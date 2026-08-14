@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Al incidir una onda electromagnética sobre una superficie metálica cuya frecuencia es igual a 1,25×10^15 Hz, el potencial de frenado de los electrones es de 2,1 V. Calcule aproximadamente (en eV) la función trabajo del metal.",
-      "alternatives": ["4,58", "3,08", "6,58", "5,58", "2,58"],
+      "alternatives": [
+        "4,58",
+        "3,08",
+        "6,58",
+        "5,58",
+        "2,58"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
       "sourceName": "Física Moderna - Efecto Fotoeléctrico (matematicasn), problema 1"
@@ -17,7 +23,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La superficie de una placa de sodio se expone a una radiación de frecuencia 8,6×10^14 Hz. ¿Cuál es la energía máxima que tienen los fotoelectrones que escapan de ese metal?",
-      "alternatives": ["16,6×10^-20 J", "18,0×10^-20 J", "15,6×10^-20 J", "19,8×10^-20 J"],
+      "alternatives": [
+        "16,6×10^-20 J",
+        "18,0×10^-20 J",
+        "15,6×10^-20 J",
+        "19,8×10^-20 J"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
       "sourceName": "Física Moderna - Efecto Fotoeléctrico (matematicasn), problema 2"
@@ -28,7 +39,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sobre una superficie metálica con función de trabajo igual a 3×10^-19 J, incide una onda electromagnética. Calcule aproximadamente la máxima longitud de onda (en nm) que debe tener la onda electromagnética para que se observe el efecto fotoeléctrico.",
-      "alternatives": ["321,2", "432,6", "662,6", "721,6", "932,8"],
+      "alternatives": [
+        "321,2",
+        "432,6",
+        "662,6",
+        "721,6",
+        "932,8"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
       "sourceName": "Física Moderna - Efecto Fotoeléctrico (matematicasn), problema 3"
@@ -39,7 +56,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sobre una superficie metálica, cuyo trabajo de extracción es 1,8×10^-19 J, incide una radiación de 2,0×10^-18 J. Si m_e = 9,1×10^-31 kg, la velocidad de los electrones emitidos es",
-      "alternatives": ["2×10^6 m/s", "7×10^6 m/s", "3×10^5 m/s", "4×10^6 m/s", "5×10^6 m/s"],
+      "alternatives": [
+        "2×10^6 m/s",
+        "7×10^6 m/s",
+        "3×10^5 m/s",
+        "4×10^6 m/s",
+        "5×10^6 m/s"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
       "sourceName": "Física Moderna - Efecto Fotoeléctrico (matematicasn), problema 4"
@@ -50,10 +73,1222 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine la longitud de onda de los rayos X con fotones de energía 14,2 keV. Dato: hc = 1240×10^-9 eV·m",
-      "alternatives": ["0,77×10^-10 m", "0,63×10^-10 m", "0,82×10^-10 m", "0,87×10^-10 m"],
+      "alternatives": [
+        "0,77×10^-10 m",
+        "0,63×10^-10 m",
+        "0,82×10^-10 m",
+        "0,87×10^-10 m"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
       "sourceName": "Física Moderna - Rayos X (matematicasn), problema 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la o las afirmaciones correctas:\nI. En el efecto fotoeléctrico una mayor intensidad de la radiación incidente sobre un metal aumentará la energía cinética de los electrones extraídos del material.\nII. Los rayos X están formados por electrones que se mueven a gran velocidad.\nIII. Según el modelo de Plank, la energía de la radiación electromagnética es un múltiplo entero de ℎ𝑓 donde ℎ es la constante de Planck y 𝑓 es la frecuencia de radiación.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/fisica-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — FISICA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al incidir una onda electromagnética sobre una superficie metálica con periodo igual a 8×10 –16 s, el potencial de frenado de los electrones es de 2,1 V. Calcule aproximadamente el valor en eV, la función de trabajo.\nc =3×10⁸ m/s\nh=6,63×10 –34 J.s\ne= 1,6 ×10 –19 C",
+      "alternatives": [
+        "3,07",
+        "6,58",
+        "1,58",
+        "5,58",
+        "2,58"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para una onda de radio de 1800 kHz, calcular la energía del fotón (en J).\nUsar h= 6,63×10 –34 J.s",
+      "alternatives": [
+        "9,15×1 0 –28",
+        "8,48×1 0 –28",
+        "5,93×1 0 –28",
+        "11,93×1 0 –28",
+        "13,48×1 0 –28"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una superficie de cobre, cuya función trabajo es 4,7 eV, inciden fotones con longitud de onda λ. Si el potencial de frenado es 1,3 V, calcule aproximadamente λ (en nm).\nConsidere que 1 eV=1,602×10 –19 J, h=6,626×10 –34 J ⋅ s y c=3×10 8 m/s.",
+      "alternatives": [
+        "107",
+        "207",
+        "307",
+        "407",
+        "507"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-8-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se irradia una lámina de oro con radiación de longitud de onda de 200nm. Si la energía mínima para arrancar un electrón (función trabajo) del oro es 5,1eV, determine la energía cinética máxima de los electrones emitidos (en eV).\nh=6,626×10 –34 J · s\nc=3,0×10 8 m/s\n1 eV=1,6×10 –1 9 J",
+      "alternatives": [
+        "1,11",
+        "2,25",
+        "3,01",
+        "4,52",
+        "5,08"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esfera metálica de radio 9,0cm, inicialmente sin carga, es iluminada con un haz de luz cuya frecuencia es 2×10 15 Hz. Determine la carga inducida debido al efecto fotoeléctrico. Considere que la función de trabajo del material metálico de la esfera es 5,9 eV, la constante de Planck h=3,75×10 – 15 eV.s y la constante de Coulomb k =9×10 9 Nm 2 C – 2",
+      "alternatives": [
+        "4,8×10 – 11 C",
+        "3,2×10 – 13 C",
+        "1,6×10 – 11 C",
+        "8×10 – 19 C",
+        "6,4×10 – 9 C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/simulacro-presencial-san-marcos-2018-i.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO SAN MARCOS 2027 I INGRESO UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes relaciones entre premios nobel y descubrimiento, es incorrecta",
+      "alternatives": [
+        "Albert Einstein - Ley del efecto fotoeléctrico.",
+        "Marie Curie – Aislamiento del uranio",
+        "Alexander Fleming – Descubrimiento de la penicilina",
+        "Richard Ernst - Espectroscopia RMN"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/sencico-solucionario-examen-de-admision-escuela-superior-tecnica-de-la-construccion-evaluacion-resuelta-respuestas-claves-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SENCICO 2026 EVALUACIÓN DE INGRESO CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una superficie de cobre inciden fotones con longitud de onda λ . Si el potencial de frenado del cobre es de 1,3 V, calcule aproximadamente λ (en nm).\nConsidere: La función trabajo del cobre igual a 4,7 eV\n1 eV=1,602×10 –19 J\nh=6,626×10 –34 J · s\nc =3×10 8 m/s",
+      "alternatives": [
+        "148",
+        "207",
+        "347",
+        "448",
+        "557"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al efecto fotoeléctrico, indique la secuencia de verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. La energía cinética máxima de los fotoelectrones emitidos depende de la intensidad de la luz incidente.\nII. La función trabajo representa la energía mínima con la que un electrón está ligado en el metal.\nIII. Al producirse la emisión de fotoelectrones de la superficie metálica, esta ocurre de manera instantánea, incluso con intensidades de luz muy bajas.",
+      "alternatives": [
+        "FFV",
+        "FVV",
+        "VVV",
+        "VVF",
+        "VFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-simulacro-de-examen-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre la placa de un metal, cuya función trabajo es 4,2 eV, incide una radiación de 160 nm. Determine el potencial de frenado.\nDatos: h=4×10 –15 eV.s; c=3×10 –8 m/s",
+      "alternatives": [
+        "3,1 V",
+        "3,0 V",
+        "3,5 V",
+        "2,9 V",
+        "3,3 V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para el sistema de control de cerrado automático de una puerta, se emplea cierto metal en una celda fotoeléctrica. Al someter la celda a pruebas en el laboratorio, se la irradia sucesivamente con dos tipos diferentes de luces monocromática, A y B, cuyos fotones tienen energías de 1eV y 2,5eV, respectivamente, y se encuentra que su función trabajo es de 0,5eV.\nDetermine cuál o cuáles de las siguientes afirmaciones son correctas respecto de este metal.\nDato: h=4× 10 –15 eV.s\nI) Los electrones arrancados con energías cinéticas máximas por las luces A y B están en la razón A/B=1/4\nII) La frecuencia umbral del metal para la luz A es 1,25×10 14 Hz.\nIII) La razón entre las frecuencias de los fotones A y B es 0,8.",
+      "alternatives": [
+        "Solo I",
+        "II y III",
+        "I y II",
+        "Solo II",
+        "I y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre un metal de función trabajo igual a 1,8eV índice radiación electromagnético cuyos fotones presentan una energía de 2,7eV, ¿cuál es la energía cinética máxima de los electrones arrancados al metal?",
+      "alternatives": [
+        "1,1 eV",
+        "0,9 eV",
+        "0,85 eV",
+        "0,96 eV",
+        "0,75 eV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-fisica-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE FÍSICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique las proposiciones verdaderas (V) o falsas (F).\nI ) Los rayos X son electrones que presentan una gran velocidad.\nII ) Según el modelo Planck, la energía de la radiación electromagnética es un múltiplo entero de hf donde h es la constante de Planck y f es la frecuencia de radiación.\nIII ) En el efecto fotoeléctrico una mayor intensidad de la radiación incidente sobre un metal aumentará la energía cinética de los electrones extraídos del material.",
+      "alternatives": [
+        "VFF",
+        "FFF",
+        "FVF",
+        "VVF",
+        "VVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-fisica-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE FÍSICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al incidir una onda electromagnética sobre una superficie metálica con periodo igual a 8×10 –1 6 s, el potencial de frenado de los electrones es de 2,1 V.\nCalcule aproximadamente el valor en eV, la función de trabajo.\nc =3×10 8 m/s\nh=6,63×10 –34 J.s\ne= 1,6 ×10 –1 9 C",
+      "alternatives": [
+        "3,07",
+        "6,58",
+        "1,58",
+        "5,58",
+        "2,58"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-prueba-resuelta-de-admision-a-la-universidad-uni-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2022 II TERCERA PRUEBA SOLUCIONARIO ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA 2022-2 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para una onda de radio de 1800 kHz, calcular la energía del fotón (en J).\nUsar h= 6,63×10 − ³ ⁴ J.s",
+      "alternatives": [
+        "9,15×1 0 –28",
+        "8,48×1 0 –28",
+        "5,93×1 0 –28",
+        "11,93×1 0 –28",
+        "13,48×1 0 –28"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Solucionario-de-fisica-uni-examen-resuelto-de-admision-universidad-de-ingenieria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNI EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al incidir una onda electromagnética sobre una superficie metálica con periodo igual a 8×10 − ¹ ⁶ s, el potencial de frenado de los electrones es de 2,1 V. Calcule aproximadamente el valor en eV, la función de trabajo.\nc =3×10⁸ m/s\nh=6,63×10 − ³ ⁴ J.s\ne= 1,6 ×10 − ¹ ⁹ C",
+      "alternatives": [
+        "3,07",
+        "6,58",
+        "1,58",
+        "5,58",
+        "2,58"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Solucionario-de-fisica-uni-examen-resuelto-de-admision-universidad-de-ingenieria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNI EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean los enunciados siguientes:\n1. Tras la colisión del fotón con el núcleo del átomo, aparecen algunos residuos (pedazos del núcleo) quizá junto con algunas partículas creadas a partir de la energía del fotón; pero, fundamentalmente, se produce un electrón y un positrón.\n2. En la materia, los electrones siempre tienen carga eléctrica negativa y el núcleo del átomo tiene carga positiva.\n3. Actualmente, este proceso nos es bien conocido y ocurre a diario en los laboratorios.\n4. El positrón, sin embargo, no es una partícula que permanezca “oculta” en un átomo normal, hasta ser arrancado por la sacudida de una colisión con rayos cósmicos.\n5. Supongamos, por ejemplo, que un fotón de alta energía choca con un átomo en la atmósfera.\n6. Debe ser, por tanto, una de las partículas creadas en la cascada al convertirse la energía en materia.\nEl orden correcto de los enunciados es:",
+      "alternatives": [
+        "1,2,4,5,6 y 3",
+        "2,1,4,3,5 y 6",
+        "2,4,6,3,5 y 1",
+        "5,3,2,1,4 y 6",
+        "5,6,1,4,3 y 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/reestructuracion-textual-ejercicios-resueltos-de-lecturas-razonamiento-verbal-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REESTRUCTURACIÓN TEXTUAL EJERCICIOS RESUELTOS DE RAZONAMIENTO VERBAL PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El molibdeno tiene una función trabajo de 4,20 eV. ¿Cuál es el potencial de frenado si la luz incidente tiene una longitud de onda de 180 nm?\nDatos: h = 4, 00×10 − ¹ ⁵ eV. s ; c = 3, 00×10 ⁸ m/ s",
+      "alternatives": [
+        "6,67 V",
+        "3,20 V",
+        "2,47 V",
+        "4,67 V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN SAN MARCOS ÁREA A 2022 II MEDICINA HUMANA SOLUCIONARIO PRUEBA DESARROLLADA ADMISIÓN UNIVERSIDAD RESPUESTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el efecto fotoeléctrico, la energía cinética máxima depende de:",
+      "alternatives": [
+        "La frecuencia de la radiación incidente.",
+        "La intensidad de la radiación incidente.",
+        "La función trabajo.",
+        "La longitud de onda máxima",
+        "La frecuencia umbral."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según la teoría de Albert Einstein, la energía del fotón incidente se utiliza primero para vencer la función del trabajo del metal, y el resto se transforma en energía cinética del electrón emitido. Si un metal tiene una función de trabajo de 2 eV y sobre el incide la luz cuya energía es 5 eV, ¿cuál será la energía cinética máxima de tos electrones emitidos?",
+      "alternatives": [
+        "4 eV",
+        "1 eV",
+        "2 eV",
+        "3 eV",
+        "5 eV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La teoría de la relatividad incluye tanto a la teoría de la relatividad especial como la de relatividad general, formuladas a principios del siglo XX, pretendían resolver la incompatibilidad existente entre la mecánica newtoniana y el electromagnetismo. Fue formulada por:",
+      "alternatives": [
+        "Isaac Newton",
+        "Arthur Eddington",
+        "Albert Einstein",
+        "Johannes Kepler"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/12/examen-de-admision-sencico-resuelto-servicio-nacional-de-capacitacion-para-la-industria-de-la-construccion-prueba-desarrollada-claves-respuestas-word-soluciones-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — SENCICO EXAMEN DE ADMISIÓN SOLUCIONARIO SERVICIO NACIONAL DE CAPACITACIÓN PARA LA INDUSTRIA DE LA CONSTRUCCIÓN PRUEBA DE INGRESO RESUELTA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se hacen incidir fotones sobre una superficie de aluminio cuya función trabajo es de 4,3 eV. Calcule la frecuencia mínima del fotón incidente, en Hz, de modo que el aluminio emita foto-electrones. (1eV = 1,6  1019 J, h = 6,62  10-34 J.s, c = 3  108 m/s)",
+      "alternatives": [
+        "0,74  1012",
+        "0,84  1013",
+        "0,94  1014",
+        "1,04  1015",
+        "2,04  1016"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20152.pdf",
+      "sourceName": "uni.edu.pe-pdf — UNI 2015-2 Física pregunta 18"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la estrella gigante Betelgeuse emite energía radiante a una tasa de 10 4 veces mayor que el Sol, mientras que su temperatura es la mitad de la temperatura del Sol; considerando que ambas estrellas son absorbedoras perfectas y sea R S el radio del Sol, entonces el radio de la estrella Betelgeuse es",
+      "alternatives": [
+        "380R S",
+        "400R S",
+        "420R S",
+        "440R S",
+        "460R S"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EFECTO FOTOELÉCTRICO EJERCICIOS RESUELTOS de FÍSICA MODERNA PDF RAYOS X MECANICA CUÁNTICA INGRESO A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una fuente de 100 kW de potencia que emite radiación de frecuencia 10¹⁵ Hz, el número de fotones que la fuente emite en cada segundo es: (aprox.) (h = 6,62 × 10−³⁴ J·s)",
+      "alternatives": [
+        "15 × 10²²",
+        "20 × 10²²",
+        "25 × 10²²",
+        "30 × 10²²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-18-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un haz de ondas electromagnéticas monocromáticas de la región visible que está desplazándose en el vacío tiene una frecuencia de 4 × 10¹⁴ Hz , determinar la energía de los fotones. (h = 4 × 10−¹⁵ eVs)",
+      "alternatives": [
+        "1,6 eV",
+        "3 eV",
+        "0,2 eV",
+        "0, 03 eV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-18-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a las radiaciones electromagnéticas, marque verdadero (V) o falso (F).\nI. Un haz de luz de color rojo tiene mayor frecuencia que la luz de color verde.\nII. La energía de un fotón de luz verde es mayor que la energía de un fotón de luz roja.\nIII. Las radiaciones electromagnéticas viajan a la velocidad de la luz, sin importar en que medio se desplazan",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "FFV",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-aritmetica-uni.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA 1 CE PREUNI CLAVES SOLUCIONES 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se requieren 11 eV de energía para disociar una molécula de monóxido de carbono en átomos de carbono y oxígeno. La frecuencia mínima de la radiación electromagnética adecuada para lograr la disociación se encuentra en",
+      "alternatives": [
+        "la región visible.",
+        "la región infrarroja.",
+        "la región ultravioleta.",
+        "la región de microondas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep108.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.8 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una voz masculina, tras la modulación y transmisión, suena como la de una mujer para el receptor. El problema se debe a",
+      "alternatives": [
+        "una mala selección del índice de modulación (se eligió 0 < m < 1).",
+        "una mala selección del ancho de banda de los amplificadores.",
+        "una mala selección de la frecuencia portadora.",
+        "pérdida de energía en la transmisión."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep115.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.15 MCQ 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El murciélago emite pulsos de corta duración de ondas ultrasónicas, los cuales regresan en forma de ecos después de impactar objetos en el ambiente, aportando información sobre sus dimensiones, sus ubicaciones y sus posibles movimientos. Esto se debe a la sensibilidad del murciélago para detectar el tiempo que tardan los ecos en regresar, así como las pequeñas variaciones en las frecuencias y en las intensidades de los pulsos ultrasónicos. Estas características le permiten cazar presas pequeñas incluso cuando están en movimiento respecto a él. Considere una situación unidimensional en la que una polilla se aleja, en movimiento rectilíneo y uniforme, de un murciélago en reposo. En la situación descrita, ¿mediante qué alteraciones en las características de los pulsos ultrasónicos serían detectadas la distancia y la velocidad de la polilla por el sistema de un murciélago?",
+      "alternatives": [
+        "Intensidad disminuida, el tiempo de retorno aumentado y la frecuencia percibida disminuida.",
+        "Intensidad aumentada, el tiempo de retorno disminuido y la frecuencia percibida disminuida.",
+        "Intensidad disminuida, el tiempo de retorno disminuido y la frecuencia percibida aumentada.",
+        "Intensidad disminuida, el tiempo de retorno aumentado y la frecuencia percibida aumentada.",
+        "Intensidad aumentada, el tiempo de retorno aumentado y la frecuencia percibida aumentada."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2016/2016_PV_impresso_D1_CD1.pdf",
+      "sourceName": "gov.br-inep — ENEM 2016 dia 1 caderno azul questão 57"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El sonorizador (badén sonoro) es un dispositivo físico implantado sobre la superficie de una carretera de modo que provoque una trepidación y ruido al paso de un vehículo sobre él, alertando de una situación atípica más adelante, como obras, peajes o cruce de peatones. Al pasar sobre los sonorizadores, la suspensión del vehículo sufre vibraciones que producen ondas sonoras, resultando en un ruido peculiar. Considere un vehículo que pasa con velocidad constante igual a 108 km/h sobre un sonorizador cuyas franjas están separadas por una distancia de 8 cm. Disponible en: www.denatran.gov.br. Consultado el: 2 set. 2015 (adaptado). La frecuencia de la vibración del automóvil percibida por el conductor durante el paso por ese sonorizador está más próxima a",
+      "alternatives": [
+        "8,6 hercios.",
+        "13,5 hercios.",
+        "375 hercios.",
+        "1 350 hercios.",
+        "4 860 hercios."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2018/2018_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2018 dia 2 caderno azul questão 103"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es común que en los viajes en avión se nos solicite apagar aparatos cuyo funcionamiento implique la emisión o la recepción de ondas electromagnéticas, como los celulares. La justificación dada para ese procedimiento es, entre otras cosas, la necesidad de eliminar fuentes de señales electromagnéticas que puedan interferir en las comunicaciones, vía radio, de los pilotos con la torre de control. Esa interferencia podrá ocurrir solamente si las ondas emitidas por el celular y las recibidas por el radio del avión",
+      "alternatives": [
+        "son ambas audibles.",
+        "tienen la misma potencia.",
+        "tienen la misma frecuencia.",
+        "tienen la misma intensidad.",
+        "se propagan con velocidades diferentes."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2023 dia 2 caderno azul questão 128"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el combustible utilizado en la mayoría de centrales nucleares?",
+      "alternatives": [
+        "Uranio",
+        "Plutonio",
+        "Helio",
+        "Samario"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ₈ ₀ Hg ² ⁰ ² es bombardeado con una radiación desconocida X formando la especie ₉ ₄ Pu²³ ⁸ y liberando 2 positrones. El número de protones de X es",
+      "alternatives": [
+        "16",
+        "20",
+        "36",
+        "77",
+        "100"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/qumica-unt-examen-resuelto-pdf-trujilo.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes proposiciones relacionadas a los espectros continuos de los rayos X:\nI. Dependen del material del blanco.\nIl. Dependen del potencial acelerador del tubo de rayos X.\nIlI. Son producidos por la acción de frenado de los electrones por el blanco.\nIndique la secuencia de verdad o falsedad.",
+      "alternatives": [
+        "FVV",
+        "VVF",
+        "FVF",
+        "VFV",
+        "FFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/5to-actividad-2-dpcc-experiencia-7-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA UNJFSC ORDINARIO INGRESO UNIVERSIDAD HUACHO 2026 –  PDF PREGUNTAS CLAVES"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia de potencial entre los electrodos de un tubo de rayos X es de 33,15 keV. Si los electrones al chocar con el ánodo pierden el 60% de su energía, la frecuencia de la radiación que se genera es: (h=6,63×10 –34 J · s)",
+      "alternatives": [
+        "6,4 ×10 18 Hz",
+        "4,8 ×10 18 Hz",
+        "1,6 ×10 18 Hz",
+        "0,8 ×10 18 Hz",
+        "0,6 ×10 18 Hz"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La velocidad de la luz es:",
+      "alternatives": [
+        "200 000 km/s",
+        "100 000 km/s",
+        "300 000 km/s",
+        "3000 000 km/s",
+        "150 000 km/s"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/cultura-general-preguntas-resueltas-de-actualidad-descarga-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CULTURA GENERAL 2027 EJERCICIOS RESUELTOS – ACTUALIDAD 2026 – 200 PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una explosión nuclear se liberan 1,26×10 14 J de energía, luego de esta explosión se recogieron 1,3g de material radiactivo. La masa inicial, en gramos, del material radiactivo de la bomba, es:",
+      "alternatives": [
+        "2,7",
+        "2,4",
+        "2,2",
+        "1,4",
+        "1,2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Premio Nobel de Física de 1978 le fue otorgado a Arno Penzias y Robert Wilson: ellos descubrieron la radiación de fondo cósmica de microondas y observaron que ese “ruido” parecía venir de todos lados del espacio; finalmente encontraron que ese fenómeno era producto de la radiación electromagnética residual del big bang , el cual ocurrió hace 13,7 mil millones de años. Un análisis de esa radiación condujo a la deducción de que la temperatura de fondo del universo es de 2,725 K. ¿Cuál de las siguientes temperaturas en °C se aproxima más a la temperatura de fondo del universo?",
+      "alternatives": [
+        "–250,325 °C",
+        "–230,325 °C",
+        "–320,125 °C",
+        "–270,275 °C"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-fisica-de-admision-la.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El yodo radiactivo (I-131) se emplea en:",
+      "alternatives": [
+        "Obstrucciones de la sangre.",
+        "Cáncer a la piel.",
+        "Tratamiento de la tiroides.",
+        "Matar gusanos.",
+        "Bailar mejor"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/quimica-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — QUIMICA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una estación de radio transmite a 89,5 MHz con una potencia radiada de 45,0 kW. El número de fotones por segundo que emite la estación, es aproximadamente: (h=6,626×10 ^ – 34 J · s)",
+      "alternatives": [
+        "4,00×10 ^ 29",
+        "6,59×10 ^ 29",
+        "7,59×10 ^ 29",
+        "1,35×10 ^ 35",
+        "2,20×10 ^ 35"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/examen-admision-uni-solucionario_28.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considere la posibilidad de poder viajar aún más lejos del sistema estelar Alfa Centauri, hacia un planeta que albergaría agua, ubicado a 6 años luz de la Tierra. Suponga que podemos fabricar una nave espacial que pueda viajar con una rapidez de 0,6c. Calcule la cantidad de años que demoraría el viaje de ida respecto a los siguientes observadores:",
+      "alternatives": [
+        "Un científico que se encuentra en reposo en un observatorio en el planeta Tierra.",
+        "El piloto de la nave espacial.",
+        "10 años; 10 años",
+        "12 años; 10 años",
+        "10 años; 8 años"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los valores de las longitudes de onda de la radiación electromagnética emitida por un cuerpo se encuentran entre 380 nm y 780 nm.\nCalcule el valor aproximado de la energía máxima (en eV) que puede tener un fotón.\nh=4,1×10 –1 5 eV · s\nc=3,0×10 8 m/s",
+      "alternatives": [
+        "1,24",
+        "2,24",
+        "3,24",
+        "4,24",
+        "5,24"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Einstein propuso la ecuación más famosa de la historia: la energía es igual a la masa por la velocidad de la luz al cuadrado (E=mc²). Fue una deducción que enseguida permitió entender fenómenos inexplicados hasta el momento, cómo, por qué y cuándo el uranio radioactivo se desintegraba, su peso disminuía y generaba una enorme cantidad de energía. Si se desintegra 10 nanogramos de material radiactivo, determine la energía en Joule que se liberó durante este proceso nuclear.\nDato: J = kg × m ² /s ² ; c = 3 × 10 8 m/s",
+      "alternatives": [
+        "9,0×10 5",
+        "9,0 × 10 3",
+        "4,5 × 10 4",
+        "4,5 × 10 5",
+        "9,0 × 10 2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cierta reacción nuclear, se liberó 4,5 Mega Joule (MJ) de energía. Calcule la masa asociada a la generación de dicha energía en microgramos(μg).\nDatos: M=10 6\nU=10 –6\nC=3×10 8 m/s",
+      "alternatives": [
+        "0,05μg",
+        "1,05μg",
+        "0,09μg",
+        "2,5×10 –2 μg",
+        "0,12μg"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/quimica-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos hermanos, Rafael y Paola, se separan llevando consigo relojes idénticos. Rafael se queda en la Tierra y Paola viaja en una nave espacial cuya velocidad constante es 2√2/3 c, siendo c la velocidad de la luz en el vacío. Paola mide su frecuencia cardiaca, ayudada con su reloj, obteniendo 60 latidos/minuto. ¿Cada cuántos segundos latirá el corazón de Paola medido con el reloj de Rafael?",
+      "alternatives": [
+        "3,5 s",
+        "1,5 s",
+        "3,0 s",
+        "2,0 s",
+        "2,5 s"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-examen-admision-agraria-unalm-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos amigos están conversando a través de sus celulares. La banda utilizada para la transmisión de la señal es 2600 MHz. Durante el tiempo que dura la conversación, son transferidos, en promedio, 1,5×10 23 fotones por segundo. Determine la potencia promedio radiada por cada celular.\nDato: h=6,6×10 –3 4 J.s",
+      "alternatives": [
+        "0,27 W",
+        "0,26 W",
+        "1,50 W",
+        "0,52 W",
+        "2,0 W"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepre-san-marcos-fisica-semana-8-2019-1.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relacionar correctamente:\nI)\nPartículas positivas.\nII) Partículas negativas.\nIII) Ondas electromagnéticas.",
+      "alternatives": [
+        "Beta.",
+        "Gamma.",
+        "Alfa.",
+        "IB, IIC, IIIA",
+        "IC, IIA, IIIB"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué masa de uranio libera 18×10 20 erg de energía?",
+      "alternatives": [
+        "1 g",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los esposos Curie, descubrieron un elemento aún más radiactivo que el uranio. Indicar el elemento:",
+      "alternatives": [
+        "Uranio.",
+        "Tritio.",
+        "Hidrógeno.",
+        "Radio.",
+        "Plutonio."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señalar la partícula que no es corpuscular.",
+      "alternatives": [
+        "Alfa",
+        "Gamma",
+        "Beta",
+        "Positrón",
+        "Neutrón"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se dispone de 10kg de Plutonio que son transformados en energía obteniéndose 5,4×10 17 J. ¿Qué masa de Plutonio no sufrió transformación?",
+      "alternatives": [
+        "3 kg",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el transcurso de una reacción nuclear, 5g de una muestra liberó una energía de 1,8×10 21 ergios. Calcule el porcentaje de masa que no sufrió reacción nuclear.",
+      "alternatives": [
+        "40%",
+        "60%",
+        "90%",
+        "94%",
+        "100%"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué se entiende por radioactividad natural?",
+      "alternatives": [
+        "La descomposición espontánea del átomo del radio",
+        "La descomposición espontánea del núcleo de un átomo",
+        "Una reacción química espontánea .",
+        "La emisión de electrones de su capa electrónica.",
+        "La emisión de átomos de radio de alta penetrabilidad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a la radioactividad, elija la secuencia correcta de verdad (V) o falsedad (F).",
+      "alternatives": [
+        "La radioactividad artificial o inducida de un núcleo atómico artificial es la descomposición espontánea e inestable.",
+        "En la descomposición de la radioactividad artificial se emiten rayos beta y gamma, si el núcleo es liviano.",
+        "Cuando el núcleo es pesado (transuránico) emite rayos alfa, beta y gamma.",
+        "La sustancia radioactiva emite diferentes tipos de radiaciones como son cationes y aniones. ( e) Las sustancias radioactivas pueden sufrir fusión o fisión.",
+        "FFVVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Incluye verdadero (V) o falso (F) según corresponda\nI) Las emisiones radiactivas pueden ionizar átomos de la materia con la cual interactúan.\nII) La radiación gamma (𝛾) tiene alto poder de penetración.\nIII)Todas las emisiones radiactivas pueden ser desviadas por campos magnéticos .",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FVF",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una explosión nuclear se liberan 1,26×10 ¹ ⁴ J de energía, luego de esta explosión se recogieron 1,3g de material radiactivo. La masa inicial, en gramos, del material radiactivo de la bomba, es:",
+      "alternatives": [
+        "2,7",
+        "2,4",
+        "2,2",
+        "1,4",
+        "1,2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el número y tipo de partículas que debe perder el 12 U 238 para obtener 86 Rn 222",
+      "alternatives": [
+        "2 partículas β, 4 partículas α",
+        "4 partículas α, 3 partículas β",
+        "8 electrones, 1 partícula α",
+        "6 partículas α, 2 electrones",
+        "5 partículas β, 3 partículas α"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de vidas medias que deben transcurrir para que un material radiactivo se reduzca al 25% de su valor inicial es:",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El 80 Hg 202 es bombardeado con una radiación desconocida X formando la especie 94 Pu 238 y liberando 2 positrones. El número de protones de X es",
+      "alternatives": [
+        "16",
+        "20",
+        "36",
+        "77",
+        "100"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las fuerzas fundamentales, indica verdadero (V) o falso (F):\nI. La fuerza nuclear débil actúa en el interior de los nucleones.\nII. En la fuerza electromagnética la partícula de intercambio: fotón.\nIII. En un núcleo estable predominan las fuerzas de repulsión.\nIV. La fuerza nuclear fuerte es de largo alcance.",
+      "alternatives": [
+        "VVVF",
+        "FVFF",
+        "VFFF",
+        "FFVV",
+        "VVFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/quimica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene 0,1 kg de material radiactivo para una reacción nuclear. Al final solo se recupera 99,75 gramos. Determina la energía liberada en TJ.",
+      "alternatives": [
+        "24,5",
+        "54,0",
+        "45,0",
+        "28,5",
+        "22,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/quimica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pueden aparecer síntomas en cuestión de minutos, tales como daños en la piel, naúseas, vómitos, diarrea y fatiga; además, en casos severos, puede inducir al coma, convulsiones o hasta la muerte. Esto se debe a la exposición a",
+      "alternatives": [
+        "fenómenos fotoeléctricos.",
+        "descargas eléctricas.",
+        "contaminación radiactiva.",
+        "contaminación magnética.",
+        "contaminación atmosférica."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/biologia-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si al lanzar un haz de luz a una pantalla con dos rendijas no se diera el fenómeno de la difracción,",
+      "alternatives": [
+        "sería imposible observar las franjas en la pantalla.",
+        "tendría que pasar primero por una de las rendijas.",
+        "el fenómeno de interferencia constructiva sería invisible.",
+        "los fotones tendrían frente a ellas una posición determinada."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/textos-con-imagenes-o-mixtos-ejercicios-resueltos-de-comprension-de-lectura-razonamiento-verbal-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-aptitud-academica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEXTOS CON GRÁFICOS EJERCICIOS RESUELTOS DE COMPRENSIÓN LECTORA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tomando el radio de Bohr como a0 = 53 pm, el radio del ion Li++ en su estado fundamental, según el modelo de Bohr, será aproximadamente",
+      "alternatives": [
+        "53 pm",
+        "27 pm",
+        "18 pm",
+        "13 pm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep112.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.12 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La energía de enlace de un átomo de H, considerando un electrón que se mueve me 4 alrededor de un núcleo fijo (protón), es B = – . (m = masa 8n 2ε 02h 2 del electrón). Si se decide trabajar en un sistema de referencia donde el electrón está en reposo, el protón estaría moviéndose alrededor de él. Por argumentos similares, la energía de enlace sería Me 4 B=– (M = masa del protón) 8n 2ε 02h 2 Esta última expresión no es correcta porque",
+      "alternatives": [
+        "n no sería un número entero.",
+        "La cuantización de Bohr se aplica solo al electrón.",
+        "el sistema de referencia en el que el electrón está en reposo no es inercial.",
+        "el movimiento del protón no sería en órbitas circulares, ni siquiera aproximadamente."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep112.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.12 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La molécula de O2 está formada por dos átomos de oxígeno. En la molécula, la fuerza nuclear entre los núcleos de los dos átomos",
+      "alternatives": [
+        "no es importante porque las fuerzas nucleares tienen corto alcance.",
+        "es tan importante como la fuerza electrostática para mantener unidos a los dos átomos.",
+        "cancela la fuerza electrostática repulsiva entre los núcleos.",
+        "no es importante porque el núcleo de oxígeno tiene igual número de neutrones y protones."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep112.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.12 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Supongamos que consideramos un gran número de recipientes, cada uno con 10000 átomos iniciales de un material radiactivo con una vida media de 1 año. Después de 1 año,",
+      "alternatives": [
+        "todos los recipientes tendrán 5000 átomos del material.",
+        "todos los recipientes contendrán el mismo número de átomos del material, pero ese número será solo aproximadamente 5000.",
+        "los recipientes tendrán, en general, diferentes números de átomos del material, pero su promedio estará cerca de 5000.",
+        "ninguno de los recipientes puede tener más de 5000 átomos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep113.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.13 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fuerza gravitacional entre un átomo de H y otra partícula de masa m estará dada por la ley de Newton: M .m F =G , donde r está en km y r2",
+      "alternatives": [
+        "M = m protón + m electrón.",
+        "M = m protón + m electrón − B (B = 13.6 eV). c2",
+        "M no está relacionada con la masa del átomo de hidrógeno. |V |",
+        "M = m protón + m electrón − 2 (|V | = magnitud de la energía potencial c del electrón en el átomo de H)."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep113.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.13 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tritio es un isótopo del hidrógeno cuyo núcleo, el tritón, contiene 2 neutrones y 1 protón. Los neutrones libres se desintegran en p + e + ν. Si uno de los neutrones del tritón se desintegrara, se transformaría en un núcleo de He. Esto no ocurre. Esto se debe a que",
+      "alternatives": [
+        "los neutrones son más pesados que los protones.",
+        "la fuerza electrostática entre protones es repulsiva.",
+        "los neutrones se desintegran en protones mediante desintegración beta.",
+        "las fuerzas nucleares entre neutrones son más débiles que entre protones."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep113.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.13 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un reactor nuclear, los moderadores reducen la velocidad de los neutrones que se producen en un proceso de fisión. El moderador utilizado tiene núcleos ligeros. Los núcleos pesados no cumplirían este propósito porque",
+      "alternatives": [
+        "se romperían.",
+        "la colisión elástica de los neutrones con núcleos pesados no los frenaría.",
+        "el peso total del reactor sería insoportablemente alto.",
+        "las sustancias con núcleos pesados no se presentan en estado líquido o gaseoso a temperatura ambiente."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep113.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.13 MCQ 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El uso de la tecnología nuclear es un tema bastante controvertido, debido al riesgo de accidentes graves, como los ocurridos en Chernóbil (1986), en Goiânia (1987) y en Fukushima (2011). A pesar de muchas desventajas, como la generación de residuos tóxicos, la descontaminación ambiental costosa en caso de accidentes y su uso en armas nucleares, la generación de energía nuclear presenta ventajas en comparación con otras fuentes de energía. La generación de esa energía tiene como característica:",
+      "alternatives": [
+        "Formar residuos fácilmente reciclables.",
+        "Promover el aumento de la deforestación.",
+        "Contribuir a la producción de lluvia ácida.",
+        "Emitir gases tóxicos que son liberados al ambiente.",
+        "Producir calor sin el consumo de combustibles fósiles."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2023 dia 2 caderno azul questão 93"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La desintegración de una porción de masa de la materia da lugar a la liberación de 45×10^19 ergios de energía. Determina el porcentaje que pasó a ser energía, si la masa inicial fue de 5 gramos.",
+      "alternatives": [
+        "20 %",
+        "25%",
+        "35 %",
+        "10 %",
+        "5 %"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2019/05/uncp-quimica-pdf-examen-admision.html",
+      "sourceName": "quimicapdf.blogspot.com — SOLUCIONARIO EXAMEN UNCP ÁREA V 2022 2021 ADMISIÓN UNIVERSIDAD DEL CENTRO EVALUACIÓN DESARROLLADA CIENCIAS AGRARIAS PDF"
     }
   ]
 }

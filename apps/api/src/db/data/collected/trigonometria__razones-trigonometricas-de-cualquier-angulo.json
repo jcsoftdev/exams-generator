@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\sen\\theta = -\\dfrac{1}{3}$ y $\\tan\\theta < 0$, calcule $\\sqrt{2}(\\sec\\theta + \\tan\\theta)$.",
-      "alternatives": ["-1", "0", "1", "-2", "2"],
+      "alternatives": [
+        "-1",
+        "0",
+        "1",
+        "-2",
+        "2"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 1 (Rubiños/matematicasn)"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $81\\tan^2\\theta - 1600 = 0$ y $\\theta$ pertenece al IV cuadrante, calcule $9\\sec\\theta - 41\\sen\\theta$.",
-      "alternatives": ["85", "63", "72", "81", "78"],
+      "alternatives": [
+        "85",
+        "63",
+        "72",
+        "81",
+        "78"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 2 (Rubiños/matematicasn)"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si $\\alpha$ está en posición normal, $6\\sen^2\\alpha - 19\\sen\\alpha + 10 = 0$ y $\\alpha \\in$ II cuadrante, calcule $\\sqrt{5}\\tan\\alpha + 2$.",
-      "alternatives": ["2", "0", "1", "-1", "-2"],
+      "alternatives": [
+        "2",
+        "0",
+        "1",
+        "-1",
+        "-2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 3 (Rubiños/matematicasn)"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Indique el ángulo que NO es coterminante con $-10°$.",
-      "alternatives": ["350°", "710°", "1420°", "-730°", "1070°"],
+      "alternatives": [
+        "350°",
+        "710°",
+        "1420°",
+        "-730°",
+        "1070°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 4 (Rubiños/matematicasn)"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si $\\alpha$ está en posición normal con $\\tan\\alpha = -3$ y $|\\cos\\alpha| = \\cos\\alpha$, calcule $\\sqrt{10}(\\cos\\alpha - \\sen\\alpha)$.",
-      "alternatives": ["4", "5", "-1", "-2", "-4"],
+      "alternatives": [
+        "4",
+        "5",
+        "-1",
+        "-2",
+        "-4"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 6 (Rubiños/matematicasn)"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Los ángulos $\\alpha$ y $\\beta$ son coterminantes; $0 < \\alpha < 2\\pi$ y $6\\pi < \\beta < 8\\pi$. Si $\\alpha + 2\\beta = 2535°$, calcule $\\alpha + \\beta$.",
-      "alternatives": ["1330°", "1280°", "1380°", "1220°", "1480°"],
+      "alternatives": [
+        "1330°",
+        "1280°",
+        "1380°",
+        "1220°",
+        "1480°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 7 (Rubiños/matematicasn)"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si $\\alpha$ y $\\beta$ son coterminantes, $\\alpha$ en el IV cuadrante, y $12\\sen^2\\alpha - 5\\sen\\beta - 3 = 0$, calcule $\\tan\\alpha + \\sec\\beta$.",
-      "alternatives": ["$\\dfrac{1}{3}$", "$\\dfrac{3}{2}$", "$\\dfrac{3}{4}$", "$\\dfrac{\\sqrt{2}}{2}$", "$\\dfrac{\\sqrt{3}}{4}$"],
+      "alternatives": [
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{3}{2}$",
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{\\sqrt{2}}{2}$",
+        "$\\dfrac{\\sqrt{3}}{4}$"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 8 (Rubiños/matematicasn)"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si $15\\sen^2\\beta - 14\\sen\\beta - 8 = 0$, donde $\\beta$ está en posición normal en el III cuadrante, calcule $\\cot\\beta \\cdot \\cos\\beta$.",
-      "alternatives": ["-2,4", "-2,5", "-2,3", "-2,1", "-2,2"],
+      "alternatives": [
+        "-2,4",
+        "-2,5",
+        "-2,3",
+        "-2,1",
+        "-2,2"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 9 (Rubiños/matematicasn)"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si $|\\cos\\alpha| = -\\cos\\alpha$, $|\\cot\\alpha| = \\cot\\alpha$ y $|\\sen\\alpha| = \\dfrac{3}{4}$, calcule $\\sqrt{7}(2\\tan\\alpha - \\sec\\alpha)$.",
-      "alternatives": ["2", "10", "7", "12", "8"],
+      "alternatives": [
+        "2",
+        "10",
+        "7",
+        "12",
+        "8"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 11 (Rubiños/matematicasn)"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si $\\beta$ satisface $5\\cos^2\\beta + \\sqrt{5}\\cos\\beta - 2 = 0$ y $\\cot\\beta > 0$, $\\sen\\beta < 0$, calcule $(\\csc\\beta + 2\\sec\\beta)^2$.",
-      "alternatives": ["16", "18", "19", "20", "21"],
+      "alternatives": [
+        "16",
+        "18",
+        "19",
+        "20",
+        "21"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 13 (Rubiños/matematicasn)"
@@ -116,7 +176,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\sen\\theta\\sqrt{\\sen\\theta\\cos\\theta} < 0$, ¿a qué cuadrante pertenece $\\theta$?",
-      "alternatives": ["II cuadrante", "III cuadrante", "IV cuadrante", "I o III cuadrante"],
+      "alternatives": [
+        "II cuadrante",
+        "III cuadrante",
+        "IV cuadrante",
+        "I o III cuadrante"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 15 (Rubiños/matematicasn)"
@@ -127,7 +192,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\sec\\theta = \\dfrac{25}{24}$ y $\\sen\\theta < 0$, calcule $\\tan\\theta$.",
-      "alternatives": ["$\\dfrac{7}{24}$", "$\\dfrac{24}{7}$", "$-\\dfrac{3}{4}$", "$-\\dfrac{7}{24}$"],
+      "alternatives": [
+        "$\\dfrac{7}{24}$",
+        "$\\dfrac{24}{7}$",
+        "$-\\dfrac{3}{4}$",
+        "$-\\dfrac{7}{24}$"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 16 (Rubiños/matematicasn)"
@@ -138,7 +208,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántos ángulos cuadrantales existen entre $0°$ y $630°$?",
-      "alternatives": ["4", "5", "7", "6"],
+      "alternatives": [
+        "4",
+        "5",
+        "7",
+        "6"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 17 (Rubiños/matematicasn)"
@@ -149,7 +224,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\alpha$ y $\\theta$ son ángulos cuadrantales positivos menores que una vuelta: $\\sen\\alpha + 3 = \\sec 60°$; $\\cos\\theta = \\sen 270° + \\cos 360°$; $\\alpha \\neq \\theta$. Calcule $\\alpha + \\theta$.",
-      "alternatives": ["270°", "180°", "450°", "360°"],
+      "alternatives": [
+        "270°",
+        "180°",
+        "450°",
+        "360°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 19 (Rubiños/matematicasn)"
@@ -160,7 +240,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\beta$ está en el II cuadrante y $6\\cos^2\\beta - \\cos\\beta = 1$, calcule $\\sqrt{2}\\cot\\beta$.",
-      "alternatives": ["$-\\dfrac{1}{3}$", "$-\\dfrac{1}{2}$", "$-1$", "$-2$", "$-\\dfrac{3}{4}$"],
+      "alternatives": [
+        "$-\\dfrac{1}{3}$",
+        "$-\\dfrac{1}{2}$",
+        "$-1$",
+        "$-2$",
+        "$-\\dfrac{3}{4}$"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 20 (Rubiños/matematicasn)"
@@ -171,7 +257,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\tan\\psi > 0$ y $\\cos\\psi < 0$, determine el signo de: $E = \\sen\\psi\\sec\\psi$; $D = \\cot\\psi - \\csc\\psi$; $U = \\cos^3\\psi + \\sen\\psi$.",
-      "alternatives": ["+; –; +", "+; +; –", "+; +; +", "–; +; –", "–; –; +"],
+      "alternatives": [
+        "+; –; +",
+        "+; +; –",
+        "+; +; +",
+        "–; +; –",
+        "–; –; +"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 21 (Rubiños/matematicasn)"
@@ -182,7 +274,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Si $f(x) = \\sen^3 x - \\cos^3 x$, calcule $f(90°) + f(180°)$.",
-      "alternatives": ["-2", "-1", "0", "1", "2"],
+      "alternatives": [
+        "-2",
+        "-1",
+        "0",
+        "1",
+        "2"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 22 (Rubiños/matematicasn)"
@@ -193,7 +291,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si $\\theta \\in$ III cuadrante y $\\beta \\in$ II cuadrante, y $\\tan^2\\theta + \\cot^2\\beta + 13 = 2(2\\tan\\theta - 3\\cot\\beta)$, calcule $\\sqrt{5}\\sec\\theta + \\sqrt{10}\\csc\\beta$.",
-      "alternatives": ["3", "5", "7", "0", "12"],
+      "alternatives": [
+        "3",
+        "5",
+        "7",
+        "0",
+        "12"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 23 (Rubiños/matematicasn)"
@@ -204,7 +308,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuántos ángulos cuadrantales existen entre $100°$ y $890°$?",
-      "alternatives": ["5", "6", "7", "8"],
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 24 (Rubiños/matematicasn)"
@@ -215,7 +324,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\beta$ es un ángulo cuadrantal positivo menor que una vuelta y $\\tan\\beta = \\cos 180° + \\csc 90°$, calcule $\\beta + 10°$.",
-      "alternatives": ["100°", "10°", "190°", "370°"],
+      "alternatives": [
+        "100°",
+        "10°",
+        "190°",
+        "370°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 25 (Rubiños/matematicasn)"
@@ -226,7 +340,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "El punto $(3, -4)$ está en el lado final de un ángulo en posición normal. Calcule $\\csc\\theta$.",
-      "alternatives": ["$-\\dfrac{5}{4}$", "$\\dfrac{5}{3}$", "$\\dfrac{5}{4}$", "$-\\dfrac{5}{3}$", "$\\dfrac{3}{5}$"],
+      "alternatives": [
+        "$-\\dfrac{5}{4}$",
+        "$\\dfrac{5}{3}$",
+        "$\\dfrac{5}{4}$",
+        "$-\\dfrac{5}{3}$",
+        "$\\dfrac{3}{5}$"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Ejercicio 18 (Rubiños/matematicasn)"
@@ -237,7 +357,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "El punto $(-5, 4)$ está en el lado final de un ángulo en posición normal. Calcule $\\tan\\theta$.",
-      "alternatives": ["$\\dfrac{4}{5}$", "$-\\dfrac{4}{5}$", "$\\dfrac{3}{5}$", "$\\dfrac{3}{4}$", "$-\\dfrac{3}{4}$"],
+      "alternatives": [
+        "$\\dfrac{4}{5}$",
+        "$-\\dfrac{4}{5}$",
+        "$\\dfrac{3}{5}$",
+        "$\\dfrac{3}{4}$",
+        "$-\\dfrac{3}{4}$"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Ejercicio 19 (Rubiños/matematicasn)"
@@ -248,7 +374,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\csc\\alpha < 0$ y $\\sec\\alpha > 0$, ¿en qué cuadrante está $\\theta$?",
-      "alternatives": ["I cuadrante", "II cuadrante", "III cuadrante", "IV cuadrante", "Es cuadrantal"],
+      "alternatives": [
+        "I cuadrante",
+        "II cuadrante",
+        "III cuadrante",
+        "IV cuadrante",
+        "Es cuadrantal"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 9"
@@ -259,7 +391,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\theta \\in$ II cuadrante, determine el signo de: $E = \\dfrac{\\sen\\theta + 5\\cos\\theta}{\\tan\\theta - 3\\cot\\theta}$.",
-      "alternatives": ["$+$", "$-$", "$+$ o $-$", "$+$ y $-$", "No tiene signo"],
+      "alternatives": [
+        "$+$",
+        "$-$",
+        "$+$ o $-$",
+        "$+$ y $-$",
+        "No tiene signo"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 10"
@@ -270,7 +408,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\sen\\theta \\cdot \\cos\\theta > 0$, ¿en qué cuadrante está $\\theta$?",
-      "alternatives": ["I cuadrante", "II cuadrante", "III cuadrante", "I o III cuadrante", "II o III cuadrante"],
+      "alternatives": [
+        "I cuadrante",
+        "II cuadrante",
+        "III cuadrante",
+        "I o III cuadrante",
+        "II o III cuadrante"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 12"
@@ -281,7 +425,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\sen\\theta = \\dfrac{1}{3}$ y $\\theta \\in$ II cuadrante, calcule $\\tan\\theta$.",
-      "alternatives": ["$\\dfrac{\\sqrt{4}}{2}$", "$2\\sqrt{2}$", "$-\\dfrac{\\sqrt{2}}{2}$", "$-2\\sqrt{2}$", "$\\dfrac{\\sqrt{4}}{2}$"],
+      "alternatives": [
+        "$\\dfrac{\\sqrt{4}}{2}$",
+        "$2\\sqrt{2}$",
+        "$-\\dfrac{\\sqrt{2}}{2}$",
+        "$-2\\sqrt{2}$",
+        "$\\dfrac{\\sqrt{4}}{2}$"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 13"
@@ -292,7 +442,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\cot\\theta = 0{,}25$ y $\\theta \\in$ III cuadrante, calcule $\\sec\\theta$.",
-      "alternatives": ["$\\sqrt{17}$", "$-\\sqrt{17}$", "$\\dfrac{\\sqrt{17}}{4}$", "$\\sqrt{14}$", "$-\\dfrac{\\sqrt{17}}{4}$"],
+      "alternatives": [
+        "$\\sqrt{17}$",
+        "$-\\sqrt{17}$",
+        "$\\dfrac{\\sqrt{17}}{4}$",
+        "$\\sqrt{14}$",
+        "$-\\dfrac{\\sqrt{17}}{4}$"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 14"
@@ -303,7 +459,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\cot^2\\theta = 3$ y $270° < \\theta < 360°$, calcule $\\sen\\theta$.",
-      "alternatives": ["$\\dfrac{1}{2}$", "$-\\dfrac{1}{2}$", "$\\dfrac{\\sqrt{3}}{2}$", "$-\\dfrac{\\sqrt{3}}{2}$", "$\\dfrac{\\sqrt{2}}{2}$"],
+      "alternatives": [
+        "$\\dfrac{1}{2}$",
+        "$-\\dfrac{1}{2}$",
+        "$\\dfrac{\\sqrt{3}}{2}$",
+        "$-\\dfrac{\\sqrt{3}}{2}$",
+        "$\\dfrac{\\sqrt{2}}{2}$"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 15"
@@ -314,7 +476,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si $\\csc^2\\theta = 16$ y $\\pi < \\theta < \\dfrac{3\\pi}{2}$, calcule $E = \\tan\\theta + 15\\sen\\theta$.",
-      "alternatives": ["$-\\dfrac{3}{4}$", "$\\dfrac{3}{4}$", "$-\\dfrac{5}{4}$", "$\\dfrac{5}{4}$", "$0$"],
+      "alternatives": [
+        "$-\\dfrac{3}{4}$",
+        "$\\dfrac{3}{4}$",
+        "$-\\dfrac{5}{4}$",
+        "$\\dfrac{5}{4}$",
+        "$0$"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 16"
@@ -325,7 +493,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule: $E = \\dfrac{-\\sec(180°) + (-\\cos(0°))\\tan(360°)}{\\cot(270°) - \\sen(90°)}$.",
-      "alternatives": ["0", "1", "-1", "2", "-3"],
+      "alternatives": [
+        "0",
+        "1",
+        "-1",
+        "2",
+        "-3"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 17"
@@ -336,7 +510,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule: $E = \\dfrac{-\\tan\\left(-\\dfrac{\\pi}{2}\\right) - 2\\sen(\\pi)\\cos(\\pi)}{\\cos\\left(\\dfrac{3\\pi}{2}\\right) - \\sen\\left(\\dfrac{\\pi}{2}\\right)}$.",
-      "alternatives": ["0", "1", "-1", "2", "-3"],
+      "alternatives": [
+        "0",
+        "1",
+        "-1",
+        "2",
+        "-3"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 18"
@@ -347,7 +527,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $(5, 12)$ es un punto del lado final de un ángulo en posición normal, calcule $E = \\dfrac{1 + \\sen\\theta}{\\cos\\theta}$.",
-      "alternatives": ["5", "-5", "$\\dfrac{1}{5}$", "$-\\dfrac{1}{5}$", "10"],
+      "alternatives": [
+        "5",
+        "-5",
+        "$\\dfrac{1}{5}$",
+        "$-\\dfrac{1}{5}$",
+        "10"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 19"
@@ -358,7 +544,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\cos\\alpha = \\dfrac{40}{41}$ y $\\alpha \\in$ IV cuadrante, calcule $\\csc\\alpha + \\cot\\alpha$.",
-      "alternatives": ["-9", "$-\\dfrac{1}{9}$", "9", "$\\dfrac{1}{9}$", "$\\dfrac{7}{9}$"],
+      "alternatives": [
+        "-9",
+        "$-\\dfrac{1}{9}$",
+        "9",
+        "$\\dfrac{1}{9}$",
+        "$\\dfrac{7}{9}$"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Problemas Propuestos, Pregunta 1 (Rubiños/matematicasn)"
@@ -369,7 +561,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El punto $P(-6, -8)$ pertenece al lado final del ángulo $\\theta$ en posición normal. Calcule $\\sec\\theta + \\tan\\theta$.",
-      "alternatives": ["3", "-3", "$-\\dfrac{1}{3}$", "$\\dfrac{1}{3}$", "1"],
+      "alternatives": [
+        "3",
+        "-3",
+        "$-\\dfrac{1}{3}$",
+        "$\\dfrac{1}{3}$",
+        "1"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Problemas Propuestos, Pregunta 2 (Rubiños/matematicasn)"
@@ -380,7 +578,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El lado final del ángulo $\\theta$ pasa por el punto medio del segmento $AB$ donde $A(-1, 1)$ y $B(5, 7)$. Calcule $\\tan\\theta$.",
-      "alternatives": ["1", "2", "3", "4", "-4"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "-4"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Problemas Propuestos, Pregunta 3 (Rubiños/matematicasn)"
@@ -391,7 +595,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $8\\tan x = 4$ y $x \\in$ III cuadrante, calcule $\\sen x \\cdot \\cos x$.",
-      "alternatives": ["$\\dfrac{2}{13}$", "$\\dfrac{3}{13}$", "$\\dfrac{6}{13}$", "$-\\dfrac{6}{13}$", "$-\\dfrac{3}{13}$"],
+      "alternatives": [
+        "$\\dfrac{2}{13}$",
+        "$\\dfrac{3}{13}$",
+        "$\\dfrac{6}{13}$",
+        "$-\\dfrac{6}{13}$",
+        "$-\\dfrac{3}{13}$"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Problemas Propuestos, Pregunta 4 (Rubiños/matematicasn)"
@@ -402,7 +612,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Determine el signo de: $\\sen 220° \\cdot \\tan 250° \\cdot \\cos 150°$.",
-      "alternatives": ["$(+)$", "$(-)$", "$(+)$ o $(-)$", "$\\pm$"],
+      "alternatives": [
+        "$(+)$",
+        "$(-)$",
+        "$(+)$ o $(-)$",
+        "$\\pm$"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Problemas Propuestos, Pregunta 5 (Rubiños/matematicasn)"
@@ -413,7 +628,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule: $3\\sen 90° + 5\\cos\\pi + 2\\tan 2\\pi$.",
-      "alternatives": ["-1", "-2", "-3", "2", "3"],
+      "alternatives": [
+        "-1",
+        "-2",
+        "-3",
+        "2",
+        "3"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Problemas Propuestos, Pregunta 6 (Rubiños/matematicasn)"
@@ -424,7 +645,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\tan\\theta = 2{,}4$ y $\\cos\\theta < 0$, calcule $\\sen\\theta$.",
-      "alternatives": ["$-\\dfrac{5}{13}$", "$-\\dfrac{12}{13}$", "$\\dfrac{12}{13}$", "$\\dfrac{5}{13}$", "$\\dfrac{2}{5}$"],
+      "alternatives": [
+        "$-\\dfrac{5}{13}$",
+        "$-\\dfrac{12}{13}$",
+        "$\\dfrac{12}{13}$",
+        "$\\dfrac{5}{13}$",
+        "$\\dfrac{2}{5}$"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Problemas Propuestos, Pregunta 9 (Rubiños/matematicasn)"
@@ -435,7 +662,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si el punto $P(-1, 3)$ pertenece al lado final del ángulo $\\theta$ en posición normal, calcule $\\sen\\theta \\cdot \\cos\\theta$.",
-      "alternatives": ["-0,4", "-0,3", "0,3", "0,4", "-0,2"],
+      "alternatives": [
+        "-0,4",
+        "-0,3",
+        "0,3",
+        "0,4",
+        "-0,2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Ejercicio 1 (Rubiños/matematicasn)"
@@ -446,7 +679,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\sen\\varphi = \\dfrac{3}{5}$ y $\\varphi \\in$ IV cuadrante, calcule $\\sec\\varphi - \\tan\\varphi$.",
-      "alternatives": ["$-2$", "$2$", "$\\dfrac{1}{2}$", "$-\\dfrac{1}{2}$", "$1$"],
+      "alternatives": [
+        "$-2$",
+        "$2$",
+        "$\\dfrac{1}{2}$",
+        "$-\\dfrac{1}{2}$",
+        "$1$"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Ejercicio 3 (Rubiños/matematicasn)"
@@ -457,7 +696,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\cos\\theta = -0{,}8$ y $\\theta \\in$ II cuadrante, calcule $\\csc\\theta + \\cot\\theta$.",
-      "alternatives": ["$\\dfrac{1}{3}$", "$-\\dfrac{1}{3}$", "$3$", "$-3$", "$\\dfrac{2}{3}$"],
+      "alternatives": [
+        "$\\dfrac{1}{3}$",
+        "$-\\dfrac{1}{3}$",
+        "$3$",
+        "$-3$",
+        "$\\dfrac{2}{3}$"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Ejercicio 5 (Rubiños/matematicasn)"
@@ -468,7 +713,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule: $\\sen 0° + \\cos 360°$.",
-      "alternatives": ["0", "1", "2", "-1", "$\\sqrt{2}$"],
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "-1",
+        "$\\sqrt{2}$"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/angulo-cuadrantal-ejemplos-ejercicios-problemas-resueltos-de-razones-trigonometricas-matematica-examen-admision-universidad-word-pdf.html",
       "sourceName": "Ángulos Cuadrantales – Ejercicio 1 (matematicasn/admision universidad)"
@@ -479,7 +730,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule: $\\sen\\pi + \\sen\\dfrac{\\pi}{2} + \\sen\\dfrac{3\\pi}{2}$.",
-      "alternatives": ["2", "1", "0", "-1", "-2"],
+      "alternatives": [
+        "2",
+        "1",
+        "0",
+        "-1",
+        "-2"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/angulo-cuadrantal-ejemplos-ejercicios-problemas-resueltos-de-razones-trigonometricas-matematica-examen-admision-universidad-word-pdf.html",
       "sourceName": "Ángulos Cuadrantales – Ejercicio 2 (matematicasn/admision universidad)"
@@ -490,7 +747,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule: $\\sec 0° + \\csc\\dfrac{\\pi}{2} + \\cos\\dfrac{\\pi}{2}$.",
-      "alternatives": ["0", "1", "2", "3", "-1"],
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "-1"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/angulo-cuadrantal-ejemplos-ejercicios-problemas-resueltos-de-razones-trigonometricas-matematica-examen-admision-universidad-word-pdf.html",
       "sourceName": "Ángulos Cuadrantales – Ejercicio 3 (matematicasn/admision universidad)"
@@ -501,7 +764,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule: $\\cos 0° - 3\\sen\\pi + 5\\tan 0°$.",
-      "alternatives": ["0", "1", "2", "-1", "5"],
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "-1",
+        "5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/angulo-cuadrantal-ejemplos-ejercicios-problemas-resueltos-de-razones-trigonometricas-matematica-examen-admision-universidad-word-pdf.html",
       "sourceName": "Ángulos Cuadrantales – Ejercicio 4 (matematicasn/admision universidad)"
@@ -512,7 +781,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El ángulo $A$ está en el III cuadrante con $\\tan A = 2{,}4$ y el ángulo $B$ está en el II cuadrante con $\\sen B = \\cos A + \\sen(-A)$. Calcule $49[\\cot^2 B + \\csc(-B)]$.",
-      "alternatives": ["29", "211", "38", "120", "91"],
+      "alternatives": [
+        "29",
+        "211",
+        "38",
+        "120",
+        "91"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 5 (Rubiños/matematicasn)"
@@ -523,7 +798,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Dos ángulos coterminales están en razón $5:4$. Si el mayor está entre $3900°$ y $6800°$, calcule la suma de ambos.",
-      "alternatives": ["9720°", "6480°", "7620°", "12960°", "10800°"],
+      "alternatives": [
+        "9720°",
+        "6480°",
+        "7620°",
+        "12960°",
+        "10800°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 12 (Rubiños/matematicasn)"
@@ -534,7 +815,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El lado final del ángulo $\\beta$ en posición normal pasa por $(-12, -5)$. Calcule $\\sec\\beta - \\csc\\beta$.",
-      "alternatives": ["$\\dfrac{-18}{65}$", "$\\dfrac{18}{65}$", "$\\dfrac{-7}{65}$", "$\\dfrac{7}{65}$", "$\\dfrac{-4}{13}$"],
+      "alternatives": [
+        "$\\dfrac{-18}{65}$",
+        "$\\dfrac{18}{65}$",
+        "$\\dfrac{-7}{65}$",
+        "$\\dfrac{7}{65}$",
+        "$\\dfrac{-4}{13}$"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Ejercicio 9 (Rubiños/matematicasn)"
@@ -545,7 +832,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El punto $(-9, -40)$ pertenece al lado final de un ángulo en posición normal. Calcule $E = \\csc\\theta + \\cot\\theta$.",
-      "alternatives": ["$\\dfrac{4}{5}$", "$-\\dfrac{5}{4}$", "$-\\dfrac{4}{5}$", "$\\dfrac{5}{4}$", "$-\\dfrac{4}{3}$"],
+      "alternatives": [
+        "$\\dfrac{4}{5}$",
+        "$-\\dfrac{5}{4}$",
+        "$-\\dfrac{4}{5}$",
+        "$\\dfrac{5}{4}$",
+        "$-\\dfrac{4}{3}$"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 7"
@@ -556,7 +849,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El punto $(20, -21)$ corresponde al lado final de un ángulo en posición normal. Calcule $E = \\tan\\theta + \\sec\\theta$.",
-      "alternatives": ["$\\dfrac{2}{5}$", "$-\\dfrac{2}{5}$", "$1$", "$\\dfrac{5}{2}$", "$-\\dfrac{5}{2}$"],
+      "alternatives": [
+        "$\\dfrac{2}{5}$",
+        "$-\\dfrac{2}{5}$",
+        "$1$",
+        "$\\dfrac{5}{2}$",
+        "$-\\dfrac{5}{2}$"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 8"
@@ -567,7 +866,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si el lado de un ángulo en posición estándar pasa por el punto $(-1, 2)$, calcule $E = \\sec\\theta \\cdot \\csc\\theta$.",
-      "alternatives": ["$-\\dfrac{5}{2}$", "$\\dfrac{5}{2}$", "$-\\dfrac{2}{5}$", "$\\dfrac{2}{5}$", "$1$"],
+      "alternatives": [
+        "$-\\dfrac{5}{2}$",
+        "$\\dfrac{5}{2}$",
+        "$-\\dfrac{2}{5}$",
+        "$\\dfrac{2}{5}$",
+        "$1$"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 6"
@@ -578,7 +883,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si $\\alpha$ y $\\beta$ son coterminantes, están en el IV cuadrante, y el punto $(-2, a)$ con $a < 3$ está en el lado terminal de $\\beta$. Si $\\cot\\alpha + \\tan\\beta = -\\dfrac{13}{6}$, calcule $6\\csc^2\\alpha - \\cot\\beta$.",
-      "alternatives": ["$\\dfrac{4}{7}$", "$\\dfrac{12}{7}$", "$\\dfrac{4}{25}$", "$\\dfrac{19}{4}$", "$\\dfrac{3}{2}$"],
+      "alternatives": [
+        "$\\dfrac{4}{7}$",
+        "$\\dfrac{12}{7}$",
+        "$\\dfrac{4}{25}$",
+        "$\\dfrac{19}{4}$",
+        "$\\dfrac{3}{2}$"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 10 (Rubiños/matematicasn)"
@@ -589,7 +900,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Determine el signo de: $\\cot 432° \\cdot \\tan^2 134° \\cdot \\csc^3 214° \\cdot \\sec^4 360°$.",
-      "alternatives": ["$+$", "$-$", "$+$ o $-$", "Indeterminado", "No tiene signo"],
+      "alternatives": [
+        "$+$",
+        "$-$",
+        "$+$ o $-$",
+        "Indeterminado",
+        "No tiene signo"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "Libro de Trigonometría Preuniversitaria (SlideShare), Ejercicio 11"
@@ -600,7 +917,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\tan\\beta = 0{,}5$ y $\\beta \\in$ III cuadrante, calcule $\\sen\\beta \\cdot \\cos\\beta$.",
-      "alternatives": ["$0{,}3$", "$0{,}4$", "$-0{,}3$", "$-0{,}4$", "$0{,}2$"],
+      "alternatives": [
+        "$0{,}3$",
+        "$0{,}4$",
+        "$-0{,}3$",
+        "$-0{,}4$",
+        "$0{,}2$"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Ejercicio 4 (Rubiños/matematicasn)"
@@ -611,7 +934,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El punto $Q(-3, -4)$ pertenece al lado final del ángulo $\\beta$ en posición normal. Calcule $\\sec\\beta + \\tan\\beta$.",
-      "alternatives": ["$\\dfrac{1}{3}$", "$-\\dfrac{1}{3}$", "$3$", "$-3$", "$\\dfrac{2}{5}$"],
+      "alternatives": [
+        "$\\dfrac{1}{3}$",
+        "$-\\dfrac{1}{3}$",
+        "$3$",
+        "$-3$",
+        "$\\dfrac{2}{5}$"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
       "sourceName": "Razones Trigonométricas de Ángulos de Cualquier Magnitud – Ejercicio 2 (Rubiños/matematicasn)"
@@ -622,10 +951,319 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Si $\\alpha$ y $\\theta$ son ángulos cuadrantales positivos menores que una vuelta, $\\sqrt{\\tan\\alpha} = \\sen^3\\theta - 1$, calcule $\\alpha - \\theta$.",
-      "alternatives": ["180°", "0", "90°", "-180°"],
+      "alternatives": [
+        "180°",
+        "0",
+        "90°",
+        "-180°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
       "sourceName": "Razones Trigonométricas de Ángulos en Posición Normal – Problemas Propuestos, Problema 18 (Rubiños/matematicasn)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la ecuación:\nHalle “ ”; si cada uno de ellos es un ángulo cuadrantal, positivo y menor a una vuelta.",
+      "alternatives": [
+        "720º",
+        "90º",
+        "180º",
+        "270º",
+        "360º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-trigonometricas-de-angulos.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Siendo 𝛉 un ángulo cuadrantal positivo y menor que una vuelta, además:\nCos θ=Tg45°–Sec60°\nCalcule :\nSec 4 ( θ/4 ) + Sen 2 ( θ/2 )",
+      "alternatives": [
+        "3",
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/resolucion-examen-villarreal-admision.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS DE LA SALUD PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA D 2027 FORMALES Y NATURALES"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se cumple que 15sen² β – 14 sen β – 8=0 , donde β es un ángulo en posición normal del tercer cuadrante, calcule el valor de ctg β co β",
+      "alternatives": [
+        "– 2,4",
+        "– 2,5",
+        "– 2,3",
+        "– 2,1",
+        "– 2,2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si β es un ángulo en posición normal que satisface la ecuación 5cos² β + √ 5cos β – 2=0 y además ctg β> 0 , sen β< 0 , calcule el valor de la expresión (csc β + 2sec β)² .",
+      "alternatives": [
+        "16",
+        "18",
+        "19",
+        "20",
+        "21"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea β un ángulo en posición normal que pertenece al II cuadrante, tal que 6cos² β – cos β = 1. Halle el valor de √ 2cot β",
+      "alternatives": [
+        "−1/3",
+        "− 1/2",
+        "–1",
+        "–2",
+        "−3/4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos A(a + b;b) y B(b;a− b) pertenecen al lado terminal de un ángulo en posición normal cuya medida es α . Calcule el valor de csc²α + tg²α , si b > 0 .",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS DE CUALQUIER MAGNITUD EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule\nR= tan²1500°+ 5cos2483°",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/reduccion-al-primer-cuadrante-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — REDUCCIÓN AL PRIMER CUADRANTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un ángulo“ ” en posición normal que verifica las siguientes condiciones:\ni)\nii)\niii)\ndetermine el valor de:",
+      "alternatives": [
+        "-11",
+        "-10",
+        "-9",
+        "-8",
+        "-6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-trigonometricas-de-angulos.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si “b” es un ángulo de 4to cuadrante y , halle:",
+      "alternatives": [
+        "12,85",
+        "12,15",
+        "10,35",
+        "9,35",
+        "8,35"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-trigonometricas-de-angulos.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si:\nAdemás cuadrante.\nHalle:",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-trigonometricas-de-angulos.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el valor de\ncos(2550°)+cos(−390°)",
+      "alternatives": [
+        "1",
+        "√ 2",
+        "√ 3",
+        "1/2 + √ 3/2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/simulacro-resuelto-de-admision-a-la-universidad-catolica-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO CATÓLICA SOLUCIONARIO DE ACCESO UNIVERSIDAD PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar el radio vector de ( 5 ; 12)",
+      "alternatives": [
+        "17",
+        "7",
+        "13",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/plano-cartesiano-geometria-analitica.html",
+      "sourceName": "matematicaj.blogspot.com — PLANO CARTESIANO GEOMETRIA ANALÍTICA PLANA COORDENADAS SISTEMA BIDIMENSIONAL FÓRMULAS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el radio vector de (– 4 ; 3).",
+      "alternatives": [
+        "7",
+        "2",
+        "5",
+        "8",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/plano-cartesiano-geometria-analitica.html",
+      "sourceName": "matematicaj.blogspot.com — PLANO CARTESIANO GEOMETRIA ANALÍTICA PLANA COORDENADAS SISTEMA BIDIMENSIONAL FÓRMULAS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la alternativa correcta, después de determinar si la proposición es verdadera (V) o falsa (F) en cada uno de los siguientes enunciados.\nI. sen160°< sen70°< sen50°\nII. sen1< sen2< sen3\nIII) tan(sen2)> tan(sen1) > tan(sen3)",
+      "alternatives": [
+        "FVV",
+        "VVV",
+        "FFV",
+        "FFF",
+        "FVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule tanx + coty\nsi\ntan(180° + x) = 5\ncot(360° – y) = 2",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/5to-actividad-9-matematica-resuelta-experiencia-de-aprendizaje-3-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El pH de una reacción química en condiciones normales está dado por la siguiente expresión: K=|tan(148°) + tan(328°)|\nSi se considera tan(58°)=8/5 , halle el valor de K.",
+      "alternatives": [
+        "89/40",
+        "5/4",
+        "0",
+        "39/40",
+        "16/5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-trigonometria-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS TRIGONOMETRÍA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Escriba verdadero (V) o falso (F) según corresponda, luego marque la alternativa correcta.\n• sen50º<sen150º ( )\n• sen300º>sen200º ( )\n• sen160º<sen340º ( )",
+      "alternatives": [
+        "FFF",
+        "VVV",
+        "FFV",
+        "VFV",
+        "VVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/trigonometria-examen-admision-agraria.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique cuál de las siguientes alternativas es la de menor valor. Justifique su respuesta en la CT.",
+      "alternatives": [
+        "cos220º",
+        "cos160º",
+        "cos40º",
+        "cos350º",
+        "cos250º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/trigonometria-cayetano-heredia-examen.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
     }
   ]
 }

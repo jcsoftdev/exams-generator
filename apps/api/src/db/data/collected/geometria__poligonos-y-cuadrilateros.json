@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si el ángulo externo de un polígono regular mide 36°, calcule el mayor número de diagonales que se puede trazar.",
-      "alternatives": ["20", "28", "35", "44", "54"],
+      "alternatives": [
+        "20",
+        "28",
+        "35",
+        "44",
+        "54"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2020/03/geometria-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
       "sourceName": "Geometría - Ejercicios de examen de admisión universidad (claves publicadas), Pregunta 2 (clave C)"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La mediana de un trapecio mide 10 y las longitudes de los lados no paralelos suman 18. Encontrar el perímetro del trapecio.",
-      "alternatives": ["20", "28", "36", "38", "42"],
+      "alternatives": [
+        "20",
+        "28",
+        "36",
+        "38",
+        "42"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
       "sourceName": "Cuadriláteros ejercicios resueltos PDF - matematicasn, Problema 2 (clave D)"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Uno de los lados de un rectángulo es el doble del otro lado y el perímetro del rectángulo es 90. Encontrar la longitud del mayor lado.",
-      "alternatives": ["20", "25", "30", "35", "40"],
+      "alternatives": [
+        "20",
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
       "sourceName": "Cuadriláteros ejercicios resueltos PDF - matematicasn, Problema 3 (clave C)"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En un paralelogramo, la longitud de un lado es el triple de la longitud del otro lado. Encontrar la longitud del mayor lado si el perímetro del paralelogramo es 80.",
-      "alternatives": ["20", "30", "40", "50", "10"],
+      "alternatives": [
+        "20",
+        "30",
+        "40",
+        "50",
+        "10"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
       "sourceName": "Cuadriláteros ejercicios resueltos PDF - matematicasn, Problema 4 (clave B)"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Las medidas de dos ángulos consecutivos de un paralelogramo se encuentran en la razón de 4 a 5. Encontrar la medida del menor ángulo.",
-      "alternatives": ["80°", "100°", "90°", "45°", "20°"],
+      "alternatives": [
+        "80°",
+        "100°",
+        "90°",
+        "45°",
+        "20°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
       "sourceName": "Cuadriláteros ejercicios resueltos PDF - matematicasn, Problema 5 (clave A)"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La suma de las distancias desde los vértices de un romboide a una recta exterior es 24u. Calcular la distancia del punto de intersección de las diagonales a la misma recta exterior al romboide.",
-      "alternatives": ["6u", "8u", "10u", "5u", "4u"],
+      "alternatives": [
+        "6u",
+        "8u",
+        "10u",
+        "5u",
+        "4u"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
       "sourceName": "Cuadriláteros ejercicios resueltos PDF - matematicasn, Problema 1 (clave A)"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcule el número de diagonales medias de un polígono, en donde el número de diagonales es el cuádruple del número de ángulos internos.",
-      "alternatives": ["20", "27", "35", "44", "55"],
+      "alternatives": [
+        "20",
+        "27",
+        "35",
+        "44",
+        "55"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/03/poligonos-y-cuadrilateros-ejercicios.html",
       "sourceName": "Polígonos y cuadriláteros ejercicios desarrollados - matematica-a1, Problema 1 (clave E)"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si un polígono de n lados tuviera (n-3) lados, tendría (n+3) diagonales menos. ¿Qué polígono es?",
-      "alternatives": ["Triángulo", "Cuadrilátero", "Pentágono", "Hexágono", "Octógono"],
+      "alternatives": [
+        "Triángulo",
+        "Cuadrilátero",
+        "Pentágono",
+        "Hexágono",
+        "Octógono"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/03/poligonos-y-cuadrilateros-ejercicios.html",
       "sourceName": "Polígonos y cuadriláteros ejercicios desarrollados - matematica-a1, Problema 10 (clave D)"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un trapecio, sus diagonales miden 5 m y 9 m. Calcule el máximo valor entero que puede tener su mediana.",
-      "alternatives": ["5 m", "6 m", "7 m", "8 m", "9 m"],
+      "alternatives": [
+        "5 m",
+        "6 m",
+        "7 m",
+        "8 m",
+        "9 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cuadrilateros-ejercicios-resueltos_31.html",
       "sourceName": "Paralelogramos Trapecios Rectángulos Cuadrado Rombos - matematicasn, Pregunta 1 (clave C)"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Al intersecarse las bisectrices de los ángulos interiores de un romboide, forman un:",
-      "alternatives": ["Cuadrado", "Rectángulo", "Rombo", "Romboide", "No se puede determinar"],
+      "alternatives": [
+        "Cuadrado",
+        "Rectángulo",
+        "Rombo",
+        "Romboide",
+        "No se puede determinar"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cuadrilateros-ejercicios-resueltos_31.html",
       "sourceName": "Paralelogramos Trapecios Rectángulos Cuadrado Rombos - matematicasn, Pregunta 2 (clave B)"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Indique (V) verdadero o (F) falso para las siguientes proposiciones:\n(I) Un cuadrilátero con sólo 2 lados paralelos es un trapecio.\n(II) Un cuadrilátero con diagonales perpendiculares y congruentes es un cuadrado.\n(III) Un trapecio rectángulo es un trapecio escaleno.",
-      "alternatives": ["VFV", "FFV", "VFF", "FVF", "FFF"],
+      "alternatives": [
+        "VFV",
+        "FFV",
+        "VFF",
+        "FVF",
+        "FFF"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cuadrilateros-ejercicios-resueltos_31.html",
       "sourceName": "Paralelogramos Trapecios Rectángulos Cuadrado Rombos - matematicasn, Pregunta 4 (clave C)"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "La diagonal de un trapecio isósceles es igual a la suma de sus bases. Calcule el menor ángulo que forman las diagonales.",
-      "alternatives": ["30°", "60°", "45°", "90°", "75°"],
+      "alternatives": [
+        "30°",
+        "60°",
+        "45°",
+        "90°",
+        "75°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cuadrilateros-ejercicios-resueltos_31.html",
       "sourceName": "Paralelogramos Trapecios Rectángulos Cuadrado Rombos - matematicasn, Pregunta 5 (clave B)"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Desde los vértices de un romboide se trazan perpendiculares a una recta exterior y las longitudes de estas perpendiculares suman 80. Calcule la distancia del punto de intersección de las diagonales del paralelogramo a dicha recta exterior.",
-      "alternatives": ["10", "40", "35", "20", "60"],
+      "alternatives": [
+        "10",
+        "40",
+        "35",
+        "20",
+        "60"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cuadrilateros-ejercicios-resueltos_31.html",
       "sourceName": "Paralelogramos Trapecios Rectángulos Cuadrado Rombos - matematicasn, Pregunta 6 (clave D)"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un trapecio tiene sus diagonales de 8 y 10. El máximo valor entero de la mediana es:",
-      "alternatives": ["8", "9", "5", "7", "6"],
+      "alternatives": [
+        "8",
+        "9",
+        "5",
+        "7",
+        "6"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cuadrilateros-ejercicios-resueltos_31.html",
       "sourceName": "Paralelogramos Trapecios Rectángulos Cuadrado Rombos - matematicasn, Pregunta 7 (clave E)"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La base menor de un trapecio mide 3 m y los lados no paralelos miden 1 m y 5 m. Calcule la longitud de la base mayor, sabiendo que su medida es entera.",
-      "alternatives": ["6 m", "5 m", "8 m", "7 m", "9 m"],
+      "alternatives": [
+        "6 m",
+        "5 m",
+        "8 m",
+        "7 m",
+        "9 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cuadrilateros-ejercicios-resueltos_31.html",
       "sourceName": "Paralelogramos Trapecios Rectángulos Cuadrado Rombos - matematicasn, Pregunta 1 (segunda serie, clave C)"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las diagonales de un rombo miden 12 cm y 16 cm. Halle la distancia que hay entre dos lados opuestos.",
-      "alternatives": ["9,4 cm", "9,8 cm", "9,7 cm", "9,6 cm", "9,5 cm"],
+      "alternatives": [
+        "9,4 cm",
+        "9,8 cm",
+        "9,7 cm",
+        "9,6 cm",
+        "9,5 cm"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2020/03/geometria-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
       "sourceName": "Geometría - Ejercicios de examen de admisión universidad (claves publicadas), Pregunta 4 (clave D)"
@@ -182,7 +278,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Las bases de un trapecio miden 20 cm y 80 cm respectivamente. Calcular la mediana.",
-      "alternatives": ["30 cm", "40 cm", "50 cm", "60 cm", "70 cm"],
+      "alternatives": [
+        "30 cm",
+        "40 cm",
+        "50 cm",
+        "60 cm",
+        "70 cm"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://es.slideshare.net/mitsuyito/cuadrilateros-rubios",
       "sourceName": "Cuadriláteros - Rubiños (Slideshare), Problema 1 (clave c)"
@@ -193,7 +295,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Las bases de un trapecio miden 10 cm y 20 cm respectivamente. Calcular la longitud del segmento que une los puntos medios de sus diagonales.",
-      "alternatives": ["4 cm", "5 cm", "6 cm", "7 cm", "8 cm"],
+      "alternatives": [
+        "4 cm",
+        "5 cm",
+        "6 cm",
+        "7 cm",
+        "8 cm"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://es.slideshare.net/mitsuyito/cuadrilateros-rubios",
       "sourceName": "Cuadriláteros - Rubiños (Slideshare), Problema 2 (clave b)"
@@ -204,7 +312,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Las medidas de los ángulos interiores de un trapezoide están entre sí como 1, 2, 3, 4. Hallar la medida del menor ángulo.",
-      "alternatives": ["20°", "26°", "30°", "34°", "36°"],
+      "alternatives": [
+        "20°",
+        "26°",
+        "30°",
+        "34°",
+        "36°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://es.slideshare.net/mitsuyito/cuadrilateros-rubios",
       "sourceName": "Cuadriláteros - Rubiños (Slideshare), Problema 4 (clave e)"
@@ -215,7 +329,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las bases de un trapecio están en la relación 12 a 8. Calcular la base menor, si el segmento formado por los puntos medios de las diagonales es 40 cm.",
-      "alternatives": ["160 cm", "120 cm", "130 cm", "112 cm", "15 cm"],
+      "alternatives": [
+        "160 cm",
+        "120 cm",
+        "130 cm",
+        "112 cm",
+        "15 cm"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://es.slideshare.net/mitsuyito/cuadrilateros-rubios",
       "sourceName": "Cuadriláteros - Rubiños (Slideshare), Problema 6 (clave a)"
@@ -226,7 +346,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las longitudes de las bases de un trapecio miden 2x cm y 7x cm. Si la mediana mide 27 cm, ¿cuánto mide el segmento que une los puntos medios de las diagonales?",
-      "alternatives": ["10 cm", "13 cm", "15 cm", "17 cm", "N.A."],
+      "alternatives": [
+        "10 cm",
+        "13 cm",
+        "15 cm",
+        "17 cm",
+        "N.A."
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://es.slideshare.net/mitsuyito/cuadrilateros-rubios",
       "sourceName": "Cuadriláteros - Rubiños (Slideshare), Problema adicional 1 (clave d: 15 cm)"
@@ -237,7 +363,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las bases de un trapecio están en la relación 7 a 9. Si la mediana mide 64 cm, hallar la base mayor.",
-      "alternatives": ["72 cm", "56 cm", "68 cm", "58 cm", "N.A."],
+      "alternatives": [
+        "72 cm",
+        "56 cm",
+        "68 cm",
+        "58 cm",
+        "N.A."
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://es.slideshare.net/mitsuyito/cuadrilateros-rubios",
       "sourceName": "Cuadriláteros - Rubiños (Slideshare), Problema adicional 3 (clave a)"
@@ -248,7 +380,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En un trapecio isósceles ABCD (BC // AD) se verifica que ∠A = 50°. Hallar ∠C.",
-      "alternatives": ["115°", "120°", "130°", "140°", "125°"],
+      "alternatives": [
+        "115°",
+        "120°",
+        "130°",
+        "140°",
+        "125°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://es.slideshare.net/mitsuyito/cuadrilateros-rubios",
       "sourceName": "Cuadriláteros - Rubiños (Slideshare), Problema adicional 4 (clave c)"
@@ -259,7 +397,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La base mayor de un trapecio mide el triple de la menor. Si la mediana mide 12 cm, ¿cuánto miden las bases?",
-      "alternatives": ["6 cm y 18 cm", "4 cm y 20 cm", "7 cm y 17 cm", "9 cm y 15 cm", "10 cm y 14 cm"],
+      "alternatives": [
+        "6 cm y 18 cm",
+        "4 cm y 20 cm",
+        "7 cm y 17 cm",
+        "9 cm y 15 cm",
+        "10 cm y 14 cm"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://es.slideshare.net/mitsuyito/cuadrilateros-rubios",
       "sourceName": "Cuadriláteros - Rubiños (Slideshare), Problema adicional 6 (clave a)"
@@ -270,7 +414,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las bases de un trapecio isósceles están en la relación de 1 a 5. Si la suma de sus lados no paralelos es 30 m y su perímetro es 66 m, ¿cuánto mide la mediana del trapecio?",
-      "alternatives": ["30 m", "18 m", "36 m", "9 m", "16 m"],
+      "alternatives": [
+        "30 m",
+        "18 m",
+        "36 m",
+        "9 m",
+        "16 m"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://es.slideshare.net/mitsuyito/cuadrilateros-rubios",
       "sourceName": "Cuadriláteros - Rubiños (Slideshare), Problema adicional 7 (clave b)"
@@ -281,7 +431,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un trapecio, el segmento que une los puntos medios de las diagonales mide 13 m y la suma de las bases mide 48 m. Hallar la longitud de la base menor.",
-      "alternatives": ["37 m", "24 m", "11 m", "22 m", "17 m"],
+      "alternatives": [
+        "37 m",
+        "24 m",
+        "11 m",
+        "22 m",
+        "17 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://es.slideshare.net/mitsuyito/cuadrilateros-rubios",
       "sourceName": "Cuadriláteros - Rubiños (Slideshare), Problema adicional 8 (clave c)"
@@ -292,7 +448,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcular la base mayor de un trapecio, sabiendo que los lados no paralelos miden 5 y 7, y que las bisectrices interiores de los ángulos adyacentes a la base menor se cortan en un punto de la base mayor.",
-      "alternatives": ["10", "12", "14", "16", "18"],
+      "alternatives": [
+        "10",
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://es.slideshare.net/mitsuyito/cuadrilateros-rubios",
       "sourceName": "Cuadriláteros - Rubiños (Slideshare), Problema adicional 10 (clave b)"
@@ -303,7 +465,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántas diagonales tiene un polígono de 25 lados?",
-      "alternatives": ["240", "250", "275", "280", "300"],
+      "alternatives": [
+        "240",
+        "250",
+        "275",
+        "280",
+        "300"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/manual-de-ejercicios-poligonos-a12/69557717",
       "sourceName": "Manual de ejercicios polígonos A12 (Slideshare), Problema 1 (clave C: 275)"
@@ -314,7 +482,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En un polígono se pueden trazar 54 diagonales. ¿Cuántos lados tiene?",
-      "alternatives": ["12 lados", "16 lados", "18 lados", "20 lados", "24 lados"],
+      "alternatives": [
+        "12 lados",
+        "16 lados",
+        "18 lados",
+        "20 lados",
+        "24 lados"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/manual-de-ejercicios-poligonos-a12/69557717",
       "sourceName": "Manual de ejercicios polígonos A12 (Slideshare), Problema 2 (clave A: 12 lados)"
@@ -325,7 +499,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La suma de los ángulos interiores de un dodecágono es igual a:",
-      "alternatives": ["1 440°", "1 620°", "1 800°", "1 920°", "2 160°"],
+      "alternatives": [
+        "1 440°",
+        "1 620°",
+        "1 800°",
+        "1 920°",
+        "2 160°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/manual-de-ejercicios-poligonos-a12/69557717",
       "sourceName": "Manual de ejercicios polígonos A12 (Slideshare), Problema 3 (clave C: 1 800°)"
@@ -336,7 +516,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Cada ángulo exterior de un polígono regular de 18 lados mide:",
-      "alternatives": ["18°", "20°", "24°", "30°", "36°"],
+      "alternatives": [
+        "18°",
+        "20°",
+        "24°",
+        "30°",
+        "36°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/manual-de-ejercicios-poligonos-a12/69557717",
       "sourceName": "Manual de ejercicios polígonos A12 (Slideshare), Problema 5 (clave B: 20°)"
@@ -347,7 +533,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule cuántos lados tiene un polígono si la suma de sus ángulos interiores es equivalente a 28 ángulos rectos.",
-      "alternatives": ["18 lados", "9 lados", "16 lados", "30 lados", "N.A."],
+      "alternatives": [
+        "18 lados",
+        "9 lados",
+        "16 lados",
+        "30 lados",
+        "N.A."
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/manual-de-ejercicios-poligonos-a12/69557717",
       "sourceName": "Manual de ejercicios polígonos A12 (Slideshare), Problema 40 (clave: 16 lados, pues (n-2)×180=28×90=2520 → n=16)"
@@ -358,7 +550,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule cuántos lados tiene un polígono cuyo ángulo exterior mide 2°.",
-      "alternatives": ["90 lados", "180 lados", "270 lados", "360 lados", "56 lados"],
+      "alternatives": [
+        "90 lados",
+        "180 lados",
+        "270 lados",
+        "360 lados",
+        "56 lados"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/manual-de-ejercicios-poligonos-a12/69557717",
       "sourceName": "Manual de ejercicios polígonos A12 (Slideshare), Problema 33 (clave B: 180 lados)"
@@ -369,7 +567,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule el ángulo interior de un octágono regular.",
-      "alternatives": ["90°", "60°", "120°", "135°", "45°"],
+      "alternatives": [
+        "90°",
+        "60°",
+        "120°",
+        "135°",
+        "45°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/manual-de-ejercicios-poligonos-a12/69557717",
       "sourceName": "Manual de ejercicios polígonos A12 (Slideshare), Problema 36 (clave D: 135°)"
@@ -380,7 +584,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La suma de los ángulos interiores de un icoságono (20 lados) es igual a:",
-      "alternatives": ["3 200°", "3 240°", "3 160°", "3 300°", "3 500°"],
+      "alternatives": [
+        "3 200°",
+        "3 240°",
+        "3 160°",
+        "3 300°",
+        "3 500°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/manual-de-ejercicios-poligonos-a12/69557717",
       "sourceName": "Manual de ejercicios polígonos A12 (Slideshare), Problema 42 (clave B: 3 240°)"
@@ -391,7 +601,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántas diagonales tiene un heptágono?",
-      "alternatives": ["14", "20", "9", "72", "28"],
+      "alternatives": [
+        "14",
+        "20",
+        "9",
+        "72",
+        "28"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/manual-de-ejercicios-poligonos-a12/69557717",
       "sourceName": "Manual de ejercicios polígonos A12 (Slideshare), Problema 43 (clave A: 14)"
@@ -402,7 +618,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántas diagonales tiene un polígono de 22 lados?",
-      "alternatives": ["200", "209", "100", "220", "360"],
+      "alternatives": [
+        "200",
+        "209",
+        "100",
+        "220",
+        "360"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/manual-de-ejercicios-poligonos-a12/69557717",
       "sourceName": "Manual de ejercicios polígonos A12 (Slideshare), Problema 49 (clave B: 209)"
@@ -413,7 +635,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el paralelogramo ABCD, AD = 2·AB y F es el punto medio de BC. Calcule m∠AFD.",
-      "alternatives": ["90°", "85°", "80°", "75°", "70°"],
+      "alternatives": [
+        "90°",
+        "85°",
+        "80°",
+        "75°",
+        "70°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/practica-4-cuadrilateros/19628373",
       "sourceName": "Práctica 4 Cuadriláteros - CEPRE San Marcos 2010-I (Slideshare), Problema 11 (clave A: 90°)"
@@ -424,7 +652,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un trapecio, la razón de sus bases es 5:6. Si la mediana es igual a la base menor más 3 cm, hallar la longitud del segmento que une los puntos medios de las diagonales.",
-      "alternatives": ["2 cm", "3 cm", "5 cm", "4 cm", "8 cm"],
+      "alternatives": [
+        "2 cm",
+        "3 cm",
+        "5 cm",
+        "4 cm",
+        "8 cm"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/practica-4-cuadrilateros/19628373",
       "sourceName": "Práctica 4 Cuadriláteros - CEPRE San Marcos 2010-I (Slideshare), Problema 10 (clave verificada: 3 cm, pues bases 5k y 6k, mediana=11k/2=5k+3 → k=6, bases 30 y 36, segmento=(36-30)/2=3)"
@@ -435,7 +669,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En el trapecio rectángulo ABCD, la m∠ADC = 90°, la m∠DCB = 53° y AD = 8. Calcule la longitud del segmento que tiene por extremos los puntos medios de las diagonales de dicho trapecio.",
-      "alternatives": ["1", "2", "3", "4", "2,5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "2,5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-ejercicios-resueltos-pdf.html",
       "sourceName": "Geometría Rubiños PDF - matematicasn, Pregunta 4 (clave C: 3)"
@@ -446,7 +686,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un terreno de forma rectangular tiene de perímetro 98 m y su diagonal mide 35 m. ¿Cuánto será el área del terreno?",
-      "alternatives": ["544 m²", "588 m²", "600 m²", "625 m²", "635 m²"],
+      "alternatives": [
+        "544 m²",
+        "588 m²",
+        "600 m²",
+        "625 m²",
+        "635 m²"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-ejercicios-resueltos-pdf.html",
       "sourceName": "Geometría Rubiños PDF - matematicasn, Pregunta 9 (clave B: 588 m²)"
@@ -457,7 +703,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En las diagonales de un trapecio (AC = 14 cm y BD = 24 cm), calcule el valor mínimo entero de la mediana del trapecio.",
-      "alternatives": ["6 cm", "8 cm", "10 cm", "11 cm", "12 cm"],
+      "alternatives": [
+        "6 cm",
+        "8 cm",
+        "10 cm",
+        "11 cm",
+        "12 cm"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/practica-4-cuadrilateros/19628373",
       "sourceName": "Práctica 4 Cuadriláteros - CEPRE San Marcos 2010-I (Slideshare), Problema 3 (clave D: 11 cm)"
@@ -468,7 +720,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el trapecio rectángulo ABCD (∠A y ∠B son rectos), con DA = 7 m y CD = 10 m. Si la distancia del punto de intersección de las bisectrices de sus ángulos interiores a la base BA es 4 m y BC < AD, calcule BC.",
-      "alternatives": ["6 m", "5 m", "4 m", "7 m", "8 m"],
+      "alternatives": [
+        "6 m",
+        "5 m",
+        "4 m",
+        "7 m",
+        "8 m"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/practica-4-cuadrilateros/19628373",
       "sourceName": "Práctica 4 Cuadriláteros - CEPRE San Marcos 2010-I (Slideshare), Problema 14 (clave B: 5 m)"
@@ -479,10 +737,2574 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En el trapecio ABCD (BC // AD), las bisectrices de los ángulos BCD y ADC se intersecan en Q. Si BC = 4 m, AD = 10 m y AB // CQ, calcule CD.",
-      "alternatives": ["4 m", "5 m", "6 m", "7 m", "8 m"],
+      "alternatives": [
+        "4 m",
+        "5 m",
+        "6 m",
+        "7 m",
+        "8 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/practica-4-cuadrilateros/19628373",
       "sourceName": "Práctica 4 Cuadriláteros - CEPRE San Marcos 2010-I (Slideshare), Problema 18 (clave C: 6 m)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la longitud (en cm) del lado de un polígono regular inscrito en una circunferencia C de radio R cm si la longitud del lado de un polígono de doble número de lados inscrito en C es igual a R / 2 cm.",
+      "alternatives": [
+        "√ 15 R /2",
+        "√ 15 R / 3",
+        "√ 15 R /4",
+        "√ 15 R /5",
+        "√ 15 R /6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/examen-admision-uni-resuelto-geometria.html",
+      "sourceName": "geometriapdf.blogspot.com — EXAMEN ADMISION UNI RESUELTO GEOMETRIA INGRESO UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC la suma de las medidas de A y B es 90 grados centesimales y la suma de las medidas de B y C en el sistema radial es rad. Halle la diferencia de los ángulos internos C y A.",
+      "alternatives": [
+        "36º",
+        "99º",
+        "54º",
+        "63º",
+        "9º"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/sistemas-de-medida-angular-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SISTEMAS DE MEDIDA ANGULAR EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los polígonos regulares ABCDE y ABPQRSTU, ambos en un mismo semiplano respecto a , Calcule: .",
+      "alternatives": [
+        "72º",
+        "45º",
+        "20º",
+        "24º",
+        "27º"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-y-cuadrilateros-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS Y CUADRILÁTEROS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "9 es un número de diagonales que se pueden trazar desde 5 vértices consecutivos de un polígono regular de “n” lados. Calcule “n”.",
+      "alternatives": [
+        "5 lados",
+        "7 lados",
+        "6 lados",
+        "8 lados",
+        "9 lados"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-y-cuadrilateros-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS Y CUADRILÁTEROS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la suma de las medidas de los ángulos internos de un Polígono Regular ABCDE…, de “n” lados; si",
+      "alternatives": [
+        "540º",
+        "720º",
+        "900º",
+        "1080º",
+        "1260º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-y-cuadrilateros-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS Y CUADRILÁTEROS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las medidas de cinco ángulos internos de un polígono convexo es 760º.Calcule la suma de las medidas de los ángulos externos correspondientes a los vértices restantes.",
+      "alternatives": [
+        "190º",
+        "200º",
+        "210º",
+        "220º",
+        "230º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-y-cuadrilateros-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS Y CUADRILÁTEROS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la medida del ángulo que forman las diagonales de un trapecio isósceles; si una diagonales el doble de la base media.",
+      "alternatives": [
+        "60º",
+        "45º",
+        "30º",
+        "53º",
+        "37º"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-y-cuadrilateros-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS Y CUADRILÁTEROS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la longitud de la base media de un trapecio isósceles, si las diagonales forman 106º y tienen por longitud 5m c/u.",
+      "alternatives": [
+        "3",
+        "4",
+        "6",
+        "8",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-y-cuadrilateros-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS Y CUADRILÁTEROS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un polígono convexo de n lados, el número de diagonales excede al número de vértices en 18. Halle n.",
+      "alternatives": [
+        "6",
+        "8",
+        "9",
+        "7",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/geometria-callao-examen-admision.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un polígono regular ABCDEF... m∠ABD=90°. Halle el número de diagonales de dicho polígono.",
+      "alternatives": [
+        "8",
+        "12",
+        "6",
+        "10",
+        "9"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/geometria-callao-examen-admision.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos lados tiene un polígono convexo, si al duplicar su número de lados, el número de diagonales aumenta en 84?",
+      "alternatives": [
+        "9 lados",
+        "12 lados",
+        "10 lados",
+        "8 lados",
+        "11 lados"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/geometria-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cuadrado de la medida del ángulo exterior de un polígono regular es igual a los 5/2 de la medida del ángulo interior. Determina su número de lados.",
+      "alternatives": [
+        "19",
+        "18",
+        "15",
+        "17",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/matematicas-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIOS UNCP 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DEL CENTRO DEL PERÚ PDF TEMAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene 54 diagonales en un polígono regular, determine el ángulo exterior de dicho polígono.",
+      "alternatives": [
+        "10°",
+        "20°",
+        "30°",
+        "40°",
+        "70°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/1ro-2do-experiencia-de-aprendizaje-integrada-2-aprendo-en-casa-primer-segundo-grado-de-secundaria-actividades-resueltas-web-tv-radio-word-descargas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNAH 2027 INGRESO UNIVERSIDAD AUTÓNOMA DE HUANTA CLAVES – RESPUESTAS – PRUEBA DE ENSAYO – SIMULACIÓN RESUELTA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un polígono regular, el doble del número de diagonales es 9 veces el número de lados. Hallar la medida de su ángulo interno.",
+      "alternatives": [
+        "180°",
+        "120°",
+        "135∘",
+        "150∘",
+        "105°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/valores-y-vectores-propios-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA III UNCP ADMINISTRACIÓN, CONTABILIDAD Y ECONOMÍA INGRESO UNIVERSIDAD DEL CENTRO PREGUNTAS  2027 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos lados tiene un polígono cuya suma de las medidas de sus ángulos internos y externos es 1980°?",
+      "alternatives": [
+        "8",
+        "11",
+        "13",
+        "17",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/10/mapeos-definidos-por-funciones.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNAMAD 2027 ADMISIÓN UNIVERSIDAD NACIONAL AMAZÓNICA PREGUNTAS RECIENTES PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La medida de un ángulo interior de un polígono regular excede en 20° a la medida del ángulo interior de otro pol í gono regular que tiene tres lados menos. La medida del ángulo interior del primer pol í gono es ______",
+      "alternatives": [
+        "120",
+        "105°.",
+        "140°.",
+        "144°",
+        "110°."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/geometria-vectorial-basica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN CEPREUNAJ SOCIALES RESUELTO (MODELO) INGRESO DIRECTO UNIVERSIDAD 2027 – JULIACA – CLAVES DE RESPUESTAS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las medidas de 8 ángulos internos de un decágono convexo es 1340°. Calcule la medida del ángulo determinado al trazar las bisectrices interiores de los otros dos ángulos.",
+      "alternatives": [
+        "90°",
+        "130°",
+        "100°",
+        "120°",
+        "145°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/cepreuni-2019-ii-tercera-practica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI SOLUCIONARIOS 2026 PDF 2027"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un polígono regular si las mediatrices de dos lados consecutivos forman un ángulo de 30°, entonces el doble del ángulo exterior de dicho polígono es:",
+      "alternatives": [
+        "30º",
+        "50°",
+        "60 º",
+        "90º",
+        "120°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/1ro-2do-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREVI TERCER EXAMEN INGRESO DIRECTO UNIVERSIDAD PRUEBA FINAL CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el polígono cuyo número de diagonales es el doble del número de diagonales de otro polígono que tiene tres lados menos?",
+      "alternatives": [
+        "Pentágono",
+        "Nonágono",
+        "Icoságono",
+        "Decágono",
+        "Dodecágono"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-3ro-4to-actividad-4-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS ECONÓMICAS, FINANCIERAS Y EMPRESARIALES PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA A 2027"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuánto mide un ángulo interno de un polígono regular de 18 lados?",
+      "alternatives": [
+        "90°",
+        "72°",
+        "144°",
+        "108°",
+        "160°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué polígono tiene 44 diagonales ?",
+      "alternatives": [
+        "Hexágono",
+        "Endecágono",
+        "Triángulo",
+        "Icoságono"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la relación entre el ángulo interior y central de un polígono regular es como 3 a 2, hallar el número de lados del polígono.",
+      "alternatives": [
+        "3",
+        "2",
+        "5",
+        "4",
+        "7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un polígono regular, el doble de número de diagonales es 5 veces del número de lados, luego, la medida de su ángulo interior es:",
+      "alternatives": [
+        "120°",
+        "135°",
+        "180°",
+        "105°",
+        "95°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el número de lados de un polígono en el cual la diferencia de su número de diagonales y el número de ángulos rectos a que equivale la suma de sus ángulos interiores, es 19.",
+      "alternatives": [
+        "12",
+        "8",
+        "13",
+        "14",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se triplica el número de lados de un polígono, la suma de sus ángulos internos queda quintuplicada. ¿Cómo se llama dicho polígono?.",
+      "alternatives": [
+        "Octágono",
+        "Decágono",
+        "Cuadrilátero",
+        "Triángulo",
+        "Pentágono"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la suma de ángulos internos de aquel polígono que tiene tantas diagonales como número de lados.",
+      "alternatives": [
+        "540°",
+        "480°",
+        "750°",
+        "720°",
+        "360°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos lados tiene el polígono en el cual al aumentar su número de lados en tres; su número total de diagonales aumenta en 15?",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En qué polígono regular, la medida de uno de sus ángulos interiores es igual al triple de uno de sus ángulos exteriores?",
+      "alternatives": [
+        "Hexágono",
+        "Pentágono",
+        "Octágono",
+        "Decágono",
+        "Nonágono"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Encontrar el número de lados de un polígono, si su número de diagonales es igual a siete veces su número de lados.",
+      "alternatives": [
+        "18",
+        "20",
+        "16",
+        "15",
+        "17"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ángulo central de un polígono regular mide 72°, encontrar su número de diagonales.",
+      "alternatives": [
+        "8",
+        "12",
+        "15",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el número de lados de un polígono, si la suma de las medidas de sus ángulos interiores es igual a seis veces la suma de las medidas de sus ángulos exteriores.",
+      "alternatives": [
+        "12",
+        "16",
+        "14",
+        "18",
+        "20"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos lados tiene un polígono regular cuyo ángulo interior mide 144°?",
+      "alternatives": [
+        "7",
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de diagonales de un polígono, más el número de vértices, más el número de ángulos interiores es igual a nueve veces el número de lados. Hallar el número de lados.",
+      "alternatives": [
+        "14",
+        "17",
+        "16",
+        "15",
+        "18"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cada lado de un polígono regular mide 6 y el perímetro equivale al número que expresa el total de diagonales, en centímetros. Hallar la medida de un ángulo central.",
+      "alternatives": [
+        "8º",
+        "12º",
+        "18º",
+        "24º",
+        "30º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de ángulos rectos a que equivale la suma de los ángulos internos de un polígono cuyo número de diagonales es igual al número de sus ángulos internos.",
+      "alternatives": [
+        "8",
+        "9",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las medidas de los ángulos interiores, más la suma de las medidas de los ángulos exteriores de un polígono es igual a 720°. Calcular su número de lados.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de diagonales de un polígono es 275. Encontrar su número de lados.",
+      "alternatives": [
+        "22",
+        "15",
+        "30",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de diagonales de un polígono es igual al número de ángulos llanos que contiene la suma de las medidas de sus ángulos interiores. Hallar el número de lados.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "12",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Encontrar el número de lados de un polígono, en el cual de cuatro vértices consecutivos se pueden trazar 29 diagonales.",
+      "alternatives": [
+        "9",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde uno de los vértices de un polígono se trazan 64 diagonales, encontrar el número de lados.",
+      "alternatives": [
+        "67",
+        "64",
+        "68",
+        "72",
+        "62"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las medidas de los ángulos interiores de un polígono es igual a 1080°, hallar el número de diagonales.",
+      "alternatives": [
+        "12",
+        "18",
+        "20",
+        "24",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la suma de las medidas de los ángulos interiores de un polígono, si la diferencia de su número de diagonales y su número de vértices es igual a 25.",
+      "alternatives": [
+        "1400°",
+        "1440°",
+        "1450°",
+        "1550°",
+        "1540°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un polígono de “n” lados, de cuatro vértices consecutivos se trazan “3n” diagonales. Calcular “n”.",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "12",
+        "15"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma del número de lados y del número de diagonales de un polígono es igual a 435. Encontrar el número de lados.",
+      "alternatives": [
+        "27",
+        "32",
+        "30",
+        "28",
+        "29"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La mediana de un trapecio mide 10, las longitudes de los lados no paralelos suman 18. Encontrar el perímetro del trapecio.",
+      "alternatives": [
+        "20",
+        "28",
+        "36",
+        "38",
+        "42"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Uno de los ángulos interiores de un trapecio isósceles mide 45°, su base menor mide 6 y la altura del trapecio mide 4. Calcular la longitud de la base mayor.",
+      "alternatives": [
+        "10",
+        "12",
+        "14",
+        "18",
+        "20"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Encontrar la relación de las bases de un trapecio, la relación de la mediana y del segmento que une los puntos medios de las diagonales es de 3 a 2. En un trapecio isósceles, sus lados no paralelos y su base menor son congruentes, si la medida de uno de los ángulos interiores es 60° y la base mayor mide 12. Encontrar la longitud de la base menor.",
+      "alternatives": [
+        "4",
+        "6",
+        "7",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El lado de un cuadrado es el cuádruplo del lado de un rombo, la suma de los perímetros de los dos cuadriláteros es 80. Encontrar el perímetro del cuadrado.",
+      "alternatives": [
+        "20",
+        "32",
+        "40",
+        "42",
+        "64"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las distancias de los vértices de un paralelogramo a una recta exterior es 84. Calcular la distancia del centro del paralelogramo a la recta exterior.",
+      "alternatives": [
+        "41",
+        "28",
+        "18",
+        "21",
+        "24"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un trapecio ABCD cuyas diagonales se cortan perpendicularmente; si la base mayor AD es igual a la diagonal AC e igual a 4 cm. Calcular la longitud de la base menor BC , BD= 3 cm.",
+      "alternatives": [
+        "1 cm",
+        "2 cm",
+        "3 cm",
+        "4 cm",
+        "5 cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un trapecio se cumple que el segmento que une los puntos medios de las diagonales y la mediana están en relación de 3 a 5. Calcule la relación de sus bases.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un romboide ABCD; AB=12m, BC=16m . Se traza la bisectriz interior del ángulo A, la cual intersecta a BC en E y a la prolongación de DC en F; si se traza desde M punto medio de EF un rayo paralelo a CD, interceptado a AD en N. Hallar la longitud del segmento MN .",
+      "alternatives": [
+        "12 cm",
+        "20 cm",
+        "18 cm",
+        "14 cm",
+        "16 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cual es el polígono regular, donde su apotema es la mitad de su lado?.",
+      "alternatives": [
+        "Hexágono",
+        "Pentágono",
+        "Cuadrado",
+        "Octógono",
+        "Nonágono"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poligonos-regulares-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el número de diagonales de un polígono regular ABCDE... sabiendo que las mediatrices de los lados AB y DE forman un ángulo de 60º.",
+      "alternatives": [
+        "90",
+        "105",
+        "120",
+        "135",
+        "150"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poligonos-regulares-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un prisma oblicuo de siete caras. Calcule la suma de ángulos internos de la base del prisma.",
+      "alternatives": [
+        "540°",
+        "900°",
+        "840°",
+        "720°",
+        "680°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un polígono convexo y equiángulo ABCDEF … las bisectrices de los ángulos ABC y DEF determinan un ángulo congruente con un ángulo del polígono. Calcule el número de diagonales del polígono.",
+      "alternatives": [
+        "5",
+        "9",
+        "14",
+        "20",
+        "27"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-algebra-2020.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA 2 CE PREUNI CLAVES SOLUCIONADA 2025-2 "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de diagonales de aquel polígono regular cuya suma de la medida de un ángulo interno con un ángulo externo es 10 veces sus número de lados.",
+      "alternatives": [
+        "115",
+        "145",
+        "135",
+        "125",
+        "155"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/geometria-plana-y-del-espacio-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNI RESUELTA– INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La base menor de un trapecio mide 3 m y los lados no paralelos, 1 m y 5 m. Calcule la longitud de la base mayor sabiendo que su medida es un número entero.",
+      "alternatives": [
+        "6 m",
+        "5 m",
+        "8 m",
+        "7 m",
+        "9 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cuadrilateros-ejercicios-resueltos_31.html",
+      "sourceName": "matematicasn.blogspot.com — PARALELOGRAMOS TRAPECIOS RECTÁNGULOS CUADRADO ROMBOS EJEMPLOS Y EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cada lado de un polígono regular mide 6 m y el perímetro equivale al número que expresa el total de diagonales expresado en metros (m). Halle la medida de un ángulo externo.",
+      "alternatives": [
+        "30°",
+        "25°",
+        "24°",
+        "36°",
+        "18°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/3ro-4to-actividad-6-experiencia-7-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si desde los vértices A, C y F de un polígono regular ABCDEFG... se trazan en total 138 diagonales, entonces la medida de uno de los ángulos exteriores del polígono, es",
+      "alternatives": [
+        "7,0°",
+        "7,2°",
+        "7,5°",
+        "9,0°",
+        "12,0°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/01/examen-de-geometria-resuelto-pdf-unmsm.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cada lado de un polígono regular mide 3cm. Si su perímetro equivale al número total de diagonales, ¿cuánto mide dicho perímetro?",
+      "alternatives": [
+        "21 cm",
+        "18 cm",
+        "27 cm",
+        "24 cm",
+        "15 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/geometria-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos lados tiene el polígono cuyo número de diagonales es mayor que 55, pero menor que 75?",
+      "alternatives": [
+        "15",
+        "12",
+        "13",
+        "14",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/segunda-prueba-resuelta-de-geometria.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un paralelogramo ABCD, P es un punto de AC y Q en la prolongación de DP tal que ABQC es un trapecio isósceles   BQ//AC . Halle m ∢ APQ .",
+      "alternatives": [
+        "60°",
+        "75°",
+        "45°",
+        "90°",
+        "80°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-13-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un romboide ABCD se traza la altura BH (H en AD). Si la longitud del inradio del triángulo AHB es 1 cm y el cuadrilátero HBCD es circunscriptible a una circunferencia cuyo radio mide 3 cm, halle HD.",
+      "alternatives": [
+        "5 cm",
+        "3 cm",
+        "4 cm",
+        "6 cm",
+        "2 cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-13-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un trapecio ABCD (BC//AD) se ubica el punto P en AD tal que PBCD es un paralelogramo. Si el perímetro de dicho paralelogramo es igual a 100, calcule la longitud de la base media del trapecio. (AD=CD)",
+      "alternatives": [
+        "25",
+        "80",
+        "60",
+        "90",
+        "50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-13-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un polígono regular, se pueden trazar desde 4 vértices consecutivos 17 diagonales. Calcule la medida del ángulo externo.",
+      "alternatives": [
+        "45°",
+        "60°",
+        "75°",
+        "54°",
+        "30°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las medidas de dos ángulos internos de un triángulo es 110 y su diferencia es 10. Calcula la medida del menor ángulo interno de este triángulo.",
+      "alternatives": [
+        "10°",
+        "20°",
+        "30°",
+        "40°",
+        "50°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la suma de los ángulos internos de un polígono es 1260°,¿cuántas diagonales tiene el polígono?",
+      "alternatives": [
+        "90",
+        "20",
+        "27",
+        "35",
+        "54"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En qué polígono, el número de diagonales es igual al número de lados?",
+      "alternatives": [
+        "Pentágono",
+        "Icoságono",
+        "Hexágono",
+        "Decágono",
+        "Endecágono"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el número de lados de aquel polígono en el cual su número de lados más su número de diagonales es 28.",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En qué polígono se cumple que el número de sus diagonales excede al número de sus vértices en 7?",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "11",
+        "13 EJERCICIOS CON RESPUESTAS PROBLEMA 1 : ¿Cuántos lados tiene el polígono cuya suma de ángulos internos y externos es 7200°?"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poligonos-ejercicios-resueltos-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — POLIGONOS CONCEPTOS EJEMPLOS Y PROBLEMAS RESUELTOS PDF PRIMARIA SECUNDARIA Y PRE UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se colocan monedas, una por vértice, en todos los vértices de un polígono regular de 10 lados. Dos jugadores retiran alternadamente una, dos o tres monedas, en estos últimos casos deben estar en vértices consecutivos. Gana el que retire la última moneda. Si tuviera que jugar, ¿para ganar, qué turno escogería y cuántas monedas retiraría en su primer turno?",
+      "alternatives": [
+        "primero; 2 monedas.",
+        "primero; 1 ó 3 monedas.",
+        "segundo; 2 monedas.",
+        "segundo; lo mismo que el primero en su turno.",
+        "segundo; diferente a lo que retiró el primero en su turno."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/problemas-de-estrategias-logicas-ejemplos-preguntas-resueltas-razonamiento-matematico-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — JUEGOS LÓGICOS DE ESTRATEGIAS EJERCICIOS RESUELTOS DE RAZONAMIENTO Y SITUACIONES LÓGICAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "( I ) Gauss ingresó en el colegio Carolino donde conoció la obra de Euler.\n( II ) Cuando dejó el colegio, aún no había decidido si se dedicaría a las matemáticas o a la fisiología.\n( III ) Gauss consiguió la construcción de un polígono regular de 17 lados con regla y compás. ( IV ).............................\n( V ) Posteriormente, Gauss descubrió el teorema de la teoría de los números.",
+      "alternatives": [
+        "En su tesis, Gauss dio la primera demostración del teorema fundamental del álgebra.",
+        "Son muchas las anécdotas que muestran la precocidad intelectual de Gauss.",
+        "Gauss agrupó los números en 50 parejas de números que sumaban 01, para solucionar.",
+        "Algunos consideran este hecho fundamental para que Gauss se decidiera por las matemáticas.",
+        "A partir de allí, las matemáticas dejan de ser el único objetivo y se interesa por la astronomía."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2016/08/examen-de-admision-uni-2016-ii.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Examen de Admisión UNI 2016 - II Razonamiento Verbal"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un trapecio isósceles ABCD. Si AB=5, BC=4 y AD=10.\nCalcule el área del trapecio.",
+      "alternatives": [
+        "25u²",
+        "26u²",
+        "27u²",
+        "28u²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geometria-beca-18-formulario-ejemplos-resueltos-temario-pronabec-del-prospecto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA BECA 18 FORMULARIO CON EJEMPLOS RESUELTOS DEL TEMARIO PRONABEC PRUEBA UNICA NACIONAL PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La medida del área del trapecio en centímetros cuadrados, es:",
+      "alternatives": [
+        "57/5",
+        "54/5",
+        "56/5",
+        "58/5",
+        "52/5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Uniendo los puntos medios de los lados de un trapecio, se forma un cuadrado de 5𝑢 de lado. Calcular el área del trapecio.",
+      "alternatives": [
+        "50𝑢 2",
+        "40 𝑢 2",
+        "30 𝑢 2",
+        "50√2 𝑢 2",
+        "25√2𝑢 2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/endomorfismos-y-diagonalizacion-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA V UNCP AGRARIAS SATIPO TARMA INGRESO UNIVERSIDAD DEL CENTRO PREGUNTAS  2027 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el perímetro de un rombo, cuyas diagonales miden 32cm y 24cm.",
+      "alternatives": [
+        "108 cm",
+        "56 cm",
+        "112 cm",
+        "80 cm",
+        "100"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las diagonales de un trapecio son perpendiculares y miden 6 m y 8 m. La base mayor mide 8 m. La medida de la mediana del trapecio es",
+      "alternatives": [
+        "6 m.",
+        "3 m.",
+        "3,5 m.",
+        "5 m.",
+        "4 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/5to-actividad-2-dpcc-experiencia-7-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA UNJFSC ORDINARIO INGRESO UNIVERSIDAD HUACHO 2026 –  PDF PREGUNTAS CLAVES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el perímetro de un rombo cuyas diagonales tienen longitudes de 24 y 10 cm.",
+      "alternatives": [
+        "49 cm",
+        "51 cm",
+        "52 cm",
+        "53 cm",
+        "54 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-8-experiencia-4-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área de un trapecio rectángulo, cuyos lados no paralelos miden 15 u y 17 u, y la base menor mide 6 u.",
+      "alternatives": [
+        "120 u 2",
+        "150 u 2",
+        "140 u 2",
+        "130 u 2",
+        "110 u 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-8-experiencia-4-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las diagonales de un rombo miden 12 y 16 cm. Halle la distancia que hay entre dos lados opuestos:",
+      "alternatives": [
+        "9,4 cm",
+        "9,8 cm",
+        "9,7 cm",
+        "9,6 cm",
+        "9,5 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/examen-admision-villareal-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO VILLARREAL 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNFV 2026 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el trapecio ABCD en su lado lateral CD se ubica el punto N, tal que 3(CN)=2(ND). Si el producto de la longitud de BC por la distancia de N a AD es 60 u, además m ∢ ABN=90° y m ∢ BCD=2m ∢ BAD, entonces el área del trapecio, en u ² , es",
+      "alternatives": [
+        "115",
+        "220",
+        "225",
+        "325",
+        "625"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la medida del ángulo que forman las diagonales de un trapecio isósceles; si una diagonal es el doble de la base media.",
+      "alternatives": [
+        "30°",
+        "37°",
+        "45°",
+        "53°",
+        "60°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/1ro-2do-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREVI TERCER EXAMEN INGRESO DIRECTO UNIVERSIDAD PRUEBA FINAL CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las diagonales de un rombo miden 12 y 16cm. Halle la distancia que hay entre dos lados opuestos:",
+      "alternatives": [
+        "9,4 cm",
+        "9,8 cm",
+        "9,7 cm",
+        "9,6 cm",
+        "9,5 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/geometria-examen-admision-villarreal.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El perímetro de un cuadrilátero ABCD circunscrito a una circunferencia es 16 m y AB=3 m. Halle CD.",
+      "alternatives": [
+        "4 m",
+        "5 m",
+        "6 m",
+        "7 m",
+        "8 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-13-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área de un cuadrilátero bicéntrico de lados Iguales (lado = 2cm)",
+      "alternatives": [
+        "2 cm²",
+        "4 cm²",
+        "8 cm²",
+        "16 cm²",
+        "32 cm²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-figuras-por-formulas.html",
+      "sourceName": "matematicasn.blogspot.com — RESOLUCIÓN DE FIGURAS EN TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un cuadrado ABCD, se construye externamente un triángulo rectángulo AEB. Si EB=14 y AE=10, calcula ED.",
+      "alternatives": [
+        "26",
+        "24",
+        "25",
+        "21"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/06/geometria-admision-catolica-pucp-examen.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA ADMISIÓN CATÓLICA PUCP 2022 2023 EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene el cuadrilátero ABCD donde AB=BC, BD=AC y m CAD = 90º. Calcule m BDA.",
+      "alternatives": [
+        "37º",
+        "45º",
+        "60º",
+        "53º",
+        "30º"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/triangulos-ii-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — TRIÁNGULOS II EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un icoságono regular ABC… y un pentadecágono regular ABMN… están ubicados en distintos semiplanos respecto a Calcule:",
+      "alternatives": [
+        "72º",
+        "36º",
+        "24º",
+        "69º",
+        "60º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-y-cuadrilateros-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS Y CUADRILÁTEROS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un decágono convexo, calcule el máximo número de ángulos internos de medida 100º.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-y-cuadrilateros-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS Y CUADRILÁTEROS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cuadrado ABCD de centro “O”. en la región exterior relativa al lado AB se ubica el punto Q de modo que la luego se traza . Siendo , calcule la",
+      "alternatives": [
+        "30º",
+        "15º",
+        "16º",
+        "26,5º",
+        "18,5º"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la longitud del lado de un pentágono regular, cuya diagonal mide .",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-regulares-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS REGULARES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una misma circunferencia se inscriben un pentágono regular, un hexágono regular y un decágono regular, cuyos lados miden , y respectivamente. Calcule Si:",
+      "alternatives": [
+        "10",
+        "20",
+        "25",
+        "40",
+        "50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-regulares-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS REGULARES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un rectángulo de lados 5 y 10 m. se aumenta cada dimensión en 2 m. ¿En cuánto varía el perímetro?",
+      "alternatives": [
+        "8 m.",
+        "6 m.",
+        "10 m.",
+        "4 m."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el lado de un cuadrado cuyo perímetro mide 56 centímetros.",
+      "alternatives": [
+        "12 cm.",
+        "13 cm.",
+        "14 cm.",
+        "28 cm."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el lado de un rombo cuyo perímetro mide 52 centímetros.",
+      "alternatives": [
+        "13 cm.",
+        "13,5 cm.",
+        "14 cm.",
+        "14,5 cm."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El contorno de un jardín tiene la forma de un trapecio cuyas diagonales miden 16m y 18m. Si Milagros y un niño se encuentran en los puntos medios de los lados no paralelos de dicho jardín, ¿cuál es la máxima longitud entera de la línea recta que los separa?",
+      "alternatives": [
+        "16m",
+        "17m",
+        "18m",
+        "15m",
+        "20m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/03/unsm-solucionario-examen-admision-universidad-nacional-de-san-martin-claves-respuestas-prueba-resuelta-descarga-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE SAN MARTÍN 2023 PRUEBA UNSM DE INGRESO DESARROLLADA CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cuadrado ABCD, cuyo lado mide 4 cm, las diagonales se intersecan en \"O\". Si se traza la mediatriz de OC que interseca a la prolongación de AD en E; halle CE.",
+      "alternatives": [
+        "2√7 cm",
+        "2√5 cm",
+        "3√3 cm",
+        "3√5 cm",
+        "5 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/geometria-callao-examen-admision.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un trapecio ABCD, se traza BD de tal manera que la m∠CBD=35º, m∠BCD=110º y AD=2BC=2CD. Calcule la medida del ángulo BAD.",
+      "alternatives": [
+        "40º",
+        "45º",
+        "50º",
+        "55º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geometria-beca-18-formulario-ejemplos-resueltos-temario-pronabec-del-prospecto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA BECA 18 FORMULARIO CON EJEMPLOS RESUELTOS DEL TEMARIO PRONABEC PRUEBA UNICA NACIONAL PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un pentágono convexo ABCDE, AB es perpendicular a BC , BC es perpendicular a CD , m ∠ D=140° , m ∠ A=170° . Calcular la m ∠ E",
+      "alternatives": [
+        "40º",
+        "50º",
+        "60º",
+        "70º",
+        "80º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/geometria-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un trapezoide ABCD, se tiene: m ∠ A= 60°; AB = 16 √ 3 cm, CD= 40 √ 2 cm, y m ∠ D= 45°. Hallar la distancia del punto medio M de BC a AD.",
+      "alternatives": [
+        "16 cm",
+        "18 cm",
+        "32 cm",
+        "36 cm",
+        "64 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/geometria-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar el perímetro del triángulo que se forma al unir los puntos medios de tres lados consecutivos de un hexágono inscrito en una circunferencia de 6𝑐𝑚 de radio.",
+      "alternatives": [
+        "3√3+9 𝑐𝑚",
+        "9√3+6 𝑐𝑚",
+        "6√3+9 𝑐𝑚",
+        "12√3+9 𝑐𝑚",
+        "15√3+9 𝑐𝑚"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/ept-1ro-2do-actividad-1-experiencia-5-resuelta-aprendo-en-casa-educacion-para-el-trabajo-tarea-web-radio-reto-tv-primero-segundo-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN CPU FAUSTINO INGRESO DIRECTO UNIVERSIDAD HUACHO PRUEBA DE ENSAYO 2027 – PREGUNTAS CLAVES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene que los ángulos internos de un cuadrilátero son proporcionales a los números 18; 12; 9 y 15.\n¿Cuál es la medida del mayor de dichos ángulos?",
+      "alternatives": [
+        "100°",
+        "180°",
+        "160°",
+        "120°",
+        "60°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Examen-de-admision-universidad-nacional-del-altiplano-unap-ingenierias-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNA 2027 UNIVERSIDAD DEL ALTIPLANO EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las bases de un trapecio miden 3 y 11, sus diagonales miden 13 y 15. La altura del trapecio es:",
+      "alternatives": [
+        "13",
+        "10",
+        "12",
+        "14",
+        "9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unica-pdf-ica.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN LUIS GONZAGA 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNICA 2026 TEMARIO VACANTES PROSPECTO ESTRUCTURA PUNTAJES CRONOGRAMA ÁREAS A B C PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el número total de diagonales de un nonágono.",
+      "alternatives": [
+        "25",
+        "26",
+        "27",
+        "28",
+        "29"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-8-experiencia-4-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el plano cartesiano, se tiene un romboide ABCD. Determine las coordenadas del vértice C si\nA(1; 4), B(5; 7) y D(3; 2).",
+      "alternatives": [
+        "(3; 4)",
+        "(7; 5)",
+        "(2; 1)",
+        "(3; 1)",
+        "(4; 2)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-8-experiencia-4-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un polígono convexo de n lados, se disminuye en 3 al número de lados, obteniéndose (n+3) diagonales menos, calcule el valor de n.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/5to-actividad-5-experiencia-7-resuelta-matematicas-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un terreno de cultivo está determinado por un trapecio, los linderos que son paralelos miden 2 m y 10 m y los otros dos linderos miden 5 m y 7 m. Para facilitar el riego del terreno en época de cultivo, el dueño decide construir un canal de regadío que conecte los puntos medios de los linderos paralelos. ¿Cuál es la longitud del canal?",
+      "alternatives": [
+        "√21 m",
+        "2√21 m",
+        "3√21 m",
+        "2√22 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/geometria-semana-9-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 9 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La altura del trapecio, en centímetros, es:",
+      "alternatives": [
+        "15/7",
+        "13/7",
+        "12/7",
+        "12/5",
+        "13/5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El perímetro del rombo ABCD en unidades es:",
+      "alternatives": [
+        "20",
+        "24",
+        "28",
+        "32",
+        "38"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La longitud de la mediana del trapecio ABPD en unidades es:",
+      "alternatives": [
+        "7,5",
+        "4,5",
+        "3,5",
+        "2,5",
+        "1,0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados dos polígonos regulares, tales que la suma total de sus medidas angulares internas es 2340∘ y la diferencia de sus números de diagonales es 21, calcular la medida, en grados sexagesimales, del ángulo interno del polígono de menor número de lados.",
+      "alternatives": [
+        "135",
+        "144",
+        "900/11",
+        "800/9",
+        "900/7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-untels-admision-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO  UNTELS 2027 RESUELTO INGRESO UNIVERSIDAD NACIONAL TECNOLÓGICA DEL SUR – VILLA EL SALVADOR PDF CLAVES DE RESPUESTAS – SOLUCIONARIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un terreno tiene forma de un octógono regular y tiene un perímetro de 24( √ 2 −1) u. Determine la distancia desde el centro de la circunferencia circunscrita al terreno hacia un lado cualquiera del terreno (u).",
+      "alternatives": [
+        "1/2",
+        "5/2",
+        "3/2",
+        "7/2",
+        "9/2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si ABCDEF es un hexágono regular y sobre AB se toma un punto R, que al ser unido con E determina un segmento secante a FC en el punto Q. Si, además, m ∠ FAQ=5 θ y m ∠ ERB=10 θ , entonces el valor de θ es",
+      "alternatives": [
+        "12",
+        "10",
+        "14",
+        "16",
+        "8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cuadrilátero ABCD, las diagonales miden AC= 17 cm y BD= 15 cm; sea M punto medio de AC y F punto medio de BD; los ángulos interiores de B y D miden 90°. Calcule MF en cm.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/examen-uni-resuelto-geometria-admision.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRIA SEGUNDA PRUEBA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El menor ángulo de un paralelogramo mide a y sus diagonales miden 2m y 2n. Calcule su área. (m > n)",
+      "alternatives": [
+        "(m² – n²)tan(α)",
+        "(m² – n²)cot(α)",
+        "(m² – n²)sec(α)",
+        "(m² – n²)csc(α)",
+        "(m² – n²)sen(α)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/razonamiento-trigonometrico-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA UNI DE EXAMEN DE ADMISIÓN UNIVERSIDAD DE INGENIERÍA SOLUCIONADO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el lado de un rombo cuyo perímetro mide 54 centímetros.",
+      "alternatives": [
+        "13 cm.",
+        "13,5 cm.",
+        "14 cm.",
+        "14,5 cm.",
+        "16,5 cm."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/01/razonamiento-matematico-aptitud-logica-psicotecnico-solucionario-examen-admision-universidad-institutos-superiores-tecnicos-escuela-pnp-prueba-resuelta-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuánto mide el ángulo interno de un icoságono?",
+      "alternatives": [
+        "142°",
+        "110∘",
+        "72°",
+        "144°",
+        "162∘"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/endomorfismos-y-diagonalizacion-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA V UNCP AGRARIAS SATIPO TARMA INGRESO UNIVERSIDAD DEL CENTRO PREGUNTAS  2027 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ángulos interiores de un pentágono son proporcionales a 5 números consecutivos. Halla uno de los ángulos del pentágono.",
+      "alternatives": [
+        "72°",
+        "100°",
+        "108°",
+        "90°",
+        "120°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-escuela-naval-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO ESCUELA NAVAL 2027 EXAMEN ADMISIÓN ENP MARINA DE GUERRA DEL PERÚ ESNA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Betty tiene un terreno con forma hexagonal regular de 12√3 m de lado. Betty pide al arquitecto diseñar una casa que ocupe el hexágono que se forma al unir los puntos medios del hexágono original y el resto del terreno estará formado por jardines. ¿Cuál es el perímetro de dichos jardines en metros?",
+      "alternatives": [
+        "36(2√3 + 3)",
+        "120",
+        "723",
+        "32√3",
+        "130"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/tutoria-1ro-2do-actividad-1-experiencia-8-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA B 2026-1 CIENCIAS BÁSICAS SAN MARCOS INGRESO RESPUESTAS PRESENCIAL DESARROLLO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Armando tiene un patio rectangular de dimensiones 8√3 m y 16 m. Él ha decidido construir una piscina, en forma de hexágono regular, que tenga un lado sobre uno de los lados del patio y también que tenga el mayor perímetro posible. Calcule el perímetro de la región ocupada por la piscina.",
+      "alternatives": [
+        "48 m",
+        "64 m",
+        "54 m",
+        "36 m",
+        "42 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-11-dpcc-experiencia-9-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA D 2025-2 ADMINISTRACIÓN MARKETING CONTABILIDAD ECONOMÍA INGRESO UNIVERSIDAD PRUEBA DESARRROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuánto suman los ángulos externos e internos de un icoságono?",
+      "alternatives": [
+        "2800°",
+        "3600°",
+        "4000°",
+        "8200°",
+        "1020°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuánto mide el ángulo externo de un icoságono regular?",
+      "alternatives": [
+        "12°",
+        "16°",
+        "20°",
+        "18°",
+        "32°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuánto mide uno de los ángulos exteriores de un dodecágono regular?",
+      "alternatives": [
+        "15°",
+        "30°",
+        "45°",
+        "22°30’",
+        "20°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas diagonales tiene un endecágono?",
+      "alternatives": [
+        "45",
+        "46",
+        "42",
+        "44",
+        "52"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Encontrar la medida de uno de los ángulos exteriores de un nonágono equiángulo.",
+      "alternatives": [
+        "36°",
+        "40°",
+        "45°",
+        "30°",
+        "60°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tres ángulos interiores de un heptágono convexo miden 110°, 130° y 100°; los otros cuatro ángulos interiores son congruentes. Hallar la medida de uno de estos cuatro ángulos interiores.",
+      "alternatives": [
+        "120°",
+        "140°",
+        "150°",
+        "90°",
+        "135°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un hexágono convexo, tres de sus ángulos interiores son congruentes entre sí y miden 100° cada uno, los otros ángulos interiores también son congruentes. Calcular la medida de uno de estos ángulos congruentes.",
+      "alternatives": [
+        "135°",
+        "120°",
+        "90°",
+        "130°",
+        "140°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las medidas de tres ángulos interiores de un pentágono convexo es igual a 320°, los otros dos ángulos interiores son congruentes. Hallar la medida de uno de estos ángulos.",
+      "alternatives": [
+        "60°",
+        "75°",
+        "105°",
+        "110°",
+        "85°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un hexágono equiángulo ABCDEF, AB = CD = 4, BC = 6. Encontrar AD.",
+      "alternatives": [
+        "5",
+        "14",
+        "16",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un octógono regular ABCDEFGH, encontrar la medida del ángulo formado por las prolongaciones de los lados HA y DC .",
+      "alternatives": [
+        "45°",
+        "30°",
+        "15°",
+        "20°",
+        "60°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si ABCDEF es un hexágono regular, sobre AB se ubica un punto R, que al ser unido con E determina un segmento secante a FC en el punto Q. Si m ∢ FAQ=5 θ y m ∢ ERB=10 θ , calcule el valor de θ .",
+      "alternatives": [
+        "10°",
+        "8°",
+        "12°",
+        "14°",
+        "16°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Uno de los lados de un rectángulo es el doble del otro lado, el perímetro del rectángulo es 90. Encontrar la longitud del mayor lado.",
+      "alternatives": [
+        "20",
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado un terreno cuadrangular , cuyas diagonales miden 80m y 100m respectivamente ; se pregunta el propietario del mismo por la magnitud del perímetro y este contesta que no recuerda bien si la longitud es 370 ó 380. lo más probable , es :",
+      "alternatives": [
+        "380m",
+        "370m",
+        "220m",
+        "160m",
+        "420m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un trapecio ABCD, cuyas bases BC y AD miden 19cm y 27cm respectivamente. Si P es un punto de AD tal que al unir con el punto C resultan dos regiones equivalentes en el trapecio ABCD. Calcule (en cm) la longitud de AP.",
+      "alternatives": [
+        "4",
+        "8",
+        "3",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-de-regiones-cuadrangulares.html",
+      "sourceName": "matematicasn.blogspot.com — ÁREAS DE REGIONES CUADRANGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un romboide ABCD, BC=2AB. La bisectriz de B interseca a la prolongación de CD en Q y la bisectriz de A interseca a BD en M y a BC en P. Si MB=4 cm y PQ=12 cm, halle MD en cm.",
+      "alternatives": [
+        "9",
+        "14",
+        "12",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/semejanza-de-triangulos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SEMEJANZA DE TRIÁNGULOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En dos polígonos regulares la diferencia de los números de diagonales es 36 y las medidas de los ángulos exteriores están en la relación de 4 a 5. Calcule el número de lados de uno de los polígonos.",
+      "alternatives": [
+        "10",
+        "13",
+        "15",
+        "16",
+        "18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-algebra-2020.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA 2 CE PREUNI CLAVES SOLUCIONADA 2025-2 "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La mediana y la base mayor de un trapecio están en la relación de 5 a 7. Si la base menor mide 6 cm, calcule la longitud del segmento que une los puntos medios de las diagonales.",
+      "alternatives": [
+        "5 cm",
+        "3 cm",
+        "4 cm",
+        "2 cm",
+        "6 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/01/examen-de-geometria-resuelto-pdf-unmsm.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el trapecio ABCD, BC//AD, m ∢ A=53°, m ∢ D=45°, AB=10cm y BC=5cm. El valor de AD, en cm, es:",
+      "alternatives": [
+        "17",
+        "18",
+        "19",
+        "21",
+        "22"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/01/examen-de-geometria-resuelto-pdf-unmsm.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un trapecio rectángulo ABCD, la m ∢ ADC=90°, la m ∢ DCB=53° y AD=8. Calcule la longitud del segmento que tiene por extremos los puntos medios de las diagonales de dicho trapecio.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-geometria-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE GEOMETRÍA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un paralelogramo ABCD, P es un punto de AD y Q de AB . Si AP=AQ, m ∢ QPC=90°, BC=13 m y BQ=3 m, halle AQ.",
+      "alternatives": [
+        "3 m",
+        "4 m",
+        "5 m",
+        "6 m",
+        "7 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-13-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean ABCDEF los vértices de un hexágono regular, donde AB=8 m. Halle la distancia del punto de intersección de las diagonales AD y BF a la diagonal AC .",
+      "alternatives": [
+        "1 m",
+        "2 m",
+        "4 m",
+        "5 m",
+        "2,5 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-15-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luis tiene un jardín determinado por un trapecio ABCD (AD//BC) y desea cercarlo.\nSi m ∢ BAD+m ∢ CDA = 90°, AB=6 m, CD=8 m y BC=6 m, ¿cuántos metros lineales de cerca necesita para cercar el jardín?",
+      "alternatives": [
+        "32 m",
+        "40 m",
+        "24 m",
+        "36 m",
+        "42 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-15-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un rombo ABCD, P es un punto de AC y Q en la prolongación de BP (Q en el exterior del rombo). Si m ∢ QDA=m ∢ ACB y QD=PB, halle m ∢ APQ.",
+      "alternatives": [
+        "30°",
+        "37°",
+        "53°",
+        "60°",
+        "75°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-15-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de un rectángulo ABCD es 40m2 siendo el lado mayor doble que el lado menor. Los vértices de este rectángulo están articulados, de manera que se pueden modificar los ángulos internos para formar un paralelogramo. Si luego de la modificación, una diagonal resulta ser 2√35m . Halle su nueva área, en m².",
+      "alternatives": [
+        "30√3",
+        "20√2",
+        "20√5",
+        "72√3",
+        "20√3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-figuras-por-formulas.html",
+      "sourceName": "matematicasn.blogspot.com — RESOLUCIÓN DE FIGURAS EN TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula la suma de los ángulos interiores de un decágono.",
+      "alternatives": [
+        "180°",
+        "1260°",
+        "540°",
+        "1440°",
+        "900°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas diagonales tiene un octágono?",
+      "alternatives": [
+        "14",
+        "20",
+        "27",
+        "35",
+        "44"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luis tiene un terreno de forma rectangular cuya área es 1200 m ² y su diagonal mide 50 m, ¿cuál es el perímetro de dicho terreno?",
+      "alternatives": [
+        "160 m",
+        "140 m",
+        "120 m",
+        "100 m",
+        "180 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuaciones-y-sistemas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES Y SISTEMAS EJERCICIOS RESUELTOS DE SECUNDARIA MATEMÁTICA 4 ESO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan tiene un terreno rectangular cuya diagonal mide 130 m y su perímetro tiene 340 m. Si el metro cuadrado de terreno cuesta 100 soles, ¿cuántos miles de soles recibirá Juan por vender todo su terreno?",
+      "alternatives": [
+        "600",
+        "500",
+        "300",
+        "450",
+        "100"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/08/sistemas-de-ecuaciones-lineales-pdf_3592.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS DE ECUACIONES LINEALES PDF EJERCICIOS DESARROLLADOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un polígono convexo equiángulo ABCDEF. Si AB=8m, CD=6m y DE=10m, halle (en m) BF.",
+      "alternatives": [
+        "8 √ 3",
+        "6 √ 3",
+        "9 √ 3",
+        "2 √ 3",
+        "4 √ 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/segunda-prueba-resuelta-de-geometria.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el interior de un pentágono regular ABCDE, se ubica un punto P tal que DP=AB. Si la medida del ángulo CPD es 66°, calcular la medida del ángulo PAB.",
+      "alternatives": [
+        "41°",
+        "40°",
+        "48°",
+        "55°",
+        "42°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/segunda-prueba-resuelta-de-geometria.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
     }
   ]
 }

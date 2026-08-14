@@ -67,6 +67,311 @@
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
       "sourceName": "Rubiños - Ecología banco de preguntas resueltas de examen de admisión (segunda práctica, pregunta 7, fotoperiodo)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una placa de aluminio de 5 mm de espesor se encuentra en contacto térmico con una placa de oro de 10 mm de espesor. La temperatura exterior de la placa de aluminio es de 20 °C y la del oro es de 30 °C. Calcule aproximadamente, en °C, la temperatura en la superficie de contacto, si la rapidez de transferencia de calor en ambas placas es la misma. Las conductividades térmicas del aluminio y del oro son 238 Wm – 1 K – 1 y 314 Wm – 1 K – 1 , respectivamente.",
+      "alternatives": [
+        "24",
+        "27",
+        "21",
+        "26",
+        "29"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Tercera-prueba-uni-solucionario-examen-admision-universidad-ingenieria-fisica-quimica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA QUÍMICA EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA TERCERA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una placa de estaño de 6 mm de espesor y de 4 cm² de área de sección recta, tiene la misma rapidez de transferencia de calor de una placa de hierro de 10 mm de espesor y de 9 cm² de área de sección recta. Calcule aproximadamente, en °C, la diferencia de las temperaturas exteriores de la placa de hierro, si para el estaño vale 5 °C.\nLas conductividades térmicas son 64 Wm − ¹ K − ¹ y 80,2 Wm − ¹ K − ¹ para el estaño y el hierro, respectivamente.",
+      "alternatives": [
+        "3,96",
+        "5,96",
+        "4,96",
+        "1,96",
+        "2,96"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/fisica-problemas-resueltos-del-examen-de-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SEMINARIO DE FÍSICA PROBLEMAS RESUELTOS TIPO EXAMEN DE ADMISIÓN A LA UNIVERSIDAD NACIONAL DE INGENIERÍA UNI PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la reflexión y refracción de la luz:\nI. El principio de Fermat del tiempo mínimo establece que entre todas las trayectorias posibles que podría seguir la luz para ir de un punto a otro, toma la que requiere el tiempo más corto.\nII. La frecuencia de la luz cambia en una reflexión difusa.\nIII. La refracción de la luz se produce debido a que su velocidad no cambia cuando pasa de un medio a otro.\nLA SECUENCIA DE VERDAD CORRECTA ES:",
+      "alternatives": [
+        "VVF",
+        "FVF",
+        "VVV",
+        "VFF",
+        "FVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/ecuaciones-diferenciales-exactas-con.html",
+      "sourceName": "matematicasn.blogspot.com — TERCER SUMATIVO CEPUNT SALUD ÁREA A INGRESO DIRECTO UNIVERSIDAD RESUELTO CLAVES DE RESPUESTAS PREGUNTAS 2027 PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El autor de texto da cuenta:",
+      "alternatives": [
+        "Del contenido de tres principios ópticos.",
+        "Del fundamento de la óptica geométrica.",
+        "De la construcción de la teoría ondulatoria.",
+        "Del desarrollo histórico de la óptica hasta 1657.",
+        "De la forma de propagación de la luz infrarroja."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-esan-examen-admision-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO ESAN 2027 EXAMEN ADMISIÓN UNIVERSIDAD TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica la alternativa que presenta la secuencia correcta, luego de determinar si cada proposición es verdadera (V) o falsa (F).\nI) La transferencia de calor por convección se produce incluso en el vacío.\nII) En el proceso de transferencia de calor por conducción entre dos cuerpos, es necesario el contacto entre ellos.\nIII) En el proceso de transferencia de calor por convección en un fluido, el calor se transfiere debido al movimiento del fluido.",
+      "alternatives": [
+        "VFF",
+        "FFV",
+        "VVV",
+        "FVF",
+        "FVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/01/conductividad-termica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf-transferencia-de-calor-por-conduccion-conveccion-y-radiacion.html",
+      "sourceName": "matematicasn.blogspot.com — CONDUCCIÓN TÉRMICA EJERCICIOS RESUELTOS PDF TRANSFERENCIA POR CONVECCIÓN – RADIACIÓN  – CONDUCTIVIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al mecanismo de transferencia de calor por convección se propone que:\nI) Se produce únicamente en los líquidos.\nII) No requiere una diferencia de temperaturas.\nIII) Puede ser producido mediante dispositivos mecánicos.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VVF",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/01/conductividad-termica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf-transferencia-de-calor-por-conduccion-conveccion-y-radiacion.html",
+      "sourceName": "matematicasn.blogspot.com — CONDUCCIÓN TÉRMICA EJERCICIOS RESUELTOS PDF TRANSFERENCIA POR CONVECCIÓN – RADIACIÓN  – CONDUCTIVIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si debido a la refracción de la luz, por el cristalino, los haces luminosos convergen detrás de la retina, entonces podemos decir que esta persona padece de",
+      "alternatives": [
+        "miopía.",
+        "astigmatismo.",
+        "hipermetropía.",
+        "presbicia.",
+        "estrabismo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/10/cepre-san-marcos-2019-2-boletin-1-solucionario-2019-II-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA SENSORIAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la verdad (V) o falsedad (F) de las siguientes proposiciones que se pueden desprender de la ecuación de Bernoulli.\nI) Relaciona la presión, la rapidez del fluido y la altura para un flujo de un fluido ideal incomprensible.\nII) No considera las pérdidas de energía debido a la fricción, lo que implica que no hay transferencia de calor dentro o fuera del fluido.\nIII) Solo es aplicable para un flujo estable de un fluido incomprensible y sin fricción interna (viscosidad)",
+      "alternatives": [
+        "VVF",
+        "FVV",
+        "VFV",
+        "VVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una placa de estaño de 6mm de espesor y de 4cm 2 de área de sección recta, tiene la misma rapidez de transferencia de calor de una placa de hierro de 10 mm de espesor y de 9cm 2 de área de sección recta. Calcule aproximadamente, en °C, la diferencia de las temperaturas exteriores de la placa de hierro, si para el estaño vale 5°C.\nLas conductividades térmicas son 64 Wm –1 K –1 y 80,2 Wm –1 K –1 para el estaño y el hierro, respectivamente.",
+      "alternatives": [
+        "3,96",
+        "5,96",
+        "4,96",
+        "1,96",
+        "2,96"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Fisica-problemas-resueltos-de-examen-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una placa de aluminio de 5mm de espesor se encuentra en contacto térmico con una placa de oro de 10 mm de espesor. La temperatura exterior de la placa de aluminio es de 20°C y la del oro es de 30°C. Calcule aproximadamente, en °C, la temperatura en la superficie de contacto, si la rapidez de transferencia de calor en ambas placas es la misma. Las conductividades térmicas del aluminio y del oro son 238Wm –1 K –1 y 314Wm –1 K –1 , respectivamente.",
+      "alternatives": [
+        "24",
+        "27",
+        "21",
+        "26",
+        "29"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Fisica-problemas-resueltos-de-examen-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un rayo de luz incide sobre un espejo con un ángulo de 53°. Hallar la desviación que sufre el rayo.",
+      "alternatives": [
+        "37°",
+        "53°",
+        "74°",
+        "106°",
+        "143°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/reflexion-de-la-luz-ejemplos-problemas-resueltos-formulas-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REFLEXIÓN DE LA LUZ EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un rayo de luz incide sobre una superficie reflectora con un ángulo de 70°. Hallar la desviación que experimenta el rayo de luz.",
+      "alternatives": [
+        "45°",
+        "20°",
+        "30°",
+        "70°",
+        "40°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/reflexion-de-la-luz-ejemplos-problemas-resueltos-formulas-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REFLEXIÓN DE LA LUZ EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La temperatura media del planeta Tierra es:",
+      "alternatives": [
+        "19ºC",
+        "20ºC",
+        "30ºC",
+        "32ºC",
+        "15ºC"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/12/cultura-general-educacion-civica-solucionario-examen-admision-universidad-institutos-superiores-tecnicos-escuela-pnp-prueba-resuelta-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CULTURA GENERAL 2026 PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD INSTITUTOS TÉCNICOS SUPERIORES ESCUELA PNP PRUEBA DE INGRESO RESPUESTAS"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Normalmente los _____________ del Sol llegan a la Tierra dando luz y calor. Cuando las plantas, el suelo, las rocas y los objetos se han calentado, _____________ parte de ese calor a la _____________.",
+      "alternatives": [
+        "rayos - canalizan - flora",
+        "truenos - equilibra - fauna",
+        "relámpagos - reciben - corteza terrestre",
+        "rayos ultravioletas - reintegran - temperatura",
+        "rayos - devuelven - atmósfera"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/razonamiento-verbal-callao-examen-de-admision-universidad-unac-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO VERBAL EXAMEN ADMISIÓN UNIVERSIDAD DEL CALLAO RESUELTO"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El factor que influye en la temperatura favoreciendo la conducción y la evaporación es:",
+      "alternatives": [
+        "La humedad",
+        "La presión atmosférica",
+        "La nubosidad",
+        "La precipitación",
+        "La velocidad de los vientos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/ecologia-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — ECOLOGÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué instrumento sirve para medir la insolación?",
+      "alternatives": [
+        "Barómetro",
+        "Nefoscópio",
+        "Heliógrafo",
+        "Hidrómetro",
+        "Anemómetro"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-tiempo-y-clima-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TIEMPO Y CLIMA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante el día, el aire que está sobre la Tierra se calienta más rápido que el aire que reposa sobre los mares debido a que",
+      "alternatives": [
+        "existe una menor irradiación en el continente que en el mar.",
+        "la irradiación continental es mayor que la del mar.",
+        "los rayos ultravioleta atraviesan directamente la atmósfera.",
+        "la atmósfera es menos densa y absorbe más calor.",
+        "el Sol ha calentado directamente el océano."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-tiempo-y-clima-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TIEMPO Y CLIMA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cantidad de radiación solar absorbida por la superficie terrestre es:",
+      "alternatives": [
+        "342 W/m 2",
+        "168 W/m 2",
+        "70 W/m 2",
+        "200 W/m 2",
+        "102 W/m 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
     }
   ]
 }

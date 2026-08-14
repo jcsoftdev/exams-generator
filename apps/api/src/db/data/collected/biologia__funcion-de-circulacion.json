@@ -1,1 +1,3517 @@
-{ "entries": [] }
+{
+  "entries": [
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los hijos del primer matrimonio de Juan son del grupo sanguíneo A; los de su segundo matrimonio A y B ¿Cuáles serán los grupos sanguíneos de Juan, de su primera y segunda esposa respectivamente?",
+      "alternatives": [
+        "A, B, O",
+        "O, A, AB",
+        "A, O, B",
+        "O, A, B",
+        "AB, O, B"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://biologia-test.blogspot.com/2014/06/p-80-los-hijos-del-primer-matrimonio-de.html",
+      "sourceName": "biologia-test.blogspot.com — P-80 Los hijos del primer matrimonio de Juan son del grupo sanguíneo A ..."
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la unión de un hombre de grupo sanguíneo A heterocigoto con una mujer de grupo sanguíneo B heterocigoto, sus descendientes podrán tener grupos sanguíneos.",
+      "alternatives": [
+        "AB",
+        "AB, A, B y O",
+        "A y B",
+        "A, B y AB",
+        "A, B, y O"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://biologia-test.blogspot.com/2014/06/p-78-de-la-union-de-un-hombre-de-grupo.html",
+      "sourceName": "biologia-test.blogspot.com — P-78 De la unión de un hombre de grupo sanguíneo A heterocigoto con una mujer ..."
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ibrahim, un joven hindú de 26 años, presenta hipertricosis auricular. Se casó con una peruana y quiere saber el porcentaje de su descendencia que presentaría esta característica.",
+      "alternatives": [
+        "Solo el 50 % de sus hijos varones",
+        "El 100 % de sus hijos varones",
+        "El 100 % de sus hijas mujeres",
+        "Solo el 50 % de sus hijas mujeres",
+        "Solo el 25 % de sus hijos varones"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/biologia-examen-resuelto-de-admision-la.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Iván, especialista en invertebrados, estudia, en una población de lombrices de tierra, una mutación que está empezando a diezmarla. Dicha mutación obstaculiza la correcta formación del nefrostoma, lo cual conlleva finalmente a",
+      "alternatives": [
+        "reducir el tamaño de los nefridios, limitando la absorción del agua hacia la sangre de los protonefridios a nefridios en los estados adultos.",
+        "limitar la transformación.",
+        "evitar que los nefridios tengan la capacidad de llevar la hemolinfa al corazón.",
+        "destruir todo el sistema circulatorio, provocando una infección generalizada.",
+        "impedir que se realice la reabsorción de sales y nutrimientos en la sangre."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/Biologia-prueba-deco-resuelta-de-admision-universidad-san-marcos-solucionario-a-b-d-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El sistema circulatorio de mayor eficiencia que logra un adecuado control de la distribución sanguínea es al circulación",
+      "alternatives": [
+        "doble a vasos cerrados.",
+        "simple a vasos abiertos.",
+        "simple a vasos cerrados.",
+        "doble a vasos abiertos."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/biologia-abd-examen-resuelto-deco-san.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El sistema circulatorio de mayor eficiencia que logra un adecuado control de la distribución sanguínea es la circulación",
+      "alternatives": [
+        "doble a vasos cerrados.",
+        "simple a vasos abiertos.",
+        "simple a vasos cerrados.",
+        "doble a vasos abiertos."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/biologia-deco-abd-admision-universidad-san-marcos-examen-resuelto-unmsm-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el corazón, las válvulas separan una cavidad de otra evitando que exista flujo retrógrado. Están situadas en torno a los orificios atrioventriculares y, entre los ventrículos y las arterias de salida. La válvula que separa la aurícula izquierda del ventrículo izquierdo es denominada",
+      "alternatives": [
+        "tricúspide.",
+        "pulmonar.",
+        "mitral.",
+        "aórtica."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/01/biologia-prueba-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN DE BIOLOGÍA RESUELTO DE ADMISIÓN UNIVERSIDAD CON CLAVES Y SOLUCIONES"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al sistema cardiovascular humano, se afirma que:\n1. El orificio auriculoventricular izquierdo se cierra durante la sístole ventricular por la válvula mitral.\n2. La vena cava inferior posee válvula de Eustaquio.\n3. El nodo sinoauricular se ubica a la altura de la desembocadura de la vena cava superior.\n4. La válvula sigmoidea o semilunar de la aorta es una válvula bicúspide.\n5. El nodo auriculoventricular se encuentra situado en las paredes de los ventrículos y transmite los impulsos eléctricos a las fibras del miocardio ventricular.\nSon ciertas",
+      "alternatives": [
+        "1, 2 y 3",
+        "1, 2 y 4",
+        "2, 3 y 5",
+        "2, 4 y 5",
+        "3, 4 y 5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/biologia-unt-examen-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA UNT EXAMEN ADMISIÓN UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al sistema circulatorio, se tiene que:\n1. A la aurícula izquierda llegan las venas pulmonares.\n2. Del ventrículo izquierdo emerge la arteria aorta.\n3. la vena cava inferior posee válvula de Eustaquio.\n4. Las aurículas poseen músculos papilares.\n5. Los ventrículos poseen músculos pectíneos. Son ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "1, 2 y 4",
+        "2, 3 y 4",
+        "2, 4 y 5",
+        "3, 4 y 5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/biologia-unt-examen-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA UNT EXAMEN ADMISIÓN UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al riñón se tiene:\n1. El túbulo contorneado próximal (TCP) es el segmento inicial de la nefrona.\n2. Regula la presión arterial.\n3. Es una glándula mixta.\n4. Produce renina y eritropoyetina.\n5. Regula y mantiene la composición del medio interno.\nSon ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "1, 3 y 5",
+        "2, 3 y 4",
+        "2, 4 y 5",
+        "3, 4 y 5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación al texto es correcto:",
+      "alternatives": [
+        "El pulmón es el órgano principal del sistema cardiovascular.",
+        "Las plaquetas participan en la defensa inmunológica del organismo.",
+        "La circulación en el hombre es cerrada, completa y doble.",
+        "La circulación en el hombre es abierta, completa y doble.",
+        "Las venas que drenan en la vena cava superior son las del abdomen y miembros inferiores."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante la circulación, el corazón recibe a nivel de la aurícula izquierda sangre oxigenada a baja presión proveniente de los pulmones a través de",
+      "alternatives": [
+        "Arterias pulmonares",
+        "Venas cavas",
+        "Venas pulmonares",
+        "Arterias coronarias",
+        "Seno venoso coronario"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/3ro-4to-actividad-1-2-3-ingles-experiencia-5-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son características del sistema cardiovascular, excepto:",
+      "alternatives": [
+        "El primer ruido cardiaco LUB se produce por el cierre de las válvulas tricúspide y bicúspide.",
+        "El ciclo cardiaco dura 8 décimas de segundo y comprende etapas de sístole y diástole.",
+        "El gasto cardiaco es la cantidad de sangre que expulsa cada ventrícula en un minuto.",
+        "La presión arterial máxima o sistólica tiene el valor de 70 a 80 mm Hg.",
+        "La válvula sigmoidea de la arteria aorta presenta el nódulo de Arancio."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-de-razonamiento-logico.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN UNSLG ÁREA A CIENCIAS DE LA SALUD INGRESO UNIVERSIDAD NACIONAL SAN LUIS GONSAGA RESUELTO UNICA PDF MEDICINA 2026"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al sistema cardiovascular, identifica las afirmaciones correctas:\nI. El vértice del corazón está orientado hacia abajo, a la izquierda y adelante.\nII. El tabique interauricular del corazón fetal presenta el agujero de Botal.\nIII. El nódulo sinusal está ubicado en la base del tabique interauricular del corazón.",
+      "alternatives": [
+        "I y III",
+        "II y III",
+        "I, II y III",
+        "Solo I",
+        "I y ll"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-de-razonamiento-logico.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN UNSLG ÁREA A CIENCIAS DE LA SALUD INGRESO UNIVERSIDAD NACIONAL SAN LUIS GONSAGA RESUELTO UNICA PDF MEDICINA 2026"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pedro es un hombre que sufre de presión arterial alta. La presión arterial es la fuerza de la sangre sobre las paredes de las arterias, mientras el corazón bombea sangre para controlar o reducir la presión arterial alta, es posible que su médico le recomiende adoptar cambios en el estilo de vida para tener un corazón saludable. De acuerdo a la rapidez con la que aparece y por su duración la Presión Ata pertenece a una enfermedad:",
+      "alternatives": [
+        "Emergente",
+        "Aguda",
+        "Crónica",
+        "Degenerativa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/salud-y-enfermedades-infecciosas-y-no-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SALUD E HIGIENE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los músculos nasales y auriculares, corresponden a la prueba evolutiva de tipo:",
+      "alternatives": [
+        "anatomía comparada.",
+        "embriología.",
+        "bioquímica.",
+        "paleontológica.",
+        "recapitulación."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-la-evolucion-biologica-evidencias-evolutivas-ejemplos-preguntas-resueltas-biologia-preuniversitaria-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ORIGEN DE LA VIDA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es función de las plaquetas o trombocitos",
+      "alternatives": [
+        "Activar la defensa inmunológica",
+        "Transportar el oxígeno",
+        "Transportar el bióxido de carbono",
+        "Desencadenar el proceso de coagulación sanguínea.",
+        "Ceder los nutrientes a las células del cuerpo."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/simulacro-villarreal-presencial-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO VILLARREAL 2027 RESUELTO INGRESO UNIVERSIDAD RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el corazón de los humanos, la sangre pasa de la aurícula derecha al ventrículo derecho a través de la válvula",
+      "alternatives": [
+        "de Eustaquio",
+        "mitral",
+        "bicúspide",
+        "tricúspide",
+        "de Tebesio"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-admision-villareal-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN ADMISIÓN UNIVERSIDAD FEDERICO VILLARREAL 2025 DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los anfibios, como las ranas y salamandras, son ectotérmicos, es decir, son animales de sangre fría que se adaptan a la temperatura de su medio. Además, se caracterizan por tener circulación incompleta. Seleccione la alternativa que señala la causa de esta última característica.",
+      "alternatives": [
+        "Poseen un solo ventrículo, sin un tabique que lo divida.",
+        "La sangre pasa solamente una vez por el corazón.",
+        "La sangre venosa y la arterial se mezclan en las aurículas.",
+        "En el corazón, la sangre venosa y la arterial no se mezclan.",
+        "En el corazón, circula solo sangre venosa y no se mezcla."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/simulacro-presencial-san-marcos-2018-i.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO SAN MARCOS 2027 I INGRESO UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el ser humano el aire ingresa a los pulmones debido a",
+      "alternatives": [
+        "la baja presión pulmonar que predomina en la cavidad torácica.",
+        "la alta presión pulmonar que predomina en la cavidad torácica.",
+        "equilibrio de presión entre la cavidad torácica y el exterior.",
+        "la cantidad de oxígeno que tiene el aire.",
+        "la gran cantidad de C O 2 presente en la circulación mayor."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-respiratorio-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com —  APARATO RESPIRATORIO HUMANO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El texto y la imagen brindan información sobre",
+      "alternatives": [
+        "las funciones y características de los dos sistemas circulatorios.",
+        "las principales funciones del sistema circulatorio de los animales.",
+        "el sistema circulatorio cerrado y sus diferentes funciones vitales.",
+        "las características de los sistemas circulatorios abierto y cerrado.",
+        "los principales tipos de sistemas circulatorios del mundo animal."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/temas-admision-san-marcos-frecuentes.html",
+      "sourceName": "matematicasn.blogspot.com — TEMAS FRECUENTES SAN MARCOS ADMISIÓN 2027 I EXAMEN DECO INGRESO UNIVERSIDAD 2026 II DECANA DE AMÉRICA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la práctica del curso de biología celular, los alumnos por medio de unos reactivos determinaron que de los 70 integrantes de la promoción, 61 eran del grupo sanguíneo “O”, 3 del grupo “A”, 2 del grupo “B” y los demás del grupo “AB”; resultado similar que también se ha registrado en promociones de otras universidades de Sudamérica. ¿Qué conclusión se podría obtener de estas cifras?",
+      "alternatives": [
+        "Los alumnos del grupo sanguíneo “O”, son donadores universales, mientras que los del grupo “AB” están en menor porcentaje",
+        "Los alumnos de grupo sanguíneo “AB”, son probablemente de otro país, ya que todas las personas en Sudamérica son del grupo sanguíneo “O”",
+        "El que la mayoría de alumnos en diferentes promociones sean del grupo “O”, permite afirmar que la mayoría de progenitores también eran del mismo grupo sanguíneo que los hijos",
+        "Los alumnos del grupo sanguíneo “AB” son los más abundantes, pues heredaron alelos de progenitores con diferentes grupos sanguíneos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GENÉTICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la hipertricosis auricular, es correcto afirmar:",
+      "alternatives": [
+        "Es una enfermedad que no se hereda.",
+        "Es causada por un gen dominante.",
+        "El gen que la origina se ubica en el cromosoma Y.",
+        "Es causada por un gen recesivo.",
+        "Su transmisión es independiente del sexo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GENÉTICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El adjetivo expresa características o cualidades del nombre. En tal sentido, cuantifique los adjetivos en el enunciado «El estrés y las preocupaciones son más frecuentes en esta temporada y pueden generar serias afecciones a la salud como los dolores musculares, presión arterial alta e insuficiencia cardiaca».",
+      "alternatives": [
+        "Siete",
+        "Cinco",
+        "Seis",
+        "Cuatro"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/adjetivo-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ADJETIVO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relaciona adecuadamente.\nI. Emite respuestas de actos voluntarios.\nII. Regula la presión arterial.\nIII. Reúne la información proveniente de los sentidos.",
+      "alternatives": [
+        "tálamo",
+        "hipófisis",
+        "área motora de la corteza cerebral",
+        "hipotálamo",
+        "IB, IID, IIIA"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/factores-biologicos-del-comportamiento-humano-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BASES BIOLÓGICAS DEL COMPORTAMIENTO EJERCICIOS RESUELTOS DEL PSIQUISMO – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los grupos sanguíneos humanos el Rh – es:",
+      "alternatives": [
+        "homocigoto dominante.",
+        "heterocigoto.",
+        "codominante.",
+        "un caso de dominancia incompleta.",
+        "homocigoto recesivo."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/genetica-no-mendeliana-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GENÉTICA POSTMENDELIANA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Camila y Daniel, son hermanos y sus padres son de grupos sanguíneos AB y O. Daniel tiene hijos del grupo A y O, mientras que Camila tiene hijos del grupo B y O. Si padres e hijos tienen grupos distintos, ¿cuáles son los genotipos de Camila y Daniel, respectivamente?",
+      "alternatives": [
+        "I B i, I A i",
+        "I A i, I B I B",
+        "I A i, IBi",
+        "I B I B , I A i",
+        "I A I A , I B I B"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/genetica-no-mendeliana-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GENÉTICA POSTMENDELIANA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a la genética del sexo, relacione:\nI) Hipertricosis auricular\nII) Hemofilia\nIII) Daltonismo\nIV) Síndrome Turner",
+      "alternatives": [
+        "Expresión sexual secundaria alterada.",
+        "Ceguera a colores.",
+        "Poco probable en mujeres.",
+        "fenotipo por gen holándrico.",
+        "Id, IIb, IIIc, IVa"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/herencia-genetica-sanguinea-y-ligada-a-la-sexualidad-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — HERENCIA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Javier padece de hipertricosis auricular y se acaba de casar con Lucía. En tal sentido, es de esperar que su descendencia esté constituida por",
+      "alternatives": [
+        "hijos e hijas portadoras.",
+        "hijos con hipertricosis.",
+        "hijos normales e hijas con hipertricosis.",
+        "hijos e hijas sin hipertricosis.",
+        "hijas con hipertricosis."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/herencia-genetica-sanguinea-y-ligada-a-la-sexualidad-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — HERENCIA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Perla ha estudiado con detalle el tema referido a los grupos sanguíneos en el sistema ABO. A partir de sus análisis ha concluido que los individuos del grupo O carecen de ______ y los individuos del grupo AB carecen de ______",
+      "alternatives": [
+        "antígenos - anticuerpos.",
+        "aglutininas - aglutinógenos.",
+        "anticuerpos - aglutininas.",
+        "antígenos - aglutinógenos."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/herencia-genetica-sanguinea-y-ligada-a-la-sexualidad-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — HERENCIA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Normalmente, los glóbulos rojos del feto no entran en contacto con la sangre de la madre, si esto ocurre, el sistema inmune responde desarrollando anticuerpos para combatir los glóbulos rojos del bebé. Durante el parto, la placenta se desprende y la sangre del bebé entra en contacto con la sangre de la madre. El contacto sanguíneo también se produce durante un aborto, tanto espontáneo como provocado o durante un procedimiento de examen prenatal invasivo, por ejemplo, una amniocentesis. ¿Cuál podría ser una consecuencia derivada a partir de los procedimientos que se describen en el texto?",
+      "alternatives": [
+        "la hemofilia",
+        "el daltonismo",
+        "la anemia hemolítica",
+        "la hipertricosis auricular"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/herencia-genetica-sanguinea-y-ligada-a-la-sexualidad-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — HERENCIA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tito sufre de hipertricosis auricular y ha contraído nupcias con Bety, que no tiene esa condición. En tal sentido, es de esperar que su descendencia esté constituida por",
+      "alternatives": [
+        "hijos e hijas portadoras.",
+        "hijos e hijas con hipertricosis.",
+        "hijos normales e hijas con hipertricosis.",
+        "hijos e hijas sin hipertricosis.",
+        "hijos con hipertricosis e hijas normales."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/citogenetica-y-mutaciones-ejemplos-preguntas-resueltas-de-genetica-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CITOGENÉTICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Rosaura sabe que la sangre está formada por el plasma y los elementos formes que son _______ Ella desea saber cuál de estos elementos son los responsables de los grupos sanguíneos y le consulta a Segismundo, él le responde que son _______",
+      "alternatives": [
+        "solo los glóbulos blancos y las plaquetas – los glóbulos blancos",
+        "los glóbulos blancos, los glóbulos rojos y las plaquetas – los glóbulos rojos",
+        "solo los glóbulos rojos y las plaquetas – las plaquetas",
+        "los glóbulos blancos, los glóbulos rojos y las plaquetas – glóbulos blancos",
+        "solo los glóbulos rojos y los glóbulos blancos – los glóbulos rojos"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/1ro-2do-actividad-7-ct-experiencia-6-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO SANGUÍNEO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La respiración en los animales puede ser directa o indirecta; directa cuando el intercambio de gases se realiza directamente entre el medio y las células de los organismos, mientras que la indirecta es característica de animales de gran tamaño, por lo que es necesaria la presencia de un órgano respiratorio capaz de transportar los gases desde el medio ambiente hacia el sistema circulatorio y viceversa. En las arañas, este órgano recibe el nombre de",
+      "alternatives": [
+        "Branquias",
+        "Sacos aéreos",
+        "Filotráqueas",
+        "Branquias dermales",
+        "Pulmones"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparatos-respiratorios-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA RESPIRATORIO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes no es un característica de los animales pertenecientes al phillum Moluscos?",
+      "alternatives": [
+        "Tienen gran cefalización",
+        "Su celoma es reducido",
+        "Su sistema circulatorio es abierto",
+        "Tienen una segmentación muy marcada",
+        "Su celoma es exponencial"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/zoologia-ejercicios-resueltos-de-examen-de-ingreso-universidad-pnp-policia-biologia-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ZOOLOGÍA EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El corazón humano es una bomba muscular que permite el flujo de la sangre desde las venas y arterias hacia las aurículas y los ventrículos. Las aurículas se llenan de sangre y se contraen, luego los ventrículos se llenan de sangre y se contraen y, finalmente, la sangre sale del corazón hacia los tejidos del cuerpo.\n¿Cuál de los siguientes enunciados es correcto?",
+      "alternatives": [
+        "El ventrículo derecho se contrae y dirige la sangre hacia la arteria aorta.",
+        "Las venas pulmonares conducen la sangre hacia los pulmones.",
+        "El ventrículo izquierdo se llena de sangre por las arterias pulmonares.",
+        "La aurícula izquierda se contrae y dirige la sangre hacia los pulmones.",
+        "Las venas cavas conducen la sangre hacia la aurícula derecha."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS BIOLOGÍA PREGUNTAS RESUELTAS EXAMEN ADMISIÓN UNIVERSIDAD UNMSM"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para la clase de anatomía, se examinó un organismo cuya piel es muy húmeda y lisa; además, se sabe que en una etapa de su desarrollo presentan branquias externas para luego desarrollar pulmones. Asimismo, los alumnos observaron que posee sangre y que su corazón presentaba tres cavidades. Se puede afirmar sobre el sistema circulatorio de dicho organismo que es",
+      "alternatives": [
+        "cerrado con circulación doble e incompleta.",
+        "abierto con circulación simple e incompleta.",
+        "cerrado con circulación simple y completa.",
+        "abierto con circulación doble y completa.",
+        "abierto con circulación simple y doble."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS BIOLOGÍA PREGUNTAS RESUELTAS EXAMEN ADMISIÓN UNIVERSIDAD UNMSM"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los animales existen dos tipos de sistema circulatorio: abierto y cerrado. Respecto del sistema circulatorio de zancudos, moscas y cucarachas, determine el valor de verdad (V o F) de las siguientes afirmaciones:\nI) Poseen sistema circulatorio abierto con vasos interconectados.\nII) El movimiento muscular del cuerpo favorece el retorno de la hemolinfa.\nIII) E l corazón no permite que la hemolinfa fluya y bañe los tejidos del insecto.",
+      "alternatives": [
+        "VVF",
+        "VVV",
+        "VFV",
+        "FFF",
+        "FVF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/biologia-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA ÁREA A SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El marcapasos cardiaco es un dispositivo que se coloca en el paciente cuyo corazón no puede bombear suficiente sangre al cuerpo. Si se desea colocarlo, tendrían que hacerlo por una vena ubicada debajo de la clavícula izquierda para que lleguen a la aurícula y ventrículo derechos. De lo expuesto, ¿cuál sería el vaso sanguíneo que permitiría el ingreso al corazón?",
+      "alternatives": [
+        "Arteria pulmonar",
+        "Vena cava inferior",
+        "Vena cava superior",
+        "Aorta ascendente",
+        "Aorta descendente"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/biologia-examen-resuelto-de-admision-universidad-san-marcos-deco-domingo-areas-C-E-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el sistema de grupos sanguíneos ABO, se observan dos situaciones genéticas que no fueron contempladas por Gregorio Mendel; es decir, fueron descubiertas tiempo después de su muerte, por lo que forman parte de la denominada Herencia No Mendeliana. Con respecto al sistema ABO, ¿cuáles son estas?",
+      "alternatives": [
+        "La dominancia intermedia y codominancia",
+        "La codominancia y dominancia completa",
+        "Los alelos múltiples y la codominancia",
+        "La herencia intermedia y el alelismo",
+        "La dominancia incompleta y serie alélica"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/biologia-examen-resuelto-de-admision-universidad-san-marcos-deco-domingo-areas-C-E-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la alternativa donde el núcleo de la frase verbal es verbo irregular.",
+      "alternatives": [
+        "La felicidad regula la presión arterial.",
+        "La secretaria solicitó permiso al jefe.",
+        "Mantén el optimismo en todo tiempo.",
+        "Se incrementará el beneficio laboral.",
+        "Formuló preguntas para el examen."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/la-frase-verbal-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA FRASE VERBAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relacione correctamente:\n( ) En su corazón la sangre venosa no se mezcla con la sangre arterial.\n( ) Por su corazón solo circula sangre venosa\n( ) En su corazón se mezcla la sangre venosa con la arterial\n( ) Su sistema circulatorio posee una serie de aberturas llamadas ostiolos\nI. Mosca de la fruta\nII. Anchoveta\nIII. Cocodrilo\nIV. Perro",
+      "alternatives": [
+        "II – II – III – IV",
+        "I – II – III – IV",
+        "IV – III – II – I",
+        "IV – I – II – III",
+        "IV – II – III – I"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCULACIÓN Y TRANSPORTE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – BIOLOGÍA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Felipe es un zoólogo que ha encontrado un extraño ser vivo terrestre, al analizarlo detecta en su parte ventral una estructura muscular rodeada de tres grandes conductos que se conectan a tres cavidades internas pero estos conductos tienen terminaciones ciegas a una enorme cavidad interna, donde no puede identificar algo semejante a vasos sanguíneos. Según estas descripciones, sería correcto afirmar que dicho ser vivo posee",
+      "alternatives": [
+        "un hemocele semejante al sistema circulatorio cerrado.",
+        "una estructura muscular semejante al corazón de los reptiles y anfibios.",
+        "un sistema circulatorio que posiblemente transporte hemolinfa.",
+        "un fluido muy parecido a la sangre venosa que sale de la cavidad ciega."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCULACIÓN Y TRANSPORTE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – BIOLOGÍA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El corazón al impulsar la sangre permite que esta ejerza una presión sobre las paredes de los vasos sanguíneos, lo que se conoce como presión arterial, la cual se mide con un aparato llamado esfigmomanómetro, siendo los valores humanos normales de 120/80 mmHg. ¿Cuál de las siguientes alternativas indicaría que una persona tiene hipertensión arterial?",
+      "alternatives": [
+        "90/60",
+        "125/85",
+        "120/80",
+        "100/70"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCULACIÓN Y TRANSPORTE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – BIOLOGÍA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las alternativas agrupa correctamente los siguientes animales según el sistema circulatorio que poseen?\nI. Fasciola hepática\nII. Lumbricus terrestris\nIII. Vicugna pacos\nIV. Engraulis ringens\nV. Apis mellifera\nVI. Helix aspersa",
+      "alternatives": [
+        "I y V poseen sistema circulatorio abierto.",
+        "II, III y IV poseen sistema circulatorio cerrado",
+        "V y VI no poseen corazón",
+        "I y V poseen sistema circulatorio"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCULACIÓN Y TRANSPORTE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – BIOLOGÍA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A continuación se listan diferentes componentes del corazón humano. Ordena estos componentes según el flujo de sangre:",
+      "alternatives": [
+        "vena cava – aurícula derecha – válvula tricúspide – arteria aorta – ventrículo derecho",
+        "aurícula Izquierda – válvula bicúspide – ventrículo izquierdo – arteria aorta",
+        "vena cava – aurícula izquierda – válvula tricúspide – ventrículo derecho",
+        "aurícula derecha – válvula bicúspide – ventrículo derecho – válvula sigmoidea"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCULACIÓN Y TRANSPORTE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – BIOLOGÍA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cual es la desventaja del sistema circulatorio abierto.",
+      "alternatives": [
+        "puede llevar más sangre.",
+        "este sistema es muy lento no transporta suficiente O 2",
+        "sistema muy rápido solo transporta nutrientes.",
+        "baña los órganos de hemoceloma.",
+        "tiene menos células sanguíneas."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuáles son los principales vasos sanguíneos involucrados en la circulación mayor?",
+      "alternatives": [
+        "Vena pulmonar y vena cava inferior",
+        "Vena cava superior y arteria pulmonar",
+        "Arteria aorta y venas cavas",
+        "Arteria pulmonar y vena pulmonar",
+        "Arteria aorta y vena pulmonar"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación al sistema circulatorio de los peces, es falso: La sangre pasa una sola vez por el corazón.",
+      "alternatives": [
+        "Corazón con dos cámaras.",
+        "Presentan glóbulos rojos.",
+        "Pigmento respiratorio es la hemoglobina.",
+        "circulación doble y completa.",
+        "Sus eritrocitos son nucleados."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la circulación pulmonar o menor: De que ventrículo sale la sangre venosa para oxigenarse en los pulmones y que válvulas impide su retroceso.",
+      "alternatives": [
+        "Ventrículo derecho - válvula sigmoidea pulmonar.",
+        "Ventrículo derecho - válvula tricúspide.",
+        "Ventrículo Izquierdo - válvula Bicúspide.",
+        "Ventrículo Izquierdo - válvula sigmoidea aórtica.",
+        "Ventrículo Derecha - válvula aurícula ventricular."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la única arteria que lleva sangre venosa y la vena que lleva sangre arterial?",
+      "alternatives": [
+        "Arteria aorta _ Vena cava superior.",
+        "Arteria pulmonar _ Venas pulmonares.",
+        "Arteria carótida _ Seno venoso.",
+        "Arteria renal _ Vena yugular.",
+        "Arterias subclavias_ Vena cava inferior."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La sangre venosa de la circulación mayor ingresa al corazón por ______ mientras que la sangre arterial de la circulación menor ingresa al corazón ______",
+      "alternatives": [
+        "venas pulmonares- venas cavas",
+        "venas cavas - venas pulmonares.",
+        "arteria pulmonar – venas cavas",
+        "vena porta - venas cavas.",
+        "arteria aorta - arteria pulmonar."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El músculo cardiaco se nutre y oxigena y esto lo realiza a través de:",
+      "alternatives": [
+        "Aurícula derecha",
+        "Ventrículo izquierdo",
+        "Arteria aorta",
+        "Arteria coronaria",
+        "Venas coronarias."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante el ciclo cardiaco, al inicio de la sístole ventricular se cierra las válvulas ______ , ocurriendo el ______ este es sordo y prolongado.",
+      "alternatives": [
+        "tricúspide y ventricular – 3ª ruido cardiaco",
+        "tricúspide y bicúspide _1ª ruido cardiaco",
+        "sigmoideas _ 2ª ruido cardiaco",
+        "aortica y semilunar _ 3ª ruido cardiaco",
+        "tricúspide y sigmoidea _ 3 ruido cardiaco-"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Paco , tiene una arritmia cardiaca y se le coloca un marcapaso, para regular sus latidos en que tejido del corazón se coloca este dispositivo.",
+      "alternatives": [
+        "Haz de Hiss",
+        "Nodo aurícula ventricular",
+        "Nódulo sinusal",
+        "Fibras de purkinje",
+        "Nodo aurículo de aschoff-Tawara."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los anfibios la sangre pasa dos veces por el corazón, observándose una mezcla de sangre arterial con sangre venosa en:",
+      "alternatives": [
+        "la aurícula.",
+        "el ventrículo.",
+        "el cono arterial.",
+        "foramen de Panizza",
+        "la arteria aorta."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tipo de sistema circulatorio en el cual el fluido se transporta por vasos abiertos, llegando a salir a las lagunas tisulares.",
+      "alternatives": [
+        "abierto.",
+        "lagunar.",
+        "cerrado.",
+        "A y B",
+        "A y C."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se descubre una nueva especie animal, la cual presenta un sistema circulatorio formado por tres corazones que bombean un fluido que baña directamente los tejidos en una cavidad denominada hemocele. Posteriormente, el fluido retorna a los corazones a través de unos orificios denominados ostiolos. De la siguiente lista de animales, ¿cuál no podría tener relación con la nueva especie?",
+      "alternatives": [
+        "Grillo",
+        "Caracol",
+        "Garrapata",
+        "Pulpo",
+        "Cangrejo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos alumnos se encontraban estudiando el tema sobre la circulación en animales. Uno de ellos afirmó que “ todos los animales presentan sistema circulatorio, el cual puede ser abierto o cerrado ”. Su compañero, sin embargo, le dijo que había un error ya que",
+      "alternatives": [
+        "todos los animales presentan solo el sistema circulatorio abierto.",
+        "aquellos con diámetro menor a 1mm carecen de sistema circulatorio.",
+        "aquellos como los cnidarios y anélidos carecen de sistema circulatorio.",
+        "todos los animales inferiores presentan sistema circulatorio cerrado.",
+        "existen animales con sistema circulatorio abierto y cerrado a la vez."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al sistema circulatorio cerrado determine el valor de verdad o falsedad (V o F) de los siguientes enunciados y marque la alternativa correspondiente.\n☛ Tiene un mayor control de la distribución de la hemolinfa.\n☛ El fluido bombeado por el corazón está confinado a vasos.\n☛ Todos los animales con circulación cerrada tienen 1 corazón.\n☛ Los vertebrados presentan el sistema circulatorio cerrado.",
+      "alternatives": [
+        "FVFV",
+        "VVVV",
+        "FFFF",
+        "VVFF",
+        "FFVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las válvulas auriculoventriculares regulan el pasaje sanguíneo de las auriculas hacia los ventrículos. Estas válvulas se fijan, a través de cuerdas tendinosas, a los músculos papilares que se contraen para que las válvulas se abran durante la",
+      "alternatives": [
+        "diástole auricular.",
+        "diástole ventricular.",
+        "sístole ventricular.",
+        "contracción isovolumétrica.",
+        "fibrilación atrial."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Helber es un docente universitario que se vio muy afectado por el Covid 19 y esto porque sin saberlo era hipertenso; es por esta razón que fue vulnerable a la enfermedad y sobre todo a las secuelas de la infección. Pero a pesar de ello, se recuperó; sin embargo, al realizarse un electrocardiograma pudo evidenciar una anomalía cardíaca que le permitió confirmar su situación de hipertenso. ¿Cuál de las siguientes alternativas estaría relacionada con la anomalía que se evidenció en el corazón de Helber?",
+      "alternatives": [
+        "hipertrofia ventricular derecha",
+        "hipotrofia auricular izquierda",
+        "hipertrofia ventricular izquierda",
+        "hipotrofia auricular derecha"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al observar a un anfibio y un ave, podemos percatarnos de que el primero posee un estilo de vida con menor actividad física. Según el sistema circulatorio respectivo, ¿cuál de las siguientes alternativas se relacionaría con esta diferencia?",
+      "alternatives": [
+        "En el corazón de los anfibios puede haber mezcla de sangre arterial y venosa, por lo que su circulación es doble e incompleta.",
+        "Los anfibios tienen una menor presión sanguínea debido a que la sangre se encuentra difundida desde el hemocele.",
+        "Solo sangre de tipo venosa circula por el corazón de las aves, ya que el oxígeno se ha distribuido rápidamente por su organismo.",
+        "Todas las aves poseen una aurícula y un ventrículo donde la sangre arterial se mezcla con la venosa."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Presentan un corazón con aurícula y ventrículo, con numerosos vasos y la hemolinfa fluye a través de lagunas tisulares.",
+      "alternatives": [
+        "arácnidos.",
+        "gasterópodos.",
+        "bivalvos.",
+        "cefalópodos.",
+        "poríferos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Como tarea de un trabajo de campo, un alumno ha colectado un vertebrado con características de reptil o anfibio. Su objetivo es determinar la clase a la que pertenece el animal tomando en cuenta las características de su sistema circulatorio. Al diseccionarlo, encuentra que tiene un corazón con cuatro compartimentos: dos aurículas y dos ventrículos. Señale el tipo de sistema circulatorio respectivo y a qué animal corresponde.",
+      "alternatives": [
+        "Cerrado, doble e incompleto - reptil",
+        "Abierto, simple e incompleto - anfibio",
+        "Cerrado, doble y completo - reptil",
+        "Cerrado, simple y completo - anfibio",
+        "Abierto, simple y completo - reptil"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las cucarachas son animales que han logrado adaptarse a muchas condiciones que otros animales no toleran. En la Facultad de Entomología de la U , la disección de la especie Periplaneta americana persigue entender las particularidades de su sistema circulatorio. Los estudiantes concluyeron que es muy semejante al de un saltamontes; lo que significa que el corazón\nI ) es multicameral y de posición dorsal.\nII ) es de forma tubular y ocupa gran parte del abdomen y tórax.\nIII ) presenta válvulas a ambos lados de cada cámara.",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "I y II",
+        "I, II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los anélidos tienen un doble sistema de transporte, el líquido celomático y el sistema sanguíneo. Alimentos, desechos y gases respiratorios son transportados por el líquido celomático y la sangre en distintos grados. La sangre es transportada por",
+      "alternatives": [
+        "Un sistema sanguíneo cerrado.",
+        "El líquido celomático",
+        "Un sistema circulatorio lagunar.",
+        "Un fluido denominado hemoceloma."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La circulación doble, cerrada y completa del “gallito de las rocas”, ave nacional del Perú, garantiza una mayor disponibilidad de oxígeno y, consecuentemente, una mayor disponibilidad de energía para conseguir mantener la temperatura del cuerpo constante en estos organismos homeotermos. El corazón de estas aves, presenta cuatro cámaras (dos aurículas y dos ventrículos), que son completamente independientes; y a diferencia de los mamíferos,",
+      "alternatives": [
+        "tiene circulación incompleta.",
+        "presenta eritrocitos con núcleo.",
+        "su circulación es simple.",
+        "tiene corazón tetralocular."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cocodrilo de Tumbes, una especie en vías de extinción, tiene un sistema circulatorio más eficaz y una presión sanguínea mucho más alta que los anfibios. Este cocodrilo, a diferencia de otros reptiles como las tortugas o serpientes, tiene el tabique interventricular completo que hace posible una mejor circulación de la sangre. En este animal se puede hallar una estructura conocida como",
+      "alternatives": [
+        "corazón venoso.",
+        "foramen de Panizza.",
+        "corazón bilocular.",
+        "válvula espiral."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relacione a los vertebrados con el tipo de sistema circulatorio que posee.\nI ) Anchoveta.\nII ) Gallito de las rocas\nIII ) Rana gigante",
+      "alternatives": [
+        "Circulación cerrada, doble e incompleta.",
+        "Circulación cerrada, simple y completa.",
+        "Circulación cerrada, doble y completa.",
+        "Ia, IIc, IIIb",
+        "Ib, IIc, IIIa"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al sistema circulatorio determine la secuencia correcta según sea verdadero (V) o falso(F).\nI ) Los insectos tienen un sistema circulatorio abierto.\nII ) En oligoquetos hay un fluido circulatorio con hemoglobina.\nIII ) En oligoquetos, el vaso dorsal es un órgano bombeador.\nIV ) Los cefalópodos poseen un corazón tricavitario.",
+      "alternatives": [
+        "VVVV",
+        "VVVF",
+        "VVFF",
+        "VFFF",
+        "FFFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los reptiles son los animales en los que se observa una mayor diversidad estructural cardiaca, en general poseen corazón con cuatro cavidades, pero en algunos grupos la separación no es completa, lo que da lugar a mezcla de sangre venosa y arterial, lo cual ocurre entre",
+      "alternatives": [
+        "ambas aurículas",
+        "ambos ventrículos",
+        "cavidades del mismo lado",
+        "cavidades de lados opuestos"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La siguiente estructura cardíaca evita el flujo retrógrado de sangre desde el ventrículo izquierdo hacia la aurícula izquierda:",
+      "alternatives": [
+        "Válvula tricúspide",
+        "Válvula pulmonar",
+        "Válvula mitral (bicúspide)",
+        "Válvula aórtica",
+        "Válvula de Eustaquio"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El nodo sinoauricular (marcapasos natural) se localiza en:",
+      "alternatives": [
+        "Ventrículo derecho",
+        "Aurícula derecha",
+        "Tabique interventricular",
+        "Aurícula izquierda",
+        "Ventrículo izquierdo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La circulación en el hombre es cerrada, doble y completa, con un corazón tetracavitario: dos cavidades superiores llamadas aurículas y dos cavidades inferiores llamadas ventrículos. ¿Qué cavidad debe contraerse para que se realice el intercambio de gases en los alveolos pulmonares?",
+      "alternatives": [
+        "Ventrículo derecho",
+        "Ventrículo izquierdo",
+        "Aurícula izquierda",
+        "Aurícula derecha",
+        "Nódulo sinusal"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-semana-1-manual-pre-san.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En lo peces la circulación es completa, y esto es porque no hay mezcla de sangre arterial y venosa. El motivo fundamental de esta característica debido a que",
+      "alternatives": [
+        "el corazón ventral de los peces solo conduce sangre arterial.",
+        "la sangre venosa y arterial en el corazón circulan bien separadas.",
+        "por el corazón de los peces solo puede circular sangre venosa.",
+        "la sangre venosa y arterial no pasan al mismo tiempo por el corazón.",
+        "la sangre arterial pasa por la aurícula y la sangre venosa por el ventrículo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/biologia-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA ÁREA E SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Julio y Rosa quieren saber sus grupos sanguíneos. Para ello, van a un laboratorio especializado y emplean un kit del sistema ABO. Julio presenta anticuerpos Ben su plasma sanguíneo; y en sus eritrocitos, antígenos A. Rosa presenta anticuerpos A y anticuerpos B en su plasma sanguíneo; y en sus eritrocitos, ningún antígeno. ¿A qué grupos sanguíneos pertenecen, respectivamente, Julio y Rosa?",
+      "alternatives": [
+        "A y O",
+        "O y A",
+        "B y A",
+        "O y B",
+        "A y AB"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/biologia-examen-resuelto-de-admision-a-la-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se ha estimado que los seres humanos requerimos entre 40 y 50 componentes de alimentos para una buena salud, porque entre otros beneficios, el aporte nutricional de las plantas o cultivos sirve para:",
+      "alternatives": [
+        "Lograr la remoción integral de los ácidos grasos poliinsaturados y carbohidratos dañinos.",
+        "Lograr un equilibrio adecuado entre el metabolismo de grasas y carbohidratos en adultos.",
+        "Brindar tonicidad a los tejidos epiteliales y fortalecimiento al sistema circulatorio.",
+        "Proporcionar los azúcares y aceites esenciales para una buena digestión y metabolismo.",
+        "Fortalecer el sistema inmunológico y por tanto para prevenir y curar enfermedades."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/biologia-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es una de las acciones realizadas por la porción toracolumbar.",
+      "alternatives": [
+        "Reducción de la secreción salival",
+        "Retardar la frecuencia cardíaca",
+        "Dilatar los vasos sanguíneos cutáneos",
+        "Constricción de la pupila",
+        "Bajar la presión arterial"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/biologia-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son animales con sistema circulatorio cerrado, circulación incompleta, ovíparos, con escudos córneos, terrestres o acuáticos, poiquilotermos, triploblásticos, celomados.",
+      "alternatives": [
+        "Caracoles.",
+        "Anfibios urodelos.",
+        "Tortugas.",
+        "Serpientes."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/biologia-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El sodio es un bioelemento importante para mantener el volumen de líquido extracelular y el líquido osmótico, de este modo interviene como un mecanismo químico rápido en la regulación de la presión arterial sistémica. Para el logro de este fin, a nivel renal actúa la hormona ______ que induce la reabsorción de este bioelemento.",
+      "alternatives": [
+        "vasopresina",
+        "antidiurética",
+        "aldosterona",
+        "cortisol"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/biologia-preguntas-resueltas-de-secundaria-y-preuniversitaria-solucionario-prueba-ingreso-universidad-claves-respuestas-desarrollo-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lamentablemente, ........... impedía que ........... funcionasen como era debido.",
+      "alternatives": [
+        "la bulla – los auriculares",
+        "el frío – las estufas",
+        "la congestión – los semáforos",
+        "la niebla – los limpiaparabrisas",
+        "el óxido – las bisagras"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/oraciones-incompletas-ejercicios-resueltos-razonamiento-verbal-completamiento-de-textos-aptitud-examen-admision-universidad-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ORACIONES INCOMPLETAS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Alejandro realiza una salida de campo para el curso de zoología, en la cual el profesor les pide que recolecten un animal que no sea invertebrado y que tenga un sistema circulatorio doble e incompleto. Entonces, el animal recolectado podría ser",
+      "alternatives": [
+        "una lombriz de tierra.",
+        "un caracol de huerto.",
+        "el erizo.",
+        "un anfibio.",
+        "una ave."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-biologia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA PREGUNTAS RESUELTAS MODO EXAMEN DE ADMISIÓN UNIVERSIDAD CON RESPUESTAS"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tejido muscular del corazón, encargado de bombear la sangre por el sistema circulatorio mediante contracción es ________.",
+      "alternatives": [
+        "el epicardio",
+        "el endocardio",
+        "el miocardio",
+        "la válvula mitral",
+        "el pericardio"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es el vaso sanguíneo que está conectado al ventrículo derecho del corazón y que transporta la sangre desoxigenada a los pulmones.",
+      "alternatives": [
+        "Vena pulmonar",
+        "Arteria pulmonar",
+        "Vena cava superior",
+        "Vena cava inferior",
+        "Arteria aorta"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la aurícula derecha, genera los impulsos eléctricos para la contracción del corazón.",
+      "alternatives": [
+        "nodo auriculoventricular.",
+        "haces internodales.",
+        "nodo sinusal.",
+        "haz de Hiss.",
+        "fibras de Purkinge."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Edu siente que los latidos de su corazón están acelerados, por lo que acude al médico. Después de realizarse algunos exámenes, se le informa que los impulsos eléctricos, que coordinan los latidos de su corazón, no están funcionando adecuadamente por un problema en la aurícula derecha. Por lo expuesto, se podría deducir que la estructura afectada es",
+      "alternatives": [
+        "la válvula tricúspide.",
+        "el nódulo de Aschoff-Tawara.",
+        "el fascículo de Hiss.",
+        "el fascículo de Bachman.",
+        "el nódulo de Keith-Flack."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si bien se sabe que la coagulación sanguínea juega un papel muy importante para evitar la pérdida de sangre ante la lesión de un vaso sanguíneo, ¿Por qué en ciertas ocasiones patológicas resulta gravísima como por ejemplo cuando es responsable de un infarto agudo de miocardio, que incluso podría llevar a la muerte?",
+      "alternatives": [
+        "Porque se forma un coágulo en el interior del vaso sanguíneo",
+        "Porque ocurre una agregación plaquetaria sin necesidad",
+        "Porque se bloquea la formación de fibrina",
+        "Porque hay exceso de hemoglobina"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las últimas semanas se ha estado solicitando la donación de plasma sanguíneo, para con ella poder salvar hasta tres vidas según los especialistas. Se sabe que el plasma se obtiene de una extracción sanguínea del voluntario.\n¿De qué consiste este plasma sanguíneo?",
+      "alternatives": [
+        "De las plaquetas y células sanguíneas",
+        "Del suero sanguíneo y elementos formes",
+        "De las células sanguíneas y los trombocitos",
+        "Del suero sanguíneo y las proteínas presentes en el"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La válvula que separa la aurícula izquierda del ventrículo izquierdo se llama",
+      "alternatives": [
+        "tricúspide.",
+        "mitral.",
+        "de Eustaquio.",
+        "de Thebesio.",
+        "sigmoidea."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La arteria pulmonar nace en _______ y se encarga de transportar sangre rica en _______",
+      "alternatives": [
+        "la aurícula derecha oxígeno.",
+        "la aurícula izquierda oxígeno.",
+        "el ventrículo derecho dióxido de carbono.",
+        "el ventrículo izquierdo dióxido de carbono.",
+        "el ventrículo derecho oxígeno."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al conjunto de fibras musculares, semiautónomas y autorrítmicas, responsables de dar inicio al impulso cardiaco, se le denomina",
+      "alternatives": [
+        "nodo Aschoff y Tawara.",
+        "nodo aurícula ventricular.",
+        "nodo de Keith y Flack.",
+        "haz de His.",
+        "fibras de Purkinje."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante transfusiones sanguíneas la concentración de calcio en la sangre del paciente suele disminuir, lo cual ocasiona una baja presión arterial. Al administrar calcio en estos pacientes la presión aumenta. De acuerdo al párrafo, indicar en qué proceso estaría interviniendo el calcio.",
+      "alternatives": [
+        "Aumento del pulso arterial.",
+        "Inducción de la vasoconstricción.",
+        "Disminución de la fuerza de contracción miocárdica.",
+        "Dilatación de los vasos sanguíneos.",
+        "Inhibición de la coagulación."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al ciclo cardiaco, marque verdadero (V) o falso (F) según corresponda\n( ) Durante la fase de llenado ventricular ocurre la sístole auricular\n( ) El segundo ruido cardiaco ocurre al inicio de la contracción isovolumétrica\n( ) Durante la fase de eyección se cierran las válvulas semilunares\n( ) La diástole ocurre en la relajación isovolumétrica",
+      "alternatives": [
+        "FFVV",
+        "VFVF",
+        "VFFV",
+        "FFFV",
+        "VVFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los anestésicos inhalatorios son muy útiles para realizar procedimientos quirúrgicos. Estos anestésicos llegan a los pulmones para luego ser captados por la sangre. Indicar el camino que seguiría el anestésico en la circulación sanguínea desde que ingresa a la sangre hasta ser transportado a los tejidos.",
+      "alternatives": [
+        "Vena cava – aurícula derecha – ventrículo derecho– arteria pulmonar",
+        "Arteria aorta – aurícula derecha – ventrículo derecho – arteria pulmonar",
+        "Vena pulmonar – ventrículo izquierdo – aurícula derecha – arteria aorta",
+        "Vena pulmonar – aurícula izquierda – ventrículo izquierdo – arteria aorta",
+        "Arteria aorta – aurícula derecha – ventrículo derecho – vena cava"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El gasto cardíaco es el volumen de sangre expulsada por un ventrículo en un minuto; y está determinado por",
+      "alternatives": [
+        "la frecuencia cardíaca",
+        "el volumen sistólico y la frecuencia cardíaca.",
+        "la frecuencia cardíaca y el débito cardíaco.",
+        "la sístole auricular y la diástole ventricular",
+        "el ciclo cardíaco"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La circulación menor tiene importancia porque ........ Se inicia en el ventrículo derecho y termina en la aurícula izquierda.",
+      "alternatives": [
+        "se oxigena la sangre",
+        "se oxigenan los tejidos",
+        "se bombea sangre al cerebro",
+        "la sangre llega al corazón desde el hígado",
+        "se irriga al mismo corazón"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El agujero de Botal es una estructura presente en el corazón fetal y consiste en",
+      "alternatives": [
+        "una comunicación interauricular.",
+        "una comunicación interventricular.",
+        "la unión de las venas cavas.",
+        "un bypass en las coronarias.",
+        "la salida de la aorta."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una de las etapas del ciclo cardiaco en la que todas las válvulas están cerradas es",
+      "alternatives": [
+        "Contracción isovolumétrica",
+        "Llenado rápido",
+        "Llenado lento",
+        "Eyección",
+        "Contracción auricular"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al corazón, marque la secuencia correcta del valor de verdad (V o F) según corresponda\nI ) La pared del corazón está formada por tres capas: el epicardio, el miocardio y el endocardio.\nII ) El miocardio es el mayor componente del corazón y es responsable de su acción de bombeo.\nIII ) La excitación cardíaca se inicia en el nodo sinusal localizado en la pared de la aurícula derecha.\nIV. El ventrículo derecho bombea sangre solo a los pulmones y el ventrículo izquierdo bombea sangre al resto del cuerpo.",
+      "alternatives": [
+        "VVVF",
+        "VVFF",
+        "VVVV",
+        "FVFV",
+        "VVFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La presión sanguínea se suele expresar con dos números. La presión normal puede ser 120/80: el 120 se denomina sistólica; el 80, diastólica. Los dos valores corresponden, aproximadamente, a los valores máximo y mínimo durante el ciclo cardiaco. Las unidades son milímetros de mercurio. Exprese la presión de 80 mm de mercurio en cm de agua.\n( ρ Hg = 13,6 g/cm ³ ; ρ agua =1 g/cm ³ )",
+      "alternatives": [
+        "9,81",
+        "108,8",
+        "11,22",
+        "10,88",
+        "9,88"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las aurículas están separadas por ______.",
+      "alternatives": [
+        "Septum interauricular",
+        "válvula mitral",
+        "válvula tricúspide",
+        "columnas carnosas",
+        "septem interventricular"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/anatomia-ejercicios-resueltos-de-examen-de-ingreso-universidad-pnp-policia-prueba-claves-respuestas-soluciones-ejemplos-doc-ppt-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ANATOMÍA EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I) Luego del estetoscopio, el termómetro clínico, que sirve para medir la temperatura corporal, fue inventado por Thomas Allbut.\nII) La aparición de inventos cada vez más sofisticados en la medicina ha permitido un gran avance en la celeridad y precisión de los diagnósticos.\nIII) Este instrumento consistía en un tubo con un auricular y un captor del sonido en cada extremo.\nIV) El primer estetoscopio fue diseñado en 1816 por René Laennec.\nV) Posteriormente, se le incorporó otro auricular y, de este modo, fue evolucionando hasta llegar al estetoscopio actual .",
+      "alternatives": [
+        "II , II , IV, I, V",
+        "IV, III, II,V, I",
+        "II, IV, III,V,I",
+        "VI, V, III, I, II",
+        "II, V, I, III, IV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/04/Test-de-coherencia-textual-resuelto-con-claves-y-respuestas-pre-universidad-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COHERENCIA TEXTUAL EJERCICIOS RESUELTOS PDF VERBAL"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación al enunciado:\n1. Los glóbulos rojos son las células más numerosas de la sangre.\n2. Los glóbulos rojos poseen membrana celular y carecen de núcleo y organelos.\n3. Las plaquetas son fragmentos de los leucocitos.\n4. Los eritrocitos transportan O 2 y CO 2 .\n5. Los leucocitos tienen en su estructura hemoglobina.\nSon ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "1, 2 y 4",
+        "1, 4 y 5",
+        "2, 3 y 4",
+        "3, 4 y 5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el hombre, el factor Rh está representado por una molécula presente en la superficie del glóbulo rojo (+ si está presente y – si no lo está). Coincidentemente, el mono del género Rhesus también lo puede presentar. Desde el punto de vista evolutivo, determine el valor de verdad (V o F) de las siguientes proposiciones:\nI. Esta es una evidencia bioquímica de la evolución de los primates\nII. Demuestra que ambas especies tienen el mismo lugar de origen\nIII. Demuestra la relación embriológica entre ambos primates.",
+      "alternatives": [
+        "VFF",
+        "VFV",
+        "FFV",
+        "FVF",
+        "VV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/evolucion-biologica-del-ser-humano-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA EVOLUCIÓN BIOLÓGICA DEL SER HUMANO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son proteínas presentes en el plasma sanguíneo.\n1. albúmina\n2. histonas\n3. globulinas\n4. fibrinógeno\n5. protaminas\nSon ciertas",
+      "alternatives": [
+        "1, 2 y 4",
+        "1, 3 y 4",
+        "2, 3 y 5",
+        "2, 4 y 5",
+        "3, 4 y 5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/educacion-religiosa-1ro-2do-actividad-1-experiencia-7-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA A SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CIENCIAS DE LA SALUD CLAVES PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Del cruce de 2 individuos híbridos para el grupo sanguíneo A y factor Rh, determine la proporción de hijos del grupo sanguíneo A y Rh–.",
+      "alternatives": [
+        "9/16",
+        "1/4",
+        "3/16",
+        "1/16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/herencia-genetica-sanguinea-y-ligada-a-la-sexualidad-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — HERENCIA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la proteína más abundante del plasma sanguíneo?",
+      "alternatives": [
+        "Albúmina",
+        "Hemoglobina",
+        "Inmunoglobulina",
+        "Fibrinógeno",
+        "Protrombina"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/1ro-2do-actividad-7-ct-experiencia-6-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO SANGUÍNEO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Glóbulos blancos sin gránulos que se observen en el citoplasma.",
+      "alternatives": [
+        "Eosinófilos",
+        "Plaquetas",
+        "Neutrófilos",
+        "Basófilos",
+        "Linfocitos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/1ro-2do-actividad-7-ct-experiencia-6-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO SANGUÍNEO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El coágulo sanguíneo es una red de fibras proteicas en la cual quedan atrapados los glóbulos rojos, glóbulos blancos y plaquetas. Estas fibras están constituidas de fibrina, que se forman a partir",
+      "alternatives": [
+        "de la menadiona.",
+        "de la tromboplastina.",
+        "de la trombina.",
+        "de la protrombina.",
+        "del fibrinógeno."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/1ro-2do-actividad-7-ct-experiencia-6-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO SANGUÍNEO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las células con mayor número de mitocondrias las encontramos en:",
+      "alternatives": [
+        "glandulares.",
+        "epidérmicas.",
+        "glóbulos rojos.",
+        "miocitos.",
+        "glóbulos blancos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biologia-celular-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA CELULAR EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lord Leopoldo de Battenberg falleció a los 33 años debido a que padecía hemofilia. Al realizar un análisis de su sangre, se ha hallado que presentaba plaquetas rotas por lo que no podría liberar cierta proteína y de ahí dicha condición. ¿A qué proteína se hace referencia?",
+      "alternatives": [
+        "Protrombina",
+        "Tromboplastina",
+        "Trombina",
+        "Fibrinógeno",
+        "Plasmina"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/biologia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA SAN MARCOS PRUEBA DECO DE INGRESO UNIVERSIDAD DESARROLLADA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Después de producirse una herida cutánea, se presenta el sangrado por ruptura de los vasos sanguíneos superficiales. Al cabo de unos minutos, se forma un coágulo sobre la herida que evita el sangrado. Esto se debe a que",
+      "alternatives": [
+        "las redes de fibrina atrapan las células sanguíneas.",
+        "los neutrófilos destruyen los glóbulos rojos.",
+        "las plaquetas transforman la trombina en protrombina.",
+        "los macrófagos tapizan toda el área de la lesión.",
+        "los linfocitos transforman el fibrinógeno en fibrina."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/biologia-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA ANATOMÍA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando un vaso sanguíneo es dañado las plaquetas liberan:",
+      "alternatives": [
+        "Tromboplastina o tromboquinasa",
+        "Ion Ca++ y otros factores",
+        "Fibrinógeno",
+        "Fibrina",
+        "Trobina."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando un vaso sanguíneo se rompe, las células dañadas y las plaquetas liberan una proteína, que en presencia de Ca + + y la vitamina K el proceso de coagulación.\n¿Qué proteína y vitamina están participando?",
+      "alternatives": [
+        "Trombina",
+        "Protrombina",
+        "Tromboplastina",
+        "Fibrinógeno",
+        "Fibrina"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proteína plasmática más abundante, responsable de mantener la presión oncótica y transportar hormonas y fármacos, es:",
+      "alternatives": [
+        "Fibrinógeno",
+        "Globulina",
+        "Hemoglobina",
+        "Albúmina",
+        "Transferrina"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es una proteína simple fibrosa:",
+      "alternatives": [
+        "colágeno",
+        "albúmina",
+        "globulina",
+        "nucleoproteínas",
+        "fibrinógeno"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-biologia-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE BIOLOGÍA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El corazón se ubica en el mediastino medio inferior, rodeado por una membrana llamada ____________.",
+      "alternatives": [
+        "miocardio",
+        "pericardio",
+        "endocárdico",
+        "cuerolo tendinoso",
+        "líquido pericárdico"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al ayudar en la cocina, Lolito sufrió un pequeño corte; su madre le colocó una gasa y ejerció presión evitando así, más pérdida de sangre. Después de un par de horas, Lolito, curioso, quiso ver su herida y notó que ya no tenía sangrado.\n¿Cuál de las siguientes afirmaciones está directamente relacionada con el cese de la hemorragia?",
+      "alternatives": [
+        "La lisis de los eritrocitos",
+        "La formación de fibrina",
+        "La inactivación de la trombina",
+        "La producción de hemoglobina",
+        "La generación de anticuerpos"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona es herida con un puñal que atravesó su corazón. Señale el orden de las estructuras histológicas que fueron atravesadas por dicha arma:",
+      "alternatives": [
+        "miocardio - endocardio - epicardio - pericardio",
+        "endocardio - epicardio - miocardio - pericardio",
+        "pericardio - epicardio - miocardio - endocardio",
+        "pericardio - endocardio - epicardio - miocardio",
+        "epicardio - endocardio - miocardio - pericardio"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un paciente herido de bala sufre de un profuso sangrado y, debido a que no recibe atención médica inmediata, pierde el conocimiento. ¿Cuál cree usted que ha sido el fenómeno fisiológico que ha provocado este hecho?",
+      "alternatives": [
+        "Trombosis coronaria",
+        "Conmoción cerebral",
+        "Choque hipovolémico",
+        "Shock nervioso",
+        "Estrés postraumático"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los vasos sanguíneos contribuyen a la homeostasis proveyendo las estructuras para el flujo de sangre desde y hacia el corazón y el intercambio de nutrientes y desechos en los tejidos. También juegan un papel importante ajustando la velocidad y el volumen del flujo sanguíneo. Al respecto de ellos, podemos afirmar que",
+      "alternatives": [
+        "las arterias poseen baja distensibilidad, lo que significa que sus paredes no se estiran con facilidad.",
+        "las arteriolas regulan el flujo sanguíneo desde los capilares hacia las arterias.",
+        "las venas tienen la lámina elástica interna o externa que se encuentra en las arterias.",
+        "el flujo de sangre de las arteriolas a las vénulas a través de los capilares se denomina microcirculación.",
+        "las vénulas que poseen diámetro entre 10 y 100."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando se estaba auscultando el corazón de un paciente, el médico notó que el segundo ruido cardíaco no era el adecuado, sabiendo que coincide con el final de la sístole; es decir, con la contracción del miocardio. Se asume que hay un problema con",
+      "alternatives": [
+        "la válvula bicúspide",
+        "la válvula tricúspide",
+        "las válvulas semilunares",
+        "las válvulas atriales"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Paco al observar unas láminas de histología al microscopio, correspondientes a vasos sanguíneos, identificó unos que se caracterizan por presentar una pared muscular gruesa, un diámetro pequeño y con abundante tejido elástico.\nEstas características descritas corresponden a un tipo particular de vasos denominados",
+      "alternatives": [
+        "arterias",
+        "venas",
+        "capilares",
+        "fístulas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando tenemos la voluntad de ser donantes de sangre, personal calificado nos la extrae de vasos sanguíneos que generalmente ubican en la zona de pliegue del brazo. Este vaso sanguíneo es superficial y resulta ser observable en la mayoría de personas, y se encarga del transporte de sangre no oxigenada. Nos estamos refiriendo a:",
+      "alternatives": [
+        "arterias.",
+        "capilares",
+        "vasos linfoides.",
+        "venas"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la fase de eyección, las válvulas auriculoventriculares están _______ y las válvulas sigmoideas están _______",
+      "alternatives": [
+        "cerradas cerradas.",
+        "cerradas abiertas.",
+        "abiertas abiertas.",
+        "semicerradas semiabiertas.",
+        "abiertas cerradas."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la fase de llenado ventricular, lo normal es que las válvulas aurículoventriculares estén _______ y las válvulas sigmoideas estén _______",
+      "alternatives": [
+        "cerradas cerradas.",
+        "cerradas abiertas.",
+        "abiertas abiertas.",
+        "abiertas cerradas.",
+        "semicerradas semiabiertas."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El miocardio del corazón recibe sangre oxigenada a través de la arteria",
+      "alternatives": [
+        "aorta dorsal.",
+        "coronaria.",
+        "carótida.",
+        "tronco pulmonar.",
+        "mesentérica."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando los ventrículos del corazón se contraen la sangre es expulsada a través de un tipo de vasos sanguíneos. Con respecto a los vasos sanguíneos en mención, indicar el enunciado correcto.",
+      "alternatives": [
+        "Presentan músculo liso",
+        "Se denominan venas",
+        "Son permeables",
+        "Transportan sólo sangre oxigenada",
+        "Presentan válvula bicúspide y tricúspide"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cavidad pericárdica se localiza entre",
+      "alternatives": [
+        "la hoja parietal del pericardio seroso y el pericardio fibroso.",
+        "la hoja visceral del pericardio seroso y el epicardio.",
+        "la hoja visceral del pericardio seroso y el miocardio.",
+        "el epicardio y la hoja parietal del pericardio seroso.",
+        "el epicardio y el miocardio."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a los vasos sanguíneos, determine el valor de verdad (V y F) y marque la alternativa correcta.\nI ) Las arterias, sin excepción, transportan sangre oxigenada.\nII ) Las venas se originan de los ventrículos del corazón.\nIII ) Las arterias con dilatación anormal se denominan aneurismas.\nIV ) Los capilares suelen comunicar las arteriolas con las vénulas.",
+      "alternatives": [
+        "VVVF",
+        "VVFV",
+        "VFFV",
+        "FFVV",
+        "FVFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la estructura del corazón, La hoja visceral del pericardio seroso es a la vez",
+      "alternatives": [
+        "el miocardio.",
+        "el endocardio.",
+        "el epicardio.",
+        "el pericardio fibroso.",
+        "la cuerda tendinosa."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cierre y vibración de las válvulas tricúspide y mitral durante la fase de sístole, tiene como consecuencia",
+      "alternatives": [
+        "la salida de sangre del ventrículo.",
+        "el llenado ventricular.",
+        "la relajación ventricular.",
+        "el primer ruido cardiaco.",
+        "la relajación isovolumétrica."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las cuerdas tendinosas presentes en el corazón, tienen como función",
+      "alternatives": [
+        "el soporte de las válvulas.",
+        "conducir el impulso eléctrico.",
+        "generar impulsos eléctricos.",
+        "envolver al corazón.",
+        "nutrir al corazón."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los componentes del sistema cardiovascular, conocidos como vasa vasorum son importantes porque",
+      "alternatives": [
+        "nutren al corazón.",
+        "irrigan a las arterias y venas.",
+        "forman al marcapaso.",
+        "llevan nutrientes al hígado.",
+        "permiten la oxigenación de la sangre."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El gasto cardiaco aproximado en el ser humano se calcula a partir del volumen de eyección y la frecuencia cardiaca. Su valor es de aproximadamente",
+      "alternatives": [
+        "1 L/min.",
+        "3 L/min.",
+        "5 L/min.",
+        "7 L/min.",
+        "9 L/min."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La frecuencia cardiaca es el número de latidos que realiza el corazón en un minuto y su valor promedio es ....... latidos/minuto",
+      "alternatives": [
+        "10 - 30",
+        "20 - 40",
+        "40 - 60",
+        "60 - 80",
+        "80 - 100"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CIRCULATORIO HUMANO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el texto:\nLa sangre es un líquido espeso, de color rojo, que se encuentra contenido dentro del sistema cardiovascular y está formado por una parte líquida (plasma) y unos elementos celulares denominados glóbulos rojos , glóbulos blancos y plaquetas .\nEl concepto de cada una de las expresiones subrayadas, respectivamente, es:\n1) Células sanguíneas que intervienen en los mecanismos defensivos del cuerpo, detectando y destruyendo las sustancias de organismos extraños.\n2) Elementos de la sangre de forma ovoidea, que participan en los procesos de coagulación. 3) Estructuras tubulares que forman el sistema cardiovascular y que se encuentran repartidos por todo el organismo.\n4) Células sanguíneas con forma de disco bicóncavo, sin núcleo, que en su interior contiene una proteína (hemoglobina).\n5) Tipos de leucocitos (1% del total) que circulan en la sangre y contienen una sustancia denominada histamina y participa en los procesos alérgicos.\n6) Vasos sanguíneos que se distribuyen por todo el organismo y que transportan sangre oxigenada.\nSon ciertas:",
+      "alternatives": [
+        "1,2 y 4",
+        "3, 4 y 6",
+        "4,1 y 2",
+        "4,5 y 2",
+        "6,5 y 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/conceptualizacion-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONCEPTUALIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elige la opción correcta entre las siguientes Columna I Columna II A. Epinefrina i. Estimula el crecimiento muscular B. Testosterona ii. Disminución de la presión arterial C. Glucagón iii. Degradación del glucógeno hepático D. Factor natriurético auricular iv. Aumenta la frecuencia cardíaca Opciones:",
+      "alternatives": [
+        "A-ii, B-i, C-iii, D-i",
+        "A-iv, B-i, C-iii, D-ii",
+        "A-i, B-ii, C-iii, D-iv",
+        "A-i, B-iv, C-ii, D-iii"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep422.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.22 MCQ 12"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Algunos niños pueden nacer con un defecto en el tabique ventricular (VSD), una enfermedad cardiaca congénita en la que el tabique del corazón tiene una abertura y permite que la sangre de ambos ventrículos entre en contacto. Conforme a lo mencionado, ¿qué tipo de circulación presentarían los pacientes con esta condición?",
+      "alternatives": [
+        "simple y completa",
+        "abierta e incompleta",
+        "doble e incompleta",
+        "doble y completa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/biologia-preuniversitaria-examen.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA DECO RESUELTA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El fenómeno de dilatación patológica y localizada de una arteria por debilitamiento de sus paredes es conocida con el nombre de _____ .",
+      "alternatives": [
+        "estenosis",
+        "várices",
+        "aneurisma",
+        "arteriosclerosis",
+        "hematoma"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/biologia-callao-examen-de-admision-universidad-unac-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA EXAMEN ADMISIÓN UNIVERSIDAD DEL CALLAO RESUELTO"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al llegar al domicilio de un sospechoso de asesinato, se encontró manchas de sangre en el mueble debido a ello, el sospechoso fue detenido. Al analizar la sangre se determinó la presencia de glóbulos rojos nucleados por lo que su abogado exigió la liberación inmediata de su cliente. ¿En que se basó dicha solicitud del abogado?",
+      "alternatives": [
+        "Se requieren datos de los leucocitos para determinar si la sangre es humana.",
+        "Se necesita analizar una muestra fresca de sangre.",
+        "Los eritrocitos de los humanos son células anucleadas.",
+        "La sangre encontrada en el mueble pertenece a un gato."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/biologia-preuniversitaria-clase-4-teoria-y-ejercicios-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA PREUNIVERSITARIA CUARTA GUIA RESUELTA PREGUNTAS TIPO EXAMEN DE ADMISIÓN A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El conocimiento de las enfermedades cardiovasculares (ECV) constituye un tema muy importante considerando que son la primera causa de muerte en la mayoría de los países occidentales. Una de las siguientes afirmaciones no corresponde a una ECV.",
+      "alternatives": [
+        "El aumento de la presión sanguínea puede dañar el corazón, las arterias y otros órganos.",
+        "El accidente cerebrovascular constituye la interrupción del suministro de sangre al cerebro.",
+        "Si una arteria en general se bloquea parcialmente, una porción del músculo cardiaco muere debido a la falta de oxígeno, lo cual constituye un infarto al miocardio.",
+        "La aterosclerosis es la acumulación de materiales grasos ubicados debajo del revestimiento interno de las arterias.",
+        "La causa más frecuente de hipertensión es el adelgazamiento de las arterias debido a la aterosclerosis."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/curvas-en-el-plano-lugares-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA BIOMÉDICAS 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el ventrículo izquierdo se encuentra el nódulo de:",
+      "alternatives": [
+        "Tebesio",
+        "Sigmoideas",
+        "Cowper",
+        "Skene",
+        "Arancio"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unica-pdf-ica.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN LUIS GONZAGA 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNICA 2026 TEMARIO VACANTES PROSPECTO ESTRUCTURA PUNTAJES CRONOGRAMA ÁREAS A B C PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los hongos y bacterias son fagocitados por:",
+      "alternatives": [
+        "Monocitos",
+        "Piocitos",
+        "Neutrófilos",
+        "Basófilos",
+        "Eosinófilos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unica-pdf-ica.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN LUIS GONZAGA 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNICA 2026 TEMARIO VACANTES PROSPECTO ESTRUCTURA PUNTAJES CRONOGRAMA ÁREAS A B C PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar cuál es la principal arteria del cuerpo humano",
+      "alternatives": [
+        "Maxilares",
+        "Branquiales",
+        "Aorta",
+        "Facial",
+        "Occipital"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-3ro-4to-actividad-4-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS ECONÓMICAS, FINANCIERAS Y EMPRESARIALES PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA A 2027"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué células sanguíneas están encargadas de la producción de anticuerpos?",
+      "alternatives": [
+        "neutrófilos",
+        "basófilos",
+        "eosinófilos",
+        "plasmocitos",
+        "monocitos"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/resolucion-examen-villarreal-admision.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS DE LA SALUD PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA D 2027 FORMALES Y NATURALES"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Por dónde circula la sangre oxigenada?",
+      "alternatives": [
+        "solo por arterias",
+        "solo por vénulas",
+        "por capilares y venas",
+        "por arterias y capilares",
+        "exclusivamente por venas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/resolucion-examen-villarreal-admision.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS DE LA SALUD PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA D 2027 FORMALES Y NATURALES"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique qué tipo de células son infectadas por el virus del sida.",
+      "alternatives": [
+        "natural killer",
+        "citotóxicas",
+        "plasmoblastos",
+        "T8 supresores",
+        "helper"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/resolucion-examen-villarreal-admision.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS DE LA SALUD PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA D 2027 FORMALES Y NATURALES"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si pisáramos adrede un saltamontes, sería absurdo pretender que se",
+      "alternatives": [
+        "viera un líquido transparente o verde pálido",
+        "Observara rastros de sangre roja en el piso.",
+        "exhibiera una mancha diferente a la sangre.",
+        "mostrara el color tenue de su hemolinfa.",
+        "notará la ausencia de sangre encarnada."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/temas-admision-san-marcos-frecuentes.html",
+      "sourceName": "matematicasn.blogspot.com — TEMAS FRECUENTES SAN MARCOS ADMISIÓN 2027 I EXAMEN DECO INGRESO UNIVERSIDAD 2026 II DECANA DE AMÉRICA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una final deportiva, un participante cayó y se rompió la cabeza empezando a sangrar. No había cerca al lugar un centro asistencial para su pronta atención, por lo que solo se atinó a colocarle una prenda en dicho lugar ejerciendo presión, lo que resultó positivo para evitar más pérdida de sangre. Y así ya no fue necesario tener que suturarlo como indicó finalmente un médico cuando fue llevado a un hospital. Su madre se preguntaba, ¿cómo pudo ayudar esta acción inmediata?, ante ello, un participante que sabía de biología, respondió que fue un mecanismo natural debido a:",
+      "alternatives": [
+        "la lisis de los eritrocitos.",
+        "la formación de fibrina.",
+        "la inactivación de la trombina.",
+        "la producción de hemoglobina."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/01/biologia-prueba-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN DE BIOLOGÍA RESUELTO DE ADMISIÓN UNIVERSIDAD CON CLAVES Y SOLUCIONES"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El corazón es un órgano muscular en forma de cono e histológicamente está formado por el pericardio y la pared cardiaca. El pericardio se divide en pericardio fibroso y pericardio seroso; mientras que, la pared cardiaca se divide en tres: epicardio, miocardio y endocardio. La capa responsable de la acción del bombeo del corazón es el:",
+      "alternatives": [
+        "Epicardio",
+        "Miocardio",
+        "Endocardio",
+        "Pericardio seroso",
+        "Pericardio fibroso"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN QUINTOS BIOMÉDICAS 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS PDF SOLUCIONARIO"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación al sistema cardiovascular humano se puede afirmar lo siguiente:\n1. La pared cardiaca presenta tres capas: epicardio, miocardio y endocardio.\n2. El pericardio fibroso proporciona protección, evita la sobredistensión y fija el corazón al mediastino.\n3. Las venas tienen una ubicación generalmente profundas.\n4. Las asterias inician en los ventrículos.\n5. Las venas terminan en los capilares.\nSon ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "1, 2 y 4",
+        "1, 3 y 5",
+        "2, 3 y 4",
+        "3, 4 y 5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al no llegar oxígeno al tejido cardiaco, por obstrucción de las arterias coronarias del corazón, se produce un agudo dolor en el pecho que se irradia hacia:",
+      "alternatives": [
+        "Los pulmones",
+        "El cerebro",
+        "Mitad del cuerpo derecho o izquierdo",
+        "El brazo izquierdo",
+        "Mitad de la cara derecha o izquierda."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/simulacro-villarreal-presencial-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO VILLARREAL 2027 RESUELTO INGRESO UNIVERSIDAD RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la circulación de la sangre en el corazón y pulmones, seleccione la alternativa correcta sobre los enunciados.\nI. La válvula tricúspide se abre para que la sangre venosa pase al ventrículo derecho.\nII. La válvula mitral se abre para que la sangre arterial pase al ventrículo izquierdo.\nIII. La válvula pulmonar se abre para que la sangre arterial se dirija a los pulmones.",
+      "alternatives": [
+        "VFF",
+        "VVF",
+        "VVV",
+        "FVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-biologia-semana-15-2020.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la sangre, la mayor parte del oxígeno es transportada por una proteína compleja llamada _________. Por otra parte, el dióxido de carbono es transportado mayormente en forma de iones _________.",
+      "alternatives": [
+        "carboxihemoglobina - bicarbonato",
+        "metahemoglobina - bicarbonato",
+        "hemoglobina - bicarbonato",
+        "hemoglobulina - sulfato"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos-biologia-semana-11-2020.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA ÁREA C PRUEBA DECO SAN MARCOS SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un estudio experimental, se evalúa el corazón de cuatro cámaras de un ave grande mientras bombea sangre. Como resultado, se espera que, cuando la sangre ingrese al corazón a través de las venas cavas, las válvulas aurículo-ventriculares estén _______ , la sangre contenga _______ oxígeno y los ventrículos estén _______",
+      "alternatives": [
+        "abiertas - mucho - vacíos",
+        "abiertas - poco - llenos",
+        "cerradas - poco - vacíos",
+        "cerradas - mucho - vacíos",
+        "cerradas - mucho - llenos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCULACIÓN Y TRANSPORTE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – BIOLOGÍA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifique si la característica es de una vena (V) o una arteria (A).\n( ) sus paredes vasculares son delgadas\n( ) poseen válvulas\n( ) sus paredes vasculares son anchas y elásticas\n( ) devuelven la sangre de los órganos al corazón",
+      "alternatives": [
+        "V – V – A – V",
+        "A – A – V – A",
+        "V – V – V – A",
+        "A – V – A – V"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCULACIÓN Y TRANSPORTE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – BIOLOGÍA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El corazón humano posee cuatro cavidades y varias estructuras conocidas como válvulas que permiten controlar el flujo de sangre en su interior. De acuerdo a ello relacione ambas columnas y marque la alternativa correcta.\nI. Tricúspide\nII. Válvula sigmoidea\nIII. Bicúspide",
+      "alternatives": [
+        "Permite la salida de la sangre del corazón",
+        "Regula el flujo de la sangre venosa",
+        "Regula el flujo de la sangre arterial",
+        "IIa – IIIb – Ic"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCULACIÓN Y TRANSPORTE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – BIOLOGÍA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ruidos cardíacos son sonidos breves y transitorios producidos por la intervención de las válvulas del corazón. Así se distinguen dos tipos de ruido, marque la alternativa incorrecta respecto a ello.",
+      "alternatives": [
+        "El cierre de la válvula bicúspide interviene en el primer ruido cardíaco.",
+        "La apertura de las válvulas sigmoideas es responsable del segundo ruido cardiaco.",
+        "Cuando las válvulas aurículo ventriculares se cierran provocan el primer ruido cardiaco.",
+        "El cierre de la válvula pulmonar y aortica son responsables del segundo ruido cardiaco."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCULACIÓN Y TRANSPORTE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – BIOLOGÍA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una persona producto de la infección, se eleva el número de leucocitos como un mecanismo de defensa. A dicho aumento, se denomina:",
+      "alternatives": [
+        "Leucopenia",
+        "Trombocitopenia",
+        "Policitemia",
+        "Leucocitosis",
+        "Anemia"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/03/centro-preuniversitario-cepreunach-simulacion-de-la-prueba-de-ensayo-de-ingreso-universidad-ejercicios-resueltos-solucionario-del-simulacro-actualizado-claves-respuestas-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO CEPREUNACH 2027 INGRESO DIRECTO A LA UNIVERSIDAD SOLUCIONARIO PRUEBA DE ENSAYO – SIMULACIÓN PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Glóbulos blancos cuyo recuento elevado indica una infección parasitaria:",
+      "alternatives": [
+        "basófilos",
+        "eosinófilos",
+        "monocitos",
+        "linfocitos B",
+        "linfocitos T"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los leucocitos que se incrementan ante la presencia de helmintos en el ser humano son los.",
+      "alternatives": [
+        "Basó filos",
+        "Eosinófilos",
+        "Linfocitos",
+        "Monocito",
+        "Neutrófilos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/1ro-2do-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREVI TERCER EXAMEN INGRESO DIRECTO UNIVERSIDAD PRUEBA FINAL CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La falta de vitamina K afecta el proceso de coagulación al no permitir la síntesis de protrombina, que es la molécula que se convierte en trombina sobre la cual actúa la _______ para dar inicio al proceso de coagulación.",
+      "alternatives": [
+        "fibrina",
+        "tromboplastina",
+        "trombina",
+        "protrombina",
+        "plasmina"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/biologia-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Nuestro cuerpo da señales cuando algo va mal. Si detectamos la presencia de una serie de bultos en la zona lateral del cuello, en las axilas y en la zona inguinal, que se mueven ligeramente y con leve dolor, pero constante, ¿qué estaría ocurriendo?",
+      "alternatives": [
+        "Inflamación de los ganglios linfáticos",
+        "Un evento de reacción alérgica",
+        "Una picadura araña que produjo inflamación",
+        "Acumulación de grasa simple en los ganglios",
+        "Filtración hídrica del sistema hemostático"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/biologia-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La respuesta inmune específica consiste en una serie compleja de interacciones entre los distintos componentes del sistema inmunológico. Por ejemplo, cuando el linfocito activado prolifera y origina una gran cantidad de linfocitos, todos ellos con el mismo receptor de superficie, es una característica que corresponde a la",
+      "alternatives": [
+        "especificidad.",
+        "autorregulación.",
+        "clonalidad.",
+        "memoria inmunológica.",
+        "potenciación de respuesta."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/biologia-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Órgano linfático que presenta pulpa roja y pulpa blanca:",
+      "alternatives": [
+        "Ganglio linfático",
+        "Amígdala",
+        "Placa de Peyer",
+        "Timo",
+        "Bazo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-3ro-4to-actividad-2-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL MEDICINA PRUEBA INGRESO UNIVERSIDAD RESUELTA 2027 CLAVES "
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es considerado el tampón extracelular más abundante del plasma sanguíneo.",
+      "alternatives": [
+        "Cℓ –",
+        "HCO 3 –",
+        "Na +",
+        "K +",
+        "H 2 PO 4 –"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/5to-actividad-10-ct-experiencia-3-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La circulación simple y completa se presenta en:",
+      "alternatives": [
+        "Peces pulmonados",
+        "Aves",
+        "Renacuajos",
+        "Monotremas",
+        "Reptiles."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la circulación de tipo abierta la hemolinfa es vaciada hacia:",
+      "alternatives": [
+        "El corazón",
+        "Las arterias",
+        "Las venas",
+        "Las capilares",
+        "El hemoceloma"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La circulación doble e incompleta se presenta en el caso de:",
+      "alternatives": [
+        "Mamíferos",
+        "Anfibios",
+        "Peces",
+        "Artrópodos",
+        "Aves."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el aparato circulatorio abierto, los vasos comunican con unas amplias cavidades o hemoceles, que son inundadas por el medio interno de:",
+      "alternatives": [
+        "hemolinfa.",
+        "sangre.",
+        "linfa.",
+        "suero.",
+        "plasma."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los cocodrilos pueden permanecer largo tiempo sumergidos bajo el agua, lo que hace alterar su sistema de circulación el cual lo puede realizar por presentar:",
+      "alternatives": [
+        "Agujero oval",
+        "Epiglotis",
+        "Agujero de panizza",
+        "Fosa redonda",
+        "Fosa poplítea."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los gusanos redondos del filo nematodo presenta una circulación:",
+      "alternatives": [
+        "abierta",
+        "doble",
+        "simple",
+        "completa",
+        "sin órganos especializados"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Como se llama el músculo del corazón que contiene fibras nerviosas y que ayuda a contraerse automáticamente.",
+      "alternatives": [
+        "Epicarpio",
+        "Endocardio",
+        "Pericardio seroso",
+        "Miocardio",
+        "Endotelio"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El aumento de la hemoglobina en el poblador andino es para:",
+      "alternatives": [
+        "aumentar la capacidad muscular",
+        "compensar la deficiencia de oxígeno",
+        "contrarrestar la gravedad",
+        "para protegernos del frío",
+        "soportar la altitud"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre los ruidos cardiacos, colocar (V) o (F) según el valor de verdad de los siguientes enunciados:\n( ) El segundo ruido se da solo por cierre de la válvula sigmoidea derecha.\n( ) El primer ruido sucede por apertura simultánea de las válvulas tricúspide y bicúspide.\n( ) En la generación del tercer ruido participan las válvulas auriculoventriculares.",
+      "alternatives": [
+        "FFV",
+        "FVV",
+        "VFF",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a la circulación de los anfibios, es correcto, excepto:",
+      "alternatives": [
+        "tienen hematíes con núcleos.",
+        "poseen linfocitos, monocitos y neutrófilos.",
+        "circulación doble y completa.",
+        "corazón con tres cavidades.",
+        "tienen mezcla de sangre en el ventrículo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los reptiles que presentan foramen de Panizza pertenecen al orden:",
+      "alternatives": [
+        "saurios.",
+        "quelonios.",
+        "ofidios.",
+        "crocodilianos.",
+        "rátidas."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La circulación de los condrictios es:",
+      "alternatives": [
+        "abierta e incompleta.",
+        "simple y completa.",
+        "doble y completa.",
+        "simple e incompleta.",
+        "cerrada e incompleta."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los leucocitos que están asociados a la inflamación, alergia y sinusitis son:",
+      "alternatives": [
+        "Neutrófilos",
+        "Eosinófilos",
+        "Basófilos",
+        "Monocitos",
+        "Linfocitos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relaciona:\n1) Sangre\n2) Hemolinfa\n3) Hidrolinfa\n( ) Erizo\n( ) Peces\n( ) moluscos.",
+      "alternatives": [
+        "1,2,3",
+        "3,1,2.",
+        "3,2,1",
+        "2,1,3.",
+        "1,3,2."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Adriano observa al microscopio, cortes histológicos de vasos sanguíneos. El centra su atención en aquellos que presentan una pared muscular gruesa, un diámetro pequeño y con abundante tejido elástico. Se puede deducir que Adriano logró interesarse en",
+      "alternatives": [
+        "vénulas.",
+        "venas.",
+        "capilares.",
+        "fístulas.",
+        "arterias."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las aves no se presenta:",
+      "alternatives": [
+        "circulación cerrada doble y completa.",
+        "corazón con cuatro cavidades.",
+        "glóbulos rojos son anucleados.",
+        "no hay mezcla de sangre.",
+        "corazón presenta arco aórtico derecho."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Como es conocido, los artrópodos y entre ellos los insectos, constituyen alrededor de las 3/4 partes de especies de animales conocidas. Según lo mencionado, se concluye que el modelo de circulación animal más frecuente en la biodiversidad animal es del tipo circulación",
+      "alternatives": [
+        "abierta.",
+        "incompleta.",
+        "cerrada.",
+        "doble."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los glóbulos blancos son células sanguíneas cuya función es la defensa, por lo que forman parte de nuestro sistema inmunológico. ¿Qué glóbulos blancos tienen la propiedad de fagocitar complejos antígeno-anticuerpo?",
+      "alternatives": [
+        "Neutrófilos",
+        "Monocitos",
+        "Eosinófilos",
+        "Linfocitos",
+        "Basófilos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ejercicios-resueltos-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA E 2024-2  DERECHO SOCIALES EDUCACIÓN INGRESO UNIVERSIDAD PRUEBA RESUELTA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación correcta de las válvulas cardiacas es",
+      "alternatives": [
+        "seno venoso coronario: válvula sigmoidea aórtica",
+        "orificio auriculoventricular izquierdo: válvula tricúspide",
+        "orificio auriculoventricular derecho: válvula mitral",
+        "vena cava superior: válvula sigmoidea pulmonar",
+        "vena cava inferior: válvula de Eustaquio"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los nuevos hematíes se originan a expensas de células que pierden su núcleo, en _______ , luego se cargan de hemoglobina y pasan al torrente circulatorio.",
+      "alternatives": [
+        "Médula roja de los huesos",
+        "Bazo",
+        "Médula amarilla de los huesos",
+        "Osteoblastos",
+        "Hígado"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se conoce también como la hoja visceral del pericardio seroso:",
+      "alternatives": [
+        "Pericardio fibroso",
+        "Pericardio parietal",
+        "Miocardio",
+        "Endocardio",
+        "Epicardio"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El componente sanguíneo responsable de la coagulación y la reparación de vasos lesionados es:",
+      "alternatives": [
+        "Eritrocito",
+        "Leucocito",
+        "Plaqueta",
+        "Linfocito",
+        "Plasma"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El proceso mediante el cual se forman las células sanguíneas en la médula ósea roja se denomina:",
+      "alternatives": [
+        "Hemólisis",
+        "Hematopoyesis",
+        "Eritropoyesis",
+        "Fagocitosis",
+        "Diapedesis"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La adaptabilidad de los camélidos a la altura tanto como a los llanos se debe a :",
+      "alternatives": [
+        "la alta concentración de hemoglobina en la sangre.",
+        "la poca cantidad de sangre en el cuerpo.",
+        "la gran cantidad de glóbulos rojos.",
+        "la fluidez de sangre en los pulmones.",
+        "la alta viscosidad de la sangre circulante."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/religion-5to-actividad-3-experiencia-5-resuelta-aprendo-en-casa-educacion-religiosa-tarea-web-radio-reto-tv-quinto-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNCP ÁREA-1 CIENCIAS DE LA SALUD INGRESO UNIVERSIDAD DEL CENTRO RESUELTO RESPUESTAS 2026"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considerando las 4 válvulas que se encuentran en el interior del corazón, señale aquellas por las cuales solo circula sangre oxigenada.",
+      "alternatives": [
+        "Tricúspide y sigmoidea aórtica",
+        "Bicúspide y sigmoidea pulmonar",
+        "Tricúspide y sigmoidea pulmonar",
+        "Mitral y sigmoidea pulmonar",
+        "Bicúspide y sigmoidea aórtica"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Wuchereria bancrofti , un parasito transmitido por mosquitos, provoca la elefantiasis que se caracteriza por el crecimiento anormal de partes del cuerpo por acumulación de líquidos por obstrucción de conductos. ¿Cuál sería el órgano o conducto afectado?",
+      "alternatives": [
+        "Ganglio linfático",
+        "Órgano linfoide",
+        "Vasos capilares",
+        "Válvula cardiaca",
+        "Vaso linfático"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/biologia-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ruidos cardíacos son sonidos breves y transitorios producidos por la apertura y el cierre de las válvulas. El primer ruido se produce por",
+      "alternatives": [
+        "la apertura de las válvulas sigmoideas.",
+        "el cierre de las válvulas bicúspide y tricúspide.",
+        "la apertura de las válvulas bicúspide y tricúspide.",
+        "el cierre de las válvulas sigmoideas."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/biologia-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un laboratorio de inmunología se desea estudiar a los leucocitos encargados de originar a las células responsables de la inmunidad humoral.\n¿A qué leucocitos estudiarían en dicho laboratorio?",
+      "alternatives": [
+        "Linfocito T",
+        "Granulocito",
+        "Monocito",
+        "Linfocito B"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-8-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COORDINACIÓN QUÍMICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al sistema que nos permite destruir agentes extraños o antígenos, indicar verdadero (V) o falso (F) según corresponda y marque la alternativa correcta.\n( ) Los mecanismos innatos externos está presente en todos los organismos.\n( ) Los linfocitos B forman los anticuerpos directamente.\n( ) Solo linfocitos B tienen la capacidad de generar la memoria inmunológica.\n( ) Las células del sistema inmunológico son los eritrocitos y leucocitos.\n( ) El antígeno induce la respuesta inmunitaria en los organismos.",
+      "alternatives": [
+        "FVFVV",
+        "VVFVF",
+        "FVFFF",
+        "VFFFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-8-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COORDINACIÓN QUÍMICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué sustancia genera la defensa química del organismo?",
+      "alternatives": [
+        "La Adrenalina",
+        "El ácido acético",
+        "El ácido clorhídrico",
+        "Los anticuerpos",
+        "Los antígenos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-biologia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA PREGUNTAS RESUELTAS MODO EXAMEN DE ADMISIÓN UNIVERSIDAD CON RESPUESTAS"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cómo se denomina a los glóbulos blancos más numerosos de la sangre cuya función es la fagocitosis de bacterias que invaden los tejidos?",
+      "alternatives": [
+        "Monocitos",
+        "Linfocitos",
+        "Eosinófilos",
+        "Neutrófilos",
+        "Basófilos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/3ro-4to-actividad-10-cta-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia-web-tarea-radio-reto-tv-ct-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PEDRO RUIZ INGRESO UNIVERSIDAD EXAMEN RESUELTO RESPUESTAS 2024 PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El volumen sanguíneo se incrementa con :",
+      "alternatives": [
+        "los ejercicios corporales",
+        "el sobrecalentamiento del cuerpo",
+        "las dietas bajas en calorías y proteínas",
+        "el aumento de las proteínas del plasma",
+        "el crecimiento"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/comprension-de-lectura-cayetano-heredia.html",
+      "sourceName": "matematicasn.blogspot.com — APTITUD VERBAL CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La función cardiovascular se ve disminuida por",
+      "alternatives": [
+        "el poco entrenamiento y el incremento de las hormonas anabólicas",
+        "el sobreentrenamiento y la dieta abundante en grasas",
+        "el sobreentrenamiento y la dieta baja en calorías y proteínas",
+        "el poco entrenamiento y el aumento del volumen de proteínas",
+        "la tensión muscular y la dieta baja en calorías y proteínas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/comprension-de-lectura-cayetano-heredia.html",
+      "sourceName": "matematicasn.blogspot.com — APTITUD VERBAL CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Referente a las arterias, son ciertas:\nI) Llega al corazón y se originan en los tejidos\nII) Salen del corazón y se originan en los ventrículos\nIII) De circulación profunda.\nIV) De circulación superficial\nV) Recogen sangre de los tejidos y la llevan al corazón",
+      "alternatives": [
+        "I y II",
+        "I, II y V",
+        "II y IV",
+        "II, IV y V",
+        "II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-biologia-semana-12-2020.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA EJERCICIOS DESARROLLADOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El pulso arterial se puede palpara en la arterias superficiales, como por ejemplo en la arteria radial; el pulso normal de un adulto oscila:",
+      "alternatives": [
+        "50 – 70 pulsos por minuto",
+        "60 – 80 pulsos por minuto",
+        "30 – 50 pulsos por minuto",
+        "80 – 120 pulsos por minuto",
+        "80 – 10 pulsos por minuto"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-biologia-semana-12-2020.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA EJERCICIOS DESARROLLADOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es un factor fundamental para el Eritropoyesis:",
+      "alternatives": [
+        "Cobre",
+        "Magnesio",
+        "Manganeso",
+        "Hierro",
+        "Cobalto"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-biologia-semana-12-2020.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA EJERCICIOS DESARROLLADOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La capa más gruesa del corazón es:",
+      "alternatives": [
+        "Pericardio viceral",
+        "Pericardio parietal",
+        "Miocardio",
+        "Endocardio",
+        "Endotelio"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/anatomia-ejercicios-resueltos-de-examen-de-ingreso-universidad-pnp-policia-prueba-claves-respuestas-soluciones-ejemplos-doc-ppt-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ANATOMÍA EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son fagocitos llamados patrulleros:",
+      "alternatives": [
+        "neutrófilos.",
+        "eosinófilos.",
+        "monocitos.",
+        "basófilos.",
+        "linfocitos."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/anatomia-ejercicios-resueltos-de-examen-de-ingreso-universidad-pnp-policia-prueba-claves-respuestas-soluciones-ejemplos-doc-ppt-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ANATOMÍA EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el sistema inmune las células que cumplen con la función de fagocitosis son los:",
+      "alternatives": [
+        "eosinófilos y monocitos",
+        "basófilos y monocitos",
+        "monocitos y linfocitos",
+        "monocitos y neutrófilos",
+        "neutrófilo y eosinófilos"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/anatomia-ejercicios-resueltos-de-examen-de-ingreso-universidad-pnp-policia-prueba-claves-respuestas-soluciones-ejemplos-doc-ppt-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ANATOMÍA EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las arterias se caracterizan por:",
+      "alternatives": [
+        "tener su origen en los ventrículos.",
+        "llevar sangre de los tejidos al corazón.",
+        "tener válvulas en toda su trayectoria.",
+        "transporta sangre poco oxigenada.",
+        "tener lumen grande."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/anatomia-ejercicios-resueltos-de-examen-de-ingreso-universidad-pnp-policia-prueba-claves-respuestas-soluciones-ejemplos-doc-ppt-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ANATOMÍA EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los vasos sanguíneos más numerosos del cuerpo, a través de su pared se realiza un intercambio constante de sustancias:",
+      "alternatives": [
+        "arterias",
+        "venas",
+        "capilares",
+        "arteriales",
+        "vénulas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/anatomia-ejercicios-resueltos-de-examen-de-ingreso-universidad-pnp-policia-prueba-claves-respuestas-soluciones-ejemplos-doc-ppt-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ANATOMÍA EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN"
+    }
+  ]
+}

@@ -1797,6 +1797,2094 @@
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
       "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q38"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En su Metafísica , Aristóteles rechaza el relativismo y la postula de los impugnadores del principio de no contradicción (PNC). Según el Estagirita, es imposible que un enunciado sea verdadero y falso al mismo tiempo y en el mismo sentido. Quien pretenda rechazar este principio debe hacerlo con un argumento válido y su argumento será válido si y solo si no es contradictorio. Por lo tanto, quien pretenda impugnar este principio tiene que aceptarlo, de antemano, al momento de argumentar.\nCon esta argumentación, Aristóteles\nI. refuta dialécticamente a los impugnadores del PNC.\nII. demuestra directamente que el PNC es una verdad cierta e indudable.\nIII. sostiene que el PNC es un postulado injustificable racionalmente.",
+      "alternatives": [
+        "II",
+        "Solo I",
+        "I y III",
+        "Solo III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/filosofia-preuniversitaria-clase-4-teoria-y-ejercicios-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — FILOSOFÍA SOLUCIONARIO DE EXAMEN ADMISIÓN UNIVERSIDAD PRUEBA DE INGRESO CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si:\nI. Todos los arquitectos son profesionales.\nI I. Todos los profesionales son personas capacitadas.\nIII. Algunos arquitectos trabajan en proyectos públicos.\nIV. Ninguna persona capacitada actúa como improvisada.\n¿Cuál es la conclusión válida?",
+      "alternatives": [
+        "Todos los que trabajan en proyectos públicos son profesionales.",
+        "Algunos profesionales no actúan con improvisación.",
+        "Ningún profesional trabaja en proyectos públicos.",
+        "Todas las personas capacitadas son arquitectos.",
+        "Algunos arquitectos actúan con improvisación."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-untels-admision-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO  UNTELS 2027 RESUELTO INGRESO UNIVERSIDAD NACIONAL TECNOLÓGICA DEL SUR – VILLA EL SALVADOR PDF CLAVES DE RESPUESTAS – SOLUCIONARIO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La inferencia\nSi me compro un temo, gasto mucho dinero; no me compro un temo; entonces, no gasto mucho dinero\nes una falacia de",
+      "alternatives": [
+        "silogismo disyuntivo.",
+        "silogismo hipotético",
+        "negación del antecedente.",
+        "medio concluyente.",
+        "afirmación del consecuente."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/silogismo-categorico-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SILOGISMO CATEGÓRICO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Si hay nubes oscuras, entonces llueve. Pero, no llueve. Por lo tanto, no hay nubes oscuras\". ¿Cómo se denomina este razonamiento?",
+      "alternatives": [
+        "Simplificación",
+        "Silogismo Disyuntivo",
+        "Modus Ponendo Ponens",
+        "Silogismo Hipotético Puro",
+        "Modus Tollendo Tolens"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/logica-examen-admision-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De un grupo de personas se sabe lo siguiente:\n* Algunos provincianos son casados.\n* Todos los profesores no son provincianos.\n* Ninguno de los que tienen hijos es profesor\n* Todos los casados tienen hijos\n* 9 personas no son provincianas, ni casadas, pero tienen hijos.\n* Hay 12 profesores y son tantos como el número de casados\n* De los 25 provincianos, 15 tienen hijos.\n* 5 casados no son limeños\n* 10 limeños no son profesores ni tienen hijos.\n¿Cuántas personas conforman el grupo y cuántos no tienen hijos, ni son profesores?",
+      "alternatives": [
+        "63 y 20",
+        "57 y 10",
+        "59 y 23",
+        "64 y 9",
+        "63 y 22"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/conjuntos-ii-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — CONJUNTOS II EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición «Andrés no limpia la azotea puesto que asea su dormitorio, pero Andrés limpia la azotea» es equivalente a\nI. Andrés no limpia la azotea y no asea su dormitorio.\nII. Andrés limpia la azotea y asea su dormitorio.\nIII. Andrés limpia la azotea y no asea su dormitorio.",
+      "alternatives": [
+        "Solo III",
+        "Solo I",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/03/simulacro-presencial-san-marcos-2018-ii.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO ÁREA C SAN MARCOS 2025 I CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los amigos Aníbal, Benito, Carlos y Danilo son acusados de haber cometido un crimen. La policía ha establecido que:\n► Si Aníbal es culpable, entonces Benito fue su cómplice.\n► Si Benito es culpable, entonces o bien Carlos era su cómplice, o bien Aníbal es inocente.\n► Si Danilo es inocente, entonces Aníbal es culpable y Carlos es inocente.\n► Si Danilo es culpable, también Aníbal lo es.\n¿Quiénes son inocentes?",
+      "alternatives": [
+        "Aníbal",
+        "Benito",
+        "Carlos",
+        "Ninguno"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/02/examen-san-marcos-deco-2018-ii.html",
+      "sourceName": "matematicaj.blogspot.com — SAN MARCOS 2023-2 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD RESULTADOS ÁREAS A B C D E 2023 II PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la proposición:\nEn forma alguna, en cuanto el juez dicte sentencia de divorcio absoluto, el matrimonio se disuelve.\nEquivale a:",
+      "alternatives": [
+        "El matrimonio se disuelve cuando el juez dicte sentencia de divorcio.",
+        "El juez dicta sentencia de divorcio absoluto pero el matrimonio no se disuelve.",
+        "Siempre que un matrimonio se disuelve, es porque se dictó sentencia.",
+        "Se dicta sentencia de divorcio cuando solo y cuando el matrimonio se disuelve.",
+        "No se dicta sentencia de divorcio porque el matrimonio se disuelve."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son proposiciones coligativas:\n1. Juan y Mario son miembros del Comité de Defensa Civil.\n2. Juan no obstante Mario no son miembros del Comité de Defensa Civil.\n3. Juan conjuntamente con Mario ambos forman el Comité de Defensa Civil.\n4. Juan y Mario juntos van al colegio.\n5. 14 además 15 son números pares.\nSon ciertas:",
+      "alternatives": [
+        "1, 3 y 5",
+        "2, 4 y 5",
+        "1, 2 y 5",
+        "3, 4 y 5",
+        "2, 3 y 4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De los siguientes conceptos:\n1. Android - Sistema Operativo\n2. Laptop - Computador Personal\n3. Profesión - Informática\nSe puede afirmar que una conclusión falsa es",
+      "alternatives": [
+        "Android es subordinado de Sistema Operativo.",
+        "Computador Personal es subordinante de Laptop.",
+        "Informática es subordinado de Profesión.",
+        "Android no es comparable con Laptop.",
+        "Informática no es comparable con Computador Personal."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la expresión Nadie es feliz , inferimos:\n1. Es falso que todos sean felices.\n2. Ni Andrea ni Elena son felices.\n3. Es absurdo que algunos sean felices.\n4. Nicolasa no es feliz a menos que Maritza no sea feliz.\n5. Es mentira que hay felices.\nSon ciertas:",
+      "alternatives": [
+        "2, 3 y 4",
+        "2, 3 y 5",
+        "3, 4 y 5",
+        "1, 2 y 3",
+        "1, 3 y 5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la expresión:\n\"Casi no hay lógicos\", podemos obtener equivalentemente en un universo finito:\n1) Max o Santiago son lógicos.\n2) Luis es lógico o también Gustavo es lógico.\n3) Si Jacinto no es lógico, Ervando sí lo es.\n4) Es una farsa que, ni Walter ni Carlos sean lógicos.\n5) Elvis es lógico en el caso de que Víctor no lo sea.\nSON CIERTAS:",
+      "alternatives": [
+        "solo 1, 3 y 5",
+        "solo 3, 4 y 5",
+        "solo 2 y 4",
+        "solo 2 y 5",
+        "todas"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Caracterizan al lenguaje formal:\n1. Tiene significado conceptual.\n2. Su verdad es convencional.\n3. Sus símbolos o reglas carecen de contenido conceptual.\n4. Su significado es el objeto.\n5. Es condición suficiente para el conocimiento científico.\nSon ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "3, 4 y 5",
+        "2, 3 y 4",
+        "1, 2 y 5",
+        "2, 3 y 5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las premisas:\n“Algunos psicólogos son docentes, además, muchos de los no psicólogos son docentes, pero, varios de los no docentes son psicólogos”, se infiere:",
+      "alternatives": [
+        "Todos son psicólogos o docentes, salvo que, sean docentes y psicólogos.",
+        "Todos son psicólogos o docentes, además, sean docentes y psicólogos.",
+        "Todos son psicólogos o docentes, salvo que, sean docentes pero no psicólogos.",
+        "Todos son psicólogos o docentes, salvo que, ni son docentes ni psicólogos.",
+        "Todos son psicólogos o docentes, además, sean psicólogos pero no docentes."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pedro es un alumno aplicado que asistió a un seminario de Razonamiento Lógico; de allí salió muy preocupado por lo que dijo el profesor al final de la clase: “Quienquiera que piense con Lógica es coherente”; de allí que tenía que hacer varias inferencias correctas para entender dicho enunciado, estas fueron:\n1. Es falso que hay no coherentes y no piensan con lógica.\n2. Es objetable que casi la totalidad que es coherente piensa con lógica.\n3. Ninguno que es incoherente no piensa con lógica,\n4. Ni algún incoherente piensa con lógica.\n5. Si no es coherente, evidentemente no piensa con lógica.\nSon ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "3, 4 y 5",
+        "1, 2 y 5",
+        "Solo 4 y 5",
+        "Solo 1 y 4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\n“Algunos políticos no son chauvinistas”,\n“Ciertos chauvinistas no son políticos”,\n“Hay políticos que son chauvinistas”;\nse induce que:",
+      "alternatives": [
+        "Todo político es chauvinista.",
+        "Cualquier chauvinista es político.",
+        "Muchos políticos no son chauvinistas.",
+        "Quienquiera es político o chauvinista o político y chauvinista.",
+        "Ningún hombre es político o chauvinista, o, ni político ni chauvinista."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la proposición “casi no hay policías”, en un universo finito, se obtiene:\n1. Álex o Santiago son policías.\n2. Luis es policía o también Francisco es policía.\n3. Si Elidio no es policía, Orlando sí lo es.\n4. Es una farsa que, ni Walter ni Carlos sean policías.\n5. Elvis es policía únicamente si Víctor no lo es.\nSon ciertas:",
+      "alternatives": [
+        "solo 1, 3 y 5",
+        "solo 2 y 5",
+        "solo 2 y 4",
+        "solo 3, 4 y 5",
+        "1, 2, 3, 4 y 5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La premisa:\n“Existen médicos que son ginecólogos” equivale a:\n1. Es absurdo que casi ningún médico es ginecólogo.\n2. Es falso que todos los ginecólogos son no médicos\n3. En absoluto sucede que ningún ginecólogo es médico.\n4. Existen ginecólogos que son médicos.\n5. Todos los médicos son no ginecólogos.\nSon ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "2, 3 y 4",
+        "3, 4 y 5",
+        "1 y 4",
+        "2 y 5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son características del lenguaje formal :\n1. tiene múltiples significados ·\n2. solamente es escrito\n3. fue creado con fines prácticos\n4. posee una gramática imperfecta\n5. sus símbolos tienen sonidos propios\nSON CIERTAS:",
+      "alternatives": [
+        "1 ,2 y 5",
+        "1 ,3 y 5",
+        "3, 4 y 5",
+        "2 y 3",
+        "solo 3 y 5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-logico-unt-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LOGICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes proposiciones es equivalente a:\nTodos los diplomáticos no son católicos",
+      "alternatives": [
+        "Ningún diplomático es católico.",
+        "Algunos diplomáticos son católicos.",
+        "No todos los católicos son diplomáticos.",
+        "Algunos diplomáticos no son católicos.",
+        "Algunos católicos no son diplomáticos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/inferencias-logicas-cuantificadores.html",
+      "sourceName": "matematicaj.blogspot.com — LÓGICA DE CLASES PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD EN RAZONAMIENTO LÓGICO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si todas las lagartijas son reptiles y todos los reptiles son vertebrados, entonces se concluye que :",
+      "alternatives": [
+        "ninguna lagartija es vertebrado.",
+        "todas la lagartijas son vertebrados.",
+        "algunos reptiles no son vertebrados.",
+        "algunas lagartijas no son vertebrados.",
+        "algunas lagartijas no son reptiles."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/inferencias-logicas-cuantificadores.html",
+      "sourceName": "matematicaj.blogspot.com — LÓGICA DE CLASES PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD EN RAZONAMIENTO LÓGICO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A partir de la premisa:\n‘‘Todos los estudiantes de la pre son inteligentes’’, se puede deducir válidamente que:\nI) No es cierto que al menos un estudiante de la pre no sea inteligente.\nII) Al menos un estudiante de la pre es inteligente.\nIII) Algunos estudiantes de la pre no son inteligentes.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "I y II",
+        "I y III",
+        "II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/inferencias-logicas-cuantificadores.html",
+      "sourceName": "matematicaj.blogspot.com — LÓGICA DE CLASES PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD EN RAZONAMIENTO LÓGICO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si todos los ents son árboles y ningún hobbit es árbol , entonces:",
+      "alternatives": [
+        "algunos hobbits son ents",
+        "ningún hobbit es ent",
+        "algunos árboles no son ents",
+        "algunos hobbits no son árboles",
+        "todos los hobbits no son ents"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/inferencias-logicas-cuantificadores.html",
+      "sourceName": "matematicaj.blogspot.com — LÓGICA DE CLASES PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD EN RAZONAMIENTO LÓGICO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si ningún problema es difícil , y algunos problemas son interesantes, podemos concluir válidamente que:",
+      "alternatives": [
+        "Algunas cosas interesantes no son difíciles.",
+        "Algunas cosas interesantes son difíciles.",
+        "Algunos problemas no son interesantes.",
+        "Algunas cosas difíciles no son interesantes.",
+        "Ninguna cosa difícil es interesante."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/inferencias-logicas-cuantificadores.html",
+      "sourceName": "matematicaj.blogspot.com — LÓGICA DE CLASES PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD EN RAZONAMIENTO LÓGICO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada las siguientes premisas:\n• Algunos estudiantes no son honestos.\n• Todos los miembros de la fraternidad son honestos\n• Se puede deducir válidamente que:",
+      "alternatives": [
+        "Algunos estudiantes son miembros de la fraternidad.",
+        "Algunos miembros de la fraternidad no son estudiantes.",
+        "Algunos estudiantes no son miembros de la fraternidad.",
+        "Ningún miembro de la fraternidad es estudiante.",
+        "Ningún estudiante es miembro de la fraternidad."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/inferencias-logicas-cuantificadores.html",
+      "sourceName": "matematicaj.blogspot.com — LÓGICA DE CLASES PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD EN RAZONAMIENTO LÓGICO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se afirma\n• Los ingenieros son profesionales.\n• Algunas mujeres no son profesionales.\nDetermine la respuesta correcta.",
+      "alternatives": [
+        "Todas las mujeres son ingenieros.",
+        "Ningún ingeniero es mujer.",
+        "Ninguna mujer es ingeniero.",
+        "Ciertas mujeres no son ingenieros.",
+        "Ningún no mujer es no ingeniero."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/razonamiento-logico-deductivo-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO LÓGICO DEDUCTIVO PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De cierto curso se sabe que, «si un estudiante falta a más de tres clases, su nota final se verá afectada en un punto. Además, si al finalizar el semestre su promedio es menor a 12 deberá repetir el curso». Si la nota de Juan no ha sido afectada en un punto y no debe repetir el curso, se deduce que",
+      "alternatives": [
+        "faltó a más de 3 clases y su promedio es 12",
+        "el promedio de Juan fue mayor a 12 y las sus faltas mayores a 3.",
+        "Juan faltó a menos de 3 clases y su promedio fue de al menos 12.",
+        "Juan deberá asistir a todas las clases restantes para no repetir el curso.",
+        "el promedio de Juan fue menor a 12 y las faltas menores a 3."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/solucionario-unp-examen-admision-universidad-nacional-de-piura-preguntas-resueltas-prueba-de-ingreso-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNP 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE PIURA 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Anita meditaba muy preocupada por la temporada de invierno que se acercaba. Ella sabe que:\n☛ Si un niño consume kion, entonces tiene mayor defensa.\n☛ Consume kion o se enferma de los bronquios.\n☛ Si un niño se enferma de los bronquios, entonces no asistirá a la fiesta de invierno.\nSi Anita mandó a su hijo a la fiesta de invierno, ¿cuál de las siguientes afirmaciones es siempre verdadera?\nI) Su hijo consumió kion.\nII) Su hijo tiene mayor defensa.\nIII) Su hijo se enfermó de los bronquios.",
+      "alternatives": [
+        "Solo II",
+        "II y III",
+        "Solo I",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-matematico-ejercicios_12.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 1 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2017-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "José se dedica a la fabricación de neumáticos y deduce correctamente lo siguiente:\n☛ Todos los neumáticos están hechos de goma.\n☛ Todas las cosas hechas de goma son flexibles.\n☛ Algunas cosas hechas de goma son de color negro.\nSu socio que lo observa le pregunta, ¿cuál o cuáles de las siguientes afirmaciones son siempre verdaderas?\nI. Todos los neumáticos son flexibles y de color negro.\nII. Solo algunos de los neumáticos son hechos de goma.\nIII. Todos los neumáticos son flexibles.\nIIV. Todos los neumáticos son de color negro.\nS i José respondió correctamente, ¿cuál fue su respuesta?",
+      "alternatives": [
+        "Solo I",
+        "II y IV",
+        "I y II",
+        "Solo III",
+        "II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-matematico-ejercicios_12.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 1 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2017-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las elecciones para elegir a los directivos de una junta vecinal, hubo cuatro listas: lista 1, lista 2, lista 3 y lista 4. Juan, Miguel, Luis y César votaron por listas diferentes. Se sabe lo siguiente:\n☛ Si César no votó por la lista 1, entonces Miguel votó por la lista 3.\n☛ Si Juan votó por la lista 4, entonces César no votó por la lista 1.\n☛ Si Miguel votó por la lista 3 o por la lista 4, entonces Luis votó por la lista 2.\nSi Luis no votó por la lista 2, ¿quién votó por la lista 4?",
+      "alternatives": [
+        "Juan",
+        "Luis",
+        "Miguel",
+        "César",
+        "Juan o Miguel"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-matematico-ejercicios_12.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 1 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2017-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ely, Lalo y Clovis son tres amigos que tienen la siguiente conversación:\n«Teo tiene por lo menos 6 primos, dice Lalo.\n«No, tiene menos de 6», corrige Clovis.\n«Tal vez tengas razón, pero lo que yo sé es que tiene más de 1 primo», agrega Ely.\nSi se sabe que solo uno de los tres amigos dice la verdad, ¿cuántos primos, como máximo, tiene Teo?",
+      "alternatives": [
+        "1",
+        "6",
+        "5",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/tutoria-3ro-4to-actividad-2-experiencia-7-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EVALUACIÓN MEDICINA HUMANA 2026-2 SAN MARCOS INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuatro alumnos son sospechosos de haberse pasado el examen de habilidad lógico matemática y al ser interrogado por el profesor contestaron de la siguiente manera.\nDelia : Julio copió.\nJulio : Juan copió.\nJuan : Julio miente.\nJosé : Yo no copié.\nSi el único que no copió es el único que dice la verdad, ¿quién no copió el examen?",
+      "alternatives": [
+        "Delia",
+        "José",
+        "Juan",
+        "Julio",
+        "Juan o José"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/simulacro-2-matematicas-fisica-y.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNICA RESUELTO 2027 INGRESO UNIVERSIDAD GONSAGA DESCARGA PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Martín es el padre de José, y de él sabe lo siguiente:\n─ Si José es ingeniero, entonces no es abogado.\n─ José es abogado o no es químico.\n¿Cuál de las siguientes afirmaciones son siempre verdaderas?\nI ) Si José es ingeniero, entonces no es químico.\nII ) José no es ingeniero o no es químico.\nIII ) José no es ingeniero y no es químico.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "I y II",
+        "I y III",
+        "Solo III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Solucionarios-cepre-san-marcos-en-pdf-ingreso-directo-unmsm-deco-centro-preuniversitario-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIOS PRE SAN MARCOS 2026 I 2025 II 2024 2023 2022 DESCARGA PDF 2027"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cierto país, hay una ley que indica lo siguiente:\n\"Todos los dueños de un auto deben ser mayores de edad\".\nSi Alberto, Bruno y Carmela viven en ese país y siempre cumplen la ley, ¿cuál de las siguientes afirmaciones es necesariamente verdadera?",
+      "alternatives": [
+        "Alberto es mayor de edad; por lo tanto, es dueño de un auto.",
+        "Bruno no es dueño de un auto; por lo tanto, es menor de edad.",
+        "Carmela es dueña de un auto; por lo tanto, es mayor de edad."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/solucionario-examen-de-nombramiento-docente-prueba-unica-nacional-pun-resuelta-minedu-claves-respuestas-simulacro-desarrollado-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN NOMBRAMIENTO DOCENTE 2026 DESARROLLADA INICIAL PRIMARIA SECUNDARIA CLAVES–RESPUESTAS PREGUNTAS RESUELTAS PDF PRUEBA ÚNICA NACIONAL PUN 2025 MINEDU"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea saber si dos vehículos con velocidades V 1 y V 2 que circulan sobre la misma pista se están alejando. Se cuenta con las siguientes informaciones:\nI) V 1 > V 2\nII) Ambos vehículos circulan en sentidos opuestos y parten del mismo punto",
+      "alternatives": [
+        "Solo la información I es suficiente.",
+        "Solo la información II es suficiente.",
+        "Es necesario utilizar ambas informaciones.",
+        "Cada información por separado es suficiente.",
+        "Faltan datos."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/3ro-4to-actividad-6-experiencia-9-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 PRIMERA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF RM RV APTITUD LETRAS Y HUMANIDADES"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se afirma que:\n• Todos los peruanos son inteligentes.\n• Algunos peruanos desean estudiar inglés.\nEntonces podemos afirmar que:",
+      "alternatives": [
+        "Todos los peruanos inteligentes no desean estudiar inglés.",
+        "No es cierto que todos los peruanos desean estudiar inglés.",
+        "Todos los peruanos que desean estudiar inglés no son inteligentes.",
+        "Todos los inteligentes desean estudiar inglés.",
+        "Todos los peruanos no son inteligentes."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/3ro-4to-actividad-6-experiencia-9-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 PRIMERA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF RM RV APTITUD LETRAS Y HUMANIDADES"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el mercado los objetos A son más caros que los objetos B. Si no tengo dinero para comprar dos kilos de A, luego:",
+      "alternatives": [
+        "No tengo dinero para comprar 2 kilos de B.",
+        "No tengo dinero para comprar 1 kilo de B.",
+        "Es posible que compre 1 kilo de B.",
+        "No tengo ningún centavo para comprar."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/02/solucionario-coar-examen-admision-pua-resuelto-ingreso-colegio-de-alto-rendimiento-preguntas-claves-respuestas-ejercicios-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO COAR 2027 EXAMEN ADMISIÓN PUA COLEGIO DE ALTO RENDIMIENTO EVALUACIÓN PRUEBA RESUELTA RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si mañana hay nubes, entonces en la tarde lloverá; pero mañana habrá nubes, si hoy día hace calor o frío. Como hoy, no hace ni tal ni cual cosa, pero si está nublado, luego mañana:",
+      "alternatives": [
+        "Lloverá",
+        "No lloverá",
+        "No se sabe",
+        "Pueda que llueva"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/02/solucionario-coar-examen-admision-pua-resuelto-ingreso-colegio-de-alto-rendimiento-preguntas-claves-respuestas-ejercicios-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO COAR 2027 EXAMEN ADMISIÓN PUA COLEGIO DE ALTO RENDIMIENTO EVALUACIÓN PRUEBA RESUELTA RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los hermanos Alberto, Carlos y Betty son tema de conversación de dos vecinas, las cuales expresan las siguientes proposiciones verdaderas:\n• Si Alberto estudia Contabilidad, entonces Betty estudia Medicina.\n• Si Carlos no estudia Derecho, entonces trabaja.\n• Si Carlos estudia Derecho, entonces Betty no estudia Medicina.\nSi en realidad Carlos no trabaja, ¿cuál de las siguientes alternativas es siempre verdadera?",
+      "alternatives": [
+        "Carlos no estudia Derecho.",
+        "Betty estudia Medicina.",
+        "Alberto estudia Derecho.",
+        "Alberto no estudia Contabilidad.",
+        "Carlos estudia Medicina."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-del-examen-de-admision.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNTELS 2027 EXAMEN ADMISIÓN UNIVERSIDAD TECNOLÓGICA DE LIMA SUR CRONOGRAMA VACANTES ESTRUCTURA PUNTAJES PROSPECTO TEMAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Alicia, luego de haber asistido al festival Lima por la Paz deduce verdaderamente lo siguiente con respecto a los participantes en dicho evento:\n• Algunos cantantes son rockeros.\n• Todos los cantantes bailan.\n• No todos los rockeros bailan. Su hermana Erica, que asistió también al festival, le pregunta: «¿Cuál de las siguientes afirmaciones son verdaderas?»\nI ) Todos los cantantes son rockeros.\nII ) Algunos cantantes son rockeros y bailan.\nIII ) Todos los que bailan son rockeros.\nSi Alicia respondió correctamente, ¿cuál fue su respuesta?",
+      "alternatives": [
+        "I y II",
+        "Solo I",
+        "Solo II",
+        "II y III",
+        "Solo III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-untels-admision-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO  UNTELS 2027 RESUELTO INGRESO UNIVERSIDAD NACIONAL TECNOLÓGICA DEL SUR – VILLA EL SALVADOR PDF CLAVES DE RESPUESTAS – SOLUCIONARIO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Uno de los integrantes de la familia cumple años el día de hoy, por lo que Felícita va a preparar la cena. Luego de revisar su despensa, saca las siguientes conclusiones verdaderas:\n• Si no comemos lomo saltado, entonces no comemos ají de gallina.\n• Si comemos chupe de camarones, entonces no comeremos carapulcra.\n• Si comemos lomo saltado, entonces comeremos carapulcra.\n• Si no comemos ají de gallina, entonces comeremos sopa seca.\nSi concluye que definitivamente no comeremos sopa seca, ¿de qué estará compuesta necesariamente la cena familiar?",
+      "alternatives": [
+        "Chupe de camarones, lomo saltado y carapulcra",
+        "Ají de gallina, chupe de camarones y carapulcra",
+        "Ají de gallina, lomo saltado y carapulcra",
+        "Lomo saltado, ají de gallina y chupe de camarones",
+        "Sopa seca, carapulcra y ají de gallina"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-untels-admision-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO  UNTELS 2027 RESUELTO INGRESO UNIVERSIDAD NACIONAL TECNOLÓGICA DEL SUR – VILLA EL SALVADOR PDF CLAVES DE RESPUESTAS – SOLUCIONARIO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se sabe que:\n– Todo periodista es crítico.\n– Algunos periodistas son profesionales objetivos.\nSe concluye que:",
+      "alternatives": [
+        "Todo periodista no es crítico\"'",
+        "Ningún crítico es profesional objetivo.",
+        "Algún profesional objetivo no es periodista.",
+        "Algunos profesionales objetivos son críticos.",
+        "Algunos periodistas son profesionales objetivos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-matematico-unc-examen.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición:\n“La mayoría de narcotraficantes son deshonestos”\nEquivalente a:",
+      "alternatives": [
+        "Cualquier narcotraficante no es deshonesto.",
+        "Todos los narcotraficantes son deshonestos.",
+        "No es verdad que, ningún narcotraficante es deshonesto.",
+        "Ciertos no narcotraficantes innegablemente no son deshonestos.",
+        "Para cada narcotraficante se verifica que es deshonesto."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-matematico-unc-examen.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el argumento:\nSi llueve, me resfrío\nSi me resfrío, no asistiré a clases\nAsisto a clases\n-----------\nSe concluye que:",
+      "alternatives": [
+        "Llueve",
+        "No llueve",
+        "Me resfrío",
+        "No me resfrío",
+        "Llueve y no me resfrío"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-matematico-unc-examen.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar cuáles de las siguientes proposiciones son equivalentes a:\n“No es verdad que ningún congresista es honesto”.\n1) Existe honestos que son congresistas\n2) Algunos no honestos son congresistas\n3) Es falso que, cualquier no es congresista o no es honesto\n4) Cualquiera es honestos o no es congresista\n5) La mayoría de congresista son honestos",
+      "alternatives": [
+        "1, 2 y 5",
+        "1, 3 y 5",
+        "1, 2 y 4",
+        "2, 3 y 5",
+        "3, 4 y 5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-matematico-unc-examen.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Teniendo en cuenta la definición de argumento, indique la validez o no del siguiente razonamiento:\nSi Pedro poseyera minas de oro, entonces Pedro sería rico. Pedro no posee minas de oro, por lo tanto, Pedro no es rico.",
+      "alternatives": [
+        "Es inválido, porque, aunque las premisas son verdaderas, la conclusión no es necesariamente verdadera.",
+        "Es válido, porque todas las premisas son verdaderas y la conclusión se desprende de las premisas.",
+        "Es válido, ya que la verdad de las proposiciones no descalifica la validez de las inferencias.",
+        "No es válido, pues a pesar de que la conclusión se deduzca de las premisas, no es verdadera."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-filosofia-semana-13-2020.html",
+      "sourceName": "matematicaj.blogspot.com — FILOSOFÍA PRUEBA DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREA E SOLUCIONES CLAVES RESPUESTAS PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes proposiciones verdaderas:\n1. Todos los peluches son rellenados con lana.\n2. Existen peluches osos y peluches tigres.\n3. Algunas sillas son rellenadas con lana.\n¿Cuáles de las siguientes oraciones son verdaderas o falsas?\nI. Solo las sillas de niños son rellenadas con lana.\nII. Todos los peluches tigres están rellenados con lana.\nIII. Los peluches monos no están rellenos con lana.",
+      "alternatives": [
+        "FFV",
+        "FVF",
+        "VVV",
+        "FFF",
+        "VVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/razonamiento-matematico-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO UNI DE EXAMEN DE ADMISIÓN UNIVERSIDAD DE INGENIERÍA SOLUCIONADO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si afirmamos\n• Algunos relajados van a fiestas.\n• Todos los que van a fiestas pierden tiempo.\nDetermine la respuesta correcta.",
+      "alternatives": [
+        "Los que van a fiestas no son relajados.",
+        "Los que van a fiestas son relajados.",
+        "Algunos relajados pierden tiempo.",
+        "Todos los relajados aprovechan el tiempo.",
+        "No todos los que van a fiestas pierden el tiempo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/libro-de-razonamiento-matematico-de-quinto-de-secundaria-ejercicios-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO PROBLEMAS RESUELTOS DE EXAMEN DE ADMISIÓN UNI SOLUCIONARIO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada las siguientes proposiciones verdaderas:\nI. Todos los que trabajan en la UNJ son inteligentes.\nII. Algunos que trabajan en la UNJ son Limeños.\nDetermine la afirmación que siempre es verdadera.",
+      "alternatives": [
+        "Todos los que trabajan en la UNJ",
+        "Algunos inteligentes son Limeños",
+        "Todos los Limeños no son inteligentes.",
+        "Ningún Limeños trabaja en la UNJ",
+        "Todos los Limeños son inteligentes."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/monotonia-y-curvatura-funciones-con.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNJ 2027 UNIVERSIDAD NACIONAL DE JAÉN EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Amelia y su hermana esperan la mañana siguiente para abrir la caja de chocolates que guardó su madre. Se sabe lo siguiente:\nI. Si Amelia despierta antes que su hermana, entonces comerá por lo menos un chocolate.\nII. Si hay chocolates en la caja, entonces Amelia comerá, a lo más, dos chocolates.\nIII. Si Amelia come varios chocolates, entonces quedarían tres chocolates menos.\nIV. Si Amelia despierta antes que su hermana, entonces no quedarán varios chocolates para su hermana.\nSi la madre de las niñas, guardó más de un chocolate en la caja y Amelia despertó antes que su hermana, ¿cuántos chocolates en total guardó en la caja la madre?",
+      "alternatives": [
+        "6",
+        "3",
+        "5",
+        "4",
+        "2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/monotonia-y-curvatura-funciones-con.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNJ 2027 UNIVERSIDAD NACIONAL DE JAÉN EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes proposiciones lógicas:\n• Ningún científico es ingeniero\n• Muchos católicos son científicos\nEntonces la proposición verdadera es:",
+      "alternatives": [
+        "Todo católico no es ingeniero.",
+        "Ningún ingeniero es católico.",
+        "Muchos católicos son teólogos.",
+        "Todo ingeniero no es católico.",
+        "Algunos católicos no son ingenieros."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si ningún animal furioso ataca al hombre y todos los perros son animales furiosos, luego :",
+      "alternatives": [
+        "algunos perros no son furiosos",
+        "algunos perros no atacan al hombre",
+        "ningún perro ataca al hombre",
+        "ningún perro deja de atacar al hombre",
+        "todos los perros atacan al hombre"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la negación lógica de la proposición:\nTodas estas preguntas son difíciles ?",
+      "alternatives": [
+        "Todas estas preguntas son fáciles.",
+        "Ninguna de estas preguntas es difícil.",
+        "Algunas de estas preguntas no son fáciles.",
+        "Algunas de estas preguntas son difíciles.",
+        "Algunas de estas preguntas no son difíciles."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes proposiciones lógicas:\n• Los jóvenes son preuniversitarios\n• Cada adolescente es un joven\nMarque la alternativa correcta considerando la proposición verdadera.\nI) Ningún adolescente es preuniversitario.\nII)No existe preuniversitario que sea adolescente.\nIII)Todos los adolescentes son preuniversitarios.",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "solo III",
+        "I y II",
+        "II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la negación lógica de la proposición:\n‘‘Algunos científicos no son románticos’’?",
+      "alternatives": [
+        "Algunos científicos son románticos.",
+        "Ningún científico es romántico.",
+        "Todos los científicos son románticos.",
+        "Todos los científicos no son románticos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la negación lógica de la proposición:\n‘‘Ningún matemático es distraído’’?",
+      "alternatives": [
+        "Al menos un matemático no es distraído.",
+        "Al menos un matemático es distraído.",
+        "Todos los matemáticos son distraídos.",
+        "Todos los matemáticos no son distraídos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las premisas :\n• Todos los cerdos vuelan\n• Ningún cerdo tiene cola\n¿Cuáles de las siguientes conclusiones son verdaderas?\nI) No todos los cerdos tienen cola.\nII) Ningún animal que vuela tiene cola.\nIII)Existen animales sin cola que vuelan.",
+      "alternatives": [
+        "Sólo I",
+        "Sólo II",
+        "Sólo III",
+        "II y III",
+        "I y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si afirmamos que :\n• Algunas personas son corruptas\n• Todo corrupto es ruin.\n• Todo ruin es mediocre.\nEntonces :",
+      "alternatives": [
+        "Algunas personas son mediocres.",
+        "Algunas personas son no mediocres.",
+        "Algunos no corruptos son mediocres.",
+        "Alguien que no es ruin es mediocre.",
+        "Algunas personas no son corruptas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\n• Algunos peruanos son deportistas.\n• Todo deportista es un buen orador.\nEntonces se puede concluir que",
+      "alternatives": [
+        "Algunos buenos oradores no son peruanos.",
+        "Ningún peruano es orador.",
+        "Algunos peruanos son buenos oradores.",
+        "Todos los buenos oradores son deportistas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A partir de la proposición Todos los inmorales son no justos , ¿qué alternativa no se concluye necesariamente?",
+      "alternatives": [
+        "Ningún inmoral es justo.",
+        "Algunos inmorales son no justos.",
+        "Ningún moral es injusto.",
+        "Es falso que algún justo es inmoral."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si Es falso que ningún juez es justo , se concluye que",
+      "alternatives": [
+        "Todo juez es injusto.",
+        "Muchos jueces no son justos.",
+        "Muchos jueces son justos.",
+        "Todos los jueces son justos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si Todo matemático es inteligente , entonces se puede concluir que",
+      "alternatives": [
+        "Ningún matemático es inteligente.",
+        "Algunos matemáticos no son inteligentes.",
+        "No es el caso que ningún matemático es inteligente.",
+        "Todo inteligente es matemático."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale cuál es la negación de\nTodo arquitecto es ingenioso.",
+      "alternatives": [
+        "Todo ingenioso es arquitecto.",
+        "Todo ingenioso no es arquitecto.",
+        "Algún arquitecto no es ingenioso.",
+        "Algún arquitecto es ingenioso."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si asumimos que es cierta la afirmación Todo poeta es realista , entonces podemos concluir que",
+      "alternatives": [
+        "Algunos poetas no son realistas.",
+        "Ningún poeta es realista.",
+        "No es cierto que todo poeta sea realista.",
+        "Ningún poeta es no realista."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si:\n• Ningún carnívoro muerde a su dueño.\n• Algunos perros muerden a sus dueños.\nLuego podemos concluir que",
+      "alternatives": [
+        "Algunos carnívoros no son perros.",
+        "Ningún perro es carnívoro.",
+        "Todo carnívoro es perro.",
+        "Algunos perros no son carnívoro."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si las siguientes proposiciones son falsas:\n• Algunos mamíferos son alados\n• Algunos carnívoros no son alados.\nEntonces se concluye que",
+      "alternatives": [
+        "Algunos mamíferos son carnívoros.",
+        "Ningún mamífero es carnívoro.",
+        "Algunos no carnívoros no son alados.",
+        "Algunos alados son no mamíferos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\n• Todos los libros son grandes tesoros.\n• Todos los grandes tesoros son invaluables.\nentonces se concluye que",
+      "alternatives": [
+        "Algunos libros no son grandes tesoros.",
+        "Todos los libros son invaluables.",
+        "Los libros invaluables no son grandes.",
+        "Los grandes tesoros no son buenos libros."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\n• Ningún ocioso hace ejercicios.\n• Todos los que hacen ejercicios no sufren enfermedades.\nEntonces se puede concluir que",
+      "alternatives": [
+        "Todo ocioso sufre enfermedades.",
+        "Los ociosos hacen ejercicios.",
+        "Los que hacen ejercicios son ociosos.",
+        "Algunos que no sufren enfermedades no son ociosos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si:\n• Ningún educado es limeño.\n• Todos los limeños son puntuales.\nEntonces se concluye que",
+      "alternatives": [
+        "Los limeños son no puntuales.",
+        "Todo puntual es limeño.",
+        "Algún puntual es educado.",
+        "Algún puntual no es educado."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\n• Todo perro es mamífero.\n• Algunos perros no son salvajes.\nEntonces se concluye que",
+      "alternatives": [
+        "Ningún salvaje es mamífero.",
+        "Todo mamífero es salvaje.",
+        "Algún no salvaje es mamífero.",
+        "Ningún mamífero es no salvaje."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la negación de la conclusión de las siguientes proposiciones:\n• Ningún irresponsable es ordenado.\n• Algún ordenado no es disciplinado.",
+      "alternatives": [
+        "Todo responsable es disciplinado.",
+        "Algún responsable es disciplinado.",
+        "Algún responsable no es disciplinado.",
+        "Todo irresponsable es disciplinado."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\n• Todos los artistas son sensibles.\n• Todos los sensibles son poetas.\n• Todos los artistas son humildes.\n¿Qué se concluye de las tres premisas?",
+      "alternatives": [
+        "Todos los poetas son humildes.",
+        "Todos los humildes son poetas.",
+        "Algunos humildes son poetas.",
+        "Algunos humildes no son poetas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si:\n• Algunos alumnos son autodidactas.\n• Todos los autodidactas son creativos.\nEntonces se concluye que",
+      "alternatives": [
+        "Todo alumno es creativo.",
+        "Ningún alumno es creativo.",
+        "Algunos alumnos son creativos.",
+        "Los alumnos no son creativos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\n• Algunas personas son mayores de edad.\n• Todos los mayores de edad son no infantes.\nSe puede concluir que",
+      "alternatives": [
+        "Algunas personas no son infantes.",
+        "Algunas personas son infantes.",
+        "Algunos infantes no son personas.",
+        "Los mayores de edad no son personas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la conclusión de la negación de las siguientes proposiciones?\n• Algunos políticos no son honrados.\n• Todo astuto es honrado.",
+      "alternatives": [
+        "Todo político es honrado.",
+        "Algunos astutos no son políticos.",
+        "Ningún político es astuto.",
+        "Algunos políticos son honrados."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la conclusión de las premisas dadas.\n• Algunos estudiantes son puntuales.\n• Ningún es responsable.",
+      "alternatives": [
+        "Ciertos puntuales son estudiantes.",
+        "Todo responsable es puntual.",
+        "Todo estudiante es responsable.",
+        "Algunos estudiantes no son responsables."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La negación de “Todos los milenios son genios” es:",
+      "alternatives": [
+        "Algún milenio no es genio.",
+        "No hay genio que sea milenio.",
+        "Algunos milenios son genios.",
+        "Ningún milenio es genio.",
+        "Todos los milenios no son genios."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la negación de:\n“Algunos senadores son irracionales”",
+      "alternatives": [
+        "Todos los senadores son irracionales.",
+        "Algunos senadores son racionales.",
+        "Algunos racionales son no senadores.",
+        "Ningún senador es irracional."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la negación de la conclusión de las premisas dadas.\n• Cualquier persona es honesta.\n• Nunca un honesto es corrupto.",
+      "alternatives": [
+        "Ciertos honestos son corruptos.",
+        "Algunas personas son corruptas.",
+        "Ninguna persona es corrupta.",
+        "Todo honesto es persona."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifique la fórmula de la siguiente proposición categórica:\n“Ningún deportista peruano es drogadicto”.",
+      "alternatives": [
+        "Algún S es P",
+        "Ningún S es P",
+        "Ningún S no es P",
+        "Algún S no es P",
+        "Todo S es P"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA DE CLASES EJERCICIOS RESUELTOS PDF INFERENCIAS CUANTIFICADORES PREDICATIVA RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las proposiciones:\n1. Es falaz que Darío mienta salvo que Marta diga la verdad, o de lo contrario el párroco no les dará su bendición.\n2. El párroco no les da su bendición y Marta y Darío no dicen la verdad.\n3. Si Darío no miente Marta dice la verdad, por tanto el párroco les da su bendición.\n4. Si el párroco les da su bendición es incierto que cada vez que Darío miente consiguientemente Marta dice la verdad.\nSon equivalentes entre sí",
+      "alternatives": [
+        "1, 2 y 3",
+        "1, 3 y 4",
+        "2, 3 y 4",
+        "solo 1 y 3",
+        "solo 2 y 4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/educacion-religiosa-1ro-2do-actividad-1-experiencia-7-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA A SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CIENCIAS DE LA SALUD CLAVES PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la premisa:\n“En modo alguno es innegablemente que casi no hay profesores que no son ingenieros”, equivale a\n1. Ningún profesor es ingeniero.\n2. La minoría de profesores son ingenieros.\n3. Para cada uno de los profesores que son ingenieros.\n4. Es falso que ningún profesor es ingeniero.\n5. Es absurdo que es falso que quienquiera que sea profesor es ingeniero.\nSon inciertas",
+      "alternatives": [
+        "1, 2 y 4",
+        "1, 3 y 4",
+        "2, 3 y 4",
+        "2, 4 y 5",
+        "solo 2 y 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/educacion-religiosa-1ro-2do-actividad-1-experiencia-7-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA A SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CIENCIAS DE LA SALUD CLAVES PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La expresión “casi no hay deportistas” equivale a\n1. Varios son deportistas.\n2. No ocurre que ninguno no sea no deportista.\n3. No todos no son deportistas.\n4. Es mentira que ninguno sea deportista.\n5. Es innegable que al menos hay un deportista.\nSon ciertas",
+      "alternatives": [
+        "1, 2 y 4",
+        "1, 3 y 4",
+        "2, 3 y 5",
+        "3, 4 y 5",
+        "todas"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/educacion-religiosa-1ro-2do-actividad-1-experiencia-7-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA A SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CIENCIAS DE LA SALUD CLAVES PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición:\n“Los fenómenos de la física son observables si la física es una ciencia fáctica”, equivale a decir:\n1. La física es una ciencia fáctica, si y solo si los fenómenos de la física son observables pero la física es una ciencia fáctica.\n2. Es absurdo que, los fenómenos de la física no son observables aunque la física es una ciencia fáctica.\n3. La física no es una ciencia fáctica a menos que los fenómenos de la física sean observables.\n4. Los fenómenos de la física son observables o la física es una ciencia fáctica, por lo cual y según lo cual los fenómenos de la física son observables.\n5. Ya que los fenómenos de la física no son observables por eso la física no es una ciencia fáctica.\nSON CIERTAS:",
+      "alternatives": [
+        "solo 1, 3 y 5",
+        "solo 2, 3 y 4",
+        "solo 1, 4 y 5",
+        "solo 2 y 4",
+        "1, 2, 3, 4 y 5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/3ro-4to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA C CIENCIAS DE LA PERSONA 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tengo un problema: No cobro mi jornada porque hoy es feriado. Si no salgo a trabajar, entonces hoy es feriado. Si no cobro mi jornada o salgo a trabajar, entonces no iré a pasear con María. Si las conclusiones que obtuve son verdaderas, puedo afirmar con seguridad que",
+      "alternatives": [
+        "iré a pasear con María.",
+        "salgo a trabajar.",
+        "hoy es feriado.",
+        "cobro mi jornada.",
+        "no iré a pasear con María."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/la-recta-en-el-plano-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNAMBA 2027 UNIVERSIDAD MICAELA BASTIDAS CPU ABANCAY – APURIMAC EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes proposiciones verdaderas:\nI. Todos los que estudian biología entienden la naturaleza.\nII. Algunos estudiantes de biología tocan guitarra.\nDetermine la afirmación que siempre es verdadera.",
+      "alternatives": [
+        "Algunos que estudian biología no entienden la naturaleza.",
+        "Ninguno que estudia biología toca guitarra.",
+        "Todos los que tocan guitarra entienden la naturaleza.",
+        "Todos los que estudian biología no tocan guitarra.",
+        "Algunos que tocan guitarra y estudian biología entienden la naturaleza."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/educacion-religiosa-5to-actividad-1-experiencia-7-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNSAAC CIENCIAS DE LA SALUD Y DE LA VIDA ÁREA B 2027 INGRESO UNIVERSIDAD PDF CUSCO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Abel piensa regalarle un automóvil a su hijo Carlos. Con respecto al sueldo mensual de Abel, se sabe lo siguiente:\nI. Si Abel gana menos de S/ 3000, entonces Carlos recibirá un automóvil de a lo más 14 000 dólares.\nII. Si Abel gana al menos S/ 4000, entonces Carlos recibirá un automóvil de más de 16 000 dólares.\nSi Carlos recibió un automóvil de 15 000 dólares, ¿qué se puede afirmar verdaderamente acerca del sueldo mensual de Abel?",
+      "alternatives": [
+        "Es de por lo menos S/ 3000, pero a lo más S/ 4000.",
+        "Es más de S/ 3000 y por lo menos S/ 4000.",
+        "Es más de S/ 3000, pero a lo más S/ 4000.",
+        "Es de por lo menos S/ 3000, pero menos de S/ 4000.",
+        "Es más de S/ 3000 y menos de S/ 4000."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/educacion-religiosa-5to-actividad-1-experiencia-7-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNSAAC CIENCIAS DE LA SALUD Y DE LA VIDA ÁREA B 2027 INGRESO UNIVERSIDAD PDF CUSCO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada las siguientes proposiciones verdaderas:\nI. Todos los ingenieros saben matemática.\nII. A ninguno que le gusta la historia y a ningún psicólogo les gusta la matemática.\nIII. Al psicólogo Martín le gusta la historia.\nDetermine la afirmación que siempre es verdadera.",
+      "alternatives": [
+        "Si Martín es psicólogo, entonces también es ingeniero.",
+        "A algunos que les gustan la historia, también son ingenieros.",
+        "Martín es psicólogo y es muy bueno en matemática.",
+        "Martín es amante de las matemáticas.",
+        "Martín no es ingeniero."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/tutoria-1ro-2do-actividad-2-experiencia-8-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNSAAC ÁREA A 2027 INGENIERÍAS CIENCIAS BÁSICAS INGRESO UNIVERSIDAD PDF CUSCO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada las siguientes proposiciones verdaderas:\nI. Todos los que estudian matemática saben razonar.\nII. Algunos estudiantes de matemática escriben poemas.\nDetermine la afirmación que siempre es verdadera.",
+      "alternatives": [
+        "Algunos que escriben poemas y no estudian matemática saben razonar.",
+        "Ninguno que estudia matemática escribe poemas.",
+        "Todos los que escriben poemas saben razonar.",
+        "Todos los que estudian matemática no escriben poemas.",
+        "Ninguno que escribe poemas estudia matemática."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/3ro-4to-actividad-12-dpcc-experiencia-9-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA B 2026-1 INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuatro miembros de la familia Barzini: Antonino, Luca, Ciro y Dino están almorzando juntos en un restaurante. Se sabe lo siguiente:\nI. Si Luca es padre de Dino, entonces Antonino no es abuelo de Dino.\nII. Si Antonino es abuelo de Dino, entonces Ciro es padre de Luca.\nIII. Si Dino no es hijo de Ciro, entonces Luca no es hijo de Ciro.\nSi Antonino es abuelo de Dino y solo tiene un hijo, entonces es cierto que",
+      "alternatives": [
+        "Luca es hijo de Antonino.",
+        "Ciro es hermano de Dino.",
+        "Luca es mayor que Ciro.",
+        "Luca es hermano de Dino.",
+        "Ciro no es hijo de Antonino."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-arte-cultura-experiencia-8-actividad-2-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA A 2026-1 SAN MARCOS PRESENCIAL RESPUESTAS DESARROLLO INGRESO UNIVERSIDAD PDF CIENCIAS DE LA SALUD "
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre las hermanas Luz, Susana, Rosa y Margot se tiene las siguientes proposiciones verdaderas:\n• Si Margot no estudia Química, entonces Susana estudia Física.\n• Si Luz no estudia Matemática, entonces Susana no estudia Física.\n• Si Margot no estudia Química, entonces Rosa estudia Biología.\n• Si Margot estudia Química, entonces no trabaja.\nSi en realidad Margot sí trabaja, ¿cuál de las siguientes alternativas es verdadera?",
+      "alternatives": [
+        "Susana estudia Física y Rosa no estudia Biología.",
+        "Margot estudia Química.",
+        "Susana no estudia Física y Luz no estudia Matemática.",
+        "Rosa no estudia Biología.",
+        "Luz estudia Matemática."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/simulacro-san-marcos-examen-de-admision.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA E 2025-1 SAN MARCOS DERECHO EDUCACIÓN SOCIALES INGRESO RESPUESTAS PRESENCIAL DESARROLLO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el volumen de un cubo.\nI) El área total es 96 cm 2\nII) Su diagonal mide 4√3 cm.",
+      "alternatives": [
+        "Solo la información I es suficiente.",
+        "Solo la información II es suficiente.",
+        "Ambas informaciones son necesarias.",
+        "Cada una de las informaciones por separado es suficiente.",
+        "No hay suficiente información."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/02/examen-admision-uni-2017-i-soluciones-y.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 APTITUD PRIMERA PRUEBA RESUELTA –RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pareja de esposos interroga a sus cuatro hijas: Ana, Bety, Carla y Daniela debido a que una de ellas salió sin permiso para pasear con su enamorado. Ellas respondieron lo siguiente:\nAna : «Bety fue».\nBety : «Carla fue».\nCarla : «Ana miente».\nDaniela : «Yo no fui».\nSi se sabe que solo una de ellas dice la verdad, ¿quién salió sin permiso?",
+      "alternatives": [
+        "Daniela",
+        "Ana",
+        "Carla o Ana",
+        "Carla",
+        "Bety"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/tutoria-3ro-4to-actividad-1-resuelta-experiencia-de-aprendizaje-2-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-secundaria-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BOLETIN 5 ESPECIAL RESUELTO CEPRE SAN MARCOS 2024 RESPUESTAS PREUNMSM 2025 PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ana, Beatriz, Carmen y Dina dijeron, cada una, una verdad y luego, una mentira, en cualquier orden, al ser preguntadas sobre las profesiones que cada una tienen.\nAna : «Beatriz es abogada». «Carmen es dentista».\nBeatriz : «Carmen no es dentista». «Dina es ingeniera».\nCarmen : «Dina es matemática». «Ana es ingeniera».\nDina : «Yo soy dentista». «Beatriz es matemática».\nSi las cuatro ejercen profesiones diferentes, ¿quién es la matemática y quién es la dentista respectivamente?",
+      "alternatives": [
+        "Carmen y Dina",
+        "Dina y Ana",
+        "Beatriz y Carmen",
+        "Carmen y Ana",
+        "Carla y Ana"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/03/comunicacion-5to-actividad-14-aprendo-en-casa-semana-1-2-3-quinto-grado-de-secundaria-tarea-resuelta-web-radio-word-reto-tv-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BOLETIN 3 ESPECIAL RESUELTO CEPRE SAN MARCOS 2024 RESPUESTAS PREUNMSM 2025 PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes afirmaciones verdaderas:\n• Si Alondra no estudia un posgrado en Matemática, entonces no estudia en la UNMSM.\n• Si Alondra no es más alta que Diana, entonces estudia en pregrado en la UNMSM.\n• Si Alondra estudia en pregrado en la UNMSM, entonces Alondra es veinteañera.\n• Alondra estudia en UNMSM y tiene 31 años.\n¿Cuál de las alternativas es siempre verdadera?",
+      "alternatives": [
+        "Alondra no estudia un posgrado.",
+        "Alondra es más alta que Diana.",
+        "Diana estudia en UNMSM.",
+        "Alondra estudia en pregrado en la UNMSM.",
+        "Diana es más alta que Alondra."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/tutoria-5to-actividad-2-experiencia-7-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS MEDICINA 2025-2 INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada las siguientes proposiciones verdaderas:\nI. Todos los futbolistas peruanos que juegan en el extranjero son millonarios.\nII. Algunos futbolistas peruanos que juegan en el extranjero jugaron en el Cantolao. Determine la afirmación que siempre es verdadera.",
+      "alternatives": [
+        "Todos los futbolistas peruanos que juegan en el extranjero no jugaron en el Cantolao.",
+        "Todos los futbolistas peruanos que jugaron en el Cantolao son millonarios.",
+        "Todos los que jugaron en el Cantolao no son millonarios.",
+        "Ningún futbolista peruano que jugó en el Cantolao juega en el extranjero.",
+        "Algunos millonarios que no son futbolistas peruanos que juegan en el extranjero jugaron en el Cantolao."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/ept-5to-actividad-1-experiencia-8-resuelta-aprendo-en-casa-educacion-para-el-trabajo-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2025-2 INGENIERÍAS INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una urna no transparente se tiene 4 bolillas numeradas: una con el número 11, otra con el número 13, otra con el número 17 y la última con el 19. Ana, Bety, Carla y Dalia extraen una bolilla cada una. Se sabe lo siguiente:\nI. Si Dalia no tiene la bolilla con el número 11, entonces Bety tiene la bolilla con el número 17.\nII. Si Bety tiene la bolilla con el número 17 o tiene la bolilla con el número 19, entonces Carla tiene la bolilla con el número 13.\nIII. Si Ana tiene la bolilla con el número 19, entonces Dalia no tiene la bolilla con el número 11.\nSi Carla no tiene la bolilla con el número 13, ¿quién tiene la bolilla con el número 17?",
+      "alternatives": [
+        "Dalia",
+        "Ana",
+        "Bety",
+        "Carla",
+        "Dalia o Carla"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-4-dpcc-experiencia-9-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA E 2025-2 DERECHO SOCIALES EDUCACIÓN INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los profesores Enrique, Marcos y José enseñan matemática, física y química; no necesariamente en ese orden. El profesor de química que es el mejor amigo de Marcos, es el menor; Enrique es el profesor de química. Marcos no es profesor de física. De las siguientes afirmaciones:\nI. José no es el menor de todos\nII. Marcos es profesor de matemática\nIII. Enrique no enseña física\n¿Cuál es correcta?",
+      "alternatives": [
+        "Solo II",
+        "Solo I",
+        "Solo III",
+        "Solo I y II",
+        "I; II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/5to-actividad-7-experiencia-9-resuelta-matematicas-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — RM CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante el receso, cuatro alumnos (Abel, Andrés, Arturo y Abelardo) empiezan a jugar y resulta herida Alejandra después de que uno de ellos la empujó. La auxiliar del piso se entera de la situación y envía a coordinación a los alumnos para averiguar quién empujó a la alumna; ellos respondieron:\n• Abel: Yo no fui.\n• Andrés: Abel miente.\n• Arturo: Andrés no miente.\n• Abelardo: Todos ellos son mentirosos .\nSi por los antecedentes de los cuatro alumnos el coordinador general sabe que solo dos de ellos mienten, ¿quién empujó a Alejandra?",
+      "alternatives": [
+        "Abel",
+        "Andrés",
+        "Arturo",
+        "Abelardo",
+        "Abel o Andrés"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prueba-de-razonamiento-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — APTITUD LÓGICO MATEMÁTICO CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ricardo ha hecho dos listas de 5 números enteros consecutivos cada una. Para determinar la diferencia de la suma de los números de cada lista.\nInformación brindada:\nI. En la primera lista está el número 7 y en la otra el número 12.\nII. La suma de los números de la primera lista es la mitad de la suma de los números de la segunda lista.\nIII. El primer número anotado en la primera lista, y el tercer número anotado en la segunda lista son iguales.\nPara resolver el problema,",
+      "alternatives": [
+        "solo I.",
+        "solo II.",
+        "I y II.",
+        "solo III.",
+        "I y III."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/03/examen-de-concurso-de-becas-academia.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA B 2024-2 GENÉTICA ESTADÍSTICA QUÍMICA FÍSICA COMPUTACIÓN PRESENCIAL SAN MARCOS CLAVES INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ana María posee un terreno de forma rectangular y desea determinar la cantidad mínima de parcelas cuadradas sin que sobre parte del terreno.\nInformación brindada:\nI. El perímetro del terreno es igual a 1 680 metros.\nII. El ancho del terreno es 360 metros.\nIII. En cada parcela se sembrará 400 plantas de camote.\nPara resolver el problema,",
+      "alternatives": [
+        "es suficiente la información I.",
+        "es necesario la información I y II.",
+        "es suficiente la información III.",
+        "es necesario la información I y III.",
+        "es suficiente la información II."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-general-del-cuarto-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA E 2024-2 JURÍDICAS DERECHO SOCIALES EDUCACIÓN PRESENCIAL SAN MARCOS CLAVES INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ingeniero de obras de la construcción de dos edificios nos ha proporcionado la siguiente información: «El número de pisos del primer edificio está en relación al número de pisos del segundo edificio como 3 a 5». Se desea determinar la cantidad de pisos que tendrá cada uno de los edificios.\nInformación brindada:\nI. La diferencia de la cantidad de pisos de los edificios es de 14.\nII. La cantidad de los pisos de ambos edificios suman 56.\nIII. Hay 3 pisos habitados en el primer edificio.\nPara resolver el problema,",
+      "alternatives": [
+        "es suficiente la información I o II, cada uno por separado.",
+        "es suficiente usar la información II y III.",
+        "es suficiente solo la información III.",
+        "es necesario usar todas las informaciones.",
+        "se requiere información adicional."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-general-del-cuarto-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA E 2024-2 JURÍDICAS DERECHO SOCIALES EDUCACIÓN PRESENCIAL SAN MARCOS CLAVES INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Seis amigas, Ángela, Beatriz, Carla, Delia, Emilia y Felícita, están en una reunión. Se sabe que dos de ellas son casadas y el resto son solteras. Al preguntárseles quiénes son casadas, ellas respondieron lo siguiente:\n• Ángela: Beatriz es la casada.\n• Beatriz: Carla es la casada.\n• Carla: Emilia es la casada.\n• Delia: Yo soy soltera.\n• Emilia: Carla mintió cuando dijo que soy casada.\n• Felícita: Yo soy soltera.\nSi solamente una de las afirmaciones es verdadera, ¿quiénes son las casadas?",
+      "alternatives": [
+        "Delia y Felícita",
+        "Delia y Carla",
+        "Beatriz y Felícita",
+        "Emilia y Felícita",
+        "Ángela y Beatriz"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/razonamiento-matematico-de-pre.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO MATEMÁTICO SAN MARCOS EXAMEN RESUELTO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Daniel y Pedro son dos amigos mitómanos que estudian en la universidad. Daniel miente los jueves, viernes y sábados, y los otros días dice la verdad. Pedro miente los domingos, lunes y martes, y los otros días dice la verdad. Un día se encuentran en la universidad y sostuvieron el siguiente diálogo:\nDaniel: \"Hola ¡ayer yo mentí al decir que estudié matemática!\"\nPedro: \"Hola ¡ayer yo también mentí al decir que estudié matemática!\"\n¿Qué día de la semana fue el día siguiente que estudié matemática?",
+      "alternatives": [
+        "Lunes",
+        "Domingo",
+        "Sábado",
+        "Viernes",
+        "Martes"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/razonamiento-matematico-de-pre.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO MATEMÁTICO SAN MARCOS EXAMEN RESUELTO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el complejo deportivo de Villa María del Triunfo se llevó a cabo el torneo de hockey sobre césped con los tres equipos que se formaron en el taller del verano: Halcones, Bola Verde y Cirano . Los resultados, luego del evento donde jugaron todos contra todos una sola vez, fueron: Halcones anotó tres goles en total, Bola Verde ganó sus encuentros y anotó solo dos goles y Cirano tuvo un empate. ¿Cuál es la diferencia de goles anotados entre, por un lado el encuentro de Halcones versus Cirano y, por otro, de Bola Verde versus Círano?",
+      "alternatives": [
+        "5",
+        "4",
+        "3",
+        "2",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/pre-san-marcos-solucionario-semana_82.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA B 2024-1 PRUEBA RESUELTA CIENCIAS BÁSICAS INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se organizó un torneo entre los equipos Aqua Green, Shark Ball y Delfín Challenger. Se sabe que jugaron todos contra todos una sola vez. El equipo Aqua Green anotó 9 goles en sus dos victorias y mantuvo su arco invicto. El equipo Shark Ball llevó 5 goles en contra y 3 a favor. Delfín Challenger perdió sus dos encuentros y le anotaron 8 goles. A partir de los datos mencionados, la diferencia de goles que tuvo el encuentro de Aqua Green versus Shark Ball con respecto al de Aqua Green versus Delfín Challenger fue de",
+      "alternatives": [
+        "3.",
+        "0",
+        "2.",
+        "1",
+        "4."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/pre-san-marcos-solucionario-semana_82.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA B 2024-1 PRUEBA RESUELTA CIENCIAS BÁSICAS INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ana, Ben, Cam y Don llevan polos con una letra y un número en su espalda. Los números son 2; 4; 6 y 8, y las letras A; B; C y D. Además, se sabe que:\n– El número que va con la letra C es el doble del número de Cam.\n– La letra de Cam aparece en su nombre.\n– La dirección de Don es el número de Don menos el número de Ben.\n– El número de Ana es la dirección de Don.\n– La posición de la letra de B en en el alfabeto (por ejemplo C es 3) es mayor que el número de Ben.\n¿Cuál es el número y la letra de Ana?",
+      "alternatives": [
+        "8; A",
+        "2; B",
+        "6; B",
+        "6; A",
+        "4; B"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/razonamiento-matematico-untels-examen.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO MATEMÁTICO RESUELTO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los señores Bravo, Hernández, Navarro, Pérez y Gutiérrez tienen diferentes profesiones: Herrero, proyectista, neurólogo, biólogo y geólogo. Ellos viven en diferentes ciudades: Barcelona, Huelva, Nueva York, París y Granada. Se sabe lo siguiente:\n☛ Las iniciales de la profesión y el lugar de residencia no pueden coincidir con los apellidos de los señores.\n☛ El señor Hernández vive en Nueva York y no es biólogo.\n☛ el señor Bravo no es ni herrero ni proyectista.\n☛ el señor Navarro no vive en Barcelona.\n☛ El señor Pérez vive en Granada y es herrero.\n☛ El señor Hernández no es neurólogo y tampoco lo es el señor Gutiérrez.\n¿Qué profesión tiene el señor Bravo?",
+      "alternatives": [
+        "biólogo",
+        "geólogo",
+        "neurólogo",
+        "biólogo o geólogo",
+        "proyectista"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/eopnp-aptitud-academica-examen-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — APTITUD ACADÉMICA EOPNP PRUEBA RESUELTA INGRESO ESCUELA DE OFICIALES DE LA POLICÍA RM Y RV PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una brusca parada del carro azul de Carlos origina un choque en cadena de 6 carros. El auto blanco de Mario está junto al de Julio y Gregorio; Javier no tiene carro azul y chocó a Julio. Si un carro rojo chocó a Javier y hay 2 carros rojos, 2 azules, uno blanco y uno verde; además, se sabe que los carros del mismo color no son seguidos. ¿Cuál fue el segundo auto que chocó Carlos y quién es su conductor?",
+      "alternatives": [
+        "azul; Julio",
+        "verde; Javier",
+        "blanco; Mario",
+        "rojo; Gregorio",
+        "rojo; Julio"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/eopnp-aptitud-academica-examen-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — APTITUD ACADÉMICA EOPNP PRUEBA RESUELTA INGRESO ESCUELA DE OFICIALES DE LA POLICÍA RM Y RV PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las niñas Andrea, Betty, Carmen y Danitza reciben bolsitas con diferente número de gomitas dulces: una recibió la bolsita con 15 gomitas; otra, la bolsita con 12 gomitas; otra, la bolsita con 9 gomitas; y otra, la bolsita con 13 gomitas.\nSe sabe que:\n• Betty le informa a la niña que tiene la bolsita con 12 gomitas que Andrea salió ganando en la repartición.\n• Danitza le informa a la niña que tiene la bolsita con 12 gomitas que una de las otras tiene la bolsita con 13 gomitas en ella.\n¿Cuántas gomitas menos que Andrea tiene Carmen?",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/razonamiento-matematico-simulacro.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO MATEMÁTICO SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se niega cada una de las siguientes premisas\n─ Ningún intelectual es impuntual.\n─ Algunos intelectuales no son profesionales.\n¿Cuál es la conclusión?",
+      "alternatives": [
+        "Algunos profesionales son puntuales.",
+        "Algunos profesionales son impuntuales.",
+        "Todo profesional es impuntual.",
+        "Ningún profesional es puntual.",
+        "Algunos no profesionales son puntuales"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-razonamiento-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE RAZONAMIENTO MATEMÁTICO RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada las siguientes proposiciones verdaderas:\nI. Si Carla no estudia, entonces no ingresará a la UNMSM.\nII. Si Alberto estudia, entonces Benito estudia.\nIII. Si Carla estudia, entonces Benito no estudia.\n¿Qué consecuencia origina el hecho de que Carla ingrese a la UNMSM?",
+      "alternatives": [
+        "Alberto no estudia.",
+        "Carla no estudia.",
+        "Benito estudia.",
+        "Alberto estudia."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL PROBLEMAS RESUELTOS PREUNIVERSITARIOS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Aníbal, Humberto, Tomás y Kent son amigos y son sospechosos de haber robado una motocicleta. Luego de ser interrogados por la policía, se llega a saber lo siguiente:\n– Kent dijo que fue Aníbal.\n– Tomás afirmó que él no fue.\n– Humberto señaló que fue Aníbal.\n– Aníbal dice que él no fue.\nSi solamente uno de ellos robó la motocicleta y, de las respuestas dadas, solo una es falsa y las demás verdaderas, ¿quién robó la motocicleta?",
+      "alternatives": [
+        "Aníbal",
+        "Kent",
+        "Tomás",
+        "Humberto",
+        "Boris"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-examen-de-admision-san_23.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2023-2 PRUEBA RESUELTA DE INGRESO UNIVERSIDAD INGENIERÍAS RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Andrés, Beto y Carlos son hermanos y están acusados de haber roto el vidrio de la ventana de la casa de su vecina.\nAl ser interrogados, respondieron de la siguiente manera:\n– Andrés : «Beto fue el que rompió el vidrio de la ventana».\n– Carlos : «Yo no rompí el vidrio de la ventana».\n– Beto : «Lo que dice Andrés es verdad».\nSe sabe que solo uno de ellos rompió el vidrio, al menos uno de ellos miente y al menos uno dice la verdad. En consecuencia, ¿quién rompió el vidrio de la ventana y cuántos mintieron?",
+      "alternatives": [
+        "Andrés – 2",
+        "Beto – 1",
+        "Carlos – 2",
+        "Beto – 2",
+        "Tomás -1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-examen-de-admision-san_23.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2023-2 PRUEBA RESUELTA DE INGRESO UNIVERSIDAD INGENIERÍAS RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mario, Leo, Ignacio y Luis, al ser interrogados por José, quien los acusa de romper una ventana de su casa, manifestaron lo siguiente:\nMario : Fue Luis\nLeo : Luis miente\nIgnacio : Yo no fui, soy inocente\nLuis : La ventana la rompió Leo\nSi solo uno de ellos miente y solo uno de ellos rompió la ventana.\n¿Quién rompió la ventana y quién miente respectivamente?",
+      "alternatives": [
+        "Luis, Mario",
+        "Mario, Leo",
+        "Luis, Luis",
+        "Leo, Mario"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/simulacro-san-marcos-2018-i-presencial.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA B 2023-1 PRUEBA RESUELTA DE INGRESO UNIVERSIDAD RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de interrogar a cinco sospechosos de un crimen, se concluye que hay cuatro culpables y un inocente, quién es el único que dice la verdad. Se sabe que los sospechosos declararon lo siguiente:\n• Samuel : Yo no fui\n• Pablo: Samuel miente\n• Jorge: Pablo miente\n• Roberto: Pablo fue\n• Cesar: Roberto dice la verdad\n¿Cuál es el nombre del inocente?",
+      "alternatives": [
+        "Samuel",
+        "Pablo",
+        "Jorge",
+        "Roberto",
+        "Cesar"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-matematico-recreativo.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO MATEMÁTICO AGRARIA PRUEBA UNALM INGRESO UNIVERSIDAD LA MOLINA RESUELTA"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuatro hermanos son interrogados por su padre, pues uno de ellos rompió un plato. Cada uno afirmó lo siguiente:\nRaúl: Pablo no fue.\nPablo: Juan fue.\nJuan: No fue Carlos.\nCarlos: No fue Raúl.\nSi solo dos de ellos mienten, y de estos uno fue el que rompió el plato, ¿quién rompió el plato?",
+      "alternatives": [
+        "Raúl",
+        "Pablo",
+        "Juan",
+        "Carlos",
+        "no se puede determinar"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/223-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023-2 PRIMERA PRUEBA SOLUCIONARIO DE INGRESO UNIVERSIDAD NACIONAL DE INGENIERÍA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para el estreno de una obra teatral, Ty, Ía, Zé y Vu apresuraron su salida de la universidad. Ya en el teatro, notaron que la obra tenía restricción etaria (era para mayores de 18 años); las cuatro se miran y con respecto a su edad dicen:\n• Ty: “Yo sí puedo entrar a verla”\n• Ía: “Ty está mintiendo: no puede entrar”\n• Zé: “Ía no puede entrar a ver la obra”\nVu, que es mayor de edad y las conoce muy bien, sabe que solo una de ellas miente y que solo una de ellas es menor de edad.\n¿Quién miente y quién es menor de edad, respectivamente?",
+      "alternatives": [
+        "Ty y Ía",
+        "Ía y Zé",
+        "Ty y Ty",
+        "Ía y Ía"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-logico-verdades-y-mentiras.html",
+      "sourceName": "matematicasn.blogspot.com — VERDADES Y MENTIRAS PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Acaba el examen de admisión y, de seis amigos, solo uno no ingresó. Un profesor, al encontrarlos, les pregunta:\nProfesor: ¿Quién no ingresó?\nLalo: Hernando no ingresó.\nDiego: Yo no ingresé.\nHernando: Raquel no ingresó.\nRaquel: Yo ingresé.\nFlor: Yo ingresé.\nMaribel: Lalo no ingresó.\nSi el profesor sabe que solo uno de los alumnos dice la verdad, ¿quién no ingresó y quién no miente, respectivamente?",
+      "alternatives": [
+        "Diego y Raquel",
+        "Flor y Maribel",
+        "Diego y Hernando",
+        "Flor y Raquel"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-logico-verdades-y-mentiras.html",
+      "sourceName": "matematicasn.blogspot.com — VERDADES Y MENTIRAS PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hay una fila de 2020 loros, los cuales están hablando, uno detrás de otro. El primero dice: El segundo loro es verde. El segundo dice: El tercer loro es verde, así sucesivamente, hasta que el loro número 2018 dice: El loro 2019 es verde. El loro número 2019 dice: El loro 2020 es un hipopótamo azul. El loro 2020 dice: ¡Yo no soy un hipopótamo azul! Se sabe que todos los loros verdes mienten, y que todos los loros que mienten son verdes. ¿Cuántos loros verdes hay en la fila?",
+      "alternatives": [
+        "1",
+        "1010",
+        "10",
+        "2019"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-logico-verdades-y-mentiras.html",
+      "sourceName": "matematicasn.blogspot.com — VERDADES Y MENTIRAS PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuatro amigos, Luis, Mario, Nora y Paty, terminaron sus estudios de medicina, ingeniería, educación y economía, no necesariamente en ese orden; y tienen la costumbre de decir siempre una verdad y una mentira. Se les hace dos preguntas a cada uno acerca de sus profesiones o la de sus amigos y responden lo siguiente:\nLuis: Nora es doctora, Mario es ingeniero.\nMario: Nora no es doctora, Paty es economista.\nNora: Paty es profesora, Luis es economista.\nPaty: Yo soy doctora, Mario es profesor.\n¿Quién es doctor(a) y quién es profesor(a) respectivamente?",
+      "alternatives": [
+        "Nora y Paty",
+        "Paty y Luis",
+        "Mario y Nora",
+        "Paty y Nora"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-logico-verdades-y-mentiras.html",
+      "sourceName": "matematicasn.blogspot.com — VERDADES Y MENTIRAS PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El enunciado:\n«Si eres consciente de tu enojo o decides transformar tu furia, entonces no eres consciente de tu enojo. Pero no es cierto que eres feliz con poco y no eres feliz con poco», es equivalente a:",
+      "alternatives": [
+        "Eres consciente de tu enojo.",
+        "Decides transformar tu furia.",
+        "Eres feliz con poco.",
+        "No eres feliz con poco.",
+        "No eres consciente de tu enojo."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/08/logica-y-conjuntos-pdf-ejercicios-y.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA Y CONJUNTOS PDF EJERCICIOS Y EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tres hermanos: David, Benjamín y Luciana, son especialistas, cada uno, en un instrumento musical distinto, los cuales son: violín, chelo y piano, no necesariamente en ese orden.\nSu tío al verlos afirma:\n“No estoy seguro del instrumento que toca cada uno, pero sí sé que: si Benjamín no es el pianista, entonces lo es David; y que si Luciana no es la pianista, entonces David es el violinista”\n¿Cuáles son los instrumentos que tocan Benjamín y Luciana, respectivamente?",
+      "alternatives": [
+        "Violín y piano",
+        "Piano y violín",
+        "Chelo y violín",
+        "Piano y chelo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/10/Primer-examen-pre-san-marcos-solucionario-ciclo-especial-ingreso-directo-admision-a-la-universidad-cepusm-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — PRIMER EXAMEN PRE SAN MARCOS 2021 II SOLUCIONARIO CICLO ESPECIAL DE ADMISIÓN A LA UNIVERSIDAD CEPUSM 2022 PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada las siguientes proposiciones verdaderas:\n– Si Fernando no estudia ingeniería electrónica, entonces no estudia en la UNMSM.\n– Si Fernando no es hermano de Mathias, entonces estudia medicina humana.\n– Si Fernando estudia medicina humana, entonces Fernando es menor de edad.\nSi se sabe que Fernando estudia en la UNMSM y tiene 20 años, ¿cuál de las siguientes conclusiones es siempre verdadera?",
+      "alternatives": [
+        "Fernando no es hermano de Mathias.",
+        "Fernando es hermano de Mathias.",
+        "Fernando estudia medicina humana.",
+        "Fernando no estudia ingeniería electrónica.",
+        "Fernando estudia matemática."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/habilidad-logico-matematica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — BOLETIN PRE SAN MARCOS RAZONAMIENTO MATEMATICO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Siempre que tomo café en las tardes, no puedo dormir esa noche. Si lo tomo por la mañana, no puedo conciliar el sueño hasta medianoche.\n¿Cuál de las opciones es necesariamente cierta?",
+      "alternatives": [
+        "Son las dos de la mañana y estoy despierto. Hoy he tomado café.",
+        "Tomé café en el desayuno. A las dos de la mañana estaré despierto.",
+        "Son las once de la noche y estoy dormido. Hoy no he tomado café.",
+        "Estoy despierto a las doce y media de la noche. Hoy he tomado café por la mañana.",
+        "Tomé café por la tarde. Dormiré a la media noche."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/10/examen-ordinario-unach-2021-banco-de.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Examen ordinario UNACH 2021 Banco de Preguntas RV"
     }
   ]
 }

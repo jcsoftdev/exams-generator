@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una sala de juegos usted lanza 6 dados simultáneamente. ¿De cuántas formas puede ocurrir que 5 de los dados muestren números diferentes?",
-      "alternatives": ["120", "320", "420", "520", "720"],
+      "alternatives": [
+        "120",
+        "320",
+        "420",
+        "520",
+        "720"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántos números de cuatro cifras se pueden formar con los dígitos 0, 1, 2, 3 y 4, si estos no pueden repetirse?",
-      "alternatives": ["8", "32", "48", "96", "42"],
+      "alternatives": [
+        "8",
+        "32",
+        "48",
+        "96",
+        "42"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿De cuántas maneras diferentes se podrán sentar en hilera 6 amigas, si Genara y Eucalipta estarán siempre juntas y en uno de los extremos?",
-      "alternatives": ["24", "48", "96", "120", "72"],
+      "alternatives": [
+        "24",
+        "48",
+        "96",
+        "120",
+        "72"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 3"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un club tiene 20 miembros de los cuales 12 son mujeres. ¿Cuántas juntas directivas de 3 miembros (Presidente, Vicepresidente y Secretario) pueden formarse, si el presidente debe ser una mujer y el vicepresidente un hombre?",
-      "alternatives": ["1428", "1716", "1628", "1718", "1728"],
+      "alternatives": [
+        "1428",
+        "1716",
+        "1628",
+        "1718",
+        "1728"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 4"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Se tiene 2 libros de Medicina, 4 de Historia y 3 de Economía. Se desea formar un grupo de 6 libros de los cuales siempre se encuentren 2 libros de Medicina, 2 de Historia y 2 de Economía. ¿De cuántas maneras diferentes se pueden formar dichos grupos?",
-      "alternatives": ["6", "12", "18", "24", "27"],
+      "alternatives": [
+        "6",
+        "12",
+        "18",
+        "24",
+        "27"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 5"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántos números de 3 cifras existen?",
-      "alternatives": ["99", "999", "899", "900", "100"],
+      "alternatives": [
+        "99",
+        "999",
+        "899",
+        "900",
+        "100"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 6"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "De un grupo de 9 personas se requiere escoger un grupo de 7 para abordar un bote con 6 remos y con un timón. ¿De cuántas maneras diferentes se pueden ubicar, sabiendo que de las 9 personas solo 5 pueden llevar el timón?",
-      "alternatives": ["72 510", "100 800", "86 400", "78 100", "79 220"],
+      "alternatives": [
+        "72 510",
+        "100 800",
+        "86 400",
+        "78 100",
+        "79 220"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 7"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿De cuántas maneras diferentes se puede seleccionar una consonante y una vocal de las letras de la palabra NÚMEROS?",
-      "alternatives": ["10", "11", "12", "6!", "7!"],
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "6!",
+        "7!"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 8"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuántas palabras de 6 letras diferentes que terminen en A pueden obtenerse con las letras de la palabra ROSITA, sin que se repita ninguna palabra y sin importar si la palabra tiene sentido o no?",
-      "alternatives": ["24", "48", "50", "120", "720"],
+      "alternatives": [
+        "24",
+        "48",
+        "50",
+        "120",
+        "720"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 9"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Edy tiene 12 amigos de los cuales 2 no pueden estar a la vez en la misma reunión. ¿De cuántas maneras se podrá invitar a 7 de ellos?",
-      "alternatives": ["521", "506", "540", "421", "530"],
+      "alternatives": [
+        "521",
+        "506",
+        "540",
+        "421",
+        "530"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 10"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "De un grupo de 12 congresistas, ¿cuántas comisiones constituidas por 4 integrantes se podrán formar, si se sabe que dos de los congresistas no pueden estar en la misma comisión?",
-      "alternatives": ["200", "450", "150", "160", "180"],
+      "alternatives": [
+        "200",
+        "450",
+        "150",
+        "160",
+        "180"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 12"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En la mesa redonda del rey Arturo hay sentados 12 caballeros. Entre ellos cada uno está enemistado con sus vecinos. Hay que escoger 5 caballeros para que liberen a una princesa encantada. ¿De cuántas maneras se puede hacer esto, de tal modo que entre los caballeros elegidos no haya enemigos (vecinos)?",
-      "alternatives": ["15", "21", "36", "48", "72"],
+      "alternatives": [
+        "15",
+        "21",
+        "36",
+        "48",
+        "72"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 13"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuántos números mayores a 13 y menores a 100 existen, tales que en su escritura solo se utilizan cifras impares?",
-      "alternatives": ["21", "23", "25", "26", "27"],
+      "alternatives": [
+        "21",
+        "23",
+        "25",
+        "26",
+        "27"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Práctica Propuesta N° 14"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En una librería solo tienen 68 juegos de escuadras (todos iguales), 30 cuadernos de 100 hojas (todos iguales), 20 cajas de colores (todas iguales) y 40 cuadernos de control (todos iguales). Si los alumnos A, B, C y D ingresan en la librería y cada uno compra un artículo de escritorio, ¿de cuántas maneras diferentes podrían escoger dichos artículos?",
-      "alternatives": ["256", "64", "1024", "512", "128"],
+      "alternatives": [
+        "256",
+        "64",
+        "1024",
+        "512",
+        "128"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 1"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En una competencia de canotaje, un bote tiene 4 asientos en cada lado y es tripulado por 6 hombres, de los cuales Arturo, José y Carlos reman solo en el lado izquierdo; Sergio, Alejandro y Roberto, solo en el lado derecho. ¿De cuántas maneras puede ordenarse la tripulación?",
-      "alternatives": ["36", "576", "144", "720", "768"],
+      "alternatives": [
+        "36",
+        "576",
+        "144",
+        "720",
+        "768"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 2"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "¿Cuántos números de 6 cifras diferentes son múltiplos de 5 y tienen a 2 como cifra de centenas de millar?",
-      "alternatives": ["5208", "1736", "3360", "1680", "672"],
+      "alternatives": [
+        "5208",
+        "1736",
+        "3360",
+        "1680",
+        "672"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 4"
@@ -182,7 +278,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El equipo de fútbol 'San Sebastián' participa en 12 juegos en una temporada. ¿De cuántas maneras diferentes podrán obtener 7 victorias, 3 empates y el resto derrotas?",
-      "alternatives": ["6420", "8640", "11880", "7920", "6930"],
+      "alternatives": [
+        "6420",
+        "8640",
+        "11880",
+        "7920",
+        "6930"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 5"
@@ -193,7 +295,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Cinco niños se van de campamento, y cada niño va acompañado de su padre y su madre. Deciden realizar una fogata en la noche. Si cada niño se sienta entre su padre y su madre a la hora de la fogata, ¿de cuántas maneras diferentes se podrán colocar alrededor de la fogata?",
-      "alternatives": ["960", "768", "600", "192", "1236"],
+      "alternatives": [
+        "960",
+        "768",
+        "600",
+        "192",
+        "1236"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 6"
@@ -204,7 +312,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un hotel va a hospedar a siete médicos que asisten a un congreso. Si solo hay disponible una habitación triple y dos dobles, ¿de cuántas maneras diferentes se les puede asignar a una habitación?",
-      "alternatives": ["120", "80", "210", "180", "100"],
+      "alternatives": [
+        "120",
+        "80",
+        "210",
+        "180",
+        "100"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 7"
@@ -215,7 +329,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las diagonales de un polígono convexo se obtienen uniendo un par de vértices no adyacentes. ¿Cuántos lados tiene el polígono convexo en el que se cumple que su número de lados coincide con su número total de diagonales?",
-      "alternatives": ["6", "7", "8", "9", "5"],
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "5"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 8"
@@ -226,7 +346,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Cuatro estudiantes mujeres y 2 varones se van a sentar en las carpetas A y B, con asientos para tres personas cada una. ¿De cuántas maneras diferentes se pueden ubicar los 6 estudiantes, si en la carpeta A debe haber por lo menos un varón?",
-      "alternatives": ["924", "468", "432", "1008", "576"],
+      "alternatives": [
+        "924",
+        "468",
+        "432",
+        "1008",
+        "576"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 9"
@@ -237,7 +363,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En un club deportivo practican 4 karatecas y 8 tenistas. ¿Cuántos grupos diferentes de 6 integrantes cada uno pueden formarse, de tal manera que en cada grupo esté por lo menos un karateca?",
-      "alternatives": ["896", "980", "868", "644", "840"],
+      "alternatives": [
+        "896",
+        "980",
+        "868",
+        "644",
+        "840"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 10"
@@ -248,7 +380,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el tren de Cusco a Machu Picchu, donde viajan solo pasajeros de Francia, China y Alemania, se elige al azar a 5 de ellos para realizar una encuesta. ¿De cuántas maneras diferentes pueden resultar las nacionalidades de los elegidos?",
-      "alternatives": ["24", "28", "21", "15", "32"],
+      "alternatives": [
+        "24",
+        "28",
+        "21",
+        "15",
+        "32"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 11"
@@ -259,7 +397,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un bazar se ofrecen a la venta mochilas del mismo modelo pero de cinco colores diferentes. Si se desea comprar un total de cuatro mochilas y cualquier compra puede ser atendida, ¿de cuántas maneras diferentes se pueden adquirir dicho total?",
-      "alternatives": ["382", "56", "495", "525", "70"],
+      "alternatives": [
+        "382",
+        "56",
+        "495",
+        "525",
+        "70"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 12"
@@ -270,7 +414,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuántos productos diferentes, cada uno de tres factores primos, pueden obtenerse utilizando solo los números 2, 3, 5 y 7?",
-      "alternatives": ["15", "20", "24", "64", "18"],
+      "alternatives": [
+        "15",
+        "20",
+        "24",
+        "64",
+        "18"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 13"
@@ -281,7 +431,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una tienda solo se venden duraznos, peras y manzanas, por unidades. Si se desea comprar nueve unidades de estas frutas y se tiene la cantidad de fruta suficiente para atender cualquier pedido, ¿de cuántas maneras diferentes se puede realizar dicha compra?",
-      "alternatives": ["91", "110", "165", "55", "72"],
+      "alternatives": [
+        "91",
+        "110",
+        "165",
+        "55",
+        "72"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/11/combinaciones-permutaciones-lineales.html",
       "sourceName": "matematicaj - Análisis Combinatorio, Pregunta 14"
@@ -292,7 +448,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Lenin desea formar un equipo de 6 jugadores formado por 1 arquero, 2 defensas (uno derecho y uno izquierdo), 2 laterales (derecho e izquierdo) y 1 delantero. Si dispone de 6 jugadores y todos son aptos para jugar en cualquier posición, ¿de cuántas maneras se podrá formar el equipo?",
-      "alternatives": ["120", "360", "540", "880", "720"],
+      "alternatives": [
+        "120",
+        "360",
+        "540",
+        "880",
+        "720"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 1"
@@ -303,7 +465,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántas banderas tricolores se pueden diseñar si se dispone de 6 colores de telas?",
-      "alternatives": ["120", "150", "100", "40", "15"],
+      "alternatives": [
+        "120",
+        "150",
+        "100",
+        "40",
+        "15"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 2"
@@ -314,7 +482,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Se tiene un aparato para mandar señales, el cual tiene 5 focos, y cuando se prenden unos y se apagan otros se forman señales diferentes. ¿Cuántas señales distintas se pueden formar con dicho aparato?",
-      "alternatives": ["30", "31", "32", "33", "25"],
+      "alternatives": [
+        "30",
+        "31",
+        "32",
+        "33",
+        "25"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 3"
@@ -325,7 +499,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un partido de fútbol que terminó en empate debe definirse por penales. Uno de los entrenadores debe seleccionar de sus 11 jugadores a los 5 que deben patear los penales y el orden en que lo van a realizar. ¿De cuántas maneras podrá realizar la elección?",
-      "alternatives": ["11×10×9×8×7", "11×11×11×11×11", "11×10×9×8×7×6×5", "11×9×7×5", "11×9×7×5×3"],
+      "alternatives": [
+        "11×10×9×8×7",
+        "11×11×11×11×11",
+        "11×10×9×8×7×6×5",
+        "11×9×7×5",
+        "11×9×7×5×3"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 4"
@@ -336,7 +516,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Se tienen telas de 8 colores diferentes y Micaela desea confeccionarse un traje tricolor (saco, blusa y falda). ¿De cuántas maneras se puede confeccionar dicho traje tomando en cuenta solo los colores pero no el modelo?",
-      "alternatives": ["332", "220", "210", "224", "336"],
+      "alternatives": [
+        "332",
+        "220",
+        "210",
+        "224",
+        "336"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 5"
@@ -347,7 +533,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿De cuántas maneras se pueden colocar 7 niños en una fila, de manera que 3 niños en particular queden juntos?",
-      "alternatives": ["120", "5040", "900", "720", "840"],
+      "alternatives": [
+        "120",
+        "5040",
+        "900",
+        "720",
+        "840"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 7"
@@ -358,7 +550,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una persona desea comprar una pizza y para ello puede elegir entre 15 ingredientes. ¿De cuántas maneras puede ordenar su pizza si solo puede elegir 4 ingredientes?",
-      "alternatives": ["60", "2730", "1860", "1305", "1365"],
+      "alternatives": [
+        "60",
+        "2730",
+        "1860",
+        "1305",
+        "1365"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 8"
@@ -369,7 +567,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un examen consta de 10 preguntas. ¿De cuántas maneras se puede elegir 8 de ellas?",
-      "alternatives": ["36", "24", "45", "42", "48"],
+      "alternatives": [
+        "36",
+        "24",
+        "45",
+        "42",
+        "48"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 9"
@@ -380,7 +584,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Esteban tenía en su examen 13 preguntas, de las cuales solo tiene que responder 10 para salir aprobado. Si de las cinco primeras preguntas solo debe responder 3, ¿de cuántas maneras puede resolver las 10 preguntas?",
-      "alternatives": ["40", "60", "80", "50", "77"],
+      "alternatives": [
+        "40",
+        "60",
+        "80",
+        "50",
+        "77"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 10"
@@ -391,7 +601,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Se quiere elegir una junta directiva de APAFA en una institución educativa, conformada por 6 integrantes: un presidente, un vicepresidente, un secretario, un tesorero y dos vocales. ¿De cuántas maneras se puede elegir la junta si se presentan 10 candidatos?",
-      "alternatives": ["210", "60", "720", "840", "180"],
+      "alternatives": [
+        "210",
+        "60",
+        "720",
+        "840",
+        "180"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 11"
@@ -402,7 +618,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "De un grupo de nueve profesores, de los cuales cinco eran de Matemática, dos de Física y dos de Química, se desea formar un grupo de cinco profesores. ¿De cuántas maneras se pueden formar los grupos, si debe haber 3 de Matemática, 1 de Física y 1 de Química?",
-      "alternatives": ["3", "20", "40", "25", "36"],
+      "alternatives": [
+        "3",
+        "20",
+        "40",
+        "25",
+        "36"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 12"
@@ -413,7 +635,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un grupo de 9 turistas llega a un hotel y encuentra disponibles una habitación triple y tres habitaciones dobles. ¿De cuántas formas diferentes podrán ocupar las habitaciones?",
-      "alternatives": ["8760", "5760", "7560", "8560", "7520"],
+      "alternatives": [
+        "8760",
+        "5760",
+        "7560",
+        "8560",
+        "7520"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 13"
@@ -424,7 +652,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Anita asiste a la biblioteca todos los días de la semana, 4 días por la mañana y el resto por la tarde. ¿De cuántas maneras diferentes puede acudir semanalmente a la biblioteca?",
-      "alternatives": ["84", "21", "112", "20", "35"],
+      "alternatives": [
+        "84",
+        "21",
+        "112",
+        "20",
+        "35"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 15"
@@ -435,7 +669,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un grupo de 5 varones y 4 mujeres, donde Nancy y Martín son pareja al igual que Magaly y Leo, van al cine y se sientan en una fila de 9 asientos. Si las parejas deben sentarse en los extremos, ¿de cuántas maneras pueden hacerlo?",
-      "alternatives": ["1020", "480", "1000", "960", "240"],
+      "alternatives": [
+        "1020",
+        "480",
+        "1000",
+        "960",
+        "240"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 16"
@@ -446,7 +686,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Se presenta un grupo conformado por seis hombres y tres mujeres. ¿Cuántas comisiones de cuatro personas se pueden formar de tal manera que en cada una de ellas exista como mínimo una mujer?",
-      "alternatives": ["118", "115", "111", "222", "112"],
+      "alternatives": [
+        "118",
+        "115",
+        "111",
+        "222",
+        "112"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 17"
@@ -457,7 +703,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En una reunión del centro PRE hay 24 personas, de las cuales 3 son personal administrativo y el resto son personal docente. ¿De cuántas formas diferentes se puede formar una comisión de 3 miembros de manera que en cada comisión haya por lo menos un personal administrativo?",
-      "alternatives": ["696", "669", "684", "694", "649"],
+      "alternatives": [
+        "696",
+        "669",
+        "684",
+        "694",
+        "649"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Análisis Combinatorio, Ejercicio 18"
@@ -468,7 +720,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "De Lima a Ica existen 4 caminos diferentes, y de Ica a Tacna hay 5 caminos diferentes. ¿De cuántas maneras diferentes se podrá ir de Lima a Tacna pasando siempre por Ica?",
-      "alternatives": ["9", "20", "12", "40", "625"],
+      "alternatives": [
+        "9",
+        "20",
+        "12",
+        "40",
+        "625"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn - Análisis Combinatorio, Ejercicio 1"
@@ -479,7 +737,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Lenin tiene 6 pantalones, 4 camisas y 5 pares de zapatos, todos de diferentes colores entre sí. ¿De cuántas maneras diferentes puede vestirse?",
-      "alternatives": ["15", "240", "60", "120", "72"],
+      "alternatives": [
+        "15",
+        "240",
+        "60",
+        "120",
+        "72"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematicasn - Análisis Combinatorio, Ejercicio 3"
@@ -490,7 +754,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una maratón participan 8 semifinalistas. ¿De cuántas formas distintas podrán ser premiados los 3 primeros con medallas de Oro, Plata y Bronce?",
-      "alternatives": ["336", "5040", "1440", "720", "64"],
+      "alternatives": [
+        "336",
+        "5040",
+        "1440",
+        "720",
+        "64"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-problemas-con.html",
       "sourceName": "matematicasn - Análisis Combinatorio, 100 Problemas N° 1"
@@ -501,7 +771,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Carlos invitó a 4 amigos a su casa para ver un partido; se sientan en un sillón de 5 personas. ¿De cuántas maneras pueden ver el partido, si Carlos se sienta al centro?",
-      "alternatives": ["120", "60", "360", "420", "24"],
+      "alternatives": [
+        "120",
+        "60",
+        "360",
+        "420",
+        "24"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-problemas-con.html",
       "sourceName": "matematicasn - Análisis Combinatorio, 100 Problemas N° 2"
@@ -512,7 +788,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una reunión hay 8 personas. ¿De cuántas maneras se pueden sentar 5 de ellas alrededor de una mesa si dos personas en particular (A y B) no pueden estar en la mesa a la vez?",
-      "alternatives": ["864", "924", "720", "900", "800"],
+      "alternatives": [
+        "864",
+        "924",
+        "720",
+        "900",
+        "800"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-problemas-con.html",
       "sourceName": "matematicasn - Análisis Combinatorio, 100 Problemas N° 4"
@@ -523,7 +805,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un equipo de béisbol consta de 6 jardineros, 7 jugadores de cuadra, 5 lanzadores y 2 receptores. ¿De cuántas formas diferentes se puede elegir un equipo de 9 jugadores, sabiendo que debe haber 3 jardineros, 4 jugadores de cuadra, un lanzador y un receptor?",
-      "alternatives": ["7", "70", "700", "7000", "70000"],
+      "alternatives": [
+        "7",
+        "70",
+        "700",
+        "7000",
+        "70000"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-problemas-con.html",
       "sourceName": "matematicasn - Análisis Combinatorio, 100 Problemas N° 5"
@@ -534,7 +822,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un examen consta de 12 preguntas de las cuales el estudiante debe contestar 10. Si de las 6 primeras preguntas debe contestar por lo menos 5, ¿cuántas posibilidades de elegir 10 preguntas tiene el estudiante?",
-      "alternatives": ["15", "36", "51", "21", "27"],
+      "alternatives": [
+        "15",
+        "36",
+        "51",
+        "21",
+        "27"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-problemas-con.html",
       "sourceName": "matematicasn - Análisis Combinatorio, 100 Problemas N° 6"
@@ -545,7 +839,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "¿De cuántas maneras diferentes 2 peruanos, 3 argentinos y 4 colombianos pueden sentarse en fila, de modo que los de la misma nacionalidad se sienten juntos?",
-      "alternatives": ["864", "1728", "688", "892", "1700"],
+      "alternatives": [
+        "864",
+        "1728",
+        "688",
+        "892",
+        "1700"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-problemas-con.html",
       "sourceName": "matematicasn - Análisis Combinatorio, 100 Problemas N° 12"
@@ -556,7 +856,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántos resultados posibles se pueden obtener en el lanzamiento simultáneo de 5 monedas y 3 dados?",
-      "alternatives": ["6934", "6912", "6780", "6512", "6936"],
+      "alternatives": [
+        "6934",
+        "6912",
+        "6780",
+        "6512",
+        "6936"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-problemas-con.html",
       "sourceName": "matematicasn - Análisis Combinatorio, 100 Problemas N° 13"
@@ -567,7 +873,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "El aula especial de la academia consta de 15 alumnos a los cuales se les toma el examen final. ¿Cuántas opciones distintas se tiene para ocupar los 2 primeros puestos, si no hay empate?",
-      "alternatives": ["210", "230", "240", "205", "180"],
+      "alternatives": [
+        "210",
+        "230",
+        "240",
+        "205",
+        "180"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-problemas-con.html",
       "sourceName": "matematicasn - Análisis Combinatorio, 100 Problemas N° 14"
@@ -578,7 +890,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una madre de familia tiene 4 hijos en edad escolar. En su distrito existen 3 colegios. ¿De cuántas formas diferentes como máximo puede matricular a sus hijos?",
-      "alternatives": ["81", "64", "72", "36", "25"],
+      "alternatives": [
+        "81",
+        "64",
+        "72",
+        "36",
+        "25"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/analisis-combinatorio-guias-ejercicios.html",
       "sourceName": "aritmeticapdf - Análisis Combinatorio con Respuestas, Problema 1"
@@ -589,7 +907,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "A una conferencia internacional asisten 5 diplomáticos peruanos y 9 colombianos. ¿De cuántas maneras se puede formar una comisión de trabajo de 6 miembros en la que estén presentes por lo menos 3 diplomáticos peruanos y por lo menos un colombiano?",
-      "alternatives": ["840", "1029", "1020", "849", "720"],
+      "alternatives": [
+        "840",
+        "1029",
+        "1020",
+        "849",
+        "720"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/analisis-combinatorio-guias-ejercicios.html",
       "sourceName": "aritmeticapdf - Análisis Combinatorio con Respuestas, Problema 2"
@@ -600,7 +924,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En un examen, un estudiante debe resolver 10 preguntas de las 13 dadas. Si se tiene que contestar necesariamente por lo menos 3 de entre las 5 primeras, ¿cuántas maneras puede elegir las 10 preguntas?",
-      "alternatives": ["80", "220", "276", "286", "316"],
+      "alternatives": [
+        "80",
+        "220",
+        "276",
+        "286",
+        "316"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/analisis-combinatorio-guias-ejercicios.html",
       "sourceName": "aritmeticapdf - Análisis Combinatorio con Respuestas, Problema 3"
@@ -611,7 +941,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Ana, Betly y Cecilia van de campamento con 3 muchachos más. ¿De cuántas maneras diferentes se pueden ubicar alrededor de una fogata circular, si entre dos chicas hay siempre un muchacho?",
-      "alternatives": ["1", "2", "4", "7", "8"],
+      "alternatives": [
+        "1",
+        "2",
+        "4",
+        "7",
+        "8"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/analisis-combinatorio-guias-ejercicios.html",
       "sourceName": "aritmeticapdf - Análisis Combinatorio con Respuestas, Problema 4"
@@ -622,7 +958,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Alfonso dispone de cinco latas de pintura de distintos colores para pintar las fachadas de 3 casas consecutivas, cada una con un color diferente. ¿De cuántas maneras puede hacerlo?",
-      "alternatives": ["60", "30", "120", "480", "280"],
+      "alternatives": [
+        "60",
+        "30",
+        "120",
+        "480",
+        "280"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
       "sourceName": "matematicasn - Permutaciones y Combinaciones, Problema 1"
@@ -633,7 +975,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Para que una cerradura especial sea abierta, es necesario que se digite una secuencia correcta formada por cuatro dígitos diferentes (del 1 al 9) y dos letras también diferentes (del alfabeto de 26 letras). ¿Cuál es el número máximo de intentos que una persona puede hacer para abrir la cerradura?",
-      "alternatives": ["82020", "92000", "1965600", "2002020", "840000"],
+      "alternatives": [
+        "82020",
+        "92000",
+        "1965600",
+        "2002020",
+        "840000"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
       "sourceName": "matematicasn - Permutaciones y Combinaciones, Problema 2"
@@ -644,7 +992,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "A la final de un torneo de tenis se clasifican 8 jugadores. ¿Cuántas partidas se jugarán, si se juega todos contra todos?",
-      "alternatives": ["72", "36", "28", "16", "64"],
+      "alternatives": [
+        "72",
+        "36",
+        "28",
+        "16",
+        "64"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
       "sourceName": "matematicasn - Permutaciones y Combinaciones, Problema 3"
@@ -655,7 +1009,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "4 hombres y 3 mujeres deben sentarse en una fila de 7 asientos de modo que ningún hombre ocupe sitio par. ¿De cuántas maneras diferentes podrán sentarse?",
-      "alternatives": ["12", "180", "144", "360", "720"],
+      "alternatives": [
+        "12",
+        "180",
+        "144",
+        "360",
+        "720"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
       "sourceName": "matematicasn - Permutaciones y Combinaciones, Problema 5"
@@ -666,7 +1026,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿De cuántas maneras 2 hombres y 3 mujeres pueden sentarse en una fila de cine, si los hombres tienen que estar juntos y las mujeres también?",
-      "alternatives": ["24", "30", "36", "12", "18"],
+      "alternatives": [
+        "24",
+        "30",
+        "36",
+        "12",
+        "18"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
       "sourceName": "matematicasn - Permutaciones y Combinaciones, Problema 6"
@@ -677,7 +1043,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En la juguería se quiere ordenar en la vitrina de 5 posiciones, disponiendo para ello de 8 frutas diferentes. ¿De cuántas maneras diferentes se puede hacer?",
-      "alternatives": ["84", "720", "408", "1204", "6720"],
+      "alternatives": [
+        "84",
+        "720",
+        "408",
+        "1204",
+        "6720"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
       "sourceName": "matematicasn - Permutaciones y Combinaciones, Problema 8"
@@ -688,7 +1060,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿De cuántas formas se pueden seleccionar 2 bolas blancas y 3 azules de un total de 6 bolas blancas y 4 azules?",
-      "alternatives": ["24", "30", "60", "25", "18"],
+      "alternatives": [
+        "24",
+        "30",
+        "60",
+        "25",
+        "18"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
       "sourceName": "matematicasn - Permutaciones y Combinaciones, Problema 9"
@@ -699,7 +1077,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un grupo de inversionistas está conformado por 7 mujeres y 4 hombres. ¿De cuántas maneras diferentes se puede formar una expedición de 6 personas en la cual debe haber por lo menos 2 hombres?",
-      "alternatives": ["320", "125", "729", "371", "900"],
+      "alternatives": [
+        "320",
+        "125",
+        "729",
+        "371",
+        "900"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
       "sourceName": "matematicasn - Permutaciones y Combinaciones, Problema 10"
@@ -710,7 +1094,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Se tiene 6 números positivos y 5 números negativos, se escogen al azar 4 números y se multiplican. ¿De cuántas maneras se pueden elegir 4 números de tal manera que el producto sea positivo?",
-      "alternatives": ["150", "155", "160", "170", "175"],
+      "alternatives": [
+        "150",
+        "155",
+        "160",
+        "170",
+        "175"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
       "sourceName": "matematicasn - Permutaciones y Combinaciones, Problema 11"
@@ -721,7 +1111,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "De un grupo formado por 7 hombres y 4 mujeres hay que escoger 6 personas de forma que entre ellas haya no menos de 2 mujeres. ¿De cuántas maneras puede efectuarse la elección?",
-      "alternatives": ["72", "181", "192", "371", "901"],
+      "alternatives": [
+        "72",
+        "181",
+        "192",
+        "371",
+        "901"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
       "sourceName": "matematicasn - Permutaciones y Combinaciones, Problema 14"
@@ -732,7 +1128,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿De cuántas maneras diferentes se puede sentar en una fila de 5 butacas a 3 hombres y 2 mujeres, de modo que las mujeres no estén juntas?",
-      "alternatives": ["12", "24", "36", "48", "72"],
+      "alternatives": [
+        "12",
+        "24",
+        "36",
+        "48",
+        "72"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
       "sourceName": "matematicasn - Permutaciones y Combinaciones, Problema 15"
@@ -743,7 +1145,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Los distritos de Lima y San Isidro están unidos por 6 caminos diferentes; San Isidro y Miraflores cuentan con 10 caminos diferentes, y Miraflores con San Juan de Lurigancho por 8 caminos. ¿De cuántas maneras diferentes puede trasladarse una persona de Lima a San Juan de Lurigancho pasando por San Isidro y Miraflores?",
-      "alternatives": ["480", "460", "440", "420", "400"],
+      "alternatives": [
+        "480",
+        "460",
+        "440",
+        "420",
+        "400"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 3"
@@ -754,7 +1162,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "El aula de selección del centro preuniversitario consta de 12 alumnos a los cuales se les toma un examen. ¿Cuántas opciones distintas se tiene para ocupar los 3 primeros puestos, si no hay empate?",
-      "alternatives": ["3", "1320", "120", "256", "310"],
+      "alternatives": [
+        "3",
+        "1320",
+        "120",
+        "256",
+        "310"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 5"
@@ -765,7 +1179,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El código MORSE usa dos signos: punto y raya; y las palabras tienen de 1 a 4 signos. ¿Cuántas son las palabras del código MORSE?",
-      "alternatives": ["40", "30", "36", "34", "20"],
+      "alternatives": [
+        "40",
+        "30",
+        "36",
+        "34",
+        "20"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 9"
@@ -776,7 +1196,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Si un club tiene 4 candidatos para Presidente, 3 candidatos para Secretario y 2 candidatos para Tesorero, ¿de cuántas maneras puede elegirse la mesa directiva?",
-      "alternatives": ["3", "7", "12", "24", "32"],
+      "alternatives": [
+        "3",
+        "7",
+        "12",
+        "24",
+        "32"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 10"
@@ -787,7 +1213,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un examen está formado por tres grupos de preguntas: el grupo A contiene 5 preguntas, el grupo B contiene 7 y el grupo C contiene 9. Se va a contestar una pregunta de cada grupo. ¿De cuántas maneras diferentes puede un estudiante elegir sus preguntas?",
-      "alternatives": ["270", "315", "413", "21", "120"],
+      "alternatives": [
+        "270",
+        "315",
+        "413",
+        "21",
+        "120"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 11"
@@ -798,7 +1230,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿De cuántas maneras puede elegirse un comité de cuatro personas en un club de nueve miembros?",
-      "alternatives": ["86", "100", "120", "126", "130"],
+      "alternatives": [
+        "86",
+        "100",
+        "120",
+        "126",
+        "130"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 12"
@@ -809,7 +1247,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuántos arreglos diferentes pueden formarse con las letras de la palabra RAPIDEZ si: a) se toman cinco a la vez, y b) se toman todas a la vez? Dar como respuesta la suma de los resultados.",
-      "alternatives": ["7560", "7500", "7480", "7396", "7200"],
+      "alternatives": [
+        "7560",
+        "7500",
+        "7480",
+        "7396",
+        "7200"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 14"
@@ -820,7 +1264,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Veinte corredores compiten en un RALLY. ¿De cuántas maneras pueden concederse el primer, segundo y tercer premio?",
-      "alternatives": ["3280", "4900", "5248", "6030", "6840"],
+      "alternatives": [
+        "3280",
+        "4900",
+        "5248",
+        "6030",
+        "6840"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 15"
@@ -831,7 +1281,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuántos arreglos diferentes pueden hacerse con las letras de la palabra OSHKOSH, tomadas todas a la vez?",
-      "alternatives": ["630", "600", "586", "500", "490"],
+      "alternatives": [
+        "630",
+        "600",
+        "586",
+        "500",
+        "490"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 16"
@@ -842,7 +1298,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En un examen formado por diez preguntas pueden omitirse tres de ellas. ¿Cuántas selecciones de siete preguntas por contestar pueden hacerse?",
-      "alternatives": ["100", "120", "130", "140", "150"],
+      "alternatives": [
+        "100",
+        "120",
+        "130",
+        "140",
+        "150"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 18"
@@ -853,7 +1315,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿De cuántas maneras distintas se pueden colocar alineadas 8 monedas de las cuales 5 son de 20 céntimos y 3 son de 10 céntimos?",
-      "alternatives": ["40", "60", "56", "72", "81"],
+      "alternatives": [
+        "40",
+        "60",
+        "56",
+        "72",
+        "81"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 25"
@@ -864,7 +1332,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Se tiene un libro de Física, uno de Geometría, uno de Aritmética, uno de Química y uno de Álgebra. ¿De cuántas maneras se podrán ordenar los libros si el de Álgebra debe estar en el centro?",
-      "alternatives": ["100", "120", "24", "12", "720"],
+      "alternatives": [
+        "100",
+        "120",
+        "24",
+        "12",
+        "720"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 26"
@@ -875,7 +1349,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "De un grupo de 8 hombres y 7 mujeres, ¿cuántos grupos mixtos de 7 personas se pueden formar sabiendo que en cada grupo hay exactamente 4 varones?",
-      "alternatives": ["2350", "3450", "2450", "3630", "1500"],
+      "alternatives": [
+        "2350",
+        "3450",
+        "2450",
+        "3630",
+        "1500"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 27"
@@ -886,7 +1366,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántos números pares de 3 cifras diferentes se pueden formar con los dígitos 1, 2, 3, 4 y 5?",
-      "alternatives": ["30", "50", "24", "60", "125"],
+      "alternatives": [
+        "30",
+        "50",
+        "24",
+        "60",
+        "125"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 29"
@@ -897,7 +1383,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuántos numerales de 5 dígitos diferentes tienen como sus 2 últimas cifras a 2 y 5 (en ese orden)?",
-      "alternatives": ["450", "3600", "900", "336", "1800"],
+      "alternatives": [
+        "450",
+        "3600",
+        "900",
+        "336",
+        "1800"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 30"
@@ -908,7 +1400,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un grupo de jóvenes hay 8 varones y 6 mujeres. Si se desea elegir un grupo de 5, donde haya exactamente 3 mujeres, ¿de cuántas maneras se podrá obtener el grupo?",
-      "alternatives": ["200", "280", "480", "760", "560"],
+      "alternatives": [
+        "200",
+        "280",
+        "480",
+        "760",
+        "560"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 31"
@@ -919,7 +1417,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "De un grupo de 15 personas, 5 son muchachos, 6 son muchachas y 4 son adultos. Se desea formar un comité de 5 personas. ¿De cuántas maneras se pueden agrupar, si en el comité debe haber 2 adultos, 2 muchachas y 1 muchacho?",
-      "alternatives": ["450", "120", "600", "150", "900"],
+      "alternatives": [
+        "450",
+        "120",
+        "600",
+        "150",
+        "900"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios_24.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Desarrollados, Ejercicio 32"
@@ -930,7 +1434,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántas variaciones pueden formarse con 10 objetos distintos tomados de 3 en 3?",
-      "alternatives": ["780", "720", "730", "760", "740"],
+      "alternatives": [
+        "780",
+        "720",
+        "730",
+        "760",
+        "740"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Ejercicios, Ejercicio 2"
@@ -941,10 +1451,1350 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un individuo descansa 2 días cualesquiera de la semana. ¿Cuántas semanas podrán transcurrir para que no se repitan los días de descanso?",
-      "alternatives": ["14", "20", "21", "28", "19"],
+      "alternatives": [
+        "14",
+        "20",
+        "21",
+        "28",
+        "19"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/analisis-combinatorio-ejercicios.html",
       "sourceName": "matematica-a1 - Análisis Combinatorio Ejercicios, Ejercicio 3"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De 12 personas, de las cuales 7 son mujeres, se quiere formar un comité.\n¿De cuántas maneras se puede formar dicho grupo si debe haber 3 varones y 2 mujeres?",
+      "alternatives": [
+        "230",
+        "210",
+        "315",
+        "270",
+        "235"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/solucionario-examen-admision-unach-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN UNACH 2026 RESUELTO INGRESO UNIVERSIDAD AUTONOMA DE CHOTA PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un condominio donde se reunieron 14 propietarios de los cuales 5 son varones y 9 son damas. ¿De cuántas maneras se puede formar una comisión de 6 miembros en la que participen, por lo menos, 3 varones y 2 damas?",
+      "alternatives": [
+        "1440",
+        "1260",
+        "1020",
+        "1089",
+        "1040"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/arte-cultura-experiencia-8-5to-actividad-1-2-3-4-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUARTO EXAMEN CEPRU ORDINARIO INGRESO DIRECTO PREGUNTAS CLAVES UNIVERSIDAD SAN ANTONIO 2027"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un grupo de trabajadores de construcción civil, está conformado por 10 varones y 7 mujeres, y pretenden formar un comité para conversar sobre el tema de horas extras, con el ingeniero responsable. El comité lo integrarán 5 varones y 3 mujeres.\n¿De cuántas maneras distintas se puede seleccionar dicho comité?",
+      "alternatives": [
+        "6820",
+        "8520",
+        "8820",
+        "8280",
+        "8000"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/1ro-2do-experiencia-de-aprendizaje-integrada-2-aprendo-en-casa-primer-segundo-grado-de-secundaria-actividades-resueltas-web-tv-radio-word-descargas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNAH 2027 INGRESO UNIVERSIDAD AUTÓNOMA DE HUANTA CLAVES – RESPUESTAS – PRUEBA DE ENSAYO – SIMULACIÓN RESUELTA PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un grupo de 8 trabajadores, 5 son hombres y 3 son mujeres. Se requiere formar una comisión de 4 personas, ¿de cuántas maneras se puede formar dicha comisión de modo que debe haber a lo más 2 mujeres?",
+      "alternatives": [
+        "75",
+        "70",
+        "65",
+        "60",
+        "55"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-logico-150-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICO MATEMÁTICA VILLARREAL RESUELTA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si durante el receso parlamentario algún suceso eventual requiere de la reunión del pleno del Congreso, entonces se debe",
+      "alternatives": [
+        "disolver la Comisión Permanente.",
+        "formar una comisión investigadora.",
+        "convocar a legislatura extraordinaria.",
+        "convocar a elecciones parlamentarias.",
+        "aprobar una legislatura ordinaria."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De cinco varones y cuatro damas, ¿de cuántas maneras se puede formar una comisión mixta de cuatro miembros?",
+      "alternatives": [
+        "160",
+        "180",
+        "140",
+        "120",
+        "240"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-10-experiencia-8-resuelta-matematicas-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA INGENIERÍAS 2024 INGRESO UNIVERSIDAD PRUEBA RESUELTA SAN AGUSTIN CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un grupo de amigos, formado por 5 varones y 3 mujeres. Se desea formar una comisión de 4 integrantes, de modo que dicha comisión esté conformada de a lo más una mujer. ¿Cuántas comisiones diferentes se podrán formar?",
+      "alternatives": [
+        "27",
+        "12",
+        "72",
+        "55",
+        "35"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/vademecum-de-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un marinero tiene 7 banderolas, del mismo tamaño pero de colores diferentes. Si las iza una a continuación de la otra, ¿cuántas señales diferentes podrá hacer con 3 de ellas?",
+      "alternatives": [
+        "35",
+        "210",
+        "5040",
+        "6",
+        "21"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/combinaciones-permutaciones-y.html",
+      "sourceName": "matematicasn.blogspot.com — PERMUTACIONES O VARIACIONES EJERCICIOS RESUELTOS PDF PERMUTACIÓN LINEAL"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el número de señales que se puede hacer con 10 banderas diferentes, pudiendo izarse cada vez 2 ó 3 banderas.",
+      "alternatives": [
+        "810",
+        "720",
+        "840",
+        "900",
+        "750"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/combinaciones-permutaciones-y.html",
+      "sourceName": "matematicasn.blogspot.com — PERMUTACIONES O VARIACIONES EJERCICIOS RESUELTOS PDF PERMUTACIÓN LINEAL"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas palabras diferentes de 5 letras diferentes formadas por 2 vocales y 3 consonantes se pueden formar sin interesar el sentido, escogiendo de las letras de la palabra ESQUILMAR?",
+      "alternatives": [
+        "720",
+        "120",
+        "240",
+        "2 400",
+        "7 200"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/09/analisis-combinatorio-ejemplos-resueltos-de-razonamiento-matematico-de-secundaria-en-pdf.html",
+      "sourceName": "algebraenpdf.blogspot.com — ANÁLISIS COMBINATORIO EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos grupos diferentes integrados por un hombre y una mujer pueden formarse con 5 hombres y 8 mujeres, si cierto varón se rehusa a formar pareja con dos mujeres en particular?",
+      "alternatives": [
+        "70",
+        "38",
+        "40",
+        "35",
+        "21"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "aritmeticapdf.blogspot.com — ANÁLISIS COMBINATORIO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un grupo de 6 personas se forman dúos de canto, luego llegan 5 personas más y se forman tríos, con la condición que en cada grupo haya al menos una persona del grupo inicial. ¿Cuál es la diferencia del número de tríos que se puede formar y el número de dúos del grupo inicial?",
+      "alternatives": [
+        "175",
+        "170",
+        "115",
+        "105",
+        "140"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "aritmeticapdf.blogspot.com — ANÁLISIS COMBINATORIO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la palabra EUCALIPTO se escogen 2 consonantes y 3 vocales diferentes. ¿Cuántas palabras de 5 letras pueden formarse sin que las palabras tengan necesariamente significado?",
+      "alternatives": [
+        "5!",
+        "6!",
+        "10(6!)",
+        "10(5!)",
+        "60(6!)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "aritmeticapdf.blogspot.com — ANÁLISIS COMBINATORIO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se debe seleccionar dos personas para los los cargos de director y subdirector de entre 5 personas igualmente capacitadas. ¿De cuántos modos distintos se puede hacer ello?",
+      "alternatives": [
+        "10",
+        "20",
+        "30",
+        "24",
+        "56"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/analisis-combinatorio-reglas.html",
+      "sourceName": "aritmeticapdf.blogspot.com — ANÁLISIS COMBINATORIO REGLAS Y EXPLICACIONES BÁSICAS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cada lado de un pentágono se considera 4 puntos (sin contar los vértices). ¿Cuántos triángulos que tengan como sus vértices dichos puntos se puede contar?",
+      "alternatives": [
+        "1140",
+        "1100",
+        "1210",
+        "1120",
+        "1080"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/analisis-combinatorio-reglas.html",
+      "sourceName": "aritmeticapdf.blogspot.com — ANÁLISIS COMBINATORIO REGLAS Y EXPLICACIONES BÁSICAS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cada lado de un triángulo se escogen 3 puntos diferentes (no se toman los vértices). ¿Cuántos triángulos se pueden formar con los puntos tomados en cada lado?",
+      "alternatives": [
+        "10",
+        "6",
+        "12",
+        "15",
+        "84"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/analisis-combinatorio-reglas.html",
+      "sourceName": "aritmeticapdf.blogspot.com — ANÁLISIS COMBINATORIO REGLAS Y EXPLICACIONES BÁSICAS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos n ú meros de tres cifras existen, tales que empiecen en cifra par?",
+      "alternatives": [
+        "200",
+        "215",
+        "220",
+        "205",
+        "210"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2019/01/metodo-combinatorio-ejercicios.html",
+      "sourceName": "aritmeticapdf.blogspot.com — MÉTODO COMBINATORIO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números de 3 cifras existen, que tengan una sola cifra impar?",
+      "alternatives": [
+        "322",
+        "323",
+        "326",
+        "324",
+        "325"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2019/01/metodo-combinatorio-ejercicios.html",
+      "sourceName": "aritmeticapdf.blogspot.com — MÉTODO COMBINATORIO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números se pude escribir de tal manera que se use las cifras: 0, 1, 3, 5, 8 y 9, que sean mayores de 3000 pero menores que 9000?",
+      "alternatives": [
+        "221",
+        "300",
+        "647",
+        "625",
+        "453"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2019/01/conteo-de-numeros-ejercicios-resueltos.html",
+      "sourceName": "aritmeticapdf.blogspot.com — CONTEO DE NÚMEROS FÓRMULAS Y EJERCICIOS DESARROLLADOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números de 4 cifras menores que 600 existen tales que acaben en las cifras 1, 5, 9 y además el producto de las tres cifras restantes sea impar?",
+      "alternatives": [
+        "425",
+        "225",
+        "125",
+        "525",
+        "325"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2019/01/conteo-de-numeros-ejercicios-resueltos.html",
+      "sourceName": "aritmeticapdf.blogspot.com — CONTEO DE NÚMEROS FÓRMULAS Y EJERCICIOS DESARROLLADOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un agricultor debe elegir entre sembrar uno de los siguientes 3 productos: camote, caña de azúcar o arroz. Luego, según lo elegido, debe seleccionar entre 2 variedades de camote, 2 variedades de caña o 3 variedades de arroz.\nEl agricultor debe sembrar una única variedad de alguno de los 3 productos. ¿Cuántas opciones tiene?",
+      "alternatives": [
+        "3 opciones.",
+        "7 opciones.",
+        "10 opciones."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-nombramiento-docente-con.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN DE NOMBRAMIENTO DOCENTE SOLUCIONARIO RESPUESTAS PRUEBA PUN ÚNICA NACIONAL RESUELTA DESCARGA PDF RAZONAMIENTO LÓGICO Y VERBAL 2026"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marisol desea visitar 3 lugares turísticos (El Alto, Las reinas y Las cascadas) que se encuentran en cierta zona. Ella proyecta empezar por El Alto, luego piensa visitar Las reinas y terminar su recorrido en Las cascadas. Para desplazarse de El Alto hacia Las reinas, existen 2 caminos; mientras que, para ir de Las reinas a Las cascadas, hay 3 caminos.\n¿Cuántos recorridos diferentes podría elegir Marisol para ir de El Alto hacia Las cascadas, si debe pasar por Las reinas?",
+      "alternatives": [
+        "Cinco.",
+        "Ocho.",
+        "Seis."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-nombramiento-docente-con.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN DE NOMBRAMIENTO DOCENTE SOLUCIONARIO RESPUESTAS PRUEBA PUN ÚNICA NACIONAL RESUELTA DESCARGA PDF RAZONAMIENTO LÓGICO Y VERBAL 2026"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una tienda de ropa se ofrece la siguiente promoción «por la compra de un pantalón se regala un cinturón», donde todos los pantalones y cinturones son diferentes entre sí. Con los cinturones y pantalones que tiene se puede formar 80 parejas posibles, además el número de cinturones excede en dos al número de pantalones. Si un cliente compra 6 pantalones, ¿cuántos cinturones le quedará a la tienda?",
+      "alternatives": [
+        "10",
+        "12",
+        "6",
+        "8",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/30-ejercicios-desarrollados-de.html",
+      "sourceName": "matematicasn.blogspot.com — UNSLG INGENIERÍAS ÁREA C EXAMEN INGRESO UNIVERSIDAD SAN LUIS GONSAGA RESUELTO UNICA PDF 2026"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Greyshi tiene 5 amigos y siempre va al colegio acompañada por lo menos con dos de ellos. ¿Cuántas alternativas diferentes de compañía tiene Greyshi para ir al colegio?",
+      "alternatives": [
+        "25",
+        "41",
+        "30",
+        "23",
+        "26"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-17-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 17 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para una carrera de 10 kilómetros planos, un entrenador dispone de 14 atletas; 5 damas y el resto varones. ¿Cuántos equipos diferentes de 8 integrantes puede formar de tal manera que en cada equipo haya por lo menos cuatro damas?",
+      "alternatives": [
+        "714",
+        "630",
+        "260",
+        "320"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-17-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 17 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cierta mercadería se vende únicamente en los centros comerciales A, B y C. En «A» se puede conseguir en 3 stands, en el centro «B» en 2 stands y en «C» en 2.\n¿Cuántas formas distintas tengo para adquirir el producto?",
+      "alternatives": [
+        "12",
+        "7",
+        "21",
+        "36",
+        "24"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-17-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 17 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas señales diferentes pueden emitirse con tres focos rojos, cuatro focos amarillos y tres azules en una fila de diez portafocos?",
+      "alternatives": [
+        "8400",
+        "4200",
+        "1316",
+        "2632",
+        "2100"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-17-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 17 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un testigo de cierto delito dijo que la placa del vehículo usado por los delincuentes era un número de 6 dígitos, de los cuales los tres primeros eran 487, no puede precisar los últimos dígitos, pero aseguró que eran distintos. ¿Cuántos números de placas se tendrá que investigar?",
+      "alternatives": [
+        "640",
+        "720",
+        "800",
+        "900",
+        "990"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-17-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 17 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María escribe números naturales de tres cifras tales que la cifra central sea mayor que la suma de las otras dos, por ejemplo 185 y 263. ¿Cuántos números diferentes podrá escribir María, como máximo?",
+      "alternatives": [
+        "144",
+        "120",
+        "96",
+        "100",
+        "72"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-11-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 11 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Alex, con un lápiz, ha trazado 2 rectas paralelas sobre una plancha rectangular de triplay. Si luego traza 8 rectas secantes a las paralelas anteriores y procede a cortar por las líneas trazadas, ¿cuántos pedazos de triplay podrá obtener como máximo?",
+      "alternatives": [
+        "45",
+        "55",
+        "54",
+        "46",
+        "36"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-7-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 7 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una cartulina están dibujados n puntos y cada 2 puntos se ha unido con un color distinto, de tal manera que se han utilizado como máximo un total de 28 colores. Halle n.",
+      "alternatives": [
+        "6",
+        "7",
+        "5",
+        "9",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-7-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 7 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean dos rectas paralelas L₁ y L₂, se ubican 8 puntos a₁, a₂, …, a₈ en L₁ y 10 puntos b₁, b₂, …, b₁₀ en L₂. ¿Cuántos triángulos distintos se pueden formar tomando tres puntos cualesquiera de los 18?",
+      "alternatives": [
+        "176",
+        "560",
+        "640",
+        "720",
+        "816"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-2-ccss-experiencia-8-resuelta-aprendo-en-casa-ciencias-sociales-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICA"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mauro Fernando, profesor de cálculo II de la UNMSM, tiene que preparar el examen final del curso. Para ello, cuenta en la memoria de su laptop con un banco de preguntas por niveles: 50 nivel fácil, 47 nivel regular y 47 nivel difícil. Él necesita elaborar un examen de 10 preguntas, de las cuales 5 serán de nivel fácil, 3 de nivel regular y 2 de nivel difícil. Además, en la pantalla de su computadora, se van mostrando las preguntas de su banco de uno en uno y al azar. ¿Cuántas preguntas, como mínimo, se deberán mostrar en la pantalla de su laptop para tener la seguridad de que con las mostradas se pueda elaborar el examen?",
+      "alternatives": [
+        "100",
+        "102",
+        "99",
+        "101",
+        "98"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/3ro-4to-actividad-2-comunicacion-experiencia-9-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA E 2026-1 DERECHO SOCIALES EDUCACIÓN INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De un grupo de 6 varones y 4 mujeres se elegirá una comisión de 3 integrantes, ¿cuántas comisiones mixtas se podrán formar?",
+      "alternatives": [
+        "56",
+        "96",
+        "72",
+        "87",
+        "84"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-aritmetica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ARITMÉTICA RUBIÑOS 2025 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos sonidos distintos pueden producirse con 7 teclas de un piano si solo se tocan 3 de ellas simultáneamente y cuántos sonidos distintos pueden producirse con 7 teclas de un piano si solo se tocan 3 de ellas una tras otra? Dé como respuesta la suma de ambas cantidades.",
+      "alternatives": [
+        "235",
+        "245",
+        "215",
+        "225",
+        "250"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/Desarrollo-del-examen-de-admision-a-la-universidad-con-claves-y-respuestas-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN UNAC 2023 BLOQUE 1 INGENIERÍAS INGRESO UNIVERSIDAD CLAVES RESPUESTAS SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mario abrió una cuenta en el banco XYZ y le entregaron una tarjeta débito (ahorros), luego, tiene que crear una contraseña de 4 dígitos. ¿Cuántas contraseñas distintas puede crear si los dígitos son diferentes entre sí? Tenga en cuenta que los dígitos a utilizar son 0; 1; 2; 3; 4; 5; 6; 7; 8; 9.",
+      "alternatives": [
+        "5040",
+        "4000",
+        "660",
+        "5420",
+        "3600"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepre-unac-geometria-segundo-examen.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN UNAC BLOQUE 3 2023 CIENCIAS DE LA SALUD INGRESO UNIVERSIDAD CLAVES RESPUESTAS DESARROLLO PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se lanzan 2 dados simultáneamente ¿Calcular cuántos elementos tiene el espacio muestral?.",
+      "alternatives": [
+        "6",
+        "12",
+        "24",
+        "36",
+        "216"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — PROBABILIDADES EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números de tres cifras con las 2 últimas cifras iguales existen?",
+      "alternatives": [
+        "45",
+        "90",
+        "100",
+        "900",
+        "81"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/metodo-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO COMBINATORIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números naturales menores que 100 son tales que la suma de sus cifras es 7?",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/metodo-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO COMBINATORIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos numerales de tres cifras del sistema decimal, poseen solamente 2 cifras impares en su escritura?",
+      "alternatives": [
+        "375",
+        "250",
+        "350",
+        "225",
+        "325"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/metodo-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO COMBINATORIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números de tres cifras existen en los cuales las cifras de primer y tercer orden suman 11 , y la cifra central es par?",
+      "alternatives": [
+        "45",
+        "40",
+        "100",
+        "90",
+        "81"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/metodo-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO COMBINATORIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números de 3 cifras existen tales que el producto de sus 3 cifras sea un número par?",
+      "alternatives": [
+        "750",
+        "625",
+        "795",
+        "775",
+        "725"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/metodo-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO COMBINATORIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos partidos deben programarse en un campeonato de fútbol de dos ruedas en el que intervienen 12 equipos?.",
+      "alternatives": [
+        "142",
+        "124",
+        "120",
+        "108",
+        "132"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Seis amigos se encuentran en un centro comercial. ¿Cuántos saludos de mano se intercambian, si cada amigo estrecha la mano de todos los demás solo una vez?",
+      "alternatives": [
+        "6",
+        "8",
+        "10",
+        "12",
+        "15"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el número de rectas de la unión de 6 puntos de un plano. (Tres puntos cualquieras nunca están un línea recta)",
+      "alternatives": [
+        "15",
+        "22",
+        "14",
+        "13",
+        "19"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos triángulos quedan determinados por 10 puntos, donde 3 puntos cualesquiera nunca están en línea recta?",
+      "alternatives": [
+        "90",
+        "120",
+        "168",
+        "240",
+        "195"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen 12 puntos coplanares, no situados 3 de ellos en línea recta. ¿De cuántas modos diferentes se puede formar un triángulo teniendo a un punto determinado como vértice?",
+      "alternatives": [
+        "55",
+        "45",
+        "220",
+        "110",
+        "80"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un club de voley tiene 10 jugadoras. ¿Cuántos equipos diferentes de 6 jugadoras se pueden formar sabiendo que en todos ellos siempre tiene que estar Carla y Susana?",
+      "alternatives": [
+        "80",
+        "20",
+        "70",
+        "40",
+        "60"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un club de voley tiene en total 9 jugadoras de las que en cada partido sólo pueden jugar 6. ¿Cuántos equipos de 6 jugadoras pueden formarse, si en todos ellos siempre debe estar la capitana?",
+      "alternatives": [
+        "63",
+        "72",
+        "56",
+        "112",
+        "108"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una juguería se tienen las siguientes frutas: papaya, carambola, plátano, piña, fresa, lúcuma, sandía; se quiere saber cuántos tipos diferentes de jugos se puede hacer sabiendo que cada uno debe estar echo a base de 3 frutas y que la carambola y la fresa nunca deben combinarse ya que el jugo sería demasiado ácido.",
+      "alternatives": [
+        "127",
+        "125",
+        "35",
+        "30",
+        "91"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan ve desde su ventana que las personas allí reunidas se han dado en total 105 apretones de mano al saludarse. ¿Cuántas personas ha visto Juan?",
+      "alternatives": [
+        "15",
+        "12",
+        "7",
+        "14",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Diego tiene 8 bolitas negras y Rudy tiene 5 bolitas rojas. Si quieren intercambiar sus bolitas, de modo que se intercambie grupos de al menos 2 pero no más de 4, ¿cuántos intercambios posibles se darán?",
+      "alternatives": [
+        "1190",
+        "1230",
+        "1410",
+        "1180",
+        "1150"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un campamento de fútbol se jugaron en total 524 partidos y se jugó en dos etapas. En la primera todos contra todos y en la segunda los 8 mejores. ¿Cuántos equipos participaron?",
+      "alternatives": [
+        "24",
+        "12",
+        "32",
+        "30",
+        "36"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene seis cajas en las cuales se debe colocar 13 bolas diferentes. ¿De cuántos modos se pueden colocar si en la primera caja se debe poner 3 bolas, en la última 4 bolas y en las restantes las demás bolas?",
+      "alternatives": [
+        "6060×46",
+        "210×46",
+        "286×46",
+        "13!",
+        "12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-combinatorio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen 6 tarros de pintura de diferentes colores. ¿Cuántos colores diferentes a los que ya se tienen, se podrán obtener al mezclarlos en proposiciones iguales?",
+      "alternatives": [
+        "56",
+        "63",
+        "57",
+        "27"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/conjuntos-convexos-triangulos-y.html",
+      "sourceName": "matematicasn.blogspot.com — CONJUNTOS PERTENENCIA E INCLUSIÓN DETERMINACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene “n” pinturas de “n” colores básicos y se desea obtener 1013 nuevos tonos, combinando partes iguales de 2; 3; 4; 5; …; n colores.\nHallar “n”.",
+      "alternatives": [
+        "5",
+        "7",
+        "8",
+        "10",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/subconjunto-propio.html",
+      "sourceName": "matematicasn.blogspot.com — SUBCONJUNTO PROPIO EJEMPLOS Y EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una señora sale a pasear todos los días con dos o mas de sus perritos. Con mucho cuidado, procuró llevar cada día un grupo diferente. Si en total tiene 10 perritos. ¿Al cabo de cuantos días tendrá que llevar necesariamente a un grupo repetido?",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/teoria-de-conjuntos-ejercicios-quinto.html",
+      "sourceName": "matematicasn.blogspot.com — RELACIONES ENTRE CONJUNTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos tipos de jugo surtido se pueden preparar, si se dispone de 6 clases de fruta?",
+      "alternatives": [
+        "56",
+        "57",
+        "60",
+        "63",
+        "64"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/08/conjuntos-pdf-ejemplos-resueltos-teoria.html",
+      "sourceName": "matematicasn.blogspot.com — SUBCONJUNTOS EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se encontraba Carmen y 5 de sus amigos conversando en la sala de su casa, cuando su mamá le pidió que vaya a comprar un jarabe a la farmacia, sus cinco amigos se ofrecieron acompañarla. ¿Cuántas opciones diferentes tiene Carmen para ir acompañada a la farmacia?",
+      "alternatives": [
+        "32",
+        "31",
+        "16",
+        "15",
+        "33"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/combinatoria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — COMBINATORIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De un grupo de 20 personas se desea enviar de viaje a dos de ellos .... A : Uno a Chiclayo y el otro a Puno. B : Juntos a Cusco. Calcule la suma del número de formas en que puede ocurrir A más el número de fórmas en que puede ocurrir B.",
+      "alternatives": [
+        "380",
+        "390",
+        "400",
+        "570",
+        "650"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-problemas-con_3.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS COMBINATORIO PREGUNTAS RESUELTAS DE SECUNDARIA Y PRE UNIVERSIDAD PDF "
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el máximo número de maneras diferentes de matricular a 3 niños en 5 colegios diferentes?",
+      "alternatives": [
+        "625",
+        "125",
+        "243",
+        "343",
+        "81"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/combinatoria-ejercicios-resueltos_4.html",
+      "sourceName": "matematicasn.blogspot.com — PRINCIPIO MULTIPLICATIVO EJERCICIOS RESUELTOS PDF TEOREMA FUNDAMENTAL DEL ANÁLISIS COMBINATORIO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿números 1: 2: 3 y 4 cifras se pueden formar con los dígitos 1; 2; 3 y 4, si no se permite repeticiones?.",
+      "alternatives": [
+        "24",
+        "32",
+        "64",
+        "80",
+        "90"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/combinatoria-ejercicios-resueltos_4.html",
+      "sourceName": "matematicasn.blogspot.com — PRINCIPIO MULTIPLICATIVO EJERCICIOS RESUELTOS PDF TEOREMA FUNDAMENTAL DEL ANÁLISIS COMBINATORIO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el número de enteros positivos menores que 10 000 que se pueden formar con los dígitos 1; 2; 3 y 4, si se permiten repeticiones.",
+      "alternatives": [
+        "120",
+        "240",
+        "124",
+        "340",
+        "420"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/combinatoria-ejercicios-resueltos_4.html",
+      "sourceName": "matematicasn.blogspot.com — PRINCIPIO MULTIPLICATIVO EJERCICIOS RESUELTOS PDF TEOREMA FUNDAMENTAL DEL ANÁLISIS COMBINATORIO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En nuestra localidad hay tres restaurantes bien diferenciados; el primero, de comida criolla, ofrece hasta seis platos diferentes, y el segundo, un chifa, ofrece hasta 9 platos diferentes, y el tercero, de comida vegetariana, ofrece hasta cinco platos distintos. Si un buen día decidimos darnos el gusto al almorzar fuera de casa, ¿cuántas opciones diferentes tenemos de elegir un plato?.",
+      "alternatives": [
+        "12",
+        "15",
+        "20",
+        "16"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/analisis-combinatorio-22preguntas.html",
+      "sourceName": "matematicasn.blogspot.com — PRINCIPIO ADITIVO EJERCICIOS RESUELTOS PDF PRINCIPIO DE LA SUMA"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María tiene 8 bolitas y Nancy tiene 5 bolitas. Si quieren intercambiar sus bolitas de modo que se intercambien grupos de al menos 2 pero no más de 4, ¿cuántos intercambios posibles se darán?",
+      "alternatives": [
+        "119",
+        "1210",
+        "1100",
+        "1190",
+        "1245"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/tecnicas-de-conteo-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — TÉCNICAS DE CONTEO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un torneo de ajedrez se jugaron en total 524 partidas y además se sabe se realizaron dos ruedas. En la primera ronda jugaron todos contra todos y en la segunda jugaron los 8 mejores. ¿Cuántos participaron?",
+      "alternatives": [
+        "28",
+        "40",
+        "36",
+        "24",
+        "32"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/tecnicas-de-conteo-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — TÉCNICAS DE CONTEO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un campamento hay 8 varones, 5 mujeres y 3 perros. Se van a formar grupos de 5, ¿cuántos grupos diferentes se podrá formar si siempre debe haber 2 mujeres y un perro en cada grupo?",
+      "alternatives": [
+        "6(5!)",
+        "3(5!)",
+        "7(5!)",
+        "8(5!)",
+        "5(5!)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/tecnicas-de-conteo-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — TÉCNICAS DE CONTEO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos resultados posibles se pueden obtener en el lanzamiento simultáneo de 5 monedas y 3 dados legales?",
+      "alternatives": [
+        "6934",
+        "6912",
+        "6780",
+        "6512",
+        "6936"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS COMBINATORIO FULL 100 PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El aula especial de la Academia consta de 15 alumnos a los cuales se le toma el examen final. ¿Cuántas opciones distintas se tiene para ocupar los 2 primeros puestos, si no hay empate?",
+      "alternatives": [
+        "210",
+        "230",
+        "240",
+        "205",
+        "180"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/analisis-combinatorio-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS COMBINATORIO FULL 100 PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para que una cerradura especial sea abierta, es necesario que se digite en un panel magnético una secuencia correcta formada por cuatro dígitos diferentes y dos letras también diferentes. Los dígitos pueden variar de 1 a 9 y las letras son todas (las veintiséis del alfabeto). ¿Cuál es el número máximo de intentos que una persona que no conoce la secuencia correcta puede hacer para que la cerradura sea abierta?.",
+      "alternatives": [
+        "82020",
+        "92000",
+        "1965600",
+        "2002020"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
+      "sourceName": "matematicasn.blogspot.com — PERMUTACIONES Y COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A la final de un torneo de Tenis se clasifican 8 jugadores. ¿Cuántas partidas se jugará, si se juega todos contra todos?.",
+      "alternatives": [
+        "72",
+        "36",
+        "28",
+        "16",
+        "64"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/permutaciones-y-combinaciones.html",
+      "sourceName": "matematicasn.blogspot.com — PERMUTACIONES Y COMBINACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números de tres cifras menores de 226 se pueden formar con los dígitos 1 ; 2 ; 3 y 4, si cada dígito se suma sola vez?",
+      "alternatives": [
+        "6",
+        "12",
+        "8",
+        "14",
+        "24"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/combinatoria-y-el-diagrama-del-arbol.html",
+      "sourceName": "matematicasn.blogspot.com — DIAGRAMA DEL ÁRBOL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Manuela puede estudiar 0 ; 1 ó 2 horas para una prueba de estadística en una noche determinada. Elaborar un diagrama de árbol para obtener el número de maneras que Manuela puede estudiar:\nI) Cinco horas exactamente en tres noches consecutivas.\nII) Cinco horas, como mínimo en tres noches consecutivas.",
+      "alternatives": [
+        "2 y 3",
+        "3 y 4",
+        "12 y 8",
+        "9 y 6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/combinatoria-y-el-diagrama-del-arbol.html",
+      "sourceName": "matematicasn.blogspot.com — DIAGRAMA DEL ÁRBOL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas palabras diferentes se pueden formar con todas las letras de la palabra ACCACCIA?.",
+      "alternatives": [
+        "280",
+        "560",
+        "140",
+        "360",
+        "720"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/permutaciones-con-repeticion-preguntas.html",
+      "sourceName": "matematicasn.blogspot.com — PERMUTACIONES CON REPETICIÓN EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos ordenamientos se puede formar con todos los elementos de “ASOCIACION” si las letras S y N siempre deben estar juntos?",
+      "alternatives": [
+        "7!×8",
+        "6!×7",
+        "9×8!",
+        "10×9!",
+        "9×7!"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/permutaciones-con-repeticion-preguntas.html",
+      "sourceName": "matematicasn.blogspot.com — PERMUTACIONES CON REPETICIÓN EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A una persona que sufre de obesidad le recomiendan que para que baje de peso acuda 3 días al gimnasio, 2 días al sauna y 1 día que haga dieta. (de lunes a sábado) ¿De cuántos modos distintos puede elaborar una programación para cumplir con la recomendación?",
+      "alternatives": [
+        "30",
+        "60",
+        "120",
+        "90",
+        "240"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/permutaciones-con-repeticion-preguntas.html",
+      "sourceName": "matematicasn.blogspot.com — PERMUTACIONES CON REPETICIÓN EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el número de ordenamientos que se puede obtener con todas las letras de la palabra “HONOLULU”, si todas las vocales deben permanecer juntas.",
+      "alternatives": [
+        "120",
+        "240",
+        "360",
+        "180",
+        "720"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/permutaciones-con-repeticion-preguntas.html",
+      "sourceName": "matematicasn.blogspot.com — PERMUTACIONES CON REPETICIÓN EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Consideremos una operación de maquinado en la que se necesita taladrar dos agujeros de diámetro distintos en una hoja de metal, así como hacer dos ranuras de diferente tamaño. Denotamos con T la operación de taladrado y con R la de ranurado. Entonces, al proponer una secuencia de operaciones para el maquinado, tal vez se tenga interés en el número de secuencias distintas posibles en que pueden efectuarse las cuatro operaciones.",
+      "alternatives": [
+        "6",
+        "12",
+        "24",
+        "82",
+        "96"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/permutaciones-con-repeticion-preguntas.html",
+      "sourceName": "matematicasn.blogspot.com — PERMUTACIONES CON REPETICIÓN EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números de 8 cifras tienen como producto de sus cifras 120?",
+      "alternatives": [
+        "4312",
+        "7202",
+        "8012",
+        "9032",
+        "4002"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/permutaciones-con-repeticion-preguntas.html",
+      "sourceName": "matematicasn.blogspot.com — PERMUTACIONES CON REPETICIÓN EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
     }
   ]
 }

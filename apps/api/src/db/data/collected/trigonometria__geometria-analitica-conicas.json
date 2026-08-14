@@ -1247,6 +1247,2362 @@
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conicas-circunferencia-y-parabola.html",
       "sourceName": "MathN Blog - Circunferencia y Parábola Problemas Resueltos, Pregunta 10"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los vértices de una elipse E se ubican en las rectas L 1 : x = 1 y L 2 : x = 9, su eje focal es paralelo al eje X y la ordenada de su centro es 7. Si la elipse E pasa por el punto P(2;6) , halle la longitud de su lado recto (en centímetros).",
+      "alternatives": [
+        "7/8 cm",
+        "4/7 cm",
+        "8/7 cm",
+        "7/4 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-18.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El centro de la elipse E es el vértice de la parábola P : x² = 16y, un extremo del eje menor es el foco de la parábola y la longitud del lado recto de E es 4 m. Halle la ecuación de la elipse.",
+      "alternatives": [
+        "x² + 8y² = 64",
+        "x² + 4y² = 64",
+        "2x² + 3y² = 36",
+        "3x² + 4y² = 64"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-18.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La recta L: x – 2y + 4 = 0 interseca a la parábola P: y ² =4px en el punto (a;4). Calcule la distancia del foco de P a la recta L.",
+      "alternatives": [
+        "3 u",
+        "√5 u",
+        "2 u",
+        "2√5 u"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/09/geometria-san-marcos-deco-admision-la.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA EXAMEN RESUELTO DE ADMISIÓN A LA UNIVERSIDAD SAN MARCOS DECO"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La recta L: x–2y+4=0 interseca a la parábola P: y 2 =4px en el punto (a;4). Calcule la distancia del foco de P a la recta L.",
+      "alternatives": [
+        "3 u",
+        "√5 u",
+        "2 u",
+        "2√5 u"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/examen-san-marcos-deco-geometria-ce.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La circunferencia C 1 : x ² + y ² – 8x + 4y + 5 = 0, es concéntrica con la circunferencia C 2 que es tangente al eje de las abscisas. Halle la ecuación de la circunferencia C 2 .",
+      "alternatives": [
+        "x ² + y ² – 8x + 4y +16 = 0",
+        "x ² + y ² – 8x + 4y +12 = 0",
+        "x ² + y ² – 8x + 4y +10 = 0",
+        "x ² + y ² – 8x + 4y +14 = 0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-geometria-semana-17-2020.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una elipse con centro en el origen de coordenadas tiene como recta directriz :\nx+2y – 6= 0\nSi la longitud del eje mayor es el triple del eje menor, entonces la distancia entre los focos es",
+      "alternatives": [
+        "32 √ 5/ 13",
+        "32 √ 5/ 15",
+        "32 √ 5/ 14",
+        "32 √ 5/ 11",
+        "32 √ 5/ 12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la ecuación de la parábola x 2 –8x+8y=0, halle la suma de la abscisa y la ordenada del vértice de dicha parábola.",
+      "alternatives": [
+        "8",
+        "6",
+        "10",
+        "12",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/cepreuni-2019-ii-tercera-practica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI SOLUCIONARIOS 2026 PDF 2027"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una parábola tiene su foco en F(3;2) y recta directriz x= – 4. Su ecuación es:",
+      "alternatives": [
+        "y 2 –2y–14x+3=0",
+        "y 2 –2y – 6x+7=0",
+        "y 2 – 4y – 8x– 6=0",
+        "y 2 – 4y – 6x+7=0",
+        "y 2 – 4y –14x– 3=0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el diseño de arcos parabólicos, se crea el modelo de uno de los arcos de parábola en el plano cartesiano XOY. Se sabe que el foco está en F(0;16), su vértice pertenece a la recta L:4y−2x−72=0 y el eje focal es vertical. Si los puntos de intersección de la parábola con el eje X son A y B, halle la distancia en decímetros (dm) desde A hasta B.",
+      "alternatives": [
+        "26",
+        "28",
+        "24",
+        "20",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/examen-san-marcos-2019-i-deco.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN MARCOS 2027 I EXAMEN ADMISIÓN UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la ecuación general de la cónica : Ax²+By²+Cx+Dy+F=0 con A, B, C, D, F constantes arbitrarias, se tiene que:\nI) Si A=B≠0, entonces siempre tenemos la ecuación de una circunferencia.\nII) Si B=0 y A≠0, entonces siempre tenemos la ecuación de una parábola.\nIII) Si A.B<0 y D² – 4BF<0, entonces siempre tenemos la ecuación de una hipérbola.\nLuego son verdaderas:",
+      "alternatives": [
+        "solo I",
+        "II y III",
+        "solo II",
+        "solo III",
+        "I y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/01/simulacro-admision-uni-segunda-prueba-matematicas-universidad-ingenieria-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNI 2027 SEGUNDA PRUEBA DE INGRESO SOLUCIONARIO UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la ecuación de la circunferencia es :\nx ² + y ² – 3x + 5y – 14 = 0, entonces su radio",
+      "alternatives": [
+        "√11",
+        "5",
+        "15",
+        "3√10/2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la ecuación de la circunferencia; donde uno de sus diámetros tiene por extremos los puntos a A( – 2; – 3) y B(6;5).",
+      "alternatives": [
+        "x ² + y ² + 5 =0",
+        "x ² + y ² – 4x – 2y – 27 = 0",
+        "x ² +y ² – = 0",
+        "x ² + y ² – 4x – y – 27 = 0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de la circunferencia que tiene su centro en el eje Y, y una cuerda cuyos extremos son los puntos (2;7) y (4;1).",
+      "alternatives": [
+        "x ² + y ² = 20",
+        "(x – 3) ² + y ² = 20",
+        "x ² + (y – 3) ² = 20",
+        "x ² + (y – 5) ² = 20"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de la circunferencia que tiene su centro en el punto ( – 1;4) y es tangente a la recta que pasa por los puntos (3; – 2) y ( – 9; 3)",
+      "alternatives": [
+        "(x + 2) ² + (y – 4) ² = 8",
+        "(x+1) ² +(y – 4) ² = 16",
+        "(x + 2) ² + (y – 4) ² = 6",
+        "(x + 3) ² + (y – 6) ² = 8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de la circunferencia tangente al eje de ordenadas y que pasa por los puntos:\nA=(2; – 1) y B=(1; 6)",
+      "alternatives": [
+        "(x – 5) ² + (y – 3) ² = 5 ²",
+        "(x – 3) ² + (y–5) ² = 5 ²",
+        "(x – 5) ² + (y – 2) ² = 5 ²",
+        "(x – 3) ² +(y – 5) ² =3 ²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la ecuación de la circunferencia cuyo centro está contenido en el eje x y que pasa por los puntos A=(1; 3) y B(4;5).",
+      "alternatives": [
+        "(x – 3) ² + y ² = 13",
+        "(x – 7) ² + y ² = 45",
+        "(x – 4) ² + y ² =18",
+        "(x – 2) + y ² = 20"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La circunferencia tiene por ecuación: x ² +y ² – 30y + 200=0 y tiene centro (20;0), el eje radical de ambos tiene por ecuación 4x – 3y– 5=0. Halle la ecuación de la circunferencia .",
+      "alternatives": [
+        "x ² +y ² +4x 5y+5=0",
+        "x ² +y ² 40x+250=0",
+        "x ² +y ² +20x – 195=0",
+        "x ² +y ² – 20x – 250=0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La recta ℒ : x – 2y + 4 = 0 interseca a la parábola P: y ² =4px en el punto (a;4).\nCalcule la distancia del foco de P a la recta ℒ .",
+      "alternatives": [
+        "3 u",
+        "√5 u",
+        "2 u",
+        "2√5 u"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/geometria-analitica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA ANALÍTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación de una hipérbola es 4x ² – y ² + 2y + 3 = 0 , marcar lo incorrecto",
+      "alternatives": [
+        "Centro: (0; 1)",
+        "Vértices: (0; 3) y (0; – 1)",
+        "Focos: (0; 1+√5) y (0; 1–√5)",
+        "Excentricidad: /2",
+        "Lado recto: 2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la distancia de un foco de la hipérbola 16x ² – 9y ² = 144 a una cualquiera de sus asíntotas.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la longitud del lado recto de una hipérbola de excentricidad 2, si la distancia entre sus directrices es 2.",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "12",
+        "15"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la ecuación de la hipérbola con vértices en (2; 3), (2; 9) y pasa por (0; 0)",
+      "alternatives": [
+        "4(x + 2) ² – 9(y + 6) ² = 36",
+        "4(y – 6) ² – 27(x – 2) ² = 36",
+        "9(x – 2) ² – 4(y + 6) ² = 36",
+        "4(y + 2) ² – 9(x + 6) ² = 36",
+        "4(x – 2) ² – 27(y – 6) ² = 36"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una hipérbola con centro en el origen tiene un vértice en el punto (– 4; 0) y un foco en el punto (6;0). Según esto, determine la longitud de su lado recto",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "12",
+        "16"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la ecuación de la hipérbola cuyos focos son (0;– 2) y (0;2) además cada uno de los lados rectos mide 6",
+      "alternatives": [
+        "x ² – y ² =1",
+        "x ² –3y ² =3",
+        "2y ² –x ² =2",
+        "3y ² –x ² =3",
+        "3x ² – 4y ² =12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una hipérbola equilátera centrada en el origen pasa por el punto (4; – 1). Hallar la ecuación (posición canónica)",
+      "alternatives": [
+        "x ² – 2y ² =14",
+        "x ² – y ² =15",
+        "2y ² – x ² =14",
+        "x ² – y ² =14",
+        "x ² – 2y ² =15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la ecuación de la hipérbola equilátera centrada en el origen, con vértice en (0;4)?",
+      "alternatives": [
+        "x ² – y ² =4",
+        "x ² – y ² =32",
+        "y ² – x ² =4",
+        "x ² – y ² =16",
+        "y ² – x ² =16"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la ecuación de la hipérbola si su centro es C(1;1) y un foco con su vértice correspondiente son (7;1) y (5;1)?",
+      "alternatives": [
+        "20(x – 1) ² – 16(y – 1) ² =640",
+        "16(y – 1) ² – 20(x+1) ² =320",
+        "5(x – 1) ² – 4(y – 1) ² =80",
+        "16(y – 1) ² – 20(x – 1) ² =640",
+        "20(x – 1) ² – 16(y – 1) ² =80"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación de una hipérbola es\nx ² – 4y ² – 2x –16y – 19=0\nCalcule la distancia entre los focos.",
+      "alternatives": [
+        "5",
+        "2√5",
+        "2",
+        "4√5",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de la hipérbola con centro en el origen, una de cuyas asíntotas es la recta 2√5x − 3y = 0 y pasa por el punto P(–1; 2).",
+      "alternatives": [
+        "10y ² – 2x ² =2",
+        "9y ² – 20x ² =16",
+        "6y ² – 3x ² =21",
+        "9y ² – 16x ² =20",
+        "8y ² – 15x ² =17"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la ecuación de una hipérbola 9x² – y ² –36x–6y +18=0 calcule la ecuación de una de sus rectas asíntotas.",
+      "alternatives": [
+        "y = 3x–3",
+        "y = 3x– 6",
+        "y = 3x–9",
+        "y = 3x– 8",
+        "y = 3x–12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la ecuación de la hipérbola cuyos focos son: (4;– 2) y (4;10), excentricidad es igual a Tg260°",
+      "alternatives": [
+        "8y ² + x ² – 64y – 8x + 96 = 0",
+        "y ² – x ² + 64y – 6x + 16 = 0",
+        "8y ² – x ² + 8x – 64y + 80 = 0",
+        "x ² – y ² – 64y + 6x + 16 = 0",
+        "32x ² – 4y ² – 16x + 8y – 19 = 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área del triángulo formado por los ejes coordenados y cualquier recta tangente a la hipérbola xy =n; n > 0.",
+      "alternatives": [
+        "4n",
+        "n/2",
+        "n/4",
+        "2n",
+        "n"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de una hipérbola con centro en el origen, focos sobre el eje Y, lado recto igual a 16/3 y la pendiente de una de sus asíntotas es 3/4 .",
+      "alternatives": [
+        "4y ² –x ² =36",
+        "4x ² –y ² =36",
+        "16y ² –9x ² =36",
+        "16y ² –x ² =18",
+        "8y ² –x ² =36"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el lado recto de una hipérbola cuyas asíntotas tienen por ecuaciones x–y +1= 0, x+ y–3= 0, además uno de los vértices de la hipérbola es (4; 2).",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la ecuación de la hipérbola con centro en el origen, cuyo eje focal está sobre el eje x, la distancia focal es 6 y la distancia entre las directrices es igual a 4.",
+      "alternatives": [
+        "x ² – 2y ² =4",
+        "x ² – 3y ² =2",
+        "x ² – 4y ² =3",
+        "x ² – 2y ² =6",
+        "x ² – 9y ² =1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el ángulo obtuso formado por las asíntotas de una hipérbola de excentricidad igual a 2 y eje focal paralelo al eje X.",
+      "alternatives": [
+        "120°",
+        "150°",
+        "135°",
+        "127°",
+        "143°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la ecuación de la hipérbola que pasa por el punto P(2; 3), tiene su centro en el origen, su eje transverso sobre el eje Y y una de sus asíntotas es la recta ℒ : 2y − 7x = 0.",
+      "alternatives": [
+        "4y ² – 7x ² =6",
+        "4y ² – 7x ² =3",
+        "4y ² – 7x ² =2",
+        "4y ² – 7x ² =8",
+        "4y ² – 7x ² =10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los focos de una elipse 9y ² +25x ² –225= 0 coinciden con los focos de una hipérbola. Si la excentricidad es 4/3 , determine la ecuación de la hipérbola.",
+      "alternatives": [
+        "9x ² – 7y ² = 1",
+        "3y ² – 5x ² = 45",
+        "7y ² – 9x ² = 1",
+        "7y ² – 9x ² = 63",
+        "9y ² – 25x ² = 225"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el producto de las longitudes de los radios vectores del punto P(6; 5) de la hipérbola 5x ² – 4y ² = 80.",
+      "alternatives": [
+        "60",
+        "56",
+        "65",
+        "36",
+        "75"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la hipérbola 4x ² – 3y ² = 36, calcule la ecuación de la cuerda cuyo punto medio es P(4; 2).",
+      "alternatives": [
+        "8x – 2y –21=0",
+        "8x – 3y – 26=0",
+        "7x – 3y – 22=0",
+        "6x – 5y –14=0",
+        "4x – y –14=0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una hipérbola equilátera tiene una asíntota en ℒ : x–y +1= 0 y la otra pasa por (–1; 4) y uno de sus vértices es (4; 2). Halle la ecuación de la hipérbola.",
+      "alternatives": [
+        "x ² –y ² –2x+4y–12=0",
+        "y ² –x ² –4y +2x+12=0",
+        "x ² –y ² –2x+4y–16=0",
+        "y ² –x ² –4y +2x+16=0",
+        "x ² –y ² +2x–2y–4=0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el valor de k ² para que la recta 2x–y–4= 0 sea tangente a la hipérbola 4x ² –k ² y ² =4k ²",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las asíntotas de una hipérbola son las rectas x+2y = 4, x–2y = 0 y un foco es el punto (2; 5). Calcule la distancia entre sus directrices.",
+      "alternatives": [
+        "8/5",
+        "9/5",
+        "7/2",
+        "4/3",
+        "6/5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de la hipérbola con foco F(3;3), directriz ℒ : x+3y – 3=0 y excentricidad e=2.",
+      "alternatives": [
+        "3x ² – 12xy – 13y ² – 18x+6y +72=0",
+        "3x ² –12xy – 13y ² – 18x+36y +70=0",
+        "3x ² – 10xy – 13y ² – 18x+36y +72=0",
+        "3x ² – 12xy – 14y ² –18x+33y +62=0",
+        "2x ² – 5xy +13y ² – 17x+35y – 60=0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si e 1 es la excentricidad de la hipérbola\n3x ² –5y ² +6x+10y–17=0 y e 2 es la excentricidad de su conjugada.\nCalcule 15e 1 e 2 .",
+      "alternatives": [
+        "2",
+        "4",
+        "8",
+        "6",
+        "10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la elipse de ecuación :\n9x²+16y² = 576 se inscribe un cuadrado , halle la suma de las coordenadas del vértice del cuadrado , ubicado en el tercer cuadrante .",
+      "alternatives": [
+        "– 15",
+        "– 12,5",
+        "– 9,6",
+        "– 8,4",
+        "– 4,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un arco en forma de media elipse tiene 40 pies de ancho y 16 pies de altura en el centro. Encuentre la altura del arco de 10 pies del extremo derecho .",
+      "alternatives": [
+        "8√3",
+        "2√5",
+        "3√3",
+        "7√3",
+        "4√3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la ecuación de la elipse :\n4x² + 9y² = 36 , halle el área de la región cuadrangular que se obtiene al unir los puntos de intersección de la elipse con el eje “Y” y los focos de la misma.",
+      "alternatives": [
+        "8√5",
+        "2√5",
+        "3√3",
+        "7√3",
+        "4√5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la elipse de ecuación :\n4x²+9y² – 48x+72y+144=0 entonces la suma de la longitud de sus ejes es:",
+      "alternatives": [
+        "16",
+        "20",
+        "40",
+        "36",
+        "18"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los vértices de una elipse son: V1(3;5), V2(3; – 1), además su excentricidad es 1/3. Halle la longitud del lado recto.",
+      "alternatives": [
+        "4",
+        "2",
+        "3",
+        "8/3",
+        "8/5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de la elipse de de centro (0;0) y de eje mayor 2a sobre el eje X en la que el eje menor, se vea bajo un ángulo que mide 90° desde uno de los focos.",
+      "alternatives": [
+        "x ² + 2y ² = a ²",
+        "2y ² + x ² = a ²",
+        "4y ² + x ² = a ²",
+        "x ² + 2y ² = 2a ²",
+        "4y ² + x ² = 2a ²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El punto (3 ;–1) es un extremo del eje menor de una elipse cuyos focos están en la recta y+6=0. La excentricidad es √2/2 Hallar la ecuación de la elipse.",
+      "alternatives": [
+        "x ² +2y ² – 6x+24y+31=0",
+        "x ² – 2y ² – 6x+24y – 30=0",
+        "x ² - y ² + 6x – y =0",
+        "x ² + y ² – 5x – 12y – 15=0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la ecuación de la elipse, cuyo eje mayor mide 26u y los focos son los puntos F1(–10;0) y F2(14;0).",
+      "alternatives": [
+        "25x ² + 169y ² – 100x – 4125 = 0",
+        "9x ² + 169y ² +100x – 4225 = 0",
+        "16x ² + 169y ² +100x – 4125 = 0",
+        "16x ² + 169y ² +100x – 4225 = 0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la distancia de la recta :\n4x + 3y – 12 = 0 al foco más cercano de la elipse\n9y ² + 13x ² = 13.",
+      "alternatives": [
+        "4",
+        "2",
+        "3",
+        "8/3",
+        "8/5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde el punto (0;9) se traza una recta tangente a la elipse 2x ² + y ² =9.\nHalle el intercepto de esta recta tangente con la parte positiva del eje X.",
+      "alternatives": [
+        "14/5",
+        "2",
+        "11/3",
+        "8/3",
+        "9/4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la ecuación de una elipse horizontal es nx ² +4y ² +6x – 8y = 5 y la longitud de su eje mayor es 4, halle el valor de n.",
+      "alternatives": [
+        "1",
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el lado recto de la elipse\n9x ² +4y ² –18x+16y–11=0",
+      "alternatives": [
+        "4/3",
+        "10/3",
+        "5/3",
+        "5/2",
+        "8/3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la ecuación de una elipse cuyo centro es el punto (2; 1), la distancia focal es 4 u, la distancia entre sus directrices es 16 u y su eje focal es paralelo al eje de abscisas.",
+      "alternatives": [
+        "3x ² –12x+4y ² –8y–16=0",
+        "2x ² –4x+6y ² +12y–18=0",
+        "4x ² –8x+3y ² –12y–16=0",
+        "3x ² –12x+4y ² –8y–32=0",
+        "4x ² –8x+3y ² –12y–32=0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los focos de una elipse son los puntos F 1 = (3; 8) y F 2 = (3; 2) y la longitud de su eje menor es 8. Halle la excentricidad.",
+      "alternatives": [
+        "4/5",
+        "1/2",
+        "3/5",
+        "3/4",
+        "1/4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la ecuación de una parábola con vértice (2;1) y foco (2;4). Determinar también la longitud de su lado recto.",
+      "alternatives": [
+        "12",
+        "20",
+        "32",
+        "4",
+        "52"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la ecuación de la parábola de vértice en el origen de coordenadas y directriz de la recta y – 5=0",
+      "alternatives": [
+        "x² = – 5y",
+        "x² = – 10y",
+        "x² = – 20y",
+        "x² = – 3y",
+        "x² = – 9y"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El foco de una parábola es el punto A(4;0) y un punto sobre la parábola es el punto P(2;2); entonces la distancia del punto P a la recta directriz de la parábola es :",
+      "alternatives": [
+        "√2",
+        "2√3",
+        "2√2",
+        "4",
+        "5√2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el radio focal del punto M de la parábola y ² =20x si la abscisa del punto M es igual a 7.",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una parábola , su foco es (12;0) y la directriz es perpendicular al eje x e intercepta al eje x en (8;0), entonces la ecuación de la parábola es :",
+      "alternatives": [
+        "y² = 18(x – 10)",
+        "y² = 20(x – 10)",
+        "y²=6(x+10)",
+        "y² = 8(x – 10)",
+        "y² = 10(x – 8)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una parábola pasa por los puntos A(0; 0), B(8; –4) y C(3; 1). Si el eje focal es paralelo al eje de abscisas, obtenga el lado recto de la parábola.",
+      "alternatives": [
+        "1",
+        "2",
+        "4",
+        "1/2",
+        "1/4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la ecuación de la parábola :\ny²– 4y – 8x+44=0, entonces la suma de las coordenadas del foco de la parábola es",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la ecuación de la recta :\n3x–4y–5= 0 es la directriz de la parábola, y el punto más cercano de la parábola a la recta es Q(4; 4), calcule la longitud de su lado recto.",
+      "alternatives": [
+        "5,2",
+        "6,2",
+        "7,2",
+        "4,8",
+        "6,4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una parábola cuyo vértice es (2;1) y su foco tiene como coordenadas el punto (5;1), halle la ecuación de la parábola.",
+      "alternatives": [
+        "12x + y² + 2y = 0",
+        "12x – y² + 2y – 25=0",
+        "12x + x² + 2y + 61 = 0",
+        "12x – y² + 2y – 61 = 0",
+        "12x + 2y² + 2y – 61 = 0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un espejo parabólico tiene una profundidad de 35 cm en el centro y en el diámetro su parte superior es 66 cm. Calcule la distancia aproximada del vértice al foco.",
+      "alternatives": [
+        "6,08",
+        "6,58",
+        "7,18",
+        "7,78",
+        "9,68"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se lanza una piedra , siendo su trayectoria una parábola. La máxima altura que alcanza la piedra es 8 metros y cae 32 metros más allá del punto en que se lanzó la piedra . Hallar la altura que alcanzó la piedra 24 metros más alla del punto en que fué lanzada.",
+      "alternatives": [
+        "8m",
+        "10m",
+        "12m",
+        "9m",
+        "6m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La recta 2x – y – 13=0 contiene a los puntos P=(13;b) y Q=(4;a), los cuales pertenecen a una parábola cuyo vértice es V=(h;1); su eje focal es paralelo al eje x y su parámetro es p . Calcule a+b+h+p .",
+      "alternatives": [
+        "10",
+        "9",
+        "16",
+        "13",
+        "12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una parábola cuyo vértice es (0;0). Sea P un punto de la parábola y F su foco. M es un punto de la directriz PM es tangente a la curva. Halle la medida del ángulo MFP.",
+      "alternatives": [
+        "45°",
+        "60°",
+        "75°",
+        "90°",
+        "120°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el foco de una parábola está ubicado en F( – 5; – 1) y su directriz x + y – 2=0\nAdemás la ecuación de la parábola es :\nax²+bxy+cy²+dx+ey+f=0\nHalle a + b + c",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pelota describe una curva parabólica alrededor de un punto F (foco de la parábola). Cuando la pelota está a 10 m del punto F, el segmento de recta de F a la pelota hace un ángulo de π/3 rad con el eje de la parábola. Calcule la ecuación de la parábola.",
+      "alternatives": [
+        "y ² =5x",
+        "y ² =10x",
+        "y ² =15x",
+        "y ² =3x",
+        "y ² =20x"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de la recta tangente a la parábola y²=12x que es paralela a la recta 3x – 2y + 30 = 0",
+      "alternatives": [
+        "3x – 2y + 5 = 0",
+        "2x – 3y – 10 = 0",
+        "3x – 2y + 4 = 0",
+        "2y – 3x + 30 = 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una parábola P de ecuación y=x². Desde un punto fijo A(1;0) se trazan segmentos a un punto P de la parábola. Halle la ecuación del lugar geométrico respectivamente que describen los puntos medios de los segmentos AP cuando P se mueve a lo largo de la parábola P .",
+      "alternatives": [
+        "y = (x – 1)²",
+        "2y = (2x – 1) ²",
+        "y = (2x + 1)",
+        "2x = (2y – 1)",
+        "x = (y + 1) ²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La circunferencia con centro en el punto (4;–1) pasa por el foco de la parábola x² + 16y=0 y es tangente a la directriz de esta parábola. Calcular la suma de las coordenadas del punto de tangencia.",
+      "alternatives": [
+        "8",
+        "6",
+        "10",
+        "4",
+        "12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene la parábola :\ny² – nx–10y+41=0\nSi se sabe que el foco es F(5; 5) y que n es un número positivo menor que 7; hallar el valor de n y la longitud del lado recto.",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea el triángulo AVB, donde A y B son los puntos de intersección de la recta\nℒ : 3x – 2y – 24= 0 con la parábola\nℙ : y²=9x, y V es el vértice de la parábola.\nLa suma de los dígitos del número que representa el área del triángulo es:",
+      "alternatives": [
+        "15",
+        "9",
+        "12",
+        "8",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la ecuación general de la cónica : Ax 2 +By 2 +Cx+Dy+F=0 con A, B, C, D, F constantes arbitrarias, se tiene que:\nI) Si A=B ≠ 0, entonces siempre tenemos la ecuación de una circunferencia.\nII) Si B=0 y A ≠ 0, entonces siempre tenemos la ecuación de una parábola.\nIII) Si A.B<0 y D 2 – 4BF<0, entonces siempre tenemos la ecuación de una hipérbola.\nLuego son verdaderas:",
+      "alternatives": [
+        "solo I",
+        "II y III",
+        "solo II",
+        "solo III",
+        "I y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/02/solucionario-segunda-prueba-examen.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-1 SEGUNDA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DE INGENIERÍA SOLUCIONES DE MATEMÁTICA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la parábola que tiene como directriz a la recta: 4x+3y+1=0 y como foco el punto (0;13) se inscribe un triángulo cuyos vértices son los extremos de lado recto y el vértice de la parábola; el área de dicho triángulo es:",
+      "alternatives": [
+        "4",
+        "8",
+        "16",
+        "24",
+        "32"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-unsa-examen-admision-san.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNSA PRUEBA RESUELTA SAN AGUSTIN INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La gráfica de la ecuación x ² +y ² – 3xy+1=0 luego de una rotación de los ejes para eliminar el término xy corresponde a :",
+      "alternatives": [
+        "dos rectas que se cortan",
+        "una elipse",
+        "una parábola",
+        "una hipérbola",
+        "dos rectas paralelas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el vértice de la parábola cuya ecuación es\n4x ² +4xy + y ² –5x+10y–25=0",
+      "alternatives": [
+        "(–2; 1)",
+        "(–1; 2)",
+        "(–1; 1)",
+        "(–3; 1)",
+        "(–1; 3)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea F=(a;b) el foco de la parábola P de ecuación:\nx²– 2xy+y² – 8x – 16y+64= 0\nCalcule: a+b.",
+      "alternatives": [
+        "8",
+        "2",
+        "6",
+        "4",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/segunda-prueba-examen-uni-2016-2.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I SEGUNDA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA MATEMÁTICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes proposiciones referentes a las leyes de Kepler sobre los movimientos planetarios:\nI. La Tierra describe una órbita elíptica con el Sol en el centro de la elipse.\nII. El vector que va del Sol a la Tierra barre áreas iguales en tiempos iguales.\nIII. El cubo del periodo de la órbita de la Tierra es proporcional al cuadrado de su semieje mayor.\nSon correctas:",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "solo III",
+        "I y III",
+        "II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/tercera-prueba-examen-de-admision-uni.html",
+      "sourceName": "matematicasn.blogspot.com — TERCERA PRUEBA ADMISIÓN UNI 2022 I SOLUCIONARIO FÍSICA QUÍMICA UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule las coordenadas del foco de la parábola cuya ecuación es x ² +2xy + y ² – 8x+8y = 0.",
+      "alternatives": [
+        "(3; – 3)",
+        "(1; –1)",
+        "(2; – 2)",
+        "(2; –1)",
+        "(3; – 2)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/rotacion-y-traslacion-de-ejes.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN DE COORDENADAS ECUACIÓN COMPLETA DE SEGUNDO GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación de la hipérbola es :\n9x² – 4y² – 54x + 8y + 113 = 0 marcar lo incorrecto :",
+      "alternatives": [
+        "Vértices : (3; 4); (3; – 2)",
+        "Focos : (3; 1 + √13); (3; 1 - √13)",
+        "Longitud del eje transverso = 6",
+        "Longitud del lado recto = 8/3",
+        "Excentricidad : 13/2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la ecuación de una hipérbola con centro en el origen, si su eje transverso está sobre el eje X. Además su excentricidad es √6/2 y contiene al punto (2; 1)",
+      "alternatives": [
+        "2x² – y² =2",
+        "x² – 2y² =2",
+        "2x² – y² =1",
+        "x² – y² =2",
+        "x² – 2y²=1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de la hipérbola con centro (0;0) de manera que los focos estén situados sobre el eje “x”, la distancias entre las directrices es √30/15 y que pasa por el punto P(1; 2).",
+      "alternatives": [
+        "20x² – y² = 20",
+        "5x² – y² = 1",
+        "20x² – y²=1",
+        "20x² – y² = 18",
+        "5x² – y²= 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las ecuaciones de las directrices de una hipérbola son 5x+1=0 y 5x+19=0.\nSi la excentricidad es igual a 1,666... , calcular la longitud de sus lados rectos",
+      "alternatives": [
+        "32/3",
+        "16/3",
+        "8/3",
+        "16/5",
+        "32/5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los extremos del eje conjugado de una hipérbola son los puntos (0;3) y (0; – 3) y la longitud de cada lado recto es 6. Hallar la ecuación de la hipérbola",
+      "alternatives": [
+        "y² – 3x² = 9",
+        "y² – x² = 9",
+        "x² – y² = 9",
+        "x² – 3y² = 9",
+        "2y² – 3x² = 6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una hipérbola con centro en (4;2) y foco en (4;6). Si se sabe que la longitud de su lado recto es 6,4, determinar la longitud del eje conjugado",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la longitud del eje transverso y la excentricidad de una hipérbola, están en la relación de 18 a 3, calcular la distancia entre sus directrices",
+      "alternatives": [
+        "5",
+        "6",
+        "8",
+        "9",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una hipérbola con centro en (1; 4) tiene un foco en (7; 4) y un vértice es (3; 4). Hallar su ecuación",
+      "alternatives": [
+        "2x² – y² – 4x – 8y – 16=0",
+        "2x² – y² – 8x+6y – 19=0",
+        "4x² – 2y² – 4x+y – 20=0",
+        "6x² – 4y² – 48y – 14x+21=0",
+        "8x² – y² – 16x+8y – 40=0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las asíntotas de una hipérbola son las rectas x – 3y+2=0 y x+3y+2=0, un vértice es ( – 5;0). Hallar la ecuación de la hipérbola",
+      "alternatives": [
+        "9x²+y²+6y – 4x+1=0",
+        "9y² – x² – 8y – 6x – 11=0",
+        "x² – 9y²+4x – 5=0",
+        "25x² – 16y² – 8x – 10=0",
+        "9x² – y² – 2x+4y=0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si r = 2(1+2cos θ) − ¹ es la ecuación de una cónica en coordenadas polares, determine la ecuación de una recta directriz en coordenadas cartesianas.",
+      "alternatives": [
+        "8x–5=0",
+        "12x–13=0",
+        "3x–5=0",
+        "6x–5=0",
+        "8x–3=0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/coordenadas-polares-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — COORDENADAS POLARES PREGUNTAS RESUELTAS DE ECUACIONES POLARES DE LAS CÓNICAS TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el lugar geométrico de los puntos que dividen a las abcisas de los puntos de la circunferencia x² + y² =25 en la relación 4/5.",
+      "alternatives": [
+        "Recta",
+        "Circunferencia",
+        "Parábola",
+        "Elipse",
+        "Hipérbola"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/08/lugares-geometricos-conicas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GRÁFICA DE UNA ECUACIÓN LUGARES GEOMÉTRICOS PROBLEMAS RESUELTOS GRÁFICAS DE ECUACIONES PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una circunferencia de 10 de radio pasa por el origen e intercepta al eje X en un punto que resulta ser el punto de tangencia de esta circunferencia con una recta de pendiente igual a 3/4 . Halle la suma de las coordenadas del centro de la circunferencia.",
+      "alternatives": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una circunferencia de radio √10 que pasa por P(7;5) y es tangente a\nx – 3y+4 =0\nCalcule la suma de las coordenadas del centro de la circunferencia.",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si las rectas\nℒ 1 : x – 4y + 3 = 0\nℒ 2 : 4x + y – 5 = 0\nson tangentes a una circunferencia en los puntos P ₁ (5 ; 2) y P ₂ (2 ; – 3) respectivamente, entonces la suma de las coordenadas del centro de la circunferencia es:",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si las rectas\nI ₁ : x – 4y + 3 = 0\nI ₂ : 4x + y – 5 = 0\nson tangentes a una circunferencia en los puntos P ₁ (5; 2) y P ₂ (2; – 3) respectivamente, entonces la suma de las coordenadas del centro de la circunferencia es:",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2021/10/matematica-unt-solucionario-de-examen-de-admision-universidad-nacional-de-trujillo-simulacro-desarrollado-preguntas-resueltas-word-pdf.html",
+      "sourceName": "algebraenpdf.blogspot.com — MATEMÁTICA ADMISIÓN UNT EXAMEN UNIVERSIDAD NACIONAL DE TRUJILLO RESUELTO SIMULACRO DE INGRESO SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se quiere armar un arco de madera de forma semielíptica cuyas medidas son 10 m de ancho y 4 m de altura, luego se colocará en el arco dos focos para iluminar un escenario de tal manera que están ubicados a 3 m del centro. Halle a que altura del piso se deben colocar.",
+      "alternatives": [
+        "3,3 m",
+        "3,2 m",
+        "3 m",
+        "3,5 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-18.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una elipse tiene por ecuación x² + 81y² – 2x + 324y + 316 = 0. Halle la longitud de su lado recto en metros.",
+      "alternatives": [
+        "2/9 m",
+        "4/81 m",
+        "2/27 m",
+        "81/25 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-18.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los focos de una elipse E son F1(4;1) y F2(–2;1). Si uno de los vértices pertenece a la recta L: x +3y +2 = 0, halle la longitud del eje menor (en metros).",
+      "alternatives": [
+        "5√3 m",
+        "4√3 m",
+        "6√3 m",
+        "8√3 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-18.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El arco de un túnel semielíptico tiene un ancho de 6 m y una altura de 5 m. Si un camión de 4 m de altura desea pasar por el túnel, halle el máximo valor entero de ancho que puede tener el camión.",
+      "alternatives": [
+        "2 m",
+        "3 m",
+        "4 m",
+        "5 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-18.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una circunferencia de centro (–3;7) que pasa por (2;–5), determinar su diámetro.",
+      "alternatives": [
+        "13",
+        "15",
+        "26",
+        "30",
+        "35"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/geometria-analitica-basica-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRIA ANALÍTICA BÁSICA EJERCICIOS RESUELTOS DE MATEMÁTICAS DE SECUNDARIA Y PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante de ingeniería civil requiere determinar la gráfica de una curva cuyos puntos (x;y) ubicados en un plano cartesiano verifican las condiciones x = 2a; y = 2b, donde a y b son constantes tales que a² + b² = 1. Si para realizar esta tarea utilizó un graficador de ecuaciones, identifique la gráfica que el estudiante observó en la pantalla del graficador.",
+      "alternatives": [
+        "Circunferencia",
+        "Recta",
+        "Parábola",
+        "Una poligonal"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-17-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — CEPRE SAN MARCOS GEOMETRIA SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de una circunferencia cuyo centro está en el primer cuadrante, y es tangente al eje X y a la recta L: x – 2 = 0, sabiendo que la distancia del centro de la circunferencia al eje Y es 5 cm.",
+      "alternatives": [
+        "(x – 5)² + (y – 3)² = 9",
+        "(x – 4)² + (y – 4)² = 16",
+        "(x – 4)² + (y – 2)² = 4",
+        "(x – 3)² + (y – 5)² = 25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-17-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — CEPRE SAN MARCOS GEOMETRIA SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una recta pasa por el diámetro de la circunferencia\nx² + y ² – 6x + 4y –12 = 0 y biseca a la cuerda cuya ecuación es x+3y – 6= 0.\nLa ecuación de dicha recta es:",
+      "alternatives": [
+        "–2x+y –1=0",
+        "–x+3y –11=0",
+        "–2x+3y –11=0",
+        "3x–y –11=0",
+        "3x+2y – 6=0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/matematicas-unt-examen-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MATEMÁTICAS UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un plano cartesiano XY, se dibuja una circunferencia con centro en (0;0) y cuya longitud de su radio es de 5cm.\n¿En cuántos puntos de la circunferencia, ambas coordenadas son números enteros?",
+      "alternatives": [
+        "12",
+        "14",
+        "10",
+        "16",
+        "18"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-matematico-ejercicios_12.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 1 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2017-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La puerta de una parroquia está determinada por una parábola de 6 m de alto y 4 m de ancho en la base. Si para limpiar la parte superior se desea colocar un tabladillo de 2 m de largo paralelo a la base cuyos extremos pertenecen a la parábola, ¿a qué altura se colocará?",
+      "alternatives": [
+        "4,2 m",
+        "4,5 m",
+        "4,8 m",
+        "5,2 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-geometria-semana-17-2020.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un túnel tiene la forma de arco parabólico, de 5 m de altura y 4 m de ancho, la empresa de transportes TOURHS S.A se dedicada al transporte cuyo recorrido pasa por el túnel, quiere comprar una flota de camiones de 3 m de ancho. Halle la altura máxima que deben de tener los camiones para que puedan pasar por el túnel.",
+      "alternatives": [
+        "25/16 m",
+        "35/16 m",
+        "34/15 m",
+        "45/16 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-geometria-semana-17-2020.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La entrada a un edificio tiene forma de media elipse, cuyo ancho mide 40 m con una altura de 16 m en el centro. Encuentre la altura de la entrada a 10 m del extremo izquierdo.",
+      "alternatives": [
+        "11√3",
+        "10√3",
+        "9√3",
+        "8√3",
+        "7√3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una circunferencia pasa por los puntos (2, 3) y (–1, 1). Si su centro está contenido en la recta x – 3y= 11, entonces la suma de las coordenadas del centro es:",
+      "alternatives": [
+        "5",
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una parábola pasa por los puntos (0; 0), (3;0) y (3,5; 1) . Si su eje es paralelo al eje Y, entonces la suma de las coordenadas de su vértice es:",
+      "alternatives": [
+        "9/11",
+        "7/13",
+        "5/12",
+        "4/15",
+        "3/14"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La altura máxima aproximada, que puede pasar un vehículo por uno de los focos, en metros, es:",
+      "alternatives": [
+        "1,67",
+        "1,68",
+        "1,69",
+        "1,70",
+        "1,80"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si las rectas\nI 1 : x – 4y+3 = 0\nI 2 : 4x+y – 5 = 0\nson tangentes a una circunferencia en los puntos P 1 (5;2) y P 2 (2;–3) respectivamente, entonces la suma de las coordenadas del centro de la circunferencia es:",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/educacion-religiosa-1ro-2do-actividad-1-experiencia-7-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA A SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CIENCIAS DE LA SALUD CLAVES PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de la curva tal que la distancia de cualquier punto de ella al origen de coordenadas y al punto F=(6;0) están en la relación de 2 a 1.",
+      "alternatives": [
+        "x ² + 8y ² = 16",
+        "x ² + y ² = 8",
+        "x ² – y ² = 2",
+        "x – 3y = 1",
+        "(x – 8)² + y ² = 16"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si las rectas\nℒ 1 : x – 4y + 3 = 0\nℒ 2 : 4x + y – 5 = 0\nson tangentes a una circunferencia en los puntos P 1 (5;2) y P 2 (2;–3) respectivamente, entonces la suma de las coordenadas del centro de la circunferencia es:",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/geometria-analitica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA ANALÍTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle las ecuaciones de las asíntotas de la curva : 144x ² – 25y ² = 3600",
+      "alternatives": [
+        "2x ± 15y = 0",
+        "5x ± 12y = 0",
+        "12x± 5y=0",
+        "12x ± y = 0",
+        "15x ± 7y = 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la ecuación del lugar geométrico de un punto que se mueve de manera que la diferencia numérica de sus distancias a (– 3; 0) y (3; 0) es siempre 4",
+      "alternatives": [
+        "5x ² – 4y ² = 20",
+        "5y ² – 4x ² = 20",
+        "4y ² – 5x ² = 20",
+        "4x ² – 5y ² = 20",
+        "4x ² – y ² = 4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación del lugar geométrico de los puntos de un plano tal que la diferencia de distancias de dichos puntos fijos F 1 (2; 4) y F 2 (10; 4) es igual a 6.",
+      "alternatives": [
+        "7x ² –9y ² –49x+18y +1=0",
+        "9x ² –7y2+72x–84y +45=0",
+        "7x²–9y ² –84x+72y +45=0",
+        "9x ² –7y ² +72x–84y +12=0",
+        "x ² –y ² –24x+16y +8=0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un arco de 80m de luz tiene forma semielíptica. Sabiendo que su altura es 30m, calcular la altura del arco en un punto situado a 15m del centro.",
+      "alternatives": [
+        "15√55/4",
+        "12√55",
+        "9√55/5",
+        "√55",
+        "√37"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El techo de 14u de altura es el centro de un pasillo de 10u de ancho, tiene la forma de una semielipse , las paredes laterales tiene una altura de 10u, encontrar la altura del techo a 2u de cualquier pared.",
+      "alternatives": [
+        "13",
+        "13,1",
+        "13,2",
+        "13,3",
+        "13,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un puente está diseñado de tal manera que su base tiene forma de semielipse con una luz de 150m, siendo su máxima altura 45m. Hallar la longitud de dos soportes verticales cuya distancia entre sí y a sus respectivos extremos es la misma.",
+      "alternatives": [
+        "30√3",
+        "30√2",
+        "13√3",
+        "17√3",
+        "24√3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El arco de un túnel es de forma semielíptica, tiene un ancho en la parte más baja de 48 m y una altura en el centro de 20 m. ¿Qué ancho tiene el túnel a la mitad de su altura?",
+      "alternatives": [
+        "8 √ 3",
+        "10 √ 3",
+        "20 √ 3",
+        "24 √ 3",
+        "18 √ 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un techo de 14 m de altura en el centro de un pasillo de 10 m de ancho tiene la forma de una semielipse, las paredes laterales tienen una altura de 10 m, calcule la altura del techo a 2 m de cualquier pared lateral.",
+      "alternatives": [
+        "13,2 m",
+        "9,7 m",
+        "12,4 m",
+        "10,3 m",
+        "11,6 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIPSE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un depósito de agua tiene sección transversal parabólica. Cuando el nivel de agua alcanza una altura de 18 m, su ancho mide 24 m. Si el nivel de agua desciende 10 m, determine el nuevo ancho del nivel de agua.",
+      "alternatives": [
+        "12",
+        "15",
+        "16",
+        "18",
+        "20"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un depósito de agua tiene sección transversal parabólica, cuando el nivel del agua alcanza una altura de 10u su ancho mide 20u; cuando el nivel del agua desciende hasta la mitad, su nuevo ancho del nivel es:",
+      "alternatives": [
+        "6√2",
+        "6√3",
+        "8√2",
+        "4",
+        "10√2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El agua que fluye de un grifo horizontal que está a 25 m del piso describe una curva parabólica con vértice en el grifo. Si a 21 m del piso, el flujo del agua se observa que se ha alejado 10 m de la recta vertical que pasa por el grifo, calcule a qué distancia de esta recta vertical tocará el agua el suelo.",
+      "alternatives": [
+        "25 m",
+        "27 m",
+        "30 m",
+        "35 m",
+        "40 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La entrada de una iglesia tiene forma parabólica de 9m de alto y 12m de base. Toda la parte superior es una ventana de vidrio cuya base es paralela al piso y mide 8m. ¿Cuál es la altura de la ventana?.",
+      "alternatives": [
+        "2,5",
+        "3",
+        "4",
+        "4,5",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA PARÁBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el centro de un parque de forma circular, se coloca un aspersor de riego. Si el parque se ubica en un sistema cartesiano cuyo borde pasa por los puntos (1;0) (2; √ 3) y (5;0), halle las coordenadas del punto donde se encuentra el aspersor.",
+      "alternatives": [
+        "(3; 1)",
+        "(1,5; 0,5)",
+        "(3; 0)",
+        "(0; 3)",
+        "(2,5; 0)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-geometria-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS GEOMETRÍA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el ángulo de giro de los ejes coordenados de modo que no contengan el término xy .\n4x ² +4xy+y ² +2x+y=0",
+      "alternatives": [
+        "45°/2",
+        "53°/2",
+        "45°",
+        "37°/2",
+        "30°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Transforme la ecuación:\ny ² +x ² – 6y+2x+6=0\nTrasladando los ejes coordenados al nuevo origen (–1 ; 3).",
+      "alternatives": [
+        "(x’) ² – (y’) ² = 2",
+        "(x’) ² + (y’) ² = 4",
+        "(x’) ² + (y’) ² = 8",
+        "(x’) ² – (y’) ² = 12",
+        "(x’) ² + (y’) ² = 16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Transforme la ecuación:\n4x ² – y ² – 8x – 10y – 25 = 0\na un nuevo sistema X’Y’ trasladando al origen de coordenadas al punto O’(1 ; –5)",
+      "alternatives": [
+        "x’ ² + 4y’ ² = 4",
+        "4x’ ² + 4y’ ² = 4",
+        "x’ ² – y’ ² = 1",
+        "4x’ ² – y’ ² = 4",
+        "x’ ² – 4y’ ² = 1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la ecuación:\n16x ² – 24xy + 9y ² + 85x + 30y +175 = 0\n¿Qué medida del ángulo debe girar al sistema XY en sentido antihorario para que elimine el término en xy?",
+      "alternatives": [
+        "16°",
+        "37°",
+        "32°",
+        "53°",
+        "106°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mediante una traslación de ejes, transforme la ecuación x ² –xy + y ² =3–x en otra que no tenga términos de primer grado.",
+      "alternatives": [
+        "(x') ² –(x' y') + (y') ² =10",
+        "3(x') ² –3(x' y') + 3(y') ² =10",
+        "2(x') ² –2(x' y') + 2(y') ² =5",
+        "3(x') ² –3(x')(y') + (y') ² =10",
+        "(x') ² –(x' y') + (y') ² =9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El origen de coordenadas se traslada al punto (3; 2) y luego se hace una rotación de 45º en sentido antihorario. Calcule en este nuevo sistema las coordenadas de P(10; 5).",
+      "alternatives": [
+        "(5 √ 2; − 2 √ 2)",
+        "(5 √ 2; − 3 √ 2)",
+        "(3 √ 2; − 5 √ 2)",
+        "(7 √ 2; − 5 √ 2)",
+        "(5 √ 2; − √ 2)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la ecuación de la curva C: xy = 8, calcule la ecuación resultante en el sistema x'y' luego de aplicar una rotación de ejes.",
+      "alternatives": [
+        "x' ² – y' ² =9",
+        "x' ² – y' ² =12",
+        "x' ² – y' ² =15",
+        "x' ² – y' ² =8",
+        "x' ² – y' ² =16"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por una rotación de un ángulo de medida 45° de los ejes coordenados, una cierta ecuación se transformó en:\n4(x’’) ² –9(y’’) ² = 36\nDetermine la ecuación original",
+      "alternatives": [
+        "5x ² + 5y ² – 25xy + 70 = 0",
+        "5x ² + 5y ² – 25xy + 50 = 0",
+        "5x ² + 5y ² – 26xy + 72 = 0",
+        "5x ² + 5y ² – 26xy + 90 = 0",
+        "5x ² + 5y ² – 52xy + 72 = 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
     }
   ]
 }

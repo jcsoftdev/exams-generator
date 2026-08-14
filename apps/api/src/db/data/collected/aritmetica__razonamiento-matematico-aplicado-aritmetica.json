@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Por 12 horas de trabajo, a un operario se le promete pagar $100 y un regalo. El operario se retiró luego de 8 horas de trabajo, por lo que recibió $60 más el regalo. ¿Cuál es el valor del regalo?",
-      "alternatives": ["$ 30", "$ 40", "$ 20", "$ 50", "$ 10"],
+      "alternatives": [
+        "$ 30",
+        "$ 40",
+        "$ 20",
+        "$ 50",
+        "$ 10"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://profe-alexz.blogspot.com/2016/02/examen-admision-san-marcos-2016-i.html",
       "sourceName": "Examen de Admisión UNMSM 2016-I, área ADF, pregunta 11"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "De cierto número de problemas, Roberto resuelve el primer día 3/10 del total y en el segundo día resuelve 5/7 de lo que le faltaba resolver, lo que es igual a 50 problemas. ¿Cuántos problemas le faltan resolver?",
-      "alternatives": ["20", "30", "50", "10", "15"],
+      "alternatives": [
+        "20",
+        "30",
+        "50",
+        "10",
+        "15"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://profe-alexz.blogspot.com/2016/02/examen-admision-san-marcos-2016-i.html",
       "sourceName": "Examen de Admisión UNMSM 2016-I, área ADF, pregunta 12"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La edad de Rosa es 3 veces mayor que la edad de Jesús. Hace 5 años la suma de sus edades era 40 años. ¿Qué edad tiene Jesús?",
-      "alternatives": ["10 años", "15 años", "8 años", "12 años", "20 años"],
+      "alternatives": [
+        "10 años",
+        "15 años",
+        "8 años",
+        "12 años",
+        "20 años"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/700-problemas-resueltos-de-razonamiento.html",
       "sourceName": "700 Problemas Resueltos de Razonamiento Matemático Preuniversitario, problema 6"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hace 15 años la edad de un abuelo era 15 veces la edad de su nieto. Actualmente la edad del nieto equivale a los 3/10 de la edad de su abuelo. ¿Cuál es la edad del nieto?",
-      "alternatives": ["20 años", "18 años", "17 años", "16 años", "15 años"],
+      "alternatives": [
+        "20 años",
+        "18 años",
+        "17 años",
+        "16 años",
+        "15 años"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/700-problemas-resueltos-de-razonamiento.html",
       "sourceName": "700 Problemas Resueltos de Razonamiento Matemático Preuniversitario, problema 8"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La estatura promedio de todos los estudiantes en un salón del tercer grado es de 1 metro. Si la estatura promedio de los varones, que son en total 10, es de 1,15 m y la estatura promedio de todas las mujeres es 0,90 m, halle el número de estudiantes en el salón.",
-      "alternatives": ["25", "15", "28", "22", "14"],
+      "alternatives": [
+        "25",
+        "15",
+        "28",
+        "22",
+        "14"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://profe-alexz.blogspot.com/2016/02/examen-admision-san-marcos-2016-i.html",
       "sourceName": "Examen de Admisión UNMSM 2016-I, área BCE, pregunta 7"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Tatiana ahorra el 10% de su ingreso mensual, el cual varía de S/1200 a S/1500; además, su gasto mensual varía de S/800 a S/1000. Si el dinero que le queda lo repartiera equitativamente entre sus 4 hijos, ¿cuál es la mínima cantidad que recibiría cada uno de sus hijos?",
-      "alternatives": ["S/20", "S/15", "S/30", "S/50", "S/10"],
+      "alternatives": [
+        "S/20",
+        "S/15",
+        "S/30",
+        "S/50",
+        "S/10"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/700-problemas-resueltos-de-razonamiento.html",
       "sourceName": "700 Problemas Resueltos de Razonamiento Matemático Preuniversitario, problema 17"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En una reunión de 92 personas, 14 parejas están bailando. De cada 16 personas que no están bailando, 6 son mujeres. ¿Cuántos hombres hay en la reunión?",
-      "alternatives": ["60", "54", "48", "44", "38"],
+      "alternatives": [
+        "60",
+        "54",
+        "48",
+        "44",
+        "38"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/700-problemas-resueltos-de-razonamiento.html",
       "sourceName": "700 Problemas Resueltos de Razonamiento Matemático Preuniversitario, problema 3"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Hace 6 años Edu tenía 6 años. ¿En cuántos años la edad de Edu será el triple de su edad actual?",
-      "alternatives": ["12", "18", "24", "22", "36"],
+      "alternatives": [
+        "12",
+        "18",
+        "24",
+        "22",
+        "36"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
       "sourceName": "Matemáticas N - Problemas de Edades Preuniversitario, ejercicio 2"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Rosario tiene 4 años más que Carolina. La suma de sus edades actuales es 52. ¿Cuántos años tiene Rosario?",
-      "alternatives": ["22", "24", "28", "30", "27"],
+      "alternatives": [
+        "22",
+        "24",
+        "28",
+        "30",
+        "27"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
       "sourceName": "Matemáticas N - Problemas de Edades Preuniversitario, ejercicio 12"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dentro de 15 años tendré el triple de la edad que tenía hace 9 años. ¿Qué edad tengo?",
-      "alternatives": ["18", "19", "25", "24", "21"],
+      "alternatives": [
+        "18",
+        "19",
+        "25",
+        "24",
+        "21"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
       "sourceName": "Matemáticas N - Problemas de Edades Preuniversitario, ejercicio 15"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Juan tiene 42 años y Pedro tiene 18 años. ¿Hace cuántos años la edad de Juan era 9 veces la de Pedro?",
-      "alternatives": ["12", "14", "15", "10", "11"],
+      "alternatives": [
+        "12",
+        "14",
+        "15",
+        "10",
+        "11"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
       "sourceName": "Matemáticas N - Problemas de Edades Preuniversitario, ejercicio 17"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La edad de Arturo es el doble de la de Katty. Hace 15 años la edad de Arturo era el triple de la de Katty. ¿Cuántos años tiene Arturo?",
-      "alternatives": ["30", "45", "50", "60", "55"],
+      "alternatives": [
+        "30",
+        "45",
+        "50",
+        "60",
+        "55"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
       "sourceName": "Matemáticas N - Problemas de Edades Preuniversitario, ejercicio 19"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La edad de Sara es el triple de la de Ángel. Dentro de 5 años la suma de sus edades será 46. ¿Cuántos años tiene actualmente Ángel?",
-      "alternatives": ["10", "7", "11", "9", "8"],
+      "alternatives": [
+        "10",
+        "7",
+        "11",
+        "9",
+        "8"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
       "sourceName": "Matemáticas N - Problemas de Edades Preuniversitario, ejercicio 21"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Hace 6 años Julio tenía 4 veces la edad de David. Dentro de 4 años tendrá el doble. ¿Cuál es la suma actual de sus edades?",
-      "alternatives": ["37", "36", "35", "34", "33"],
+      "alternatives": [
+        "37",
+        "36",
+        "35",
+        "34",
+        "33"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
       "sourceName": "Matemáticas N - Problemas de Edades Preuniversitario, ejercicio 25"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La edad de William es el doble de la de María Belén. Hace 12 años la suma de sus edades era 30. ¿Cuántos años tiene actualmente María Belén?",
-      "alternatives": ["20", "17", "19", "21", "18"],
+      "alternatives": [
+        "20",
+        "17",
+        "19",
+        "21",
+        "18"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
       "sourceName": "Matemáticas N - Problemas de Edades Preuniversitario, ejercicio 22"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hace 10 años Carlos tenía 4 veces la edad de Pablo; ahora tiene el doble. ¿Cuántos años tiene Pablo?",
-      "alternatives": ["27", "19", "15", "13", "30"],
+      "alternatives": [
+        "27",
+        "19",
+        "15",
+        "13",
+        "30"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
       "sourceName": "Matemáticas N - Problemas de Edades Preuniversitario, pregunta propuesta 5"
@@ -182,7 +278,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La edad de María es la mitad de la de Miguel. Hace 20 años la edad de Miguel era el triple de la de María. ¿Cuántos años tiene María?",
-      "alternatives": ["20", "80", "40", "60", "70"],
+      "alternatives": [
+        "20",
+        "80",
+        "40",
+        "60",
+        "70"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
       "sourceName": "Matemáticas N - Problemas de Edades Preuniversitario, pregunta propuesta 6"
@@ -193,7 +295,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En 1918 un padre tenía 9 veces la edad de su hijo; en 1923 tenía 5 veces la edad de su hijo. ¿Qué edad tenía el padre en 1940?",
-      "alternatives": ["66", "72", "67", "70", "57"],
+      "alternatives": [
+        "66",
+        "72",
+        "67",
+        "70",
+        "57"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
       "sourceName": "Matemáticas N - Problemas de Edades Preuniversitario, pregunta propuesta 26"
@@ -204,7 +312,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una elección, un candidato obtuvo el 65% de los votos y sacó 1500 votos más que el otro. ¿Cuántos votos hubo en total?",
-      "alternatives": ["4000", "4500", "5000", "5500", "6000"],
+      "alternatives": [
+        "4000",
+        "4500",
+        "5000",
+        "5500",
+        "6000"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
       "sourceName": "Blog del Profe Alex - Porcentajes Tipo Examen de Admisión, problema 2"
@@ -215,7 +329,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una reunión, el 20% de las mujeres equivale al 30% de los hombres. ¿Qué porcentaje son hombres?",
-      "alternatives": ["50%", "30%", "25%", "40%", "48%"],
+      "alternatives": [
+        "50%",
+        "30%",
+        "25%",
+        "40%",
+        "48%"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
       "sourceName": "Blog del Profe Alex - Porcentajes Tipo Examen de Admisión, problema 10"
@@ -226,7 +346,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una empresa tiene 3600 trabajadores, de los cuales el 25% son mujeres. ¿Cuántos hombres deben retirarse para que las mujeres representen el 40%?",
-      "alternatives": ["1530", "900", "1800", "1350", "1250"],
+      "alternatives": [
+        "1530",
+        "900",
+        "1800",
+        "1350",
+        "1250"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
       "sourceName": "Blog del Profe Alex - Porcentajes Tipo Examen de Admisión, problema 17"
@@ -237,7 +363,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "De 50 camisas, un comerciante vende algunas ganando el 30% y el resto perdiéndose el 20%. Si no tiene ganancia ni pérdida neta, ¿cuántas camisas vendió con ganancia?",
-      "alternatives": ["30", "15", "35", "20", "25"],
+      "alternatives": [
+        "30",
+        "15",
+        "35",
+        "20",
+        "25"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
       "sourceName": "Blog del Profe Alex - Porcentajes Tipo Examen de Admisión, problema 20"
@@ -248,7 +380,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una empresa consume el 40% de las materias primas disponibles. Lo que sobra excede en 57 kg a lo que se gastó. ¿Cuántos kilogramos de materia prima tenía la empresa?",
-      "alternatives": ["228", "342", "570", "285", "171"],
+      "alternatives": [
+        "228",
+        "342",
+        "570",
+        "285",
+        "171"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
       "sourceName": "Matemáticas N - Tanto por Ciento Ejercicios Resueltos, pregunta 1"
@@ -259,7 +397,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una conferencia, el 60% de los ponentes son mujeres. De las mujeres, el 30% expone por primera vez; de los hombres, el 50% lo hace. ¿Qué porcentaje expone por primera vez?",
-      "alternatives": ["38%", "42%", "30%", "45%", "35%"],
+      "alternatives": [
+        "38%",
+        "42%",
+        "30%",
+        "45%",
+        "35%"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
       "sourceName": "Matemáticas N - Tanto por Ciento Ejercicios Resueltos, pregunta 2"
@@ -270,7 +414,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una empresa tiene 250 empleados, de los cuales el 80% son hombres. ¿Cuántas mujeres se deben contratar para que el 60% del total sean mujeres?",
-      "alternatives": ["200", "250", "120", "240", "350"],
+      "alternatives": [
+        "200",
+        "250",
+        "120",
+        "240",
+        "350"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
       "sourceName": "Matemáticas N - Tanto por Ciento Ejercicios Resueltos, pregunta 5"
@@ -281,7 +431,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una tela encoge el 20% en el ancho y el 40% en el largo. Si se necesita 5 m de ancho, ¿qué longitud hay que comprar para obtener 48 m² luego del lavado?",
-      "alternatives": ["30 m", "25 m", "20 m", "18 m", "24 m"],
+      "alternatives": [
+        "30 m",
+        "25 m",
+        "20 m",
+        "18 m",
+        "24 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
       "sourceName": "Matemáticas N - Tanto por Ciento Ejercicios Resueltos, pregunta 7"
@@ -292,7 +448,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una ciudad, el 45% fuma, el 40% bebe. Del grupo de los que fuman, el 20% también bebe. ¿Qué porcentaje no fuma ni bebe?",
-      "alternatives": ["5%", "15%", "30%", "35%", "24%"],
+      "alternatives": [
+        "5%",
+        "15%",
+        "30%",
+        "35%",
+        "24%"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
       "sourceName": "Matemáticas N - Tanto por Ciento Ejercicios Resueltos, pregunta 14"
@@ -303,7 +465,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un padre reparte S/.11 250 entre sus dos hijos. Si el mayor hubiera recibido el 20% menos y el menor el 30% menos, ambos habrían recibido lo mismo. ¿Cuánto recibió el mayor?",
-      "alternatives": ["S/6000", "S/6500", "S/4750", "S/5250", "S/5000"],
+      "alternatives": [
+        "S/6000",
+        "S/6500",
+        "S/4750",
+        "S/5250",
+        "S/5000"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
       "sourceName": "Matemáticas N - Tanto por Ciento Ejercicios Resueltos, pregunta 23"
@@ -314,7 +482,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En una fiesta, los hombres eran el doble de las mujeres inicialmente. El 35% de los hombres se retira y llegan 90 mujeres, quedando iguales. ¿Cuántas mujeres había inicialmente?",
-      "alternatives": ["150", "200", "250", "300", "350"],
+      "alternatives": [
+        "150",
+        "200",
+        "250",
+        "300",
+        "350"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
       "sourceName": "Matemáticas N - Tanto por Ciento Ejercicios Resueltos, pregunta 25"
@@ -325,7 +499,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dos autos parten simultáneamente en el mismo punto y en la misma dirección a 80 km/h y 95 km/h respectivamente. ¿Cuántas horas tarda el más rápido en estar 120 km adelante?",
-      "alternatives": ["6 h", "9 h", "12 h", "8 h", "10 h"],
+      "alternatives": [
+        "6 h",
+        "9 h",
+        "12 h",
+        "8 h",
+        "10 h"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-tiempo-de-encuentro-y-de.html",
       "sourceName": "Matemáticas N - Móviles: Tiempo de Encuentro y Alcance, ejercicio 2"
@@ -336,7 +516,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un león persigue a una cebra con 180 m de ventaja. El león corre a 31 m/s y la cebra a 22 m/s. ¿Cuánto tarda el león en alcanzarla?",
-      "alternatives": ["9 s", "15 s", "18 s", "12 s", "20 s"],
+      "alternatives": [
+        "9 s",
+        "15 s",
+        "18 s",
+        "12 s",
+        "20 s"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-tiempo-de-encuentro-y-de.html",
       "sourceName": "Matemáticas N - Móviles: Tiempo de Encuentro y Alcance, ejercicio 3"
@@ -347,7 +533,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Dos autos parten en sentidos contrarios a 80 km/h y 70 km/h respectivamente, separados 300 km. ¿Cuántas horas tardan en encontrarse?",
-      "alternatives": ["1 h", "2 h", "3 h", "4 h", "5 h"],
+      "alternatives": [
+        "1 h",
+        "2 h",
+        "3 h",
+        "4 h",
+        "5 h"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-tiempo-de-encuentro-y-de.html",
       "sourceName": "Matemáticas N - Móviles: Tiempo de Encuentro y Alcance, ejercicio 6"
@@ -358,7 +550,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un auto parte a las 7 a.m. a 70 km/h. Otro auto parte desde el mismo punto a las 7 a.m. en la misma dirección a 60 km/h, pero con 80 km de ventaja inicial para el primero. ¿A qué hora lo alcanza el más lento?",
-      "alternatives": ["3 p.m.", "5 p.m.", "1 p.m.", "2 p.m.", "6 p.m."],
+      "alternatives": [
+        "3 p.m.",
+        "5 p.m.",
+        "1 p.m.",
+        "2 p.m.",
+        "6 p.m."
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-tiempo-de-encuentro-y-de.html",
       "sourceName": "Matemáticas N - Móviles: Tiempo de Encuentro y Alcance, ejercicio 8"
@@ -369,7 +567,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un tren de 200 m de largo cruza un túnel de 600 m a 40 m/s. ¿Cuánto tiempo tarda en atravesar completamente el túnel?",
-      "alternatives": ["20 s", "30 s", "15 s", "40 s", "17,5 s"],
+      "alternatives": [
+        "20 s",
+        "30 s",
+        "15 s",
+        "40 s",
+        "17,5 s"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-tiempo-de-encuentro-y-de.html",
       "sourceName": "Matemáticas N - Móviles: Tiempo de Encuentro y Alcance, ejercicio 11"
@@ -380,7 +584,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Julio tarda 30 minutos en llegar a la academia. Al regresar, aumenta su velocidad en 3 m/min y llega 10 minutos antes. ¿Cuál es la distancia total recorrida en los dos viajes?",
-      "alternatives": ["360 m", "180 m", "720 m", "540 m", "480 m"],
+      "alternatives": [
+        "360 m",
+        "180 m",
+        "720 m",
+        "540 m",
+        "480 m"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-problemas-con-claves-pdf.html",
       "sourceName": "Matemáticas N - Móviles: Problemas con Claves, ejercicio 2"
@@ -391,7 +601,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Yasmin viaja a 6 km/h y llega 15 min tarde; si viaja a 12 km/h llega 15 min antes. ¿A qué velocidad debe viajar para llegar puntual?",
-      "alternatives": ["7 km/h", "8 km/h", "9 km/h", "9,5 km/h", "8,5 km/h"],
+      "alternatives": [
+        "7 km/h",
+        "8 km/h",
+        "9 km/h",
+        "9,5 km/h",
+        "8,5 km/h"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-problemas-con-claves-pdf.html",
       "sourceName": "Matemáticas N - Móviles: Problemas con Claves, ejercicio 4"
@@ -402,7 +618,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un camión tarda 8 s en pasar frente a un observador y 38 s en cruzar una estación de 120 m. ¿Cuál es la longitud del camión?",
-      "alternatives": ["45 m", "32 m", "30 m", "60 m", "38 m"],
+      "alternatives": [
+        "45 m",
+        "32 m",
+        "30 m",
+        "60 m",
+        "38 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-problemas-con-claves-pdf.html",
       "sourceName": "Matemáticas N - Móviles: Problemas con Claves, ejercicio 6"
@@ -413,7 +635,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una persona realiza un viaje de A a B a 8 km/h y regresa a 5 km/h. El viaje total dura 13 horas. ¿Cuál es la distancia total recorrida (ida y vuelta)?",
-      "alternatives": ["40 km", "36 km", "80 km", "46 km", "38 km"],
+      "alternatives": [
+        "40 km",
+        "36 km",
+        "80 km",
+        "46 km",
+        "38 km"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-tiempo-de-encuentro-y-de.html",
       "sourceName": "Matemáticas N - Móviles: Tiempo de Encuentro y Alcance, pregunta propuesta 8"
@@ -424,7 +652,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un viaje dura 30 horas. Si se aumenta la velocidad en 4 km/h, se ahorra 6 horas. ¿Cuál es la distancia total del viaje?",
-      "alternatives": ["480 km", "650 km", "960 km", "820 km", "520 km"],
+      "alternatives": [
+        "480 km",
+        "650 km",
+        "960 km",
+        "820 km",
+        "520 km"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-tiempo-de-encuentro-y-de.html",
       "sourceName": "Matemáticas N - Móviles: Tiempo de Encuentro y Alcance, ejercicio 20"
@@ -435,7 +669,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dos remadores se cruzan desde orillas opuestas de un río simultáneamente y se encuentran a 12 m de la orilla más cercana. Después de llegar a la orilla opuesta, regresan y se vuelven a encontrar a 6 m de la otra orilla. ¿Cuál es el ancho del río?",
-      "alternatives": ["20 m", "30 m", "18 m", "26 m", "32 m"],
+      "alternatives": [
+        "20 m",
+        "30 m",
+        "18 m",
+        "26 m",
+        "32 m"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-problemas-con-claves-pdf.html",
       "sourceName": "Matemáticas N - Móviles: Problemas con Claves, pregunta propuesta 9"
@@ -446,7 +686,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un grifo llena una cisterna en 20 horas y otro en 12 horas. El primero abre una hora, luego trabajan juntos tres horas y ambos se cierran. ¿Qué fracción de la cisterna queda sin llenar?",
-      "alternatives": ["11/20", "1/20", "9/20", "1/2", "13/20"],
+      "alternatives": [
+        "11/20",
+        "1/20",
+        "9/20",
+        "1/2",
+        "13/20"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-8-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
       "sourceName": "Solucionario CEPRE San Marcos Semana 8, problema 2"
@@ -457,7 +703,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Lela y Tila preparan un banquete juntas en 6 horas. Si Lela sola lo haría en 10 horas, ¿cuántas horas necesitaría Tila trabajando sola?",
-      "alternatives": ["6", "10", "12", "15", "18"],
+      "alternatives": [
+        "6",
+        "10",
+        "12",
+        "15",
+        "18"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-8-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
       "sourceName": "Solucionario CEPRE San Marcos Semana 8, problema 3"
@@ -468,7 +720,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Catalina gastó 2/5 de lo que no gastó, luego regaló 3/7 de lo que no regaló del resto. Si le quedaron 14 soles, ¿cuánto tenía inicialmente?",
-      "alternatives": ["28", "30", "23", "26", "32"],
+      "alternatives": [
+        "28",
+        "30",
+        "23",
+        "26",
+        "32"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-8-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
       "sourceName": "Solucionario CEPRE San Marcos Semana 8, problema 4"
@@ -479,7 +737,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Raúl realizó tres apuestas: ganó 1/4 de su capital inicial; perdió 1/10 del acumulado; ganó 3/7 del resto. Se retiró con S/.510 de ganancia. ¿Cuál era su capital inicial?",
-      "alternatives": ["S/.840", "S/.750", "S/.680", "S/.540", "S/.620"],
+      "alternatives": [
+        "S/.840",
+        "S/.750",
+        "S/.680",
+        "S/.540",
+        "S/.620"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-8-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
       "sourceName": "Solucionario CEPRE San Marcos Semana 8, problema 8"
@@ -490,7 +754,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una empresa asfalta una carretera en cinco meses: en el mes 1 completa la mitad; en el mes 2, 1/3 de lo que quedaba; en el mes 3, 1/4 del nuevo resto; en el mes 4, 1/5 del nuevo resto; en el mes 5 termina 12 km. ¿Cuál es la longitud total?",
-      "alternatives": ["40 km", "48 km", "54 km", "45 km", "36 km"],
+      "alternatives": [
+        "40 km",
+        "48 km",
+        "54 km",
+        "45 km",
+        "36 km"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-8-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
       "sourceName": "Solucionario CEPRE San Marcos Semana 8, problema 14"
@@ -501,7 +771,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un distribuidor gastó S/2400 en cajas de vino. Si cada caja hubiera costado S/40 menos, habría podido comprar 3 cajas adicionales con el mismo dinero. ¿Cuál fue el costo por caja?",
-      "alternatives": ["S/.180", "S/.160", "S/.200", "S/.240", "S/.220"],
+      "alternatives": [
+        "S/.180",
+        "S/.160",
+        "S/.200",
+        "S/.240",
+        "S/.220"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2018/06/examen-san-marcos-2019-i-deco.html",
       "sourceName": "Solucionario Examen San Marcos DECO 2019-I, pregunta 26"
@@ -512,7 +788,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el taller de costura de María se produce el doble de polos que en el de Rosa. Los costos de producción son S/25 y S/20 por polo respectivamente. Ambas quieren ganar el 20% sobre el costo total. ¿Cuál es el precio de venta promedio por polo de la producción conjunta?",
-      "alternatives": ["S/28,5", "S/26", "S/25,5", "S/28", "S/27"],
+      "alternatives": [
+        "S/28,5",
+        "S/26",
+        "S/25,5",
+        "S/28",
+        "S/27"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/09/razonamiento-matematico-del-examen-de-admision-a-la-universidad-problemas-resueltos-en-pdf.html",
       "sourceName": "Matemática J - Razonamiento Matemático Examen de Admisión, problema 1"
@@ -523,7 +805,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un maestro de construcción edificará pequeños jardines en cada uno de los 24 pisos de un edificio. Cobra S/100 más por piso que el anterior. Por el quinto piso cobrará S/2400. ¿Cuánto cobrará en total por toda la obra?",
-      "alternatives": ["S/75 600", "S/80 000", "S/71 300", "S/67 100", "S/78 000"],
+      "alternatives": [
+        "S/75 600",
+        "S/80 000",
+        "S/71 300",
+        "S/67 100",
+        "S/78 000"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/09/razonamiento-matematico-del-examen-de-admision-a-la-universidad-problemas-resueltos-en-pdf.html",
       "sourceName": "Matemática J - Razonamiento Matemático Examen de Admisión, problema 2"
@@ -534,7 +822,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un obrero puede construir un muro de ladrillos en 12 horas, mientras que su aprendiz solo tardaría 18 horas. ¿Cuánto tardarán juntos? ¿Qué fracción ha construido el aprendiz cuando terminan?",
-      "alternatives": ["7,5 h; 5/8", "7,8 h; 5/3", "7,8 h; 5/6", "7,2 h; 1/6", "7,2 h; 5/6"],
+      "alternatives": [
+        "7,5 h; 5/8",
+        "7,8 h; 5/3",
+        "7,8 h; 5/6",
+        "7,2 h; 1/6",
+        "7,2 h; 5/6"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2018/02/pre-san-marcos-2018-semana-19.html",
       "sourceName": "Solucionario Pre San Marcos Semana 19 2018, problema 3"
@@ -545,7 +839,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un ciclista da 25 km de ventaja al otro. El primero viaja a 37 km/h y el segundo a 42 km/h. ¿Cuántas horas tarda el segundo en alcanzar al primero?",
-      "alternatives": ["1 h", "2 h", "3 h", "4 h", "5 h"],
+      "alternatives": [
+        "1 h",
+        "2 h",
+        "3 h",
+        "4 h",
+        "5 h"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-problemas-con-claves-pdf.html",
       "sourceName": "Matemáticas N - Móviles: Problemas con Claves, ejercicio 8"
@@ -556,7 +856,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Dos ciclistas parten en sentidos opuestos sobre una pista de 800 m. Si van en sentido contrario se encuentran cada 16 s; si van en el mismo sentido, el más rápido adelanta al otro cada 80 s. ¿Cuál es la razón de sus velocidades?",
-      "alternatives": ["3/2", "1/3", "1/2", "4/3", "2/5"],
+      "alternatives": [
+        "3/2",
+        "1/3",
+        "1/2",
+        "4/3",
+        "2/5"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-tiempo-de-encuentro-y-de.html",
       "sourceName": "Matemáticas N - Móviles: Tiempo de Encuentro y Alcance, pregunta propuesta 18"
@@ -567,7 +873,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un conductor reduce su velocidad en 1/5, llegando 4 horas tarde a su destino. ¿Cuál es el tiempo normal del viaje?",
-      "alternatives": ["12 h", "16 h", "18 h", "15 h", "19 h"],
+      "alternatives": [
+        "12 h",
+        "16 h",
+        "18 h",
+        "15 h",
+        "19 h"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-tiempo-de-encuentro-y-de.html",
       "sourceName": "Matemáticas N - Móviles: Tiempo de Encuentro y Alcance, pregunta propuesta 23"
@@ -578,7 +890,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El 75% de cierto número es 3000. ¿Cuánto es ese número?",
-      "alternatives": ["4000", "1500", "2000", "600", "5000"],
+      "alternatives": [
+        "4000",
+        "1500",
+        "2000",
+        "600",
+        "5000"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/porcentajes-problemas-resueltos-pdf.html",
       "sourceName": "AritméticaPDF - Porcentajes Problemas Resueltos Preuniversitario, problema 1"
@@ -589,7 +907,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿A qué aumento único equivalen tres aumentos sucesivos del 10%, 25% y 60%?",
-      "alternatives": ["120%", "220%", "95%", "110%", "130%"],
+      "alternatives": [
+        "120%",
+        "220%",
+        "95%",
+        "110%",
+        "130%"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/porcentajes-problemas-resueltos-pdf.html",
       "sourceName": "AritméticaPDF - Porcentajes Problemas Resueltos Preuniversitario, problema 2"
@@ -600,7 +924,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El 25% de 280 es el 40% más de ¿qué número?",
-      "alternatives": ["40", "50", "35", "28", "48"],
+      "alternatives": [
+        "40",
+        "50",
+        "35",
+        "28",
+        "48"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://aritmeticapdf.blogspot.com/2018/11/porcentajes-problemas-resueltos-pdf.html",
       "sourceName": "AritméticaPDF - Porcentajes Problemas Resueltos Preuniversitario, problema 4"
@@ -611,7 +941,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El triángulo base aumenta el 30% y la altura disminuye el 20%. ¿Cuál es la variación del área?",
-      "alternatives": ["-10%", "+4%", "-4%", "-2%", "+2%"],
+      "alternatives": [
+        "-10%",
+        "+4%",
+        "-4%",
+        "-2%",
+        "+2%"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
       "sourceName": "Matemáticas N - Tanto por Ciento Ejercicios Resueltos, pregunta 20"
@@ -622,10 +958,339 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un precio se reduce el 10% y luego el 20%. ¿En qué porcentaje debe aumentarse el precio rebajado para que sea el 8% más que el precio original?",
-      "alternatives": ["84%", "50%", "63%", "59%", "75%"],
+      "alternatives": [
+        "84%",
+        "50%",
+        "63%",
+        "59%",
+        "75%"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
       "sourceName": "Matemáticas N - Tanto por Ciento Ejercicios Resueltos, pregunta 13"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la feria de un pueblo aún se practica la antigua costumbre del trueque. Por ejemplo, por una gallina, se puede obtener una pareja de cuyes; por un par de cerdos y 3 carneros, una vaca; por 6 gallinas, un carnero; por 3 caballos, 2 vacas; y por 7 gallinas, un cerdo. Si el criador de cuyes consiguió obtener un caballo, una vaca y dos cerdos, ¿cuántos cuyes por lo menos tuvo que llevar a la feria?",
+      "alternatives": [
+        "42",
+        "64",
+        "92",
+        "135",
+        "140"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/tutoria-3ro-4to-actividad-2-experiencia-8-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 PRIMERA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF APTITUD LETRAS Y HUMANIDADES"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un kilogramo de mandarinas contiene 8 o 9 unidades. ¿Cuál es la máxima cantidad en kilogramos que puede tener 3 docenas de mandarinas?",
+      "alternatives": [
+        "3,5",
+        "4,8",
+        "5,2",
+        "4,0",
+        "4,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estudio-y-representacion-de-funciones_4.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA SOCIALES 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una obra se empezó con cierta cantidad de obreros y, a partir del segundo día, por presupuesto, se fue despidiendo un obrero cada día, hasta que no quedó ningún obrero, pero se terminó la obra. Determinar en cuántos días se realizó el trabajo, si en el primer día se hizo la novena parte de toda la obra.",
+      "alternatives": [
+        "19",
+        "18",
+        "17",
+        "16",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/admision-unsaac-solucionario-pdf-cuzco.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNSAAC 2027 EXAMEN ADMISIÓN UNIVERSIDAD SAN ANTONIO DE ABAD CRONOGRAMA VACANTES ESTRUCTURA 2026 PUNTAJES PROSPECTO TEMAS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Amanda participa en una maratón de 42 km. Se sabe que ella completó los primeros 28 km. ¿Qué parte de la distancia total le falta correr?",
+      "alternatives": [
+        "28/42 de la distancia total.",
+        "14/28 de la distancia total.",
+        "14/42 de la distancia total."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/solucionario-examen-de-nombramiento-docente-prueba-unica-nacional-pun-resuelta-minedu-claves-respuestas-simulacro-desarrollado-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN NOMBRAMIENTO DOCENTE 2026 DESARROLLADA INICIAL PRIMARIA SECUNDARIA CLAVES–RESPUESTAS PREGUNTAS RESUELTAS PDF PRUEBA ÚNICA NACIONAL PUN 2025 MINEDU"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mirtha trabaja en una tienda que ofrece el servicio de fotocopias. Un cliente le ha encargado fotocopiar 16 juegos de copias de un documento de 100 hojas. Además, le ha pedido utilizar papel bond de 80 gramos. Debido a que.la tienda nu cuenta con este tipo de papel, Mirtha deberá comprarlo.\nSi este tipo de papel es vendido solo en paquetes de 500 hojas, ¿cuál es la menor cantidad de paquetes que deberá comprar Mirtha para realizar el servicio?",
+      "alternatives": [
+        "3 paquetes.",
+        "4 paquetes.",
+        "S paquetes."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/solucionario-examen-de-nombramiento-docente-prueba-unica-nacional-pun-resuelta-minedu-claves-respuestas-simulacro-desarrollado-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN NOMBRAMIENTO DOCENTE 2026 DESARROLLADA INICIAL PRIMARIA SECUNDARIA CLAVES–RESPUESTAS PREGUNTAS RESUELTAS PDF PRUEBA ÚNICA NACIONAL PUN 2025 MINEDU"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Melissa, Julio y Karina viajan de Puerto Maldonado a Cusca en distintas empresas de transporte. Melissa compró su pasaje a S/ 65 y gastó S/ 10 menos de lo que pagó Julio. Por su parte, Julio gastó por su pasaje S/ 15 menos que Karina.\n¿Cuánto pagó Karina por su pasaje?",
+      "alternatives": [
+        "S/ 90",
+        "S/ 10",
+        "S/ 40"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/solucionario-examen-de-nombramiento-docente-prueba-unica-nacional-pun-resuelta-minedu-claves-respuestas-simulacro-desarrollado-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN NOMBRAMIENTO DOCENTE 2026 DESARROLLADA INICIAL PRIMARIA SECUNDARIA CLAVES–RESPUESTAS PREGUNTAS RESUELTAS PDF PRUEBA ÚNICA NACIONAL PUN 2025 MINEDU"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para hacer uso de la piscina de un club, se ofrecen dos opciones:\n☛ La primera: efectuar un pago único mensual de S/ 80.\n☛ La segunda: hacer un pago de S/ 5 cada vez que se quiera utilizar la piscina. Una persona quiere usar la piscina durante un mes.\n¿ Cuántas veces, como mínimo, tendría que utilizar la piscina para que le resulte más económico hacer un pago único mensual?",
+      "alternatives": [
+        "15 veces.",
+        "16 veces.",
+        "17 veces."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/solucionario-examen-de-nombramiento-docente-prueba-unica-nacional-pun-resuelta-minedu-claves-respuestas-simulacro-desarrollado-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN NOMBRAMIENTO DOCENTE 2026 DESARROLLADA INICIAL PRIMARIA SECUNDARIA CLAVES–RESPUESTAS PREGUNTAS RESUELTAS PDF PRUEBA ÚNICA NACIONAL PUN 2025 MINEDU"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un grupo de estudiantes de primaria participan en un proyecto de reciclaje de botellas de plástico. Luego de juntar 20 botellas, ellos se proponen acopiar diariamente 6 botellas durante los siguientes 40 días. Si cumplieran ese objetivo, ¿cuántas botellas en total habrán acumulado al terminar el día 14?",
+      "alternatives": [
+        "84 botellas.",
+        "98 botellas.",
+        "104 botellas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/solucionario-examen-de-nombramiento-docente-prueba-unica-nacional-pun-resuelta-minedu-claves-respuestas-simulacro-desarrollado-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN NOMBRAMIENTO DOCENTE 2026 DESARROLLADA INICIAL PRIMARIA SECUNDARIA CLAVES–RESPUESTAS PREGUNTAS RESUELTAS PDF PRUEBA ÚNICA NACIONAL PUN 2025 MINEDU"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cierto-día, Alejandra compró 300 kg de manzanas a S/ 4 el kilogramo con el propósito de venderlas. Ella determinó un precio fijo de venta por kilogramo. Al vender 200 kg, logró recuperar exactamente el dinero que invirtió.\n¿Cuánto será su ganancia al vender todas las manzanas?",
+      "alternatives": [
+        "S/ 600",
+        "S/ 400",
+        "S/ 200"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/solucionario-examen-de-nombramiento-docente-prueba-unica-nacional-pun-resuelta-minedu-claves-respuestas-simulacro-desarrollado-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN NOMBRAMIENTO DOCENTE 2026 DESARROLLADA INICIAL PRIMARIA SECUNDARIA CLAVES–RESPUESTAS PREGUNTAS RESUELTAS PDF PRUEBA ÚNICA NACIONAL PUN 2025 MINEDU"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tazón, Estefania preparó una mezcla de tres frutos secos para invitar a sus amigas. Para ello, por cada 100 gramos de maní que puso en el tazón, añadió 50 gramos de pasas y 50 gramos de almendras.\nSi el total de la mezcla fue 1200 gramos, ¿cuántos gramos de almendras utilizó en la mezcla?",
+      "alternatives": [
+        "300 gramos.",
+        "400 gramos.",
+        "600 gramos."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/solucionario-examen-de-nombramiento-docente-prueba-unica-nacional-pun-resuelta-minedu-claves-respuestas-simulacro-desarrollado-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN NOMBRAMIENTO DOCENTE 2026 DESARROLLADA INICIAL PRIMARIA SECUNDARIA CLAVES–RESPUESTAS PREGUNTAS RESUELTAS PDF PRUEBA ÚNICA NACIONAL PUN 2025 MINEDU"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un terreno rectangular es dividido en parcelas cuadradas de 100 m 2 de área. En la esquina de cada parcela se coloca un poste. Si se necesitan 130 postes, ¿cuál es la diferencia entre el largo y el ancho del terreno?",
+      "alternatives": [
+        "10 m",
+        "20 m",
+        "30 m",
+        "40 m",
+        "50 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/5to-actividad-14-educacion-fisica-experiencia-3-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNASAM ÁREA E ESTADÍSTICA SISTEMAS MATEMÁTICA CLAVES PDF – INGRESO UNIVERSIDAD – 2026–2027"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan tiene, en total, 29 soles repartidos en monedas de 1 sol, 2 soles y 5 soles. Si la cantidad total de monedas que tiene es doce y las monedas que no son de 5 soles suman un total de 14 soles, ¿cuántas monedas de un sol tiene Juan?",
+      "alternatives": [
+        "uno",
+        "cinco",
+        "tres",
+        "dos",
+        "cuatro"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/habilidad-algebraica-deco-prueba.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Rogelio tiene 88 canicas de colores rojo, azul y verde. Él observa que las de color rojo son la tercera parte de las de color azul y las de color verde son 18 canicas más que las de color azul. Determine cuántas canicas de color verde y azul tiene Rogelio.",
+      "alternatives": [
+        "64 canicas",
+        "58 canicas",
+        "72 canicas",
+        "60 canicas",
+        "50 canicas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/algebra-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cada día una persona escribe en un cuaderno 1/3 de las hojas en blanco más 2 hojas. Si después de 3 días consecutivos le quedan aún 18 hojas sin escribir, ¿cuántas hojas he escrito dicha persona?",
+      "alternatives": [
+        "48",
+        "57",
+        "61",
+        "63",
+        "75"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/razonamiento-matematico-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si compro tres pelotas, para mis hijos me queda dinero para cuatro pelotas, pero si compro cuatro pelotas para cada uno, me faltaría dinero para tres pelotas más. ¿Cuántos hijos tengo?",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/razonamiento-matematico-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tapizador dispone de una pieza de tela rectangular de 10 m de largo y 1,5 m de ancho. Con el propósito de tapizar un mueble, dicha pieza de tela debe cortarla en piezas rectangulares de 0,75 m de ancho por 1 m de largo; para ello dispone de una guillotina especial, la cual puede cortar a lo más cuatro capas de dicha tela y la longitud máxima de cada corte es de 1m. ¿Cuántos cortes rectos, como mínimo, se debe realizar para obtener la máxima cantidad de dichas piezas?",
+      "alternatives": [
+        "8",
+        "5",
+        "7",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-matematico-y-habilidad.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN UNAC 2023 BLOQUE 2 ADMINISTRACIÓN CONTABILIDAD ECONOMÍA INGRESO UNIVERSIDAD CLAVES RESPUESTAS DESARROLLO PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El último campeonato de la copa américa duró 39 semanas, si en cada semana se jugó 4 partidos. ¿Cuántos equipos participaron, sabiendo que han jugado de visita y de local?",
+      "alternatives": [
+        "13",
+        "1270",
+        "14",
+        "15",
+        "16"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — ADICIÓN Y SUSTRACCIÓN ARITMÉTICA EJERCICIOS RESUELTOS DE ARITMÉTICA PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Seis equipos juegan un torneo de fútbol en el que cada uno juega exactamente una vez con todos los demás. En cada partido, el ganador obtiene 3 puntos; el que pierde, 0 puntos y, si hay empate, cada uno obtiene 1 punto. La suma del número total de puntos de todos los equipos es 41. ¿Cuántos partidos terminaron en empate?",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN SAN MARCOS ÁREA A 2022 II MEDICINA HUMANA SOLUCIONARIO PRUEBA DESARROLLADA ADMISIÓN UNIVERSIDAD RESPUESTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Aldo realizó una compra en línea de cierta cantidad de pelotas idénticas por un monto total de 84 soles. Al querer venderlas, observa que hay cuatro pelotas dañadas y que no sirven para ser vendidas; por lo que vendió cada una de las pelotas restantes a 3 soles más de lo que le costó cada una, ganando así 6 soles en total. ¿Cuántos soles le costó cada pelota?",
+      "alternatives": [
+        "8",
+        "6",
+        "9",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN SAN MARCOS ÁREA A 2022 II MEDICINA HUMANA SOLUCIONARIO PRUEBA DESARROLLADA ADMISIÓN UNIVERSIDAD RESPUESTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un mayorista de abarrotes tiene un pedido de 52 kg de arroz y, como no tiene balanza propia ni pesas, alquila una balanza de dos platillos a once soles y alquila pesas de 3 kg, 5 kg y 9 kg al precio de dos, tres y cinco soles, cada una, respectivamente. Determine la cantidad mínima de soles que debe pagar por el alquiler de la balanza y las pesas con la finalidad de entregar el pedido de 52 kg de arroz realizando una sola pesada, sabiendo que puede alquilar todas las pesas que quiera de cada peso, y debe emplear los tres tipos de pesas.",
+      "alternatives": [
+        "35",
+        "46",
+        "41",
+        "45"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN SAN MARCOS ÁREA A 2022 II MEDICINA HUMANA SOLUCIONARIO PRUEBA DESARROLLADA ADMISIÓN UNIVERSIDAD RESPUESTAS SOLUCIONES PDF"
     }
   ]
 }

@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver y dar la suma de las tres primeras soluciones positivas de: 1 + sen x = 2 sen^2 x",
-      "alternatives": ["330°", "630°", "210°", "90°", "530°"],
+      "alternatives": [
+        "330°",
+        "630°",
+        "210°",
+        "90°",
+        "530°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar el número de soluciones menores que 360° en: csc^2 x = cot x + 1",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver: sen 6x + sen 2x = sen 4x, dar una solución.",
-      "alternatives": ["60°", "45°", "30°", "a y b", "b y c"],
+      "alternatives": [
+        "60°",
+        "45°",
+        "30°",
+        "a y b",
+        "b y c"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 3"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver: (sen x + cos x)^2 = 1 + cos x, indicando la suma de las tres primeras soluciones positivas.",
-      "alternatives": ["180°", "270°", "360°", "450°", "720°"],
+      "alternatives": [
+        "180°",
+        "270°",
+        "360°",
+        "450°",
+        "720°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 4"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver: 1 + cos x = 2 sen^2 x; indicando la suma de sus dos primeras soluciones positivas.",
-      "alternatives": ["180°", "120°", "200°", "240°", "360°"],
+      "alternatives": [
+        "180°",
+        "120°",
+        "200°",
+        "240°",
+        "360°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 6"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver: sec^2 x = √3 tan x + 1; indicando el número de soluciones positivas menores que una vuelta.",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 7"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Resolver: sen x − √3 cos x = 1; indicando el menor valor positivo que cumple.",
-      "alternatives": ["30°", "60°", "90°", "135°", "180°"],
+      "alternatives": [
+        "30°",
+        "60°",
+        "90°",
+        "135°",
+        "180°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 8"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Resuelve e indica la menor solución positiva en: 2 cos^2 x + 4 sen^2 x = 3",
-      "alternatives": ["0°", "30°", "45°", "60°", "53°"],
+      "alternatives": [
+        "0°",
+        "30°",
+        "45°",
+        "60°",
+        "53°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 10"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Indica la menor solución positiva: 1 + sen^2 x = 7 cos^2 x",
-      "alternatives": ["30°", "45°", "60°", "53°", "37°"],
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "53°",
+        "37°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 11"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Resuelve: cos x − 1 = cos 2x",
-      "alternatives": ["45°", "60°", "90°", "80°", "120°"],
+      "alternatives": [
+        "45°",
+        "60°",
+        "90°",
+        "80°",
+        "120°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 12"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resuelve e indica la menor solución positiva: cot 2x + cot x = 0",
-      "alternatives": ["30°", "45°", "60°", "75°", "12°"],
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "75°",
+        "12°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 14"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Resuelve e indica la menor solución positiva en: sec x (1 + cos 2x) = 1",
-      "alternatives": ["30°", "45°", "60°", "75°", "90°"],
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "75°",
+        "90°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 15"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Resuelve: sen 5x + sen x = sen 3x e indica como respuesta la suma de todas las soluciones positivas menores de 180°.",
-      "alternatives": ["40°", "180°", "240°", "300°", "360°"],
+      "alternatives": [
+        "40°",
+        "180°",
+        "240°",
+        "300°",
+        "360°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
       "sourceName": "Matematicasn - Ecuaciones Trigonométricas Ejercicios Resueltos, Pregunta 16"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Resolver: sen x · cot x + cos x = 1. Dar como respuesta el menor valor positivo de x.",
-      "alternatives": ["15°", "30°", "60°", "45°", "75°"],
+      "alternatives": [
+        "15°",
+        "30°",
+        "60°",
+        "45°",
+        "75°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-trigonometricas-ejercicios.html",
       "sourceName": "Matematicasn - Ecuación Trigonométrica Elemental, Ejercicio 1"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sume las dos primeras soluciones positivas de la ecuación: sen 5x + sen x = sen 3x",
-      "alternatives": ["30°", "60°", "90°", "180°", "120°"],
+      "alternatives": [
+        "30°",
+        "60°",
+        "90°",
+        "180°",
+        "120°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-trigonometricas-ejercicios.html",
       "sourceName": "Matematicasn - Ecuación Trigonométrica Elemental, Ejercicio 2"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Resolver: cos x · tan x + sen x = 1. Dar como respuesta el menor valor positivo de x.",
-      "alternatives": ["15°", "30°", "60°", "45°", "75°"],
+      "alternatives": [
+        "15°",
+        "30°",
+        "60°",
+        "45°",
+        "75°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-trigonometricas-ejercicios.html",
       "sourceName": "Matematicasn - Ecuación Trigonométrica Elemental, Ejercicio 3"
@@ -182,7 +278,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Sume las dos primeras soluciones positivas de la ecuación: sen 3x = 1",
-      "alternatives": ["90°", "45°", "100°", "120°", "150°"],
+      "alternatives": [
+        "90°",
+        "45°",
+        "100°",
+        "120°",
+        "150°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-trigonometricas-ejercicios.html",
       "sourceName": "Matematicasn - Ecuación Trigonométrica Elemental, Ejercicio 4"
@@ -193,7 +295,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sume las dos primeras soluciones positivas de la ecuación: sen 5x − sen x = sen 2x",
-      "alternatives": ["80°", "90°", "100°", "120°", "110°"],
+      "alternatives": [
+        "80°",
+        "90°",
+        "100°",
+        "120°",
+        "110°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-trigonometricas-ejercicios.html",
       "sourceName": "Matematicasn - Ecuación Trigonométrica Elemental, Ejercicio 5"
@@ -204,7 +312,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver: 4 sen^2 x + 8 sen x + 3 = 0, para x ∈ [0; 2π]. Indicar las soluciones.",
-      "alternatives": ["5π/6 y π/2", "π/3 y π/2", "π/6 y π/3", "π/4 y π/8", "7π/6 y 11π/6"],
+      "alternatives": [
+        "5π/6 y π/2",
+        "π/3 y π/2",
+        "π/6 y π/3",
+        "π/4 y π/8",
+        "7π/6 y 11π/6"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas I, Ejercicio 2"
@@ -215,7 +329,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar los valores de x que satisfacen: 2 cos^2 x + 3 sen x = 3",
-      "alternatives": ["30° y 90°", "60° y 90°", "45° y 60°", "75° y 150°", "30° y 180°"],
+      "alternatives": [
+        "30° y 90°",
+        "60° y 90°",
+        "45° y 60°",
+        "75° y 150°",
+        "30° y 180°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas I, Ejercicio 3"
@@ -226,7 +346,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar el menor valor positivo de x que resuelva la ecuación: sen x = 1 + √3 cos x",
-      "alternatives": ["30°", "45°", "75°", "90°", "60°"],
+      "alternatives": [
+        "30°",
+        "45°",
+        "75°",
+        "90°",
+        "60°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas I, Ejercicio 4"
@@ -237,7 +363,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar el menor valor positivo de x que satisface la ecuación: 2 cos x = 3 tan x",
-      "alternatives": ["π/11", "5π/8", "π/3", "2π/3", "π/6"],
+      "alternatives": [
+        "π/11",
+        "5π/8",
+        "π/3",
+        "2π/3",
+        "π/6"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas I, Ejercicio 6"
@@ -248,7 +380,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver: tan(45° + x) = 3 tan x + 2, para 0° < x < 90°. Hallar x.",
-      "alternatives": ["15°", "30°", "45°", "60°", "75°"],
+      "alternatives": [
+        "15°",
+        "30°",
+        "45°",
+        "60°",
+        "75°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas I, Ejercicio 7"
@@ -259,7 +397,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver: 2 cos x + cos 2x = −3/2, para 90° < x < 180°. Hallar x.",
-      "alternatives": ["120°", "135°", "127°", "143°", "150°"],
+      "alternatives": [
+        "120°",
+        "135°",
+        "127°",
+        "143°",
+        "150°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas I, Ejercicio 8"
@@ -270,7 +414,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar la suma de los ángulos θ comprendidos entre 0° y 360° que cumplen: 2√3 cos^2 θ = sen θ",
-      "alternatives": ["60°", "120°", "180°", "270°", "360°"],
+      "alternatives": [
+        "60°",
+        "120°",
+        "180°",
+        "270°",
+        "360°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas I, Ejercicio 9"
@@ -281,7 +431,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar la suma de soluciones en [0°; 360°] que cumplen: 2 tan^2 x + 3 sec x = 0",
-      "alternatives": ["180°", "270°", "120°", "540°", "360°"],
+      "alternatives": [
+        "180°",
+        "270°",
+        "120°",
+        "540°",
+        "360°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas I, Ejercicio 10"
@@ -292,7 +448,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Hallar el número de soluciones para x ∈ (0°; 180°) que cumplen: tan^2 x − 3 = 0",
-      "alternatives": ["1", "2", "3", "0", "4"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "0",
+        "4"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas I, Ejercicio 11"
@@ -303,7 +465,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Resolver: sen x − √3 cos x = 0. Dar las dos primeras soluciones positivas.",
-      "alternatives": ["{15°; 195°}", "{30°; 210°}", "{30°; 150°}", "{30°; 60°}", "{60°; 240°}"],
+      "alternatives": [
+        "{15°; 195°}",
+        "{30°; 210°}",
+        "{30°; 150°}",
+        "{30°; 60°}",
+        "{60°; 240°}"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas II, Ejercicio 6"
@@ -314,7 +482,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular la segunda solución positiva de la ecuación: sen x − cos x = 1",
-      "alternatives": ["75°", "45°", "90°", "150°", "180°"],
+      "alternatives": [
+        "75°",
+        "45°",
+        "90°",
+        "150°",
+        "180°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas II, Ejercicio 8"
@@ -325,7 +499,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Resolver: (sen 4x + sen 2x) / (2 cos 2x + 1) = 1/2. Dar la solución principal positiva.",
-      "alternatives": ["π/12", "5π/4", "π/6", "5π/3", "5π/12"],
+      "alternatives": [
+        "π/12",
+        "5π/4",
+        "π/6",
+        "5π/3",
+        "5π/12"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas II, Ejercicio 9"
@@ -336,7 +516,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver: (1 + tan x)(1 − tan x) = 1, para x ∈ [0; 2π]. Dar la suma de las soluciones.",
-      "alternatives": ["π/3", "π", "5π/3", "3π", "4π"],
+      "alternatives": [
+        "π/3",
+        "π",
+        "5π/3",
+        "3π",
+        "4π"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas II, Ejercicio 10"
@@ -347,7 +533,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular la tercera solución positiva de la ecuación: 2 cos^2 x − 7 cos x + 3 = 0",
-      "alternatives": ["60°", "120°", "240°", "300°", "420°"],
+      "alternatives": [
+        "60°",
+        "120°",
+        "240°",
+        "300°",
+        "420°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas II, Ejercicio 11"
@@ -358,7 +550,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar el número de soluciones de la ecuación: sen 3x + sen x = 0, para x ∈ [0°; 180°].",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas II, Ejercicio 12"
@@ -369,7 +567,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular la suma de soluciones de la ecuación: sen x − cos 2x = 0, para x ∈ [0; 2π].",
-      "alternatives": ["3π/2", "5π/2", "7π/2", "π", "2π"],
+      "alternatives": [
+        "3π/2",
+        "5π/2",
+        "7π/2",
+        "π",
+        "2π"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas II, Ejercicio 13"
@@ -380,7 +584,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcular la mayor solución positiva menor a una vuelta de: tan x + sen x = 2 cos^2(x/2)",
-      "alternatives": ["150°", "180°", "45°", "225°", "315°"],
+      "alternatives": [
+        "150°",
+        "180°",
+        "45°",
+        "225°",
+        "315°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas II, Ejercicio 18"
@@ -391,7 +601,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar el número de soluciones positivas y menores a una vuelta de: 2 sen x + cot x = csc x",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas II, Ejercicio 19"
@@ -402,7 +618,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si x ∈ ]90°; 180°[, resolver: tan(x + 45°) + tan(x − 45°) − 2 cot x = 0",
-      "alternatives": ["105°", "120°", "135°", "150°", "165°"],
+      "alternatives": [
+        "105°",
+        "120°",
+        "135°",
+        "150°",
+        "165°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
       "sourceName": "UNFV CEPREVI - Trigonometría 2018, Unidad 16 Problemas II, Ejercicio 17"
@@ -413,7 +635,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si x ∈ [40°; 290°], indica el número de soluciones en dicho intervalo de: 2√3 − 2√3 cos^2 x = sen 2x",
-      "alternatives": ["1", "5", "3", "4", "2"],
+      "alternatives": [
+        "1",
+        "5",
+        "3",
+        "4",
+        "2"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicaj.blogspot.com/2020/03/trigonometria-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
       "sourceName": "Matematicaj - Trigonometría Preguntas Examen Admisión Universidad, Pregunta 10"
@@ -424,7 +652,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver el sistema: cos x · cos y = 3/4 y sen x · sen y = 1/4. Dar la solución con x, y agudos.",
-      "alternatives": ["60°; 0°", "45°; 15°", "30°; 60°", "30°; 30°", "37°; 23°"],
+      "alternatives": [
+        "60°; 0°",
+        "45°; 15°",
+        "30°; 60°",
+        "30°; 30°",
+        "37°; 23°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/08/sistemas-de-ecuaciones-trigonometricas-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
       "sourceName": "Matematicasn - Sistema de Ecuaciones Trigonométricas, Ejercicio 7"
@@ -435,7 +669,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver el sistema: tan x + tan y = 2 y 2 cos x · cos y = 1. Hallar x e y en el primer cuadrante.",
-      "alternatives": ["30°; 30°", "37°; 45°", "30°; 60°", "45°; 45°", "60°; 60°"],
+      "alternatives": [
+        "30°; 30°",
+        "37°; 45°",
+        "30°; 60°",
+        "45°; 45°",
+        "60°; 60°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/08/sistemas-de-ecuaciones-trigonometricas-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
       "sourceName": "Matematicasn - Sistema de Ecuaciones Trigonométricas, Ejercicio 8"
@@ -446,10 +686,605 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si x + y = 2π/3 y cos^2 x + cos^2 y = 1, hallar M = x − y.",
-      "alternatives": ["85°", "75°", "90°", "100°", "80°"],
+      "alternatives": [
+        "85°",
+        "75°",
+        "90°",
+        "100°",
+        "80°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/08/sistemas-de-ecuaciones-trigonometricas-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
       "sourceName": "Matematicasn - Sistema de Ecuaciones Trigonométricas, Ejercicio 10"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la ecuación trigonométrica\nSen2x – 2tanx =0, x∈ [0,2 𝛑 ] , un estudiante resolvió por error la ecuación\nsen 2 x – 2tanx = 0 ; x ∈ [0,2 𝛑 ].\nEntonces, obtuvo ________ las que habría obtenido si hubiese resuelto la ecuación original.",
+      "alternatives": [
+        "las mismas soluciones que",
+        "más soluciones que",
+        "menos soluciones que",
+        "soluciones muy diferentes a"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/trigonometria-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la solución de la ecuación trigonométrica: sen2x–1=0; si x∈〈0;2 𝛑 〉",
+      "alternatives": [
+        "𝛑/ 4",
+        "7 𝛑/4",
+        "5 𝛑/3",
+        "3 𝛑/2",
+        "𝛑/ 5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-prueba.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver:\nIndique el número de soluciones en el intervalo de",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si – 𝛑/2 ≤ x ≤ 0 , tal que\ncosx=0\ncos(x + z)=1/2\nhalle el menor valor de “z”.",
+      "alternatives": [
+        "𝛑/4",
+        "𝛑/3",
+        "𝛑/6",
+        "𝛑/12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/simulacro-resuelto-de-admision-a-la-universidad-catolica-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO CATÓLICA SOLUCIONARIO DE ACCESO UNIVERSIDAD PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el número de soluciones en el intervalo: [0 ; 2 𝛑 ] de la siguiente ecuación:\nSen2x=Senx",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/solucionario-admision-pacifico-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DEL PACÍFICO 2026 PRUEBA UP RESUELTA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a y b representan las cantidades de soluciones de la ecuación\n4 √ 2sen(2x–23)°+4 √ 2cos(4x – 7)°=8cos(60 – 3x)°\nen los intervalos [0; 𝛑 ] y 〈 𝛑 ; 2 𝛑 ], respectivamente, determine la diferencia positiva entre a y b.",
+      "alternatives": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/trigonometria-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x∈[40°; 290°], indica el número de soluciones en dicho intervalo de:\n2 √ 3 – 2 √ 3cos²x=sen2x",
+      "alternatives": [
+        "1",
+        "5",
+        "3",
+        "4",
+        "2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/trigonometria-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PREGUNTAS DEL EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Raúl promete a su hija Massiel: “Iremos de viaje tantos días como el número de soluciones correctas que tiene la siguiente ecuación:\nsen(7x) = sen(3x); x ∈ < 0; 𝛑>\nSi Massiel determinó correctamente la cantidad de soluciones y su papá la premia con un día más de viaje, ¿cuántos días estarán de viaje?",
+      "alternatives": [
+        "6",
+        "4",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/simulacro-deco-presencial-san-marcos.html",
+      "sourceName": "matematicaj.blogspot.com — MATEMÁTICA SAN MARCOS PREGUNTAS RESUELTAS PRUEBA DECO DE EXAMEN DE ADMISIÓN A LA UNIVERSIDAD UNMSM SOLUCIONARIO"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver cos2x ≤ √ 3/2 ; ∀∈[0; π] se tiene como solución a",
+      "alternatives": [
+        "[ 𝛑/12 ; 9 𝛑/12 ]",
+        "[ 𝛑/12 ; 7 𝛑/12 ]",
+        "[ 𝛑/12 ; 11 𝛑/12 ]",
+        "[ 𝛑/12 ; 10 𝛑/12 ]",
+        "[ 𝛑/12 ; 8 𝛑/12 ]"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x∈[40°; 290°], indica el número de soluciones en dicho intervalo de:\n2 √ 3–2 √ 3cos 2 x=sen2x",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/11/Solucionarios-catolica-pucp-examenes-admision-universidad-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CATÓLICA EXAMEN ADMISIÓN UNIVERSIDAD PUCP PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelva la ecuación:\n2cos 2 (x)+3sen(x)=0\ne indique la suma de soluciones en [0; 2𝛑]",
+      "alternatives": [
+        "𝛑/6",
+        "5𝛑/6",
+        "7𝛑/6",
+        "11𝛑/6",
+        "3𝛑"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-7-experiencia-8-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-primero-segundo-grado-de-secundaria-word-aprendizaje-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las edades de dos hermanos, Lucia y Micaela son x años y y años, respectivamente. Resuelve lo siguiente para calcularlos:\ntan(2x)°tan(4x)°=1\nsen(x+30)°=cos(5y)°\n¿Cuál es la suma de ambas edades?",
+      "alternatives": [
+        "15 años",
+        "19 años",
+        "24 años",
+        "29 años",
+        "30 años"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-prueba.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver y dar la suma de las tres primeras soluciones positivas de:\n1+senx = 2sen 2 x",
+      "alternatives": [
+        "330°",
+        "630°",
+        "210°",
+        "90°",
+        "530°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el número de soluciones menores que 360° en:\ncsc 2 x = cotx + 1",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver : sen6x + sen2x = sen4x\ndar una solución.",
+      "alternatives": [
+        "60°",
+        "45°",
+        "30°",
+        "a y b",
+        "b y c"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver :\n(senx + cosx) 2 = 1 + cosx\nindicando la suma de las tres primeras soluciones positivas.",
+      "alternatives": [
+        "180°",
+        "270°",
+        "360°",
+        "450°",
+        "720°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver: 1 + cosx = 2sen 2 x ; indicando la suma de sus dos primeras soluciones positivas.",
+      "alternatives": [
+        "180º",
+        "120º",
+        "200º",
+        "240º",
+        "360º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver: sec 2 x = √3tanx + 1 ; indicando el número de soluciones positivas menores que una vuelta",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver: senx – √3cosx = 1 ; indicando el menor valor positivo que cumple.",
+      "alternatives": [
+        "30º",
+        "60º",
+        "90º",
+        "135º",
+        "180º"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve e indicar una solución Tgx + √3 Tg2x +3Tg2xTgx = √ 3",
+      "alternatives": [
+        "𝛑/9",
+        "𝛑/3",
+        "𝛑/5",
+        "𝛑/4",
+        "𝛑"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve e indica la menor solución positiva en:\n2Cos 2 x + 4Sen 2 x = 3",
+      "alternatives": [
+        "0°",
+        "30°",
+        "45°",
+        "60°",
+        "53°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica la menor solución positiva:\n1 + Sen 2 x = 7Cos 2 x",
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "53°",
+        "37°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve: Cosx – 1 = Cos2x",
+      "alternatives": [
+        "45°",
+        "60°",
+        "90°",
+        "80°",
+        "120°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve e indica las soluciones positivas menores de 360° para Tg2x + Secx = 1",
+      "alternatives": [
+        "0°, 120°, 240°",
+        "80°, 120°",
+        "0°, 60°, 120°",
+        "90°, 270°",
+        "30°, 60°, 90°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve e indica la menor solución positiva:\nCtg2x + Ctgx = 0",
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "75°",
+        "12°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve e indica la peor solución positiva en:\nSecx(1+ Cos2x) = 1",
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "75°",
+        "90°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve: Sen5x + Senx = Sen3x e indica como respuesta la suma de todas las soluciones positivas menores de 180°.",
+      "alternatives": [
+        "40°",
+        "180°",
+        "240°",
+        "300°",
+        "360°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve y dar una solución de:\nTgx + Tg2x + Tg4x = Tgx.Tg2x.Tg4x",
+      "alternatives": [
+        "𝛑/4",
+        "𝛑/6",
+        "𝛑/5",
+        "𝛑/7",
+        "1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES EN TRIGONOMETRÍA RESUELTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve:\nSen2x Sen6x = Sen3x Sen5x.\nIndicar un conjunto solución.",
+      "alternatives": [
+        "k𝛑",
+        "2k𝛑",
+        "k𝛑/5",
+        "k𝛑/7",
+        "k𝛑/8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES EN TRIGONOMETRÍA RESUELTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve: Tgx + Ctgx = – 4",
+      "alternatives": [
+        "105°",
+        "110°",
+        "120°",
+        "130°",
+        "140°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES EN TRIGONOMETRÍA RESUELTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve e indica un valor de “x” en:\nTg2x = 2Tgx",
+      "alternatives": [
+        "𝛑/4",
+        "𝛑/3",
+        "𝛑/2",
+        "𝛑/6",
+        "𝛑"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES EN TRIGONOMETRÍA RESUELTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve: Sen2x = Senx para valores de x menores que 360°.",
+      "alternatives": [
+        "0°, 45°, 90°, 180°",
+        "45°, 60°, 120°, 240°",
+        "30°, 60°, 120°, 240°",
+        "45°, 135°, 225°, 315",
+        "0°, 60°, 180°, 300°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES EN TRIGONOMETRÍA RESUELTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el arco positivo “x” más pequeño de modo que se cumpla:\n3Tg²x = 2Cos2x",
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "75°",
+        "15°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES EN TRIGONOMETRÍA RESUELTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación cos2t = cost describe el desplazamiento de un insecto, donde t denota el tiempo en segundos. ¿Cuál es el menor valor de t que satisface la ecuación?",
+      "alternatives": [
+        "2𝛑/5",
+        "4𝛑/3",
+        "2𝛑/3",
+        "2𝛑",
+        "4𝛑"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un laboratorio, se ha determinado que el desplazamiento de una partícula está modelada por la ecuación x(t)=4sen2t(sen2t–1) en centímetros, donde 0<t<3𝜋/4 denota el tiempo en segundos.\nDetermine el tiempo cuando el desplazamiento es de 3 cm.",
+      "alternatives": [
+        "𝜋/3",
+        "𝜋/12",
+        "5𝜋/12",
+        "7𝜋/12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/trigonometria-examen-pre-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EXAMEN RESUELTO DE ADMISIÓN UNIVERSIDAD"
     }
   ]
 }

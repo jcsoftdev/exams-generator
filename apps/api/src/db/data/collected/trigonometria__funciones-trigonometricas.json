@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle el rango de la siguiente función real con regla de correspondencia: f(x) = 2 + cos(x - 0.5π); π ≤ x ≤ 2π",
-      "alternatives": ["[0; 1]", "[0; 2]", "[1; 2]", "[1; 3]", "[2; 3]"],
+      "alternatives": [
+        "[0; 1]",
+        "[0; 2]",
+        "[1; 2]",
+        "[1; 3]",
+        "[2; 3]"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funciones-trigonometricas-reales-de.html",
       "sourceName": "matematicasn.blogspot.com - Funciones trigonométricas reales, dominio y rango, Problema 1"
@@ -17,7 +23,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si M y m son los valores máximo y mínimo, respectivamente, que puede tomar la expresión 16(sen²6x - sen²2x)cos4x - 1, determine M - m.",
-      "alternatives": ["5", "7", "6", "8"],
+      "alternatives": [
+        "5",
+        "7",
+        "6",
+        "8"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/02/trigonometria-examen-pre-universidad.html",
       "sourceName": "matematicasn.blogspot.com - Trigonometría examen resuelto de admisión universidad, Problema 2"
@@ -28,7 +39,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Determine el dominio de la función f definida por f(x) = sen(x) + cos(x - 1).",
-      "alternatives": ["ℝ", "ℝ - {1}", "ℝ - {-1}", "ℝ - {0}"],
+      "alternatives": [
+        "ℝ",
+        "ℝ - {1}",
+        "ℝ - {-1}",
+        "ℝ - {0}"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 1"
@@ -39,7 +55,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La edad de Edu es el triple de la edad de Pedro. Si la edad de Pedro está determinada por el mínimo valor que toma la función real f definida por f(t) = sec⁴(t) + csc⁴(t) en años, halle la edad de Edu.",
-      "alternatives": ["21 años", "18 años", "24 años", "27 años", "15 años"],
+      "alternatives": [
+        "21 años",
+        "18 años",
+        "24 años",
+        "27 años",
+        "15 años"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 2"
@@ -50,7 +72,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Indique qué valor NO pertenece al dominio de la función f definida por f(x) = sen(2x) + cos²(x) + tan(x).",
-      "alternatives": ["0", "π/6", "π/4", "3π/2"],
+      "alternatives": [
+        "0",
+        "π/6",
+        "π/4",
+        "3π/2"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 3"
@@ -61,7 +88,13 @@
       "gradeLevel": "medium",
       "difficulty": "medium",
       "bodyTypst": "En una ciudad la temperatura del día en grados centígrados está dada por T(t) = 10(ctg(πt/48) - ctg(πt/24)), donde t es el tiempo en horas, iniciando desde la medianoche. ¿A qué hora la temperatura será de 10 °C?",
-      "alternatives": ["10:00 am", "09:00 am", "11:00 am", "12:00 m", "08:00 am"],
+      "alternatives": [
+        "10:00 am",
+        "09:00 am",
+        "11:00 am",
+        "12:00 m",
+        "08:00 am"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 4"
@@ -72,7 +105,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine el rango de la función f definida por f(x) = sen(x)·cos(x) + 3.",
-      "alternatives": ["[-1/2; 1/2]", "[5/2; 7/2]", "[-1; 1]", "[-1; 2]"],
+      "alternatives": [
+        "[-1/2; 1/2]",
+        "[5/2; 7/2]",
+        "[-1; 1]",
+        "[-1; 2]"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 5"
@@ -83,7 +121,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El desplazamiento de una partícula está determinado por f(t) = csc²(t) - 2csc(t) + 6 metros, donde t ∈ [π/6; 2π/3]. ¿Cuál es la diferencia entre la máxima y mínima distancia?",
-      "alternatives": ["1 m", "2 m", "0,5 m", "1,5 m", "2,5 m"],
+      "alternatives": [
+        "1 m",
+        "2 m",
+        "0,5 m",
+        "1,5 m",
+        "2,5 m"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 6"
@@ -94,7 +138,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine el rango de la función f definida por f(x) = 2cos(x + 30°)cos(x - 30°).",
-      "alternatives": ["[-1/2; 3/2]", "[-2; 2]", "[-1; 1]", "[-2; 1/2]"],
+      "alternatives": [
+        "[-1/2; 3/2]",
+        "[-2; 2]",
+        "[-1; 1]",
+        "[-2; 1/2]"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 7"
@@ -105,7 +154,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una ciudad, la temperatura en °C está dada por T(t) = 3ctg²(t) + 5, con π ≤ t ≤ 5π. Calcule la diferencia entre la máxima y mínima temperatura en °C.",
-      "alternatives": ["11 °C", "7 °C", "8 °C", "10 °C", "9 °C"],
+      "alternatives": [
+        "11 °C",
+        "7 °C",
+        "8 °C",
+        "10 °C",
+        "9 °C"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 8"
@@ -116,7 +171,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Señale la secuencia correcta de verdad (V) o falsedad (F):\nI. La función f(x) = sen(x), en el intervalo ]0; π[, tiene un máximo valor.\nII. La función f(x) = sen(x) es creciente en el intervalo ]π/2; 3π/2[.\nIII. La función f(x) = sen(x) interseca al eje x en 3 puntos en el intervalo [0; 2π].",
-      "alternatives": ["VVV", "VFF", "FFF", "VFV"],
+      "alternatives": [
+        "VVV",
+        "VFF",
+        "FFF",
+        "VFV"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 9"
@@ -127,7 +187,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "La fuerza electromotriz (en voltios) aplicada a un circuito eléctrico está dada por E(t) = 110sec²(πt/4) + 2, donde t denota el tiempo en segundos y t ∈ [1; 2〉. ¿Cuál será la mínima fuerza electromotriz aplicada al circuito?",
-      "alternatives": ["225 voltios", "215 voltios", "210 voltios", "222 voltios", "220 voltios"],
+      "alternatives": [
+        "225 voltios",
+        "215 voltios",
+        "210 voltios",
+        "222 voltios",
+        "220 voltios"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 10"
@@ -138,7 +204,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La función real f definida por f(t) = 10csc(πt/8) describe la oscilación de una pesa en centímetros. Halle el periodo de f.",
-      "alternatives": ["15", "16", "14", "18", "13"],
+      "alternatives": [
+        "15",
+        "16",
+        "14",
+        "18",
+        "13"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 11"
@@ -149,7 +221,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un laboratorio de biología la función real P definida por P(t) = 5 + 3sec(πt/24) representa el número de bacterias en miles y t el tiempo en días. ¿Cuál es la población de bacterias al octavo día?",
-      "alternatives": ["13 000", "9 000", "10 000", "11 000", "12 000"],
+      "alternatives": [
+        "13 000",
+        "9 000",
+        "10 000",
+        "11 000",
+        "12 000"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 12"
@@ -160,7 +238,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si [c; d] es el rango de la función real f definida por f(x) = 2csc²(2x) + 4csc(2x) + 5 donde π < x ≤ 5π/12, halle c + d.",
-      "alternatives": ["30", "28", "32", "34", "29"],
+      "alternatives": [
+        "30",
+        "28",
+        "32",
+        "34",
+        "29"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 13"
@@ -171,7 +255,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Halle el rango de la función real f definida por f(x) = (sec(3x) + csc(3x) - 3)(sec(3x) + csc(3x) + 3).",
-      "alternatives": ["[-1; +∞〉", "[-8; +∞〉", "[-9; +∞〉", "[9; +∞〉", "〈-∞; -9]"],
+      "alternatives": [
+        "[-1; +∞〉",
+        "[-8; +∞〉",
+        "[-9; +∞〉",
+        "[9; +∞〉",
+        "〈-∞; -9]"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
       "sourceName": "matematicasn.blogspot.com - Funciones Trigonométricas Ejercicios Resueltos PDF, Pregunta 14"
@@ -182,7 +272,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea la función real f definida por f(x) = √2 · sen(0,5π · cos(x)) donde 0 ≤ x ≤ 2π/3. Halle el mínimo valor de f.",
-      "alternatives": ["-√2", "-1/2", "-1", "-1/4"],
+      "alternatives": [
+        "-√2",
+        "-1/2",
+        "-1",
+        "-1/4"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grafica-de-la-funcion-coseno-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Función Coseno Ejercicios Resueltos de Dominio Rango Periodo, Pregunta 3"
@@ -193,7 +288,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sea la función real f definida por f(x) = cos(3x) + 8cos²(x)·sen²(x/2) + 3cos(x). Halle el rango de f.",
-      "alternatives": ["[2; 8]", "[1; 4]", "[0; 4]", "[1; 2]"],
+      "alternatives": [
+        "[2; 8]",
+        "[1; 4]",
+        "[0; 4]",
+        "[1; 2]"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grafica-de-la-funcion-coseno-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Función Coseno Ejercicios Resueltos de Dominio Rango Periodo, Pregunta 4"
@@ -204,7 +304,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea la función real f definida por f(x) = 1 - 2cos(2x) donde π/3 ≤ x < π/2. Si la edad de Bryan es (a + 12) años, siendo a el mínimo valor de f(x), halle la edad de Bryan.",
-      "alternatives": ["16 años", "11 años", "18 años", "14 años"],
+      "alternatives": [
+        "16 años",
+        "11 años",
+        "18 años",
+        "14 años"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grafica-de-la-funcion-coseno-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Función Coseno Ejercicios Resueltos de Dominio Rango Periodo, Pregunta 5"
@@ -215,7 +320,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Señale la variación de la expresión: A = 2sen(x) + 3, para x ∈ ℝ.",
-      "alternatives": ["[1; 5]", "[2; 6]", "[1; 6〉", "〈1; 5〉", "〈1; 5]"],
+      "alternatives": [
+        "[1; 5]",
+        "[2; 6]",
+        "[1; 6〉",
+        "〈1; 5〉",
+        "〈1; 5]"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 9"
@@ -226,7 +337,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Señale la variación de la expresión: B = 5cos(θ) - 1, para θ ∈ ℝ.",
-      "alternatives": ["[-6; -4]", "[3; 2〉", "[-3; 4〉", "〈6; 4]", "[-6; 4]"],
+      "alternatives": [
+        "[-6; -4]",
+        "[3; 2〉",
+        "[-3; 4〉",
+        "〈6; 4]",
+        "[-6; 4]"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 10"
@@ -237,7 +354,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Señale la extensión (rango) de la expresión: M = 3 - 2sen(θ), para θ ∈ ℝ.",
-      "alternatives": ["〈1; 6]", "〈1; 5]", "[1; 5]", "〈1; 5〉", "[3; 5〉"],
+      "alternatives": [
+        "〈1; 6]",
+        "〈1; 5]",
+        "[1; 5]",
+        "〈1; 5〉",
+        "[3; 5〉"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 11"
@@ -248,7 +371,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Señale la extensión (rango) de la expresión: N = 4 - 3cos(β), para β ∈ ℝ.",
-      "alternatives": ["[1; 8]", "〈1; 7]", "[1; 5]", "[1; 7]", "〈0; 6]"],
+      "alternatives": [
+        "[1; 8]",
+        "〈1; 7]",
+        "[1; 5]",
+        "[1; 7]",
+        "〈0; 6]"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 12"
@@ -259,7 +388,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Halle la variación (rango) de la siguiente expresión: P = sen²(x) + 4, para x ∈ ℝ.",
-      "alternatives": ["[4; 5]", "[3; 4]", "[1; 4]", "[0; 5]"],
+      "alternatives": [
+        "[4; 5]",
+        "[3; 4]",
+        "[1; 4]",
+        "[0; 5]"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 13"
@@ -270,7 +404,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Halle la suma del valor máximo y mínimo de la expresión: P = 3sen(x) - 2, para x ∈ ℝ.",
-      "alternatives": ["-2", "-3", "2", "3", "-4"],
+      "alternatives": [
+        "-2",
+        "-3",
+        "2",
+        "3",
+        "-4"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 14"
@@ -281,7 +421,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle la variación de la expresión P = 6 - 2cos(x), si x ∈ [π/3; 2π/3].",
-      "alternatives": ["[4; 7]", "[5; 7]", "[5; 8]", "[-4; 7]"],
+      "alternatives": [
+        "[4; 7]",
+        "[5; 7]",
+        "[5; 8]",
+        "[-4; 7]"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 15"
@@ -292,7 +437,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Sume el valor máximo y el mínimo de la expresión: W = 7 - 4cos(x), para x ∈ ℝ.",
-      "alternatives": ["11", "8", "13", "6", "14"],
+      "alternatives": [
+        "11",
+        "8",
+        "13",
+        "6",
+        "14"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 16"
@@ -303,7 +454,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sabiendo que θ pertenece al II cuadrante, señale la variación de: H = 3sen(θ) - 1.",
-      "alternatives": ["〈0; 3〉", "〈-1; 3〉", "〈-1; 2〉", "〈-1; 3〉", "〈-2; 1〉"],
+      "alternatives": [
+        "〈0; 3〉",
+        "〈-1; 3〉",
+        "〈-1; 2〉",
+        "〈-1; 3〉",
+        "〈-2; 1〉"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 17"
@@ -314,7 +471,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle la variación de la siguiente expresión: M = cos²(Φ) + 2cos(Φ) + 1, para Φ ∈ ℝ.",
-      "alternatives": ["[-1; 4]", "[0; 2]", "[-1; 2]", "[0; 4]"],
+      "alternatives": [
+        "[-1; 4]",
+        "[0; 2]",
+        "[-1; 2]",
+        "[0; 4]"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 18"
@@ -325,7 +487,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sabiendo que θ pertenece al III cuadrante, señale la variación de: M = 2 - 3cos(θ).",
-      "alternatives": ["〈2; 5〉", "〈2; 3〉", "〈1; 2〉", "〈1; 3〉", "〈-1; 1〉"],
+      "alternatives": [
+        "〈2; 5〉",
+        "〈2; 3〉",
+        "〈1; 2〉",
+        "〈1; 3〉",
+        "〈-1; 1〉"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 19"
@@ -336,7 +504,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle la suma de todos los valores enteros de n para los que se cumple que sen(Φ) = (3n - 5)/8 tiene solución (Φ ∈ ℝ).",
-      "alternatives": ["7", "8", "9", "10"],
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 20"
@@ -347,7 +520,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sume el valor máximo y el mínimo de: T = sen²(x) + sen(x) + 1, para x ∈ ℝ.",
-      "alternatives": ["9/4", "7/4", "2", "7", "15/4"],
+      "alternatives": [
+        "9/4",
+        "7/4",
+        "2",
+        "7",
+        "15/4"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 21"
@@ -358,7 +537,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Señale la variación de la expresión: B = sen(2sen(x) + 1), para x ∈ ℝ.",
-      "alternatives": ["〈sen(4); 3]", "[sen(3); 1]", "[-8; sen(3)]", "[0; sen(3)]", "〈sen(3); 1〉"],
+      "alternatives": [
+        "〈sen(4); 3]",
+        "[sen(3); 1]",
+        "[-8; sen(3)]",
+        "[0; sen(3)]",
+        "〈sen(3); 1〉"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 22"
@@ -369,7 +554,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sume el valor máximo y el mínimo de: A = 3sen(α) + 2cos(β) - sen(θ), siendo α, β y θ variables independientes.",
-      "alternatives": ["2", "12", "6", "-1", "0"],
+      "alternatives": [
+        "2",
+        "12",
+        "6",
+        "-1",
+        "0"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Primera Práctica Pregunta 23"
@@ -380,7 +571,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Halla la suma de los valores máximo y mínimo de la función f(x) = 5 + sen(5x + 1), para x ∈ ℝ.",
-      "alternatives": ["10", "5", "4", "9", "0"],
+      "alternatives": [
+        "10",
+        "5",
+        "4",
+        "9",
+        "0"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Segunda Práctica Pregunta 5"
@@ -391,7 +588,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halla el máximo valor de la expresión: E = (2 - sen(x))² + (3 + cos(y))², siendo x e y independientes.",
-      "alternatives": ["13", "15", "18", "27", "25"],
+      "alternatives": [
+        "13",
+        "15",
+        "18",
+        "27",
+        "25"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Segunda Práctica Pregunta 7"
@@ -402,7 +605,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcula el producto A·B, donde A y B son los valores máximo y mínimo, respectivamente, de la expresión k = 5 - 3cos(x), para x ∈ ℝ.",
-      "alternatives": ["-15", "-6", "8", "15", "16"],
+      "alternatives": [
+        "-15",
+        "-6",
+        "8",
+        "15",
+        "16"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
       "sourceName": "matematicasn.blogspot.com - Circunferencia Trigonométrica Ejercicios Resueltos, Segunda Práctica Pregunta 13"
@@ -413,7 +622,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle el rango de la función F(x) = sen²(x) + 2sen(x) + π.",
-      "alternatives": ["[π; π+3]", "[π-1; π+2]", "[π-1; π+4]", "[π+1; π+3]", "[π-1; π+3]"],
+      "alternatives": [
+        "[π; π+3]",
+        "[π-1; π+2]",
+        "[π-1; π+4]",
+        "[π+1; π+3]",
+        "[π-1; π+3]"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicaj.blogspot.com/2020/03/trigonometria-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
       "sourceName": "matematicaj.blogspot.com - Trigonometría Preguntas del Examen de Admisión Universidad Resueltas con Claves, Pregunta 6"
@@ -424,7 +639,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Siendo A la amplitud y T el periodo de la función f(x) = 0,5sen(4x - 0,25π), determine el valor de A · T.",
-      "alternatives": ["π/2", "π/3", "π/4", "π/6", "π/8"],
+      "alternatives": [
+        "π/2",
+        "π/3",
+        "π/4",
+        "π/6",
+        "π/8"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/01/funcion-seno-coseno-tangente-rango.html",
       "sourceName": "matematicasn.blogspot.com - Función Seno Coseno Tangente Rango, Problema 1"
@@ -435,7 +656,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La función real f(x) = A · sen(ωx) tiene periodo 3π y rango [-5; 5]. La regla de correspondencia de f es:",
-      "alternatives": ["f(x) = 5sen(2x/3)", "f(x) = 10sen(9x)", "f(x) = 10sen(3πx)", "f(x) = 5sen(5x/2)"],
+      "alternatives": [
+        "f(x) = 5sen(2x/3)",
+        "f(x) = 10sen(9x)",
+        "f(x) = 10sen(3πx)",
+        "f(x) = 5sen(5x/2)"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.todamateria.com/problemas-de-funciones-trigonometricas-ejercicios-resueltos/",
       "sourceName": "todamateria.com - Ejercicios de Funciones Trigonométricas, Ejercicio 2"
@@ -446,7 +672,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El valor máximo de la función real f(x) = 1 / (2 + cos(x)) es:",
-      "alternatives": ["1/3", "1/2", "1", "3"],
+      "alternatives": [
+        "1/3",
+        "1/2",
+        "1",
+        "3"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.todamateria.com/problemas-de-funciones-trigonometricas-ejercicios-resueltos/",
       "sourceName": "todamateria.com - Ejercicios de Funciones Trigonométricas, Ejercicio 6"
@@ -457,7 +688,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las intersecciones de las gráficas de f(x) = sen(x) y g(x) = cos(x) ocurren en puntos P(xk, yk) para cada entero k. Los posibles valores de yk son:",
-      "alternatives": ["√2/2 y -√2/2", "√2/3 y -√2/3", "√3/2 y -√3/2", "√3/3 y -√3/3"],
+      "alternatives": [
+        "√2/2 y -√2/2",
+        "√2/3 y -√2/3",
+        "√3/2 y -√3/2",
+        "√3/3 y -√3/3"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.todamateria.com/problemas-de-funciones-trigonometricas-ejercicios-resueltos/",
       "sourceName": "todamateria.com - Ejercicios de Funciones Trigonométricas, Ejercicio 7"
@@ -468,10 +704,285 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule el rango de: y = 5sen(x) - 4, para x ∈ ℝ.",
-      "alternatives": ["[-10; 2]", "[-9; 1]", "[-8; 0]", "[-7; -1]", "[-6; -2]"],
+      "alternatives": [
+        "[-10; 2]",
+        "[-9; 1]",
+        "[-8; 0]",
+        "[-7; -1]",
+        "[-6; -2]"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funciones-trigonometricas-reales-de.html",
       "sourceName": "matematicasn.blogspot.com - Dominio y Rango de una Función Trigonométrica, Ejercicio 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la suma del mínimo y máximo valor de la función:\ny = sen²x + 2senx + 3 ; ∀ x ∈ ℜ",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/trigonometria-unc-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el periodo de la siguiente función real:\nh(x) = 5sen ⁶ (4x + 𝛑/3)",
+      "alternatives": [
+        "𝛑/3",
+        "2 𝛑/3",
+        "𝛑/4",
+        "𝛑/2",
+        "𝛑"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/trigonometria-unc-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el periodo de la siguiente función real:\nh(x) = sen2x + cos3x + cos5x",
+      "alternatives": [
+        "𝛑",
+        "2 𝛑",
+        "2 𝛑/3",
+        "2 𝛑/5",
+        "3 𝛑"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/trigonometria-unc-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El proceso rítmico de respiración consiste en intervalos alternos de inhalación y exhalación. Según estudios realizados, un ciclo completo dura 5 segundos. Si la función f(t)= asenbt modela el volumen de la circulación del aire en el instante t en litros por segundo y si el volumen máximo es 0,6 litros por segundo, determine el valor de 10a + 10𝜋b−¹",
+      "alternatives": [
+        "30",
+        "29",
+        "32",
+        "28"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-trigonometria-semana-15.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La presión sanguínea de una persona en milímetros de mercurio se modela por la función p(t)=20sen(At) + 100, donde t es el tiempo en segundos y A > 0. Si la presión sanguínea oscila entre 80 y 120 milímetros por segundo; además tiene un periodo de 1 segundo, halle el tiempo en el que la presión sanguínea fue mínima durante el primer segundo.",
+      "alternatives": [
+        "0,75 s",
+        "0,60 s",
+        "0,90 s",
+        "0,50 s"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-trigonometria-semana-15.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La función f α : ℝ + → ℝ , definida por f α (x)=tanαx, donde α es un parámetro entero positivo, representa el cambio de temperatura de un cuerpo. Se requiere saber la suma de los valores de x sobre el intervalo ] 𝛑/4;4 𝛑/3 [ donde no es posible definir la siguiente expresión:\nf 1 (x) + f 2 (x) + f 3 (x)",
+      "alternatives": [
+        "9 𝛑/2",
+        "11 𝛑/2",
+        "11 𝛑 /6",
+        "14 𝛑 /3",
+        "9 𝛑 /3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/trigonometria-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el mínimo valor de\nE=4senx– √ 2cos(45°–x)",
+      "alternatives": [
+        "– √ 13",
+        "– √ 11",
+        "– 10",
+        "– √ 2",
+        "– 1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-prueba.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una ciudad la temperatura del día en grados centígrados está dada por la función T definida por\nT(t) = 10( ctg ( 𝛑 t/48) − ctg ( 𝛑 t/24) ) , donde t es el tiempo en horas. Si el registro de la temperatura se inicia desde la medianoche, ¿a qué hora la temperatura será de 10 °C ?.",
+      "alternatives": [
+        "10 : 00am",
+        "09 : 00am",
+        "11: 00am",
+        "12 : 00m",
+        "08 : 00am"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El desplazamiento de una partícula está determinada por la función real f definida por\nf(t) = csc 2 t −2csct + 6 en metros, donde t denota el tiempo en minutos tal que t∈ [ 𝛑/6;2 𝛑/3 ] .\n¿Cuál es la diferencia entre la máxima y mínima distancia que se puede alejar la partícula con respecto al eje horizontal?",
+      "alternatives": [
+        "1 m",
+        "2 m",
+        "0,5 m",
+        "1,5 m",
+        "2,5 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una ciudad, la temperatura del día en °C está dada por la función real T definida\nT(t) = 3ctg 2 t + 5, 𝛑 ≤t ≤5 𝛑 , donde t es el tiempo en horas.\nCalcule la diferencia entre la máxima y mínima temperatura en °C.",
+      "alternatives": [
+        "11 °C",
+        "7 °C",
+        "8 °C",
+        "10 °C",
+        "9 °C"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la secuencia correcta de verdad (V) o falsedad (F) según corresponda.\nI. La función f (x) =senx, en el intervalo 〈0; 𝛑 〉 tiene un máximo valor.\nII. La función f (x) =senx es creciente en el intervalo ] 𝛑/2 ;3 𝛑/2 [\nIII. La función f (x) =senx interseca al eje x en 3 puntos en el intervalo [0;2 𝛑 ].",
+      "alternatives": [
+        "VVV",
+        "VFF",
+        "FFF",
+        "VFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La función real f definida por\nf(t)=10csc ( 𝛑 t/8) describe la oscilación de una pesa en centímetros, donde t denota el tiempo en segundos. Halle el periodo de f.",
+      "alternatives": [
+        "15",
+        "16",
+        "14",
+        "18",
+        "13"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la suma del mínimo y máximo valor de la función:\ny = sen 2 x + 2senx + 3 ; ∀ x ∈ ℝ",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el periodo de la siguiente función real:\nh(x) = 5sen 6 (4x+ 𝛑/3)",
+      "alternatives": [
+        "𝛑/3",
+        "2 𝛑/3",
+        "𝛑/4",
+        "𝛑/2",
+        "𝛑"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El proceso rítmico de la respiración consiste en periodos alternantes de inhalación y exhalación. Cada 5 segundos se lleva a cabo un ciclo completo (inhalación y exhalación). Si F(t)=asen(bt) representa el flujo de aire en el tiempo t (en litros por segundo) y si la máxima intensidad de flujo de aire es de 0,6 litros/s , obtenga una fórmula que represente este proceso.",
+      "alternatives": [
+        "F(t)=0,6sen(πt/5)",
+        "F(t)=6sen(πt/9)",
+        "F(t)=5sen(πt/3)",
+        "F(t)=4sen(πt/3)",
+        "F(t)=0,6sen(2πt/5)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el distrito de Ayaviri de la ciudad de Puno la temperatura T expresado en grados centígrados está descrito por la función T(t)=3sent+4cost+8\nCalcule la diferencia de temperaturas máximo y mínimo en ese distrito.",
+      "alternatives": [
+        "10°C",
+        "15°C",
+        "20°C",
+        "40°C",
+        "12°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-trigonometria-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE TRIGONOMETRÍA RUBIÑOS 2027 DESCARGA GRATIS PDF"
     }
   ]
 }

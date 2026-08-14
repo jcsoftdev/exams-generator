@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En el Sistema Internacional existen ____ magnitudes fundamentales.",
-      "alternatives": ["5", "3", "7", "2", "9"],
+      "alternatives": [
+        "5",
+        "3",
+        "7",
+        "2",
+        "9"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/02/ecuaciones-dimensionales-principio-de.html",
       "sourceName": "Matematicasn - Ecuaciones dimensionales, ejercicios resueltos de ingreso a la universidad, Ejercicio 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Inicialmente las tres magnitudes básicas eran:",
-      "alternatives": ["masa, temperatura, tiempo", "metro, temperatura, intensidad de corriente", "masa, longitud, temperatura", "masa, longitud, tiempo", "longitud, temperatura, cantidad de sustancia"],
+      "alternatives": [
+        "masa, temperatura, tiempo",
+        "metro, temperatura, intensidad de corriente",
+        "masa, longitud, temperatura",
+        "masa, longitud, tiempo",
+        "longitud, temperatura, cantidad de sustancia"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/02/ecuaciones-dimensionales-principio-de.html",
       "sourceName": "Matematicasn - Ecuaciones dimensionales, ejercicios resueltos de ingreso a la universidad, Ejercicio 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Indicar cuál no es magnitud fundamental en el Sistema Internacional.",
-      "alternatives": ["masa", "longitud", "tiempo", "velocidad", "temperatura"],
+      "alternatives": [
+        "masa",
+        "longitud",
+        "tiempo",
+        "velocidad",
+        "temperatura"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/02/ecuaciones-dimensionales-principio-de.html",
       "sourceName": "Matematicasn - Ecuaciones dimensionales, ejercicios resueltos de ingreso a la universidad, Ejercicio 3"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Indique la unidad que no corresponde a las magnitudes fundamentales del S.I.",
-      "alternatives": ["kilogramo", "ampere", "segundo", "watts", "metro"],
+      "alternatives": [
+        "kilogramo",
+        "ampere",
+        "segundo",
+        "watts",
+        "metro"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/02/ecuaciones-dimensionales-principio-de.html",
       "sourceName": "Matematicasn - Ecuaciones dimensionales, ejercicios resueltos de ingreso a la universidad, Ejercicio 7"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una ley física es correcta si es dimensionalmente homogénea, es decir, si todos sus términos (sumandos) tienen la misma dimensión. Conforme a esta propiedad, ¿cuál o cuáles de las siguientes afirmaciones son correctas?\n\nI. La dimensión de la ecuación que expresa una ley física es igual a un monomio de las dimensiones de las magnitudes fundamentales.\nII. Esta propiedad de la homogeneidad de la ecuación de una ley física dificulta la detección de errores de cálculo.\nIII. Cada término de una ley física es un monomio de las dimensiones de las magnitudes fundamentales, por lo tanto, es una magnitud derivada.",
-      "alternatives": ["solo III", "I y III", "solo II", "I y II", "solo I"],
+      "alternatives": [
+        "solo III",
+        "I y III",
+        "solo II",
+        "I y II",
+        "solo I"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
       "sourceName": "Matematicasn - Física admisión San Marcos simulacro resuelto, Pregunta de homogeneidad dimensional"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La corriente de un río tiene una velocidad de 12 m/s. Si un alumno cruza perpendicularmente el río con una velocidad de 5 m/s, ¿cuál será el valor de la velocidad resultante?",
-      "alternatives": ["17 m/s", "7 m/s", "15 m/s", "13 m/s", "12 m/s"],
+      "alternatives": [
+        "17 m/s",
+        "7 m/s",
+        "15 m/s",
+        "13 m/s",
+        "12 m/s"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejemplos-ejercicios-problemas-resueltos-de-fisica-secundaria-preuniversitaria-examen-admision-universidad-word-pdf.html",
       "sourceName": "Matematicasn - Análisis vectorial, ejercicios resueltos de ingreso a la universidad, Ejercicio 5"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un paracaidista salta y cae verticalmente por acción de su peso igual a 600 N. Al abrir el paracaídas, el aire ejerce una fuerza sobre el paracaídas de 1000 N en dirección vertical y hacia arriba. ¿Cuál es el valor de la fuerza resultante sobre el paracaidista en dicho instante?",
-      "alternatives": ["1600 N", "1400 N", "400 N", "600 N", "800 N"],
+      "alternatives": [
+        "1600 N",
+        "1400 N",
+        "400 N",
+        "600 N",
+        "800 N"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejemplos-ejercicios-problemas-resueltos-de-fisica-secundaria-preuniversitaria-examen-admision-universidad-word-pdf.html",
       "sourceName": "Matematicasn - Análisis vectorial, ejercicios resueltos de ingreso a la universidad, Ejercicio 6"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dos vectores tienen una resultante mínima que vale 4 y una resultante máxima igual a 16. ¿Cuál es la resultante de estos vectores cuando forman 60°?",
-      "alternatives": ["7", "9", "14", "5", "12"],
+      "alternatives": [
+        "7",
+        "9",
+        "14",
+        "5",
+        "12"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejemplos-ejercicios-problemas-resueltos-de-fisica-secundaria-preuniversitaria-examen-admision-universidad-word-pdf.html",
       "sourceName": "Matematicasn - Análisis vectorial, ejercicios resueltos de ingreso a la universidad, Ejercicio 7"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un bote a motor se dirige hacia el este con una velocidad de 10 m/s. Si la corriente marina mantiene una velocidad de 6 m/s en la dirección N30°E, ¿cuál será el valor de la velocidad resultante del bote?",
-      "alternatives": ["16 m/s", "15 m/s", "14 m/s", "12 m/s", "11 m/s"],
+      "alternatives": [
+        "16 m/s",
+        "15 m/s",
+        "14 m/s",
+        "12 m/s",
+        "11 m/s"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejemplos-ejercicios-problemas-resueltos-de-fisica-secundaria-preuniversitaria-examen-admision-universidad-word-pdf.html",
       "sourceName": "Matematicasn - Análisis vectorial, ejercicios resueltos de ingreso a la universidad, Ejercicio 8"
@@ -105,10 +159,1438 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La resultante máxima de dos vectores es 40 N y su resultante mínima es cero. Determine el módulo del vector resultante cuando forman un ángulo de 120°.",
-      "alternatives": ["20√3 N", "20 N", "40 N", "40√3 N", "60 N"],
+      "alternatives": [
+        "20√3 N",
+        "20 N",
+        "40 N",
+        "40√3 N",
+        "60 N"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://razonamientopdf.blogspot.com/p/fisica-solucionario-admision-universidad.html",
       "sourceName": "Razonamientopdf - Física de examen admisión universidad, prueba de autoevaluación con claves, Vectores resultante"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos vectores concurrentes tienen módulos de 3 y 5 unidades. Si el módulo del vector resultante es 7, determinar el ángulo que forman los vectores.",
+      "alternatives": [
+        "30°",
+        "45°",
+        "53°",
+        "60°",
+        "90°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/vectores-ejercicios-para-resolver-con-respuestas-de-secundaria-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VECTORES EJERCICIOS CON RESPUESTAS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la siguiente ecuación: x= L ÷ ( v.f ) , donde: L es calor latente específico, v es velocidad lineal y f es frecuencia. Según la teoría del análisis dimensional, determinar la fórmula. dimensional de la variable x y la magnitud física que representaría.",
+      "alternatives": [
+        "[x]= L² ; área",
+        "[x]= L ; longitud",
+        "[x]= LT − ¹ ; velocidad",
+        "[x]= L² MT − ² ; calor",
+        "[x]= θ ; temperatura"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La resultante máxima de dos vectores es 40N y su resultante mínima es cero. Determine el módulo del vector resultante cuando forman un ángulo de 120°.",
+      "alternatives": [
+        "20√3N",
+        "20N",
+        "40N",
+        "40√3N",
+        "60N"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-examen-admision-agraria-unalm-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la fórmula dimensional de W si:\nW= Fd\ndonde:\nF: fuerza",
+      "alternatives": [
+        "L 3 MT –2",
+        "ML 3 T",
+        "TL 2",
+        "distancia",
+        "ML 2 T –2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la fórmula dimensional de x en:\nx= vt 2\ndonde:\nv: velocidad\nt: tiempo",
+      "alternatives": [
+        "LT –1",
+        "LT –2",
+        "LT –3",
+        "LT",
+        "L 2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta de verdadero (V) o falso (F).\nI) Las magnitudes escalares tienen dirección.\nII) La suma vectorial, es una suma numérica.\nIII) La suma de una magnitud escalar con una magnitud vectorial da por resultado una magnitud escalar.",
+      "alternatives": [
+        "FFV",
+        "FFF",
+        "FVV",
+        "VVV",
+        "VVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/ecuaciones-formulas-dimensionales.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS DIMENSIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El módulo del vector resultante es √10u . Calcular el ángulo que forman entre sí, siendo los vectores 2u y √2u .",
+      "alternatives": [
+        "16°",
+        "30°",
+        "37°",
+        "45°",
+        "75°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejercicios-resueltos-de-fisica-de-secundaria-formulas-metodos-ejemplos-operaciones-examen-prueba-con-claves-respuestas-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VECTORES EN SECUNDARIA EJEMPLOS Y PROBLEMAS RESUELTOS FÓRMULAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ácido perclórico (HCℓ O 4 ) pertenece al grupo de los ácidos oxidantes fuertes; es muy corrosivo por lo que se debe manipular con extremo cuidado. La densidad de este ácido es 1,768 g/cm³, su punto de ebullición es 203°C y su punto de fusión es – 18°C. Es soluble en agua y en concentraciones superiores al 72% (mayor a 12,18 mol/L), puede resultar explosivo.\nAl respecto, seleccione la(s) proposiciones correctas(s).\nI) La concentración medida en mol/L, corresponde a una magnitud básica.\nII) La densidad es considerada como magnitud derivada, en el SI se mide en kg/m³.\nIII) En unidades SI, la diferencia de temperaturas entre ebullición y fusión es 221 K.",
+      "alternatives": [
+        "I y III",
+        "Solo II",
+        "II y III",
+        "Solo III",
+        "Solo I"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/examen-admision-san-marcos-2015-i.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el movimiento de un bote sobre agua, se ha determinado que la fuerza de resistencia que ejerce el agua sobre el bote es proporcional a su velocidad. Determine la ecuación dimensional de la constante de proporcionalidad.",
+      "alternatives": [
+        "LT –2",
+        "LT –1",
+        "MLT –2",
+        "MLT –1",
+        "MT –1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/tercera-prueba-examen-uni-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I TERCERA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las coordenadas de tres puntos en el espacio son A(3;4;5)m ; B(6;7; 8)m y C(–5;4;10)m.\n¿Cuál es aproximadamente el área del triángulo (en m²) formado al unir estos tres puntos?",
+      "alternatives": [
+        "18",
+        "21",
+        "24",
+        "26",
+        "29"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/producto-vectorial-ejemplos-y-ejercicios-resueltos-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — PRODUCTO VECTORIAL EJEMPLOS Y  EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la siguiente relación de magnitudes físicas, ¿cuántas son escalares y vectoriales, respectivamente?\n• densidad\n• fuerza de tensión tiempo velocidad\n• trabajo aceleración",
+      "alternatives": [
+        "5; 1",
+        "4; 2",
+        "5; 2",
+        "3; 3",
+        "1; 5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/Analisis-dimensional-formulas-principio-de-homogeneidad-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ANÁLISIS DIMENSIONAL FÓRMULAS EJEMPLOS Y EJERCICIOS RESUELTOS DE FÍSICA BÁSICA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes magnitudes físicas no es fundamental en el Sistema Internacional (SI)?",
+      "alternatives": [
+        "área",
+        "tiempo",
+        "longitud",
+        "temperatura",
+        "masa"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/Analisis-dimensional-formulas-principio-de-homogeneidad-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ANÁLISIS DIMENSIONAL FÓRMULAS EJEMPLOS Y EJERCICIOS RESUELTOS DE FÍSICA BÁSICA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la masa y al peso de un objeto, califique cada proposición como verdadera (V) o falsa (F):\nI) La masa es una magnitud escalar y el peso es una magnitud vectorial.\nII) Obtenemos el mismo valor al medir la masa del objeto en diferentes puntos de la Tierra, lo que no sucede con el peso.\nIII) El peso de un objeto se mide con una balanza.\nIV) La unidad de la masa, en el Sistema Internacional, es el gramo.\nV) El peso de un objeto en la Luna es menor que en la Tierra.",
+      "alternatives": [
+        "VFFVV",
+        "FFVVF",
+        "FVFFV",
+        "VVVFF",
+        "VVFFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/examen-admision-unsa-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNSA 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE SAN AGUSTIN DE AREQUIPA 2026 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los vectores A y B tienen magnitudes de 4m y 5m respectivamente. Si su producto escalar es 12 m 2 , determine la magnitud del producto vectorial (en m 2 ) de estos vectores.",
+      "alternatives": [
+        "10",
+        "12",
+        "20",
+        "16",
+        "25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/resolucion-de-sistemas-de-ecuaciones.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-1 TERCERA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DESARROLLO DE FÍSICA QUÍMICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No es una magnitud vectorial:",
+      "alternatives": [
+        "fuerza",
+        "velocidad",
+        "aceleración",
+        "longitud",
+        "desplazamiento"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar verdadero (V) o falso (F) según corresponda.\nI) La velocidad es una magnitud vectorial ( )\nII) La rapidez es el módulo de la velocidad. ( )\nIII) La velocidad y la rapidez son iguales. ( )",
+      "alternatives": [
+        "VVV",
+        "FVF",
+        "VVF",
+        "VFF",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las magnitudes físicas, indique cual si es fundamental.",
+      "alternatives": [
+        "área",
+        "energía",
+        "velocidad",
+        "temperatura",
+        "presión"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/ecuaciones-formulas-dimensionales.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS DIMENSIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la veracidad (V) o falsedad (F) de las siguientes proposiciones.\nI) Para medir la fuerza de atracción de la Tierra, es necesario especificar la dirección.\nII) Las magnitudes escalares requieren modulo y dirección.\nIII) El tiempo transcurre en una determinada dirección.",
+      "alternatives": [
+        "VVV",
+        "VFF",
+        "VFV",
+        "FFV",
+        "FVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/ecuaciones-formulas-dimensionales.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS DIMENSIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la siguiente relación de magnitudes físicas, ¿Cuántas son escalares?\n• Fuerza\n• Temperatura\n• Tiempo\n• Desplazamiento\n• Densidad",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/ecuaciones-formulas-dimensionales.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS DIMENSIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la siguiente lista de magnitudes, señale cuantos son vectoriales.\n• Temperatura\n• desplazamiento\n• Aceleración\n• fuerza\n• Energía\n• densidad\n• Velocidad\n• volumen",
+      "alternatives": [
+        "2",
+        "6",
+        "5",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/ecuaciones-formulas-dimensionales.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS DIMENSIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación mostrada es dimensionalmente correcta.\nDetermine la magnitud A.\nP=AB\nDonde: P es N.s y B es m/s.",
+      "alternatives": [
+        "tiempo",
+        "longitud",
+        "masa",
+        "fuerza",
+        "aceleración"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/ecuaciones-formulas-dimensionales.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS DIMENSIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación mostrada es dimensionalmente correcta.\nDetermine x.\nA=KB C x\nDonde: A es longitud (m), K es un número, B es aceleración (m/s²)",
+      "alternatives": [
+        "tiempo",
+        "1",
+        "longitud",
+        "2",
+        "masa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/ecuaciones-formulas-dimensionales.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS DIMENSIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el valor de la siguiente expresión x+y+z, si la ecuación\nP=ρ x g y h z es dimensionalmente correcta.\ndonde:\nP=presión\nρ=densidad\ng=aceleración de la gravedad\nh=profundidad",
+      "alternatives": [
+        "4",
+        "3",
+        "8",
+        "2",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/ecuaciones-formulas-dimensionales.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS DIMENSIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La magnitud de dos vectores están en relación de 4 a 3, si la resultante máxima de los dos vectores es 14 u; determine la nueva resultante cuando estos vectores formen 60° entre sí.",
+      "alternatives": [
+        "37√2 u",
+        "3√37 u",
+        "10 u",
+        "2√37 u",
+        "5√3 u"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/metodo-del-paralelogramo-ejemplos-ejercicios-resueltos-pdf-formula-para-calcular-vector-resultante-y-diferencia-suma-y-resta-de-vectores-fisica-word-doc.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DEL PARALELOGRAMO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. Un vector se puede descomponer solo en dos componentes.\nII. Todo vector se puede rotar pero no trasladar.\nIII. La resultante de dos vectores no nulos es máxima cuando son antiparalelos.",
+      "alternatives": [
+        "FFF",
+        "VFV",
+        "FVF",
+        "VFF",
+        "FFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/metodo-del-paralelogramo-ejemplos-ejercicios-resueltos-pdf-formula-para-calcular-vector-resultante-y-diferencia-suma-y-resta-de-vectores-fisica-word-doc.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DEL PARALELOGRAMO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a las propiedades de los vectores, indique la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. La suma de un conjunto de vectores no nulos podría dar como resultado un vector nulo.\nII. Dos vectores son paralelos si tienen la misma dirección.\nIII. La resultante de dos vectores no nulos es máxima cuando son perpendiculares.",
+      "alternatives": [
+        "VFV",
+        "VVF",
+        "VVV",
+        "FFF",
+        "VFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/metodo-del-paralelogramo-ejemplos-ejercicios-resueltos-pdf-formula-para-calcular-vector-resultante-y-diferencia-suma-y-resta-de-vectores-fisica-word-doc.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DEL PARALELOGRAMO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes pares de magnitudes físicas no tiene la misma fórmula dimensional?",
+      "alternatives": [
+        "Trabajo y torque.",
+        "Momento angular y la constante de Planck.",
+        "Tensión y tensión superficial.",
+        "Impulso y momento lineal."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep302.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.2 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el momento (P), el área (A) y el tiempo (T) se toman como magnitudes fundamentales, entonces la energía tiene la fórmula dimensional",
+      "alternatives": [
+        "(P1 A–1 T1)",
+        "(P2 A1 T1)",
+        "(P1 A–1/2 T1)",
+        "(P1 A1/2 T–1)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep302.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.2 MCQ 12"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones es verdadera?",
+      "alternatives": [
+        "Una magnitud escalar es aquella que se conserva en un proceso.",
+        "Una magnitud escalar es aquella que nunca puede tomar valores negativos.",
+        "Una magnitud escalar es aquella que no varía de un punto a otro en el espacio.",
+        "Una magnitud escalar tiene el mismo valor para observadores con diferentes orientaciones de los ejes."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep304.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.4 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se unen 4 varillas para formar un cuadrilátero de 9 000 mm de perímetro. Las longitudes de 3 varillas son 2,2 m; 110 cm y 2300 mm, halle la longitud de la última varilla.",
+      "alternatives": [
+        "34×10 − ³ km",
+        "3,4×10 − ³ km",
+        "54×10 − ³ km",
+        "5,4×10 − ³ km"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/numeros-y-operaciones-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — NÚMEROS Y OPERACIONES ARITMÉTICA CATÓLICA PREGUNTAS RESUELTAS PUCP"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia del sol a la Tierra es 9,27×10 7 millas (1 milla=1601 m). Si dicha distancia es de la forma A×10 n metros. (0 <A<10). Halla A+n.",
+      "alternatives": [
+        "12,48...",
+        "9,47...",
+        "8,72...",
+        "10,11..."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/simulacro-resuelto-de-admision-a-la-universidad-catolica-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO CATÓLICA SOLUCIONARIO DE ACCESO UNIVERSIDAD PDF 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cobrador sale de la oficina y va a realizar sus cobranzas. Primero se desplaza 2,5 km al oeste de la oficina; luego va a un segundo lugar a 4,5 km al norte; de allí continúa 4 km al este y finalmente 6,5 km hacia el sur. ¿A cuántos kilómetros de la oficina se encuentra?",
+      "alternatives": [
+        "2 km",
+        "5 km",
+        "3 km",
+        "2,5 km"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/habilidad-logico-matematicas-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD MATEMÁTICA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un visitador médico visitó los centros médicos A, B, C y D, realizando los siguientes recorridos: partió de la empresa donde trabaja y recorrió 6 √2 . km en dirección NO y llegó al centro médico A De ahí recorrió 6 √ 3 km en dirección N60ºE y llegó a B. Desde B recorrió (9 – 4 √ 3 ) km en dirección sur y llegó a C. Finalmente, desde C, recorrió 14 km en dirección S30ºO llegando a D. ¿A qué distancia de la empresa se encuentra el centro médico D?",
+      "alternatives": [
+        "3 √ 3 km",
+        "3 √ 2 km",
+        "4 √2 km",
+        "5 km"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/razonamiento-matematico-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una embarcación hace el siguiente recorrido: 180 km hacia el este, 120 km en la dirección N 60° E, 120 √ 3 km en la dirección N 30° O y, finalmente, 420 km en la dirección oeste. ¿En qué dirección debería navegar esta embarcación para retornar a su punto de partida en el menor tiempo posible?",
+      "alternatives": [
+        "S E",
+        "S 30° E",
+        "S 30° O",
+        "S 75° E"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/razonamiento-logico-matematico-prueba.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO DECO RESUELTO"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Aldo se encuentra descansando bajo la sombra de un árbol a 20 m en la dirección N53°E de su casa, y su amigo Ricardo se encuentra ubicado a 5 m en la dirección S37°O de la casa de Aldo. Ricardo avanza con una velocidad constante de 5 m/min en la dirección N37°O. Después de 4 minutos, ¿cuál es la distancia que separa a ambos?",
+      "alternatives": [
+        "3√41 m",
+        "41 m",
+        "√689 m",
+        "31 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/aptitud-matematica-uni-prueba-de.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA RESUELTA DE EXAMEN SAN MARCOS "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos vectores de la misma magnitud forman un ángulo de 60° y tienen una resultante de magnitud 4√3u. Si se reduce a la mitad la magnitud de cada vector y se duplica el ángulo entre ellos, determine la magnitud de la nueva resultante.",
+      "alternatives": [
+        "2 u",
+        "4 u",
+        "8 u",
+        "10 u",
+        "12 u"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/vectores-problemas-resueltos-de-pre-universidad-nivel-uni-cepreuni-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VECTORES PROBLEMAS RESUELTOS PREUNIVERSITARIOS NIVEL UNI CEPREUNI PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos vectores A y B tienen magnitudes de 16 u y 12 u, respectivamente.\nCon esta información, indicar la verdad o falsedad de las siguientes proposiciones:\nI. La máxima magnitud de la resultante de A y B es 28 u.\nII. La mínima magnitud de la resultante de A y B es 0 u.\nIII. Si A y B son ortogonales, las magnitudes del vector suma A + B y el vector diferencia A–B son iguales y tienen un valor de 20 u.",
+      "alternatives": [
+        "VFV",
+        "FFF",
+        "VVV",
+        "FFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/vectores-problemas-para-practicar-con-claves-y-respuestas-fisica-preuniversitaria-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VECTORES PROBLEMAS CON CLAVES Y RESPUESTAS DE FÍSICA PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene dos vectores de módulo 7 y 15 unidades que forman entre sí un ángulo de 53°. Hallar el ángulo formado por la resultante y el vector de módulo 7.",
+      "alternatives": [
+        "30°",
+        "37°",
+        "45°",
+        "53°",
+        "60°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/vectores-problemas-para-practicar-con-claves-y-respuestas-fisica-preuniversitaria-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VECTORES PROBLEMAS CON CLAVES Y RESPUESTAS DE FÍSICA PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una hormiga se desplaza erráticamente sobre una vereda. Un caminante curioso se detiene a estudiar su movimiento y observa que durante algunos segundos realiza los siguientes movimientos sucesivos: 2 cm hacia el sur, 2√2cm hacia el este, hacia el noreste y finalmente 2√2cm hacia el noroeste. Determine la magnitud del desplazamiento total de la hormiga.",
+      "alternatives": [
+        "1 cm",
+        "2 cm",
+        "4 cm",
+        "√2cm",
+        "2√2cm"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/vectores-problemas-para-practicar-con-claves-y-respuestas-fisica-preuniversitaria-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VECTORES PROBLEMAS CON CLAVES Y RESPUESTAS DE FÍSICA PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene dos vectores expresados en función de los vectores unitarios:\nA = 12i – 5j\nB = –4i + 11j\nHallar el módulo de A+B",
+      "alternatives": [
+        "6",
+        "8",
+        "9",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/vectores-problemas-para-practicar-con-claves-y-respuestas-fisica-preuniversitaria-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VECTORES PROBLEMAS CON CLAVES Y RESPUESTAS DE FÍSICA PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos fuerzas coplanares dan una resultante máxima de 22u y una resultante mínima de 8u. Calcular el módulo del vector suma sí forman un ángulo de 53º",
+      "alternatives": [
+        "10u",
+        "15u",
+        "20u",
+        "25u",
+        "30u"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/vectores-ejercicios-para-resolver-con-respuestas-de-secundaria-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VECTORES EJERCICIOS CON RESPUESTAS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que: a = 8i + 6j, hallar el módulo del vector a/5",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/vectores-ejercicios-para-resolver-con-respuestas-de-secundaria-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VECTORES EJERCICIOS CON RESPUESTAS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que:\na= 2i – 3j\nb = 4i + 11j\nHallar el módulo del vector: a +b",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "5",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/vectores-ejercicios-para-resolver-con-respuestas-de-secundaria-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VECTORES EJERCICIOS CON RESPUESTAS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la magnitud y dirección del vector F que sumado al vector C, de 20 unidades de magnitud y 100° de dirección, se obtenga como resultante el vector cero.",
+      "alternatives": [
+        "10 unidades y 100°",
+        "20 unidades y –100°",
+        "40 unidades y 280°",
+        "40 unidades y –100°",
+        "20 unidades y 280°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estudio-y-representacion-de-funciones_4.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA SOCIALES 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la siguiente relación de magnitudes físicas, ¿cuál no es una magnitud física vectorial?",
+      "alternatives": [
+        "volumen",
+        "fuerza",
+        "velocidad",
+        "desplazamiento",
+        "aceleración"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/cantidades-fisicas-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf-magnitud-fisica.html",
+      "sourceName": "matematicasn.blogspot.com — CANTIDADES FÍSICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique cuántas de las siguientes magnitudes no son fundamentales en el SI: presión, área, temperatura, longitud, intensidad de corriente y fuerza.",
+      "alternatives": [
+        "6",
+        "1",
+        "0",
+        "5",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/cantidades-fisicas-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf-magnitud-fisica.html",
+      "sourceName": "matematicasn.blogspot.com — CANTIDADES FÍSICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando se realizan mediciones, se obtienen los siguientes datos experimentales p=2,5 kPa; Q=0,5 m 3 /s; A=1m 2 ; d=1000 kg/m 3 , entonces el valor de k es:",
+      "alternatives": [
+        "5",
+        "8",
+        "9",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la lista de prefijos correspondientes a múltiplos de unidades de medidas, indicar el que tiene mayor factor.",
+      "alternatives": [
+        "mega",
+        "kilo",
+        "exa",
+        "peta",
+        "deca"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-8-dpcc-experiencia-6-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UPCH 2027 EXAMEN ADMISIÓN UNIVERSIDAD CAYETANO HEREDIA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Joseph Priestley en 1774 descubrió el oxígeno, el cual es un gas muy importante en procesos de combustión. Un tanque de acero de 10×10 3 s litros puede ser llenado con oxígeno (O 2 ) a una temperatura de 50°C y 1520 mmHg, durante 10 minutos. Indique el número de unidades básicas y derivadas, respectivamente.",
+      "alternatives": [
+        "2 – 2",
+        "1 – 3",
+        "3 – 1",
+        "4 – 0",
+        "0 – 4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/cepreuni-quimica-sexta-practica-uni.html",
+      "sourceName": "matematicaj.blogspot.com — CEPREUNI QUÍMICA SEXTA PRACTICA RESUELTA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el módulo de la suma de dos vectores de igual módulo es dos veces el módulo de la diferencia, el ángulo entre dichos vectores es",
+      "alternatives": [
+        "15°",
+        "30°",
+        "45°",
+        "53°",
+        "74°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el prefijo correspondiente a submúltiplos de unidades de menor valor:",
+      "alternatives": [
+        "micro",
+        "nano",
+        "atto",
+        "femto",
+        "mili"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-y-cocientes-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO UNC 2027 INGRESO UNIVERSIDAD DE CAJAMARCA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un niño ata una cuerda a una caja de mayólica de 20 kg. La cuerda soporta una tensión\nT=(80 î +40 ĵ +100k) N. Determine la magnitud de la tensión.",
+      "alternatives": [
+        "30 √ 5 N",
+        "60 √ 2 N",
+        "40 √ 5 N",
+        "80 √ 3 N",
+        "60 √ 5 N"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/cepunt-solucionario-de-fisica-examen-resuelto-admision-unt-trujillo.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos vectores se encuentran aplicados a un mismo punto, uno de ellos mide 5 unidades y el otro 12 unidades. ¿Cuántas unidades mide el módulo de su vector suma, si el ángulo formado por ellos mide 90°?",
+      "alternatives": [
+        "10",
+        "13",
+        "17",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/fisica-5to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-educacion-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando empujamos o jalamos un objeto ejercemos una fuerza. Al respecto, califique cada proposición como verdadera (V) o falsa (F).\nI) Las fuerzas siguen las reglas del álgebra vectorial.\nII) La unidad de la fuerza en el SI es el Newton que equivale a kg . m 2 /s.\nIII) La intensidad de una fuerza puede medirse con un dinamómetro.",
+      "alternatives": [
+        "FVV",
+        "FFF",
+        "VVV",
+        "VFV",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-examen-admision-agraria-unalm-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las magnitudes físicas se clasifican según su naturaleza en:",
+      "alternatives": [
+        "fundamentales y vectoriales.",
+        "escalares y complementarias.",
+        "fundamentales y derivadas.",
+        "básicas y escalares.",
+        "escalares y vectoriales."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el SI, la unidad de la fuerza es el:",
+      "alternatives": [
+        "kilogramo.",
+        "joule.",
+        "newton.",
+        "metro.",
+        "pascal."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine K si:\nK= 7 kg× 8 kg ×9 cm",
+      "alternatives": [
+        "ML",
+        "ML 2",
+        "ML 3",
+        "M 2 L",
+        "θN"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos vectores mide 14 y la suma mínima mide 2. Calcula el módulo de los vectores.",
+      "alternatives": [
+        "14 y 2",
+        "7 y 7",
+        "8 y 5",
+        "6 y 8",
+        "10 y 4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/vectores-ejercicios-resueltos-del-libro.html",
+      "sourceName": "matematicasn.blogspot.com — LOS VECTORES EN FÍSICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos vectores es 16 y la suma mínima es 0. Calcula la resultante cuando formen 90°.",
+      "alternatives": [
+        "8",
+        "4",
+        "8√2",
+        "16",
+        "16√2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/vectores-ejercicios-resueltos-del-libro.html",
+      "sourceName": "matematicasn.blogspot.com — LOS VECTORES EN FÍSICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La resultante de dos vectores que forman 90° es 10. Además, la suma máxima de ambos es 14. Calcula la suma mínima de los vectores si son enteros y pares consecutivos.",
+      "alternatives": [
+        "4",
+        "6",
+        "2",
+        "0",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/vectores-ejercicios-resueltos-del-libro.html",
+      "sourceName": "matematicasn.blogspot.com — LOS VECTORES EN FÍSICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la resultante máxima de dos vectores es 28 y la resultante mínima es 4. Calcula el módulo de la resultante cuando formen un ángulo de 90°.",
+      "alternatives": [
+        "10",
+        "8",
+        "15",
+        "20",
+        "16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/vectores-ejercicios-resueltos-del-libro.html",
+      "sourceName": "matematicasn.blogspot.com — LOS VECTORES EN FÍSICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la resultante de dos vectores que forman 90° es 50u. Calcula la suma máxima de los vectores si además la resultante mínima de dichos vectores es 34 además son enteros y su cociente es 7/24.",
+      "alternatives": [
+        "62",
+        "31",
+        "48",
+        "14",
+        "42"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/vectores-ejercicios-resueltos-del-libro.html",
+      "sourceName": "matematicasn.blogspot.com — LOS VECTORES EN FÍSICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si dos vectores que forman 90° dan como resultante “R”. Calcula R si la suma máxima de los vectores es 4u, y el producto de ambos vale 3 además son impares consecutivos.",
+      "alternatives": [
+        "3",
+        "1",
+        "√13",
+        "√7",
+        "√10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/vectores-ejercicios-resueltos-del-libro.html",
+      "sourceName": "matematicasn.blogspot.com — LOS VECTORES EN FÍSICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos vectores coplanares y concurrentes cuyos módulos son 3N y 5N respectivamente. Determinar el ángulo que ellos deben formar entre sí para que su vector suma tenga por módulo 7 N.",
+      "alternatives": [
+        "30°",
+        "45°",
+        "37°",
+        "53°",
+        "60°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejercicios-resueltos-de-fisica-de-secundaria-formulas-metodos-ejemplos-operaciones-examen-prueba-con-claves-respuestas-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VECTORES EN SECUNDARIA EJEMPLOS Y PROBLEMAS RESUELTOS FÓRMULAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La resultante mínima de dos vectores es cero y su resultante máxima igual a 30u.\n¿Cuál debe ser el módulo de su resultante cuando los citados vectores formen un ángulo entre sí de 106º?",
+      "alternatives": [
+        "21",
+        "15",
+        "3√26",
+        "18",
+        "Absurdo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejercicios-resueltos-de-fisica-de-secundaria-formulas-metodos-ejemplos-operaciones-examen-prueba-con-claves-respuestas-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VECTORES EN SECUNDARIA EJEMPLOS Y PROBLEMAS RESUELTOS FÓRMULAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos vectores colineales tienen una resultante de módulo igual a 14. Al girar uno de los vectores 90°, su nueva resultante tiene como módulo igual a 10. El menor de los vectores es:",
+      "alternatives": [
+        "3",
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejercicios-resueltos-de-fisica-de-secundaria-formulas-metodos-ejemplos-operaciones-examen-prueba-con-claves-respuestas-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VECTORES EN SECUNDARIA EJEMPLOS Y PROBLEMAS RESUELTOS FÓRMULAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La magnitud de dos vectores coplanares a y b están en relación de 3 a 7, respectivamente. Si la máxima magnitud resultante de los vectores es 20 u, determine la magnitud de la resultante cuando los vectores a y b formen 60° entre sí.",
+      "alternatives": [
+        "2√79 𝑢",
+        "2√97 𝑢",
+        "2√68 𝑢",
+        "2√86 𝑢",
+        "2√36 𝑢"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-fisica-segundo-examen.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La presión dentro del tanque de una caldera viene dada por la ecuación P=D x a y t z\ndonde\nP: presión",
+      "alternatives": [
+        "aceleración t: tiempo. Determine el valor de x + y + z.",
+        "3",
+        "8",
+        "densidad",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-fisica-segundo-examen.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los números 436.32, 227.2 y 0.301 con las cifras significativas apropiadas es",
+      "alternatives": [
+        "663.821",
+        "664",
+        "663.8",
+        "663.82"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep302.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.2 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La masa y el volumen de un cuerpo son 4.237 g y 2.5 cm3, respectivamente. La densidad del material del cuerpo con las cifras significativas correctas es",
+      "alternatives": [
+        "1.6048 g cm–3",
+        "1.69 g cm–3",
+        "1.7 g cm–3",
+        "1.695 g cm–3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep302.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.2 MCQ 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los números 2.745 y 2.735, al redondearse a 3 cifras significativas, dan",
+      "alternatives": [
+        "2.75 y 2.74",
+        "2.74 y 2.73",
+        "2.75 y 2.73",
+        "2.74 y 2.74"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep302.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.2 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El largo y el ancho de una lámina rectangular son 16.2 cm y 10.1 cm, respectivamente. El área de la lámina con las cifras significativas apropiadas y su error es",
+      "alternatives": [
+        "164 ± 3 cm2",
+        "163.62 ± 2.6 cm2",
+        "163.6 ± 2.6 cm2",
+        "163.62 ± 3 cm2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep302.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.2 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La medida de dos magnitudes junto con la precisión de su respectivo instrumento de medición es A = 2.5 m s–1 ± 0.5 m s–1, B = 0.10 s ± 0.01 s. El valor de AB será",
+      "alternatives": [
+        "(0.25 ± 0.08) m",
+        "(0.25 ± 0.5) m",
+        "(0.25 ± 0.05) m",
+        "(0.25 ± 0.135) m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep302.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.2 MCQ 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mides dos magnitudes como A = 1.0 m ± 0.2 m, B = 2.0 m ± 0.2 m. Debemos reportar el valor correcto de AB como:",
+      "alternatives": [
+        "1.4 m ± 0.4 m",
+        "1.41m ± 0.15 m",
+        "1.4m ± 0.3 m",
+        "1.4m ± 0.2 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep302.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.2 MCQ 8"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes mediciones es la más precisa?",
+      "alternatives": [
+        "5.00 mm",
+        "5.00 cm",
+        "5.00 m",
+        "5.00 km."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep302.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.2 MCQ 9"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La longitud media de un objeto es 5 cm. ¿Cuál de las siguientes mediciones es la más exacta?",
+      "alternatives": [
+        "4.9 cm",
+        "4.805 cm",
+        "5.25 cm",
+        "5.4 cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep302.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.2 MCQ 10"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El módulo de Young del acero es 1.9 × 1011 N/m2. Cuando se expresa en unidades CGS de dinas/cm2, será igual a (1N = 105 dinas, 1m2 = 104 cm2)",
+      "alternatives": [
+        "1.9 × 1010",
+        "1.9 × 1011",
+        "1.9 × 1012",
+        "1.9 × 1013"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep302.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.2 MCQ 11"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La componente de un vector r a lo largo del eje X tendrá su valor máximo si",
+      "alternatives": [
+        "r está a lo largo del eje Y positivo",
+        "r está a lo largo del eje X positivo",
+        "r forma un ángulo de 45° con el eje X",
+        "r está a lo largo del eje Y negativo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep304.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.4 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considera las magnitudes: presión, potencia, energía, impulso, potencial gravitacional, carga eléctrica, temperatura, área. De estas, las únicas magnitudes vectoriales son",
+      "alternatives": [
+        "Impulso, presión y área",
+        "Impulso y área",
+        "Área y potencial gravitacional",
+        "Impulso y presión"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep304.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.4 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se encuentra que |A+B| = |A|. Esto implica necesariamente que,",
+      "alternatives": [
+        "B = 0",
+        "A y B son antiparalelos",
+        "A y B son perpendiculares",
+        "A.B ≤ 0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep304.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.4 MCQ 10"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La resultante de dos vectores es 20 u y forma con el vector de menor módulo un ángulo de 37°. Los vectores forman entre sí 53°. Calcular la medida de cada vector.",
+      "alternatives": [
+        "15 y 7",
+        "16 y 12",
+        "16 y 9",
+        "12 y 7",
+        "12 y 9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/vectores-problemas-resueltos-de-fisica-preuniversitaria-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — EJERCICIOS DE VECTORES RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar el ángulo que deben formar dos vectores A y B, para que el módulo de su resultante suma sea igual al de su resultante diferencia.",
+      "alternatives": [
+        "45°",
+        "60°",
+        "90°",
+        "75°",
+        "53°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/vectores-problemas-resueltos-de-fisica-preuniversitaria-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — EJERCICIOS DE VECTORES RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La mínima resultante de dos vectores es 4√3 y cuando forman 60° entre si su resultante es: √93 ¿cuál será el módulo de la resultante cuando los vectores formen 90° entre sí.",
+      "alternatives": [
+        "√78",
+        "√80",
+        "√69",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/vectores-problemas-resueltos-de-fisica-preuniversitaria-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — EJERCICIOS DE VECTORES RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Andrés, Víctor y César se encuentran en un mismo plano horizontal. Víctor se encuentra a una distancia de 20 m al norte de Andrés y César se encuentra al este de Víctor y noreste de Andrés. Si Andrés y Víctor se desplazan en direcciones N53°E y S37°E respectivamente hasta que Andrés se encuentra a 5m al norte de Víctor y en ese instante César se encuentra al N(90°– θ)E de la nueva posición de Andrés, determine ctgθ .",
+      "alternatives": [
+        "7/8",
+        "11/8",
+        "8/9",
+        "8/11"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2022/06/razonamiento-matematico-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA REPASO PREGUNTAS RESUELTAS SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La resultante máxima de dos vectores es 14 y la resultante mínima de los mismos vectores es 2. Calcule la resultante cuando los vectores forman un ángulo de 90°.",
+      "alternatives": [
+        "10",
+        "12",
+        "8",
+        "9",
+        "25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
     }
   ]
 }

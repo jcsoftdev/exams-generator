@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un restaurante compra (a+2) cajas de mondadientes para sus comensales. Si cada caja contiene (a+10) mondadientes y ya ha utilizado 12a, determine la cantidad de mondadientes que le quedan.",
-      "alternatives": ["20", "a^2 + 5", "a^2", "a^2 + 12a", "a^2 + 20"],
+      "alternatives": [
+        "20",
+        "a^2 + 5",
+        "a^2",
+        "a^2 + 12a",
+        "a^2 + 20"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Elita decide aprovechar ofertas de campaña escolar para comprar cuadernos a su hijo. En la lista de útiles le piden (2x+1) cuadernos, y al preguntar en la librería se da cuenta que el número coincide con el precio. ¿Cuánto será el gasto total si al final Elita recibió un descuento de 4x soles?",
-      "alternatives": ["(4x^2 - 1) soles", "(x^2 + 2) soles", "4x^2 soles", "(x^2 + 1) soles", "(4x^2 + 1) soles"],
+      "alternatives": [
+        "(4x^2 - 1) soles",
+        "(x^2 + 2) soles",
+        "4x^2 soles",
+        "(x^2 + 1) soles",
+        "(4x^2 + 1) soles"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Lenin decide realizar un viaje por vacaciones con toda su familia. En la agencia se da cuenta que el pasaje por persona es la mitad de la cantidad de integrantes que irán de viaje. Determine el gasto total si el pasaje por persona es S/(x - 1), además tiene que pagar un incremento por equipaje de S/4x.",
-      "alternatives": ["S/(x^2 - 1)", "S/(x^2 + 2)", "S/(2x^2)", "S/(x^2 + 1)", "S/(2x^2 + 2)"],
+      "alternatives": [
+        "S/(x^2 - 1)",
+        "S/(x^2 + 2)",
+        "S/(2x^2)",
+        "S/(x^2 + 1)",
+        "S/(2x^2 + 2)"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 3"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine un valor de (x+y+z) si se sabe que x^2 + y^2 + z^2 = xy + yz + zx = 3.",
-      "alternatives": ["-3", "4", "2", "-5", "-7"],
+      "alternatives": [
+        "-3",
+        "4",
+        "2",
+        "-5",
+        "-7"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 4"
@@ -50,7 +74,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Edu realiza una donación mensual de (a+b+1) soles a una casa hogar todos los meses. Si ya han pasado (a+b+1) meses, ¿cuánto habrá donado si dos meses dejó de enviar dinero?",
-      "alternatives": ["(a + b)^2 - 1 soles", "(a^2 + b^2) soles", "(a + b)^2 + 1 soles", "(a^2 + b^2 + 1) soles"],
+      "alternatives": [
+        "(a + b)^2 - 1 soles",
+        "(a^2 + b^2) soles",
+        "(a + b)^2 + 1 soles",
+        "(a^2 + b^2 + 1) soles"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 5"
@@ -61,7 +90,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Si a+b=2 y ab=3, halle el valor de a^3 + b^3.",
-      "alternatives": ["6", "8", "12", "-8", "-10"],
+      "alternatives": [
+        "6",
+        "8",
+        "12",
+        "-8",
+        "-10"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 6"
@@ -72,7 +107,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Mensualmente una compañía puede vender (4x^2 + y^2) unidades de cierto artículo a (2x + y) soles cada una. Determine el ingreso total para un determinado mes donde se dejó de vender (2xy) artículos.",
-      "alternatives": ["S/(x^3 + y^3)", "S/(8x^3 + y^3)", "S/(2x^3 + y^3)", "S/(8x^3 y^3)", "S/(x^3 y^3)"],
+      "alternatives": [
+        "S/(x^3 + y^3)",
+        "S/(8x^3 + y^3)",
+        "S/(2x^3 + y^3)",
+        "S/(8x^3 y^3)",
+        "S/(x^3 y^3)"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 7"
@@ -83,7 +124,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Durante las elecciones congresales se determinó que la cantidad de personas que sufragaron en la región sur es de m^3 millones de personas y en la región norte (3m) millones. Si también se determinó que un total de (3m^2 + 1) personas viciaron su voto, determine la cantidad total de votos válidos.",
-      "alternatives": ["(m + 1)^3", "m^3 - 1", "3m^3", "(m - 1)^3", "m^3 + 1"],
+      "alternatives": [
+        "(m + 1)^3",
+        "m^3 - 1",
+        "3m^3",
+        "(m - 1)^3",
+        "m^3 + 1"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 8"
@@ -94,7 +141,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si se cumple x^2 + y^2 + 5 = 2(2x + y), con {x; y} subconjunto de los reales, determine el valor de (x + y)^3.",
-      "alternatives": ["8", "9", "3", "27", "18"],
+      "alternatives": [
+        "8",
+        "9",
+        "3",
+        "27",
+        "18"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 9"
@@ -105,7 +158,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine a+b si se cumple a^2 + b^2 = 2a + 2b - 2, con {a; b} subconjunto de los reales.",
-      "alternatives": ["3", "2", "4", "1", "1/4"],
+      "alternatives": [
+        "3",
+        "2",
+        "4",
+        "1",
+        "1/4"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 10"
@@ -116,7 +175,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si la suma y el producto de tres números es 8 y 16 respectivamente, determine la suma de los cubos de dichos números; sabiendo que la suma de los productos dos a dos (productos binarios) de dichos números es 11.",
-      "alternatives": ["186", "206", "196", "216", "296"],
+      "alternatives": [
+        "186",
+        "206",
+        "196",
+        "216",
+        "296"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 11"
@@ -127,7 +192,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "A una bebé se le debe administrar 1 gota de cierto medicamento por cada kilo de peso, dos veces al día y durante cinco días. Si la bebé pesa |mn+5| kilos, donde m y n son tales que m-n=7 y m^3-n^3=49, ¿cuántas gotas en total le fueron administradas durante su tratamiento?",
-      "alternatives": ["70", "55", "90", "80", "75"],
+      "alternatives": [
+        "70",
+        "55",
+        "90",
+        "80",
+        "75"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Productos Notables ejercicios resueltos, Pregunta 12"
@@ -138,7 +209,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Para un cierto número se cumple que su cuadrado excede en 1 al triple del número. Calcule la diferencia entre el número elevado al exponente 5 y el número elevado al exponente -5.",
-      "alternatives": ["393", "396", "399", "387", "390"],
+      "alternatives": [
+        "393",
+        "396",
+        "399",
+        "387",
+        "390"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/productos-notables-ejercicios-resueltos.html",
       "sourceName": "MatematicasN - Productos Notables de Secundaria Problemas Resueltos, Problema 1"
@@ -149,7 +226,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Ana tiene (a+b+c) soles, Esther tiene el triple de lo que tiene Ana y Karina tiene la mitad de la suma del dinero que tienen Ana y Esther. Si se cumple que a^2 + b^2 + c^2 + 42 = 2(4a + 5b + c), determine cuánto dinero tiene Karina después de comprar un helado de 'a' soles.",
-      "alternatives": ["18 soles", "16 soles", "12 soles", "14 soles", "20 soles"],
+      "alternatives": [
+        "18 soles",
+        "16 soles",
+        "12 soles",
+        "14 soles",
+        "20 soles"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/productos-notables-ejercicios-resueltos.html",
       "sourceName": "MatematicasN - Productos Notables de Secundaria Problemas Resueltos, Problema 2"
@@ -160,7 +243,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En tres puntos A, B y C de una recta numérica con coordenadas a, b y c respectivamente, tres estudiantes realizan cálculos: Isabel halla la suma de los cubos de a, b y c; Jaime halla la suma de a y c; Daysi resta a de c y le suma una unidad. Si el resultado de Isabel equivale al triple negativo del producto de los resultados de Jaime y Daysi, con restricciones a >= 1, b >= 0, c >= -1, ¿cuántas unidades (u) distan los puntos C y A?",
-      "alternatives": ["2u", "1u", "3u", "4u", "5u"],
+      "alternatives": [
+        "2u",
+        "1u",
+        "3u",
+        "4u",
+        "5u"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-notables-ejercicios-resueltos_80.html",
       "sourceName": "MatematicasN - Productos Notables Ejercicios Básicos Resueltos, Problema 1"
@@ -171,7 +260,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En una bodega, los precios por kilogramo de fideos, arroz y azúcar son S/.x, S/.y y S/.z respectivamente, con xyz = 36. Al final del día, se vendieron y kg de fideos, z kg de arroz y x kg de azúcar, obteniendo un ingreso de S/ 33 y un total de 10 kg vendidos. ¿Cuánto hubiera sido el ingreso si se hubieran vendido x^2 kg de fideos, y^2 kg de arroz y z^2 kg de azúcar?",
-      "alternatives": ["S/ 191", "S/ 181", "S/ 100", "S/ 108", "S/ 118"],
+      "alternatives": [
+        "S/ 191",
+        "S/ 181",
+        "S/ 100",
+        "S/ 108",
+        "S/ 118"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-notables-ejercicios-resueltos_80.html",
       "sourceName": "MatematicasN - Productos Notables Ejercicios Básicos Resueltos, Problema 2"
@@ -182,7 +277,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Ely es propietaria de un taller de lavado de vehículos con las tarifas: S/.x por carro, S/.y por moto y S/.z por camión, donde x^2 + y^2 + z^2 = 350. Cierto día se lavaron 'y' carros, 'z' motos y 'x' camiones obteniendo un ingreso de S/ 275. Si el producto de las tres tarifas es igual a 750, determine cuánto hubiera ganado Ely si, con la misma cantidad de vehículos lavados y en ese orden, la tarifa hubiera sido S/.y^2 por carro, S/.z^2 por moto y S/.x^2 por camión.",
-      "alternatives": ["S/ 4500", "S/ 2250", "S/ 5500", "S/ 2500", "S/ 5450"],
+      "alternatives": [
+        "S/ 4500",
+        "S/ 2250",
+        "S/ 5500",
+        "S/ 2500",
+        "S/ 5450"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-notables-ejercicios-resueltos.html",
       "sourceName": "MatematicasN - Productos Notables Fórmulas y Ejemplos Resueltos, Problema 1"
@@ -193,7 +294,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Efectuar abreviadamente: E = (x+1)(x-1)(x^2+1) + 1",
-      "alternatives": ["x^2", "x^4", "2x^2", "x^8", "1"],
+      "alternatives": [
+        "x^2",
+        "x^4",
+        "2x^2",
+        "x^8",
+        "1"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/productos-notables-16-ejercicios.html",
       "sourceName": "Blog del Profe Alex - Productos Notables Razonamiento Algebraico, Problema 01"
@@ -204,7 +311,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular (a^3 + b^3) / (a^2 + b^2) si a + b = 3 y ab = 5.",
-      "alternatives": ["36", "18", "14", "56", "28"],
+      "alternatives": [
+        "36",
+        "18",
+        "14",
+        "56",
+        "28"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/productos-notables-16-ejercicios.html",
       "sourceName": "Blog del Profe Alex - Productos Notables Razonamiento Algebraico, Problema 02"
@@ -215,7 +328,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Efectuar: E = raiz[16](1 + 3(2^2 + 1)(2^4 + 1)(2^8 + 1))",
-      "alternatives": ["2", "4", "8", "16", "32"],
+      "alternatives": [
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/productos-notables-16-ejercicios.html",
       "sourceName": "Blog del Profe Alex - Productos Notables Razonamiento Algebraico, Problema 03"
@@ -226,7 +345,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Si x + 1/x = 6, calcular x^2 + 1/x^2.",
-      "alternatives": ["32", "17", "34", "36", "6"],
+      "alternatives": [
+        "32",
+        "17",
+        "34",
+        "36",
+        "6"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/productos-notables-16-ejercicios.html",
       "sourceName": "Blog del Profe Alex - Productos Notables Razonamiento Algebraico, Problema 04"
@@ -237,7 +362,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Hallar la diferencia positiva de dos números, sabiendo que la suma de sus cuadrados es 15 y su producto es 3.",
-      "alternatives": ["3", "2", "1", "6", "5"],
+      "alternatives": [
+        "3",
+        "2",
+        "1",
+        "6",
+        "5"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/productos-notables-16-ejercicios.html",
       "sourceName": "Blog del Profe Alex - Productos Notables Razonamiento Algebraico, Problema 05"
@@ -248,7 +379,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Simplificar: (a + 2b + c)(a + c) - (a + b + c)^2. (Examen de admisión ESAN)",
-      "alternatives": ["a^2", "b^2", "c^2", "-b^2", "-2b^2"],
+      "alternatives": [
+        "a^2",
+        "b^2",
+        "c^2",
+        "-b^2",
+        "-2b^2"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/productos-notables-16-ejercicios.html",
       "sourceName": "Blog del Profe Alex - Productos Notables Razonamiento Algebraico, Problema 06 (Admisión ESAN)"
@@ -259,7 +396,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La suma de dos números es 10 y la suma de sus cubos es 100. Calcular el producto de dichos números. (Examen de admisión UNAC)",
-      "alternatives": ["30", "20", "40", "25", "10"],
+      "alternatives": [
+        "30",
+        "20",
+        "40",
+        "25",
+        "10"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/productos-notables-16-ejercicios.html",
       "sourceName": "Blog del Profe Alex - Productos Notables Razonamiento Algebraico, Problema 09 (Admisión UNAC)"
@@ -270,7 +413,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuál de las siguientes operaciones con productos notables es correcta?\nA) (x+8)(x+10) = x^2 + 80x + 18\nB) (x-5)(x-7) = x^2 + 12x - 35\nC) (x+a^2)(x-b^2) = x^2 - (b^2 - a^2)x - a^2*b^2\nD) (2x-1)(x+1/5) = 2x^2 + (3/5)x - 1/5\nE) (x-1)^4 = x^4 + 4x^3 - 6x^2 + 4x + 1",
-      "alternatives": ["A", "B", "C", "D", "E"],
+      "alternatives": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/productos-notables-16-ejercicios.html",
       "sourceName": "Blog del Profe Alex - Productos Notables Razonamiento Algebraico, Problema 12"
@@ -281,7 +430,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sean E = 1 - x, F = x + 1, G = x^4 - x - 2. Calcular la suma de coeficientes del polinomio P(x) = E^2 + F^3 - 3G.",
-      "alternatives": ["11", "14", "13", "15", "17"],
+      "alternatives": [
+        "11",
+        "14",
+        "13",
+        "15",
+        "17"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/productos-notables-16-ejercicios.html",
       "sourceName": "Blog del Profe Alex - Productos Notables Razonamiento Algebraico, Problema 13"
@@ -292,7 +447,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si a + b + c = 13 y ab + bc = 28 - ac, hallar 3a^2 + 3b^2 + 3c^2. (Examen de admisión UTEC)",
-      "alternatives": ["312", "324", "339", "336", "300"],
+      "alternatives": [
+        "312",
+        "324",
+        "339",
+        "336",
+        "300"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/productos-notables-16-ejercicios.html",
       "sourceName": "Blog del Profe Alex - Productos Notables Razonamiento Algebraico, Problema 14 (Admisión UTEC)"
@@ -303,7 +464,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si a + b = 5 y ab = 3, hallar a^2 + b^2.",
-      "alternatives": ["19", "-19", "20", "-20", "10"],
+      "alternatives": [
+        "19",
+        "-19",
+        "20",
+        "-20",
+        "10"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://es.slideshare.net/slideshow/productos-notables-academia/67991648",
       "sourceName": "Prof. Darwin Idrogo Pérez - Productos Notables Academia (Slideshare), Problema 19"
@@ -314,7 +481,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si a + b + c = 0, calcular: a^2/(bc) + b^2/(ac) + c^2/(ab).",
-      "alternatives": ["2", "1", "0", "3", "4"],
+      "alternatives": [
+        "2",
+        "1",
+        "0",
+        "3",
+        "4"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://es.slideshare.net/slideshow/productos-notables-academia/67991648",
       "sourceName": "Prof. Darwin Idrogo Pérez - Productos Notables Academia (Slideshare), Problema 17"
@@ -325,7 +498,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si ax + by = 8, ay - bx = 6 y a^2 + b^2 = 5, calcular x^2 + y^2.",
-      "alternatives": ["16", "18", "20", "24", "25"],
+      "alternatives": [
+        "16",
+        "18",
+        "20",
+        "24",
+        "25"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://es.slideshare.net/slideshow/productos-notables-academia/67991648",
       "sourceName": "Prof. Darwin Idrogo Pérez - Productos Notables Academia (Slideshare), Problema 36"
@@ -336,7 +515,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si a + b + c = 3 y a^3 + b^3 + c^3 = 9, hallar N = (a+b)(b+c)(c+a).",
-      "alternatives": ["3", "4", "5", "6", "7"],
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://es.slideshare.net/slideshow/productos-notables-academia/67991648",
       "sourceName": "Prof. Darwin Idrogo Pérez - Productos Notables Academia (Slideshare), Problema 37"
@@ -347,7 +532,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dado x + y = 3 y x^3 + y^3 = 9, hallar x*y.",
-      "alternatives": ["1", "-1", "2", "-2", "3"],
+      "alternatives": [
+        "1",
+        "-1",
+        "2",
+        "-2",
+        "3"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://es.slideshare.net/slideshow/productos-notables-academia/67991648",
       "sourceName": "Prof. Darwin Idrogo Pérez - Productos Notables Academia (Slideshare), Problema 38"
@@ -358,7 +549,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular M = (x+a)(x-a)(x^2+ax+a^2)(x^2-ax+a^2).",
-      "alternatives": ["x^3 - a^3", "x^6 - a^6", "x^3 + a^3", "x^6 + a^6", "x + a"],
+      "alternatives": [
+        "x^3 - a^3",
+        "x^6 - a^6",
+        "x^3 + a^3",
+        "x^6 + a^6",
+        "x + a"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://es.slideshare.net/slideshow/productos-notables-academia/67991648",
       "sourceName": "Prof. Darwin Idrogo Pérez - Productos Notables Academia (Slideshare), Problema 39"
@@ -369,7 +566,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dado a + b + c = 4 y a^2 + b^2 + c^2 = 6, hallar ab + ac + bc.",
-      "alternatives": ["3", "4", "5", "6", "7"],
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://es.slideshare.net/slideshow/productos-notables-academia/67991648",
       "sourceName": "Prof. Darwin Idrogo Pérez - Productos Notables Academia (Slideshare), Problema 35"
@@ -380,7 +583,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si a^3 + b^3 + c^3 = 10, a^2 + b^2 + c^2 = 6 y a + b + c = 4, hallar a^4 + b^4 + c^4.",
-      "alternatives": ["8", "16", "10", "18", "12"],
+      "alternatives": [
+        "8",
+        "16",
+        "10",
+        "18",
+        "12"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://es.slideshare.net/slideshow/productos-notables-academia/67991648",
       "sourceName": "Prof. Darwin Idrogo Pérez - Productos Notables Academia (Slideshare), Problema 04"
@@ -391,10 +600,625 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Hallar r^2 - 2r + 2 si r^2 = 2r + 1.",
-      "alternatives": ["-1", "1", "2", "-2", "3"],
+      "alternatives": [
+        "-1",
+        "1",
+        "2",
+        "-2",
+        "3"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://es.slideshare.net/slideshow/productos-notables-academia/67991648",
       "sourceName": "Prof. Darwin Idrogo Pérez - Productos Notables Academia (Slideshare), Problema 07"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El noveno término del binomio (x+x − ³ ) ⁿ es de grado 8, halla el grado del quinto término.",
+      "alternatives": [
+        "6",
+        "14",
+        "18",
+        "24",
+        "28"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/binomio-de-newton-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — BINOMIO DE NEWTON EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que la razón geométrica de dos números cuya diferencia de cuadrados es 180, se invierte al sumar 6 al menor y restar 6 al mayor. Calcule su producto.",
+      "alternatives": [
+        "180",
+        "216",
+        "270",
+        "396",
+        "Hay dos respuestas."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/matematicas-unsa-examen-admision-san.html",
+      "sourceName": "matematicasn.blogspot.com — MATEMÁTICA UNSA PRUEBA RESUELTA SAN AGUSTIN INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia de cuadrados de 2 números es 60; y su MCD es 2. Hallar el mayor de ellos.",
+      "alternatives": [
+        "4",
+        "6",
+        "78",
+        "64",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/maximo-comun-divisor-y-minimo-comun_31.html",
+      "sourceName": "matematicasn.blogspot.com — MCD Y MCM PROBLEMAS RESUELTOS DE PRE UNIVERSIDAD MÁXIMO COMÚN DIVISOR Y MÍNIMO COMÚN MÚLTIPLO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un rectángulo cuya área es 36 m² y su perímetro 30m.\nCalcule la diferencia entre el mayor y menor de los lados.",
+      "alternatives": [
+        "9",
+        "10",
+        "11",
+        "12",
+        "8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/12/productos-notables-paso-paso-desde-cero.html",
+      "sourceName": "matematicaj.blogspot.com — PRODUCTOS NOTABLES EJEMPLOS Y PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un restaurante compra (a+2) cajas de mondadientes para sus comensales. Si cada caja contiene (a+10) y ya ha utilizado 12a, determine la cantidad de mondadientes que le quedan.",
+      "alternatives": [
+        "20",
+        "a² +5",
+        "a²",
+        "a² +12a",
+        "a² +20"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PRODUCTOS NOTABLES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine un valor (x+y+z) si se sabe\nx ² + y ² + z ² = xy+yz+xy =3",
+      "alternatives": [
+        "–3",
+        "4",
+        "2",
+        "–5",
+        "–7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PRODUCTOS NOTABLES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se cumple x² + y ² +5= 2(2x + y); {x; y} ⊂ ℝ , determine el valor de (x + y)³.",
+      "alternatives": [
+        "8",
+        "9",
+        "3",
+        "27",
+        "18"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PRODUCTOS NOTABLES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine a+b si se cumple a ² + b ² =2a + 2b – 2; {x; y} ⊂ ℝ",
+      "alternatives": [
+        "3",
+        "2",
+        "4",
+        "1",
+        "1/4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PRODUCTOS NOTABLES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Brunella, una bebe de 10 meses, es llevada por sus padres a su pediatra por problemas en su vía respiratoria. El médico después de auscultarla, le prescribe cierto medicamento, el cual se le debe de administrar 1 gota por cada kilo de peso, dos veces al día y durante cinco días. Si Brunella pesa |mn+5| kilos; donde m y n son tales que m–n=7 y m³–n³=49. ¿Cuántas gotas en total le fueron administradas a Brunella durante su tratamiento?",
+      "alternatives": [
+        "70",
+        "55",
+        "90",
+        "80",
+        "75"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/productos-notables-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PRODUCTOS NOTABLES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a los puntos A, B y C, ubicados en la recta real con coordenadas a, b y c respectivamente, tres estudiantes realizan los siguientes cálculos: Isabel halla la suma de los cubos de las coordenadas a,b y c; Jaime halla la suma de las coordenadas a y c; y Daysi resta la coordenada a de c y al resultado le aumenta una unidad. Si el resultado que halla Isabel es igual al opuesto del triple del producto de los resultados hallados por Jaime y Daysi; además a≥1, b≥0 y c≥–1,¿ cuántas unidades (u) dista el punto C de A?",
+      "alternatives": [
+        "2u",
+        "1u",
+        "3u",
+        "4u",
+        "5u"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-notables-ejercicios-resueltos_80.html",
+      "sourceName": "matematicasn.blogspot.com — PRODUCTOS NOTABLES EJERCICIOS BÁSICOS RESUELTOS DE PRIMARIA Y SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una tienda de abarrotes los precios del kilogramo de fideos, arroz y azúcar son respectivamente S/.x , S/.y y S/.z con xyz=36 . Al finalizar el día, el dueño analiza las ventas y encuentra que se vendieron “y” kg de fideos, “z” kg de arroz y “x” kg de azúcar, obteniendo un ingreso de S/ 33 y vendiendo en total 10 kg. ¿Cuánto hubiese sido el ingreso, si se hubieran vendido x² kg de fideos, y ² kg de arroz y z ² kg de azúcar?",
+      "alternatives": [
+        "S/ 191",
+        "S/ 181",
+        "S/ 100",
+        "S/ 108",
+        "S/ 118"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-notables-ejercicios-resueltos_80.html",
+      "sourceName": "matematicasn.blogspot.com — PRODUCTOS NOTABLES EJERCICIOS BÁSICOS RESUELTOS DE PRIMARIA Y SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si:\nx+y=5\nxy =6\nHallar x² + y ²",
+      "alternatives": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/productos-notables-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — PRODUCTOS NOTABLES FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que:\n(x + 2) ² =36\nHallar x ² + 4x – 2",
+      "alternatives": [
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/productos-notables-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — PRODUCTOS NOTABLES FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Beto se encuentra en una librería y compra una unidad de cada lapicero de las marcas Pillow y Flower recibiendo un descuento especial por ser cliente antiguo del establecimiento. Si el producto de los precios unitarios (en soles ) de cada marca de lapicero es igual a 15, la diferencia de precios de los lapiceros Pillow y Flower (en ese orden) es tanto como el valor del descuento y además Beto pago por su compra 6 soles, ¿a cuánto asciende el descuento de la compra?",
+      "alternatives": [
+        "4 soles",
+        "5 soles",
+        "6 soles",
+        "3 soles",
+        "2 soles"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/productos-notables-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — PRODUCTOS NOTABLES FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Gabriela maneja su bicicleta para ir de la ciudad M a la ciudad N, con una velocidad de a km/h durante (b+c) horas, y desde la ciudad N sube a una moto rumbo a la ciudad P con una velocidad de b km/h durante (a+c) horas, finalmente desde la ciudad P conduce su auto para ir a la ciudad Q con una velocidad de c km/h durante (a + b) horas. La distancia entre la ciudad M y la ciudad Q es 2(a²+ b ² + c ² ) km. Determine el valor de verdad de las siguientes afirmaciones: Observación: Las ciudades M, N, P y Q, en ese orden, están situadas sobre una carretera (en línea recta).\nI) La distancia entre las ciudades N y Q es el doble de la distancia entre las ciudades M y N.\nII) La distancia entre las ciudades M y N, es igual a la distancia entre las ciudades N y Q.\nIII) La distancia entre la ciudad M y la ciudad N es la cuarta parte de la distancia entre las ciudades M y Q.",
+      "alternatives": [
+        "VFF",
+        "FVF",
+        "VFV",
+        "VVV",
+        "FFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/productos-notables-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — PRODUCTOS NOTABLES FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 21 y su producto es –50.\nCalcular la suma de sus cuadrados.",
+      "alternatives": [
+        "541",
+        "491",
+        "421",
+        "529",
+        "531 PROBLEMA 3 : El perímetro de un rectángulo de largo “L” y ancho “A” es de 24 metros. ¿Cuánto es el valor numérico de (A – 4)³ + (L – 3) ³ , si el área de un rectángulo de largo (L – 3) y ancho (A – 4) es 4 metros cuadrados?"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/productos-notables-pdf-teoria-y_24.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE PRODUCTOS NOTABLES TEST CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el valor del termino central del desarrollo de",
+      "alternatives": [
+        "64",
+        "128",
+        "265",
+        "512",
+        "1 024"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/binomio-de-newton-y-radicacion.html",
+      "sourceName": "matematica-a1.blogspot.com — BINOMIO DE NEWTON Y RADICACIÓN EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el desarrollo de la expresión ; existe un termino que contiene a . El termino que ocupa este termino contado a partir del extremo final es:",
+      "alternatives": [
+        "9",
+        "8",
+        "7",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/binomio-de-newton-y-radicacion.html",
+      "sourceName": "matematica-a1.blogspot.com — BINOMIO DE NEWTON Y RADICACIÓN EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el desarrollo de los coeficientes de los términos de lugar séptimo y octavo son iguales. Entonces el número de términos que presentará será:",
+      "alternatives": [
+        "49",
+        "48",
+        "47",
+        "45",
+        "44"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/binomio-de-newton-y-radicacion.html",
+      "sourceName": "matematica-a1.blogspot.com — BINOMIO DE NEWTON Y RADICACIÓN EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el desarrollo de los coeficientes de los términos de los lugares “2x+1” y “r+2” son iguales ¿De qué términos estamos hablando?",
+      "alternatives": [
+        "14 y 29",
+        "16 y28",
+        "16 y 26",
+        "16 y 27",
+        "18 y 30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/binomio-de-newton-y-radicacion.html",
+      "sourceName": "matematica-a1.blogspot.com — BINOMIO DE NEWTON Y RADICACIÓN EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el polinomio\nP(x;y) ≡ x³+y³+3(x²y+xy²)\nHalle el valor de :\nP(b −1;3 − b) − P(−1;1)",
+      "alternatives": [
+        "1",
+        "4",
+        "8",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/algebra-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA CATÓLICA PREGUNTAS RESUELTAS PUCP"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la siguiente igualdad\n(3x² – 5x+ 8)(x+ 8) = (3x+ 4)(x²+ 16) +ax(bx – c)\nel valor de la suma de las cifras de (ac – ab) es:",
+      "alternatives": [
+        "12",
+        "10",
+        "8",
+        "9",
+        "11"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique la siguiente expresión:\n(m−3n) 2 +(3m+n) 2 −10(n−m) 2",
+      "alternatives": [
+        "5 mn",
+        "10 mn",
+        "15 mn",
+        "20 mn",
+        "25 mn"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-ucsur-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CIENTIFÍCA DEL SUR 2027 UCSUR EXAMEN ADMISIÓN UNIVERSIDAD TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x(x – 3) = –1 , halle el valor de x³.x³ – 18x³+5",
+      "alternatives": [
+        "–1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/razonamiento-matematico-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO UNI DE EXAMEN DE ADMISIÓN UNIVERSIDAD DE INGENIERÍA SOLUCIONADO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al simplificar la expresión\nE= 99 ⁴ + 2(99)³ – 2(99) – 1\nla suma de las cifras del resultado es",
+      "alternatives": [
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/solucionario-unt-ingenierias-area-b-examen-admision-universidad-nacional-de-trujillo-claves-respuestas-prueba-resuelta-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA B SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD INGENIERÍAS CLAVES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si:\na+b=5\nab=2\nCalcular a 2 +b 2",
+      "alternatives": [
+        "23",
+        "27",
+        "7",
+        "29",
+        "21"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-7-experiencia-6-resuelta-matematicas-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a, b y c son números que cumplen las condiciones\na+b+c=21\na²+b²+c²=3035\nEntonces el valor de:\nT=(a+b)²+(a+c)²+(b+c)² es:",
+      "alternatives": [
+        "3 100",
+        "3 476",
+        "3 900",
+        "3 006",
+        "3075"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/algebra-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los valores numéricos de las edades de dos hermanos es 45 y la suma de sus cubos es 23 085. Halle el producto de estos valores.",
+      "alternatives": [
+        "504",
+        "486",
+        "506",
+        "500",
+        "510"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁLGEBRA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x 4 +x –4 =119 entonces el valor de x 3 –x –3 es:",
+      "alternatives": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "40"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-logico-matematico-y-verbal.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-1 PRIMERA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DESARROLLO APTITUD ACADÉMICA  PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina el valor de verdad de las siguientes proposiciones:\nI) a 2 +b 2 =(a+b) 2\nII) (a–b) 2 =a 2 –2ab+b 2\nIII) (a+b) 3 =a 3 +b 3",
+      "alternatives": [
+        "VFV",
+        "FVF",
+        "VFF",
+        "FVV",
+        "FFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/algebra-untels-examen-resuelto-admision.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA RESUELTA DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Eloy y Carlos en un taller de arte tienen como tarea construir un cubo cada uno. Si la arista del cubo de Carlos mide 3 cm menos que la arista del cubo de Eloy y la diferencia de volúmenes es 657 cm³, calcule el volumen del cubo de Eloy.",
+      "alternatives": [
+        "125 cm³",
+        "343 cm ³",
+        "1000 cm³",
+        "1331 cm ³",
+        "850 cm³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el polinomio\nP(x;y)≡ x 3 +y 3 +3(x 2 y+xy 2 )\nHalle el valor de :\nP(b −1;3 − b) − P(−1;1)",
+      "alternatives": [
+        "1",
+        "4",
+        "8",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/11/algebra-simulacro-de-examen-admision-beca-18-resuelto-pronabec-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SIMULACRO EXAMEN BECA 18 PRONABEC ADMISIÓN UNIVERSIDAD PRUEBA ÚNICA NACIONAL RESUELTA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que:\nm 6 –n 6 =a 3 +3ab\nAdemás: m 2 n 2 =b\nDetermina m 2 –n 2",
+      "alternatives": [
+        "ab",
+        "a 2",
+        "b 2",
+        "b",
+        "a"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-intermedia-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que\na+b=5\nab=1\nHalle a 3 +b 3",
+      "alternatives": [
+        "120",
+        "110",
+        "122",
+        "115",
+        "90"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/algebra-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que x e y son números reales, calcule el valor mínimo de P, donde\nP = 2x² + 9y² +16x − 36 √ 3y + 500",
+      "alternatives": [
+        "240",
+        "360",
+        "460",
+        "640"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Razonamiento-matematico-deco-C-E-examen-admision-universidad-san-marcos-resuelto-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO MATEMÁTICO PRUEBA DECO SOLUCIONES DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREAS D B PROBLEMAS DESARROLLADOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina el valor de verdad de las siguientes proposiciones:\nI. a²+b²= (a + b)²\nII. (a – b)²=a² – 2ab + b²\nIII. (a + b)³=a³ + b³",
+      "alternatives": [
+        "VFV",
+        "FVF",
+        "VFF",
+        "FVV",
+        "FFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/11/algebra-examen-resuelto-de-admision-a-la-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — ÁLGEBRA PREGUNTAS RESUELTAS ADMISIÓN UNIVERSIDAD SIMULACRO SOLUCIONARIO PRUEBA DE INGRESO DESARROLLADA 2022 2023"
     }
   ]
 }

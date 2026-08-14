@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En relación a las propiedades magnéticas de un material, indique la verdad (V) o falsedad (F) según corresponda en cada enunciado.\nI. Todo metal genera un campo magnético.\nII. Los polos opuestos de los imanes se atraen.\nIII. El hierro, cobalto y níquel son los principales materiales ferromagnéticos.",
-      "alternatives": ["VVF", "VFF", "FVV", "FVF", "VVV"],
+      "alternatives": [
+        "VVF",
+        "VFF",
+        "FVV",
+        "FVF",
+        "VVV"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/12/magnetismo-campo-fuerza-magnetica-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
       "sourceName": "Magnetismo - Ejercicios resueltos preuniversitarios (matematicaj), ejercicio propuesto 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el experimento de Oersted, al aplicar la regla de la mano derecha a la corriente, indique la verdad (V) o falsedad (F) de las siguientes proposiciones.\nI. El pulgar debe señalar en el sentido de la corriente real.\nII. El pulgar debe señalar en el sentido de la corriente convencional.\nIII. El campo magnético tiene el sentido en el cual se curvan los cuatro dedos.\nIV. La regla de la mano derecha, usada para hallar la dirección del campo magnético, se cumple sin excepción.",
-      "alternatives": ["FVFV", "FVVV", "VVFV", "FFVF", "VVVF"],
+      "alternatives": [
+        "FVFV",
+        "FVVV",
+        "VVFV",
+        "FFVF",
+        "VVVF"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2025/09/campo-magnetico-ejemplos-problemas-resueltos-formulas-biot-savar-oersted-induccion-magnetica-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "Campo magnético - Biot-Savart / Oersted, problemas resueltos preuniversitarios (matematicasn), ejercicio 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Con respecto al campo magnético, indique la verdad (V) o falsedad (F) de las siguientes proposiciones.\nI. Si dividimos un imán por la mitad, cada parte tiene un solo polo magnético.\nII. Las brújulas se orientan en la dirección de las líneas de inducción magnética.\nIII. En la proximidad de los polos geográficos, es menos intenso que en otras regiones.",
-      "alternatives": ["VFF", "FFV", "VVV", "FVV", "FVF"],
+      "alternatives": [
+        "VFF",
+        "FFV",
+        "VVV",
+        "FVV",
+        "FVF"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2025/09/campo-magnetico-ejemplos-problemas-resueltos-formulas-biot-savar-oersted-induccion-magnetica-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "Campo magnético - Biot-Savart / Oersted, problemas resueltos preuniversitarios (matematicasn), ejercicio 4"
@@ -55,7 +73,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El campo magnético que atraviesa una espira de área 2 m² varía de 0,5 T a cero en un tiempo de 0,25 segundos. ¿Cuál es la fuerza electromotriz inducida en dicha espira (en V)?",
-      "alternatives": ["4", "12", "16", "8", "120"],
+      "alternatives": [
+        "4",
+        "12",
+        "16",
+        "8",
+        "120"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2025/10/induccion-electromagnetica-flujo-magnetico-ejemplos-problemas-resueltos-formulas-ley-de-lenz-ley-de-faraday-regla-de-la-mano-derecha-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "Inducción electromagnética - Flujo magnético, problemas resueltos preuniversitarios (matematicasn), ejercicio 11"
@@ -66,10 +90,1087 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El flujo magnético a través del área de una espira circular varía de acuerdo a la ley φ = 1 + 8t, donde φ se expresa en mWb y t en segundos. ¿Cuál sería la magnitud de la fem inducida (en 10⁻³ V) en el intervalo de tiempo de 0 a 2 s?",
-      "alternatives": ["2", "8", "6", "5", "4"],
+      "alternatives": [
+        "2",
+        "8",
+        "6",
+        "5",
+        "4"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2025/10/induccion-electromagnetica-flujo-magnetico-ejemplos-problemas-resueltos-formulas-ley-de-lenz-ley-de-faraday-regla-de-la-mano-derecha-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "Inducción electromagnética - Flujo magnético, problemas resueltos preuniversitarios (matematicasn), ejercicio 12"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al campo magnético generado por dos conductores paralelos muy largos que transportan corriente de igual intensidad y en la misma dirección, indique la verdad (V) o falsedad (F) de las siguientes proposiciones.\nI. En el punto medio entre los conductores el campo magnético resultante es cero.\nII. En el punto medio entre los conductores el campo magnético resultante tiene una dirección que es paralela a los conductores.\nIII. Si las corrientes en los conductores fueran de direcciones opuestas el campo magnético resultante en el punto medio seria nulo.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFF",
+        "FFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-14-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 14 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por un alambre conductor recto y extenso circula una corriente. Si la magnitud del campo magnético es de 2,4 × 10 − ⁴ T a una distancia de 0,01 m, ¿cuál es la intensidad de la corriente?",
+      "alternatives": [
+        "8,0 A",
+        "12,0 A",
+        "16,0 A",
+        "6,0 A"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/fisica-simulacro-san-marcos-solucionario-admision-a-la-universidad-2020-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA ÁREA C PRUEBA DECO SAN MARCOS SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cable rectilíneo de 16 cm de longitud se encuentra en un campo magnético constante homogéneo de 7 mT. Calcule aproximadamente, en mA, la corriente eléctrica que fluye por el cable si la fuerza máxima es de 0,021 N.",
+      "alternatives": [
+        "18,75",
+        "38,00",
+        "48,00",
+        "28,25",
+        "58,25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De acuerdo con el fenómeno del magnetismo, determine la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. Una carga eléctrica en reposo produce un campo magnético a su alrededor.\nII. La magnitud del campo magnético en un punto debido a la corriente eléctrica que circula por un alambre conductor recto muy largo varía en razón inversa con la distancia desde el alambre a dicho punto.\nIII. La magnitud del campo magnético en un punto debido a la corriente eléctrica que circula por un alambre conductor recto muy largo varía en razón inversa con dicha corriente.\nIndique la alternativa que contiene las proposiciones correctas.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y III",
+        "II y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-8-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Nuestro planeta se encuentra rodeado por un campo magnético. Al respecto, califique cada proposición como verdadera (V) o falsa (F).\nI. Una brújula funciona al alinearse con el campo magnético de la Tierra.\nII. La intensidad del campo magnético terrestre tiene un valor del orden de un tesla.\nIII. El norte de la aguja de una brújula apunta al sur geográfico de la Tierra.\nIV. Puede suponerse un enorme imán de barra en el interior de la Tierra que genera este campo magnético.",
+      "alternatives": [
+        "VVFV",
+        "VFFV",
+        "FFVF",
+        "FVVV",
+        "VVFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/curvas-en-el-plano-lugares-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA BIOMÉDICAS 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una espira rectangular está parcialmente dentro de una región con campo magnético uniforme de 0,80 T perpendicular al plano. La espira es extraída completamente con rapidez constante tal que el área dentro del campo disminuye a razón de 3 ×10 –3 m 2 /s. La f.e.m. inducida instantánea es:",
+      "alternatives": [
+        "1,4 mV",
+        "2,4 mV",
+        "2,6 mV",
+        "2,8 mV",
+        "3,0 mV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una bobina es un alambre que ha sido doblado en forma de espiras sucesivas para intensificar el efecto de la corriente eléctrica que circulará en el mismo sentido en cada espira. Considerando lo mencionado, si una bobina tiene 125 espiras y en el instante t=1s el flujo magnético es 0,25Wb y en el instante t=3s el flujo magnético es 0,35Wb. Calcule la fuerza automotriz inducida media en la bobina.",
+      "alternatives": [
+        "6,20V",
+        "6,25V",
+        "6,23V",
+        "6,30V",
+        "6,28V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/1ro-2do-experiencia-de-aprendizaje-integrada-2-aprendo-en-casa-primer-segundo-grado-de-secundaria-actividades-resueltas-web-tv-radio-word-descargas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNAH 2027 INGRESO UNIVERSIDAD AUTÓNOMA DE HUANTA CLAVES – RESPUESTAS – PRUEBA DE ENSAYO – SIMULACIÓN RESUELTA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El material magmático se encuentra en constante movimiento en la astenósfera por",
+      "alternatives": [
+        "la dureza de las rocas.",
+        "la forma y rotación de la Tierra.",
+        "la existencia del campo magnético.",
+        "las elevadas temperaturas en la zona del manto.",
+        "la baja presión en el núcleo exterior."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/fuerzas-geologicas-internas-y-la-construccion-del-relieve-geodinamica-endogena-de-la-tierra-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-secundaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEODINÁMICA ENDÓGENA PREGUNTAS RESUELTAS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La tectónica de placas explica que la corteza está conformada por un conjunto de bloques que se desplazan gracias a",
+      "alternatives": [
+        "las corrientes convectivas del manto.",
+        "la rotación terrestre y el efecto Coriolis.",
+        "las mareas generadas por influencia de la Luna.",
+        "la atracción gravitacional del Sol.",
+        "la composición metálica del núcleo y el campo magnético."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/fuerzas-geologicas-internas-y-la-construccion-del-relieve-geodinamica-endogena-de-la-tierra-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-secundaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEODINÁMICA ENDÓGENA PREGUNTAS RESUELTAS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si por el bobinado se hace circular una corriente de 2 Amperios, calcule el campo magnético en el interior de un solenoide recto construido al enrollar uniformemente 600 vueltas de un alambre conductor de cobre delgado sobre un cilindro hueco de 30 cm de longitud.",
+      "alternatives": [
+        "1 600×10 –3 T",
+        "15 072×10 –3 T",
+        "5,03×10 –3 T",
+        "7,05×10 –3 T",
+        "10,03×10 –3 T"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/examen-admision-cantuta-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CANTUTA 2027 UNE EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE EDUCACIÓN ENRIQUE GUZMÁN Y VALLE PROSPECTO CRONOGRAMA VACANTES ESTRUCTURA PUNTAJES TEMAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "(I) _______\n(II) Cuando los huevos eclosionan. las tortugas recién nacidas se encaminan hacia el océano.\n(III) Inician, entonces, una asombrosa travesía que, en total, puede cubrir una distancia de 12 900 km.\n(IV) Años después, ya adultas, las hembras vuelven a la misma playa donde nacieron para poner sus propios huevos.\n(V) Esto se debe a su sistema de navegación, que les permite determinar su posición detectando el ángulo y la intensidad del campo magnético de la Tierra.",
+      "alternatives": [
+        "Las tortugas migran desde su zona de alimentación hasta las costas donde anidan.",
+        "La tortuga marina es un reptil que nace con un diente especial llamado curúncula.",
+        "Las tortugas marinas pasan el 90% de su vida en el océano y el 10 % en la arena.",
+        "Las tortugas marinas ponen sus huevos en una playa distinta de donde nacieron.",
+        "Tras poner sus huevos y enterrarlos, la tortuga marina hembra abandona el nido."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/inclusion-de-enunciado-preguntas-resueltas-de-examen-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INCLUSIÓN DE ENUNCIADOS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un campo magnético cuya intensidad es 0,9 T en la dirección positiva del eje z actúa sobre un protón que se mueve con velocidad v ➜ =(4,0 î + 3,0j)×10 6 m/s. Calcule aproximadamente la magnitud de la fuerza magnética (en unidades de 10 –13 N) que actúa sobre el protón. Considere la carga de un protón igual a 1,6 ×10 –19 C.",
+      "alternatives": [
+        "7,2",
+        "8,3",
+        "8,7",
+        "9,2",
+        "9,7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las siguientes proposiciones, indique la alternativa correcta.\nI) Se induce una f.e.m. en toda espira conductora cuando cambia el flujo magnético que lo atraviesa.\nII) Se induce una f.e.m. y una corriente en toda espira conductora tanto cuando ésta forma un circuito cerrado como cuando forma un circuito abierto, siempre que en ambos casos exista un flujo magnético variable que lo atraviesa.\nIII) Se induce una f.e.m. en toda espira conductora o no conductora siempre que el flujo magnético que lo atraviesa sea variable.",
+      "alternatives": [
+        "VFF",
+        "FFV",
+        "VVV",
+        "FFF",
+        "VFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/10/induccion-electromagnetica-flujo-magnetico-ejemplos-problemas-resueltos-formulas-ley-de-lenz-ley-de-faraday-regla-de-la-mano-derecha-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INDUCCIÓN ELECTROMAGNÉTICA EJERCICIOS RESUELTOS DE FLUJO MAGNÉTICO PDF – LEY DE LENZ – LEY DE FARADAY – REGLA DE LA MANO DERECHA – FUERZA ELECTROMOTRIZ EN UNA BARRA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la fuerza magnética, indique la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI) La fuerza magnética es responsable sólo del cambio en la dirección de la velocidad de una carga ‘‘q’’.\nII) La fuerza magnética nunca realiza trabajo sobre una carga ‘‘q’’.\nIII) La energía cinética de una carga ‘‘q’’ cambia cuando actúa una fuerza magnética sobre ella.",
+      "alternatives": [
+        "VVF",
+        "FFV",
+        "VVV",
+        "FFF",
+        "VFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/10/fuerza-magnetica-ejemplos-problemas-resueltos-formulas-lorentz-ampere-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUERZA MAGNÉTICA EJERCICIOS RESUELTOS PDF AMPERE LORENTZ PALMA DE LA MANO DERECHA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un protón se mueve en una región donde hay un campo magnético de magnitud 1,75 T y orientado hacia al eje Z positivo. La rapidez del protón es 4,46×10 6 m/s moviéndose hacia el eje X positivo.\nCalcule el valor aproximado de la magnitud de la fuerza magnética (en N) que actúa sobre el protón.\nCarga del protón: 1,6×10 –1 9 C",
+      "alternatives": [
+        "4,45×10 –1 3",
+        "8,25×10 –1 3",
+        "1,25×10 –1 2",
+        "2,15×10 –1 1",
+        "3,15×10 –1 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El núcleo de la Tierra actúa como un dínamo que genera el campo magnético, por lo tanto, el centro de la Tierra contiene minerales. ¿Cuáles son estos minerales?",
+      "alternatives": [
+        "titanio - magnesio",
+        "hierro - sílice",
+        "niquel - magnesio",
+        "niquel - hierro",
+        "sílice - titanio"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/02/geosfera-y-geodinamica-terrestre-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicasn.blogspot.com — GEÓSFERA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – GEOGRAFÍA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No es consecuencia del movimiento de rotación:",
+      "alternatives": [
+        "desviación de Coriolis",
+        "activación del campo magnético",
+        "diferencia de hora solar",
+        "duración del año",
+        "movimiento de la esfera celeste"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-movimiento-de-rotacional-de-la-tierra-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO DE ROTACIÓN TERRESTRE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – GEOGRAFÍA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia entre la localización del eje magnético y el eje geográfico se denomina:",
+      "alternatives": [
+        "polo magnético.",
+        "inclinación magnética.",
+        "declinación magnética.",
+        "campo magnético.",
+        "plano magnético."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-movimiento-de-rotacional-de-la-tierra-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO DE ROTACIÓN TERRESTRE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – GEOGRAFÍA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la Tierra gira en sentido retrógrado:",
+      "alternatives": [
+        "los días durarían menos.",
+        "el efecto Coriolis se invertiría.",
+        "no habría campo magnético.",
+        "habría años más cortos.",
+        "existiría una mayor diferencia de radios."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-movimiento-de-rotacional-de-la-tierra-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO DE ROTACIÓN TERRESTRE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – GEOGRAFÍA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cable rectilíneo de 16cm de longitud, se encuentra en un campo magnético constante homogéneo de 7mT. Calcule (en A) la corriente eléctrica que fluye por el cable, si la fuerza máxima que experimenta el cable es de 0,021N.",
+      "alternatives": [
+        "18,75",
+        "28,75",
+        "58,75",
+        "48,75",
+        "38,75"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/resolucion-de-sistemas-de-ecuaciones.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-1 TERCERA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DESARROLLO DE FÍSICA QUÍMICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un experimento, una partícula con carga q y masa m ingresa con velocidad V a una región donde existe un campo magnético uniforme B . La velocidad V forma un ángulo de 30° con la dirección del campo magnético. En estas condiciones, determine el radio y el tipo de trayectoria que describe la partícula.",
+      "alternatives": [
+        "mV(2qB) –1 , helicoidal",
+        "mV (2qB) –1 , circular",
+        "2mV (qB) –1 , helicoidal",
+        "mV (qB) –1 , circular",
+        "3 √ 2mV (qB) –1 , helicoidal"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la teoría atómica de Bohr , es incorrecto :",
+      "alternatives": [
+        "En un átomo hay interacción eléctrica entre su núcleo positivo y el electrón que gira a su alrededor.",
+        "En los saltos electrónicos se emite o absorben valores específicos de energía.",
+        "Este modelo no se puede aplicar al Calcio.",
+        "Los radios de las órbitas circulares no pueden asumir cualquier valor.",
+        "Explica el efecto Zeeman, que es el desdoblamiento de las líneas espectrales por acción de un campo magnético externo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/modelo-atomico-de-dalton-thomson-rutherford-bohr-y-actual-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MODELOS ATÓMICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Analizar la veracidad (V) o falsedad (F) de las siguientes afirmaciones.\nI) La polarización es una característica de todas las ondas transversales.\nII) La dirección de polarización de una onda electromagnética está dada por la dirección del campo magnético.\nIII) La luz proveniente de fuentes ordinarias: bombillas, fluorescentes está polarizada.\nIV) Para obtener luz polarizada se utiliza un filtro polarizador.",
+      "alternatives": [
+        "FFFV",
+        "FVFV",
+        "VFFV",
+        "FVVF",
+        "VFVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique verdadero (V) o falso (F) según corresponda\n( ) Los rayos gamma al pasar por un campo magnético sufren desviación hacia el polo negativo.\n( ) Respecto al poder de penetración :\nrayos α > rayos β > rayos 𝛾\n( ) Los rayos beta no poseen carga eléctrica y se propagan a la velocidad de la luz .\n( Efecto dañino sobre los seres vivos :\nrayos 𝛾 > rayos β > rayos α",
+      "alternatives": [
+        "FVFV",
+        "VFFV",
+        "VFFF",
+        "FFFV",
+        "FFVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un solenoide de 90 cm de longitud y de 1,2cm de radio. Si por cada centímetro de longitud se tiene 100 vueltas, calcule, en A, la corriente eléctrica en el solenoide sabiendo que en su eje el campo magnético es de 10𝛑mT.\nConsidere μ 0 =4𝛑×10 –7 T· m/A.",
+      "alternatives": [
+        "0,5",
+        "1,5",
+        "2,5",
+        "3,5",
+        "4,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/induccion-electromagnetica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INDUCCIÓN MAGNÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El fenómeno de la inducción magnética ayuda a entender cómo se genera la corriente eléctrica en Arequipa. En una central hidroeléctrica, a través de la caída de agua, se hace girar uniformemente una bobina que se encuentra dentro de un campo magnético constante. En las terminales de la bobina, se induce un voltaje y, por lo tanto, una corriente eléctrica que se envía a la ciudad. Según la ley de inducción de Faraday, de las siguientes, ¿qué variable cambia mientras la bobina se encuentra girando?",
+      "alternatives": [
+        "El periodo de giro de la bobina",
+        "El área encerrada por uno de los lazos de la bobina",
+        "El ángulo que forma el vector campo magnético y el vector área de uno de los lazos de la bobina",
+        "La velocidad angular de la bobina",
+        "El campo magnético donde se encuentra la bobina"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/induccion-electromagnetica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INDUCCIÓN MAGNÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la longitud de una línea de inducción magnética, correspondiente a una corriente de 1mA que circula por un cable muy largo, es 4 𝛑 m , halle la magnitud del campo magnético sobre dicha línea de inducción en unidad de (10 –10 T).",
+      "alternatives": [
+        "0,2",
+        "0,5",
+        "1,0",
+        "2,0",
+        "5,0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/induccion-electromagnetica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INDUCCIÓN MAGNÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A través de un solenoide de 5cm. de diámetro circula una corriente eléctrica de 2A, si el número de espiras por unidad de longitud se triplica, permaneciendo la intensidad constante, calcular la relación de los valores del campo magnético en el centro del solenoide antes y después de cambiar el número de espiras.",
+      "alternatives": [
+        "1/3 disminuye",
+        "3 aumenta",
+        "1,5 aumenta",
+        "2 aumenta",
+        "1,5 disminuye"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/induccion-electromagnetica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INDUCCIÓN MAGNÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un solenoide por donde circula una corriente I=0,5A originándose en el interior de él un campo magnético cuya magnitud es 10 G.\nHalle (en 10 –4 T) en cuando varía B si n (n° de vueltas por unidad de longitud) disminuye a la mitad , e I aumenta al triple.\n(considere 1G=10 –4 T)",
+      "alternatives": [
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/induccion-electromagnetica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INDUCCIÓN MAGNÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el experimento de Oersted, al aplicar la regla de la mano derecha a la corriente.\nI) El pulgar debe señalar en el sentido de la corriente real.\nII) El pulgar debe señalar en el sentido de la corriente convencional.\nIII) El campo magnético tiene el sentido en el cual se curvan los cuatro dedos.\nIV) La regla de la mano derecha, usada para hallar la dirección del campo magnético, se cumple sin excepción.",
+      "alternatives": [
+        "VVVV",
+        "FVVV",
+        "FVFV",
+        "FFVV",
+        "FFFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/induccion-electromagnetica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INDUCCIÓN MAGNÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un solenoide de 90 cm de longitud y de 1,2cm de radio. Si por cada centímetro de longitud se tiene 100 vueltas, calcule, en A, la corriente eléctrica en el solenoide sabiendo que en su eje el campo magnético es de 10𝛑mT.\nConsidere μ 0 =4𝛑×10 –7 T· m/A.",
+      "alternatives": [
+        "0,5",
+        "1,5",
+        "2,5",
+        "3,5",
+        "4,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/tercera-prueba-examen-uni-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I TERCERA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al concepto de la inducción electromagnética. Indique la verdad (V) o falsedad (F) de las siguientes proposiciones.\nI. El flujo magnético variable produce un fem.\nII. La fem inducida genera una corriente eléctrica.\nIII. Se cumple la ley de Lenz.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FFV",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-fisica-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De acuerdo a las leyes de Faraday y de Lenz con respecto al flujo magnético, indique la verdad (V) o falsedad (F) de las proposiciones.\nI. La ley de Lenz determina al sentido de la corriente inducida.\nII. La ley de Faraday se relaciona con el flujo magnético.\nIII. Las centrales hidroeléctricas generan corriente eléctrica básicamente por inducción electromagnética.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-fisica-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El campo magnético a través de una bobina de 100 espiras varía según la ecuación B = 0,3t² + 0,2 , donde B está en tesla y t en segundos. Determine la intensidad de la corriente inducida en un intervalo △t = 2 s. Considere la resistencia de la bobina 20 Ω y su área transversal 5 cm².",
+      "alternatives": [
+        "1,5 mA",
+        "1,2 mA",
+        "0,8 mA",
+        "0,15 mA"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-fisica-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una espira cuadrada de 2 m de lado se encuentra en el plano X-Y del sistema cartesiano tridimensional. Un campo magnético uniforme de 2 mT atraviesa la espira formando un ángulo de 60° con el eje +Z. Considerando que la espira metálica tiene una resistencia de 0,32Ω y si el campo magnético se reduce a cero en 0,5 s. ¿Cuál es la magnitud de la corriente inducida presente en la espira?",
+      "alternatives": [
+        "25 mA",
+        "50 mA",
+        "125 mA",
+        "150 mA"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-fisica-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un avión caza de quinta generación se desplaza del oeste hacia el este con una rapidez de 1800 km/h. Si consideramos que el campo magnético terrestre en la posición del avión tiene una magnitud de 50 × 10−⁶ T y forma un ángulo de inclinación de 37° con la horizontal. Determine la magnitud de la fem inducida entre los puntos extremos de las alas cuya longitud es de 15 m?",
+      "alternatives": [
+        "0.125 V",
+        "0.175 V",
+        "0.225 V",
+        "0.150 V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-fisica-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un transformador de corriente tiene una pérdida de flujo magnético del 10%. Si sus devanados primario y secundario están en una relación de 1 a 20 respectivamente, ¿cuál es el voltaje de entrada si a través del secundario se tiene 180 V?",
+      "alternatives": [
+        "9 V",
+        "10",
+        "8,1 V",
+        "20V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN SAN MARCOS ÁREA A 2022 II MEDICINA HUMANA SOLUCIONARIO PRUEBA DESARROLLADA ADMISIÓN UNIVERSIDAD RESPUESTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un electrón se lanza con velocidad uniforme a lo largo del eje de un solenoide largo que transporta corriente. ¿Cuál de las siguientes afirmaciones es verdadera?",
+      "alternatives": [
+        "El electrón se acelerará a lo largo del eje.",
+        "La trayectoria del electrón será circular alrededor del eje.",
+        "El electrón experimentará una fuerza a 45° respecto al eje y, por lo tanto, describirá una trayectoria helicoidal.",
+        "El electrón continuará moviéndose con velocidad uniforme a lo largo del eje del solenoide."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep104.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.4 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un ciclotrón, una partícula cargada",
+      "alternatives": [
+        "se acelera todo el tiempo.",
+        "aumenta su rapidez entre las des debido al campo magnético.",
+        "aumenta su rapidez dentro de una de.",
+        "disminuye su rapidez dentro de una de y la aumenta entre las des."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep104.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.4 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un imán permanente a temperatura ambiente",
+      "alternatives": [
+        "el momento magnético de cada molécula es cero.",
+        "las moléculas individuales tienen un momento magnético distinto de cero, todos perfectamente alineados.",
+        "los dominios están parcialmente alineados.",
+        "todos los dominios están perfectamente alineados."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep105.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.5 MCQ 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La magnetohipertermia es un procedimiento terapéutico que se basa en la elevación de la temperatura de las células de una región específica del cuerpo que estén afectadas por un tumor. En este tipo de tratamiento, nanopartículas magnéticas son fagocitadas por las células tumorales, y un campo magnético alterno externo se utiliza para promover la agitación de las nanopartículas y el consiguiente calentamiento de la célula. La elevación de temperatura descrita ocurre porque",
+      "alternatives": [
+        "el campo magnético generado por la oscilación de las nanopartículas es absorbido por el tumor.",
+        "el campo magnético alterno hace que las nanopartículas giren, transfiriendo calor por fricción.",
+        "las nanopartículas interactúan magnéticamente con las células del cuerpo, transfiriendo calor.",
+        "el campo magnético alterno suministra calor a las nanopartículas que lo transfieren a las células del cuerpo.",
+        "las nanopartículas son aceleradas en un único sentido debido a la interacción con el campo magnético, haciendo que choquen con las células y transfieran calor."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2016/2016_PV_impresso_D1_CD1.pdf",
+      "sourceName": "gov.br-inep — ENEM 2016 dia 1 caderno azul questão 88"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para demostrar el proceso de transformación de energía mecánica en eléctrica, un estudiante construye un pequeño generador utilizando: • un alambre de cobre de diámetro D enrollado en N espiras circulares de área A; • dos imanes que crean en el espacio entre ellos un campo magnético uniforme de intensidad B; y • un sistema de engranajes que le permite girar las espiras alrededor de un eje con una frecuencia f. Al hacer funcionar el generador, el estudiante obtuvo una tensión máxima V y una corriente de cortocircuito i. Para duplicar el valor de la tensión máxima V del generador manteniendo constante el valor de la corriente de cortocircuito i, el estudiante debe duplicar el(la)",
+      "alternatives": [
+        "número de espiras.",
+        "frecuencia de giro.",
+        "intensidad del campo magnético.",
+        "área de las espiras.",
+        "diámetro del alambre."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2017/2017_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2017 dia 2 caderno azul questão 133"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las redes de alta tensión para transmisión de energía eléctrica generan un campo magnético variable suficiente para inducir corriente eléctrica en el alambre de las cercas. Tanto los animales como los empleados de las propiedades rurales o de las empresas de energía deben tener mucho cuidado al acercarse a una cerca cuando esta se encuentre próxima a una red de alta tensión, pues, si tocan el alambre de la cerca, podrán sufrir una descarga eléctrica. Para minimizar este tipo de problema, se debe:",
+      "alternatives": [
+        "Hacer la puesta a tierra de los alambres de la cerca.",
+        "Agregar un fusible de seguridad en la cerca.",
+        "Realizar la puesta a tierra de la red de alta tensión.",
+        "Instalar un fusible de seguridad en la red de alta tensión.",
+        "Utilizar cables recubiertos con aislante en la red de alta tensión."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2019/2019_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2019 dia 2 caderno azul questão 92"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cocina de inducción funciona a partir del surgimiento de una corriente eléctrica inducida en el fondo de la olla, con la consiguiente transformación de energía eléctrica en calor por efecto Joule. La principal ventaja de esas cocinas es la eficiencia energética, que es sustancialmente mayor que la de las cocinas convencionales. La corriente eléctrica mencionada es inducida por",
+      "alternatives": [
+        "radiación.",
+        "conducción.",
+        "campo eléctrico variable.",
+        "campo magnético variable.",
+        "resonancia electromagnética."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2023 dia 2 caderno azul questão 108"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la razón f 2 /f 1 entre las frecuencias de dos ondas electromagnéticas armónicas que se propagan en el vacío, cuyas longitudes de onda son λ 1 =5,0μm y λ 2 =5,0nm, respectivamente.",
+      "alternatives": [
+        "10",
+        "10 2",
+        "10 3",
+        "10 4",
+        "10 5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una onda electromagnética que se propaga en el vacío, cuya intensidad media es 8 mW/m 2 . Si la amplitud de la componente magnética de la onda electromagnética aumenta en 25 %, calcule en mW/m 2 , la nueva intensidad media.",
+      "alternatives": [
+        "12,5",
+        "25",
+        "15,5",
+        "10",
+        "27,5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/fisica-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a los polos de un imán. Indicar la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. El polo sur de un imán se orienta hacia el polo norte geográfico terrestre.\nII. Los imanes pueden tener un solo polo.\nIII. Los imanes atraen a todos los metales.",
+      "alternatives": [
+        "VFV",
+        "FVF",
+        "FFF",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-14-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 14 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule aproximadamente la intensidad promedio de una radiación electromagnética en mW/m 2 , si la amplitud de su componente eléctrica es 2 V/m y se está propagando en el vacío. Considere que la permitividad eléctrica del vacío es 8,85 × 10 12 C 2 /N ⋅ m 2 y la rapidez de la luz en el vacío es 3 × 10 8 m/s.",
+      "alternatives": [
+        "1,3",
+        "2,3",
+        "3,3",
+        "4,3",
+        "5,3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-11-educacion-fisica-experiencia-6-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La intensidad media de una onda electromagnética es de 8 mW/m². Si la inducción magnética máxima de la onda aumenta en 25 %, calcule, en mW/m², la nueva intensidad media.",
+      "alternatives": [
+        "25",
+        "27,5",
+        "10",
+        "15,5",
+        "12,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/fisica-problemas-resueltos-del-examen-de-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SEMINARIO DE FÍSICA PROBLEMAS RESUELTOS TIPO EXAMEN DE ADMISIÓN A LA UNIVERSIDAD NACIONAL DE INGENIERÍA UNI PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a las ondas electromagnéticas (OEM) se hacen las siguientes afirmaciones:\nI) En el vacío, la rapidez de propagación de una OEM no depende de la frecuencia de propagación de la onda.\nII) Una OEM se puede producir por la desaceleración de cargas eléctricas.\nIII) Las OEM son ondas longitudinales.\nDe estas afirmaciones son ciertas:",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "I y II",
+        "I y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una estación de TV emite en una frecuencia de 90 MHz. La longitud de esta onda en m es:",
+      "alternatives": [
+        "50",
+        "2,2",
+        "3,33",
+        "90,2",
+        "4,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto de las OEM, indique la veracidad (V) o falsedad (F) de las siguientes proposiciones:\nI) Las OEM, pueden ser longitudinales o transversales.\nII) Las OEM, se encuentran conformados por la superposición de una onda magnética y otra eléctrica en fase.\nIII) La intensidad de una OEM, depende de la fuente que la genera.",
+      "alternatives": [
+        "VVV",
+        "FFF",
+        "VFV",
+        "FFV",
+        "VVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando varía (en m) la longitud de una onda que tiene una frecuencia de 3 mHz en el vacío cuando pasa a un medio no magnético cuya permitividad eléctrica es ε=4ε 0 .",
+      "alternatives": [
+        "– 30",
+        "– 60",
+        "– 50",
+        "– 70",
+        "– 80"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una emisora de radio situada a 90km de nuestra casa genera una señal de radio con una frecuencia de 0,7Mhz. ¿Cuántas longitudes de onda hay entre la estación y nuestra casa?",
+      "alternatives": [
+        "150",
+        "180",
+        "210",
+        "240",
+        "250"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se puede afirmar que las ondas electromagnéticas para radio y para la luz , que las dos tienen:",
+      "alternatives": [
+        "La misma velocidad en el vacío, pero diferentes frecuencias.",
+        "Diferentes velocidades en el vacío pero la misma frecuencia.",
+        "Diferentes velocidades en el vacío y diferentes frecuencias.",
+        "La misma velocidad en el vacío y la misma frecuencia.",
+        "Naturaleza diferente."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes proposiciones con respecto a las características de las ondas electromagnéticas:\nI) Los campos eléctricos y magnéticos asociados a una onda electromagnética son perpendiculares a la dirección de propagación y antiparalelos entre sí.\nII) Un haz de radiación infraroja posee menor energía que uno de radiación visible de la misma intensidad.\nIII) En el espectro electromagnético se ordena a las ondas electromagnéticas según su intensidad.\nSeñale la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F):",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FFV",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto del espectro electromagnético , ¿cuáles de las siguientes afirmaciones son correctas?\nI) Las ondas de mayor longitud se encuentran en la región de los rayos γ (gamma).\nII) En la región de radiofrecuencia se encuentran las ondas audibles por el oído humano.\nIII) La región del infrarrojo se encuentra más próxima al visible que la región de las microondas.",
+      "alternatives": [
+        "Sólo I",
+        "Sólo II",
+        "Sólo III",
+        "I y III",
+        "II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El canal 5 de TV (VHF) transmite a una frecuencia de 63,0 MHz. El canal 25 de TV (UHF) transmite a una frecuencia de 527 MHz, encuentre la razón (VHF/UHF) de las longitudes de onda de los dos canales.",
+      "alternatives": [
+        "8,92",
+        "7,49",
+        "7,28",
+        "6,25",
+        "8,37"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-fisica-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE FÍSICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La intensidad media de una onda electromagnética es de 8 mW/m 2 . Si la inducción magnética máxima de la onda aumenta en 25%, calcule, en mW/m 2 , la nueva intensidad media.",
+      "alternatives": [
+        "25",
+        "27,5",
+        "10",
+        "15,5",
+        "12,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Fisica-problemas-resueltos-de-examen-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una espira circular que transporta corriente, de radio R, se coloca en el plano x-y con centro en el origen. La mitad de la espira con x > 0 se dobla de modo que ahora se encuentra en el plano y-z.",
+      "alternatives": [
+        "La magnitud del momento magnético ahora disminuye.",
+        "El momento magnético no cambia.",
+        "La magnitud de B en (0,0,z), con z >> R, aumenta.",
+        "La magnitud de B en (0,0,z), con z >> R, no cambia."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep104.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.4 MCQ 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un toroide de n vueltas, radio medio R y radio de sección transversal a, transporta una corriente I. Se coloca sobre una mesa horizontal tomada como el plano x-y. Su momento magnético m",
+      "alternatives": [
+        "es distinto de cero y apunta en la dirección z por simetría.",
+        "apunta a lo largo del eje del toroide (m = m φ̂).",
+        "es cero; de lo contrario, existiría un campo que decae como en r3 a grandes distancias fuera del toroide.",
+        "apunta radialmente hacia afuera."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep105.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.5 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una onda electromagnética linealmente polarizada, dada como E = E ˆi cos (kz – ω t ), incide normalmente sobre una pared infinita perfectamente reflectante en z = a. Suponiendo que el material de la pared es ópticamente inactivo, la onda reflejada estará dada por",
+      "alternatives": [
+        "Er = – Eo ˆi cos (kz – ω t ) .",
+        "E r = E o ˆi cos (kz + ω t ) . 21/04/2018",
+        "E r = – Eo ˆi cos (kz + ω t ) .",
+        "E = E ˆi sin (kz – ωt ) . r o"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep108.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.8 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se deben transmitir de un lugar a otro tres ondas A, B y C, de frecuencias 1600 kHz, 5 MHz y 60 MHz, respectivamente. ¿Cuál de las siguientes es la forma de comunicación más apropiada?",
+      "alternatives": [
+        "A se transmite mediante onda espacial, mientras que B y C se transmiten mediante onda ionosférica.",
+        "A se transmite mediante onda terrestre, B mediante onda ionosférica y C mediante onda espacial.",
+        "B y C se transmiten mediante onda terrestre, mientras que A se transmite mediante onda ionosférica.",
+        "B se transmite mediante onda terrestre, mientras que A y C se transmiten mediante onda espacial."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep115.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.15 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para un transformador ideal. Indique la verdad (V) o falsedad (F) de las siguientes proposiciones\nI. La potencia del primario es igual que del secundario.\nII. Se puede elevar o disminuir el voltaje del secundario.\nIII. Se puede elevar o disminuir la corriente del secundario.",
+      "alternatives": [
+        "VVF",
+        "VVV",
+        "FFV",
+        "FVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-fisica-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
     }
   ]
 }

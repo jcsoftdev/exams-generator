@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Hallar la pendiente de una recta que pasa por (2; -2) y (-1; 4).",
-      "alternatives": ["1", "-2", "0", "2", "3"],
+      "alternatives": [
+        "1",
+        "-2",
+        "0",
+        "2",
+        "3"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 1 (clave B)"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Dados los puntos A(3; 2) y B(7; 6) que pertenecen a la recta L. Calcular la pendiente.",
-      "alternatives": ["1", "2", "3", "4", "1/2"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "1/2"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 2 (clave A)"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El ángulo de inclinación de una recta mide 135°, si pasa por los puntos (-3; n) y (-5; 7). Hallar el valor de n.",
-      "alternatives": ["1", "3", "5", "7", "-1"],
+      "alternatives": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "-1"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 3 (clave C)"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcula la pendiente de una recta si se sabe que su ángulo de inclinación es 37°.",
-      "alternatives": ["5/4", "2/3", "5/2", "3/4", "1"],
+      "alternatives": [
+        "5/4",
+        "2/3",
+        "5/2",
+        "3/4",
+        "1"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 4 (clave D)"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una recta pasa por los puntos (2; 3), (6; 8) y (10; b). Hallar el valor de b.",
-      "alternatives": ["13", "8", "7", "-6", "5"],
+      "alternatives": [
+        "13",
+        "8",
+        "7",
+        "-6",
+        "5"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 5 (clave A)"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcular la pendiente de la recta cuya ecuación es: 3x - 4y - 12 = 0",
-      "alternatives": ["1", "2/3", "3/5", "3/4", "1/2"],
+      "alternatives": [
+        "1",
+        "2/3",
+        "3/5",
+        "3/4",
+        "1/2"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 6 (clave D)"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Dada la recta L: y = 3x + 4. Determinar el punto de intersección de la recta con el eje Y.",
-      "alternatives": ["(0; 1)", "(0; 0)", "(0; 2)", "(0; 4)", "(0; -1)"],
+      "alternatives": [
+        "(0; 1)",
+        "(0; 0)",
+        "(0; 2)",
+        "(0; 4)",
+        "(0; -1)"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 10 (clave D)"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular las coordenadas del punto de intersección de dos rectas cuyas ecuaciones son: L1: 2x - y - 6 = 0 ; L2: x + y - 3 = 0",
-      "alternatives": ["(3; 1)", "(3; 0)", "(5; 2)", "(7; 1)", "(8; -1)"],
+      "alternatives": [
+        "(3; 1)",
+        "(3; 0)",
+        "(5; 2)",
+        "(7; 1)",
+        "(8; -1)"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 12 (clave B)"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Las rectas L1: x - y = 0 y L2: 3x + 4y - 21 = 0 determinan con el eje de las abscisas una región triangular cuya área se pide calcular.",
-      "alternatives": ["10,5", "6", "9", "12", "12,4"],
+      "alternatives": [
+        "10,5",
+        "6",
+        "9",
+        "12",
+        "12,4"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Geometría Analítica Banco de Preguntas Resueltas de Examen Admisión, Pregunta 3 (clave A)"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Para la instalación de las vías de un tren, los rieles que lo conforman siguen las rectas L1: ax + (a - 1)y - 3 = 0 y L2: 4x + 3y + 7 = 0 que son paralelas en un tramo. Halle la distancia entre L1 y L2.",
-      "alternatives": ["1", "1,5", "2", "2,5", "3"],
+      "alternatives": [
+        "1",
+        "1,5",
+        "2",
+        "2,5",
+        "3"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Geometría Analítica Banco de Preguntas Resueltas de Examen Admisión, Pregunta 4 (clave C)"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Las coordenadas de los vértices de un triángulo son A(-3; -1), B(-1; 5) y C(5; 3). Halle la ecuación de la recta que pasa por el vértice B y es paralela al lado AC.",
-      "alternatives": ["2x - 4y - 10 = 0", "x - 2y + 12 = 0", "x - 2y + 11 = 0", "x - 2y + 13 = 0", "2x - 4y + 14 = 0"],
+      "alternatives": [
+        "2x - 4y - 10 = 0",
+        "x - 2y + 12 = 0",
+        "x - 2y + 11 = 0",
+        "x - 2y + 13 = 0",
+        "2x - 4y + 14 = 0"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Geometría Analítica Banco de Preguntas Resueltas de Examen Admisión, Pregunta 5 (clave C)"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Hallar la ecuación de la mediatriz del segmento determinado por la intersección de la recta 2x + y - 6 = 0 con los ejes coordenados.",
-      "alternatives": ["2x - y + 6 = 0", "2x - 4y + 9 = 0", "x - 2y + 12 = 0", "2x + 4y - 15 = 0", "2x - 4y - 9 = 0"],
+      "alternatives": [
+        "2x - y + 6 = 0",
+        "2x - 4y + 9 = 0",
+        "x - 2y + 12 = 0",
+        "2x + 4y - 15 = 0",
+        "2x - 4y - 9 = 0"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Geometría Analítica Banco de Preguntas Resueltas de Examen Admisión, Pregunta 6 (clave B)"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El punto B tiene coordenadas (x; x - 2) y el otro punto es A(2; -4), siendo el ángulo de inclinación de la recta AB igual a 53°. Hallar las coordenadas del punto B.",
-      "alternatives": ["(12; 14)", "(15; 10)", "(14; 12)", "(12; 17)", "(18; 9)"],
+      "alternatives": [
+        "(12; 14)",
+        "(15; 10)",
+        "(14; 12)",
+        "(12; 17)",
+        "(18; 9)"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 7 (clave C)"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Determinar si el punto (4; w) pertenece a la recta L: 3x - 5y + 15 = 0. Hallar w.",
-      "alternatives": ["1", "2", "6,3", "5,4", "10"],
+      "alternatives": [
+        "1",
+        "2",
+        "6,3",
+        "5,4",
+        "10"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 11 (clave D)"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las rectas L1: 2x - 3y + 5 = 0 y L2: ax + 4y - 10 = 0 son paralelas. Hallar el valor de a.",
-      "alternatives": ["-1", "-8/3", "2", "1", "4"],
+      "alternatives": [
+        "-1",
+        "-8/3",
+        "2",
+        "1",
+        "4"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 13 (clave B)"
@@ -171,7 +261,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar la ecuación de la recta que pasa por el punto (1; 2) y es perpendicular a la recta 3x - 4y + 12 = 0.",
-      "alternatives": ["3x + 2y + 1 = 0", "2x + y - 8 = 0", "4x + 3y - 10 = 0", "6x + 3y - 12 = 0"],
+      "alternatives": [
+        "3x + 2y + 1 = 0",
+        "2x + y - 8 = 0",
+        "4x + 3y - 10 = 0",
+        "6x + 3y - 12 = 0"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 14 (clave C)"
@@ -182,7 +277,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La recta L1: 3x - 4y - 10 = 0 es paralela a la recta L2 que pasa por el punto (2; -3). Hallar la ecuación de L2.",
-      "alternatives": ["3x - y = 0", "3x + 4y + 1 = 0", "3x - 4y - 18 = 0", "3x + y = 0", "3x + y + 1 = 0"],
+      "alternatives": [
+        "3x - y = 0",
+        "3x + 4y + 1 = 0",
+        "3x - 4y - 18 = 0",
+        "3x + y = 0",
+        "3x + y + 1 = 0"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 15 (clave C)"
@@ -193,7 +294,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dado el triángulo cuyos vértices son A(2; 3), B(4; 6) y C(6; 1). Hallar la ecuación de la altura trazada desde B al lado AC.",
-      "alternatives": ["y = x - 2", "y = x + 2", "y = 2x - 2", "y = 2x + 2", "y = x"],
+      "alternatives": [
+        "y = x - 2",
+        "y = x + 2",
+        "y = 2x - 2",
+        "y = 2x + 2",
+        "y = x"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 16 (clave C)"
@@ -204,7 +311,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular el área del triángulo formado por los ejes coordenados y la recta y = 3x - 12.",
-      "alternatives": ["24 u²", "18 u²", "20 u²", "15 u²", "32 u²"],
+      "alternatives": [
+        "24 u²",
+        "18 u²",
+        "20 u²",
+        "15 u²",
+        "32 u²"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 17 (clave A)"
@@ -215,7 +328,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular la distancia del punto P(7; -3) a la recta x - 2y + 2 = 0.",
-      "alternatives": ["3√5", "2", "6√3", "5√4", "√10"],
+      "alternatives": [
+        "3√5",
+        "2",
+        "6√3",
+        "5√4",
+        "√10"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 19 (clave A)"
@@ -226,7 +345,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El punto (2; k) es equidistante de las rectas L1: x + y - 2 = 0 y L2: x - 7y + 2 = 0. Hallar el valor de k.",
-      "alternatives": ["4", "1", "0", "-1", "2"],
+      "alternatives": [
+        "4",
+        "1",
+        "0",
+        "-1",
+        "2"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 20 (clave E)"
@@ -237,7 +362,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular el área de la región triangular determinada por las rectas L1: x = 0, L2: x + y - 1 = 0 y L3: y = x.",
-      "alternatives": ["1/4 u²", "2/3 u²", "5/2 u²", "3/4 u²", "1 u²"],
+      "alternatives": [
+        "1/4 u²",
+        "2/3 u²",
+        "5/2 u²",
+        "3/4 u²",
+        "1 u²"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
       "sourceName": "matematicasn - Ecuación de la Recta Ejercicios Resueltos, Pregunta 21 (clave A)"
@@ -248,7 +379,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuál es la ecuación de la recta que pasa por el origen y es perpendicular a la recta 3x - 2y = 6?",
-      "alternatives": ["2x + 3y = 0", "3x + 2y = 1", "2x - 3y = 6", "3x + 4y = 2", "2x - 3y = 4"],
+      "alternatives": [
+        "2x + 3y = 0",
+        "3x + 2y = 1",
+        "2x - 3y = 6",
+        "3x + 4y = 2",
+        "2x - 3y = 4"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2020/03/geometria-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
       "sourceName": "matematicasn - Geometría Ejercicios de Examen Admisión Universidad, Problema 15 (clave A)"
@@ -259,7 +396,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La pendiente y la inclinación de una recta que pasa por los puntos A(0; -2) y B(4; 2) es:",
-      "alternatives": ["1 y 135°", "-1 y 45°", "-1 y 135°", "1 y 45°"],
+      "alternatives": [
+        "1 y 135°",
+        "-1 y 45°",
+        "-1 y 135°",
+        "1 y 45°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.thatquiz.org/es/preview?c=umih0991&s=kjsa33",
       "sourceName": "ThatQuiz - Geometría Analítica (Recta), Problema 7 (clave D)"
@@ -270,7 +412,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Al trazar la recta AB que pasa por los puntos A(-4; -1) y B(2; 3), y la recta CD que pasa por C(-3; -2) y D(3; 2), ¿qué relación tienen ambas rectas?",
-      "alternatives": ["Oblicuas", "Inclinadas", "Perpendiculares", "Paralelas"],
+      "alternatives": [
+        "Oblicuas",
+        "Inclinadas",
+        "Perpendiculares",
+        "Paralelas"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.thatquiz.org/es/preview?c=umih0991&s=kjsa33",
       "sourceName": "ThatQuiz - Geometría Analítica (Recta), Problema 10 (clave D)"
@@ -281,7 +428,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La pendiente y la inclinación de una recta que pasa por los puntos P(-6; -2) y Q(6; 4) es:",
-      "alternatives": ["-2 y 153,5°", "2 y 26,5°", "0,5 y 153,5°", "0,5 y 26,5°"],
+      "alternatives": [
+        "-2 y 153,5°",
+        "2 y 26,5°",
+        "0,5 y 153,5°",
+        "0,5 y 26,5°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.thatquiz.org/es/preview?c=umih0991&s=kjsa33",
       "sourceName": "ThatQuiz - Geometría Analítica (Recta), Problema 11 (clave D)"
@@ -292,7 +444,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Al trazar la recta AB por los puntos A(-4; -1) y B(2; 3), y la recta CD por C(2; 3) y D(4; 0), ¿qué relación tienen?",
-      "alternatives": ["Inclinadas", "Paralelas", "Oblicuas", "Perpendiculares"],
+      "alternatives": [
+        "Inclinadas",
+        "Paralelas",
+        "Oblicuas",
+        "Perpendiculares"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.thatquiz.org/es/preview?c=umih0991&s=kjsa33",
       "sourceName": "ThatQuiz - Geometría Analítica (Recta), Problema 12 (clave D)"
@@ -303,7 +460,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La pendiente y la inclinación de una recta que pasa por los puntos P(-7; 3) y Q(-7; -1) es:",
-      "alternatives": ["indefinida y 90°", "0 y 0°", "0 y 90°", "indefinida y 0°"],
+      "alternatives": [
+        "indefinida y 90°",
+        "0 y 0°",
+        "0 y 90°",
+        "indefinida y 0°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.thatquiz.org/es/preview?c=umih0991&s=kjsa33",
       "sourceName": "ThatQuiz - Geometría Analítica (Recta), Problema 13 (clave A)"
@@ -314,7 +476,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La pendiente y la inclinación de una recta que pasa por los puntos Q(4; 1) y P(9; -3) es:",
-      "alternatives": ["5/4 y 141,3°", "-4/5 y 141,3°", "4/5 y 38,7°", "-4/5 y 38,7°"],
+      "alternatives": [
+        "5/4 y 141,3°",
+        "-4/5 y 141,3°",
+        "4/5 y 38,7°",
+        "-4/5 y 38,7°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.thatquiz.org/es/preview?c=umih0991&s=kjsa33",
       "sourceName": "ThatQuiz - Geometría Analítica (Recta), Problema 14 (clave B)"
@@ -325,7 +492,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La pendiente y la inclinación de una recta que pasa por los puntos P(-5; -4) y Q(3; -4) es:",
-      "alternatives": ["0 y 0°", "no existe y 180°", "no existe y 0°", "1 y 180°"],
+      "alternatives": [
+        "0 y 0°",
+        "no existe y 180°",
+        "no existe y 0°",
+        "1 y 180°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.thatquiz.org/es/preview?c=umih0991&s=kjsa33",
       "sourceName": "ThatQuiz - Geometría Analítica (Recta), Problema 15 (clave A)"
@@ -336,7 +508,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Hallar la ecuación de la recta que pasa por el punto P(0; 5) y tiene pendiente m = -2.",
-      "alternatives": ["2x + y = 5", "2y + x = 5", "2x - y = 5", "y - 2x = 5"],
+      "alternatives": [
+        "2x + y = 5",
+        "2y + x = 5",
+        "2x - y = 5",
+        "y - 2x = 5"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.thatquiz.org/es/preview?c=umih0991&s=kjsa33",
       "sourceName": "ThatQuiz - Geometría Analítica (Recta), Problema 16 (clave A)"
@@ -347,7 +524,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Hallar la ecuación de la recta que pasa por el punto P(-4; 3) y tiene pendiente m = 1/2.",
-      "alternatives": ["2y + x = -10", "x - 2y = -10", "y - 2x = 10", "2x + y = 10"],
+      "alternatives": [
+        "2y + x = -10",
+        "x - 2y = -10",
+        "y - 2x = 10",
+        "2x + y = 10"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.thatquiz.org/es/preview?c=umih0991&s=kjsa33",
       "sourceName": "ThatQuiz - Geometría Analítica (Recta), Problema 17 (clave B)"
@@ -358,7 +540,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La ecuación de la recta cuya abscisa al origen es 5 y cuya ordenada al origen es -3, respectivamente, es:",
-      "alternatives": ["3x - 5y = 15", "3x - 5y = -15", "5x + 3y = 15", "5x - 3y = -15"],
+      "alternatives": [
+        "3x - 5y = 15",
+        "3x - 5y = -15",
+        "5x + 3y = 15",
+        "5x - 3y = -15"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.thatquiz.org/es/preview?c=umih0991&s=kjsa33",
       "sourceName": "ThatQuiz - Geometría Analítica (Recta), Problema 18 (clave A)"
@@ -369,7 +556,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La pendiente y el punto de corte con el eje Y de la recta y = -3x + 7, respectivamente, son:",
-      "alternatives": ["-3 y (0; 7)", "3 y (0; 7)", "-3 y (7; 0)", "3 y (7; 0)"],
+      "alternatives": [
+        "-3 y (0; 7)",
+        "3 y (0; 7)",
+        "-3 y (7; 0)",
+        "3 y (7; 0)"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.thatquiz.org/es/preview?c=umih0991&s=kjsa33",
       "sourceName": "ThatQuiz - Geometría Analítica (Recta), Problema 20 (clave A)"
@@ -380,7 +572,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determinar el punto de intersección de las rectas: x + y/3 = 2/3 y x/3 - y = -2/3.",
-      "alternatives": ["(1/5; 3/5)", "(2/5; 3/5)", "(2/5; 4/5)", "(3/5; 4/5)"],
+      "alternatives": [
+        "(1/5; 3/5)",
+        "(2/5; 3/5)",
+        "(2/5; 4/5)",
+        "(3/5; 4/5)"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://unibetas.com/guia-ipn-geometria-analitica-1/",
       "sourceName": "Guía IPN 2023 Geometría Analítica - Reactivo 7 (clave C)"
@@ -391,7 +588,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Identificar la ecuación de la recta perpendicular a 7y = 2x + 11 que pasa por el punto (0; -5).",
-      "alternatives": ["y = -7/2 x - 10", "2y = -7x - 5", "2y = -7x - 10", "y = -7x - 5"],
+      "alternatives": [
+        "y = -7/2 x - 10",
+        "2y = -7x - 5",
+        "2y = -7x - 10",
+        "y = -7x - 5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://unibetas.com/guia-ipn-geometria-analitica-1/",
       "sourceName": "Guía IPN 2023 Geometría Analítica - Reactivo 8 (clave C)"
@@ -402,10 +604,1323 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Determinar la ecuación de la recta que pasa por los puntos A(1; 2) y B(3; 3).",
-      "alternatives": ["x + 2y = 3", "x + y = 3", "x + 2y = -3", "-x + 2y = 3"],
+      "alternatives": [
+        "x + 2y = 3",
+        "x + y = 3",
+        "x + 2y = -3",
+        "-x + 2y = 3"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://unibetas.com/guia-ipn-geometria-analitica-1/",
       "sourceName": "Guía IPN 2023 Geometría Analítica - Reactivo 9 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El punto medio de una cuerda de la circunferencia x² + y² – 8x – 12 = 0 es M(5;–1). Halle la ecuación de la recta que contiene a dicha cuerda.",
+      "alternatives": [
+        "x – y – 6 = 0",
+        "x – 2y – 7 = 0",
+        "x – 3y – 8 = 0",
+        "2x – y – 11 = 0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-17-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — CEPRE SAN MARCOS GEOMETRIA SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean las curvas C 1 , C 2 de ecuaciones x ² + y ² = 1 ; x ² +y ² – 2x – 2y+1=0, halle la ecuación de la recta que pasa por la intersecciones de C 1 y C 2 .",
+      "alternatives": [
+        "x+2y=1",
+        "x + y=1",
+        "x–y =3",
+        "x=5",
+        "x+y = 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de la recta que pasa por la intersección de las rectas\nℒ 1 : x+ 2y+1=0\nℒ 2 :2x+y –1=0\ny que es perpendicular a la cuerda común de las circunferencias\nC 1 : x ² + y ² + 3x =0\nC 2 : x ² + y ² + 3y =0.",
+      "alternatives": [
+        "2x+y – 1=0",
+        "y – 2x+3=0",
+        "2y+x+1=0",
+        "x – y – 2=0",
+        "y+x=0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una recta con pendiente positiva que pasa por el punto (–4;0) determina en la circunferencia de ecuación x ² + y ² =16 una cuerda de 6,4 de longitud. Halle la ecuación de la recta.",
+      "alternatives": [
+        "3x – 4y+3=0",
+        "3x – 4y+12=0",
+        "3x – 4y+6=0",
+        "3x – 2y+12=0",
+        "2x+3y+6=0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la ecuación de la recta que pasa por (1; 2) y tiene un ángulo de inclinación de 37°.",
+      "alternatives": [
+        "4x – 3y =5",
+        "3x–4y=3",
+        "3x –4y = 5",
+        "3x +2y =4",
+        "3x–y =3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE LA RECTA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la ecuación de la recta que pasa por A(1;–3) y B (5;6).",
+      "alternatives": [
+        "4x – 3y =5",
+        "4x–9y =31",
+        "3x –4y = 35",
+        "3x +2y =4",
+        "4x–9y =6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE LA RECTA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En e l Google Maps , la Av. Independencia pasa por el punto P(2;3) y es paralela a la Av. Goyeneche que está representada por la ecuación 2x+5y+7=0. Determine la ecuación de la recta que representa a la Av. Independencia.",
+      "alternatives": [
+        "5x–2y – 4 = 0",
+        "2x + 5y – 19 = 0",
+        "2x + 5y – 15 = 0",
+        "4x + 3y – 4 = 0",
+        "4x + 3y – 10 = 0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/educacion-religiosa-5to-actividad-2-experiencia-8-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA BIOMÉDICAS 2024 INGRESO UNIVERSIDAD PRUEBA RESUELTA SAN AGUSTIN CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La recta y – x –1= 0, mediante una rotación, se convierte en el sistema X 'Y ', en una recta paralela al eje X'. Calcule la ecuación de la recta.",
+      "alternatives": [
+        "2y'− √ 3 = 0",
+        "2y'− √ 2 = 0",
+        "4y'− 3 √ 2 = 0",
+        "y'− √ 2 = 0",
+        "3y'− √ 2 = 0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/rotacion-y-traslacion-de-ejes.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN DE COORDENADAS ECUACIÓN COMPLETA DE SEGUNDO GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la ecuación de la recta que pasa por el punto P(2 √2 ; 2 𝛑/3) y es paralela al eje polar.",
+      "alternatives": [
+        "r cos θ = √ 6",
+        "r cos θ = √ 3",
+        "r sen θ = 2",
+        "r sen θ = √ 3",
+        "r sen θ = √ 6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/coordenadas-polares-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — COORDENADAS POLARES PREGUNTAS RESUELTAS DE ECUACIONES POLARES DE LAS CÓNICAS TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la ecuación de la recta que pasa por el punto medio del segmento que une los puntos (2;0) y (6;–2), y es perpendicular a este segmento.",
+      "alternatives": [
+        "y = x + 9",
+        "y = 2x 6",
+        "y = x – 5",
+        "y = 2x – 9",
+        "y = 2x – 8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-general-de-la-recta-y-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN GENERAL DE LA RECTA Y ÁNGULO ENTRE 2 RECTAS PENDIENTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos rectas se intersectan formando un ángulo de 135°, sabiendo que la recta final tiene pendiente igual a – 3. Calcular la pendiente de la recta inicial.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "–1/2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-general-de-la-recta-y-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN GENERAL DE LA RECTA Y ÁNGULO ENTRE 2 RECTAS PENDIENTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los vértices de un triángulo son los puntos A = (– 2;1); B=(4;7); C=(6;– 3).\nHalle la ecuación de la recta que contiene a la altura BH.",
+      "alternatives": [
+        "2x – y – 1 = 0",
+        "x + y+ 7 = 0",
+        "x – y+2=0",
+        "3x + y – 1 = 0",
+        "2x + y+ 10 = 0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-general-de-la-recta-y-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN GENERAL DE LA RECTA Y ÁNGULO ENTRE 2 RECTAS PENDIENTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el volumen del sólido generado al girar la región determinada por los ejes coordenados con las rectas x=–2 e y = 8, con respecto del eje de ordenadas.",
+      "alternatives": [
+        "8𝛑",
+        "16𝛑",
+        "32𝛑",
+        "64𝛑"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/ecuacion-de-la-recta-geometria.html",
+      "sourceName": "geometriapdf.blogspot.com — ECUACIÓN DE LA RECTA EJERCICIOS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el vértice A(1; – 2); B(2;3) y C( – 2;1) son los vértice del triángulo mediano del triángulo MNP. Halle la suma de la abscisa y de la ordenada de uno de los vértices del triángulo MNP.",
+      "alternatives": [
+        "– 7",
+        "– 3",
+        "– 2",
+        "0",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-de-la-recta-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA RECTA PROBLEMAS RESUELTOS DE GEOMETRÍA ANALÍTICA ESCALAR PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un punto sobre la recta 3x +5y =15 equidista de los ejes coordenados, entonces el punto mencionado puede encontrarse:",
+      "alternatives": [
+        "En ninguno de los cuadrantes.",
+        "En el cuadrante I solamente.",
+        "Solamente en los cuadrantes I y II.",
+        "Únicamente en los cuadrantes I, II y III.",
+        "En cada uno de los cuadrantes."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-de-la-recta-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA RECTA PROBLEMAS RESUELTOS DE GEOMETRÍA ANALÍTICA ESCALAR PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de una región rectangular ABCD es 50u², si las coordenadas de B y C son (1;4) y (9;–2) respectivamente , halle las coordenadas positivas del vértice A.",
+      "alternatives": [
+        "(3; 8)",
+        "(2; 8)",
+        "(4; 8)",
+        "(4;10)",
+        "(2;10)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-de-la-recta-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA RECTA PROBLEMAS RESUELTOS DE GEOMETRÍA ANALÍTICA ESCALAR PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean las rectas :\nℒ 1 : x – y–2=0\nℒ 2 : x – 2y – 1=0\nℒ 3 con pendiente m>1.\nSi ℒ 1 es la bisectriz del ángulo formado por ℒ 2 y ℒ 3 halle m.",
+      "alternatives": [
+        "5/4",
+        "2",
+        "5/2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-de-la-recta-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA RECTA PROBLEMAS RESUELTOS DE GEOMETRÍA ANALÍTICA ESCALAR PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado los vértices de un triángulo A(–10;–13), B(–2;3), C(2; 1) .\nLa longitud de la perpendicular trazada del vértice B a la mediana CM mide (en u):",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-de-la-recta-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA RECTA PROBLEMAS RESUELTOS DE GEOMETRÍA ANALÍTICA ESCALAR PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la distancia de la recta 3x+4y+4 =0, al punto (1; 2).",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-general-de-la-recta-y-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN GENERAL DE LA RECTA Y ÁNGULO ENTRE 2 RECTAS PENDIENTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las rectas:\nx=2\ny=3\n3x – 2y=0\n2x – 3y+5=0\nindica en cuántos puntos se cortan las rectas.",
+      "alternatives": [
+        "Un solo punto",
+        "Dos puntos",
+        "Tres puntos",
+        "Cuatro puntos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/06/algebra-admision-catolica-pucp-examen.html",
+      "sourceName": "algebraenpdf.blogspot.com — ALGEBRA ADMISIÓN CATÓLICA PUCP 2022 2023 EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un terreno rectangular ABCD, los hitos que demarcan el lote son A(3;1), B(19;13), C(16;17) y D. Halle las coordenadas de D.",
+      "alternatives": [
+        "(0;4)",
+        "(0;5)",
+        "(0;6)",
+        "(1;4)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-16-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tren se desplaza en línea recta partiendo de la estación A(10;2), pasando consecutivamente por las estaciones B,C y llegando a la estación D(90;30). Si AB=BC/2=CD/5 halle las coordenadas de la estación en C.",
+      "alternatives": [
+        "(36;12)",
+        "(40;12)",
+        "(40;12,5)",
+        "(38;12)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-16-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene dos rectas cuyas ecuaciones son:\nL 1 : (k +1)x – 2y + 4 = 0\nL 2 : (3k – 2)x – (2 – k)y +12 = 0\nHalle k para que la recta L 1 sea paralela a la recta L 2",
+      "alternatives": [
+        "1 y – 5",
+        "1 y 6",
+        "– 6 y 1",
+        "5 y 1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-16-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se lanza una pelota al ras del piso desde el punto A(-4;5) con velocidad constante de 5 m/s para que impacte en una pared sobre la recta L : 6x – 8y – 36 = 0. Halle el tiempo mínimo al momento del impacto",
+      "alternatives": [
+        "3 s",
+        "2 s",
+        "4 s",
+        "1 s"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-16-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si ABCD es un paralelogramo donde A(3;2), B(1;5), C(–2;3). Halle el punto D.",
+      "alternatives": [
+        "(0;0)",
+        "(1;7)",
+        "(–1;3)",
+        "(–2;2)",
+        "(–5;1)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/introduccion-la-geometria-analitica.html",
+      "sourceName": "geometriapdf.blogspot.com — INTRODUCCIÓN A LA GEOMETRÍA ANALÍTICA EJERCICIOS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar en el eje de ordenadas un punto A cuya distancia hasta el punto B(–8;13) sea igual a 17.",
+      "alternatives": [
+        "(0;–1)",
+        "(0;–2)",
+        "(1;2)",
+        "(2;8)",
+        "(0;–28)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/introduccion-la-geometria-analitica.html",
+      "sourceName": "geometriapdf.blogspot.com — INTRODUCCIÓN A LA GEOMETRÍA ANALÍTICA EJERCICIOS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean: A (-2;5); B (3;-2) y C (10;b); puntos del plano.",
+      "alternatives": [
+        "-3",
+        "= d (B,C), Halle el valor de b, si es negativo.",
+        "-7",
+        "-8",
+        "-9 RERESOLUCIÓN donde: b=3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/geometria-analitica-25-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — GEOMETRÍA ANALÍTICA 25 EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el punto A (-2;5) y B (m;8). Halle la suma de valores de “m” si la distancia de AB es 5.",
+      "alternatives": [
+        "-1",
+        "-2",
+        "-3",
+        "-4",
+        "-6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/geometria-analitica-25-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — GEOMETRÍA ANALÍTICA 25 EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuál de los siguientes triángulos ABC, tienen mayor área.\na) A (-5,0), B (1,2) y C (1,-2)\nb) A (1,1), B (6-4) y C (5,3)\nc) A (2,0) , B (6,0) y C (4,12)",
+      "alternatives": [
+        "a",
+        "b",
+        "c",
+        "Todos tiene igual área"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/geometria-analitica-25-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — GEOMETRÍA ANALÍTICA 25 EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un cuadrilátero cuyas coordenadas son: A(-3;-1); B (-2,4); C (5;3) y D . Si M es el punto de intersección de sus diagonales, halle la suma de las coordenadas del punto N, si es punto medio de . Donde:",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/geometria-analitica-25-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — GEOMETRÍA ANALÍTICA 25 EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos medios de los lados de un triángulo son P (2;5), Q (4;2) y R (1;1) . Halle las coordenadas de los tres vértices.\nIndique como respuesta la suma de las abscisas y las ordenadas de los tres vértices.",
+      "alternatives": [
+        "7",
+        "8",
+        "10",
+        "12",
+        "15"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/geometria-analitica-25-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — GEOMETRÍA ANALÍTICA 25 EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado los puntos A (m-1; n+2) y B (2;3). Si el punto Q divide al segmento AB en la proporción: siendo\nHalle: (m + n).",
+      "alternatives": [
+        "-2",
+        "-4",
+        "-6",
+        "-8",
+        "-10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/geometria-analitica-25-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — GEOMETRÍA ANALÍTICA 25 EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos A(-2;3); B(1;1), C(3;a) con a >0 y D(b;c) son los vértices de un cuadrado.\nCalcule:",
+      "alternatives": [
+        "6",
+        "10",
+        "8",
+        "2",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/geometria-analitica-25-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — GEOMETRÍA ANALÍTICA 25 EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si 0 (0;0); y , donde es el punto de intersección de y . Si P divide a ambos segmentos en la misma razón. Halle la suma de las coordenadas del punto .",
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/geometria-analitica-25-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — GEOMETRÍA ANALÍTICA 25 EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la ecuación lineal de la recta L es: 5x+3y–4=0 y el punto (2;k) pertenece a dicha recta. Hallar: K",
+      "alternatives": [
+        "0",
+        "-1",
+        "-2",
+        "-3",
+        "-4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/la-recta-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — LA RECTA EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la medida del ángulo obtuso que forman dos rectas, cuyas pendientes valen “ ” y “ ” respectivamente.",
+      "alternatives": [
+        "127º",
+        "120º",
+        "150º",
+        "135º",
+        "143º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/la-recta-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — LA RECTA EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una recta pasa por los puntos y (9;7)otra pasa por los puntos (3;9) y (-2; 8). Determine al ángulo agudo que forman estas rectas.",
+      "alternatives": [
+        "45º",
+        "135º",
+        "60º",
+        "53º",
+        "75º"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/la-recta-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — LA RECTA EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos vértices consecutivos de un cuadrado son (–7;3) y (–1;–5), determine su perímetro.",
+      "alternatives": [
+        "70",
+        "40",
+        "50",
+        "28",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/plano-cartesiano-geometria-analitica.html",
+      "sourceName": "matematicaj.blogspot.com — PLANO CARTESIANO GEOMETRIA ANALÍTICA PLANA COORDENADAS SISTEMA BIDIMENSIONAL FÓRMULAS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la distancia entre los puntos, cuyas coordenadas son: (0; 3) y (–4; 1).",
+      "alternatives": [
+        "2 √ 3",
+        "2 √ 5",
+        "3",
+        "5",
+        "3 √ 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/geometria-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una recta L pasa por los puntos (– 2;0) y (0;-4). Indique cuál de los siguientes puntos pertenece a dicha recta",
+      "alternatives": [
+        "(1;5)",
+        "(2;3)",
+        "(3;– 10)",
+        "(1;– 1) e, (4;– 2)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Uno de los vértices de un cuadrado es el punto (8; 3) y una de sus diagonales está contenida en la recta L de ecuación:\nx+y=6\nSi z es la medida del lado del cuadrado y (a; b) es el punto de intersección de sus diagonales, entonces calcule el valor de a+b+z.",
+      "alternatives": [
+        "7",
+        "9",
+        "11",
+        "13",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/5to-actividad-5-experiencia-7-resuelta-matematicas-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICAS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El vértice C de un triángulo ABC es el punto (2;5)\nSi M= (1; 2) y N= (4; 3) son los puntos de trisección del lado AB, entonces el área en unidades cuadradas es:",
+      "alternatives": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia entre los puntos A y B para instalar el alambre de soporte es:",
+      "alternatives": [
+        "√ 91",
+        "√ 61",
+        "√ 51",
+        "√ 40",
+        "√ 20"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las coordenadas del punto medio donde instalará el foco es:",
+      "alternatives": [
+        "(5 ; 5)",
+        "(6 ; – 5)",
+        "(7 ; 5)",
+        "(7/2 ; 5)",
+        "(8 ; 6)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia que separa el centro del foco en metros es:",
+      "alternatives": [
+        "1,0",
+        "2,0",
+        "2,5",
+        "3,0",
+        "3,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el valor de a, si la distancia entre los puntos P(– 4; a) y Q(59; 11) es 65, y el punto P está en el segundo cuadrante.",
+      "alternatives": [
+        "3",
+        "9",
+        "27",
+        "36",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/1ro-2do-actividad-1-educacion-fisica-experiencia-7-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-primero-segundo-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UP 2027 EXAMEN ADMISIÓN UNIVERSIDAD DEL PACÍFICO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes rectas:\nℒ 1 : y–x–2=0 ∧ ℒ 2 : y–2x–m=0, calcule la variación de \"m\" para que las rectas se intersecten en un punto ubicado en el segundo cuadrante.",
+      "alternatives": [
+        "〈1;5〉",
+        "〈2;4〉",
+        "〈3;5〉",
+        "〈4;6〉"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-catolica-2018-admision.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO CATÓLICA 2027 RESUELTO CLAVES INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado los puntos A(3;2) y B(7;6) que pertenecen a la recta ℒ . Calcular la pendiente .",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "1/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE LA RECTA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una recta pasa por los puntos (2;3) y (6;8) y (10;b).\nHallar el valor de b.",
+      "alternatives": [
+        "13",
+        "8",
+        "7",
+        "–6",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE LA RECTA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar las coordenadas del punto B(x ; x–2), si el otro punto de la recta es A(2 ;– 4), además el ángulo de inclinación es 53º.",
+      "alternatives": [
+        "(12; 14)",
+        "(15; 10)",
+        "(14; 12)",
+        "(12; 17)",
+        "(18; 9)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE LA RECTA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el punto (4;w) pertenece a la recta :\nℒ : 3x– 5y+15 = 0.\nCalcular el valor de w.",
+      "alternatives": [
+        "1",
+        "2",
+        "6,3",
+        "5,4",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE LA RECTA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el área del triángulo formado por los ejes coordenados y la recta : y = 3x – 12.",
+      "alternatives": [
+        "24u²",
+        "18",
+        "20",
+        "15",
+        "32"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE LA RECTA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula la distancia del punto P(7;–3) a la recta: x – 2y + 2 = 0",
+      "alternatives": [
+        "3√5",
+        "2",
+        "6√3",
+        "5√4",
+        "√10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE LA RECTA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el área del triángulo cuyo lados son las rectas:\nℒ 1 : x = 0 ;\nℒ 2 : x + y – 1 = 0\nℒ 3 : y=x",
+      "alternatives": [
+        "1/4u²",
+        "2/3",
+        "5/2",
+        "3/4",
+        "1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE LA RECTA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un triángulo ABC tiene por coordenadas A(– 5 ; 1) , B(– 5 ; 4) y C( 2 ; 4).\nCalcular el área del triángulo.",
+      "alternatives": [
+        "10,5 u²",
+        "12,5 u²",
+        "14,5 u²",
+        "16 u²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la distancia entre los puntos A(–3;4) y B(5; – 2)",
+      "alternatives": [
+        "10 u",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado los puntos A(–4; 3); B(–4;–13) y C(4;2) forman un triángulo al unir los puntos. Calcular su perímetro.",
+      "alternatives": [
+        "30u",
+        "24",
+        "42",
+        "30",
+        "40"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El segmento que une A(–2;–1) con B(2;2) se prolonga hasta C. Si BC=3AB. Halle las coordenadas de C.",
+      "alternatives": [
+        "(6;12)",
+        "(10;14)",
+        "(12;8)",
+        "(14;11)",
+        "(10;12)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la distancia máxima del punto P(11;12) exterior a una circunferencia de centro (3;6) y su radio mide 3cm.",
+      "alternatives": [
+        "10cm.",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la altura del triángulo ABC, relativa al lado AB, si A(– 2;5); B(– 2;8); C(6;3)",
+      "alternatives": [
+        "8",
+        "7",
+        "6",
+        "5",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si dos vértices opuestos de un paralelogramo son: A(1;1) y C=(3;5), ¿cuál es el punto de corte de las diagonales?",
+      "alternatives": [
+        "(2;4)",
+        "(2;3)",
+        "(1;3)",
+        "(2;2)",
+        "(3;3)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea el paralelogramo ABCD tal que : A(3;–4), B(6;5) y C(–3 ; –2), entonces las coordenadas de vértices D es:",
+      "alternatives": [
+        "(– 6 ; – 10)",
+        "(– 6; –11)",
+        "(– 5; –11)",
+        "(– 5 ; – 12)",
+        "(– 6; –14)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si los puntos (1 ; 6) y (5 ; 2) son los vértices opuestos de un cuadrado , entonces el área del cuadrado es:",
+      "alternatives": [
+        "32",
+        "50",
+        "4",
+        "16",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con los puntos medios de los lados del triángulo cuyos vértices son A(– 2;4), B(6;8) y C(4; – 6) se construye un triángulo, calcular su área.",
+      "alternatives": [
+        "13m ²",
+        "12",
+        "20",
+        "16,5",
+        "14,6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La base mayor de un trapecio isósceles une los puntos (– 2;8) y (– 2; – 4). Uno de los extremos de la base menor tiene por coordenada (3;–2). La distancia o longitud de la base menor es:",
+      "alternatives": [
+        "8",
+        "6",
+        "9",
+        "12",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El punto P=(h+2k; h–k) divide al segmento AB en la razón 1/3.\nSi A=(–2; 2) y B = (h – k; 2k – 2k), calcule h y k .",
+      "alternatives": [
+        "3/2 y – 3/2",
+        "4/7 y 4/9",
+        "7/4 y – 5/4",
+        "7/6 y – 5/4",
+        "7/5 y – 6/7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Edu asocia el plano de su localidad con un sistema de coordenadas. Si su casa está ubicada en el punto C( – 6; 8), el mercado está en el punto M( – 3; – 3) y el banco en el punto B(4; 2). ¿Cuál es la longitud aproximada del recorrido que realiza Edu si primero va al banco, luego al mercado y finalmente a su casa?",
+      "alternatives": [
+        "31,6 u",
+        "28,4 u",
+        "30,8 u",
+        "32,8 u"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un pueblo A(2; 3) equidista de dos pueblos P(5; –1) y Q(a ; 0). Halle un posible valor de a.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean b y c dos números reales positivos tal que c≠1. Si la distancia de A(2;2) a B(6;b) es 5 u y la distancia de B a C(c;4) es √ 26 u, calcule la distancia de A a C (en u).",
+      "alternatives": [
+        "√ 29",
+        "√ 40",
+        "√ 11",
+        "√ 5",
+        "√ 85"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/prueba-3-de-matematicas-fisica-y.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-1 SEGUNDA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DESARROLLO MATEMÁTICAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un plano cartesiano XY, se dibuja un polígono ABCDE, donde A(–3,3), B(–6,1), C(–9,6), D(–1,8) y E(2,5). Si se dibuja el polígono A’B’C’D’E’ simétrico al polígono ABCDE con respecto al punto P(7,1), ¿cuál es la suma de las coordenadas de los vértices del polígono A’B’C’D’E’?",
+      "alternatives": [
+        "74",
+        "72",
+        "73",
+        "75",
+        "71"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/ept-1ro-2do-actividad-2-experiencia-6-resuelta-aprendo-en-casa-educacion-para-el-trabajo-tarea-web-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BOLETIN 6 ESPECIAL RESUELTO CEPRE SAN MARCOS 2024 RESPUESTAS PREUNMSM 2025 PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un plano cartesiano XY, se dibuja un triángulo de vértices A, B y C. De las siguientes afirmaciones indique Verdadero (V) o Falso (F) y determine la respuesta correcta:\nI) Si A'(r; s) es el punto de simetría de A(–6;–2) con respecto al punto P(–2;1) entonces r+s=6.\nII) Si B'(m; k) es el punto de simetría de B(–3; –1) con respecto a la recta x=1 entonces mk=–4\nIII) Si C'(u;w) es el punto de simetría de C(–4;1) con respecto a la recta y=2 entonces u²+w²=25",
+      "alternatives": [
+        "VFV",
+        "VFF",
+        "FVF",
+        "VVV",
+        "FFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-razonamiento-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE RAZONAMIENTO MATEMÁTICO RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considerando que el centro de un cuadrado de lado 2 unidades es el origen de coordenadas (0,0), halle la suma de las componentes de los vértices del cuadrado simétrico con respecto al punto (3,4).",
+      "alternatives": [
+        "55",
+        "56",
+        "57",
+        "54"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/simetrias-y-reflexiones-ejercicios-resueltos-de-razonamiento-matematico-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-aptitud-academica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMETRÍA Y REFLEXIONES EJERCICIOS RESUELTOS PDF DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se ubica en el plano cartesiano el segmento de extremos A (–5;–2) y B(–2;–6). Determine las coordenadas de los segmentos simétricos con respecto al eje Y, al eje X y al origen de coordenadas. Dé como respuesta la suma de las coordenadas de los extremos de los segmentos simétricos.",
+      "alternatives": [
+        "15",
+        "–9",
+        "–3",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/simetrias-y-reflexiones-ejercicios-resueltos-de-razonamiento-matematico-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-aptitud-academica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMETRÍA Y REFLEXIONES EJERCICIOS RESUELTOS PDF DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se ubica en el plano cartesiano el triángulo de vértices A (–7;–4) B (–6;3) C (–2;–1) y la recta x=–1 paralela al eje Y, a dicho triángulo se le aplica una simetría con respecto a la recta L. ¿Cuál es la suma de las coordenadas de los vértices del triángulo A´B´C´?",
+      "alternatives": [
+        "3",
+        "4",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/simetrias-y-reflexiones-ejercicios-resueltos-de-razonamiento-matematico-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-aptitud-academica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMETRÍA Y REFLEXIONES EJERCICIOS RESUELTOS PDF DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene el triángulo ABC de vértices A= (1; 2), B= (–1; 5) y C= (–3; –1). ¿Cuál es la suma de las abscisas de los vértices del triángulo reflejado del triángulo ABC con respecto a la recta L: x= 3?",
+      "alternatives": [
+        "17",
+        "19",
+        "20",
+        "21"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/simetrias-y-reflexiones-ejercicios-resueltos-de-razonamiento-matematico-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-aptitud-academica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMETRÍA Y REFLEXIONES EJERCICIOS RESUELTOS PDF DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un arquitecto está diseñando el plano de un parque que tiene la forma de un triángulo, el cual está representado con ABC en un plano cartesiano XY donde A()−7;−4 , B()−4;3 y C()−1;−2 . El arquitecto decide cambiar la posición del parque, y dibuja A'B'C' el cual es el triángulo simétrico del triángulo ABC con respecto al punto P()2;−3 . Halle la suma de las coordenadas de los vértices A' y B'.",
+      "alternatives": [
+        "9",
+        "8",
+        "11",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/simetrias-y-reflexiones-ejercicios-resueltos-de-razonamiento-matematico-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-aptitud-academica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMETRÍA Y REFLEXIONES EJERCICIOS RESUELTOS PDF DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la suma de ordenadas de los puntos de trisección del segmento cuyos extremos son A(2; 5) y B(–10; – 1).",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2019/01/plano-cartesiano-problemas-resueltos-pdf.html",
+      "sourceName": "trigonometriapdf.blogspot.com — GEOMETRIA ANALÍTICA COORDENADAS CARTESIANAS EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considera un punto A , tal que este es cualquier punto que se ubica en el primer o tercer cuadrante, de tal manera que al reflejarlo respecto al eje Y se obtiene el punto B . Si x es la distancia del punto A al eje Y, ¿cuál de las siguientes expresiones permite determinar la distancia entre los puntos A y B ?",
+      "alternatives": [
+        "2x 2",
+        "x",
+        "2x",
+        "3x"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-29-paes-regular-oficial-matematica1-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Matemática M1 pregunta 51"
     }
   ]
 }

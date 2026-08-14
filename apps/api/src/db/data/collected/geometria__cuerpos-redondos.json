@@ -889,6 +889,2451 @@
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2016/01/la-esfera-ejercicios-resueltos-de.html",
       "sourceName": "MatemáticaJ Blog - La Esfera Problemas Resueltos Preuniversitaria, Problema 7"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un escultor realiza trabajos sobre jabones que tienen la forma de un paralelepípedo rectangular cuyas dimensiones son 4 cm, 6 cm y 8 cm. Si de uno de dichos jabones quiere esculpir un tronco de cono de revolución, de menor altura pero de mayor volumen y cuyas áreas de las bases están en la proporción de 1 a 4, halle el volumen de dicho tronco de cono.",
+      "alternatives": [
+        "21𝜋m³",
+        "18𝜋m³",
+        "24𝜋m³",
+        "22𝜋m³"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-15-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una zona esférica y un huso esférico son equivalentes y están determinados en superficies esféricas congruentes cuyos radios miden R . Si la longitud de la altura de la zona esférica es R/4 , halle la medida del diedro correspondiente al huso esférico.",
+      "alternatives": [
+        "30°",
+        "37°",
+        "45°",
+        "53°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-15-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área lateral de un cono equilátero cuyas generatrices son radios de una superficie esférica es igual al área de un huso esférico contenido en dicha superficie esférica. Halle la medida del diedro correspondiente al huso esférico.",
+      "alternatives": [
+        "45°",
+        "60°",
+        "30°",
+        "15°",
+        "75°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-15-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Encontrar la relación de las áreas de las superficies de las esferas circunscrita e inscrita a un cilindro de revolución.",
+      "alternatives": [
+        "5 a 2",
+        "4 a 3",
+        "3 a 2",
+        "2 a 1",
+        "3 a 1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/esfera-geometria-del-espacio-preguntas.html",
+      "sourceName": "geometriapdf.blogspot.com — ESFERA DE REVOLUCIÓN GEOMETRÍA DEL ESPACIO EJERCICIOS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cono equilátero se encuentra circunscrito a una esfera de 2cm de radio. Calcular el área de la región plana que se forma por los puntos de tangencia de las generatrices del cono con la superficie de la esfera.",
+      "alternatives": [
+        "𝛑 cm²",
+        "3 𝛑",
+        "3 𝛑 /4",
+        "2 𝛑",
+        "4 𝛑"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/esfera-geometria-del-espacio-preguntas.html",
+      "sourceName": "geometriapdf.blogspot.com — ESFERA DE REVOLUCIÓN GEOMETRÍA DEL ESPACIO EJERCICIOS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las áreas de las bases elípticas de un tronco de cono oblicuo son de 32 𝛑 dm³ y 72 𝛑 dm³ . Determinar el valor de la altura de dicho tronco, sabiendo que su volumen es de 304 𝛑 dm³ .",
+      "alternatives": [
+        "12 dm",
+        "9",
+        "10",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/cono-ejercicios-de-geometria-del.html",
+      "sourceName": "geometriapdf.blogspot.com — CONO EJERCICIOS DE GEOMETRIA DEL ESPACIO PRACTICA DE MATEMÁTICAS DE SECUNDARIA Y PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las bases de un tronco de cono circular son los círculos de radios 3u y 6u. Si la generatriz mide 6u, ¿cuál es la longitud del radio de la esfera circunscrita?",
+      "alternatives": [
+        "6 u",
+        "5",
+        "8",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/cono-ejercicios-de-geometria-del.html",
+      "sourceName": "geometriapdf.blogspot.com — CONO EJERCICIOS DE GEOMETRIA DEL ESPACIO PRACTICA DE MATEMÁTICAS DE SECUNDARIA Y PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el volumen de un tronco de cilindro circular recto, en el cual se inscribe una esfera, además la generatriz mayor y menor miden 4u y 1u.",
+      "alternatives": [
+        "1,4𝛑 u³",
+        "1,6𝛑",
+        "1,8𝛑",
+        "2,2𝛑",
+        "2,4𝛑"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/cono-ejercicios-de-geometria-del.html",
+      "sourceName": "geometriapdf.blogspot.com — CONO EJERCICIOS DE GEOMETRIA DEL ESPACIO PRACTICA DE MATEMÁTICAS DE SECUNDARIA Y PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esfera de 100𝛑m² de área está inscrita en un cilindro. Calcular el volumen del cilindro.",
+      "alternatives": [
+        "200𝛑m³",
+        "220𝛑m³",
+        "250𝛑m³",
+        "260𝛑m³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/11/geometria-simulacro-prueba-beca-18-pronabec-con-solucionario-admision-universidad-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA SIMULACRO EXAMEN BECA 18 PRONABEC ADMISIÓN UNIVERSIDAD PRUEBA ÚNICA NACIONAL CON SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un balde tiene forma de un cilindro de revolución contiene cierta cantidad de refresco; accidentalmente al momento de preparar el refresco cae una naranja y un limón, tal que el nivel del refresco sube 3 cm. Si el radio de la base del balde mide 10 cm y el volumen de la naranja es 5 veces el volumen del limón, halle el volumen del limón.",
+      "alternatives": [
+        "50𝜋cm³",
+        "40𝜋cm³",
+        "30𝜋cm³",
+        "80𝜋cm³"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-14-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — PRE SAN MARCOS GEOMETRIA SEMANA 14 DECO SOLUCIONARIO ADMISIÓN A LA UNIVERSIDAD UNMSM PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cono circular recto invertido se llena de agua hasta la mitad su altura, de 10 cm y radio en la base 4 cm. Si se introduce un cilindro de altura 1 cm y radio en su base 2 cm, calcula la altura del desnivel del agua sufrido en el cono invertido.",
+      "alternatives": [
+        "3∛133 – 4,5",
+        "3∛133 – 5",
+        "3∛133 – 4",
+        "3∛133 – 3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/solucionario-del-examen-de-ingreso-universidad-catolica-pucp-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el área lateral de un cono de revolución es igual a veces el área de su base. Calcule el ángulo que forma la generatriz con la altura.",
+      "alternatives": [
+        "30°",
+        "60°",
+        "37°",
+        "53°",
+        "45°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/cilindro-y-cono-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — CILINDRO Y CONO EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule a que distancia del centro de una esfera de radio m se debe seccionar con un plano para que la diferencia de las áreas de los casquetes esféricos determinados sea igual al área de la sección que divide a la esfera en dichos casquetes.",
+      "alternatives": [
+        "0,6m",
+        "0,8m",
+        "1m",
+        "2m",
+        "3m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área del círculo limitado por la intersección de una superficie esférica y una superficie cónica, ambas inscritas en un cilindro de revolución cuyo radio de la base es .",
+      "alternatives": [
+        "2 m2",
+        "4 m2",
+        "8 m2",
+        "12 m2",
+        "15 m2 4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el ángulo en la cúspide de un cono de revolución sabiendo que el área de la esfera inscrita es el área de la base del cono como 4 es a 3.",
+      "alternatives": [
+        "15°",
+        "30°",
+        "60°",
+        "74°",
+        "80"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área de un huso esférico de 90° si el radio mide 5cm",
+      "alternatives": [
+        "24  cm2",
+        "12,5  cm2",
+        "25  cm2",
+        "16  cm2",
+        " cm2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene dos esferas concéntricas; se traza un plano secante a la esfera mayor y es tangente a la esfera menor, determinando un círculo de área 16  cm2. Calcule el área del casquete menor determinado en la esfera mayor sabiendo que el radio de la esfera menor es 3 cm.",
+      "alternatives": [
+        "9 cm2",
+        "16 cm2",
+        "20 cm2",
+        "25 cm2",
+        "36 cm2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de una esfera inscrita en un cubo es 18 cm2; calcule el área de la esfera circunscrita a dicho cubo.",
+      "alternatives": [
+        "18 cm2",
+        "27 cm2",
+        "36 cm2",
+        "45 cm2",
+        "54 cm2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la longitud de la altura de un casquete esférico incluido en una esfera de 4cm de radio, siendo su área la quinta parte del área de la superficie esférica.",
+      "alternatives": [
+        "1 cm",
+        "1,5 cm",
+        "1,6 cm",
+        "2 cm",
+        "2,5 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una zona esférica equivalente a un huso esférico incluidos en una superficie esférica de radio R; calcule la medida del ángulo del huso esférico si la altura de la zona es R/3.",
+      "alternatives": [
+        "15°",
+        "25°",
+        "30°",
+        "45°",
+        "60°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A que distancia del centro de una esfera de radio R debe trazarse un plano secante para que el área de los casquetes determinados estén en la relación de 1 a 3.",
+      "alternatives": [
+        "R/2",
+        "R/3",
+        "R/5",
+        "2R/3",
+        "R/10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una superficie esférica de radio 12cm se tiene una zona esférica y un huso esférico equivalentes y la altura de la zona esférica mide 3cm; calcule el volumen de la cuña esférica.",
+      "alternatives": [
+        "248  cm2",
+        "268  cm2",
+        "278  cm2",
+        "288  cm2",
+        "300  cm2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de un huso esférico es igual a la tercera parte del área de la superficie esférica y el volumen de la esfera es 36 m3. Calcule el área de la cuña esférica.",
+      "alternatives": [
+        "12  m2",
+        "16  m2",
+        "18  m2",
+        "21  m2",
+        "25  m2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos planos perpendiculares son tangentes a una esfera y la distancia entre los puntos de tangencia es 3 cm. Calcule el volumen de la esfera.",
+      "alternatives": [
+        "16  cm3",
+        "21  cm3",
+        "25  cm3",
+        "28  cm3",
+        "36  cm3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un tronco de cono de altura igual a 8 m y radios de sus bases igual a 4 m y 6 m lleno de agua, y un cilindro de radio 20m y altura 57m. Calcule cuántos troncos de cono se necesitarán para llenar al cilindro.",
+      "alternatives": [
+        "110",
+        "110,5",
+        "100",
+        "112,5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geometria-simulacro-catolica-resuelto-examen-admision-universidad-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PUCP RESUELTA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una esfera inscrita en un cilindro de revolución. Si el área de la superficie esférica es 100 𝛑 μ², calcule el volumen del cilindro.",
+      "alternatives": [
+        "200 𝛑 μ³",
+        "250 𝛑 μ³",
+        "300 𝛑 μ³",
+        "450 𝛑 μ³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geometria-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRIA CATÓLICA PREGUNTAS RESUELTAS PUCP "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un cilindro de radio 6 y generatriz 30 que contiene cierto líquido. Se desea vaciar el líquido en vasos de forma de tronco de cono de radio menor 2, radio mayor 4 y altura 8, con la condición de que solo los vasos se llenan hasta sus tres cuartas partes. Calcula la cantidad de vasos empleados aproximadamente.",
+      "alternatives": [
+        "18",
+        "19",
+        "20",
+        "21"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geometria-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRIA CATÓLICA PREGUNTAS RESUELTAS PUCP "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cono de revolución, se inscribe dos esferas de radios 2dm y 6dm. Calcular el volumen (en dm³ ) del cono.",
+      "alternatives": [
+        "190 𝛑",
+        "810 𝛑",
+        "790 𝛑",
+        "840 𝛑",
+        "648 𝛑"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/cono-geometrico-y-tronco-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — CONO DE REVOLUCIÓN Y TRONCO EJEMPLOS Y EJERCICIOS RESUELTOS DE GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el volumen (en u ³ ) de un cono circular recto, si la longitud de su altura es 8u y la medida del ángulo de desarrollo es 120°.",
+      "alternatives": [
+        "32 𝛑 /3",
+        "64 𝛑 3",
+        "19 𝛑 /3",
+        "17 𝛑 /3",
+        "20 𝛑 /3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/cono-geometrico-y-tronco-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — CONO DE REVOLUCIÓN Y TRONCO EJEMPLOS Y EJERCICIOS RESUELTOS DE GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La altura y el diámetro de la base de un cono recto miden 18 y 24 unidades respectivamente. En el cono, se inscribe un cilindro recto cuya área total es 260 𝛑 u² . Calcular el volumen (en u ³ ) del cono parcial cuya base es la base superior del cilindro.",
+      "alternatives": [
+        "500 𝛑",
+        "480 𝛑",
+        "440 𝛑",
+        "420 𝛑",
+        "400 𝛑"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/cono-geometrico-y-tronco-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — CONO DE REVOLUCIÓN Y TRONCO EJEMPLOS Y EJERCICIOS RESUELTOS DE GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos bases de un tronco de cono circular son dos círculos de radios que miden 3 y 6m. Si la generatriz mide 6m, hallar la longitud del radio de la esfera circunscrita.",
+      "alternatives": [
+        "3m",
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/cono-geometrico-y-tronco-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — CONO DE REVOLUCIÓN Y TRONCO EJEMPLOS Y EJERCICIOS RESUELTOS DE GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el volumen de un tronco de cono de revolución, cuyo desarrollo del área lateral es un trapecio circular de área 30 𝛑 , si la altura y la generatriz del tronco miden 3 y 5u respectivamente.",
+      "alternatives": [
+        "30 𝛑",
+        "31 𝛑",
+        "32 𝛑",
+        "33 𝛑",
+        "36 𝛑"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/cono-geometrico-y-tronco-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — CONO DE REVOLUCIÓN Y TRONCO EJEMPLOS Y EJERCICIOS RESUELTOS DE GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el volumen de un tronco de cono de revolución, donde los radios de las bases miden a y 3a. Además, el área lateral es igual a la suma de las áreas de sus bases.",
+      "alternatives": [
+        "5,5 𝛑 a ³",
+        "3,5 𝛑 a ³",
+        "4,5 𝛑 a ³",
+        "6,5 𝛑 a ³",
+        "7 𝛑 a ³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/cono-geometrico-y-tronco-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — CONO DE REVOLUCIÓN Y TRONCO EJEMPLOS Y EJERCICIOS RESUELTOS DE GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el volumen (en dm ³ ) de un tronco de cono recto, cuyos radios de las bases miden 3dm y 9dm. Además, el área lateral del sólido es de 120 𝛑d m²",
+      "alternatives": [
+        "324 𝛑",
+        "312 𝛑",
+        "336 𝛑",
+        "360 𝛑",
+        "348 𝛑"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/cono-geometrico-y-tronco-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — CONO DE REVOLUCIÓN Y TRONCO EJEMPLOS Y EJERCICIOS RESUELTOS DE GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tronco de cono circular de bases paralelas, los radios de sus bases miden 5dm y 2dm. Si el área lateral es de 35 𝛑d m² , calcular el ángulo central (en rad ) del desarrollo lateral.",
+      "alternatives": [
+        "5 𝛑 /7",
+        "4 𝛑 /3",
+        "2 𝛑 /3",
+        "𝛑 /2",
+        "6 𝛑 /5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/cono-geometrico-y-tronco-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — CONO DE REVOLUCIÓN Y TRONCO EJEMPLOS Y EJERCICIOS RESUELTOS DE GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una caja de cartón con tapa en forma e cubo, se introduce una esfera. Al cerrar la caja la superficie de cada cara del cubo intersecta en un único puto a la superficie esférica. Si la distancia entre dos caras opuestas del cubo es 6 dm, calcule el volumen de la esfera.",
+      "alternatives": [
+        "32 𝛑 dm³",
+        "24 𝛑 dm³",
+        "36 𝛑 dm³",
+        "28 𝛑 dm³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-geometria-semana-18-2020.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El volumen de un cono de revolución es 36π cm³. Se inscribe un triángulo equilátero ABC en la base del cono. El triángulo ABC está circunscrito a una circunferencia cuyo círculo es base de un cilindro recto inscrito en el cono. Calcule el volumen del cilindro (en cm³).",
+      "alternatives": [
+        "27π/10",
+        "27π/8",
+        "27π/5",
+        "27π/2",
+        "27π"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/examen-uni-resuelto-geometria-admision.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRIA SEGUNDA PRUEBA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El volumen de una esfera es igual al quíntuplo del área de la superficie esférica, entonces el radio de dicha esfera es",
+      "alternatives": [
+        "13 u",
+        "14 u",
+        "15 u",
+        "12 u",
+        "11 u"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-8-experiencia-4-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el área de una superficie esférica disminuye 19%, ¿en cuánto disminuye el volumen de la esfera?",
+      "alternatives": [
+        "28,5%",
+        "27,1%",
+        "19,0%",
+        "25,4%",
+        "36,2%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/5to-actividad-9-ct-experiencia-4-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNASAM ÁREA D MEDICINA ENFERMERÍA OBSTETRICIA PDF – INGRESO UNIVERSIDAD CLAVES – 2026–2027"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una superficie esférica de longitud de radio R, el área de una zona esférica cuya altura mide R/4 es equivalente al área de un huso esférico. Calcule la medida (en grados sexagesimales) del ángulo diedro correspondiente al huso esférico.",
+      "alternatives": [
+        "15",
+        "30",
+        "45",
+        "60",
+        "75"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-7-experiencia-8-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-primero-segundo-grado-de-secundaria-word-aprendizaje-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un paralelepípedo recto cuyas aristas miden 6; 3 y 6𝜋, el cual es equivalente a un cilindro de revolución de radio igual a 3. Hallar la altura del cilindro.",
+      "alternatives": [
+        "16cm",
+        "18",
+        "12",
+        "15",
+        "9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/figuras-y-cuerpos-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — SÓLIDOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la longitud del radio de una esfera, en centímetros, sabiendo que el área de su superficie total es numéricamente igual a su volumen.",
+      "alternatives": [
+        "1 cm",
+        "2 cm",
+        "3 cm",
+        "4 cm",
+        "6 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una superficie esférica cuya área mide 144 𝜋 𝑢² . Calcule la longitud de la circunferencia máxima.",
+      "alternatives": [
+        "18 𝜋",
+        "16 𝜋",
+        "15 𝜋",
+        "12 𝜋",
+        "20 𝜋"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el área de la superficie esférica circunscrita a un cubo de arista igual a 2.",
+      "alternatives": [
+        "8 𝜋",
+        "16 𝜋",
+        "32 𝜋",
+        "12 𝜋",
+        "64 𝜋"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el volumen de una esfera es numéricamente igual con el área de su superficie, calcule el área del círculo máximo de dicha esfera.",
+      "alternatives": [
+        "16 𝜋 𝑢²",
+        "32 𝜋 𝑢²",
+        "18 𝜋 𝑢²",
+        "25 𝜋 𝑢²",
+        "9 𝜋 𝑢²"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo en forma de esfera de volumen 𝕍 es calentada hasta que su radio aumenta en un décimo de su valor inicial. Calcule el nuevo volumen de la esfera.",
+      "alternatives": [
+        "1,331𝕍",
+        "1,227𝕍",
+        "1,666𝕍",
+        "1,343𝕍",
+        "1,434𝕍"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el radio de la superficie esférica inscrita en un tetraedro regular cuya arista tiene 6 m de longitud.",
+      "alternatives": [
+        "√ 6/2",
+        "√ 6/3",
+        "3 √ 6/2",
+        "√ 6/4",
+        "√ 6/6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el volumen de una esfera inscrita en un cilindro de revolución si el área de la superficie total del cilindro mide 54 𝜋 𝑢² .",
+      "alternatives": [
+        "12 𝜋 𝑢³",
+        "36 𝜋 𝑢³",
+        "72 𝜋 𝑢³",
+        "48 𝜋 𝑢³",
+        "52 𝜋 𝑢³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la razón de las longitudes de los radios de las esferas inscrita y circunscrita a una misma esfera.",
+      "alternatives": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "2/3",
+        "2/2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada una superficie esférica de radio R, calcule la distancia desde el centro hacia el plano secante a la superficie esférica para que el casquete menor que se forma tenga igual área que la superficie lateral del cono equilátero inscrito en dicha superficie esférica.",
+      "alternatives": [
+        "R/7",
+        "R/2",
+        "R/5",
+        "R/3",
+        "R/4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cono circular recto está inscrita una esfera. La relación entre los volúmenes del cono y de la esfera es igual a dos. Halle la relación entre el área de la superficie total del cono y el área de la superficie esférica.",
+      "alternatives": [
+        "2: 1",
+        "3: 2",
+        "5: 2",
+        "3: 1",
+        "5: 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de una superficie esférica es 24 𝜋 , se trazan dos planos paralelos entre sí, tal que dichos planos trisecan a un radio de forma perpendicular. Halle el área de la zona esférica comprendida entre los planos.",
+      "alternatives": [
+        "3 𝜋",
+        "4 𝜋",
+        "6 𝜋",
+        "8 𝜋",
+        "12 𝜋"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la medida del ángulo que debe girar un semicírculo de radio ∛28 respecto del diámetro como eje de giro, para que el volumen de la cuña esférica sea equivalente a un segmento esférico de una sola base, de altura 2 y se encuentre en una esfera de radio 3.",
+      "alternatives": [
+        "60°",
+        "90°",
+        "45°",
+        "67°30'",
+        "75°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el radio de la esfera inscrita en el tetraedro trirrectángulo S – ABC de arista : SA=12 ; SB =24 y SC = 36.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La razón entre la altura de un cono de revolución y el radio de la superficie esférica circunscrita a este es igual a 8/5. Calcule la medida del ángulo formado por dos generatrices diametralmente opuestas.",
+      "alternatives": [
+        "45°",
+        "75°",
+        "53°",
+        "60°",
+        "37°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de la superficie total de un cono es igual a 25 veces el área de la superficie esférica inscrita en el cono. Si el volumen del cono es 175u ³ . Calcule el volumen de la esfera (en u ³ ).",
+      "alternatives": [
+        "4",
+        "5",
+        "7",
+        "9",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el radio de la esfera inscrita en un tetraedro regular cuya arista mide 12m.",
+      "alternatives": [
+        "√6",
+        "√2",
+        "√3",
+        "4",
+        "√5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuatro esferas congruente de radio r, están inscritas en un cubo de tal manera que son tangentes a la base y a las caras laterales consecutivas 2 a 2. Entonces el radio de una quinta esfera que es tangente a las cuatro esferas dadas y a la cara opuesta es:",
+      "alternatives": [
+        "r/2",
+        "5r/4",
+        "3r/4",
+        "4r/7",
+        "5r/7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la medida del ángulo entre la generatriz de un cono de revolución y su base si el área de la superficie esférica inscrita en el cono es igual al área de la base del cono.",
+      "alternatives": [
+        "53°",
+        "37°",
+        "45°",
+        "60°",
+        "75°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La altura de un segmento esférico es 8 y la distancia del centro de la esfera a la base del segmento esférico es 5. Calcule el volumen del segmento esférico.",
+      "alternatives": [
+        "1984 𝜋 𝑢³/3",
+        "1762 𝜋 𝑢³/3",
+        "1854 𝜋 𝑢³/3",
+        "1676 𝜋 𝑢³/3",
+        "1582 𝜋 𝑢³/3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el volumen del segmento esférico de una base si el área de su casquete esférico es cuatro veces el área de su base y el radio de la esfera es 4√3.",
+      "alternatives": [
+        "35𝜋",
+        "88𝜋",
+        "220𝜋",
+        "180𝜋",
+        "150𝜋"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una superficie esférica esta inscrita en un huso esférico y dos semicírculos máximos de una esfera, si el área del huso esférico es 24𝜋 u² y su radio es 6u entonces el área de la superficie esférica máxima inscrita es (en u²):",
+      "alternatives": [
+        "12𝜋",
+        "14𝜋",
+        "16𝜋",
+        "18𝜋",
+        "20𝜋"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El volumen de una esfera es numéricamente igual al área de su superficie y el área de un huso correspondiente es 2/9 del área de la superficie esférica. Calcule el volumen de la cuña esférica.",
+      "alternatives": [
+        "8𝜋",
+        "6𝜋",
+        "5𝜋",
+        "12𝜋",
+        "9𝜋"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el área lateral , en m², de un tronco de pirámide cuadrangular regular circunscrita a una esfera , siendo las áreas de las bases del tronco 9 y 36.",
+      "alternatives": [
+        "78",
+        "79",
+        "80",
+        "81",
+        "82"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esfera de área 144 𝜋 m² es cortada por dos planos que forman entre si un ángulo diedro de 60º, de modo que la recta de intersección de los planos es tangente a la esfera y el plano bisectriz contiene un diámetro de la esfera. ,Hallar el volumen de la parte de la esfera comprendida en el ángulo diedro.",
+      "alternatives": [
+        "2888𝜋m³",
+        "198𝜋m³",
+        "243𝜋m³",
+        "126𝜋m³",
+        "264𝜋m³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En dos esferas concéntricas, se traza un plano secante tangente a la esfera menor, formándose una sección de 16 𝜋 𝑚² . Calcule el volumen de uno de los segmentos esféricos si el radio de la esfera menor es 3 m.",
+      "alternatives": [
+        "10 𝜋 𝑚²",
+        "16 𝜋 𝑚²",
+        "21 𝜋 𝑚²",
+        "52 𝜋 𝑚²/3",
+        "24 𝜋 𝑚²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el volumen de una esfera inscrita en un cono de revolución cuya generatriz mide 13 y el radio de su base mide 5.",
+      "alternatives": [
+        "2000 𝜋 𝑢³/27",
+        "1000 𝜋 𝑢³/27",
+        "4000 𝜋 𝑢³/81",
+        "8000 𝜋 𝑢³/9",
+        "2000 𝜋 𝑢³/9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La afirmación: “Si el área de una esfera es 36 𝛑 u ² , entonces su volumen es 36 𝛑 u³ ”. Marcar la alternativa correcta:",
+      "alternatives": [
+        "Ambigua",
+        "Falsa",
+        "Imposible",
+        "Incompleta",
+        "Verdadera"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene dos esferas cuya relación de volúmenes es de 1 a 2, si el radio de la menor es ∛16 .\nCalcule el volumen de la esfera mayor.",
+      "alternatives": [
+        "143𝛑/3",
+        "196 𝛑/3",
+        "129𝛑/3",
+        "128 𝛑/3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de la superficie lateral de un cilindro de revolución es igual área de su base, si el radio de la base mide 6 . hallar la altura del cilindro.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "0,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El radio de la base de un cilindro de revolución es R y su altura mide 4R . Hallar el área de la superficie total del cilindro.",
+      "alternatives": [
+        "10𝜋R²",
+        "8𝜋R²",
+        "12𝜋R²",
+        "6𝜋R²",
+        "9𝜋R²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de la superficie lateral de un cilindro equilátero es 36 𝜋 . Halle el volumen de dicho cilindro.",
+      "alternatives": [
+        "48 𝜋",
+        "52 𝜋",
+        "54 𝜋",
+        "56 𝜋",
+        "72 𝜋"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la relación entre los volúmenes de un hexaedro regular y un cilindro de revolución inscrito de tal manera que ambas bases están en caras opuestas del hexaedro.",
+      "alternatives": [
+        "4/𝜋",
+        "𝜋",
+        "𝜋/3",
+        "6/𝜋",
+        "9/𝜋"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea AB la generatriz de un cilindro de revolución y C el punto ubicado en la generatriz diametralmente opuesta, tal que el área de la región triangular ABC es 10 𝑢². Calcule el área de la superficie lateral del cilindro.",
+      "alternatives": [
+        "40 𝜋 𝑢²",
+        "20 𝜋 𝑢²",
+        "60 𝜋 𝑢²",
+        "30 𝜋 𝑢²",
+        "50 𝜋 𝑢²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un prisma cuadrangular regular, se inscribe un cilindro de revolución cuya base se encuentra inscrita en la base del prisma. Calcule la razón de volúmenes.",
+      "alternatives": [
+        "𝜋/ 8",
+        "𝜋/ 2",
+        "𝜋/ 3",
+        "𝜋/ 4",
+        "𝜋/ 6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el volumen de un cilindro de revolución es numéricamente igual al área de su superficie total, calcule la suma de inversas del radio y la generatriz.",
+      "alternatives": [
+        "0,8",
+        "0,6",
+        "0,5",
+        "1",
+        "1,2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un cilindro de revolución donde su altura es el doble de la longitud del diámetro de la base. El cilindro contiene agua que ocupa las 3/4 partes de su capacidad. ¿Cuántos grados sexagesimales con respecto a la vertical se podría inclinar como máximo sin que se derrame agua?",
+      "alternatives": [
+        "53°",
+        "24°",
+        "30°",
+        "45°",
+        "37°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un cilindro de revolución, cuya generatriz mide 4, además, la distancia entre una recta que contiene al eje, y otra recta que es tangente a la superficie lateral es 3. Halle el volumen de dicho cilindro.",
+      "alternatives": [
+        "25 𝜋",
+        "20 𝜋",
+        "48 𝜋",
+        "36 𝜋",
+        "45 𝜋"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el área de la mayor sección determinada por uno de los planos diagonales de un cubo, a un cilindro inscrito en dicho cubo, cuyas bases están contenidas en dos caras opuestas, si el radio de la base del cilindro mide 2.",
+      "alternatives": [
+        "12 𝜋",
+        "16",
+        "8",
+        "4 𝜋",
+        "4√2 𝜋"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un octoedro regular de volumen 𝕍 esta inscrito en un cilindro de revolución de modo que 2 vértices opuestos se encuentran en los centros de las bases. Halle el volumen del cilindro.",
+      "alternatives": [
+        "3𝕍𝜋/2",
+        "𝕍𝜋/2",
+        "5𝕍𝜋/2",
+        "3𝕍𝜋/4",
+        "3𝕍𝜋/5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cilindro recto de volumen V cuya generatriz es el doble del diámetro de la base, contiene agua hasta los 3/4 de volumen. Hallar en que relación se encuentran las alturas de los dos volúmenes respectivamente.",
+      "alternatives": [
+        "4/3",
+        "2/3",
+        "3/4",
+        "1/3",
+        "3/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el valor de verdad de las siguientes proposiciones:\nI) En un tronco de cilindro de revolución cualquier sección plana es una región elíptica o un círculo.\nII) El eje de cualquier tronco de cilindro de revolución es igual a la semisuma de dos generatrices diametralmente opuestas.\nIII) Dado un cilindro de revolución de eje entonces cualquier plano secante que pase por el punto medio de e intercepta a todas las generatrices determinado dos troncos de cilindros equivalentes.",
+      "alternatives": [
+        "FVV",
+        "VVV",
+        "VVF",
+        "FFF",
+        "FFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un prisma recto de base rectangular ABC, siendo el ángulo ABC = 90º y la altura del prisma 6m. considerando como diámetro el segmento BC se dibuja un cilindro recto de igual altura que el prisma. La cara lateral mayor del prisma es dividida por una de las generatrices del cilindro en dos regiones rectangulares cuyas áreas son 18m² y 6m² ; la región rectangular menor es interior al cilindro. Hallar el volumen del cilindro.",
+      "alternatives": [
+        "3𝜋m³",
+        "4𝜋",
+        "2𝜋",
+        "5𝜋",
+        "6𝜋"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cilindro de revolución (radio 5cm) es cortado por dos planos paralelos de manera que los ejes mayores de las elipses que se forman miden 16cm y la generatriz del cilindro oblicuo que aparece es de 30cm. Calcular el volumen del cilindro oblicuo.",
+      "alternatives": [
+        "2355 cm³",
+        "2145",
+        "1935",
+        "1835"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tronco de cilindro recto de base circular, cuyo radio mide 2u . Sus generatrices máximas y mínimas miden 8u y cero respectivamente. Halle el área lateral.",
+      "alternatives": [
+        "12𝜋u",
+        "16𝜋",
+        "18𝜋",
+        "20𝜋",
+        "22𝜋"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un rollo de papel, cuyo diámetro es de 30cm consiste en 500 vueltas de papel fuertemente enrollado en un cilindro de 10cm de diámetro. ¿Qué longitud tiene el papel?.",
+      "alternatives": [
+        "200𝜋m",
+        "300𝜋",
+        "100𝜋",
+        "400𝜋",
+        "500𝜋"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cilindro circular recto de altura 15cm y radio igual 18√3cm es cortado por 2 planos paralelos que forman un ángulo de 30° con el eje del cilindro ; cada uno de los planos intercepta a sólo una de las bases en un único punto. El área lateral de la parte del cilindro comprendida entre estos dos planos es (en cm²).",
+      "alternatives": [
+        "12𝜋√3",
+        "18𝜋√3",
+        "18𝜋",
+        "20𝜋√3",
+        "22𝜋√3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cilindro circular recto, el punto O es el centro de una de sus bases cuyo radio mide 3m. Si B es un punto de la circunferencia de la base opuesta y OB=3 √ 3m, calcule (en m³) el volumen del sólido.",
+      "alternatives": [
+        "18 𝛑 √ 2",
+        "29 𝛑 √ 2",
+        "24 𝛑 √ 2",
+        "27 𝛑 √ 2",
+        "21 𝛑 √ 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La superficie lateral de un cilindro de revolución es una región cuadrada de área A .\nHallar el volumen del cilindro en función de A .",
+      "alternatives": [
+        "( 3 A √ A)/ 8 𝜋",
+        "( A √ A)/ 8 𝜋",
+        "( A √ A)/ 6 𝜋",
+        "( A √ A)/ 4 𝜋",
+        "( A √ A)/ 2 𝜋"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CILINDRO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La altura de un cono de revolución mide 12 , el diámetro de su base mide 10 . Encontrar el área de su superficie lateral.",
+      "alternatives": [
+        "60𝜋",
+        "64𝜋",
+        "62𝜋",
+        "65𝜋",
+        "70𝜋"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cuerda trazada en la base de un cono circular recto de 4m de altura, mide 8m , si la distancia de la cuerda al centro del círculo base es de 2m. ¿Cuánto mide la generatriz?.",
+      "alternatives": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al desarrollar la superficie lateral de un cono de revolución , se obtiene un semicírculo. Halle la medida del ángulo que forman dos generatrices diametralmente opuestas.",
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "90°",
+        "120°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tronco de cono de altura 12m tiene por base un círculo de radio R=10m , si el volumen del tronco de cono es 700𝜋 𝑚³, el volumen del cono es :",
+      "alternatives": [
+        "812𝜋 𝑚³",
+        "800 𝜋",
+        "750 𝜋",
+        "815𝜋",
+        "900𝜋"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un círculo de metal de 64 𝜋 𝑐𝑚² se corta por un diámetro en dos partes iguales y con una mitad se forma un cono circular recto uniendo los radios extremos. El ángulo que forman las generatrices del cono con su base, mide :",
+      "alternatives": [
+        "15°",
+        "30°",
+        "60°",
+        "45°",
+        "75°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tronco de cono de altura 12m tiene por base mayor un círculo de radio R=10m. Si el volumen del tronco de cono es 7000 𝑚³ . ¿Cuál es el volumen del cono?",
+      "alternatives": [
+        "750𝜋 𝑚³",
+        "812𝜋 𝑚³",
+        "780𝜋 𝑚³",
+        "800𝜋 𝑚³",
+        "815𝜋 𝑚³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tronco de cono de revolución se traza un plano por el centro de la base menor y paralelo a una generatriz determinando una sección trapezoidal cuyas bases miden 2 y 2√3 . Si la altura del tronco de cono mide 10 y el radio de la base mayor mide 2. Halle el área de la sección aproximada.",
+      "alternatives": [
+        "25,6",
+        "26,3",
+        "27,4",
+        "28,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cono circular recto está inscrito un cilindro circular cuya área total es igual al área lateral del cono. Si la generatriz del cono mide 8 μ, calcule la distancia del vértice del cono a la base superior del cilindro si, además, la sección axial del cono es un triángulo rectángulo.",
+      "alternatives": [
+        "2 μ",
+        "4 μ",
+        "3 μ",
+        "5 μ",
+        "3,5 μ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La generatriz de un cono circular recto mide 5 y la medida del ángulo de desarrollo es 216°. Calcule el volumen de dicho cono.",
+      "alternatives": [
+        "15 𝜋 𝑢³",
+        "20 𝜋 𝑢³",
+        "24 𝜋 𝑢³",
+        "12 𝜋 𝑢³",
+        "18 𝜋 𝑢³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cono de revolución, el segmento de mediatriz de una de sus generatrices limitado por la altura del cono mide 4 y la altura del cono mide 10. Calcule el área de la superficie lateral de dicho cono.",
+      "alternatives": [
+        "80 𝜋 𝑢²",
+        "60 𝜋 𝑢²",
+        "50 𝜋 𝑢²",
+        "40 𝜋 𝑢²",
+        "70 𝜋 𝑢²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la generatriz irreductible de 0,454545... dar el numerador.",
+      "alternatives": [
+        "2",
+        "4",
+        "5",
+        "11",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/fraccion-generatriz-ejercicios-de-sexto.html",
+      "sourceName": "matematicasn.blogspot.com — FRACCIÓN GENERATRIZ EJERCICIOS RESUELTOS DE PRIMARIA O BÁSICO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el volumen de una esfera inscrita en un cono circular recto, si el diámetro de la base del cono mide 12cm y la generatriz mide 10cm.",
+      "alternatives": [
+        "18𝛑cm 3",
+        "25 𝛑cm 3",
+        "30 𝛑cm 3",
+        "36 𝛑cm 3",
+        "45 𝛑cm 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/01/examen-de-geometria-resuelto-pdf-unmsm.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cuerda trazada en la base de un cono circular recto de 4m de altura mide 8m y la distancia de la cuerda al centro del círculo es 2m, luego a 2m de la base se traza un plano paralelo a dicha base, obteniéndose un tronco de cono. Calcule el volumen (en m3) del tronco de cono.",
+      "alternatives": [
+        "20𝛑/3",
+        "35 𝛑/3",
+        "40𝛑/3",
+        "70 𝛑/3",
+        "71 𝛑/3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/segunda-prueba-resuelta-de-geometria.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cilindro de revolución, el área de la base es igual al área de la superficie lateral. Calcule la razón entre el radio de la base y la generatriz.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cono de revolución cuya altura mide 2 √ 2 y su radio de su base es 2, calcule el área de la superficie lateral.",
+      "alternatives": [
+        "√ 3 u 2",
+        "2 √ 3 u 2",
+        "4 √ 3 u 2",
+        "6 √ 3 u 2",
+        "8 √ 3 u 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cono de revolución de vértice M y diámetro de la base AB, se ubica el punto medio N de la altura MO, MO=h. Se traza NE⊥AM (E en AM).\nSi ((AE)² – (EM)²)h=45.\nCalcule el volumen del cono.",
+      "alternatives": [
+        "9 𝛑",
+        "18 𝛑",
+        "10 𝛑",
+        "45 𝛑",
+        "15 𝛑"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-geometria-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE GEOMETRÍA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el máximo valor del volumen del cilindro que se puede inscribir en una esfera de radio √3",
+      "alternatives": [
+        "4𝛑 m³",
+        "6𝛑",
+        "8𝛑",
+        "12𝛑"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/maximos-y-minimos-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF APLICANDO DERIVADAS OPTIMIZACIÓN GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una constructora pretende conectar un reservorio central (Rc) en forma de cilindro, con radio interno igual a 2 m y altura interna igual a 3,30 m, a cuatro reservorios cilíndricos auxiliares (R1, R2, R3 y R4), los cuales tienen radios internos y alturas internas de 1,5 m. R2 RC R1 R3 R4 Las conexiones entre el reservorio central y los auxiliares se hacen mediante tuberías cilíndricas de 0,10 m de diámetro interno y 20 m de longitud, conectadas cerca de las bases de cada reservorio. En la conexión de cada uno de esos tubos con el reservorio central hay válvulas que liberan o interrumpen el flujo de agua. En el momento en que el reservorio central está lleno y los auxiliares están vacíos, se abren las cuatro válvulas y, después de algún tiempo, las alturas de las columnas de agua en los reservorios se igualan, en cuanto cesa el flujo de agua entre ellos, por el principio de los vasos comunicantes. La medida, en metros, de las alturas de las columnas de agua en los reservorios auxiliares, después de cesar el flujo de agua entre ellos, es",
+      "alternatives": [
+        "1,44.",
+        "1,16.",
+        "1,10.",
+        "1,00.",
+        "0,95."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2019/2019_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2019 dia 2 caderno azul questão 175"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las rectas 3y–x–6= 0, x = 0, y = 0 determinan una región triangular. Al hacer girar esta región alrededor del eje x se genera un sólido de revolución. Calcule el volumen de dicho sólido.",
+      "alternatives": [
+        "24 𝛑u³",
+        "6 𝛑u³",
+        "8 𝛑u³",
+        "18 𝛑u³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/09/geometria-san-marcos-deco-admision-la.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA EXAMEN RESUELTO DE ADMISIÓN A LA UNIVERSIDAD SAN MARCOS DECO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC, exteriormente se traza el cuadrado ABEF. Calcule el volumen del sólido generado al girar 360° la región cuadrada alrededor de la recta que contiene al lado AC, si los ángulos BAC y BCA miden 53° y 45° respectivamente y AC = 7cm.",
+      "alternatives": [
+        "80 cm3",
+        "100 cm3",
+        "175 cm3",
+        "200 cm3",
+        "300 cm3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el volumen de la esfera es 288π u3, entonces el radio de dicha esfera es",
+      "alternatives": [
+        "2 u",
+        "3 u",
+        "4 u",
+        "7 u",
+        "6 u"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-8-experiencia-4-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las generatrices máxima y mínima de un tronco de cilindro oblicuo miden 13 cm y 9 cm. Si el radio de la sección recta mide 5 cm, halle el área lateral de dicho tronco.",
+      "alternatives": [
+        "105 𝛑 cm 2",
+        "80 𝛑 cm 2",
+        "110 𝛑 cm 2",
+        "90 𝛑 cm 2",
+        "100 𝛑 cm 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/geometria-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La base de un cilindro recto está inscrito en un trapecio isósceles cuyo perímetro es 40 m. Si la medida de la altura del cilindro es igual a la medida de la base mayor del trapecio y uno de los ángulos internos mide 37°. Calcule el volumen del cilindro.",
+      "alternatives": [
+        "216 𝛑m 3",
+        "162 𝛑 m 3",
+        "288 𝛑 m 3",
+        "81 𝛑 m 3",
+        "144 𝛑 m 3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/geometria-preuniversitaria-libro-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente cilíndrico cuya altura y radio de la base miden 12 cm y 4 cm respectivamente, contiene agua hasta la mitad de su capacidad. Si un niño introduce al recipiente n bolitas cuyos radios miden 2 cm, de modo que el agua cubre completamente el recipiente, halle n.",
+      "alternatives": [
+        "6",
+        "8",
+        "10",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-15-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tarro de leche tiene forma cilíndrica, el radio de su base mide 24 mm y el área de la etiqueta que cubre de manera exacta la superficie lateral es 2160𝜋mm². Halle la medida de la altura del tarro.",
+      "alternatives": [
+        "40 mm",
+        "42 mm",
+        "45 mm",
+        "48 mm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-14-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — PRE SAN MARCOS GEOMETRIA SEMANA 14 DECO SOLUCIONARIO ADMISIÓN A LA UNIVERSIDAD UNMSM PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se gira una región rectangular de área 10 u², en torno a uno de sus lados, cuya longitud es 2 u. Calcula el área de la superficie lateral del cilindro y su volumen.",
+      "alternatives": [
+        "20π u² y 20π u³",
+        "20π u² y 24π u³",
+        "24π u² y 20π u³",
+        "18π u² y 20π u³"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/06/geometria-admision-catolica-pucp-examen.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA ADMISIÓN CATÓLICA PUCP 2022 2023 EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el volumen de un cilindro recto es el doble del volumen de un cono recto, tal que los radios de sus respectivas bases tienen igual medida; calcula la relación entre las alturas del cilindro y cono, respectivamente.",
+      "alternatives": [
+        "1/4",
+        "2/3",
+        "3/4",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/solucionario-del-examen-de-ingreso-universidad-catolica-pucp-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el volumen del sólido engendrado por una región hexagonal regular de perímetro 36cm y gira alrededor de una recta que contiene a uno de los lados del dicho polígono.",
+      "alternatives": [
+        "962  cm3",
+        "972  cm3",
+        "925  cm3",
+        "928 cm3",
+        "936  cm3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/esfera-y-rotaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ESFERA Y ROTACIONES EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la generatriz de un cono recto circular mide 5 m y la superficie lateral desarrollada forma un sector circular de 216°, entonces el volumen de dicho cono, en m³, es",
+      "alternatives": [
+        "9 𝛑",
+        "10 𝛑",
+        "11 𝛑",
+        "12 𝛑",
+        "14 𝛑"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/matematicas-unt-examen-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MATEMÁTICAS UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de la base de una pirámide cuadrangular es de 16 m² y su apotema mide 2 √ 3m. Hallar el área de la superficie total de la semiesfera inscrita en dicha pirámide, si se sabe que el circulo máximo está contenido en la base de la pirámide.",
+      "alternatives": [
+        "10𝛑m²",
+        "12 𝛑 m²",
+        "14𝛑m²",
+        "9 𝛑 m²",
+        "8 𝛑 m²"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/geometria-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considere un rombo cuyos lados miden 6cm y uno de los ángulos internos mide 60°. La rotación de 360° de ese rombo en toro de uno de sus lados genera un sólido cuyo volumen, en centímetros cúbicos, es",
+      "alternatives": [
+        "178",
+        "178.3T",
+        "146/3",
+        "162 .",
+        "162V3 m."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/manual-de-calculo-vectorial-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO FAUSTINO 2027 INGRESO UNIVERSIDAD CLAVES DE RESPUESTAS (MODELO)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un grifo dispone de un tanque subterráneo que tiene la forma de un cilindro circular recto con un volumen de 112𝛑m³ y una base cuyo diámetro mide . La altura del tanque mide:",
+      "alternatives": [
+        "6m",
+        "7m",
+        "8 m",
+        "9 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-u-de-lima-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNIVERSIDAD DE LIMA 2027 EXAMEN ADMISIÓN TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En algunas provincias ubicadas en la sierra central se acostumbra a almacenar los granos o semillas en depósitos de forma cónica llamados silos. Si se desea almacenar 20𝛑m 3 de semillas ¿Cuál debe ser la altura del silo, considerando que el diámetro mide 8 m?",
+      "alternatives": [
+        "3,75 m",
+        "3,25 m",
+        "2,25 m",
+        "3,50 m",
+        "4,75 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-ucsur-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CIENTIFÍCA DEL SUR 2027 UCSUR EXAMEN ADMISIÓN UNIVERSIDAD TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la clase de matemáticas el profesor dibuja un rectángulo de lados a y b. Primero lo hace girar respecto al lado a, obteniendo un cilindro de 216 𝛑 u 3 de volumen, luego lo hace girar respecto al otro lado obteniendo otro cilindro de 125 𝛑 u 3 de volumen. Halle el área del rectángulo.",
+      "alternatives": [
+        "38u 2",
+        "34u 2",
+        "36 u 2",
+        "30u 2",
+        "32u 2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN QUINTOS BIOMÉDICAS 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS PDF SOLUCIONARIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el volumen de un cono cuya generatriz mide 26cm y el radio de su base es de 10cm ?",
+      "alternatives": [
+        "400𝜋 cm 3",
+        "500𝜋 cm 3",
+        "600𝜋 cm 3",
+        "700𝜋 cm 3",
+        "800𝜋 cm 3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/10/mapeos-definidos-por-funciones.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNAMAD 2027 ADMISIÓN UNIVERSIDAD NACIONAL AMAZÓNICA PREGUNTAS RECIENTES PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cilindro de 30cm de radio y 50cm de altura está completamente lleno de agua. Si dentro de él se introduce un trozo de madera labrado en forma de prisma de base cuadrada de 10cm de lado y cuya altura es de 20 cm el agua se derrama. Calcular la cantidad de agua, en litros, q ue queda en el recipiente.",
+      "alternatives": [
+        "100,3",
+        "105,2",
+        "75,3",
+        "120,2",
+        "139,3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/04/aprendo-en-casa-inicial-minedu-ninos-3-4-5-anos-jardin-peru-educa-actividades-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNHEVAL 2027 RESUELTO INGRESO UNIVERSIDAD NACIONAL PDF CLAVES DE RESPUESTAS – SOLUCIONARIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se dan dos esferas tangentes exteriormente y cuyos radios miden 1 d 𝑚 y 3 d 𝑚 . El volumen del cono recto circunscrito a ambas esferas, es:",
+      "alternatives": [
+        "81d 𝑚³",
+        "18 𝜋 d 𝑚³",
+        "18d 𝑚³",
+        "81 𝜋 d 𝑚³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos conos tangentes de vértices coincidentes y de radios 3 cm y 5 cm pero de iguales generatrices. Si el ángulo formado por sus respectivas alturas mide 60°, calcule la distancia entre los centros de las bases de dichos conos.",
+      "alternatives": [
+        "3 cm",
+        "6 cm",
+        "5 cm",
+        "7 cm",
+        "8 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El desarrollo de las superficies laterales de dos conos circulares rectos tangentes exteriores con vértice común son dos semicírculos, cuyos radios miden 8 y 4 m. Calcule la distancia entre los centros de las bases de los conos:",
+      "alternatives": [
+        "1 m",
+        "2 m",
+        "3 m",
+        "4 m",
+        "6 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una región triangular ABC, tal que AC= 5, m ∢ ACB= 37° y m ∢ ABC= 90°. Calcule el volumen del sólido generado por dicha región cuando gira 360° alrededor de AB.",
+      "alternatives": [
+        "16 𝜋 𝑢³",
+        "15 𝜋 𝑢³",
+        "18 𝜋 𝑢³",
+        "20 𝜋 𝑢³",
+        "25 𝜋 𝑢³"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante la ejecución de la obra: Línea 1 del Metro de Lima, se están construyendo pilares de base circular y con la forma de un cilindro recto. Sabiendo que la altura promedio del pilar más alto es 24m y el segmento de mayor longitud que une dos puntos de sus bases, determina con el plano de la base un ángulo de 74°, calcule aproximadamente (en m 3 ) el volumen del vaciado de concreto del pilar.",
+      "alternatives": [
+        "293𝛑",
+        "295𝛑",
+        "296 𝛑",
+        "294𝛑",
+        "292𝛑"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-preuniversitaria-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 MATEMÁTICA SEGUNDA PRUEBA RESUELTA – RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el volumen de un neumático de auto móvil mide 𝕍u ³ y su área total 𝔸u² y el radio de la sección transversal es r, tal que 𝔸×r = 60u ³ .\nCalcule 𝕍 (en u ³ ).",
+      "alternatives": [
+        "20",
+        "30",
+        "40",
+        "50",
+        "60"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/teorema-de-pappus-y-gulding-rotaciones.html",
+      "sourceName": "matematicasn.blogspot.com — PAPPUS Y GULDING EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una región triangular de área 60u² gira alrededor de un eje coplanar siendo la distancia de sus vértices al eje giro 10u, 11u y 42 u. Calcule el volumen generado (en u³).",
+      "alternatives": [
+        "1250 𝛑",
+        "2520 𝛑",
+        "2780 𝛑",
+        "3250 𝛑",
+        "4270 𝛑"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/teorema-de-pappus-y-gulding-rotaciones.html",
+      "sourceName": "matematicasn.blogspot.com — PAPPUS Y GULDING EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se ha cabado un pozo de forma cilíndrica de 14 m de profundidad y 5 m de diámetro, se le requiere revestir en primer lugar el área lateral con una capa de concreto de 10 cm de espesor y luego cubrirla con una capa impermeabilizadora. Si por el 𝑚³ de concreto se cobra S/.120 y por el 𝑚² de impermeabilización S/.18, ¿a cuánto asciende el costo total? (considerar: 𝜋 = 22/7)",
+      "alternatives": [
+        "S/.7382",
+        "6348",
+        "9908",
+        "8675",
+        "6388,8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/figuras-y-cuerpos-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — SÓLIDOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cono equilátero se inscribe una superficie semiesférica, tal que el círculo máximo está en la base del cono. Calcule el área de la zona esférica determinada por la superficie cónica sobre la superficie semiesférica si el radio de la base del cono es igual a 4 √ 3.",
+      "alternatives": [
+        "16 𝜋",
+        "36 𝜋",
+        "18 𝜋",
+        "24 𝜋",
+        "72 𝜋"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una semiesfera se inscribe un cono cuyo vértice es el centro de la semiesfera. Calcule el volumen del cono si el radio de su base es 3 m y dicha base divide a la superficie semiesférica en dos superficies equivalentes.",
+      "alternatives": [
+        "3 √ 2 𝜋 𝑚³",
+        "4 √ 3 𝜋 𝑚³",
+        "5 √ 3 𝜋 𝑚³",
+        "3 √ 3 𝜋 𝑚³",
+        "3 𝜋 𝑚³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de la base de una pirámide cuadrangular regular es 16 𝑐𝑚² y su apotema mide 2 √ 3cm. Calcule volumen de la semiesfera inscrita en dicha pirámide (el círculo máximo está contenido en la base de la pirámide).",
+      "alternatives": [
+        "10 𝜋 𝑐𝑚²",
+        "12 𝜋 𝑐𝑚²",
+        "8 𝜋 𝑐𝑚²",
+        "16 𝜋 𝑐𝑚²",
+        "32 𝜋 √ 6 𝑐𝑚²/27"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación entre el volumen de un tronco de pirámide regular cuadrangular , de áreas 4a² y 16a²(a>0) y el volumen de una esfera inscrita es",
+      "alternatives": [
+        "7/𝜋",
+        "6/𝜋",
+        "5/𝜋",
+        "12/𝜋",
+        "9/𝜋"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESFERA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una plantilla circular de cartulina, de 30 cm de radio se divide en 3 regiones equivalentes que tienen forma de sector circular. Con cada sector circular se construye la superficie lateral de un cono. Si se sabe que para construir la base del cono que tiene forma circular se necesita de su radio, calcule la longitud del radio de la base del cono resultante.",
+      "alternatives": [
+        "25 cm",
+        "15 cm",
+        "10 cm",
+        "30 cm",
+        "20 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de gotas esféricas de agua del mismo radio que debemos juntar para formar una gota grande esférica cuya capacidad sea el doble de la capacidad de las gotas pequeñas es",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/cepunt-solucionario-de-fisica-examen-resuelto-admision-unt-trujillo.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tronco de cilindro circular recto se inscribe una pirámide regular de base triangular cuyo volumen es 10√3 cm 3 . Calcule el volumen (en cm 3 ) del sólido determinado por el tronco de cilindro.",
+      "alternatives": [
+        "80 𝛑/3",
+        "200 𝛑/3",
+        "40 𝛑",
+        "100𝛑/3",
+        "50𝛑/3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/prueba-3-de-matematicas-fisica-y.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-1 SEGUNDA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DESARROLLO MATEMÁTICAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A 6 cm del centro de una esfera se traza un plano secante que determina con la esfera un círculo de área 64 𝛑 cm ² .\nCalcule el área del menor casquete determinado por el plano.",
+      "alternatives": [
+        "60 𝛑",
+        "80 𝛑",
+        "100 𝛑",
+        "120 𝛑",
+        "90 𝛑"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-geometria-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE GEOMETRÍA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una bola de plomo de 8cm de radio se funde para obtener bolitas de 1cm de radio cada una. Entonces el número de bolitas que se obtiene como máximo, es:",
+      "alternatives": [
+        "256",
+        "448",
+        "512",
+        "520",
+        "632"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área total de un cono equilátero es 81u 2 . Hallar el área de la esfera inscrita.",
+      "alternatives": [
+        "27 u 2",
+        "32 u 2",
+        "28 u 2",
+        "36 u 2",
+        "18 √ 3 u 2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que dos círculos menores paralelos distantes 3m y situados a un mismo lado del centro tienen áreas 𝛑m 2 y 16𝛑m 2 , el área de la esfera es:",
+      "alternatives": [
+        "28𝛑m 2",
+        "68𝛑m 2",
+        "48𝛑m 2",
+        "17𝛑m 2",
+        "64𝛑m 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un rollo de papel, cuyo diámetro es 30 cm, consiste en 500 vueltas de papel fuertemente enrollado en un cilindro de 10 cm de diámetro y 2 m de altura. Halle el área de la superficie del papel. (π=3,14).",
+      "alternatives": [
+        "314 m²",
+        "628 m ²",
+        "157 m ²",
+        "1256 m ²",
+        "341 m ²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/04/examen-admision-2019-villarreal.html",
+      "sourceName": "razonamientopdf.blogspot.com — DESARROLLO DEL EXAMEN ADMISIÓN VILLARREAL UNIVERSIDAD PDF 2027"
     }
   ]
 }

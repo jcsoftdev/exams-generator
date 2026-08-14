@@ -1,3 +1,332 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es importante establecer que se puede obtener nanopartículas a partir de la reacción de sulfato de cobre (CuS O 4 ) para obtener el cobre metálico (Cu) y poder usarlo en sensores electrónicos, en materiales compuestos, en aleaciones, entre otros y poder comparar sus dimensiones nanométricas.\nDe acuerdo a los siguientes tamaños establecidos, ordenarlos de menor a mayor\nI) 2,0×10⁰ nm : nanopartículas de cobre en sensores electrónicos\nII) 1,0×10 ⁻ ² μm : nanopartículas de cobre en aleaciones\nIII) 7,5×10⁴ pm : nanopartículas de cobre en materiales compuestos",
+      "alternatives": [
+        "II, I, III",
+        "III, I, II",
+        "I, II, III",
+        "I, III, II",
+        "II, III, I"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/examen-admision-san-marcos-2015-i.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Existe un gran consenso en que la nanotecnología nos llevará a una segunda revolución industrial en el siglo XXI.\nAl respecto, indique la alternativa que contiene la secuencia correcta, después de verificar si las proposiciones son verdaderas (V) o falsas (F).\nI) Se utiliza para crear materiales y sistemas con propiedades únicas.\nII) Permite trabajar y manipular estructuras moleculares.\nIII) Es una técnica que se aplica a nivel de nanoescala.",
+      "alternatives": [
+        "VFF",
+        "VVF",
+        "VFV",
+        "FVV",
+        "VVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/biotecnologia-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOTECNOLOGÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas de las siguientes proposiciones son verdaderas ?\n1) Un nanotubo de carbono consiste en una o varias láminas de grafito enrolladas sobre sí mismas, en algunos casos cerradas por fullerenos.\n2) Un nanotubo de carbono siempre es un buen conductor eléctrico.\n3) La longitud de un nanotubo es del orden de unos nanómetros, mientras que su diámetro puede llegar al milímetro.\n4) Muchas de la propiedades físicas y químicas de los materiales cambian a escala nanométrica.\n5) La nanotecnología puede emplearse en ciencias tan diversas como la agricultura y la medicina.\n6) Actualmente, muchos procesos comerciales utilizan los principios de la nanotecnología.",
+      "alternatives": [
+        "3",
+        "5",
+        "1",
+        "6",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/biotecnologia-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOTECNOLOGÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas de las siguientes proposiciones son falsas ?.\nRespecto a la nanotecnología .\n1) Es una ciencia que se aplica a un nivel de nanoescala.\n2) Permite trabajar y manipular las estructuras moleculares y sus átomos.\n3) Cuando se manipula la materia a escala minúscula de átomos y moléculas se manifiestan fenómenos y propiedades totalmente nuevas.\n4) La palabra nanotecnología define a las ciencias y técnicas que se aplican a un nivel de nanoescala.\n5) Las propiedades de los materiales a nivel de nano escala son similares a las propiedades macroscópicas.\n6) Los nanotubos de carbono pueden ser utilizados como sistemas de separación moleculares.\n7) Los nanotubos de carbón son las fibras más fuertes que se conocen.\n8) Los nanotubos solo miden nanómetro en diámetro.\n9) Un solo nanotubo perfecto es de 10 a 100 veces más fuertes que el acero y poseen propiedades eléctricas .",
+      "alternatives": [
+        "2",
+        "7",
+        "3",
+        "5",
+        "ninguna"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/biotecnologia-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOTECNOLOGÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a la nanotecnología :\nI) Como su nombre indica consiste en generación de «máquinas», estructuras y «reactores» a escala nanométrica.\nII) Algunos materiales pueden ser utilizados en pantallas planas por tener buena capacidad como emisores de electrones\nIII) A pesar de ser un campo muy reciente el potencial que presenta la nanotecnología es enorme . es(son) correcta(s):",
+      "alternatives": [
+        "Sólo I",
+        "Sólo II",
+        "Sólo III",
+        "I y II",
+        "I , II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/biotecnologia-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOTECNOLOGÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la nanotecnología , señale las proposiciones verdaderas :\nI) Es el estudio, manipulación y aplicación de materiales y sistemas funcionales a través del control de la materia a nanoescala.\nII) La nanotecnología planea obtener materiales sorprendentes a un costo reducido con propiedades únicas.\nIII)Actualmente se aplica en la manipulación del ADN para obtener alimentos transgénicos.",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "solo III",
+        "I y II",
+        "I , II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/biotecnologia-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOTECNOLOGÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El texto esta conformado por:\n\nTexto:\nSegún la organización para la cooperación y el desarrollo económico (OCDE. 2015) se puede definir la biotecnología como \"la aplicación de la ciencia y la tecnología en organismos vivos ya sea en partes, productos o modelos de éstos para alterar materiales vivos o muertos para la producción de conocimiento bienes y servicios\" la OCDE añade a esta definición una lista no exhaustiva que enumera las diferentes técnicas que se deben incluir a la hora de definir a biotecnología (ADN/ARN proteínas y otras moléculas y tejidos, cultivos e ingenierías técnicas biotecnológicas de procesamiento, vectores de genes y ARN bioinformática Nanotecnología).",
+      "alternatives": [
+        "Una comparación de una síntesis",
+        "Una argumentación y un listado",
+        "Una definición y una enumeración",
+        "Una síntesis y una analogía",
+        "Una explicación y una ejemplificación"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/10/examen-cepreunsa-i-fase-2022.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Examen CEPREUNSA I Fase 2022 "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El silicio tiene una fuerte tendencia a formar polímeros como las siliconas. La longitud de cadena del polímero de silicona se puede controlar añadiendo",
+      "alternatives": [
+        "MeSiCl3",
+        "Me2SiCl2",
+        "Me3SiCl",
+        "Me4Si"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep511.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.11 MCQ 8"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes no es un polímero semisintético?",
+      "alternatives": [
+        "cis-poliisopreno",
+        "Nitrato de celulosa",
+        "Acetato de celulosa",
+        "Caucho vulcanizado"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep515.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.15 MCQ 2"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes polímeros puede formarse utilizando la siguiente unidad monomérica?",
+      "alternatives": [
+        "Nylon 6,6",
+        "Nylon 2-nylon 6",
+        "Polímero de melamina",
+        "Nylon-6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep515.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.15 MCQ 8"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El término 'sorción' se refiere a ____________.",
+      "alternatives": [
+        "absorción",
+        "adsorción",
+        "tanto la absorción como la adsorción",
+        "desorción 23/04/18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.5 MCQ 4"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El grado de adsorción del adsorbato desde la fase de solución aumenta con ________.",
+      "alternatives": [
+        "el aumento de la cantidad de adsorbato en la solución.",
+        "la disminución del área superficial del adsorbente.",
+        "el aumento de la temperatura de la solución.",
+        "la disminución de la cantidad de adsorbato en la solución."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.5 MCQ 6"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes no es una condición favorable para la adsorción física?",
+      "alternatives": [
+        "presión alta",
+        "∆H negativo",
+        "mayor temperatura crítica del adsorbato",
+        "temperatura alta"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.5 MCQ 8"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La adsorción física de una especie gaseosa puede cambiar a adsorción química con ______________.",
+      "alternatives": [
+        "la disminución de la temperatura",
+        "el aumento de la temperatura",
+        "el aumento del área superficial del adsorbente",
+        "la disminución del área superficial del adsorbente"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.5 MCQ 9"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la fisisorción, el adsorbente no muestra especificidad por ningún gas en particular porque ______________.",
+      "alternatives": [
+        "las fuerzas de van der Waals involucradas son universales.",
+        "los gases involucrados se comportan como gases ideales.",
+        "la entalpía de adsorción es baja.",
+        "es un proceso reversible."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.5 MCQ 10"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con base en los datos dados a continuación, predice cuál de los siguientes gases muestra la menor adsorción sobre una cantidad definida de carbón activado. Gas CO2 SO2 CH4 H2 Temperatura crítica/K 304 630 190 33",
+      "alternatives": [
+        "CO2",
+        "SO2",
+        "CH4",
+        "H2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.5 MCQ 12"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A alta concentración de jabón en agua, el jabón se comporta como ____________.",
+      "alternatives": [
+        "coloide molecular",
+        "coloide de asociación",
+        "coloide macromolecular",
+        "coloide liófilo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.5 MCQ 14"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes mostrará el efecto Tyndall?",
+      "alternatives": [
+        "Solución acuosa de jabón por debajo de la concentración micelar crítica.",
+        "Solución acuosa de jabón por encima de la concentración micelar crítica.",
+        "Solución acuosa de cloruro de sodio.",
+        "Solución acuosa de azúcar."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.5 MCQ 15"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes procesos es responsable de la formación de deltas en el lugar donde los ríos se encuentran con el mar?",
+      "alternatives": [
+        "Emulsificación",
+        "Formación de coloides",
+        "Coagulación",
+        "Peptización"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.5 MCQ 22"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El carbón activado es un material que posee un elevado contenido de carbono, siendo muy utilizado para la eliminación de compuestos orgánicos volátiles del medio, como el benceno. Para la eliminación de estos compuestos, se utiliza la adsorción. Este fenómeno ocurre mediante interacciones de tipo intermolecular entre la superficie del carbón (adsorbente) y el benceno (adsorbato, sustancia adsorbida). En el caso presentado, entre el adsorbente y la sustancia adsorbida ocurre la formación de:",
+      "alternatives": [
+        "Enlaces disulfuro.",
+        "Enlaces covalentes.",
+        "Puentes de hidrógeno.",
+        "Interacciones dipolo inducido – dipolo inducido.",
+        "Interacciones dipolo permanente – dipolo permanente."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2016/2016_PV_impresso_D1_CD1.pdf",
+      "sourceName": "gov.br-inep — ENEM 2016 dia 1 caderno azul questão 60"
+    }
+  ]
 }

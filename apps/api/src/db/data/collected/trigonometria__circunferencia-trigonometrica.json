@@ -1185,6 +1185,394 @@
       "correctAnswer": "2",
       "sourceUrl": "https://es.slideshare.net/slideshow/semana-5-34613205/34613205",
       "sourceName": "SlideShare - Semana 5 Circunferencia Trigonométrica, Problema de clase 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el producto de los valores mínimo y máximo de la expresión:",
+      "alternatives": [
+        "18",
+        "36",
+        "9",
+        "40",
+        "20"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-trigonometrica.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la veracidad (V) o falsedad (F) de c/u de las siguientes proposiciones\n(I) sen2 > sen1 > sen3 ( )\n(II) sen 6 > sen4 > sen5 ( )\n(III) ( )\n(IV) ( )",
+      "alternatives": [
+        "FFVV",
+        "VVFF",
+        "VVFV",
+        "FVFV",
+        "VFVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-trigonometrica.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: ; analizar la verdad (v) ó falsedad (F) de las siguientes proposiciones:",
+      "alternatives": [
+        "VVFV",
+        "VFVF",
+        "VVVF",
+        "VFFV",
+        "VFFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-trigonometrica.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el mínimo valor de: siendo “a” y “b” ángulos diferentes.",
+      "alternatives": [
+        "-4",
+        "-5",
+        "-6",
+        "-7",
+        "-8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-trigonometrica.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la expresión de menor valor entre:",
+      "alternatives": [
+        "Cos10°",
+        "Cos 50°",
+        "Cos140°",
+        "Cos240°",
+        "Cos300°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la expresión de mayor valor entre:",
+      "alternatives": [
+        "cos70°",
+        "cos130°",
+        "cos160°",
+        "cos220°",
+        "cos 310°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la expresión del mayor valor en:",
+      "alternatives": [
+        "Sen1",
+        "Sen2",
+        "Sen3",
+        "Sen4",
+        "Sen5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale verdadero (V) ó falso (F), según corresponda en:\nI) Si: 0°<x<45° ⇒ senx >cosx\nII) Si: 45°< x<90° ⇒ senx>cosx\nIII) Si: 90°< x<135° ⇒ senx + cosx>0",
+      "alternatives": [
+        "FFV",
+        "VFV",
+        "VVF",
+        "FFF",
+        "FVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale verdadero (V) o falso (F) según corresponda en:\nI) tan50° > tan70°\nII) tan100° > tan160°\nIII) |tan300°| > |tan320°|",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FVV",
+        "FFV",
+        "FVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la suma de todos los valores enteros que tienen n si se cumple que sen Φ=(3n–5)/8 ; Φ∈ℝ",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sume el máximo y mínimo valor de:\nA= 3sen α + 2cos β – sen θ ; si: \" α \", \" β \" y \" θ \" son independientes.",
+      "alternatives": [
+        "2",
+        "12",
+        "6",
+        "–1",
+        "0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: 𝛑/2<x<y< 𝛑\nI. Senx> Seny\nII. Cosx<Cosy\nIII. Senx<Cosy\nSon verdaderos:",
+      "alternatives": [
+        "Sólo I",
+        "Sólo II",
+        "Sólo III",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica el orden creciente de:\nSen1; Sen2; Sen3",
+      "alternatives": [
+        "Sen1; Sen2; Sen3",
+        "Sen1; Sen3; Sen2",
+        "Sen2; Sen3; Sen1",
+        "Sen2; Sen1; Sen3",
+        "Sen3; Sen1; Sen2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica el orden creciente de:\nCos1; Cos2; Cos3",
+      "alternatives": [
+        "Cos1; Cos2; Cos3",
+        "Cos1; Cos3; Cos2",
+        "Cos2; Cos3; Cos1",
+        "Cos3; Cos2; Cos1",
+        "Cos3; Cos1; Cos2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Afirma si es (V) o (F):\nI. El seno en el IIC, decrece entre (0) y (–1)\nII. El coseno en el IIIC, crece entre (–1) y (0)\nIII. La tangente en el IIC, crece entre( ) y (0)",
+      "alternatives": [
+        "FVF",
+        "FVV",
+        "VFV",
+        "VVF",
+        "FFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Afirma si es (V) o (F):\nI. Sen2 > Sen3\nII. Cos4 > Cos5\nIII. Tg5 > Tg6",
+      "alternatives": [
+        "VFV",
+        "VVV",
+        "FFF",
+        "VFF",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la expresión correcta\nI) Si x∈ ] 3 𝛑/2 ; 2 𝛑 [ ⇒ tgx es positiva.\nII) Si x ∈ ] 𝛑/2 ; 𝛑 [ ⇒ senx es creciente.\nIII) Si x∈ ] 𝛑 ; 3 𝛑/2 [ ⇒ cosx es negativa.",
+      "alternatives": [
+        "Solo III",
+        "Solo I",
+        "Solo II",
+        "I y III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA TRIGONOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "EJERCICIO 1 :\nOrdene de menor a mayor\nsen 40°; sen 80°; sen 170°",
+      "alternatives": [
+        "sen 170° < sen 80° < sen 40°",
+        "sen 170° < sen 40° < sen 80°",
+        "sen 40° < sen 80° < sen 170°",
+        "sen 40° < sen 170° < sen 80°",
+        "sen 80° < sen 40° < sen 170°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2019/01/circunferencia-trigonometrica-problemas.html",
+      "sourceName": "trigonometriapdf.blogspot.com — SENO COSENO TANGENTE COTANGENTE SECANTE COSECANTE EN LA CIRCUNFERENCIA TRIGONOMÉTRICA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "EJERCICIO 2 :\nSeñale el mayor valor de las cantidades dadas.",
+      "alternatives": [
+        "cos 70°",
+        "cos 100°",
+        "cos 200°",
+        "cos350°",
+        "cos40°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2019/01/circunferencia-trigonometrica-problemas.html",
+      "sourceName": "trigonometriapdf.blogspot.com — SENO COSENO TANGENTE COTANGENTE SECANTE COSECANTE EN LA CIRCUNFERENCIA TRIGONOMÉTRICA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea  un ángulo positivo menor que una vuelta cuyo lado final no cae en el IC, y otro ángulo con el cual se verifica:\nDetermine el valor de:",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-trigonometricas-de-angulos.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se hace un plano de una pista circular de ciclismo, usando una circunferencia de radio igual a 1u, y con ejes perpendiculares en su centro. Si un móvil, partiendo del punto (1;0) recorre la circunferencia en forma antihoraria, 360º, halle la suma de los ángulos en posición normal en los cuales las coordenadas del móvil son iguales.",
+      "alternatives": [
+        "5 𝛑/4",
+        "3 𝛑/8",
+        "𝛑/2",
+        "2 𝛑/3",
+        "3 𝛑/2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-trigonometria-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS TRIGONOMETRÍA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si δ es un arco que pertenece al cuarto cuadrante, además, es positivo y menor a una vuelta, determine la variación de cos²δ +2|cosδ|.",
+      "alternatives": [
+        "〈2;4〉",
+        "〈1;4〉",
+        "〈0;1〉",
+        "〈0;3〉",
+        "〈–1;3〉"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-trigonometria-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE TRIGONOMETRÍA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se hace un plano de una pista circular de ciclismo, usando una circunferencia de radio igual a 1 u, y con ejes perpendiculares en su centro. Si un móvil, partiendo del punto (1; 0) recorre la circunferencia en forma antihoraria, 360º, halle la suma de los ángulos en posición normal en los cuales las coordenadas del móvil son iguales.",
+      "alternatives": [
+        "5 𝛑/4",
+        "3 𝛑/2",
+        "𝛑/2",
+        "2 𝛑/3 CLIC AQUÍ Ver LO DE TRIGONOMETRÍA SOLUCIONES"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/cepre-san-marcos-fisica-semana-6-2020.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN SAN MARCOS ÁREA B 2022-II PRUEBA DE ADMISIÓN A LA UNIVERSIDAD 2022-2 CIENCIAS BÁSICAS CLAVES RESPUESTAS UNMSM PDF"
     }
   ]
 }

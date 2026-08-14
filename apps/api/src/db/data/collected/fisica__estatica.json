@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Cuando una fuerza modifica la forma de un cuerpo, dicha fuerza ha producido:",
-      "alternatives": ["Traslación", "Rotación", "Deformación", "Dilatación", "Fusión"],
+      "alternatives": [
+        "Traslación",
+        "Rotación",
+        "Deformación",
+        "Dilatación",
+        "Fusión"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
       "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Según el Sistema Internacional (SI), la unidad de fuerza es el:",
-      "alternatives": ["Kilogramo", "Joule", "Newton", "Watt", "Pascal"],
+      "alternatives": [
+        "Kilogramo",
+        "Joule",
+        "Newton",
+        "Watt",
+        "Pascal"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
       "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Cuando una fuerza traslada un cuerpo de un lugar a otro, ha producido:",
-      "alternatives": ["Traslación", "Rotación", "Deformación", "Dilatación", "Fusión"],
+      "alternatives": [
+        "Traslación",
+        "Rotación",
+        "Deformación",
+        "Dilatación",
+        "Fusión"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
       "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 3"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Acción mutua entre dos cuerpos que ocurre por contacto o a distancia:",
-      "alternatives": ["Cohesión", "Interacción", "Movimiento", "Electricidad", "Fenómeno"],
+      "alternatives": [
+        "Cohesión",
+        "Interacción",
+        "Movimiento",
+        "Electricidad",
+        "Fenómeno"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
       "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 4"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Representación gráfica de todas las fuerzas externas que actúan sobre un cuerpo:",
-      "alternatives": ["MVCL", "MRUV", "MRU", "DCL", "MCU"],
+      "alternatives": [
+        "MVCL",
+        "MRUV",
+        "MRU",
+        "DCL",
+        "MCU"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
       "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 5"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "A la fuerza de atracción gravitatoria que ejerce la Tierra sobre un cuerpo que se encuentra en sus proximidades se le denomina:",
-      "alternatives": ["Tensión", "Reacción", "Normal", "Compresión", "Peso"],
+      "alternatives": [
+        "Tensión",
+        "Reacción",
+        "Normal",
+        "Compresión",
+        "Peso"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
       "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 6"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Cuando una fuerza produce en un cuerpo un movimiento de rotación, ha producido:",
-      "alternatives": ["Traslación", "Rotación", "Deformación", "Dilatación", "Fusión"],
+      "alternatives": [
+        "Traslación",
+        "Rotación",
+        "Deformación",
+        "Dilatación",
+        "Fusión"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
       "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 7"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Si un cuerpo tiene una masa de 30 kg, entonces su peso es: (g = 10 m/s²)",
-      "alternatives": ["3 N", "30 N", "300 N", "6 N", "60 N"],
+      "alternatives": [
+        "3 N",
+        "30 N",
+        "300 N",
+        "6 N",
+        "60 N"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
       "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 8"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Si un cuerpo pesa 90 N, entonces su masa es: (g = 10 m/s²)",
-      "alternatives": ["9 kg", "90 kg", "900 kg", "3 kg", "45 kg"],
+      "alternatives": [
+        "9 kg",
+        "90 kg",
+        "900 kg",
+        "3 kg",
+        "45 kg"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
       "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 9"
@@ -105,10 +159,401 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Cuando tratamos de estirar una cuerda aparece una ____; cuando comprimimos una barra aparece una ____.",
-      "alternatives": ["Reacción - Tensión", "Tensión - Normal", "Normal - Compresión", "Tensión - Compresión", "Normal - Fricción"],
+      "alternatives": [
+        "Reacción - Tensión",
+        "Tensión - Normal",
+        "Normal - Compresión",
+        "Tensión - Compresión",
+        "Normal - Fricción"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
       "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 10"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Centro de gravedad económica y desarrollo de la Primera Revolución Industrial:",
+      "alternatives": [
+        "EE.UU.",
+        "Inglaterra",
+        "Alemania",
+        "Francia",
+        "Holanda"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://banco-preguntas.blogspot.com/2018/08/preguntas-de-ceprevi-historia-universal.html",
+      "sourceName": "banco-preguntas.blogspot.com — PREGUNTAS DE CEPREVI: HISTORIA UNIVERSAL"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marque lo que corresponda:\n1. Sumatoria de fuerzas igual a cero.\n2. Sumatoria de momentos igual a cero.\n3. Segunda condición de equilibrio.\n4. Sumatoria de fuerzas y sumatoria de momentos igual a cero.\n5. Equilibrio de una partícula.\n6. Equilibrio de un cuerpo rígido.",
+      "alternatives": [
+        "1–6 y 2–3",
+        "4–6 y 1–5",
+        "1–3 y 2–5",
+        "5–6 y 4–5",
+        "1–4 y 4–6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Momento-de-una-fuerza-torque--ejercicios-problemas-para-practicar-con-claves-y-respuestas-secundaria-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MOMENTO DE UNA FUERZA TORQUE EJERCICIOS CON RESPUESTAS DE FÍSICA PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La llave de rueda es una herramienta utilizada a menudo por los mecánicos de la industria automotriz para aflojar y apretar manualmente las tuercas de las ruedas de los automóviles. Cuanto más larga es esta llave, menor será la fuerza para sacar la tuerca, lo que constituye una ventaja mecánica. Si la llave tiene 40 cm de largo y para sacar una tuerca se requiere 8 N . m de torque, determine la mínima fuerza que se debe ejercer a la llave para lograr el objetivo.",
+      "alternatives": [
+        "10 N",
+        "15 N",
+        "20 N",
+        "30 N",
+        "40 N"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Momento-de-una-fuerza-torque--ejercicios-problemas-para-practicar-con-claves-y-respuestas-secundaria-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MOMENTO DE UNA FUERZA TORQUE EJERCICIOS CON RESPUESTAS DE FÍSICA PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una aplicación del principio de la palanca la tenemos en el torno, el cual es utilizado para sacar agua de pozos de gran profundidad. Se trata de una máquina simple constituida por un cilindro que gira sobre un eje que lo atraviesa longitudinalmente; al cilindro se le fija una cuerda para sacar la carga de agua y una manivela para hacerlo girar. Considere un torno con un cilindro cuyo diámetro es 50 cm, y una manivela cuyo brazo tiene 80 cm. Determine la fuerza que se debe aplicar para sacar 20 litros de agua a rapidez constante.\n( g=10 m/s²).",
+      "alternatives": [
+        "20,7 N",
+        "38,8 N",
+        "62,5 N",
+        "70,8 N",
+        "30 N"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Momento-de-una-fuerza-torque--ejercicios-problemas-para-practicar-con-claves-y-respuestas-secundaria-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MOMENTO DE UNA FUERZA TORQUE EJERCICIOS CON RESPUESTAS DE FÍSICA PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La epirogénesis es un proceso lento de levantamiento y hundimiento de amplias superficies, sin provocar cambios sustanciales en su estructura geofísica. Esta se sustenta en la teoría de la isostasia y da lugar a la formación de continentes y unidades geomorfológicas muy particulares. De acuerdo al enunciado, identifique las alternativas que guarden relación con estos movimientos.\nI. El escudo es una región continental estable conformada por rocas muy antiguas.\nII. La isostasia es la condición de equilibrio que presenta la superficie terrestre.\nIII. La presencia de un sistema de fallas de gran tamaño como la de San Andrés.\nIV. El movimiento vertical de ascenso hace que los materiales sufran plegamientos.",
+      "alternatives": [
+        "II y III",
+        "II y IV",
+        "I, III y IV",
+        "I y II"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geografia-preuniversitaria-clase-3-teoria-y-ejercicios-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — GEOGRAFIA PREUNIVERSITARIA TERCERA GUIA RESUELTA PREGUNTAS TIPO EXAMEN DE ADMISIÓN A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El conjunto de huesos funciona como un sistema pasivo, donde los huesos planos cumplen la función de _______ como es el caso del hueso _______",
+      "alternatives": [
+        "palanca - escápula",
+        "palanca - humero",
+        "protección - estrágalo",
+        "protección - iliaco",
+        "resistencia - clavícula"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-1-2-3-4-ingles-experiencia-8-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA DE ENSAYO PEDRO RUIZ GALLO INGRESO UNIVERSIDAD UNPRG 2027 CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elimina la oración que presenta impertinencia o redundancia.",
+      "alternatives": [
+        "La palanca es una máquina simple cuya función es transmitir fuerza y desplazamiento.",
+        "Está compuesta por una barra rígida que puede girar libremente alrededor de un punto llamado fulcro.",
+        "Las palancas se dividen en tres géneros: palancas de primera clase, palancas de segunda clase y palancas de tercera clase.",
+        "El remo es un ejemplo de palanca de primera clase."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/simulacro-admision-catolica-pdf-pucp.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO CATÓLICA INGRESO UNIVERSIDAD PUCP PRESENCIAL PDF 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con relación a las siguientes proposiciones sobre la primera Ley de Newton indique verdadero (V) o falso (F).\nI) Una partícula que se encuentra en estado de reposo, continuará en dicho estado indefinidamente a menos que una fuerza actúe sobre ella.\nII) Solo una fuerza puede cambiar el estado de reposo o de movimiento de las partículas.\nIII) Solo existen fuerzas cuando los cuerpos que las generan se encuentran adyacentes.",
+      "alternatives": [
+        "VFF",
+        "VVF",
+        "VVV",
+        "FVF",
+        "VFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/11/primera-condicion-de-equilibrio-mecanico-de-fuerzas-paralelas-y-por-triangulo-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRIMERA CONDICIÓN DE EQUILIBRIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al siguiente sistema en equilibrio a 250°C\nH 2 O (g) +C (s) + Calor ⇄ CO(g) +H 2(g) Indique la alternativa correcta.",
+      "alternatives": [
+        "Si aumentamos el volumen del reactor disminuye el rendimiento",
+        "Si la temperatura se duplica, el valor de K c disminuye",
+        "Si se aumenta carbono pulverizado la reacción se desplaza temporalmente a la derecha",
+        "Si aumenta la presión del sistema en equilibrio disminuye el rendimiento",
+        "Si agrega un catalizador, el valor de K c aumenta"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La composición molar en el sistema en equilibrio en la síntesis del amoniaco es, 50% de NH 3(g) , 25% de N 2(g) y el resto hidrogeno si la presión total del sistema en equilibrio es 80 atm, determine la constante de equilibrio en función de las presiones parciales K p .\n3H 2(g) +N 2(g) → 2NH 3(g)",
+      "alternatives": [
+        "100",
+        "0,01",
+        "0,10",
+        "10,0",
+        "0,20"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La primera ley de Newton con frecuencia se le conoce como “ley de la inercia”. Esta establece que: “Todo cuerpo permanece en estado de _______ o de movimiento rectilíneo _______ a menos que sobre él actúe una fuerza _______ ”.\nComplete con las palabras correctas:",
+      "alternatives": [
+        "reposo / variado / neta",
+        "reposo / uniforme / resultante",
+        "movimiento / circular / cualquiera",
+        "movimiento / variado / parcial",
+        "energía / total / total"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/fisica-cayetano-heredia-examen-admision.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas de las siguientes proposiciones son verdaderas?\n1) La fuerza es una cantidad vectorial.\n2) Si la velocidad de un cuerpo es cero, entonces éste se encuentra en equilibrio.\n3) Para que una partícula esté en equilibrio, ninguna fuerza debe actuar sobre ella.\n4) Una partícula está en equilibrio solamente si se encuentra en reposo.\n5) La fuerza gravitacional es la menos intensa.\n6) La fuerza nuclear fuerte es sólo atractiva.\n7) La fuerza electrodébil depende de los medios.\n8) La fuerza gravitacional no es capaz de modificar el estado de reposo de un cuerpo.\n9) La fuerza de interacción entre dos cargas eléctricas es de naturaleza electrodébil.\n10) Las fuerzas gravitacionales son de mayor orden de magnitud que las electrodébiles.",
+      "alternatives": [
+        "7",
+        "10",
+        "3",
+        "1",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/11/primera-condicion-de-equilibrio-mecanico-de-fuerzas-paralelas-y-por-triangulo-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRIMERA CONDICIÓN DE EQUILIBRIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los distintos puntos de la Tierra se encuentran a distancias ligeramente diferentes del Sol y, por lo tanto, experimentan diferentes fuerzas gravitacionales. Para un cuerpo rígido, sabemos que si diversas fuerzas actúan en distintos puntos de él, el movimiento resultante es como si una fuerza neta actuara sobre el c.m. (centro de masa) causando traslación, y un torque neto en el c.m. causando rotación alrededor de un eje que pasa por el c.m. Para el sistema Tierra-Sol (aproximando la Tierra como una esfera de densidad uniforme)",
+      "alternatives": [
+        "el torque es cero.",
+        "el torque hace que la Tierra gire sobre su eje.",
+        "el resultado del cuerpo rígido no es aplicable, ya que la Tierra ni siquiera es aproximadamente un cuerpo rígido.",
+        "el torque hace que la Tierra se mueva alrededor del Sol."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep308.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.8 MCQ 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una regla de un metro se mueve con velocidad uniforme. Esto implica que",
+      "alternatives": [
+        "la fuerza que actúa sobre la regla es cero, pero puede actuar un torque alrededor del centro de masa de la regla.",
+        "la fuerza que actúa sobre la regla es cero y el torque que actúa alrededor del centro de masa de la regla también es cero.",
+        "la fuerza total que actúa sobre ella no tiene por qué ser cero, pero el torque sobre ella es cero.",
+        "ni la fuerza ni el torque tienen por qué ser cero."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep305.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.5 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta de verdad (V) o falsedad (F) respecto a las siguientes proposiciones.\nI. Los módulos de la fuerza de acción y reacción pueden ser distintos, depende de la masa de los cuerpos que interactúen.\nII. La fuerza de gravedad en una barra siempre actúa en su punto medio.\nIII. El módulo de fuerza elástica depende en forma proporcionalmente directa a la deformación del resorte.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "FFV",
+        "FVV",
+        "VVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/estatica-ejercicios-problemas-para-practicar-con-claves-y-respuestas-secundaria-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ESTÁTICA EJERCICIOS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta de verdad (V) o falsedad (F) respecto de las siguientes afirmaciones.\nI) Toda fuerza genera rotación.\nII) El momento de una fuerza depende del punto elegido como centro de momento.\nIII) Si la línea de acción de la fuerza no pasa por el centro de momentos, la fuerza genera rotación.",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "VFF",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Momento-de-una-fuerza-torque--ejercicios-problemas-para-practicar-con-claves-y-respuestas-secundaria-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MOMENTO DE UNA FUERZA TORQUE EJERCICIOS CON RESPUESTAS DE FÍSICA PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tres fuerzas F 1 , F 2 y F 3 actúan sobre un cuerpo en equilibrio; sabiendo que:\nF 1 =3i +4j\nF 2 =5i–10j\nhallar el módulo de la fuerza F 3",
+      "alternatives": [
+        "5",
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/vectores-ejercicios-para-resolver-con-respuestas-de-secundaria-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VECTORES EJERCICIOS CON RESPUESTAS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona de 700N sube sobre dos balanzas, colocado un pie sobre cada una de ellas. La distancia de separación del pie derecho al izquierdo es de 35cm; si la balanza que soporta el pie derecho indica un equivalente a 300N, ¿a qué distancia en cm con respecto al pie derecho pasa la proyección del peso de la persona?",
+      "alternatives": [
+        "10",
+        "15",
+        "20",
+        "25",
+        "30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos personas llevan en sus hombros una tabla uniforme de madera de 3,0 m de longitud que pesa los 120 kgf. Si extremos una de las de personas ubicada en uno de los extremos de la tabla sostiene 40Kgf del peso a qué distancia de ella se ubica la otra persona",
+      "alternatives": [
+        "1,25𝑚",
+        "1,75𝑚",
+        "2,20𝑚",
+        "2,25𝑚",
+        "2,50𝑚"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/08/aplicaciones-de-ecuaciones_2365.html",
+      "sourceName": "matematicasn.blogspot.com — PRIMER EXAMEN PARCIAL CPU INGENIERÍAS JUAN FRANCISCO AGUINAGA CASTRO INGRESO DIRECTO UNIVERSIDAD PREGUNTAS CENTRO PREUNIVERSITARIO 2027 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la presión que ejerce una fuerza de 40N al ser aplicada en una superficie de 6m², la fuerza actúa con una inclinación de 37° respecto al plano horizontal.",
+      "alternatives": [
+        "2Pa",
+        "4Pa",
+        "6Pa",
+        "1Pa",
+        "5Pa"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un cilindro metálico de 50 kg, 1 m de longitud y un área de 25 cm² en cada base. Si una de sus bases está en contacto con el suelo, ¿qué presión ejerce el cilindro sobre el suelo?\n( g=10m/s²)",
+      "alternatives": [
+        "2×10 ⁵ Pa",
+        "3×10 ⁵ Pa",
+        "4×10 ⁵ Pa",
+        "5×10 ⁵ Pa",
+        "10 ⁵ Pa"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La carga máxima que un alambre puede soportar sin romperse, cuando su longitud se reduce a la mitad de su longitud original,",
+      "alternatives": [
+        "se duplicará.",
+        "se reducirá a la mitad.",
+        "se cuadruplicará.",
+        "permanecerá igual."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep309.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.9 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una barra rígida de masa M está sostenida simétricamente por tres alambres, cada uno de longitud l. Los de los extremos son de cobre y el del medio es de hierro. La razón de sus diámetros, si cada uno debe tener la misma tensión, es igual a",
+      "alternatives": [
+        "Ycopper/Yiron Yiron",
+        "Ycopper Y iron",
+        "2 Y copper",
+        "Yiron . Ycopper"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep309.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.9 MCQ 5"
     }
   ]
 }

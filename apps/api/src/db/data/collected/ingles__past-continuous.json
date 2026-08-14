@@ -6,7 +6,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Yesterday, at six I ________ dinner.",
-      "alternatives": ["was preparing", "was prepare", "was prepared", "did prepare"],
+      "alternatives": [
+        "was preparing",
+        "was prepare",
+        "was prepared",
+        "did prepare"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2014/09/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 2, Q1"
@@ -17,7 +22,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "My father ________ a novel while I ________ TV.",
-      "alternatives": ["was read / was watching", "were reading / was watching", "read / watched", "was reading / was watching"],
+      "alternatives": [
+        "was read / was watching",
+        "were reading / was watching",
+        "read / watched",
+        "was reading / was watching"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/09/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 2, Q2"
@@ -28,7 +38,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "We ________ our school when he came in.",
-      "alternatives": ["talked", "were talking", "were talked", "talking"],
+      "alternatives": [
+        "talked",
+        "were talking",
+        "were talked",
+        "talking"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2014/09/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 2, Q3"
@@ -39,7 +54,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "The kids ________ in the garden when it suddenly started to rain.",
-      "alternatives": ["played", "playing", "were playing", "was playing"],
+      "alternatives": [
+        "played",
+        "playing",
+        "were playing",
+        "was playing"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2014/09/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 2, Q4"
@@ -50,7 +70,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Most of the time we ________ in the park.",
-      "alternatives": ["were sat", "sitting", "was sitting", "were sitting"],
+      "alternatives": [
+        "were sat",
+        "sitting",
+        "was sitting",
+        "were sitting"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/09/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 2, Q5"
@@ -61,7 +86,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "While I ________ in my room, my sister left home.",
-      "alternatives": ["was studying", "studied", "study", "have studied"],
+      "alternatives": [
+        "was studying",
+        "studied",
+        "study",
+        "have studied"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2014/09/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 2, Q6"
@@ -72,7 +102,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "My baby brother ________ loudly so I couldn't do my homework.",
-      "alternatives": ["was cried", "cried", "was crying", "has cried"],
+      "alternatives": [
+        "was cried",
+        "cried",
+        "was crying",
+        "has cried"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2014/09/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 2, Q7"
@@ -83,7 +118,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "The teacher tried to explain but they ________ .",
-      "alternatives": ["were listening", "weren't listening", "listened", "have listened"],
+      "alternatives": [
+        "were listening",
+        "weren't listening",
+        "listened",
+        "have listened"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2014/09/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 2, Q8"
@@ -94,7 +134,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "________ you doing your homework at six o'clock last night?",
-      "alternatives": ["Are", "Did", "Have", "Were"],
+      "alternatives": [
+        "Are",
+        "Did",
+        "Have",
+        "Were"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/09/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 2, Q9"
@@ -105,7 +150,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "The teacher was angry because some students ________ football in the class when he came in.",
-      "alternatives": ["are playing", "played", "have played", "were playing"],
+      "alternatives": [
+        "are playing",
+        "played",
+        "have played",
+        "were playing"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/09/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 2, Q10"
@@ -116,7 +166,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "My mother ________ the dishes at six o'clock yesterday.",
-      "alternatives": ["were washing", "was washed", "was washing", "washes"],
+      "alternatives": [
+        "were washing",
+        "was washed",
+        "was washing",
+        "washes"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 5, Q1"
@@ -127,7 +182,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Katie and Emma ________ a picture when I entered the class.",
-      "alternatives": ["was drawing", "were drawing", "drew", "were drew"],
+      "alternatives": [
+        "was drawing",
+        "were drawing",
+        "drew",
+        "were drew"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 5, Q2"
@@ -138,7 +198,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "I broke a glass while I ________ tea.",
-      "alternatives": ["drank", "was drink", "has drunk", "was drinking"],
+      "alternatives": [
+        "drank",
+        "was drink",
+        "has drunk",
+        "was drinking"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 5, Q3"
@@ -149,7 +214,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "My sister burnt her finger while she ________.",
-      "alternatives": ["cooked", "was cooking", "cooks", "was cook"],
+      "alternatives": [
+        "cooked",
+        "was cooking",
+        "cooks",
+        "was cook"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 5, Q4"
@@ -160,7 +230,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "My father ________ the newspaper while my mother ________ the floor.",
-      "alternatives": ["was reading / was vacuuming", "read / vacuumed", "was read / was vacuuming", "has read / has vacuumed"],
+      "alternatives": [
+        "was reading / was vacuuming",
+        "read / vacuumed",
+        "was read / was vacuuming",
+        "has read / has vacuumed"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 5, Q5"
@@ -171,7 +246,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "The students ________ when the teacher entered the class.",
-      "alternatives": ["were talk", "talked", "were talking", "were talked"],
+      "alternatives": [
+        "were talk",
+        "talked",
+        "were talking",
+        "were talked"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 5, Q6"
@@ -182,7 +262,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I couldn't watch the match because I ________ my homework at that time.",
-      "alternatives": ["was do", "was did", "did", "was doing"],
+      "alternatives": [
+        "was do",
+        "was did",
+        "did",
+        "was doing"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 5, Q7"
@@ -193,7 +278,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "I broke that window while I ________ the room.",
-      "alternatives": ["was painting", "was paint", "painted", "has painted"],
+      "alternatives": [
+        "was painting",
+        "was paint",
+        "painted",
+        "has painted"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 5, Q9"
@@ -204,10 +294,913 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "I burnt my shirt while I ________ it.",
-      "alternatives": ["am ironing", "was ironing", "ironed", "irons"],
+      "alternatives": [
+        "am ironing",
+        "was ironing",
+        "ironed",
+        "irons"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-past-continuous-tense-multiple.html",
       "sourceName": "ELT-ELS Past Continuous Multiple Choice Test 5, Q10"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Choose the alternative that complete this sentence\nI ............. back from China and we ............. on the plane.",
+      "alternatives": [
+        "‘m travelling - meet",
+        "was travelling - met",
+        "travel - ‘re meeting",
+        "‘m travelling - ‘re meeting",
+        "was travelling - meet"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/10/Ingles-unt-solucionario-de-examen-de-admision-universidad-nacional-de-trujillo-simulacro-desarrollado-preguntas-resueltas-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — INGLÉS UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete the sentence with the present continuous: We ____________ TV. (watch)",
+      "alternatives": [
+        "was watching",
+        "were watching",
+        "are watching",
+        "is watching",
+        "are watch"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/10/Ingles-unt-solucionario-de-examen-de-admision-universidad-nacional-de-trujillo-simulacro-desarrollado-preguntas-resueltas-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — INGLÉS UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete la oración con el verbo adecuado:\nMy cousin met his wife, Laura, while he ... in Italy.",
+      "alternatives": [
+        "lives",
+        "living",
+        "lived",
+        "live",
+        "was living"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/ingles-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — INGLÉS EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete:\n“What _______ at 10:30 yesterday?”",
+      "alternatives": [
+        "were you doing",
+        "you were doing",
+        "did you do",
+        "was you doing",
+        "you was doing"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/ingles-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — INGLÉS EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I was ___________ because John was driving very fast.",
+      "alternatives": [
+        "fritened",
+        "frigtened",
+        "frightened"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level1b/level-1b-elementary-spelling-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Spelling Multiple Choice Test 1"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I slowed down but I still never found the house I was looking for.",
+      "alternatives": [
+        "drive slow",
+        "park the car",
+        "leave the car"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level2/level-2-pre-intermediate-phrasal-verbs-definition-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Phrasal Verbs Definition Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why did the narrator think it wasn't a \"normal conversation\"?",
+      "alternatives": [
+        "the people were shouting",
+        "the voices were strange",
+        "she heard only one person"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level2/level-2-pre-intermediate-aunt-helens-house-multiple-choice-questions.php",
+      "sourceName": "esl-lounge.com — Aunt Helen's House"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I decided to do a Swedish course _____ I was going to live in Sweden for a year.",
+      "alternatives": [
+        "due to",
+        "because of",
+        "owing to",
+        "since"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-purpose-reason-result-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Purpose, Result and Reason Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The car was going too fast. It ran off the road.",
+      "alternatives": [
+        "If the car hadn't been going so fast, it wouldn't have run off the road.",
+        "If the car wouldn't go so fast, it won't run off the road.",
+        "If the car didn't go so fast, it wouldn't have run off the road."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-third-conditional-situations-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Third Conditional Situations Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I wish they ______ us they were coming early.",
+      "alternatives": [
+        "had told",
+        "have told",
+        "did tell"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-wishes-regrets-tenses-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Wishes & Regrets Tenses Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "As we were travelling alone, we didn't have many _____ with us.",
+      "alternatives": [
+        "luggage",
+        "bags",
+        "baggage"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/level5/level-5-advanced-quantifiers-agreement-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Quantifiers Agreement Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "After Michael said he was quitting the position, every _____ gave him their full support.",
+      "alternatives": [
+        "workers",
+        "colleagues",
+        "employee"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level5/level-5-advanced-quantifiers-agreement-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Quantifiers Agreement Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "He was living high on the ______.",
+      "alternatives": [
+        "horse",
+        "hog",
+        "dog"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/level5/level-5-advanced-proverbs-multiple-choice-worksheet-3.php",
+      "sourceName": "esl-lounge.com — Proverbs Multiple Choice Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The ___________ was bustling with people shopping, working, and enjoying the various attractions.",
+      "alternatives": [
+        "region",
+        "subway",
+        "city centre",
+        "park"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-2.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "At sunset, we made our way back to the ___________ where we were staying.",
+      "alternatives": [
+        "scenery",
+        "cliff",
+        "harbour",
+        "village"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-12.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 12"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I went to see a(n) ___________ about the problem I was having with my new car.",
+      "alternatives": [
+        "engineer",
+        "mechanic",
+        "electrician",
+        "waiter"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-16.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 16"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "There was only a light ___________ in the morning with no sign that a storm was coming.",
+      "alternatives": [
+        "gale",
+        "cyclone",
+        "breeze",
+        "draught"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-3.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "We couldn't find the hotel and it was getting dark ___________ we got out a map and studied it carefully.",
+      "alternatives": [
+        "so",
+        "and",
+        "but",
+        "if"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-8.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 8"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "She was reminiscing about the past while ___________ her old photo albums.",
+      "alternatives": [
+        "cleaning",
+        "reading",
+        "going through",
+        "repairing"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-22.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 22"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What didn't the graphic image's creator try to make money out of its use?",
+      "alternatives": [
+        "he didn't need the money",
+        "he considers profit to be 'anti-revolutionary'",
+        "he didn't know it was being used without permission",
+        "to help its spread"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-reading-multiple-choice-5-a-revolutionary-photo.php",
+      "sourceName": "esl-lounge.com — A Revolutionary Photo"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I met a woman in town who was talking to people about homeless teenagers and asking for ___________.",
+      "alternatives": [
+        "grants",
+        "donations",
+        "pocket money",
+        "aid"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-11.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 11"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "It was the child's history teacher that first realised she was being ___________ at home.",
+      "alternatives": [
+        "declined",
+        "neglected",
+        "abandoned",
+        "deserted"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-12.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 12"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A truck that was carrying food ___________ fell into the river, but the driver managed to escape.",
+      "alternatives": [
+        "goods",
+        "aids",
+        "benefits",
+        "productions"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-13.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 13"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What is implied by the description of the grandmother watching the writer eat?",
+      "alternatives": [
+        "She was concerned he might not enjoy the food",
+        "She was proud of her family's cooking",
+        "She was amused by his poor eating technique",
+        "She was observing his reaction to unfamiliar food with scientific interest"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-train-from-karachi-reading-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice. Worksheet 5"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I don't think anyone understood what I was saying at the meeting, did they? I totally failed to get my point _____________.",
+      "alternatives": [
+        "around",
+        "about",
+        "across",
+        "along"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-3.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The police caught him as he was running away from the blazing house and he was charged the following day with _____________. His plan was to collect on his house insurance.",
+      "alternatives": [
+        "fraud",
+        "forgery",
+        "arson",
+        "burglary"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-9.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 9"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Having spent too much time playing basketball in his spare time, Roger now found he was falling _____________ the other students in the other subjects at school.",
+      "alternatives": [
+        "down",
+        "back",
+        "behind",
+        "over"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-18.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 18"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why did the policeman touch his gun?",
+      "alternatives": [
+        "It was probably instinctive.",
+        "He sensed great danger.",
+        "He was losing his patience.",
+        "He was just checking it was there."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-reading-multiple-choice-1.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice - Cookies"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why did the narrator buy the book about vegetables?",
+      "alternatives": [
+        "She wanted to improve her diet.",
+        "To understand why her husband was leaving her.",
+        "To give her life order.",
+        "There was something she liked about the book when she first saw it."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-reading-multiple-choice-2.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice - Jesus and the Aubergines"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why was Aspen careful to hold only the frame of the photo?",
+      "alternatives": [
+        "He was worried about cutting himself on the glass.",
+        "The photo itself was very dirty.",
+        "He was concerned about damaging the photo.",
+        "He knew Kieran was watching him carefully."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-last-photo-reading-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice - Last Photo From The Third Planet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What do the narrator's comments about the stranger suggest?",
+      "alternatives": [
+        "he wasn't well liked by the others",
+        "he didn't really belong",
+        "he was looking for a job",
+        "it was his first time in the pub"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-the-pirate-island-reading-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice - The Pirate Island by Harry Collingwood"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What was the purpose of John Clayton's investigation?",
+      "alternatives": [
+        "that natives in a British colony were being mistreated",
+        "that natives in a British colony were stealing",
+        "that another European country was attempting to influence British policy",
+        "that another European country had ideas of invading a British colony"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-tarzan-of-the-apes-reading-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice - Tarzan of the Apes by Edgar Rice Burroughs"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Professor Curie and I worked at that time in the laboratory of the school of Physics and Chemistry where Professor Curie ______ his lectures.",
+      "alternatives": [
+        "is holding",
+        "was holding",
+        "held"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-verb-tense-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — Verb Tense Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The dog and cat WERE LAYING on the bed WHEN Martha CAME home.",
+      "alternatives": [
+        "were",
+        "when",
+        "came",
+        "laying"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-out-of-place-words-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Out Of Place Words Multiple Choice Worksheet 1"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "All were fascinating experiments that turned out ______.",
+      "alternatives": [
+        "as well as",
+        "very good",
+        "so well as",
+        "very well"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-comparatives-modifiers-multiple-choice-3.php",
+      "sourceName": "esl-lounge.com — Comparatives & Modifiers Multiple Choice Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The professor's lecture was interesting. She is a better speaker ______.",
+      "alternatives": [
+        "than I expected",
+        "that I expected",
+        "as I expected",
+        "I expected"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-comparatives-modifiers-multiple-choice-3.php",
+      "sourceName": "esl-lounge.com — Comparatives & Modifiers Multiple Choice Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The hysterical father was shouting at his children in an irrational and ______ way.",
+      "alternatives": [
+        "unfriendly",
+        "dogmatic",
+        "loud"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-5.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 5"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The critic ______ that the performance was boring.",
+      "alternatives": [
+        "implied",
+        "worried",
+        "insulted"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-14.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "We expected the money ________ he had promised it to us.",
+      "alternatives": [
+        "for this",
+        "while",
+        "as"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-reason-and-cause-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Reason And Cause Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Every once in a _____, a new sports star comes along to beat all the old records.",
+      "alternatives": [
+        "period",
+        "time",
+        "while"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level5/level-5-advanced-quantifiers-agreement-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Quantifiers Agreement Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "She is ___________ her younger brother while their parents are at work.",
+      "alternatives": [
+        "looking for",
+        "looking after",
+        "looking out"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-4.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 4"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Kathy broke her ___________ while hiking in the mountains.",
+      "alternatives": [
+        "ear",
+        "leg",
+        "eye"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-12.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 12"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "He pulled a muscle in his ___________ while playing football.",
+      "alternatives": [
+        "ear",
+        "heart",
+        "back"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "It ___________ me a while to understand the complex problem.",
+      "alternatives": [
+        "spent",
+        "took",
+        "made"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "They decided to stay in a small cheap ___________ while visiting the city.",
+      "alternatives": [
+        "church",
+        "shop",
+        "hotel"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-15.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 15"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "In the morning, I like to drink coffee on the ___________ while enjoying the view.",
+      "alternatives": [
+        "ceiling",
+        "bucket",
+        "balcony",
+        "wardrobe"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-20.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 20"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Has someone moved the drinks ___________ the table while I was gone? I'm sure that glass in front of Peter was mine.",
+      "alternatives": [
+        "off",
+        "along",
+        "around",
+        "on"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-8.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 8"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The tiger belongs to the big cat family, but ____________ the panther which lives in South America, it is found mainly in Asia.",
+      "alternatives": [
+        "whether",
+        "while",
+        "unlike",
+        "dissimilar"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "While cleaning the attic, he ___________ a box of childhood memories.",
+      "alternatives": [
+        "misplaced",
+        "destroyed",
+        "encountered",
+        "rediscovered"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-21.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 21"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Can you ___________ my dog while I'm away on vacation?",
+      "alternatives": [
+        "look after",
+        "look into",
+        "look up",
+        "look out"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-27.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 27"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "She locked the door ___________ someone might break in while she was away.",
+      "alternatives": [
+        "in case that",
+        "for fear that",
+        "in spite of that",
+        "as long as"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-28.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 28"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Make sure to ___________ any signs of danger while hiking in the woods.",
+      "alternatives": [
+        "make up for",
+        "look up to",
+        "go on",
+        "look out for"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-30.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 30"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The new policy was implemented ___________ employee feedback.",
+      "alternatives": [
+        "while",
+        "during",
+        "considered",
+        "after"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-32.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 32"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "___________ a while, the rain stopped and the sun came out.",
+      "alternatives": [
+        "Before",
+        "After",
+        "In",
+        "At"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-32.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 32"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Can you _____________ who is at the door while I take the meat out of the oven?",
+      "alternatives": [
+        "control",
+        "mind",
+        "check",
+        "prove"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-4.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 4"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "He was arrested on a lonely highway and charged with drinking while under the _____________ of alcohol.",
+      "alternatives": [
+        "power",
+        "influence",
+        "spell",
+        "side effects"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The agency's mission is to accelerate transition to an efficient and low-carbon economy, ______ mitigating the long-term threat of climate change.",
+      "alternatives": [
+        "during",
+        "after",
+        "since",
+        "while"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-connectors-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Connectors Multiple Choice Worksheet"
     }
   ]
 }

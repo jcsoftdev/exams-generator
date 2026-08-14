@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Doña María, dueña del restaurant \"El Salaverryno\", compra cada fin de semana cierta cantidad de kilos de pescado, cebolla y limón. Si al doble de la cantidad de kilos de pescado se le suma la cantidad de kilos de cebolla, se obtiene la cantidad de kilos de limón aumentado en 32 kilos. Si a la tercera parte de la cantidad de kilos de cebolla se le suma el doble de la cantidad de kilos de limón, se obtiene la cantidad de kilos de pescado aumentado en 9 kilos; además la tercera parte de la suma de las cantidades de kilos de pescado y cebolla es un kilo menos que la cantidad de limón. ¿Qué cantidad de kilos de pescado compra cada fin de semana Doña María?",
-      "alternatives": ["12", "14", "10", "18", "15"],
+      "alternatives": [
+        "12",
+        "14",
+        "10",
+        "18",
+        "15"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/06/sistema-de-ecuaciones-problemas.html",
       "sourceName": "matematicasn - Sistema de ecuaciones problemas resueltos, Problema 2 (rpta E)"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Una empresa debe enlatar una mezcla de frutos secos. Cada lata contiene maní, castañas y nueces. El maní cuesta 5 soles/kg, las castañas 20 soles/kg y las nueces 16 soles/kg. Cada lata contiene 0,5 kg de mezcla con un costo total de los ingredientes de 5,75 soles. La cantidad de kilogramos de maní más la de nueces es igual al triple de la cantidad de kilogramos de castañas. ¿Cuántos gramos de maní hay por lata?",
-      "alternatives": ["225", "240", "125", "220", "250"],
+      "alternatives": [
+        "225",
+        "240",
+        "125",
+        "220",
+        "250"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/sistema-de-ecuaciones-ejercicios.html",
       "sourceName": "algebraenpdf - Sistema de ecuaciones ejercicios resueltos, Problema 1 (rpta E)"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "La administración de un parque compró en total 320 unidades entre escarificadoras, sierras y tijeras de podar por 250 000 soles. Cada escarificadora cuesta 4000 soles, cada sierra 1000 soles y cada tijera de podar 50 soles. El número de tijeras de podar excedió a la suma de escarificadoras y sierras en 80 unidades. ¿Cuántas sierras se compraron?",
-      "alternatives": ["60", "90", "40", "80", "120"],
+      "alternatives": [
+        "60",
+        "90",
+        "40",
+        "80",
+        "120"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/sistema-de-ecuaciones-ejercicios.html",
       "sourceName": "algebraenpdf - Sistema de ecuaciones ejercicios resueltos, Problema 2 (rpta D)"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un laboratorio adquiere dos tipos de productos químicos. El tipo I cuesta 3 dólares y ocupa 2 pies cuadrados de espacio de almacenamiento por unidad; el tipo II cuesta 2,50 dólares y ocupa 1 pie cuadrado por unidad. Con un presupuesto de 400 dólares y 240 pies cuadrados de espacio de almacenamiento, ¿cuántas unidades de cada tipo (en ese orden) se pueden adquirir usando todo el presupuesto y todo el espacio?",
-      "alternatives": ["100; 40", "80; 15", "44; 17", "30; 75", "30; 90"],
+      "alternatives": [
+        "100; 40",
+        "80; 15",
+        "44; 17",
+        "30; 75",
+        "30; 90"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/sistema-de-ecuaciones-ejercicios.html",
       "sourceName": "algebraenpdf - Sistema de ecuaciones ejercicios resueltos, Problema 3 (rpta A)"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular el valor entero de m del siguiente sistema: 2x + 3y = 8, mx - y = 37, 3x + 8y = m; si el sistema es compatible determinado.",
-      "alternatives": ["47", "5", "15", "-5", "13"],
+      "alternatives": [
+        "47",
+        "5",
+        "15",
+        "-5",
+        "13"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/06/sistema-de-ecuaciones-problemas.html",
       "sourceName": "matematicasn - Sistema de ecuaciones problemas resueltos, Problema 3 (rpta B)"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Durante tres semanas, Paco compró las mismas cantidades de pecanas, almendras y maníes. El precio por kg de pecanas se redujo a la mitad cada semana, el de almendras se duplicó cada semana y el de maníes se mantuvo constante. Los gastos de Paco la primera, segunda y tercera semana fueron S/ 42, S/ 36 y S/ 42 respectivamente. Si la primera semana los precios por kg de pecanas, almendras y maníes fueron S/ 12, S/ 2 y S/ 3 respectivamente, ¿cuántos kilogramos de almendras compró Paco cada semana?",
-      "alternatives": ["2 kg", "3 kg", "5 kg", "1 kg", "6 kg"],
+      "alternatives": [
+        "2 kg",
+        "3 kg",
+        "5 kg",
+        "1 kg",
+        "6 kg"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/06/sistema-de-ecuaciones-problemas.html",
       "sourceName": "matematicasn - Sistema de ecuaciones problemas resueltos, Problema 4 (rpta B)"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Mónica, Norma y Paola concurren a un mismo puesto de venta de verduras de un mercado para comprar papas y cebollas. Mónica y Norma pagaron S/ 13,80 y S/ 19,10 respectivamente. Determine cuántos soles pagó Paola en total, si se sabe que Mónica compró 3 kg de papas y 2 kg de cebollas, Norma compró 2 kg de papas y 5 kg de cebollas, y Paola compró 5 kg de papas y 8 kg de cebollas.",
-      "alternatives": ["64,80", "53,90", "59,50", "61,60", "62,70"],
+      "alternatives": [
+        "64,80",
+        "53,90",
+        "59,50",
+        "61,60",
+        "62,70"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
       "sourceName": "matematicasn - San Marcos Álgebra problemas resueltos de admisión, Pregunta 4 (rpta E)"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un alumno sale de su casa a las m horas y regresa a las 9:00 p.m. Si m satisface la condición de que el sistema 2x + (m - 1)y = 12, mx + 6y = m² + 8 sea compatible indeterminado, ¿cuántas horas estuvo fuera de su casa?",
-      "alternatives": ["6", "5", "3", "4", "7"],
+      "alternatives": [
+        "6",
+        "5",
+        "3",
+        "4",
+        "7"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
       "sourceName": "matematicasn - San Marcos Álgebra problemas resueltos de admisión, Pregunta 7 (rpta B)"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un profesor plantea a sus alumnos el siguiente sistema de ecuaciones en x, y y z para determinar su edad: x + y + 2z = 3, x + 2y - z = 1, ty + z = r. Halle el valor de 3(r + t) para que el sistema tenga infinitas soluciones.",
-      "alternatives": ["1/3", "-1/3", "2", "2/3", "1"],
+      "alternatives": [
+        "1/3",
+        "-1/3",
+        "2",
+        "2/3",
+        "1"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-preuniversitaria-libro-de.html",
       "sourceName": "matematicasn - Álgebra preuniversitaria libro resuelto, Pregunta 9 (rpta E)"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La suma, la diferencia y el cociente de dos números están en la misma relación que 9, 7 y 2. Halle el mayor de dichos números.",
-      "alternatives": ["46", "20", "24", "28", "32"],
+      "alternatives": [
+        "46",
+        "20",
+        "24",
+        "28",
+        "32"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/planteo-de-ecuaciones-problemas.html",
       "sourceName": "matematicasn - Planteo de ecuaciones problemas resueltos de examen admisión, Pregunta 1 (rpta E)"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Elena paga por 2 pollos y 5 pavos un total de S/ 495. Si cada pavo cuesta S/ 15 más que un pollo, ¿cuántos soles cuestan un pollo y un pavo juntos?",
-      "alternatives": ["120", "105", "145", "95", "135"],
+      "alternatives": [
+        "120",
+        "105",
+        "145",
+        "95",
+        "135"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/planteo-de-ecuaciones-problemas.html",
       "sourceName": "matematicasn - Planteo de ecuaciones problemas resueltos de examen admisión, Pregunta 2 (rpta E)"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un matrimonio dispone de una suma de dinero para ir al teatro con sus hijos. Si compra entradas de S/ 7 le faltaría S/ 17, y si adquiere entradas de S/ 4 le sobraría S/ 10. ¿Cuántos hijos tiene el matrimonio?",
-      "alternatives": ["3", "4", "7", "1", "9"],
+      "alternatives": [
+        "3",
+        "4",
+        "7",
+        "1",
+        "9"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/planteo-de-ecuaciones-problemas.html",
       "sourceName": "matematicasn - Planteo de ecuaciones problemas resueltos de examen admisión, Pregunta 6 (rpta C)"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En una granja se observan entre conejos y pollos 48 animales; además, se han contado un total de 124 patas. ¿Cuántos conejos hay en la granja?",
-      "alternatives": ["14", "15", "16", "17", "27"],
+      "alternatives": [
+        "14",
+        "15",
+        "16",
+        "17",
+        "27"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://pdfcoffee.com/planteo-de-ecuaciones-lumbreras-7-pdf-free.html",
       "sourceName": "Lumbreras - Planteo de Ecuaciones, Problema 7 (rpta A)"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una reunión asistieron varones, mujeres y niños. Se observa que entre varones y mujeres se cuentan 48 personas; entre mujeres y niños, 44 personas; y entre varones y niños, 46 personas. ¿Cuántas personas asistieron a dicha reunión?",
-      "alternatives": ["120", "67", "68", "69", "70"],
+      "alternatives": [
+        "120",
+        "67",
+        "68",
+        "69",
+        "70"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://pdfcoffee.com/planteo-de-ecuaciones-lumbreras-7-pdf-free.html",
       "sourceName": "Lumbreras - Planteo de Ecuaciones, Problema 11 (rpta D)"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Con billetes de S/ 100 y de S/ 50 se pagó una deuda de S/ 2800. El número de billetes de S/ 50 excede en 8 al número de billetes de S/ 100. Si los billetes que tenemos de S/ 100 los contáramos como billetes de S/ 50 y viceversa, ¿qué cantidad de dinero tendríamos?",
-      "alternatives": ["S/ 3200", "S/ 2700", "S/ 3000", "S/ 2400", "S/ 3400"],
+      "alternatives": [
+        "S/ 3200",
+        "S/ 2700",
+        "S/ 3000",
+        "S/ 2400",
+        "S/ 3400"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://pdfcoffee.com/planteo-de-ecuaciones-lumbreras-7-pdf-free.html",
       "sourceName": "Lumbreras - Planteo de Ecuaciones, Problema 19 (rpta A)"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Miguel tiene 10 veces lo que tiene Pedro, y Luis tiene 3 veces más de lo que tiene Pedro. Además, el exceso de lo que tienen Miguel y Luis juntos sobre el séxtuplo de lo que tiene Pedro es S/ 48. ¿Cuánto tienen entre los tres?",
-      "alternatives": ["S/ 70", "S/ 80", "S/ 90", "S/ 95", "S/ 98"],
+      "alternatives": [
+        "S/ 70",
+        "S/ 80",
+        "S/ 90",
+        "S/ 95",
+        "S/ 98"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://pdfcoffee.com/planteo-de-ecuaciones-lumbreras-7-pdf-free.html",
       "sourceName": "Lumbreras - Planteo de Ecuaciones, Problema 20 (rpta C)"
@@ -182,7 +278,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Sebastián compró 4 bolsas de globos y 3 bolsas de pitos pagando S/ 26, mientras que su hermana Antonella adquirió una bolsa menos de cada producto pagando S/ 19. ¿Cuánto gastaron en total los hermanos en bolsas de globos?",
-      "alternatives": ["S/ 35", "S/ 14", "S/ 42", "S/ 24", "S/ 40"],
+      "alternatives": [
+        "S/ 35",
+        "S/ 14",
+        "S/ 42",
+        "S/ 24",
+        "S/ 40"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/p/algebra-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Álgebra Rubiños ejercicios resueltos PDF, Problema 2 (rpta A)"
@@ -193,7 +295,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Una fundación desea invertir S/ 18 000 en dos entidades financieras que pagan un rendimiento anual a plazo fijo del 2% y 4% respectivamente. ¿Cuánto se debe invertir en cada banco para obtener S/ 660 de renta anual?",
-      "alternatives": ["S/ 8000 y S/ 10000", "S/ 5000 y S/ 13000", "S/ 6000 y S/ 12000", "S/ 3000 y S/ 15000", "S/ 4000 y S/ 14000"],
+      "alternatives": [
+        "S/ 8000 y S/ 10000",
+        "S/ 5000 y S/ 13000",
+        "S/ 6000 y S/ 12000",
+        "S/ 3000 y S/ 15000",
+        "S/ 4000 y S/ 14000"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/p/algebra-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Álgebra Rubiños ejercicios resueltos PDF, Problema 1 (rpta D)"
@@ -204,7 +312,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Por 12 horas de trabajo, a un operario se le promete pagar $100 y un regalo. El operario se retiró luego de 8 horas de trabajo, por lo que recibió $60 más el regalo. ¿Cuál es el valor del regalo? (Examen admisión UNMSM 2016-I)",
-      "alternatives": ["$30", "$40", "$20", "$50", "$10"],
+      "alternatives": [
+        "$30",
+        "$40",
+        "$20",
+        "$50",
+        "$10"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://profe-alexz.blogspot.com/2016/02/examen-admision-san-marcos-2016-i.html",
       "sourceName": "Blog Profe Alex - Examen Admisión San Marcos UNMSM 2016-I, Pregunta 11 (rpta C)"
@@ -215,7 +329,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una reunión el número de caballeros es el doble del número de damas más 8. Después de que 8 parejas se retiran, el número de caballeros que quedan es cuatro veces más que el nuevo número de damas. ¿Cuántos caballeros había inicialmente?",
-      "alternatives": ["16", "32", "48", "64", "72"],
+      "alternatives": [
+        "16",
+        "32",
+        "48",
+        "64",
+        "72"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-primer-grado-ejercicios.html",
       "sourceName": "matematicasn - Ecuaciones de primer grado ejercicios resueltos, Problema 9 (rpta C)"
@@ -226,7 +346,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Entre cerdos y gallinas se cuentan 86 cabezas y 246 patas. ¿Cuántos cerdos hay?",
-      "alternatives": ["37", "49", "45", "35", "64"],
+      "alternatives": [
+        "37",
+        "49",
+        "45",
+        "35",
+        "64"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/planteo-de-ecuaciones-ejercicios_5.html",
       "sourceName": "matematicasn - Planteo de ecuaciones ejercicios resueltos PDF, Ejercicio 21 (rpta A)"
@@ -237,7 +363,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una empresa de juguetes produce y vende muñecos de peluche. Se conoce que en la feria del libro IDEA URBANA se paga b soles de alquiler del stand más 50 soles por muñeco producido. Al vender 80 muñecos se obtiene una ganancia de 1000 soles; al vender solo 20 muñecos se tiene una pérdida de 800 soles. Con una relación lineal entre costo y producción, ¿cuál es la cantidad mínima que debe producirse y venderse para obtener ganancia?",
-      "alternatives": ["70", "47", "30", "50", "55"],
+      "alternatives": [
+        "70",
+        "47",
+        "30",
+        "50",
+        "55"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-ecuaciones-lineales.html",
       "sourceName": "matematicasn - Sistemas de ecuaciones lineales básicos 2x2 ejemplos resueltos, Problema 1 (rpta B)"
@@ -248,7 +380,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un mercado de verduras en Comas vende tres tipos de papas: amarilla a S/ 12/kg, huayro a S/ 10/kg y blanca a S/ 9/kg. El total de kilos vendidos es 44 kg, el total de ventas es S/ 436 y la cantidad de papa blanca menos la cantidad de papa huayro es igual a la cantidad de papa amarilla menos 4 kg. Los kilogramos vendidos de cada variedad son números:",
-      "alternatives": ["consecutivos", "impares", "divisibles por 3", "divisibles por 4", "primos"],
+      "alternatives": [
+        "consecutivos",
+        "impares",
+        "divisibles por 3",
+        "divisibles por 4",
+        "primos"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/06/sistema-de-ecuaciones-conceptos-basicos.html",
       "sourceName": "matematicasn - Sistema de ecuaciones métodos ejemplos resueltos, Problema 1 (rpta D)"
@@ -259,7 +397,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sean a, b, c pertenecientes a los reales tales que 0 < a < b < c y x₁ < x₂. Siendo (x₁; y₁) y (x₂; y₂) soluciones del sistema: y = ax² + bx + c, y = cx² + bx + a; entonces podemos afirmar que: (Examen admisión UNI)",
-      "alternatives": ["x₁, x₂, y₁, y₂ > 0", "x₁, x₂ < 0; y₁, y₂ > 0", "x₁, x₂ > 0; y₁, y₂ < 0", "x₁ < 0; x₂, y₁, y₂ > 0", "x₁ > 0; y₁, y₂ < 0"],
+      "alternatives": [
+        "x₁, x₂, y₁, y₂ > 0",
+        "x₁, x₂ < 0; y₁, y₂ > 0",
+        "x₁, x₂ > 0; y₁, y₂ < 0",
+        "x₁ < 0; x₂, y₁, y₂ > 0",
+        "x₁ > 0; y₁, y₂ < 0"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/examen-admision-uni-resuelto-algebra.html",
       "sourceName": "algebraenpdf - Examen admisión UNI resuelto Álgebra, Problema 2 (rpta D)"
@@ -270,7 +414,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un ganadero vendió 60 animales entre vacas y terneros por S/ 21 600. Como necesitaba S/ 25 000 debe efectuar una venta complementaria. Si vende 8 vacas más le sobrarían S/ 200, pero si vende 20 terneros más le faltarían S/ 400. ¿Cuál es la diferencia entre el número de vacas y terneros que vendió inicialmente?",
-      "alternatives": ["18", "13", "16", "24", "12"],
+      "alternatives": [
+        "18",
+        "13",
+        "16",
+        "24",
+        "12"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://pdfcoffee.com/planteo-de-ecuaciones-lumbreras-7-pdf-free.html",
       "sourceName": "Lumbreras - Planteo de Ecuaciones, Problema 83 (rpta D)"
@@ -281,7 +431,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Se tienen tres montones de palitos cuya suma es 48. Si del primer montón se pasa al segundo tantos como hay en este; luego del segundo se pasa al tercero tantos como hay en este; y finalmente del tercero se pasa al primero tantos como hay ahora en este; resulta la misma cantidad en cada montón. ¿Cuántos palitos había en cada uno de los montones al inicio?",
-      "alternatives": ["22; 10; 16", "8; 28; 12", "8; 16; 24", "22; 14; 12", "20; 18; 10"],
+      "alternatives": [
+        "22; 10; 16",
+        "8; 28; 12",
+        "8; 16; 24",
+        "22; 14; 12",
+        "20; 18; 10"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://pdfcoffee.com/planteo-de-ecuaciones-lumbreras-7-pdf-free.html",
       "sourceName": "Lumbreras - Planteo de Ecuaciones, Problema 75 (rpta D)"
@@ -292,7 +448,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Con S/ 580 se pagan con billetes de S/ 100 y S/ 20. Los billetes de S/ 20 son 5 más que los de S/ 100. ¿Cuántos billetes de S/ 100 hay?",
-      "alternatives": ["3", "4", "5", "6", "7"],
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/planteo-de-ecuaciones-ejercicios_5.html",
       "sourceName": "matematicasn - Planteo de ecuaciones ejercicios resueltos PDF, Ejercicio 12 (rpta B)"
@@ -303,7 +465,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Bety tiene 2 veces más de lo que tiene Berta. Si Bety le da S/ 18 tendrían la misma cantidad. ¿Cuánto tiene Bety?",
-      "alternatives": ["S/ 72", "S/ 48", "S/ 36", "S/ 54", "S/ 60"],
+      "alternatives": [
+        "S/ 72",
+        "S/ 48",
+        "S/ 36",
+        "S/ 54",
+        "S/ 60"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/planteo-de-ecuaciones-ejercicios_5.html",
       "sourceName": "matematicasn - Planteo de ecuaciones ejercicios resueltos PDF, Ejercicio 15 (rpta A)"
@@ -314,7 +482,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Luis y José salieron de cacería y trajeron patos y conejos. Luis mató el doble de patos que de conejos. José mató tantos conejos como Luis. Ambos trajeron en total 21 especímenes con 54 patas. ¿Cuántos conejos mató José?",
-      "alternatives": ["2", "4", "7", "5", "3"],
+      "alternatives": [
+        "2",
+        "4",
+        "7",
+        "5",
+        "3"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://pdfcoffee.com/planteo-de-ecuaciones-lumbreras-7-pdf-free.html",
       "sourceName": "Lumbreras - Planteo de Ecuaciones, Problema 43 (rpta E)"
@@ -325,7 +499,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un comerciante compró cuadernos, unos a S/ 20 la docena y otros a S/ 15 la docena, adquiriendo en total 777 cuadernos y pagando por todo S/ 1020. Si se sabe que por cada 3 docenas que compró de cualquier precio le regalaron un cuaderno, ¿cuántas docenas compró del menor precio?",
-      "alternatives": ["48", "24", "36", "15", "50"],
+      "alternatives": [
+        "48",
+        "24",
+        "36",
+        "15",
+        "50"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://pdfcoffee.com/planteo-de-ecuaciones-lumbreras-7-pdf-free.html",
       "sourceName": "Lumbreras - Planteo de Ecuaciones, Problema 71 (rpta A)"
@@ -336,10 +516,1047 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Alfredo vende huevos rosados a S/ 36 la docena y huevos blancos a S/ 24 la docena. Por 250 huevos obtiene S/ 624. ¿Cuántos huevos fueron rosados si por cada 2 docenas que vende obsequia un huevo blanco?",
-      "alternatives": ["120", "190", "151", "144", "128"],
+      "alternatives": [
+        "120",
+        "190",
+        "151",
+        "144",
+        "128"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://pdfcoffee.com/planteo-de-ecuaciones-lumbreras-7-pdf-free.html",
       "sourceName": "Lumbreras - Planteo de Ecuaciones, Problema 53 (rpta D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el sistema de ecuaciones:\n3x+2y=m+2\n2x–3y=2m –1\n¿qué valor debe tomar m para que el valor de x sea el doble valor de y en el sistema?",
+      "alternatives": [
+        "3/2",
+        "4/3",
+        "2/5",
+        "5/3",
+        "2/3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/solucionario-unc-ingenierias-examen-de-admision-universidad-nacional-de-cajamarca-modulo-A-prueba-resuelta-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO INGENIERÍA UNC 2027 RESUELTO UNIVERSIDAD DE CAJAMARCA ECONOMÍA ADMINISTRACIÓN Y CONTABILIDAD CLAVES MÓDULO A PDF "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver el sistema de ecuaciones siguiente:\nx+y+z=0\nx–y–z=4\n3x+2y+z=7\nEl valor de xy+z es:",
+      "alternatives": [
+        "1",
+        "3",
+        "7",
+        "13"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-u-de-lima-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNIVERSIDAD DE LIMA 2027 EXAMEN ADMISIÓN TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Del sistema de ecuaciones\nx 2 –x–a =0\nx 2 +x+b =0\nSea r una raíz común y sabiendo que a+b=3, entonces el módulo de la suma de las otras raíces es",
+      "alternatives": [
+        "9",
+        "7",
+        "3",
+        "5",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-de-algebra-preuniversitaria.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Del sistema de ecuaciones\nx² – x – a =0\nx² + x + b =0\nSea r una raíz común y sabiendo que a + b = 3, entonces el módulo de la suma de las otras raíces es",
+      "alternatives": [
+        "9",
+        "7",
+        "3",
+        "5",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionarios-uni-2016-i-examen-de.html",
+      "sourceName": "matematicasn.blogspot.com — SEGUNDA PRUEBA ADMISIÓN UNI 2022 I SOLUCIONARIO MATEMÁTICAS UNIVERSIDAD DE INGENIERÍA 2022-1 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa debe enlatar una mistura de frutos secos. Se sabe que cada lata contiene maní, castañas y nueces y además el kilogramo de maní cuesta 5 soles; el kilogramo de castaña, 20 soles y el kilogramo de nueces, 16 soles. Cada lata debe contener medio kilogramo de mistura y el costo total de los ingredientes de cada lata debe ser 5,75 soles. Si, en cada lata, el número de kilogramos de maní sumado con los de nueces es el triple del número de kilogramos de castañas, ¿Cuántos gramos de maní hay por lata?",
+      "alternatives": [
+        "225",
+        "240",
+        "125",
+        "220",
+        "250"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/sistema-de-ecuaciones-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — SISTEMA DE ECUACIONES PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La administración del Parque de la Reserva, adquirió un total de 320 unidades entre escarificadores, sierras y tijeras podadoras por lo que gastó un total de S/.250 000. El precio de un escarificador fue S/.4000; el de una sierra, S/.1000 y el de una tijera podadora, S/.50. Además, el número de tijeras podadoras excedía en 80 unidades al número de escarificadores sumado con el número de sierras. ¿Cuántas unidades de sierras compró la administración?",
+      "alternatives": [
+        "60",
+        "90",
+        "40",
+        "80",
+        "120"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/sistema-de-ecuaciones-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — SISTEMA DE ECUACIONES PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un pequeño laboratorio desea adquirir y almacenar dos tipos de químicos. Cada químico de tipo I cuesta 3 dólares y cada químico de tipo II cuesta 2, 50 dólares; además cada químico de tipo I ocupa un espacio de 2 pies², mientras que cada químico del tipo II ocupa un espacio de 1 pie². ¿Cuántas unidades de cada tipo de químico, en el orden dado, puede adquirir y almacenar, si dispone de 400 dólares para la adquisición y de un espacio de 240 pies² para almacenarlo?",
+      "alternatives": [
+        "100 ; 40",
+        "80 ; 15",
+        "44 ; 17",
+        "30 ; 75",
+        "30; 90"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/sistema-de-ecuaciones-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — SISTEMA DE ECUACIONES PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante tres semanas, Paco compró las mismas cantidades, en kilogramos, de pecanas, almendras y maníes. Con respecto a los precios de cada producto, se sabe que: el precio por kilogramo de pecanas se redujo a la mitad cada semana, el de almendras se duplicó cada semana y el de maníes se mantuvo constante. Los gastos de Paco la primera, segunda y tercera semana fueron S/ 42, S/ 36 y S/ 42 respectivamente. Si la primera semana los costos por kilogramo de pecanas, almendras y maníes fueron S/12, S/2 y S/ 3 respectivamente, ¿cuántos kilogramos de almendras compró Paco cada semana?",
+      "alternatives": [
+        "2 kg",
+        "3 kg",
+        "5 kg",
+        "1 kg",
+        "6 kg"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/sistema-de-ecuaciones-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA DE ECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La moneda de un país lejano es el peso y hay monedas de 4 pesos, 1 peso y medio peso. Lewis lleva el banco 54 monedas que hacen un total de 200 pesos. ¿Cuánto dinero llevo Lewis a dicho banco, en monedas de 4 pesos?",
+      "alternatives": [
+        "195 pesos",
+        "193 pesos",
+        "198 pesos",
+        "194 pesos",
+        "196 pesos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistema-de-ecuaciones-lineales.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE SISTEMA DE ECUACIONES TEST CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si los valores de las medidas del largo y el ancho de un terreno rectangular cumplen que la suma de cuadrados de cada una de ellas es 180 y la suma de las inversas de las mismas es 1/4 , determine el área máxima que puede tomar dicho terreno.",
+      "alternatives": [
+        "70 u²",
+        "72 u²",
+        "56 u²",
+        "30 u²",
+        "42 u²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistema-de-ecuaciones-lineales.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE SISTEMA DE ECUACIONES TEST CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una tablilla se consigue traducir lo siguiente: “En el mercado 3 camellos cuestan como 4 vacas y 3 cabras como 2 carneros. Marduk constata que 3 vacas y 6 cabras cuestan 2 talentos pero 2 camellos más 3 carneros cuestan 1 talento con 80 sestercios”. Si Marduk quiere comprar un camello, una vaca, un carnero y una cabra para la dote de su hermana próxima a casarse, ¿cuánto debió pagar Marduk por dicha compra? (considere un talento equivalente a 360 denarios y un sestercio equivalente a 3 denarios)",
+      "alternatives": [
+        "654 denarios",
+        "856 denarios",
+        "568 denarios",
+        "456 denarios",
+        "546 denarios"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistema-de-ecuaciones-lineales.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE SISTEMA DE ECUACIONES TEST CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver el sistema:\ny² – xy=7\nx+2y=4\nUno de los valores de x es:",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-ecuaciones-no-lineales.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA DE ECUACIONES NO LINEAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Eber compró 3 canicas de cristal y 2 de acero por 1,45€ y ayer, 2 de cristal y 5 de acero por 1,7€. Determine el precio de una canica de cristal y una de acero.",
+      "alternatives": [
+        "0,2 € y 1 €",
+        "0,35€ y 0,37 €",
+        "0,2 € y 0,3 €",
+        "0,35 € y 0,2 €"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/metodo-de-eliminacion-sistema-de.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DE REDUCCIÓN O ELIMINACIÓN SISTEMA DE ECUACIONES EJERCICIOS RESUELTOS POR SUMAS Y RESTAS GAUSS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cierto día asistieron a un teatro solo adultos y niños. En la función de la mañana, asistieron 11 adultos y 6 niños, con una recaudación total de S/135; y por la tarde, asistieron 16 adultos y 12 niños, con S/216 de recaudación. ¿Cuál es el precio de la entrada de un niño?",
+      "alternatives": [
+        "S/9",
+        "S/6",
+        "S/7",
+        "S/8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/metodo-de-eliminacion-sistema-de.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DE REDUCCIÓN O ELIMINACIÓN SISTEMA DE ECUACIONES EJERCICIOS RESUELTOS POR SUMAS Y RESTAS GAUSS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un almacén de una empresa de chocolates, hay 900 bombones envasados en cajas de 6 y 12 unidades. ¿Cuántas cajas hay de cada clase si en total hay 125 cajas?",
+      "alternatives": [
+        "Hay 100 cajas de 6 bombones y 25 cajas de 12 bombones.",
+        "Hay 90 cajas de 6 bombones y 35 cajas de 12 bombones.",
+        "Hay 80 cajas de 6 bombones y 45 cajas de 12 bombones.",
+        "Hay 70 cajas de 6 bombones y 55 cajas de 12 bombones."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/metodo-de-igualacion-sistema-de.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DE IGUALACIÓN SISTEMA DE ECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un seminario del curso de Álgebra, acuden 60 estudiantes. Si se van 3 hombres y vienen 3 mujeres, el número de mujeres sería 1/3 del número de hombres. ¿Cuántos hombres y mujeres hay en el seminario?",
+      "alternatives": [
+        "12 hombres y 48 mujeres",
+        "46 hombres y 14 mujeres",
+        "48 hombres y 12 mujeres",
+        "50 hombres y 10 mujeres"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/metodo-de-igualacion-sistema-de.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DE IGUALACIÓN SISTEMA DE ECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un paciente necesita 65 u de proteínas y 45 u de carbohidratos, y ha encontrado en el mercado dos tipos de alimentos: el tipo A que contiene 3 u de proteínas y 2 u de carbohidratos, y el tipo B que contiene 4 u de proteínas y 3 u de carbohidratos. Si el paciente compra ambos tipos de alimentos, ¿cuántos alimentos de tipo B compró?",
+      "alternatives": [
+        "5",
+        "12",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/metodo-de-sustitucion-sistema-de.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DE SUSTITUCIÓN SISTEMA DE ECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un concierto benéfico se venden todas las entradas y se recaudan 23 mil dólares. Los precios de las entradas son 50 dólares las normales y 300 dólares las VIP. Calcule el número de entradas vendidas de cada tipo si el aforo del establecimiento es de 160 personas.",
+      "alternatives": [
+        "100 entradas VIP y 60 normales",
+        "70 entradas VIP y 90 normales",
+        "10 entradas VIP y 150 normales",
+        "60 entradas VIP y 100 normales"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/metodo-de-sustitucion-sistema-de.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DE SUSTITUCIÓN SISTEMA DE ECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver el sistema:\n2senx + 3tgy = 4 √3\n6senx − tgy = 2 √3\nSe obtiene que la solución en el primer cuadrante es:",
+      "alternatives": [
+        "x = 45°; y = 45°",
+        "x = 60°; y = 30°",
+        "x = 30°; y = 60°",
+        "x = 60°; y = 45°",
+        "x = 60°; y = 60°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/sistemas-de-ecuaciones-trigonometricas-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA DE ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve:\nCosx Cosy = 3/4\nSenx Seny = 1/4",
+      "alternatives": [
+        "60°; 0°",
+        "45°; 15°",
+        "30°; 60°",
+        "30°; 30°",
+        "37°; 23°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/sistemas-de-ecuaciones-trigonometricas-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA DE ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver el sistema:\ntgx + tgy = 2\n2cosx.cosy = 1\nLos valores de \"x\" e \"y\" son respectivamente:",
+      "alternatives": [
+        "30°; 30°",
+        "37°; 45°",
+        "30°; 60°",
+        "45°; 45°",
+        "60°; 60°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/sistemas-de-ecuaciones-trigonometricas-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA DE ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\nx+y =2 𝛑/3\ncos²x+ cos²y=1\nHallar: M=x – y",
+      "alternatives": [
+        "85°",
+        "75°",
+        "90°",
+        "100°",
+        "80°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/sistemas-de-ecuaciones-trigonometricas-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA DE ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un comerciante textil alquila un total de 19 máquinas, entre remalladoras, bordadoras y de coser, a 80 ; 50 y 60 dólares, respectivamente, y obtiene un total de 1240 dólares semanales. Si aumentara en 20 dólares el alquiler de cada remalladora, en 10 dólares el alquiler de cada máquina de coser y disminuyera en 10 dólares el alquiler de cada bordadora, obtendría un total de 1420 dólares a la semana. ¿Cuántas máquinas bordadoras alquila semanalmente?",
+      "alternatives": [
+        "7",
+        "4",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-deco-problemas-resueltos-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS PRUEBA DECO RESUELTA DE EXAMEN DE ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un escolar gastó cierta suma de dinero para comprar un maletín, un lapicero y un libro. Si el costo de los útiles fuese 1/10 ; 1/4 y 1/5 de los precios originales, respectivamente, el gasto sería 8 soles; en tanto que si el costo fuese 1/4 ; 1/8 y 1/6 de los precios originales respectivamente, el gasto sería 12 soles. ¿Cuántos soles gastó dicho escolar?",
+      "alternatives": [
+        "48",
+        "56",
+        "65",
+        "60"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-deco-problemas-resueltos-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS PRUEBA DECO RESUELTA DE EXAMEN DE ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un comerciante vende tres variedades de quinua: roja, negra y amarilla. Los precios de cada kilogramo de estas variedades de quinua son S/.18, S/.20 y S/.10 respectivamente. Al finalizar el día, vendió un total de 40 kg de quinua y el importe por todo lo vendido fue de S/.576. Si el número de kilogramos vendidos de quinua roja menos los de quinua negra es la quinta parte del número de kilogramos vendidos de quinua amarilla, ¿cuántos kilogramos se vendió de la quinua que tuvo mayor demanda?",
+      "alternatives": [
+        "20",
+        "24",
+        "18",
+        "22"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-deco-problemas-resueltos-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS PRUEBA DECO RESUELTA DE EXAMEN DE ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el par ordenado (x 0 ; y 0 ) es la solución del siguiente sistema.\nx + ay = b\nbx + 2y = a\nCalcular “a+b”\nsiendo x 0 =1 ∧ y 0 =2",
+      "alternatives": [
+        "–10",
+        "–12",
+        "–13",
+        "–14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/06/algebra-admision-catolica-pucp-examen.html",
+      "sourceName": "algebraenpdf.blogspot.com — ALGEBRA ADMISIÓN CATÓLICA PUCP 2022 2023 EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el sistema\nx/2 + y/3 =5\nx – y=1\nSi x=a ∧ y=b\nDetermina el valor de a/b",
+      "alternatives": [
+        "1",
+        "5",
+        "32/27",
+        "27/32"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/simulacro-resuelto-de-admision-a-la-universidad-catolica-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO CATÓLICA SOLUCIONARIO DE ACCESO UNIVERSIDAD PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea el sistema:\nax + by = ab ... (1)\n– bx + 2ay =– b² ... (2)\ncompatible determinada\nMarca la alternativa correcta:",
+      "alternatives": [
+        "Se necesita el valor de “a” para conocer “x”",
+        "Se necesita el valor de “a” para conocer “y”",
+        "Se necesita el valor de “b” para conocer “x”",
+        "Se necesita el valor de “b” para conocer “y”"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/algebra-beca-18-formulario-ejemplos-resueltos-temario-pronabec-del-prospecto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA BECA 18 FORMULARIO CON EJEMPLOS RESUELTOS DEL TEMARIO PRONABEC PRUEBA UNICA NACIONAL PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se reunieron varios amigos quienes tomaron cuatro tazas de leche y dos tazas de café, y tuvieron que pagar S/.20. Si en otra oportunidad, consumiendo una taza de leche y tres tazas de café; pagaron S/.10. Entonces una taza de leche cuesta:",
+      "alternatives": [
+        "S/.2,5",
+        "S/.3",
+        "S/.4",
+        "S/.5",
+        "S/.6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Examen-de-admision-universidad-nacional-del-altiplano-unap-ingenierias-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNA 2027 UNIVERSIDAD DEL ALTIPLANO EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Oscar puede comprar 26 manzanas y 14 naranjas o 36 manzanas y 12 naranjas con el dinero que dispone. Si solo compra naranjas, ¿Cuál es el número de manzanas que puede comprar?",
+      "alternatives": [
+        "86",
+        "48",
+        "132",
+        "96",
+        "40"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-untels-admision-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO  UNTELS 2027 RESUELTO INGRESO UNIVERSIDAD NACIONAL TECNOLÓGICA DEL SUR – VILLA EL SALVADOR PDF CLAVES DE RESPUESTAS – SOLUCIONARIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver el sistema:\ny 2 – xy=7\nx+2y=4\nUno de los valores de x es:",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el valor de m para que x sea igual a y en el siguiente sistema:\nmx + 4y = 119\n5x – my = 34",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/algebra-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para ensamblar 50 vehículos, entre bicicletas, motocicletas y automóviles, se utilizaron entre otros elementos 38 motores y 148 llantas. ¿Cuántas motocicletas se ensamblaron?",
+      "alternatives": [
+        "10",
+        "12",
+        "14",
+        "16",
+        "24"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unjbh-pdf.html",
+      "sourceName": "matematicasn.blogspot.com —  SOLUCIONARIO JORGE BASADRE 2027 UNJBG EXAMEN ADMISIÓN UNIVERSIDAD GROHMANN DE TACNA CANAL 1 2 3 4 PROSPECTO CRONOGRAMA VACANTES ESTRUCTURA PUNTAJES TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de resolver el sistema de variables “x” e “y”:\n3x+8y=41 ... (I)\nx+6y=27 ... (II)\nHalla el valor de xy.",
+      "alternatives": [
+        "6",
+        "12",
+        "8",
+        "15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/simulacro-admision-catolica-pdf-pucp.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO CATÓLICA INGRESO UNIVERSIDAD PUCP PRESENCIAL PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea el sistema:\nax+by = ab ... (I)\n– bx+2ay =– b 2 ... (II)\ncompatible determinada\nMarca la alternativa correcta:",
+      "alternatives": [
+        "Se necesita el valor de “a” para conocer “x”",
+        "Se necesita el valor de “a” para conocer “y”",
+        "Se necesita el valor de “b” para conocer “x”",
+        "Se necesita el valor de “b” para conocer “y”"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/simulacro-admision-catolica-pdf-pucp.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO CATÓLICA INGRESO UNIVERSIDAD PUCP PRESENCIAL PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el sistema\n2x – y+z=1\nx+4y+2z=– 1\n¿Cuál de las siguientes ecuaciones\nI ) x – 5y – z=2,\nII ) 3x+3y+3z=2,\nIII ) 5x+2y+4z=1,\npuede agregarse al sistema anterior de modo que el conjunto solución no varíe?",
+      "alternatives": [
+        "solo I",
+        "I y II",
+        "I y III",
+        "solo II",
+        "solo III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-ejercicios-con-respuestas-de.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO SEGUNDO EXAMEN UNI 2025 RESUELTO INGRESO UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Bruhy y su hermana Gladys fueron juntas a una tienda. Bruhy compró 4 unidades de un producto M y 3 unidades de un producto N pagando 15 soles y Gladys 8 unidades del producto M y 4 unidades del producto N pagando 28 soles. Determine la diferencia en soles del precio de venta de un producto M con un producto N, en ese orden.",
+      "alternatives": [
+        "3 soles",
+        "2 soles",
+        "1 sol",
+        "4 soles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-ecuaciones-lineales-con-dos.html",
+      "sourceName": "matematicasn.blogspot.com — RESOLUCIÓN DE SISTEMAS DE ECUACIONES SENCILLOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos números a y b, distintos entre sí, son tales que si al número “a” se le suma su recíproco resulta igual al número b, aumentado en 6 y, recíprocamente, si al número b se le suma su recíproco resulta el número “a”, aumentado en 6. Si el producto de dichos números es 1/2 , halle la suma de los cuadrados de a y b.",
+      "alternatives": [
+        "34",
+        "35",
+        "37",
+        "38",
+        "40"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-ecuaciones-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS DE ECUACIONES FULL PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un granjero compró pavos, patos y pollos, cada pavo costó 100 soles, cada pato 50 soles y cada pollo 5 soles. Si compró en total 100 animales con 1000 soles. ¿Cuántos pollos compró?.",
+      "alternatives": [
+        "50",
+        "10",
+        "85",
+        "90",
+        "70"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/divisibilidad-y-congruencias-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIBILIDAD COMPUESTA PREGUNTAS RESUELTAS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante observa que el precio de un libro es 5 veces el precio de un lapicero y este cuesta el doble de una regla. Entonces compra 2 libros, 5 reglas, 3 lapiceros y paga S/.46,50. Calcule el precio de cada libro.",
+      "alternatives": [
+        "S/.10",
+        "S/.12",
+        "S/.15",
+        "S/.18",
+        "S/.23"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/07/Razones-aritmeticas-y-geometricas-ejemplos-preguntas-resueltas-de-matematica-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES EJERCICIOS RESUELTOS PDF – MATEMÁTICA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un granjero compró cinco patos y cuatro gallinas por S/.24,40. Más tarde compró 10 patos y 11 gallinas por S/.54,35 al mismo precio ¿Cuánto gastaría en soles al comprar sólo un pato y una gallina?",
+      "alternatives": [
+        "5,35",
+        "4,25",
+        "6,35",
+        "5,25",
+        "6,25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-decimales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el circo, cuando compramos cuatro entradas de adulto y seis entradas de niño tenemos que pagar S/. 9,50; en cambio, si hubiéramos comprado tres entradas de adulto y una entrada de niño habríamos tenido que pagar S/.4,50 ¿Cuánto cuestan una entrada de niño y un de adulto?",
+      "alternatives": [
+        "S/.0,75 y S/.1,25",
+        "0,70 y 1,20",
+        "0,85 y 1,35",
+        "0,65 y 1,15",
+        "0,60 y 1,10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-decimales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pablo compró siete papayas y cinco melones, gastando S/.32,35; pero si hubiera comprado 12 melones y 10 papayas habría gastado S/.55,54. ¿Cuánto cuestan una papaya y un melón en soles?",
+      "alternatives": [
+        "3,25 y 1,92",
+        "3,23 y 1,94",
+        "3,24 y 1,93",
+        "3,26 y 1,91",
+        "3,22 y 1,95"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-decimales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El siguiente sistema lineal definido en las variables x e y:\n2x+(m–1)y=12\nmx+6y=m 2 +8\nes compatible indeterminado.\nCierta tarde, un estudiante sale de su casa a las m horas rumbo a la universidad y regresa a las 9:00p.m. Si m verifica la condición del sistema, halle el número de horas que el estudiante estuvo fuera de su casa.",
+      "alternatives": [
+        "6",
+        "5",
+        "3",
+        "4",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁLGEBRA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un gerente tiene dos ofertas para alquilar dos máquinas, la oferta \"A\" consiste en un pago fijo de 1000 soles y 30 soles la hora de uso y la oferta \"B\" consiste en un pago fijo de 800 soles y 40 soles la hora de uso. ¿A las cuantas horas se igualan las ofertas?",
+      "alternatives": [
+        "No se igualan",
+        "10 horas",
+        "15 horas",
+        "20 horas",
+        "100 horas"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/tutoria-3ro-4to-actividad-1-experiencia-6-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNPRG ECONÓMICAS INGRESO UNIVERSIDAD PRUEBA RESUELTA PEDRO RUIZ GALLO ADMINISTRACIÓN CONTABILIDAD ECONOMÍA GRUPO C RESPUESTAS 2025 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luis compró 6 lápices más que cuadernos y Rolando compró tantos bolígrafos como lápices y cuadernos compró Luis; además por 3 cuadernos se pagó tanto como por 7 lápices. Si por el total de cuadernos pagó el doble que, por el total de lápices, ¿cuántos bolígrafos compró?",
+      "alternatives": [
+        "78",
+        "144",
+        "156",
+        "108",
+        "128"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/ept-1ro-2do-actividad-2-experiencia-6-resuelta-aprendo-en-casa-educacion-para-el-trabajo-tarea-web-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BOLETIN 6 ESPECIAL RESUELTO CEPRE SAN MARCOS 2024 RESPUESTAS PREUNMSM 2025 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los incrementos o decrementos de los precios en soles de tres productos M, N y P, de una semana a otra, fueron tales que la suma de las variaciones de sus precios es tres soles; la suma de la variación del precio del producto M con la del producto N excede en cinco soles a la variación del precio del producto P; el doble de la variación del precio de M más la variación del precio P excede en cuatro soles a la variación del precio de N. ¿Qué producto(os) sufrieron decrementos?",
+      "alternatives": [
+        "Todos",
+        "P",
+        "N y P",
+        "M y P",
+        "N"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/determinantes-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DETERMINANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Gianluca tiene dos piezas metálicas cuadradas, cuyas longitudes de sus lados son (a) cm y (b) cm respectivamente y el área de la primera excede al cuádruple de la segunda en 7 cm 2 . Su hermano Pedro tiene una pieza metálica rectangular de área igual a 6 cm 2 cuyas longitudes de sus lados son (a) cm y (b) cm. Determine el perímetro de la pieza de Pedro.",
+      "alternatives": [
+        "10 cm",
+        "14 cm",
+        "11 cm",
+        "12 cm",
+        "15 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La papelera KARTOON vende dos tipos de cuadernos a librerías pre-universitarias, el primero tiene un precio de S/5 y el segundo de S/7. La compañía recibe un pedido por 500 cuadernos, junto con un cheque por S/3140. Si el pedido no especifica el número de cada tipo, ¿cuántos cuadernos de cada tipo tuvo como pedido?",
+      "alternatives": [
+        "100 y 400",
+        "180 y 320",
+        "200 y 300",
+        "220 y 280",
+        "210 y 290"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sandro recibe una herencia de $50 000. Decide invertir en tres fondos (mercado de dinero, acciones preferenciales y acciones de alta tecnología). Se estima que para el siguiente año rendirá\n– fondo de mercado de dinero 5%\n– fondo de acciones preferenciales 9%\n– fondo de acciones de alta tecnología 16%\nSandro desea tener un rendimiento total de $4000 el primer año.\nPara evitar riesgos, decide invertir en el fondo de mercado de dinero el triple de lo que invirtió en el fondo de acciones de alta tecnología.\n¿Cuánto debe invertir en cada fondo respectivamente?",
+      "alternatives": [
+        "30 000; 10 000; 20 000",
+        "30 000; 10 000; 10 000",
+        "60 000; 20 000; 20 000",
+        "45 000; 10 000; 5000",
+        "50 000; 20 000; 10 000"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Daniel pagó S/230 por 5 cajas de clavos y 4 cajas de tornillos. Luis compro 2 cajas de clavos y 5 de tornillos y tuvo que pagar S/160.\n¿Cuánto pagará Carlos por 20 cajas de clavos y 10 cajas de tornillos?",
+      "alternatives": [
+        "S/1000",
+        "S/600",
+        "S/1100",
+        "S/800",
+        "S/1200"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la feria del libro, la empresa IDEA URBANA paga por el alquiler del puesto “b” soles además por producir cada libro le genera un gasto de 50 soles. Si vendiera 80 libros obtendría una ganancia de 1000 soles, pero si vendiera 20 libros le ocasionaría una pérdida de 800 soles. Si el costo está relacionado de manera lineal con la producción de libros, ¿cuántos libros como mínimo debe de producir y vender la empresa para obtener ganancia?",
+      "alternatives": [
+        "70",
+        "47",
+        "30",
+        "50"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-ecuaciones-lineales.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS DE ECUACIONES LINEALES BÁSICOS DE 2×2 EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una heladería, el costo de 4 helados de barquillo, 7 helados de vasito y un granizado es de S/.35,50 y el costo de 5 helados de barquillo, 9 helados de vasito y un granizado es de S/.40,50. En dicha heladería, el costo, en soles, al comprar un helado de barquillo, un helado de vasito y un granizado es",
+      "alternatives": [
+        "20,50",
+        "30,50",
+        "21,50",
+        "22,50",
+        "24,50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuaciones-y-sistemas-de-ecuaciones.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES Y SISTEMAS DE ECUACIONES EJERCICIOS RESUELTOS MATEMÁTICA 3 ESO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los juegos Panamericanos los deportistas de Estados Unidos ganaron 20 medallas más que Brasil y 140 menos que el doble de medallas que ganó México.\nLos tres países sumaron 300 medallas.\nSobre los tipos de medalla, se obtuvo los siguientes datos:\n☛ La cantidad de medallas de oro repartidos entre los tres países fue 90.\n☛ Brasil no ganó medallas de oro.\n☛ Los tres países consiguieron la misma cantidad de medallas de bronce.\n☛ La cantidad de medallas de plata que obtuvo Brasil es el doble de la cantidad de medallas de plata que adquirió Estados Unidos, más 10.\n☛ Brasil y México obtuvieron la misma cantidad de medallas de plata.\n¿Cuántas medallas de oro ganó México?",
+      "alternatives": [
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/08/sistemas-de-ecuaciones-lineales-pdf_3592.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS DE ECUACIONES LINEALES PDF EJERCICIOS DESARROLLADOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Aida, Jacky y Leti fueron al mercado a comprar frutas. Jacky compró pera y durazno, un kilogramo de cada fruta y pagó por todo S/ 15, mientras que Aída pagó S/ 40 por la compra de 2 kg de durazno y 3 kg de pera. Si Leti decidió comprar 3 kg de durazno y 4 kg de pera, ¿cuánto pagó Leti por su compra?",
+      "alternatives": [
+        "S/ 51",
+        "S/ 43",
+        "S/ 55",
+        "S/ 49"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/08/sistemas-de-ecuaciones-lineales-pdf_3592.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS DE ECUACIONES LINEALES PDF EJERCICIOS DESARROLLADOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un jardín rectangular está rodeado por un camino de anchura uniforme. El jardín y el camino juntos ocupan un área de 450 metros cuadrados. Determine la anchura del camino si su área es de 82 metros cuadrados y el perímetro del jardín es de 78 metros.",
+      "alternatives": [
+        "1.50 m",
+        "1.00 m",
+        "2.00 m",
+        "2.20 m",
+        "1.60 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-examen-de-admision-san_23.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2023-2 PRUEBA RESUELTA DE INGRESO UNIVERSIDAD INGENIERÍAS RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El largo del auditorio de la Facultad de Ciencias Económicas de la UNI, mide 2m más que su ancho, si se decide ampliar las dimensiones, añadiendo 7m al ancho, y 6m al largo, el área sería tres veces el área anterior. Determine el área inicial del auditorio.",
+      "alternatives": [
+        "70 m 2",
+        "60 m 2",
+        "100 m 2",
+        "85 m 2",
+        "80 m 2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/algebra-problemas-resueltos-examen.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea el sistema:\nax+by= ab ... (1)\n– bx+2ay=– b 2 ... (2)\ncompatible determinada\nMarca la alternativa correcta:",
+      "alternatives": [
+        "Se necesita el valor de “a” para conocer “x”",
+        "Se necesita el valor de “a” para conocer “y”",
+        "Se necesita el valor de “b” para conocer “x”",
+        "Se necesita el valor de “b” para conocer “y”"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/algebra-admision-catolica-pucp-examen.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA ADMISIÓN CATÓLICA DESARROLLADA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se reunieron varios amigos quienes tomaron cuatro tazas de leche y dos tazas de café y tuvieron que pagar 20 soles. Si en otra oportunidad consumieron 1 taza de leche y 3 tazas de café y pagaron 10 soles, entonces una taza de leche cuesta:",
+      "alternatives": [
+        "2,5 soles",
+        "3 soles",
+        "4 soles",
+        "5 soles",
+        "6 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/ecuaciones-lineales-basicas-resueltas-paso-a-paso-para-ninos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — ECUACIÓN LINEAL PROBLEMAS RESUELTOS PREUNIVERSITARIOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si cada asistente a una reunión benéfica colabora con S/ 6, faltaría S/ 120 para reunir el aporte requerido. Si cada asistente colabora con S/ 9, se reuniría S/ 240 más de lo requerido. ¿Cuánto debe aportar cada asistente para que no falte ni sobre?",
+      "alternatives": [
+        "S/ 6",
+        "S/ 9",
+        "S/ 5",
+        "S/ 7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2022/06/razonamiento-matematico-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA REPASO PREGUNTAS RESUELTAS SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Raúl y Teresa arman bolsas de dulces distribuyendo en total 1000 dulces en 300 bolsas y cada uno arma bolsas distintas. Raúl pone tres dulces en cada una y Teresa pone cinco dulces en cada una. Si no sobra ningún dulce, ¿cuántas bolsas armó Raúl?",
+      "alternatives": [
+        "250",
+        "180",
+        "125",
+        "50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-29-paes-regular-oficial-matematica1-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Matemática M1 pregunta 34"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una familia consumió en una picantería durante tres días seguidos, su consumo fue de la siguiente forma: el primer día consumieron dos cuyes chactado, un costillar frito y dos adobos de chancho, el segundo día tres cuyes chactado, un costillar frito y un adobo de chancho y el tercer día un cuy chactado, dos costillar frito y dos adobos de chancho. Si en esos días gastaron 240, 235 y 255 soles respectivamente y el costo de cada plato consumido en los tres días no varió. ¿Cuánto costó un cuy chactado?",
+      "alternatives": [
+        "58 soles",
+        "48 soles",
+        "43 soles",
+        "50 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2018/09/examen-san-marcos-deco-quimica-ce.html",
+      "sourceName": "quimicapdf.blogspot.com — AREA C SAN MARCOS EXAMEN ADMISION UNIVERSIDAD SOLUCIONADO PDF"
     }
   ]
 }

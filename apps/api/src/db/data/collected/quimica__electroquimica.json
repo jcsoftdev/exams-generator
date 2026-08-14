@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un proceso electrolítico se han depositado 72 gramos de aluminio. El número de electrones que han pasado a través de la solución electrolítica es: (P.A. Al = 27)",
-      "alternatives": ["8 N₀", "6 N₀", "18 N₀", "20 N₀", "27 N₀"],
+      "alternatives": [
+        "8 N₀",
+        "6 N₀",
+        "18 N₀",
+        "20 N₀",
+        "27 N₀"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/12/electroquimica-celdas-electroliticas-galvanicas-pilas-faraday-ejercicios-resueltos-quimica-pre-universidad-pdf.html",
       "sourceName": "Electroquímica problemas resueltos preuniversitario (matematicaj) - pregunta depósito de aluminio"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Respecto a la electrólisis, indique la secuencia correcta de verdadero (V) y falso (F):\nI. La reacción redox es espontánea y genera corriente eléctrica.\nII. Los iones ceden sus electrones en el ánodo.\nIII. En el circuito externo, los electrones fluyen del cátodo hacia el ánodo.",
-      "alternatives": ["FVF", "VVF", "VVV", "FFV", "VFV"],
+      "alternatives": [
+        "FVF",
+        "VVF",
+        "VVV",
+        "FFV",
+        "VFV"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/12/electroquimica-celdas-electroliticas-galvanicas-pilas-faraday-ejercicios-resueltos-quimica-pre-universidad-pdf.html",
       "sourceName": "Electroquímica problemas resueltos preuniversitario (matematicaj) - secuencia V/F electrólisis"
@@ -45,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Qué intensidad de corriente (amperios) necesitamos para depositar 90 g de aluminio en 5 horas? (P.A. Al = 27)",
-      "alternatives": ["27.0", "36.4", "48.7", "53.6", "60.8"],
+      "alternatives": [
+        "27.0",
+        "36.4",
+        "48.7",
+        "53.6",
+        "60.8"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://quimica-a1.blogspot.com/2013/02/electroquimica-problemas-resueltos-tipo.html",
       "sourceName": "Electroquímica problemas resueltos tipo examen de ingreso (quimica-a1) - corriente para depositar aluminio"
@@ -56,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si en el cátodo de una celda que contiene CuCl₂ se han depositado 6,35 g de metal durante 1930 segundos, ¿qué corriente se utilizó en amperios? (P.A. Cu = 63,5)",
-      "alternatives": ["50 A", "5 A", "25 A", "2.5 A", "10 A"],
+      "alternatives": [
+        "50 A",
+        "5 A",
+        "25 A",
+        "2.5 A",
+        "10 A"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "http://quimica-a1.blogspot.com/2013/02/electroquimica-problemas-resueltos-tipo.html",
       "sourceName": "Electroquímica problemas resueltos tipo examen de ingreso (quimica-a1) - corriente depósito de cobre"
@@ -67,10 +91,2113 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determinar el potencial de la siguiente pila: Mg / Mg²⁺, 1M // Ag⁺, 1M / Ag",
-      "alternatives": ["+1.54 V", "+3.14 V", "+3.94 V", "0.74 V", "0.37 V"],
+      "alternatives": [
+        "+1.54 V",
+        "+3.14 V",
+        "+3.94 V",
+        "0.74 V",
+        "0.37 V"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://quimica-a1.blogspot.com/2013/02/electroquimica-problemas-resueltos-tipo.html",
       "sourceName": "Electroquímica problemas resueltos tipo examen de ingreso (quimica-a1) - potencial de pila Mg/Ag"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Algunas especies de bacterias fotosintéticas utilizan, como agente reductor, el H 2 S en vez de agua en la fase lumínica de la fotosintesis. El H 2 S, al igual que el agua en las plantas y cianobacterias, es fotolisado por efecto del quantum luminoso. De acuerdo con lo anterior, al final de la fase lumínica, estas bacterias liberan",
+      "alternatives": [
+        "azufre.",
+        "hidrógeno.",
+        "oxígeno.",
+        "peróxido.",
+        "agua."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/biologia-examen-resuelto-de-admision-la.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se somete agua acidulada con ácido sulfúrico a electrólisis, con una corriente de 9650 amperios por 100 segundos. Determine el volumen, medido a condiciones normales, de la mezcla gaseosa formada en litros.\nDatos: H=1 g/mol, O=16 g/mol, R=0,082 atm-L mol K",
+      "alternatives": [
+        "224",
+        "376",
+        "84",
+        "965",
+        "168"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/quimica-simulacro-san-marcos-solucionario-admision-a-la-universidad-2020-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por mucho tiempo, el aluminio (Al) ha sido un metal obtenido solo en pequeñas cantidades mediante soluciones acuosas del metal y la electrólisis, porque el agua se reduce con mayor facilidad que el ion metálico. Indique el valor de verdad (V o F) de los siguientes enunciados respecto de lo que ocurre en una celda electrolítica al intentar obtener aluminio metálico a partir de su solución acuosa.\nI. El agua se reduce liberando hidrógeno gaseoso H ₂ en el cátodo.\nII. El ion aluminio gana tres electrones y se produce en el ánodo.\nIII. Durante el proceso, el agua compite con el ion aluminio (III).\nIV El aluminio pierde tres electrones y se obtiene en el ánodo.",
+      "alternatives": [
+        "VFVF",
+        "VVVF",
+        "VFVV",
+        "FFVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/quimica-simulacro-san-marcos-solucionario-admision-a-la-universidad-2020-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Muchas reacciones químicas son de tipo redox (implican transferencia de electrones). Tal es el caso de la siguiente reacción química:\nHNO 3(ac) +H 2 S (ac) →NO (g) +S (s) +H 2 O ( ℓ )\nAl respecto, determine el valor de verdad (V o F) de las siguientes proposiciones:\nI. El coeficiente del agente oxidante es 3 y el del agente reductor es 2.\nII. Se transfieren 2 moles de electrones por cada mol de agente reductor.\nIII. Al formarse 8 moles de H 2 O, se producen 4 moles de la forma reducida.",
+      "alternatives": [
+        "VVV",
+        "VFF",
+        "FFV",
+        "FVV",
+        "VVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/quimica-deco-examen-resuelto-de-ingreso.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA DECO RESUELTA"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se somete a electrólisis el agua, acidulada con ácido sulfúrico, para lo que se emplea una corriente de 965 amperios por 10 segundos. Determine el volumen, en litros, de la mezcla gaseosa formada a 25°C y 1 atm de presión.\nDatos: H=1 g/mol, O=16 g/mol, R=0,082 atm – L mol K",
+      "alternatives": [
+        "1,2",
+        "2,4",
+        "1,8",
+        "3,6",
+        "1,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-quimica-de-admision-la_22.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El hierro metálico (Fe) se obtiene en altos hornos al fundir el mineral hematita (Fe 2 O 3 ) en presencia de monóxido de carbono. Indique la secuencia del valor de verdad (V o F) correspondiente a los enunciados referidos a la reacción\nFe 2 O 3 +CO → Fe + CO 2\nI. El agente reductor es el anhidrido carbonoso.\nII. El CO 2 se forma por la reducción del CO.\nIII. Se forman 2 moles de Fe y 3 moles de CO 2 .",
+      "alternatives": [
+        "VFV",
+        "VVV",
+        "FFV",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-quimica-de-admision-la.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El azufre se obtiene a nivel industrial a partir del sulfuro de hidrógeno (H 2 S) mediante la reacción\nH 2 S (g) +SO 2(g) → S (s) +H 2 O (g)\nDespués de balancear, indique verdadero (V) o falso (F) respecto a los enunciados:\nI. El coeficiente del agente oxidante es 1.\nII. La suma de coeficientes de la reacción es 8.\nIII. Se han transferido 4 moles de electrones por cada mol de SO 2",
+      "alternatives": [
+        "FVV",
+        "FVF",
+        "VFF",
+        "VFV",
+        "VVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/quimica-callao-examen-de-admision-universidad-unac-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La masa en gramos que se deposita al hacer pasar 0,9 Faraday por una celda electrolítica que contiene Al + ³ es",
+      "alternatives": [
+        "0,9",
+        "2,7",
+        "8,1",
+        "24,3",
+        "27,0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/qumica-unt-examen-resuelto-pdf-trujilo.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el Perú, con el fin de obtener metales como oro, plata, cobre, zinc, plomo, molibdeno, entre otros, se procesan diferentes tipos de minerales y, para concentrarlos, se desarrollan procesos físicos, químicos, fisicoquímicos y biológicos. Identifique los principales procesos que se realizan, en nuestro país, para la extracción del oro.",
+      "alternatives": [
+        "Tostación - calcinación",
+        "Cianuración - amalgación",
+        "Biolixiviación - electrólisis",
+        "Molienda - flotación"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La hematita (Fe ₂ O ₃ ) es utilizada como materia prima para la obtención del hierro elemental. En la industria, se procesa en hornos eléctricos a temperaturas elevadas.\n1 Fe ₂ O ₃ + 3CO → 2Fe + 3CO ₂\nConsiderando la ecuación química, complete, en forma secuencial, los espacios libres de cada uno de los enunciados.\nI. Al reaccionar 800 gramos de Fe ₂ O ₃ con 20 mol CO, se tiene un exceso de ________.\nII. Se produce 6 mol de CO ₂ , cuando el rendimiento es de 80%, al añadir ________.\nIII. En el proceso óxido-reducción, el CO es el reactante considerado como ________.\nDato: P.F. Fe ₂ O ₃ =160",
+      "alternatives": [
+        "200 g Fe ₂ O ₃ - 256 g Fe ₂ O ₃ - agente oxidante",
+        "5 mol CO - 400 g Fe ₂ O ₃ - agente reductor",
+        "200 g Fe ₂ O ₃ - 400 g Fe ₂ O ₃ - agente oxidante",
+        "5 mol CO - 256 g Fe ₂ O ₃ - agente reductor"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mediante la electrólisis, un proceso no espontáneo, se convierte la energía eléctrica en energía química. Determine el número de moles de átomos obtenidos en cada una de las tres celdas dispuestas en serie y en cuyo circuito se hace circular 10 faraday: en el ánodo de la celda que contiene cloruro de magnesio fundido, en el cátodo de la celda que contiene sulfato cúprico acuoso y en el ánodo de la celda que contiene agua acidulada respectivamente.",
+      "alternatives": [
+        "5 - 10 - 5",
+        "20 - 10 - 10",
+        "10 - 20 - 10",
+        "10 - 5 - 5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pila genera corriente eléctrica mediante una reacción química, la cual también es posible producir a partir de una corriente eléctrica mediante la electrólisis. Cuando una corriente continua pasa a través de una sal fundida o una disolución acuosa de un electrolito,",
+      "alternatives": [
+        "el ánodo es el electrodo negativo de la celda electrolítica.",
+        "en el cátodo de la celda se verifica la reacción de oxidación.",
+        "los iones negativos se dirigen hacia el electrodo positivo.",
+        "los aniones de la solución electrolítica se reducen en el ánodo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-19-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — CEPRE SAN MARCOS QUÍMICA SEMANA 19 EXAMEN DE INGRESO UNIVERSIDAD SAN MARCOS ÁREA C PRUEBA DECO RESPUESTAS PREGUNTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al óxido formado como resultado de la reacción de tostación de la esfalerita,\n2ZnS(s) +3O ₂ (g) → 2ZnO(s) +2SO ₂ (g) , se le llama calcina.\nRespecto de lo que ocurre en esta reacción, se puede afirmar que",
+      "alternatives": [
+        "el número de oxidación del oxígeno molecular es 2 –.",
+        "la reacción que forma la calcina es de doble sustitución.",
+        "el número de oxidación del metal en la reacción es 2+.",
+        "el azufre se reduce cuando forma el dióxido de azufre."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-19-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — CEPRE SAN MARCOS QUÍMICA SEMANA 19 EXAMEN DE INGRESO UNIVERSIDAD SAN MARCOS ÁREA C PRUEBA DECO RESPUESTAS PREGUNTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cloro es considerado como un halógeno con mucha importancia comercial debido a que forma una variedad de compuestos. En cuál de los siguientes compuestos el número de oxidación del átomo de cloro es 1+?",
+      "alternatives": [
+        "CaCl ₂",
+        "Cl ₂ O",
+        "HClO ₂",
+        "Cl ₂"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-14-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PRUEBA DECO SOLUCIONES DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREAS D B PROBLEMAS DESARROLLADOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para describir cuantitativamente la relación entre la cantidad de electricidad usada y el número de moles de electrones que se intercambia durante la electrólisis, se considera que un mol de electrones equivale a 96 500 coulombs (C). Calcule los moles de electrones que son suministrados por 193 ×10³ C.",
+      "alternatives": [
+        "0,5",
+        "5,0",
+        "3,0",
+        "2,0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-14-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PRUEBA DECO SOLUCIONES DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREAS D B PROBLEMAS DESARROLLADOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los procesos electrolíticos son no espontáneos, por ello requieren de energía externa. Con respecto a los componentes de una celda electrolítica:",
+      "alternatives": [
+        "cátodo",
+        "batería",
+        "ánodo",
+        "CuS O 4(g) Seleccione la alternativa que contenga la relación correcta en: ( ) Electrodo en el cual se realiza la oxidación ( ) Electrodo en el cual se realiza la reducción ( ) Fuente de energía ( ) Solución electrolítica",
+        "abcd"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a la corrosión, indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F):\nI. Se puede considerar como el deterioro de un metal por la acción de agentes con los que tiene contacto.\nII. Puede incluir materiales no metálicos como el hormigón y los plásticos.\nIII. Las reacciones de corrosión se pueden dividir en reacciones de semicelda de ánodo y cátodo.",
+      "alternatives": [
+        "FVV",
+        "VFV",
+        "FFF",
+        "VVV",
+        "VVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El perclorato de bario es un fuerte agente oxidante. Indique la fórmula química de este compuesto.\nConsidere que el bario es un alcalino-térreo y el cloro es un halógeno.",
+      "alternatives": [
+        "Ba(ClO 3 ) 2",
+        "BaClO 4",
+        "Ba 2 ClO 4",
+        "Ba(ClO 4 ) 2",
+        "Ba(ClO 2 ) 2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-8-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se emplea un tiempo mayor de electrólisis manteniendo la intensidad constante. Según la ley de Faraday, ocurre:",
+      "alternatives": [
+        "La masa se triplica sin relación",
+        "La masa crece proporcionalmente al tiempo",
+        "La masa permanece igual",
+        "La masa decrece",
+        "La masa aumenta cuadráticamente"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una corriente de 10 A fluye durante 30 min a través de una solución de Cr 3 + . Calcule la masa depositada aplicando la primera Ley de Faraday (M Cr= 52 g/mol).",
+      "alternatives": [
+        "0,95 g",
+        "1,45 g",
+        "1,90 g",
+        "3,23 g",
+        "8,70 g"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ácido nitroso es un compuesto inorgánico monoprótico, existe en un medio acuoso y forma sales llamadas nitritos. En medio acuoso, el ácido nitroso sufre una reacción redox, en equilibrio, y contamina el aire al formar dos óxidos de nitrógeno, como se muestra en la siguiente ecuación:\nHN O 2 (ac) ⇄ NO (g) + N O 2 (g) + H 2 O ( ℓ )\nDetermine la secuencia que vincula correctamente la información de las columnas siguientes:\nI) La especie oxidada es de color pardo.\nII) La especie reducida incolora.\nIII) Tiene dos enlaces simples y uno doble.",
+      "alternatives": [
+        "HN O 2",
+        "NO",
+        "N O 2",
+        "Ic, IIb, IIIa,",
+        "Ib, IIa, IIIc"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/examen-san-marcos-2019-i-deco.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN MARCOS 2027 I EXAMEN ADMISIÓN UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique las sustancias que se forman en el cátodo y en el ánodo, respectivamente, cuando se realiza la electrólisis de una solución acuosa de sulfato cúprico, CuSO 4(ac) .",
+      "alternatives": [
+        "Cu (s) ; O 2(g)",
+        "Cu 2 + (ac); H 2 O ( ℓ )",
+        "Cu (s) ; H 2(g)",
+        "Cu (ac) 2+ ; H (ac) +",
+        "Cu (s) ; OH (ac) –"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El niquelado es un proceso utilizado con la finalidad de proteger a piezas metálicas contra la corrosión, teniendo el valor agregado de un mejor acabado.\nCalcule la masa (en gramos) de níquel depositada sobre una placa metálica, si ella se sumerge dentro de una celda electrolítica que contiene una solución acuosa Ni Cℓ 2 , por la cual pasa por una corriente de 5 A durante 10 minutos.\nDatos:\nMasa atómica: Ni=58,7\n1F=96 500C",
+      "alternatives": [
+        "0,03",
+        "0,91",
+        "1,25",
+        "1,50",
+        "2,00"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al igualar la siguiente reacción por el método del cambio de estado de oxidación, indique verdadero (V) o falso (F) en cada proposición y marque la alternativa correspondiente.\nSn (s) +HNO 3(ac) → SnO 2 (s) +NO (g) +H 2 O ( ℓ )\nI ) El coeficiente de la forma reducida es 3.\nII ) El coeficiente del agente oxidante es 4.\nIII ) Se transfieren 12 electrones.",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "FVF",
+        "VVF",
+        "FFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las reacciones químicas pueden ser del tipo oxido-reducción tal como la electrólisis de sustancias químicas y soluciones acuosas, al respecto indicar las proposiciones correctas.\nI ) Es un proceso químico no espontáneo.\nII ) Una sustancia se descompone por acción de la corriente eléctrica alterna.\nIII ) La electrólisis de NaC ℓ ( ℓ ) genera sodio (Na) y cloro(C ℓ ).",
+      "alternatives": [
+        "II y III",
+        "I y III",
+        "I y II",
+        "solo III",
+        "solo I"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la masa en gramos de producto obtenido en el cátodo y ánodo respectivamente durante la electrólisis de CuC ℓ 2(ac) , concentrada al circular una cantidad de carga eléctrica equivalente a 10 Faraday.\nPA (uma): Cu= 63,5; C ℓ =35,5; H=1; O=16",
+      "alternatives": [
+        "10 g de H 2 y 80 g de O 2",
+        "317,50 g de Cu y 355 g de C ℓ 2",
+        "10 g de H 2 y 355 g de C ℓ 2",
+        "635 g de Cu y 710 g de C ℓ 2",
+        "317,50 g de Cu y 80 g de O 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una sesión de laboratorio de electroquímica se muestra a cinco celdas electrolíticas conectadas en serie, donde ocurre la electrólisis simultánea de las soluciones concentradas, indique aquella donde solo el soluto se descompone.",
+      "alternatives": [
+        "AgNO 3(ac)",
+        "KI (ac)",
+        "KNO 3(ac)",
+        "ZnSO 4(ac)",
+        "CuC ℓ 2(ac)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre los componentes químicos que encontramos en el medioambiente: atmósfera, hidrósfera y litósfera, determine el valor de verdad (V o F) de las siguientes proposiciones:\nI. Los sulfatos, nitratos y oxidantes fotoquímicos son contaminantes primarios del aire.\nII. Los organofosforados y los policlorobifenilos son contaminantes del agua y suelo.\nIII. El aumento de NaCl en el suelo es un ejemplo de contaminación natural del suelo.\nIV. En el aire, el N 2 es muy poco reactivo, mientras el O 2 es un agente oxidante intenso.",
+      "alternatives": [
+        "VFVF",
+        "VVVV",
+        "FVVV",
+        "FFVV",
+        "FFFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/contaminacion-ambiental-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTAMINACIÓN AMBIENTAL EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante la electrólisis de suficiente cantidad de Ba Cℓ 2(ac ) con una intensidad de corriente eléctrica de 3,05 A durante 1 hora, ¿qué volumen (en litros) de gas hidrógeno, medidos a 27°C y 1 atm de presión se podrá obtener?\nMasa atómica: H=1;\n1 Faraday= 96 500 C\nR=0,082 atm·L/mol –1 ·K –1",
+      "alternatives": [
+        "7,4",
+        "0,3",
+        "1,4",
+        "4,9",
+        "3,7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sistemas-de-ecuaciones-lineales-metodo.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 FÍSICA QUÍMICA TERCERA PRUEBA RESUELTA –RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el número de oxidación de los elementos subrayados:\nC O 2\nCa 3 ( P O 4 ) 2\n( Mn O 4 ) –2\nDe cómo respuesta la suma de sus valores:",
+      "alternatives": [
+        "14",
+        "16",
+        "8",
+        "15",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-6-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una nomenclatura es la forma sistemática con la que se nombran los compuestos conforme a sus propiedades y su composición y su número de oxidación del elemento. Señale la relación formula nombre correcto.",
+      "alternatives": [
+        "C ℓ 2 O 7 : Anhídrido clórico",
+        "Mn(OH) 3 : hidróxido manganoso",
+        "H 2 SO 3 : acido sulfúrico",
+        "CuC ℓ : cloruro de cobre (I)",
+        "PbO 2 : Oxido plumboso"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-11-habilidad-logico.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA A 2024-1 PRUEBA RESUELTA CIENCIAS DE LA SALUD INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una ecuación química es una representación de una reacción, donde se especifican los reactantes y los productos. En ella se cumple la ley de la conservación de la materia, por lo cual debe estar balanceada. Con respecto a la siguiente ecuación química:\nSn (s) +HNO 3(ac) → SnO 2(ac) +NO 2(g) +H 2 O ( ℓ )\nbalancee y luego marque la secuencia correcta de verdadero (V) o falso (F).\nI) La suma de los coeficientes estequiométrico es doce.\nII) Por cada mol de estaño se transfiere cuatro moles de electrones.\nIII) El agente oxidante es el ácido nítrico y el agente reductor es el estaño",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FVV",
+        "VVF",
+        "FFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-16-2020.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2024-1 PRUEBA RESUELTA INGENIERÍAS INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al igual que en la electrólisis del cloruro de sodio (NaCℓ), metales activos como el Li, K y Ca liberan hidrógeno gaseoso (H 2 ) a partir de soluciones acuosas. En el otro electrodo, se libera cloro gaseoso (C ℓ 2 ). Identifique la afirmación correcta respecto de la electrólisis de una solución acuosa de cloruro de sodio.",
+      "alternatives": [
+        "Al ganar un electrón, el Na + se reduce y el sodio se deposita en el cátodo.",
+        "En la electrólisis, se producen la oxidación y la reducción simultáneas del agua.",
+        "Al reducirse el ion cloruro, el cloro gaseoso formado es liberado en el ánodo.",
+        "Durante la oxidación en el ánodo, se liberan dos moles de electrones.",
+        "Durante la reducción en el ánodo, se liberan dos moles de electrones."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/quimica-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La capacidad oxidante del ozono se manifiesta frente a diferentes tipos de sustancias como, por ejemplo, al oxidar los sulfuros hasta sus correspondientes sulfatos. Establezca el valor de verdad (V o F) de las afirmaciones derivadas de la siguiente reacción:\n4O 3(g) +PbS (s) → PbSO 4 (s) +4O 2(g)\nI) El número de oxidación tanto del O ₂ (g) como del O 3(g) es cero.\nII) En el sulfuro de plomo, el azufre tiene número de oxidación 2 –\nIII) En el sulfato de plomo, el azufre tiene número de oxidación 6 +",
+      "alternatives": [
+        "FVV",
+        "VVF",
+        "VVV",
+        "VFV",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/quimica-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA ÁREA A SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante la electrólisis de una sustancia en solución acuosa, es muy probable que ocurran dos reacciones de oxidación en el ánodo y dos reacciones de reducción en el cátodo; ello se debe a que el agua se oxida y también se reduce. Elija la alternativa que identifique el tipo de reacción que experimentan los componentes acuosos.\nI) 2H 2 O ( ℓ ) → O 2(g) +4H (ac) +\nII) 2H (ac) + → H 2(g)\nIII) 2H 2 O ( ℓ ) → H 2(g) +2OH (ac) –",
+      "alternatives": [
+        "Medio ácido convertido en gas hidrógeno",
+        "Reacción de oxidación del agua",
+        "Reacción de reducción con ganancia de 2e –",
+        "Ia, IIb, IIIc",
+        "Ic, IIb, IIIa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/quimica-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA ÁREA A SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Fe es un elemento que tiene la propiedad de corroerse con mucha facilidad cuando se expone a la humedad. En el sulfato ferroso se produce una reacción redox cuya reacción se denota por F e +2 → F e +3\nDetermine el equivalente gramo del sulfato ferroso.\n(Masa atómica: Fe=56; S=32; O=16).",
+      "alternatives": [
+        "38",
+        "304",
+        "76",
+        "60",
+        "152"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/quimica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para que ocurra la electrólisis la corriente debe ser :",
+      "alternatives": [
+        "Alterna",
+        "Continua",
+        "Rara",
+        "De alto voltaje",
+        "FD"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿ Cuántas horas se requieren para depositar 7 gramos de cinc en la electrólisis de Zn Cℓ 2 cuando se usan 0,7 A ?",
+      "alternatives": [
+        "4,17",
+        "6,23",
+        "9,12",
+        "8,25",
+        "5,43"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos Coulombios se requiere para producir 5,4 g de Ag por electrólisis de una solución de nitrato de plata?",
+      "alternatives": [
+        "9650",
+        "1206",
+        "3217",
+        "2412",
+        "4825"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una celda electrolítica, durante 4 horas se depositan 48g de Mg a partir de MgCO 2 . Determine la carga empleada en Faraday.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de Litio se depositan en el cátodo, cuando se realiza la electrólisis del Li Cℓ fundido, con una carga eléctrica de 5,0 ×10 3 Coulombios?",
+      "alternatives": [
+        "1,8×10 –1",
+        "1,8 ×10 –2",
+        "3,6 ×10 –1",
+        "3,6 ×10 –2",
+        "2,7 ×10 –1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de agregar ácido carbónico ( H 2 C O 3 ) al óxido de calcio (CaO) se obtiene un producto turbio acuoso de carbonato de calcio . Posteriormente, se adiciona ácido clorhídrico (H Cℓ ) produciéndose una reacción química y obteniéndose cloruro de calcio (Ca Cℓ 2 ); este cloruro se funde y a través de la electrólisis se obtiene calcio en el cátodo y cloro en el ánodo. Al respecto, indique la alternativa que contiene respectivamente la clase de materia, que se encuentra subrayado y en negrita.",
+      "alternatives": [
+        "Elemento, compuesto, elemento, mezcla y elemento",
+        "Compuesto, mezcla, mezcla, elemento y elemento",
+        "Compuesto, compuesto, mezcla, elemento y elemento",
+        "Compuesto, compuesto, mezcla, elemento y compuesto",
+        "Elemento, elemento, elemento, mezcla y elemento"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los cambios químicos son aquellos en los cuales se altera la estructura interna de la materia, es decir, rompiendo y formando nuevos enlaces químicos, mientras que en los cambios físicos no ocurren dichos procesos. Para los siguientes cambios, determine el número de cambios químicos y físicos respectivamente:",
+      "alternatives": [
+        "Oxidación del aluminio.",
+        "Sublimación del hielo seco.",
+        "Formación de hilos de plata.",
+        "Electrólisis del agua.",
+        "Volatilidad de la acetona."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cloruro de manganeso (II) es un sólido cristalino de color rosa claro, y se emplea como catalizador en reacciones de cloración para la producción del PVC utilizado en la producción de tuberías de agua. Dicha sal se puede sintetizar mediante la reacción del dióxido de manganeso y el ácido clorhídrico, según la siguiente ecuación:\nMnO 2 ( s ) + HC ℓ (ac) → Mn C ℓ 2 ( s ) + C ℓ 2 ( g ) + H 2 O ( ℓ )\nLuego de balancear dicha ecuación, indique el coeficiente del agente reductor y el coeficiente del agua, respectivamente.",
+      "alternatives": [
+        "2 y 4",
+        "2 y 2",
+        "1 y 4",
+        "4 y 2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/balance-de-ecuaciones-quimicas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BALANCE DE ECUACIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El bromuro de mercurio (II) es un sólido cristalino blanco que al reaccionar con el arsénico se convierte en un sólido amarillo, lo cual permite la detección de arsénico en aguas contaminadas. Dicha sal se puede sintetizar mediante la siguiente reacción química:\nHNO 3 (ac) +HBr (ac) +Hg ( ℓ ) → HgBr 2 (ac) +H 2 O ( ℓ ) +NO ( g )\nAl respecto, seleccione la alternativa correcta.",
+      "alternatives": [
+        "El HNO 3 es el agente reductor.",
+        "El NO es la forma oxidada.",
+        "El Hg disminuye su estado de oxidación.",
+        "El N se reduce de +5 a +2."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/balance-de-ecuaciones-quimicas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BALANCE DE ECUACIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El yodo tiene diversas aplicaciones, por ejemplo, se usa en la obtención de tinturas y colorantes, además se emplea en el campo médico para combatir bacterias e infecciones. En una planta industrial de producción de yodo se hace reaccionar el nitrito de potasio con el yoduro de potasio en presencia de ácido sulfúrico según la siguiente ecuación:\nKNO 2 (ac) + KI (ac) + H 2 SO4 (ac) → NO ( g ) + I 2 ( s ) + K 2 SO4 (ac) + H 2 O ( ℓ )\nAl respecto, determine el valor de verdad (V o F) de las siguientes proposiciones:\nI ) El nitrito de potasio es el agente oxidante.\nII ) La forma oxidada es el monóxido de nitrógeno.\nIII ) La suma de coeficientes estequiométricos es trece.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "VFF",
+        "FVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/balance-de-ecuaciones-quimicas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BALANCE DE ECUACIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica cuántas proposiciones son correctas :\n( ) En una reacción endotérmica se libera energía calorífica.\n( ) Una reacción de desplazamiento simple es una reacción REDOX.\n( ) En la semireacción\n2I –1 → I 2 + 2e – , el ión yoduro se oxida.\n( ) En una reacción REDOX, el agente oxidante gana electrones.\n( ) En las reacciones de doble desplazamiento no hay transferencia de electrones.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica cuántas proposiciones son no correctas:\n( ) La siguiente reacción química :\nC 3 H 8 + 5O 2 → 3CO 2 + 4H 2 O es de combustión completa.\n( ) En una reacción reversible existen dos sentidos de reacción que son simultáneos.\n( ) El agua se puede descomponer por electrólisis.\n( ) La masa de un catalizador permanece invariable al final de la reacción.\n( ) La reacción entre gases es siempre espontánea.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica lo que no ocurre durante un proceso REDOX:\nI) Se produce transferencia de electrones.\nII) Durante la reducción siempre se gana electrones.\nIII) El agente reductor cede electrones al agente oxidante.\nIV) La sustancia que se reduce es el agente oxidante.\nV) El agente oxidante y reductor siempre son sustancias distintas.",
+      "alternatives": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica cuáles son las proposiciones no incorrectas :\nI) La síntesis del agua constituye una reacción REDOX intermolecular.\nII) La disociación del KCℓO\nen KCℓ en KCℓO 3 es una reacción de dismutación.\nIII) Las especies\nH 2 O 2 , C ℓ 2 , NO 2 poseen un comportamiento dual es decir oxidante y reductor.\nIV) La disociación del peróxido de hidrógeno significa una reacción REDOX intramolecular.",
+      "alternatives": [
+        "I y II",
+        "I, II y III",
+        "II y IV",
+        "II, III y IV",
+        "I y IV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica cuántas proposiciones son incorrectas :\n( ) HgO → Hg+O 2 + O 2 :\nREDOX intramolecular\n( ) I 2 +KOH → KIO 3 +KI+H 2 O:\nREDOX desproporción\n( ) I 2 +C ℓ 2 → HIO 3 +HC ℓ :\nREDOX intermolecular\n( ) K+H 2 O → KOH+H 2 :\ndesplazamiento simple\n( ) H 2 + O 2 → H 2 O :\nelectrólisis",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica cuántas proposiciones son no correctas :\n( ) H 2 + O 2 → H 2 O : Electrólisis\n( ) H 2 O 2 → H 2 O + O 2 : Fotólisis con dismutación\n( ) MgO → Mg + O 2 : REDOX intramolecular.\n( ) Br 2 + KOH → KBrO 3 + KBr + H 2 O : REDOX desproporción\n( ) I 2 + C ℓ 2 + H 2 O → HIO 3 + HCℓ : REDOX intermolecular.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las siguientes reacciones indica el agente oxidante y reductor respectivamente.\nI) I 2 + H 2 O 2 → HIO 3 + H 2 O\nII) H 2 O 2 + KMnO 4 → MNO 2 + KOH + O 2 +H 2 O",
+      "alternatives": [
+        "I 2 – H 2 O 2",
+        "H 2 O 2 – KMnO 4",
+        "H 2 O 2 – H 2 O 2",
+        "I 2 – KMnO 4",
+        "I 2 – O 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El compuesto químico ácido nítrico (HNO 3 ) se emplea como reactivo de laboratorio y para fabricar explosivos como la nitroglicerina y trinitrotolueno (TNT). Dicho compuesto se puede obtener mediante la reacción del amoniaco y el ácido sulfúrico, según la siguiente ecuación:\nNH 3(ac) + H 2 SO 4(ac) → S ( s ) + HNO 3(ac) + H 2 O ( ℓ )\nLuego de balancear dicha ecuación, indique el coeficiente del agente reductor y el coeficiente del agua, respectivamente.",
+      "alternatives": [
+        "4 y 4",
+        "7 y 3",
+        "1 y 4",
+        "3 y 7",
+        "4 y 7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El yoduro cuproso (CuI) se utiliza en la siembra de nubes, es decir, modificando la cantidad o tipo de precipitación de una nube, o incluso su estructura al dispersar sustancias en la atmósfera aumentan la capacidad del agua de la nube para formar gotitas o cristales. Esta sustancia se puede obtener, mediante la siguiente reacción:\nCuSO 4(ac) + KI (ac) → CuI (ac) + I 2 ( s ) + K 2 SO 4(ac)\nCon respecto a esta reacción y su respectivo balance, seleccione el valor de verdad (V o F) de las siguientes proposiciones:\nI ) El sulfato de cobre es el agente oxidante.\nII ) La forma reducida es el yodo molecular.\nIII ) La suma de coeficientes es ocho.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "VFF",
+        "FVF",
+        "VVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F) , sobre las reacciones químicas.\n𝑖) Toda semirreacción redox genera compuestos iónicos.\n𝑖𝑖) La semirreacción de reducción consume electrones por lo que las especies que la experimentan aumenta su estado de oxidación\n𝑖𝑖𝑖) Se trata de un fenómeno químico .",
+      "alternatives": [
+        "VFV",
+        "FFV",
+        "FVF",
+        "FVV",
+        "VFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/ecuaciones-redox-ejemplos-problemas-resueltos-balanceo-reacciones-oxidacion-reduccion-examen-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES REDOX EJERCICIOS RESUELTOS DE BALANCE DE ECUACIONES MÉTODO REDOX PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas de las siguientes proposiciones son verdaderas , sobre las reacciones químicas ?\nI) En las reacciones redox las especies químicas experimentan cambios en los estados de oxidación .\nII) El agente oxidante es la especie que se oxida .\nIII) El agente reductor , luego de la reacción , se convierte en la forma oxidada .\nIV) En la semirreacción de oxidación se liberan electrones",
+      "alternatives": [
+        "3",
+        "2",
+        "5",
+        "8",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/ecuaciones-redox-ejemplos-problemas-resueltos-balanceo-reacciones-oxidacion-reduccion-examen-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES REDOX EJERCICIOS RESUELTOS DE BALANCE DE ECUACIONES MÉTODO REDOX PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El bromo se emplea en la fabricación de productos de fumigación, agentes ininflamables, productos para la purificación de aguas, colorantes, desinfectantes e insecticidas.\nEn el proceso químico mostrado, se produce bromo molecular.\nHNO 3(ac) + HBr (ac) → Br 2 ( ℓ ) + NO (g) + H 2 O ( ℓ )\nAl respecto, seleccione la alternativa correcta.",
+      "alternatives": [
+        "El HNO 3 es el agente reductor.",
+        "Se transfieren cinco moles de electrones.",
+        "La forma oxidada es el NO.",
+        "La relación molar: HNO 3 /HBr es 3.",
+        "El coeficiente de la forma reducida es 2."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/ecuaciones-redox-ejemplos-problemas-resueltos-balanceo-reacciones-oxidacion-reduccion-examen-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES REDOX EJERCICIOS RESUELTOS DE BALANCE DE ECUACIONES MÉTODO REDOX PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ácido nítrico reacciona con la mayor parte de los metales como el magnesio, la plata y el cobre. Por ejemplo, la combinación de ácido nítrico y magnesio sólido produce nitrato de magnesio y agua, con desprendimiento de dióxido de nitrógeno gaseoso de color marrón.\nSegún la siguiente ecuación que representa a la reacción:\nHNO 3(ac) + Mg ( s ) → Mg(NO 3 ) 2(ac) + NO 2 ( g ) + H 2 O ( ℓ )\nDetermine la secuencia correcta de verdad (V o F) según corresponda.\nI ) El coeficiente estequiométrico de la forma oxidada es 1.\nII ) Por cada mol de agente reductor hay 4 moles de agente oxidante.\nIII ) El magnesio gana electrones y se oxida.",
+      "alternatives": [
+        "VVF",
+        "FFF",
+        "VVV",
+        "VFV",
+        "FVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/ecuaciones-redox-ejemplos-problemas-resueltos-balanceo-reacciones-oxidacion-reduccion-examen-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES REDOX EJERCICIOS RESUELTOS DE BALANCE DE ECUACIONES MÉTODO REDOX PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El zirconio es un metal de color blanco grisáceo, brillante, duro y muy resistente a la corrosión, por lo cual se emplea en la fabricación de coronas dentales, prótesis y articulaciones artificiales. Se puede obtener, mediante la reacción representada por la siguiente ecuación:\nZrCℓ 4 ( g ) + Mg ( ℓ ) → Zr ( s ) + MgCℓ 2 ( ℓ )\nCon respecto a esta reacción y su respectivo balance, seleccione el valor de verdad (V o F) de las siguientes proposiciones.\nI ) El tetracloruro de zirconio es el agente reductor.\nII ) Se obtiene un mol de zirconio por cada cuatro moles de e– transferidos.\nIII ) La suma de coeficientes estequiométricos es cuatro.",
+      "alternatives": [
+        "VVF",
+        "FVF",
+        "VFF",
+        "VFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/ecuaciones-redox-ejemplos-problemas-resueltos-balanceo-reacciones-oxidacion-reduccion-examen-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES REDOX EJERCICIOS RESUELTOS DE BALANCE DE ECUACIONES MÉTODO REDOX PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El anhidrido sulfuroso es un gas tóxico, agente reductor muy eficiente, se usa en la industria alimentaria y vitivinícola. Al combinarse con agua forma ácido sulfuroso y este posteriormente forma oxoaniones sulfitos. Estos derivados del azufre son monitoreados por su potencial toxicidad cuando ingresan a nuestro cuerpo. Al respecto, seleccione la alternativa que contiene respectivamente las fórmulas de las especies químicas mencionadas.",
+      "alternatives": [
+        "SO – H 2 SO 2 – SO 2 2 –",
+        "SO 2 – H 2 SO 3 – SO 4 2 –",
+        "SO 3 – H 2 SO 4 – SO 3 2 –",
+        "SO 2 – H 2 SO 3 – SO 3 2 –"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/nomenclatura-inorganica-10-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS FORMACIÓN DE COMPUESTOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una reacción redox, el número total de electrones perdidos por una sustancia debe ser igual al número total de electrones ganados por otra. Marque la alternativa correcta luego de relacionar cada una de las especies con el rol que cumplen en la reacción\nZn (s) + HgO (s) → ZnO (s) + Hg (l)\nl. Zn (s)\nII. HgO (s)\nIII. ZnO (s)\nIV. Hg (l)",
+      "alternatives": [
+        "Sustancia que actúa como agente oxidante",
+        "Sustancia que desprende dos moles de electrones",
+        "Se forma cuando el Hg2+ gana dos moles de electrones",
+        "Especie que se forma cuando se oxida el cinc (Zn)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN SAN MARCOS ÁREA A 2022 II MEDICINA HUMANA SOLUCIONARIO PRUEBA DESARROLLADA ADMISIÓN UNIVERSIDAD RESPUESTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para la siguiente reacción Redox:\nFeS + HNO 3 → Fe(NO 3 ) 3 + S + H 2 O + NO\nResponder verdadero (V) o falso (F) según corresponda:\n( ) El hierro no cambia su estado de oxidación\n( ) La forma reducida es el NO\n( ) Sólo el azufre se oxida perdiendo 2e –",
+      "alternatives": [
+        "VVF",
+        "FVF",
+        "VFV",
+        "FFV",
+        "FVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/quimica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ácido sulfúrico (H 2 SO 4 ) es una sustancia corrosiva y es añadido en el agua para generar la electrólisis del agua. Si en dicha electrólisis, se aplica una intensidad de corriente de 6 amperios y se obtiene 44,8 L de cierto gas medido a condiciones normales en el ánodo, ¿cuántas horas aproximadamente han transcurrido en dicho proceso electrolítico?\nDatos: Masas molares (g/mol): O =16; H=1.",
+      "alternatives": [
+        "20",
+        "26",
+        "30",
+        "36"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2022/05/quimica-semana-12-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "quimicapdf.blogspot.com — QUÍMICA PRE SAN MARCOS SEMANA 12 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones no es correcta sobre las características de los rayos catódicos?",
+      "alternatives": [
+        "Se originan en el cátodo y se mueven hacia el ánodo.",
+        "Viajan en línea recta en ausencia de un campo eléctrico o magnético externo.",
+        "Las características de los rayos catódicos no dependen del material de los electrodos en el tubo de rayos catódicos.",
+        "Las características de los rayos catódicos dependen de la naturaleza del gas presente en el tubo de rayos catódicos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.2 MCQ 4"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuanto más positivo es el valor de E°, mayor es la tendencia de la especie a reducirse. Usando el potencial estándar de electrodo de los pares redox que se dan a continuación, determina cuál de las siguientes es el agente oxidante más fuerte. Valores de E°: Fe3+/Fe2+ = + 0.77; I2(s)/I– = + 0.54; Cu2+/Cu = + 0.34; Ag+/Ag = + 0.80V",
+      "alternatives": [
+        "Fe3+",
+        "I2(s)",
+        "Cu2+",
+        "Ag +"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep508.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.8 MCQ 2"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usando el potencial estándar de electrodo, determina el par entre el cual la reacción redox no es factible. Valores de E° (V): Fe3+/Fe2+ = + 0.77; I2/I– = + 0.54; Cu2+/Cu = + 0.34; Ag+/Ag = + 0.80 V",
+      "alternatives": [
+        "Fe y I +",
+        "Ag y Cu 3+",
+        "Fe y Cu 3+",
+        "Ag y Fe"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep508.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.8 MCQ 4"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de oxidación de un elemento en un compuesto se evalúa con base en ciertas reglas. ¿Cuál de las siguientes reglas no es correcta al respecto?",
+      "alternatives": [
+        "El número de oxidación del hidrógeno siempre es +1.",
+        "La suma algebraica de todos los números de oxidación en un compuesto es cero.",
+        "Un elemento en estado libre o no combinado tiene número de oxidación cero.",
+        "En todos sus compuestos, el número de oxidación del flúor es –1."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep508.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.8 MCQ 6"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes ordenamientos representa el número de oxidación creciente del átomo central? 2– –",
+      "alternatives": [
+        "CrO–2 , ClO3– , CrO4 , MnO4 – 2– – –",
+        "ClO3 , CrO4 , MnO4 , CrO2 105 Reacciones Redox – – – 2–",
+        "CrO2 , ClO3 , MnO4 , CrO4 2– – – –",
+        "CrO4 , MnO4 , CrO2 , ClO3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep508.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.8 MCQ 8"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El peróxido de hidrógeno es _________.",
+      "alternatives": [
+        "un agente oxidante",
+        "un agente reductor",
+        "tanto un agente oxidante como un agente reductor",
+        "ni oxidante ni reductor"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep509.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.9 MCQ 10"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El peróxido de hidrógeno se obtiene mediante la electrólisis de ______.",
+      "alternatives": [
+        "agua",
+        "ácido sulfúrico",
+        "ácido clorhídrico",
+        "peróxido de sodio fundido"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep509.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.9 MCQ 13"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El poder reductor de un metal depende de varios factores. Sugiere el factor que hace del Li el agente reductor más fuerte en solución acuosa.",
+      "alternatives": [
+        "Entalpía de sublimación",
+        "Entalpía de ionización",
+        "Entalpía de hidratación",
+        "Entalpía de ganancia electrónica"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep510.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.10 MCQ 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El agente reductor más comúnmente usado es",
+      "alternatives": [
+        "AlCl3",
+        "PbCl2",
+        "SnCl4",
+        "SnCl2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep511.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.11 MCQ 13"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones no es correcta sobre un electrodo inerte en una celda?",
+      "alternatives": [
+        "No participa en la reacción de la celda.",
+        "Proporciona una superficie para la reacción de oxidación o de reducción.",
+        "Proporciona una superficie para la conducción de electrones.",
+        "Proporciona una superficie para la reacción redox."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep503.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.3 MCQ 5"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usando los datos dados a continuación, determina el agente reductor más fuerte. Cr2O72– /Cr 3+ = 1.33V Cl2 /Cl– = 1.36V E° = 1.51V E° = – 0.74V MnO4– /Mn2+ Cr 3+ /Cr –",
+      "alternatives": [
+        "Cl",
+        "Cr",
+        "Cr3+",
+        "Mn2+ 23/04/18"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep503.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.3 MCQ 8"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usa los datos dados en la P.8 y determina cuál de los siguientes es el agente oxidante más fuerte. –",
+      "alternatives": [
+        "Cl",
+        "Mn2+ –",
+        "MnO4",
+        "Cr3+"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep503.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.3 MCQ 9"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante la carga de la batería de plomo-ácido ______________.",
+      "alternatives": [
+        "el PbSO4 del ánodo se reduce a Pb.",
+        "el PbSO4 del cátodo se reduce a Pb. 35 Electroquímica 23/04/18",
+        "el PbSO4 del cátodo se oxida a Pb.",
+        "el PbSO4 del ánodo se oxida a PbO2."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep503.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.3 MCQ 15"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un precipitado recién preparado a veces se convierte en una solución coloidal por ___________.",
+      "alternatives": [
+        "coagulación",
+        "electrólisis 65 Química de Superficies 23/04/18",
+        "difusión",
+        "peptización"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.5 MCQ 17"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la extracción de cloro mediante la electrólisis de salmuera ____________. –",
+      "alternatives": [
+        "ocurre la oxidación del ion Cl– a gas cloro. –",
+        "ocurre la reducción del ion Cl– a gas cloro.",
+        "Para la reacción global, ∆G tiene un valor negativo.",
+        "ocurre una reacción de desplazamiento."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep506.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.6 MCQ 1"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El sulfuro de mercurio(II) fue usado como pigmento rojo para pinturas de cuadros y murales. Ese pigmento, conocido como vermellón, se oscurece con el paso de los años, fenómeno cuyo origen es blanco de investigaciones. Se planteó la hipótesis de que el vermellón se descompone bajo la acción de la luz, produciendo una fina capa de mercurio metálico en la superficie. Esa reacción sería catalizada por el ion cloruro presente en la humedad del aire. WOGAN, T. Mercury's Dark Influence on Art. Disponible en: www.chemistryworld.com. Consultado el: 26 abr. 2018 (adaptado). Según la hipótesis propuesta, el ion cloruro actúa en la descomposición fotoquímica del vermellón",
+      "alternatives": [
+        "reaccionando como agente oxidante.",
+        "desplazando el equilibrio químico.",
+        "disminuyendo la energía de activación.",
+        "precipitando cloruro de mercurio.",
+        "absorbiendo la energía de la luz visible."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2018/2018_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2018 dia 2 caderno azul questão 102"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A continuación se dan los valores de E° de algunos pares redox. Con base en estos valores, elige la opción correcta. Valores de E°: Br2/Br– = + 1.90; Ag+/Ag(s) = + 0.80; Cu2+/Cu(s) = + 0.34; I2(s)/I– = + 0.54",
+      "alternatives": [
+        "Cu reducirá Br",
+        "Cu reducirá Ag –",
+        "Cu reducirá I",
+        "Cu reducirá Br2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep508.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.8 MCQ 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la metalurgia del aluminio ________________. 3+",
+      "alternatives": [
+        "El Al se oxida a Al (s).",
+        "el ánodo de grafito se oxida a monóxido de carbono y dióxido de carbono.",
+        "el estado de oxidación del oxígeno cambia en la reacción del ánodo.",
+        "el estado de oxidación del oxígeno cambia en la reacción global involucrada en el proceso."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep506.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.6 MCQ 8"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "e e + e Batería Solución acuosa de NaCl + Ánodo de carbono Diafragma de amianto Célula electroquímica En el proceso electrolítico ilustrado, el producto secundario obtenido es el",
+      "alternatives": [
+        "vapor de agua.",
+        "oxígeno molecular.",
+        "hipoclorito de sodio.",
+        "hidrógeno molecular.",
+        "cloruro de hidrógeno."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2017/2017_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2017 dia 2 caderno azul questão 95"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A continuación se da la entalpía de disociación de enlace de los enlaces E—H (E = elemento). ¿Cuál de los compuestos actuará como agente reductor más fuerte? Compuesto NH3 PH3 AsH3 SbH3 −1 ∆diss (E—H)/kJ mol 389 322 297 255",
+      "alternatives": [
+        "NH3",
+        "PH3",
+        "AsH3",
+        "SbH3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep507.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.7 MCQ 7"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El KMnO4 actúa como agente oxidante en medio alcalino. Cuando el KMnO4 alcalino se trata con KI, el ion yoduro se oxida a ____________.",
+      "alternatives": [
+        "I2 –",
+        "IO –",
+        "IO3 –",
+        "IO4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep508.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.8 MCQ 16"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Por qué no se usa HCl para acidificar el medio en las reacciones de oxidación del KMnO4 en medio ácido?",
+      "alternatives": [
+        "Tanto el HCl como el KMnO4 actúan como agentes oxidantes.",
+        "El KMnO4 oxida el HCl a Cl2, que también es un agente oxidante.",
+        "El KMnO4 es un agente oxidante más débil que el HCl.",
+        "El KMnO4 actúa como agente reductor en presencia de HCl."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep508.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.8 MCQ 21"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una celda galvánica que consta de dos semiceldas: una semicelda que contiene un electrodo de Zn (g) sumergido en una solución de Zn Cℓ 2 1M y la otra que contiene un electrodo de Mg (g) sumergido en una solución de Mg Cℓ 2 1M, las dos semiceldas se encuentran unidas por un puente salino de KCℓ saturado. Marque a alternativa que representa la ecuación química de dicha celda galvánica.\nE°(Mg 2 + /Mg)= – 2,37 V\nE°(Zn 2 + /Zn)= – 0,76 V",
+      "alternatives": [
+        "Zn Cℓ 2(ac) +Mg Cℓ 2(ac) → Mg (a) +Zn(a)+2 Cℓ 2(g)",
+        "Zn Cℓ 2(ac) +Mg(a) → Zn(a)+Mg Cℓ 2(ac)",
+        "Mg Cℓ 2(ac) +Zn(a) → Mg(a)+ZnCl2(ac)",
+        "Mg (a) +Zn(a)+2 Cℓ 2(g) → Mg Cℓ 2(ac) +Zn Cℓ 2(ac)",
+        "Mg (a) +2K Cℓ (ac) → Mg Cℓ 2(ac) +2K(a)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/quimica-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Proceso que ocurre por acción del oxígeno, que al ser liberado en el agua produce una reducción de electrones de la sustancia.",
+      "alternatives": [
+        "Disolución",
+        "Hidrólisis",
+        "Oxidación",
+        "Hidratación",
+        "Carbonatación"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/geografia-unt-examen-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOGRAFÍA UNT EXAMEN DE ADMISION A LA UNIVERSIDAD NACIONAL DE TRUJILLO RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a la corrosión, determine el valor de verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. Para que se produzca corrosión, es indispensable la presencia de oxígeno. ( )\nII. La protección catódica es un método de protección muy empleado; utiliza un metal de alto potencial de oxidación llamado cátodo de sacrificio. ( )\nIII. La corrosión puede disminuir al sumergir la pieza a proteger en una solución reductora de baja concentración. ( )\nMarque la alternativa que contenga la secuencia correcta.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFV",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-8-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Balancear en medio ácido y calcular la suma de sus coeficientes\nMn 4 – + C 2 H 2 → Mn 2 + + CO 2",
+      "alternatives": [
+        "15",
+        "19",
+        "17",
+        "21",
+        "13"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unica-pdf-ica.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN LUIS GONZAGA 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNICA 2026 TEMARIO VACANTES PROSPECTO ESTRUCTURA PUNTAJES CRONOGRAMA ÁREAS A B C PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el antiguo Perú, el oro, la plata y el cobre no desempeñaron un rol protagónico en la economía; su utilización estuvo más bien orientada a la práctica religiosa. Actualmente, en su extracción, se puede emplear procesos como la amalgamación, cianuración, flotación, tostación, etc., los cuales pueden contaminar el medio ambiente.\nRelacione correctamente los constituyentes de las siguientes columnas:\nI. Oro\nII. Plata\nIII. Cobre",
+      "alternatives": [
+        "Usado antiguamente para el culto del Sol.",
+        "Se somete a lixiviación ácida y refinación electrolítica.",
+        "Se extrae por cianuración en medio alcalino.",
+        "Ib, IIc, IIIa",
+        "Ib, IIa, IIIc"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/simulacro-presencial-san-marcos-2018-i.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO SAN MARCOS 2027 I INGRESO UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El niquelado es un proceso mediante el cual los objetos metálicos obtienen un fino acabado, además sirve de protección contra la corrosión.\nCuando un objeto es sumergido en una solución de NiCI ₂ , se depositan sobre este 2,95 g de Ni. Determine el volumen, en L, del gas producido en el ánodo, medidos a C.N.\nDatos: Masas atómicas: Cl = 35,5; Ni =59",
+      "alternatives": [
+        "2,24",
+        "3,36",
+        "0,56",
+        "1,12",
+        "4,48"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Tercera-prueba-uni-solucionario-examen-admision-universidad-ingenieria-fisica-quimica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA QUÍMICA EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA TERCERA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La masa de plata, expresada en gramos, depositada sobre el collar es:",
+      "alternatives": [
+        "1,6",
+        "2,0",
+        "4,0",
+        "6,7",
+        "9,6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de faradios que circulan en el mencionado proceso electroquímico es:",
+      "alternatives": [
+        "0,019",
+        "0,108",
+        "0,361",
+        "0,540",
+        "1,800"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El alcohol yodado mancha la ropa en el l 2 (s) cuando está disuelto en Kl alcohólico, esta se puede limpiar sin usar detergente con una solución de sulfitos (SO 3 ) 2 – que lo reduce a ion I ₋ en medio básico, según la ecuación:\nI 2 + [SO 3 ] 2 – → [SO 4 ] 2 – + I –\nCalcula el número de electrones por cada 10 moles de I ₂ reducido.",
+      "alternatives": [
+        "5",
+        "10",
+        "20",
+        "12",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematicas-1-de-secundaria-texto-de.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA I UNCP 2027 INGRESO MEDICINA ENFERMERÍA UNIVERSIDAD DEL CENTRO DESARROLLO CLAVES DE RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los recubrimientos tienen diferentes funciones: decorativos, anticorrosivos, antifricción y protectores de soldadura. Un recubrimiento de plomo se obtiene al sumergir una pieza soldada en una solución acuosa de iones Pb 2+ por un tiempo de 2000 s y con una intensidad de corriente de 4,825 A. Calcule la masa (en g) de plomo depositado sobre la pieza metálica.\nMasa atómica: Pb = 208, F = 96 500 C/mol",
+      "alternatives": [
+        "8,4",
+        "9,4",
+        "10,4",
+        "11,4",
+        "12,4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-11-educacion-fisica-experiencia-6-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La corrosión de un metal es un proceso espontáneo a temperatura ambiente.\nAl respecto, ¿cuáles de las siguientes proposiciones son correctas?\nI. La corrosión implica un proceso de oxidación reducción.\nII. En algunos casos, la corrosión del metal forma una capa protectora que disminuye el proceso de corrosión.\nIII. El daño estructural por efectos de la corrosión tiene una alta repercusión económica.",
+      "alternatives": [
+        "solo I",
+        "I y III",
+        "solo III",
+        "I y II",
+        "I, II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/prueba-de-quimica-ingreso-universidad.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO DE QUÍMICA UNI DESARROLLADO PRUEBA DE ENSAYO DE EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una posible solución a la contaminación relacionada a los gases emanados por los motores de los autos es el uso de celdas de combustible H 2 -O 2 . Al respecto, ¿cuáles de las siguientes proposiciones son correctas?\nI. En la celda se producen reacciones de oxidación-reducción.\nII. La celda produce agua como producto.\nIII. La celda produce principalmente energía térmica.",
+      "alternatives": [
+        "I y II",
+        "I y III",
+        "II y III",
+        "solo II",
+        "solo III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/prueba-de-quimica-ingreso-universidad.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO DE QUÍMICA UNI DESARROLLADO PRUEBA DE ENSAYO DE EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se electroliza agua con una corriente de 0,5A. Entonces, los volúmenes de O 2 e H 2 a condiciones de presión y temperatura normales son, respectivamente: (F=96487C)\n(2H 2 O → O 2(g) + 4H+ + 4e)",
+      "alternatives": [
+        "103,2 ml y 205,0 ml",
+        "103,7 ml y 204,3 ml",
+        "104,5 ml y 209,0 ml",
+        "106,4 ml y 210,0 ml",
+        "108,4 ml y 215,0 ml"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/ecuaciones-diferenciales-exactas-con.html",
+      "sourceName": "matematicasn.blogspot.com — TERCER SUMATIVO CEPUNT SALUD ÁREA A INGRESO DIRECTO UNIVERSIDAD RESUELTO CLAVES DE RESPUESTAS PREGUNTAS 2027 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tres celdas conectadas en serie que contienen CuS O 4 , AgN O 3 , y A ℓ C ℓ 3 , respectivamente, se electrolizan a las mismas condiciones. Si en la segunda celda se depositan 0,25 g de Ag, entonces los miligramos de Cu y A ℓ que se depositarán en las otras celdas, respectivamente, son:\n(P.A.: Cu=63,5; Ag=108; Aℓ=27)",
+      "alternatives": [
+        "20,6 y 70,5",
+        "28,5 y 75,2",
+        "51,5 y 28,3",
+        "71,3 y 35,5",
+        "73,5 y 20,8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes semirreacciones representa el proceso de oxidación?",
+      "alternatives": [
+        "Fe 3+ → Fe 0",
+        "Mn 7+ → Mn 2+",
+        "N 5+ → N 4+",
+        "Mg 2+ → Mg 0",
+        "Sn 2+ → Sn 4+"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-y-cocientes-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO UNC 2027 INGRESO UNIVERSIDAD DE CAJAMARCA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para realizar un proceso de electrodeposición en un objeto, este se introduce en una solución que posee un catión metálico divalente durante 1000s con una corriente de 5A, depositándose 1,53 g del metal. Determine qué metal se deposita en el objeto.\nMasas atómicas:\nNi = 59; Cu = 63,5; Zn = 65; Cr= 52; Fe=56",
+      "alternatives": [
+        "Fe",
+        "Cu",
+        "Zn",
+        "Ni",
+        "Cr"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El hierro o fierro elemento químico sólido, gris plateado resaltándose por el brillo metálico; pero expuesto al ambiente húmedo cambia de color y deja de brillar debido a la formación de óxidos FeO y Fe 2 O 3 . Al respecto indique la secuencia correcta de verdad (V) o falsedad (F).\nI) Ambos óxidos son compuestos diatómicos\nII) El hierro es una sustancia simple\nIII) La formación de óxidos son fenómenos químicos",
+      "alternatives": [
+        "FVV",
+        "FFV",
+        "VVV",
+        "VVF",
+        "VFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una muestra de agua acidulada para realizar un proceso electrolítico, siendo sometido el sistema a una carga total de 40 Faraday; en dicho proceso, se obtienen gases en cada electrodo como producto de la reducción y oxidación, los cuales están bajo condiciones normales (C.N.). Calcule los gramos del gas liberado en la zona catódica y el volumen en litros liberado en la zona anódica, respectivamente.\nDatos: Pesos atómicos: H=1, O=16",
+      "alternatives": [
+        "10 y 224",
+        "20 y 448",
+        "20 y 112",
+        "40 y 224",
+        "40 y 112"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/quimica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se hace circular una corriente de 60 A durante 3,86 ×10 –3 segundos, a través de una solución que contiene cloruro de magnesio fundido (ecuación química:\nMgC ℓ 2 ( ℓ ) → Mg ( ℓ ) + C ℓ 2(g)\nLa masa de magnesio en gramos y el volumen de cloro, a condiciones normales, obteniendo en mililitros, respectivamente, es:\nDatos: Peso atómico Mg = 24; cloro = 35,5",
+      "alternatives": [
+        "57,6 – 2,68 ×10 4",
+        "14,4 – 2,68 ×10 4",
+        "28,8 – 2,68 ×10 4",
+        "28,8 – 5,36 ×10 3",
+        "14,4 – 5,36 ×10 3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-quimica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS QUÍMICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se pasaron 1500 C por una solución de nitrato de aluminio\n¿ Cuál es la masa de aluminio que se deposita en el cátodo ?",
+      "alternatives": [
+        "0,12 g",
+        "0,13 g",
+        "0,14 g",
+        "0,15 g",
+        "0,16 g"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿ Qué ocurre en el ánodo ?",
+      "alternatives": [
+        "Oxidación",
+        "Reducción",
+        "Ambos",
+        "Ninguno",
+        "FD."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿ Qué ocurre en el cátodo ?",
+      "alternatives": [
+        "Oxidación",
+        "Reducción",
+        "Ambos",
+        "Ninguno",
+        "FD."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el volumen de oxígeno en litros a C.N. que se desprende al electrolizar agua por el paso de 5 F.",
+      "alternatives": [
+        "7",
+        "14",
+        "28",
+        "42",
+        "56"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la intensidad de la corriente que en 96,5 segundos deposita 1,2 mg de plata ?",
+      "alternatives": [
+        "0,011 A",
+        "21,20 A",
+        "0,220 A",
+        "84,65 A",
+        "8,80 A"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿ Cuántos faraday deben pasar por una solución electrolítica para liberar 10 g de hidrógeno ?.",
+      "alternatives": [
+        "10 F",
+        "20 F",
+        "30 F",
+        "40 F",
+        "50 F"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el tiempo necesario para que pasen 40000 coulomb por un baño electrolítico que usa una corriente de 4 amperes.",
+      "alternatives": [
+        "10 s",
+        "102 s",
+        "103 s",
+        "104 s",
+        "105 s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la intensidad de corriente que debe circular por una solución de AgNO 3 durante 1 hora para obtener 108 g de plata .",
+      "alternatives": [
+        "26,8 A",
+        "13,4 A",
+        "53,6 A",
+        "28,5 A",
+        "23,7 A"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿ Cuántos gramos de aluminio se depositan electrolíticamente a partir de una solución que contiene Aℓ(3 + ) en una hora por el paso de 10 ampere?",
+      "alternatives": [
+        "2,34 g",
+        "1,34 g",
+        "0,16 g",
+        "0,78 g",
+        "3,35 g"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿ Cuánto tiempo necesita una corriente de 1,985 ampere para depositar 4 g de plata ?.\nm.A (Ag)=108",
+      "alternatives": [
+        "45 s",
+        "30 min",
+        "5 min",
+        "58 min",
+        "23 min"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se hace circular corriente eléctrica a través de dos celdas electrolíticas comunicadas entre si; en una se obtiene 2g de Ag. ¿Cuántos gramos de Cu (II) se obtiene en la otra celda?",
+      "alternatives": [
+        "2,00",
+        "1,18",
+        "0,59",
+        "1,00",
+        "0,30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de Cu se obtienen a partir de una solución de CuC, al pasar una corriente de 5A durante 2,5 horas?",
+      "alternatives": [
+        "29,06",
+        "28,61",
+        "30,61",
+        "28,91",
+        "29,61"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tiosulfato reacciona de manera diferente con el yodo y el bromo en las reacciones que se dan a continuación: 2– 2– – 2S2O3 + I2 → S4O6 + 2I 2– 2– – + S2O3 + 2Br2 + 5H2O → 2SO4 + 2Br + 10 H ¿Cuál de las siguientes afirmaciones justifica el comportamiento dual del tiosulfato mencionado arriba?",
+      "alternatives": [
+        "El bromo es un oxidante más fuerte que el yodo.",
+        "El bromo es un oxidante más débil que el yodo.",
+        "El tiosulfato sufre oxidación por el bromo y reducción por el yodo en estas reacciones.",
+        "El bromo sufre oxidación y el yodo sufre reducción en estas reacciones."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep508.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.8 MCQ 5"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En cuál de los siguientes compuestos un elemento presenta dos estados de oxidación diferentes?",
+      "alternatives": [
+        "NH2OH",
+        "NH4NO3",
+        "N2H4",
+        "N3H"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep508.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.8 MCQ 7"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué celda medirá el potencial estándar de electrodo del electrodo de cobre? +",
+      "alternatives": [
+        "Pt (s) H2 (g,0.1 bar) H (aq.,1 M) Cu2+(aq.,1M) Cu +",
+        "Pt(s) H2 (g, 1 bar) H (aq.,1 M) Cu2+ (aq.,2 M) Cu +",
+        "Pt(s) H2 (g, 1 bar) H (aq.,1 M) Cu2+ (aq.,1 M) Cu +",
+        "Pt(s) H2 (g, 1 bar) H (aq.,0.1 M) Cu2+ (aq.,1 M) Cu"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep503.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.3 MCQ 1"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia entre los potenciales de electrodo de dos electrodos, cuando no circula corriente a través de la celda, se llama ___________.",
+      "alternatives": [
+        "Potencial de celda",
+        "Fem de la celda",
+        "Diferencia de potencial",
+        "Voltaje de la celda"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep503.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.3 MCQ 4"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones sobre las soluciones de electrolitos no es correcta?",
+      "alternatives": [
+        "La conductividad de la solución depende del tamaño de los iones.",
+        "La conductividad depende de la viscosidad de la solución.",
+        "La conductividad no depende de la solvatación de los iones presentes en la solución.",
+        "La conductividad de la solución aumenta con la temperatura."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep503.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.3 MCQ 7"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La constante de celda de una celda de conductividad _____________.",
+      "alternatives": [
+        "cambia con el cambio de electrolito.",
+        "cambia con el cambio de concentración del electrolito.",
+        "cambia con la temperatura del electrolito.",
+        "permanece constante para una celda."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep503.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.3 MCQ 14"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al añadir H2SO4 concentrado a una sal de cloruro, se desprenden humos incoloros, pero en el caso de una sal de yoduro, salen humos violetas. Esto se debe a que",
+      "alternatives": [
+        "el H2SO4 reduce el HI a I2",
+        "el HI es de color violeta",
+        "el HI se oxida a I2",
+        "el HI se transforma en HIO3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep507.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.7 MCQ 1"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un compuesto negro de manganeso reacciona con un ácido halogenhídrico para dar un gas amarillo verdoso. Cuando un exceso de este gas reacciona con NH3 se forma un trihaluro inestable. En este proceso, el estado de oxidación del nitrógeno cambia de _________.",
+      "alternatives": [
+        "– 3 a +3",
+        "– 3 a 0",
+        "– 3 a +5",
+        "0 a – 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep507.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.7 MCQ 23"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando se añade una solución de KMnO4 a una solución de ácido oxálico, la decoloración es lenta al principio pero se vuelve instantánea después de un tiempo porque",
+      "alternatives": [
+        "se forma CO2 como producto.",
+        "la reacción es exotérmica.",
+        "el MnO4– cataliza la reacción.",
+        "el Mn2+ actúa como autocatalizador."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep508.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.8 MCQ 9"
     }
   ]
 }

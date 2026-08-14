@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar el valor de $k$ para que la suma de las raíces de la ecuación $2k x^2 = (12x + 1)x + 12$ sea igual a $7$.",
-      "alternatives": ["1/3", "1/2", "2/3", "3/2", "2/5"],
+      "alternatives": [
+        "1/3",
+        "1/2",
+        "2/3",
+        "3/2",
+        "2/5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_6.html",
       "sourceName": "matematicasn — Ecuaciones de segundo grado, ejercicios resueltos (preuniversitario), problema 1 (clave B)"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si las edades de los gemelos BA y BE están dadas por las soluciones de la ecuación $x^2 - (3m + 3)x + 2m + 7 = 0$, con $m > 0$, determine la suma de sus edades.",
-      "alternatives": ["4 años", "6 años", "8 años", "10 años", "12 años"],
+      "alternatives": [
+        "4 años",
+        "6 años",
+        "8 años",
+        "10 años",
+        "12 años"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_6.html",
       "sourceName": "matematicasn — Ecuaciones de segundo grado, ejercicios resueltos (preuniversitario), problema 2 (clave B)"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Fedhy compra cierto número de cuadernos del mismo precio, por los que paga 120 soles. Si cada cuaderno costara S/ 2 menos, hubiese comprado 2 cuadernos más (gastando la misma cantidad de dinero). ¿Cuánto le costó a Fedhy cada cuaderno?",
-      "alternatives": ["S/ 12", "S/ 14", "S/ 16", "S/ 20", "S/ 24"],
+      "alternatives": [
+        "S/ 12",
+        "S/ 14",
+        "S/ 16",
+        "S/ 20",
+        "S/ 24"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_6.html",
       "sourceName": "matematicasn — Ecuaciones de segundo grado, ejercicios resueltos (preuniversitario), problema 3 (clave A)"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un deportista apuesta a tirar al blanco con la condición de que por cada tiro que acierta recibirá 18 dólares y por cada tiro que falla pagará 12 dólares. Si después de 25 tiros obtuvo de ganancia tantos dólares como el producto de los tiros que acertó y falló, ¿cuántos tiros dio en el blanco?",
-      "alternatives": ["11", "12", "15", "17", "20"],
+      "alternatives": [
+        "11",
+        "12",
+        "15",
+        "17",
+        "20"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_6.html",
       "sourceName": "matematicasn — Ecuaciones de segundo grado, ejercicios resueltos (preuniversitario), problema 4 (clave C)"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Thiago es delegado del equipo de fulbito del hijo menor y se requieren $2(a+b)(a-b)$ soles con aportes iguales por cada padre. Cuando $(a-b)$ padres no asisten, los padres restantes deben pagar $(a+b)$ soles más cada uno. ¿Cuántos padres al inicio iban a aportar para los gastos del partido? (siendo $a > b > 0$).",
-      "alternatives": ["(a+b)", "(a-b)", "2(a+b)", "2(a-b)", "(2a+b)"],
+      "alternatives": [
+        "(a+b)",
+        "(a-b)",
+        "2(a+b)",
+        "2(a-b)",
+        "(2a+b)"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_6.html",
       "sourceName": "matematicasn — Ecuaciones de segundo grado, ejercicios resueltos (preuniversitario), problema 5 (clave D)"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En la clase de Álgebra, el profesor escribe en la pizarra la ecuación $x^2 + 5x - 3 = 0$ y pide a sus alumnos que hallen una ecuación cuadrática que tenga como raíces a los cuadrados de las raíces de la ecuación indicada.",
-      "alternatives": ["x² – 9x + 31 = 0", "x² – 31x + 9 = 0", "x² + 31x + 9 = 0", "x² – 31x – 9 = 0", "x² + 9x – 31 = 0"],
+      "alternatives": [
+        "x² – 9x + 31 = 0",
+        "x² – 31x + 9 = 0",
+        "x² + 31x + 9 = 0",
+        "x² – 31x – 9 = 0",
+        "x² + 9x – 31 = 0"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
       "sourceName": "matematicasn — San Marcos Álgebra, problemas resueltos de admisión, pregunta 5 (clave B)"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El valor numérico que representa el precio de una mascarilla KN95 satisface la ecuación $x^4 = 74x^2 - 1225$. Determine la suma del mayor y del menor valor en soles que podría costar una mascarilla KN95.",
-      "alternatives": ["10", "14", "11", "12", "15"],
+      "alternatives": [
+        "10",
+        "14",
+        "11",
+        "12",
+        "15"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
       "sourceName": "matematicasn — San Marcos Álgebra, problemas resueltos de admisión, pregunta 10 (clave D)"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $\\beta$ es solución de la ecuación $x^2 + 2x - 1 = 0$, halle el valor de $N = \\beta^2 + \\dfrac{1}{\\beta^2}$.",
-      "alternatives": ["2", "4", "5", "6", "8"],
+      "alternatives": [
+        "2",
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://pdfcoffee.com/01-algebra-aduni-2020-2-pdf-free.html",
       "sourceName": "ADUNI Álgebra 2020 — Semana 13, práctica dirigida, problema 1 (clave D)"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $m$ es solución de $x^2 - 3x + 1 = 0$, determine $m^2 + \\dfrac{1}{m^2}$.",
-      "alternatives": ["7", "5", "9", "11", "3"],
+      "alternatives": [
+        "7",
+        "5",
+        "9",
+        "11",
+        "3"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://pdfcoffee.com/01-algebra-aduni-2020-2-pdf-free.html",
       "sourceName": "ADUNI Álgebra 2020 — Semana 14, práctica domiciliaria, problema 1 (clave A)"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea la ecuación $3x^2 - 5x - 7 = 0$ con conjunto solución $\\{\\alpha,\\, \\beta\\}$. Determine $\\dfrac{\\alpha}{\\beta} + \\dfrac{\\beta}{\\alpha}$.",
-      "alternatives": ["-4/21", "-3/7", "1/7", "-12/21", "-67/21"],
+      "alternatives": [
+        "-4/21",
+        "-3/7",
+        "1/7",
+        "-12/21",
+        "-67/21"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://es.slideshare.net/slideshow/aduni-repaso-algebra-1/52361142",
       "sourceName": "ADUNI Repaso Álgebra 1 — Semana 2, problema 4 (clave E)"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Luego de resolver $x^4 + 3x^3 - x^2 - 3x = 0$, indique la suma de soluciones no positivas.",
-      "alternatives": ["-1", "-2", "-3", "-4", "-5"],
+      "alternatives": [
+        "-1",
+        "-2",
+        "-3",
+        "-4",
+        "-5"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://es.slideshare.net/slideshow/aduni-repaso-algebra-1/52361142",
       "sourceName": "ADUNI Repaso Álgebra 1 — Semana 2, problema 5 (clave D)"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En la ecuación $x^2 - 2(n+1)x + 5n = 0$, con $n \\in \\mathbb{R}$, determine la suma de los valores de $n$ para los cuales la ecuación tiene raíces reales iguales.",
-      "alternatives": ["2", "-1", "-2", "1", "3"],
+      "alternatives": [
+        "2",
+        "-1",
+        "-2",
+        "1",
+        "3"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://es.slideshare.net/slideshow/aduni-repaso-algebra-1/52361142",
       "sourceName": "ADUNI Repaso Álgebra 1 — Semana 2, problema 9 (clave E)"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dada la ecuación $x^2 - 3x + 5 = 0$ de raíces $a$ y $b$, construya la ecuación cuadrática cuyas raíces son $(3a - 1)$ y $(3b - 1)$.",
-      "alternatives": ["x² – 3x + 1 = 0", "x² – 7x + 1 = 0", "x² – 33x + 7 = 0", "x² – 7x + 37 = 0", "x² – 5x + 1 = 0"],
+      "alternatives": [
+        "x² – 3x + 1 = 0",
+        "x² – 7x + 1 = 0",
+        "x² – 33x + 7 = 0",
+        "x² – 7x + 37 = 0",
+        "x² – 5x + 1 = 0"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://es.slideshare.net/slideshow/aduni-repaso-algebra-1/52361142",
       "sourceName": "ADUNI Repaso Álgebra 1 — Semana 2, problema 10 (clave D)"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Las ecuaciones $x^2 - 5x + a = 0$ y $x^2 - ax + 8 = 0$, con $a \\in \\mathbb{Z}^+$, tienen una raíz común $b$ donde $1 < b < 3$. Determine $a$.",
-      "alternatives": ["2", "4", "6", "8", "16"],
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "16"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://es.slideshare.net/slideshow/aduni-repaso-algebra-1/52361142",
       "sourceName": "ADUNI Repaso Álgebra 1 — Semana 2, problema 12 (clave C)"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dadas las ecuaciones $3x^2 - 7x + 2 = 0$ y $3x^2 - 4x + 1 = 0$, determine la suma de las raíces no comunes.",
-      "alternatives": ["2", "5", "3", "4", "1"],
+      "alternatives": [
+        "2",
+        "5",
+        "3",
+        "4",
+        "1"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://pdfcoffee.com/01-algebra-aduni-2020-2-pdf-free.html",
       "sourceName": "ADUNI Álgebra 2020 — Semana 14, práctica domiciliaria, problema 8 (clave C)"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determinar el valor de $k$ si una de las raíces de la ecuación $x^2 - 7x + k = 0$ es igual a $3$.",
-      "alternatives": ["9", "10", "11", "12", "13"],
+      "alternatives": [
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
       "sourceName": "UNFV CEPREVI — Álgebra, Unidad 12: Ecuaciones de segundo grado, problema 3 (claves: 03d)"
@@ -182,7 +278,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar $k$ para que las raíces de la ecuación $x^2 + kx + 8 = k$ sean iguales, siendo $k > 0$.",
-      "alternatives": ["-8", "4", "-6", "10", "13"],
+      "alternatives": [
+        "-8",
+        "4",
+        "-6",
+        "10",
+        "13"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
       "sourceName": "UNFV CEPREVI — Álgebra, Unidad 12: Ecuaciones de segundo grado, problema 7 (claves: 07b)"
@@ -193,7 +295,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar $n$ en la ecuación $9x^2 - 18(n-1)x - 8n + 24 = 0$, si una raíz es el doble de la otra.",
-      "alternatives": ["2", "-2", "0", "1", "3"],
+      "alternatives": [
+        "2",
+        "-2",
+        "0",
+        "1",
+        "3"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
       "sourceName": "UNFV CEPREVI — Álgebra, Unidad 12: Ecuaciones de segundo grado, problema 11 (claves: 11a)"
@@ -204,7 +312,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular el valor de $m$ en la ecuación $(m-1)x^2 + (3m+12)x - (3m+6) = 0$, si sus raíces son opuestas.",
-      "alternatives": ["2", "-2", "4", "-4", "3"],
+      "alternatives": [
+        "2",
+        "-2",
+        "4",
+        "-4",
+        "3"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
       "sourceName": "UNFV CEPREVI — Álgebra, Unidad 12: Ecuaciones de segundo grado, problema 16 (claves: 16d)"
@@ -215,7 +329,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si $x_1$ y $x_2$ son las raíces de $x^2 + 5x + 1 = 0$, calcular $E = (x_1 + x_2)^2 - 2x_1 x_2$.",
-      "alternatives": ["20", "21", "23", "24", "25"],
+      "alternatives": [
+        "20",
+        "21",
+        "23",
+        "24",
+        "25"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/naturaleza-de-las-ecuaciones-de-2do-grado/13399357",
       "sourceName": "SlideShare — Naturaleza de las Ecuaciones de 2do Grado, problema 3 (clave C)"
@@ -226,7 +346,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar $m$ si la suma de raíces de la ecuación $(m-2)x^2 - (m+5)x + 8 = 0$ es igual a $10$.",
-      "alternatives": ["25", "25/9", "9/25", "1/4", "N.A."],
+      "alternatives": [
+        "25",
+        "25/9",
+        "9/25",
+        "1/4",
+        "N.A."
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/naturaleza-de-las-ecuaciones-de-2do-grado/13399357",
       "sourceName": "SlideShare — Naturaleza de las Ecuaciones de 2do Grado, problema 4 (clave B)"
@@ -237,7 +363,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En la ecuación $3x^2 + 2ax + a^2 - 6 = 0$, ¿para qué valor de $a$ las raíces serán iguales?",
-      "alternatives": ["±1", "±2", "±3", "±4", "N.A."],
+      "alternatives": [
+        "±1",
+        "±2",
+        "±3",
+        "±4",
+        "N.A."
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/naturaleza-de-las-ecuaciones-de-2do-grado/13399357",
       "sourceName": "SlideShare — Naturaleza de las Ecuaciones de 2do Grado, problema 6 (clave C)"
@@ -248,7 +380,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si el conjunto solución de la ecuación cuadrática $x^2 - (a+3)x + 12 = 0$ es $\\{a,\\, b\\}$, indique la ecuación cuadrática de raíces $2a$ y $2b$.",
-      "alternatives": ["x² + 4x + 1 = 0", "2x² – 14x + 1 = 0", "x² – 10x + 1 = 0", "x² – 14x + 48 = 0", "x² + 14x – 48 = 0"],
+      "alternatives": [
+        "x² + 4x + 1 = 0",
+        "2x² – 14x + 1 = 0",
+        "x² – 10x + 1 = 0",
+        "x² – 14x + 48 = 0",
+        "x² + 14x – 48 = 0"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
       "sourceName": "matematicasn — Práctica de ecuación cuadrática test con claves, problema 3 (clave D)"
@@ -259,7 +397,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si la ecuación $2x^2 - 6x + (n+1) = 0$ presenta raíces reales, calcule el mayor valor entero de $n$.",
-      "alternatives": ["1", "4", "2", "3", "0"],
+      "alternatives": [
+        "1",
+        "4",
+        "2",
+        "3",
+        "0"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
       "sourceName": "matematicasn — Práctica de ecuación cuadrática test con claves, problema 4 (clave D)"
@@ -270,7 +414,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Porty va a comprar dos libros: uno de álgebra a $(m-5)$ soles y otro de geometría a $(n-3)$ soles, donde $m$ es la suma de los cuadrados de las soluciones de $(x-3)(x-4) - 16 = 0$ y $n$ es el cuadrado de la diferencia de dichas soluciones. Si paga con $(n - m + 4)$ billetes de $10$ soles, ¿cuánto recibió de vuelto?",
-      "alternatives": ["S/ 3", "S/ 4", "S/ 6", "S/ 8", "S/ 10"],
+      "alternatives": [
+        "S/ 3",
+        "S/ 4",
+        "S/ 6",
+        "S/ 8",
+        "S/ 10"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
       "sourceName": "matematicasn — Práctica de ecuación cuadrática test con claves, problema 2 (clave C)"
@@ -281,7 +431,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Las edades de mi abuelo Euclides y las de su nieto están dadas por las soluciones de la ecuación $8^3 = (72 - x)(16 - x)$. El valor de cada boleto en dólares era la semisuma de dichos números. ¿Cuánto costó cada boleto?",
-      "alternatives": ["$ 44", "$ 55", "$ 66", "$ 77", "$ 88"],
+      "alternatives": [
+        "$ 44",
+        "$ 55",
+        "$ 66",
+        "$ 77",
+        "$ 88"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
       "sourceName": "matematicasn — Práctica de ecuación cuadrática test con claves, problema 5 (clave A)"
@@ -292,7 +448,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle la suma de los valores de $n$ que hacen que la ecuación $2ax(ax + nc) + (n^2 - 2)c^2 = 0$ (con $a \\cdot c \\neq 0$) tenga soluciones iguales.",
-      "alternatives": ["2", "4", "0", "1", "3"],
+      "alternatives": [
+        "2",
+        "4",
+        "0",
+        "1",
+        "3"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
       "sourceName": "matematicasn — Ecuación cuadrática ejercicios resueltos, problema 8 (clave C)"
@@ -303,7 +465,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Resuelva $nx^2 - 5x + 1 = 0$ sabiendo que su discriminante es igual a $1$. Indique el conjunto solución.",
-      "alternatives": ["{ 2 ; 1/3 }", "{ 1/2 ; 1/3 }", "{ 2 ; 6 }", "{ 1 ; 5 }", "{ 3 ; 1/6 }"],
+      "alternatives": [
+        "{ 2 ; 1/3 }",
+        "{ 1/2 ; 1/3 }",
+        "{ 2 ; 6 }",
+        "{ 1 ; 5 }",
+        "{ 3 ; 1/6 }"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
       "sourceName": "matematicasn — Ecuación cuadrática ejercicios resueltos, problema 2 (clave B)"
@@ -314,10 +482,3099 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Por la venta de $x$ departamentos se genera un ingreso $I(x) = 2x^2$ (miles de soles). Si los costos están modelados por $C(x) = 3x^2 - 26x + 120$ (miles de soles), determine la utilidad máxima.",
-      "alternatives": ["S/ 35 000", "S/ 45 000", "S/ 49 000", "S/ 13 000", "S/ 30 000"],
+      "alternatives": [
+        "S/ 35 000",
+        "S/ 45 000",
+        "S/ 49 000",
+        "S/ 13 000",
+        "S/ 30 000"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
       "sourceName": "matematicasn — Ecuación cuadrática ejercicios resueltos, problema 11 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si Merko compró una casaca al precio de (a+b)² soles y una camisa al precio de (6 – ab) soles donde a y b son soluciones de la ecuación (x – 5)(x – 7) – 99=0, ¿cuánto gastó Merko , por la compra de ambas prendas de vestir?",
+      "alternatives": [
+        "207 soles",
+        "470 soles",
+        "214 soles",
+        "310 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — ECUACIONES DE SEGUNDO GRADO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El promedio aritmético de los valores enteros que toma k, para que la ecuación cuadrática x² – (k – 4)x+k – 4=0 tenga soluciones no reales, es el número de alumnos que aprobaron el curso de Matemática Básica. Si el total de alumnos que llevaron dicho curso es el quíntuplo del menor valor entero que toma k, ¿cuántos no aprobaron dicho curso?",
+      "alternatives": [
+        "13",
+        "15",
+        "20",
+        "19"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — ECUACIONES DE SEGUNDO GRADO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a²x²+4abx+1=0... (*) tiene soluciones reales y diferentes, y bx²+2x+a=0... (**) tiene soluciones reales e iguales con a y b ∈ ℤ + , determine el valor de verdad de las proposiciones en el orden respectivo.\nI. La suma de las soluciones de la ecuación (*) es 4.\nII. El conjunto solución de la ecuación (**) es { – 1 }\nIII. ab = 1.\nIV. El producto delas soluciones de la ecuación (*) es – 1.",
+      "alternatives": [
+        "FFVF",
+        "FFVV",
+        "FFFV",
+        "FVVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — ECUACIONES DE SEGUNDO GRADO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la ecuación cuadrática:\nafirmamos:\nI. Si la suma de sus raíces es igual a su producto, entonces b+c=0.\nII. Si una raíz es la negativa de la otra, entonces b=0.\nIII. Si una raíz es doble de la otra, entonces",
+      "alternatives": [
+        "Las 3 afirmaciones son verdaderas.",
+        "Solo I y II son verdaderas.",
+        "Solo I y III son verdaderas.",
+        "Solo II y III son verdaderas.",
+        "Solo II es verdadera."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/productos-notables-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — PRODUCTOS NOTABLES EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a y b son las soluciones de la ecuación cuadrática\nCalcule",
+      "alternatives": [
+        "3",
+        "2",
+        "4",
+        "5",
+        "7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/teoria-de-ecuaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com —  TEORÍA DE ECUACIONES EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué podemos afirmar acerca de esta ecuación?",
+      "alternatives": [
+        "Tiene 5 soluciones",
+        "Tiene 4 soluciones",
+        "la suma de las soluciones es",
+        "es incompatible",
+        "3 soluciones"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/teoria-de-ecuaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com —  TEORÍA DE ECUACIONES EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve la ecuación\ne indique el valor de",
+      "alternatives": [
+        "4",
+        "3",
+        "16",
+        "19"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/teoria-de-ecuaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com —  TEORÍA DE ECUACIONES EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la suma de las 3 primeras soluciones positivas de la ecuación:",
+      "alternatives": [
+        "111º",
+        "133º",
+        "122º",
+        "132º",
+        "123º"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el número de soluciones positivas y menores a una vuelta de la ecuación:",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver y dar la suma de soluciones de la ecuación:",
+      "alternatives": [
+        "450º",
+        "630º",
+        "540º",
+        "360º",
+        "300º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la suma de las soluciones de la ecuación:\nctg x – csc 2x = 1\nPara ángulos positivos menores de 360º",
+      "alternatives": [
+        "360º",
+        "630º",
+        "450º",
+        "660º",
+        "810º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la ecuación:\ndonde: , la suma de todas sus soluciones es:",
+      "alternatives": [
+        "1260º",
+        "990º",
+        "650º",
+        "720º",
+        "570º"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle los valores de “x” en el primer cuadrante que verifican la ecuación:",
+      "alternatives": [
+        "15º y 75º",
+        "45º y 30º",
+        "30º y 60º",
+        "15º y 30º",
+        "18º y 60º"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la ecuación:\nLa suma de las soluciones comprendidos entre 0 y 180º será:",
+      "alternatives": [
+        "360º",
+        "240º",
+        "245º",
+        "315º",
+        "325º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la ecuación:\nEl mayor ángulo negativo x es:",
+      "alternatives": [
+        "15º",
+        "– 75º",
+        " 45º",
+        "87º",
+        "– 39º"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el valor de (a + b) en la ecuación:\n; {a;b}\nSi se sabe que una de sus raíces es: 1 + 2 i",
+      "alternatives": [
+        "31",
+        "34",
+        "35",
+        "38",
+        "39 RESOLUCIÒN x1 = 1 + 2i x2 = 1 2i  x1.x2 = 2; x1.x1 = 5  x²  2x + 5 = 0 Por Horner: a = 19 ; b = 15 a + b = 34"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/sistemas-de-ecuaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SISTEMAS DE ECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale el valor de “a” en la ecuación:\nsi se sabe que la suma de sus raíces excede al producto de las mismas en una unidad.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5 RESOLUCIÒN Suma= ; Producto= Ecuación: ; operando a – 4 = 2 a – 7 3 = a"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/sistemas-de-ecuaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SISTEMAS DE ECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No es solución de la ecuación:\n; es",
+      "alternatives": [
+        "-1",
+        "2",
+        "-5",
+        "4",
+        "A ó D"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/sistemas-de-ecuaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SISTEMAS DE ECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver: La ecuación\ny halle la suma de los cuadrados de las raíces negativas.",
+      "alternatives": [
+        "53",
+        "57",
+        "61",
+        "62",
+        "64 RESOLUCIÒN Multiplicando convenientemente Haciendo Regresando a la variable original. ó x = -2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/sistemas-de-ecuaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SISTEMAS DE ECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la ecuación en x, x² – (m + 2)x+m+5=0 tiene soluciones no reales, entonces podemos afirmar que la ecuación y ² – 5y+m=0 tiene",
+      "alternatives": [
+        "soluciones reales y diferentes",
+        "soluciones reales e iguales",
+        "como discriminante un valor que pertenece al intervalo 9,16",
+        "soluciones no reales",
+        "como discriminante un valor menor a 8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/06/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "matematicaj.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el valor de k para que la suma de las raíces de la ecuación:\n2kx 2 =(12x+1)x+12 sea igual a 7.",
+      "alternatives": [
+        "1/3",
+        "1/2",
+        "2/3",
+        "3/2",
+        "2/5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Encuentre las raíces de la ecuación cuadrática.\nx 2 – 12x + 32 = 0",
+      "alternatives": [
+        "4 y 8",
+        "1 y 3",
+        "3 y 4",
+        "8 y 2",
+        "5 y 6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/3ro-4to-actividad-2-experiencia-5-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se sabe que la ecuación cuadrática x 2 –9x+b=0 tiene como raíz al número 2. Calcule la otra raíz.",
+      "alternatives": [
+        "1",
+        "5",
+        "7",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-catolica-2018-admision.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO CATÓLICA 2027 RESUELTO CLAVES INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Adelo es un matemático que ha estudiado el friaje en las ciudades de Puno, Cuzco y Huancavelica; Él ha determinado que Puno es la ciudad más fría a las 7am. Si las temperaturas, en grados centígrados, de las tres ciudades en mención a las 7am están representadas por las soluciones de la ecuación x–3 + | x²+3x–18 | ,¿cuál es la temperatura de Puno a las 7am?",
+      "alternatives": [
+        "–7°C",
+        "–9°C",
+        "–5°C",
+        "–6°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES CON VALOR ABSOLUTO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de resolver la siguiente ecuación x²–4x–|x–2|=16\nDetermine el valor absoluto de la diferencia de sus soluciones.",
+      "alternatives": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES CON VALOR ABSOLUTO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el producto de las soluciones de la ecuación\n| x+3 | – | 3x+9 | = (x+3)²+ x²+6x+5",
+      "alternatives": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES CON VALOR ABSOLUTO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si las edades de los gemelos BA y BE están dadas por las soluciones de la ecuación, x 2 – (3m + 3)x + 2m + 7 = 0, m > 0; determine la suma de sus edades.",
+      "alternatives": [
+        "4 años",
+        "6 años",
+        "8 años",
+        "10 años",
+        "12 años"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_6.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE SEGUNDO GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los dos primeros términos de una progresión aritmética es igual al valor absoluto de la suma de las raíces de la ecuación: x² – 6x – 135 =0\nAdemás el sexto término es 21. Calcula la razón:",
+      "alternatives": [
+        "2",
+        "4",
+        "3",
+        "2,5",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/11/progresiones-aritmeticas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — PROGRESIONES ARITMÉTICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cierto día las temperaturas registradas en grados Celsius (°C) por dos pacientes fueron “a” y “q” respectivamente (a>q). Si el valor numérico de dichas temperaturas son raíces de la ecuación x ² –(n–3)x+ 6,25=0 (n∈ ℤ + ) .\nCalcule el menor valor que puede tomar n.",
+      "alternatives": [
+        "3",
+        "9",
+        "6",
+        "5",
+        "–2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-cuadraticas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN DE SEGUNDO GRADO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las raíces de la ecuación 3x 2 +2x+m=0 son a y b, además se verifica que\n(3a+2) –1 +(3b+2) –1 =1/3\nSi actualmente Jorge tiene m años, ¿cuántos años tendrá dentro de 16 años?",
+      "alternatives": [
+        "20 años",
+        "25 años",
+        "18 años",
+        "22 años",
+        "24 años"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/algebra-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el valor de n en la ecuación: 4 x – 2 x = 56",
+      "alternatives": [
+        "1/2",
+        "1/3",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/ecuaciones-exponenciales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES EXPONENCIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de soluciones de la ecuación 16 x +4=5×4 x representa la cantidad de decenas de miembros de una promoción de colegio que asisten a su reencuentro por primera vez.\nNikolay que es el maestro de ceremonias observa que 9 miembros de la promoción son mujeres, ¿cúantos apretones de mano, calculó Nikolay que se darán los varones, si todos ellos se saludan?",
+      "alternatives": [
+        "50",
+        "36",
+        "55",
+        "48",
+        "49"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/ecuaciones-exponenciales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES EXPONENCIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si los puntos K(4;1), L(14;1), N(a;b), son los vértices de un triángulo rectángulo recto en N, entonces la ecuación de circunferencia que pasa por estos tres puntos es :",
+      "alternatives": [
+        "(x – 1) ² + (y – 9) ² = 9",
+        "(x – 9) ² + (y – 1) ² = 16",
+        "(x– 1) ² + (y – 9) ² = 25",
+        "(x – 9) ² + (y – 1) ² = 25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular las coordenadas del punto de intersección de dos rectas cuyas ecuaciones son:\nℒ 1 : 2x – y –6 = 0\nℒ 2 : x + y – 3 = 0",
+      "alternatives": [
+        "(3;1)",
+        "(3;0)",
+        "(5;2)",
+        "(7;1)",
+        "(8;–1)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE LA RECTA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La recta que pasa por el punto (1;2) y es perpendicular a la recta: 3x – 4y + 12 = 0 tiene por ecuación:",
+      "alternatives": [
+        "3x 2y + 1 = 0",
+        "2x + y – 8 = 0",
+        "4x + 3y –10 = 0",
+        "6x + 3y – 12 = 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-recta-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES DE LA RECTA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelva la ecuación cuadrática nx²–5x+1= 0 si se conoce que su discriminante es igual a 1.",
+      "alternatives": [
+        "{ 2 ; 1/3 }",
+        "{ 1/2 ; 1/3 }",
+        "{2; 6}",
+        "{1; 5}"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las ecuaciones\n3x² – 7x+2=0\n3x ² – 4x+1=0\nDetermine la suma de raíces no comunes.",
+      "alternatives": [
+        "2",
+        "5",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la alternativa correcta si la ecuación cuadrática de incógnita x mx ² – (2m+n)x+2n= 0 ; m≠0\ntiene raíces iguales.",
+      "alternatives": [
+        "m=n",
+        "n=2m",
+        "m+n=0",
+        "m=3m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la suma de los valores de n que hacen que la ecuación 2ax(ax+nc)+(n ² – 2)c ²= 0 (a.c ≠ 0) tenga soluciones iguales.",
+      "alternatives": [
+        "2",
+        "4",
+        "0",
+        "1",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la suma de las tres primeras soluciones positivas de la ecuación:\n2secx.cscx + 3tanx = 2cotx + 5√2",
+      "alternatives": [
+        "360°",
+        "540°",
+        "270°",
+        "720°",
+        "450°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la suma de las dos primeras soluciones positivas de la ecuación.\n2Sen2x+2(Senx+Cosx)=– 1",
+      "alternatives": [
+        "𝛑/6",
+        "𝛑/3",
+        "5 𝛑/6",
+        "11 𝛑/6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lenin promete a su hija Massiel:\n“Iremos de viaje tantos días como el número de soluciones correctas que tiene la siguiente ecuación:\nsen(7x)=sen(3x); x ∈ < 0; 𝛑>\nSi Massiel determinó correctamente la cantidad de soluciones y su papá la premia con un día más de viaje, ¿cuántos días estarán de viaje?",
+      "alternatives": [
+        "6",
+        "4",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el número de soluciones de la siguiente ecuación:\n2senx – cscx=1; x∈[0, 2π]",
+      "alternatives": [
+        "4",
+        "5",
+        "3",
+        "2",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la suma de las soluciones de la ecuación 3tgx – tg2x=0, en el intervalo [0;𝛑].",
+      "alternatives": [
+        "11𝛑/7",
+        "𝛑",
+        "3𝛑",
+        "13𝛑",
+        "2𝛑"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve la ecuación:\nSen⁶x+Cos⁶x=0,25\nPara: 90°<x<180°",
+      "alternatives": [
+        "115°",
+        "130°",
+        "145°",
+        "135°",
+        "150°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES EN TRIGONOMETRÍA RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: Sen2x=Cosx.\nHalla la diferencia entre los primeros ángulos que satisfacen la ecuación.",
+      "alternatives": [
+        "𝛑/3",
+        "2𝛑/3",
+        "𝛑/6",
+        "𝛑/5",
+        "0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuaciones-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES EN TRIGONOMETRÍA RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El punto A(3;9) es uno de los vértices del triángulo ABC y las ecuaciones de dos de sus medianas son\nℒ 1 : y – 6 =0\nℒ 2 : 3x – 4y + 9 =0\nDetermine las coordenadas de los otros dos vértices.",
+      "alternatives": [
+        "B (4 ; 6) y C(2; 4)",
+        "B (1 ; 6) y C(3; 2)",
+        "B (6 ; 6) y C(1; 1)",
+        "B (11; 6) y C(1; 3)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-de-la-recta-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA RECTA PROBLEMAS RESUELTOS DE GEOMETRÍA ANALÍTICA ESCALAR PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las raíces de la ecuación cuadrática x 2 +ax+b=0 verifican el sistema:\n3x 1 +x 2 =3\nx 1 +3x 2 =– 7\nDetermina el valor de a – b",
+      "alternatives": [
+        "6",
+        "7",
+        "4",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las raíces de la ecuación cuadrática x 2 +ax+b=0 verifican el sistema:\n6x 1 +x 2 =5\nx 1 +6x 2 =9\nHalle el valor de a+25b",
+      "alternatives": [
+        "19",
+        "25",
+        "23",
+        "17",
+        "22"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/algebra-problemas-resueltos-examen.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El alcohol yodado mancha la ropa en el l ₂ (s) cuando está disuelto en Kl alcohólico, esta se puede limpiar sin usar detergente con una solución de sulfitos (SO 3 ) 2 – que lo reduce a ion I − en medio básico, según la ecuación:\nI 2 + [SO 3 ] 2 – → [SO 4 ] 2 – + I –\nCalcula el número de electrones por cada 10 moles de I 2 reducido.",
+      "alternatives": [
+        "5",
+        "10",
+        "20",
+        "12",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/balance-de-ecuaciones-quimicas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BALANCE DE ECUACIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la ecuación de segundo grado\nx ² + y ² +6x–4y +12=0\nHalle la ecuación en un nuevo sistema X'Y', cuando el origen de coordenadas (0; 0) se traslada al punto (–3; 2).",
+      "alternatives": [
+        "(x ') ² + (y ') ² =2",
+        "(x ') ² + (y ') ² =3",
+        "(x ') ² + (y ') ² =4",
+        "(x ') ² + (y ') ² =6",
+        "(x ') ² + (y ') ² =1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación cuadrática\n3x ² –2 √ 3 xy + y ² +2x+2 √ 3 y = 0 representa",
+      "alternatives": [
+        "una elipse.",
+        "una hipérbola.",
+        "una parábola.",
+        "dos rectas paralelas.",
+        "dos rectas que se cortan."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/traslacion-y-rotacion-de-ejes-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRASLACIÓN Y ROTACIÓN DE EJES DE COORDENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En [ – 𝛑/2 ; 𝛑 ] , la suma de las raíces de la ecuación\n2sen ⁴ x + sen ² x −1= 0 es",
+      "alternatives": [
+        "𝛑",
+        "5𝛑/4",
+        "3𝛑/4",
+        "𝛑/2",
+        "𝛑/4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionarios-uni-2016-i-examen-de.html",
+      "sourceName": "matematicasn.blogspot.com — SEGUNDA PRUEBA ADMISIÓN UNI 2022 I SOLUCIONARIO MATEMÁTICAS UNIVERSIDAD DE INGENIERÍA 2022-1 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ganadero Ygor tiene 420 vacas y acepta un pedido de m cientos de vacas para el mercado europeo por lo que Ygor tiene que comprar a su amigo, el ganadero Mischa, una determinada cantidad de vacas para poder cumplir con la cantidad de vacas solicitadas.\n¿Cuánto le pagó Ygor a Mischa por las vacas compradas a $ 300 cada una, si m satisface la ecuación Log 2 (x – 4) – Log 6 (x–4)=0 ?",
+      "alternatives": [
+        "$ 25500",
+        "$ 27000",
+        "$ 17700",
+        "$ 24000",
+        "$ 16500"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN LOGARÍTMICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el valor de x en la siguiente ecuación\nLog 4 x Logx + Logx – 6=0\nluego dé como respuesta su mayor solución.",
+      "alternatives": [
+        "0,1",
+        "1",
+        "10",
+        "0",
+        "1000"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN LOGARÍTMICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación que modela el decaimiento radiactivo continuo es Log e (A÷A 0 )=rt ; ln2=0,690 donde; A es la cantidad de núcleos, A 0 es la cantidad de núcleos iniciales, r es la tasa de decrecimiento y t el tiempo en años. Si una muestra tiene 100 g.\nCalcule después de cuánto tiempo habrá 50 g.\nConsidere r=–0,0138.",
+      "alternatives": [
+        "24 años",
+        "36 años",
+        "48 años",
+        "70 años",
+        "50 años"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES LOGARÍTMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la suma de las raíces de la ecuación\nLog 9 x²+ Log x 9=3",
+      "alternatives": [
+        "10",
+        "11",
+        "15",
+        "13",
+        "12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES LOGARÍTMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la suma de las soluciones de la ecuación (x – 3)² –2= 3 | x – 5 | +4x",
+      "alternatives": [
+        "12",
+        "5",
+        "10",
+        "7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CON VALOR ABSOLUTO PROBLEMAS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si m es la única solución entera positiva de la ecuación | 3–4x | = | x²–5x+1 | , la cual representa el número de mes del año, ¿cúal es el mes del año que está representado por (m+7 ) ?",
+      "alternatives": [
+        "Setiembre",
+        "Agosto",
+        "Octubre",
+        "Noviembre"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CON VALOR ABSOLUTO PROBLEMAS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María necesitará globos y sorpresas para la fiesta de cumpleaños de su hijo. En esta fiesta habrá 100 invitados y a todos le corresponderá un globo y una sorpresa.Si la suma y el producto de las soluciones de la ecuación |2x–6| + |15 –5x |=14 representan, respectivamente, el número de globos y sorpresas (ambos en decenas), que compró María, ¿cuántas sorpresas y globos (en ese orden), aun le faltará comprar?",
+      "alternatives": [
+        "60 y 70",
+        "40 y 20",
+        "50 y 40",
+        "40 y 50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CON VALOR ABSOLUTO PROBLEMAS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la suma de los valores enteros que debe tomar ψ para que la ecuación\n2x ² – ψ x+1= 0 presente raíces no reales.",
+      "alternatives": [
+        "1",
+        "6",
+        "5",
+        "0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si m y n son las raíces de la ecuación 2x² – 5x+6= 0, halle el valor reducido de (m+2)(n+2).",
+      "alternatives": [
+        "1",
+        "10",
+        "12",
+        "3/5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la ecuación en x, x²+bx+2=0 tiene soluciones consecutivas, halle el mayor valor de b.",
+      "alternatives": [
+        "1",
+        "3",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El profesor Tymo escribió en la pizarra los números 255 y 257, y les dio a sus alumnos tres retos:\nReto 1: Formar una ecuación cuadrática mónica P(x)=0, cuyas soluciones son dichos números.\nReto 2: Formar una ecuación cuadrática mónica Q(x)=0 , cuyas soluciones son las inversas de dichos números.\nReto 3: Resolver la ecuación P(x)= Q(x) .\n¿Cuál es la solución del reto 3?",
+      "alternatives": [
+        "16",
+        "32",
+        "64",
+        "128"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el conjunto solución de la ecuación cuadrática x ² – (a+3)x+12= 0 es {a;b}.\nIndique la ecuación cuadrática de raíces 2a y 2b.",
+      "alternatives": [
+        "x ² +4x+1=0",
+        "2x ² –14x+1=0",
+        "x ² –10x+1=0",
+        "x ² –14x+48=0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE ECUACIÓN CUADRÁTICA TEST CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la ecuación 2x ² – 6x+ (n+ 1) = 0 presenta raíces reales, calcule el mayor valor entero de n.",
+      "alternatives": [
+        "1",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE ECUACIÓN CUADRÁTICA TEST CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mi abuelo Euclides es un matemático jubilado. Ayer fuimos a una agencia de viajes a comprar boletos. Luego de indicar nuestro destino, la encargada preguntó por nuestras edades, mi abuelo le contestó que están dadas por las soluciones de la ecuación 8³ =(72 – x)(16 – x) , la encargada respondió que el valor de cada boleto en dólares era la semisuma de dichos números.\n¿Cuál es el valor de un boleto?",
+      "alternatives": [
+        "$ 44",
+        "$ 55",
+        "$ 66",
+        "$ 77"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE ECUACIÓN CUADRÁTICA TEST CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación (x² – x +1)(x² –(n + 2)x + 2n)=0 tiene dos soluciones reales e iguales, además la suma de los elementos del conjunto solución es “a” y el producto de los elementos del conjunto solución es “b”.\nHalle el valor numérico de a+b.",
+      "alternatives": [
+        "5",
+        "9",
+        "6",
+        "11",
+        "7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_23.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO DE SECUNDARIA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El profesor Pier le afirma a su alumno Pedry que la ecuación lineal 3a²(x–2)+5ax+1=2x+a se satisface para cualquier valor real entonces le pide que halle el valor de b para que en la ecuación cuadrática 2x² – bx+18a=0 se satisfaga que la diferencia entre la suma y producto de soluciones sea igual a 7/2 .\n¿Qué valor(es) para el parámetro b, encontró Pedry ?",
+      "alternatives": [
+        "12",
+        "1/3",
+        "13 y – 2",
+        "– 1",
+        "– 1 y 13"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_23.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO DE SECUNDARIA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La empresa Cayta munä produce y vende Ositos de Peluches, la empresa determina la ecuación lineal de la demanda teniendo los siguientes datos: Si el precio de venta unitario es de 40 soles la demanda es de 60 unidades. Pero si el precio de venta unitario es 80 soles la demanda es de 20 unidades. Además se sabe que la ecuación de la oferta es p+q=40 , determine la cantidad de ositos que se deben producir y vender para obtener el punto de equilibrio en el mercado.\ndonde\np: precio de venta unitario (en soles)\nq: cantidad",
+      "alternatives": [
+        "70",
+        "40",
+        "30",
+        "50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-ecuaciones-lineales.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS DE ECUACIONES LINEALES BÁSICOS DE 2×2 EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por una traslación de ejes, la ecuación 25x ² +4y ² +150x–8y +129=0\nSe transformó en A(x') ² –B(y') ² =1\nCalcule 100(A–B).",
+      "alternatives": [
+        "29",
+        "28",
+        "27",
+        "26",
+        "25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/rotacion-y-traslacion-de-ejes.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN DE COORDENADAS ECUACIÓN COMPLETA DE SEGUNDO GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área de la elipse que tiene por ecuación\n21x ² −10 √ 3xy + 31y ² −144 = 0.",
+      "alternatives": [
+        "10 𝛑 u ²",
+        "9 𝛑 u ²",
+        "4 𝛑 u ²",
+        "6 𝛑 u ²",
+        "8 𝛑 u²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/rotacion-y-traslacion-de-ejes.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN DE COORDENADAS ECUACIÓN COMPLETA DE SEGUNDO GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mediante una rotación de ejes, la ecuación 7x ² − 6 √ 3xy +13y ² −16 = 0 se transforma en Ax' ² +By' ² = 1. Calcule A–1+B–1.",
+      "alternatives": [
+        "9",
+        "6",
+        "8",
+        "5",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/rotacion-y-traslacion-de-ejes.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN DE COORDENADAS ECUACIÓN COMPLETA DE SEGUNDO GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Después de una rotación de ejes la ecuación:\n5x ² +4xy+2y ² =3\nSe transforma en: m(x’) ² +n(y’) ² =p .\nHalle: (m + n+ p).",
+      "alternatives": [
+        "15",
+        "14",
+        "13",
+        "12",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/rotacion-y-traslacion-de-ejes.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN DE COORDENADAS ECUACIÓN COMPLETA DE SEGUNDO GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique realizando transformaciones de ejes , la curva descrita por la ecuación:\n4x ² – 24xy + 11y ² + 56x – 58y + 95 = 0",
+      "alternatives": [
+        "4(x’’) ² – (y’’) ² = 1",
+        "4(x’’) ² – (y’’) ² = 4",
+        "(x’’) ² – 4(y’’) ² = 1",
+        "(x’’) ² – 4(y’’) ² = 4",
+        "(x’’) ² – 2(y’’) ² = 4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/rotacion-y-traslacion-de-ejes.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN DE COORDENADAS ECUACIÓN COMPLETA DE SEGUNDO GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por una rotación de un ángulo de medida 45° de los ejes coordenados, una cierta ecuación se transformó en: 4(x’’)2 –9(y’’)2 = 36. Determine la ecuación original",
+      "alternatives": [
+        "5x ² + 5y ² – 25xy + 70 = 0",
+        "5x ² + 5y ² – 25xy + 50 = 0",
+        "5x ² + 5y ² – 26xy + 72 = 0",
+        "5x ² + 5y ² – 26xy + 90 = 0",
+        "5x ² + 5y ² – 52xy + 72 = 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/rotacion-y-traslacion-de-ejes.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN DE COORDENADAS ECUACIÓN COMPLETA DE SEGUNDO GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una hipérbola tiene su centro en el origen y pasa por el punto ( – 1; 2). Calcular su ecuación si la longitud de cada lado recto es 2/3 y su eje conjugado está sobre el eje x",
+      "alternatives": [
+        "y² – 3x²=3",
+        "y² – 3x²=1",
+        "3y² – x²=1",
+        "3y² – x²=3",
+        "y² – x²=1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las asíntotas de una hipérbola son\n2x – y – 6 = 0 y 2x+y – 2 = 0\nSi dicha curva pasa por ( – 11; 8), hallar su ecuación",
+      "alternatives": [
+        "4(x – 2)² – (y+2)² = 576",
+        "4(y+2)² – (x – 2)² = 216",
+        "4(x+2)² – (y – 2)² = 676",
+        "2(y –1)² – (x – 2)² = 276",
+        "2(x – 2) ² – (y+1) ² = 216"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación de una hipérbola es\n4x² – 9y²+16x – 54y – 101=0\nCalcular la longitud de su lado recto",
+      "alternatives": [
+        "2/3",
+        "4/3",
+        "32/3",
+        "8/3",
+        "31/3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una hipérbola cuya ecuación es :\n16x² – 9y² – 64x – 54y – 161 = 0\nHallar las coordenadas de su centro",
+      "alternatives": [
+        "(2; – 1)",
+        "(1; – 3)",
+        "(2; – 3)",
+        "(3; – 4)",
+        "(3; – 6)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/hiperbola-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE LA HIPÉRBOLA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación polar de una curva es r = 6(3+sen θ) − ¹\nDetermine la longitud de su lado recto.",
+      "alternatives": [
+        "12",
+        "10",
+        "8",
+        "6",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/coordenadas-polares-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — COORDENADAS POLARES PREGUNTAS RESUELTAS DE ECUACIONES POLARES DE LAS CÓNICAS TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las asíntotas de la hipérbola cuya ecuación polar es\n2r =3secθ +5cscθ son r =msecθ y r =ncscθ.\nDetermine el valor de m ² +n ² .",
+      "alternatives": [
+        "34",
+        "6",
+        "17/4",
+        "17/2",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/coordenadas-polares-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — COORDENADAS POLARES PREGUNTAS RESUELTAS DE ECUACIONES POLARES DE LAS CÓNICAS TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de puntos de intersección de las curvas de ecuación\nr =sen²θ y r =cos²θ",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/coordenadas-polares-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — COORDENADAS POLARES PREGUNTAS RESUELTAS DE ECUACIONES POLARES DE LAS CÓNICAS TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados los puntos A(3;4) y B(– 5;2), hallar la ecuación del lugar geométrico de todos los puntos que equidistan de los puntos A y B.",
+      "alternatives": [
+        "y=–4x– 1",
+        "y = 3x – 1",
+        "y = 4x + 2",
+        "y = 4x + 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-general-de-la-recta-y-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN GENERAL DE LA RECTA Y ÁNGULO ENTRE 2 RECTAS PENDIENTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea hallar la ecuación de una recta, que interceptando sobre el eje positivo de las x un segmento de longitud igual a 7 unidades, pasa además por el punto de abscisa x = 4 ; 5x+3y = 30 .",
+      "alternatives": [
+        "10x+9y – 70= 0",
+        "9x+10y – 70 = 0",
+        "10x + y – 60 = 0",
+        "x + 9y –70 = 0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuacion-general-de-la-recta-y-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN GENERAL DE LA RECTA Y ÁNGULO ENTRE 2 RECTAS PENDIENTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que una de las raíces de la ecuación\n3x 3 –ax 2 +bx+14=0\nes (1− √ 3) , calcule el valor de a+b",
+      "alternatives": [
+        "21",
+        "19",
+        "18",
+        "16",
+        "17"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/algebra-examen-de-admision-universidad-desarrollado-prueba-resuelta-de-ingreso-preguntas-claves-respuestas-simulacro-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA DE ADMISIÓN UNIVERSIDAD DESARROLLADA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En [ – 𝛑/2 ; 𝛑 ] , la suma de las raíces de la ecuación\n2sen 4 x+sen 2 x−1= 0 es",
+      "alternatives": [
+        "𝛑",
+        "5𝛑/4",
+        "3𝛑/4",
+        "𝛑/2",
+        "𝛑/4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/trigonometria-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la suma de soluciones de la ecuación x² – 6x – |x – 3|=11",
+      "alternatives": [
+        "9",
+        "7",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/ecuaciones-con-valor-absoluto-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — ECUACIONES CON VALOR ABSOLUTO PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x 0 es solución de la ecuación ||x|– 5|=2x – 3 calcule el valor de 8÷x 0",
+      "alternatives": [
+        "2/3",
+        "–1/6",
+        "1",
+        "3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/ecuaciones-con-valor-absoluto-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — ECUACIONES CON VALOR ABSOLUTO PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al multiplicar [(n – 2)x –14 ] por la inversa de (x – 2) –1 resulta ser igual a (x+5). Si la ecuación que resulta es una ecuación cuadrática con soluciones no reales , determine la ecuación cuadrática y mónica cuyas soluciones son el mayor y menor valor entero de n.",
+      "alternatives": [
+        "x² – 3x + 10=0",
+        "x ² – x + 2 = 0",
+        "x ² – 2x + 8 = 0",
+        "x ² – 10x + 16 = 0",
+        "x ² – x + 6 = 0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/resolucion-de-ecuaciones-cuadraticas-elementales-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — ECUACIÓN CUADRÁTICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las raíces de la ecuación cuadrática x²+ax +b= 0 verifican el sistema:\n3x ₁ + x ₂ =3\nx ₁ + 3x ₂ =– 7\nDetermina el valor de a – b",
+      "alternatives": [
+        "6",
+        "7",
+        "4",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/11/algebra-examen-resuelto-de-admision-a-la-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — ÁLGEBRA PREGUNTAS RESUELTAS ADMISIÓN UNIVERSIDAD SIMULACRO SOLUCIONARIO PRUEBA DE INGRESO DESARROLLADA 2022 2023"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Zepudio compró cierta cantidad de ventiladores. El costo de cada uno es igual al número de ventiladores que compró aumentado en diez, pero si hubiese comprado el doble de número de ventiladores hubiera pagado por cada uno menos de la quinta parte del número de ventiladores que compró y hubiese gastado 625 soles más.\n¿Cuántos ventiladores compró?",
+      "alternatives": [
+        "54",
+        "25",
+        "45",
+        "52",
+        "35"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/06/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "matematicaj.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Betty y Katty fueron de compras y cada una compró tantos artículos como soles pago por cada uno. Si Betty gastó S/.600 menos que Katty y compraron 30 artículos en total, ¿Cuánto gastó Betty ?",
+      "alternatives": [
+        "S/.100",
+        "S/.81",
+        "S/.25",
+        "S/.625",
+        "S/.400"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/resolucion-de-ecuaciones-basicas-ejemplos-resueltos-de-secundaria-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ECUACIÓN DE PRIMER GRADO EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ana tiene el doble de lo que tiene María en dinero; luego Ana le prestó cierta suma a María; por lo que ahora María tiene el triple de lo que le queda a Ana. Si el préstamo que pidió María excede en S/.6 a lo que tenía inicialmente, ¿con cuánto se quedó Ana?",
+      "alternatives": [
+        "S/.12",
+        "S/.15",
+        "S/.18",
+        "S/.24",
+        "S/.30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/resolucion-de-ecuaciones-basicas-ejemplos-resueltos-de-secundaria-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ECUACIÓN DE PRIMER GRADO EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Yo tengo el triple de la mitad de lo que tienes más S/. 10. Si tú tuvieras el doble de lo que tienes, tendrías S/.5 más de lo que tengo, ¿cuánto tengo?",
+      "alternatives": [
+        "S/.50",
+        "S/.55",
+        "S/.60",
+        "S/.40",
+        "S/.45"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/resolucion-de-ecuaciones-basicas-ejemplos-resueltos-de-secundaria-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ECUACIÓN DE PRIMER GRADO EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En 7 horas 30 minutos una costurera puede confeccionar un pantalón y tres camisas; ó 2 pantalones y una camisa. ¿En cuánto tiempo puede confeccionar un pantalón y una camisa?",
+      "alternatives": [
+        "3 horas",
+        "4 horas",
+        "5 horas",
+        "4 horas 30 min",
+        "3 horas 30min"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/resolucion-de-ecuaciones-basicas-ejemplos-resueltos-de-secundaria-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ECUACIÓN DE PRIMER GRADO EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 74 y su cociente 9, dando de residuo 4. ¿Cuál es el número menor?",
+      "alternatives": [
+        "2",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-primer-grado-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE PRIMER GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Me falta para tener 26 soles el doble de lo que me falta para tener 20 soles. Cuánto tengo.",
+      "alternatives": [
+        "16",
+        "14",
+        "15",
+        "18",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-primer-grado-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE PRIMER GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El exceso de 6 veces un número sobre 50 equivale al exceso de 50 sobre 4 veces el número. Calcular dicho número.",
+      "alternatives": [
+        "10",
+        "12",
+        "8",
+        "13",
+        "9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-primer-grado-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE PRIMER GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El exceso de 8 veces un número sobre 800 equivale al exceso de 880 sobre cuatro veces el número. Halla el número.",
+      "alternatives": [
+        "120",
+        "140",
+        "160",
+        "130",
+        "100"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-primer-grado-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE PRIMER GRADO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Benita compra camisetas cuyo costo unitario coincide numéricamente con la cantidad de camisetas compradas. Si en total se pagó S/196, ¿cuántas camisetas compró?",
+      "alternatives": [
+        "14",
+        "16",
+        "13",
+        "17"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a y b son soluciones de 2x ² – 7x– 4= 0, halle el menor valor de ab.",
+      "alternatives": [
+        "1/8",
+        "1/16",
+        "1/32",
+        "1/64"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sandro quiere hacer el marco de un espejo con un listón de madera de 10 m, sin que le sobre ni le falte nada. Si se sabe que el espejo es rectangular y que tiene una superficie de 60 000 cm ² , ¿de qué longitud deben ser los trozos que debe cortar?",
+      "alternatives": [
+        "dos trozos de 1 m y dos de 3 m",
+        "dos trozos de 3 m y dos de 2 m",
+        "dos trozos de 5 m y uno de 1 m",
+        "dos trozos de 2 m y dos de 2 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La escuela de música Fun Music tiene un taller de 60 estudiantes que pagan 80 soles de mensualidad. Después de varios meses se quiere incrementar la pensión mensual; su administrador Lewis, experto en estudio de mercado se percata que por cada 10 soles que incrementen la pensión mensual pierden 3 estudiantes. ¿Cuántos estudiantes debe tener el taller y cuál debe ser la mensualidad que se pague por el taller de la escuela Fun Music respectivamente, para que se obtenga el ingreso máximo en aquel mes?",
+      "alternatives": [
+        "45 y S/ 70",
+        "42 y S/ 108",
+        "50 y S/ 100",
+        "52 y S/ 60",
+        "42 y S/ 140"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cancha de fútbol tiene un área de 6400 m² ; además, su largo es el doble de su ancho, disminuido en 28 m, determine el perímetro de la cancha de fútbol.",
+      "alternatives": [
+        "104 m",
+        "456 m",
+        "200 m",
+        "328 m",
+        "480 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Fedy vende un libro de álgebra en 24 soles, perdiendo un porcentaje sobre el costo del libro que es igual al número de soles que le costó el libro.\n¿Cuánto costó el libro de Fedy , si la pérdida fue mínima?",
+      "alternatives": [
+        "20 soles",
+        "50 soles",
+        "16 soles",
+        "40 soles",
+        "36 soles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por la venta de x departamentos de la empresa constructora DELFINO S.A. se genera un ingreso de I(x)=2x² miles de soles. Si los costos de construcción de los x departamentos está modelado por C(x)=3x ² – 26x +120 miles de soles, determine la utilidad máxima de la venta de los departamentos.",
+      "alternatives": [
+        "S/ 35 000",
+        "S/ 45 000",
+        "S/ 49 000",
+        "S/ 13 000",
+        "S/ 30 000"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la secuencia correcta del valor de verdad (V o F) con respecto de las siguientes proposiciones.\nI) 2x ² – 4x – 8=0 presenta raíces reales y diferentes.\nII) 4x ² –12x+9=0 presenta raíces reales iguales.\nIII) x ² +x+4= 0 tiene raíces no reales.",
+      "alternatives": [
+        "FVV",
+        "VVF",
+        "FFF",
+        "VVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un parque rectangular tiene sus veredas del mismo ancho y de área 504m² . Si las dimensiones del parque son 80 m de largo por 50 m de ancho, determine el ancho de la vereda.",
+      "alternatives": [
+        "2m",
+        "1m",
+        "1,5m",
+        "2,5m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las dimensiones de la base de un paralelepípedo rectangular son 3a y b metros donde – 4 y a son soluciones de 3x²+bx–20=0, determine la medida máxima de la altura del paralelepípedo rectangular, si su volumen no es mayor a 210 metros cúbicos.",
+      "alternatives": [
+        "4 metros",
+        "7 metros",
+        "5 metros",
+        "6 metros"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las hermanas Meche y Mily viven en una torre habitacional, ellas tienen sus departamentos en el (n–2) y ( m – 5 ) piso respectivamente. Si \"n\" y \"m\" son la suma de los cuadrados y cubos, respectivamente, de las soluciones de ( x – 2 ) ( x+2 ) = 5 ( x – 1 ) – 6.\n¿a cuántos pisos se encuentra el departamento de Mily con respecto al de Meche ?",
+      "alternatives": [
+        "3 pisos",
+        "6 pisos",
+        "5 pisos",
+        "4 pisos"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE ECUACIÓN CUADRÁTICA TEST CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Porty va a comprar dos libros, uno de álgebra y el otro de geometría, cuyos precios de venta son respectivamente ( m – 5 ) soles y ( n – 3 ) soles, donde \"m\" es la suma de cuadrados de las soluciones de ( x – 3 ) ( x – 4 ) – 16=0, y \"n\" es el cuadrado de la diferencia de dichas soluciones.\nSi Porty compra dichos libros pagando con ( n – m+4 ) billetes de 10 soles, determine cuánto recibió de vuelto Porty .",
+      "alternatives": [
+        "S/4",
+        "S/5",
+        "S/6",
+        "S/3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE ECUACIÓN CUADRÁTICA TEST CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un terreno rectangular tiene como perímetro 140 metros y su diagonal mide 50 metros.\nDetermine la diferencia positiva de sus lados.",
+      "alternatives": [
+        "15 m",
+        "20 m",
+        "10 m",
+        "8 m",
+        "5 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_23.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO DE SECUNDARIA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Letty compró cierto número de sacos de fruta por 240 soles. Si hubiera comprado 3 sacos más con el mismo dinero inicial, cada saco le habría costado 4 soles menos.\n¿Cuántos sacos de fruta compró Letty y cuánto le costó cada saco?",
+      "alternatives": [
+        "18 sacos, 30 soles",
+        "15 sacos, 20 sacos",
+        "12 sacos, 20 soles",
+        "20 sacos, 26 sacos",
+        "14 sacos, 20 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_23.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO DE SECUNDARIA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El profesor Enrique evalúa a 4 de sus alumnos sobre polinomios cuadráticos mediante las siguientes proposiciones:\n● El polinomio 2 p(x)=2x ²– 3x+5 siempre es positivo.\n● El polinomio 2 p(x) = x ²+ 4x –1 no siempre es positivo.\n● El polinomio 2 p(x) = x ²– 4x+10 toma su mínimo valor en x = 6 .\n● El polinomio 2 p(x) =– x²+6x+1 toma su máximo valor en x = 3.\nLos estudiantes Hugo, Paco, Luis y Nicolás respondieron así respectivamente VVVV, VFFV, VVFV y VVFF.\n¿Qué alumno respondió correctamente todo el examen?",
+      "alternatives": [
+        "Hugo",
+        "Paco",
+        "Luis",
+        "Nicolás",
+        "ningún alumno"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_23.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN DE SEGUNDO GRADO DE SECUNDARIA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la suma de las raíces de la siguiente ecuación",
+      "alternatives": [
+        "16",
+        "17",
+        "19",
+        "21",
+        "32"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/logaritmos-e-inecuaciones-logaritmicas.html",
+      "sourceName": "matematica-a1.blogspot.com — LOGARITMOS E INECUACIONES LOGARÍTMICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar el producto de las raíces de la siguiente ecuación",
+      "alternatives": [
+        "5",
+        "15",
+        "125",
+        "25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/logaritmos-e-inecuaciones-logaritmicas.html",
+      "sourceName": "matematica-a1.blogspot.com — LOGARITMOS E INECUACIONES LOGARÍTMICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una ecuación de cuarto grado en \"x\" es dividida por (x – 2) obteniéndose la ecuación:\n4x³ + 8x² – x – 2 = 0\nDeterminar las raíces de dicha ecuación.",
+      "alternatives": [
+        "x₁ = – 1/2, x₂ = 1/2, x₃ = – 2, x₄ = 2",
+        "x₁ = 1/2, x₂ = 1, x₃ = 3, x₄ = – 1",
+        "x₁ = – 3, x₂ = 1, x₃ = – 2, x₄ = – 1",
+        "x₁ = – 2, x₂ = 2, x₃ = – 1/4, x₄ = 1",
+        "x₁ = 1/5, x₂ = 1, x₃ = 0, x₄ = – 2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-untels-admision-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO  UNTELS 2027 RESUELTO INGRESO UNIVERSIDAD NACIONAL TECNOLÓGICA DEL SUR – VILLA EL SALVADOR PDF CLAVES DE RESPUESTAS – SOLUCIONARIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la suma de las raíces positivas del polinomio p(x)=x 3 –12x 2 +17x+90 es mayor que 13 y el producto de ellas es mayor que 30, determine la raíz negativa, sabiendo que todas las raíces son enteras.",
+      "alternatives": [
+        "–5",
+        "–9",
+        "–2",
+        "–10",
+        "–1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/algebra-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a y (b+1) son soluciones de x² – x – 12=0, determine el mínimo valor de a(b+2)+b–a.",
+      "alternatives": [
+        "–9",
+        "–16",
+        "–11",
+        "–13"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/ecuaciones-de-segundo-grado-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — ECUACIONES DE SEGUNDO GRADO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a las raíces del polinomio p(x)=x³ – 7x+m ; m∈ R , se sabe que una raíz es positiva e igual al doble de otra. Halle la suma de los cubos de todas las raíces de este polinomio.",
+      "alternatives": [
+        "– 24",
+        "– 18",
+        "– 21",
+        "– 9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-deco-problemas-resueltos-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS PRUEBA DECO RESUELTA DE EXAMEN DE ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con un rollo completo de alambre es posible cercar un terreno de forma cuadrada. Si con la misma cantidad de alambre se puede cercar un terreno de forma rectangular, con un lado 6 metros mayor que el otro lado y de área mayor o igual a 40 m², ¿cuántos metros puede medir, como mínimo, el perímetro del terreno de forma cuadrada?",
+      "alternatives": [
+        "24",
+        "32",
+        "20",
+        "28"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-deco-problemas-resueltos-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS PRUEBA DECO RESUELTA DE EXAMEN DE ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un parque de forma rectangular tiene un área de (A – 1) metros cuadrados y un perímetro de P metros. Entre las siguiente ecuaciones, ¿cuál de ellas tiene como raíces a los valores numéricos de las longitudes de los lados de dicho parque?",
+      "alternatives": [
+        "x² – 2Px+A – 1=0",
+        "x ² – Px+2A – 1=0",
+        "2x ² – Px+2A – 2=0",
+        "2x ² – Px+A – 1=0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/03/algebra-ce-examen-resuelto-deco-san.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA CE EXAMEN RESUELTO DECO SAN MARCOS DE ADMISIÓN A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un grupo de profesores decide realizar un viaje, cuyos gastos ascienden a S/ 200. Días antes desisten de ir dos profesores por lo que cada profesor debe aportar S/ 5 más. ¿Cuántos profesores fueron de viaje?",
+      "alternatives": [
+        "10",
+        "8",
+        "9",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/admision-catolica-primera-opcion.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Phaquita hizo un mantel que mide 4 pies×5 pies. Ella tiene 10 pies cuadrados de tela para crear un borde alrededor del mantel.\n¿Qué tan ancho debe hacer el borde para usar toda la tela?\n(El borde debe tener el mismo ancho en los cuatro lados)",
+      "alternatives": [
+        "0,25 pies",
+        "0,5 pies",
+        "0,75 pies",
+        "1 pie"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/ecuaciones-de-segundo-grado-ejemplos-resueltos-de-matematicas-de-secundaria-en-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — ECUACIONES CUADRÁTICAS EJEMPLOS Y EJERCICIOS RESUELTOS DE DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A la fiesta de Isidoro asistieron m niños, cada uno de los cuales recibió un cono sorpresa; además Isidoro, por ser el cumpleañero, recibió dos conos sorpresa. Cada cono contenía (m – 15) golosinas; además, en la mesa se puso un total de 40 golosinas para los invitados. Si para la fiesta se compró en total 150 golosinas y todas fueron distribuidas, ¿cuántos niños asistieron a la fiesta de Isidoro?",
+      "alternatives": [
+        "16",
+        "18",
+        "19",
+        "20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/ecuaciones-de-segundo-grado-ejemplos-resueltos-de-matematicas-de-secundaria-en-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — ECUACIONES CUADRÁTICAS EJEMPLOS Y EJERCICIOS RESUELTOS DE DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una clínica atiende la misma cantidad de pacientes por día, y cobra por cada consulta en soles 10 más que el número de pacientes atendidos. Si su ingreso es de 3000 soles por día, ¿cuántos pacientes más debería atender, sin variar el cobro de consulta, para que su ingreso diario sea de 3600 soles?",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/ecuaciones-de-segundo-grado-ejemplos-resueltos-de-matematicas-de-secundaria-en-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — ECUACIONES CUADRÁTICAS EJEMPLOS Y EJERCICIOS RESUELTOS DE DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "300 empleados deben cobrar S/. 25 200, pero como algunos de ellos se retiran; el resto tiene que cobrar S/.140; cada uno ¿Cuántos se retiraron?",
+      "alternatives": [
+        "90",
+        "100",
+        "110",
+        "120",
+        "130"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/resolucion-de-ecuaciones-elementales-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "geometriapdf.blogspot.com — ECUACIONES EJEMPLOS RESUELTOS DE PRIMARIA Y SECUNDARIA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una sandia pesa 4kg más media sandia; ¿cuánto pesa sandia y media?",
+      "alternatives": [
+        "6 kg",
+        "8 kg",
+        "10 kg",
+        "9 kg",
+        "12 kg"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/resolucion-de-ecuaciones-elementales-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "geometriapdf.blogspot.com — ECUACIONES EJEMPLOS RESUELTOS DE PRIMARIA Y SECUNDARIA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un padre reparte su fortuna entre sus hijos dándole S/.480 a cada uno; debido a que 2 de ellos renunciaron a su parte; a cada uno de los restantes le tocó S/.720. ¿Cuántos hijos eran inicialmente?",
+      "alternatives": [
+        "8",
+        "7",
+        "5",
+        "6",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/resolucion-de-ecuaciones-elementales-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "geometriapdf.blogspot.com — ECUACIONES EJEMPLOS RESUELTOS DE PRIMARIA Y SECUNDARIA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Gasté los 2/3 de lo que no gasté y aún me quedan S/.20 mas de lo que gasté. ¿Cuánto tenía?",
+      "alternatives": [
+        "S/.100",
+        "S/.120",
+        "S/.80",
+        "S/.90",
+        "S/.110"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/resolucion-de-ecuaciones-elementales-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "geometriapdf.blogspot.com — ECUACIONES EJEMPLOS RESUELTOS DE PRIMARIA Y SECUNDARIA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si es una raíz irracional de:\n, calcule el valor:",
+      "alternatives": [
+        "4",
+        "8",
+        "1",
+        "7",
+        "*"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/teoria-de-ecuaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com —  TEORÍA DE ECUACIONES EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver:\nindicar como respuesta la diferencia de los cuadrados de sus raíces.",
+      "alternatives": [
+        "7",
+        "6",
+        "5",
+        "4",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/sistemas-de-ecuaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SISTEMAS DE ECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la solución entera positiva de:\n2x 2 +3x=44",
+      "alternatives": [
+        "3",
+        "4",
+        "2",
+        "8",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/simulacro-resuelto-de-admision-a-la-universidad-catolica-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO CATÓLICA SOLUCIONARIO DE ACCESO UNIVERSIDAD PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El triple de un número, disminuido en 5, es igual al doble de dicho número, aumentado en 3. Hallar dicho número.",
+      "alternatives": [
+        "6",
+        "12",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la suma de los módulos de todas las raíces del polinomio p(x)=x 4 +45x 2 +324 ∈ ℤ [x] representa el promedio final de Mary en el curso de Economía, determine el valor de dicho promedio.",
+      "alternatives": [
+        "13",
+        "11",
+        "17",
+        "18",
+        "15"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/algebra-simulacro-san-marcos-solucionario-admision-a-la-universidad-2020-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA DECO RESUELTA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un grupo de monos está dividido en dos bandos : la octava parte de ellos al cuadrado se solaza en el bosque, mientras que los otros doce juegan en el campo. La mayor cantidad de monos que podemos tener es :",
+      "alternatives": [
+        "56",
+        "64",
+        "32",
+        "48",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/planteo-ecuaciones-ejercicios-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — PLANTEO DE ECUACIONES EJEMPLOS Y EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un jardín de forma rectangular de 40 m de largo por 30 m de ancho está rodeado por un camino de arena uniforme. Halle la longitud del ancho de dicho camino si se sabe que su área es 296 m ² .",
+      "alternatives": [
+        "2m",
+        "3m",
+        "4m",
+        "4,5m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/algebra-beca-18-formulario-ejemplos-resueltos-temario-pronabec-del-prospecto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA BECA 18 FORMULARIO CON EJEMPLOS RESUELTOS DEL TEMARIO PRONABEC PRUEBA UNICA NACIONAL PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se cumple que:\nx 2 −2x−1=0 , x≠0\nEl valor de: M=x 8 +x –8 , es:",
+      "alternatives": [
+        "1164",
+        "1124",
+        "1134",
+        "1144",
+        "1154"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unica-pdf-ica.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN LUIS GONZAGA 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNICA 2026 TEMARIO VACANTES PROSPECTO ESTRUCTURA PUNTAJES CRONOGRAMA ÁREAS A B C PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La raíz positiva de la ecuación x 2 =14x+3200, es el ancho de un rectángulo cuya área es 6400 m 2 . Determine el perímetro del rectángulo.",
+      "alternatives": [
+        "176 m",
+        "400 m",
+        "268 m",
+        "348 m",
+        "328 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/solucionario-unp-examen-admision-universidad-nacional-de-piura-preguntas-resueltas-prueba-de-ingreso-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNP 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE PIURA 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el valor de verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. Si P(x) = 0 es una ecuación recíproca, entonces P(− x) = 0 es una ecuación recíproca.\nII. Si P(x) = 0 es una ecuación recíproca, entonces P(2x) = 0 es una ecuación recíproca.\nIII. Si P(x) = 0 es una ecuación recíproca, entonces P(x + 1) = 0 es una ecuación recíproca.\nMarque la alternativa que contiene la secuencia correcta.",
+      "alternatives": [
+        "VVV",
+        "VFF",
+        "VFV",
+        "FVV",
+        "FFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-2-ccss-experiencia-8-resuelta-aprendo-en-casa-ciencias-sociales-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un jugador del equipo deportivo PQR patea una pelota y la altura de la pelota en función del tiempo es h(t)=40t–8t 2 m. Halle t sabiendo que a los t segundos después que pateó la pelota, otro jugador del equipo deportivo PQR salta, cabecea la pelota y hace gol; se sabe que el cabezazo fue a una altura de 1,98 m, además t ≥ 1. Halle la suma de las cifras de t.",
+      "alternatives": [
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/5to-actividad-5-experiencia-7-resuelta-matematicas-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la ecuación : 2x 2 –6x+5=0 , θ 𝒚 β son las raíces.\nCalcule: θ 2 +β 2",
+      "alternatives": [
+        "10",
+        "8",
+        "6",
+        "4",
+        "2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-1ro-2do-actividad-3-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-primero-segundo-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL HUMANIDADES, CIENCIAS JURÍDICAS Y SOCIALES PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA B 2027"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pastelería puede elaborar y vender cupcakes a S/ 5 cada uno y tiene un gasto de S/ 2 para elaborar cada cupcake . Además, tiene gastos fijos de S/ 800 semanales. Halle el número de cupcakes que deberá elaborarse y venderse semanalmente para tener una utilidad semanal de S/ 4000.",
+      "alternatives": [
+        "1500",
+        "1600",
+        "1800",
+        "1700",
+        "1900"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/algebra-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Josefo compra cierta cantidad de fólderes del mismo precio, por los que paga 180 soles. Si cada fólder costara S/ 6 menos, hubiese comprado 5 folderes más (gastando la misma cantidad de dinero). Determine el precio de un fólder.",
+      "alternatives": [
+        "S/ 15",
+        "S/ 10",
+        "S/ 12",
+        "S/ 18",
+        "S/ 14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/algebra-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la ecuación x 2 –(2n–3)x+9=0 tiene soluciones reales, determine la suma del mayor valor entero negativo con el menor valor entero positivo que toma «n».",
+      "alternatives": [
+        "3",
+        "0",
+        "2 ",
+        "1",
+        "4 "
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/algebra-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a las dimensiones iniciales (en metros) de un rectángulo se le disminuyen 2 m su área disminuye en 8 m 2 , halle el perímetro del rectángulo inicial.",
+      "alternatives": [
+        "10 m 2",
+        "16 m 2",
+        "14 m 2",
+        "15 m 2",
+        "12 m 2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/algebra-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cierta cantidad de postes se ubican a lo largo de una avenida, si se colocan 4 focos en cada poste sobraría 14 focos, pero para ubicar 6 focos en cada poste faltaría 10 focos. ¿Cuál es la suma de cifras del número de focos que se dispone actualmente?",
+      "alternatives": [
+        "60",
+        "70",
+        "62",
+        "58"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos12-habilidad-logico-deco.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA PRE SAN MARCOS SEMANA 12 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un estante se pueden colocar 24 libros de castellano y 20 libros de inglés; o 36 libros de castellano y 15 libros de inglés. ¿Cuántos libros de castellano únicamente entran en el estante?",
+      "alternatives": [
+        "62",
+        "52",
+        "44",
+        "72"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos12-habilidad-logico-deco.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA PRE SAN MARCOS SEMANA 12 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si por S/60 dieran 4 cuadernos más de los que dan, lo docena costaría S/6 soles menos. ¿Cuál es el costo de un cuaderno?",
+      "alternatives": [
+        "S/2,5",
+        "S/3,5",
+        "S/4",
+        "S/3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos12-habilidad-logico-deco.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA PRE SAN MARCOS SEMANA 12 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Deseamos repartir una cantidad de soles entre cierto número de niños. Si diéramos a cada niño S/15, nos faltarían S/70; pero si diéramos S/10, nos sobrarían S/10. ¿Cuántos soles más necesitaríamos para dar S/12 a cada niño?",
+      "alternatives": [
+        "11",
+        "13",
+        "22",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos12-habilidad-logico-deco.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA PRE SAN MARCOS SEMANA 12 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el número que multiplicado por 2 es 4 unidades menos que tres veces 6?",
+      "alternatives": [
+        "6",
+        "7",
+        "5",
+        "4",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/06/ecuaciones-de-primer-grado-ejercicios.html",
+      "sourceName": "matematicaj.blogspot.com — ECUACIÓN LINEAL EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cantidad de S/.580 se pagan con billetes de S/.100 y S/.20. Cuántos se han dado de S/.100 si los billetes de S/.20 son 5 más que los de S/.100",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/06/ecuaciones-de-primer-grado-ejercicios.html",
+      "sourceName": "matematicaj.blogspot.com — ECUACIÓN LINEAL EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa de artefactos electrodomésticos determina que si produce X hornos tostadores por mes, su costo Y de producción está dado por la ecuación como sigue:\nY=6X+3000\ndonde Y se mide en dólares.\nSi el costo de producción fuese de 3600 dólares, entonces el número de tostadores es",
+      "alternatives": [
+        "80",
+        "110",
+        "100",
+        "70",
+        "90"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la solución entera positiva de:\n2x² + 3x = 44",
+      "alternatives": [
+        "3",
+        "4",
+        "2",
+        "8",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/algebra-simulacro-resuelto-admision-universidad-catolica-pucp-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA SIMULACRO RESUELTO DE ADMISIÓN A LA UNIVERSIDAD CATOLICA PUCP PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular x al resolver la ecuación:\n4 x – 3 x – 0,5 = 3 x + 0,5 −2 2x – 1",
+      "alternatives": [
+        "3/2",
+        "2/3",
+        "4/3",
+        "3/4",
+        "6/7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la ecuación\nx+ √ x − 20 = 0, se obtiene",
+      "alternatives": [
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la ecuación:\n(x+1) 2 .(x+3)=2(x+1).(x+2) 2\nIndique la cantidad de valores reales que verifican:",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/11/Solucionarios-catolica-pucp-examenes-admision-universidad-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CATÓLICA EXAMEN ADMISIÓN UNIVERSIDAD PUCP PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la siguiente ecuación: (2x-3)(5x-2)=0, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "El producto de las soluciones de esta ecuación es 6.",
+        "Las dos soluciones de esta ecuación son negativas.",
+        "Las dos soluciones de esta ecuación son fracciones.",
+        "La suma de las soluciones de esta ecuación es un número entero."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-ejercicios-con-respuestas-de_23.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA PRONABEC RESPUESTAS CLAVES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ahorros de Pablito constaban de (x+1); (3x – 5) y (x+3) monedas de 10, 20 y 50 céntimos de sol, respectivamente. ¿A cuánto ascienden sus ahorros, si al cambiarlos en monedas de 1 sol el número de monedas obtenidas es igual al número de monedas de 50 céntimos?",
+      "alternatives": [
+        "S/ 13,50",
+        "S/ 130",
+        "S/ 20",
+        "S/ 15"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/operaciones-matematicas-arbitrarias_31.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA BECA 18 CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las raíces del polinomio P(x)=2x 3 – 9x 2 +13x – 6 representan el dinero, en moles de soles, que aportaron Andrés, Beto y Carlos para iniciar un negocio conjunto. Si Andrés fue quien hizo la mayor inversión y Carlos invirtió la mitad de lo que invirtió Andrés, ¿Cuál fue la inversión total hecha Beto y Carlos?",
+      "alternatives": [
+        "S/1500",
+        "S/3000",
+        "S/3500",
+        "S/2500",
+        "S/2000"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/algebra-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el mes de noviembre yo ganara S/.60 más , podría gastar diariamente S/.32,50 y ahorrar S/.84,50. ¿Cuál es mi sueldo mensual en soles?",
+      "alternatives": [
+        "999,50",
+        "1000",
+        "999",
+        "998,50",
+        "1000,50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-decimales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si mi sueldo mensual fuera S/.32,25 más de lo que es, podría gastar S/.27,54 cada uno de los días del mes de julio y aún así ahorrar S/.23,27 en dicho mes. ¿Cuál es mi sueldo mensual en soles?",
+      "alternatives": [
+        "844,76",
+        "834,76",
+        "843,67",
+        "844,67",
+        "845,67"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-decimales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una familia el padre gana 16 soles por hora y la madre 15 soles por hora. Al cabo de 26 días de trabajo el padre recibió 1456 soles más que la madre, dado que laboró 3 horas más por día que ella. ¿Cuántas horas de trabajo acumuló el padre?",
+      "alternatives": [
+        "154",
+        "260",
+        "234",
+        "286",
+        "312"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-algebra-2020.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA 2 CE PREUNI CLAVES SOLUCIONADA 2025-2 "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El dueño de una panadería compra un cierto número de sacos de harina por un total de 240 nuevos soles, si cada saco hubiera costado 4 nuevos soles menos, se hubiera comprado 3 sacos más. ¿Cuál es el número de sacos de harina que se compró?",
+      "alternatives": [
+        "6",
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-algebra-2020.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA 2 CE PREUNI CLAVES SOLUCIONADA 2025-2 "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el número negativo que sumado con su inverso multiplicativo da el mismo resultado que restar dicho número al doble de su inverso?",
+      "alternatives": [
+        "– √ 2/3",
+        "–1",
+        "– √ 2",
+        "–1/2",
+        "– √ 2/2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prueba-de-razonamiento-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — APTITUD LÓGICO MATEMÁTICO CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lewis un profesor de educación física cuenta con un número de pelotas, el cual esta representado por el valor de x en\n(2x–14) (2x–14) = 4\n¿cuántos pelotas tiene el profesor Lewis ?",
+      "alternatives": [
+        "8",
+        "10",
+        "11",
+        "5",
+        "14"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El dueño de una avícola posee dos camiones con cierta cantidad de jabas de huevo cada uno. El segundo camión contiene el doble de jabas que el primero. Después de descargar igual cantidad de jabas del primero y del segundo, lo que quedó en el segundo es el triple de lo que quedó en el primero. Si se agregan 120 jabas a lo que quedó en el primer camión, habrá tantas jabas como tenia al principio el segundo.\n¿Cuántas jabas contenían en total los dos camiones al principio?",
+      "alternatives": [
+        "150",
+        "180",
+        "240",
+        "210",
+        "270"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/habilidad-logico-matematica-y-verbal_15.html",
+      "sourceName": "matematicasn.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA ÁREA E SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para un trabajo manual, José dispone de una pieza cuadrada de triplay, la cual debe recortar en trozos cuadrados de igual tamaño. Considere que el lado de cada trozo debe medir x dm y que el lado de la pieza de triplay mide x 2 dm. Si 13 veces el área de cada trozo de triplay excede al área de la pieza de triplay en 36dm 2 , halle la máxima medida posible de cada lado de uno de los trozos de triplay por recortar.",
+      "alternatives": [
+        "3dm",
+        "9dm",
+        "4dm",
+        "8dm",
+        "2dm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/algebra-examen-preuniversidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lucía pagó con un billete de S/100 los cinco cuadernos y siete lápices que compró. Los precios unitarios, en soles, de cada cuaderno y cada lápiz son (3a–b) y (a+b), respectivamente, donde a, b y 3 son raíces del polinomio p(x)=x 3 – 5x 2 –2kx+24. ¿Cuánto recibió de vuelto Lucía?",
+      "alternatives": [
+        "S/11",
+        "S/24",
+        "S/18",
+        "S/16",
+        "S/12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/algebra-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a las raíces del polinomio p(x)=x 3 – 7x+m ; m∈ ℝ , se sabe que una raíz es positiva e igual al doble de otra. Halle la suma de los cubos de todas las raíces de este polinomio.",
+      "alternatives": [
+        "– 24",
+        "– 18",
+        "– 21",
+        "– 9",
+        "–1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-algebra-semana-9-2019-1.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA ÁREA D SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a y b son soluciones de la ecuación:\nz 2 – 3z+1=0 ; z ∈ ℝ\nDetermine M=(a+b)ab",
+      "alternatives": [
+        "6",
+        "9",
+        "1,5",
+        "1/3",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-preuniversitaria-libro-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un laboratorio experimental la población de bacterias de tipo M y de tipo N son «x» y 4 256–x respectivamente. Si la cantidad de bacterias de tipo N es equivalente a la cantidad de bacterias de tipo M, x x–1 veces; determine el número de bacterias de tipo M en el laboratorio.",
+      "alternatives": [
+        "64",
+        "36",
+        "81",
+        "49",
+        "25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los hermanos Angel , Paco y Gretel hoy recibieron de propina respectivamente 4 x soles , 3 x+0,5 soles  y la suma de las propinas de sus hermanos. Si Ángel compra una gaseosa de 3 x–0,5 soles y Paco compra otra gaseosa de 2 2x–1 soles , ambos hermanos tienen la misma cantidad de dinero. ¿Cuánto dinero tiene Gretel de propina?",
+      "alternatives": [
+        "20 soles",
+        "17 soles",
+        "18 soles",
+        "23 soles",
+        "15 soles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x(x – 3) = –1 , halle el valor de x 6 – 18x³+5",
+      "alternatives": [
+        "–1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/examen-de-admision-2016-i-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2021 II PRIMERA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA RESPUESTAS SOLUCIONARIO CLAVES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si – 1 es raíz del polinomio P(x)=x ³ – x ² –2x+m determine el valor de verdad (V o F) de las siguientes proposiciones.\nI ) m=0\nII ) 2 también es una raíz.\nIII) P(x) tiene como factores (x+ 1) y (x – 2)",
+      "alternatives": [
+        "FVV",
+        "VFF",
+        "VVV",
+        "FFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-ejercicios-resueltos_19.html",
+      "sourceName": "matematicasn.blogspot.com — CASOS DE FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Qué se puede afirmar acerca de las raíces del polinomio:\nx ³ – 6x ² + 11x – 6",
+      "alternatives": [
+        "Son pares",
+        "Son impares",
+        "Son negativas",
+        "Algunas son positivas y otras negativas",
+        "Son consecutivas"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/productos-notables-y-factorizacion-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE FACTORIZACIÓN EJERCICIOS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según el teorema del factor, indique la secuencia correcta del valor de verdad (V o F) según corresponda.\nI) Si 10 es raíz de P(x) ⇒ (x –10) es factor de P(x).\nII ) Si 1 y – 4 son raíces de P(x) ⇒ (x –1) y (x+ 4) son factores de P(x).\nIII ) Si (x –100) es factor de P(x) ⇒ 100 es raíz de P(x).",
+      "alternatives": [
+        "VVF",
+        "VVV",
+        "FVV",
+        "VFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN PROBLEMAS RESUELTOS PREUNIVERSITARIOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a y b son las raíces de\nx 2 –4x+4=0\nCalcule a 2 +b 2",
+      "alternatives": [
+        "5",
+        "7",
+        "6",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/algebra-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el valor de (m+1) 2 , si la ecuación mx 2 –4x+4(2–m)=0 tiene solución única.",
+      "alternatives": [
+        "1",
+        "4",
+        "9",
+        "0",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/algebra-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El producto de dos números impares consecutivos positivos es cuatro veces el menor más 15. ¿Cuál es el producto?",
+      "alternatives": [
+        "43",
+        "63",
+        "93",
+        "35"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/ecuaciones-lineales-y-cuadraticas-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — ECUACIONES DE PRIMER Y SEGUNDO GRADO PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se añade a cada uno de 2 números consecutivos la unidad, la suma de sus cuadrados aumenta en 76. Halle la diferencia de sus cuadrados.",
+      "alternatives": [
+        "36",
+        "37",
+        "38",
+        "39",
+        "40"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/razones-y-proporciones-ejercicios.html",
+      "sourceName": "razonamientopdf.blogspot.com — RAZONES Y PROPORCIONES PROBLEMAS RESUELTOS TIPO ADMISIÓN A LA UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál valor corresponde a uno de los puntos en los que la parábola y = x^2 + 11x + 28 intersecta al eje x?",
+      "alternatives": [
+        "x = 4",
+        "x = -7",
+        "x = 28"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ceneval.edu.mx/wp-content/uploads/2021/08/EXANI-I-Guia-para-el-sustentante.pdf",
+      "sourceName": "ceneval.edu.mx — Guía del sustentante Nuevo EXANI-I (CENEVAL) — EXANI-I Pensamiento matemático — ejemplo de reactivo"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si α y β son las raíces de x 2 –5x+2=0\nHalle el valor positivo de T= α – β",
+      "alternatives": [
+        "9",
+        "√ 17",
+        "16",
+        "20",
+        "√ 11"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que: x.y >0 , se cumple, x(19y−10x)=6y 2 . Halle la razón x/y",
+      "alternatives": [
+        "3/2; 2/5",
+        "1/3; 1/5",
+        "2/3; 1/2",
+        "4/5: 2/3",
+        "2/3; 2/5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
     }
   ]
 }

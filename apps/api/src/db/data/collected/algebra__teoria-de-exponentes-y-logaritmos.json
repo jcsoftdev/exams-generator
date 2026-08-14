@@ -6,7 +6,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular el valor de la siguiente expresión: (6^10 · 15^5 · 10^7) · (2^15 · 5^12 · 3^15)^(-1)",
-      "alternatives": ["7", "4", "1", "3"],
+      "alternatives": [
+        "7",
+        "4",
+        "1",
+        "3"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-exponentes-ejercicios.html",
       "sourceName": "matematicasn (Rubiños) - Teoría de Exponentes, ejercicios resueltos, Práctica Pregunta 1"
@@ -17,7 +22,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Elvira compra un libro de inglés con un billete de S/ 100 y recibe de vuelto x^8 soles, donde «x» es la solución de la ecuación: log_x(2) · log_4(x^2) · log_x(2) = 2. ¿Cuánto le costó el libro?",
-      "alternatives": ["S/ 94", "S/ 80", "S/ 70", "S/ 84", "S/ 88"],
+      "alternatives": [
+        "S/ 94",
+        "S/ 80",
+        "S/ 70",
+        "S/ 84",
+        "S/ 88"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
       "sourceName": "matematicasn - San Marcos Álgebra problemas resueltos de admisión (UNMSM), Pregunta 1"
@@ -28,7 +39,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Pedro tiene ahorrado S/ 24 000 y desea depositarlo en diferentes bancos. En el Banco A deposita S/ 13 000 y su monto (en miles de soles) está dado por f(x) = log_4(x + 4) + c, para 0 ≤ x ≤ 12. En el Banco B deposita S/ 11 000 y su monto (en miles de soles) está dado por g(x) = log_2(x + 1) + d, para 0 ≤ x ≤ 12. Si toma ambas opciones, ¿cuántos meses deben transcurrir para que ambos montos sean iguales?",
-      "alternatives": ["5", "4", "10", "14", "22"],
+      "alternatives": [
+        "5",
+        "4",
+        "10",
+        "14",
+        "22"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
       "sourceName": "matematicasn - San Marcos Álgebra problemas resueltos de admisión (UNMSM), Pregunta 3"
@@ -39,7 +56,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Efectuar: M = log_5(125) - log(100) + log_2(64)",
-      "alternatives": ["3", "4", "5", "6", "7"],
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
       "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 01"
@@ -50,7 +73,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Una sustancia radiactiva decae según N(t) = 6m · e^(-0.08t) gramos, donde m es el valor de x que satisface: (log_a x)(log_b x)(log_a x + log_b x)^(-1) = log_a(b^6). ¿Aproximadamente cuánto tiempo tardará en reducirse la masa inicial a un tercio?",
-      "alternatives": ["12.5 · ln(3)", "ln(3)", "8 · ln(3)", "3 · ln(8)"],
+      "alternatives": [
+        "12.5 · ln(3)",
+        "ln(3)",
+        "8 · ln(3)",
+        "3 · ln(8)"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-problemas-resueltos-tipo.html",
       "sourceName": "matematicasn - Logaritmos de examen admisión universidad preguntas resueltas, Problema 1"
@@ -61,7 +89,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Dulce necesita un préstamo de x_0 millones de soles para comprar una casa, donde x_0 es la solución distinta de 1/3 de: (log_x(x^2))(log_x(16x))(log_5(3x))(log_9(25)) = 4 · log_9(9x^2). Si ya pagó la mitad del préstamo, ¿cuánto vale la casa en millones de soles?",
-      "alternatives": ["10", "20", "34", "24"],
+      "alternatives": [
+        "10",
+        "20",
+        "34",
+        "24"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-problemas-resueltos-tipo.html",
       "sourceName": "matematicasn - Logaritmos de examen admisión universidad preguntas resueltas, Problema 2"
@@ -72,7 +105,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El ganadero Ygor tiene 420 cabezas de ganado y acepta un pedido de m centenas de cabezas. Debe comprar el complemento a su amigo Mischa a S/ 300 cada una. Si m satisface log_2(x - 4) - log_6(x - 4) = 0, ¿cuánto pagó Ygor a Mischa?",
-      "alternatives": ["S/ 25 500", "S/ 27 000", "S/ 17 700", "S/ 24 000", "S/ 16 500"],
+      "alternatives": [
+        "S/ 25 500",
+        "S/ 27 000",
+        "S/ 17 700",
+        "S/ 24 000",
+        "S/ 16 500"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-ejemplos.html",
       "sourceName": "matematicasn - Ecuación logarítmica: problemas resueltos de secundaria y pre universidad, Ejercicio 1"
@@ -83,7 +122,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver: log_4(x) · log(x) + log(x) - 6 = 0. Indicar la mayor solución.",
-      "alternatives": ["0.1", "1", "10", "0", "1000"],
+      "alternatives": [
+        "0.1",
+        "1",
+        "10",
+        "0",
+        "1000"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-ejemplos.html",
       "sourceName": "matematicasn - Ecuación logarítmica: problemas resueltos de secundaria y pre universidad, Ejercicio 2"
@@ -94,7 +139,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El producto de las soluciones de la ecuación 6 + 5 · log_2(x) = (log_x 2)^2 - 2 representa la edad actual de Olena. ¿Cuántos años tenía Olena hace 10 años?",
-      "alternatives": ["18 años", "20 años", "22 años", "23 años", "25 años"],
+      "alternatives": [
+        "18 años",
+        "20 años",
+        "22 años",
+        "23 años",
+        "25 años"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-ejemplos.html",
       "sourceName": "matematicasn - Ecuación logarítmica: problemas resueltos de secundaria y pre universidad, Ejercicio 3"
@@ -105,7 +156,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver: log_4(x^2) + log_x(4) = 3. Indicar el producto de las soluciones.",
-      "alternatives": ["6", "7", "8", "9", "12"],
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "12"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-ejemplos.html",
       "sourceName": "matematicasn - Ecuación logarítmica: problemas resueltos de secundaria y pre universidad, Ejercicio 4"
@@ -116,7 +173,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una sustancia pierde la cuarta parte de su masa cada hora a cierta temperatura. Si se tienen 1 kg, ¿cuántas horas se necesitan para que queden 250 gramos? (Usar log_2(3) = 1.6)",
-      "alternatives": ["1 hora", "3 horas", "5 horas", "7 horas"],
+      "alternatives": [
+        "1 hora",
+        "3 horas",
+        "5 horas",
+        "7 horas"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 1"
@@ -127,7 +189,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuál es el valor de POH de una solución de ácido nítrico HNO_3 si la concentración molar de iones hidrógeno es [H^+] = 0.01 M? Usar PH = -log[H^+] y POH + PH = 14.",
-      "alternatives": ["10", "11", "15", "13", "12"],
+      "alternatives": [
+        "10",
+        "11",
+        "15",
+        "13",
+        "12"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 2"
@@ -138,7 +206,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las bacterias E. coli se duplican cada 20 minutos. ¿Cuánto tiempo se necesita para que 2×10^3 bacterias lleguen a 256 000?",
-      "alternatives": ["2 horas 20 minutos", "1 hora 40 minutos", "2 horas 40 minutos", "1 hora 20 minutos"],
+      "alternatives": [
+        "2 horas 20 minutos",
+        "1 hora 40 minutos",
+        "2 horas 40 minutos",
+        "1 hora 20 minutos"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 3"
@@ -149,7 +222,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Usando la escala de Richter R = log(A) - log(P), donde A es la amplitud en cm y P el período en segundos. Si A = 10^(-2) cm y P = 1 s, ¿cuál es la magnitud del sismo?",
-      "alternatives": ["1", "2", "3", "4", "7"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 4"
@@ -160,7 +239,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Resolver: log_{x-3}(2) + log_{x-3}(8) = log_{16}(x - 3), con α > β. Hallar α + 16β.",
-      "alternatives": ["20", "68", "40", "12"],
+      "alternatives": [
+        "20",
+        "68",
+        "40",
+        "12"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 5"
@@ -171,7 +255,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Dos números reales a > b satisfacen: a^2 + b^2 = 738 y log_3(a) - log_3(b) = 2. Hallar a + b.",
-      "alternatives": ["19", "22", "30", "45", "72"],
+      "alternatives": [
+        "19",
+        "22",
+        "30",
+        "45",
+        "72"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 6"
@@ -182,7 +272,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Resolver: log_4(x + 2) + log_2(6) = log_4(6x + 132). ¿Cuántas soluciones reales tiene?",
-      "alternatives": ["0", "1", "2", "3"],
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 7"
@@ -193,7 +288,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un elemento radiactivo sigue la ley N = N_0 · e^(-λt). Si su vida media es de 9 años, ¿cuánto tiempo tarda en que 2 gramos disminuyan a 1/16 gramos?",
-      "alternatives": ["18 años", "45 años", "32 años", "50 años", "36 años"],
+      "alternatives": [
+        "18 años",
+        "45 años",
+        "32 años",
+        "50 años",
+        "36 años"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
       "sourceName": "matematicasn - Álgebra San Marcos preguntas resueltas DECO (simulacro admisión UNMSM), Problema 7"
@@ -204,7 +305,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El PH de una solución se calcula con PH = -log[H^+]. Una muestra tiene concentración inicial de 0.001 mol/L y luego 0.01 mol/L. Determine la variación ΔPH.",
-      "alternatives": ["1", "2", "3", "-1", "-2"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "-1",
+        "-2"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
       "sourceName": "matematicasn - Álgebra San Marcos preguntas resueltas DECO (simulacro admisión UNMSM), Problema 10"
@@ -215,7 +322,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver: log_2(log_3(x - 2)) = 2",
-      "alternatives": ["83", "94", "72", "76", "81"],
+      "alternatives": [
+        "83",
+        "94",
+        "72",
+        "76",
+        "81"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
       "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 16"
@@ -226,7 +339,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Resolver: ln(ln(ln x)) = 0",
-      "alternatives": ["e^2", "e^(1/e)", "2e", "e^e", "3e"],
+      "alternatives": [
+        "e^2",
+        "e^(1/e)",
+        "2e",
+        "e^e",
+        "3e"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
       "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 17"
@@ -237,7 +356,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcular: M = -colog_4(antilog_2(log_2(antilog_2(4))))",
-      "alternatives": ["2", "4", "5", "8", "7"],
+      "alternatives": [
+        "2",
+        "4",
+        "5",
+        "8",
+        "7"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
       "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 11"
@@ -248,7 +373,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Resolver: log_3(2x + 1) + log_{1/3}(x + 8) = 0",
-      "alternatives": ["3", "4", "6", "8", "7"],
+      "alternatives": [
+        "3",
+        "4",
+        "6",
+        "8",
+        "7"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
       "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 13"
@@ -259,7 +390,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcular: log(1 + 1/1) + log(1 + 1/2) + log(1 + 1/3) + ... + log(1 + 1/2005) = log(x). Hallar x.",
-      "alternatives": ["32", "4", "1", "2006", "2007"],
+      "alternatives": [
+        "32",
+        "4",
+        "1",
+        "2006",
+        "2007"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
       "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 20"
@@ -270,7 +407,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular: E = (2^(x+4) + 36 · 2^(x-2)) / (2^(x+5) - 2 · 2^(x+3) - 4 · 2^(x+1) - 6 · 2^(x-1))",
-      "alternatives": ["3", "4", "5", "6", "7"],
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://vacollege.edu.pe/uploads/libros/pdf/algebra-manual-de-preparacion-preuniversitaria.pdf",
       "sourceName": "Lexus Editores - Álgebra Manual de Preparación Pre-Universitaria, Ejercicio Resuelto 1 (Teoría de Exponentes)"
@@ -281,7 +424,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular: E = (216 · 353 · 803) / (154 · 149 · 302). Simplificar usando factores primos y propiedades de exponentes.",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://vacollege.edu.pe/uploads/libros/pdf/algebra-manual-de-preparacion-preuniversitaria.pdf",
       "sourceName": "Lexus Editores - Álgebra Manual de Preparación Pre-Universitaria, Ejercicio Resuelto 4 (Teoría de Exponentes)"
@@ -292,7 +441,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcular: E = ^n√((10^n + 15^n + 6^n) / (5^(-n) + 2^(-n) + 3^(-n)))",
-      "alternatives": ["10", "15", "20", "30", "45"],
+      "alternatives": [
+        "10",
+        "15",
+        "20",
+        "30",
+        "45"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://vacollege.edu.pe/uploads/libros/pdf/algebra-manual-de-preparacion-preuniversitaria.pdf",
       "sourceName": "Lexus Editores - Álgebra Manual de Preparación Pre-Universitaria, Ejercicio Resuelto 8 (Teoría de Exponentes)"
@@ -303,10 +458,965 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcular el valor de: ^(n-1)√((4^(n-1) + 1) / (4^(1-n) + 1)) + ^(n-1)√((5^(n-1) + 1) / (5^(1-n) + 1)) + ^(n-1)√((6^(n-1) + 1) / (6^(1-n) + 1)) + ^(n-1)√((7^(n-1) + 1) / (7^(1-n) + 1))",
-      "alternatives": ["13", "18", "22", "26", "30"],
+      "alternatives": [
+        "13",
+        "18",
+        "22",
+        "26",
+        "30"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://vacollege.edu.pe/uploads/libros/pdf/algebra-manual-de-preparacion-preuniversitaria.pdf",
       "sourceName": "Lexus Editores - Álgebra Manual de Preparación Pre-Universitaria, Ejercicio Resuelto 15 (Teoría de Exponentes)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una calculadora científica, al digitar un número positivo cualquiera y luego presionar la tecla log, aparece en el visor el logaritmo decimal del número inicialmente digitado. Si se digita un millón en dicha calculadora y luego se presiona, T veces, la tecla log hasta que aparezca en el visor un número negativo entonces Log(T) T–1 pertenece al intervalo",
+      "alternatives": [
+        "〈 0;2〉",
+        "〈 2;3〉",
+        "〈 –1;0〉",
+        "〈 – 2;0〉"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS DE SECUNDARIA RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de cuadrados de dos números reales a y b es 738 donde a>b y la diferencia de sus logaritmos, en base 3, de a con b en ese orden, es igual a 2.\nDetermine la suma de estos números.",
+      "alternatives": [
+        "19",
+        "22",
+        "30",
+        "45",
+        "72"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La profesora Zaret está de cumpleaños, pero sus estudiantes no saben cuántos años cumple. Todo lo que ella dice es que su edad es igual al producto de las soluciones de la ecuación logarítmica:\nLog x 2× Log x/16 2 = Log x/64 2\n¿Cuántos años cumple Zaret ?",
+      "alternatives": [
+        "36",
+        "32",
+        "64",
+        "26",
+        "54"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logaritmos-ejercicios-resueltos-quinto.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE LOGARITMOS CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver la siguiente ecuación logarítmica\nLog 4 x²+ Log x 4=3\nDé como respuesta el producto de sus soluciones.",
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN LOGARÍTMICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cierto tipo de bacterias tiene un crecimiento logarítmico dado por N(t)= α Log 2 (t+2), donde α es una constante positiva, t es el tiempo (en días) que transcurre desde el momento en que se inicia el estudio y N(t) representa el número de bacterias presentes al cabo de t días.\n¿A los cuántos días se habrá quintuplicado el número de bacterias con respecto a lo que había al inicio del estudio?",
+      "alternatives": [
+        "25 días",
+        "32 días",
+        "34 días",
+        "30 días"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-ejercicios-resueltos-de_5.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos bolsas llenas de pelotitas de manera que el triple de lo que hay en la primera aumentado en lo contiene la segunda es más de 40; además el exceso del primero sobre el doble del segundo es más de 4.\nCalcula el número de pelotitas que hay en la primera bolsa, si el triple de éstas es menor que 42.",
+      "alternatives": [
+        "18",
+        "12",
+        "15",
+        "14",
+        "13"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/inecuaciones-exponenciales-resueltas.html",
+      "sourceName": "algebraenpdf.blogspot.com — INECUACIÓN EXPONENCIAL PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre dos primos hacen más de 25 años; además la diferencia es mayor a 3 años; calcule la edad del mayor, si ésta es menor que 16 años.",
+      "alternatives": [
+        "9",
+        "14",
+        "12",
+        "15",
+        "13"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/inecuaciones-exponenciales-resueltas.html",
+      "sourceName": "algebraenpdf.blogspot.com — INECUACIÓN EXPONENCIAL PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina el valor de “x” en la ecuación\nlogx+log2x=log(9x+5)",
+      "alternatives": [
+        "1/2",
+        "5",
+        "1",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/11/algebra-simulacro-prueba-beca-18-pronabec-con-solucionario-admision-universidad-pdf.html",
+      "sourceName": "algebraenpdf.blogspot.com — ALGEBRA SIMULACRO EXAMEN BECA 18 PRONABEC ADMISIÓN UNIVERSIDAD PRUEBA ÚNICA NACIONAL CON SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si distintos de la unidad y además: ab = 1 averigüe el valor de:",
+      "alternatives": [
+        "2",
+        "5",
+        "7",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/logaritmos-e-inecuaciones-logaritmicas.html",
+      "sourceName": "matematica-a1.blogspot.com — LOGARITMOS E INECUACIONES LOGARÍTMICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el Log 6!, sabiendo que Log 2=a; Log 3=b",
+      "alternatives": [
+        "2a+3b+1",
+        "3a+2b+1",
+        "4a+b+1",
+        "a+2b+1",
+        "3a+b+1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/logaritmos-e-inecuaciones-logaritmicas.html",
+      "sourceName": "matematica-a1.blogspot.com — LOGARITMOS E INECUACIONES LOGARÍTMICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El valor de la expresión:\n; será:",
+      "alternatives": [
+        "0,001",
+        "0,1",
+        "10",
+        "1 000",
+        "100 000"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/logaritmos-e-inecuaciones-logaritmicas.html",
+      "sourceName": "matematica-a1.blogspot.com — LOGARITMOS E INECUACIONES LOGARÍTMICAS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El valor de la expresión log 1 + log 100² + log 100 es",
+      "alternatives": [
+        "3",
+        "4",
+        "6",
+        "7",
+        "9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/12/examen-admision-cantuta-solucionario.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN ADMISIÓN CANTUTA SOLUCIONARIO UNIVERSIDAD NACIONAL DE EDUCACIÓN UNE PRUEBA DESARROLLADA PREGUNTAS RESUELTAS CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las soluciones que satisface a la ecuación\nLog 3 (x–4) 2 =2 es",
+      "alternatives": [
+        "12",
+        "1",
+        "6",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/30-ejercicios-desarrollados-de.html",
+      "sourceName": "matematicasn.blogspot.com — UNSLG INGENIERÍAS ÁREA C EXAMEN INGRESO UNIVERSIDAD SAN LUIS GONSAGA RESUELTO UNICA PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El valor de la expresión log1 + log 100 2 + log100 es",
+      "alternatives": [
+        "3",
+        "4",
+        "6",
+        "7",
+        "9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/examen-admision-cantuta-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CANTUTA 2027 UNE EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE EDUCACIÓN ENRIQUE GUZMÁN Y VALLE PROSPECTO CRONOGRAMA VACANTES ESTRUCTURA PUNTAJES TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver:\n(Log 6 x)(Log x (2x))(Log 2 x (3x) ) =Log x x 2",
+      "alternatives": [
+        "2",
+        "4",
+        "10",
+        "12",
+        "14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-3ro-4to-actividad-4-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS ECONÓMICAS, FINANCIERAS Y EMPRESARIALES PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA A 2027"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un científico observa en un experimento que la masa de un compuesto químico, en un medio adecuado, se reduce a la mitad cada 2 horas. Si el científico colocó inicialmente 1000 gramos de dicho compuesto en un recipiente, ¿cuántas horas han transcurrido desde el inicio del experimento, si ahora quedan 25 gramos del compuesto en el recipiente?",
+      "alternatives": [
+        "– 2log 2 (0,25) horas",
+        "– 2log 2 (0,025) horas",
+        "– log 2 (0,025) horas",
+        "– 4log 2 (0,025) horas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/algebra-semana-18-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El gerente de una empresa textil observa que la utilidad de dicha empresa creció m% anual entre los años 2014 y 2019 y además dispone de la siguiente información: en el 2014 la utilidad fue de S/ 200 000 y al final del último año fue de S/ 248 832. Si la utilidad continúa creciendo a la misma razón, ¿cuántos años, aproximadamente, estima el gerente para que la empresa tenga una utilidad de S/ 890 750?\nConsidere ln(1,2)=0,18 y ln(4,45375)=1,49.",
+      "alternatives": [
+        "11 años",
+        "8 años",
+        "9 años",
+        "10 años"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/algebra-semana-18-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando Kittzay toma el antibiótico XD de 500 mg, dicho medicamento recorre la corriente sanguínea y al pasar por el hígado y los riñones,se metaboliza y aproximadamente el 40% del medicamento es eliminado por el organismo cada hora. Determine luego de cuántas horas Kittzay tendrá 108 mg del antibiótico XD en su organismo.",
+      "alternatives": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/algebra-semana-18-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La medida de la altura media de un tronco de cierta especie de árbol, que se destina a la producción de madera, desde que es plantada es modelada por\nh(t) = 1,5 + log 3 (t +1)\ncon h(t) en metros y t en años. Si uno de esos árboles fue cortado cuando su tronco midió 3,5 m de altura, entonces el tiempo transcurrido desde el momento de la plantación hasta que fue cortado es de",
+      "alternatives": [
+        "6 años.",
+        "7 años.",
+        "9 años.",
+        "8 años."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/algebra-semana-18-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x + y = 2\n2 x + 2 y = 6\nentonces el valor de 4 x +4 y es:",
+      "alternatives": [
+        "22",
+        "24",
+        "28",
+        "30",
+        "32"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el valor de n en la ecuación: 4 ⁿ – 2 ⁿ = 56",
+      "alternatives": [
+        "1/2",
+        "1/3",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/algebra-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "g(x) =Ln(x), indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F).\nI. Para todo x>0 se tiene\nLog ₄ (2x+1) >Log ₂ (x+1).\nII. La función logaritmo es creciente.\nIII. La función exponencial es creciente.",
+      "alternatives": [
+        "VFF",
+        "VFV",
+        "VVV",
+        "FFF",
+        "FVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para un mejor estudio del sol los astrónomos utilizan filtros de luz en sus instrumentos de observación. Se sabe que cada filtro deja pasar cuatro quintos de la intensidad de la luz que en él incide y para reducir dicha intensidad a menos del 10% de la original, fue necesario utilizar n filtros.\nConsiderando Log2=0,3 , halle la menor cantidad de filtros que se utilizó.",
+      "alternatives": [
+        "12",
+        "11",
+        "10",
+        "9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS DE SECUNDARIA RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La escala de magnitud de momento MMS (M w ), es usada para estimar las magnitudes de los grande terremotos en términos de energía liberada. M w y M 0 se relacionan por la fórmula\nM w =10,7+LogM 0 ×0,666... ,donde M 0 es el momento sísmico, cuya unidad es dina centímetros(dyn/cm). El terremoto de Kobe, ocurrido el 17 de enero de 1995, fue uno de los terremotos que causaron mayor impacto en Japón y tuvo una magnitud M w =7,3.\nEl momento sismico M 0 , del terremoto ocurrido en Kobe fue de",
+      "alternatives": [
+        "10 26 dyn/cm.",
+        "10 22,35 dyn/cm.",
+        "10 23,45 dyn/cm.",
+        "10 27 dyn/cm."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS DE SECUNDARIA RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el conjunto solución de 2 x +2 –x ≤2 √ 2 es [ a;b ] , determine el valor de 4 a + 4 b",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/inecuaciones-exponenciales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EXPONENCIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Esbeta compra tantos libros como la suma de los valores de x e y que verifican la ecuación 2 x .3 y +648=81(2 x )+8(3 y ) .\nSi cada libro cuesta 20 soles ¿cuánto dinero gastó Esbeta en total?",
+      "alternatives": [
+        "100 soles",
+        "120 soles",
+        "140 soles",
+        "160 soles",
+        "180 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/inecuaciones-exponenciales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EXPONENCIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Paco dispone de log 3 (35–x 3 )  5 soles; con este dinero compra 15 unidades de cierto artículo cuyo costo por unidad es log 3 (5–x) soles, sin sobrarle nada. Si el valor numérico del costo de cada artículo es un número entero, ¿cuánto dinero tenía Paco antes de la compra?",
+      "alternatives": [
+        "S/ 60",
+        "S/ 15",
+        "S/ 30",
+        "S/ 45",
+        "S/ 75"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/algebra-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número N de especies que viven en una determinada área natural (por ejemplo, un bosque) de superficie S (en metros cuadrados), está modelado por la ecuación logN=logc+3logS, donde «c» es una constante positiva que depende del tipo de hábitat. ¿En cuántas veces se incrementará la cantidad de especies que viven en cierta área natural, si esta se duplica en superficie?",
+      "alternatives": [
+        "1 vez",
+        "3 veces",
+        "7 veces",
+        "15 veces",
+        "31 veces"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/algebra-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cierta población de bacterias se duplica cada 3 horas. Si inicialmente se tiene una colonia de 1000 bacterias, ¿en cuánto tiempo aproximadamente el número de bacterias llegará a 100000? (considere log2=0,3).",
+      "alternatives": [
+        "16 horas",
+        "18 horas",
+        "20 horas",
+        "22 horas",
+        "24 horas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la cantidad de bacterias de un cultivo está determinada por 4 ⁿ , donde n es el tiempo en horas. Determine el tiempo n cuando la cantidad de bacterias es 16ⁿ ⁻ ².",
+      "alternatives": [
+        "3 horas",
+        "4 horas",
+        "1 horas",
+        "2 horas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-exponentes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍA DE EXPONENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un fanático de la caída de fichas de dominó quiere ordenar 4096 fichas en forma de un cuadrado de lado √(x √x). Determine cuántas fichas habrá de cada lado y el valor de x.",
+      "alternatives": [
+        "12 fichas, x=144",
+        "15 fichas; x=225",
+        "64 fichas; x=256",
+        "25 fichas; x=625"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-exponentes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍA DE EXPONENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por fiestas de fin de año se compra cierto número de luces navideñas por S/100. Si se sabe que el precio de una caja de luz navideña es √(k(√k) − ¹ ) soles y coincide con el número de cajas compradas, ¿Cuál es el precio de cada luz navideña y el valor de k?",
+      "alternatives": [
+        "S/20; k=100",
+        "S/10; k= 10 000",
+        "S/10; k=1000",
+        "S/30; k=10"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-exponentes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍA DE EXPONENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un elemento radiactivo decae de tal manera que, al desintegrarse en t segundos, la cantidad de miligramos presentes en ese instante está dada por la siguiente función:\nr(t)=8e –t\nDetermine el tiempo, en segundos que debe transcurrir para que la cantidad de miligramos presentes del elemento radiactivo sea la mitad de la cantidad inicial.",
+      "alternatives": [
+        "ln4",
+        "ln6",
+        "ln2",
+        "ln8",
+        "ln5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁLGEBRA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el valor de x 2 , si se cumple la siguiente ecuación:\nxlog15+log(log5)=log(5 log125)",
+      "alternatives": [
+        "4",
+        "9",
+        "3",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/algebra-untels-examen-resuelto-admision.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA RESUELTA DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el valor de POH de una solución de ácido nítrico; HNO 3 si la concentración molar de iones hidrógeno [H + ]= 0,01 M y además, se cumple que PH= – Log[H + ] y POH+PH=14?",
+      "alternatives": [
+        "10",
+        "11",
+        "15",
+        "13",
+        "12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si α y β son las soluciones de la ecuación Log (x–3) 2 + Log (x–3) 8 =Log 16 (x–3) , con α> β , halle el valor de α +16 β .",
+      "alternatives": [
+        "20",
+        "68",
+        "40",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la siguiente ecuación Log 4 (x+2) + Log 2 6 =Log 4 (6x +132) , determine el número de elementos del conjunto solución.",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre las oraciones siguientes, sólo una es unimembre:",
+      "alternatives": [
+        "¿Vienes?",
+        "¿Qué deseas?",
+        "Escúchame.",
+        "¡Dios mío!",
+        "Dile."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/caracteristicas-sintacticas-de-la-oracion-unimembre-y-bimembre-ejemplos-preguntas-resueltas-de-lenguaje-de-secundaria-pre-examen-admision-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ORACIONES UNIMEMBRES Y BIMEMBRES EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el conjunto solución de la ecuación\nLog (5–x) (35–x 3 )=3",
+      "alternatives": [
+        "∅",
+        "{2; 3; 4; 6}",
+        "{3; 4}",
+        "{2; 3}",
+        "{2; 3; 4}"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-de-algebra-preuniversitaria.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el conjunto solución de la ecuación\nLog (5 – x) (35 – x³) = 3.",
+      "alternatives": [
+        "∅",
+        "{2; 3; 4; 6}",
+        "{3; 4}",
+        "{2; 3}",
+        "{2; 3; 4}"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionarios-uni-2016-i-examen-de.html",
+      "sourceName": "matematicasn.blogspot.com — SEGUNDA PRUEBA ADMISIÓN UNI 2022 I SOLUCIONARIO MATEMÁTICAS UNIVERSIDAD DE INGENIERÍA 2022-1 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dulce va a comprar una casa en San Isidro, para ello necesita un préstamo en el banco de x 0 millones de soles, para completar el pago de la casa. Si x 0 es una solución de la ecuación:\n(Log x x 2 )(Log x 16x)(Log 5 3x)(Log 9 25)=4(Log 9 9x 2 )\n; donde x 0 ≠1/3 ; además Dulce ya pagó una parte del precio de costo de la casa, siendo que dicho pago efectuado está representado por la mitad del valor del préstamo.\nHalle el valor (en millones de soles) de la casa.",
+      "alternatives": [
+        "10",
+        "20",
+        "34",
+        "24"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS DE EXAMEN ADMISIÓN UNIVERSIDAD PREGUNTAS RESUELTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación de la demanda para las mochilas que vende un comerciante está dada por\n50x 0 –p=q , donde x 0 es la solución de\nLog 3 { 7+Log 5 [ 23+Log x (6–x) ] } =2\ny es el número de mochilas demandadas al precio unitario de soles .\nHalle el ingreso que obtiene el comerciante si vende 60 mochilas.",
+      "alternatives": [
+        "1800 soles",
+        "3600 soles",
+        "2400 soles",
+        "3000 soles",
+        "2500 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logaritmos-ejercicios-resueltos-quinto.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE LOGARITMOS CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un terreno rectangular, son 10a metros y 10b metros con a<b, donde a y b son las mayores soluciones enteras de Log 5 (25+5 2 –x –1) ≥ x , halle la suma del valor numérico del área con el semiperímetro de dicho terreno.",
+      "alternatives": [
+        "360",
+        "100",
+        "640",
+        "340",
+        "230"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logaritmos-ejercicios-resueltos-quinto.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE LOGARITMOS CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la ecuación\n6 Lnx – 9×2 Lnx =2×3 Lnx – 18\nhallar el producto de sus soluciones.",
+      "alternatives": [
+        "e 6",
+        "e 5",
+        "e 4",
+        "e 3",
+        "e 2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logaritmos-neperianos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com —  LOGARITMOS NEPERIANOS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La temperatura T=T(t) de un cierto congelador en cualquier instante t (t en horas) se rige mediante la ecuación Ln|T – M|=–kt+c donde M es la temperatura del medio ambiente y k y c son constantes fijas. Cuando la temperatura del congelador es de – 16°C y la temperatura del lugar es 20º C se interrumpe la energía y la refrigeradora se apaga.\n¿Al cabo de cuántas horas, aproximadamente, la temperatura del congelador será de 0C?",
+      "alternatives": [
+        "(Ln9 – Ln5)k –1 horas",
+        "(Ln6 – Ln5)k –1 horas",
+        "(Ln5 – Ln9)k –1 horas",
+        "(Ln4 – Ln5)k –1 horas",
+        "(Ln3 – Ln6)k –1 horas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/otras-propiedades-en-los-logaritmos.html",
+      "sourceName": "matematicasn.blogspot.com — PROPIEDADES DE LOGARITMOS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una conversación humana tiene un nivel de intensidad de 60 decibeles y el rugido de un león tiene un nivel de intensidad de 80 decibeles\n¿Qué se puede afirmar sobre la intensidad del sonido del rugido del león comparado con la intensidad del sonido de la conversación humana?\nObservación\nEl nivel de intensidad dB de un sonido, expresado en decibeles se define por medio de:\ndB=10Log(p÷p 0 )\ndB : Nivel de intensidad p\np : intensidad del sonido (variable)\np 0 : Sonido mas débil que el oído humano puede captar (constante)",
+      "alternatives": [
+        "Intensidad del sonido del rugido del león es 10 veces la intensidad del sonido de la conversación humana.",
+        "Intensidad del sonido del rugido del león es 1000 veces la intensidad del sonido de la conversación humana. .",
+        "Intensidad del sonido del rugido del león es igual a la intensidad del sonido de la conversación humana.",
+        "Intensidad del sonido del rugido del león es 100 veces la intensidad del sonido de la conversación humana.",
+        "Intensidad del sonido del rugido del león es 200 veces la intensidad del sonido de la conversación humana."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aplicaciones-de-los-logaritmos-en-la.html",
+      "sourceName": "matematicasn.blogspot.com — APLICACIÓN DE LOS LOGARITMOS EN LA VIDA COTIDIANA EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La potencia L, de un sonido( en decibeles) que percibe el oído humano depende del cociente de la intensidad I, de dicho sonido entre el umbral I 0 , de escucha del oído humano promedio.\nEs decir\nL=10Log(I÷I 0 )\n¿Cuánto será la potencia de un sonido que posee una intensidad de (k+8)×10 4 veces el umbral del oído humano promedio?\nsiendo:\nk= [ Log 3 Log 9 (a+b) 18 ] ÷ [1+ Log 9 Log 3 (a+b) ] , donde a+b>0",
+      "alternatives": [
+        "30 decibeles",
+        "40 decibeles",
+        "50 decibeles",
+        "60 decibeles",
+        "20 decibeles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aplicaciones-de-los-logaritmos-en-la.html",
+      "sourceName": "matematicasn.blogspot.com — APLICACIÓN DE LOS LOGARITMOS EN LA VIDA COTIDIANA EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ciclistas Jaime y Enrique inician un paseo en bicicleta, partiendo ambos de un mismo punto M y tienen como meta llegar a un punto P. Jaime llegó primero a dicha meta, y en ese momento Enrique había recorrido una longitud de (Log 5 4(x–5)) millas y aún le faltaba (–2+Log 3 25) millas para llegar al punto P. Si el recorrido lo realizaron sin inconveniente alguno y, a lo largo de una carretera recta, cuya longitud es de (Log 3 (x–5)) millas, halle esta longitud.",
+      "alternatives": [
+        "Log 3 25 millas",
+        "Log 3 20 millas",
+        "Log 3 30 millas",
+        "Log 3 15 millas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-ejercicios-resueltos-de_5.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando un determinado antibiótico es administrado a un adulto, la cantidad de la misma (en miligramos), que queda en el torrente sanguíneo del paciente después de t horas, aproximadamente, está dada por 5(3 –t ) – 4(3 –3t ) . Si después de t 1 horas de haber sido administrado el medicamento en el paciente, la cantidad que aún le queda en el torrente sanguineo es 3 t 1 miligramos, ¿cuántos miligramos de dicho medicamento hay aún en el torrente sanguíneo del paciente al cabo de las t 1 horas?",
+      "alternatives": [
+        "4 mg",
+        "3 mg",
+        "5 mg",
+        "2 mg"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-ejercicios-resueltos-de_5.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El valor de un auto se deprecia un 20% en el primer año que transcurre y en los siguientes años se deprecia el 10%( del valor anterior) por cada año que transcurre.\n¿Cuánto tiempo, en años, aproximadamente, debe transcurrir para que el valor del auto sea de 6000 dólares, si su valor inicial es de 12 000 dólares?\n(Considere log16=1,2 y Log9=0,95).",
+      "alternatives": [
+        "5 años",
+        "3 años",
+        "4 años",
+        "7 años"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-logaritmicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LOGARÍTMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Adrián, el día lunes, vende (5x–2) 5x artículos de precio unitario ( 2 –4 (5x)–2 –3 ) miles de soles cada uno, obteniendo por ello un ingreso de 2000 soles. Si el día martes Adrián vendió 10 artículos similares a los del día lunes, halle el ingreso de dinero que obtuvo el día martes.",
+      "alternatives": [
+        "1290 soles",
+        "1200 soles",
+        "1250 soles",
+        "1150 soles",
+        "2000 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa estima que el volumen de ventas puede modelarse mediante la ecuación:\nS(x)=b.2 kx ; 0≤x≤6 donde x es el número de semanas después de promover cierta venta y b es una constante real positiva. El volumen de ventas al final de la primera y la cuarta semana fue de $32160 y $4020, respectivamente. Calcular el volumen de ventas en la segunda semana.",
+      "alternatives": [
+        "6040",
+        "8040",
+        "16 080",
+        "20 080",
+        "12 000"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Algunos biólogos modelan el número de especies S en un área fija A (por ejemplo una isla) con la relación especie - área.\nlogS= logC+KlogA\ndonde C y K son constantes positivas que dependen del tipo de especie y hábitat. Si K=3 para unas determinadas especies y se duplica el área, ¿qué sucede con el número de especies (S)?",
+      "alternatives": [
+        "Se duplica.",
+        "Se mantiene igual.",
+        "Aumenta 8 veces.",
+        "Se triplica.",
+        "Se cuadruplica."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número M=2 8 +2 11 +2 x es un cuadrado perfecto, además x<14\nCalcula Log(x ² –44)+Log(x–2)",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "1",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/algebra-problemas-resueltos-examen.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el valor de m en\n27 m+1 = 3 5m+2",
+      "alternatives": [
+        "1",
+        "2",
+        "1/2",
+        "1/3",
+        "2/3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/algebra-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I La expresión 103 = I0 relaciona la sonoridad de un sonido de 30 decibeles con su intensidad (I) y la menor intensidad (IO) que percibe el oído humano. ¿Cuántas veces es el valor de I respecto a IO?",
+      "alternatives": [
+        "Una milésima.",
+        "Un tercio.",
+        "Tres veces.",
+        "Mil veces."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://eservicioseducativos.com/wp-content/uploads/2021/11/Cuadernillo-de-preguntas-Matematicas-Saber-11-2021.pdf",
+      "sourceName": "eservicioseducativos.com — ICFES Saber 11 2021 Matemáticas pregunta 48"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El precio de una revista en soles está dado por la menor solución de la ecuación E(x) y la cantidad de revistas que se vende es la mayor solución de E(x). Determine el ingreso en soles, si E(x) :( logx)²+2=3logx .",
+      "alternatives": [
+        "1000",
+        "900",
+        "800",
+        "1100"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2018/09/examen-san-marcos-deco-quimica-ce.html",
+      "sourceName": "quimicapdf.blogspot.com — AREA C SAN MARCOS EXAMEN ADMISION UNIVERSIDAD SOLUCIONADO PDF"
     }
   ]
 }

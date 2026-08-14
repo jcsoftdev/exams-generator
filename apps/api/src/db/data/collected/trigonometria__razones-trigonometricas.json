@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo ABC con ángulo recto en C, simplifique: E = a·ctgA − c·senB",
-      "alternatives": ["0", "1/3", "a", "b", "1/2"],
+      "alternatives": [
+        "0",
+        "1/3",
+        "a",
+        "b",
+        "1/2"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://recursosdidacticos.org/razones-trigonometricas-de-angulos-agudos-para-quinto-de-secundaria/",
       "sourceName": "Recursos Didácticos - Razones Trigonométricas de Ángulos Agudos - Problema 2"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo rectángulo ABC con ángulo recto en B, reduzca: E = (secA − senC)·ctgA − cosC",
-      "alternatives": ["1", "2", "0", "3", "-1"],
+      "alternatives": [
+        "1",
+        "2",
+        "0",
+        "3",
+        "-1"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://recursosdidacticos.org/razones-trigonometricas-de-angulos-agudos-para-quinto-de-secundaria/",
       "sourceName": "Recursos Didácticos - Razones Trigonométricas de Ángulos Agudos - Problema 3"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo ABC con ángulo recto en A, se tiene tgB = 0,75 y a − b = 6 m. Halle el perímetro.",
-      "alternatives": ["12 m", "24 m", "36 m", "42 m", "45 m"],
+      "alternatives": [
+        "12 m",
+        "24 m",
+        "36 m",
+        "42 m",
+        "45 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://recursosdidacticos.org/razones-trigonometricas-de-angulos-agudos-para-quinto-de-secundaria/",
       "sourceName": "Recursos Didácticos - Razones Trigonométricas de Ángulos Agudos - Problema 4"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo rectángulo ABC, recto en C, se cumple que tgA + tgB = 2. Halle cscA·secA + cosB·cscA.",
-      "alternatives": ["2", "3", "4", "5", "6"],
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
       "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 6"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Las medidas de los lados de un triángulo rectángulo T son a metros, b metros y c metros, siendo a, b, c números pares consecutivos. Calcular ctg(θ/2), si θ es el mayor ángulo agudo de T.",
-      "alternatives": ["3/2", "2", "5/4", "25", "4/3"],
+      "alternatives": [
+        "3/2",
+        "2",
+        "5/4",
+        "25",
+        "4/3"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
       "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 7"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo rectángulo de perímetro 60 m, calcular su área, si el coseno de uno de los ángulos agudos es 0,8.",
-      "alternatives": ["120 m²", "130 m²", "140 m²", "150 m²", "160 m²"],
+      "alternatives": [
+        "120 m²",
+        "130 m²",
+        "140 m²",
+        "150 m²",
+        "160 m²"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/razones-trigonometricas-de-angulos.html",
       "sourceName": "Trigonometría PDF - Razones Trigonométricas de Ángulos Agudos - Problema 1"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo rectángulo ABC, recto en C, se cumple que senA·senB = 2/5. Hallar 2(tgA + tgB).",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
       "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 1"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo rectángulo ABC, recto en C, se cumple que cosA·cosB = 2/5. Halle 2(ctgA + ctgB).",
-      "alternatives": ["4", "3", "5", "2/5", "2"],
+      "alternatives": [
+        "4",
+        "3",
+        "5",
+        "2/5",
+        "2"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
       "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 2"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo rectángulo ABC, recto en B, se cumple que tgC = √2·cosA. Calcule csc²A + 3·ctgC.",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
       "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 4"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo rectángulo ABC, recto en B, se cumple que senA·senC = 8/13. Halle 8(tgA + tgC).",
-      "alternatives": ["13", "14", "15", "16", "17"],
+      "alternatives": [
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
       "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 5"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En un triángulo rectángulo ABC con ángulo recto en A, simplifique: E = b·tgC + c·tgB − c",
-      "alternatives": ["a", "b", "c", "2a", "2c"],
+      "alternatives": [
+        "a",
+        "b",
+        "c",
+        "2a",
+        "2c"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://recursosdidacticos.org/razones-trigonometricas-de-angulos-agudos-para-quinto-de-secundaria/",
       "sourceName": "Recursos Didácticos - Razones Trigonométricas de Ángulos Agudos - Problema 1"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El perímetro de un triángulo rectángulo es 180 m. Si la tangente de uno de sus ángulos agudos es 2,4, calcule la hipotenusa.",
-      "alternatives": ["13 m", "26 m", "39 m", "78 m", "82 m"],
+      "alternatives": [
+        "13 m",
+        "26 m",
+        "39 m",
+        "78 m",
+        "82 m"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/11/razones-trigonometricas-nivel-basico.html",
       "sourceName": "Trigonometría PDF - Razones Trigonométricas Nivel Básico - Problema 1"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En un triángulo rectángulo, los lados de mayor longitud miden 4 cm y 3 cm. Calcule la tangente del menor ángulo agudo.",
-      "alternatives": ["2/3", "3/4", "3/√7", "√7/3", "√7/4"],
+      "alternatives": [
+        "2/3",
+        "3/4",
+        "3/√7",
+        "√7/3",
+        "√7/4"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/11/razones-trigonometricas-angulos-agudos.html",
       "sourceName": "Trigonometría PDF - Razones Trigonométricas de Ángulos Agudos - Problema 1"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En un triángulo rectángulo, los dos lados mayores miden 13 cm y 12 cm. Calcule el coseno del mayor ángulo agudo.",
-      "alternatives": ["5/12", "12/23", "5/13", "5/8", "7/15"],
+      "alternatives": [
+        "5/12",
+        "12/23",
+        "5/13",
+        "5/8",
+        "7/15"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/11/razones-trigonometricas-angulos-agudos.html",
       "sourceName": "Trigonometría PDF - Razones Trigonométricas de Ángulos Agudos - Problema 2"
@@ -160,10 +244,2862 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcule el perímetro de un triángulo rectángulo cuya área es 7,5 cm², si la tangente de uno de sus ángulos agudos es 5/12.",
-      "alternatives": ["12 cm", "13 cm", "15 cm", "24 cm", "30 cm"],
+      "alternatives": [
+        "12 cm",
+        "13 cm",
+        "15 cm",
+        "24 cm",
+        "30 cm"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/razones-trigonometricas-de-angulos.html",
       "sourceName": "Trigonometría PDF - Razones Trigonométricas de Ángulos Agudos - Problema 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona colocada a la orilla del rio ve un árbol plantado sobre la ribera opuesta bajo un ángulo de elevación de 60º se aleja 40mts, y nuevo ángulo de elevación mide 30º ¿Cuál es la altura del árbol?",
+      "alternatives": [
+        "43,6",
+        "30,6",
+        "34,6",
+        "36,4",
+        "38,4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/razones-trigonometricas-de-angulos.html",
+      "sourceName": "matematica-a1.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS AGUDOS II EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Subiendo por un camino inclinado un ángulo de 37º respecto a la horizontal, se divisa lo alto de un poste con un ángulo de elevación de45º. Si el poste se encuentra a 20m del punto de observación; ¿Cuál es la altura del poste?",
+      "alternatives": [
+        "2m",
+        "3m",
+        "6m",
+        "4m",
+        "8m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/razones-trigonometricas-de-angulos.html",
+      "sourceName": "matematica-a1.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS AGUDOS II EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Carla se encuentra a una distancia de 40 m de un edificio y observa la parte más alta de él, con un ángulo cuya tangente es 7/10. Halle la distancia que debe alejarse Carla para que el nuevo ángulo de elevación tenga como tangente 1/3.",
+      "alternatives": [
+        "44 m",
+        "48 m",
+        "50 m",
+        "60 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/simulacro-resuelto-de-admision-a-la-universidad-catolica-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO CATÓLICA SOLUCIONARIO DE ACCESO UNIVERSIDAD PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el mayor perímetro de un triángulo rectángulo que no exceda a 160, si la suma de la tangente de uno de sus ángulos agudos con la cosecante del otro ángulo es 5.",
+      "alternatives": [
+        "150 u",
+        "140 u",
+        "155 u",
+        "159 u",
+        "145 u"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/trigonometria-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un automóvil parte desde la base de un edificio de 30 m de altura. Si desde la azotea de este el ángulo de depresión con el que una persona observará al automóvil está dado por arccot[(t² + t)/60] en radianes, donde 0 ≤ t ≤ 20 es el tiempo transcurrido en minutos desde que el automóvil parte de la base del edificio, calcule la distancia a la que se encontrará el automóvil respecto a la persona a los 15 minutos.",
+      "alternatives": [
+        "30 17 m",
+        "45 5 m",
+        "240 m",
+        "35 65 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/trigonometria-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona observa una torre con un ángulo de elevación de 60°, ¿cuánto debe retroceder para que observe la misma torre con un ángulo de elevación de 30°? La altura de la torre es 5 √ 3 m y la altura de la persona es de √ 3 m.",
+      "alternatives": [
+        "8 m",
+        "6 m",
+        "10 m",
+        "7 m",
+        "9 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/trigonometria-unc-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un observador de 1,7 m de estatura visualiza la parte alta de una antena colocada sobre un edificio, con ángulo de elevación de 37º; si se acerca 7 m hacia el edificio, el nuevo ángulo de elevación es 53º. Si la antena mide 1,5 m, determinar la altura del edificio.",
+      "alternatives": [
+        "12,2 m",
+        "13,2 m",
+        "14,2 m",
+        "15,2 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/trigonometria-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dayana observa un globo con un ángulo de elevación de 45° en dirección este. En el mismo instante, Gianina, que está a 0,5km al oeste de Dayana, observa el mismo globo con un ángulo de elevación de 30°. ¿A qué distancia está Gianina del globo?",
+      "alternatives": [
+        "3,71 km",
+        "2,73 km",
+        "5,61 km",
+        "1,36 km",
+        "4,16 km"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/examen-admision-unsa-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNSA 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE SAN AGUSTIN DE AREQUIPA 2026 PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ciudadano que se encuentra a 30 metros de la base del asta de la bandera peruana, determina que el ángulo de elevación hasta la punta del asta es de 53°. ¿Qué altura en metros tiene el asta de la bandera?",
+      "alternatives": [
+        "30",
+        "35",
+        "40",
+        "45",
+        "50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un pequeño agujero en un techo a 18 m de altura, ingresa un haz de luz con un ángulo de depresión de 37° proyectándose en el piso. Pasado un tiempo, el haz de luz presenta un ángulo de depresión de 45° y ha recorrido una distancia en línea recta en el piso. Si el haz de luz se ha mantenido siempre en el mismo plano vertical, se desea saber cuántos metros ha recorrido la proyección en el piso.",
+      "alternatives": [
+        "3 m",
+        "4 m",
+        "5 m",
+        "6 m",
+        "8 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-ucsur-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CIENTIFÍCA DEL SUR 2027 UCSUR EXAMEN ADMISIÓN UNIVERSIDAD TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos triángulos equiláteros ABC y ABD forman un ángulo diedro de 90°. Hallar el coseno del ángulo DAC.",
+      "alternatives": [
+        "2/3",
+        "1/6",
+        "3/4",
+        "3/5",
+        "1/4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA DEL COSENO PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un proyectil es lanzado con un ángulo de elevación de 37°. Si cuando ha ascendido las tres cuartas partes de su altura máxima, le falta 3s para llegar a su altura máxima. Calcula la rapidez de lanzamiento.\n(g = 10 m/s²)",
+      "alternatives": [
+        "50m/s",
+        "60m/s",
+        "70m/s",
+        "80m/s",
+        "100m/s"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-parabolico-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO PARABÓLICO EJERCICIOS RESUELTOS DE MPCL –  INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante para medir la altura de un árbol, lanza una pelota desde una distancia horizontal de 42m mediante un aparato desde el suelo con un ángulo de elevación de 53°.Si él constata que el tiempo transcurrido entre el disparo y la llegada de la piedra a la punta del árbol es de 3s. ¿Cuál es la altura (en metros) del árbol?\n(Asumir g=10m/s² y tg53°=4/3)",
+      "alternatives": [
+        "7",
+        "9",
+        "11",
+        "9,6",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-parabolico-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO PARABÓLICO EJERCICIOS RESUELTOS DE MPCL –  INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto situado al sur de una torre, se observa su parte superior con un ángulo de elevación de 53° y desde otro punto situado al este de la torre el ángulo de elevación para su parte superior es de 30°, si la torre mide 12m; calcula la distancia que separa a ambos puntos de observación.",
+      "alternatives": [
+        "35 √ 7",
+        "4 √ 5 7",
+        "5 √ 5 7",
+        "6 √ 5 7",
+        "√ 5 7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto ubicado al sur de un faro, se observa su parte superior con un ángulo de elevación “θ ” cuya tangente es 3, y desde otro punto de observación situado al este del faro; el ángulo de elevación es “α” y su tangencia es ahora 7/8. Halla la tangente del ángulo de elevación con el cual se observaría el faro desde un punto ubicado en medio de los dos puntos de observación iniciales.",
+      "alternatives": [
+        "42/25",
+        "25/42",
+        "30/31",
+        "31/30",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La base de un muro de 7 metros de altura se halla en una línea que va de norte a sur . El rumbo de la luz solar es S60°E , y su ángulo de depresión es 30°. Determinar el ancho de la sombra del muro .",
+      "alternatives": [
+        "10 m",
+        "12",
+        "11,5",
+        "9",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un acantilado se observa en la dirección Sur, una boya con un ángulo de depresión de 45° y en dirección este un bote con un ángulo de depresión de 30°. Si la distancia que separa a la boya del bote es 80m. Calcula la altura del acantilado.",
+      "alternatives": [
+        "25m",
+        "40m",
+        "45m",
+        "48m",
+        "50m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un barco que navega con rumbo N37°E observa al norte a un avión que vuela en la dirección oeste este. Luego de navegar 35km vuelve a observar el avión pero ahora hacia el este, con un ángulo de elevación de 16° y a : 100 √ 3km de distancia.\nCalcula el ángulo de elevación en la primera observación.",
+      "alternatives": [
+        "15°",
+        "30°",
+        "45°",
+        "60°",
+        "75°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un navío que viaja exactamente hacia el ESTE a la velocidad uniforme de 40,8 km/h, observa el pie de un faro exactamente en el rumbo NORTE a las 5h 1,5' 15\", luego 8° al NORTE del NO a las 7h 31' 45\" y la parte más alta del faro con un ángulo de elevación de 37°. Halle las distancias del pie del faro a los dos puntos de observación y la altura del faro respectivamente.",
+      "alternatives": [
+        "136km;170km y 127,5km",
+        "140km;180km y 150km",
+        "130km; 160km y 120,km",
+        "140km; 150km y 120km",
+        "180km y 180km"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona de 2m de estatura observa la base de un poste de luz con ángulo de depresión de 30° y la parte superior con un ángulo de elevación de 60°. Calcula la altura del poste.",
+      "alternatives": [
+        "4m",
+        "6m",
+        "4 √ 3",
+        "8m",
+        "6 √ 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto del suelo se observa la parte superior de un edificio con un ángulo de elevación de 15°, acercándose 36m hacia el edificio el nuevo ángulo de elevación es el doble del anterior. Calcula la altura del edificio.",
+      "alternatives": [
+        "6 √ 3m",
+        "12m",
+        "18m",
+        "12 √ 3m",
+        "24m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un edificio de altura “h” se divisa una piedra en el suelo con un ángulo de depresión “β”. ¿A qué altura de la base del edificio, se halla la piedra?",
+      "alternatives": [
+        "hctg β",
+        "2hctgβ",
+        "3hctgβ",
+        "4hctgβ",
+        "5hctgβ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un edificio se ve un punto en tierra con un ángulo de depresión “α “ y a otro punto ubicado a la mitad entre el primer punto y del edificio, con un ángulo de depresión “90–α”. Calcula : “ctg2α”.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la parte superior e inferior de un muro se observa la parte superior de otro muro con ángulo de elevación de 37° y 45° respectivamente. Si el muro más alto mide 48m, entonces la altura del otro muro es:",
+      "alternatives": [
+        "8m",
+        "12m",
+        "16m",
+        "24m",
+        "32m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde de un punto en tierra se divisa lo alto de una torre con un ángulo de elevación “α”. Si el observador se acerca 20m el ángulo de elevación sería “β”. Calcula la altura de la torre, si además se sabe que : ctgα – ctgβ = 0,25",
+      "alternatives": [
+        "10",
+        "80",
+        "160",
+        "240",
+        "40"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de una cima se observa un obstáculo con un ángulo de depresión de 60°, si dicho obstáculo dista 20 √ 3m de pie de la cima. Calcula la altura de la cima.",
+      "alternatives": [
+        "20m",
+        "20 √ 3m",
+        "60m",
+        "60 √ 3",
+        "40m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un nadador se dirige hacia un faro y lo observa con un ángulo de elevación de 30°, al avanzar 10m. el ángulo de elevación se duplica. Halla la altura del faro .",
+      "alternatives": [
+        "5m",
+        "3m",
+        "9,66m",
+        "5 √ 3m",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la parte superior de un edificio de 6 pisos iguales el ángulo de depresión para un punto en el suelo es “β” y desde la parte más alta del cuarto piso el ángulo de depresión es “α”. Calcula : “tgα.ctgβ”.",
+      "alternatives": [
+        "1/2",
+        "2/3",
+        "3/4",
+        "4/5",
+        "5/6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto que se encuentra a 48m del pie de una torre el ángulo de elevación para la parte más alta es 45º. ¿Cuánto debe acercar dicho punto para que el nuevo ángulo de elevación sea 53º?",
+      "alternatives": [
+        "10m",
+        "4m",
+        "12m",
+        "16m",
+        "8m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un niño de estatura de 1,5m; está ubicada a 6m de una torre y observa su parte más lata con ángulo de elevación de 53º. ¿Cuál es la altura de la torre?",
+      "alternatives": [
+        "8,5m",
+        "9,5m",
+        "10,5m",
+        "12,5m",
+        "13,5m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona se dirige a un edificio y observa lo alto del mismo con un ángulo de elevación “α”, después de caminar 10m observa al mismo punto anterior con ángulo de elevación “β”, si la altura del edificio es de 30m. Calcula: 3Tgα.Ctgβ + Tgα",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un avión vuela horizontalmente a una altura de 2000m con respecto al nivel del mar, desde un punto de observación situado sobre la costa se le observa en un instante determinado bajo un ángulo de elevación “α”. Luego de 5 segundos el nuevo ángulo de elevación es “β”. Si el avión vuela con rapidez constante, calcula dicha rapidez si se sabe :\nTgα = 4/21 y Tgβ = 2/11",
+      "alternatives": [
+        "100 m/s",
+        "200 m/s",
+        "300 m/s",
+        "400 m/s",
+        "500 m/s"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un edificio se observa a un móvil con un ángulo de depresión de 37°, dicho móvil se desplaza con rapidez constante, luego que avanza 28m acercándose al edificio es observado con un ángulo de depresión de 53°, si de esta posición tarda en llegar al edificio 6 segundos. Halla la rapidez del móvil en Km/h.",
+      "alternatives": [
+        "10",
+        "10,8",
+        "16",
+        "18",
+        "21,6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un observador se encuentra a 4m de la base de un poste de 3m de altura. ¿Cuál es el ángulo de elevación respectivo?",
+      "alternatives": [
+        "30°",
+        "53°",
+        "45°",
+        "60°",
+        "37°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La parte superior de un edificio de 24 m de altura es observada bajo un ángulo de elevación de 53°. ¿Cuál es la distancia entre el observador y el pie del edificio?",
+      "alternatives": [
+        "18m",
+        "16m",
+        "12m",
+        "19m",
+        "15m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la parte superior de un morro de 15 m de altura se observa un objeto que está ubicado a 20 m del pie del morro. ¿Cuál es el ángulo de depresión?",
+      "alternatives": [
+        "30°",
+        "45°",
+        "37°",
+        "16°",
+        "53°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto en tierra , se divisa lo alto de un edificio con un ángulo de elevación β . Si la altura del edificio es \"h\", ¿A qué distancia del edificio se encuentra el punto de observación?.",
+      "alternatives": [
+        "hsen β",
+        "hcos β",
+        "htan β",
+        "hcot β"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un faro, se observa un mismo lado, dos barcos anclados, con un ángulo de depresión de 53° y 37°. Si los barcos están separados una distancia de 14m, ¿Cuál es la altura del faro ?.",
+      "alternatives": [
+        "16m",
+        "12",
+        "24",
+        "32",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona de 1,75m de altura observa la parte superior de una torre con un ángulo de elevación de 37°. Después de avanzar 5m en dirección a la torre, desde el extremo superior de la persona con un ángulo de depresión de 45°. Calcular la altura de la torre.",
+      "alternatives": [
+        "15m",
+        "15,5",
+        "15,75",
+        "16,75",
+        "17"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la medida aproximada del ángulo de elevación del Sol, cuando una persona de h metros de estatura proyecta una sombra de 2h metros de longitud en un terreno a nivel.",
+      "alternatives": [
+        "15°",
+        "18°",
+        "18,5°",
+        "26,5°",
+        "30°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona de 1,65 m de estatura observa la base de un poste de luz con un ángulo de depresión de 37° y la parte superior de este con un ángulo de elevación cuya tangente es 5. Calcule la altura del poste.",
+      "alternatives": [
+        "12 m",
+        "12,3 m",
+        "13 m",
+        "12,65 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un niño observa la parte superior de un edificio con un ángulo de elevación de 18,5°. Si el niño se encuentra a 24m del pie del edificio, ¿cuánto deberá caminar (en m)en dirección del edificio, para obtener la parte superior de este con un ángulo de 26,5°?",
+      "alternatives": [
+        "4",
+        "8",
+        "10",
+        "12",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una estatua de 5 metros de altura descansa sobre una pedestal de 4m de alto. Si desde un punto en el piso se observa la cabeza de la estatua con un ángulo de elevación 2θ y el ángulo de visual de la estatua es θ, halle la distancia del observador al pedestal y cos2θ.",
+      "alternatives": [
+        "6 y 0,6",
+        "7 y 0,7",
+        "8 y 0,8",
+        "10 y 0,9",
+        "12 y 0,8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un avión que vuela horizontalmente observa en tierra una casa con ángulo de depresión β . Se desplaza a partir de ese instante una distancia igual al triple de su altura y el nuevo ángulo de depresión de la casa crece y es igual al complemento de β . Calcule cot² β + tan² β .",
+      "alternatives": [
+        "11",
+        "12",
+        "13",
+        "15"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un avión vuela en línea recta y horizontalmente a una altura de 2420 m. Desde un punto en tierra es observado con un ángulo de elevación de 53°. Calcule la distancia entre ese punto y el avión.",
+      "alternatives": [
+        "2400 m",
+        "3200 m",
+        "3000 m",
+        "3025 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La elevación angular de la parte superior de una torre vista desde el pie de un poste es de 60°, y desde la parte superior del poste, que tiene 30 m de altura, el ángulo de elevación mide 30°. Luego la altura de la torre es:",
+      "alternatives": [
+        "15 m",
+        "30 m",
+        "45 m",
+        "60 m",
+        "75 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto en el suelo se observa la parte más alta de una torre con un ángulo de elevación de 60°, si se retrocede 40 m y se vuelve a observar la parte más alta, el ángulo de elevación es de 30°. Hallar la altura de la torre.",
+      "alternatives": [
+        "20 √ 3 m",
+        "10 √ 3 m",
+        "30 m",
+        "15 √ 3 m",
+        "10 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un avión vuela horizontalmente a una altura constante, antes de pasar sobre dos puntos en tierra “A” y “B” los observa con ángulos de depresión de 45° y 37° respectivamente. Cuando está sobre “B” es visto desde “A” con un ángulo de elevación “α\". ¿Cuánto vale Tgα?",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde el décimo piso de un edificio de 16 pisos, se observa un punto en el suelo con un ángulo de depresión “θ”. De la azotea del edificio se observa el mismo punto con un ángulo de depresión igual al complemento de θ. Hallar: Ctg θ.",
+      "alternatives": [
+        "2/3",
+        "1/3",
+        "1",
+        "4/3",
+        "5/3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un niño de 100cm de estatura mira un OVNI con un ángulo de elevación de 45°. Luego el OVNI pasa sobre el niño volando a una altura constante y es visto nuevamente ahora con un ángulo de elevación de 53°. Si la distancia horizontal entre la primera y segunda observación fue de 182 m. Hallar a que altura volaba el OVNI.",
+      "alternatives": [
+        "104 m",
+        "105 m",
+        "106 m",
+        "204 m",
+        "183 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un mono se encuentra a 24 m de altura en el tronco de una palmera, y ve a una mona que está en el suelo con un ángulo de depresión de 53°. Luego, ambos se dirigen en forma simultánea hacia la base la palmera, y cuando la mona ha avanzado la mitad de la distancia que la separaba de la palmera inicialmente mira al mono con un ángulo de elevación de 45°; entonces la distancia que los separa en ese instante es:",
+      "alternatives": [
+        "9 √ 2/2 m",
+        "9 m",
+        "9 √ 2m",
+        "18 √ 2 m",
+        "18 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un avión que vuela a una altura constante de 6000 m pasa sobre una ciudad, 2 minutos después es visto desde la ciudad, con un ángulo de elevación de 37°, ¿cuál es la velocidad constante del avión en km/h?",
+      "alternatives": [
+        "480",
+        "120",
+        "960",
+        "240",
+        "360"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto se observa la parte más alta de un edificio con un ángulo de elevación “θ\", si después de avanzar las 2/3 partes de la distancia original que separaba al observador del pie del edificio, el ángulo de elevación fue el complemento de \"θ\". Calcular \"θ\".",
+      "alternatives": [
+        "15°",
+        "45°",
+        "60°",
+        "30°",
+        "22°30'"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona colocada a 36 m de una torre, observa su parte más alta con un ángulo de elevación “α\" (Tgα =7/12). ¿Qué distancia habría que alejarse para que el ángulo de elevación sea θ? Donde: Tgθ = 1/4",
+      "alternatives": [
+        "12 m",
+        "13 m",
+        "48 m",
+        "15 m",
+        "20 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona se dirige a un edificio, y observa lo alto del mismo bajo un ángulo de elevación “x”; después de caminar 10 m observa la misma altura con un ángulo de elevación “θ\". Si la altura del edificio es 30 m, hallar: Tgx( Tgθ + 0,333...)",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un avión que inicialmente se encuentra a 2700 m de altura, sobre un objeto, empieza a caer con un ángulo de 37° por debajo de la línea horizontal, avanzando 500 m luego retoma su posición horizontal avanzando una distancia “x” y el piloto observa el objeto con un ángulo de depresión de 45°. Calcular “x”.",
+      "alternatives": [
+        "2400 m",
+        "1800 m",
+        "2400 √ 2",
+        "2100 √ 2",
+        "2000 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos personas de estaturas “H” y “h” (H>h) se encuentran paradas frente a frente separadas una cierta distancia. La persona de menos estatura observa la cabeza de la otra persona con un ángulo de elevación α y sus pies con un ángulo de depresión \"β\". Hallar: \"H/h\".",
+      "alternatives": [
+        "1+TgαTgβ",
+        "1+TgαCtgβ",
+        "1+CtgαTgβ",
+        "1+CtgαCtgβ",
+        "1+SenαCosβ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un faro a 15m sobre el nivel del mar se observa una boya con un ángulo de depresión cuya tangente es 3/2; desde la base del faro a 8 m sobre el nivel del mar se vuelve a observar la boya, con un ángulo de depresión “θ”. Calcule el valor de \"Tgθ\"",
+      "alternatives": [
+        "5/4",
+        "4/5",
+        "3/4",
+        "4/3",
+        "3/5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ratón observa el borde superior de un muro con un ángulo de elevación de 37°; luego avanza 28 m acercándose al muro en línea recta y, lo vuelve a observar con un ángulo de elevación de 53°. Si el ratón tarda 3 segundos en llegar a la base del ° muro desde su segunda posición, determine la velocidad constante en m/seg con que se desplaza el roedor.",
+      "alternatives": [
+        "18",
+        "16",
+        "14",
+        "12",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto de tierra se ve lo alto de una torre con un ángulo de elevación “θ”. Nos acercamos una distancia igual a la altura de la torre y el ángulo de elevación es ahora 37º. Calcule: ctg θ (Tomar: sen37º = 0,6)",
+      "alternatives": [
+        "53",
+        "43",
+        "73",
+        "3",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un avión que esta por aterrizar observa en su misma trayectoria la pista de aterrizaje de extensión igual al doble de la altura a la que se encuentra, si ve el extremo más alejado con ángulo de depresión de 22º30’ .Calcule con que ángulo observa el otro extremo.",
+      "alternatives": [
+        "22º30’",
+        "67º30’",
+        "90º",
+        "60º",
+        "120º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Subiendo por un camino inclinado de ángulo ψ respecto a la horizontal, se observa lo alto de una torre con un ángulo de elevación 2 ψ , de modo que se verifica que la torre mide a metros y la visual b metros. Calcule el valor de cot ψ .",
+      "alternatives": [
+        "a/b",
+        "2a/b",
+        "b/a",
+        "a/2b"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde el pie de un poste, el ángulo de elevación de la parte más alta de una palmera es 53°, y desde la parte superior del poste que tiene 6 m de altura, el nuevo ángulo de elevación es de 18°30'. Calcule la altura de la palmera.",
+      "alternatives": [
+        "8 m",
+        "10 m",
+        "12 m",
+        "15 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre un peñasco situado en la ribera de un río se levanta una torre de 120 m de altura. Desde el extremo superior de la torre, el ángulo de depresión de un punto situado en la orilla opuesta es de 60° y desde la base de la torre, el ángulo de depresión del mismo punto es de 30°. Calcule la altura del peñasco, en metros.",
+      "alternatives": [
+        "30",
+        "50",
+        "60",
+        "90"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un topógrafo observa con un teodolito la cima de un peñasco de 69,10 m de altura con un ángulo de elevación cuya tangente es 3/4. Interesado en observar mejor la cima del peñasco, se aproxima a este una cierta distancia siguiendo una trayectoria recta en la misma dirección en la que se encontraba inicialmente, por lo que la tangente del nuevo ángulo de elevación es 5/4. Si el punto de visualización del teodolito está a 1,60 m de altura del suelo, ¿cuántos metros se aproximó el topógrafo al peñasco?",
+      "alternatives": [
+        "37 m",
+        "27 m",
+        "36 m",
+        "26 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto en tierra se observa la parte alta de un poste con un ángulo de elevación ψ . Si la altura del poste es igual a (sen80° – sen50°) u y la distancia de ese punto al pie del poste es igual a (cos80°+cos50°) u, calcule ψ .",
+      "alternatives": [
+        "37°",
+        "30°",
+        "20°",
+        "15°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN TRIGONOMÉTRICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina el área de un triángulo rectángulo, si la hipotenusa mide 54 cm, y el coseno del ángulo formado por la altura y la mediana relativa a la hipotenusa es igual a 2/3.",
+      "alternatives": [
+        "420 cm²",
+        "450 cm²",
+        "486 cm²",
+        "962 cm²",
+        "243 cm²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/seno-coseno-tangente-cotangente-secante.html",
+      "sourceName": "matematicasn.blogspot.com — SENO COSENO TANGENTE COTANGENTE SECANTE COSECANTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo rectángulo son números consecutivos. El coseno del mayor ángulo agudo de ese triangulo es:",
+      "alternatives": [
+        "3/2",
+        "3/4",
+        "1/2",
+        "3/5",
+        "4/5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/seno-coseno-tangente-cotangente-secante.html",
+      "sourceName": "matematicasn.blogspot.com — SENO COSENO TANGENTE COTANGENTE SECANTE COSECANTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un helicóptero, que viaja en línea recta y horizontalmente, divisa en tierra un punto P con un ángulo de depresión de 53°. Si luego de recorrer 900m se encuentra exactamente por encima del punto P, ¿a qué altura está viajando el avión?",
+      "alternatives": [
+        "1600 m",
+        "1500 m.",
+        "1400 m.",
+        "1800 m.",
+        "1200 m."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-8-experiencia-8-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto en tierra, se observa la altura de una torre con un ángulo de elevación de 37°. Si la visual en dicho lugar mide 20m, ¿qué distancia horizontal, en metros, debe acercarse un observador, hacia la torre, para que el nuevo ángulo de elevación tenga tangente igual a 2?",
+      "alternatives": [
+        "10 m",
+        "2 m",
+        "15 m",
+        "4 m",
+        "5 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-8-experiencia-8-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un faro se divisan dos barcos a un mismo lado del faro con ángulo de depresión de 37º y 53º. Si el faro tiene 60m de altura ¿cuál sería la distancia entre los barcos?",
+      "alternatives": [
+        "35 m",
+        "37 m",
+        "40 m",
+        "45 m",
+        "52 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/trigonometria-examen-admision.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona de 1,60m de estatura observa la parte mas alta de un poste con un ángulo de elevación de 45º y la parte inferior con un ángulo de depresión de 53º. ¿Cuál es la altura del poste?",
+      "alternatives": [
+        "2,10 m",
+        "2,40 m",
+        "2,80 m",
+        "3,20 m",
+        "3,60 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/trigonometria-unsa-examen-admision-san.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNSA PRUEBA RESUELTA SAN AGUSTIN INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ángulo de elevación de la cúspide de una torre es de 60° a 72m de ella, estando el ojo del observador a √ 3 metros sobre el suelo. La altura de la torre, en metros, es:",
+      "alternatives": [
+        "74√3",
+        "73√3",
+        "72√3",
+        "60√3",
+        "59√3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/trigonometria-examen-admision-agraria.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona de 1,65m de estatura divisa la parte mas alta de un edificio con un ángulo de elevación de 53º. Si la persona se encuentra a 15m del edificio ¿cuál es la altura del edificio?",
+      "alternatives": [
+        "20,65 m",
+        "21 m",
+        "21,65 m",
+        "27,65 m",
+        "29,60 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/trigonometria-examen-admision-agraria.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde el techo de la casa de Julián se observa la parte alta de un edificio en construcción con un ángulo de elevación de 30°, y desde ese mismo punto se observa la base del mismo edificio con un ángulo de depresión de 45°. La distancia de la casa de Julián al edificio en construcción es 3 √ 3 m. Si falta construir 3(4− √ 3) m de altura para terminar el edificio, ¿cuál será la altura del edificio terminado?",
+      "alternatives": [
+        "(12+3 √ 3) m",
+        "12 m",
+        "15 m",
+        "18 m",
+        "24 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/trigonometria-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA ÁREA A SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una avioneta sobrevuela una autopista rectilínea a una altura constante. Con ángulo de depresión de α , el piloto observa en ella un auto en movimiento, en la misma dirección del avión. Después de unos segundos, el piloto observa nuevamente el mismo auto, esta vez con ángulo de depresión de β, donde α +β=90° y tan α =3/4. Si la distancia que la avioneta y el auto avanzaron es 260m y 15m, respectivamente, determine a qué altura sobrevuela la avioneta.",
+      "alternatives": [
+        "480 m",
+        "780 m",
+        "1040 m",
+        "420 m",
+        "720 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/trigonometria-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante observa la parte superior de un árbol con un ángulo de elevación θ ; cuando la distancia que separa el árbol del estudiante se ha reducido a la cuarta parte, el ángulo de elevación es 2 θ , hallar tan2 θ .",
+      "alternatives": [
+        "2",
+        "2 √ 2",
+        "3 √ 2",
+        "4 √ 2",
+        "5 √ 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepreuni-trigonometria-sexta-practica.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un edificio de 48m de altura se divisa dos autos estacionados con un ángulo de depresión de 45º y 53º. Si los autos están a un mismo lado del edificio ¿qué distancia las separa?",
+      "alternatives": [
+        "12 m",
+        "15 m",
+        "16 m",
+        "18 m",
+        "24 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepreuni-trigonometria-sexta-practica.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un agricultor, ubicado en el punto A, observa al Este y ve un gallinazo en la punta de un árbol con un ángulo de elevación de 45°. Al mismo tiempo, su hijo, ubicado en el punto B, a 2 km directamente al Oeste del punto A, ve al mismo gallinazo con un ángulo de elevación de 30°. Calcular la distancia del hijo del agricultor al gallinazo.",
+      "alternatives": [
+        "5,40 km",
+        "5,46 km",
+        "5,55 km",
+        "5,70 km",
+        "5,88 km"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepreuni-trigonometria-sexta-practica.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una antena de TV se encuentra situada en lo alto de un edificio de 36m de altura. Si un hombre observa con un ángulo de elevación de 53º lo alto de la antena y con un ángulo de elevación de 37º lo alto del edificio ¿cuál es la altura de la antena?",
+      "alternatives": [
+        "24 m",
+        "28 m",
+        "32 m",
+        "36 m",
+        "42 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/trigonometria-cayetano-heredia-examen.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona de 1,75m de estatura está parada en el techo de un edificio cuya altura es de 22,25. Si la persona observa un auto estacionado con un ángulo de depresión de 30º, ¿a qué distancia del edificio se encuentra el auto estacionado?",
+      "alternatives": [
+        "22 m",
+        "24 m",
+        "24√2 m",
+        "24√3 m",
+        "48 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/trigonometria-cayetano-heredia-examen.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un observador se encuentra a 24m de la base de un poste de 7m de altura. ¿Cuál es el ángulo de elevación respectivo?",
+      "alternatives": [
+        "16°",
+        "12°",
+        "14°",
+        "22°",
+        "30°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La parte superior de un edificio de 48m de altura es observada bajo un ángulo de elevación de 53°. ¿Cuál es la distancia entre el observador y el pie del edificio?",
+      "alternatives": [
+        "36 m",
+        "32 m",
+        "24 m",
+        "38 m",
+        "30 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la parte superior de un morro de 77m de altura se observa un objeto que está ubicado a 264m del pie del morro. ¿Cuál es el ángulo de depresión?",
+      "alternatives": [
+        "14°",
+        "16°",
+        "12°",
+        "10°",
+        "15°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A 20 m de una torre se observa su parte más alta con un ángulo de elevación “ θ ” y si nos alejamos 10m el ángulo de elevación es el complemento de “ θ ”. Calcula Tg θ .",
+      "alternatives": [
+        "√(3/2)",
+        "√ 3",
+        "2 √ 3",
+        "√ 3/5",
+        "√2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto A situado a 30m del pie de un edificio, se observa su parte superior con un ángulo de elevación de 30°. Calcula la distancia del punto A hacia la parte superior.",
+      "alternatives": [
+        "√ 3",
+        "20 √ 3",
+        "√ 3/2",
+        "2 √ 3",
+        "√5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto “A” situado al sur de una torre BT se observa que el ángulo de elevación a la parte superior de la torre es de 45o y se camina 100 √ 2mts en dirección Este hasta el punto C, el ángulo de elevación mide ahora 30o. Calcula la altura de la torre.",
+      "alternatives": [
+        "50 √ 2 m",
+        "100 m",
+        "√ 2 m",
+        "100 √ 2 m",
+        "200 √ 2 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un topógrafo se ubica en la base de una colina y observa su parte alta con un ángulo de 47°. Si retrocede 15 m y vuelve a observar el mismo punto con un ángulo de elevación de 40°, determine la altura de la colina.",
+      "alternatives": [
+        "30csc40°csc7°sen47° m",
+        "10sen40°csc7°csc47° m",
+        "15sen40°csc7°sen47° m",
+        "25sen40°csc7°sen47° m",
+        "20sen40°csc7°sen47° m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-trigonometria-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE TRIGONOMETRÍA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un proyectil es disparado con una velocidad v 0 =50 m/s y un ángulo de elevación α=37°.\nDespués de 2s la velocidad del proyectil forma un ángulo β con la horizontal. Indique la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI) La componente vertical de la velocidad en su punto más alto es +12 m/s.\nII) El tiempo de vuelo del proyectil es 6s.\nIII) La tangente del ángulo β es 1/4.",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "VVF",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/cepre-san-marcos-fisica-semana-7-2020.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un proyectil es disparado desde el suelo con rapidez v 0 = 200 m/s y ángulo de elevación de 53° con la horizontal. Determine el tiempo en que la velocidad del proyectil forma un ángulo de inclinación de 45° con la horizontal.",
+      "alternatives": [
+        "2s",
+        "3s",
+        "4s",
+        "7s",
+        "5s"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/cepre-san-marcos-fisica-semana-7-2020.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un proyectil es disparado con una rapidez inicial y cuyo ángulo de elevación sobre la superficie horizontal es α. Si el alcance horizontal del proyectil es cuatro veces su altura máxima, ¿Cuál es el ángulo α de elevación del proyectil?",
+      "alternatives": [
+        "30°",
+        "45°",
+        "53°",
+        "60°",
+        "37°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-fisica-segundo-examen.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las medidas de los lados de un triángulo están expresados por tres números consecutivos. Si el valor de la tangente de la mitad del menor ángulo es 1/2. Determinar el valor del Coseno del mayor ángulo.",
+      "alternatives": [
+        "3/5",
+        "4/5",
+        "5/13",
+        "12/13",
+        "13/14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn.blogspot.com — RESOLUCIÓN DE TRIÁNGULOS OBLICUÁNGULOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el Coseno del mayor ángulo agudo de un triángulo de lados enteros consecutivos es 1/5. Hallar el perímetro de dicho triángulo.",
+      "alternatives": [
+        "12",
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn.blogspot.com — RESOLUCIÓN DE TRIÁNGULOS OBLICUÁNGULOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los catetos de un triángulo ABC miden AB = 3 ; BC = √ 7. Si giramos un triángulo de 60° alrededor de BC, halla el coseno del ángulo que se forma la primera y la nueva posición de la hipotenusa AC.",
+      "alternatives": [
+        "21/25",
+        "23/32",
+        "25/32",
+        "27/32",
+        "18/25"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn.blogspot.com — RESOLUCIÓN DE TRIÁNGULOS OBLICUÁNGULOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC, de lados 3 y 4 unidades, el coseno del ángulo que forman dichos lados es – 11/24. Calcule el perímetro de dicho triángulo.",
+      "alternatives": [
+        "10",
+        "13",
+        "15",
+        "17"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn.blogspot.com — RESOLUCIÓN DE TRIÁNGULOS OBLICUÁNGULOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dorita observa un globo con un ángulo de elevación de 45° en dirección este. En el mismo instante, Giany , que está a 0,5 km al oeste de Dorita , observa el mismo globo con un ángulo de elevación de 30°. ¿A qué distancia está Giany del globo?",
+      "alternatives": [
+        "3,71 km",
+        "2,73 km",
+        "5,61 km",
+        "1,36 km",
+        "4,16 km"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-senos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE SENOS EJERCICIOS RESUELTOS Y DEMOSTRACIÓN PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la azotea de un edificio una persona observa a un automóvil en el suelo con un ángulo de depresión 3β. Si el automóvil se desplaza en dirección opuesta al edificio y en el mismo plano vertical una distancia de 90 m, donde en su nueva posición es observado por la misma persona con un ángulo de depresión 2β y a una distancia de 150 m, halle la altura del edificio.",
+      "alternatives": [
+        "90√2 m",
+        "60√2 m",
+        "100√2 m",
+        "50√2 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-senos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE SENOS EJERCICIOS RESUELTOS Y DEMOSTRACIÓN PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las longitudes de los lados de un triángulo miden sec⁶45°u , 5cot²135°u y (sec²60°+cot²30°)u.\nMarque la alternativa que corresponde al valor del coseno del menor ángulo.",
+      "alternatives": [
+        "– 2/3",
+        "– 1/16",
+        "3/4",
+        "7/15",
+        "11/14"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/ley-de-cosenos-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE COSENOS EJERCICIOS RESUELTOS Y DEMOSTRACIÓN PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un niño sostiene dos globos . El ángulo de elevación del globo que tiene en la mano derecha es de 21° y la cuerda mide “a” . el ángulo de elevación del globo que sostiene en la mano izquierda es de 24° y la cuerda mide a√2m ¿Cuál es la distancia que hay entre los dos globos?",
+      "alternatives": [
+        "√7a",
+        "√5a",
+        "√3 a",
+        "√13a",
+        "√17a"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/ley-de-cosenos-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE COSENOS EJERCICIOS RESUELTOS Y DEMOSTRACIÓN PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona divisa la parte mas alta de una torre con un ángulo de elevación θ , siendo la longitud de la visual 50 √3 metros, la torre se encuentra al norte de la persona. Luego, la persona avanza una cierta distancia hacia el este y vuelve a observar el punto anterior, pero ahora el ángulo de elevación es el doble del anterior y la longitud de la visual es 50 metros. Halle el valor del ángulo de elevación θ .",
+      "alternatives": [
+        "15°",
+        "30°",
+        "37°",
+        "45°",
+        "53°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-del-arco_5.html",
+      "sourceName": "matematicasn.blogspot.com — ARCO DOBLE EJERCICIOS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un edificio se observa una pulga con un ángulo de depresión de 30 ° , si la pulga se encuentra a 7m del pie del edificio, calcula la altura del edificio.",
+      "alternatives": [
+        "3 √ 7",
+        "√3/5",
+        "7 √ 3/3",
+        "2 √ 7",
+        "5 √ 5/7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/angulos-de-elevacion-y-depresion.html",
+      "sourceName": "matematicasn.blogspot.com — ANGULOS DE ELEVACIÓN , DEPRESIÓN Y OBSERVACIÓN ROSA NAÚTICA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a 20m de un poste se observa su parte más alta con un ángulo de elevación de 37° y luego nos acercamos al poste a una distancia igual a su altura, el nuevo ángulo de elevación es “θ”. Halla “Tgθ”.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/angulos-de-elevacion-y-depresion.html",
+      "sourceName": "matematicasn.blogspot.com — ANGULOS DE ELEVACIÓN , DEPRESIÓN Y OBSERVACIÓN ROSA NAÚTICA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto “D”, un observador divisa una estatua con su pedestal de 5m y 4m respectivamente. El ángulo de elevación de la cabeza de la estatua es el doble de la parte superior del pedestal o pie de la estatua. ¿Cuál es el valor de la tangente del mayor ángulo de elevación?",
+      "alternatives": [
+        "1/2",
+        "3/4",
+        "2/3",
+        "5/6",
+        "1/5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/angulos-de-elevacion-y-depresion.html",
+      "sourceName": "matematicasn.blogspot.com — ANGULOS DE ELEVACIÓN , DEPRESIÓN Y OBSERVACIÓN ROSA NAÚTICA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la parte superior de una torre se observan dos piedras en el suelo con ángulo de depresión de 37° y 53°. Si la altura de la torre es de 12m y las piedras están en línea recta y a un mismo lado de la torre, calcula la distancia entre las piedras.",
+      "alternatives": [
+        "12",
+        "8",
+        "7",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/trigonometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — PROBLEMAS DE TRIGONOMETRÍA RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona ubicada en la parte más alta de un poste de alumbrado público ubica dos puntos opuestos a ambos lados del poste con ángulo de depresión de 37° y 53. Si los puntos distan entre si 20m. Halla la suma de las visuales.",
+      "alternatives": [
+        "22",
+        "25",
+        "20",
+        "18",
+        "32"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/trigonometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — PROBLEMAS DE TRIGONOMETRÍA RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona colocada a orillas de un río, ve el extremo superior de un árbol plantado sobre la ribera opuesta, bajo un ángulo de elevación de 60°. Si se aleja 40m; el ángulo de elevación es 30°. Halla el ancho del rio.",
+      "alternatives": [
+        "23",
+        "22",
+        "20",
+        "18",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/trigonometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — PROBLEMAS DE TRIGONOMETRÍA RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina la altura de un árbol si se tiene que el ángulo de elevación con el que se observa su parte superior, disminuye de 53° a 37°, cuando el observador recorre 14m.",
+      "alternatives": [
+        "12",
+        "24",
+        "30",
+        "36",
+        "40"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES PROBLEMAS RESUELTOS DE TRIGONOMETRÍA DE SECUNDARIA Y PREUNIVERSITARIA – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona de 2m de estatura, ubicada a 32m de una toree de 34m de altura; divisa en parte más alta con un ángulo de elevación de :",
+      "alternatives": [
+        "20º",
+        "15º",
+        "30º",
+        "60º",
+        "45º"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES PROBLEMAS RESUELTOS DE TRIGONOMETRÍA DE SECUNDARIA Y PREUNIVERSITARIA – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona de 1,75m de altura observa un árbol con un ángulo de depresión de 30° su base y con un ángulo de elevación de 60° su parte superior. Halla la altura del árbol.",
+      "alternatives": [
+        "5",
+        "7",
+        "9",
+        "11",
+        "13"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES PROBLEMAS RESUELTOS DE TRIGONOMETRÍA DE SECUNDARIA Y PREUNIVERSITARIA – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona colocada a orillas de un río ve el extremo superior de un árbol, plantado sobre la rivera opuesta, bajo un ángulo de elevación de 60°, si se aleja 40m el ángulo de elevación es 30°.\n¿Cuál es el ancho del río?",
+      "alternatives": [
+        "10",
+        "15",
+        "20",
+        "25",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES PROBLEMAS RESUELTOS DE TRIGONOMETRÍA DE SECUNDARIA Y PREUNIVERSITARIA – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto, ubicado a 36m de la base de un poste, se observa la parte superior de éste con un ángulo de elevación de 37°. ¿Cuánto se tendrá que avanzar para que el nuevo ángulo de elevación tenga una tangente igual a 0,9?",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES PROBLEMAS RESUELTOS DE TRIGONOMETRÍA DE SECUNDARIA Y PREUNIVERSITARIA – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un faro de 58m de altura se observa un buque con un ángulo de depresión de 30°. ¿A qué distancia se encuentra el buque del faro?",
+      "alternatives": [
+        "58",
+        "58 √ 3",
+        "60",
+        "29 √ 3",
+        "60 √ 3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES PROBLEMAS RESUELTOS DE TRIGONOMETRÍA DE SECUNDARIA Y PREUNIVERSITARIA – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde cierto punto del suelo se observa la parte superior de un edificio con un ángulo de elevación “θ” y desde el punto medio de la distancia que separa el pie de la torre y dicho punto, la elevación angular es 90°– θ. Calcula tgθ.",
+      "alternatives": [
+        "√ 2",
+        "√ 2/2",
+        "√ 3",
+        "√ 3/3",
+        "√5/5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES PROBLEMAS RESUELTOS DE TRIGONOMETRÍA DE SECUNDARIA Y PREUNIVERSITARIA – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un observador de 1,7m de estatura visualiza la parte alta de una antena colocada sobre un edificio, con ángulo de elevación de 37º; si se acerca 7m hacia el edificio, el nuevo ángulo de elevación es 53º. Si la antena mide 1,5m, determinar la altura del edificio.",
+      "alternatives": [
+        "12,2 m",
+        "13,2 m",
+        "14,2 m",
+        "15,2 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/test-de-trigonometria-resuelto-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EVALUACIÓN DE TALENTO CATÓLICA SOLUCIONADA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Edu de 1,5m de estatura divisa una piedra en el suelo con un ángulo de depresión de 37°. ¿a qué distancia de Edu se encuentra la piedra?.",
+      "alternatives": [
+        "1m",
+        "2",
+        "3",
+        "2,5",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/angulos-de-elevacion-y-depresion-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN PREGUNTAS RESUELTAS DE TRIGONOMETRÍA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona de dos metros de estatura observa la parte más alta de un árbol con un ángulo de elevación de 30°. ¿ A qué distancia se encuentra de la base del árbol, si este mide 32 m?.",
+      "alternatives": [
+        "30√3",
+        "20√3",
+        "32√3",
+        "24√2",
+        "40√2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/angulos-de-elevacion-y-depresion-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN PREGUNTAS RESUELTAS DE TRIGONOMETRÍA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la parte más alta de un edificio de 60 m de longitud se observa un automóvil con un ángulo de depresión de 37°, ¿ a qué distancia de la base del edificio se encuentra el automóvil?.",
+      "alternatives": [
+        "80m",
+        "70",
+        "90",
+        "60",
+        "40"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/angulos-de-elevacion-y-depresion-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN PREGUNTAS RESUELTAS DE TRIGONOMETRÍA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto U se observa una estatua, en su pedestal de 5m y 4m respectivamente. Si el ángulo de elevación de la estatua es el doble del ángulo de elevación de la parte superior del pedestal; calcular la distancia donde se encuentra el observador al pie del pedestal.",
+      "alternatives": [
+        "8",
+        "10",
+        "12",
+        "20",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/angulos-de-elevacion-y-depresion-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN PREGUNTAS RESUELTAS DE TRIGONOMETRÍA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo si:\nCalcular el perímetro del triángulo",
+      "alternatives": [
+        "90",
+        "120",
+        "150",
+        "75",
+        "136"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/razones-trigonometricas-de-angulos_12.html",
+      "sourceName": "matematica-a1.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS AGUDOS I EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo\nSi:\nHalle: E = ctg²B + sec²A",
+      "alternatives": [
+        "13",
+        "15",
+        "17",
+        "19",
+        "21"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/razones-trigonometricas-de-angulos_12.html",
+      "sourceName": "matematica-a1.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS AGUDOS I EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se verifica que:\nDetermine:",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/razones-trigonometricas-de-angulos_12.html",
+      "sourceName": "matematica-a1.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS AGUDOS I EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un trapecio cuyas diagonales son perpendiculares y sus bases miden 4 y 12.\nHalle la altura de dicho trapecio si el producto de sus diagonales es 80.",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/razones-trigonometricas-de-angulos.html",
+      "sourceName": "matematica-a1.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS AGUDOS II EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos círculos tangentes exteriormente cuyos radios son “r” y “3r” respectivamente . Calcular el ángulo que forma la recta que pasa por los centros de ambos círculos con una de las tangentes exteriores a ambos círculos.",
+      "alternatives": [
+        "45°",
+        "60°",
+        "30°",
+        "15°",
+        "53°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos_19.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS NOTABLES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una semicircunferencia de radio (1+√3)cm se divide en treinta arcos iguales. Calcular la proyección del arco comprendido entre la quinta y décima división sobre el diámetro horizontal en centímetros .",
+      "alternatives": [
+        "1/4",
+        "1/2",
+        "1/3",
+        "2/8",
+        "3/7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos_19.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS NOTABLES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un niño está volando una cometa. En determinado momento, la cuerda que sujeta la cometa mide 50 m, formando con el suelo un ángulo de 37º.\nDetermine a qué altura se encuentra la cometa.",
+      "alternatives": [
+        "40 m",
+        "50 m",
+        "20 m",
+        "30 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos_19.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS NOTABLES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "ABCD un rectángulo. Se ubican los puntos M y N sobre los lados AB y AD respectivamente. Sabiendo que MB=BC, m∢MCN=α, m∢ABN=β , m∢ANM=m∢DNC, y tan(α)=3/4 .\nCalcule el valor aproximado de 3cot(β).",
+      "alternatives": [
+        "28",
+        "25",
+        "29",
+        "31",
+        "32"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos_19.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS NOTABLES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si 81tg²θ – 1600=0 y el ángulo θ pertenece al cuarto cuadrante, calcule 9sec θ – 41sen θ",
+      "alternatives": [
+        "85",
+        "63",
+        "72",
+        "81",
+        "78"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar el ángulo que no es coterminal al ángulo – 10°.",
+      "alternatives": [
+        "350°",
+        "710°",
+        "1420°",
+        "– 730°",
+        "1070°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A es un ángulo del tercer cuadrante cuya tangente es 2,4 y B es un ángulo del segundo cuadrante para el cual es cierto que senB = cos A + sen(−A) .\nCalcular 49[ctg²B + csc(– B)]",
+      "alternatives": [
+        "29",
+        "211",
+        "38",
+        "120",
+        "91"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ángulos α y β son coterminales y para ellos es cierto que 0 < α < 2 𝛑 y 6 𝛑 < β < 8 𝛑 .\nSi α + 2β = 2535°, calcular α + β.",
+      "alternatives": [
+        "1330°",
+        "1280°",
+        "1380°",
+        "1220°",
+        "1480°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ángulos α y β son coterminales y ( – 2;a) con a<3 es un punto del lado terminal de β . Si ctg α+ tg β = – 13/6 , calcule 6csc² α – ctg β .",
+      "alternatives": [
+        "4/7",
+        "12/7",
+        "4/25",
+        "19/4",
+        "3/ 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos ángulos coterminales están en la relación de 5 a 4. Si el mayor ángulo está comprendido entre 3900° y 6800°, calcule la suma de las medidas de dichos ángulos.",
+      "alternatives": [
+        "9720°",
+        "6480°",
+        "7620°",
+        "12960°",
+        "10800°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si senθ √( sen θ cos θ )<0, ¿a qué cuadrante pertenece θ?",
+      "alternatives": [
+        "IIC",
+        "IIIC",
+        "IVC",
+        "IC o IIIC"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se sabe que α y θ son ángulos cuadrantales positivos y menores que una vuelta, dichos ángulos cumplen las siguientes condiciones:\nsen α +3=sec60°\ncos θ = sen270°+ cos360°\nα ≠ θ\ncalcule α + θ",
+      "alternatives": [
+        "270°",
+        "180°",
+        "450°",
+        "360°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si θ ∈IIIC y β ∈IIC, además tan² θ + cot² β +13= 2(2tan θ – 3cot β ), calcule √ 5sec θ + √ 10csc β",
+      "alternatives": [
+        "3",
+        "5",
+        "7",
+        "0",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-trigonometricas-de-angulos-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS EN POSICIÓN NORMAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula:\ncos1°cos2°cos3° ... cos180°",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS DE CUALQUIER MAGNITUD EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: Tg6x.Tg(x+20º)= Sen 90º\nCalcula:\n2Sen(x – 10º) + 4Sec18x",
+      "alternatives": [
+        "–2",
+        "–4",
+        "–6",
+        "–8",
+        "–10"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS DE CUALQUIER MAGNITUD EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean α y β las medidas de dos ángulos coterminales (α > β) tal que el doble del menor es a la suma de ellos como 13 es a 23. Calcule la medida del mayor de ellos si está comprendido entre 1100° y 1300°.",
+      "alternatives": [
+        "988°",
+        "1088°",
+        "1188°",
+        "1288°",
+        "1328°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS DE CUALQUIER MAGNITUD EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos ángulos coterminales que están en relación de 2 a 7 la diferencia de ellos es mayor que 1200º pero menor que 1500º. Halle los ángulos.",
+      "alternatives": [
+        "1400º y 576º",
+        "2130º y 576º",
+        "2016º y 576º",
+        "1080º y 576º",
+        "720º y 216º"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS DE CUALQUIER MAGNITUD EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar el menor de dos ángulos coterminales, si la suma de ellos es 1320º y el mayor está comprendido entre 900º y 1200º.",
+      "alternatives": [
+        "100º",
+        "140º",
+        "240º",
+        "300º",
+        "420º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS DE CUALQUIER MAGNITUD EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las medidas de dos ángulos coterminales son proporcionales a los número 5 y 2. Además la medida del mayor ellos está comprendida entre 1000º y 1700º; halle la suma de medidas de dichos ángulos.",
+      "alternatives": [
+        "1880º",
+        "1860º",
+        "1680º",
+        "1660º",
+        "1200º"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS DE CUALQUIER MAGNITUD EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se cumple que sen² β cos β < 0 y cos β csc β > 0. Indique el cuadrante al cual pertenece β .",
+      "alternatives": [
+        "IIC ∨ IIIC",
+        "IIC",
+        "IIIC ∨ IVC",
+        "IIIC"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS DE CUALQUIER MAGNITUD EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tan β = √ 5/2 , además β ∈ IIIC, calcule cos β",
+      "alternatives": [
+        "− 2/3",
+        "− √ 5/3",
+        "− 3/4",
+        "− 2/7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razones-trigonometricas-de-angulos-de.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS DE ÁNGULOS DE CUALQUIER MAGNITUD EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo ABC, recto en C se cumple cscA . cscB=2/5\nHallar 2(tg A + tgB).",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS PROBLEMAS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo ABC, recto en C se cumple cosA·cosB = 2/5\nHalle 2(ctgA + ctgB).",
+      "alternatives": [
+        "4",
+        "3",
+        "5",
+        "2/5",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS PROBLEMAS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC, recto en A, se tiene que\ncosBtgC = [cosBcosC + 2senBsenC]secC.\nCalcular √10 [6cscθ + cosθ ]\nSiendo θ el mayor ángulo agudo del triángulo.",
+      "alternatives": [
+        "22",
+        "23",
+        "19",
+        "18",
+        "21"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS PROBLEMAS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo ABC recto en B se cumple que\ntgC =√2cosA\nCalcule csc²A + 3ctgC.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES TRIGONOMÉTRICAS PROBLEMAS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la función real f definida por f (x) = √ 2 sen(0,5 𝛑 cosx)\ndonde 0 ≤ x ≤ 2 𝛑/3 .\nHalle el mínimo valor de f.",
+      "alternatives": [
+        "− √2",
+        "− 1/2",
+        "– 1",
+        "− 1/4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grafica-de-la-funcion-coseno-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIÓN COSENO EJERCICIOS RESUELTOS DE DOMINIO RANGO PERIODO Y GRÁFICA DE LA RAZÓN TRIGONOMÉTRICA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la función real f definida por\nf (x) =cos3x+8cos²xsen²(x/2)+3cosx\nHalle el rango de f.",
+      "alternatives": [
+        "[2,8]",
+        "[1,4]",
+        "[0,4]",
+        "[1,2]"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grafica-de-la-funcion-coseno-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIÓN COSENO EJERCICIOS RESUELTOS DE DOMINIO RANGO PERIODO Y GRÁFICA DE LA RAZÓN TRIGONOMÉTRICA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La temperatura promedio de una ciudad es modelada por la función f, definida por\nf (t) =10 sen ( 𝛑t /4)+22 en grados Celsius, donde t es el número de días transcurridos a partir del 1 de mayo hasta el 28 de mayo. Determine la fecha en que se obtuvo la mínima temperatura por tercera vez en la ciudad.",
+      "alternatives": [
+        "22 de mayo",
+        "23 de mayo",
+        "24 de mayo",
+        "25 de mayo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grafica-de-la-funcion-seno-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIÓN SENO EJERCICIOS RESUELTOS DE DOMINIO RANGO PERIODO Y GRÁFICA DE LA RAZÓN TRIGONOMÉTRICA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Carlos tiene un terreno de forma triangular con lados que miden (10tanx) m, (10Rcotx) m y 10m. Si el perímetro de dicho terreno es 70 m, halle el mayor valor de R.",
+      "alternatives": [
+        "3",
+        "8",
+        "9",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grafica-de-la-funcion-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIÓN COTANGENTE EJERCICIOS RESUELTOS DE DOMINIO RANGO PERIODO Y GRÁFICA DE LA RAZÓN TRIGONOMÉTRICA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una nave espacial, despega al espacio desde una plataforma que se encuentra a 1500 metros sobre el nivel mar; durante su desplazamiento, la altura es modelada por la función real f, definida como f (t) = 98,5tan( 𝛑t /10) en kilómetros, donde 0 ≤ t ≤ 4 , es el número de horas transcurridas desde que la nave despega de la plataforma. Si el espacio exterior comienza a los 100 km de altura sobre el nivel del mar, ¿cuántas horas le toma a esta nave llegar al espacio?",
+      "alternatives": [
+        "1hora",
+        "1,5 horas",
+        "2,5 horas",
+        "3 horas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grafica-de-la-funcion-tangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIÓN TANGENTE EJERCICIOS RESUELTOS DE DOMINIO RANGO PERIODO Y GRÁFICA DE LA RAZÓN TRIGONOMÉTRICA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La asistencia del público en un centro comercial desde las 11:00 a.m. hasta 11:00 p.m. esta modelada por\nf (x) =4sec² ( 𝛑x /36) +20tan ( 𝛑x /36)+21\nen cientos de personas, donde x∈[0,12] son las horas de atención transcurridas desde las 11 de la mañana. ¿Cuántas personas, como mínimo, asistieron desde las 11:00 a.m. hasta 11:00 p.m. a dicho centro comercial?",
+      "alternatives": [
+        "2 500 personas",
+        "2 550 personas",
+        "2 450 personas",
+        "2 525 personas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grafica-de-la-funcion-tangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIÓN TANGENTE EJERCICIOS RESUELTOS DE DOMINIO RANGO PERIODO Y GRÁFICA DE LA RAZÓN TRIGONOMÉTRICA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Daniel tiene un terreno rectangular cuyas medidas son (18tanθ) m y (8cotθ) m, donde θ es un ángulo agudo. Si Daniel desea cercar todo el borde de su terreno, ¿cuántos metros de cerca necesita Daniel como mínimo?",
+      "alternatives": [
+        "52 m",
+        "42 m",
+        "48 m",
+        "53 m",
+        "50 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/06/examen-de-admision-del-callao-ingreso_82.html",
+      "sourceName": "geometriapdf.blogspot.com — PRUEBA SAN MARCOS ÁREA D 2023-2 ADMISIÓN UNIVERSIDAD RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle “C” a partir de la ecuación:\nsiendo “S”, “C” y “R” lo convencional para un mismo ángulo.",
+      "alternatives": [
+        "20",
+        "25",
+        "40",
+        "50",
+        "10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/sistemas-de-medida-angular-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SISTEMAS DE MEDIDA ANGULAR EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule:\n(asumir: tg 37º = 0,75)",
+      "alternatives": [
+        "23",
+        "24",
+        "25",
+        "26",
+        "27"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/arco-compuesto-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — ARCO COMPUESTO EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cometa es soltada tal que la cuerda que sostiene a la cometa se estira 50 m. Si el ángulo de inclinación que forma la cuerda con la horizontal es 37°, calcule a qué altura se encuentra la cometa.",
+      "alternatives": [
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geometria-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRIA CATÓLICA PREGUNTAS RESUELTAS PUCP "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si (3a – 35)° y (90 – b)° son ángulos agudos que verifican\ntg (3a – 35) = ctg (90 – b)\n2b – a = 15\nhalle la diferencia positiva entre los valores de a y b.",
+      "alternatives": [
+        "1",
+        "4",
+        "2",
+        "3",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/trigonometria-callao-examen-de-admision-universidad-unac-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La altura de tres personas, son a m, b m y c m, donde a=sen27°–cos63°+1, b=1,6sec54 ° sen36 ° y c=tan22 ° cot68 ° +1,6 .\nDetermine las alturas de las dos personas más bajas.",
+      "alternatives": [
+        "1 m y 1,6 m",
+        "1,6 m y 1,5 m",
+        "1 m y 1,4 m",
+        "1,4 m y 1, 6 m",
+        "1,2 m y 1,5 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/trigonometria-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Siendo ψ un ángulo agudo y además se tiene que tan ψ=12/ 5 ; calcule:\n2sen ψ + 3cos ψ",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-8-experiencia-8-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si : Senβ= 60/61 .\nCalcula el valor de :\nTgβ + Secβ",
+      "alternatives": [
+        "101/11",
+        "1/11",
+        "11",
+        "10",
+        "13/11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/seno-coseno-tangente-cotangente-secante.html",
+      "sourceName": "matematicasn.blogspot.com — SENO COSENO TANGENTE COTANGENTE SECANTE COSECANTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula :\n1 – Cos60° – 2Sen²30°",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/triangulos-30-60-45-45-37-53-16-74-notables-ejemplos-problemas-preguntas-resueltas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIÁNGULOS DE 45° Y 45° 30° Y 60° 37° Y 53° 16° Y 74° EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula :\n(Tan37° + Ctg53°) Csc30°",
+      "alternatives": [
+        "9/4",
+        "9/16",
+        "3/2",
+        "4/9",
+        "3/4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/triangulos-30-60-45-45-37-53-16-74-notables-ejemplos-problemas-preguntas-resueltas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIÁNGULOS DE 45° Y 45° 30° Y 60° 37° Y 53° 16° Y 74° EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula “x” en la igualdad:\nxSen30°+Sec ² 60°=4xTan37°+Tan ⁴ 45°",
+      "alternatives": [
+        "9/4",
+        "9/16",
+        "3/2",
+        "4/9",
+        "5/6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/triangulos-30-60-45-45-37-53-16-74-notables-ejemplos-problemas-preguntas-resueltas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIÁNGULOS DE 45° Y 45° 30° Y 60° 37° Y 53° 16° Y 74° EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si dos ángulos agudos θ y β son complementarios, entonces es falso que",
+      "alternatives": [
+        "sen θ =cos β",
+        "tan θ =cot β",
+        "sen θ ·sec β = 1",
+        "tan θ ·cot β = 1",
+        "cos θ ·csc β =1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/trigonometria-examen-admision.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un triángulo rectángulo ABC recto en B. En AC se ubica el punto medio M y en BC se ubica el punto T, tal que TC=TB+2(AB). Determine el valor de tanα si m∢MTC=α.",
+      "alternatives": [
+        "1/8",
+        "1/4",
+        "1/2",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-trigonometria-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE TRIGONOMETRÍA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pocho realiza compras al supermercado valorizados en ( 4M–3) soles , donde M es el menor valor entero de la expresión 12(cscθ+sen θ)² – 17, donde θ es un ángulo agudo. Si Pocho paga con un billete de 100 soles y el resto lo paga con su tarjeta de crédito, determine el monto que pagó con su tarjeta.",
+      "alternatives": [
+        "20 soles",
+        "30 soles",
+        "25 soles",
+        "40 soles",
+        "35 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-trigonometria-semana-13.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La pastelería “Dulce Mesa” tiene (3M–14) tortas para venderlas en un día a (32+M) soles cada una, donde M es el máximo valor entero de la expresión (5sen β –2 )² , β es un ángulo agudo. Si al finalizar el día consigue vender todas sus tortas, halle el ingreso que obtuvo la pastelería.",
+      "alternatives": [
+        "450 soles",
+        "300 soles",
+        "350 soles",
+        "500 soles",
+        "400 soles"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-trigonometria-semana-13.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La Empresa «Marco Ensamble», importa y ensambla autos, para luego ponerlos a la venta; el precio de costo por importar y ensamblar un auto está dado por el mínimo de\n(3+sen ² x) ² + (3+cos²x) ² en cientos de dólares. Si dicha empresa, por cada automóvil que vende, tiene una ganancia del 51 % del precio de venta ¿a cuánto ascendería el monto de la venta por 300 automóviles?",
+      "alternatives": [
+        "$ 1 680 000",
+        "$ 1 600 000",
+        "$ 2 400 000",
+        "$ 1 480 000",
+        "$ 1 500 000"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-trigonometria-semana-13.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
     }
   ]
 }

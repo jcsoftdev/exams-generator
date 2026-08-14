@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un bloque de 1 kg se mueve con rapidez constante V. Si su energía cinética es 32 J, determine el valor de \"V\".",
-      "alternatives": ["4 m/s", "6 m/s", "7 m/s", "8 m/s", "4√2 m/s"],
+      "alternatives": [
+        "4 m/s",
+        "6 m/s",
+        "7 m/s",
+        "8 m/s",
+        "4√2 m/s"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 1 (Clave: D)"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un móvil es lanzado. Calcule su energía cinética cuando su rapidez es igual a 2 m/s, sabiendo que su masa es 2 kg.",
-      "alternatives": ["2 J", "3 J", "4 J", "8 J", "1 J"],
+      "alternatives": [
+        "2 J",
+        "3 J",
+        "4 J",
+        "8 J",
+        "1 J"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 5 (Clave: C)"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Una pelota es lanzada hacia abajo con una rapidez inicial de 5 m/s; su masa es 2 kg. Determine su energía cinética en ese instante.",
-      "alternatives": ["20 J", "50 J", "25 J", "100 J", "75 J"],
+      "alternatives": [
+        "20 J",
+        "50 J",
+        "25 J",
+        "100 J",
+        "75 J"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 7 (Clave: C)"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Una pelota se encuentra a 5 m de altura y tiene una masa de 2 kg. Calcule su energía potencial gravitatoria respecto al piso. (g = 10 m/s²)",
-      "alternatives": ["50 J", "75 J", "100 J", "125 J", "150 J"],
+      "alternatives": [
+        "50 J",
+        "75 J",
+        "100 J",
+        "125 J",
+        "150 J"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 9 (Clave: C)"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Una piedra de 1 kg es lanzada verticalmente hacia arriba y alcanza una altura de 5 m. Calcule su energía potencial gravitatoria respecto al piso en ese punto. (g = 10 m/s²)",
-      "alternatives": ["25 J", "30 J", "40 J", "50 J", "60 J"],
+      "alternatives": [
+        "25 J",
+        "30 J",
+        "40 J",
+        "50 J",
+        "60 J"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 10 (Clave: D)"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una caja de cereal de 250 g es lanzada verticalmente hacia arriba con una rapidez de 10 m/s. Calcule su energía cinética en ese instante.",
-      "alternatives": ["25 J", "12,5 J", "15 J", "20 J", "30 J"],
+      "alternatives": [
+        "25 J",
+        "12,5 J",
+        "15 J",
+        "20 J",
+        "30 J"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 11 (Clave: B)"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Dos pelotas de 1 kg son lanzadas hacia arriba; una asciende 10 m y la otra 9 m. Calcule la energía potencial gravitatoria de la más alta respecto a su punto de lanzamiento. (g = 10 m/s²)",
-      "alternatives": ["10 J", "90 J", "100 J", "50 J", "190 J"],
+      "alternatives": [
+        "10 J",
+        "90 J",
+        "100 J",
+        "50 J",
+        "190 J"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 12 (Clave: C)"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una naranja está a punto de caer de la rama de un árbol ubicada a 10 cm del piso; su masa es 100 g. Calcule su energía potencial gravitatoria respecto al piso. (g = 10 m/s²)",
-      "alternatives": ["100 J", "50 J", "1 J", "5 J", "0,1 J"],
+      "alternatives": [
+        "100 J",
+        "50 J",
+        "1 J",
+        "5 J",
+        "0,1 J"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 13 (Clave: E)"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Una piedra es soltada desde cierta altura. Luego de caer, su rapidez es 4 m/s; su masa es 2 kg. Calcule su energía cinética en ese instante.",
-      "alternatives": ["8 J", "10 J", "12 J", "18 J", "16 J"],
+      "alternatives": [
+        "8 J",
+        "10 J",
+        "12 J",
+        "18 J",
+        "16 J"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 14 (Clave: E)"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una piedra de 1 kg es soltada desde una torre de 80 m. Calcule su energía potencial gravitatoria a la mitad de su recorrido (40 m de altura), respecto al piso. (g = 10 m/s²)",
-      "alternatives": ["800 J", "600 J", "500 J", "400 J", "700 J"],
+      "alternatives": [
+        "800 J",
+        "600 J",
+        "500 J",
+        "400 J",
+        "700 J"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 15 (Clave: D)"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Una mosca de 10 g se encuentra a 40 m de altura. Calcule su energía potencial gravitatoria respecto al piso. (g = 10 m/s²)",
-      "alternatives": ["20 J", "10 J", "5 J", "4 J", "3 J"],
+      "alternatives": [
+        "20 J",
+        "10 J",
+        "5 J",
+        "4 J",
+        "3 J"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 17 (Clave: D)"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Una maceta ubicada a 10 m de altura tiene una masa de 2 kg. Calcule su energía potencial gravitatoria respecto al piso. (g = 10 m/s²)",
-      "alternatives": ["100 J", "150 J", "200 J", "125 J", "250 J"],
+      "alternatives": [
+        "100 J",
+        "150 J",
+        "200 J",
+        "125 J",
+        "250 J"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 19 (Clave: C)"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Desde un malecón de 40 m de altura se lanza una piedra con una velocidad de 50 m/s. Despreciando la fricción del aire, determine con qué velocidad impacta en el agua. (g = 10 m/s²)",
-      "alternatives": ["52 m/s", "53,41 m/s", "57,44 m/s", "62,82 m/s", "60 m/s"],
+      "alternatives": [
+        "52 m/s",
+        "53,41 m/s",
+        "57,44 m/s",
+        "62,82 m/s",
+        "60 m/s"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
       "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 20 (Clave: C)"
@@ -149,10 +227,2508 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un objeto se desliza sobre una superficie horizontal con una rapidez inicial de 8 m/s. Si el coeficiente de rozamiento cinético con la superficie es μ = 0,2, ¿qué distancia recorre hasta detenerse? (g = 10 m/s²)",
-      "alternatives": ["12 m", "16 m", "24 m", "8 m", "32 m"],
+      "alternatives": [
+        "12 m",
+        "16 m",
+        "24 m",
+        "8 m",
+        "32 m"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/09/teorema-del-trabajo-y-la-energia-cinetica-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn - Teorema del trabajo y la energía cinética, problema 6 (Clave: B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La función de trabajo para el potasio es 2 eV. ¿Cuál es la energía cinética máxima de los fotoelectrones cuando la superficie del metal es iluminada con luz de longitud de onda 500 nm?\nDatos: h =4,14×10 − ¹ ⁵ eV s",
+      "alternatives": [
+        "0,124 eV",
+        "0,244 eV",
+        "0,144 eV",
+        "0,484 eV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/fisica-ejercicios-resueltos-examen-de.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La energía en reposo de un cuerpo se relaciona con su masa en reposo. En este contexto, una partícula con energía en reposo de 600 MeV tiene una energía total relativista de 1200 MeV. Calcule su energía cinética.\nDato: 1 eV=1,6×10 –19 J",
+      "alternatives": [
+        "9,6×10 –12 J",
+        "6,0×10 –11 J",
+        "9,6×10 –10 J",
+        "9,6×10 –11 J",
+        "6,0×10 –12 J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-fisica-de-admision-la_21.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo se mueve con MAS y se encuentra en el punto más alejado de su posición de equilibrio. En este contexto, indique el valor de verdad (V o F) de las siguientes afirmaciones:\nI. La energía cinética del cuerpo es máxima.\nII. La energía mecánica se mantiene constante.\nIII. La energía potencial es máxima.",
+      "alternatives": [
+        "VVF",
+        "FVF",
+        "FVV",
+        "FFV",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-fisica-de-admision-la.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una onda mecánica ingresa en un medio elástico. Esta onda transmite al medio energía y cantidad de movimiento. Sobre esta onda, es posible observar que las partículas del medio elástico se mueven en dirección\nI. perpendicular a la dirección del movimiento de la onda.\nII. paralela a la dirección del movimiento de la onda.\nIII. contraria a la dirección de movimiento de la onda.\nDe las tres posibles observaciones, ¿cuál o cuáles ocurren en la naturaleza?",
+      "alternatives": [
+        "I, II y III",
+        "solo I",
+        "solo II",
+        "solo I y III",
+        "solo III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-fisica-de-admision-la.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un experimento científico se miden ciertas cantidades físicas fundamentales, con los cuales se calcula una cantidad física derivada. Indique cuál de las siguientes cantidades físicas derivadas fue la que se calculó, si su expresión dimensional es ML 2 T –2 .",
+      "alternatives": [
+        "Fuerza",
+        "Presión",
+        "Energía",
+        "Cantidad de movimiento",
+        "Potencia"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/fisica-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La energía cinética que deben tener los electrones para producir R-x de longitud de onda mínima 0,4 Å, es de",
+      "alternatives": [
+        "11 keV",
+        "21 keV",
+        "30 keV",
+        "41 keV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-18-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una pelota de 2kg es lanzado hacia arriba con una rapidez de 30m/s. Calcula su energía cinética luego de 2s de haber sido lanzado.\n(g=10m/s²)",
+      "alternatives": [
+        "50J",
+        "75J",
+        "100J",
+        "90J",
+        "900J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/energia-potencial-cinetica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ENERGÍA CINÉTICA Y POTENCIAL EJERCICIOS RESUELTOS CONSERVACIÓN DE LA ENERGÍA MECÁNICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una pelota de 0,5kg es lanzada hacia arriba alcanzando una altura máxima de 20m. Calcula su energía potencial gravitatoria respecto a tierra.\n(g=10m/s²)",
+      "alternatives": [
+        "200J",
+        "150J",
+        "100J",
+        "50J",
+        "0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/energia-potencial-cinetica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ENERGÍA CINÉTICA Y POTENCIAL EJERCICIOS RESUELTOS CONSERVACIÓN DE LA ENERGÍA MECÁNICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con los datos de la pregunta anterior calcula su energía cinética en ese instante.",
+      "alternatives": [
+        "50J",
+        "75J",
+        "100J",
+        "0J",
+        "25J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/energia-potencial-cinetica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ENERGÍA CINÉTICA Y POTENCIAL EJERCICIOS RESUELTOS CONSERVACIÓN DE LA ENERGÍA MECÁNICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una maceta es soltada desde una altura de 100m. Luego de 4s, cuál será su energía cinética (g=10m/s²)\nConsidera su masa de 0,5kg.",
+      "alternatives": [
+        "200J",
+        "300J",
+        "400J",
+        "100J",
+        "800J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/energia-potencial-cinetica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ENERGÍA CINÉTICA Y POTENCIAL EJERCICIOS RESUELTOS CONSERVACIÓN DE LA ENERGÍA MECÁNICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con los datos de la pregunta anterior calcula en ese instante su energía potencial gravitatoria respecto a tierra.\n(g=10m/s²)",
+      "alternatives": [
+        "50J",
+        "75J",
+        "100J",
+        "125J",
+        "250J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/energia-potencial-cinetica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ENERGÍA CINÉTICA Y POTENCIAL EJERCICIOS RESUELTOS CONSERVACIÓN DE LA ENERGÍA MECÁNICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una roca de 20kg esta a 20m de altura. Calcula su energía potencial gravitatoria su energía potencial gravitatoria en ese instante.\n(g=10m/s²)",
+      "alternatives": [
+        "400J",
+        "200J",
+        "800J",
+        "2000J",
+        "4000J"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/energia-potencial-cinetica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ENERGÍA CINÉTICA Y POTENCIAL EJERCICIOS RESUELTOS CONSERVACIÓN DE LA ENERGÍA MECÁNICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la energía cinética de un vehículo que tiene una masa de 100 kg y va a 20 m/s.",
+      "alternatives": [
+        "1 kJ",
+        "5 kJ",
+        "10 kJ",
+        "15 kJ",
+        "20 kJ"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/energia-potencial-cinetica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ENERGÍA CINÉTICA Y POTENCIAL EJERCICIOS RESUELTOS CONSERVACIÓN DE LA ENERGÍA MECÁNICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una pelota cae desde una altura de 80m. Calcula su energía potencial gravitatoria respecto a tierra luego de haber descendido 30m. Su masa es 1kg\n(g=10m/s²)",
+      "alternatives": [
+        "50J",
+        "80J",
+        "800J",
+        "500J",
+        "300J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/energia-potencial-cinetica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ENERGÍA CINÉTICA Y POTENCIAL EJERCICIOS RESUELTOS CONSERVACIÓN DE LA ENERGÍA MECÁNICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un proyectil de 200 g de masa es lanzado al vacío con una rapidez de 5,0 m/s. calcular el cambio de energía cinética que experimenta dicho cuerpo cuando su rapidez se haya duplicado.",
+      "alternatives": [
+        "0,0 J",
+        "2,5 J",
+        "5,0 J",
+        "7,5 J",
+        "8,5 J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tubo de rayos X, se aceleran los electrones con un voltaje de 3,00×10 ⁴ V. Suponiendo que los electrones son frenados en el ánodo, y toda la energia cinética se convierte en energía de los fotones X, halle la longitud de onda de los rayos X.\nDatos: h = 4,14×10 − ¹ ⁵ eV-s ; 1eV = 1,60×10 − ¹ ⁹ J",
+      "alternatives": [
+        "0,31 A°",
+        "0,41 A°",
+        "0,21 A°",
+        "0,11 A°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-fisica-semana-16-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA SOLUCIONARIO DE EXAMEN ADMISIÓN UNIVERSIDAD PRUEBA DE INGRESO CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pelota de 8 kg, que cuelga del techo atada a un alambre de 135 cm de longitud, sufre un choque elástico con una pelota de 2 kg que se mueve horizontalmente con rapidez de 5 m/s justo antes del choque. La tensión en el alambre inmediatamente después del choque es:",
+      "alternatives": [
+        "60N",
+        "102 N",
+        "112 N",
+        "185 N",
+        "200 N"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/monotonia-y-curvatura-funciones-con.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNJ 2027 UNIVERSIDAD NACIONAL DE JAÉN EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos cuerpos A y B de masas iguales con densidades d A >d B , se dejan caer desde una altura h, al mismo tiempo, en el vacío. Indique la afirmación correcta.",
+      "alternatives": [
+        "La inercia de A es mayor que la inercia de B.",
+        "El volumen de A es mayor que el volumen de B",
+        "En todo instante la energía cinética de A es mayor que la energíia cinética de B.",
+        "El cuerpo A llega primero al piso.",
+        "Ambos llegan simultáneamente al piso."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/5to-actividad-2-dpcc-experiencia-7-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA UNJFSC ORDINARIO INGRESO UNIVERSIDAD HUACHO 2026 –  PDF PREGUNTAS CLAVES"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Distinga el efecto de una fuerza no conservativa que actúa sobre un objeto:",
+      "alternatives": [
+        "la energía cinética siempre es mayor que la energía potencial",
+        "se conserva la energía mecánica",
+        "siempre se conserva la energía cinética",
+        "se conserva la energía total",
+        "la energía cinética es igual a la energía potencial"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/examen-admision-cantuta-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CANTUTA 2027 UNE EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE EDUCACIÓN ENRIQUE GUZMÁN Y VALLE PROSPECTO CRONOGRAMA VACANTES ESTRUCTURA PUNTAJES TEMAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona jala un cajón de 20 kg con una fuerza oblicua de 100N que forma 53° con la horizontal. Determine el trabajo mecánico que realiza la persona en un tramo de 5m.\nConsidere g= 10 m/s 2 y las superficies lisas.",
+      "alternatives": [
+        "150 J",
+        "200 J",
+        "250 J",
+        "300 J",
+        "350 J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-ingles-actividad-1-2-3-4-experiencia-8-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el trabajo mecánico que realizará la fuerza de gravedad cuando cae una piedra desde 15m de altura, si su masa es 0,5kg.\n(g=10m/s²)",
+      "alternatives": [
+        "100J",
+        "50J",
+        "75J",
+        "125J",
+        "25J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La transformación del agua líquida en vapor de agua implica:",
+      "alternatives": [
+        "Disminución de la energía cinética molecular",
+        "Aumento de la densidad",
+        "Aumento de fuerzas de repulsión",
+        "Disminución de calor",
+        "Aumento de fuerza de cohesión"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-8-dpcc-experiencia-6-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UPCH 2027 EXAMEN ADMISIÓN UNIVERSIDAD CAYETANO HEREDIA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo de 5,0 kg de masa, durante su movimiento experimenta un cambio en su velocidad de 6î–2 ĵ (m/s) a 4î +8 ĵ (m/s) debido a la acción de fuerzas externas. Determine el trabajo neto que experimenta el cuerpo.",
+      "alternatives": [
+        "50,0 J",
+        "60,0 J",
+        "100,0 J",
+        "200,0 J",
+        "300,0 J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-y-cocientes-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO UNC 2027 INGRESO UNIVERSIDAD DE CAJAMARCA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos moles de gas ideal se encuentran a 52°C en un depósito rígido. Si la constante universal de gases es de 8,31J/mol · K, la energía cinética traslacional total de la masa de gas, en J, es de",
+      "alternatives": [
+        "5565",
+        "6091",
+        "8102",
+        "8212",
+        "9110"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la final de un campeonato de fútbol, el centro delantero del equipo favorito ejecuta un tiro penal rasante a la superficie del césped con un balón de 300gramos. El contacto entre el futbolista y la pelota duró 10 milisegundos, luego de lo cual, esta adquirió la velocidad de 10m/s. A partir de la situación planteada marque la alternativa correcta.\nI. El cambio en cantidad de movimiento del balón fue 3N·s.\nII. La magnitud del impulso adquirido por el balón fue 2,5 kg·m/s.\nIII. La fuerza media fue 300N.",
+      "alternatives": [
+        "solo II",
+        "I y III",
+        "solo III",
+        "I y II",
+        "solo I"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/simulacro-presencial-san-marcos-2018-i.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO SAN MARCOS 2027 I INGRESO UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante las eliminatorias un jugador da un cabezazo a una pelota de fútbol de 420g de masa y el golpe dura 5ms. Indique cuales de las siguientes proposiciones con respecto a lo expresado, son correctas:\nI) Si después del cabezazo la pelota tiene una rapidez de 15 m/s; entonces, la magnitud de la cantidad de movimiento de la pelota es de 5,3 kg.m/s\nII) Si la magnitud de la fuerza media del cabezazo es de 250N; entonces, la magnitud del impulso medio desarrollado fue de 2 kg,m/s.\nIII) Si la magnitud de la fuerza media del cabezazo es de 200N, entonces el impulso medio desarrollado es de magnitud igual a 1kg. m/s.",
+      "alternatives": [
+        "Solo III",
+        "Solo I",
+        "Solo II",
+        "II y III",
+        "I y II"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/cantidad-de-movimiento-ejercicios-resueltos-de-fisica-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMPULSO Y CANTIDAD DE MOVIMIENTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación a la cantidad de movimiento indique la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI) Es una cantidad vectorial\nII) Depende del sistema de referencia\nIII) Se manifiesta solamente cuando existen cuerpos que interactúan en una colisión",
+      "alternatives": [
+        "VVF",
+        "FFF",
+        "VFF",
+        "FVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/cantidad-de-movimiento-ejercicios-resueltos-de-fisica-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMPULSO Y CANTIDAD DE MOVIMIENTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la veracidad (V) o falsedad (F) respecto de las proposiciones siguientes:\nI) La energía potencial gravitatoria respecto a una referencia determinada no puede ser negativa.\nII) Si una fuerza no cambia de orientación a lo largo de una trayectoria entonces necesariamente dicha fuerza es conservativa.\nIII) El trabajo efectuado por una fuerza conservativa es igual al cambio de su energía potencial.",
+      "alternatives": [
+        "FFF",
+        "FFV",
+        "VFV",
+        "VVV",
+        "VFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/conservacion-de-la-energia-mecanica-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONSERVACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un móvil es soltado desde cierta altura si el móvil de 4kg experimenta un M.V.C.L. Calcula su energía cinética luego de 1s de caída.\n(g=10m/s²)",
+      "alternatives": [
+        "100J",
+        "150J",
+        "200J",
+        "300J",
+        "50J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque de masa 500g es arrastrado por una fuerza de 15N. Calcula su energía cinética luego de 2s sabiendo que parte del reposo.",
+      "alternatives": [
+        "90J",
+        "450J",
+        "900J",
+        "45J",
+        "225J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque de 6kg asciende por acción de una fuerza constante “F”. Si la aceleración del bloque es igual a 3m/s². Hallar la energía cinética que tendrá luego de 5s, sabiendo que parte del reposo.\n(g=10m/s²)",
+      "alternatives": [
+        "225J",
+        "450J",
+        "675J",
+        "900J",
+        "1115J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pelota es lanzada hacia abajo con rapidez inicial de 5m/s, si su masa es igual a 2kg. Hallar su energía cinética en dicho instante.",
+      "alternatives": [
+        "20J",
+        "50J",
+        "25J",
+        "100J",
+        "75J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con los datos de la pregunta anterior, Calcula la energía cinética , luego de 0,5s.\n(g=10m/s²)",
+      "alternatives": [
+        "50J",
+        "75J",
+        "100J",
+        "25J",
+        "125J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una caja de cereales es lanzada en forma vertical y hacia arriba con una rapidez de 10m/s, si su masa es de 250g. Calcula su energía cinética en ese instante.",
+      "alternatives": [
+        "25J",
+        "12,5J",
+        "15J",
+        "20J",
+        "30J"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una piedra es soltada desde cierta altura, si luego de un tiempo de caída su rapidez es 4m/s. Calcula su energía cinética si su masa es de 2kg.",
+      "alternatives": [
+        "8J",
+        "10J",
+        "12J",
+        "18J",
+        "16J"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre un bloque de 8kg actúan dos fuerzas una de 12N y otra de 28N, en direcciones opuestas. Hallar la energía cinética del bloque luego de 4s.\n(Considerara fuerzas horizontales y las superficies son lisas)",
+      "alternatives": [
+        "128J",
+        "192J",
+        "256J",
+        "64J",
+        "32J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una piedra cuyo peso es de 20 newtons cae desde cierta altura (suponga velocidad inicial igual a cero). La caída dura 1,6 segundos. Despreciando la resistencia del aire, la energía cinética (EC) y la energía potencial (EP) de la piedra en el punto medio del camino recorrido serán iguales (en joules) a ....\n(g=10m/s²)",
+      "alternatives": [
+        "128 y128",
+        "64 y128",
+        "32 y 156",
+        "64 y 180",
+        "96 y 96"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esfera de 3,0kg es lanzada verticalmente, hacia abajo, con una rapidez de 4,0 m/s. Cuando la esfera se encuentra a 2,0 m del piso, su rapidez es 8,0 m/s. Determine la variación de su energía potencial gravitatoria.",
+      "alternatives": [
+        "62J",
+        "32J",
+        "52J",
+        "42J",
+        "72J"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con referencia a las fuerzas conservativas, señale el valor de verdad de las siguientes proposiciones:\nI) La energía cinética de una partícula se conserva si y solo si sobre ésta actúan solo fuerzas conservativas.\nII) La energía mecánica total de una partícula se conserva si y solo si sobre ésta actúan sólo fuerzas conservativas.\nIII) Si una fuerza no realiza trabajo durante el desplazamiento de la partícula entonces se concluye que esta fuerza es conservativa.",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "VVF",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto de 4 kg se encuentra a 10 m de altura y presenta una energía potencial gravitatoria de 280 J. Determina la aceleración de la gravedad local (en m/s 2 )",
+      "alternatives": [
+        "6",
+        "9",
+        "8",
+        "5",
+        "7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo de 2 kg cae desde una altura de 100 m. Si g=10m/s², la energía cinética del cuerpo cuando recorra los 4/5 de dicha altura, es:",
+      "alternatives": [
+        "2500 J",
+        "1500 J",
+        "1600 J",
+        "1200 J",
+        "2000 J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-simulacro-de-examen-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I ) El mercado de los vehículos electrónicos está creciendo de una forma progresiva en todo el mundo, en el que se busca soluciones menos contaminantes y más amigables con el medio ambiente. II ) Además, su popularidad no solo se debe a la alternativa eco amigable, sino a una alternativa más económica frente a vehículos que utilizan el diésel como combustible, volviéndolo una alternativa más atractiva. III ) Estos vehículos están impulsados por un motor alimentado por una fuente de energía eléctrica que, posteriormente, se transforma en energía cinética. IV ) En la actualidad, la tecnología que más aplicación tiene es la de las baterías de iones de litio, aunque existen otros tipos. V. Los vehículos que emplean diésel requieren cambios de aceite, utilizan filtros, cuentan con tubo de escape y pastillas de frenos que no duran tanto.",
+      "alternatives": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Informacion-eliminada-preguntas-resueltas-de-examen-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INFORMACIÓN ELIMINADA EJERCICIOS RESUELTOS PDF VERBAL"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tubo de rayos X, se aceleran los electrones con un voltaje de 3,00×10 4 V. Suponiendo que los electrones son frenados en el ánodo, y toda la energia cinética se convierte en energía de los fotones X, halle la longitud de onda de los rayos X.\nDatos: h=4,14×10 –15 eV-s ; 1eV=1,60×10 –19 J",
+      "alternatives": [
+        "0,31 Â",
+        "0,41 Â",
+        "0,21Â",
+        "0,11 Â"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-semana-6-manual-pre-san.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA A 2024-2 SALUD INGRESO UNIVERSIDAD PRUEBA RESUELTA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los helicópteros, casi siempre, pueden aterrizar y despegar en forma vertical; a pesar de ello, la mayoría de los pilotos prefieren describir un ángulo cuando se trata de acercarse a la helisuperficie y, asimismo, elevarse a medida que avanzan. En la ciudad de Lima un helicóptero de la FAP de 1500kg asciende verticalmente con una aceleración constante de 2m/s 2 una distancia de 30m. Determine el trabajo neto sobre el helicóptero en este tramo.",
+      "alternatives": [
+        "120 kJ",
+        "90 kJ",
+        "64 kJ",
+        "110 kJ",
+        "85 kJ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-16-2020.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2024-1 PRUEBA RESUELTA INGENIERÍAS INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el corazón late con más fuerza, el tejido cardiaco con mayor trabajo mecánico será el",
+      "alternatives": [
+        "epicardio.",
+        "endocardio.",
+        "miocardio.",
+        "mesocardio.",
+        "pericardio."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hace unos años, el atleta Usain Bolt de 76 kg de masa se convirtió en el hombre más veloz de la Tierra al recorrer 100 m en apenas 9,5 s. Calcule la energía cinética que desarrolló en la carrera.",
+      "alternatives": [
+        "40/17 kJ",
+        "45/21 kJ",
+        "76/13 kJ",
+        "80/19 kJ",
+        "30/11 kJ"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-examen-admision-agraria-unalm-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la verdad (V) o falsedad (F) en las siguientes proposiciones: Dos esferas macizas del mismo diámetro una de metal y otra de madera se dejan caer de cierta altura, cuando están a 10 m del piso, ellas tienen idéntica:\nI) aceleración\nII) energía potencial\nIII) energía cinética",
+      "alternatives": [
+        "VFF",
+        "FVF",
+        "FFV",
+        "VFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El trabajo negativo realizado por una fuerza aplicada a un cuerpo implica que:",
+      "alternatives": [
+        "la energía cinética del cuerpo crece.",
+        "la fuerza aplicada es variable.",
+        "la fuerza aplicada es perpendicular al desplazamiento.",
+        "la fuerza tiene un componente que se opone al desplazamiento."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. El Principio de Incertidumbre de Heisenberg se refiere a los errores experimentales que se comete cuando se mide la posición de un electrón.\nII. No se puede medir la posición de un electrón exactamente porque se mueve muy rápido.\nIII. El Principio de Incertidumbre de Heisenberg se aplica en medidas a nivel atómico de posición y cantidad de movimiento simultáneo.",
+      "alternatives": [
+        "VVF",
+        "VFF",
+        "VFV",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La energía mecánica se conserva en un medio no resistivo. En este contexto, la energía mecánica es igual a la energía potencial gravitatoria en la siguiente situación:",
+      "alternatives": [
+        "La velocidad del objeto es nula.",
+        "La energía cinética es máxima.",
+        "La rapidez del objeto no es constante.",
+        "La velocidad del objeto es negativa.",
+        "La velocidad del objeto es positiva."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/fisica-cayetano-heredia-examen-admision.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se suelta una piedra desde una altura de 200 m. El rozamiento con el aire provoca que su energía cinética al momento de llegar al suelo sea el 90 % de lo que sería sino hubiese rozamiento con el aire. Calcule la rapidez de la piedra en el instante que llega al suelo.\n( g=10 m/s²)",
+      "alternatives": [
+        "60 m/s",
+        "50 m/s",
+        "40 m/s",
+        "30 m/s",
+        "20 m/s"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-fisica-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE FÍSICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a la conservación de la cantidad de movimiento lineal, indicar verdadero (V) o falso (F):\nI ) Las fuerzas internas no modifican la cantidad de movimiento del centro de masa de un sistema de partículas.\nII ) Al actuar una fuerza externa sobre un sistema de partículas, entonces la cantidad de movimiento del sistema se conserva.\nIII ) Cuando cambia la cantidad de movimiento de un sistema de partículas, la fuerza externa sobre el sistema es nula.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFV",
+        "VFF",
+        "FFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/cepre-san-marcos-fisica-semana-7-2020.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ley de conservación de la cantidad de movimiento se aplica a un sistema de objetos que colisionan, si:",
+      "alternatives": [
+        "Todas las colisiones son elásticas",
+        "El impulso neto externo es cero",
+        "No existe cambio en la energía cinética del sistema",
+        "El coeficiente de restitución vale 1",
+        "El coeficiente de restitución es cero"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un balín de masa 3 gramos que se mueve con rapidez de 180 m/s penetra en una bolsa de arena y finalmente se detiene. ¿Cuál es el incremento en la temperatura de la bala si toda su energía cinética se transforma en calor, el cual es absorbido por la bala?\n(c bala = 128 J/kg°C)",
+      "alternatives": [
+        "112 °C",
+        "135 °C",
+        "127 °C",
+        "108 °C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un proyectil de 200g de masa es lanzado al vacío con una rapidez de 5m/s. calcular el cambio de energía cinética que experimenta dicho cuerpo cuando su rapidez se haya duplicado.",
+      "alternatives": [
+        "0,0 J",
+        "2,5 J",
+        "5,0 J",
+        "7,5 J",
+        "8,5 J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/fisica-unsa-examen-admision-agustin.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSA PRUEBA RESUELTA SAN AGUSTIN INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El segundo párrafo gira en torno a:\n\nTexto:\nPara la descripción del movimiento de un fluido recurriremos a las leyes generales de la Mecánica (leyes de Newton, leyes de conservación de la cantidad de movimiento y de la energía), junto con relaciones específicas condicionadas por la fluidez.\nA escala microscópica la materia (y en particular un fluido), se compone de moléculas que se encuentran a distintas distancias entre sí, con espacio vacío entre ellas. Estas moléculas están continuamente moviéndose, interaccionando y colisionando entre sí de forma compleja.\nUn análisis exacto del problema debiera tener en cuenta la acción de todas y cada una de las moléculas que componen el fluido, incluyendo posición, velocidad e interacciones, lo que teniendo en cuenta el gran número de moléculas que componen un fluido real, es completamente inmanejable.\nUna variante estadística de este procedimiento, con importantes simplificaciones, es la que se adopta en Teoría Cinética y en Mecánica Estadística, pero el tratamiento es aún demasiado complejo para utilizarlo en el trabajo diario de Hidráulica.\nSin embargo, en la mayor parte de los cálculos hidráulicos, el interés real no está centrado en el comportamiento molecular microscópico del fluido, sino en una serie de manifestaciones macroscópicas promedio que resultan de la acción conjunta de una gran cantidad de moléculas, manifestaciones como la densidad, la presión o la temperatura. En la práctica es posible hacer una simplificación importante de cara a describir esas manifestaciones, suponer que todas ellas son el resultado de la acción de una distribución continua de una materia hipotética, a la que denominaremos el continuo o el medio continuo, en lugar de estudiar el conglomerado real de las moléculas discretas, de mucha mayor complejidad. De este modo, a la hora de estudiar nuestros problemas sustituiremos la materia real por este medio continuo ficticio, cuyas propiedades varían de forma continua y reflejan a nivel macroscópico las propiedades del medio real. Nótese que el hecho de utilizar este medio continuo ficticio nos permite describir las propiedades del medio mediante una serie de funciones matemáticas que varían de forma continua y están definidas para todos los puntos del espacio ocupados por el medio real.",
+      "alternatives": [
+        "Los cálculos de la hidráulica",
+        "Una variante estadística",
+        "La descripción del fluido",
+        "La acción de la fuerza",
+        "Los estados de la materia"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/06/conectores-logicos-guia-con-respuestas.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — CONECTORES LÓGICOS - Guía con respuestas"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desprende que las moléculas están continuamente moviéndose a razón de:\n\nTexto:\nPara la descripción del movimiento de un fluido recurriremos a las leyes generales de la Mecánica (leyes de Newton, leyes de conservación de la cantidad de movimiento y de la energía), junto con relaciones específicas condicionadas por la fluidez.\nA escala microscópica la materia (y en particular un fluido), se compone de moléculas que se encuentran a distintas distancias entre sí, con espacio vacío entre ellas. Estas moléculas están continuamente moviéndose, interaccionando y colisionando entre sí de forma compleja.\nUn análisis exacto del problema debiera tener en cuenta la acción de todas y cada una de las moléculas que componen el fluido, incluyendo posición, velocidad e interacciones, lo que teniendo en cuenta el gran número de moléculas que componen un fluido real, es completamente inmanejable.\nUna variante estadística de este procedimiento, con importantes simplificaciones, es la que se adopta en Teoría Cinética y en Mecánica Estadística, pero el tratamiento es aún demasiado complejo para utilizarlo en el trabajo diario de Hidráulica.\nSin embargo, en la mayor parte de los cálculos hidráulicos, el interés real no está centrado en el comportamiento molecular microscópico del fluido, sino en una serie de manifestaciones macroscópicas promedio que resultan de la acción conjunta de una gran cantidad de moléculas, manifestaciones como la densidad, la presión o la temperatura. En la práctica es posible hacer una simplificación importante de cara a describir esas manifestaciones, suponer que todas ellas son el resultado de la acción de una distribución continua de una materia hipotética, a la que denominaremos el continuo o el medio continuo, en lugar de estudiar el conglomerado real de las moléculas discretas, de mucha mayor complejidad. De este modo, a la hora de estudiar nuestros problemas sustituiremos la materia real por este medio continuo ficticio, cuyas propiedades varían de forma continua y reflejan a nivel macroscópico las propiedades del medio real. Nótese que el hecho de utilizar este medio continuo ficticio nos permite describir las propiedades del medio mediante una serie de funciones matemáticas que varían de forma continua y están definidas para todos los puntos del espacio ocupados por el medio real.",
+      "alternatives": [
+        "Que el ángulo disminuye continuamente",
+        "Las distintas distancias entre sí",
+        "La acción de una fuerza sobre el área",
+        "Que el gas no es un tipo de fluido",
+        "La fluidez que regresa a su forma inicial"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/06/conectores-logicos-guia-con-respuestas.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — CONECTORES LÓGICOS - Guía con respuestas"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De negar la existencia de las manifestaciones macroscópicas, es de suponer que:\n\nTexto:\nPara la descripción del movimiento de un fluido recurriremos a las leyes generales de la Mecánica (leyes de Newton, leyes de conservación de la cantidad de movimiento y de la energía), junto con relaciones específicas condicionadas por la fluidez.\nA escala microscópica la materia (y en particular un fluido), se compone de moléculas que se encuentran a distintas distancias entre sí, con espacio vacío entre ellas. Estas moléculas están continuamente moviéndose, interaccionando y colisionando entre sí de forma compleja.\nUn análisis exacto del problema debiera tener en cuenta la acción de todas y cada una de las moléculas que componen el fluido, incluyendo posición, velocidad e interacciones, lo que teniendo en cuenta el gran número de moléculas que componen un fluido real, es completamente inmanejable.\nUna variante estadística de este procedimiento, con importantes simplificaciones, es la que se adopta en Teoría Cinética y en Mecánica Estadística, pero el tratamiento es aún demasiado complejo para utilizarlo en el trabajo diario de Hidráulica.\nSin embargo, en la mayor parte de los cálculos hidráulicos, el interés real no está centrado en el comportamiento molecular microscópico del fluido, sino en una serie de manifestaciones macroscópicas promedio que resultan de la acción conjunta de una gran cantidad de moléculas, manifestaciones como la densidad, la presión o la temperatura. En la práctica es posible hacer una simplificación importante de cara a describir esas manifestaciones, suponer que todas ellas son el resultado de la acción de una distribución continua de una materia hipotética, a la que denominaremos el continuo o el medio continuo, en lugar de estudiar el conglomerado real de las moléculas discretas, de mucha mayor complejidad. De este modo, a la hora de estudiar nuestros problemas sustituiremos la materia real por este medio continuo ficticio, cuyas propiedades varían de forma continua y reflejan a nivel macroscópico las propiedades del medio real. Nótese que el hecho de utilizar este medio continuo ficticio nos permite describir las propiedades del medio mediante una serie de funciones matemáticas que varían de forma continua y están definidas para todos los puntos del espacio ocupados por el medio real.",
+      "alternatives": [
+        "Sería más inteligible el análisis del enfoque de la Hidráulica",
+        "El tratamiento resultaría complejo para utilizarlo en la Teoría Cinética",
+        "La manifestación colectiva de las moléculas estáticas sería significativa",
+        "Las moléculas solo concertarían en pequeñas fracciones continuas",
+        "Las manifestaciones macroscópicas dependerían solo de la densidad y presión"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/06/conectores-logicos-guia-con-respuestas.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — CONECTORES LÓGICOS - Guía con respuestas"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una mesa hay dos montones de monedas, el de la izquierda con 7 y el de la derecha con 10. Para recoger dichas monedas, Mónica sigue siempre una de las siguientes reglas:\n► Toma 3 monedas de la pila de la izquierda.\n► Toma 2 monedas de la pila de la derecha.\n► Toma 1 moneda de cada pila.\nSi cada vez que ejecuta una de las reglas se considera que ha realizado un movimiento, ¿cuál es la menor cantidad de movimientos que debe realizar Mónica para recoger todas las monedas de la mesa?",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/maximos-minimos-logicos-ejercicios.html",
+      "sourceName": "razonamientopdf.blogspot.com — MÁXIMOS Y MÍNIMOS LÓGICOS ALGEBRAICOS Y GEOMÉTRICOS PROBLEMAS RESUELTOS DE HABILIDAD LÓGICO MATEMÁTICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una golondrina se encuentra a 10m de altura y viaja con 8m/s. Calcula su energía mecánica respecto a tierra (g=10m/s²) si la golondrina tiene una masa de 95kg.",
+      "alternatives": [
+        "66J",
+        "50J",
+        "16J",
+        "32J",
+        "54J"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/energia-potencial-cinetica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ENERGÍA CINÉTICA Y POTENCIAL EJERCICIOS RESUELTOS CONSERVACIÓN DE LA ENERGÍA MECÁNICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Que energía desarrolla una persona de 680N. Si se da un tropezón, su velocidad es de 2 m/s. (g = 10 m/s²)",
+      "alternatives": [
+        "163 J",
+        "136 J",
+        "122 J",
+        "100 J",
+        "68 J"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/energia-potencial-cinetica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ENERGÍA CINÉTICA Y POTENCIAL EJERCICIOS RESUELTOS CONSERVACIÓN DE LA ENERGÍA MECÁNICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una bala atraviesa tres tablas como máximo, sí su velocidad se duplica ¿Cuántas tablas podrá atravesar como máximo? Todas las tablas son de igual espesor.",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/energia-potencial-cinetica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ENERGÍA CINÉTICA Y POTENCIAL EJERCICIOS RESUELTOS CONSERVACIÓN DE LA ENERGÍA MECÁNICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas de las siguientes proposiciones son verdaderas?\n1) La energía mecánica es la capacidad que tiene un cuerpo para realizar trabajo mecánico.\n2) Las únicas energías potenciales que existen son la elástica y la gravitatoria.\n3) La energía mecánica es independiente del sistema de referencia.\n4) Al igual que la masa, la energía cinética es una cantidad característica de los cuerpos.\n5) La energía cinética puede considerarse como una medida de la fuerza que es capaz de aplicar un cuerpo.\n6) Dado un sistema de referencia, la energía cinética es una cantidad que depende del origen del sistema coordenado.\n7) La energía mecánica se conserva en sistemas donde solamente actúan fuerzas conservativas como el peso y la fuerza elástica debido al resorte.\n8) La energía mecánica se conserva en sistemas donde solamente actúan fuerzas conservativas.\n9) La conservación de la energía mecánica es un caso particular de un caso más general llamado conservación de la energía.",
+      "alternatives": [
+        "4",
+        "5",
+        "3",
+        "2",
+        "0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/conservacion-de-la-energia-mecanica-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONSERVACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El motor de una grúa tiene un rendimiento del 75% y el sistema de transmisión 90%. ¿Cuál será el rendimiento efectivo de la grúa?",
+      "alternatives": [
+        "67,5%",
+        "82,5%",
+        "75,0%",
+        "15,0%",
+        "90,0% PROBLEMA 1 : La potencia que entrega el motor de un camión que sube por un camino inclinado es de 196,2 kW. Si el camino inclinado forma un ángulo de 30º con la horizontal y el camión se mueve con rapidez constante de 36 km/h, calcule en kg, la masa del camión. (g=9,81m/s²)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/potencia-mecanica-ejemplos-problemas-resueltos-eficiencia-de-una-maquina-fisica-de-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIA MECÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A la gatita Romina le gusta jugar con una pelota pequeña. Le da un impulso de modo que empieza a moverse en línea recta por el suelo y luego de recorrer cierta distancia d, la pelota se detiene. Halle una ecuación que permita calcular la velocidad con la que empieza a moverse asumiendo que los coeficientes de fricción estático y cinético entre la pelota y el suelo son μ S y μ K , respectivamente. La aceleración de la gravedad se denota con g.",
+      "alternatives": [
+        "(2μ S g ) 1/2",
+        "2dμ K g",
+        "2μ S g",
+        "(2dμ K g ) 1/2",
+        "(3μ K gd ) 3/2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/teorema-del-trabajo-y-la-energia-mecanica-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA DEL TRABAJO Y ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas de las siguientes proposiciones son falsas?\n1) En un movimiento pendular, el trabajo del peso en una oscilación completa es cero.\n2) El trabajo de una fuerza constante siempre es distinto de cero.\n3) Se suelta una pelota desde el techo de una casa, la cual da varios rebotes hasta detenerse. Entre dos rebotes sucesivos el trabajo del peso siempre vale cero.\n4) Luis lanza un cuerpo verticalmente hacia arriba, entonces en el tramo de subida el trabajo del peso es positivo.\n5) El signo del trabajo de una fuerza depende del sentido de los ejes en un sistema coordenado.\n6) El trabajo es una cantidad evaluable (que se puede calcular) en cada instante.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/trabajo-mecanico-8-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO MECÁNICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un electrón y un protón se mueven bajo la influencia de sus fuerzas mutuas. Al calcular el cambio en la energía cinética del sistema durante el movimiento, se ignora la fuerza magnética de uno sobre el otro. Esto se debe a que,",
+      "alternatives": [
+        "las dos fuerzas magnéticas son iguales y opuestas, por lo que no producen ningún efecto neto.",
+        "las fuerzas magnéticas no realizan trabajo sobre ninguna de las partículas.",
+        "las fuerzas magnéticas realizan trabajo igual y opuesto (pero distinto de cero) sobre cada partícula.",
+        "las fuerzas magnéticas son necesariamente despreciables."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep306.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.6 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo cae libremente bajo la acción exclusiva de la gravedad en el vacío. ¿Cuál de las siguientes magnitudes permanece constante durante la caída?",
+      "alternatives": [
+        "Energía cinética.",
+        "Energía potencial.",
+        "Energía mecánica total.",
+        "Momento lineal total."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep306.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.6 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante una colisión inelástica entre dos cuerpos, ¿cuál de las siguientes magnitudes siempre se conserva?",
+      "alternatives": [
+        "Energía cinética total.",
+        "Energía mecánica total.",
+        "Momento lineal total.",
+        "La rapidez de cada cuerpo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep306.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.6 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una prueba de lanzamiento de bala, un atleta lanza una bala de 10 kg de masa con una rapidez inicial de 1 m s–1 a 45° desde una altura de 1.5 m sobre el suelo. Suponiendo que la resistencia del aire es despreciable y que la aceleración debida a la gravedad es de 10 m s–2, la energía cinética de la bala justo al llegar al suelo será",
+      "alternatives": [
+        "2.5 J",
+        "5.0 J",
+        "52.5 J",
+        "155.0 J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep306.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.6 MCQ 16"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El calor está asociado con",
+      "alternatives": [
+        "la energía cinética del movimiento aleatorio de las moléculas.",
+        "la energía cinética del movimiento ordenado de las moléculas.",
+        "la energía cinética total del movimiento aleatorio y ordenado de las moléculas.",
+        "la energía cinética del movimiento aleatorio en algunos casos y la energía cinética del movimiento ordenado en otros. Propiedades térmicas de la materia"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep311.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.11 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con la propagación de ondas longitudinales a través de un medio, la magnitud que se transmite es",
+      "alternatives": [
+        "materia.",
+        "energía.",
+        "energía y materia.",
+        "energía, materia y momento (cantidad de movimiento)."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep315.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.15 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos átomos de H en su estado fundamental colisionan de manera inelástica. La cantidad máxima en que se reduce su energía cinética combinada es",
+      "alternatives": [
+        "10.20 eV",
+        "20.40 eV",
+        "13.6 eV",
+        "27.2 eV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep112.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.12 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una feria de ciencias, un estudiante utilizará el disco de Maxwell (yoyo) para demostrar el principio de conservación de la energía. La presentación constará de dos etapas: Etapa 1 - la explicación de que, a medida que el disco desciende, parte de su energía potencial gravitacional se transforma en energía cinética de traslación y energía cinética de rotación; Etapa 2 - el cálculo de la energía cinética de rotación del disco en el punto más bajo de su trayectoria, suponiendo el sistema conservativo. Al preparar la segunda etapa, considera la aceleración de la gravedad igual a 10 m s−2 y la velocidad lineal del centro de masa del disco despreciable en comparación con la velocidad angular. A continuación, mide la altura de la parte superior del disco respecto al suelo en el punto más bajo de su trayectoria, obteniendo 1/3 de la altura de la varilla del juguete. Las especificaciones de tamaño del juguete, es decir, de longitud (C), ancho (L) y altura (A), así como de la masa de su disco de metal, fueron encontradas por el estudiante en el recorte de manual ilustrado a continuación. 2h h Contenido: base de metal, varillas metálicas, barra superior, disco de metal. Tamaño (C × L × A): 300 mm × 100 mm × 410 mm Masa del disco de metal: 30 g El resultado del cálculo de la etapa 2, en joules, es:",
+      "alternatives": [
+        "4,10 × 10−2",
+        "8,20 × 10−2",
+        "1,23 × 10−1",
+        "8,20 × 104",
+        "1,23 × 105"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2019/2019_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2019 dia 2 caderno azul questão 121"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la rapidez de la esfera al pasar por su posición más baja, si fue lanzada desde \"A\" con una rapidez de 4m/s, desprecie la resistencia del aire (g=10m/s²).",
+      "alternatives": [
+        "6m/s",
+        "8m/s",
+        "10m/s",
+        "9m/s",
+        "7m/s"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/04/universidad-nacional-piura-examen-unp.html",
+      "sourceName": "matematicaj.blogspot.com — SOLUCIONARIO EXAMEN INGRESO UNIVERSIDAD DE PIURA UNP PDF 2025"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una partícula de masa m tiene una rapidez v en el punto 1 y una rapidez 3v/2 en el punto 2 de su recorrido. Experimentalmente, se determinó que el trabajo total realizado sobre la partícula, cuando se movía de 1 a 2, fue W. Estime el valor de v en términos de W y m.",
+      "alternatives": [
+        "√ ( 5W/6m)",
+        "2/3 √ ( 2W/m)",
+        "√ ( 3W/2m)",
+        "√ ( 8W/5m)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/fisica-preuniversitaria-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se suelta una esfera de jebe de 1kg de masa desde una altura de 10 m que realiza colisiones elásticas sobre una superficie horizontal. Debido a los efectos de fricción con el aire, el objeto disipa 10% de su energía tanto durante la caída como después del rebote. Calcule la altura que alcanza después del segundo rebote.",
+      "alternatives": [
+        "4,6 m",
+        "8,1 m",
+        "7,3 m",
+        "6,6 m",
+        "2,6 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-fisica-de-admision-la_21.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un atleta de 700 N de peso asciende con rapidez constante por una soga vertical de 12,0 m en 6,0 s. Determinar la potencia media que desarrolla el atleta en su ascenso.",
+      "alternatives": [
+        "1000 W",
+        "1200 W",
+        "1400 W",
+        "1500 W",
+        "20 800 W"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La potencia que entrega el motor de un auto que sube por un camino inclinado con rapidez constante de 36 km/h es de 80 kW. Si el camino inclinado forma un ángulo de 30° con la horizontal, calcule aproximadamente, en kg, la masa del auto.\ng= 9,81 m/s²",
+      "alternatives": [
+        "1931",
+        "1631",
+        "1131",
+        "1231",
+        "1431"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el costo en soles por mantener encendido un foco de 100 W durante un mes, sabiendo que un kilowatt hora cuesta S/1,20. Considere un mes de 30 días.",
+      "alternatives": [
+        "56,4",
+        "66,4",
+        "76,4",
+        "86,4",
+        "96,4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-8-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La máxima energía que un hueso del cuerpo humano puede absorber antes de quebrarse depende de sus características. En el caso de las piernas de una persona saludable, por ejemplo, cada hueso tiene un área transversal de 6 cm 2 y un módulo elástico de 15 GPa por lo que la energía máxima que puede absorber es 240 J. Calcule la altura máxima desde la que puede saltar una persona de 60 kg para que caiga de manera rígida sobre ambos pies sin que se rompan las piernas. (g=10 m/s 2 )",
+      "alternatives": [
+        "80 cm",
+        "160 cm",
+        "40 cm",
+        "100 cm",
+        "60 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/curvas-en-el-plano-lugares-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA BIOMÉDICAS 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la eficiencia de una máquina, sabiendo que lạ potencia perdida equivale al 25% de la potencia útil.",
+      "alternatives": [
+        "80%",
+        "90%",
+        "50%",
+        "60%",
+        "70%"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/07/unaj-solucionario-del-examen-de-admision-universidad-nacional-de-juliaca-claves-de-respuestas-desarrollo-descarga-doc-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNAJ EXAMEN ADMISIÓN UNIVERSIDAD DE JULIACA NACIONAL (MODELO) 2027 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué trabajo se realiza con una fuerza vertical de 30N al levantar un bloque de 20N durante 2s desde el suelo?\n(g = 10m/s²). Si parte del reposo.",
+      "alternatives": [
+        "400 J",
+        "200 J",
+        "300 J",
+        "150 J",
+        "350 J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo de 10kg posee una rapidez de 8m/s, sobre el se ejercen ciertas fuerzas que realizan un trabajo total de 400J. Determina la rapidez final que adquiere.",
+      "alternatives": [
+        "10m/s",
+        "12m/s",
+        "14m/s",
+        "16m/s",
+        "9m/s"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un vendedor de “plátanos” le aplica una fuerza de 20N a su carrito inicialmente en reposo y éste adquiere una aceleración de 2m/s². ¿Qué trabajo desarrolló en 10s?",
+      "alternatives": [
+        "200J",
+        "300J",
+        "600J",
+        "2000J",
+        "3000J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo descansa sobre una superficie horizontal rugosa de ( μ K =0,5); si se le aplica una fuerza horizontal de 80N, halla el trabajo de dicha fuerza cuando ha transcurrido 5s; siendo la masa del bloque 10kg\n(g=10m/s²)",
+      "alternatives": [
+        "3000J",
+        "1200J",
+        "–50J",
+        "1000J",
+        "120J"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con una fuerza F se eleva a velocidad constante un cuerpo de 12kg hasta una altura de 8 metros. Calcula el trabajo de “F”.\n(g=10m/s²).",
+      "alternatives": [
+        "960 Joules",
+        "cero",
+        "96 Joules",
+        "200 Joules",
+        "falta conocer F"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para duplicar la velocidad de un móvil de 12kg, se realiza un trabajo de 288J. ¿Qué velocidad final adquiere dicho móvil?",
+      "alternatives": [
+        "7 m/s",
+        "3 m/s",
+        "8 m/s",
+        "4 m/s",
+        "5 m/s"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la potencia de un motor que eleva 50 litros de agua por minuto a una altura de 9 m? (g = 10m/s² )",
+      "alternatives": [
+        "24W",
+        "30W",
+        "49W",
+        "35W",
+        "75W"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De un pozo debe extraerse cada tres minutos 9000 litros de agua de una profundidad de 150m. ¿Qué potencia es necesaria si la máquina pierde el 25%?",
+      "alternatives": [
+        "92 kW",
+        "90 kW",
+        "100 kW",
+        "80 kW",
+        "75 kW"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué potencia media desarrolla el motor de un auto para subir una cuesta arriba de pendiente 75%, si se sabe que tarda en recorrer 60m en 10s con rapidez constante.?\nMasa del auto es 600kg.\n(g = 10m/s²)",
+      "alternatives": [
+        "21,6 kW",
+        "20,2 kW",
+        "21,2 kW",
+        "21,4 kW",
+        "20,1 kW"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una grúa que tiene una eficiencia de 40% es accionado por un motor de 90% de rendimiento, si la potencia suministrada al motor es de 5000 W. Calcula la rapidez constante con la que subirá una carga de 450 kg.\n(g = 10m/s²)",
+      "alternatives": [
+        "4 m/s",
+        "0,4m/s",
+        "0,8m/s",
+        "0,2 m/s",
+        "2 m/s"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula la eficiencia de un motor sabiendo que la potencia de perdidas que se producen durante su procedimiento representa el 25% de la potencia útil.",
+      "alternatives": [
+        "60%",
+        "70%",
+        "90%",
+        "80%",
+        "75%"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La eficiencia del motor de una embarcación cuya potencia es 150 kW es 30%. Calcula la fuerza propulsora que debe desarrollar la hélice para que la embarcación pueda desplazarse en aguas tranquilas a 75 km/h.",
+      "alternatives": [
+        "2,16kN",
+        "206kN",
+        "2,61kN",
+        "2kN",
+        "3kN"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene 2 máquinas instaladas en serie, la primera absorbe 500W y para hacer funcionar a la segunda máquina utiliza 300W, la segunda pierde 150W. ¿Cuál es la eficiencia formada por las dos máquinas?",
+      "alternatives": [
+        "25%",
+        "30%",
+        "35%",
+        "45%",
+        "50%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por un cable de alumbrado público que se encuentra a 8m del piso, se desplaza una palomita de 1/2 kg de masa, a razón de 2m/s. Halle la energía mecánica que posee en ese instante la palomita.\n(g=10m/s 2 )",
+      "alternatives": [
+        "38 J",
+        "39 J",
+        "40 J",
+        "41 J",
+        "42 J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-3ro-4to-actividad-4-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS ECONÓMICAS, FINANCIERAS Y EMPRESARIALES PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA A 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un automóvil de 1200 kg sube una pendiente de 15 m de altura y recorre una distancia de 18 m. Calcular la fuerza necesaria en kg para que suba con velocidad constante",
+      "alternatives": [
+        "1 000",
+        "1 200",
+        "800",
+        "1 500",
+        "1 800"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-1ro-2do-actividad-3-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-primero-segundo-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL HUMANIDADES, CIENCIAS JURÍDICAS Y SOCIALES PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA B 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una piedra de 1kg es lanzada hacia arriba y alcanza una altura de 5m. Calcula su energía potencial respecto a tierra.\n(g=10m/s²)",
+      "alternatives": [
+        "25J",
+        "30J",
+        "40J",
+        "50J",
+        "60J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos pelotas con la misma masa m=1kg son lanzados hacia arriba, si uno de ellas asciende 10m, el otro 9m. Calcula la energía potencial del mayor respecto al punto de lanzamiento.\n(g=10m/s²)",
+      "alternatives": [
+        "10J",
+        "90J",
+        "100J",
+        "50J",
+        "190J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una naranja está a punto de caer desde la rama de un árbol que se encuentra a 10cm de tierra. Calcula la energía potencial de la naranja de 100gr respecto a tierra.\n(g=10m/s²)",
+      "alternatives": [
+        "100J",
+        "50J",
+        "1J",
+        "5J",
+        "0,1J"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una piedra es soltada desde una torre de 80m de altura. Calcula la energía potencial de la piedra de 1kg cuando ha recorrido la mitad de su altura respecto a tierra.\n(g=10m/s²)",
+      "alternatives": [
+        "800J",
+        "600J",
+        "500J",
+        "400J",
+        "700J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una maceta se encuentra a una altura de 10m sobre tierra cuál será su energía potencial siendo su masa igual a 2kg.\n(g=10m/s²)",
+      "alternatives": [
+        "100J",
+        "150J",
+        "200J",
+        "125J",
+        "250J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una piedra de 3,5 kg, resbala sobre una superficie horizontal con una rapidez de 10 m/s. ¿Cuánto trabajo se requiere para poder detenerla?",
+      "alternatives": [
+        "–146 J",
+        "–147J",
+        "–187J",
+        "–175J",
+        "–170 J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuánto trabajo es requerido para levantar verticalmente un bloque de 0,1kg partiendo del reposo, hasta una altura de 2 metros, de manera que llegue a dicha altura con una velocidad de 3 m/s?\n(g=9,8m/s²)",
+      "alternatives": [
+        "4,32 Joules",
+        "2,41 Joules",
+        "3,28 Joules",
+        "5,15 Joules",
+        "3,35 Joules"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una bala de 20g atraviesa un bloque de madera de 10cm de espesor. Si la bala ingresa con la velocidad de 10 m/s y sale con 6m/s, que fuerza promedio ejerció la madera sobre la bala en su recorrido? Despreciar las perdidas por calentamiento.",
+      "alternatives": [
+        "64N",
+        "6,4N",
+        "0,64N",
+        "640N",
+        "6 400 N"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el extremo inferior de un resorte de 40cm de longitud natural se coloca un bloque de 5,0kg y el resorte se estira 10 cm, quedando el sistema en equilibrio estático. Luego , muy lentamente , se aplica al bloque una fuerza F vertical , que lo hace descender 10 cm. Calcule el trabajo (en J) realizado por la fuerza.\n(g=9,8m/s²)",
+      "alternatives": [
+        "1,25",
+        "1,55",
+        "1,85",
+        "2,15",
+        "2,45"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un automóvil de 1200 kg, con el motor apagado, empieza a subir por una pendiente a 54,00 km/h. Si recorre 37,50m antes de detenerse, ¿cuál es la fuerza ejercida para disminuir su rapidez?",
+      "alternatives": [
+        "2600N",
+        "1600N",
+        "3600N",
+        "4600N",
+        "5600N"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CLASIFICACIÓN DE LA ENERGÍA MECÁNICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una bola de 2 kg se lanza desde el suelo bajo un ángulo determinado con la horizontal, alcanzando una altura máxima de 5 m. Halle el trabajo realizado (en J) por el peso de la bola desde su lanzamiento hasta el momento en que alcanza su altura máxima.\ng=9,81 m/s 2",
+      "alternatives": [
+        "−49,1",
+        "−98,1",
+        "10",
+        "4,9",
+        "−12,1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-cepreuni-segundo-parcial.html",
+      "sourceName": "matematicasn.blogspot.com — SEGUNDO EXAMEN PARCIAL CEPREUNI RESUELTO 2027 I RESPUESTAS PDF 2026-2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El rendimiento de un motor es de 0,80, si se sabe que puede efectuar un trabajo útil de 400J, ¿qué cantidad de trabajo en Joule se pierde?",
+      "alternatives": [
+        "50",
+        "100",
+        "150",
+        "200",
+        "250"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un motor eléctrico cuyo eje está acoplado a una bomba centrífuga de 60 % de eficiencia que se emplea para elevar agua. Determinar la eficiencia del sistema motor-bomba, si la potencia de pérdidas del motor constituye el 25 % de la potencia que se entrega en su eje de rotación.",
+      "alternatives": [
+        "60 %",
+        "75 %",
+        "40 %",
+        "48 %",
+        "80 %"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-untels-admision-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO  UNTELS 2027 RESUELTO INGRESO UNIVERSIDAD NACIONAL TECNOLÓGICA DEL SUR – VILLA EL SALVADOR PDF CLAVES DE RESPUESTAS – SOLUCIONARIO"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque de masa 10kg es jalado por una cuerda con una fuerza de 15N. Calcula el trabajo que desarrolla dicha fuerza para desplazarlo 6m.",
+      "alternatives": [
+        "75J",
+        "60J",
+        "90J",
+        "105J",
+        "50J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque es empujado por un niño desplazándolo sobre una superficie horizontal lisa 5m. Si el niño aplica una fuerza constante de 10N. Calcula el trabajo que desarrollo el niño.",
+      "alternatives": [
+        "20J",
+        "30J",
+        "40J",
+        "50J",
+        "10J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un escritorio debe ser desplazado en forma horizontal una distancia e 8m para lo cual se aplica una fuerza el cual desarrolla un trabajo de 1047J. Calcula el valor de la fuerza.",
+      "alternatives": [
+        "9N",
+        "11N",
+        "13N",
+        "7N",
+        "15N"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un niño levanta una ruma de libros sobre los cuales aplica una fuerza de 20N y los desplaza en forma horizontal en un recorrido de 5m. Calcula el trabajo que desarrolla el niño.",
+      "alternatives": [
+        "100J",
+        "50J",
+        "75J",
+        "20J",
+        "0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un niño realiza un trabajo de 999J al desplazar una caja en un recorrido “d” en forma horizontal, si aplica una fuerza de 37N. Calcula d”",
+      "alternatives": [
+        "9m",
+        "18m",
+        "27m",
+        "36m",
+        "16m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un fardo de tela debe ser transportado desde un almacén a otro distante 12m, para lo cual dos personas empujan con fuerzas de 15N y 10N. Calcula el trabajo que desarrolla la mayor de las fuerzas.",
+      "alternatives": [
+        "120J",
+        "160J",
+        "180J",
+        "60J",
+        "300J"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un cuerpo de masa “m” es empujado por dos fuerzas opuestas de 20N y 10N. Calcula el trabajo que desarrollan la mayor de las fuerzas en un recorrido de 8m.",
+      "alternatives": [
+        "80J",
+        "120J",
+        "40J",
+        "160J",
+        "60J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una caja es empujada por una fuerza de 20N, si luego de desplazarse 5m se aplica otra fuerza en dirección contraria a la primera si el bloque continuo su recorrido 4m más. Calcula el trabajo desarrollado por la fuerza inicial, para todo el tramo.",
+      "alternatives": [
+        "90J",
+        "120J",
+        "150J",
+        "180J",
+        "210J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el trabajo que realiza la fuerza de gravedad sobre una maceta de 1kg al caer desde una altura de 5m.\n(g=10m/s²)",
+      "alternatives": [
+        "25J",
+        "30J",
+        "40J",
+        "50J",
+        "60J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el trabajo que realizará la fuerza de gravedad sobre una moneda de 0,01kg al ser lanzado hacia arriba recorriendo una altura de 10m.\n(g=10m/s²)",
+      "alternatives": [
+        "0,5J",
+        "0,75J",
+        "1J",
+        "1.5J",
+        "2J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un dado cuya masa es de 0,002kg cae desde una mesa de 0,5m de altura, calcula el trabajo que la fuerza de gravedad.\n(g=10m/s²)",
+      "alternatives": [
+        "0,1J",
+        "0,02J",
+        "0,01J",
+        "1J",
+        "0,2J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/trabajo-mecanico-ejercicios-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TRABAJO EN FÍSICA DE SECUNDARIA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ascensor tiene una masa de 1,70×10³ kg y transporta pasajeros con una masa combinada de 300 kg. Una fuerza de fricción constante de 3,00×10³ N retarda su movimiento. ¿Qué potencia debe entregar el motor en el instante en que la rapidez del elevador es 2,00 m/s, si el motor está diseñado para proporcionar al ascensor una aceleración hacia arriba de 1,00 m/s²?\nDato: g = 10 m/s²",
+      "alternatives": [
+        "50,0 kW",
+        "25,0 kW",
+        "46,0 kW",
+        "23,0 kW"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-fisica-semana-16-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA SOLUCIONARIO DE EXAMEN ADMISIÓN UNIVERSIDAD PRUEBA DE INGRESO CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El corazón humano bombea, según la Fundación Española del Corazón, 5 litros de sangre por minuto. Según el Texas Heart Institute , si el corazón fuese una fuente, su potencia haría que la sangre alcance los 10 metros de altura. A partir de estos datos, estime la potencia del corazón humano.\nDatos: g = 10 m/s²; ρsangre = 1,05 g/cm³",
+      "alternatives": [
+        "17,5 W",
+        "12,5 W",
+        "8,75 W",
+        "4,38 W"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-fisica-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al intentar cruzar una acequia, un automóvil se queda atascado. Al ver en problemas al conductor, un hombre decide ayudarlo. Luego de enganchar el auto al suyo, le aplica una fuerza para sacarlo del atasco; después, le aplica una fuerza constante de 4k N y lo mueve a una rapidez constante de 36 km/h. En esta situación, ¿cuál fue la potencia usada para mover el automóvil a rapidez constante?",
+      "alternatives": [
+        "48 kW",
+        "80 kW",
+        "40 kW",
+        "35 kW"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-fisica-semana-19-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — CEPRE SAN MARCOS FÍSICA SEMANA 19 EXAMEN DE INGRESO UNIVERSIDAD SAN MARCOS ÁREA C PRUEBA DECO RESPUESTAS PREGUNTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una lavadora de 40 kg de masa está en reposo en una lavandería. Por motivos de limpieza, se necesita desplazarla 5 metros. Si el operario lo hace con rapidez constante en contra de una fuerza de rozamiento de 160 N, ¿cuánto trabajo necesita desarrollar?",
+      "alternatives": [
+        "600 J",
+        "700 J",
+        "800 J",
+        "400 J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos-fisica-semana-11-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRUEBA DECO SOLUCIONES DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREAS D B PROBLEMAS DESARROLLADOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una catarata de 128 m de altura, el agua cae a razón de 1,4×10 ^ 6 kg/s. Si la mitad de la energía potencial se convierte en energía eléctrica, calcule aproximadamente la potencia producida en W. ( g=9,81 m/s²)",
+      "alternatives": [
+        "878,97",
+        "878,97×103",
+        "1757,94×103",
+        "878,97×106",
+        "1757,94×106"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/examen-admision-uni-solucionario_28.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un basquetbolista deja caer el balón desde una altura de 1 m y en cada rebote pierde el 20% de su energía; entonces, determine: (a) hasta qué altura sube en el segundo rebote y (b) con qué rapidez debe lanzar el balón hacia abajo para que en el primer rebote alcance la altura original\n(g=10 m/s 2 ).",
+      "alternatives": [
+        "0,64 m; 2,0 m/s",
+        "0,60 m; 2,0 m/s",
+        "0,60 m; 4,0 m/s",
+        "0,40 m; 2,0 m/s",
+        "0,64 m; 4,0 m/s"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estudio-y-representacion-de-funciones.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA INGENIERÍA INGRESO 2027-2 UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un automóvil de 1500 kg de masa acelera desde el reposo hasta alcanzar una rapidez de 20 mis recorrido una distancia 200 m a lo largo de una carretera horizontal. Durante este período, actúa una fuerza de rozamiento de 1000 N de magnitud. Si la fuerza que mueve al automóvil es constante, ¿Cuál es el trabajo que ella realiza?",
+      "alternatives": [
+        "100 kJ",
+        "200 kJ",
+        "300 kJ",
+        "400 kJ",
+        "500 kJ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/monotonia-y-curvatura-funciones-con.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNJ 2027 UNIVERSIDAD NACIONAL DE JAÉN EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sistema está conformado por una moto bomba centrífuga y un motor a gasolina usada para desaguar las calles inundadas. La bomba centrífuga tiene una eficiencia del 80% y el motor a gasolina una eficiencia del 75%, la potencia útil del sistema es de 6 H.P. Calcule la potencia entregada al sistema.\nConsidere 1 H.P.=746W, \"g=–10 ĵ m/s 2 .",
+      "alternatives": [
+        "12 H.P.",
+        "2 H.P.",
+        "10 H.P.",
+        "1 H.P.",
+        "3 H.P."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/cepreuni-2019-ii-tercera-practica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI SOLUCIONARIOS 2026 PDF 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se utiliza una motobomba centrífuga para aplicar el fuego en un edificio multifamiliar. A una altura de 14m, el flujo del agua es 12 litros/s y la rapidez es constante de 20m/s. Si la eficiencia de la motobomba es 80%, calcule la potencia suministrada a la motobomba. Densidad del agua: 1000 kg/m 3",
+      "alternatives": [
+        "8400 W",
+        "2100 W",
+        "6300 W",
+        "5100 W",
+        "2550 W"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/cepreuni-2019-ii-tercera-practica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI SOLUCIONARIOS 2026 PDF 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las zonas altoandinas del Perú en los meses de enero a marzo se producen precipitaciones con mayor intensidad. Esto provoca deslizamientos que bloquean carreteras.\nSi Luis observa una roca de 30 kg que se acerca al pie de una colina con rapidez de 20 m/s, la ladera de la colina tiene un ángulo de 53° respecto de la horizontal. Los coeficientes de fricción estática fs y cinética fk entre la colina y la roca son 0,75 y 0,20, respectivamente. Use el principio de conservación de la energía para obtener la altura máxima h por arriba del pie de la colina hasta donde subirá la roca e indique, si la roca permanecerá en reposo en el punto más alto o se deslizará cuesta abajo.\nLA RESPUESTA CORRECTA ES:",
+      "alternatives": [
+        "h= 16,3 m; permanecerá en reposo",
+        "h= 15,3 m; se deslizará",
+        "h= 20,3 m; permanecerá en reposo",
+        "h= 8,3 m; se deslizará",
+        "h= 10,0 m; no se puede precisar"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Ingles-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA B 2027 INGENIERÍAS INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque de 10kg de masa se mueve sobre una superficie horizontal sin fricción, con rapidez constante de 20 m/s, hasta que ingresa a una superficie horizontal rugosa. Determine el trabajo realizado por la fuerza de fricción en kJ, hasta que el bloque se detenga.",
+      "alternatives": [
+        "– 2,00",
+        "– 2,50",
+        "– 1,50",
+        "– 1,00",
+        "– 0,50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una grúa ejerce una fuerza ascendente de 31 kN sobre un bloque, para levantarlo una distancia vertical de 2 m. El trabajo realizado por la grúa es",
+      "alternatives": [
+        "48 kJ.",
+        "124 kJ.",
+        "62 kJ.",
+        "40 kJ.",
+        "15,5 kJ."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-simulacro-de-examen-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque de 2 kg de masa se desplaza sobre una superficie horizontal por acción de fuerzas constantes. Si el bloque parte del reposo y recorre 10m en un lapso de 2s, calcule el trabajo resultante en este intervalo de tiempo.",
+      "alternatives": [
+        "100 J",
+        "200 J",
+        "150 J",
+        "50 J",
+        "80 J"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una bomba extrae 900 litros de agua de un pozo de 150m de profundidad en 3 minutos. Determine la potencia del motor de la bomba si este pierde el 40% de su energía.\nDatos: 1hp=735W; ρ agua = 1 g/cm 3 ; g=10 m/s 2",
+      "alternatives": [
+        "12 hp",
+        "10,2 hp",
+        "15 hp",
+        "17 hp",
+        "15,2 hp"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre un bloque de 1,5kg, inicialmente moviéndose con 80 m/s en una superficie lisa, actúa una fuerza de (12 î +15 ĵ )N durante 20s. Si el bloque solo puede moverse a lo largo del eje X, determina la potencia entregada al bloque (en kW).",
+      "alternatives": [
+        "0,72",
+        "3,52",
+        "1,29",
+        "1,92",
+        "2,96"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/cepunt-solucionario-de-fisica-examen-resuelto-admision-unt-trujillo.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Rafael y Miguel son dos hermanos que ingresaron a la UNAC en el último examen. El primer día, emocionados por empezar sus actividades universitarias, llegan temprano y descubren que su salón queda en el tercer piso. Deciden entonces subir corriendo las gradas, partiendo a la vez. El peso de Miguel es el doble del peso de Rafael; sin embargo, Miguel demora la mitad de tiempo que Rafael en llegar al salón.\n¿Quién desarrolló una mayor potencia?",
+      "alternatives": [
+        "Miguel desarrolló mayor potencia.",
+        "Ambos desarrollaron la misma potencia.",
+        "No es posible determinarlo, ya que no se conoce la altura que subieron.",
+        "No es posible determinarlo, ya que no se conoce la rapidez con la que subieron.",
+        "Rafael desarrolló mayor potencia."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/cepunt-solucionario-de-fisica-examen-resuelto-admision-unt-trujillo.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una fuerza horizontal de 20N se aplica constantemente, sobre un ladrillo de 5kg de masa inicialmente en reposo, sobre un piso sin fricción; transcurridos 6 segundos, ¿Qué trabajo desarrolló la fuerza?",
+      "alternatives": [
+        "980J",
+        "1000J",
+        "1700J",
+        "1200J",
+        "1440J"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/fisica-5to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-educacion-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un automóvil de competencia deportiva tiene un motor que proporciona una potencia de 100 kW, de los cuales el 80% permite que el movimiento del vehículo alcance una rapidez de 180 km/h. Sobre la base de estas condiciones, determine la fuerza que debe realizar el motor del automóvil para que alcance esa velocidad.",
+      "alternatives": [
+        "1,5 kN",
+        "4,0 kN",
+        "3,2 kN",
+        "1,6 kN",
+        "4,2 kN"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la construcción de un edificio se usa, con la ayuda de un motor eléctrico, una polea artesanal para elevar latas con cemento. El transporte del cemento hacia la parte superior de la edificación es retardado por una fuerza de fricción constante de 40N. Si las latas de cemento pesan 160N, ¿qué potencia suministrada por el motor eléctrico se requiere para levantar las latas con una rapidez constante de 2,50m/s?",
+      "alternatives": [
+        "600 W",
+        "400 W",
+        "300 W",
+        "500 W",
+        "700 W"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ascensor tiene una masa de 1,70×10 3 kg y transporta pasajeros con una masa combinada de 300 kg. Una fuerza de fricción constante de 3,00×10 3 N retarda su movimiento. ¿Qué potencia debe entregar el motor en el instante en que la rapidez del elevador es 2,00 m/s, si el motor está diseñado para proporcionar al ascensor una aceleración hacia arriba de 1,00 m/s 2 ?\nDato: g = 10 m/s 2",
+      "alternatives": [
+        "50,0 kW",
+        "25,0 kW",
+        "46,0 kW",
+        "23,0 kW"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-semana-6-manual-pre-san.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA A 2024-2 SALUD INGRESO UNIVERSIDAD PRUEBA RESUELTA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una niña mece de un columpio cuyas cuerdas tienen 4m de largo. La altura máxima que alcanza es de 1,3m arriba del piso. En el punto mas bajo del columpio, ella está a 0,5m arriba del suelo. Determine la rapidez máxima de la niña. Desprecie todo rozamiento.\n(g=10 m/s 2 )",
+      "alternatives": [
+        "4 m/s",
+        "8 m/s",
+        "2 m/s",
+        "6 m/s",
+        "1 m/s"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-16-2020.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2024-1 PRUEBA RESUELTA INGENIERÍAS INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fricción o arrastre del aire, es un ejemplo de la fricción de fluidos. Al contrario del modelo estándar de la fricción de superficie, tales fuerzas de fricción son dependientes de la velocidad. Una bola de 200g se suelta desde una gran altura y adquiere una velocidad de 15 m/s, después de haber caído 20m. Determine la cantidad de trabajo realizado por la fuerza de fricción del aire.\n(g=10 m/s 2 )",
+      "alternatives": [
+        "−12,5 J",
+        "−14,7 J",
+        "−17,5 J",
+        "−11,2 J",
+        "−18,5 J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-16-2020.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2024-1 PRUEBA RESUELTA INGENIERÍAS INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es aquella energía que proviene del Sol:",
+      "alternatives": [
+        "energía hidráulica",
+        "energía química",
+        "energía solar",
+        "energía mecánica",
+        "energía eólica"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es aquella energía debida al movimiento del aire:",
+      "alternatives": [
+        "energía eléctrica",
+        "energía solar",
+        "energía mecánica",
+        "energía química",
+        "energía eólica"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La potencia que entrega el motor de un camión que sube por un camino inclinado es de 196,2 kW. Si el camino inclinado forma un ángulo de 30º con la horizontal y el camión se mueve con rapidez constante de 36 km/h, calcule en kg, la masa del camión.\n(g=9,81m/s²)",
+      "alternatives": [
+        "4000",
+        "3000",
+        "5000",
+        "7000",
+        "6000"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/tercera-prueba-examen-uni-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I TERCERA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando se dispara un rifle, al combustionar la pólvora, se forman gases que impulsan la bala a lo largo del cañón. Encuentre la potencia W desarrollada por los gases propulsores cuando se dispara el rifle, si la longitud del cañón es l = 1 m, la masa de la bala es m = 10 g y la velocidad de la bala en la salida es v = 400 m/s. Considere la fuerza de la presión del gas constante durante todo el movimiento en el barril. Desprecie la masa de gases, la resistencia al movimiento de la bala y el retroceso del rifle.",
+      "alternatives": [
+        "160 kW",
+        "120 kW",
+        "320 kW",
+        "240 kW"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN SAN MARCOS ÁREA A 2022 II MEDICINA HUMANA SOLUCIONARIO PRUEBA DESARROLLADA ADMISIÓN UNIVERSIDAD RESPUESTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ciclista se detiene derrapando en 10 m. Durante este proceso, la fuerza sobre la bicicleta debida a la carretera es de 200 N y se opone directamente al movimiento. El trabajo realizado por la bicicleta sobre la carretera es",
+      "alternatives": [
+        "+ 2000 J",
+        "– 200 J",
+        "cero",
+        "– 20 000 J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep306.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.6 MCQ 4"
     }
   ]
 }

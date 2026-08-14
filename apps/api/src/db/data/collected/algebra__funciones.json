@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea F(x) una función lineal en la cual se verifica: F(0) + F(1) = 3 y 3F(1) − F(0) = 13. Halle F(−2).",
-      "alternatives": ["11", "12", "−11", "13", "10"],
+      "alternatives": [
+        "11",
+        "12",
+        "−11",
+        "13",
+        "10"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funciones-matematicas-ejercicios.html",
       "sourceName": "matematicasn - Funciones matemáticas ejercicios resueltos (admisión), Pregunta 2"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Se conoce la siguiente función lineal: f(x) = Ax + B, de modo que los pares ordenados (3; 7), (a−1; a−1) y (a; a−3) pertenecen a dicha función. Halle A + B.",
-      "alternatives": ["10", "11", "12", "13", "9"],
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "9"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funciones-matematicas-ejercicios.html",
       "sourceName": "matematicasn - Funciones matemáticas ejercicios resueltos (admisión), Pregunta 4"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle el rango de la función F: ℝ → ℝ, cuya regla de correspondencia es: F(x) = −x² + 4x.",
-      "alternatives": ["]−∞; 2]", "[4; ∞[", "]−4; +∞[", "]−∞; −4]", "]−∞; 4]"],
+      "alternatives": [
+        "]−∞; 2]",
+        "[4; ∞[",
+        "]−4; +∞[",
+        "]−∞; −4]",
+        "]−∞; 4]"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funciones-matematicas-ejercicios.html",
       "sourceName": "matematicasn - Funciones matemáticas ejercicios resueltos (admisión), Pregunta 6"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea F una función lineal tal que (1; 2) y (4; 6) son coordenadas que pertenecen a la función F, y G(x) = −2x + 3. Calcule la suma de las pendientes de las funciones lineales F y G.",
-      "alternatives": ["−1/3", "−2/3", "1/5", "1/3", "2/5"],
+      "alternatives": [
+        "−1/3",
+        "−2/3",
+        "1/5",
+        "1/3",
+        "2/5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funciones-matematicas-ejercicios.html",
       "sourceName": "matematicasn - Funciones matemáticas ejercicios resueltos (admisión), Pregunta 5"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dada f: [1; 4] → [a; b] definida por f(x) = x² − 2x + 3, demuestre que f es inyectiva y halle a y b para que f sea biyectiva.",
-      "alternatives": ["a = 2; b = 11", "a = 2; b = 5", "a = 3; b = 5", "a = 5; b = 10", "a = 3; b = 9"],
+      "alternatives": [
+        "a = 2; b = 11",
+        "a = 2; b = 5",
+        "a = 3; b = 5",
+        "a = 5; b = 10",
+        "a = 3; b = 9"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones biyectivas), Pregunta 13"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dada la función f: [a; b] → [1; 5] definida por f(x) = (x/3) + 1, determine (a + b) para que f sea biyectiva.",
-      "alternatives": ["100", "110", "118", "126", "132"],
+      "alternatives": [
+        "100",
+        "110",
+        "118",
+        "126",
+        "132"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones lineales e inversas), Pregunta 1"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si f(x) = 2 + 1/(2x − 1), x ∈ [−3; 2], determine f⁻¹(−5).",
-      "alternatives": ["−2/5", "−5/2", "2/5", "5/2", "no existe"],
+      "alternatives": [
+        "−2/5",
+        "−5/2",
+        "2/5",
+        "5/2",
+        "no existe"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Función inversa), Pregunta 5"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si f(x) = 2x + 3 y g(x) = (1/2)(x − 3), evalúe (f ∘ g)⁻¹(1).",
-      "alternatives": ["−3", "−2", "0", "−1", "1"],
+      "alternatives": [
+        "−3",
+        "−2",
+        "0",
+        "−1",
+        "1"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Composición e inversa), Pregunta 7"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si (f ∘ g)(x) = cos²x y g(x) = sen x, halle f(x).",
-      "alternatives": ["1 − x²", "1 + x²", "x²", "1 − 2x²", "1 + 2x²"],
+      "alternatives": [
+        "1 − x²",
+        "1 + x²",
+        "x²",
+        "1 − 2x²",
+        "1 + 2x²"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Composición de funciones), Pregunta 6"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si (f ∘ g)(x) = (x + 1)/(x − 1) y g(x) = 1/x, halle f(x).",
-      "alternatives": ["x²", "x + 2", "x/x", "(x + 1)/x", "x² + 1"],
+      "alternatives": [
+        "x²",
+        "x + 2",
+        "x/x",
+        "(x + 1)/x",
+        "x² + 1"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Composición de funciones), Pregunta 8"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sean f = {(−3, 2), (0, 0), (2, 4), (3, −1), (4, 3)} y g = {(2, 0), (3, 4), (4, 7), (6, 2)}. Halle f + g.",
-      "alternatives": ["{(2, 4), (3, 3), (4, 10)}", "{(2, 4), (4, 2), (6, 6)}", "{(−1, 2), (3, 4), (6, 11)}", "{(4, 4), (6, 3), (8, 10)}", "∅"],
+      "alternatives": [
+        "{(2, 4), (3, 3), (4, 10)}",
+        "{(2, 4), (4, 2), (6, 6)}",
+        "{(−1, 2), (3, 4), (6, 11)}",
+        "{(4, 4), (6, 3), (8, 10)}",
+        "∅"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Álgebra de funciones), Pregunta 22"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sean f = {(−3, 2), (0, 0), (2, 4), (3, −1), (4, 3)} y g = {(2, 0), (3, 4), (4, 7), (6, 2)}. Halle f · g.",
-      "alternatives": ["{(2, 0), (3, −4), (4, 21)}", "{(2, 4), (4, 2), (0, 0)}", "{(4, 0), (9, −4), (16, 21)}", "{(4, 4), (2, 2), (3, 3)}", "∅"],
+      "alternatives": [
+        "{(2, 0), (3, −4), (4, 21)}",
+        "{(2, 4), (4, 2), (0, 0)}",
+        "{(4, 0), (9, −4), (16, 21)}",
+        "{(4, 4), (2, 2), (3, 3)}",
+        "∅"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Álgebra de funciones), Pregunta 19"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sean f = {(1, 3), (2, 6), (4, 8), (6, 2)} y g = {(1, 2), (2, −1), (0, 1), (4, 5), (7, 0)}. Halle f − g.",
-      "alternatives": ["{(1, 1), (2, 7), (4, 3)}", "{(1, 1), (2, 8), (4, 3)}", "{(1, 2), (7, 2), (3, 4)}", "{(2, 6), (4, 5), (3, 2)}", "∅"],
+      "alternatives": [
+        "{(1, 1), (2, 7), (4, 3)}",
+        "{(1, 1), (2, 8), (4, 3)}",
+        "{(1, 2), (7, 2), (3, 4)}",
+        "{(2, 6), (4, 5), (3, 2)}",
+        "∅"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Álgebra de funciones), Pregunta 18"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dadas f: ℝ → ℝ con f(x) = 3x + 2 y g: ℝ → ℝ con g(x) = 2x + 2, la composición g⁻¹ ∘ f es:",
-      "alternatives": ["(3x + 2)/(2x + 2)", "(2x + 2)/(3x + 2)", "(3x + 4)/2", "−(3x + 4)/2", "(2x + 4)/3"],
+      "alternatives": [
+        "(3x + 2)/(2x + 2)",
+        "(2x + 2)/(3x + 2)",
+        "(3x + 4)/2",
+        "−(3x + 4)/2",
+        "(2x + 4)/3"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Composición e inversa), Pregunta 10"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Las funciones F(x) = x + 2x² y G(x) = 2 − mx con m < 0. Calcule m tal que (F ∘ G)(2) = (G ∘ F)(m − 2).",
-      "alternatives": ["−7", "−8", "−9", "−10", "−11"],
+      "alternatives": [
+        "−7",
+        "−8",
+        "−9",
+        "−10",
+        "−11"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Composición de funciones), Pregunta 15"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si f(x) = x² − 2x y g(x) = ∛(x + 3), y se cumple que (f⁻¹)(g⁻¹)(x) = 4/3, halle x.",
-      "alternatives": ["−1/2", "−2", "−6", "−4", "1/3"],
+      "alternatives": [
+        "−1/2",
+        "−2",
+        "−6",
+        "−4",
+        "1/3"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones inversas), Pregunta 3"
@@ -182,7 +278,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea F = {(2, 4), (3, 6), (5, 10), (7, 14), (m, 1)} y F⁻¹ = {(4, a), (10, b), (6, m − 7), (p/2, c), (14, d)}. Calcule K = a + b + c + d + m + p.",
-      "alternatives": ["15", "26", "36", "28", "39"],
+      "alternatives": [
+        "15",
+        "26",
+        "36",
+        "28",
+        "39"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Función inversa por extensión), Pregunta 11"
@@ -193,7 +295,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea f: ]a; 1[ → ]b; −3[ donde f(x) = x² + 4x − 1. Halle a/b para que f sea biyectiva.",
-      "alternatives": ["−2", "−1/2", "−1", "1", "2"],
+      "alternatives": [
+        "−2",
+        "−1/2",
+        "−1",
+        "1",
+        "2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones biyectivas), Pregunta 14"
@@ -204,7 +312,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine el rango de F: ℝ → ℝ donde F(y) = 1 − 2x²; x ∈ [−1; 6[.",
-      "alternatives": ["[1; 5", "[2; 5", "[1; 4", "[1; 5]", "[1; 3]"],
+      "alternatives": [
+        "[1; 5",
+        "[2; 5",
+        "[1; 4",
+        "[1; 5]",
+        "[1; 3]"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Rango de funciones), Pregunta 12"
@@ -215,7 +329,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea g(x) = x − 2 para x ∈ ]6; 10[ y h(x) = (x − 1)² + 3 para x ∈ ]4; 5[. Halle el dominio de g⁻¹(h(x)).",
-      "alternatives": ["]8; 9[", "]8; 10[", "]6; 8[", "]8; 15[", "]6; 10["],
+      "alternatives": [
+        "]8; 9[",
+        "]8; 10[",
+        "]6; 8[",
+        "]8; 15[",
+        "]6; 10["
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Dominio de composición de inversas), Pregunta 8"
@@ -226,7 +346,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine el dominio de f(x) = log(4x − x²).",
-      "alternatives": ["(0; 4)", "ℝ − (0; 4)", "(−4; 0)", "(0; ∞)", "(4; ∞)"],
+      "alternatives": [
+        "(0; 4)",
+        "ℝ − (0; 4)",
+        "(−4; 0)",
+        "(0; ∞)",
+        "(4; ∞)"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones logarítmicas), Pregunta 16"
@@ -237,7 +363,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle el rango de f(x) = (1/2)^(x² − 4x + 6).",
-      "alternatives": ["(−∞; 1]", "(0; 1/4]", "[1/4; ∞)", "(0; 1/2]", "(0; 1]"],
+      "alternatives": [
+        "(−∞; 1]",
+        "(0; 1/4]",
+        "[1/4; ∞)",
+        "(0; 1/2]",
+        "(0; 1]"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones exponenciales), Pregunta 17"
@@ -248,7 +380,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine el dominio de f(x) = log₍ₓ₋₃₎(10 − x).",
-      "alternatives": ["]3; 10[", "]3; ∞[", "]4; 10[", "]−∞; 10[", "]3; 4[ ∪ ]4; 10["],
+      "alternatives": [
+        "]3; 10[",
+        "]3; ∞[",
+        "]4; 10[",
+        "]−∞; 10[",
+        "]3; 4[ ∪ ]4; 10["
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones logarítmicas), Pregunta 18"
@@ -259,7 +397,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Si h(x) = 2ˣ, halle h⁻¹(x).",
-      "alternatives": ["2⁻ˣ", "log_x(2)", "log₂(x)", "x²", "log(x)"],
+      "alternatives": [
+        "2⁻ˣ",
+        "log_x(2)",
+        "log₂(x)",
+        "x²",
+        "log(x)"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Función inversa exponencial), Pregunta 19"
@@ -270,7 +414,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea F(x) = {x − 1 si x ≥ 1; 2x² + 1 si x < 1}. Calcule E = F(−2) + F(2).",
-      "alternatives": ["6", "7", "8", "9", "10"],
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Función a trozos), Pregunta 20"
@@ -281,7 +431,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si f(x) = log₂(x² + 2) − log₂(x + 2), halle el ínfimo del dominio de f.",
-      "alternatives": ["0", "1", "2", "−2", "no existe"],
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "−2",
+        "no existe"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Dominio funciones logarítmicas), Pregunta 1"
@@ -292,7 +448,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea f(x) = log₂(4 − log₂ x). Halle el supremo del dominio de f.",
-      "alternatives": ["10", "8", "16", "18", "4"],
+      "alternatives": [
+        "10",
+        "8",
+        "16",
+        "18",
+        "4"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Dominio funciones logarítmicas), Pregunta 11"
@@ -303,7 +465,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si f(x) = log₁/₂(1 + 2 log x), halle el supremo del dominio de f.",
-      "alternatives": ["√2", "2", "2√2", "10", "√10"],
+      "alternatives": [
+        "√2",
+        "2",
+        "2√2",
+        "10",
+        "√10"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Dominio funciones logarítmicas), Pregunta 5"
@@ -314,7 +482,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine el dominio de f(x) = log₁₆(x² − x/4). ¿Es igual a ℝ?",
-      "alternatives": ["∅", "ℝ", "ℝ − [−2; 2]", "[−2; ∞)", "(2; ∞)"],
+      "alternatives": [
+        "∅",
+        "ℝ",
+        "ℝ − [−2; 2]",
+        "[−2; ∞)",
+        "(2; ∞)"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Dominio funciones logarítmicas), Pregunta 1b"
@@ -325,7 +499,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si f(x) = log[(1 + x)/(1 − x)] para x ∈ ]−1; 1[ y f((a + b)/(1 + ab)) = 0, halle a + b.",
-      "alternatives": ["1", "−1", "2a", "2b", "0"],
+      "alternatives": [
+        "1",
+        "−1",
+        "2a",
+        "2b",
+        "0"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones logarítmicas), Pregunta 10"
@@ -336,7 +516,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sean g(x) = (eˣ − e⁻ˣ)/2 y f(x) = (eˣ + e⁻ˣ)/2. ¿Cuál es la afirmación verdadera?",
-      "alternatives": ["f²(x) + g²(x) = 1", "f²(x) + g²(x) = 0", "f²(x) − g²(x) = 1", "f²(x) − g²(x) = −1", "f²(x) + g²(x) = 2"],
+      "alternatives": [
+        "f²(x) + g²(x) = 1",
+        "f²(x) + g²(x) = 0",
+        "f²(x) − g²(x) = 1",
+        "f²(x) − g²(x) = −1",
+        "f²(x) + g²(x) = 2"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones hiperbólicas), Pregunta 11"
@@ -347,7 +533,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si f(x) = 4ˣ/(4ˣ + 1), x ∈ [1; ∞), halle el mínimo de f.",
-      "alternatives": ["1/5", "2/5", "3/5", "4/5", "1"],
+      "alternatives": [
+        "1/5",
+        "2/5",
+        "3/5",
+        "4/5",
+        "1"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones exponenciales), Pregunta 8"
@@ -358,7 +550,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine el rango de h(x) = log₁/₃(x² − 4x + 13).",
-      "alternatives": ["[−2; ∞)", "[2; ∞)", "(−∞; −2]", "(−∞; 0]", "(−∞; 2]"],
+      "alternatives": [
+        "[−2; ∞)",
+        "[2; ∞)",
+        "(−∞; −2]",
+        "(−∞; 0]",
+        "(−∞; 2]"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Rango funciones logarítmicas), Pregunta 9"
@@ -369,7 +567,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dada f(x) = 2^(log₂(x + 1)), x ∈ [3; ∞), halle f⁻¹(x).",
-      "alternatives": ["x + 1; x ∈ [4; ∞)", "x + 1; x ∈ [3; ∞)", "1 + log₂(x); x ∈ [4; ∞)", "x − 1; x ∈ [4; ∞)", "log₂(x − 1); x ∈ [3; ∞)"],
+      "alternatives": [
+        "x + 1; x ∈ [4; ∞)",
+        "x + 1; x ∈ [3; ∞)",
+        "1 + log₂(x); x ∈ [4; ∞)",
+        "x − 1; x ∈ [4; ∞)",
+        "log₂(x − 1); x ∈ [3; ∞)"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Inversa función exponencial-logarítmica), Pregunta 10b"
@@ -380,7 +584,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si f(x) = 5^(2x − x²), determine el menor k real tal que f(x) ≤ k para todo x ∈ ℝ.",
-      "alternatives": ["1/125", "1/25", "1/5", "3", "5"],
+      "alternatives": [
+        "1/125",
+        "1/25",
+        "1/5",
+        "3",
+        "5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Máximo de función exponencial), Pregunta 19"
@@ -391,7 +601,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dada la función biyectiva f(x) = x² para x ≥ 0 y f(x) = −x para x < 0, con dominio ]4; −b[ y rango ]−3; a[, halle a · b.",
-      "alternatives": ["−8", "−7", "−6", "0", "6"],
+      "alternatives": [
+        "−8",
+        "−7",
+        "−6",
+        "0",
+        "6"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones biyectivas a trozos), Pregunta 15"
@@ -402,7 +618,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dado f = {(3, 2), (0, 0), (2, 4), (4, 3)} y g = {(2, 0), (3, 4), (4, 7), (6, 2)}, halle el máximo de f + g.",
-      "alternatives": ["6", "7", "8", "9", "10"],
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Álgebra de funciones), Pregunta 4"
@@ -413,7 +635,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dado f = {(2, 0), (3, 1), (4, 6), (6, 8)} y g = {(1, 2), (0, 3), (2, 5), (3, 4)}, halle f ∘ g.",
-      "alternatives": ["{(1, 0), (2, 1), (3, 6)}", "{(1, 0), (0, 1), (2, 6)}", "{(0, 1), (1, 0), (3, 6)}", "{(0, 1), (1, 2), (2, 3)}", "{(1, 0), (2, 1), (3, 4)}"],
+      "alternatives": [
+        "{(1, 0), (2, 1), (3, 6)}",
+        "{(1, 0), (0, 1), (2, 6)}",
+        "{(0, 1), (1, 0), (3, 6)}",
+        "{(0, 1), (1, 2), (2, 3)}",
+        "{(1, 0), (2, 1), (3, 4)}"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Composición de funciones por extensión), Pregunta 16"
@@ -424,7 +652,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si f(x) = cos²x y g(x) = tan x, halle h(x) tal que f = h ∘ g.",
-      "alternatives": ["x/(1 + x)", "x²/(1 + x)", "1/(1 + x)", "1/(1 + x²)", "1/x²"],
+      "alternatives": [
+        "x/(1 + x)",
+        "x²/(1 + x)",
+        "1/(1 + x)",
+        "1/(1 + x²)",
+        "1/x²"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Composición de funciones), Pregunta 7b"
@@ -435,7 +669,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea f(x) = log₂(9 − x²) y g(x) = 3^(1 + x). Halle Dom(f) ∩ Dom(g).",
-      "alternatives": ["[0; 1]", "[−1; 1]", "[−3; 1]", "[−1; 3]", "[−3; 3]"],
+      "alternatives": [
+        "[0; 1]",
+        "[−1; 1]",
+        "[−3; 1]",
+        "[−1; 3]",
+        "[−3; 3]"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Dominio e intersección), Pregunta 8b"
@@ -446,7 +686,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Si f(x) = eˣ, halle f⁻¹(8e).",
-      "alternatives": ["8", "ln(4)", "3 ln(2) + 1", "2 ln(2) + 1", "ln(e³)"],
+      "alternatives": [
+        "8",
+        "ln(4)",
+        "3 ln(2) + 1",
+        "2 ln(2) + 1",
+        "ln(e³)"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Inversa función exponencial), Pregunta 17"
@@ -457,7 +703,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea f(x) = 2^((1 − ax)). Si para cada x₁ < x₂ se cumple f(x₁) > f(x₂), ¿qué se puede concluir sobre a?",
-      "alternatives": ["1 < a", "a < 0", "a ≤ 0", "−1 ≤ a ≤ 1", "no existe a real"],
+      "alternatives": [
+        "1 < a",
+        "a < 0",
+        "a ≤ 0",
+        "−1 ≤ a ≤ 1",
+        "no existe a real"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Funciones exponenciales monótonas), Pregunta 18"
@@ -468,7 +720,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sea f(x) = log₃(1 + 2ˣ), x ∈ [1; ∞[. Halle el mínimo de f.",
-      "alternatives": ["−1", "0", "1", "2", "3"],
+      "alternatives": [
+        "−1",
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/2algebraguia4docx-preuniversitario-arequipa-academia/267270257",
       "sourceName": "Guía Álgebra 4 - Preuniversitario Arequipa Academia (Mínimo función logarítmica), Pregunta 4"
@@ -479,10 +737,2714 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dada f: [1; 4] → [a; b] con f(x) = x² − 2x + 3, halle a + b para que f sea biyectiva.",
-      "alternatives": ["17", "11", "10", "9", "13"],
+      "alternatives": [
+        "17",
+        "11",
+        "10",
+        "9",
+        "13"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-preuniversitaria-libro-de.html",
       "sourceName": "matematicasn - Álgebra preuniversitaria ejercicios resueltos, Pregunta 12"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un móvil se desplaza a velocidad constante desde el punto M hasta el punto N, siguiendo el recorrido dado por la gráfica de la función f(x)=5 –|x – 4|, x ∈ [0;9]. Si las coordenadas de M y N son (0; f(0)) y (9; f(9)), halle la distancia recorrida por el móvil sabiendo que x se mide en kilómetros.",
+      "alternatives": [
+        "12 √ 2 km",
+        "10 √ 2 km",
+        "8 √ 2km",
+        "9 √ 2km"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-deco-problemas-resueltos-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS PRUEBA DECO RESUELTA DE EXAMEN DE ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la función cuadrática:\nf(x)=ax²+bx+6\nf(x+1) – f(x– 1)=8(x+1)\nHalla a+b",
+      "alternatives": [
+        "2",
+        "6",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/06/algebra-admision-catolica-pucp-examen.html",
+      "sourceName": "algebraenpdf.blogspot.com — ALGEBRA ADMISIÓN CATÓLICA PUCP 2022 2023 EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea una función lineal, que pasa por los puntos: (– 1; 1) ∧ (4; 11). Indica su regla de correspondencia.",
+      "alternatives": [
+        "y=x+5",
+        "y= – 3x+1",
+        "y=2x+3",
+        "y=x+1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/06/algebra-admision-catolica-pucp-examen.html",
+      "sourceName": "algebraenpdf.blogspot.com — ALGEBRA ADMISIÓN CATÓLICA PUCP 2022 2023 EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la función cuadrática f(x)=ax² + bx + c de vértice v(p;p)\nSi la función corta al eje “Y” en – p; p≠0\nHalla el valor de “b”.",
+      "alternatives": [
+        "– p",
+        "0",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/06/algebra-admision-catolica-pucp-examen.html",
+      "sourceName": "algebraenpdf.blogspot.com — ALGEBRA ADMISIÓN CATÓLICA PUCP 2022 2023 EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si f(0) = 1; f(1) = 0 ; f(– 1) = 6\nCalcula f(2) siendo “f” una función cuadrática.",
+      "alternatives": [
+        "– 1",
+        "2",
+        "3",
+        "– 5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/admision-catolica-primera-opcion.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes proposiciones corresponde a una función inyectiva?",
+      "alternatives": [
+        "A cada sector le corresponde una determinada área.",
+        "A cada auto le corresponde un cierto kilometraje.",
+        "A cada artefacto eléctrico le corresponde un tiempo de vida.",
+        "A cada peruano le corresponde un número de DNI."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/admision-catolica-primera-opcion.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la función parabólica\npasa por los puntos A (1,2); B (-1;12); C (0;4) Calcule",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/funciones-20-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — FUNCIONES 20 EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la gráfica de la función y = log x, es correcto afirmar que",
+      "alternatives": [
+        "corta al eje de las ordenadas.",
+        "corta al eje de las abscisas.",
+        "corta a todas las perpendiculares al eje de las X.",
+        "no corta a ninguno de los ejes coordenados.",
+        "corta a todas las circunferencias con centro en el origen"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/12/examen-admision-cantuta-solucionario.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN ADMISIÓN CANTUTA SOLUCIONARIO UNIVERSIDAD NACIONAL DE EDUCACIÓN UNE PRUEBA DESARROLLADA PREGUNTAS RESUELTAS CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la función cuadrática: f(x)=a·x 2 +c que pasa por los puntos (–1; –3) y (3; 0). Calcule: ac",
+      "alternatives": [
+        "– 60/61",
+        "– 63/64",
+        "– 21/64",
+        "– 81/64"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/algebra-simulacro-catolica-resuelto-examen-admision-universidad-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PUCP RESUELTA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la función f(x)= ax 2 +bx+c que pasa por los pares ordenados (0;5), (1;7) y (2,15).\nCalcule a+b+c.",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/algebra-simulacro-catolica-resuelto-examen-admision-universidad-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PUCP RESUELTA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la función cuadrática F que corta al eje de las abscisas en los puntos (5;0) y ( – 1;0), halle el punto de corte con el eje de las ordenadas, sabiendo que el mínimo valor que toma la función es – 3.",
+      "alternatives": [
+        "(0;–1/3)",
+        "(0; –3/2)",
+        "(0;1/2)",
+        "(0;–5/3)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/algebra-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA CATÓLICA PREGUNTAS RESUELTAS PUCP"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea f una función lineal de modo que:\nf(1)=2\nf(2)=7\nCalcula el valor de “a” si f(a)=32",
+      "alternatives": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/simulacro-resuelto-de-admision-a-la-universidad-catolica-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO CATÓLICA SOLUCIONARIO DE ACCESO UNIVERSIDAD PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una hormiga obrera va a recoger sus alimentos siguiendo el recorrido dado por la gráfica en el plano cartesiano XY, de la función f: [0;4] →Reales, definido por\nf(x) = ||x – 2| + 1| + 2 , donde x está dado en metros. La hormiga parte del hormiguero, ubicado en el punto cuya coordenadas (0,f(0)), y se dirige hacia el punto donde se encuentran sus alimentos, en las coordenadas (4,f(4)), para, luego, retornar hasta el hormiguero con ellos. Halle la longitud total recorrida por la hormiga (en metros).",
+      "alternatives": [
+        "6 √ 2 m",
+        "4 √ 2 m",
+        "10 √ 2 m",
+        "8 √ 2 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/algebra-problemas-resueltos-examen.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lunié es un estudiante de UNMSM que culminó el ciclo número K de sus estudios universitarios, los cuales constan de 10 ciclos académicos en total.\nSe sabe que\nK=ln(b) – ln(a)\nf:[1;5]→[ a ; b] es una función sobreyectiva definida por f(x)= e 5–|x–4| . Determine cuántos ciclos académicos le faltan estudiar a Lunié, como mínimo, para terminar sus estudios universitarios.",
+      "alternatives": [
+        "7",
+        "6",
+        "4",
+        "5",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/examen-san-marcos-deco-algebra-ce.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la función real f definida por f(x) = 12arccos(sen⁴x + cos⁴x) , determine la suma de mínimo valor y máximo valor que toma f(x).",
+      "alternatives": [
+        "4𝜋",
+        "6𝜋",
+        "5𝜋",
+        "3𝜋"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/trigonometria-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el emporio comercial de Gamarra se conoce que el precio (en miles de dólares) del metro cuadrado de un terreno esta modelada por una función lineal dependiente del tiempo (en años). Si el precio actual del metro cuadrado es de 5 mil dólares y se proyecta que al cabo de 5 años será de b miles de dólares, ¿cuál es el valor de b, si un economista afirma que de acuerdo a dicho modelo lineal dentro de 10 años el precio del metro cuadrado será de 14 mil dólares?",
+      "alternatives": [
+        "7,5",
+        "8",
+        "9",
+        "9,5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-algebra-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lucio es un comerciante de las galerías Wilson y vende USB de la misma marca y capacidad. El ingreso en dólares depende del número de decenas de USB vendidos, y dicho ingreso está modelado por una función cuadrática. Si Lucio vende 50 USB su ingreso es de $1500, y obtendrá el máximo ingreso cuando vende 100 USB. ¿Cuál sería el ingreso que obtendrá Lucio si vende 9 decenas de USB?",
+      "alternatives": [
+        "$1640",
+        "$1980",
+        "$1850",
+        "$1760"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-algebra-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Agustín es un comerciante dedicado a la producción y venta de quesos por molde y desea conocer el comportamiento económico del queso tipo “suizo”, para determinar el ingreso en equilibrio y cuántos moldes de quesos del tipo “suizo” debe producir y vender para que no le sobre ni falte productos para sus clientes el fin de semana próximo. El comportamiento de la oferta y la demanda de su producto están modelados respectivamente por las reglas\nG(x) = – 2x² + 70x + 1000\nF(x) = – 50x + 2000\ndonde x es la cantidad de decenas de moldes producidos y la unidad monetaria está en soles.",
+      "alternatives": [
+        "100 y S/1250",
+        "100 y S/1500",
+        "10 y S/3000",
+        "190 y S/2000"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-algebra-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La función real F está definida por F(x) = 3csc(2x) + 5 ; halle la suma de los números enteros que no pertenecen al rango de F.",
+      "alternatives": [
+        "25",
+        "27",
+        "33",
+        "35"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/trigonometria-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la siguiente función:\nF(x)= 2x ² – 4x – 1\nIndica en qué cuadrante se encuentra ubicado el vértice de la gráfica de dicha función:",
+      "alternatives": [
+        "I cuadrante",
+        "II cuadrante",
+        "III cuadrante",
+        "IV cuadrante"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/algebra-beca-18-formulario-ejemplos-resueltos-temario-pronabec-del-prospecto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA BECA 18 FORMULARIO CON EJEMPLOS RESUELTOS DEL TEMARIO PRONABEC PRUEBA UNICA NACIONAL PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes proposiciones, ¿cuál de ellas nos representa a una función inyectiva?",
+      "alternatives": [
+        "La velocidad que marca el velocímetro de un automóvil",
+        "El número de DNI de una población",
+        "El tiempo de vida de un artefacto",
+        "La gráfica que describe el vuelo de un mosquito"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/algebra-beca-18-formulario-ejemplos-resueltos-temario-pronabec-del-prospecto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA BECA 18 FORMULARIO CON EJEMPLOS RESUELTOS DEL TEMARIO PRONABEC PRUEBA UNICA NACIONAL PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar el dominio (Dom(f)) y el rango (Ran(f)) de la siguiente función:\nf(x)= √(x² + 4)",
+      "alternatives": [
+        "Dom(f) =[0;+∞[ ; Ran(f)= ]0; +∞ [",
+        "Dom(f) =[2;+∞[ ; Ran(f)= ]0; +∞ [",
+        "Dom(f) =] – ∞;+∞[ ; Ran(f)= [2;+∞[",
+        "Dom(f) =] – ∞;+∞[ ; Ran(f)= ]0; +∞ [",
+        "Dom(f) =[1;+∞[ ; Ran(f)= ]0; +∞ ["
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/algebra-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La deformación de un objeto debido a la temperatura está modelada por la función f, definida por\nf(x)=| 2x² – a|x|+b |; a>b, donde x está dada en grados Celsius.\nSi f (– 4)=6 y f (2)=2, halle la suma del mayor valor positivo con el mayor valor negativo, para los cuales la gráfica de la función dada corta el eje de las abscisas.",
+      "alternatives": [
+        "4",
+        "2",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-algebra-semana-18-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para la venta del día, Lucas dispone de 80 helados en su triciclo. Cierto día acude a un estadio de fútbol para vender sus helados, inicia su venta a las 10:00 a. m. y termina de vender todos sus helados a las 4:00 p.m.; además, la cantidad de helados que tiene Lucas en su triciclo ese día está descrita por una función lineal que depende de las horas transcurridas desde las 10:00 a.m. y sus ventas las realiza solo cada 45 minutos. ¿Cuántos helados tenía Lucas ese día en su triciclo, inmediatamente después de la 1:45 p.m.?",
+      "alternatives": [
+        "34",
+        "30",
+        "35",
+        "40"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-algebra-semana-13-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRUEBA DECO SOLUCIONES DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREAS D B PROBLEMAS DESARROLLADOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el estudio de un modelo de onda, se plantea el siguiente problema: encontrar los valores de x ∈ ]0;2π[ tal que f(x)=cosx – cos(π/3 – x) se anule.\nCalcule la suma de los valores que puede tomar x.",
+      "alternatives": [
+        "5π/3",
+        "7π/5",
+        "3π/4",
+        "4π/3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos-trigonometria-semana-11.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA ÁREA C PRUEBA DECO SAN MARCOS SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la función, y=f(x)=tgx\nSe sabe que:\nDom∈ [0;a] ∪ [b;π]\nRan ∈ [– √ 3 ; √ 3 ].\nHallar: a+b",
+      "alternatives": [
+        "π/4",
+        "π/3",
+        "π",
+        "2π"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/trigonometria-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea f: ℝ → ℝ con regla de correspondencia\nf(x) = – ax²+bx+ c con a> 0.\nHalle el valor máximo que toma la función f.",
+      "alternatives": [
+        "( b² + 4ac)÷(4b)",
+        "( b² + 2ac)÷(4a)",
+        "( b² + 4ac)÷(2a)",
+        "( b² + ac)÷(4a)",
+        "( b² + 4ac)÷(4a)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea f(x)=|x – a|+2 con a> 0. Si el dominio de f es [– a; 2a], ¿cuál es su rango?",
+      "alternatives": [
+        "[2; 2a+ 2]",
+        "[0; 2a+ 2]",
+        "[2 +a; 2a+ 2]",
+        "[2; a+ 2]",
+        "[0; a+ 2]"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/examen-admision-unsa-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNSA 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE SAN AGUSTIN DE AREQUIPA 2026 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine si es verdadera (V) o falsa (F) cada una de las proposiciones siguientes:\n• El dominio de la función arcoseno es igual al rango de la función seno.\n• arcsen(sen 𝛑/2 )= 𝛑/2\n• arcos(cos𝛑/2)= 𝛑/2\n• Las funciones seno y coseno son par e impar, respectivamente.\n• El dominio de la función arcotangente es ]– 𝛑/2 ; 𝛑/2 [",
+      "alternatives": [
+        "VFFVV",
+        "VVFVF",
+        "FVFVV",
+        "VVVFF",
+        "FFVVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/examen-admision-unsa-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNSA 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE SAN AGUSTIN DE AREQUIPA 2026 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la función f :[a,b] → [−1,5]\nf(x)= ∛( x−2) es biyectiva, hallar el valor de a+b",
+      "alternatives": [
+        "125",
+        "127",
+        "128",
+        "129",
+        "131"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "H allar el rango de la siguiente función real, cuya regla de correspondencia es:\nf(x)=2+cos(x – 0,5 𝛑 ) ; 𝛑 ≤ x ≤ 2 𝛑",
+      "alternatives": [
+        "[0; 1]",
+        "[0; 2]",
+        "[1; 2]",
+        "[1; 3]",
+        "[2; 3]"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la función cuadrática: f(x)=ax 2 +c que pasa por los puntos (–1;–3) y (3;0).\nCalcule: ac",
+      "alternatives": [
+        "– 60/61",
+        "– 63/64",
+        "– 21/64",
+        "– 81/64"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/solucionario-catolica-2019-admision.html",
+      "sourceName": "matematicasn.blogspot.com — EVALUACIÓN DE TALENTO CATÓLICA 2027 RESUELTA INGRESO UNIVERSIDAD RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la función cuadrática f(x)=x 2 +2bx–5 con b>0. Calcule el valor de \"b\" si se sabe que f(b)=22.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-catolica-2018-admision.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO CATÓLICA 2027 RESUELTO CLAVES INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes proposiciones corresponde a una función inyectiva?\nI) A cada sector le corresponde una determinada área.\nII) A cada peruano le corresponde un número de DNI.\nIII) A cada auto le corresponde un cierto kilometraje.\nIV) A cada artefacto eléctrico le corresponde un tiempo de vida.",
+      "alternatives": [
+        "I",
+        "II",
+        "III",
+        "IV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/11/Solucionarios-catolica-pucp-examenes-admision-universidad-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CATÓLICA EXAMEN ADMISIÓN UNIVERSIDAD PUCP PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la siguiente función:\nF(x)= 2x 2 –4x–1\nIndica en qué cuadrante se encuentra ubicado el vértice de la gráfica de dicha función:",
+      "alternatives": [
+        "I cuadrante",
+        "II cuadrante",
+        "III cuadrante",
+        "IV cuadrante"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/simulacro-admision-catolica-pdf-pucp.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO CATÓLICA INGRESO UNIVERSIDAD PUCP PRESENCIAL PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una empresa avícola, se realizaron pruebas en una dieta experimental para pollos y se logró determinar que el peso promedio, en gramos, es modelado por una función lineal que depende del número de días desde que se dio inicio a la dieta. Si el peso inicial de un pollo era de 200 gramos y transcurridos 15 días este ya había ganado 900 gramos, determine el peso de este pollo, en gramos, 10 días después de haber iniciado la dieta.",
+      "alternatives": [
+        "880",
+        "750",
+        "600",
+        "850",
+        "800"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/examen-san-marcos-2019-i-deco.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN MARCOS 2027 I EXAMEN ADMISIÓN UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lea detenidamente el texto y responda las preguntas que se formulan a continuación.\nLa afirmación de que los Medios de Comunicación de Masas (MCM) influyen en las costumbres y normas de la sociedad hoy en día se ha convertido en un tema común de debate público. Sin embargo, las investigaciones empíricas nos iluminan muy poco al respecto, y sus datos no son suficientes ni para confirmarla ni para negarla. Los estudios sobre este aspecto son escasos, además, casi siempre formulan unas hipótesis parciales desprovistas de una síntesis teórica más amplia y profunda, porque suelen basarse en alguna teoría de alcance medio de la psicología social. Este tipo de teorías, efectivamente, puede aportar una serie de interesantes observaciones sobre regularidades en los efectos de los MCM, pero no soluciona el principal problema del campo: la falta de una concepción teórica para integrar, por un lado, estos dispersos y fragmentados hallazgos sobre la influencia mediática en la moral; y, por otro lado, las aportaciones de los campos colindantes (por ejemplo, el campo de la cognición social, la lingüística cognitiva o la psicología moral). Este vacío teórico no se debe a la poca urgencia del problema, todo lo contrario: en las sociedades donde las instituciones habituales de la transmisión de normas –la Escuela y la Iglesia– han perdido posiciones, esta función parece haberse traspasado a los MCM, causando un creciente malestar social por la falta de transparencia del fenómeno. ¿Cuál es el tema central del texto?",
+      "alternatives": [
+        "El desinterés por el soporte técnico de los MCM",
+        "Los métodos de influencia de los medios de comunicación",
+        "La falta de un marco teórico de los MCM en la sociedad",
+        "Los medios de comunicación y su relación con lo social",
+        "La Iglesia y la Escuela como instituciones supremas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/03/puntajes-maximos-y-minimos-para.html",
+      "sourceName": "matematicasn.blogspot.com — PUNTAJES MÁXIMOS Y MÍNIMOS 2027 I SAN MARCOS INGRESO UNIVERSIDAD ÁREAS A B D C E PRIMEROS PUESTOS UNMSM 2026 II "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A un bloque de masa M en reposo sobre una superficie horizontal lisa y ubicado en el origen de coordenadas, se le aplica una fuerza de la forma F(x) = (10 – 2x)î N que varía con la posición x expresada en metros. ¿Cuál es el trabajo (en J) realizado por la fuerza F desde x = 0 m hasta x = 7 m?",
+      "alternatives": [
+        "14",
+        "17",
+        "21",
+        "23",
+        "25"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-11-educacion-fisica-experiencia-6-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar el rango de la función real, cuya regla de correspondencia es:\ng(x)=cos 2 x+2senx",
+      "alternatives": [
+        "[0; 2]",
+        "[–2; 0]",
+        "[–2; 2]",
+        "[–1, 1]",
+        "[– 4; 0]"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-14-resuelta-comunicacion-experiencia-6-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNASAM ÁREA A INGENIERÍAS INGRESO CLAVES PDF – INGRESO UNIVERSIDAD – 2026–2027"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean A, B conjuntos no-vacíos. Señale la alternativa que presenta la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F).\nI ) Si (x, y); (x, z) ∈ f={(x, y) / x ∈ A, y ∈ B} ⊂ A×B implica que y=z, entonces podemos decir que f es un función de A en B.\nII ) Toda función sobreyectiva f: A → B es inyectiva.\nIII ) Toda función inyectiva f: A → B es sobreyectiva.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VFF",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-ejercicios-con-respuestas-de.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO SEGUNDO EXAMEN UNI 2025 RESUELTO INGRESO UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si –1 y 2 son las raíces del polinomio f(x) =2x ³ +nx ² +nx+m, entonces determine el valor de m+n.",
+      "alternatives": [
+        "13",
+        "– 1",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN DE POLINOMIOS PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la función f: ℝ → ℝ , cuya regla de correspondencia es\nf(x) =x 2 – ax.\nDetermine el valor de a>0 de tal manera que Ran(f)=[–4;+∞〉.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-preuniversitaria-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 MATEMÁTICA SEGUNDA PRUEBA RESUELTA – RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el rango de la función\ng(x)=8cos 2 x–3",
+      "alternatives": [
+        "[–3; 5]",
+        "[–2; 1]",
+        "[–11; 5]",
+        "[–3; 8]",
+        "[–1; 1]"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-prueba.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el periodo principal de la siguiente función real, cuya regla de correspondencia es f(x)=|sen2 𝛑 x|.",
+      "alternatives": [
+        "2",
+        "1",
+        "4",
+        "1/4",
+        "1/2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-prueba.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pedro tiene ahorrado S/ 24 000 y desea depositar sus ahorros en diferentes bancos para ganar intereses. El banco A le ofrece que, si deposita S/ 13 000, el monto que obtendrá (en miles de soles) al cabo de «x» meses será f(x)=log 4 (x+4)+c ; 0 ≤ x ≤ 12. Por su parte, el banco B le ofrece que, con un depósito inicial de S/ 11 000, el monto (en miles de soles) al cabo de «x» meses será de g(x)=log 2 (x+1)+d; 0 ≤ x ≤ 12. Si Pedro toma ambas opciones, ¿cuántos meses deberán transcurrir para que el monto obtenido en ambos bancos sea el mismo?",
+      "alternatives": [
+        "5",
+        "4",
+        "10",
+        "14",
+        "22"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁLGEBRA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la función cuadrática U(x)=ax 2 +36x–33 la utilidad en miles de soles de producir x cientos de unidades de un producto. Si la utilidad de producir 300 unidades es S/48 000, halle la variación de la utilidad al producir desde 100 y hasta 1000 unidades.",
+      "alternatives": [
+        "[5000; 66 000]",
+        "[0; 55 000]",
+        "[4000; 82 000]",
+        "[2000; 36 000]",
+        "[0; 75 000]"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-16-2020.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2024-1 PRUEBA RESUELTA INGENIERÍAS INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el rango de la función\nf (x)=6sen2x.cos2x – 5",
+      "alternatives": [
+        "[–1; 2]",
+        "[–8; –2]",
+        "[–2; 8]",
+        "[–4; 2]",
+        "[–4; –1]"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/trigonometria-unsa-examen-admision-san.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNSA PRUEBA RESUELTA SAN AGUSTIN INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Si colocamos en el ápice del concepto de espíritu una función particular de conocimiento, una clase de saber, que solo el espíritu puede dar, entonces la propiedad fundamental de un ser \"espiritual\" es su independencia, libertad o autonomía existencial -o la del centro de su existencia - frente a los lazos y a la presión de lo orgánico , de la \"vida\", de todo lo que pertenece a la \"vida\" y, por ende, también de la inteligencia impulsiva propia de esta. Semejante ser \"espiritual\" ya no está vinculado a sus impulsos, ni al mundo circundante, sino que es \" libre frente al mundo circundante\", está abierto al mundo , según expresión que nos place usar».\nDe la cita anterior, perteneciente a Max Scheler, se puede deducir que, para este filósofo,",
+      "alternatives": [
+        "el ser espiritual condiciona el aspecto biológico en el hombre.",
+        "el hombre es el ser capaz de decir no al impulso instintivo. *",
+        "el hombre solo puede ser entendido por las ciencias naturales.",
+        "es correcto definir al hombre como ser orgánico dependiente.",
+        "la dimensión biológica humana determina su naturaleza."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/filosofia-examen-san-marcos-admision.html",
+      "sourceName": "matematicasn.blogspot.com — FILOSOFÍA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La siguiente tabla muestra el número de contagiados por la COVID-19 en una comunidad los días 1 y 3 de enero de 2021.\nN.º de día N.º de contagiados\n1 12\n3 28\nUn epidemiólogo utiliza el modelo cuadrático f(x)=mx 2 +nx+p para estimar el número de contagiados por la COVID-19 en el día x de dicho mes. Si se sabe que m, n, p forman una progresión aritmética, ¿cuál fue el número de contagiados el décimo día?",
+      "alternatives": [
+        "185",
+        "123",
+        "147",
+        "111",
+        "148"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/algebra-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el rango de la función\ng(x)=3–4cos2x",
+      "alternatives": [
+        "[–1; 1]",
+        "[–7; 1]",
+        "[–1; 6]",
+        "[1; 5]",
+        "[–1; 7]"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/trigonometria-cayetano-heredia-examen.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar el dominio (Dom(f)) y el rango (Ran(f)) de la siguiente función:\nf(x)= √(x 2 + 4)",
+      "alternatives": [
+        "Dom(f) =[0;+∞[ ; Ran(f)= ]0; +∞ [",
+        "Dom(f) =[2;+∞[ ; Ran(f)= ]0; +∞ [",
+        "Dom(f) =] – ∞;+∞[ ; Ran(f)= [2;+∞[",
+        "Dom(f) =] – ∞;+∞[ ; Ran(f)= ]0; +∞ [",
+        "Dom(f) =[1;+∞[ ; Ran(f)= ]0; +∞ ["
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/algebra-untels-examen-resuelto-admision.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA RESUELTA DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la función f: [1; 4] → [a; b], tal que\nf(x) = x 2 – 2x + 3\nHalle (a+b) dado que f es biyectiva.",
+      "alternatives": [
+        "17",
+        "11",
+        "10",
+        "9",
+        "13"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-preuniversitaria-libro-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique qué valor no pertenece al dominio de la función f definida por\nf (x) = sen2x+cos 2 x+ tanx",
+      "alternatives": [
+        "0",
+        "𝛑/6",
+        "𝛑/4",
+        "3𝛑/2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el rango de la función f definida por f(x) =senx.cosx+3",
+      "alternatives": [
+        "[ –1/2; 1/2]",
+        "[ 5/2; 7/2]",
+        "[ –1; 1]",
+        "[ –1; 2]"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si [ c;d] es el rango de la función real f definida por halle c+d .\nf(x) = 2csc 2 2x + 4csc2x + 5\n𝛑< x ≤ 5 𝛑/12",
+      "alternatives": [
+        "30",
+        "28",
+        "32",
+        "34",
+        "29"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea : a █ b ▀f(x) = f(a + b) – f(a – b)\nPara f(x) = 4x + 3\nCalcular el valor de E= 3 █ 1 ▀f(x)",
+      "alternatives": [
+        "7",
+        "8",
+        "10",
+        "9",
+        "11"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/operadores-matematicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — OPERADORES MATEMÁTICOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la función f, definida por f(x)=tan(x)+3|cot(x)|, ∀x∈〈0;𝛑/2〉. Calcule el valor mínimo de la función f.",
+      "alternatives": [
+        "√ 6",
+        "√ 3",
+        "2√6",
+        "2√3",
+        "3√3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/45-problemas-resueltos-de-trigonometria.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNI RESUELTA DE INGRESO UNIVERSIDAD INGENIERÍA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si f es un polinomio tal que f(x+ 1)=f(x) +1 calcule el valor de f(50) – f(48)",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/valor-numerico-de-un-polinomio-notacion-polinomica-cambio-de-variable-ejemplos-problemas-resueltos-algebra-matematica-de-secundaria-y-pre-universidad-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — NOTACIÓN POLINÓMICA VALOR NUMÉRICO EJERCICIOS RESUELTOS PDF CAMBIO DE VARIABLE EN UN POLINOMIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir 2F(x)+3 entre (x –1) el residuo es 29; al dividir 4F(x) + x entre (x – 2) el residuo es 110. Halle el residuo de dividir F(x) entre el producto (x –1)(x –2).",
+      "alternatives": [
+        "x + 3",
+        "14x – 1",
+        "1 + x",
+        "3x",
+        "0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/divisibilidad-algebraica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIBILIDAD ALGEBRAICA EJERCICIOS RESUELTOS PDF TEOREMA DEL FACTOR"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la función real f está definida por\nf (x) = 1− 2cos2x\ndonde 𝛑/3 ≤ x < 𝛑/2.\nSi la edad de Bryan es (a +12) años y a es el mínimo valor de f(x) , halle la edad de Bryan",
+      "alternatives": [
+        "16 años",
+        "11 años",
+        "18 años",
+        "14 años"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grafica-de-la-funcion-coseno-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIÓN COSENO EJERCICIOS RESUELTOS DE DOMINIO RANGO PERIODO Y GRÁFICA DE LA RAZÓN TRIGONOMÉTRICA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la función f definida por\nf(x)=cos 2 x–4cosx+20, x∈ ℝ .\nDetermine el valor mínimo que toma la función.",
+      "alternatives": [
+        "17",
+        "16",
+        "18",
+        "19",
+        "15"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/trigonometria-simulacro-resuelto-examen.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Diga usted por qué cuadrante no pasa la siguiente función f: ℝ → ℝ cuya regla de correspondencia viene dado por:\nf(x)=–x 2 +10x–20",
+      "alternatives": [
+        "I y III",
+        "I y II",
+        "II",
+        "III y IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-ejercicios-resueltos-de-primero.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PUCP PREGUNTAS DE ENSAYO EXPLICADAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el dominio de la función P(x) = (36−x 2 ) 1/4",
+      "alternatives": [
+        "[ – 36; 36]",
+        "[ – 9; 9]",
+        "[ – 6; 6]",
+        "[ – 4; 4]",
+        "[ – 8; 8]"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea f una función lineal , tal que Dom(f) es intervalo de mayor longitud para el cual 27 ≥ f(x) , además se verifica que f(4) =8 ; f(–1)= –2 , determine , en el orden dado, el valor de verdad de las siguientes proposiciones:\nI. Dom(f)= R\nII. La función es impar.\nIII. El área de la región formada por la gráfica de f(x) con 10 ≥ x ≥ 0 y el eje x es 100u² .",
+      "alternatives": [
+        "VFF",
+        "VFV",
+        "FVF",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2018/09/examen-san-marcos-deco-quimica-ce.html",
+      "sourceName": "quimicapdf.blogspot.com — AREA C SAN MARCOS EXAMEN ADMISION UNIVERSIDAD SOLUCIONADO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Todos los días somos testigos de asaltos y robos en Lima que nunca se solucionan. Consideren una función lineal tal que f(1) = 6 ; f(0) = 3. Se sabe que f*( 15) de cada f*( 21) víctimas de robo no denuncian. En Lima, según el INEI, más del 36% de personas piensan que hacerlo es perder el tiempo. Si en el mes de diciembre del 2019 hubo 720 víctimas de robo, halle la cantidad de víctimas que no presentaron denuncia de robo en el mes de diciembre de dicho año.",
+      "alternatives": [
+        "640",
+        "576",
+        "560",
+        "480"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2018/09/examen-san-marcos-deco-quimica-ce.html",
+      "sourceName": "quimicapdf.blogspot.com — AREA C SAN MARCOS EXAMEN ADMISION UNIVERSIDAD SOLUCIONADO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de factorizar el polinomio P(x) =x ³ – 2x – 1 se obtiene un factor primo cuadrático f(x). Determine el valor de f(3).",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/factorizacion-ejercicios-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — FACTORIZACIÓN (ÁLGEBRA) PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa está estudiando los efectos de cambiar su forma de producción a una nueva. Con ambas formas de producción, el costo por unidad de producir x unidades se modela a través de una función cuadrática. En el siguiente gráfico se representa el costo de producción por unidad de ambas formas de producción: Costo por unidad Forma de producción antigua Forma de producción nueva 100 Cantidad producida ¿Cuál de las siguientes afirmaciones es verdadera al comparar ambas formas de producción?",
+      "alternatives": [
+        "Siempre es más conveniente cambiar a la forma de producción nueva.",
+        "El costo de producir cero productos es igual en ambas formas de producción.",
+        "Cuando se producen más de cien unidades, la forma de producción antigua genera un menor costo por unidad.",
+        "El menor costo por unidad posible de la forma de producción antigua es menor que el menor costo por unidad posible de la forma de producción nueva."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-29-paes-regular-oficial-matematica1-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Matemática M1 pregunta 41"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudio sobre plantas de cierta región geográfica determinó que, en terrenos de x m² de área el promedio de especies encontradas en y; cuando Logy se graficó en función de Logx, el resultado fue una línea recta dada por\nLogy = Log(11,2) − Log0,01+ 0,5Logx\n¿Cuál es el promedio de especies encontradas en un área de 256 m²?",
+      "alternatives": [
+        "15 900",
+        "16 820",
+        "17 290",
+        "17 920"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/12/logaritmos-problemas-resueltos-pdf.html",
+      "sourceName": "algebraenpdf.blogspot.com — LOGARITMOS PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Jaime tiene una pequeña empresa dedicada a fabricar polos. Su ingreso semanal en soles está determinado por la función I(x) =ax²+bx, donde x representa el número de polos vendidos en una semana. Si se venden 120 polos en una semana, el ingreso es de S/.5760; además, la venta de 300 polos semanales genera el ingreso máximo. Halle el ingreso que se obtiene en una semana en la que se venden 200 polos.",
+      "alternatives": [
+        "S/.8000",
+        "S/.7800",
+        "S/.8200",
+        "S/.8500"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-deco-problemas-resueltos-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS PRUEBA DECO RESUELTA DE EXAMEN DE ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La población de cierto tipo de bacterias se obtiene según el modelo P(t)= k [ A ^ t ] , t ∈ [0, 5], donde P(t) representa el número de bacterias después de t horas, donde {k ; A}⊂R + . Si la población inicial era de 100 bacterias (t=0) y, dos horas después, había 400 bacterias, ¿cuántas bacterias habrá después de dos horas más?",
+      "alternatives": [
+        "2800",
+        "800",
+        "1600",
+        "2000"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-deco-problemas-resueltos-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS PRUEBA DECO RESUELTA DE EXAMEN DE ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se coloca 4 kilogramos de una sustancia en un recipiente con agua y, cada minuto, se diluye el 19 % de la cantidad de esta sustancia. Si la cantidad de sustancia no diluida, al cabo de t minutos, está dada por la función Q(t), en kilogramos, halle una expresión equivalente para Q(t/2)",
+      "alternatives": [
+        "4×(0,19) ^ t /2",
+        "2×(0,81) ^ t/2",
+        "4×(0,81) ^ t",
+        "4×(0,9) ^ t"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-deco-problemas-resueltos-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS PRUEBA DECO RESUELTA DE EXAMEN DE ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un laboratorio clínico, donde se hace la prueba de cultivo de bacterias de esputo, la cantidad de bacterias existentes en el esputo es modelada por la regla de correspondencia de la función P(t)=r [ e ^( kt) ] , donde r y k son constantes positivas y t es el tiempo transcurrido en días. Si la población inicial fue de 200 bacterias y al finalizar el quinto día hubo 2000 bacterias. Determine la cantidad de días en las que se habrán producido 2×10 ⁵ bacterias.",
+      "alternatives": [
+        "10",
+        "15",
+        "25",
+        "20"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/03/algebra-ce-examen-resuelto-deco-san.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA CE EXAMEN RESUELTO DECO SAN MARCOS DE ADMISIÓN A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una compañía decide ofertar q unidades del producto que fabrica a un precio por unidad igual a p , que es una cantidad entera de dólares dada por la ecuación p=Log(10+q/2) . Si la compañía vendió una cantidad mayor que 1600 unidades y menor que 19 980 unidades, ¿cuál es el ingreso total que obtuvo por dicha venta?",
+      "alternatives": [
+        "$1980",
+        "$5940",
+        "$3000",
+        "$4980"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/03/algebra-ce-examen-resuelto-deco-san.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA CE EXAMEN RESUELTO DECO SAN MARCOS DE ADMISIÓN A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un comerciante vende urnas decorativas con forma de prisma cuadrangular regular cuyo volumen, en función de un lado de su base, está dado por el polinomio V(x)=x²(x+a) ; a > 0. Luego de venderlas, y a solicitud de un cliente, el comerciante manda preparar una nueva urna de igual forma, cuyas dimensiones son cantidades enteras. La altura y el lado de la base de la nueva urna aumenta en b cm, con b∈Z, de modo que la nueva urna tiene un volumen de 1694 cm³. Si el resto de dividir V(x) entre x – 2 y x – b es, respectivamente, 20 y 112, ¿cuál es el volumen de cada urna decorativa que vendió primero el comerciante?",
+      "alternatives": [
+        "480 cm³",
+        "694 cm ³",
+        "520 cm ³",
+        "490 cm ³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/03/algebra-ce-examen-resuelto-deco-san.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA CE EXAMEN RESUELTO DECO SAN MARCOS DE ADMISIÓN A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una familia paga S/.500 por 30 km de viaje, luego paga S/.700 por otros 45 km. Halla la ecuación lineal del costo por cada kilómetro recorrido.",
+      "alternatives": [
+        "y=x+100",
+        "y=40x + 50",
+        "y= 40x/3 + 100",
+        "y= x/3 + 100"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/06/algebra-admision-catolica-pucp-examen.html",
+      "sourceName": "algebraenpdf.blogspot.com — ALGEBRA ADMISIÓN CATÓLICA PUCP 2022 2023 EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La representación de la velocidad respecto al tiempo está dada por la siguiente función.\nf(t)=– 5t²+40t – 8\nIndica en qué tiempo la velocidad es máxima.",
+      "alternatives": [
+        "t=1",
+        "t=2",
+        "t=4",
+        "t=8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/06/algebra-admision-catolica-pucp-examen.html",
+      "sourceName": "algebraenpdf.blogspot.com — ALGEBRA ADMISIÓN CATÓLICA PUCP 2022 2023 EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle “p” para que el conjunto de pares ordenados de:\nsea función",
+      "alternatives": [
+        "-5",
+        "- 4",
+        "- 3",
+        "2",
+        "- 1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/funciones-20-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — FUNCIONES 20 EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale el valor máximo de la función f, si la regla de correspondencia es:",
+      "alternatives": [
+        "- 1",
+        "- 2",
+        "- 3",
+        "- 4",
+        "- 5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/funciones-20-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — FUNCIONES 20 EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la función donde a y b son ctes reales, si , y si Halle: a +b",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/funciones-20-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — FUNCIONES 20 EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\nes una función, halle:",
+      "alternatives": [
+        "12",
+        "16",
+        "32",
+        "26",
+        "27"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/funciones-20-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — FUNCIONES 20 EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea una función definida en el conjunto de los números reales, por y además hallar: (3a-2b)",
+      "alternatives": [
+        "17",
+        "16",
+        "15",
+        "19",
+        "23"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/funciones-20-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — FUNCIONES 20 EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale el valor de “n” en la función f ; si y el dominio es",
+      "alternatives": [
+        "6",
+        "7",
+        "9",
+        "10",
+        "13"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/funciones-20-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — FUNCIONES 20 EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un campo petrolero hay 20 pozos. Cada pozo produce 200 barriles diarios de petróleo. Se sabe que, por cada nuevo pozo perforado, la producción diaria de cada pozo disminuirá en 5 barriles. ¿Cuántos pozos debería haber en este campo con el fin de maximizar la producción diaria de barriles de petróleo?",
+      "alternatives": [
+        "25",
+        "10",
+        "30",
+        "40"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/razonamiento-matematico-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa compra una computadora en 4000 dólares, después de cuatro años el valor de la computadora se espera que sea de 200 dólares. Si V es el valor de la computadora en el tiempo t (en años), entonces use la ecuación lineal que relaciona V y t para determinar el valor de V en dólares cuando t=2.",
+      "alternatives": [
+        "2150",
+        "2200",
+        "2000",
+        "2050",
+        "2100"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número N de tiendas “Las Delicias” para los años 2020 al 2030 se puede calcular con el modelo N(t)=at+20 donde t representa el año, con t=0 correspondiente al año 2020.\nSi N(4)=32, determine en qué año se tendrá 44 tiendas.",
+      "alternatives": [
+        "2025",
+        "2028",
+        "2029",
+        "2026",
+        "2027"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estudio-y-representacion-de-funciones_4.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA SOCIALES 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un carpintero puede construir sillas a un costo de S/. 30 cada una. Si vende a 2x soles la unidad, se estima que puede vender (196 – 4x) sillas al mes. ¿Cuál sería la mayor ganancia mensual, en soles, del carpintero?",
+      "alternatives": [
+        "2455",
+        "2114",
+        "2788",
+        "2456",
+        "2312"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/arte-cultura-experiencia-8-5to-actividad-1-2-3-4-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUARTO EXAMEN CEPRU ORDINARIO INGRESO DIRECTO PREGUNTAS CLAVES UNIVERSIDAD SAN ANTONIO 2027"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa importadora de autos y repuestos, en los últimos 10 años hizo un estudio sobre venta de autos y dedujo que el mes con más ventas es diciembre. Además, se concluyó que la cantidad de autos vendidos en este mes está dado por la ecuación:\nV(x)= x² – 60x+1150\nDonde V(x) es el número de autos vendidos en el mes de diciembre y x representa el ahorro promedio en miles de soles que los clientes han alcanzado para la compra de un auto. ¿Cuál es el mínimo número de autos que se venderá en el próximo mes de diciembre?",
+      "alternatives": [
+        "250",
+        "200",
+        "400",
+        "500",
+        "450"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/02/examen-pre-san-marcos-2018-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO TERCER EXAMEN PRE SAN MARCOS 2026-2 PDF ORDINARIO – ESPECIAL INGRESO DIRECTO UNIVERSIDAD 2027-1 2025 2024 2023 2022"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cierta Universidad ofrece un taller de capacitación. El costo de la inscripción por persona es de S/ 80 y asisten al taller 600 personas, pero por cada disminución de S/ 2 en la inscripción asisten 10 personas más, y por cada aumento de S/ 2 en la inscripción asisten 10 personas menos. Para obtener la máxima recaudación posible, ¿cuánto debe ser el costo de la inscripción a cobrar?",
+      "alternatives": [
+        "S/ 80",
+        "S/ 60",
+        "S/ 40",
+        "S/ 100",
+        "S/ 120"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-11-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 11 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una plantación, la producción mensual de arroz está dada en kilogramos y depende de la cantidad de litros de agua por metro cuadrado utilizada en el riego, la cual está representada por x. Si la producción está dada por la función P(x)= 1000x – x² – 200 000\nDonde P(x) está en kilogramos de arroz por mes.\n¿Cuál es la producción máxima de arroz en kilogramos que puede haber en un mes?",
+      "alternatives": [
+        "50 000",
+        "20 000",
+        "40 000",
+        "500 000",
+        "25 000"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-11-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 11 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el mínimo valor de la expresión R=3x²–2x+C es 2 , halle el valor de C",
+      "alternatives": [
+        "3",
+        "7/3",
+        "3/7",
+        "5/3",
+        "2/3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-admision-villareal-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN ADMISIÓN UNIVERSIDAD FEDERICO VILLARREAL 2025 DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pequeña compañía proveedora de servicio de cable provee a sus clientes varios tipos de planes, en el plan Premium cobra $30 por mes y tiene una cartera de 126 clientes, si por cada incremento de $1 en el precio la empresa pierde un cliente. Halle el máximo ingreso que percibe la empresa en el plan mencionado.",
+      "alternatives": [
+        "$ 6084",
+        "$ 4280",
+        "$ 3726",
+        "$ 5874"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-algebra-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudio matemático ha determinado que el porcentaje del cerebro que aún se mantiene intacto al cabo de t años de iniciado el Alzheimer está modelada por f(t) = at³ + bt + c . Si de acuerdo a este modelo, al cabo del séptimo año el 65,7% del cerebro aún se mantiene intacto y al cabo del octavo año el 51,2% del cerebro se encuentra dañado, ¿dentro de cuánto tiempo de iniciada la enfermedad el cerebro queda totalmente deteriorado?",
+      "alternatives": [
+        "12 años",
+        "11 años",
+        "10 años",
+        "9 años"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-algebra-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De un pedazo de papel que tiene la forma de un semicírculo de radio 5√2 cm, se desea recortar una región rectangular de máxima área, uno de cuyos lados debe coincidir con el diámetro del semicírculo. Halle el área de dicha región rectangular.",
+      "alternatives": [
+        "50 cm²",
+        "60 cm²",
+        "65 cm²",
+        "45 cm²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-habilidad-logico-semana.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El valor en soles del celular, luego de 12 años de haberlo comprado y el número de años que tendrán que pasar para que se devalúe totalmente son:",
+      "alternatives": [
+        "240 y 25",
+        "480 y 15",
+        "180 y 10",
+        "480 y 10",
+        "420 y 15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se realiza la revisión de la pantalla de una computadora, para ello se trazan dos ejes perpendiculares, vertical y horizontal, que se intersecan en el pixel central de la pantalla. Los cuadrantes formados reciben el mismo nombre que los del plano cartesiano, los pixeles se ubican de la misma manera como se hace para un punto en el plano. Si el pixel A(−a; b) se ubica en el segundo cuadrante, ¿dónde se ubica el pixel B(a;− b)?",
+      "alternatives": [
+        "En el primer cuadrante",
+        "En el tercer cuadrante",
+        "En el cuarto cuadrante",
+        "Sobre el eje vertical y por debajo del pixel central",
+        "Sobre el eje horizontal y la derecha del pixel central"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-ucsur-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CIENTIFÍCA DEL SUR 2027 UCSUR EXAMEN ADMISIÓN UNIVERSIDAD TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Fernanda elabora regalos navideños por un costo unitario de 20 soles y los vende a x soles la unidad. Estima que en el mes de diciembre puede vender 120 – x regalos. ¿Cuál sería la mayor utilidad de Fernanda?",
+      "alternatives": [
+        "2 800 soles",
+        "3 100 soles",
+        "1 900 soles",
+        "2 500 soles",
+        "2 200 soles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-religiosa-5to-actividad-1-2-3-experiencia-9-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN QUINTOS INGENIERÍAS 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS PDF SOLUCIONARIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ingeniero Felipe ha previsto las ganancias de sus empresas en miles de soles, en el n-ésimo día del mes de enero mediante la función: G(n) =n+15+|n+10|.\nSi en a días su ganancia es constante y en b días su ganancia sobrepasa los 55000 soles, entonces el valor de a+2b es",
+      "alternatives": [
+        "15",
+        "18",
+        "21",
+        "23",
+        "24"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ganancia que se obtiene al vender q unidades de un determinado artículo viene dada por la función U(q)=−q³+18q²−65q. Determine la suma de las dos mayores cantidades enteras de estos artículos que se pueden vender para obtener ganancia.",
+      "alternatives": [
+        "18",
+        "25",
+        "23",
+        "21",
+        "20"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/examen-san-marcos-2019-i-deco.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN MARCOS 2027 I EXAMEN ADMISIÓN UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una compañía de bienes raíces, propietaria de un edificio de 80 oficinas, desea alquilarlas. Para ello, hace un estudio de mercado que arroja el siguiente resultado: cada una de las oficinas puede ser alquilada en $ 205 mensuales, pero por cada $ 5 de aumento en dicho precio de alquiler, se tendrá una oficina desocupada sin posibilidad de ser alquilada. Si la compañía quiere tener un ingreso mensual de $ 17 750 por el alquiler de las oficinas, ¿cuál es el menor precio posible de alquiler mensual que deberá cobrar la compañía por cada oficina?",
+      "alternatives": [
+        "$ 270",
+        "$ 235",
+        "$ 250",
+        "$ 255"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/razonamiento-matematico-del-examen-de-admision-a-la-universidad-problemas-resueltos-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MATEMÁTICA SOLUCIONARIO DE EXAMEN ADMISIÓN UNIVERSIDAD PRUEBA DE INGRESO CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Julián trabaja en una compañía como vendedor de lejía y percibe un pago diario que consta de un monto fijo de S/.A más una comisión de S/.8 por cada galón de lejía que venda en el día. La tabla que se muestra corresponde a los pagos (y) percibidos por Julián en función de la cantidad (x ∈Z) de galones de lejía que vendió. Si los gastos diarios de Julián suman 108 + S/.a, ¿cuántos galones de lejía debe vender a diario, como mínimo, para solventar sus gastos?\nx y\n3 69\na 157",
+      "alternatives": [
+        "9",
+        "10",
+        "12",
+        "11"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/razonamiento-matematico-del-examen-de-admision-a-la-universidad-problemas-resueltos-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MATEMÁTICA SOLUCIONARIO DE EXAMEN ADMISIÓN UNIVERSIDAD PRUEBA DE INGRESO CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los datos para calcular la temperatura de cierta ciudad del norte del país fueron extraviados y solo se sabe que a las t horas está modelada en grados centígrados por la función T, cuya regla de correspondencia está definida por\nT(t)=a|t – b|+c ; 0 ≤ t ≤ 24\nSi se sabe que la temperatura a las 0, 12 y 24 horas del día es de 14 ; 34 y 24 grados centígrados respectivamente, y 12<b<24, determine la suma de los valores máximos y mínimo que toma la función.",
+      "alternatives": [
+        "53",
+        "39",
+        "47",
+        "49"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-algebra-semana-18-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cierta ciudad, la temperatura en grados centígrados de un día de verano, t horas después de las 00:00 horas, está representada por la función T, definida por:\nT(t) = 40 – 1,5 |t – 14| ; 0 ≤ t ≤ 24\nDetermine el intervalo que represente todos los valores de la temperatura T(t) durante el día.",
+      "alternatives": [
+        "[26; 40]",
+        "[23; 39]",
+        "[19; 40]",
+        "[20; 39]"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-algebra-semana-13-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRUEBA DECO SOLUCIONES DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREAS D B PROBLEMAS DESARROLLADOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Centro de Observación Espacial NSSE ha establecido que la distancia en kilómetros del cometa XXX367 a la Tierra, x años después del año 2000, es igual a\nD(x)= 5x² – 280x+4370.\nDetermine el año y la distancia en kilómetros, en ese orden, en que el cometa XXX367 estará más cerca de la Tierra.",
+      "alternatives": [
+        "2025 y 400",
+        "2030 y 500",
+        "2028 y 450",
+        "2024 y 350"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/08/razonamiento-logico-matematico.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA ÁREA C PRUEBA DECO SAN MARCOS SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La población de una plaga de pulgones que deforman las hojas de las plantas y perjudican los sembríos es modelada por la función f(t) =r [ e ^( kt) ] , donde r y k son constantes positivas y t representa el tiempo transcurrido en días, desde el inicio de la plaga. Si al cabo de 10 y 20 días hay 4000 y 25 000 pulgones, respectivamente, ¿cuántos pulgones había al cabo de 5 días?",
+      "alternatives": [
+        "1200",
+        "2000",
+        "1600",
+        "1500"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/matematicas-ejercicios-y-problemas-resueltos-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MATEMATICAS PRUEBA RESUELTA DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREA E DECO PREGUNTAS EXPLICADAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ingreso de cierta empresa está dado por:\nI(x)= – x²+80x+650 , según ello calcula el máximo ingreso.",
+      "alternatives": [
+        "2250",
+        "2350",
+        "2025",
+        "1850",
+        "3200"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/algebra-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — ALGEBRA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cierta región marítima, la profundidad y la presión establecen una relación lineal. Se observa lo siguiente: al nivel de la superficie, la presión es de 15 libras/pie², mientras que a 33 pies de profundidad, la presión aumenta a 30 libras/pie². ¿A qué profundidad se deberá descender para que la presión llegue a 40 libras/pie²?",
+      "alternatives": [
+        "40 pies",
+        "45 pies",
+        "50 pies",
+        "55 pies"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/algebra-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — ALGEBRA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El precio de costo de \"x\" artículos es P c =5x+2000. Si el precio de venta para cada artículo es 10 soles, halle la cantidad de artículos que se deben producir para no obtener ganancia ni pérdida.",
+      "alternatives": [
+        "400",
+        "1000",
+        "600",
+        "1200"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/algebra-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — ALGEBRA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea f: [–1; 1] → R una función decreciente y h la función definida por h(x) = f(2 – x).\nI. Dom(h) = [–1; 1]\nII. h es una función creciente.\nIII. – h es una función creciente.\nIndique cuáles de las siguientes proposiciones son verdaderas.",
+      "alternatives": [
+        "solo I",
+        "I y II",
+        "solo II",
+        "solo III",
+        "I y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con el uso diario, es normal que la batería de un celular pierda capacidad gradualmente. la capacidad de una batería es la cantidad de energía que puede almacenar, Y puede ser modelada mediante la siguiente función:\nC(t) = 100(0,5)r\nDonde:\nC(t) = capacidad de la batería, expresada en porcentaje.\nt = tiempo, expresado en años.\nDe acuerdo con este modelo, ¿cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "la capacidad de la batería al final del primer año es del 100 %.",
+        "La capacidad de la batería se reduce al 25 % después de 4 años de uso.",
+        "A los dos años de uso, la capacidad de la batería se reduce en más del 50 %.",
+        "A los tres años de uso, la capacidad de la batería es 87,5 %."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-ejercicios-con-respuestas-de_23.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA PRONABEC RESPUESTAS CLAVES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el año 2010, el precio de producción de un cajón de papaya fue de S/ 4. Si Adán vendió en ese año (50−𝑥) cajones de papaya, donde x es el precio de venta en soles de un cajón de papaya, ¿cuál fue el precio de venta de un cajón de papaya con el cual Adán pudo obtener la máxima utilidad?",
+      "alternatives": [
+        "S/ 28",
+        "S/ 27",
+        "S/ 22",
+        "S/ 25"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/operaciones-matematicas-arbitrarias_31.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA BECA 18 CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La Oficina de Bienestar Universitario de la UNMSM organizó un campeonato de fulbito entre los estudiantes de la Escuela de Estudios generales. Los equipos de fulbito de las áreas de ingeniería y de ciencias de la salud se enfrentaron y anotaron g(a–b) y g(3a+b) goles respectivamente.\nSi g(x)=x+1 y g(g(g(x))) es idéntico a t(x)=ax–b, respecto al resultado del partido se puede afirmar que:",
+      "alternatives": [
+        "En el marcador hubo 4 goles de diferencia",
+        "Ganó el área de ciencias de la salud",
+        "El área de ingeniería ganó 3 a 1",
+        "Las dos áreas empataron"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/grados-y-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — GRADOS Y POLINOMIOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luisa, Martha y Esmeralda hicieron un viaje al extranjero juntas. Ellas reunieron para el viaje (p(x)+8) mil soles, (q(x)+4) mil soles y 10 mil soles respectivamente y como grupo sólo gastaron 12000 soles en total en dicho viaje; donde p(2x–3)=6x–7 y q(12+7x)=72+49x . Al regreso del viaje todo el dinero que no fue gastado lo donaron a “ x ” indigentes de manera equitativa.\n¿Cuánto dinero le tocó a cada indigente?",
+      "alternatives": [
+        "S/ 800",
+        "S/ 1 000",
+        "S/ 8 000",
+        "S/ 10 000"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/grados-y-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — GRADOS Y POLINOMIOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un partido de fútbol, Pedro saca un tiro lateral y el balón sigue una trayectoria curva plana cuya altura respecto del piso, en metros, está dada por h(x)=−ax 2 +1,5x+2, donde x es la cantidad de metros horizontales que la pelota cubre desde el momento en que fue lanzada. Cuando la pelota se desplaza 2 metros en la horizontal, alcanza una altura de 17/4 metros. Además, un defensa, alejado 7 metros desde el punto en que Pedro lanzó el saque lateral, salta verticalmente y se eleva con su salto 2,6 metros por encima del césped. ¿Cuánto le faltó, aproximadamente, para cabecear el balón?",
+      "alternatives": [
+        "37 cm",
+        "50 cm",
+        "24 cm",
+        "46 cm",
+        "71 cm"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para trabajar, un taxista alquila un automóvil y paga diariamente por el alquiler un monto fijo de S/A más S/0,3 por kilómetro recorrido al día. La siguiente tabla muestra algunos pagos de alquiler (y) realizados por el taxista en función de los kilómetros recorridos (x).\nx 50 b a\ny a 79,4 89\nEl taxista trabajó un feriado y le cobraron S/0,1 más por kilómetro recorrido.\n¿Cuánto pagó ese día, si recorrió a+b+2 kilómetros?",
+      "alternatives": [
+        "S/114",
+        "S/134",
+        "S/123",
+        "S/117",
+        "S/118"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La población de cierto país (en millones de habitantes) cumple la siguiente relación: Donde t es el tiempo en año, medido a partir del año 2000. ¿En qué año la población de dicho país alcanzará los 25 millones de habitantes?.",
+      "alternatives": [
+        "2015",
+        "2025",
+        "2030",
+        "2035",
+        "2040"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/10/interes-compuesto-continuo-ejemplos-problemas-resueltos-formula-matematica-financiera-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INTERÉS CONTINUO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Edu dirige una sastreria de alta costura, especialista en ternos para caballeros; se sabe que los costos fijos ascienden a 60 000 soles, el costo por terno es de 500 soles y vende 5 ternos por 3500 soles. ¿Cuántos ternos como mínimo debe vender para empezar a ganar utilidades?",
+      "alternatives": [
+        "200",
+        "400",
+        "401",
+        "301",
+        "275"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/algebra-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cantidad de unidades de un artículo que los fabricantes están dispuestos a ofrecer y la cantidad de unidades de dicho artículo que los consumidores están dispuestos a comprar, cuando el precio del artículo es p soles, están dadas, respectivamente, por\nq=p 2 +5p–100\nq=350–2p\nDetermine la cantidad de unidades que los consumidores están dispuestos a comprar cuando esta cantidad coincide con la ofrecida por los fabricantes.",
+      "alternatives": [
+        "345",
+        "314",
+        "414",
+        "425",
+        "324"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁLGEBRA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea formar una empresa de repuestos de automóviles por lo que se establece el siguiente estudio sobre la utilidad, en miles de soles, dentro de x días. La cual es modelada por U(x)=–x 3 +bx 2 –cx+d. Inicialmente la empresa obtendrá 63 mil soles de ganancia. Y dentro de 7 días su utilidad será nula. Además 3 días después del inicio de la empresa, no obtendrá ganancia ni pérdida. Determine la utilidad de la empresa dentro de 13 días.",
+      "alternatives": [
+        "Ganará 600 mil soles.",
+        "Perderá 500 mil soles.",
+        "Perderá 600 mil soles.",
+        "Ganará 500 mil soles.",
+        "Perderá 400 mil soles."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/tutoria-3ro-4to-actividad-1-experiencia-6-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNPRG ECONÓMICAS INGRESO UNIVERSIDAD PRUEBA RESUELTA PEDRO RUIZ GALLO ADMINISTRACIÓN CONTABILIDAD ECONOMÍA GRUPO C RESPUESTAS 2025 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Wílder tiene una tienda de artículos. El precio de venta de cada artículo está relacionado en forma lineal con la cantidad de artículos a vender. A un precio de 36 soles no vendería artículo alguno, a un precio de 20 soles vendería 8 artículos. Calcule el ingreso máximo.",
+      "alternatives": [
+        "S/ 204",
+        "S/ 185",
+        "S/ 162",
+        "S/ 175",
+        "S/ 154"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ciencia-y-tecnologia-pruebas-concurso-ascenso-escala-carrera-publica-magisterial-ct-claves-evaluacion-docente-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNPRG MÉDICAS INGRESO UNIVERSIDAD PRUEBA RESUELTA MEDICINA HUMANA PEDRO RUIZ GALLO GRUPO A RESPUESTAS 2025 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un estudio de mercado se establece un comportamiento lineal entre el precio de venta unitario (en soles) y la cantidad demandada de pantalones. A un precio de venta unitario de 160 soles, la cantidad demandada es de 20 pantalones. Si el precio de cada pantalón disminuye en 60 soles se obtiene un ingreso máximo. Calcule dicho ingreso máximo.",
+      "alternatives": [
+        "S/ 4500",
+        "S/ 6000",
+        "S/ 4000",
+        "S/ 3000",
+        "S/ 5000"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ciencia-y-tecnologia-pruebas-concurso-ascenso-escala-carrera-publica-magisterial-ct-claves-evaluacion-docente-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNPRG MÉDICAS INGRESO UNIVERSIDAD PRUEBA RESUELTA MEDICINA HUMANA PEDRO RUIZ GALLO GRUPO A RESPUESTAS 2025 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El valor de una vivienda, en dólares, crece linealmente en función del tiempo transcurrido (en años). Carla adquirió una vivienda en el año del 2000 cuyo valor fue de 100 mil dólares y en el año 2022 su valor aumentó en 176 mil dólares. Determine cuál será el precio de la vivienda que adquirió Carla, en el año 2024.",
+      "alternatives": [
+        "284 mil dólares",
+        "300 mil dólares",
+        "290 mil dólares",
+        "280 mil dólares",
+        "292 mil dólares"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ciencia-y-tecnologia-pruebas-concurso-ascenso-escala-carrera-publica-magisterial-ct-claves-evaluacion-docente-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNPRG MÉDICAS INGRESO UNIVERSIDAD PRUEBA RESUELTA MEDICINA HUMANA PEDRO RUIZ GALLO GRUPO A RESPUESTAS 2025 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ingreso que percibe don Francisco está dado por la siguiente expresión\n–8x 2 +560x+150 en soles, donde «x» representa el número de años de trabajo.\n¿En cuántos años de trabajo, el ingreso de don Francisco será máximo?",
+      "alternatives": [
+        "35",
+        "33",
+        "27",
+        "25",
+        "20"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii_10.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA C 2024-2 INGENIERÍAS PRESENCIAL SAN MARCOS CLAVES INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un fabricante produce futones a un costo de $ 90 la unidad. Se sabe que, si los futones se venden a X dólares la unidad entonces se venderán 490 – X futones cada mes. ¿A cuánto debería vender el fabricante cada futón con el fin de obtener la máxima ganancia?",
+      "alternatives": [
+        "$ 280",
+        "$ 270",
+        "$ 320",
+        "$ 290",
+        "$ 300"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/segundo-examen-solucionario-pre-san.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA D 2024-2 ADMINISTRACIÓN MARKETING CONTABILIDAD ECONOMÍA PRESENCIAL SAN MARCOS CLAVES INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El gasto en miles de soles de una empresa está dado por:\nG (x)= x 2 –16x+74\nDonde x representa el número de cientos de unidades vendidas. ¿Cuántas unidades deben venderse para que el gasto sea mínimo?",
+      "alternatives": [
+        "700",
+        "800",
+        "900",
+        "1 200",
+        "1 000"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-de-simulacros-y-examenes.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA A 2024-2 PRESENCIAL SAN MARCOS MEDICINA CIENCIAS DE LA SALUD CLAVES INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pedrito diseña un prototipo de pirotécnico aéreo para este fin de año del 2024. La altura que alcanza el pirotécnico aéreo depende del peso que tiene. Si «x» representa el peso, en gramos, que tiene el pirotécnico aéreo y la altura que alcanza en metros está dada por:\nH=40x–x 2 –300 , 10<x<30\n¿Cuál es la máxima altura que alcanzará el pirotécnico y cuál es su peso para lograr tal altura? (Dé como respuesta la suma numérica de ambos resultados).",
+      "alternatives": [
+        "120",
+        "140",
+        "100",
+        "150",
+        "130"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/ept-1ro-2do-actividad-2-experiencia-6-resuelta-aprendo-en-casa-educacion-para-el-trabajo-tarea-web-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BOLETIN 6 ESPECIAL RESUELTO CEPRE SAN MARCOS 2024 RESPUESTAS PREUNMSM 2025 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si f(x–4)=x+7\nDetermina f(x+7)",
+      "alternatives": [
+        "x+4",
+        "x+11",
+        "x+14",
+        "x+18",
+        "x+12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El gerente de una fábrica de muebles observa que cuesta 2000 dólares producir 100 sillas en un día y 4400 dólares producir 300 sillas en un día. Si la relación entre el costo y el número de sillas fabricadas es lineal, ¿cuánto costará producir 500 sillas?",
+      "alternatives": [
+        "6800 dólares",
+        "6000 dólares",
+        "6400 dólares",
+        "5800 dólares",
+        "6200 dólares"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sastre puede confeccionar pantalones de vestir a un costo de 60 soles cada uno. Si los vende a k soles la unidad (60 ≤ k ≤ 130), se estima que puede vender (130 – k) pantalones al mes. Si la utilidad mensual del sastre depende del precio de venta de dicha prenda de vestir, determine cuál debe ser el precio de venta de cada pantalón para que su utilidad mensual sea máxima.",
+      "alternatives": [
+        "S/.100",
+        "S/.85",
+        "S/.95",
+        "S/.80"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/razonamiento-logico-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO LÓGICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Algunos científicos afirman que el promedio de la temperatura de la superficie de la Tierra está subiendo constantemente.\nEl promedio de la temperatura de la superficie de la Tierra lo han modelado como sigue:\nT=0,02t+15\ndonde T es la temperatura en °C y t en años desde 1950.\nPor lo tanto, se puede pronosticar que la temperatura promedio en °C de la superficie de !a Tierra en el año 2050 será",
+      "alternatives": [
+        "15",
+        "14",
+        "18",
+        "16",
+        "17"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-de-algebra-preuniversitaria.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea f: [–1; 1] → ℝ una función decreciente y h la función definida por h(x)= f(2–x).\nI) Dom(h) = [–1; 1]\nII) h es una función creciente.\nIII) –h es una función creciente.\nIndique cuáles de las siguientes proposiciones son verdaderas.",
+      "alternatives": [
+        "solo I",
+        "I y II",
+        "solo II",
+        "solo III",
+        "I y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-de-algebra-preuniversitaria.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los elementos radiactivos tienden a disminuir hasta agotarse completamente a medida que transcurre el tiempo. Se ha observado que cierto tipo de sustancia se desintegra en forma tal que la cantidad de masa (en gramos) restantes después de t días está representado por\nN(t)=6m×e –0,08t , donde m es el valor de x que verifica la ecuación :\n(Log a x)(Log b x)(Log a x+log b x) –1 =Log a b 6\n¿Cuánto tiempo, aproximadamente, demorará en reducirse la masa inicial a su tercera parte?",
+      "alternatives": [
+        "12,5Ln3",
+        "Ln3",
+        "8Ln3",
+        "3Lln8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — LOGARITMOS DE EXAMEN ADMISIÓN UNIVERSIDAD PREGUNTAS RESUELTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de un estudio, un biólogo estableció que producto de una infección, la cantidad en miles de parásitos presentes en el intestino delgado se modela por f(t)=4+te –kt , donde t es el tiempo en días. Después de una semana hay 5400 parásitos en el intestino delgado. Determine cuantos parásitos hay luego de e Ln7 +Ln2 días.",
+      "alternatives": [
+        "4560",
+        "4800",
+        "4200",
+        "5420",
+        "7240"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logaritmos-ejercicios-resueltos-quinto.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE LOGARITMOS CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el agua, las condiciones térmicas para llevar a cabo una vida óptima depende de cada especie de pez. Para algunas especies las temperaturas muy altas o muy bajas pueden conducir a una mortalidad elevada. En un estudio se observó que en un determinado momento la población de peces en una parte del océano fue de y ( en miles de peces) cuando la temperatura T=Log(x+1)+(Log(x–1) (en grados Celsius) fue positiva. Si el valor de y es el menor entero positivo tal que verifica que, (Log a y) a + 3aLog a y ≥ a 2a , siendo a el menor valor entero de x para el cual la temperatura es positiva.\n¿Cuántos peces observaron en dicho estudio?",
+      "alternatives": [
+        "5 mil",
+        "4 mil",
+        "3 mil",
+        "6 mil"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-logaritmicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LOGARÍTMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Memo se entera que una ONG repartirá canastas de víveres a personas que viven en lugares de frio extremo y que esto se hará de acuerdo al PT que es el promedio de la temperatura máxima y mínima de un pueblo. Si el PT<0°C, la canasta será de S/.600; si 0°C ≤ PT< 5°C, la canasta será de S/.350; si 5°C ≤ PT<10°C, la canasta será de S/.200, si no se cumple con cualquiera de estas condiciones, la persona no recibirá nada. La temperatura en el pueblo donde vive Memo es T°C. Si T°C disminuido en 1°C, no es menor que la diferencia positiva de 13°C con el doble de T°C, ¿en cuántos soles estará valorizada la canasta que recibirá Memo ?",
+      "alternatives": [
+        "200",
+        "600",
+        "No recibe canasta",
+        "350"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto_14.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CON VALOR ABSOLUTO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La temperatura de una sustancia a la que se le aplicó una reacción química está modelada por la función\nF(t) = 0,25t² – 4t + 30, donde F se mide en grados centígrados y t es el tiempo en horas. Determine la variación de la temperatura en las primeras 8 horas.",
+      "alternatives": [
+        "Disminuyó en 30°C.",
+        "Disminuyó en 14°C.",
+        "Aumentó en 16°C.",
+        "Aumentó en 14°C.",
+        "Disminuyó en 16°C."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funciones-cuadraticas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES CUADRÁTICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las utilidades de una empresa (en miles de dólares) en función del tiempo t (en años) está modelado por\nu(t) = 36t – 3t 2 –18 ; 1 ≤ t ≤ 8\n¿Cuál es la utilidad máxima y a partir de que tiempo las utilidades empiezan a disminuir?",
+      "alternatives": [
+        "75; 8 años",
+        "90; 8 años",
+        "80; 7 años",
+        "90; 6 años",
+        "100; 5 años"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funciones-cuadraticas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES CUADRÁTICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una tienda comercial abre sus puertas a las 10:00 a. m. sin ningún cliente y las cierra cuando se han retirado todos. La función n representa el número de clientes que depende del número de horas h después de las 10:00 a.m., y tiene la siguiente regla de correspondencia:\nn(h)=12h–h 2\nEl gasto realizado s por un cliente depende del número de horas h 1 que permanece en el centro comercial y está definido por:\ns(h 1 )=450–75h 1\n¿Cuántos clientes habrá en la hora de mayor afluencia comercial y cuánto gastará un cliente que permanece 4 horas en el centro comercial?\nDé, como respuesta, la suma de los valores numéricos encontrados.",
+      "alternatives": [
+        "185",
+        "166",
+        "182",
+        "186",
+        "178"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/vademecum-de-razonamiento-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — HABILIDAD LÓGICO MATEMÁTICO TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el máximo de la siguiente función g (x) =–2x²+12x+52",
+      "alternatives": [
+        "70",
+        "72",
+        "75",
+        "82",
+        "85"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una editorial pone a la venta un revista a un precio de S/8, se venderán 5000 copias. Por cada 2 soles que aumente el precio se dejará de vender 100 revistas. ¿Cuál es el mínimo precio de cada revista para generar un ingreso total por las ventas de S/65,800?",
+      "alternatives": [
+        "3",
+        "5",
+        "14",
+        "43",
+        "20"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un fabricante puede vender x unidades de almohadas cada semana a un precio de p soles por unidad, donde p=200–x. Además producir x almohadas cuesta 2800+45x. ¿Cuántas unidades como mínimo el fabricante debe producir y vender cada semana para obtener una utilidad de S/3150?",
+      "alternatives": [
+        "32",
+        "65",
+        "70",
+        "90",
+        "92"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea f (x) =18–3|x–2|, halle el área generado por f (x) y el eje X.",
+      "alternatives": [
+        "91",
+        "102",
+        "105",
+        "108",
+        "112"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Carlos y Luis son dueños de una empresa de alquiler de autos. La utilidad en soles que ellos tienen por alquilar un auto durante un tiempo t (en horas) está dada por: U (t) =–t²+10t.\nHalle el tiempo que deberán alquilar un auto para obtener la mayor utilidad posible.",
+      "alternatives": [
+        "2 h",
+        "5 h",
+        "6 h",
+        "8 h",
+        "7 h"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ingreso mensual de Rachel, en soles, por la venta de «x» docenas de cupcakes, está dado por I(x)=60x–x² , determine el ingreso máximo para un pedido de 180 a más cupcakes y no mayor a 300 cupcakes.",
+      "alternatives": [
+        "S/ 675",
+        "S/ 775",
+        "S/ 825",
+        "S/ 875",
+        "S/ 900"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-14-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cantidad de autos vendidos en el último mes del año está dado por la ecuación:\nV(x)= x² – 60x+1150\ndonde x representa el ahorro en miles de soles que todos los clientes han alcanzado en el mes de diciembre.\n¿Cuál es el mínimo número de autos que se venderá en este mes?",
+      "alternatives": [
+        "250",
+        "200",
+        "400",
+        "500",
+        "25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La altura que alcanza un aeroplano de juguete depende del peso que este lleva. Si x representa el peso en kilogramos que se coloca en el aéreo plano y su altura en metros está dada por:\nH = 40x – x² – 300\n¿Cuál es la máxima altura en metros que alcanzará ese juguete y el peso en kilos que llevará para lograr tal altura? De como respuesta la suma de estos resultados.",
+      "alternatives": [
+        "120",
+        "140",
+        "100",
+        "150"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un carpintero puede construir estantes para libros a un costo de 60 soles cada uno. Si los vende a “x” soles la unidad, se estima que puede vender “480 – 2x” estantes al año, ¿cuál sería la mayor ganancia anual (en soles) del carpintero?",
+      "alternatives": [
+        "16200",
+        "28800",
+        "14400",
+        "20000",
+        "24300"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un fabricante de alfombras observa que las ventas mensuales de x unidades del mencionado artículo cuando su precio unitario es P soles están dadas por P=205 – 3x . Si el costo de producir unidades del mismo artículo es C=970 + 4x soles. ¿Cuántas unidades como mínimo de este artículo deberán producirse y venderse de modo que la utilidad mensual sea por lo menos de 2000 soles?",
+      "alternatives": [
+        "22",
+        "25",
+        "23",
+        "45",
+        "24"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cierta Universidad ofrece un taller de capacitación. La inscripción por persona es de S/ 80 y asisten al taller 600 personas, pero por cada disminución de S/ 2 en la inscripción asisten 10 personas más, y por cada aumento de S/ 2 en la inscripción asisten 10 personas menos. Para obtener la máxima recaudación posible, ¿cuánto debe ser el costo de la inscripción a cobrar?",
+      "alternatives": [
+        "S/ 80",
+        "S/ 60",
+        "S/ 40",
+        "S/ 100",
+        "S/ 120"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Estela se dedica a la compra y venta de celulares. Cada mes compra x celulares por un valor de S/6x cada uno y los vende por internet a S/420 cada uno. ¿Cuál es la máxima ganancia que Estela puede conseguir en un mes?",
+      "alternatives": [
+        "S/2450",
+        "S/7350",
+        "S/8250",
+        "S/7680"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cantidad de autos vendidos en el último mes del año está dada por la expresión\nV(x) =x² – 60x+1150\nDonde x representa el ahorro en miles de soles que todos los clientes han alcanzado en el mes de julio. ¿Cuál es el mínimo número de autos que se venderá en este mes?",
+      "alternatives": [
+        "330",
+        "180",
+        "280",
+        "250"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa ha notado que si vende cada uno de sus artículos a S/12 habría 600 personas que podrían comprar, cada uno de ellos, un artículo. Además, que cada vez que aumentan en S/1 el costo de cada artículo la cantidad de personas que podría adquirir un artículo disminuye en 25. ¿A qué precio debe fijar cada artículo si se desea obtener la máxima recaudación?",
+      "alternatives": [
+        "S/15",
+        "S/12",
+        "S/18",
+        "S/21"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una huerta tiene actualmente 26 árboles que producen 600 frutos cada uno. Se conoce que por cada árbol adicional plantado la producción de cada árbol, disminuye en 15 frutos. ¿Cuál debe ser el número total de árboles que debe tener la huerta, para que la producción sea máxima?",
+      "alternatives": [
+        "33",
+        "25",
+        "37",
+        "28"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una caja cerrada con base cuadrada va a tener un volumen de 1000m³ si se quiere que el costo del material sea mínimo encontrar las dimensiones de la caja.",
+      "alternatives": [
+        "20 y 10",
+        "15 y 5",
+        "10 y 10",
+        "12 y 8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/maximos-y-minimos-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF APLICANDO DERIVADAS OPTIMIZACIÓN GEOMETRÍA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que:\nP(x+3)=2x+1\nP(Q(x))=2x+3\nCalcula: Q(P(1))",
+      "alternatives": [
+        "4",
+        "3",
+        "1",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/algebra-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se cumple:\nP(ax+b)=bx+a\nP(a+b)+P(b–a)=16\nHalla P(b)",
+      "alternatives": [
+        "6",
+        "4",
+        "10",
+        "8",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/algebra-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan fabrica armarios de oficina y planea venderlos a S/350 la unidad. Él estima que la fabricación le genera costos indirectos fijos que ascienden a S/11200, a lo que hay que sumarle costos de producción de S/200 por unidad fabricada. ¿Cuántas unidades debe vender Juan para obtener una ganancia de S/4550?",
+      "alternatives": [
+        "115",
+        "105",
+        "135",
+        "125",
+        "100"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/algebra-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Eloy fabrica tortas, él sabe que, si vende a S/ 20 cada torta, entonces venderá 180 tortas al día. Por cada sol que aumenta al precio de las tortas vende 6 tortas menos al día. Si el costo en la elaboración de una torta es de S/ 12. ¿Cuál es el precio, en soles, de venta de cada torta que hace máxima la ganancia diaria que obtiene Eloy ?",
+      "alternatives": [
+        "24",
+        "31",
+        "28",
+        "30",
+        "29"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-logico-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO LÓGICO MATEMÁTICO PREUNIVERSITARIO PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La presión, en pascal (Pa), que experimenta un buzo varía linealmente respecto a la profundidad a la cual se sumerge. Si se sabe que la presión al nivel del mar es de 15 Pa y que luego de sumergirse 33 pies, la presión experimentada es de 30 Pa. Halla la profundidad para la cual la presión es de 40 Pa.",
+      "alternatives": [
+        "45",
+        "55",
+        "65",
+        "75"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-ejercicios-resueltos-de-primero.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PUCP PREGUNTAS DE ENSAYO EXPLICADAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ingreso de cierta empresa está dado por:\nI(x)= – x 2 +80x+650 , según ello calcula el máximo ingreso.",
+      "alternatives": [
+        "2250",
+        "2350",
+        "2025",
+        "1850"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-ejercicios-resueltos-de-primero.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PUCP PREGUNTAS DE ENSAYO EXPLICADAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Berzy es un atleta olímpico quien se ha suministrado 250 miligramos de un fármaco para el dolor muscular. La relación que existe entre el tiempo (t) transcurrido en horas desde que se aplicó el fármaco y la cantidad de miligramos (M) que aún se encuentran en su sangre esta expresada por: M(t)=M 0 e –0,6t\n¿Después de cuantas horas de haberse suministrado el fármaco le queda solo 5 miligramos en la sangre?\nConsidere Ln0,02=–3,9",
+      "alternatives": [
+        "4,8 h",
+        "6 h",
+        "7,2 h",
+        "4,5 h",
+        "6,5 h"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/aplicaciones-de-los-logaritmos-en-la-vida-cotidiana-problemas-resueltos.html",
+      "sourceName": "razonamientopdf.blogspot.com — USO DE LOS LOGARITMOS EN LA VIDA DIARIA EJEMPLOS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa tiene varios empleados. Uno de ellos es el gerente, que gana R$ 1 000,00 por semana. Los demás empleados son jornaleros. Cada uno de ellos trabaja 2 días por semana, recibiendo R$ 80,00 por día trabajado. Llamando X a la cantidad total de empleados de la empresa, la cantidad Y, en reales, que esta empresa gasta semanalmente para pagar a sus empleados se expresa por",
+      "alternatives": [
+        "Y = 80X + 920.",
+        "Y = 80X + 1 000.",
+        "Y = 80X + 1 080.",
+        "Y = 160X + 840.",
+        "Y = 160X + 1 000."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2019/2019_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2019 dia 2 caderno azul questão 168"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cierta función \"f \"de 1er grado, se cumple:\n3f(2) + 2f(3) = 17\nf(2) – 2f(3) = 11\nDetermine el valor de f(5)",
+      "alternatives": [
+        "– 25",
+        "–11",
+        "–15",
+        "–21",
+        "–20"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de un estudio de mercado se ha determinado que la cantidad “x” de automóviles que podrá vender la marca inglesa de automóviles de lujo Rolls Royce, se relaciona con el precio unitario T(x) (en miles de dólares), de acuerdo a la función:\nT(x) = 180 – 1,2x\n¿A qué precio debe vender cada automóvil para maximizar sus ingresos?",
+      "alternatives": [
+        "80 000 dólares",
+        "90 000 dólares",
+        "100 000 dólares",
+        "120 000 dólares"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2018/09/examen-san-marcos-deco-quimica-ce.html",
+      "sourceName": "quimicapdf.blogspot.com — AREA C SAN MARCOS EXAMEN ADMISION UNIVERSIDAD SOLUCIONADO PDF"
     }
   ]
 }

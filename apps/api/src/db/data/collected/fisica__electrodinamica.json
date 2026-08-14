@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si por un alambre conductor circula una corriente de intensidad 16 mA, determine el número de electrones que atraviesan la sección transversal del conductor en 0,1 s.",
-      "alternatives": ["10^14", "10^15", "10^16", "10^17", "10^18"],
+      "alternatives": [
+        "10^14",
+        "10^15",
+        "10^16",
+        "10^17",
+        "10^18"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
       "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un alambre de 100 m, de sección transversal 5 mm², tiene una resistencia eléctrica de 0,34 Ω. Determine de qué material está hecho el alambre (según tabla de resistividades: plata 1,6×10⁻⁸; cobre 1,7×10⁻⁸; aluminio 2,8×10⁻⁸; hierro 10×10⁻⁸; plomo 22×10⁻⁸ Ω·m).",
-      "alternatives": ["plata", "cobre", "aluminio", "hierro", "plomo"],
+      "alternatives": [
+        "plata",
+        "cobre",
+        "aluminio",
+        "hierro",
+        "plomo"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
       "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un alambre de 1000 m de longitud y resistividad 5×10⁻⁶ Ω·m está conectado a un voltaje de 100 V. ¿Cuál debe ser el área de su sección recta transversal si queremos que circule una corriente de 2 A por el alambre?",
-      "alternatives": ["0,2 cm²", "0,5 cm²", "1 cm²", "2 cm²", "5 cm²"],
+      "alternatives": [
+        "0,2 cm²",
+        "0,5 cm²",
+        "1 cm²",
+        "2 cm²",
+        "5 cm²"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
       "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 6"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un hervidor eléctrico cuya resistencia es 800 Ω se conecta a una fuente de 200 V. Determine el tiempo que se necesita para que 0,5 litros de agua eleven su temperatura en 24 ºC.",
-      "alternatives": ["10 s", "50 s", "100 s", "200 s", "1 000 s"],
+      "alternatives": [
+        "10 s",
+        "50 s",
+        "100 s",
+        "200 s",
+        "1 000 s"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
       "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 18"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una bombilla eléctrica presenta la siguiente especificación técnica: 50 W – 100 V. Determine la potencia eléctrica que disipará la bombilla cuando la conectemos a una fuente de 20 V.",
-      "alternatives": ["1 W", "2 W", "3 W", "4 W", "5 W"],
+      "alternatives": [
+        "1 W",
+        "2 W",
+        "3 W",
+        "4 W",
+        "5 W"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
       "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 19"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuál es el costo mensual de energía que origina un televisor a color de 150 W al tenerlo encendido durante 5 h diarias? (cada kW·h cuesta S/. 0,30)",
-      "alternatives": ["S/. 7,25", "S/. 5,75", "S/. 4,75", "S/. 6,75", "S/. 7,50"],
+      "alternatives": [
+        "S/. 7,25",
+        "S/. 5,75",
+        "S/. 4,75",
+        "S/. 6,75",
+        "S/. 7,50"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
       "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 20"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Determine la intensidad de corriente eléctrica en un alambre de oro si en 30 s atraviesa una sección recta una cantidad de carga de 210 C.",
-      "alternatives": ["1 A", "7 A", "10 A", "21 A", "3 A"],
+      "alternatives": [
+        "1 A",
+        "7 A",
+        "10 A",
+        "21 A",
+        "3 A"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/12/intensidad-de-corriente-electrica-formula-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Intensidad de corriente eléctrica problemas resueltos, Problema 5"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Determine la cantidad de carga que pasa en 2 min a través de una sección recta si se sabe que la intensidad de corriente en el conductor es 1,5 A.",
-      "alternatives": ["1,5 C", "15 C", "3 C", "120 C", "180 C"],
+      "alternatives": [
+        "1,5 C",
+        "15 C",
+        "3 C",
+        "120 C",
+        "180 C"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/12/intensidad-de-corriente-electrica-formula-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Intensidad de corriente eléctrica problemas resueltos, Problema 6"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Una carga de 2 C pasa a través de un conductor en un tiempo de 40 s. Determine la intensidad de corriente que atraviesa dicho conductor.",
-      "alternatives": ["5 A", "0,2 A", "0,5 A", "0,02 A", "0,05 A"],
+      "alternatives": [
+        "5 A",
+        "0,2 A",
+        "0,5 A",
+        "0,02 A",
+        "0,05 A"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/12/intensidad-de-corriente-electrica-formula-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Intensidad de corriente eléctrica problemas resueltos, Problema 9"
@@ -105,10 +159,1466 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un generador de corriente proporciona 680 J a una carga de 40 C. ¿Cuál es su fuerza electromotriz (f.e.m.)?",
-      "alternatives": ["17 V", "14 V", "34 V", "68 V", "8,5 V"],
+      "alternatives": [
+        "17 V",
+        "14 V",
+        "34 V",
+        "68 V",
+        "8,5 V"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/12/la-ley-de-ohm-formula-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Ley de Ohm problemas resueltos, Problema 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un calentador eléctrico de resistencia eléctrica 21 Ω se emplea en una clase de laboratorio, para calentar medio litro de agua a temperatura ambiente; de pronto se estropea cuando estaba a 60ºC y había consumido una energía de aproximadamente 84 000 J en un tiempo de 1000 s. Si toda la energía disipada en ella es calor, ¿cuánta corriente estaba circulando por la resistencia?",
+      "alternatives": [
+        "4 A",
+        "2 A",
+        "3 A",
+        "1 A",
+        "8 A"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/fisica-ejercicios-resueltos-examen-de.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un material cuya resistencia eléctrica no es constante, sino que depende de la temperatura y de la diferencia de potencial a la cual está sometido, se llama material no óhmico; tal es el caso del filamento de un bulbo incandescente. Sobre la base de esta información, halle la razón entre la mayor y la menor corriente que conduce un filamento, si su resistencia es igual a 20 Ω cuando está frío (25°C) y 100 Ω cuando está caliente y que, además, soporta una diferencia de potencial ∆ V de 120 V.",
+      "alternatives": [
+        "3,5",
+        "4,5",
+        "5,0",
+        "4,0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-fisica-de-admision-la_21.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un alambre conductor de última tecnología en la industria eléctrica tiene 10 m de longitud, 4 cm de radio y resistencia eléctrica R=4 Ω W. En estas circunstancias, halle la resistividad eléctrica de este conductor eléctrico.\nDato: 𝛑 ≈3,1",
+      "alternatives": [
+        "1,93 μΩ·m",
+        "1,98 μΩ·m",
+        "1,88 μΩ·m",
+        "1,83 μΩ·m",
+        "1,78 μΩ·m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-fisica-de-admision-la.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fuerza electromotriz, en voltios, en cierto circuito de corriente alterna está dada por la función real E definida por E(t)=120sen(120𝜋t ), t≥0, donde t se mide en segundos. Si T y M denotan el periodo y el máximo valor que toma la función E, respectivamente, calcule M×T .",
+      "alternatives": [
+        "2/3",
+        "4",
+        "4/3",
+        "2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-trigonometria-semana-15.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la galvanoplastía se emplea corriente eléctrica para depositar un metal sobre otro. ¿Cuántos segundos se necesitan para depositar 0,635 g de cobre sobre una moneda de hierro, al hacer pasar una corriente de 0,965 amperios?\nDato: masa atómica Cu: 63,5 g",
+      "alternatives": [
+        "1000",
+        "200",
+        "20",
+        "2000"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos-quimica-semana-12-2020.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EJERCICIOS RESUELTOS DEL EXAMEN DE INGRESO A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fuerza electromotriz de una celda galvánica es independiente de",
+      "alternatives": [
+        "naturaleza de los electrodos.",
+        "concentración de los cationes.",
+        "concentración de los aniones.",
+        "temperatura del sistema.",
+        "volumen de los electrolitos."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/quimica-ejercicios-y-problemas-resueltos-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuatro resistencias de 2Ω, 8Ω, 3Ω y 6Ω son conectadas en paralelo, y estas a su vez en paralelo a una batería ideal. Calcule en V, la fuerza electromotriz de la batería, si en la resistencia de 6Ω la corriente es de 2 A.",
+      "alternatives": [
+        "4",
+        "2",
+        "8",
+        "6",
+        "12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una fábrica de componentes eléctricos se desarrollan pruebas con cierto tipo de focos led, cada uno de resistencia eléctrica R. Si solo se conecta uno de estos focos a una batería, la potencia eléctrica que disipa es P. Si se conectaran n focos, dispuestos en serie, a la batería anterior, ¿qué potencia disipará cada foco?",
+      "alternatives": [
+        "P/n",
+        "nP",
+        "P/n 2",
+        "Pn 2",
+        "P(n 2 +1)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/examen-admision-unsa-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNSA 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE SAN AGUSTIN DE AREQUIPA 2026 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una varilla cilíndrica conductora se conecta a un circuito eléctrico de tal modo que por ella circula una corriente de 1A, disipándose a una energía de 6kJ en el lapso de 1 minuto. Si se cambia la varilla por otra del mismo material, de la misma longitud pero cuya sección transversal tiene un diámetro que es el doble que el de la anterior varilla, halle la energía (en J) que se disipa en cada segundo, sabiendo que la corriente ahora es 4A.",
+      "alternatives": [
+        "400",
+        "500",
+        "600",
+        "800",
+        "1200"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/ley-o-efecto-joule-formulas-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE JOULE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La intensidad de corriente eléctrica se mide utilizando:",
+      "alternatives": [
+        "Amperímetro.",
+        "Altímetro.",
+        "Barómetro.",
+        "Nivómetro.",
+        "Voltímetro."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/cultura-general-preguntas-resueltas-de-actualidad-descarga-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CULTURA GENERAL 2027 EJERCICIOS RESUELTOS – ACTUALIDAD 2026 – 200 PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un circuito eléctrico, la potencia es proporcional al cuadrado de la intensidad de la corriente y a la resistencia del conductor. Cuando circulan 23 amperios por una resistencia de 29 ohmios, la potencia es de 15,34 kilovatios-hora. Determine el costo de la energía a 60 unidades monetarias el kilovatio-hora, si durante 50 minutos circula una corriente de 9 amperios por una resistencia de 17 ohmios.",
+      "alternatives": [
+        "67",
+        "68,85",
+        "70",
+        "72,50",
+        "84"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-aritmetica-uni.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA 1 CE PREUNI CLAVES SOLUCIONES 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al concepto de la f.e.m. (fuerza electromotriz), identifique la veracidad (V) o falsedad (F) de las siguientes proposiciones.\nI) Es la fuerza necesaria para trasladar cargas del polo negativo hacia el polo positivo de la batería.\nII) Es el trabajo necesario para trasladar cargas del polo positivo hacia el polo negativo de la batería.\nIII) La f.e.m. es una cantidad física vectorial.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FFV",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un circuito eléctrico resistivo se produce un corto circuito cuando:\nI) El circuito queda abierto por rotura de un cable.\nII) Los terminales de la fuente de energía quedan por accidente conectados directamente entre sí.\nIII) La resistencia del circuito se reduce a la resistencia de los cables de conexión.\nDetermine la combinación de proposiciones verdaderas (V) o falsas (F) en el orden correspondiente.",
+      "alternatives": [
+        "VFF",
+        "VFV",
+        "FVF",
+        "FVV",
+        "VVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un alambre tiene una resistencia eléctrica de 9 ohmios si se alarga hasta triplicar su longitud permaneciendo constante su permitividad eléctrica y su área. Determina la nueva resistencia eléctrica en ohmios.",
+      "alternatives": [
+        "27|",
+        "101",
+        "141",
+        "81",
+        "71"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la variación de la resistencia eléctrica (Ω) de un alambre, si su longitud aumenta en 2cm. Considerar que su sección transversal de 3,4mm² y su resistividad ρ=1,7×10 − ⁶ Ωm. permanecen constantes.",
+      "alternatives": [
+        "0,01",
+        "0,10",
+        "0,15",
+        "0,20",
+        "0,22"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/ley-de-pouillet-formula-ejemplos-problemas-resueltos-de-resistencia electrica-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE POUILLET EJERCICIOS RESUELTOS DE RESISTENCIA ELÉCTRICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos alambres rectos de forma cilíndrica hechos de un mismo material tienen igual masa y se encuentran a la misma temperatura. El alambre 1, cuya resistencia eléctrica es R 1 , es el doble de largo que el alambre 2. cuya resistencia es R 2 . La relación R 2 / R 1 es, entonces:",
+      "alternatives": [
+        "0,25",
+        "0,50",
+        "1,00",
+        "1,25",
+        "1,50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/ley-de-pouillet-formula-ejemplos-problemas-resueltos-de-resistencia electrica-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE POUILLET EJERCICIOS RESUELTOS DE RESISTENCIA ELÉCTRICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una varilla de cobre se estira uniformemente haciéndola 0,1% más larga.\n¿En qué porcentaje variará su resistencia eléctrica?\n(considere que la densidad no cambia con el estirón).",
+      "alternatives": [
+        "No varía",
+        "0,1%",
+        "0,2%",
+        "1,2%",
+        "2%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/ley-de-pouillet-formula-ejemplos-problemas-resueltos-de-resistencia electrica-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE POUILLET EJERCICIOS RESUELTOS DE RESISTENCIA ELÉCTRICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fuerza electromotriz de una batería a es de 12V y sus terminales están conectados a una resistencia de 5,8 Ω . La diferencia de potencial entre los bornes de la batería es de 11,6V. Calcule la resistencia interna de la batería en Ω .",
+      "alternatives": [
+        "0,1",
+        "0,2",
+        "0,3",
+        "0,4",
+        "0,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/circuitos-electricos-formulas-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUITOS ELÉCTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al transformador, determine las proposiciones verdaderas (V) o falsas (F).\nI) La inducción del primario al secundario se lleva a cabo vía un circuito eléctrico.\nII) Un transformador funciona igual con generadores de señal alterna y continua.\nIII) Es un dispositivo electromagnético cuyo principio de funcionamiento se basa en la ley de Faraday.",
+      "alternatives": [
+        "VFF",
+        "FVV",
+        "VVV",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/09/corriente-alterna-transformador-ideal-ejemplos-problemas-resueltos-formulas-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMADORES EJERCICIOS RESUELTOS DE CORRIENTE ALTERNA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule aproximadamente la potencia (en mW) que disipa un cable delgado de oro de 10 m de longitud y 1,0 mm de radio, cuando fluye una intensidad de corriente eléctrica de 0,10 A. Considere la resistividad eléctrica del oro igual a 2,44 ×10 –8 Ω ∙ m.",
+      "alternatives": [
+        "0,28",
+        "0,38",
+        "0,58",
+        "0,78",
+        "0,98"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El calor producido por una plancha es DP al cuadrado de la corriente eléctrica y al tiempo transcurrido; si una plancha produce 2000 calorías cuando circula una corriente de 2 amperios durante 10 minutos. Halle la corriente que circula por la misma plancha durante 5 minutos para producir 4000 calorías.",
+      "alternatives": [
+        "8 A",
+        "9 A",
+        "10 A",
+        "12 A"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/magnitudes-proporcionales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MAGNITUDES PROPORCIONALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se escucha con cierta frecuencia que el cambio de focos incandescentes por focos ahorradores (LED) reducirá el costo mensual de la energía eléctrica. Suponga que un foco incandescente de 100W ilumina igual que un foco LED de 15W. En este contexto, indique la verdad (V) o falsedad (F) de las siguientes propuestas:\nI ) Si ambos focos se mantienen encendidos durante una hora, la energía consumida en kWh es menor para el foco incandescente.\nII ) Por el foco incandescente circula más corriente comparada con el foco ahorrador.\nIII ) La resistencia eléctrica del foco ahorrador es menor que el foco incandescente.",
+      "alternatives": [
+        "VFF",
+        "FVV",
+        "VFV",
+        "FVF",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/cepunt-solucionario-de-fisica-examen-resuelto-admision-unt-trujillo.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fuerza electromotriz (en voltios) aplicada a un circuito eléctrico está dada por la función real\nE(t) =110sec 2 ( 𝛑 t/4) + 2 , donde t denota el tiempo en segundos. Si t∈[1;2〉 , ¿cuál será la mínima fuerza electromotriz aplicada al circuito eléctrico?,",
+      "alternatives": [
+        "225 voltios",
+        "215 voltios",
+        "210 voltios",
+        "222 voltios",
+        "220 voltios"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/funcion-seno-coseno-tangente-cotangente.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se muestra una lista de magnitudes físicas.\n• Velocidad\n• Longitud\n• Volumen\n• Intensidad de corriente eléctrica\n• Aceleración\n• Masa\n• Área\n• Tiempo\nIndique la secuencia correcta de verdad (V) o falsedad (F).\nI. Solo 5 son escalares\nII. Solo 2 son vectoriales\nIII. Solo 4 son fundamentales",
+      "alternatives": [
+        "VFV",
+        "VVF",
+        "FVF",
+        "FVV",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/ecuaciones-formulas-dimensionales.html",
+      "sourceName": "matematicasn.blogspot.com — ANÁLISIS DIMENSIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Acerca de los conductores metálicos, indique la veracidad (V) o falsedad (F) de las siguientes proposiciones.\nI) La corriente eléctrica, la constituyen los electrones de valencia.\nII) La corriente eléctrica aparece debido a la existencia de un campo eléctrico en el interior del conductor.\nIII) Cumplen con la «Ley de Ohm.»",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "FVV",
+        "FFV",
+        "VVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/intensidad-de-corriente-electrica-formula-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INTENSIDAD DE CORRIENTE ELÉCTRICA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La intensidad de corriente eléctrica se mide en :",
+      "alternatives": [
+        "Ampere",
+        "Metro",
+        "Joule",
+        "Gramo",
+        "Volt"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si en el cátodo de una celda electrolítica que contiene AgNO 2 se han depositado 5,4g del metal durante 965 segundos ,¿qué intensidad de corriente eléctrica se utilizó?",
+      "alternatives": [
+        "3,5 A",
+        "4,5 A",
+        "4 A",
+        "2,5 A",
+        "5 A"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos Amperios son necesarios para que al circular la corriente eléctrica a través de una solución de sulfato cúprico, se depositen 6,35g de Cu al cabo de 1930s?",
+      "alternatives": [
+        "50,0",
+        "96,5",
+        "95,6",
+        "0,1",
+        "10,0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROQUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La intensidad de corriente I, medida en amperios, que circula por un cable de un circuito de corriente alterna viene dada por\nI(t)=60sen(60 𝛑 t)–120sen(60 𝛑 t) sen 2 (30 𝛑 t), donde el tiempo t se mide en segundos.\nHalle la suma de los dos menores valores no nulos de t donde la intensidad de corriente es nula.",
+      "alternatives": [
+        "1/60",
+        "1/80",
+        "1/40",
+        "1/20",
+        "1/30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/trigonometria-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el número de electrones que pasan a través de una resistencia de cuatro Ohmios en un tiempo de diez minutos sabiendo que la intensidad de corriente es igual a cinco amperios.",
+      "alternatives": [
+        "16,75×10 ² ³",
+        "18,75×10 ² ¹",
+        "10,75×10 ² ³",
+        "8,7×10 ² ²",
+        "4,7×10 ² ⁰"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un metro de alambre de cobre pesa 1kgf y tiene una resistencia de 0,15Ω ¿Cuál será la longitud de un alambre del mismo material que pesa 1 t y su resistencia es 5kΩ?",
+      "alternatives": [
+        "2km",
+        "20",
+        "40",
+        "200",
+        "400"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/ley-de-pouillet-formula-ejemplos-problemas-resueltos-de-resistencia electrica-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE POUILLET EJERCICIOS RESUELTOS DE RESISTENCIA ELÉCTRICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la veracidad (V) o falsedad (F) de las siguientes proposiciones respecto de los transformadores.\nI) Son máquinas eléctricas que sólo aumentan el voltaje o tensión de la corriente.\nII) Cambian la frecuencia de la corriente alterna.\nIII) No cumplen con la ley de inducción de Faraday.",
+      "alternatives": [
+        "VFF",
+        "FFV",
+        "VVV",
+        "FVF",
+        "VFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/09/corriente-alterna-transformador-ideal-ejemplos-problemas-resueltos-formulas-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMADORES EJERCICIOS RESUELTOS DE CORRIENTE ALTERNA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I. Nikola Tesla nació el 10 de julio de 1856.\nII _______\nIII. Luego de finalizarlos, en 1881 (en Budapest), Tesla desarrolló un dispositivo repetidor telefónico o amplificador.\nIV. En 1882, se trasladó a París para trabajar como ingeniero en la Continental Edison Company.\nV. En 1887, construyó un motor de inducción sin escobillas, alimentado con corriente alterna.",
+      "alternatives": [
+        "Comenzó los estudios de ingeniería eléctrica en la Universidad de Graz.",
+        "Gana el Premio Nobel de Física.",
+        "Inicia una guerra comercial con Edison.",
+        "Gana su propuesta de electrificación con corriente alterna.",
+        "Muere el 7 de enero de 1943."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/03/inclusion-de-informacion-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INCLUSIÓN DE INFORMACIÓN EJERCICIOS RESUELTOS DE VERBAL PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija el orden correcto que deben seguir los enuncia- dos para que el texto resulte coherente y cohesivo.\nI. ¿Por qué motivos la corriente continua era un callejón sin salida para la generalización de la electricidad y la corriente alterna la única esperanza de futuro?\nII. Las partículas cargadas se mueven por un camino, como puede ser un cable eléctrico, y normalmente se dirigen hacia algún punto donde se espera que realicen algún tipo de trabajo.\nIII. Para comprenderlo, es necesario saber algo más sobre la corriente eléctrica.\nIV. ¿Cuál es la diferencia entre corriente continua y corriente alterna? V. Esta se define como el movimiento de cargas eléctricas.",
+      "alternatives": [
+        "II - IV - I - III - V",
+        "IV - I - III - V - II",
+        "IV - II - III - I - V",
+        "II - IV - I - V - III",
+        "IV - I - II - III - V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-uni-razonamiento-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — PRIMERA PRUEBA ADMISIÓN UNI 2022 I SOLUCIONARIO APTITUD ACADÉMICA HUMANIDADES UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "(I) Las patentes de Nicola Tesla y su trabajo teórico ayudaron a forjar las bases de los sistemas modernos para el uso de la energía eléctrica por corriente alterna.\n(II) Tesla Motors es una compañía estadounidense ubicada en California, que diseña, fabrica y vende coches eléctricos.\n(III) Tesla Motors ganó amplia atención al producir el Tesla Roadster, el primer automóvil de serie deportivo completamente eléctrico.\n(IV) Tesla ha desarrollado el Tesla Model S, un moderno auto de lujo totalmente eléctrico.\n(V) Con el tiempo quiere producir en masa coches eléctricos a un precio que sea accesible para el consumidor medio.",
+      "alternatives": [
+        "I",
+        "III",
+        "II",
+        "IV",
+        "V"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/08/ejercicios-de-eliminacion-de-oraciones.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Ejercicios de Eliminación de Oraciones con respuestas para secundaria"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una estudiante propone que la corriente eléctrica que fluye a través de una resistencia tiene una intensidad que depende del valor de la resistencia y del voltaje al que esta se encuentra sometida. Sus compañeros de curso disponen de distintas resistencias, cuyos valores son todos diferentes entre sí. Si desean determinar experimentalmente de qué manera la intensidad de la corriente eléctrica depende del voltaje, ¿cuál de las siguientes opciones es un procedimiento experimental adecuado para lograr su objetivo?",
+      "alternatives": [
+        "Medir la intensidad de corriente eléctrica de distintas resistencias sometidas a igual voltaje.",
+        "Medir el voltaje de una misma resistencia con distintas intensidades de corriente eléctrica.",
+        "Medir la intensidad de corriente eléctrica de una misma resistencia sometida a distintos voltajes.",
+        "Medir el voltaje de distintas resistencias con una misma intensidad de corriente eléctrica."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 34"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La Ley de Ohm permite determinar la intensidad de corriente que se establece en un circuito a partir del voltaje y de la forma en que están conectadas las resistencias. Si bien en el momento en que se propuso, aún no existía la corriente alterna, al día de hoy se puede establecer una analogía entre circuitos de corriente continua y la conexión domiciliaria. ¿Cuál de las siguientes opc iones describe de mejor forma al análogo del circuito hogareño en el cual están enchufados un televisor, una estufa y una ampolleta?",
+      "alternatives": [
+        "Un circuito en serie con resistencias distintas",
+        "Un circuito en paralelo con tres resistencias idénticas",
+        "Un circuito en paralelo con tres resistencias de distinto valor",
+        "Un circuito simple, con una resistencia equivalente a la de los tres artefactos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 36"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea comparar con precisión dos celdas de fem aproximadamente iguales a 5 V y 10 V usando un potenciómetro de 400 cm de longitud.",
+      "alternatives": [
+        "La batería que alimenta el potenciómetro debería tener un voltaje de 8 V.",
+        "La batería del potenciómetro puede tener un voltaje de 15 V, ajustando R de modo que la caída de potencial a lo largo del alambre supere ligeramente los 10 V.",
+        "Los primeros 50 cm del alambre deberían tener por sí solos una caída de potencial de 10 V.",
+        "El potenciómetro se usa generalmente para comparar resistencias y no voltajes."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep103.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.3 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considere la Fig. 11.7 del libro de texto de física del NCERT para la Clase XII. Suponga que se aumenta el voltaje aplicado a A. El haz difractado tendrá su máximo en un valor de θ que",
+      "alternatives": [
+        "será mayor que el valor anterior.",
+        "será el mismo que el valor anterior.",
+        "será menor que el valor anterior.",
+        "dependerá del blanco (target)."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep111.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.11 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El fusible es un dispositivo de protección contra sobrecorriente en circuitos. Cuando la corriente que pasa por este componente eléctrico es mayor que su corriente nominal máxima, el fusible se quema. De esta forma, evita que la corriente elevada dañe los aparatos del circuito. Suponga que el circuito eléctrico mostrado se alimenta mediante una fuente de tensión U y que el fusible soporta una corriente nominal de 500 mA. 60 Ω 60 Ω 30 Ω 120 Ω Fusible 60 Ω 40 Ω U ¿Cuál es el valor máximo de la tensión U para que el fusible no se queme?",
+      "alternatives": [
+        "20 V",
+        "40 V",
+        "60 V",
+        "120 V",
+        "185 V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2017/2017_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2017 dia 2 caderno azul questão 110"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tablero eléctrico del laboratorio de electricidad se instruye a los alumnos en la manera de construir un circuito con n resistencias de R=2Ω. En primer lugar, se les indica que las conecten en serie y, en segundo lugar, que las instalen en paralelo. ¿Cuál es el valor de n para que la resistencia equivalente del sistema conectado en serie sea igual a 16 veces la resistencia equivalente del sistema de resistencias en paralelo?",
+      "alternatives": [
+        "7",
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/fisica-ejercicios-resueltos-examen-de.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La intensidad de corriente que circula por un conductor es de 2 μA. ¿Qué tiempo demorarán 5×10 ¹³ electrones en cruzar una determinada sección transversal del conductor?",
+      "alternatives": [
+        "1 s",
+        "2 s",
+        "3 s",
+        "4 s",
+        "5 s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La intensidad de la corriente que se establece en un conductor metálico es I = 0,4 A. Suponiendo que esta corriente se mantuviera durante 10 min, calcular cuánta carga eléctrica pasó a través de una sección dada del conductor.",
+      "alternatives": [
+        "240C",
+        "400C",
+        "280C",
+        "600C",
+        "300C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cocina eléctrica consume 600 vatios durante su funcionamiento por un lapso de 15 minutos. ¿Cuál es el gasto que ocasiona, sabiendo que se paga S/.0,12 por kilovatiohora (1kwh)?",
+      "alternatives": [
+        "0,0180",
+        "0,180",
+        "1,80",
+        "2,8",
+        "0,1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/11/trabajo-y-potencia-mecanica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRABAJO Y POTENCIA PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tres resistencias iguales se conectan en serie. Cuando se aplica una diferencia de potencial a la combinación esta consume una potencia de 10W.\nQue potencia consumirá si las tres resistencias se conectan en paralelo bajo la misma diferencia de potencial.",
+      "alternatives": [
+        "3W",
+        "15W",
+        "30W",
+        "60W",
+        "90W"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/potencia-electrica-formulas-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIA ELÉCTRICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando dos resistencias iguales son conectadas en paralelo a una batería, la potencia total disipada por las resistencias es 40W , luego se conectan en serie con la misma batería la potencia disipada será:",
+      "alternatives": [
+        "160W",
+        "80",
+        "20",
+        "10",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/potencia-electrica-formulas-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIA ELÉCTRICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos cables conductores de igual material y grosor, pero longitudes de 1m y 2m respectivamente, se unen en paralelo a una batería de 8V.\n¿Cuál es la potencia consumida por cada cable?\n(resistencia/longitud=5W/m).",
+      "alternatives": [
+        "0W y 0W",
+        "6,4W y 12,8W",
+        "4,2W y 8,4W",
+        "5W y 10W"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/potencia-electrica-formulas-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIA ELÉCTRICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una fábrica de equipos, se ha diseñado un calentador eléctrico por el cual fluye corriente eléctrica continua que produce una cantidad de calor Q en un tiempo t. ¿Qué cantidad de calor producirá el calentador si se duplican su resistencia y el tiempo t, manteniendo la misma intensidad de corriente?",
+      "alternatives": [
+        "6Q",
+        "2Q",
+        "Q",
+        "8Q",
+        "4Q"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/simulacro-presencial-san-marcos-2018-i.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO SAN MARCOS 2027 I INGRESO UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un circuito, la corriente varía con el tiempo según i(t) =2+3t (en amperios), con t en segundos. La corriente se mantiene bajo esta ley desde t = 0 hasta t = 2 s en un régimen controlado. La carga total transferida en 0 ≤+≤ 2 s es:",
+      "alternatives": [
+        "20 C",
+        "16 C",
+        "14 C",
+        "12 C",
+        "10 C"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una batería de 12V tiene una resistencia interna de 0,025Ω y se conecta a una resistencia externa tal que la batería entrega una corriente de 1A. Si este circuito funciona durante 1 hora la energía gastada por la batería en calentarse a sí misma es en Joules.",
+      "alternatives": [
+        "3",
+        "12",
+        "24",
+        "60",
+        "90"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/ley-o-efecto-joule-formulas-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE JOULE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La resistencia de un foquito de linterna vale 1Ω. Si la linterna usa 2 pilas conectadas en serie de 1,5V cada una, entonces la energía, en calorías, liberada en forma de calor por el foquito durante 30s de funcionamiento de la linterna es:\n(1cal=4,18 J)",
+      "alternatives": [
+        "64,6",
+        "21,5",
+        "16,2",
+        "6,46",
+        "2,15"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/ley-o-efecto-joule-formulas-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE JOULE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos alambres L 1 y L 2 de sección trasversal circular están hechos del mismo metal y tienen igual longitud, pero la resistencia del alambre L 1 es tres veces mayor que la del alambre L 2 . La razón de las secciones del alambre L 1 respecto de L 2 , es:",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "1/2",
+        "1/3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una tetera eléctrica puede calentar un litro de agua desde 20°C hasta 100°C en 5 minutos, cuando se le conecta a 220V. Sin tomar en cuenta las pérdidas de cable, la resistencia, eléctrica de la tetera, en Ω, es",
+      "alternatives": [
+        "12,28",
+        "20,64",
+        "27,62",
+        "43,32",
+        "67,25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué cantidad de electrones debe atravesar la sección recta de un conductor para formar una corriente de 1 A?",
+      "alternatives": [
+        "1 electrón/s.",
+        "10⁶ electrones/s.",
+        "6,25×10 ¹ ⁸ electrones/s.",
+        "1,6×10 ¹ ⁹ electrones/s",
+        "6,023×10 ² ³ electrones/s."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la longitud de un alambre de resistencia “R” es triplicada y el diámetro de su sección transversal es reducido a la mitad, su nueva resistencia será:",
+      "alternatives": [
+        "R",
+        "3R",
+        "3R/4",
+        "6R",
+        "12R"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La resistividad del aluminio es 2×10 − ⁶ Ω.m. ¿Cuál será su potencia disipada cuando un alambre de 5m de longitud y 2cm² de sección transversal es sometido a una diferencia de potencial de 400 voltios (en vatios).",
+      "alternatives": [
+        "20",
+        "200",
+        "2×10⁵",
+        "2000×10 ⁵",
+        "2000"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos Joules disipa una resistencia de 60 ohmios, cuando por ella circulan 90 Coulomb durante una hora?",
+      "alternatives": [
+        "135",
+        "105",
+        "85",
+        "55",
+        "35"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un alambre de cobre (ρ=1,7×10 − ⁸ Ω.m) de 24m de longitud tiene una sección recta de 8×10 − ⁶ m². Halla la resistencia de este alambre.",
+      "alternatives": [
+        "0,041 Ω",
+        "0,051Ω",
+        "0,061 Ω",
+        "0,071Ω",
+        "0,081Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La resistencia de un alambre es de 4Ω, si el alambre es estirado uniformemente hasta que se duplica su longitud, halla su nueva resistencia.",
+      "alternatives": [
+        "1 Ω",
+        "2Ω",
+        "4Ω",
+        "8 Ω",
+        "16 Ω"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una calculadora consume una corriente de 0,3 A y tiene una resistencia interna de 20Ω. ¿Cuánto calor se genera en 10 minutos?",
+      "alternatives": [
+        "1000 J",
+        "1040 J",
+        "1080 J",
+        "1120 J",
+        "1160 J"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un aparato eléctrico de 40W está diseñado para un voltaje de 120V. ¿Qué potencia disipará si se le aplica una tensión de 90V?",
+      "alternatives": [
+        "14,5W",
+        "16,5W",
+        "18,5W",
+        "20,5W",
+        "22,5W"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina el número de resistencias de 160Ω cada una que se deben conectar en paralelo, de modo que circule una corriente de 5 A por una línea conectada a una fuente de 100 V.",
+      "alternatives": [
+        "3",
+        "5",
+        "4",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la resistencia en ohmios de un conductor que disipa 4000 W cuando se le aplica una diferencia de potencial de 20V entre sus extremos?",
+      "alternatives": [
+        "0,1 Ω",
+        "0,2 Ω",
+        "0,3 Ω",
+        "0,4Ω",
+        "0,5 Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para una resistencia de cobre de 20Ω pasa una corriente de 5A. Encontrar el calor desarrollado en 30 segundos.",
+      "alternatives": [
+        "3000cal",
+        "3200cal",
+        "3400cal",
+        "3600cal",
+        "3800cal"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las siguientes proposiciones podemos afirmar:\nI. Un amperímetro ideal tiene resistencia infinitamente pequeña.\nII. Un voltímetro ideal no disipa energía\nIII. Si se conecta un voltímetro ideal en serie con un amperímetro ideal: circulará corriente por el amperímetro, en un circuito activo.",
+      "alternatives": [
+        "FVF",
+        "FVV",
+        "FFV",
+        "VFF",
+        "VFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usando grafito en polvo se moldea una resistencia de 2Ω, en forma de paralelepípedo cuya base es un cuadrado. Si la misma cantidad de grafito se moldea también en forma de paralelepípedo, pero con una base cuadrada cuya área es el 25% de la anterior, ¿cuál será su resistencia?",
+      "alternatives": [
+        "30 Ω",
+        "32 Ω",
+        "34 Ω",
+        "36Ω",
+        "38 Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la resistencia interna de un generador cuya f.e.m. es de 120V y da una diferencia potencial de 100V cuando se le suministra una corriente de 20 A",
+      "alternatives": [
+        "0,25Ω",
+        "0,5 Ω",
+        "0,8Ω",
+        "1 Ω",
+        "1,5 Ω"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos resistencias en serie de 3Ω y 6Ω se conectan a una pila de f.e.m. 30V y de resistencia interna 1V. ¿Cuál es la corriente que pasa por la pila?",
+      "alternatives": [
+        "1A",
+        "2A",
+        "3A",
+        "4A",
+        "5A"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el problema anterior, si la conexión se hace en paralelo. ¿Qué corriente pasa por la pila?",
+      "alternatives": [
+        "10A",
+        "20A",
+        "30A",
+        "40ª",
+        "50A"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un generador de f.e.m 100 V y de resistencia interna 2Ω alimenta una resistencia de 12Ω y un motor de resistencia interna de 1Ω. La intensidad es de 5A. Determina la f.e.m del motor.",
+      "alternatives": [
+        "20V",
+        "25V",
+        "30V",
+        "35V",
+        "40V"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una fuente de tensión de 40V tiene una resistencia interna de 1Ω, ¿qué calor se genera en la fuente en 5 s, si conectamos una resistencia de 4Ω a sus bornes?",
+      "alternatives": [
+        "320 J",
+        "330 J",
+        "340 J",
+        "350 J",
+        "360 J"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el problema anterior, halla el calor que se genera en todo el circuito en dicho tiempo t=5 s.",
+      "alternatives": [
+        "1000 J",
+        "1200 J",
+        "1400 J",
+        "1600 J",
+        "1800 J"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos lámparas, cada una de 40W y 120 V, se usan como resistencia en un circuito. Si lámparas se conectan en serie. ¿Cuál es la potencia del conjunto?",
+      "alternatives": [
+        "20W",
+        "40W",
+        "60W",
+        "80W",
+        "100W"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el número de electrones que pasan por una sección transversal de un alambre de 0,3 A durante 16s.",
+      "alternatives": [
+        "3×10 ¹ ⁹ e",
+        "5×10 ¹ ⁹ e",
+        "15×10 ¹ ⁹ e",
+        "10×10 ¹ ⁹ e",
+        "4×10 ¹ ⁹ e"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al conectar a un toma corriente de 220v una plancha se obtiene una corriente de 8 A, si la plancha fue conectada a 110v. ¿Qué corriente circularía por ella?",
+      "alternatives": [
+        "2A",
+        "4A",
+        "3A",
+        "8A",
+        "6A"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una instalación eléctrica se cambia una resistencia de 12Ω fabricada con un alambre de níquel de longitud L y área de sección transversal “S” por otro alambre de igual longitud y sección. La nueva resistencia será de:\nPni = 0,12Ωmm²/m\nPconstantan = 0,5Ωmm²/m",
+      "alternatives": [
+        "12 Ω",
+        "24Ω",
+        "26Ω",
+        "50Ω",
+        "58 Ω"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la intensidad de corriente (en A) que circulará a través de un conductor de aluminio de 500 m de longitud y 1,4 mm2 de área de sección transversal, cuando se le aplique una diferencia de potencial de 150 V.\nResistividad del aluminio:\nρ Al =2,8×10 –8 Ω · m",
+      "alternatives": [
+        "35",
+        "25",
+        "10",
+        "55",
+        "15"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sistemas-de-ecuaciones-lineales-metodo.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 FÍSICA QUÍMICA TERCERA PRUEBA RESUELTA –RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La intensidad de corriente que circula por un alambre conductor es DP a la diferencia de potencial aplicado a sus extremos e IP a la resistencia del mismo. Además, esta resistencia es DP a la longitud e IP al área transversal del alambre conductor. Si se aplican 20 voltios a dos alambres conductores del mismo material uno de los cuales tiene el doble de longitud y la mitad del área que el otro alambre, ¿en qué relación están sus intensidades?",
+      "alternatives": [
+        "1 a 4",
+        "3 a 8",
+        "1 a 2",
+        "3 a 2",
+        "1 a 12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/tutoria-5to-actividad-1-experiencia-8-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRIMERA EVALUACIÓN INGENIERÍAS CONOCIMIENTOS CEPRUNSA 2024 RESUELTA RESPUESTAS INGRESO UNIVERSIDAD 2025 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La generación de energía eléctrica para las grandes ciudades se produce en centrales de energía las cuales pueden ser hidroeléctricas, termoeléctricas o termonucleares. La central termoeléctrica produce corriente eléctrica de alta tensión de 300 000V, la cual sale por líneas de transmisión de alta tensión hacia las ciudades. ¿Cuál es la relación de las espiras de un transformador para convertir la energía eléctrica producida en una central termoeléctrica transportadas por líneas de alta tensión para luego convertirlas a la tensión doméstica de 220V?",
+      "alternatives": [
+        "13,64",
+        "136,4",
+        "13 640",
+        "1364",
+        "1064"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un calentador eléctrico de agua en condiciones normales consume 2200W conectado a una fuente de 220 V. Si se le conecta por intermedio de cables delgados de cobre de 1,7×10 –7 m² de sección transversal a un tomacorriente también a 220 V, que está a una distancia de 90 m del calentador, ¿cuál es la potencia de consumo del calentador en estas condiciones?\nDato: ρ Cu =1,7×10 –8 Ω.m",
+      "alternatives": [
+        "765,5 W",
+        "1108 W",
+        "1100 W",
+        "665,5 W",
+        "565,5 W"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La intensidad de corriente que circula por un conductor es de 2μA. ¿Qué tiempo demorarán 5×10 13 electrones en cruzar una determinada sección transversal del conductor?",
+      "alternatives": [
+        "1 s",
+        "2 s",
+        "3 s",
+        "4 s",
+        "5 s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-examen-admision-agraria-unalm-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es aquella energía debido al movimiento ordenado de los electrones:",
+      "alternatives": [
+        "energía mecánica",
+        "energía eólica",
+        "energía eléctrica",
+        "energía solar",
+        "energía química"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea medir una resistencia R usando un puente métrico. El estudiante elige la resistencia estándar S de 100 Ω. Encuentra el punto nulo en l1 = 2.9 cm. Se le pide intentar mejorar la precisión. ¿Cuál de las siguientes es una forma útil de hacerlo?",
+      "alternatives": [
+        "Debería medir l1 con mayor precisión.",
+        "Debería cambiar S a 1000 Ω y repetir el experimento.",
+        "Debería cambiar S a 3 Ω y repetir el experimento.",
+        "Debería abandonar la idea de lograr una medición más precisa con un puente métrico."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep103.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.3 MCQ 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una varilla metálica de 10 cm de longitud y sección transversal rectangular de 1 cm × cm se conecta a una batería a través de caras opuestas. La resistencia será",
+      "alternatives": [
+        "máxima cuando la batería se conecta a través de las caras de 1 cm × cm.",
+        "máxima cuando la batería se conecta a través de las caras de 10 cm × 1 cm.",
+        "máxima cuando la batería se conecta a través de las caras de 10 cm × cm.",
+        "la misma sin importar cuál de las tres caras se use."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep103.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.3 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes características de los electrones determina la corriente en un conductor?",
+      "alternatives": [
+        "Solo la velocidad de arrastre.",
+        "Solo la velocidad térmica.",
+        "Tanto la velocidad de arrastre como la velocidad térmica.",
+        "Ni la velocidad de arrastre ni la velocidad térmica. 21/04/2018"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep103.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.3 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El siguiente texto describe las funciones A y B de un transistor. • Función A: una variación mínima en la corriente de base produce una gran variación en la corriente de colector. • Función B: la corriente de base se utiliza para permitir o impedir el paso de la corriente de colector. ¿Cuál es la opción más adecuada para A y B?",
+      "alternatives": [
+        "A: amplificación — B: conmutación",
+        "A: amplificación — B: inducción mutua",
+        "A: rectificación — B: conmutación",
+        "A: rectificación — B: inducción mutua",
+        "A: conmutación — B: amplificación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://horaeng.com/wp-content/uploads/2024%ED%95%99%EB%85%84%EB%8F%84-%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98-%EB%AC%BC%EB%A6%AC%ED%95%992-%EB%AC%B8%EC%A0%9C.pdf",
+      "sourceName": "ebsi.co.kr — 수능 2024 물리학II 1번"
     }
   ]
 }

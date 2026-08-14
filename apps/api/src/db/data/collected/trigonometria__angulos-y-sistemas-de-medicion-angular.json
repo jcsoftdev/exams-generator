@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Convertir 7° al sistema sexagesimal expresado en minutos.",
-      "alternatives": ["490'", "420'", "300'", "560'", "360'"],
+      "alternatives": [
+        "490'",
+        "420'",
+        "300'",
+        "560'",
+        "360'"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-medicion-angular-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas de medición angular, ejercicios resueltos - Ejercicio 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Convertir 13' al sistema sexagesimal expresado en segundos.",
-      "alternatives": ["860\"", "840\"", "780\"", "620\"", "900\""],
+      "alternatives": [
+        "860\"",
+        "840\"",
+        "780\"",
+        "620\"",
+        "900\""
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-medicion-angular-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas de medición angular, ejercicios resueltos - Ejercicio 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Convertir 5° al sistema sexagesimal expresado en segundos.",
-      "alternatives": ["20 600\"", "17 960\"", "16 920\"", "18 600\"", "18 000\""],
+      "alternatives": [
+        "20 600\"",
+        "17 960\"",
+        "16 920\"",
+        "18 600\"",
+        "18 000\""
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-medicion-angular-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas de medición angular, ejercicios resueltos - Ejercicio 3"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Convertir 780' al sistema sexagesimal expresado en grados.",
-      "alternatives": ["18°", "12°", "14°", "13°", "15°"],
+      "alternatives": [
+        "18°",
+        "12°",
+        "14°",
+        "13°",
+        "15°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-medicion-angular-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas de medición angular, ejercicios resueltos - Ejercicio 4"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Convertir 14 400\" al sistema sexagesimal expresado en grados.",
-      "alternatives": ["7°", "4°", "5°", "3°", "6°"],
+      "alternatives": [
+        "7°",
+        "4°",
+        "5°",
+        "3°",
+        "6°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-medicion-angular-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas de medición angular, ejercicios resueltos - Ejercicio 5"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcular el equivalente de 20g (grados centesimales).",
-      "alternatives": ["10°", "9°", "π/4 rad", "π/10 rad", "π/18 rad"],
+      "alternatives": [
+        "10°",
+        "9°",
+        "π/4 rad",
+        "π/10 rad",
+        "π/18 rad"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas angulares ejercicios resueltos - Práctica Q1"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcular el equivalente de π/48 rad en el sistema sexagesimal.",
-      "alternatives": ["2°15'", "3°15'", "2°45'", "3°45'", "5°15'"],
+      "alternatives": [
+        "2°15'",
+        "3°15'",
+        "2°45'",
+        "3°45'",
+        "5°15'"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas angulares ejercicios resueltos - Práctica Q2"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcular el equivalente de π/12 rad.",
-      "alternatives": ["10°", "10g", "15°", "15g", "24°"],
+      "alternatives": [
+        "10°",
+        "10g",
+        "15°",
+        "15g",
+        "24°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas angulares ejercicios resueltos - Práctica Q3"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Convertir 81\" (segundos sexagesimales) al sistema centesimal.",
-      "alternatives": ["50s", "150s", "250s", "200s", "125s"],
+      "alternatives": [
+        "50s",
+        "150s",
+        "250s",
+        "200s",
+        "125s"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas angulares ejercicios resueltos - Práctica Q4"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Convertir 27' (minutos sexagesimales) al sistema centesimal.",
-      "alternatives": ["5m", "50m", "25m", "30m", "45m"],
+      "alternatives": [
+        "5m",
+        "50m",
+        "25m",
+        "30m",
+        "45m"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas angulares ejercicios resueltos - Práctica Q5"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dos ángulos suplementarios son tales que el doble del menor es igual al mayor menos 30°. Hallar el mayor en radianes.",
-      "alternatives": ["13π/7 rad", "13π/20 rad", "13π/18 rad", "5π/18 rad", "π/18 rad"],
+      "alternatives": [
+        "13π/7 rad",
+        "13π/20 rad",
+        "13π/18 rad",
+        "5π/18 rad",
+        "π/18 rad"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas angulares ejercicios resueltos - Práctica Q6"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dos ángulos suman 80g y se diferencian en 18°. Hallar uno de ellos en el sistema sexagesimal.",
-      "alternatives": ["40°", "45°", "82°", "13°", "15°"],
+      "alternatives": [
+        "40°",
+        "45°",
+        "82°",
+        "13°",
+        "15°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas angulares ejercicios resueltos - Práctica Q7"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si 2°62'63\" = a°a'a\", hallar \"a\".",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas angulares ejercicios resueltos - Práctica Q8"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El doble del complemento de un ángulo (en sexagesimal) es igual al suplemento del mismo ángulo en centesimal. Hallar la medida circular del ángulo.",
-      "alternatives": ["Absurdo", "π/8 rad", "π/16 rad", "-π/16 rad", "-π/8 rad"],
+      "alternatives": [
+        "Absurdo",
+        "π/8 rad",
+        "π/16 rad",
+        "-π/16 rad",
+        "-π/8 rad"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
       "sourceName": "matematicasn.blogspot.com - Sistemas angulares ejercicios resueltos - Práctica Q10"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Siendo S el número de grados sexagesimales y C el número de grados centesimales de un mismo ángulo, calcular dicho ángulo en radianes si S + C = 95.",
-      "alternatives": ["π rad", "π/2 rad", "π/3 rad", "π/4 rad", "π/5 rad"],
+      "alternatives": [
+        "π rad",
+        "π/2 rad",
+        "π/3 rad",
+        "π/4 rad",
+        "π/5 rad"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/sistemas-de-medicion-angular-formulas-y.html",
       "sourceName": "trigonometriapdf.blogspot.com - Sistemas de medición angular fórmulas y ejercicios - Ejercicio 8"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Siendo S y C los valores convencionales de un ángulo, hallar su medida circular si C - S = 4.",
-      "alternatives": ["π/4 rad", "π/2 rad", "π/5 rad", "π/8 rad", "π/9 rad"],
+      "alternatives": [
+        "π/4 rad",
+        "π/2 rad",
+        "π/5 rad",
+        "π/8 rad",
+        "π/9 rad"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/sistemas-de-medicion-angular-formulas-y.html",
       "sourceName": "trigonometriapdf.blogspot.com - Sistemas de medición angular fórmulas y ejercicios - Ejercicio 9"
@@ -182,7 +278,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si S = x - 10 y C = x + 10 son los valores convencionales de un ángulo, determinar su medida circular.",
-      "alternatives": ["π rad", "π/2 rad", "π/4 rad", "π/6 rad", "2π rad"],
+      "alternatives": [
+        "π rad",
+        "π/2 rad",
+        "π/4 rad",
+        "π/6 rad",
+        "2π rad"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/sistemas-de-medicion-angular-formulas-y.html",
       "sourceName": "trigonometriapdf.blogspot.com - Sistemas de medición angular fórmulas y ejercicios - Ejercicio 10"
@@ -193,7 +295,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si 2S + 5C = 13,6, siendo S y C los valores convencionales de un ángulo, calcular su medida circular.",
-      "alternatives": ["π/10 rad", "π/100 rad", "π/1000 rad", "π/50 rad", "π/40 rad"],
+      "alternatives": [
+        "π/10 rad",
+        "π/100 rad",
+        "π/1000 rad",
+        "π/50 rad",
+        "π/40 rad"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/sistemas-de-medicion-angular-formulas-y.html",
       "sourceName": "trigonometriapdf.blogspot.com - Sistemas de medición angular fórmulas y ejercicios - Ejercicio 11"
@@ -204,7 +312,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Siendo S, C y R los valores convencionales de un ángulo, determinar su medida circular si S + C + R = 383,1416 (usar π ≈ 3,1416).",
-      "alternatives": ["π rad", "π/2 rad", "π/4 rad", "2π rad", "π/6 rad"],
+      "alternatives": [
+        "π rad",
+        "π/2 rad",
+        "π/4 rad",
+        "2π rad",
+        "π/6 rad"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/sistemas-de-medicion-angular-formulas-y.html",
       "sourceName": "trigonometriapdf.blogspot.com - Sistemas de medición angular fórmulas y ejercicios - Ejercicio 12"
@@ -215,7 +329,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Siendo S y C los valores convencionales de un ángulo donde C - S = 4, hallar su medida en grados sexagesimales.",
-      "alternatives": ["18°", "24°", "9°", "27°", "36°"],
+      "alternatives": [
+        "18°",
+        "24°",
+        "9°",
+        "27°",
+        "36°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/sistemas-de-medicion-angular-formulas-y.html",
       "sourceName": "trigonometriapdf.blogspot.com - Sistemas de medición angular fórmulas y ejercicios - Segunda práctica Q6"
@@ -226,7 +346,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si S = n + 1 y C = n + 4 son los valores convencionales de un ángulo, hallar su medida en grados sexagesimales.",
-      "alternatives": ["18°", "9°", "27°", "15°", "36°"],
+      "alternatives": [
+        "18°",
+        "9°",
+        "27°",
+        "15°",
+        "36°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/sistemas-de-medicion-angular-formulas-y.html",
       "sourceName": "trigonometriapdf.blogspot.com - Sistemas de medición angular fórmulas y ejercicios - Segunda práctica Q8"
@@ -237,7 +363,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "La diferencia de los números que representan el suplemento en grados sexagesimales y el complemento en grados centesimales de la medida de un mismo ángulo es igual a 85. Hallar la medida en radianes de dicho ángulo.",
-      "alternatives": ["π/4 rad", "π/6 rad", "π/5 rad", "π/3 rad", "π/2 rad"],
+      "alternatives": [
+        "π/4 rad",
+        "π/6 rad",
+        "π/5 rad",
+        "π/3 rad",
+        "π/2 rad"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://pdfcoffee.com/cepre-uni-trigonometria-pdf-free.html",
       "sourceName": "CEPRE-UNI Trigonometría (pdfcoffee) - Sistemas de medidas angulares - Problema 01"
@@ -248,7 +380,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Los ángulos internos de un terreno triangular miden 24°15'18\", x° y 3,05g. Si el costo para cercar dicho terreno es (20x) soles, hallar dicho costo.",
-      "alternatives": ["3 200 soles", "3 060 soles", "3 400 soles", "3 100 soles", "3 020 soles"],
+      "alternatives": [
+        "3 200 soles",
+        "3 060 soles",
+        "3 400 soles",
+        "3 100 soles",
+        "3 020 soles"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionaro-del-examen-1-pre-san-marcos.html",
       "sourceName": "matematicasn.blogspot.com - Pre San Marcos Semana 1 Solucionario - Pregunta 1"
@@ -259,7 +397,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Carlos sale de su domicilio a las 7:58 a.m. Al llegar al colegio, el minutero avanzó un ángulo α. Si α = a° = bg y 3b – a = 196, ¿a qué hora llegó Carlos al colegio?",
-      "alternatives": ["8:12 a.m.", "8:37 a.m.", "8:45 a.m.", "8:52 a.m.", "8:11 a.m."],
+      "alternatives": [
+        "8:12 a.m.",
+        "8:37 a.m.",
+        "8:45 a.m.",
+        "8:52 a.m.",
+        "8:11 a.m."
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionaro-del-examen-1-pre-san-marcos.html",
       "sourceName": "matematicasn.blogspot.com - Pre San Marcos Semana 1 Solucionario - Pregunta 2"
@@ -270,7 +414,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dos ángulos complementarios donde uno excede al otro en 50°. Hallar el menor en grados sexagesimales.",
-      "alternatives": ["20°", "18°", "30°", "27°", "40°"],
+      "alternatives": [
+        "20°",
+        "18°",
+        "30°",
+        "27°",
+        "40°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/sistemas-de-medicion-angular-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
       "sourceName": "geometriapdf.blogspot.com - Sistemas de medición angular ejercicios y problemas resueltos - Problema 1"
@@ -281,7 +431,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dos ángulos suplementarios están en razón de 2:3. Hallar el menor en radianes.",
-      "alternatives": ["π/3 rad", "π/4 rad", "2π/5 rad", "2π/3 rad", "3π/5 rad"],
+      "alternatives": [
+        "π/3 rad",
+        "π/4 rad",
+        "2π/5 rad",
+        "2π/3 rad",
+        "3π/5 rad"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/sistemas-de-medicion-angular-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
       "sourceName": "geometriapdf.blogspot.com - Sistemas de medición angular ejercicios y problemas resueltos - Problema 2"
@@ -292,7 +448,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Convertir πx/7 radianes al sistema sexagesimal resulta 540°. Determinar el valor de x.",
-      "alternatives": ["14", "21", "28", "35", "42"],
+      "alternatives": [
+        "14",
+        "21",
+        "28",
+        "35",
+        "42"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/sistemas-de-medicion-angular-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
       "sourceName": "geometriapdf.blogspot.com - Sistemas de medición angular ejercicios y problemas resueltos - Problema 3"
@@ -303,7 +465,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Expresar el complemento de 30° en el sistema circular (radianes).",
-      "alternatives": ["π/3 rad", "π/6 rad", "π/4 rad", "π/5 rad", "π/8 rad"],
+      "alternatives": [
+        "π/3 rad",
+        "π/6 rad",
+        "π/4 rad",
+        "π/5 rad",
+        "π/8 rad"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/sistema-de-medidas-angulares-2/37646330",
       "sourceName": "SlideShare - Sistema de medidas angulares (2) - Ejercicio propuesto 1"
@@ -314,7 +482,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determinar la medida de un ángulo en radianes si se verifica: 2SR/8 = CR/20, siendo S y C los valores convencionales del ángulo.",
-      "alternatives": ["π/6 rad", "π/8 rad", "π/4 rad", "π/5 rad", "π/10 rad"],
+      "alternatives": [
+        "π/6 rad",
+        "π/8 rad",
+        "π/4 rad",
+        "π/5 rad",
+        "π/10 rad"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/sistema-de-medidas-angulares-2/37646330",
       "sourceName": "SlideShare - Sistema de medidas angulares (2) - Ejercicio propuesto 2"
@@ -325,7 +499,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Los ángulos iguales de un triángulo isósceles miden (8x – 3)° y (9x – 4)g respectivamente. Hallar el ángulo desigual en radianes.",
-      "alternatives": ["π/3 rad", "2π/5 rad", "π/10 rad", "4π/5 rad", "π/2 rad"],
+      "alternatives": [
+        "π/3 rad",
+        "2π/5 rad",
+        "π/10 rad",
+        "4π/5 rad",
+        "π/2 rad"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.slideshare.net/slideshow/sistema-de-medidas-angulares-2/37646330",
       "sourceName": "SlideShare - Sistema de medidas angulares (2) - Ejercicio propuesto 3"
@@ -336,7 +516,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Siendo S y C los valores convencionales de un ángulo, hallar su medida circular si 3S – 2C = 14.",
-      "alternatives": ["π/9 rad", "π/10 rad", "π/2 rad", "π/5 rad", "π/8 rad"],
+      "alternatives": [
+        "π/9 rad",
+        "π/10 rad",
+        "π/2 rad",
+        "π/5 rad",
+        "π/8 rad"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/sistema-de-medidas-angulares-2/37646330",
       "sourceName": "SlideShare - Sistema de medidas angulares (2) - Ejercicio propuesto 4"
@@ -347,7 +533,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcular E = (1°/1') + (1'm/1m), siendo 1° = 1 grado sexagesimal, 1' = 1 minuto sexagesimal, 1'm = 1 minuto centesimal, 1m = 1 minuto sexagesimal.",
-      "alternatives": ["π rad", "2π rad", "π/4 rad", "5π rad", "π/10 rad"],
+      "alternatives": [
+        "π rad",
+        "2π rad",
+        "π/4 rad",
+        "5π rad",
+        "π/10 rad"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/sistema-de-medidas-angulares-2/37646330",
       "sourceName": "SlideShare - Sistema de medidas angulares (2) - Ejercicio propuesto 5"
@@ -358,7 +550,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Los ángulos iguales de un triángulo isósceles miden (6x)° y (5x + 5)g. Calcular el ángulo desigual en radianes.",
-      "alternatives": ["2π/5 rad", "3π/5 rad", "4π/5 rad", "π/10 rad", "π/5 rad"],
+      "alternatives": [
+        "2π/5 rad",
+        "3π/5 rad",
+        "4π/5 rad",
+        "π/10 rad",
+        "π/5 rad"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "SlideShare - Libro de trigonometría de preparatoria preuniversitaria - Ejercicio 3"
@@ -369,7 +567,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si los números que representan la medida de un ángulo en los sistemas S y C son números pares consecutivos, el complemento del ángulo expresado en radianes es:",
-      "alternatives": ["π/10 rad", "3π/10 rad", "4π/5 rad", "2π/5 rad", "7π/3 rad"],
+      "alternatives": [
+        "π/10 rad",
+        "3π/10 rad",
+        "4π/5 rad",
+        "2π/5 rad",
+        "7π/3 rad"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "SlideShare - Libro de trigonometría de preparatoria preuniversitaria - Ejercicio 10"
@@ -380,7 +584,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Siendo \"y\" el factor que convierte segundos centesimales en minutos sexagesimales y \"x\" el factor que convierte minutos centesimales en segundos sexagesimales. Calcular x/y.",
-      "alternatives": ["2000", "4000", "6000", "8000", "9000"],
+      "alternatives": [
+        "2000",
+        "4000",
+        "6000",
+        "8000",
+        "9000"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "SlideShare - Libro de trigonometría de preparatoria preuniversitaria - Ejercicio 11"
@@ -391,7 +601,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Siendo S el número de grados sexagesimales y C el número de grados centesimales de un ángulo menor que una circunferencia, calcular dicho ángulo en radianes si C = x² - x - 30 y S = x² + x - 56.",
-      "alternatives": ["3π/5 rad", "3π/7 rad", "3π/10 rad", "3π/11 rad", "3π/13 rad"],
+      "alternatives": [
+        "3π/5 rad",
+        "3π/7 rad",
+        "3π/10 rad",
+        "3π/11 rad",
+        "3π/13 rad"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "SlideShare - Libro de trigonometría de preparatoria preuniversitaria - Ejercicio 12"
@@ -402,7 +618,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sabiendo que a, b y R son los números que expresan la medida de un ángulo en minutos sexagesimales, segundos centesimales y radianes respectivamente. Calcular: E = 32R / (a + 0,01b).",
-      "alternatives": ["5", "10", "20", "15", "25"],
+      "alternatives": [
+        "5",
+        "10",
+        "20",
+        "15",
+        "25"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "SlideShare - Libro de trigonometría de preparatoria preuniversitaria - Ejercicio 14"
@@ -413,7 +635,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En un cierto ángulo se cumple que 2S - C = 3√97. Calcular el complemento del ángulo en radianes.",
-      "alternatives": ["π/10 rad", "3π/10 rad", "2π/5 rad", "3π/20 rad", "7π/5 rad"],
+      "alternatives": [
+        "π/10 rad",
+        "3π/10 rad",
+        "2π/5 rad",
+        "3π/20 rad",
+        "7π/5 rad"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "SlideShare - Libro de trigonometría de preparatoria preuniversitaria - Ejercicio 17"
@@ -424,7 +652,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Al medir un ángulo positivo en los sistemas convencionales, los números que representan dichas medidas se relacionan así: la diferencia del triple del mayor con el doble del intermedio es igual a treinta veces el número menor entre π, aumentado todo en 70. Obtener la medida circular.",
-      "alternatives": ["π/2 rad", "π/3 rad", "π/4 rad", "π/5 rad", "π/6 rad"],
+      "alternatives": [
+        "π/2 rad",
+        "π/3 rad",
+        "π/4 rad",
+        "π/5 rad",
+        "π/6 rad"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/libro-de-trigonometria-de-preparatoria-preuniversitaria/56762316",
       "sourceName": "SlideShare - Libro de trigonometría de preparatoria preuniversitaria - Ejercicio 18"
@@ -435,7 +669,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si los ángulos congruentes de un triángulo isósceles miden (6x)g y (5x + 4)°, hallar el complemento del tercer ángulo en radianes.",
-      "alternatives": ["π/10 rad", "π/5 rad", "π/12 rad", "π/20 rad", "π/8 rad"],
+      "alternatives": [
+        "π/10 rad",
+        "π/5 rad",
+        "π/12 rad",
+        "π/20 rad",
+        "π/8 rad"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://es.slideshare.net/slideshow/solucionario-semana-1/33193667",
       "sourceName": "SlideShare - Solucionario Semana 1 Trigonometría - Problema 2"
@@ -446,7 +686,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si la diferencia de dos ángulos es 100g y su suma es 3π rad, sus medidas en grados sexagesimales son:",
-      "alternatives": ["315° y 225°", "325° y 215°", "300° y 240°", "290° y 250°", "315° y 235°"],
+      "alternatives": [
+        "315° y 225°",
+        "325° y 215°",
+        "300° y 240°",
+        "290° y 250°",
+        "315° y 235°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://es.slideshare.net/slideshow/solucionario-semana-1/33193667",
       "sourceName": "SlideShare - Solucionario Semana 1 Trigonometría - Problema 3"
@@ -457,7 +703,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si x + y + z = 61, calcular E = x°y' + y°z' + z°x'.",
-      "alternatives": ["61°2'", "61°51'", "62°2'", "62°1'", "60°2'"],
+      "alternatives": [
+        "61°2'",
+        "61°51'",
+        "62°2'",
+        "62°1'",
+        "60°2'"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://es.slideshare.net/slideshow/solucionario-semana-1/33193667",
       "sourceName": "SlideShare - Solucionario Semana 1 Trigonometría - Problema 6"
@@ -468,7 +720,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Reducir la expresión: (1° + 2° + 3° + ⋯ + 2014°) / (1g + 2g + 3g + ⋯ + 2014g).",
-      "alternatives": ["10/9", "9/10", "1/2", "1", "2"],
+      "alternatives": [
+        "10/9",
+        "9/10",
+        "1/2",
+        "1",
+        "2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/semana-1-angulo-trigonometrico-79354308/79354308",
       "sourceName": "SlideShare - Semana 1 Ángulo Trigonométrico - Problema de clase 1"
@@ -479,7 +737,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar el valor de: (90° + 60g + π/5 rad) / (π/5 rad + 50g).",
-      "alternatives": ["5", "4", "3", "2", "1"],
+      "alternatives": [
+        "5",
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/semana-1-angulo-trigonometrico-79354308/79354308",
       "sourceName": "SlideShare - Semana 1 Ángulo Trigonométrico - Problema de clase 2"
@@ -490,7 +754,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un estudiante de topografía mide un ángulo de 74,25° y otro estudiante mide el mismo ángulo como 74°20'. Determinar la diferencia entre estas medidas en minutos sexagesimales.",
-      "alternatives": ["12'", "10'", "8'", "5'", "15'"],
+      "alternatives": [
+        "12'",
+        "10'",
+        "8'",
+        "5'",
+        "15'"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2016/01/angulo-trigonometrico-y-sistemas-de.html",
       "sourceName": "matematicaj.blogspot.com - Ángulo trigonométrico y sistemas de medidas angulares - Problema 1"
@@ -501,7 +771,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un estudiante recorta una cartulina formando un triángulo cuyos ángulos internos miden 6x°, 10xg y π/4 rad. Calcular la medida del mayor ángulo en grados sexagesimales.",
-      "alternatives": ["45°", "54°", "81°", "21°", "72°"],
+      "alternatives": [
+        "45°",
+        "54°",
+        "81°",
+        "21°",
+        "72°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2016/01/angulo-trigonometrico-y-sistemas-de.html",
       "sourceName": "matematicaj.blogspot.com - Ángulo trigonométrico y sistemas de medidas angulares - Problema 2"
@@ -512,7 +788,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Convertir a grados sexagesimales las siguientes medidas: I) 3π/10 rad, II) 4π/9 rad.",
-      "alternatives": ["45° y 90°", "48° y 86°", "36° y 80°", "18° y 76°", "54° y 80°"],
+      "alternatives": [
+        "45° y 90°",
+        "48° y 86°",
+        "36° y 80°",
+        "18° y 76°",
+        "54° y 80°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://www.slideshare.net/slideshow/semana-1-angulo-trigonometrico-x/85229876",
       "sourceName": "SlideShare - Semana 1 Ángulo Trigonométrico X - Problema 1"
@@ -523,7 +805,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular a + b + c sabiendo que A°B'C\" = 7°42'38\" + 19°34'51\".",
-      "alternatives": ["70", "71", "72", "73", "74"],
+      "alternatives": [
+        "70",
+        "71",
+        "72",
+        "73",
+        "74"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/semana-1-angulo-trigonometrico-x/85229876",
       "sourceName": "SlideShare - Semana 1 Ángulo Trigonométrico X - Problema 4"
@@ -534,7 +822,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Expresar (18,235)° como a°b'c\" y hallar a + b + c.",
-      "alternatives": ["38", "29", "36", "47", "42"],
+      "alternatives": [
+        "38",
+        "29",
+        "36",
+        "47",
+        "42"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/semana-1-angulo-trigonometrico-x/85229876",
       "sourceName": "SlideShare - Semana 1 Ángulo Trigonométrico X - Problema 5"
@@ -545,7 +839,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Resolver la ecuación (5x + 6)° = (10x + 4)g para x.",
-      "alternatives": ["1/5", "2", "3/5", "3", "5"],
+      "alternatives": [
+        "1/5",
+        "2",
+        "3/5",
+        "3",
+        "5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/semana-1-angulo-trigonometrico-x/85229876",
       "sourceName": "SlideShare - Semana 1 Ángulo Trigonométrico X - Problema 13"
@@ -556,7 +856,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Siendo S, C, y R los valores convencionales de un ángulo, calcular S si la medida circular es un entero positivo y se verifica la condición: la suma del cuadrado de S con el cuadrado de C dividida por SC es igual a 361R/45π.",
-      "alternatives": ["π/2 rad", "π/4 rad", "π/3 rad", "π/6 rad", "π/12 rad"],
+      "alternatives": [
+        "π/2 rad",
+        "π/4 rad",
+        "π/3 rad",
+        "π/6 rad",
+        "π/12 rad"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/sistemas-de-medicion-angular-formulas-y.html",
       "sourceName": "trigonometriapdf.blogspot.com - Sistemas de medición angular - Segunda práctica Q3"
@@ -567,7 +873,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Siendo S y C los valores convencionales de un ángulo con S = 7n + 1 y C = 8n, hallar el ángulo en el sistema centesimal.",
-      "alternatives": ["10g", "20g", "30g", "40g", "50g"],
+      "alternatives": [
+        "10g",
+        "20g",
+        "30g",
+        "40g",
+        "50g"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/sistemas-de-medicion-angular-formulas-y.html",
       "sourceName": "trigonometriapdf.blogspot.com - Sistemas de medición angular - Segunda práctica Q9"
@@ -578,7 +890,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Siendo S y C los valores convencionales, y R la medida en radianes, hallar R si S × C × R = π/6.",
-      "alternatives": ["π/3 rad", "π/5 rad", "π/6 rad", "π/60 rad", "π/30 rad"],
+      "alternatives": [
+        "π/3 rad",
+        "π/5 rad",
+        "π/6 rad",
+        "π/60 rad",
+        "π/30 rad"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/sistemas-de-medicion-angular-formulas-y.html",
       "sourceName": "trigonometriapdf.blogspot.com - Sistemas de medición angular - Segunda práctica Q10"
@@ -589,7 +907,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determinar el factor de conversión x/y donde: 25x↔50g (sistema inventado vs centesimal) y 80y↔90° (otro sistema vs sexagesimal).",
-      "alternatives": ["3/8", "5/8", "7/8", "9/8", "11/8"],
+      "alternatives": [
+        "3/8",
+        "5/8",
+        "7/8",
+        "9/8",
+        "11/8"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.slideshare.net/slideshow/semana-1-38726979/38726979",
       "sourceName": "SlideShare - Semana 1 (trigonometría) - Problema resuelto 4"
@@ -600,7 +924,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La suma de dos ángulos es 18° y su diferencia es 18g. Determinar la medida circular del menor.",
-      "alternatives": ["π/5 rad", "π/10 rad", "π/8 rad", "π/6 rad", "π/4 rad"],
+      "alternatives": [
+        "π/5 rad",
+        "π/10 rad",
+        "π/8 rad",
+        "π/6 rad",
+        "π/4 rad"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.slideshare.net/slideshow/semana-1-38726979/38726979",
       "sourceName": "SlideShare - Semana 1 (trigonometría) - Problema de clase 10"
@@ -611,10 +941,1747 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si la diferencia de los segundos sexagesimales y los minutos centesimales de un mismo ángulo es 15 700, calcular su medida circular.",
-      "alternatives": ["π/2 rad", "2 rad", "π/40 rad", "40 rad", "π/10 rad"],
+      "alternatives": [
+        "π/2 rad",
+        "2 rad",
+        "π/40 rad",
+        "40 rad",
+        "π/10 rad"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.slideshare.net/slideshow/semana-1-38726979/38726979",
       "sourceName": "SlideShare - Semana 1 (trigonometría) - Problema resuelto 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al convertir 𝛑 x/7 radianes al sistema sexagesimal se obtiene 540°. Halle el valor de x.",
+      "alternatives": [
+        "14",
+        "21",
+        "28",
+        "35"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/sistemas-de-medicion-angular-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "geometriapdf.blogspot.com — SISTEMAS DE MEDIDAS ANGULARES EJERCICIOS Y PROBLEMAS RESUELTOS EN PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo isósceles, los ángulos miden (7n – 2)° y (7n + 4) g\n¿Cuántos mide el ángulo desigual en el sistema sexagesimal?.",
+      "alternatives": [
+        "60°",
+        "44°",
+        "36°",
+        "72°",
+        "54°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número que representa el valor de un ángulo en el sistema centesimal es mayor en 11 unidades al número que representa al mismo ángulo en el sistema sexagesimal. Entonces, el valor del ángulo, en radianes, es:",
+      "alternatives": [
+        "0,172",
+        "0,727",
+        "2,750",
+        "1,727",
+        "3,172"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/formula-de-conversion-en-sistemas-de.html",
+      "sourceName": "matematicasn.blogspot.com — FÓRMULAS DE CONVERSIÓN DE MEDIDAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean dos ángulos, el primero mide p grados sexagesimales y el segundo q grados centesimales. La diferencia numérica de estas medidas es 15 . Si la suma de estos ángulos en el sistema sexagesimal es 129 , los ángulos, tal como estaban medidos originalmente, son:",
+      "alternatives": [
+        "30 y 15",
+        "45 y 30",
+        "60 y 45",
+        "75 y 60",
+        "90 y 75"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/formula-de-conversion-en-sistemas-de.html",
+      "sourceName": "matematicasn.blogspot.com — FÓRMULAS DE CONVERSIÓN DE MEDIDAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las inversas de los números que representan a dos ángulos suplementarios en grados sexagesimales es 10 veces la diferencia de las inversas de los números que representan a dichos ángulos en el sistema centesimal. Halle el mayor de ellos en el sistema sexagesimal.",
+      "alternatives": [
+        "100°",
+        "105°",
+        "110°",
+        "115°",
+        "120°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/formula-de-conversion-en-sistemas-de.html",
+      "sourceName": "matematicasn.blogspot.com — FÓRMULAS DE CONVERSIÓN DE MEDIDAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo dos de sus ángulos internos miden 60 g y 𝛑/12 rad. Calcule la medida del tercer ángulo interno en el sistema sexagesimal.",
+      "alternatives": [
+        "68°",
+        "100°",
+        "111°",
+        "120°",
+        "80°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-8-experiencia-8-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Después de las 11:00 a. m. transcurren 12 minutos y, durante ese tiempo, el minutero del reloj de Silvia ha girado un ángulo en el sistema centesimal igual a x minutos. Halle el valor de x.",
+      "alternatives": [
+        "8000",
+        "4800",
+        "9600",
+        "6600",
+        "6400"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/trigonometria-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Eber plantea el siguiente problema: Determinar la medida en el sistema centesimal de aquel ángulo agudo tal que en este sistema está representado por un número entero de grados, además que su medida en el sistema sexagesimal es x°x’ donde 0<x<60.\n¿Cuál sería la respuesta del problema planteado por Eber ?",
+      "alternatives": [
+        "61 g",
+        "54 g",
+        "60 g",
+        "70 g",
+        "72 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-trigonometria-semana-10.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la medida del menor ángulo de dos, que son suplementarios, en el sistema circular si el número de grados sexagesimales de uno de ellos es al número de grados centesimales del otro como 3 es a 5.",
+      "alternatives": [
+        "2𝛑/5 rad",
+        "𝛑/5",
+        "𝛑/10",
+        "10 𝛑/11",
+        "𝛑/ 14"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-medidas-angulares-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS DE MEDIDAS ANGULARES PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las inversas de los números que representan la medida de un ángulo en el sistema sexagesimal y centesimal es igual al cuadrado de la inversa de la medida del ángulo en radianes. El ángulo mide :",
+      "alternatives": [
+        "2097/ 𝛑 rad",
+        "𝛑/5 rad",
+        "𝛑/10 rad",
+        "10 𝛑/11 rad",
+        "1800/19 𝛑 rad"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-medidas-angulares-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS DE MEDIDAS ANGULARES PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Después de las 11 :00 a. m. transcurren 12 minutos y, durante ese tiempo, el minutero del reloj de Siivia ha girado un ángulo en el sistema centesimal igual a x minutos. Halle el valor de x.",
+      "alternatives": [
+        "4800",
+        "8000",
+        "9600",
+        "6600"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-fisica-semana-12-2020.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN SAN MARCOS ÁREA D 2022 II PRUEBA DE ADMISIÓN UNIVERSIDAD 2022-2 CIENCIAS ECONÓMICAS Y DE LA GESTIÓN CLAVES RESPUESTAS UNMSM PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El factor que convierte cualquier número radianes en minutos centesimales es:",
+      "alternatives": [
+        "3436,36",
+        "3436,63",
+        "6363,63",
+        "6334,34",
+        "4637,43"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/sistemas-de-medida-angular-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SISTEMAS DE MEDIDA ANGULAR EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Siendo “S”, “C” y “R” los números de grados sexagesimales, centesimales y números de radianes de un mismo ángulo respectivamente. Reducir la expresión:\nM = S(  200) + C(180) + 20R",
+      "alternatives": [
+        "0",
+        "0,0016",
+        "1",
+        "0,246",
+        "2,1416"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/sistemas-de-medida-angular-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SISTEMAS DE MEDIDA ANGULAR EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que “S” y “R” son los números de grados sexagesimales y radianes de un ángulo, donde:\nHalle “R”.",
+      "alternatives": [
+        "5",
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/sistemas-de-medida-angular-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SISTEMAS DE MEDIDA ANGULAR EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que (4x+11) grados sexagesimales equivale a 3 𝛑 / 20 radianes. Determine el valor de x.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/trigonometria-simulacro-catolica.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PUCP RESUELTA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las medidas de dos ángulos es 5 𝛑 / 4 radianes y el mayor ángulo excede al menor en 75°. Calcule el suplemento del mayor ángulo en radianes.",
+      "alternatives": [
+        "𝛑 / 3 rad",
+        "𝛑 / 4 rad",
+        "𝛑 / 6 rad",
+        "𝛑 / 2 rad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/trigonometria-simulacro-catolica.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PUCP RESUELTA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos ángulos que sumados son 5 𝛑/4 rad y su diferencia es 75°. Determina el suplemento del mayor de los ángulos en radianes.",
+      "alternatives": [
+        "𝛑/ 12 rad",
+        "𝛑/8 rad",
+        "𝛑/ 4 rad",
+        "𝛑/3 rad",
+        "𝛑/6 rad"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/trigonometria-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PREGUNTAS DEL EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un telescopio de luz visible tiene un diámetro de lente objetivo igual a 5 m y opera con una longitud de onda de 550 nm; entonces la mínima separación angular teórica entre dos estrellas, para que estas estrellas puedan ser resolubles por dicho telescopio, en radianes, es:",
+      "alternatives": [
+        "1,1 ×10 − ⁷",
+        "1,3 ×10 − ⁷",
+        "1,5 ×10–7",
+        "1,7 ×10 − ⁷",
+        "1,9 ×10 − ⁷"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unt-examen-resuelto-pd-trujilo.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante en una clase de Topografía mide un ángulo de 74,25°, mientras que otro estudiante mide el mismo ángulo como de 74°20’. Determine la diferencia entre estas medidas en minutos sexagesimales.",
+      "alternatives": [
+        "12’",
+        "10’",
+        "8’",
+        "5’"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/01/angulo-trigonometrico-y-sistemas-de.html",
+      "sourceName": "matematicaj.blogspot.com — SISTEMAS ANGULARES SEXAGESIMAL CENTESIMAL Y RADIAL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante de secundaria recorta una cartulina formando un triángulo cuyos ángulos internos miden 6x°, 10x ᵍ y 𝛑/ 4 rad . Calcule la medida del mayor ángulo en grados sexagesimales.",
+      "alternatives": [
+        "45°",
+        "54°",
+        "81°",
+        "21°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/01/angulo-trigonometrico-y-sistemas-de.html",
+      "sourceName": "matematicaj.blogspot.com — SISTEMAS ANGULARES SEXAGESIMAL CENTESIMAL Y RADIAL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si S y C son los números de las medidas en grados sexagesimales y en grados centesimales, respectivamente, para un mismo ángulo, que cumple\n125 ^( S –1)=25 ^ C\nDetermine la medida de dicho ángulo en radianes.",
+      "alternatives": [
+        "3 𝛑 /138",
+        "3 𝛑 /139",
+        "3 𝛑 /141",
+        "3 𝛑 /137",
+        "3 𝛑 /140"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ángulos internos de un triángulo miden 64° y 52°. Calcule la mayor diferencia de sus ángulos en radianes.",
+      "alternatives": [
+        "𝛑/ 20 rad",
+        "𝛑/ 15 rad",
+        "𝛑/ 10 rad",
+        "𝛑/ 5 rad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/solucionario-catolica-2019-admision.html",
+      "sourceName": "matematicasn.blogspot.com — EVALUACIÓN DE TALENTO CATÓLICA 2027 RESUELTA INGRESO UNIVERSIDAD RESPUESTAS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las medidas de dos ángulos es 66º y la diferencia es 𝛑/ 30 rad . Calcule la medida del mayor de los ángulos en radianes.",
+      "alternatives": [
+        "𝛑/3",
+        "𝛑/6",
+        "𝛑/5",
+        "𝛑/4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/11/Solucionarios-catolica-pucp-examenes-admision-universidad-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CATÓLICA EXAMEN ADMISIÓN UNIVERSIDAD PUCP PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ángulos agudos de un triángulo rectángulo miden: (5x+6)° y (10x) g . Determinar la medida del menor ángulo en radianes",
+      "alternatives": [
+        "𝛑/3",
+        "𝛑/4",
+        "𝛑/5",
+        "𝛑/6",
+        "𝛑/8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/guia-docente-matematica-primaria-cuadernos-de-trabajo-auto-aprendizaje-aprendo-en-casa-fichas-libros-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL INGENIERÍAS PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA C 2027 – ARQUITECTURA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula un ángulo en radianes, si cinco veces la medida en centesimales menos cuatro veces la medida en sexagesimales, todo multiplicado por la medida en radianes es igual a 2,8𝛑.",
+      "alternatives": [
+        "𝛑/5 rad",
+        "𝛑/4 rad",
+        "𝛑/10 rad",
+        "𝛑/6 rad",
+        "𝛑/100 rad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia de los recíprocos de los números de grados sexagesimal y centesimal de un mismo ángulo es igual a su número de radianes que contiene el ángulo dividido por 6𝛑. Halle aproximadamente, el valor de dicho ángulo en radianes.",
+      "alternatives": [
+        "0,128",
+        "0,181",
+        "0,256",
+        "0,362",
+        "0,543"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/formula-de-conversion-en-sistemas-de.html",
+      "sourceName": "matematicasn.blogspot.com — FÓRMULAS DE CONVERSIÓN DE MEDIDAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante observa que las agujas de su reloj forman un ángulo, cuyo número de grados sexagesimales y centesimales son iguales, luego la hora que indica el reloj podría ser:",
+      "alternatives": [
+        "3:15 a.m.",
+        "6:30 a.m.",
+        "6 a.m.",
+        "12 m.",
+        "12:30 p.m."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/formula-de-conversion-en-sistemas-de.html",
+      "sourceName": "matematicasn.blogspot.com — FÓRMULAS DE CONVERSIÓN DE MEDIDAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Siendo S y C los números que expresan la medida de un mismo ángulo en los sistemas sexagesimal y centesimal que cumple 20 < 3C – 2S < 60. Halle la medida del mayor ángulo en radianes ,tal que S y C son números enteros.",
+      "alternatives": [
+        "(𝛑/10)rad",
+        "(𝛑/5)rad",
+        "(𝛑/4)rad",
+        "(𝛑/3)rad",
+        "(𝛑/2)rad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/formula-de-conversion-en-sistemas-de.html",
+      "sourceName": "matematicasn.blogspot.com — FÓRMULAS DE CONVERSIÓN DE MEDIDAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La medida de un ángulo en los sistemas sexagesimal y centesimal están representadas por dos números pares consecutivos. Halle la medida de dicho ángulo en radianes.",
+      "alternatives": [
+        "(𝛑/12)rad",
+        "(𝛑/10)rad",
+        "(𝛑/6)rad",
+        "(2𝛑/3)rad",
+        "(5𝛑/3)rad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/formula-de-conversion-en-sistemas-de.html",
+      "sourceName": "matematicasn.blogspot.com — FÓRMULAS DE CONVERSIÓN DE MEDIDAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los números que representan la medida de un ángulo en los sistemas sexagesimal y centesimal son x ¹ ⁰⁰ y x ¹ ⁰⁰ +1 respectivamente. Halle el valor del complemento del ángulo , expresado en radianes.",
+      "alternatives": [
+        "(7𝛑/20)rad",
+        "(8𝛑/20)rad",
+        "(9𝛑/20)rad",
+        "(10𝛑/22)rad",
+        "(11𝛑/3)rad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/formula-de-conversion-en-sistemas-de.html",
+      "sourceName": "matematicasn.blogspot.com — FÓRMULAS DE CONVERSIÓN DE MEDIDAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean S, C y R los números de la medida de un ángulo trigonométrico en grados sexagesimales, grados centesimales y en radianes, respectivamente.\nSi C²–S²=38 𝛑(135 R) –1 , calcule el valor de S.",
+      "alternatives": [
+        "12",
+        "9",
+        "18",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/formula-de-conversion-en-sistemas-de.html",
+      "sourceName": "matematicasn.blogspot.com — FÓRMULAS DE CONVERSIÓN DE MEDIDAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un vehículo viaja a la velocidad de 60 km/h en una pista circular de radio 20 m, recorriendo parte de ella en un tiempo de 𝛑 seg. ¿Cuánto mide en radianes el ángulo generado en ese tiempo?",
+      "alternatives": [
+        "𝛑 /6",
+        "2 𝛑 /3",
+        "5 𝛑 /6",
+        "𝛑 /3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un pequeño bloque de masa 100g se desplaza sobre una superficie horizontal lisa describiendo una circunferencia de radio 1 m de acuerdo a la ecuación de movimiento θ=2t+2t 2 , donde θ está en radianes y t en segundos. Determine para t=1s la magnitud de la fuerza centrípeta y tangencial, respectivamente.",
+      "alternatives": [
+        "0,4 N; 3,6 N",
+        "3,6 N; 0,4 N",
+        "2,6 N; 0,4 N",
+        "3,6 N; 3,6 N",
+        "0,4 N; 0,4 N"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/02/examen-uni-2018-1-tercer-examen.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-1 TERCERA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DE INGENIERÍA SOLUCIONES DE FÍSICA QUÍMICA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el número de radianes de la medida de un ángulo equivalente a 315°.",
+      "alternatives": [
+        "9 𝛑 /2",
+        "9 𝛑 /4",
+        "9 𝛑 /8",
+        "7 𝛑 /2",
+        "7 𝛑 /4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/trigonometria-examen-admision.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la composición centesimal del Cobre en la malaquita: CuCO 3 .Cu(OH) 2\nDato : m.A. [Cu=63,5]",
+      "alternatives": [
+        "42,5%",
+        "65,7",
+        "34,3",
+        "28,7",
+        "57,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que la fórmula molecular de la nicotina es C 10 H 14 N 2 .\nCalcular la composición centesimal.",
+      "alternatives": [
+        "17,28 % C , 74,07 % N , 8,65 % H",
+        "17,28 % H , 74,07 % N , 8,65 % C",
+        "17,28 % H , 74,07 % C , 8,65 % N",
+        "8,65 % H , 74,07 % C , 17,28 % N",
+        "8,65 % C , 74,07 % H , 17,28 % N"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La composición centesimal del agua en el Na 2 B 4 O 7 . X H 2 O es 47,12 %.\nHallar el valor de X .\nm.A. [Na=23, B=11]",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la fórmula empírica de un óxido de hierro cuya composición centesimal reporta 70% Fe.\nDato: m.A. [Fe = 56]",
+      "alternatives": [
+        "FeO",
+        "Fe 2 O",
+        "Fe 2 O 3",
+        "Fe 3 O 4",
+        "FeO 3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La composición centesimal del fósforo en el P 4 O x es 43,66 %.\nHallar la masa molecular del Na 2 SO 4 .X H 2 O.\nDato: m.A. [Na=23, S=32, P=31]",
+      "alternatives": [
+        "146",
+        "322",
+        "156",
+        "208",
+        "268"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la composición centesimal del agua en el sulfato de sodio decahidratado, Na 2 SO 4 .10H 2 O.\nDato: m.A. [Na=23, S=32]",
+      "alternatives": [
+        "55,9 %",
+        "44,1",
+        "5,59",
+        "94,41",
+        "4,41"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la fórmula empírica de un óxido de hierro cuya composición centesimal reporta 72,4 % Fe.\nDato: m.A. [Fe = 56]",
+      "alternatives": [
+        "FeO",
+        "Fe 2 O",
+        "Fe 2 O 3",
+        "Fe 3 O 4",
+        "FeO 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La composición centesimal de un hidrocarburo reporta 85,7% de carbono. Sabiendo que moles del hidrocarburo tiene una masa de 5,6g.\nDeterminar la fórmula molecular.",
+      "alternatives": [
+        "CH 3",
+        "C 2 H 5",
+        "C 2 H 4",
+        "C 2 H 6",
+        "C 3 H 8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La composición centesimal de un hidrocarburo reporta 80 % de carbono. Sabiendo que la masa molecular esta comprendida entre 26 y 33.\nDeterminar la fórmula molecular.",
+      "alternatives": [
+        "CH 2",
+        "C 2 H 4",
+        "CH 3",
+        "C 2 H 6",
+        "C 2 H 5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La composición centesimal de un hidrocarburo reporta 92,3% de carbono. Sabiendo que una molécula de hidrocarburo tiene una masa de 1,295×10 –22 g,\nDeterminar la fórmula molecular.",
+      "alternatives": [
+        "C 2 H 4",
+        "CH",
+        "C 2 H 2",
+        "C 4 H 4",
+        "C 6 H 6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "10 kilogramos de hematita, un mineral de Fe 2 O 3 , contiene 4,8 kg de óxido férrico. Determinar la composición centesimal del hierro en dicho mineral.\nDato: m.A. [Fe = 56]",
+      "alternatives": [
+        "27,7 %",
+        "29,6",
+        "33,6",
+        "41,6",
+        "56,4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la composición centesimal del carbonato de sodio respecto al óxido de sodio potencialmente contenido.\nDato: m.A. [Na = 23]",
+      "alternatives": [
+        "41,5 %",
+        "43,4",
+        "58,5",
+        "21,7",
+        "50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La composición centesimal de X en XY 2 es 50%.\n¿Cuál es la composición centesimal de Y en el compuesto XY 3 ?",
+      "alternatives": [
+        "30%",
+        "40",
+        "50",
+        "60",
+        "75"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la composición centesimal del CaCO 3 expresado como CaO.\nDato: m.A. [Ca = 40]",
+      "alternatives": [
+        "44%",
+        "56",
+        "63",
+        "37",
+        "50,1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos elementos X e Y forman los compuestos X 2 Y y XY 2 . Si la composición centesimal de X en el primer compuesto es 20%.\nHallar la composición de Y en el segundo compuesto.",
+      "alternatives": [
+        "31,6 %",
+        "52,61",
+        "94,1",
+        "29,2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/composicion-porcentual-o-centesimal-formula-empirica-y-molecular-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPOSICIÓN CENTESIMAL FÓRMULA EMPÍRICA Y MOLECULAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los radios de las ruedas de una bicicleta son entre sí como 4 es a 10. Calcular el número de vueltas que da la rueda mayor cuando la menor barre un ángulo de 1840𝛑 radianes.",
+      "alternatives": [
+        "286",
+        "368",
+        "184",
+        "390",
+        "736"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si al cuádruple de la diferencia del número de grado sexagesimales y centesimales de un ángulo le agregamos 230; resulta la suma de número de grados sexagesimales y centesimales del mismo ángulo. Halla la medida centesimal del ángulo.",
+      "alternatives": [
+        "0, 1 g",
+        "1 0 g",
+        "10 0 g",
+        "100 0 g",
+        "1 g"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-medidas-angulares-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS DE MEDIDAS ANGULARES PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se muestra sectores circulares concéntricos, donde S representa área, obtener x. si S = 8L²",
+      "alternatives": [
+        "2 L",
+        "4 L",
+        "5 L",
+        "6 L",
+        "8 L"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/longitud-de-arco-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si CAE es un sector circular y",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/longitud-de-arco-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el sistema mostrado, si la rueda A da de vuelta, entonces la longitud recorrida por la rueda C es:",
+      "alternatives": [
+        "3,6 ",
+        "36 ",
+        "1,8 ",
+        "18 "
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/longitud-de-arco-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el número de vueltas que da la rueda de radio (r = 1) al ir de la posición A hasta la posición B.",
+      "alternatives": [
+        "85",
+        "9",
+        "10",
+        "10,5",
+        "11"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/longitud-de-arco-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un sector circular, se le duplica su radio sin alterar el valor de su área. Calcule la relación de las medidas de los ángulos centrales.",
+      "alternatives": [
+        "1",
+        "1/2",
+        "1/3",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/trigonometria-simulacro-catolica.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PUCP RESUELTA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que\nx + y=66°\nx − y= 𝛑/ 30 rad\nhalle el mayor de los ángulos.",
+      "alternatives": [
+        "𝛑/5 rad",
+        "𝛑/4 rad",
+        "𝛑/10 rad",
+        "𝛑/9 rad"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/simulacro-resuelto-de-admision-a-la-universidad-catolica-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO CATÓLICA SOLUCIONARIO DE ACCESO UNIVERSIDAD PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triciclo la relación de los radios de las ruedas es como 5 es a 3, si la rueda mayor recorre un ángulo de 480°, ¿qué ángulo recorre la rueda menor?",
+      "alternatives": [
+        "600º",
+        "800º",
+        "720º",
+        "780º",
+        "810º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/30-ejercicios-desarrollados-de.html",
+      "sourceName": "matematicasn.blogspot.com — UNSLG INGENIERÍAS ÁREA C EXAMEN INGRESO UNIVERSIDAD SAN LUIS GONSAGA RESUELTO UNICA PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La medida de un ángulo positivo en grados sexagesimales por la medida del mismo ángulo en segundos sexagesimales es 32 400. La medida del ángulo en minutos sexagesimales es:",
+      "alternatives": [
+        "164",
+        "168",
+        "173",
+        "180",
+        "185"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Convertir : 5𝛑/32 rad a grados sexagesimales",
+      "alternatives": [
+        "28º 5’ 30”",
+        "27º 7’ 30”",
+        "28º 7’ 30”",
+        "27º 6’ 30”"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/11/Solucionarios-catolica-pucp-examenes-admision-universidad-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CATÓLICA EXAMEN ADMISIÓN UNIVERSIDAD PUCP PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el equivalente de 2 0 g .",
+      "alternatives": [
+        "10°",
+        "9°",
+        "𝛑/4 rad",
+        "𝛑/10 rad",
+        "𝛑/18 rad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el equivalente de 𝛑/48 rad.",
+      "alternatives": [
+        "2°15’",
+        "3°15’",
+        "2°45’",
+        "3°45’",
+        "5°15’"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el equivalente de 𝛑/12 rad.",
+      "alternatives": [
+        "10°",
+        "1 0 g",
+        "15°",
+        "1 5 g",
+        "24°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Convierte a centesimal : 81’’",
+      "alternatives": [
+        "5 0 s",
+        "15 0 s",
+        "25 0 s",
+        "20 0 s",
+        "12 5 s"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Convierte a centesimal : 27´",
+      "alternatives": [
+        "5 m",
+        "5 0 m",
+        "2 5 m",
+        "3 0 m",
+        "4 5 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos ángulos es 8 0 g y su diferencia es 18°. Encuentra uno de los ángulos en sexagesimales.",
+      "alternatives": [
+        "40°",
+        "45°",
+        "82°",
+        "13°",
+        "15°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se cumple que: 2°62’ 63” = a°a’a”\nHalla “a” .",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuántos segundos hay en :\nβ =2º4 ' 5 ' '",
+      "alternatives": [
+        "7444",
+        "7445",
+        "7446",
+        "7404",
+        "7448"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A cuánto equivale 1/5 del ángulo de una vuelta en cada sistema?",
+      "alternatives": [
+        "30 º ; 50 g ; ( 𝛑 /5)rad",
+        "60 º ; 70 g ; (3 𝛑 /5)rad",
+        "72 º ; 80 g ; (2 𝛑 /5)rad",
+        "64 º ; 70 g ; ( 𝛑 /5)rad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo, dos de sus ángulos miden ( 𝛑 /3) rad y ( 𝛑 /5) rad . ¿Cuál es la medida sexagesimal del tercer ángulo?",
+      "alternatives": [
+        "84º",
+        "74º",
+        "94º",
+        "64º",
+        "54º"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplificar :\nC = (3º4 ')/4 '",
+      "alternatives": [
+        "36",
+        "46",
+        "56",
+        "66",
+        "76"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos minutos centesimales hay en :\nθ=3 g 45 m ?.",
+      "alternatives": [
+        "45",
+        "245",
+        "145",
+        "345",
+        "445"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que un ángulo se expresa como (7n+1)° y también como (8n) g .\n¿Cuál es su medida radial?.",
+      "alternatives": [
+        "( 𝛑 /3)rad",
+        "( 𝛑 /4)rad",
+        "( 𝛑 /5)rad",
+        "( 𝛑 /6)rad",
+        "( 𝛑 /9)rad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un ángulo recto mide (5x + 20)° , ¿Cuál es el valor de “x”?",
+      "alternatives": [
+        "12",
+        "14",
+        "26",
+        "30",
+        "32"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/angulo-trigonometrico-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIGONOMÉTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un ángulo agudo mide (3x – 12)° , ¿Cuál es el máximo valor entero que puede tomar “x”?",
+      "alternatives": [
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/angulo-trigonometrico-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIGONOMÉTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un ángulo “ θ ” agudo, mide:\n(6x + 18)° , ¿Cuál es el máximo valor entero que puede tomar “x”?",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/angulo-trigonometrico-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIGONOMÉTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un ángulo obtuso mide:\n(6x + 120)° , ¿Cuál es el máximo valor entero que puede tomar “x”?",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/angulo-trigonometrico-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIGONOMÉTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un ángulo obtuso mide: (4n + 60)° , ¿Cuál es el máximo valor entero que puede tomar “n”?",
+      "alternatives": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "31"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/angulo-trigonometrico-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIGONOMÉTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un ángulo agudo mide: (3n + 24)° , ¿Cuál es el máximo valor entero que puede tomar “n”?",
+      "alternatives": [
+        "20",
+        "21",
+        "22",
+        "23",
+        "24 PROBLEMAS PROPUESTOS CON RESPUESTAS AL FINAL"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/angulo-trigonometrico-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIGONOMÉTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el ángulo entre 100° y 220° que sea coterminal con 1285°.",
+      "alternatives": [
+        "45°",
+        "55°",
+        "65°",
+        "75°",
+        "205°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/formula-de-conversion-en-sistemas-de.html",
+      "sourceName": "matematicasn.blogspot.com — FÓRMULAS DE CONVERSIÓN DE MEDIDAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un sector circular de 6cm de radio y 12cm de longitud de arco. Si el radio aumenta 2cm sin que el ángulo varíe, ¿ Cuál será la nueva longitud de arco ?",
+      "alternatives": [
+        "12 cm",
+        "14 cm",
+        "16 cm",
+        "18 cm",
+        "20 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lucerito está muy ansiosa esperando en la casa de su abuelito a su amiguita Fabiana para poder ir al cine. Por tal motivo, está continuamente mirando la hora y mientras tanto, se percata que el péndulo del reloj que tiene 84 cm de longitud se balancea y se desplaza 15° a cada lado respecto a la vertical. Con la información dada, determine la longitud de arco que describe.",
+      "alternatives": [
+        "7𝛑 cm",
+        "12𝛑 cm",
+        "14𝛑 cm",
+        "8𝛑 cm",
+        "10𝛑 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el péndulo de un reloj de pared mide 4 cm y su punta recorre un arco de 5°37'30'' por segundo, ¿cuántos metros recorre en un minuto el arco que describe la punta del péndulo?",
+      "alternatives": [
+        "𝛑/40 m",
+        "𝛑/20 m",
+        "3 𝛑/8 m",
+        "7 𝛑/40 m",
+        "3 𝛑/40 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La puerta de la biblioteca Amauta es de tipo vaivén. En base a ello, calcule la longitud de la trayectoria descrita por el extremo del borde inferior de la puerta al girar un ángulo de 135°, si dicho borde mide 112 cm.",
+      "alternatives": [
+        "81 𝛑 cm",
+        "80 𝛑 cm",
+        "82 𝛑 cm",
+        "84 𝛑 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la longitud del recorrido que realiza el minutero desde las 3: 00 pm., hasta las 3:20 p.m. Considere que la longitud del minutero es de 12 cm.",
+      "alternatives": [
+        "3 𝛑 cm",
+        "8 𝛑 cm",
+        "5 𝛑 cm",
+        "9 𝛑 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los brazos de un columpio miden 1,8 m de largo y pueden describir como máximo un ángulo de 150°. Calcule el espacio recorrido por el asiento del columpio cuando el ángulo descrito en su balanceo es el máximo.",
+      "alternatives": [
+        "3,5 𝛑 mm",
+        "1,5 𝛑 m",
+        "𝛑 m",
+        "2,5 𝛑 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos postulantes de la UNI , observan un reloj eléctrico cuyas agujas están detenidas, luego de la falla eléctrica en el Callao, uno de los estudiantes dice que el área que hacen las agujas es de 7,2 m² y si el reloj tiene un radio de 6 m. ¿Cuál será el arco entre las agujas?\nConsidere 𝛑=22/7",
+      "alternatives": [
+        "12/5 m",
+        "16/3 m",
+        "5 m",
+        "7 m",
+        "9 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/longitud-de-arco-y-sector-circular.html",
+      "sourceName": "matematicasn.blogspot.com — ARCO Y SECTOR EJERCICIOS DESARROLLADOS DE SECUNDARIA Y PREUNIVERSITARIA EN TRIGONOMETRÍA MATEMÁTICA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean :\nα= 4 𝛑/15\nβ = 40°\nγ =60 grados centesimales\ny las expresiones\nM= α+ β\nN=(2 α+ β+ γ)/3\nP=4 β – γ\nQ=3 α – β\nR= α/2 + 2 β + γ/2\nentonces la expresión de mayor valor es:",
+      "alternatives": [
+        "Q",
+        "P",
+        "R",
+        "N",
+        "M"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionarios-uni-2016-i-examen-de.html",
+      "sourceName": "matematicasn.blogspot.com — SEGUNDA PRUEBA ADMISIÓN UNI 2022 I SOLUCIONARIO MATEMÁTICAS UNIVERSIDAD DE INGENIERÍA 2022-1 PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La empresa Mcradio Company S.A. es contratada para instalar una antena vertical de radio. Una vez concluido el trabajo, se detectó un ángulo de inclinación respecto a la vertical igual a 6º12'36\". Por este error, se multará a la empresa con un monto igual a (a+b+c) de miles de soles; donde a, b, c se obtienen al expresar el ángulo de inclinación como a g b m c c , 0<b<90.\n¿A cuántos miles de soles ascenderá la multa?",
+      "alternatives": [
+        "90",
+        "96",
+        "54",
+        "36",
+        "195"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-trigonometria-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE TRIGONOMETRÍA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La medida de dos ángulos coterminales positivos son proporcionales a los números 2 y 7. Si la diferencia de sus medidas está comprendida entre 1200° y 1500°, calcular la medida del menor.",
+      "alternatives": [
+        "634°",
+        "603°",
+        "576°",
+        "428°",
+        "415°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-trigonometria-semana-13.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La medida de dos ángulos coterminales negativos son proporcionales a los números 7 y 5. Si la diferencia de sus medidas está comprendida entre 540° y 900°, determine cuando mide el mayor ángulo.",
+      "alternatives": [
+        "–1800°",
+        "–1700°",
+        "–1600°",
+        "– 1500°",
+        "–1400°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-trigonometria-semana-13.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ángulos de un cuadrilátero AMOR se miden en tres sistemas diferentes.\nEl ángulo A mide 30°, el ángulo M mide 5 𝛑 /6 rad y el ángulo O mide 9 0 g .\nDetermina la medida del ángulo R.",
+      "alternatives": [
+        "𝛑/20 rad",
+        "11𝛑/20 rad",
+        "𝛑/30 rad",
+        "3𝛑/20 rad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sistemas-de-medidas-angulares-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS DE MEDIDAS ANGULARES PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un niño juega con dos ruedas de radio R cm y r cm (R>r), con ambas ruedas realiza el mismo recorrido. Si la rueda de menor radio da 20 vueltas y 4R=5r, ¿cuánto mide el ángulo de giro de la rueda mayor?",
+      "alternatives": [
+        "32 𝛑 rad",
+        "20 𝛑 rad",
+        "28 𝛑 rad",
+        "34 𝛑 rad",
+        "36 𝛑 rad"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-trigonometria.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI TRIGONOMETRÍA EXAMEN FINAL RESUELTO"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el suplemento de: 135° 28' 15\"",
+      "alternatives": [
+        "45° 31' 45\"",
+        "45° 31' 35\"",
+        "44° 31' 45\"",
+        "44° 31' 35\"",
+        "44° 21' 45\""
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-segundo-de.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON ÁNGULOS EJEMPLOS Y PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el complemento de: 72° 25' 46\"",
+      "alternatives": [
+        "17° 24' 15\"",
+        "17° 34' 15\"",
+        "17° 34' 14\"",
+        "17° 41' 14\"",
+        "12° 34' 14\""
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-segundo-de.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON ÁNGULOS EJEMPLOS Y PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la diferencia de dos ángulos que miden 30° 46' 50\" y 18° 52' 35\"",
+      "alternatives": [
+        "12° 54' 15\"",
+        "10° 54' 15\"",
+        "11° 55' 15\"",
+        "11° 54' 25\"",
+        "11° 54' 15\""
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-segundo-de.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON ÁNGULOS EJEMPLOS Y PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un ángulo mide 40°, calcular el suplemento del doble de dicho ángulo.",
+      "alternatives": [
+        "80°",
+        "100°",
+        "140°",
+        "120°",
+        "110°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-segundo-de.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON ÁNGULOS EJEMPLOS Y PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la diferencia de dos ángulos que miden 109° 30' 25\" y 58° 19' 30\"",
+      "alternatives": [
+        "51° 20' 55\"",
+        "51° 10' 55\"",
+        "51° 10' 45\"",
+        "41° 10' 35\"",
+        "61° 10' 55\""
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-segundo-de.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON ÁNGULOS EJEMPLOS Y PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un ángulo mide 60°, calcular el suplemento del complemento de dicho ángulo.",
+      "alternatives": [
+        "120°",
+        "130°",
+        "150°",
+        "160°",
+        "100°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-segundo-de.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON ÁNGULOS EJEMPLOS Y PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el suplemento de 24° 30' 18\"",
+      "alternatives": [
+        "165° 29' 42\"",
+        "135° 29' 46\"",
+        "155° 29' 42\"",
+        "145° 29' 42\"",
+        "155° 28' 52\""
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-segundo-de.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON ÁNGULOS EJEMPLOS Y PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos ruedas conectadas por una faja; si hacemos girar la faja, se observa que las ruedas giran ángulos que suman 144º. Determine la diferencia de los números de vueltas que dan estas ruedas si sus radios miden 3 m y 5 m",
+      "alternatives": [
+        "1/10",
+        "1/8",
+        "1/2",
+        "3/8",
+        "2/7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/11/aplicaciones-longitud-arco-ejercicios.html",
+      "sourceName": "trigonometriapdf.blogspot.com — APLICACIONES DE LA LONGITUD ARCO PROBLEMAS RESUELTOS –TRIGONOMETRIA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una bicicleta cuyas ruedas tienen por radios R 1 y R 2 (R 1 < R 2 ); cuando la rueda menor gira α º la mayor gira α g . ¿En qué relación se encuentra los radios?",
+      "alternatives": [
+        "1/10",
+        "1/8",
+        "1/2",
+        "3/8",
+        "9/10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/11/aplicaciones-longitud-arco-ejercicios.html",
+      "sourceName": "trigonometriapdf.blogspot.com — APLICACIONES DE LA LONGITUD ARCO PROBLEMAS RESUELTOS –TRIGONOMETRIA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ángulos y Sistemas de Medición Angular",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las medidas de los ángulos internos de un terreno triangular son 24º15ˡ 18ˡˡ, xº y 3,0 5 g . Si el costo para cercar dicho terreno es (20x) soles, halle dicho costo.",
+      "alternatives": [
+        "3 200 soles",
+        "3 060 soles",
+        "3 400 soles",
+        "3 100 soles",
+        "3 020 soles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionaro-del-examen-1-pre-san-marcos.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA PRE SAN MARCOS SEMANA 1 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
     }
   ]
 }

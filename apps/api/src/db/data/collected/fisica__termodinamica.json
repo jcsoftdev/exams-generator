@@ -82,6 +82,879 @@
       "correctAnswer": "2",
       "sourceUrl": "https://www.goconqr.com/en/quiz/11054501/test-calorimetria",
       "sourceName": "GoConqr - Test Calorimetría (11054501), pregunta 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La temperatura del reservorio caliente de una máquina térmica bajo un ciclo de Carnot es de 200 °C y del reservorio frío es de 50 °C. El calor que libera la máquina es de 1000 J. Calcule aproximadamente, en J, el trabajo que realiza la máquina.",
+      "alternatives": [
+        "564",
+        "264",
+        "464",
+        "164",
+        "364"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Tercera-prueba-uni-solucionario-examen-admision-universidad-ingenieria-fisica-quimica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA QUÍMICA EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA TERCERA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un ciclo de Carnot de un gas ideal ( γ =5/3) , se tiene que durante la expansión isotérmica el volumen se duplica y en la expansión adiabática el volumen aumenta en un 25 %. Calcule la relación entre la máxima y mínima temperatura en este ciclo",
+      "alternatives": [
+        "(1/4) ^ 2/3",
+        "(3/4) ^ 2/3",
+        "(5/4) ^ 2/3",
+        "(7/4) ^ 2/3",
+        "(9/4) ^ 2/3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/prueba-de-fisica-ingreso-universidad-de.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO DE FÍSICA UNI DESARROLLADO PRUEBA DE ENSAYO DE EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El rendimiento de una máquina que realiza un ciclo de Carnot es de 40%, que trabaja a una temperatura máxima de 527°C. Calcule el valor aproximado (en °C) de la temperatura máxima que debe tener para que el rendimiento aumente a 60 %, con la misma temperatura mínima.",
+      "alternatives": [
+        "927,0",
+        "673,5",
+        "393,5",
+        "827,0",
+        "693,5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule, aproximadamente, la energía cinética traslacional media (en 10 –21 J) de una molécula monoatómica de un gas ideal que se encuentra a 30 °C. Considere que el valor de la constante de Boltzmann es 1,38×10 –23 J/K.",
+      "alternatives": [
+        "1,1",
+        "3,2",
+        "6,3",
+        "7,1",
+        "9,3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-8-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un motor que sigue el ciclo de Carnot, cuyo foco caliente esta a 400K y toma 120kJ por ciclo y pierde 60 kJ al foco frio. La temperatura del foco frio y el rendimiento del motor es",
+      "alternatives": [
+        "100 K; 20%",
+        "50 K; 25%",
+        "150 K; 30%",
+        "200 K; 50%",
+        "250 K; 70%"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un depósito rígido contiene 6 litros de cierto gas ideal a 1,5atm y a 177°C. Si k es la constante de Boltzmann y 1atm=10 5 Pa, el número total de moléculas que hay en el depósito es:",
+      "alternatives": [
+        "3k",
+        "2/k",
+        "4/k",
+        "3/2k",
+        "2k/3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un gas ideal diatómico se expande adiabáticamente tal que su temperatura disminuye en 400°C. Si el trabajo realizado por el gas es de 16,62 kJ, determine el número de moles del gas.\n(R= 8,31 J mol –1 K –1 )",
+      "alternatives": [
+        "8",
+        "3",
+        "20",
+        "2",
+        "16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen 1,5 moles de un gas monoatómico ideal. El cambio de temperatura del gas en un proceso adiabático es 10°C.\nCalcule aproximadamente, en J, el valor absoluto del trabajo realizado por el gas.\n(R= 8,31 J/mol · K)",
+      "alternatives": [
+        "157",
+        "167",
+        "177",
+        "187",
+        "197"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un mol de un gas ideal se expande adiabáticamente realizando un trabajo de 6000J. ¿Cuál es el cambio de temperatura en grados kelvin del gas después de la expansión?\nR=8,314 J/mol.K",
+      "alternatives": [
+        "–441,1",
+        "–451,1",
+        "–461,1",
+        "–471,1",
+        "–481,1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una máquina térmica ideal de gas opera en un ciclo de Carnot entre 227°C y 127°C absorbiendo 6,0×10 4 cal de la temperatura superior. La cantidad de trabajo, en 10 3 cal, que es capaz de ejecutar esta máquina es:",
+      "alternatives": [
+        "12",
+        "16",
+        "20",
+        "28",
+        "34"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el trabajo en Joules que realiza un gas ideal cuando se calienta isobáricamente desde los 27°C hasta 87°C , si se encuentra dentro de un recipiente cerrado por un émbolo móvil. El volumen inicial es de 5 litros y la presión atmosférica es 1,033 kg–f/cm ² .",
+      "alternatives": [
+        "11,4",
+        "112,4",
+        "101,2",
+        "140",
+        "10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se calienta un mol de gas oxígeno desde una temperatura de 20°C y presión de 1 atm, hasta una temperatura de 100°C. Suponiendo que el gas oxígeno es un gas ideal determine (en J) el calor que deberá suministrarse si durante el calentamiento se mantiene constante:",
+      "alternatives": [
+        "el volumen, (b) la presión.",
+        "1422; 1682,8",
+        "1652; 2326,8",
+        "1660; 2400",
+        "1720; 1920"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando un gas ideal se expande adiabáticamente, ¿cuál de las siguientes proposiciones no es correcta?",
+      "alternatives": [
+        "La temperatura del gas disminuye.",
+        "El gas realiza trabajo.",
+        "Es necesario suministrar calor al gas para que realice trabajo.",
+        "La energía interna del gas disminuye.",
+        "La presión del gas disminuye."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un gas ideal, contenido en un cilindro que tiene un pistón movible, tiene una presión p=400kPa. Se le proporciona 20 kJ de calor y se expande isobáricamente hasta alcanzar un volumen igual a 1,5 veces su volumen inicial. Su energía interna aumenta en 10kJ en este proceso.\nDetermine el volumen inicial del gas en m³.",
+      "alternatives": [
+        "0,01",
+        "0,02",
+        "0,03",
+        "0,04",
+        "0,05"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la expresión incorrecta:",
+      "alternatives": [
+        "El calor es la energía que se intercambia entre dos cuerpos en contacto debido a la diferencia de temperaturas.",
+        "El calor puede transmitirse en forma espontánea de un cuerpo caliente a otro frío y viceversa.",
+        "En un proceso isotérmico realizado por un gas ideal, si se hace trabajo sobre el gas es necesario que el gas entregue calor a los alrededores para mantener la temperatura constante.",
+        "La primera ley de la Termodinámica es la ley de conservación de la energía.",
+        "Una máquina de Carnot de eficiencia 100% necesitaría de un reservorio de calor frío a cero grados Kelvin."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un gas ideal realiza un ciclo de Carnot. La expansión isotérmica ocurre a 250°C y la compresión isotérmica tiene lugar a 50°C. Si el gas absorve 1200J de calor durante la expansión isotérmica, entonces el trabajo neto en Joules, realizado por el gas en cada ciclo es: (no considere decimales)",
+      "alternatives": [
+        "228J",
+        "308",
+        "720",
+        "459",
+        "20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un reservorio térmico a 1000K, transfiere 125 400J de calor a una máquina térmica de Carnot, durante un ciclo termodinámico. Si el trabajo neto de la máquina térmica es 2×10 ⁴ J, la temperatura del reservorio térmico de baja temperatura en K, aproximadamente, es:",
+      "alternatives": [
+        "410",
+        "644",
+        "716",
+        "841",
+        "886"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una máquina térmica de Carnot recibe 1200 kJ/min de calor desde un foco térmico que está a 727°C, y rechaza calor a un sumidero térmico que está a 17°C.\nDeterminar la potencia neta que entrega la máquina (kW).",
+      "alternatives": [
+        "28,0",
+        "19,5",
+        "852",
+        "14,2",
+        "10,8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una máquina térmica que realiza un trabajo de 100 kJ/ciclo, devuelve 25 kJ de calor a la fuente fría.\n¿Cuál es la eficiencia (en %)?",
+      "alternatives": [
+        "20",
+        "40",
+        "60",
+        "80",
+        "90"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una máquina térmica experimenta un ciclo de Carnot, recibe de un foco a 527°C, 1000J y realiza un trabajo, cediendo una cierta cantidad de calor a un foco frío el cual se encuentra a 27°C. Determine el trabajo realizado por el motor y su eficiencia.",
+      "alternatives": [
+        "625J; 62,5%",
+        "375J; 60%",
+        "1 000J; 100%",
+        "625J; 80%"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un gas ideal con volumen inicial de 2m ³ y una presión de 500Pa se expande isobáricamente y alcanza un volumen de 4m ³ y una temperatura de 120K. Luego se enfría a volumen constante hasta que su temperatura es de 60K. Finalmente se expande a presión constante hasta un volumen de 8m ³ . Determine el trabajo total , en joules, realizado por el gas en este proceso.",
+      "alternatives": [
+        "1,00×10 ³",
+        "1,50×10 ³",
+        "2,00×10 ³",
+        "2,50×10 ³",
+        "3,00×10³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una máquina térmica trabajando con un rendimiento de 50% absorve 300cal de una fuente de calor , en cada ciclo y desprende una cantidad Q de calor hacia un sumidero a la temperatura de 250K . Hallar Q y la temperatura de la fuente de calor",
+      "alternatives": [
+        "150 cal; 500K",
+        "130 cal; 600K",
+        "140 cal; 400K",
+        "160 cal; 300K"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una máquina térmica ideal opera entre dos fuentes de calor, cuyas temperaturas son respectivamente 127°C y 27°C. Hallar el trabajo que realiza la máquina, si absorve 600 calorías de la fuente de alta temperatura.",
+      "alternatives": [
+        "1,9×10² cal",
+        "4,74×10 ² cal",
+        "2,0×10 ² cal",
+        "1,5×10 ² cal",
+        "2,3×10 ² cal"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una máquina térmica cuyo rendimiento es 20% se acopla a otra máquina de rendimiento 25%, de manera que el calor liberado por la primera es absorbido por la segunda. Halle la eficiencia (en %) del sistema de máquinas.",
+      "alternatives": [
+        "5",
+        "20",
+        "25",
+        "40",
+        "50"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El calor que absorbe una máquina térmica es 3 veces el trabajo que realiza.\n¿Qué fracción (en %) del calor absorbido es liberado hacia el depósito frío?.",
+      "alternatives": [
+        "33",
+        "45",
+        "52",
+        "67",
+        "75"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la veracidad (V) o falsedad (F) de las siguientes proposiciones:\nI) Usar el calor que rechaza una máquina térmica para alimentar otra máquina térmica transgrede la segunda ley.\nII) Según la segunda ley todas las máquinas ideales tienen la misma eficiencia.\nIII) Según la segunda ley solo las máquinas térmicas ideales tienen eficiencia del 100%.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VVF",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene 24L de acetileno C 2 H 2 a 960 mmHg y 47°C por un proceso isobárico, se eleva la temperatura hasta 127°C, luego por un proceso isotérmico se sube la presión hasta 1280 mmHg. ¿Cuál es el volumen final de acetileno?",
+      "alternatives": [
+        "27,2 L",
+        "22,5 L",
+        "18,6 L",
+        "24,8 L",
+        "20,4 L"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-3ro-4to-actividad-2-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL MEDICINA PRUEBA INGRESO UNIVERSIDAD RESUELTA 2027 CLAVES "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un proceso isotérmico al aumentar la presión en 25% ¿Qué sucede con el volumen?",
+      "alternatives": [
+        "Disminuye 80%",
+        "Aumenta 80%",
+        "Disminuye 20%",
+        "Aumenta 20%",
+        "Nada"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos monoatómico desarrollan el ciclo de Carnot entre dos focos térmicos, uno de 327°C y el otro a 127°C, calcule (en joules) el trabajo que el gas realiza durante la expansión adiabática. R = 8,31 J/mol.K",
+      "alternatives": [
+        "24,93",
+        "41,55",
+        "342,62",
+        "784,13 25",
+        "4986,00 30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20152.pdf",
+      "sourceName": "uni.edu.pe-pdf — UNI 2015-2 Física pregunta 12"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un mol de oxígeno que se encontraba inicialmente a la temperatura de 200K, se comprimió adiabáticamente hasta que su presión aumentó en 10 veces respecto a su presión inicial, entonces el trabajo realizado sobre el gas, en kJ, es:\n(coeficiente adiabático del gas = 2; R=8,31 J/kg.K)",
+      "alternatives": [
+        "3593",
+        "2789",
+        "1645",
+        "1745",
+        "1845"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan cuida su peso y come nada más que 3000 kcal por día. Al levantar cajas de 3kg hasta una plataforma de 1m de altura, a razón de 10 cajas por minuto por media hora, que porcentaje de la energía que ingirió ha gastado Juan en este trabajo. (1cal =4,18J) suponer que g=10m/s²",
+      "alternatives": [
+        "Más de uno por ciento",
+        "Mucho más de uno por ciento",
+        "Menos de un décimo por ciento",
+        "Alrededor del cincuenta por ciento",
+        "Faltan datos para calcular el porcentaje"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un litro de Argón, contenido en un cilindro con un pistón, se expande contra la presión atmosférica hasta que alcanza un volumen triple.\n¿Qué trabajo ha sido realizado por el gas?.\n(Considere 1 atmósfera =10 ⁵ N/m²)",
+      "alternatives": [
+        "200 joules",
+        "300 joules",
+        "450 joules",
+        "350 joules"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se comprime adiabáticamente un mol de gas monoatómico, efectuando sobre éste un trabajo de 100 kJ. ¿En cuántos grados Kelvin aumentó la temperatura del gas?",
+      "alternatives": [
+        "12,5",
+        "22,5",
+        "920,5",
+        "1035",
+        "8022"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un proceso termodinámico isobárico un gas monoatómico experimenta una expansión de manera que la presión se mantiene en 80kPa durante todo el proceso, si su volumen se incrementa de 1m³ a 3m³, determine (en kJ) el calor entregado al gas.",
+      "alternatives": [
+        "100",
+        "200",
+        "300",
+        "400",
+        "480"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un gas que inicialmente se encuentra a P 0 =16Pa y V 0 =2m³, se expande de tal manera que su presión varía de acuerdo a la ecuación: P=20 – 2V.\nCalcular el trabajo desarrollado por el gas hasta que su volumen es 8m³.",
+      "alternatives": [
+        "9J",
+        "12J",
+        "18J",
+        "16J",
+        "60J"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente contiene 320g de oxígeno a la temperatura de 20°C. Determine la cantidad de calor que se le debe suministrar (en kJ) para elevar su temperatura hasta 220°C manteniendo la presión constante ( C p =7R/2)",
+      "alternatives": [
+        "230,1",
+        "124,8",
+        "18,6",
+        "58,17",
+        "63,26"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una máquina de Carnot trabaja entre dos isotermas T A =27°C y T B =–73°C si recibe 120 cal de la fuente caliente durante cada ciclo, ¿cuánto calor (en cal) cede en cada ciclo a la fuente fría?",
+      "alternatives": [
+        "50",
+        "180",
+        "90",
+        "120",
+        "80"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERMODINÁMICA EJERCICIOS RESUELTOS PDF – CICLO DE CARNOT – MÁQUINAS TÉRMICAS – PRIMERA Y SEGUNDA LEY"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente cúbico (con caras horizontales y verticales) contiene un gas ideal en condiciones normales de temperatura y presión (NTP). El recipiente es transportado por un cohete que se mueve a una velocidad de 500 m s–1 en dirección vertical. La presión del gas dentro del recipiente, observada por nosotros desde el suelo,",
+      "alternatives": [
+        "permanece igual porque 500 m s−1 es mucho menor que la vrms del gas.",
+        "permanece igual porque el movimiento del recipiente en su conjunto no afecta el movimiento relativo de las moléculas del gas respecto a las paredes.",
+        "aumentará en un factor igual a (v 2rms + (500)2) / vrms, donde vrms era la velocidad cuadrática media original del gas.",
+        "será diferente en la pared superior y en la pared inferior del recipiente."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep313.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.13 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "1 mol de un gas ideal está contenido en un volumen cúbico V, ABCDEFGH, a 300 K (Fig. 13.1). Una cara del cubo (EFGH) está hecha de un material que absorbe totalmente cualquier molécula de gas Teoría cinética que incide sobre ella. En un instante dado,",
+      "alternatives": [
+        "la presión sobre EFGH sería cero.",
+        "la presión en todas las caras será igual.",
+        "la presión sobre EFGH sería el doble de la presión sobre ABCD.",
+        "la presión sobre EFGH sería la mitad de la que hay sobre ABCD."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep313.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.13 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considere el diagrama P-V para un gas ideal, a presión constante, mostrado en la Fig. 12.2. De los siguientes diagramas (Fig. 12.3), ¿cuál representa el diagrama T-P?",
+      "alternatives": [
+        "(iv)",
+        "(ii)",
+        "(iii)",
+        "(i)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep312.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.12 MCQ 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Carlos es un estudiante del quinto de secundaria que viaja de Lima (0.0 m s. n. m. y 24 °C) a la ciudad de Huaraz que está a 3000 m s. n. m. y la temperatura promedio en el día es 15 °C. Él lleva en su mochila papitas fritas en bolsas selladas. Al llegar a Huaraz, observa que las bolsas están muy infladas, casi por reventar. ¿Cuál de las siguientes proposiciones es la correcta para explicar el fenómeno?",
+      "alternatives": [
+        "A menor presión manométrica, el volumen del aire de la bolsa disminuye.",
+        "Debido a la menor presión atmosférica, el aire de la bolsa se expande.",
+        "La presión absoluta del aire de la bolsa aumenta al aumentar la altitud.",
+        "A 3000 m s. n. m. la presión barométrica aumenta al disminuir la temperatura."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/quimica-ejercicios-resueltos-examen-de.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un gas ideal opera como sustancia de trabajo en un ciclo termodinámico compuesto de dos isócoras y dos isotermas. Si durante la operación el volumen del gas varía 2 veces y su temperatura absoluta varía 3 veces, entonces el rendimiento del gas en el ciclo termodinámico es:\n(coeficiente adiabático del gas =1,5 ; ln2=0,7)",
+      "alternatives": [
+        "10/61",
+        "12/61",
+        "14/61",
+        "16/61",
+        "18/61"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unt-examen-resuelto-pd-trujilo.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las últimas olimpiadas, un levantador de pesas mueve 150 kg desde el suelo hasta una altura de 2 m; esto hace que la energía interna de su cuerpo decrezca 5 kJ. ¿Cuánto calor fluye entre el levantador y las pesas y en qué dirección, tomando como sistema termodinámico el cuerpo del levantador? (g=10 m/s 2 )",
+      "alternatives": [
+        "8 kJ hacia adentro del sistema",
+        "8 kJ hacia afuera del sistema",
+        "5 kJ hacia adentro del sistema",
+        "2 kJ hacia afuera del sistema",
+        "2 kJ hacia adentro del sistema"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/curvas-en-el-plano-lugares-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA BIOMÉDICAS 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un mol de gas ideal monoatómico recibe 249,3 J de calor bajo un proceso isócoro. Calcule el cambio de temperatura que experimenta el gas (en °C).\nConsidere la constante universal de los gases ideales\nR=8,31 J/mol.K",
+      "alternatives": [
+        "10",
+        "15",
+        "20",
+        "25",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un pistón vertical, que encierra aire, cerrado en su parte superior por una tapa cuando se encuentra a una altura de 12 cm. Calcula el desplazamiento de la tapa si la presión disminuye en 20% manteniendo constante su temperatura.",
+      "alternatives": [
+        "Baja 4 cm",
+        "Sube 4 cm",
+        "Sube 3 cm",
+        "Baja 2 cm",
+        "Baja 3 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematicas-1-de-secundaria-texto-de.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA I UNCP 2027 INGRESO MEDICINA ENFERMERÍA UNIVERSIDAD DEL CENTRO DESARROLLO CLAVES DE RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un mol de gas ideal monoatómico bajo un proceso a volumen constante disminuye su presión de 25×10 4 Pa a 15×10 4 Pa. Si el gas en este proceso liberó 150 J en forma de calor, determine el volumen (en litros) del gas.",
+      "alternatives": [
+        "0,2",
+        "0,4",
+        "0,6",
+        "0,8",
+        "1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un gas ideal monoatómico se encuentra en un recipiente de forma cilíndrica que tiene una tapa movible, y se somete a un proceso a presión constante de 1 atm. El gas se expande realizando un trabajo de 50,65 J. Si en un inicio la tapa, cuya área es 100 cm 2 , se encontraba a una altura de 6 cm respecto del fondo del recipiente. ¿Cuál será la altura (en cm) a la que quedará la tapa respecto del fondo del recipiente luego del trabajo realizado por el gas?\nConsidere 1atm=1,013×10 5 Pa.",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una máquina de Carnot tiene una eficiencia del 40% y en cada ciclo el trabajo que realiza es 4 kJ. Calcule la cantidad de calor por cada ciclo (en kJ) que se transfiere a la fuente térmica de menor temperatura.",
+      "alternatives": [
+        "2",
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sistemas-de-ecuaciones-lineales-metodo.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 FÍSICA QUÍMICA TERCERA PRUEBA RESUELTA –RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ley de Boyle es aplicable a un Fig. 13.1",
+      "alternatives": [
+        "proceso adiabático.",
+        "proceso isotérmico.",
+        "proceso isobárico.",
+        "proceso isocórico."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep313.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.13 MCQ 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cilindro que contiene un gas ideal está en posición vertical y tiene un pistón de masa M que puede moverse hacia arriba o hacia abajo sin fricción (Fig. 13.2). Si la temperatura aumenta, Fig. 13.2",
+      "alternatives": [
+        "tanto p como V del gas cambiarán.",
+        "solo p aumentará según la ley de Charles.",
+        "V cambiará pero p no.",
+        "p cambiará pero V no."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep313.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.13 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "1 mol de gas H2 está contenido en una caja de volumen V = 1.00 m3 a T = 300 K. El gas se calienta hasta una temperatura de T = 3000 K y se convierte en un gas de átomos de hidrógeno. La presión final sería (considerando que todos los gases son ideales)",
+      "alternatives": [
+        "la misma que la presión inicial.",
+        "2 veces la presión inicial.",
+        "10 veces la presión inicial.",
+        "20 veces la presión inicial."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep313.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.13 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente de volumen V contiene una mezcla de 1 mol de hidrógeno y 1 mol de oxígeno (ambos considerados como ideales). Sea f1(v)dv la fracción de moléculas con rapidez entre v y (v + dv), y f2(v)dv de manera similar para el oxígeno. Entonces",
+      "alternatives": [
+        "f1(v) + f2(v) = f(v) obedece la ley de distribución de Maxwell.",
+        "f1(v) y f2(v) obedecerán la ley de distribución de Maxwell por separado.",
+        "Ni f1(v) ni f2(v) obedecerán la ley de distribución de Maxwell.",
+        "f2(v) y f1(v) serán iguales."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep313.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.13 MCQ 7"
     }
   ]
 }

@@ -6,7 +6,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "I _____________ my homework yet.",
-      "alternatives": ["have finish", "has finished", "did finished", "haven't finished"],
+      "alternatives": [
+        "have finish",
+        "has finished",
+        "did finished",
+        "haven't finished"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 1, Q1"
@@ -17,7 +22,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "My father is on the way. He ____________ home yet.",
-      "alternatives": ["haven't arrived", "hasn't arrived", "didn't arrived", "arrived"],
+      "alternatives": [
+        "haven't arrived",
+        "hasn't arrived",
+        "didn't arrived",
+        "arrived"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 1, Q2"
@@ -28,7 +38,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "I am not hungry. I have _______ eaten.",
-      "alternatives": ["yet", "now", "just", "ever"],
+      "alternatives": [
+        "yet",
+        "now",
+        "just",
+        "ever"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 1, Q3"
@@ -39,7 +54,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "I have never ___________ to Paris.",
-      "alternatives": ["been", "went", "go", "was"],
+      "alternatives": [
+        "been",
+        "went",
+        "go",
+        "was"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 1, Q4"
@@ -50,7 +70,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "_______ you ever been to New York?",
-      "alternatives": ["Are", "Were", "Do", "Have"],
+      "alternatives": [
+        "Are",
+        "Were",
+        "Do",
+        "Have"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 1, Q5"
@@ -61,7 +86,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "I am still working. I haven't finished my work _______.",
-      "alternatives": ["already", "yet", "still", "never"],
+      "alternatives": [
+        "already",
+        "yet",
+        "still",
+        "never"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 1, Q6"
@@ -72,7 +102,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "I am looking for my pen. I __________ it.",
-      "alternatives": ["have lost", "lost", "did lost", "was lost"],
+      "alternatives": [
+        "have lost",
+        "lost",
+        "did lost",
+        "was lost"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 1, Q7"
@@ -83,7 +118,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "During the two years David ____________ ten different jobs.",
-      "alternatives": ["has has", "has had", "have had", "have has"],
+      "alternatives": [
+        "has has",
+        "has had",
+        "have had",
+        "have has"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 1, Q8"
@@ -94,7 +134,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I __________ a teacher since 2002.",
-      "alternatives": ["was", "have be", "have been", "had be"],
+      "alternatives": [
+        "was",
+        "have be",
+        "have been",
+        "had be"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 1, Q9"
@@ -105,7 +150,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "My friend ______________ my new dress yet.",
-      "alternatives": ["haven't seen", "didn't see", "hasn't see", "hasn't seen"],
+      "alternatives": [
+        "haven't seen",
+        "didn't see",
+        "hasn't see",
+        "hasn't seen"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 1, Q10"
@@ -116,7 +166,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I _____________ a cup of tea for you. It is on the table.",
-      "alternatives": ["made", "have made", "make", "am making"],
+      "alternatives": [
+        "made",
+        "have made",
+        "make",
+        "am making"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice_20.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 2, Q2"
@@ -127,7 +182,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Pete ____________ his glasses. He hasn't got his glasses now.",
-      "alternatives": ["have lost", "lost", "was lost", "has lost"],
+      "alternatives": [
+        "have lost",
+        "lost",
+        "was lost",
+        "has lost"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice_20.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 2, Q3"
@@ -138,7 +198,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "David's hair is very short. He ______________ his hair off.",
-      "alternatives": ["has cut", "cut", "have cut", "cuts"],
+      "alternatives": [
+        "has cut",
+        "cut",
+        "have cut",
+        "cuts"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice_20.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 2, Q4"
@@ -149,7 +214,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "A: Is your father at home now?\nB: ________________________.",
-      "alternatives": ["No, he went to Paris", "No, he has gone to Paris", "No, he left home", "No, he didn't come"],
+      "alternatives": [
+        "No, he went to Paris",
+        "No, he has gone to Paris",
+        "No, he left home",
+        "No, he didn't come"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice_20.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 2, Q5"
@@ -160,7 +230,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I __________ my arm three times.",
-      "alternatives": ["has broken", "broken", "broke", "have broken"],
+      "alternatives": [
+        "has broken",
+        "broken",
+        "broke",
+        "have broken"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice_20.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 2, Q6"
@@ -171,7 +246,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Our team ___________ two matches this year.",
-      "alternatives": ["has win", "has won", "won", "was won"],
+      "alternatives": [
+        "has win",
+        "has won",
+        "won",
+        "was won"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice_20.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 2, Q7"
@@ -182,7 +262,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I have worked very hard ___________.",
-      "alternatives": ["this week", "last week", "two weeks ago", "two days ago"],
+      "alternatives": [
+        "this week",
+        "last week",
+        "two weeks ago",
+        "two days ago"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice_20.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 2, Q8"
@@ -193,7 +278,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I have written six letters _______ breakfast.",
-      "alternatives": ["from", "for", "since", "in"],
+      "alternatives": [
+        "from",
+        "for",
+        "since",
+        "in"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice_20.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 2, Q9"
@@ -204,7 +294,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Tom has lived in Istanbul ______ five years.",
-      "alternatives": ["since", "in", "ago", "for"],
+      "alternatives": [
+        "since",
+        "in",
+        "ago",
+        "for"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/09/present-perfect-tense-multiple-choice_20.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 2, Q10"
@@ -215,7 +310,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "A: Would you like a cup of coffee?\nB: Thank you. I ________ one.",
-      "alternatives": ["am having", "have just had", "did have", "had"],
+      "alternatives": [
+        "am having",
+        "have just had",
+        "did have",
+        "had"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2014/11/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 3, Q1"
@@ -226,7 +326,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I am afraid she ________ typing the letters yet.",
-      "alternatives": ["didn't finish", "hasn't finished", "isn't finished", "wasn't finishing"],
+      "alternatives": [
+        "didn't finish",
+        "hasn't finished",
+        "isn't finished",
+        "wasn't finishing"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2014/11/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 3, Q2"
@@ -237,7 +342,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "He ________ his room for weeks.",
-      "alternatives": ["haven't tidied", "didn't tidied", "hasn't tidied", "wasn't tidied"],
+      "alternatives": [
+        "haven't tidied",
+        "didn't tidied",
+        "hasn't tidied",
+        "wasn't tidied"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2014/11/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 3, Q3"
@@ -248,7 +358,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Arthur ________ London. He is still there.",
-      "alternatives": ["has gone to", "went", "did go to", "have gone to"],
+      "alternatives": [
+        "has gone to",
+        "went",
+        "did go to",
+        "have gone to"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2014/11/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 3, Q4"
@@ -259,7 +374,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "James ________ in Australia for 5 years.",
-      "alternatives": ["worked", "has work", "was worked", "has worked"],
+      "alternatives": [
+        "worked",
+        "has work",
+        "was worked",
+        "has worked"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/11/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 3, Q5"
@@ -270,7 +390,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "How long ________ you stayed in Istanbul?",
-      "alternatives": ["are", "were", "have", "did"],
+      "alternatives": [
+        "are",
+        "were",
+        "have",
+        "did"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2014/11/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 3, Q6"
@@ -281,7 +406,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I can't find my watch. ________ you ________ it recently?",
-      "alternatives": ["have / see", "did / seen", "were / seen", "have / seen"],
+      "alternatives": [
+        "have / see",
+        "did / seen",
+        "were / seen",
+        "have / seen"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/11/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 3, Q7"
@@ -292,7 +422,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "He has a headache. He ________ to the doctor twice but is still not better.",
-      "alternatives": ["has been", "went", "were", "was"],
+      "alternatives": [
+        "has been",
+        "went",
+        "were",
+        "was"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2014/11/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 3, Q8"
@@ -303,7 +438,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "My sister ________ interested in medicine ever since she was a child.",
-      "alternatives": ["was", "have been", "has been", "is"],
+      "alternatives": [
+        "was",
+        "have been",
+        "has been",
+        "is"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2014/11/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 3, Q9"
@@ -314,7 +454,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "We ________ the letter two weeks ago. If you still ________ please inform us.",
-      "alternatives": ["have posted / haven't received", "posted / didn't receive", "have posted / didn't receive", "posted / haven't received"],
+      "alternatives": [
+        "have posted / haven't received",
+        "posted / didn't receive",
+        "have posted / didn't receive",
+        "posted / haven't received"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2014/11/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 3, Q10"
@@ -325,7 +470,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "They _________________ each other since last year.",
-      "alternatives": ["knew", "known", "have known", "has known"],
+      "alternatives": [
+        "knew",
+        "known",
+        "have known",
+        "has known"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 6, Q1"
@@ -336,7 +486,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sorry Mr. Brown. I _____________ my homework at home.",
-      "alternatives": ["have forgotten", "forgot", "forget", "didn't forget"],
+      "alternatives": [
+        "have forgotten",
+        "forgot",
+        "forget",
+        "didn't forget"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 6, Q2"
@@ -347,7 +502,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "My brother ___________ to study for his exam yet.",
-      "alternatives": ["has started", "hasn't started", "has start", "was started"],
+      "alternatives": [
+        "has started",
+        "hasn't started",
+        "has start",
+        "was started"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 6, Q3"
@@ -358,7 +518,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I _____________ him several times before.",
-      "alternatives": ["have saw", "seen", "saw", "have seen"],
+      "alternatives": [
+        "have saw",
+        "seen",
+        "saw",
+        "have seen"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 6, Q4"
@@ -369,7 +534,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I know what happened there. I __________ about it.",
-      "alternatives": ["haven't heard", "heard", "have heard", "hear"],
+      "alternatives": [
+        "haven't heard",
+        "heard",
+        "have heard",
+        "hear"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 6, Q5"
@@ -380,7 +550,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I am very tired. I __________ six pizzas since morning.",
-      "alternatives": ["delivered", "have delivered", "was delivering", "deliver"],
+      "alternatives": [
+        "delivered",
+        "have delivered",
+        "was delivering",
+        "deliver"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 6, Q6"
@@ -391,7 +566,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I need to take a bus because I ___________ my car.",
-      "alternatives": ["have sold", "sell", "sold", "was sold"],
+      "alternatives": [
+        "have sold",
+        "sell",
+        "sold",
+        "was sold"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 6, Q7"
@@ -402,7 +582,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I am so happy because I __________ my English exam.",
-      "alternatives": ["passed", "passes", "have passed", "didn't pass"],
+      "alternatives": [
+        "passed",
+        "passes",
+        "have passed",
+        "didn't pass"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 6, Q8"
@@ -413,7 +598,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "She is unhappy because she __________ her keys.",
-      "alternatives": ["losing", "lost", "have lost", "has lost"],
+      "alternatives": [
+        "losing",
+        "lost",
+        "have lost",
+        "has lost"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 6, Q9"
@@ -424,10 +614,2656 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "I am hungry because I _______________ anything.",
-      "alternatives": ["have eaten", "still haven't eaten", "haven't just eaten", "have already eaten"],
+      "alternatives": [
+        "have eaten",
+        "still haven't eaten",
+        "haven't just eaten",
+        "have already eaten"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.elt-els.com/2015/01/the-present-perfect-tense-multiple.html",
       "sourceName": "ELT-ELS Present Perfect Tense Multiple Choice Test 6, Q10"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "How would you summarize this article's position on dams?",
+      "alternatives": [
+        "They mention the negative effects after their construction.",
+        "It explains why they disapprove of the construction of dams.",
+        "They explore the positive and negative effects they bring.",
+        "It lists all the contributions dams have done for society."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/03/habilidad-verbal-ce-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — COMPRENSIÓN DE TEXTOS SAN MARCOS DESARROLLADO"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete the question with the correct answer.\n_______ Alfredo study Civil Engineering?",
+      "alternatives": [
+        "Is",
+        "Does",
+        "Do",
+        "Have",
+        "Has"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/ingles-preguntas-resueltas-de-examen-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — INGLÉS EJERCICIOS RESUELTOS DE EXAMEN INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete with the appropriate words.\nOh my god! Karen I _______ (see) you _______ we left school.",
+      "alternatives": [
+        "have saw - since",
+        "have seen - ever",
+        "haven’t seen - since",
+        "has seen - already"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/ingles-preguntas-resueltas-de-examen-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — INGLÉS EJERCICIOS RESUELTOS DE EXAMEN INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete the sentence with the correct form of the verb:\nWhen I was a child, my mother _______ in a factory.",
+      "alternatives": [
+        "were",
+        "worked",
+        "has worked",
+        "works",
+        "have worked"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/ingles-preguntas-resueltas-de-examen-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — INGLÉS EJERCICIOS RESUELTOS DE EXAMEN INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la alternativa que al insertarse en el espacio en blanco da sentido a la siguiente oración.",
+      "alternatives": [
+        "Who is Nikolas Cage?",
+        "I have no idea. I’ve never heard _______ him.",
+        "after",
+        "over",
+        "about"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/ingles-preguntas-resueltas-de-examen-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — INGLÉS EJERCICIOS RESUELTOS DE EXAMEN INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Choose the correct answer.\nHow long have you met your best friend?",
+      "alternatives": [
+        "I’ve met her before the exam.",
+        "I’ve meeting her since 2015.",
+        "I met her in 2015.",
+        "I’ve met her 5 years ago.",
+        "I’ve met her for 5 years."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/10/Ingles-unt-solucionario-de-examen-de-admision-universidad-nacional-de-trujillo-simulacro-desarrollado-preguntas-resueltas-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — INGLÉS UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete the sentence using the correct form of the verbs.\nPedro Galvez _______ and _______ . to San Antonio Abad University in Cuzco, but he _______ in Arequipa for six years.",
+      "alternatives": [
+        "grew up - went - has lived",
+        "grew ap - went - live",
+        "grow up - went - has lived",
+        "grew - go - lives",
+        "was born - go - live"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete the sentence with the correct answer.\nIn some Companies related with construction there are different trades. A _______ is a specialist who has studied in a Training Institute. For example, my father is a _______ because he is a plumber.",
+      "alternatives": [
+        "tradesman - trades",
+        "general constructor - trades",
+        "tradesperson - tradesman",
+        "tradesman - tradespeople",
+        "trades - person"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete the sentence with the correct word.\nCarl Friedrich _______ 45 years old. He comes from Germany, but _______ and works in Brazil.",
+      "alternatives": [
+        "have - life",
+        "is - lives",
+        "has - life",
+        "is - works",
+        "has - lives * * SEGUNDA PRUEBA UNI"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identify the incorrect word.\nMy father has lived here since fifty years.",
+      "alternatives": [
+        "has",
+        "lived",
+        "here",
+        "since",
+        "years"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/3ro-4to-actividad-1-2-3-4-ingles-experiencia-de-aprendizaje-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INGLÉS CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marque la alternativa correcta que debe insertarse en el siguiente espacio para dar sentido adecuado de la oración:\nThe weather in London is very bad. I think it’s the _______ city. I’ve ever been.",
+      "alternatives": [
+        "worse",
+        "worst",
+        "baddest",
+        "more worse",
+        "most bad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/ingles-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — INGLÉS EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "How would you summarize this article's position on dams?\n\nTexto:\nOf all the things that humanity builds from concrete or stone, there are few structures that influence the surface of Earth quite as profoundly as a dam. By blocking the flow of a river, we influence the trajectory of geology itself and change the lives of people living nearby. Dams alter geography, they transform a river's natural course and create reservoirs that, when rising, can flood an entire village. This exploitation of rivers can destroy local homes, farmland and livelihoods. The effects can be felt a long way from home, too. Damming rivers that cross entire continents, like the Nile in Africa, can withhold valuable water and power from countries downstream, forever changing the trajectories of those nations. Some of these concrete creations are so enormous that they may remain for millennia. Long after we are gone, future archaeologists will study such submerged settlements and may wonder why we let them go for the sake of shortterm politics and energy demand.",
+      "alternatives": [
+        "They mention the negative effects after their construction.",
+        "It explains why they disapprove of the construction of dams.",
+        "They explore the positive and negative effects they bring.",
+        "It lists all the contributions dams have done for society."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/09/solucionario-del-examen-de-admision-san_22.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Solucionario del examen de admision San Marcos 12-9-2021"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "This is the ______ she has ever arrived.",
+      "alternatives": [
+        "earliest",
+        "most early",
+        "early"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level1b/level-1b-elementary-adverbs-of-manner-multiple-choice-worksheet-2.php",
+      "sourceName": "esl-lounge.com — Adverbs of Manner Multiple Choice Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "This is the ______I have ever dug a hole.",
+      "alternatives": [
+        "deeper",
+        "most deeply",
+        "more deep"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/level1b/level-1b-elementary-adverbs-of-manner-multiple-choice-worksheet-2.php",
+      "sourceName": "esl-lounge.com — Adverbs of Manner Multiple Choice Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "This book is the ______ book I have ever read.",
+      "alternatives": [
+        "longer",
+        "most long",
+        "longest"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level1b/level-1b-elementary-superlative-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — Superlative Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "That is the _____ cake I have ever eaten.",
+      "alternatives": [
+        "best",
+        "better",
+        "more good"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level1b/level-1b-elementary-superlative-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — Superlative Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What is the ______ movie you have ever seen?",
+      "alternatives": [
+        "baddest",
+        "worst",
+        "most bad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/level1b/level-1b-elementary-superlative-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — Superlative Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "_____ it was already dark, we waited no longer and went home.",
+      "alternatives": [
+        "due to",
+        "because of",
+        "as",
+        "for"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-purpose-reason-result-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Purpose, Result and Reason Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "_____ Mrs. Jones falling ill so suddenly, we've cancelled the conference.",
+      "alternatives": [
+        "due to",
+        "because",
+        "since",
+        "seeing as"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-purpose-reason-result-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Purpose, Result and Reason Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "It didn't rain. The flowers died.",
+      "alternatives": [
+        "If it rained, the flowers wouldn't have died.",
+        "If it has rained, the flowers wouldn't have died.",
+        "If it had rained, the flowers wouldn't have died."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-third-conditional-situations-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Third Conditional Situations Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "We got home late. I was tired in the morning.",
+      "alternatives": [
+        "I wasn't so tired in the morning if we didn't get home so late.",
+        "I wouldn't have been tired in the morning if we hadn't gotten home so late.",
+        "I wouldn't have been tired in the morning if we don't get home so late."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-third-conditional-situations-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Third Conditional Situations Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I wish you ______ how surprised she was.",
+      "alternatives": [
+        "could have seen",
+        "saw",
+        "have seen"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-wishes-regrets-tenses-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Wishes & Regrets Tenses Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The process of testing software after changes have been made to ensure new bugs haven't been introduced is called _____.",
+      "alternatives": [
+        "marketing analysis",
+        "regression testing",
+        "product development"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/business/business-vocabulary-intermediate-bug-tracking-multiple-choice.php",
+      "sourceName": "esl-lounge.com — QA & Bug Tracking"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "She has been very ___________ at work lately.",
+      "alternatives": [
+        "busy",
+        "heavy",
+        "ready"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-6.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 6"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Helen paused her ___________ for three years when she had two children.",
+      "alternatives": [
+        "career",
+        "business",
+        "work"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-8.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 8"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What is significant about the Danube's history?",
+      "alternatives": [
+        "It has been a natural border for centuries.",
+        "It has inspired numerous artists and writers.",
+        "It has witnessed many important events."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-13.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 13"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What is the primary idea behind the \"Lazy Gene\" theory?",
+      "alternatives": [
+        "Some genes in the body are less active than others.",
+        "Some genes cause us to put on weight and therefore move less.",
+        "Some genes have been unable to change from how they were thousands of years ago.",
+        "Some genes make us avoid too much activity and preserve energy."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-6.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 6"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "How would you introduce this article?",
+      "alternatives": [
+        "Discover the benefits of unplugging from a girl who went two weeks without her phone.",
+        "Learn how to survive without technology from a girl who did it for two weeks.",
+        "Uncover the horrors of a broken phone from a girl who experienced it.",
+        "Find out how breaking her phone helps you sleep better."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-7.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "According to Clive Amble, how long has codebreaking been around?",
+      "alternatives": [
+        "Only since World War II.",
+        "Just since the advent of the digital age.",
+        "Only since the 19th century.",
+        "Almost as long as writing itself."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-12.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 12"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Can you put me ___________ for two days if I come and stay with you?",
+      "alternatives": [
+        "up",
+        "about",
+        "in",
+        "out"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-2.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A new type of transistor radio has been ___________ by South African electrical engineers.",
+      "alternatives": [
+        "developed",
+        "found",
+        "discovered",
+        "looked into"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-3.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The price of heating oil has been ___________ up again by the local government. Many people have criticised them for doing so as winter approaches.",
+      "alternatives": [
+        "pushed",
+        "taken",
+        "put",
+        "cost"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-4.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 4"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Have you ___________ to the same conclusion as I have, Martin? That it must have been William in your office last night?",
+      "alternatives": [
+        "arrived",
+        "reached",
+        "come",
+        "gained"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Martin Jones, ___________ as the Gentle Bank Robber during his three-year reign, was jailed for 25 years today at the Central Court.",
+      "alternatives": [
+        "named",
+        "reputed",
+        "called",
+        "known"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-8.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 8"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Though many eminent scientists have travelled to Loch Ness in Scotland, the famous monster has never been ____________ by any of them.",
+      "alternatives": [
+        "seen",
+        "witnessed",
+        "viewed",
+        "watched"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-12.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 12"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "That's the first good idea you've ____________ since breakfast. Well done!",
+      "alternatives": [
+        "made",
+        "had",
+        "got",
+        "thought"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-13.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 13"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Jason Rewerd, 27, has been charged with abandoning his ____________ and failing to report for duty at the military base in town.",
+      "alternatives": [
+        "gate",
+        "post",
+        "job",
+        "checkpoint"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mike has been really lucky over the last five years with his job. He now earns ________ to double what he was earning when he started.",
+      "alternatives": [
+        "near",
+        "almost",
+        "next",
+        "close"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-16.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 16"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "She has been working at the company ___________ she graduated from college.",
+      "alternatives": [
+        "from",
+        "since",
+        "after",
+        "as"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-29.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 29"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Bears used to be very ___________ in this part of the country, but nobody has seen one for ten years.",
+      "alternatives": [
+        "sparse",
+        "broad",
+        "thorough",
+        "widespread"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-3.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Politicians have been arguing about the reasons for the ___________ in the number of unemployed.",
+      "alternatives": [
+        "decline",
+        "descent",
+        "recession",
+        "weakening"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-6.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 6"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The ___________ of the report have yet to be analysed by the government so they can formulate new policies.",
+      "alternatives": [
+        "discoveries",
+        "findings",
+        "inventions",
+        "rulings"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-18.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 18"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The old castle was ___________ for many years until it was finally restored.",
+      "alternatives": [
+        "emptied",
+        "neglected",
+        "abandoned",
+        "maintained"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-24.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 24"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I have been back to the doctor three times and he still hasn't _____________ the reason for all the pain I have been suffering from recently.",
+      "alternatives": [
+        "indicated",
+        "highlighted",
+        "pinpointed",
+        "looked up"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-1.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 1"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The accidental _____________ of four listed buildings near the city centre caused a huge outcry and the manager of the building company was jailed for three months.",
+      "alternatives": [
+        "disruption",
+        "demolition",
+        "injuring",
+        "squashing"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-1.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 1"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "This fruit has been in the fridge for over three weeks! It is all _____________.",
+      "alternatives": [
+        "rotten",
+        "sour",
+        "bitter",
+        "mouldy"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-2.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "You have been _____________ with first degree murder. How do you plea?",
+      "alternatives": [
+        "accused",
+        "charged",
+        "blamed",
+        "caused"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-2.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "_____________ by despair at her situation, she tried in vain to rob the local bank and ended up in prison for five years.",
+      "alternatives": [
+        "compelled",
+        "forced",
+        "desperate",
+        "driven"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "There is no chance of you getting the promotion after only two months working here, _____________ the great work you have done.",
+      "alternatives": [
+        "regardless",
+        "presuming",
+        "nevertheless",
+        "notwithstanding"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-10.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 10"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "She hid the killer for two days in her house and has now been charged with _____________ the course of justice.",
+      "alternatives": [
+        "diverting",
+        "converting",
+        "perverting",
+        "subverting"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-15.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 15"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Don't touch that letter yet. I have just written it with my new ink pen and it will _____________.",
+      "alternatives": [
+        "blur",
+        "fog",
+        "smudge",
+        "smear"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-15.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 15"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "_____________ your continued late arrival at work, I have been pleased with your work here.",
+      "alternatives": [
+        "nonetheless",
+        "nevertheless",
+        "regardless",
+        "notwithstanding"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-17.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 17"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ever since he was bitten on the leg by Harry's dog, he has walked with a _____________.",
+      "alternatives": [
+        "stagger",
+        "mumble",
+        "limp",
+        "fumble"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-17.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 17"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I have done more than my fair _____________ of work. Now I am having a rest.",
+      "alternatives": [
+        "portion",
+        "ration",
+        "share",
+        "division"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-18.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 18"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Did you ever realise you have an uncanny _____________ of coming down to the kitchen just as I am about to serve dinner? Very strange!",
+      "alternatives": [
+        "habit",
+        "knack",
+        "trick",
+        "routine"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-20.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 20"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Your laziness has _____________ in these terrible exam results. You only have yourself to blame.",
+      "alternatives": [
+        "led",
+        "caused",
+        "contributed",
+        "resulted"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-24.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 24"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The extensive winds that have been _____________ Florida will move away as the weekend draws to a close.",
+      "alternatives": [
+        "battering",
+        "punching",
+        "cracking",
+        "thumping"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-26.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 26"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What did the narrator particularly like about using the vegetable book?",
+      "alternatives": [
+        "It got her to do things in public she normally wouldn't have done.",
+        "She learnt a lot about vegetarian eating.",
+        "It gave good advice about what to buy in supermarkets.",
+        "It contrasted well with the chaos in her personal life."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-reading-multiple-choice-2.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice - Jesus and the Aubergines"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Since 1990, per capita consumption of ______ has held steady.",
+      "alternatives": [
+        "the fresh fruits and vegetables",
+        "fresh fruits and vegetables",
+        "a fresh fruit and vegetable"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-noun-grammar-multiple-choice-worksheet-1.php",
+      "sourceName": "esl-lounge.com — Noun Grammar Multiple Choice Worksheet 1"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "And in that way it has been proved that the radioactive elements are constantly ______ and that they produce at the end ordinary elements, principally helium and lead.",
+      "alternatives": [
+        "disintegrating",
+        "to disintegrate",
+        "being disintegrating"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-verb-tense-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — Verb Tense Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Other radioactive elements ______ since: actinium (Debierne), radiothorium and mesothorium (Hahn), ionium (Boltwood), etc.",
+      "alternatives": [
+        "were discovered",
+        "have been discovered",
+        "are discovered"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-verb-tense-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — Verb Tense Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ever since Carl Benz and Gottlieb Daimler ______ the automobile back in 1886, automotive design has continued to inspire us.",
+      "alternatives": [
+        "invents",
+        "invented",
+        "inventing"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-verb-tense-multiple-choice-worksheet-2.php",
+      "sourceName": "esl-lounge.com — Verb Tense Multiple Choice Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "______ cars built in the U.S. for more than 15 years.",
+      "alternatives": [
+        "We are selling",
+        "We want to sell",
+        "We have been selling"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-verb-tense-multiple-choice-worksheet-2.php",
+      "sourceName": "esl-lounge.com — Verb Tense Multiple Choice Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Since there will be many guests, ______ the table in advance.",
+      "alternatives": [
+        "set",
+        "sit",
+        "have set"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-general-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — General Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Have you seen the new movie? I ______ it last week.",
+      "alternatives": [
+        "seen",
+        "saw",
+        "have seen it"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-verbs-and-adverbs-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Verbs & Adverbs Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Commuters have been COMPLAINING that there are VERY many UNNECESSARY stop signs on the HIGHWAY.",
+      "alternatives": [
+        "very",
+        "complaining",
+        "unnecessary",
+        "highway"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-out-of-place-words-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Out Of Place Words Multiple Choice Worksheet 1"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "After advertising for three months, he ______ sold his car.",
+      "alternatives": [
+        "finally",
+        "slowly",
+        "afterwards",
+        "specially"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-connectors-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Connectors Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Efforts to track the man suspected of the crime have been ______.",
+      "alternatives": [
+        "more unsuccessful",
+        "most unsuccessful",
+        "unsuccessful",
+        "less unsuccessful"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-comparatives-modifiers-multiple-choice-3.php",
+      "sourceName": "esl-lounge.com — Comparatives & Modifiers Multiple Choice Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The country has seen extensive rainfall, with totals in some areas ______ 60 centimeters.",
+      "alternatives": [
+        "exceeded",
+        "exceeding",
+        "exceed",
+        "did exceed"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-comparatives-modifiers-multiple-choice-3.php",
+      "sourceName": "esl-lounge.com — Comparatives & Modifiers Multiple Choice Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Your help with this project has been of great WORTH AND USEFULNESS.",
+      "alternatives": [
+        "value",
+        "regard",
+        "merit"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-match-the-definition-multiple-choice-worksheet-5.php",
+      "sourceName": "esl-lounge.com — Match The Definition Multiple Choice Worksheet 5"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I have been feeling ______ all week, worrying about all my problems that are overwhelming me.",
+      "alternatives": [
+        "bored",
+        "challenged",
+        "morose"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-5.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 5"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "To stop feeling anger towards someone who has done something wrong. To stop blaming someone.",
+      "alternatives": [
+        "to be generous",
+        "to be forgiving",
+        "to be kind hearted",
+        "to be faithful"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-definitions-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — Vocabulary Definitions Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "John ______ a backpack, but he lost it.",
+      "alternatives": [
+        "have",
+        "haved",
+        "had"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level1b/level-1b-elementary-irregular-past-simple-multiple-choice-worksheet-6.php",
+      "sourceName": "esl-lounge.com — Irregular Past Simple Multiple Choice Worksheet 6"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The house has a red roof. ______ roof is red.",
+      "alternatives": [
+        "Its",
+        "Your",
+        "His"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level1b/level-1b-elementary-possessive-adjectives-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — Possessive Adjectives Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "We have a dog and a cat. They are ______ pets.",
+      "alternatives": [
+        "my",
+        "our",
+        "it's"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/level1b/level-1b-elementary-possessive-adjectives-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — Possessive Adjectives Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Nadia has a new car. She washes ______ car every week.",
+      "alternatives": [
+        "her",
+        "their",
+        "his"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level1b/level-1b-elementary-possessive-adjectives-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — Possessive Adjectives Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I've lost my keys again. Help me look ____ them.",
+      "alternatives": [
+        "at",
+        "to",
+        "for"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level2/level-2-pre-intermediate-prepositions-multiple-choice-2.php",
+      "sourceName": "esl-lounge.com — Prepositions Multiple Choice Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "We walked a long way because the bus broke down in the hot weather.",
+      "alternatives": [
+        "stop working",
+        "crash",
+        "have an accident"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level2/level-2-pre-intermediate-phrasal-verbs-definition-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Phrasal Verbs Definition Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I ______ that car if I had had more money at the time.",
+      "alternatives": [
+        "could have bought",
+        "could buy",
+        "will buy"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-conditional-forms-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Conditional Forms Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I wish I ______ a million dollars.",
+      "alternatives": [
+        "have",
+        "will have",
+        "had"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-wishes-regrets-tenses-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Wishes & Regrets Tenses Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I wish that warbler ______ closer so I could get a picture.",
+      "alternatives": [
+        "will come",
+        "has come",
+        "would come"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level4/level-4-upper-intermediate-wishes-regrets-tenses-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Wishes & Regrets Tenses Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Which of these has hit South African journalism?",
+      "alternatives": [
+        "bribery",
+        "money problems",
+        "corruption"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/level5/level-5-advanced-new-african-website-multiple-choice-reading.php",
+      "sourceName": "esl-lounge.com — New Fact Checking Website Arrives"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Every cloud has a ______ lining.",
+      "alternatives": [
+        "silver",
+        "golden",
+        "beautiful"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level5/level-5-advanced-proverbs-multiple-choice-worksheet-4.php",
+      "sourceName": "esl-lounge.com — Proverbs Multiple Choice Worksheet 4"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "If you have any questions during the presentation, please feel free to _____ them.",
+      "alternatives": [
+        "outline",
+        "illustrate",
+        "raise"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/business/business-vocabulary-intermediate-presentations-public-speaking-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Presentations & Speaking 2 - Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Shareholders have a right to attend the company's annual general meeting to ______.",
+      "alternatives": [
+        "avoid tax payments",
+        "change management",
+        "vote on important decisions"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/business/business-vocabulary-advanced-corporate-governance-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Corporate Governance Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "When a crisis occurs, companies need to have a ______ in place.",
+      "alternatives": [
+        "marketing strategy",
+        "growth model",
+        "contingency plan"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/business/business-vocabulary-advanced-crisis-management-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Crisis Management Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "They have a large dining ___________ where the whole family eats dinner together.",
+      "alternatives": [
+        "furniture",
+        "sofa",
+        "table"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-1.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 1"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The Italian restaurant has a new ___________ with more vegetarian options.",
+      "alternatives": [
+        "article",
+        "menu",
+        "postcard"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "They have a big ___________ on their bed for the cold winter nights.",
+      "alternatives": [
+        "cushion",
+        "pillow",
+        "duvet"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-19.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 19"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why is the hedgehog famous?",
+      "alternatives": [
+        "It is very large.",
+        "It has a spiky back.",
+        "It has colourful fur."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-6.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 6"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What effect has gardening had on Karen's life?",
+      "alternatives": [
+        "It has made her busier.",
+        "It has become a new source of money.",
+        "It has helped her feel peaceful."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-14.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What has gardening taught Karen?",
+      "alternatives": [
+        "To work faster.",
+        "To grow strange plants.",
+        "To be patient."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-14.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What change have Karen's friends noticed?",
+      "alternatives": [
+        "She is less worried.",
+        "She seems more relaxed.",
+        "She appears more content."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-14.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What has gardening become for the narrator?",
+      "alternatives": [
+        "A new routine.",
+        "A quiet escape.",
+        "A way to meet new people."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-14.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "How has the Golden Gate Bridge helped the area's economy?",
+      "alternatives": [
+        "By improving transportation.",
+        "By creating jobs.",
+        "By attracting IT companies."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-15.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 15"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why is it important to have routine boiler maintenance?",
+      "alternatives": [
+        "It will work better and save you money.",
+        "It will guarantee it works during the winter.",
+        "Gas boilers can be dangerous.",
+        "Electricity bills are cheaper with newer boilers."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-2.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "His new novel has a(n) ___________ plot that wakes your curiosity.",
+      "alternatives": [
+        "original",
+        "old-fashioned",
+        "noisy",
+        "high"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "In the living room, there is a large ___________ that is nice to have on during long winter evenings.",
+      "alternatives": [
+        "TV",
+        "oven",
+        "lamp",
+        "fridge"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-9.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 9"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The new shopping centre has a wide ___________ of stores and restaurants.",
+      "alternatives": [
+        "variety",
+        "commercial",
+        "monotony",
+        "uniformity"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-10.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 10"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "People have made ___________ from the oak tree's wood for centuries.",
+      "alternatives": [
+        "towns",
+        "roads",
+        "paths",
+        "houses"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Your behavior today will have serious ___________ for your future promotion chances.",
+      "alternatives": [
+        "warnings",
+        "predictions",
+        "consequences",
+        "results"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-1.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 1"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The machine can be very dangerous, especially when it ___________ in motion.",
+      "alternatives": [
+        "is",
+        "moves",
+        "goes",
+        "has"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-6.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 6"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The champion dancer will hold a press ___________ tomorrow at which you will all be able to ask her any questions you may have.",
+      "alternatives": [
+        "meeting",
+        "seminar",
+        "lecture",
+        "conference"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "This rain means we can't go to the zoo today. ___________, I have a lot to do and it's best we stay home.",
+      "alternatives": [
+        "besides",
+        "however",
+        "on the other hand",
+        "therefore"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The government has a ___________ range of powers to deal with security threats, some of them introduced in recent years.",
+      "alternatives": [
+        "large",
+        "big",
+        "wide",
+        "narrow"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "When each group of tourists have paid the entrance fee, ___________ them with a picnic hamper and two parasols.",
+      "alternatives": [
+        "provide",
+        "give",
+        "lend",
+        "give out"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-9.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 9"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "You are the only person in this company who ___________ access to both the staff phone list and the bank information of every employee. Please remember it is a huge responsibility.",
+      "alternatives": [
+        "has",
+        "takes",
+        "opens",
+        "sees"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-9.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 9"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Overall, six universities have accepted my application but I ____________ to go to Chicago because my aunt and uncle live there.",
+      "alternatives": [
+        "select",
+        "prefer",
+        "like",
+        "enjoy"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-10.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 10"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "My uncle has a large greenhouse in his garden which he uses to ____________ tropical fruit.",
+      "alternatives": [
+        "grow",
+        "rear",
+        "breed",
+        "raise"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-11.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 11"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "You can see how this artist has ____________ the well-known style of earlier artists such as Turner and Renoir.",
+      "alternatives": [
+        "repeated",
+        "imitated",
+        "twinned",
+        "modelled"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "____________ temperatures have made living in this part of the world more and more difficult.",
+      "alternatives": [
+        "raising",
+        "enlarging",
+        "rising",
+        "growing"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I stayed at work all day and ________ got very little done.",
+      "alternatives": [
+        "yet",
+        "despite",
+        "just",
+        "moreover"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-17.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 17"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I haven't seen Kathy since we both ________ school in 1999.",
+      "alternatives": [
+        "stopped",
+        "graduated",
+        "departed",
+        "left"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-17.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 17"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "For ________ of security, we have had to cancel tonight's performance...",
+      "alternatives": [
+        "motivation",
+        "because",
+        "reasons",
+        "consequence"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-17.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 17"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "She left the party ___________ saying goodbye.",
+      "alternatives": [
+        "with",
+        "before",
+        "without",
+        "since"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-19.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 19"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Bring an umbrella ___________ it rains later.",
+      "alternatives": [
+        "in case",
+        "if",
+        "provided",
+        "since"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-20.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 20"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "___________ present, we have no plans to expand our business.",
+      "alternatives": [
+        "By",
+        "On",
+        "With",
+        "At"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-27.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 27"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "___________, let's have some coffee and relax before we continue working.",
+      "alternatives": [
+        "In the meantime",
+        "In conclusion",
+        "In addition",
+        "In general"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-28.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 28"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I've been ___________ the fence about whether to take the job or not.",
+      "alternatives": [
+        "over",
+        "under",
+        "on",
+        "off"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-32.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 32"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "How would an early human have defined a 'month'?",
+      "alternatives": [
+        "the number of days between a full moon and a new moon",
+        "the number of days for the sun and moon to be seen together",
+        "the number of days between eclipses of the moon",
+        "the number of days from one phase of the moon's cycle and then back to the same point again"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-reading-multiple-choice-4-the-history-of-time.php",
+      "sourceName": "esl-lounge.com — The History Of Time"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Scientists are yet to understand the full nutritional ___________ of the humble olive.",
+      "alternatives": [
+        "favours",
+        "helps",
+        "goods",
+        "benefits"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-3.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The garden is a paradise for flowers in particular. We have seventeen ___________ of roses.",
+      "alternatives": [
+        "varieties",
+        "breeds",
+        "families",
+        "mutations"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-4.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 4"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "In the tough economic climate, the company GTV has ___________ by over 40%.",
+      "alternatives": [
+        "sunk",
+        "belittled",
+        "reduced",
+        "shrunk"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-6.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 6"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Modern conditions such as diabetes and alcohol abuse has caused life ___________ to fall in some countries.",
+      "alternatives": [
+        "expectancy",
+        "expectation",
+        "prediction",
+        "forecast"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Every person in this room has ___________ an important part in the success of the company.",
+      "alternatives": [
+        "played",
+        "added",
+        "made",
+        "put"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-9.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 9"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Police ___________ that the boy missing since Tuesday night is in danger.",
+      "alternatives": [
+        "predict",
+        "care",
+        "wonder",
+        "fear"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-10.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 10"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "You've been ___________ from the competition because we've discovered you cheated.",
+      "alternatives": [
+        "lost",
+        "failed",
+        "eliminated",
+        "beaten"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-11.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 11"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "We have decided to ___________ the Premium 2000 computer security system. It's too old now.",
+      "alternatives": [
+        "reject",
+        "veto",
+        "discard",
+        "throw away"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-12.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 12"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Scientists have ___________ a strange phenomenon in the atmosphere of Mars.",
+      "alternatives": [
+        "observed",
+        "inspected",
+        "watched",
+        "regarded"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I owe my sisters a huge ___________ of gratitude for the way they've helped me out in recent years.",
+      "alternatives": [
+        "bill",
+        "debt",
+        "claim",
+        "liability"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The Dollar-Euro exchange rate has ___________ a lot throughout the year.",
+      "alternatives": [
+        "fluctuated",
+        "wavered",
+        "altered",
+        "ranged"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-16.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 16"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The taste is wrong. Add some more salt to it. That might ___________ the trick.",
+      "alternatives": [
+        "have",
+        "play",
+        "do",
+        "make"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-17.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 17"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A meteorite or comet ___________ is thought to have contributed to the dinosaurs' extinction.",
+      "alternatives": [
+        "crash",
+        "clash",
+        "smash",
+        "impact"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-18.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 18"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Alcohol ___________ has risen again among the young, according to a new report published today.",
+      "alternatives": [
+        "spending",
+        "inhalation",
+        "consumption",
+        "absorption"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-18.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 18"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Have you decided whether you'll ___________ for our standard insurance or the premium policy?",
+      "alternatives": [
+        "choose",
+        "select",
+        "opt",
+        "decide"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-18.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 18"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The app has millions of active ___________ who enjoy its features and functionality.",
+      "alternatives": [
+        "clients",
+        "users",
+        "purchasers",
+        "consumers"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-29.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 29"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What have contemporary sleep laboratories discovered about night-time waking?",
+      "alternatives": [
+        "It can enhance dream recall and memory functions",
+        "It leads to increased stress levels",
+        "It disrupts natural sleep patterns",
+        "It reduces overall sleep quality"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-history-of-sleep-reading-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice. Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "My company has just spent two million dollars, _____________ a world famous artist to paint a huge mural for the main entrance foyer.",
+      "alternatives": [
+        "asking",
+        "ordering",
+        "consulting",
+        "commissioning"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-2.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I can see how old those jeans are. They have _____________ almost to a sky blue color after all these years.",
+      "alternatives": [
+        "faded",
+        "blanched",
+        "disappeared",
+        "reduced"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "That old house is _____________ with rats! There is no way I would ever go and live there without at least five cats.",
+      "alternatives": [
+        "riddled",
+        "infected",
+        "crowded",
+        "inflicted"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Bill and Mary resolved their problems after her brother got them to sit down and have a(n) _____________ talk with each other.",
+      "alternatives": [
+        "candid",
+        "overt",
+        "servile",
+        "piteous"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-7.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I picked up these _____________ from the travel agents today. They have a great offer on cruises to Turkey for the end of April!",
+      "alternatives": [
+        "leaflets",
+        "manifestoes",
+        "brochures",
+        "programmes"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-8.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 8"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I wish you kids would just shut up for five minutes. I have got a _____________ headache!",
+      "alternatives": [
+        "drumming",
+        "splitting",
+        "hammering",
+        "beating"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-13.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 13"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Along with your new responsibilities, you will also have _____________ to highly confidential information about the staff here, so we need you to sign a new agreement promising not to disclose anything.",
+      "alternatives": [
+        "access",
+        "entrance",
+        "contact",
+        "admission"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The coach has _____________ fit to move to another club after some disputes over player contracts.",
+      "alternatives": [
+        "seen",
+        "looked",
+        "seemed",
+        "chosen"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-20.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 20"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "And also among our guests tonight, we are fortunate enough to have the _____________ environmentalist Kathy Wong.",
+      "alternatives": [
+        "notorious",
+        "eminent",
+        "prestigious",
+        "monumental"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-22.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 22"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I am afraid to inform the cabinet that there is a traitor in our _____________. We have begun an investigation to find out who the culprit is.",
+      "alternatives": [
+        "midst",
+        "crew",
+        "middle",
+        "centre"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-23.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 23"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A lesser known symptom of this condition is that you will suddenly have panic attacks and _____________ cold sweats with little or no warning.",
+      "alternatives": [
+        "break into",
+        "come across",
+        "give off",
+        "switch on"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-23.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 23"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I have tried every product on the market and still I can't rid these curtains of the _____________ of cigarette smoke.",
+      "alternatives": [
+        "fumes",
+        "fragrance",
+        "stench",
+        "aroma"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-24.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 24"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "On the last day of the festival, we have a choice between a battle re-enactment and a poetry _____________ near the abbey.",
+      "alternatives": [
+        "show",
+        "performance",
+        "recital",
+        "telling"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-27.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 27"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I'm not sure of this painting's value, so I would like to have it _____________.",
+      "alternatives": [
+        "assessed",
+        "evaluated",
+        "counted",
+        "appraised"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-31.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 31"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Which of these is NOT a reason why Bill Maskell is happy to leave Bob on lone look-out duty?",
+      "alternatives": [
+        "the boy insisted on being left alone",
+        "the boy has experience",
+        "the boy has good eyes",
+        "the lookout is close to the pub"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-the-pirate-island-reading-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice - The Pirate Island by Harry Collingwood"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Good automotive design ______ a decisive factor in the success of an automotive brand.",
+      "alternatives": [
+        "had become",
+        "having become",
+        "has become"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-verb-tense-multiple-choice-worksheet-2.php",
+      "sourceName": "esl-lounge.com — Verb Tense Multiple Choice Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The accountant ______ to prepare the company's tax filing.",
+      "alternatives": [
+        "has began",
+        "has begun",
+        "beginning"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-verbs-and-adverbs-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Verbs & Adverbs Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "______, regular physical activity may be associated with lower health care costs.",
+      "alternatives": [
+        "Since",
+        "However",
+        "Despite",
+        "In addition"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-connectors-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Connectors Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I have filled in an FORMAL REQUEST TO AUTHORITY form for a new passport.",
+      "alternatives": [
+        "licence",
+        "demand",
+        "application"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-match-the-definition-multiple-choice-worksheet-5.php",
+      "sourceName": "esl-lounge.com — Match The Definition Multiple Choice Worksheet 5"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "He has a double-barrelled surname and it is SEPARATED BY A SYMBOL.",
+      "alternatives": [
+        "parted",
+        "hyphenated",
+        "joined"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-match-the-definition-multiple-choice-worksheet-7.php",
+      "sourceName": "esl-lounge.com — Match The Definition Multiple Choice Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The student is bright and hardworking and has great POSSIBILITY TO SUCCEED ACADEMICALLY.",
+      "alternatives": [
+        "skill",
+        "potential",
+        "ability"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-match-the-definition-multiple-choice-worksheet-7.php",
+      "sourceName": "esl-lounge.com — Match The Definition Multiple Choice Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The professors debated whether THE INDIVIDUAL or society has a greater impact on the issue.",
+      "alternatives": [
+        "groups",
+        "committees",
+        "a person"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-match-the-definition-multiple-choice-worksheet-8.php",
+      "sourceName": "esl-lounge.com — Match The Definition Multiple Choice Worksheet 8"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The human appendix no longer has a FUNCTION.",
+      "alternatives": [
+        "support",
+        "need",
+        "reason",
+        "purpose"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-match-the-definition-multiple-choice-worksheet-9.php",
+      "sourceName": "esl-lounge.com — Match The Definition Multiple Choice Worksheet 9"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Jack has a hard decision to make. I feel sorry for his ______.",
+      "alternatives": [
+        "dilemma",
+        "problem",
+        "heartache"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-5.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 5"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Public opinion on gun ownership ______ to the left.",
+      "alternatives": [
+        "has sourced",
+        "has shifted",
+        "has stabilized"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-6.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 6"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "That particular shop has a large ______ of gourmet food.",
+      "alternatives": [
+        "selection",
+        "shelf",
+        "bakery"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-7.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The lack of natural resources ______ the country's growth.",
+      "alternatives": [
+        "has manufactured",
+        "has impacted",
+        "has led to"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-7.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "In response to the drought, California has restricted crop and landscape ______.",
+      "alternatives": [
+        "water",
+        "irrigation",
+        "harvesting"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-10.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 10"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Have you seen the Sierra Nevada mountain _____?",
+      "alternatives": [
+        "plant",
+        "climbing",
+        "range"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-12.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 12"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The newspaper reported that the candidate has recent ______ to organized crime.",
+      "alternatives": [
+        "questions",
+        "support",
+        "links",
+        "arguments"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-15.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 15"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Unfortunately, I can't go. I have a prior ______.",
+      "alternatives": [
+        "headache",
+        "commitment",
+        "refusal",
+        "illness"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-16.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 16"
     }
   ]
 }

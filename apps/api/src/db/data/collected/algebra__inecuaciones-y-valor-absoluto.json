@@ -6,7 +6,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Moshy resuelve (m - 9) ejercicios de álgebra por día durante (m - 9) días. Si el total de ejercicios resueltos, disminuido en cinco, no excede al cuádruple de la diferencia positiva entre m y nueve, ¿cuál es la máxima cantidad total de ejercicios que Moshy habrá resuelto?",
-      "alternatives": ["25", "36", "16", "9"],
+      "alternatives": [
+        "25",
+        "36",
+        "16",
+        "9"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 1 (clave A)"
@@ -17,7 +22,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una editorial determina su ingreso mediante I = |50L - 4000|, donde L representa la cantidad de libros vendidos. Si el ingreso diario no debe exceder S/ 3000, calcule la cantidad de libros que la editorial debe vender diariamente.",
-      "alternatives": ["De 20 a 140", "De 18 a 120", "De 20 a 120", "De 18 a 140"],
+      "alternatives": [
+        "De 20 a 140",
+        "De 18 a 120",
+        "De 20 a 120",
+        "De 18 a 140"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 2 (clave A)"
@@ -28,7 +38,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si el número de elementos enteros del complemento del conjunto solución de 3|x + 1| >= x + 5 representa la edad actual (en años) de Jesús, ¿cuántos años tendrá dentro de 25 años?",
-      "alternatives": ["31", "29", "35", "27"],
+      "alternatives": [
+        "31",
+        "29",
+        "35",
+        "27"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 3 (clave D)"
@@ -39,7 +54,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle el conjunto solución de la inecuación |x| + x^3 > 0.",
-      "alternatives": ["<-1; 0> U <1; +inf>", "<-1; 1> U <1; +inf>", "<-1; 0> U <0; +inf>", "<-1; 1> U <2; +inf>"],
+      "alternatives": [
+        "<-1; 0> U <1; +inf>",
+        "<-1; 1> U <1; +inf>",
+        "<-1; 0> U <0; +inf>",
+        "<-1; 1> U <2; +inf>"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 4 (clave C)"
@@ -50,7 +70,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Halle el complemento del conjunto solución de la inecuación |x^2 - 4| >= -2x + 4.",
-      "alternatives": ["]-4; 9[", "]-4; 2[", "]-4; -2[", "]-4; 0["],
+      "alternatives": [
+        "]-4; 9[",
+        "]-4; 2[",
+        "]-4; -2[",
+        "]-4; 0["
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 5 (clave D)"
@@ -61,7 +86,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Para todo x del conjunto solución de |2 - x| < 3, indique el intervalo que contiene a 6 - x.",
-      "alternatives": ["<1; 9>", "<3; 9>", "<1; 3>", "<-3; 3>"],
+      "alternatives": [
+        "<1; 9>",
+        "<3; 9>",
+        "<1; 3>",
+        "<-3; 3>"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 6 (clave A)"
@@ -72,7 +102,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Omaku resuelve la inecuación |x^4 - 20| >= |x^2|^2 + 6x^2. El profesor otorga puntos iguales a la cantidad de elementos enteros del complemento del conjunto solución. Si se necesitan 2 puntos para aprobar, ¿aprobó Omaku y cuántos puntos otorgó el profesor?",
-      "alternatives": ["Aprobó, 4 puntos", "Desaprobó, 1 punto", "Aprobó, 3 puntos", "Aprobó, 2 puntos"],
+      "alternatives": [
+        "Aprobó, 4 puntos",
+        "Desaprobó, 1 punto",
+        "Aprobó, 3 puntos",
+        "Aprobó, 2 puntos"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 7 (clave C)"
@@ -83,7 +118,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Las longitudes de los intervalos solución de las inecuaciones 3x^2 - 6x - 9 <= 0 y 2x^2 - 28x + 66 <= 0 están dadas en metros. La hormiga A se desplaza en línea recta desde el extremo inferior del conjunto solución de la primera inecuación a una velocidad constante de 2 m/min al encuentro de la hormiga B, y esta última se desplaza en línea recta simultáneamente desde el extremo superior del conjunto solución de la segunda inecuación a una velocidad constante de 4 m/min al encuentro de la hormiga A. Si al cabo de un minuto la hormiga B se detiene por fracturarse dos patitas, desde ese instante, ¿cuánto tiempo demorará la hormiga A en encontrarse con la hormiga B?",
-      "alternatives": ["3,5 min", "2 min", "3 min", "2,5 min", "4 min"],
+      "alternatives": [
+        "3,5 min",
+        "2 min",
+        "3 min",
+        "2,5 min",
+        "4 min"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
       "sourceName": "matematicasn.blogspot.com — Álgebra San Marcos DECO, Pregunta 8 (clave E)"
@@ -94,7 +135,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Al resolver la inecuación |2x - 6| <= x + 3 se obtiene CS = [a; b]. Halle a + b.",
-      "alternatives": ["10", "7", "8", "9"],
+      "alternatives": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto_14.html",
       "sourceName": "matematicasn.blogspot.com — Inecuación con Valor Absoluto (secundaria y pre-universidad), Ejercicio 2 (clave A)"
@@ -105,7 +151,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine A ∩ B si se tienen los conjuntos A = {x ∈ R / |x - 3| < 5} y B = {x ∈ R / |x + 2| >= 4}.",
-      "alternatives": ["<1; 6>", "<1; 8]", "[2; 8>", "[3; 9]"],
+      "alternatives": [
+        "<1; 6>",
+        "<1; 8]",
+        "[2; 8>",
+        "[3; 9]"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto_14.html",
       "sourceName": "matematicasn.blogspot.com — Inecuación con Valor Absoluto (secundaria y pre-universidad), Ejercicio 4 (clave C)"
@@ -116,7 +167,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Halle la suma de los divisores positivos del mayor elemento entero del conjunto solución de la inecuación |1 + |x - 2| + x| <= 4.",
-      "alternatives": ["3", "6", "7", "2"],
+      "alternatives": [
+        "3",
+        "6",
+        "7",
+        "2"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/valor-absoluto-ejercicios-resueltos-pdf.html",
       "sourceName": "algebraenpdf.blogspot.com — Valor Absoluto Ejercicios Resueltos PDF, Problema 1 (clave A)"
@@ -127,7 +183,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "La longitud del radio de un círculo C es numéricamente igual a tres unidades menos que la suma de los valores de x que verifican la ecuación |2x^2 - 4| = 8x - 6. Calcule el área de la región determinada por el círculo C.",
-      "alternatives": ["4pi u^2", "3pi u^2", "2pi u^2", "pi u^2"],
+      "alternatives": [
+        "4pi u^2",
+        "3pi u^2",
+        "2pi u^2",
+        "pi u^2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/valor-absoluto-ejercicios-resueltos-pdf.html",
       "sourceName": "algebraenpdf.blogspot.com — Valor Absoluto Ejercicios Resueltos PDF, Problema 2 (clave B)"
@@ -138,7 +199,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Una fábrica de control de calidad establece que el ancho de un cuaderno debe ser de 21 cm. Un cuaderno pasa el control si el error es de máximo 0,04 cm. Si la expresión |x - 21| <= 0,04 describe el control de calidad, ¿qué ancho x pueden tener los cuadernos que pasan el control?",
-      "alternatives": ["Pasa si el ancho está entre 20,96 y 20,98 cm", "No pasa el control de calidad", "Pasa si el ancho está entre 20,96 y 21,04 cm", "No se puede fabricar el cuaderno"],
+      "alternatives": [
+        "Pasa si el ancho está entre 20,96 y 20,98 cm",
+        "No pasa el control de calidad",
+        "Pasa si el ancho está entre 20,96 y 21,04 cm",
+        "No se puede fabricar el cuaderno"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/inecuaciones-con-valor-absoluto-problemas-resueltos-pdf.html",
       "sourceName": "razonamientopdf.blogspot.com — Inecuaciones con valor absoluto problemas resueltos, Problema 1 (clave C)"
@@ -149,7 +215,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si x_0 es la menor solución al resolver ||x| - 5| = 2x - 3, calcule el valor de 8 / x_0.",
-      "alternatives": ["3", "4", "5", "6"],
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/inecuaciones-con-valor-absoluto-problemas-resueltos-pdf.html",
       "sourceName": "razonamientopdf.blogspot.com — Inecuaciones con valor absoluto problemas resueltos, Problema 2 (clave A)"
@@ -160,7 +231,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Al resolver la inecuación |x + 1 - 1| <= |x - 1| - 1, el conjunto solución es:",
-      "alternatives": ["[0; +inf>", "[0; 1> U <1; +inf>", "<-inf; -1> U <1; +inf>", "<-1; 1>"],
+      "alternatives": [
+        "[0; +inf>",
+        "[0; 1> U <1; +inf>",
+        "<-inf; -1> U <1; +inf>",
+        "<-1; 1>"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
       "sourceName": "matematicasn.blogspot.com — Valor Absoluto Full Problemas Resueltos, Problema 3 (clave B)"
@@ -171,7 +247,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Determine el complemento del conjunto solución de la inecuación |3x + 5| > x - 2.",
-      "alternatives": ["<1; 3>", "<-1; 1>", "Ø", "R"],
+      "alternatives": [
+        "<1; 3>",
+        "<-1; 1>",
+        "Ø",
+        "R"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
       "sourceName": "matematicasn.blogspot.com — Valor Absoluto Full Problemas Resueltos, Problema 4 (clave D)"
@@ -182,7 +263,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Al resolver ||x^2 + 2x + 1| + 7| = |x^2 + x + 30|, el resultado representa mi edad en años. Mi hermana tiene el doble de mi edad. ¿Cuánto es la suma de los dígitos de la edad de mi hermana?",
-      "alternatives": ["12", "8", "10", "11"],
+      "alternatives": [
+        "12",
+        "8",
+        "10",
+        "11"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
       "sourceName": "matematicasn.blogspot.com — Valor Absoluto Full Problemas Resueltos, Problema 6 (clave B)"
@@ -193,7 +279,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Adelo estudió el frío en Puno, Cusco y Huancavelica, determinando que Puno es la ciudad más fría a las 7 a. m. Las temperaturas (°C) a las 7 a. m. de las tres ciudades están representadas por las soluciones de la expresión x - 3 + |x^2 + 3x - 18|. ¿Cuál es la temperatura de Puno?",
-      "alternatives": ["-7°C", "-9°C", "-5°C", "-6°C"],
+      "alternatives": [
+        "-7°C",
+        "-9°C",
+        "-5°C",
+        "-6°C"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Ecuaciones con Valor Absoluto, Problema 1 (clave A)"
@@ -204,7 +295,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un jardín cuadrado tiene un perímetro que no excede 20 metros. Calcule el perímetro de un jardín rectangular cuyos lados miden |x - 10| y |x + 6| metros.",
-      "alternatives": ["18", "20", "32", "30"],
+      "alternatives": [
+        "18",
+        "20",
+        "32",
+        "30"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Ecuaciones con Valor Absoluto, Problema 2 (clave C)"
@@ -215,7 +311,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Resuelva la ecuación x^2 - 4x - |x - 2| = 16. Determine el valor absoluto de la diferencia entre las soluciones.",
-      "alternatives": ["4", "6", "8", "10"],
+      "alternatives": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Ecuaciones con Valor Absoluto, Problema 4 (clave D)"
@@ -226,7 +327,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Tres conos colocados en línea: la distancia entre los conos 1 y 2 es 3 m, y entre los conos 2 y 3 es 5 m. Si la distancia entre los conos 3 y 1 está dada por (x - 5)^2 + |10 - 4x|, calcule el producto de los valores de x.",
-      "alternatives": ["12", "21", "10", "17"],
+      "alternatives": [
+        "12",
+        "21",
+        "10",
+        "17"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Ecuaciones con Valor Absoluto, Problema 5 (clave B)"
@@ -237,7 +343,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Halle el producto de las soluciones de la ecuación |x + 3| - |3x + 9| = (x + 3)^2 + x^2 + 6x + 5.",
-      "alternatives": ["6", "8", "10", "12"],
+      "alternatives": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
       "sourceName": "matematicasn.blogspot.com — Ecuaciones con Valor Absoluto, Problema 6 (clave B)"
@@ -248,7 +359,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si E = <-inf; 2] es el conjunto solución de la inecuación |x - a| <= |x - b|, con 0 < a < b, halle el mínimo valor de (a + b)^2.",
-      "alternatives": ["8", "10", "12", "14", "16"],
+      "alternatives": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-matematico-solucionario.html",
       "sourceName": "matematicasn.blogspot.com — UNI 2021-II Segunda Prueba Admisión, Pregunta 15 (clave E)"
@@ -259,7 +376,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Para hornear buen pan, el horno debe calentarse bien. El mejor pan se obtiene a 200 °C con una variación que no excede 5 grados. ¿Cuál de las siguientes inecuaciones describe correctamente este proceso si x es la temperatura del horno?",
-      "alternatives": ["|x - 230| <= 2", "|x - 200| <= 5", "|x - 2| <= 5", "|2x - 1| <= 2"],
+      "alternatives": [
+        "|x - 230| <= 2",
+        "|x - 200| <= 5",
+        "|x - 2| <= 5",
+        "|2x - 1| <= 2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
       "sourceName": "matematicasn.blogspot.com — Valor Absoluto Full Problemas Resueltos, Problema 1 (clave B)"
@@ -270,10 +392,3132 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La relación |t - 230| <= 2 indica la temperatura ideal (en °C) para la cocción de panes en un horno industrial. Determine el rango de temperaturas permitido y la temperatura máxima para el control de calidad.",
-      "alternatives": ["[200°; 300°]; 300°C", "[228°; 232°]; 232°C", "[228°; 230°]; 230°C", "[216°; 230°]; 230°C"],
+      "alternatives": [
+        "[200°; 300°]; 300°C",
+        "[228°; 232°]; 232°C",
+        "[228°; 230°]; 230°C",
+        "[216°; 230°]; 230°C"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
       "sourceName": "matematicasn.blogspot.com — Valor Absoluto Full Problemas Resueltos, Problema 2 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el número de soluciones enteras que tiene la inecuación\nLog 5 (x 2 – 6x) ≤Log 5 ( |x – 3| +3)",
+      "alternatives": [
+        "5",
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/inecuaciones-logaritmicas-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — INECUACIONES LOGARÍTMICAS PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si E=〈– ∞; 2] es el conjunto solución de la inecuación |x – a| ≤ |x – b| , 0<a<b, entonces el menor valor de (a+b)² es:",
+      "alternatives": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/examen-admision-uni-resuelto-algebra.html",
+      "sourceName": "algebraenpdf.blogspot.com — EXAMEN ADMISION UNI RESUELTO ALGEBRA - MATEMÁTICAS INGRESO UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El intervalo en el cual se satisface la inecuación:\nes: ; Calcule:",
+      "alternatives": [
+        "13",
+        "18",
+        "23",
+        "26",
+        "32"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/inecuaciones-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — INECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El conjunto solución de la inecuación:\nEs: Calcule a+b+c.",
+      "alternatives": [
+        "6",
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/inecuaciones-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — INECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale el valor máximo de k en la inecuación: de modo que la desigualdad se cumpla para todo valor de “x”.",
+      "alternatives": [
+        "8",
+        "7",
+        "6",
+        "5",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/inecuaciones-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — INECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El mayor valor entero negativo que satisface a la inecuación:\nes:",
+      "alternatives": [
+        "- 4",
+        "- 5",
+        "- 2",
+        "- 3",
+        "-1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/inecuaciones-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — INECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la suma de aquellos números enteros que satisfacen la inecuación:",
+      "alternatives": [
+        "1",
+        "0",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/inecuaciones-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — INECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la suma de los , al resolver la inecuación:",
+      "alternatives": [
+        "1",
+        "2",
+        "5",
+        "6",
+        "11"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/inecuaciones-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — INECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelva la inecuación |2|x|+5|=|–15| y calcule la suma de los valores absolutos de sus soluciones.",
+      "alternatives": [
+        "10",
+        "12",
+        "8",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — VALOR ABSOLUTO DE SECUNDARIA EJEMPLOS RESUELTOS CON ECUACIONES E INECUACIONES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la inecuación |5x – 1|> x+b se obtiene CS = 〈 – ∞; a〉 ∪ 〈2; +∞〉.\nHalle a+b.",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — VALOR ABSOLUTO DE SECUNDARIA EJEMPLOS RESUELTOS CON ECUACIONES E INECUACIONES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de valores enteros al resolver la inecuación |3x – 5| ≤ x+ 9.",
+      "alternatives": [
+        "4",
+        "5",
+        "7",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — VALOR ABSOLUTO DE SECUNDARIA EJEMPLOS RESUELTOS CON ECUACIONES E INECUACIONES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el conjunto solución al resolver la inecuación\n|x ² +x+3|+|2x – 1|<x ² +2x+3",
+      "alternatives": [
+        "〈 1/3; 1 〉",
+        "〈 –1/3;1/3〉",
+        "〈 2/3; 1 〉",
+        "〈 1; 2 〉"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/valor-absoluto-ejercicios-y-problemas-resueltos-de-matematicas-de-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VALOR ABSOLUTO PROBLEMAS RESUELTOS UNIVERSITARIOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la inecuación |3x – 5|≤ x+2m se obtiene CS = [3/4;n/2]\nHalle m+n.",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/valor-absoluto-ejercicios-y-problemas-resueltos-de-matematicas-de-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VALOR ABSOLUTO PROBLEMAS RESUELTOS UNIVERSITARIOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de valores enteros al resolver la inecuación x² – |x| ≤ 6.",
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/valor-absoluto-ejercicios-y-problemas-resueltos-de-matematicas-de-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — VALOR ABSOLUTO PROBLEMAS RESUELTOS UNIVERSITARIOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el número de elementos enteros del complemento del conjunto solución de la inecuación 3 | x+1 | ≥ x+5 representa la edad actual de Jesús (en años).\n¿Cuántos años tendrá dentro de 25 años?",
+      "alternatives": [
+        "31 años",
+        "29 años",
+        "35 años",
+        "27 años"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES CON VALOR ABSOLUTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el conjunto solución de la inecuación\n|x|+x³> 0",
+      "alternatives": [
+        "〈−1; 0〉 ∪ 〈1;+∞〉",
+        "〈−1; 1〉 ∪ 〈1;+∞〉",
+        "〈−1; 0〉 ∪ 〈0;+∞〉",
+        "〈−1; 1〉 ∪ 〈2;+∞〉"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES CON VALOR ABSOLUTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para todo x en el conjunto solución de la inecuación |2−x|<3, indique el intervalo al que pertenece 6−x.",
+      "alternatives": [
+        "〈1;9〉",
+        "〈3;9〉",
+        "〈1;3〉",
+        "〈−3;3〉"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES CON VALOR ABSOLUTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Omaku, es un estudiante que necesita dos puntos para aprobar el curso de Álgebra, si su profesor le dice, Si resuelves correctamente el siguiente ejercicio | x 4 –20 | ≥ | x² |² +6 x² , te adicionaré algunos puntos. Omaku, resolvió el ejercicio correctamente y el puntaje que el profesor le subió es igual al número de elementos enteros que tiene el complemento del conjunto solución de la inecuación dada; entonces diga usted si Omaku, aprobó o desaprobó el curso en mención y cuántos puntos le subió el profesor a Omaku, .",
+      "alternatives": [
+        "Aprobó y 4 puntos.",
+        "Desaprobó y 1 punto.",
+        "Aprobó y 3 puntos.",
+        "Aprobó y 2 puntos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES CON VALOR ABSOLUTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el cuadrado del número de soluciones enteras de la siguiente inecuación: (x³−1)(x−3) ≤0",
+      "alternatives": [
+        "10",
+        "9",
+        "8",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-grado-superior.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES DE GRADO SUPERIOR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de resolver la siguiente inecuación polinomial x 4 −4x²≥45\nDar como respuesta la suma de los extremos finitos de su conjunto solución.",
+      "alternatives": [
+        "0",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-grado-superior.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES DE GRADO SUPERIOR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el conjunto solución de la inecuación\ne 3x – 4 e x – e 2x ≤– 4",
+      "alternatives": [
+        "[0;1]",
+        "[1;2]",
+        "[1; Ln2 ]",
+        "[0;Ln2]"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/inecuaciones-exponenciales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EXPONENCIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el conjunto solución de la siguiente inecuación x² + 3|x + 2| ≤ – 4x .",
+      "alternatives": [
+        "[ – 4, – 2]",
+        "[ – 2,0]",
+        "[ – 3, – 1]",
+        "[ – 1,1]",
+        "[0, 2]"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/valor-absoluto-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VALOR ABSOLUTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x²–3x+2= 0 tiene discriminante (a)\ny, x ² –5x+6= 0 tiene discriminante (b)\nResuelva la inecuación cuadrática.\nax ² +bx+5>0",
+      "alternatives": [
+        "∅",
+        "R",
+        "{1}",
+        "{3}"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-cuadraticas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN DE SEGUNDO GRADO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de resolver la siguiente inecuación x³–7x+6>0 indique el número de soluciones enteras negativas contenidas en el conjunto solución.",
+      "alternatives": [
+        "5",
+        "4",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-polinomiales-de-grado.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES POLINOMIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de resolver la siguiente inecuación 12x ³ –4x²–3x+1≤0 dé como respuesta la suma de los extremos finitos de su conjunto solución.",
+      "alternatives": [
+        "1 3",
+        "1 2",
+        "3",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-polinomiales-de-grado.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES POLINOMIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para hornear un buen pan es necesario que el horno esté bien caliente. El mejor pan se obtiene a una temperatura de 200 °C, con una variación no mayor de 5 grados. Represente una inecuación que describa este proceso.",
+      "alternatives": [
+        "|x – 230°| ≤ 2",
+        "|x – 200°| ≤ 5",
+        "|x – 2°| ≤ 5",
+        "|2x – 1°| ≤ 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — VALOR ABSOLUTO FULL PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el conjunto solución de la siguiente inecuación:\n0,5 |6x – 20 | ≤ x",
+      "alternatives": [
+        "[1; 2]",
+        "[3; 4]",
+        "[1; 3/2]",
+        "[5/2;5]"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-conceptos-basicos.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE VALOR ABSOLUTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelva la inecuación ||x – 3 |+ 5| ≤ 7 e indique su conjunto solución.",
+      "alternatives": [
+        "[1; 7]",
+        "[1; 5]",
+        "[2; 9]",
+        "[3; 11]"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-conceptos-basicos.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE VALOR ABSOLUTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la inecuación |x ² +2x| ≤ |3x+12| se obtiene CS = [ – m; n].\nHalle m+n.",
+      "alternatives": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-conceptos-basicos.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE VALOR ABSOLUTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si E=〈–∞;2] es el conjunto solución de la inecuación |x – a| ≤ |x – b| , 0<a<b, entonces el menor valor de (a+b) 2 es:",
+      "alternatives": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/02/solucionario-segunda-prueba-examen.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-1 SEGUNDA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DE INGENIERÍA SOLUCIONES DE MATEMÁTICA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la cantidad de soluciones enteras no negativas que tiene la inecuación\n(x+ 3) (x– 6) –1 ≤ 0",
+      "alternatives": [
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-fraccionarias-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES FRACCIONARIAS EJERCICIOS RESUELTOS  PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un partido de futbol entre los equipos A y B se sabe que el número de goles que anota el equipo A es la suma de las soluciones enteras y positivas de la inecuación\nLn(8–x²) ≥L n2+Ln |x| , mientras que el número de goles que anota el equipo B es el valor absoluto de la suma de las soluciones enteras y negativas de la inecuación anterior.\n¿Cuál fue el score final?",
+      "alternatives": [
+        "3 – 3",
+        "3 – 2",
+        "2 – 2",
+        "1 – 1",
+        "2 – 1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logaritmos-neperianos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com —  LOGARITMOS NEPERIANOS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia (en millas) recorrida por un tren, medida desde su punto de partida, cuando está viajando a lo largo de una vía recta, está dada por el menor valor de x que verifica la inecuación, Log x+1 √(2X+10) ≤ 1 , halle la distancia recorrida por dicho tren.",
+      "alternatives": [
+        "5 millas",
+        "2 millas",
+        "3 millas",
+        "4 millas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-logaritmicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LOGARÍTMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la inecuación |4x+3|≤|3x+ 4| se obtiene CS.= [ – a; a].\nHalle a²+a+ 5.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto_14.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CON VALOR ABSOLUTO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la inecuación |2x – 3|>x+n se obtiene CS.= 〈 – ∞; m〉 ∪ 〈4; +∞〉; m < 1.\nHalle 3m+n.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto_14.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CON VALOR ABSOLUTO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x 0 es la menor solución al resolver la inecuación ||x|– 5|=2x – 3 , calcule el valor de 8÷x 0",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/inecuaciones-con-valor-absoluto-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — INECUACIONES CON VALOR ABSOLUTO PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las ecuaciones en x, x ² +px+q = 0 y x ² – p²x+pq = 0 se cumple que cada una de las soluciones de la segunda ecuación es igual a cada una de las soluciones de la primera ecuación aumentada en una unidad , además p ≠ 1. Halle el número de elementos enteros del conjunto solución de la inecuación q x ² + 7x – p – 2q + 1 > 0 .",
+      "alternatives": [
+        "7",
+        "6",
+        "9",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/resolucion-de-ecuaciones-cuadraticas-elementales-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — ECUACIÓN CUADRÁTICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un científico, en sus estudios para modelar la presión arterial de una persona, utiliza una función del tipo P(t) = A + Bcos(kt) en la que A, B y K son constantes reales positivas y t representa la variable tiempo, medida en segundo. Considere que un latido cardíaco representa el intervalo de tiempo entre dos presiones máximas sucesivas. Al analizar un caso específico, el científico obtuvo los datos: Presión mínima Presión máxima Número de latidos cardíacos por minuto La función P(t) obtenida, por este científico, al analizar el caso específico fue",
+      "alternatives": [
+        "P(t) = 99 + 21cos(3πt)",
+        "P(t) = 78 + 42cos(3πt)",
+        "P(t) = 99 + 21cos(2πt)",
+        "P(t) = 99 + 21cos(t)",
+        "P(t) = 78 + 42cos(t)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2017/2017_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2017 dia 2 caderno azul questão 166"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En dos cajones hay 56 naranjas. La tercera parte del número de naranjas del cajón que contiene más, es mayor que la mitad del número de naranjas del otro cajón.\nCalcula el mínimo número de naranjas que puede tener el cajón más grande.",
+      "alternatives": [
+        "34",
+        "30",
+        "31",
+        "40",
+        "36"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2017/09/inecuaciones-irracionales-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — INECUACIONES IRRACIONALES PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un terreno rectangular es tal que el ancho es menor en 10 metros que el largo y su área es un número entero de metros cuadrados menor que 24m² .\n¿Cuál es el largo del terreno?",
+      "alternatives": [
+        "12 m",
+        "8 m",
+        "16 m",
+        "11 m",
+        "19 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2017/09/inecuaciones-irracionales-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — INECUACIONES IRRACIONALES PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si M es el menor número entero que satisface la desigualdad −x² +2x − 2,5 <M, para todo x∈ R , halle el valor de M² – 6M+ 9.",
+      "alternatives": [
+        "1",
+        "9",
+        "4",
+        "16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-deco-problemas-resueltos-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS PRUEBA DECO RESUELTA DE EXAMEN DE ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La edad de José es igual a 2M , donde M es un entero que satisface la inecuación\n2+6x – 3x² ≤ M ; ∀x∈R. Si la edad de José es menor que 20, ¿cuántos años, como máximo, puede tener José?",
+      "alternatives": [
+        "16",
+        "18",
+        "14",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/03/algebra-ce-examen-resuelto-deco-san.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA CE EXAMEN RESUELTO DECO SAN MARCOS DE ADMISIÓN A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para ser admitido en un puesto de trabajo, hay que pasar dos pruebas: una de currículo y otra de conocimientos. La prueba de conocimientos consta de 40 preguntas, en la que por cada respuesta correcta se otorga cinco puntos y por cada incorrecta se restan tres. Para pasar a la segunda etapa, un candidato debe tener un puntaje en conocimientos no menor de 140 puntos. Si Jorge responde todas las preguntas y pasa a la siguiente etapa, ¿cuál sería la proposición correcta?",
+      "alternatives": [
+        "El máximo número de respuestas incorrectas es 7.",
+        "Para que pase a la segunda etapa solo necesita responder correctamente 31 preguntas.",
+        "El número de preguntas bien respondidas no superó el 65 %.",
+        "Respondió mal el 37 % de las preguntas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/03/algebra-ce-examen-resuelto-deco-san.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA CE EXAMEN RESUELTO DECO SAN MARCOS DE ADMISIÓN A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un fabricante de muebles paga a los carpinteros un salario mensual de S/950, más S/300 por cada mueble terminado. Si el gasto mensual de uno de los carpinteros es S/2100, ¿cuántos muebles, como mínimo, debe terminar al mes para cubrir sus gastos?",
+      "alternatives": [
+        "3",
+        "2",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-problemas-resueltos-deco-examen.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS A-B-D DECO SOLUCIONES DEL EXAMEN ADMISIÓN UNIVERSIDAD PRUEBA RESUELTA PREGUNTAS DESARROLLADAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a>0, b>0, hallar el mayor numero M que cumpla lo siguiente: .",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/inecuaciones-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — INECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El matrimonio Guerra - Mazi está conformado por los esposos César y Nancy. Acerca del ingreso mensual de César y su gasto mensual en alimentación, se sabe lo siguiente: si César ganara menos de 1500 soles mensuales, entonces Nancy realizaría gastos de, a lo más, 800 soles. En cambio, Nancy gastaría más de 1000 soles si César ganara, al menos, 2000 soles mensuales. Dado que Nancy gasta 900 soles mensuales en alimentación, podemos añrmar que mensualmente César gana",
+      "alternatives": [
+        "más de 1500 soles, pero a lo más 2000 soles.",
+        "más de 1500 soles, y por lo menos 2000 soles.",
+        "por lo menos 1500 soles, pero menos de 2000 soles.",
+        "por lo menos 1500 soles, pero a lo más 2000 soles ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/aritmetica-simulacro-san-marcos-solucionario-admision-a-la-universidad-2020-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ARITMÉTICA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El quíntuplo del número de lapiceros que tiene Roxana, menos el triple del número de lapiceros que tiene Romina es mayor que 2. El doble del número de lapiceros que tiene Roxana, más lo que tiene Romina es menor que 11. Si Romina tiene más de 3 lapiceros, ¿cuántos lapiceros tienen juntas?",
+      "alternatives": [
+        "6",
+        "7",
+        "9",
+        "8",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/03/unsm-solucionario-examen-admision-universidad-nacional-de-san-martin-claves-respuestas-prueba-resuelta-descarga-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE SAN MARTÍN 2023 PRUEBA UNSM DE INGRESO DESARROLLADA CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pepe pagó una deuda con monedas de S/.5 y S/.2, el número de monedas de S/.5 es menor que las de S/.2 aumentado en 3. Si intercambiamos las cantidades de monedas, la cantidad de dinero que hubiera pagado con monedas de S/.2 es mayor que la cantidad de dinero que hubiera pagado con monedas de S/.5, ¿cuánto debía Pepe?",
+      "alternatives": [
+        "S/.15",
+        "S/.14",
+        "S/.17",
+        "S/.16",
+        "S/.18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/03/unsm-solucionario-examen-admision-universidad-nacional-de-san-martin-claves-respuestas-prueba-resuelta-descarga-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE SAN MARTÍN 2023 PRUEBA UNSM DE INGRESO DESARROLLADA CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cantidad de votos obtenidos por Juana y el doble de votos obtenidos por Luís suman menos de 32 votos, pero el triple de votos obtenidos por Luís, más el cuádruple de votos obtenidos de Juana son más de 79 votos. ¿Cuál es el máximo número de votos que puede obtener Luís?",
+      "alternatives": [
+        "9",
+        "7",
+        "10",
+        "8",
+        "11"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/03/unsm-solucionario-examen-admision-universidad-nacional-de-san-martin-claves-respuestas-prueba-resuelta-descarga-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE SAN MARTÍN 2023 PRUEBA UNSM DE INGRESO DESARROLLADA CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la inecuación:\nx ² – Kx+9 < 0\nSi su conjunto solución es: ] 1;9 [ , indique el valor de \"K\"",
+      "alternatives": [
+        "9",
+        "12",
+        "10",
+        "13"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/algebra-beca-18-formulario-ejemplos-resueltos-temario-pronabec-del-prospecto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA BECA 18 FORMULARIO CON EJEMPLOS RESUELTOS DEL TEMARIO PRONABEC PRUEBA UNICA NACIONAL PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Fabiano va a doblar en forma de un rectángulo un alambre de 14 m de largo con la condición de que la diagonal de dicho rectángulo mida menos de 5 m. La medida, en metros, del lado más corto de dicho rectángulo, fluctúa entre:",
+      "alternatives": [
+        "2 y 3",
+        "5/2 y 3",
+        "3 y 4",
+        "3 y 5",
+        "7/2 y 4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-matematico-unt-examen-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMATICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El costo del pasaje de Trujillo a Pacasmayo por el alza de combustible recientemente aumentó en una cantidad equivalente a la suma de los cuadrados de todos los números enteros que satisfacen la siguiente desigualdad:\n|x²+1|² – 3|x²+1| – 4 < 0 ;\ndicha cantidad es:",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-matematico-unt-examen-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMATICO UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean:\np(x): x 2 – 4 = 0\nq(x): x + 5 < 7\nr(x): x 2 – 6 ≤ 0\nSi p(a) ∧ q(a) es verdadero y p(b) ∧ r(b) es verdadero, halle el mayor valor del valor absoluto de a + b.",
+      "alternatives": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/tutoria-3ro-4to-actividad-2-experiencia-8-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 PRIMERA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF APTITUD LETRAS Y HUMANIDADES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Abel solamente tiene monedas de S/. 0,50. Si al cuadrado del número de soles que tiene, se le disminuye el doble del mismo, le quedaría menos de S/. 360. ¿Cuánto dinero tiene Abel como máximo?",
+      "alternatives": [
+        "S/. 18,50",
+        "S/. 12,50",
+        "S/. 39",
+        "S/. 20",
+        "S/. 19,50"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-6-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 6 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un salón de clase, los alumnos se dividen en dos grupos. En un grupo, hay 5 alumnos más que en el otro. Si se trasladara 7 alumnos del grupo donde hay más alumnos al otro, entonces el producto de ambas cantidades sería mayor que 286. ¿Cuántos alumnos hay como mínimo en total?",
+      "alternatives": [
+        "15",
+        "35",
+        "32",
+        "16",
+        "37"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-6-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 6 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El producto de dos números impares positivos consecutivos no es menor que 195. Halle el menor valor que suman ambos números.",
+      "alternatives": [
+        "15",
+        "18",
+        "26",
+        "24",
+        "28"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-6-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 6 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un aula, ubicaron a un cierto número de estudiantes, de tal manera que, su cuadrado disminuido en 30 veces, es mayor a 64. Muy por el contrario, el cuádruplo del número de estudiantes, aumentado en 20, es menor a 156. ¿Cuántos estudiantes ocupan el aula?",
+      "alternatives": [
+        "30",
+        "32",
+        "34",
+        "35",
+        "33"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/5to-actividad-14-educacion-fisica-experiencia-3-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNASAM ÁREA E ESTADÍSTICA SISTEMAS MATEMÁTICA CLAVES PDF – INGRESO UNIVERSIDAD – 2026–2027"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Arón dispone de cierta cantidad de dinero para comprarle un regalo a su esposa Magaly por su cumpleaños. Si el triple de su dinero, disminuido en un nuevo sol, supera los $ 26 y no supera los $ 59; pero el cuádruplo del dinero inicial, aumentado en $ 1, no es menor que $ 21 y es menor que $ 121, determine la mayor cantidad de dinero que puede tener Arón para comprar el regalo.",
+      "alternatives": [
+        "$ 30",
+        "$ 25",
+        "$ 27",
+        "$ 20",
+        "$ 18"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/algebra-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Raquel tiene un local de venta de camisas, ella compra cada camisa a S/ 40 y las vende a S/ 90. En el mes de octubre, por el alquiler de local de venta, pagó S/ 1500 y por otros gastos, S/ 2000. Halle el mínimo número de camisas que debió vender Raquel en ese mes si obtuvo ganancia.",
+      "alternatives": [
+        "63 camisas",
+        "77 camisas",
+        "71 camisas",
+        "95 camisas",
+        "69 camisas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/algebra-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se debe construir una caja de cartón, cuyas dimensiones de la base rectangular deberán ser (x + 3)cm,(x – 5)cm y de altura x³ cm. Halle el menor valor entero que puede tomar “x”, sabiendo que la altura de la caja no debe ser mayor que 1000 cm.",
+      "alternatives": [
+        "6 cm",
+        "7 cm",
+        "5 cm",
+        "8 cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/algebra-semana-14-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 14 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si M es el menor número entero que satisface la desigualdad −x 2 +2x−2,5<M, para todo x ∈ ℝ , halle el valor de M 2 –6M+9.",
+      "alternatives": [
+        "1",
+        "9",
+        "4",
+        "16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/examen-san-marcos-deco-algebra-ce.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el menor valor entero m para el cual se verifica\n2x² – 5x+m> 0 ; ∀ x ∈ ℜ ?",
+      "alternatives": [
+        "6",
+        "11",
+        "4",
+        "13",
+        "9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/algebra-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x es un número entero positivo tal que x² < 9, ¿cuál(es) de las siguientes afirmaciones es (son) verdadera(s)?\nI. El máximo valor que podría tener x es 4.\nII. El mínimo valor que podría tener x es 1.\nIII. Un valor posible de x es 3.",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "solo III",
+        "II y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/algebra-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La edad de José es igual a 2M , donde M es un entero que satisface la inecuación\n2+6x – 3x² ≤M ; ∀x ∈ ℝ . Si la edad de José es menor que 20, ¿cuántos años, como máximo, puede tener José?",
+      "alternatives": [
+        "16",
+        "18",
+        "14",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-algebra-semana-19-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA EXAMEN DE INGRESO UNIVERSIDAD SAN MARCOS ÁREA C PRUEBA DECO RESPUESTAS PREGUNTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la inecuación:\nx² – k.x + 9 < 0\nSi su conjunto solución es: 〈1;9〉 , indique el valor de \"k\".",
+      "alternatives": [
+        "9",
+        "12",
+        "10",
+        "13"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/algebra-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — ALGEBRA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos valores enteros de x verifican la inecuación:\n|5x+1|≤|2x+13|?",
+      "alternatives": [
+        "5",
+        "7",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un gallinero había cierto número de gallinas. Se duplicó el número y se vendieron 27, quedando menos de 54. Después se triplicó el número de gallinas que había al principio y se vendieron 78, quedando más de 39. ¿Cuántas gallinas había al principio?",
+      "alternatives": [
+        "41",
+        "42",
+        "40",
+        "38",
+        "39"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/examen-admision-villareal-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO VILLARREAL 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNFV 2026 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina el conjunto solución de\n3x<24+x<2x+12",
+      "alternatives": [
+        "Todos los reales",
+        "{12}",
+        "Solo los reales positivos",
+        "ø"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/11/Solucionarios-catolica-pucp-examenes-admision-universidad-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CATÓLICA EXAMEN ADMISIÓN UNIVERSIDAD PUCP PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la inecuación:\nx 2 – k.x+9< 0\nSi su conjunto solución es: 〈1;9〉 , indique el valor de \"k\".",
+      "alternatives": [
+        "9",
+        "12",
+        "10",
+        "13"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/11/Solucionarios-catolica-pucp-examenes-admision-universidad-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CATÓLICA EXAMEN ADMISIÓN UNIVERSIDAD PUCP PDF 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a es mayor que b , ¿qué se concluye?",
+      "alternatives": [
+        "Que a y b tienen diferente signo.",
+        "Que a es un número positivo.",
+        "Que b es un número negativo.",
+        "Que la diferencia a – b es una número positivo.",
+        "Que la diferencia a – b es un número negativo."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-y-cocientes-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO UNC 2027 INGRESO UNIVERSIDAD DE CAJAMARCA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelve la siguiente inecuación: -7 < 2x-3 < 7 ¿Cuántos valores enteros positivos satisfacen la inecuación?",
+      "alternatives": [
+        "5",
+        "4",
+        "3",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-ejercicios-con-respuestas-de_23.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA PRONABEC RESPUESTAS CLAVES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre dos calidades de galletas hay en total 48 paquetes; si el cuádruple del número de paquetes de la primera calidad no es excedido por el triple del número de galletas de la segunda calidad, ¿cuál es el mínimo número de paquetes que puede haber de la primera calidad?",
+      "alternatives": [
+        "21",
+        "20",
+        "23",
+        "25",
+        "22"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN DE PRIMER GRADO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El costo de un libro es igual al triple del número de libros comprados, aumentado en 2. Si el gasto no excede a 85 nuevos soles, ¿cuál es el mayor número de libros que se podrían comprar?",
+      "alternatives": [
+        "2",
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN DE PRIMER GRADO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de lapiceros comprados es igual al doble del valor de un lapicero, disminuido en 5. Si el gasto fue menor que 63 nuevos soles.\n¿cuál es el mayor número de lapiceros que se podrían comprar?.",
+      "alternatives": [
+        "6",
+        "7",
+        "9",
+        "8",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN DE PRIMER GRADO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al comprar un lote de cierto artículo se observa que el precio por unidad es el cuádruple del número de artículos comprados, disminuido en 9. Si el gasto excede a 90 nuevos soles, calcula el mínimo número de artículos que se deben comprar.",
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN DE PRIMER GRADO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación |t – 230| ≤ 2 permite obtener la temperatura ideal en grados centígrados de un horno en la producción de panes. Determine la variación de la temperatura y la temperatura máxima que debe tener el horno para que los panes puedan pasar el control de calidad.",
+      "alternatives": [
+        "[200°; 300°]; 300 °C",
+        "[228°; 232°]; 232 °C",
+        "[228°; 230°]; 230 °C",
+        "[216°; 230°]; 230 °C"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — VALOR ABSOLUTO FULL PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La pista de una calle debe tener al menos dos carriles y cada carril debe tener un ancho de 40cm más que el ancho x (en metros) de un auto de marca SPEEDY. Si x satisface la ecuación |15x –20 |= 15 –5x , ¿cuál es el ancho mínimo de tal pista?",
+      "alternatives": [
+        "4,30 m",
+        "3,90 m",
+        "3,50 m",
+        "4,70 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — VALOR ABSOLUTO FULL PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La solución de la ecuación ||x²+2x+1|+7|= |x²+x+30| representa mi edad en años. Si tengo una hermana, cuya edad es el doble de la mía, halle la suma de las cifras del número que representa la edad (en años) de mi hermana.",
+      "alternatives": [
+        "12",
+        "8",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — VALOR ABSOLUTO FULL PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para abastecer su bodega, Noelia compró sacos de arroz de 50 kg y sacos de azúcar de 40 kg, luego pesa todos los sacos en una balanza que soporta 520 kg como máximo. Si Noelia compró más sacos de arroz que de azúcar y compró más de 4 sacos de azúcar, además los precios unitarios por saco de arroz y azúcar son 100 y 110 soles respectivamente, ¿cuánto gastó en total Noelia?",
+      "alternatives": [
+        "1260 soles",
+        "1150 soles",
+        "1250 soles",
+        "1130 soles",
+        "1350 soles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA QUINTOS PEDRO RUIZ 2026 INGRESO EXTRAORDINARIO UNIVERSIDAD RESUELTO RESPUESTAS PRIMEROS PUESTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Moshy , un estudiante preuniversitario, ha resuelto durante (m – 9) días un total de (m – 9) ejercicios de álgebra por día. Si al cabo de dicho número de días, la cantidad total de ejercicios que ha resuelto, disminuido en cinco, no excede al cuádruple de la diferencia positiva de m con nueve, ¿cuántos ejercicios de álgebra, como máximo, habrá resuelto en total Moshy ?",
+      "alternatives": [
+        "25",
+        "36",
+        "16",
+        "9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES CON VALOR ABSOLUTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una editorial , determina que sus ingresos serán mediante la siguiente ecuación: I=|50L−4000|, donde L es la cantidad de libros vendidos. Si los ingresos diarios deben ser S/ 3000 como máximo, calcule la cantidad de libros que la editorial debe vender diariamente.",
+      "alternatives": [
+        "Desde 20 hasta 140",
+        "Desde 18 hasta 120",
+        "Desde 20 hasta 120",
+        "Desde 18 hasta 140"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES CON VALOR ABSOLUTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se construye un frigorífico de forma paralelepípedo rectangular recto, cuyas dimensiones son (x) metros y (x– 1) metros. Si su altura mide (x) metros y su volumen no supera los 4m ³ , determine el máximo perímetro de su base en metros.",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-grado-superior.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES DE GRADO SUPERIOR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lucrecio va a construir una caja de la forma de un paralelepípedo rectangular donde las medidas de las aristas son valores enteros y diferentes. Si se sabe que la suma de las medidas de las dos aristas mayores es 11 pies y el área determinada por esas aristas es no menor a 24 pies².\n¿Cuál es la máxima medida de la menor arista, sabiendo que ésta es mayor a la diferencia positiva de las otras dos?",
+      "alternatives": [
+        "1 pie",
+        "2 pies",
+        "4 pies",
+        "3 pies"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pithito fabrica polos que tienen un precio de venta de S/ 55 y un costo unitario de S/ 35. Mensualmente, por el alquiler del local de venta paga S/ 1000, por el pago al personal el gasto asciende a S/ 6000 y otros gastos son de S/ 5000. Determine el mínimo número de polos que Pithito debe fabricar y vender, mensualmente, para que obtenga ganancia.",
+      "alternatives": [
+        "600",
+        "599",
+        "601",
+        "200"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tren de Lima metropolitana viaja cierto número de pasajeros. Si bajara la cuarta parte de pasajeros en el próximo paradero continuarían viajando menos de 129 pasajeros; pero si bajara la sexta parte, continuaría viajando más de 135 pasajeros.\n¿Cuántos pasajeros hay en el tren?",
+      "alternatives": [
+        "170",
+        "142",
+        "150",
+        "160",
+        "168"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Peta le pregunta a Petuña cuántos items respondió en el examen de álgebra y aritmética a lo que ésta le responde:\n☛ De álgebra respondí los tres medios de los items respondidos de aritmética.\n☛ la diferencia entre la cantidad de items respondidos de álgebra y la cuarta parte de la cantidad de items respondidos de aritmética no es menor que 20.\n☛ la tercera parte de la cantidad de items respondidos de álgebra, aumentada en 10 es más que el consecutivo de la cantidad de items respondidos de aritmética.\n¿Cuántas items no respondió Petuña, si el examen tenía 45 items?",
+      "alternatives": [
+        "11",
+        "16",
+        "7",
+        "5",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Glory va al cine con sus hermanos y compra las entradas a 15 soles cada una, gastando no menos de 50 soles; si Glory comprase las entradas de 12 soles cada una, hubiese pagado por las entradas no más de 80 soles.\nHalle el número de hermanos de Glory si logró repartir entre ellos y equitativamente 2 cajas de fresas de 8 unidades cada caja.",
+      "alternatives": [
+        "5",
+        "4",
+        "6",
+        "3",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ambrosia tiene (2x–4) monedas de 5 soles, donde x es un número par. Si la diferencia entre el recíproco del recíproco de dicha cantidad de monedas con cuatro es más que 12 y como máximo 18.\n¿Cuánto dinero en soles tiene Ambrosia?",
+      "alternatives": [
+        "S/ 60",
+        "S/ 12",
+        "S/ 84",
+        "S/ 70",
+        "S/ 24"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Chaplin invitó a todos sus hermanos y a cinco amigos a un evento deportivo, donde el costo de cada entrada (en soles) coincide con el número de hermanos que tiene Chaplin y por ello gastaría más de 40 soles , pero ninguno de sus amigos pudo asistir, así que Chaplin fue solamente con sus hermanos y gastó menos de 42 soles , ¿cuál es el número de hermanos que tiene Chaplin?",
+      "alternatives": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una camioneta pesa 890 kg y debe llevar una carga de cinco cajones de igual peso cada uno. Si la diferencia entre el peso de la camioneta vacía y el peso total de la carga no debe ser inferior a 420 kg, ¿cuánto debe pesar como máximo cada cajón de carga?",
+      "alternatives": [
+        "88 kg",
+        "92 kg",
+        "80 kg",
+        "86 kg",
+        "94 kg"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El administrador de una empresa debe decidir si deberán producir sus propios empaques, que la empresa ha estado adquiriendo de proveedores externos a s/.1.10 cada uno. La fabricación de los empaques incrementaría los costos generales de la empresa en S/ 800 al mes y el costo de material y de mano de obra será de 60 céntimos por cada empaque.\n¿Cuántos empaques como mínimo deberá producir la empresa al mes para justificar la decisión de fabricar sus propios empaques?",
+      "alternatives": [
+        "1601",
+        "1600",
+        "1700",
+        "1705",
+        "1864"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El perímetro de un jardín de forma cuadrada de lado x metros no es mayor a 20.\nCalcule el perímetro de otro jardín de forma rectangular, cuyas medidas en metros, de sus lados son |x – 10| y |x+ 6|.",
+      "alternatives": [
+        "18",
+        "20",
+        "32",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES CON VALOR ABSOLUTO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un entrenador de futbol ubica tres conos en línea recta para que sus alumnos comiencen a entrenar. La distancia entre los conos 1 y 2 es de 3 metros y, entre los conos 2 y 3 es de 5 metros; además, se sabe que la distancia, en metros, entre los conos 3 y 1 está representada por (x–5)²+ | 10 – 4x | .\n¿Cuál es el producto de los valores de x?",
+      "alternatives": [
+        "12",
+        "21",
+        "10",
+        "17"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES CON VALOR ABSOLUTO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el conjunto, M= {x ∈ ℝ /3x ≤ x ² ≤16} calcule el número de soluciones enteras del conjunto M.",
+      "alternatives": [
+        "5",
+        "6",
+        "4",
+        "8",
+        "7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La altura de un balón de fútbol lanzado por un jugador sobre la tierra está dada por la fórmula h=10t – t ² , donde t es el tiempo en segundos.\n¿Para qué valores de t la altura del objeto es mayor a 21?",
+      "alternatives": [
+        "〈3;4〉",
+        "〈2;6〉",
+        "〈4;7〉",
+        "〈3;5〉",
+        "〈3;7〉"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el conjunto M= (x∈ ℤ /(x – 4)²+ (x – 6) ² ≤ 20) calcule la suma de cuadrados de los elementos del conjunto M.",
+      "alternatives": [
+        "139",
+        "203",
+        "285",
+        "385",
+        "361"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al preguntar a una agraciada señorita por su edad, respondió: ”si sumas los cuadrados de mi edad actual y la que tuve hace seis años, obtendrás un número mayor que 666”. Como mínimo, ¿ Cuál es su edad?",
+      "alternatives": [
+        "22",
+        "19",
+        "21",
+        "40",
+        "36"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un número es tal que la diferencia de los cuadrados de su posterior anterior es mayor que 48. ¿Cuál es el mínimo número que verifica esta característica?",
+      "alternatives": [
+        "12",
+        "14",
+        "13",
+        "21",
+        "41"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un terreno cuadrado de un número exacto de metros de lado; si se disminuyen 4 m al ancho y se aumentan 5 m al largo, el área del nuevo terreno sería mayor que el original. Calcula el menor valor que puede tomar el área del terreno original.",
+      "alternatives": [
+        "400",
+        "401",
+        "420",
+        "441",
+        "410"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se compran lapiceros y cuadernos; de lapiceros se compran 2 unidades más que de cuadernos; además el costo de cada artículo es uno menos que la cantidad de artículos de la misma especie y el gasto total no es excedido por 86.\nCalcula el mínimo número de lapiceros que se compran.",
+      "alternatives": [
+        "6",
+        "8",
+        "7",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las dimensiones de un terreno son 8 m. de largo y 5 m. De ancho; si se aumenta una misma cantidad a ambas dimensiones, el área aumenta más de 30 m ² . Calcula el mínimo valor entero de dicha cantidad.",
+      "alternatives": [
+        "5",
+        "4",
+        "3",
+        "6",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se escriben cuatro números naturales consecutivos. El producto de los pares excede en más de 25 al producto de los impares. Halla el valor mínimo de la suma de estos cuatro números",
+      "alternatives": [
+        "56",
+        "53",
+        "54",
+        "59",
+        "58"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A una conferencia sobre OVNIS, asistieron 200 personas entre mujeres y hombres; el número de mujeres era mayor que el número de hombres; además , el doble del número de hombres, aumentado en el triple del número de mujeres era menor que 502.\n¿Cuántos hombres asistieron a la conferencia?",
+      "alternatives": [
+        "90",
+        "93",
+        "96",
+        "99",
+        "80"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-con-una.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LINEALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos bolsas llenas de pelotitas de manera que el triple de lo que hay en la primera aumentado en lo que contiene la segunda es más de 40; además el exceso del primero sobre el doble del segundo es más de 4. calcula el número de pelotitas que hay en la primera bolsa, si el triple de éstas es menor que 42.",
+      "alternatives": [
+        "18",
+        "13",
+        "12",
+        "15",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-con-una.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LINEALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre dos primos hacen más de 25 años; además la diferencia es mayor a 3 años; calcula la edad del mayor, si ésta es menor que 16 años.",
+      "alternatives": [
+        "9 años",
+        "14 años",
+        "12 años",
+        "15 años",
+        "13 años"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-con-una.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LINEALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina el peso de un paquete si:\n☛ Tres paquetes iguales pesan menos que un paquete más 16 kilos.\n☛ 2 paquetes iguales pesan más que un paquete más 6 kilos.",
+      "alternatives": [
+        "7 kilos",
+        "8 kilos",
+        "6 kilos",
+        "5 kilos",
+        "9 kilos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-con-una.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LINEALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tenía cierto número de pollos. Se duplico el número y se vendieron 27 quedando menos de 54. Después se triplicó el número de pollos que había al inicio y se vendieron 78 quedando más de 39.\n¿Cuántos pollos había al inicio?.",
+      "alternatives": [
+        "35",
+        "38",
+        "40",
+        "41",
+        "42"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-con-una.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LINEALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de alumnos de 5° grado es el doble del número de alumnos de 4° grado, menos 95; además el doble del número de alumnos de 5° grado, más el triple del número de alumnos de 4° grado es menor que 1910.\n¿Cuántos alumnos como máximo pueden haber en 5° grado?",
+      "alternatives": [
+        "620",
+        "485",
+        "391",
+        "505",
+        "506"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-con-una.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LINEALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un cierto número de monedas. Si se hacen montones de a 7 no se pueden completar 8 de aquellos, y si se le hacen de a 6, se completan 9 y queda un sobrante. ¿Cuál es el número de monedas?",
+      "alternatives": [
+        "56",
+        "57",
+        "55",
+        "58",
+        "59"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-con-una.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LINEALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Manuel hizo una cierta cantidad de sillas, de las que vendió 35 y le quedaron más de la mitad, luego hizo 3 más, vendiendo después 18, con lo que le quedan menos de 22 sillas. ¿Cuántas sillas hizo?",
+      "alternatives": [
+        "70",
+        "71",
+        "74",
+        "72",
+        "76"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-con-una.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LINEALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A una reunión asistieron 200 personas. Se sabe que el doble del número de damas no excede al triple del número de caballeros asistentes. Calcula el mayor número de damas que podrían haber en dicha reunión.",
+      "alternatives": [
+        "80",
+        "60",
+        "120",
+        "140",
+        "200"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-primer-grado-con-una.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES LINEALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las soluciones de la ecuación (x – 4)² + 21 = 7 | x – 5 | + 2x representa la cantidad de dinero que tiene José (en soles) para usarlo en la compra de un cuaderno de 15 soles. ¿Cuánto dinero le quedará después de la compra?",
+      "alternatives": [
+        "3 soles",
+        "6 soles",
+        "4 soles",
+        "5 soles",
+        "7 soles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/valor-absoluto-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VALOR ABSOLUTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el producto de las soluciones de la ecuación x² – 6 = 2 | x – 3 | + 6x .",
+      "alternatives": [
+        "–16",
+        "–12",
+        "–20",
+        "–18",
+        "–24"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/valor-absoluto-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VALOR ABSOLUTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la suma de los cuadrados de las soluciones de la siguiente ecuación\n(x + 3)² + 10 = | x + 5 | – 4x",
+      "alternatives": [
+        "65",
+        "74",
+        "68",
+        "82",
+        "61"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/valor-absoluto-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VALOR ABSOLUTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el menor valor entero k tal que para todo número real x se cumple 3x ² +2x+k> 0.",
+      "alternatives": [
+        "5",
+        "2",
+        "3",
+        "1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-cuadraticas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN DE SEGUNDO GRADO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Isabel, una joven emprendedora, dispone cada dia de (x–y) unidades de polos para vender. El lunes de la semana pasada vendió (4z) unidades de polos, donde z ∈ ℤ, z<8 ; quedándole por vender más de 6 unidades. Si el día de hoy tuvo un pedido total de (6z) unidades de polos, el cual supero a la cantidad de polos del que dispone cada día para la venta, aumentado en 6, ¿cuántos polos dispone Isabel para la venta cada día?",
+      "alternatives": [
+        "20",
+        "28",
+        "30",
+        "32",
+        "35"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/algebra-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la caja de un cine, tres amigas: Wendy, Winny y Raquel se dan cuenta que solo tienen monedas de 5 soles cada una de ellas para que paguen su respectiva entrada. Wendy tiene 3 monedas más que Winny y 5 monedas más que Raquel. Si numéricamente el producto de monedas de todas ellas no es mayor que 120, ¿quién tiene la mayor cantidad de monedas y cuál es su valor en soles?",
+      "alternatives": [
+        "Wendy, con S/ 50",
+        "Raquel, con S/ 20",
+        "Raquel, con S/ 30",
+        "Wendy, con S/ 40",
+        "Winny, con S/40"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes enunciados se relaciona con el Renacimiento filosófico?",
+      "alternatives": [
+        "De acuerdo con las primeras causas del cosmos, el saber científico está subordinado a la filosofía.",
+        "El control religioso se fortalece e influye sobre el conocimiento científico.",
+        "Se recupera el uso de la razón y el pensamiento crítico para comprender los hechos reales, además centra su atención en la persona y su libertad.",
+        "El saber filosófico tiene como principio la naturaleza y sus fines.",
+        "El hombre y sus estados irracionales como principios se consideran fundamentos para explicar el comportamiento humano."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/05/filosofos-modernos-y-sus-aportes-filosofia-moderna-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-con-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FILOSOFÍA MODERNA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine A ∩ B si se tienen los conjuntos\nA= {x∈ ℝ /|x – 5|≤ 2}\nB={x∈ ℝ /|x + 1| > 5}",
+      "alternatives": [
+        "〈2; 5〉",
+        "〈4; 7]",
+        "[5; 7〉",
+        "[6; 9]"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-conceptos-basicos.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE VALOR ABSOLUTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x∈〈2;5〉.\nHalle el intervalo de variación de 3x+1",
+      "alternatives": [
+        "〈7; 16〉",
+        "〈8; 17〉",
+        "〈7; 17〉",
+        "〈2; 8〉",
+        "〈4; 10〉"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/algebra-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la suma de todos los números enteros que satisfacen la siguiente inecuación\n4x 2 +7x≤12x–1",
+      "alternatives": [
+        "5/4",
+        "1",
+        "3",
+        "2",
+        "2/4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/algebra-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un paralelepípedo cuyas aristas miden a, b, y c metros ,la suma de estas medidas es 8 metros; calcular el mayor valor que puede admitir el volumen de dicho paralelepipedo.",
+      "alternatives": [
+        "512/27 m³",
+        "512/3 m³",
+        "71 m³",
+        "27 m³",
+        "78 m³"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/algebra-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para llegar a su casa, a Carlos le falta 500 metros en línea recta. Si esta distancia equivale a la suma de las distancias de x 1 2 +x 2 2 cuadras de longitud, donde x 1 y x 2 son las soluciones de la ecuación |3x–1|=|x+5|, determine la longitud, en metros de cada cuadra.",
+      "alternatives": [
+        "45",
+        "56",
+        "63",
+        "71",
+        "50"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁLGEBRA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La utilidad que se obtiene al vender 𝑞 unidades de cierto artículo está dada por el polinomio U(q)=−q 3 +23q 2 −90q. Calcule la suma de todas las cantidades enteras de estos artículos que se pueden vender para obtener utilidad.",
+      "alternatives": [
+        "140",
+        "139",
+        "138",
+        "136",
+        "137"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁLGEBRA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de resolver la siguiente inecuación\n||x–7|+2|≤(x–7) 2\ncalcule la suma de enteros que no verifican dicha inecuación.",
+      "alternatives": [
+        "18",
+        "32",
+        "24",
+        "15",
+        "21"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-16-2020.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2024-1 PRUEBA RESUELTA INGENIERÍAS INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un jardín rectangular de 50 m de largo por 36 m de ancho, debe estar rodeado por un camino de arena de ancho uniforme. Determine el ancho máximo de dicho camino, si se sabe que el área del camino no debe exceder los 552 m².",
+      "alternatives": [
+        "2,5 m",
+        "3 m",
+        "3,5 m",
+        "4 m",
+        "4,5 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/09/examen-san-marcos-2018-i-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA B 2025-1-2 CIENCIAS BÁSICAS SAN MARCOS INGRESO RESPUESTAS PRESENCIAL DESARROLLO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Carlos obsequia cierta cantidad de dinero (en soles) a su sobrino y le dice: la diferencia positiva del doble de lo que te daré con 7 es igual a la diferencia positiva de lo que te daré con 3. Determine la mayor cantidad de dinero en soles, que Carlos obsequió a su sobrino.",
+      "alternatives": [
+        "7",
+        "6",
+        "4",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-simulacro-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una compañía fabrica relojes con un precio unitario de venta de 20 dólares y costo unitario de 15 dólares. Si los costos fijos son de 480 dólares, determine el número mínimo de relojes que se deben vender para que la compañía obtenga utilidades.",
+      "alternatives": [
+        "88",
+        "97",
+        "69",
+        "96",
+        "87"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-radicales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES CON RADICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mario desea colocar alrededor de una fotografía de 20×10 cm², un marco de vidrio de igual anchura para lo cual debe utilizar por lo menos 216 cm ² de vidrio. Determine la longitud mínima que tendría el ancho del marco de vidrio.",
+      "alternatives": [
+        "3 cm",
+        "4 cm",
+        "2,5 cm",
+        "3,2 cm",
+        "4,5 cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-radicales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES CON RADICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa vende diariamente laptop para clases virtuales, y su ingreso en soles está dado por la relación I=|400n–3600| donde n representa el número de laptop vendido en un día. ¿Cuántas laptop se venden como máximo en un día para un ingreso de 2800 soles?",
+      "alternatives": [
+        "8",
+        "12",
+        "16",
+        "24"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN CON VALOR ABSOLUTO PROBLEMAS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine A ∩ B si se tienen los conjuntos\nA={x ∈ ℝ /|x – 3|< 5}\nB= {x ∈ ℝ /|x+2|≥4}",
+      "alternatives": [
+        "〈1; 6〉",
+        "〈1; 8]",
+        "[2; 8〉",
+        "[3; 9]"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto_14.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CON VALOR ABSOLUTO PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mario y Pedro tienen, cada uno, una cierta cantidad de canicas. El doble de canicas que tiene Pedro, aumentado en tres, supera a lo que tiene Mario; pero el doble de canicas que tiene Pedro es menor al triple de lo que tiene Mario, disminuido en siete canicas. Si se sabe que el número de canicas que tiene Mario es menor a cinco, ¿cuál es la máxima cantidad de canicas que tienen, juntos, Mario y Pedro?",
+      "alternatives": [
+        "7",
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/algebra-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un sólido compacto con forma de un paralelepípedo rectangular, cuyas dimensiones de su base son (x+2) cm y (3x+2) cm . Si su altura mide (x+3) cm y su volumen es a lo más 160 cm 3 , determine el mayor perímetro entero de la base en centímetros.",
+      "alternatives": [
+        "21",
+        "25",
+        "24",
+        "22",
+        "23"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/algebra-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un gallinero se tiene cierto número de gallinas, tal que si se triplicara este número y se vendiera 16 quedarían menos de 65; y si se cuadriplicara el número inicial de gallinas y se vendieran 25 quedarían más de 71. Halle la suma de cifras de la menor cantidad de gallinas que había inicialmente en el gallinero.",
+      "alternatives": [
+        "5",
+        "8",
+        "6",
+        "9",
+        "7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el menor valor entero de k, tal que para todo x ∈ ℝ se cumple que –x²+6x–3<k.",
+      "alternatives": [
+        "7",
+        "8",
+        "11",
+        "14",
+        "18"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un cuadro tal que su largo excede a su ancho en 30 cm y que el cuadrado de su diagonal no supera a 1700. Determine el máximo valor de su perímetro.",
+      "alternatives": [
+        "110 cm",
+        "100 cm",
+        "120 cm",
+        "95 cm",
+        "150 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de elementos enteros que verifican la inecuación\n6x² – 5x – 21≤0",
+      "alternatives": [
+        "5",
+        "4",
+        "3",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lila tiene S/4500 que retiro de una entidad financiera. Quiere invertir parte al 2% y el resto al 6%. ¿Cuál es el monto mínimo que debe invertir al 6%, si desea un ingreso anual por interés no sea menor a S/200 anuales?",
+      "alternatives": [
+        "2750",
+        "2850",
+        "2900",
+        "3100",
+        "3000"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelva la siguiente ecuación\n||2x–3|+x|=2x–2",
+      "alternatives": [
+        "{1; 5}",
+        "{5; 6}",
+        "{6}",
+        "∅",
+        "{2; 5}"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luis va en busca de trabajo al emporio comercial Gamarra y se le presentan dos opciones de trabajo con los siguientes salarios:\nOpción A : un salario fijo mensual de S/800 más el 3% del total de ventas que realice durante el mes.\nOpción B : un salario fijo mensual de S/1000 más el 2% del total de ventas que realice durante el mes.\nCuanto debe vender Luis durante el mes, para que las dos opciones de salario sean iguales",
+      "alternatives": [
+        "S/15 000",
+        "S/20 000",
+        "S/21 000",
+        "S/24 000",
+        "S/23 000"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el número de soluciones enteras positivas de la siguiente inecuación\n4x–11·2 x –80≤0",
+      "alternatives": [
+        "3",
+        "4",
+        "7",
+        "8",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado un número real positivo, cual es el mínimo valor que se obtiene al sumar 4 veces el cuadrado de su valor con 64 veces el cuadrado de su recíproco.",
+      "alternatives": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-14-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un aula de 46 estudiantes se sabe que “n” estudiantes no asistirán a la fiesta de promoción. Siendo “n” la suma de los valores absolutos de las soluciones de la siguiente ecuación 4x(x–1)=2( | 2x–1 | +1) , determine cuantos alumnos asistirán a la fiesta de promoción.",
+      "alternatives": [
+        "43",
+        "38",
+        "41",
+        "39",
+        "44"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-14-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla un número entero y positivo, sabiendo que su mitad, disminuida en la tercera parte de aquel, es mayor que 7/6, y que su cuarta parte, disminuida en la quinta parte de dicho número, es menor que 9/20",
+      "alternatives": [
+        "6",
+        "7",
+        "9",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-fraccionarias-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES FRACCIONARIAS EJERCICIOS RESUELTOS  PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tres Individuos cuentan el número de artículos que por minuto fabrica una máquina. El primero contó la mitad menos tres, el segundo contó la sexta parte y 7 artículos y el tercero contó la cuarta parte 5 artículos. Si el primero contó más artículos que el segundo, pero menos que el tercero.\n¿Qué número de ellos arroja la máquina?",
+      "alternatives": [
+        "31",
+        "30",
+        "29",
+        "28",
+        "32"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-fraccionarias-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES FRACCIONARIAS EJERCICIOS RESUELTOS  PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pepe tiene cierta cantidad de dinero; gasta 10 nuevos soles y lo que le queda es más que los 2/3 de lo que tenía inicialmente; gasta luego la mitad y el saldo es menor que 11 nuevos soles. ¿Cuánto tenía inicialmente?",
+      "alternatives": [
+        "S/. 31",
+        "S/.30",
+        "S/.32",
+        "S/.29",
+        "S/. 40"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-fraccionarias-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES FRACCIONARIAS EJERCICIOS RESUELTOS  PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: A = {x ∈ ℝ / 3≤ x<8 ∨ –1≤x<5}\nB = {x ∈ ℝ / 2≤ x<10 ∧ 4 ≤x≤12}\nIndique la suma del mínimo y máximo valor entero de A Δ B .",
+      "alternatives": [
+        "10",
+        "11",
+        "9",
+        "8",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/admision-callao-2016-i-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — CALLAO 2021 II SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD BLOQUES II III UNAC 2021-2 CIENCIAS EMPRESARIALES Y DE LA SALUD ÁREAS 2 y 3 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el menor valor que se obtiene al sumarle veinticinco veces su inverso multiplicativo a un número real positivo.",
+      "alternatives": [
+        "5",
+        "7,5",
+        "10",
+        "12,5",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/09/san-marcos-2017-i-solucionario-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA D SAN MARCOS 2024 RESPUESTAS INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el valor de verdad (V o F) de las siguientes proposiciones:\nI) Si a² > a²x, a ≠ 0 entonces x ∈ 〈–∞,1〉 .\nII) Si 16a > ax²,a ∈ 〈1,3〉 entonces x ∈ 〈–4,4〉 .\nIII) Si 4 < x² < 25 → x ∈ 〈2,5〉.",
+      "alternatives": [
+        "VFV",
+        "VVV",
+        "VVF",
+        "VFF",
+        "FVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-2018-i-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA C SAN MARCOS 2024 RESPUESTAS INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la altura de un rectángulo midiera 3 metros menos que la base, el área sería mayor que 10 m ² . Pero, si dicha altura midiera sólo 2 metros menos que la base, el área sería menor que 48 m². Halla el valor máximo del área de este rectángulo, si la longitud de la base debe ser un número entero de metros.",
+      "alternatives": [
+        "28",
+        "35",
+        "32",
+        "24",
+        "36"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/inecuaciones-y-sistemas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES Y SISTEMAS EJERCICIOS RESUELTOS DE MATEMÁTICA 4 ESO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para el problema anterior, Halla el valor mínimo del área del rectángulo.",
+      "alternatives": [
+        "24",
+        "12",
+        "18",
+        "15",
+        "21"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/inecuaciones-y-sistemas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIONES Y SISTEMAS EJERCICIOS RESUELTOS DE MATEMÁTICA 4 ESO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el máximo valor de M:\nM = 200 – (x – 3) ²",
+      "alternatives": [
+        "200",
+        "100",
+        "0",
+        "300",
+        "400"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el máximo valor de M:\nM = –x ² – 20x – 100",
+      "alternatives": [
+        "0",
+        "1",
+        "100",
+        "20",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: a + b = 12\nhallar al máximo valor de: a × b",
+      "alternatives": [
+        "36",
+        "49",
+        "50",
+        "90",
+        "100"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: a + b + c + d = 6, hallar el máximo valor de M.\nM = (ac + ad + bc + bd)²",
+      "alternatives": [
+        "81",
+        "36",
+        "49",
+        "20",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean los números\na=24 – 2x\nb=3x – 30\nc =x+18\nSi x ∈ ℜ , determine el valor de c cuando a×b toma su máximo valor.",
+      "alternatives": [
+        "20",
+        "18",
+        "31",
+        "29"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Edu y Bruno tienen cada uno una cierta cantidad de canicas. Edu indica que el doble de canicas que él tiene y el triple de canicas de Bruno suman 45. Bruno dice que si Edu le diera 5 canicas el producto del número que canicas que tendríamos sería máximo. Halle la cantidad de canicas que tiene Bruno .",
+      "alternatives": [
+        "12",
+        "15",
+        "16",
+        "18"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si «x» es variable, determine el valor de verdad (V o F) de las siguientes proposiciones:\nI) Si 3a > ax,a ∈ ℝ entonces x ∈ 〈–∞,3〉 .\nII) Si 2ax < ax²,a ∈ ℝ ⁺ entonces x ∈ 〈2,+∞〉.\nIII) Si 0 < x² < 9 entonces x ∈ 〈–3,3〉 .",
+      "alternatives": [
+        "FFV",
+        "FVV",
+        "FVF",
+        "FFF",
+        "VFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/09/solucionario-san-marcos-2017-i-areas-c.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2023-1 PRUEBA RESUELTA DE INGRESO UNIVERSIDAD INGENIERÍAS RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si –5<x < –2\nHalle el intervalo de variación de 5–x 2",
+      "alternatives": [
+        "〈–19;1〉",
+        "〈–15;1〉",
+        "〈1;19〉",
+        "〈0;5〉",
+        "〈2;8〉"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/algebra-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un rectángulo su base mide “x” y su perímetro mide “2a”, entonces el valor que debe tomar su base es",
+      "alternatives": [
+        "–1<x<a",
+        "–1<x <a/2",
+        "a<x<2a",
+        "0<x<a",
+        "a< x<0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/algebra-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver el sistema:\nx 2 +x+1 ≤ x+50 < x 2 – 3x+50\nCuya solución tiene la forma: [a; b〉∪〈c; d]\nDetermina el valor de: M=a+b+c+d",
+      "alternatives": [
+        "8",
+        "6",
+        "7",
+        "5",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/algebra-examen-de-admision-universidad-desarrollado-prueba-resuelta-de-ingreso-preguntas-claves-respuestas-simulacro-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA DE ADMISIÓN UNIVERSIDAD DESARROLLADA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la inecuación:\nx 2 –Kx+9 < 0\nSi su conjunto solución es: ] 1;9 [ , indique el valor de \"K\"",
+      "alternatives": [
+        "9",
+        "12",
+        "10",
+        "13"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/algebra-preuniversitaria-problemas-con_46.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA EVALUACIÓN DE TALENTO CATÓLICA SOLUCIONADA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una fábrica de cuadernos se formó una comisión de control de calidad, pues en una encuesta se detectó que los consumidores opinan que el papel es bueno, pero el tamaño del cuaderno no es uniforme: unos son más anchos que otros. El ancho requerido es de 21 cm, y un cuaderno pasará el control de calidad si el error es de, a lo más, 0,04 cm.\n¿Qué ancho x pueden tener los cuadernos que hayan aprobado el control de calidad si la expresión |x – 21| ≤ 0,04 describe dicho control?",
+      "alternatives": [
+        "Pasa el control si su ancho está entre 20,96 y 20,98 cm.",
+        "No pasa el control de calidad.",
+        "Pasa el control si su ancho está entre 20,96 y 21,04 cm.",
+        "No se puede fabricar el cuaderno."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/inecuaciones-con-valor-absoluto-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — INECUACIONES CON VALOR ABSOLUTO PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al analizar los grados de resistencia de diferentes tipos de pernos para carrocería, se determinó que cumple la siguiente condición 0,5 |x +1|= |x – 3|\nCalcule el valor máximo de grado x.",
+      "alternatives": [
+        "4",
+        "7",
+        "5/3",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/ecuaciones-con-valor-absoluto-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — ECUACIONES CON VALOR ABSOLUTO PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la suma de cifras del número intermedio de los tres menores números enteros consecutivos que satisfacen que, la cuarta parte del número menor sumado con la tercera parte del número intermedio exceda a la mitad del número mayor.",
+      "alternatives": [
+        "7",
+        "3",
+        "4",
+        "6",
+        "9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/inecuaciones-cuadraticas-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — INECUACIONES DE SEGUNDO GRADO PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un carpintero hizo un cierto número de mesas, de las cuales vende 70 mesas y le quedan por vender más de la mitad, después hizo hace 6 mesas más y vende 36 de las que tiene, quedándole menos de 42 mesas por vender. ¿Cuántas mesas ha hecho en total el carpintero?",
+      "alternatives": [
+        "140",
+        "141",
+        "142",
+        "147",
+        "148"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/inecuaciones-fraccionarias-y-de-grado-superior-ejemplos-resueltos-de-matematicas-de-secundaria-en-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — INECUACIÓN DE GRADO SUPERIOR Y RACIONAL PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Gabriel tenía un gallinero con cierto número de gallinas. Triplicó el número de gallinas y vendió 25 quedando menos de 36 gallinas. Pero si se hubiera cuadruplicado el número de gallinas y vendido 20 gallinas entonces quedaria una cantidad de gallinas no menor de 60.\n¿Cuántas gallinas tenía Gabriel al principio?",
+      "alternatives": [
+        "20",
+        "60",
+        "72",
+        "96"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/inecuaciones-con-radicales-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — INECUACIONES IRRACIONALES PROBLEMAS RESUELTOS UNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El perímetro de un cuadrado de lado ( x–1 ) m es mayor a 4m pero no más de 10m. Determine la suma del menor y mayor valor entero posible, del área de un cuadrado cuyo lado es el doble del lado del primer cuadrado, aumentado en 3.",
+      "alternatives": [
+        "90 m²",
+        "89 m²",
+        "85 m²",
+        "92 m²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/inecuaciones-de-segundo-grado-ejemplos-resueltos-de-matematicas-de-secundaria-en-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — INECUACIÓN CUADRATICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ingresos mensuales de Manuel varían de S/ 3500 a S/ 4200 y los gastos mensuales varían de S/ 2800 a S/ 3800. Si de lo que le queda, debe repartir mensualmente por lo menos S/ 220 a cada uno de sus seis hijos, ¿cuál es la máxima cantidad de dinero, en soles, que recibirá uno de ellos en un mes?",
+      "alternatives": [
+        "240",
+        "260",
+        "280",
+        "300",
+        "320"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/simulacro-de-razonamiento-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO DE RM DESARROLLADO DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Nicolás compró cierto número de audífonos. De los audífonos comprados, ese día vendió la tercera parte y le quedaron menos de 50. Al día siguiente, le devolvieron 5 audífonos defectuosos; sin embargo, logro vender 25, quedándole finalmente más de 10 audífonos. ¿Cuántos audífonos compró Nicolás como máximo?",
+      "alternatives": [
+        "66",
+        "69",
+        "72",
+        "74"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la edad (en años) de los gemelos Daniel y David, cada uno de ellos afirma lo siguiente: Daniel dice “si a la edad que tengo le resto la quinta parte de, mi edad disminuido en cuatro años resulta que no es mayor que 16 años” y David afirma: “si a mi edad le resto la sexta parte de, mi edad disminuido en 7 se obtiene cuando menos 17 años”. Determine la edad de los gemelos.",
+      "alternatives": [
+        "15 años",
+        "17 años",
+        "19 años",
+        "20 años"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El dueño de una juguería compró cierta cantidad entera de kilogramos de piña y papaya a S/ 4 y S/ 6 respectivamente el kilogramo, de modo que el pago por toda su compra no fue mayor que S/ 200, además compró la mayor cantidad de kilogramos de papaya. Si en la compra hubiera intercambiado las cantidades de kilogramos, el dueño habría pagado no menos de S/ 180. ¿Cuántos kilogramos de piña compró el dueño de la juguería?",
+      "alternatives": [
+        "13 kg",
+        "14 kg",
+        "15 kg",
+        "16 kg"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El domingo Goyito tenía para vender cierta cantidad entera de manos de plátanos, de los cuales por la mañana vendió 120 manos de plátanos sobrándole más de 30 manos de plátanos. Por la tarde llegó un pedido de 20 manos que no fue entregado y luego vendió 50 manos quedándole, al final de ese día domingo, menos de 5 manos de plátanos. ¿Cuántos plátanos, como máximo, le sobraron a Goyito al final del domingo?",
+      "alternatives": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Carlos y Juan coleccionan canicas. Un día se juntaron para jugar, y en cierto momento guardaron las canicas de ambos en una misma bolsa. Carlos las contó y resultó que había más de 24 canicas. Cuando Juan ya debía irse a su casa, Carlos le devolvió sus canicas, pero por la prisa olvidó darle 5 de ellas. Al día siguiente se juntaron de nuevo, y Juan notó que Carlos tenía más canicas que él. “¡No puede ser!”, le dijo. “Si yo tenía más del doble de canicas que tú”. Entonces Carlos recordó y le devolvió las 5 canicas que faltaban, con lo que quedó arreglado el asunto. ¿Cuántas canicas más tenía Juan que Carlos?",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ashly y Nicole decoran huevos de Pascua, entre las dos decoraron al menos 25 huevos el primer día. Al día siguiente Nicole decoró el triple de los huevos que decoró el día anterior y Ashly quintuplicó la cantidad que decoró el día anterior resultando que ese día decoraron entre las dos no más de 105 huevos. Si Ashly decoró el máximo número de huevos el primer día, ¿cuántos huevos decoró Nicole el segundo día?",
+      "alternatives": [
+        "10",
+        "15",
+        "30",
+        "75"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Thiago aplicó un examen que constaba de no más de 100 preguntas, de las cuales contestó todas las preguntas. Cada pregunta contestada correctamente tenía un valor de 4 puntos y cada pregunta contestada de manera incorrecta restaba un punto. Él obtuvo al menos 225 puntos; a pesar de que contestó más de 34 preguntas incorrectamente. ¿Cuántas preguntas tenía el examen que aplicó Thiago?",
+      "alternatives": [
+        "80",
+        "85",
+        "90",
+        "100"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una reunión familiar los primos Jesús, María y José reciben de propina billetes de veinte soles. Jesús dice: “cuatro veces el número de billetes que tengo, sumados con el número de billetes de José y, disminuído en el triple del número de billetes de María no es mayor a 5 billetes”, María contesta: “el séxtuplo del número de billetes que tengo restados del óctuplo del número de billetes de Jesús no es menor ni igual a 6. Si Jesús no recibe más de 5 billetes de veinte soles y todos reciben al menos un billete, halle el total de dinero que reciben entre los tres primos.",
+      "alternatives": [
+        "S/160",
+        "S/180",
+        "S/200",
+        "S/240"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cantidad de personas presentes en una reunión es un número par. Si al doble de dicho número se le disminuye en 7, el resultado es mayor que 29 pero si al triple del mismo se le disminuye en 5, el resultado es menor que el doble de dicho número, aumentado en 16. Halle la cantidad de personas presentes en dicha reunión.",
+      "alternatives": [
+        "18",
+        "16",
+        "20",
+        "22"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Joselyn tiene cierta cantidad de monedas de S/ 2. Si al doble del número de monedas que tiene se le resta 17, resulta menor que 35; pero si al triple del número de monedas se le suma 4 el resultado es mayor que 25. Si se triplicase el dinero que tiene Joselyn ,¿cuál es la diferencia entre la máxima y mínima cantidad de dinero que puede tener ella?",
+      "alternatives": [
+        "S/ 110",
+        "S/ 106",
+        "S/ 102",
+        "S/ 112"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-15-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un atleta que participará en una competencia, le informaron que, cuando haya recorrido 12 km, le faltará por recorrer menos de los 3/5 del total del recorrido, en cambio, cuando haya recorrido 16km, la distancia que le faltará será mayor que 1/5 del total del recorrido, ¿cuántos kilómetros como máximo tiene todo el recorrido de dicha competencia?",
+      "alternatives": [
+        "29",
+        "30",
+        "35",
+        "28"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/aritmetica-semana-8-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PRE SAN MARCOS SEMANA 8 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juanjo tiene 100 mascarillas para vender. Si al triple de la cantidad de mascarillas que no vendió se le suma 10, resulta menor que 61, y si al cuádruple de esa cantidad se le disminuye 8, el resultado sería mayor a 40.\nCalcule la mayor cantidad de mascarillas que vendió Juanjo.",
+      "alternatives": [
+        "87",
+        "98",
+        "110",
+        "106"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/inecuaciones-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — INECUACIONES PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Leoncio tiene monedas de un sol y de dos soles. Si la cantidad de monedas de 1 sol excede a la cantidad de monedas de 2 soles en 5. Si él tiene menos de 77 soles y tiene más de 49 monedas, calcule cuánto dinero tiene Leoncio.",
+      "alternatives": [
+        "81 soles",
+        "79 soles",
+        "93 soles",
+        "74 soles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/planteo-inecuaciones-ejercicios-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — PLANTEO DE INECUACIONES PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un aula de 80 alumnos de estudios generales de Ingeniería de la UNMSM, se desea saber el mayor número de desaprobados del curso de Cálculo I. Si el doble del número de dichos alumnos, se disminuye en 7, es mayor que 29, y que si el triple del número, se disminuye en 5, el resultado es menor que el doble del número, aumentado en 16.",
+      "alternatives": [
+        "19",
+        "21",
+        "22",
+        "20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/planteo-inecuaciones-ejercicios-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — PLANTEO DE INECUACIONES PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Alexander produce y vende sillas para niños; si por la elaboración de \" x\" sillas gasta (30 – 2x) soles y vende cada silla a (x – 3) soles. Determine, cuántas sillas como mínimo debe producir y vender para obtener una ganancia mayor a 80 soles.",
+      "alternatives": [
+        "10",
+        "8",
+        "12",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/planteo-inecuaciones-ejercicios-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — PLANTEO DE INECUACIONES PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa de confección de pantalones tiene en total K tiendas donde en total trabajan en total 14K empleados. Se sabe que en cada una de la K tiendas trabajan por lo menos K + 4 empleados y a lo más 2K + 5 empleados. Si el máximo número de empleados que hay en 8 tiendas es 120, halle el máximo número de tiendas de la empresa.",
+      "alternatives": [
+        "13",
+        "12",
+        "11",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2022/06/razonamiento-matematico-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA REPASO PREGUNTAS RESUELTAS SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ricardo y Carmen tienen 3k+1 y k+5 libros, respectivamente y observan que con ambas cantidades pueden formar una fracción impropia, irreducible y menor que 13/5 . Determine la diferencia entre el mayor y menor valor que puede tomar k.",
+      "alternatives": [
+        "24",
+        "26",
+        "14",
+        "18"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/12/presanmarcos-2019ii-semana8-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — SOLUCIONARIO PRE SAN MARCOS SEMANA 8 2023 ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Carmen tiene 13 lápices más que Ariel y entre las dos tienen a lo más 49 lápices. ¿Cuál es la máxima cantidad de lápices que puede tener Ariel?",
+      "alternatives": [
+        "17",
+        "18",
+        "30",
+        "31"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-29-paes-regular-oficial-matematica1-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Matemática M1 pregunta 30"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María compró libros de: Cálculo I, Matemática Básica y Complemento de Mtaemática en la librería América, cada libro tiene un costo de19 soles. Ella observa que: el triple del número de libros de Complemento de Matemática más el número de libros de Cálculo I, no es menor que tres libros, además la suma del triple del número de libros de Cálculo I, 7 veces el número de libros de Matemática Básica y nueve veces el número de libros de Complemento de Matemática no es mayor que cuarenta y nueve libros. Además el número de libros de Matemática Básica que compró no es menor que cuatro y al menos compró un libro de cada curso, halle el ingreso máximo que obtuvo el vendedor con las compras de María.",
+      "alternatives": [
+        "152 soles",
+        "171 soles",
+        "190 soles",
+        "114 soles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2018/09/examen-san-marcos-deco-quimica-ce.html",
+      "sourceName": "quimicapdf.blogspot.com — AREA C SAN MARCOS EXAMEN ADMISION UNIVERSIDAD SOLUCIONADO PDF"
     }
   ]
 }

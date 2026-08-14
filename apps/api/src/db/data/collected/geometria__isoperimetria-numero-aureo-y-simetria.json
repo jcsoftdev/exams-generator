@@ -577,6 +577,157 @@
       "correctAnswer": "2",
       "sourceUrl": "https://www.aulafacil.com/cursos/matematicas/areas-geometricas/rectangulo-aureo-l10828",
       "sourceName": "AulaFácil – Rectángulo Áureo: lado mayor = φ × b = 1,618 × 6 = 9,708 cm; perímetro = 2(6 + 9,708) = 2 × 15,708 ≈ 31,4 cm"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el plano cartesiano , se tiene dibujado el triángulo ABC, tal que las coordenadas de los vértices son A(–11; 8) , B(–5; 7) y C(–9; 4). El triángulo, se proyecta al primer cuadrante por simetría, tomando como eje de simetría al eje Y, luego se vuelve a proyectar al cuarto cuadrante, pero tomando como eje de simetría al eje X. Determine la suma de todas las coordenadas de los vértices del último triángulo proyectado.",
+      "alternatives": [
+        "6",
+        "5",
+        "3",
+        "7",
+        "12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/simetria-y-reflexiones-problemas-resueltos-de-habilidad-logico-matematica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SIMETRÍA Y REFLEXIONES PROBLEMAS RESUELTOS DE HABILIDAD LÓGICO MATEMÁTICA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el valor de verdad de cada una de las siguientes proposiciones:\nI. Un pentágono equilátero y no convexo puede tener un eje de simetría.\nII. Un polígono, equiángulo, equilátero y no convexo, puede tener centro de simetría.\nIII. La diagonal de un rectángulo es un eje de simetría.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFV",
+        "FFV",
+        "FVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepreuni-fisica-quinta-practica.html",
+      "sourceName": "matematicasn.blogspot.com — SEXTA PRACTICA CEPREUNI 2023 DESARROLLADA CLAVES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Del cuadrado ABCD se sabe que A= (1; 1), B= (1; –4) y C= (6; –4). A dicho cuadrado se le aplica una simetría central con respecto al origen de coordenadas. Halle la menor suma de coordenadas de uno de los vértices del cuadrado simétrico resultante.",
+      "alternatives": [
+        "–2",
+        "– 5",
+        "–7",
+        "–10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/simetrias-y-reflexiones-ejercicios-resueltos-de-razonamiento-matematico-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-aptitud-academica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMETRÍA Y REFLEXIONES EJERCICIOS RESUELTOS PDF DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al cuadrilátero ABCD , A(−2;1) ; B(1;4) ; C(3;2) y D(0;−3) , se le aplica una simetría central con respecto al punto (1; – 1). Dar como respuesta la suma de las ordenadas del cuadrilátero resultante.",
+      "alternatives": [
+        "–8",
+        "–6",
+        "–10",
+        "–12",
+        "–11"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/simetrias-y-reflexiones-ejercicios-resueltos-de-razonamiento-matematico-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-aptitud-academica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMETRÍA Y REFLEXIONES EJERCICIOS RESUELTOS PDF DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un túnel debe sellarse con una tapa de concreto. La sección transversal del túnel y la tapa de concreto tienen contornos de un arco de parábola y las mismas dimensiones. Para determinar el costo de la obra, un ingeniero debe calcular el área bajo el arco parabólico en cuestión. Usando el eje horizontal al nivel del suelo y el eje de simetría de la parábola como eje vertical, obtuvo la siguiente ecuación para la parábola: y = 9 − x2, siendo x e y medidos en metros. Se sabe que el área bajo una parábola como esta es igual a 2 del área del rectángulo cuyas dimensiones son, respectivamente, iguales a la base y a la altura de la entrada del túnel. ¿Cuál es el área de la parte frontal de la tapa de concreto, en metro cuadrado?",
+      "alternatives": [
+        "18",
+        "20",
+        "36",
+        "45",
+        "54"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2016/2016_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2016 dia 2 caderno azul questão 167"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lenin desea comprar un terreno de forma rectangular con la condición de que el doble del perímetro del terreno exceda en 168 m al ancho del terreno. Halle el área máxima del terreno que puede comprar Lenin .",
+      "alternatives": [
+        "588m²",
+        "630 m ²",
+        "300m ²",
+        "672m ²",
+        "540 m ²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/maximos-y-minimos-logicos-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS EJERCICIOS RESUELTOS PDF RAZONAMIENTO MATEMÁTICO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un rectángulo de 60cm² de área. Si los lados son números enteros (en centímetros), el perímetro mínimo posible , en cm , es :",
+      "alternatives": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/maximos-y-minimos-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF APLICANDO DERIVADAS OPTIMIZACIÓN GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Para cuál valor del radio , se hace máximo el área de un sector circular de perímetro 2p ?",
+      "alternatives": [
+        "p/5",
+        "p/4",
+        "p/3",
+        "p/2",
+        "p"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/maximos-y-minimos-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF APLICANDO DERIVADAS OPTIMIZACIÓN GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el menor perímetro posible para un rectángulo si se quiere que dicho rectángulo tenga área 100 u².",
+      "alternatives": [
+        "40 u",
+        "25 u",
+        "30 u",
+        "35 u"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/maximos-y-minimos-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF APLICANDO DERIVADAS OPTIMIZACIÓN GEOMETRÍA"
     }
   ]
 }

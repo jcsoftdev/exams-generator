@@ -1391,6 +1391,1877 @@
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 17"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Andrés y Hugo están practicando para su primer examen y se proponen resolver mediante tablas de verdad el siguiente enunciado: « Si no juego tenis entonces o juego ping pong o juego bádminton; si y solo si, juego tenis, pero no juego bádminton ». Si Andrés obtuvo una tautología y Hugo una contradicción, ¿en cuántos valores de la matriz principal se equivocaron respectivamente?",
+      "alternatives": [
+        "4 y 3",
+        "5 y 2",
+        "4 y 4",
+        "3 y 4",
+        "2 y 4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/07/algebra-cepreuni-examen-final-resuelto.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA CEPREUNI EXAMEN FINAL RESUELTO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se sabe que: (p Λ q) y (q → t) son falsas,\n¿Cuáles de las siguientes proposiciones son verdaderas?\nI.( ~ p V t) V s\nII. ~ [p Λ (~ p V ~ q)]\nIII. [ ~ p V (q Λ ~ t] ↔ [(p → q) Λ ~ (q Λ t) ]",
+      "alternatives": [
+        "I",
+        "II",
+        "Todas",
+        "I y II",
+        "II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-matematico-unc-examen.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el argumento Todas las criaturas de cuatro patas tienen alas. Todas las arañas tienen cuatro patas. Por lo tanto, todas las arañas tienen alas, se infiere que",
+      "alternatives": [
+        "la conclusión carece de fuerza argumental.",
+        "su validez dependerá de las reglas de inferencia.",
+        "la inferencia entre las proposiciones es errónea.",
+        "no es un argumento, sino una tautología."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-filosofia-semana-13-2020.html",
+      "sourceName": "matematicaj.blogspot.com — FILOSOFÍA PRUEBA DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREA E SOLUCIONES CLAVES RESPUESTAS PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete el siguiente enunciado:\n_______ muestra de manera ordenada todas las combinaciones posibles de los valores de las variables de una proposición compuesta, con el objetivo de establecer su valor de verdad según corresponda.",
+      "alternatives": [
+        "la proposición",
+        "una inferencia",
+        "la tabla de verdad",
+        "una tautología",
+        "un lenguaje lógico"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Analizar la siguiente proposición:\n“Si una persona enciende la luz o no enciende la luz, entonces si no enciende la luz, enciende la luz”.\nLa proposición es:",
+      "alternatives": [
+        "Una tautología",
+        "Una contradicción",
+        "Una contingencia",
+        "Equivalente a “una persona no enciende la luz”",
+        "Equivalente a “una persona enciende la luz”"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-8-dpcc-experiencia-6-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UPCH 2027 EXAMEN ADMISIÓN UNIVERSIDAD CAYETANO HEREDIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Definiendo p ↑ q ≡ ∼ p ∨ ∼ q\nEscriba usando solamente p, q y/o ↑ la proposición p → q",
+      "alternatives": [
+        "p",
+        "q",
+        "p ↑ q",
+        "p ↑ (q ↑ q)",
+        "(p ↑ p) ↑ q"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/01/admision-agraria-2018-i-pdf-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO AGRARIA 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL LA MOLINA ESTRUCTURA 2026 UNALM PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una clase de filosofía tres alumnos escribieron en la pizarra las proposiciones:\nSofía : «El hombre actúa con justicia porque es virtuoso, pero no es virtuoso».\nMario : «El hombre es virtuoso o no actúa con justicia, entonces no es virtuoso. Sin embargo, es virtuoso».\nAna : «Si el hombre es virtuoso entonces actúa con justicia, pero no actúa con justicia; si y solo si, no es virtuoso ni actúa con justicia».\n¿Quién o quiénes escribieron una tautología?",
+      "alternatives": [
+        "Sofía y Mario",
+        "Sofía y Ana",
+        "Solo Mario",
+        "Mario y Ana",
+        "Solo Ana"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/Desarrollo-del-examen-de-admision-a-la-universidad-con-claves-y-respuestas-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN UNAC 2023 BLOQUE 1 INGENIERÍAS INGRESO UNIVERSIDAD CLAVES RESPUESTAS SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la cantidad de todas las combinaciones posibles de las variables de la siguiente proposición compuesta.\n[(p ↔ q) ∨ ~ q] ↔ (r ∨ s)",
+      "alternatives": [
+        "4",
+        "8",
+        "16",
+        "32",
+        "64"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/02/Humanidades-examen-uni-solucionario-prueba-de-admision-universidad-ingenieria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — HUMANIDADES PRUEBA UNI RESUELTA DE INGRESO UNIVERSIDAD INGENIERÍA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al formalizar la proposición siguiente:\n“O estás seguro y lo que dices es cierto o mientes como un bellaco”\ny luego de construir su tabla de verdad. Indique el número de valores de verdad en el resultado final.",
+      "alternatives": [
+        "6",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/tablas-de-verdad-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — TABLAS DE VERDAD Y CONECTIVOS LÓGICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué alternativa es equivalente a la siguiente proposición?\n(p → q) →[(p ∨ (q ∧ r)) ↔ (q ∧ (p ∨ r))]",
+      "alternatives": [
+        "p",
+        "p → r",
+        "q ↔ r",
+        "p ∧ ~p",
+        "q ∨ ~q"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/tablas-de-verdad-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — TABLAS DE VERDAD Y CONECTIVOS LÓGICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un debate, cinco participantes expresaron las siguientes proposiciones:\n– Elena: «Si hay una buena educación, entonces habrá un mejor futuro para el país. Y definitivamente, hay una buena educación».\n– Fabiola: «Si el gobierno trabaja en la reducción de la pobreza, entonces habrá una mayor equidad social. Pero el gobierno no está haciendo nada para reducir la pobreza».\n– Isabel: «Si las empresas no cumplen con las normas ambientales, y cumplen con las normas ambientales o se reduce la contaminación.\nEntonces se reduce la contaminación».\n¿Quién o quiénes escribieron una tautología?",
+      "alternatives": [
+        "Elena y Fabiola",
+        "Isabel y Elena",
+        "Fabiola e Isabel",
+        "Solo Isabel",
+        "Solo Fabiola"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-preuniversitaria-libro-de.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta luego de determinar si las proposiciones son verdaderas (V) o falsas (F).\nI) ( p ∧∼ q) es lógicamente equivalente a ∼(∼ p ∨ q).\nII) (∼ p ∧ r) → q equivale lógicamente a p ∨ ∼ r ∨ q.\nIII) p → q equivale a ∼p ∧ q.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FFV",
+        "FVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuáles de las siguientes proposiciones son equivalentes a ( p → q) → r?\nI) ∼[ p ∧ ∼ q ∧ ∼ r]\nII) ( p ∧ ∼ q) ∨ r\nIII) (r ∨ q) ∧ (∼r ∧ q)",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "solo III",
+        "I y II"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se define p # q ≡ ∼( p → q), además la proposición\n∼{[∼p#(∼ p ↔ q)] # ( r ∨ q)} es falsa.\nHalle los valores de p, q, y r, respectivamente.",
+      "alternatives": [
+        "VFF",
+        "VFV",
+        "FFF",
+        "FVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que :\n(p ∧ q) ∨ (q → t) ≡ F\n¿ cuál(es) de las siguientes proposiciones son verdaderas?",
+      "alternatives": [
+        "(∼p ∨ t) ∨ s",
+        "∼[p ∧ (∼q ∨ ∼p)]",
+        "[(∼p) ∨ (q ∧ ∼t)] ↔ [(p → q) ∧ ∼(q ∧ t)]",
+        "b y c",
+        "solo a"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una clase de aritmética tres alumnos escribieron en la pizarra las proposiciones:\nMiguel: «Julia acude al dentista porque tiene dolor de muelas, pero no tiene dolor de muelas» Pedro : «Si Julia tiene dolor de muelas o no acude al dentista, entonces no tiene dolor de muelas. Sin embargo, tiene dolor de muelas»\nDiana : «Si Julia tiene dolor de muelas entonces acude al dentista, pero no acude al dentista; si y solo si, no tiene dolor de muelas ni acude al dentista»\n¿Quién o quiénes escribieron una tautología?",
+      "alternatives": [
+        "Pedro y Diana",
+        "Miguel y Pedro",
+        "Solo Diana",
+        "Miguel y Diana",
+        "Solo Miguel"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PRE SAN MARCOS SEMANA 1 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una tabla de verdad, si la matriz principal presenta únicamente valores falsos (F), se denomina:",
+      "alternatives": [
+        "Tautología.",
+        "Contingencia.",
+        "Consistencia.",
+        "Contradicción.",
+        "Verdad formal."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/logica-examen-admision-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una proposición atómica se diferencia de una molecular porque:",
+      "alternatives": [
+        "Siempre es verdadera.",
+        "Carece de conectores lógicos.",
+        "Posee variables y constantes.",
+        "Se refiere a hechos científicos.",
+        "Tiene más de un sujeto y predicado."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/logica-examen-admision-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las proposiciones\nIndique la razón de verdad",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFV",
+        "VFF",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/binomio-de-newton-y-radicacion.html",
+      "sourceName": "matematica-a1.blogspot.com — BINOMIO DE NEWTON Y RADICACIÓN EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la proposición ~ q → ~ t es falsa y la proposición p ↔ t es verdadera, entonces el valor de verdad de las proposiciones p, q y t, en ese orden, es",
+      "alternatives": [
+        "VFF",
+        "VFV",
+        "VVV",
+        "FFF",
+        "FVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/12/examen-admision-cantuta-solucionario.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN ADMISIÓN CANTUTA SOLUCIONARIO UNIVERSIDAD NACIONAL DE EDUCACIÓN UNE PRUEBA DESARROLLADA PREGUNTAS RESUELTAS CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si los conjuntos:\nA = {x – y ; 12}\nB = {x – 2y ; – 3}\nSon iguales, además:\nC = {a+2 ; 3b+7}, es unitario.\nCalcula : x ² + y² + 2a – 6b",
+      "alternatives": [
+        "546",
+        "581",
+        "662",
+        "559",
+        "613"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/07/teoria-de-conjuntos-pertenencia.html",
+      "sourceName": "matematicaj.blogspot.com — EJERCICIOS DE TEORÍA DE CONJUNTOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si los conjuntos P y Q son iguales:\nP={a ² +2a; b³–b}\nQ={15 ; 2a }\nHalla “a.b”, siendo a y b naturales.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/07/teoria-de-conjuntos-pertenencia.html",
+      "sourceName": "matematicaj.blogspot.com — EJERCICIOS DE TEORÍA DE CONJUNTOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la equivalencia lógica de “Si Juan ingresa a la UNI, entonces estudiará Ing. Civil”?",
+      "alternatives": [
+        "Juan no ingresará a la UNI o estudiará Ing. Civil.",
+        "Si Juan estudiará Ing. Civil, entonces Juan ingresará a la UNI.",
+        "Juan ingresará a la UNI y estudiará Ing. Civil.",
+        "Juan no ingresará a la UNI o no estudiará Ing. Civil.",
+        "Juan no ingresará a la UNI y no estudiará Ing. Civil."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/tutoria-3ro-4to-actividad-2-experiencia-8-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 PRIMERA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF APTITUD LETRAS Y HUMANIDADES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes afirmaciones\nI. La conjunción es verdadera si ambas variables son verdaderas\nII. En una fórmula bien · formada, pueden usarse juntas variables y metavariables\nIII. La condicional es falsa si el antecedente es verdadero y el consecuente falso\nIV. La condicional es verdadera si uno de sus componentes es falso\nLa alternativa correcta es",
+      "alternatives": [
+        "I y II son afirmaciones verdaderas",
+        "solo la afirmación IV es verdadera",
+        "I y III son afirmaciones verdaderas",
+        "solo la afirmación I es falsa",
+        "I y IV son afirmaciones falsas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se define p * q ≅ ∼(p → ∼q) si la proposición [ (r * p) * ∼q ] → { [ (r * p) * ∼q ] → q } es falsa, calcule los valores de verdad de p, q y r en ese orden.",
+      "alternatives": [
+        "VVF",
+        "FFF",
+        "FVV",
+        "VFV",
+        "VVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/solucionario-unp-examen-admision-universidad-nacional-de-piura-preguntas-resueltas-prueba-de-ingreso-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNP 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE PIURA 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De los siguientes enunciados:\nI) Si una matriz A es simétrica, entonces es diagonalizable.\nII) Toda ecuación de segundo grado tiene dos soluciones reales.\nIII) ¿El número 91 es primo?\nIV) Deseo ingresar esta vez.\n¿Cuál o cuáles son proposiciones lógicas?",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "III y IV",
+        "I, II y III",
+        "I, II y IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/solucionario-unp-examen-admision-universidad-nacional-de-piura-preguntas-resueltas-prueba-de-ingreso-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNP 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE PIURA 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición « Si el equipo gana el partido o empata, entonces el equipo no gana el partido ni empata » es equivalente a:",
+      "alternatives": [
+        "El equipo gana el partido y pierde el partido.",
+        "El equipo pierde el partido.",
+        "El equipo pierde el partido o empata.",
+        "El equipo gana el partido o pierde el partido.",
+        "El equipo no gana el partido y no empata."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/solucionario-unp-examen-admision-universidad-nacional-de-piura-preguntas-resueltas-prueba-de-ingreso-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNP 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE PIURA 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un abogado toma nota de una demanda judicial mediante conectivos y proposiciones, tal como sigue:\n∼[(𝑞∧𝑟)→(𝑝∨𝑠)]→{𝑞∧[𝑟∧(𝑝∨𝑟)]}\nDonde:\np: El acusado es culpable.\nq: El acusado tiene antecedentes penales.\nr: El acusado es condenado.\ns: El acusado recibe libertad condicional.\n¿Cuál es la conclusión de la demanda judicial?",
+      "alternatives": [
+        "El acusado es condenado y recibe libertad condicional.",
+        "El acusado es condenado o no es condenado.",
+        "El acusado es culpable y recibe libertad condicional.",
+        "El acusado tiene antecedentes penales y recibe libertad condicional.",
+        "El acusado es culpable."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/solucionario-unp-examen-admision-universidad-nacional-de-piura-preguntas-resueltas-prueba-de-ingreso-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNP 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE PIURA 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición equivalente a “Leo no estudia en su cuarto o, va al estadio si y solo si estudia en su cuarto; o va al estadio”, es:",
+      "alternatives": [
+        "Leo estudia en su cuarto",
+        "Leo no va al estadio",
+        "Leo va al estadio",
+        "Si Leo estudia en su cuarto entonces va al estadio",
+        "Leo va a la piscina"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/02/pre-san-marcos-2018-semana-19.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 19 PRE SAN MARCOS 2026-1 PDF INGRESO UNIVERSIDAD CEPUSM 2025-2 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición “Carlos estudia pero trabaja”, es de tipo",
+      "alternatives": [
+        "condicional.",
+        "disyuntiva.",
+        "negativa.",
+        "conjuntiva.",
+        "bicondicional."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/ept-5to-actividad-1-experiencia-7-resuelta-aprendo-en-casa-educacion-para-el-trabajo-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 PRIMERA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF RM RV APTITUD LETRAS Y HUMANIDADES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la expresión lógica más simplificada que representa a\n(p → (q → r)) ∨ (q → (r → p))",
+      "alternatives": [
+        "F",
+        "V",
+        "p",
+        "q ∨ r",
+        "p ∨ q"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/3ro-4to-actividad-6-experiencia-9-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 PRIMERA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF RM RV APTITUD LETRAS Y HUMANIDADES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el lenguaje usual para la proposición?\n∀x∈ ℤ : x 2 ≥ 0",
+      "alternatives": [
+        "Para algún número entero, se tiene que su cuadrado es mayor e igual que cero.",
+        "Existe un número entero, cuyo cuadrado, es mayor o igual que cero.",
+        "Para cualquier número entero, su cuadrado es mayor que cero.",
+        "Algún número entero tiene por cuadrado a un número positivo.",
+        "Para todo número entero, se tiene que su cuadrado es mayor o igual que cero."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/5to-actividad-14-educacion-fisica-experiencia-3-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNASAM ÁREA E ESTADÍSTICA SISTEMAS MATEMÁTICA CLAVES PDF – INGRESO UNIVERSIDAD – 2026–2027"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No es característica de las proposiciones simples relacionales",
+      "alternatives": [
+        "establecen un nexo entre dos o más sujetos",
+        "El nexo entre dos o mas variables no pueden eliminarse",
+        "Las ubicaciones pueden ser de afinidad, ubicación o grado",
+        "Están formados por dos o mas proposiciones simples que se unen mediante un enlace o conector lógico",
+        "tiene un solo verbo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuáles de los siguientes enunciados son proposiciones?\nI. Luricocha es distrito de Huanta.\nII. ¿Qué día es mañana?\nIII. Ocho es mayor que cinco.\nIV. Él fue alcalde de Huanta.\nV. ¡Qué hermoso es Luricocha!\nVI. Sporting Cristal fue campeón de la Liga 1 en el 2023.",
+      "alternatives": [
+        "I; II y VI",
+        "I; III y IV",
+        "I; III y VI",
+        "I; III y V",
+        "I; II y V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/1ro-2do-experiencia-de-aprendizaje-integrada-2-aprendo-en-casa-primer-segundo-grado-de-secundaria-actividades-resueltas-web-tv-radio-word-descargas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNAH 2027 INGRESO UNIVERSIDAD AUTÓNOMA DE HUANTA CLAVES – RESPUESTAS – PRUEBA DE ENSAYO – SIMULACIÓN RESUELTA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la proposición «Si se usan las mascarillas, entonces, o no hay personas vacunadas o hay nuevas variantes de la COVID-19» es falsa, determine el valor de verdad (V o F) de las siguientes proposiciones en el orden indicado.\nI) Hay nuevas variantes de la COVID-19, ya que no se usan las mascarillas.\nII) Hay nuevas variantes de la COVID-19, pero hay personas vacunadas.\nIII) No hay nuevas variantes de la COVID-19, dado que hay personas vacunadas.",
+      "alternatives": [
+        "VVF",
+        "VFF",
+        "VFV",
+        "FFV",
+        "VVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/examen-san-marcos-2019-i-deco.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN MARCOS 2027 I EXAMEN ADMISIÓN UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "dice: « Si no como frutas o verduras, entonces no tendré una dieta saludable. No obstante, tengo una dieta saludable ».\n¿Cuántos valores verdaderos encontrará Jano en la matriz principal que cumple con el pedido de Pedro?",
+      "alternatives": [
+        "4",
+        "5",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Descarga-coleccion-de-libros-rubinos-completa-gratis-textos-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBROS RUBIÑOS DESCARGA GRATUITA 2026 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No es cierto que, si no sales a correr entonces sudarás; además, si no sudas, entonces no has salido a correr. También, o bien has sudado o bien no has salido a correr.\n¿Cuál de las siguientes afirmaciones es equivalente a lo anterior?",
+      "alternatives": [
+        "Has salido a correr.",
+        "No has sudado.",
+        "Has salido a correr y no has sudado.",
+        "No has salido a correr y has sudado.",
+        "No has salido a correr y no has sudado."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Descarga-coleccion-de-libros-rubinos-completa-gratis-textos-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBROS RUBIÑOS DESCARGA GRATUITA 2026 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la proposición (p ∧ ∼q) → (r → ∼s) es falsa , el valor de verdad de las variables proposicionales q y s, en ese orden, es",
+      "alternatives": [
+        "VF",
+        "FV",
+        "FF",
+        "FC",
+        "VV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/aritmetica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — ARITMÉTICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición:”\nEs falso que Lima es la capital del Perú y Cajamarca es la capital del carnaval peruano “\nEs equivalente a:",
+      "alternatives": [
+        "Lima no es la capital del Perú y Cajamarca es la capital del carnaval peruano.",
+        "Lima no es la capital del Perú o Cajamarca es la capital del carnaval peruano.",
+        "Lima no es la capital del Perú o Cajamarca no es la capital del carnaval peruano.",
+        "Lima no es la capital del Perú y Cajamarca no es la capital del carnaval peruano.",
+        "Lima es la capital del Perú y Cajamarca no es la capital del carnaval peruano."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/aritmetica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — ARITMÉTICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La negación de la siguiente proposición:\n“Todo número real tiene un único inverso aditivo”\nes...",
+      "alternatives": [
+        "Existe un número real con único inverso aditivo.",
+        "Todo número real no tiene inverso aditivo.",
+        "Todo número real admite dos inversos aditivos.",
+        "Existe un número real que tiene por lo menos dos inversos aditivos.",
+        "Existe un número real cuyo inverso aditivo no existe."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-matematico-unc-examen.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para el enunciado :\n“Ni eres buen hijo ni buen estudiante”\nSu forma negada equivale a:",
+      "alternatives": [
+        "No eres buen hijo y buen estudiante.",
+        "Eres buen hijo y buen estudiante.",
+        "No eres buen hijo o no eres buen estudiante.",
+        "Eres buen hijo o no eres buen estudiante.",
+        "Eres buen hijo o eres buen estudiante."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-matematico-unc-examen.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean:\np : “Gané una beca”\nq : “Viajo al extranjero”.\nSimplificando y luego traduciendo la proposición:\n[( p ∨ ~ q) ∨ ( ~ p ∧ q) ∨ q] ∧ q\nEquivale a:",
+      "alternatives": [
+        "Gano una beca.",
+        "Viajo al extranjero",
+        "No gano una beca",
+        "No viajo al extranjero.",
+        "Gano una beca y viajo al extranjero."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-matematico-unc-examen.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La lógica de enunciados estudia las estructuras de los enunciados compuestos: negativos, conjuntivos, disyuntivos, condicionales y bicondicionales. Determine el valor de verdad (V o F) de las siguientes proposiciones concernientes al análisis lógico del lenguaje.\nI. La conjunción es de índole simétrica y conmutativa.\nII. La implicación equivale a un bicondicional.\nIII. En «Estaba pálido, pero sereno», el conector pero es una disyunción.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VFF",
+        "FVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/filosofia-simulacro-san-marcos-solucionario-admision-a-la-universidad-2020-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FILOSOFÍA ÁREA C PRUEBA DECO SAN MARCOS SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la negación de la proposición\n“Todos los cuervos son negros”.",
+      "alternatives": [
+        "Algunos cuervos son negros.",
+        "Algunos cuervos no son negros.",
+        "Ningún cuervo es negro.",
+        "Todos los cuervos no son negros.",
+        "Ningún cuervo no es negro."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — LÓGICA EJERCICIOS RESUELTOS DE EXAMEN DE ADMISIÓN A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la proposición\n(p ∨ ∼ r) ↔ (s → w) es verdadera\ny (∼ w) → (∼ s) es falsa,\nhalle el valor de verdad de las proposiciones.\nI. (p ∧ q) ∨ (r ∨ s)\nII. (s ↔ ∼ w) → (r ∧ ∼ p)\nIII. [t → (w ∨ ∼ p)] ∧ ∼ (p → r)",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FFF",
+        "VFF",
+        "FFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/razonamiento-matematico-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO UNI DE EXAMEN DE ADMISIÓN UNIVERSIDAD DE INGENIERÍA SOLUCIONADO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique\n∼ (q ∨ ∼ r) → (p ∨ ∼ p).",
+      "alternatives": [
+        "p",
+        "q",
+        "p ∧ q",
+        "F",
+        "V"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/libro-de-razonamiento-matematico-de-quinto-de-secundaria-ejercicios-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO PROBLEMAS RESUELTOS DE EXAMEN DE ADMISIÓN UNI SOLUCIONARIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se definen las proposiciones:\np ⇓ q ≡ ∼ p ∧ q\np ⇑ q ≡ p ∨ ∼ q\nAdemás, la proposición:\n∼[(q ⇓ p) → (q ⇑ r)] ≡ V\nDetermine los valores de verdad de p, y r respectivamente.",
+      "alternatives": [
+        "FFF",
+        "FVV",
+        "VFV",
+        "VVF",
+        "VVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/libro-de-razonamiento-matematico-de-quinto-de-secundaria-ejercicios-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO PROBLEMAS RESUELTOS DE EXAMEN DE ADMISIÓN UNI SOLUCIONARIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Karina le afirma a Tina: « Si te presto dinero o pagas tu deuda, entonces, obtengo ganancia o no pagas tu deuda ». ¿Cuál de las siguientes alternativas expresa lo afirmado por Karina?",
+      "alternatives": [
+        "Si no te presto dinero entonces no pagas tu deuda.",
+        "Si te presto dinero entonces obtengo ganancia.",
+        "Si pagas tu deuda entonces no obtengo ganancia.",
+        "No te presto dinero y no pagas tu deuda.",
+        "Si pagas tu deuda en consecuencia obtengo ganancia."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-parcial-cepreuni-solucionario.html",
+      "sourceName": "matematicaj.blogspot.com — CEPREUNI EXAMEN PARCIAL 1 SOLUCIONARIO "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Alberto le dice a su hermano Lucas: « Vas a jugar al parque dado que terminaste tu tarea. Sin embargo, vas a jugar al parque y no terminaste tu tarea ». Dicha proposición es equivalente a que le hubiera dicho:\nI. No terminaste tu tarea ni vas a jugar al parque.\nII. No vas a jugar al parque, pero terminaste tu tarea.\nIII. No terminaste tu tarea, pero vas a jugar al parque.",
+      "alternatives": [
+        "Solo I",
+        "I y II",
+        "Solo II",
+        "Solo III",
+        "II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-parcial-cepreuni-solucionario.html",
+      "sourceName": "matematicaj.blogspot.com — CEPREUNI EXAMEN PARCIAL 1 SOLUCIONARIO "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición « O Andrea va al cine o termina de asear su dormitorio. Sin embargo, si Andrea va al cine entonces termina de asear su dormitorio » es equivalente a:",
+      "alternatives": [
+        "Andrea no va al cine o termina de asear su dormitorio.",
+        "Andrea va al cine y no termina de asear su dormitorio.",
+        "Andrea va al cine o no termina de asear su dormitorio.",
+        "Andrea va al cine y termina de asear su dormitorio.",
+        "Andrea no va al cine, pero termina de asear su dormitorio."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/06/practica-cepreuni-solucionario-5.html",
+      "sourceName": "matematicaj.blogspot.com — PRACTICA CEPREUNI 5 CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición « O Benjamín va al parque o no va al cine, ya que no va al parque », es falsa. Determine el valor de verdad de las siguientes proposiciones en el orden indicado.\nI. Benjamín no va al parque.\nII. Benjamín no va al cine.\nIII. Si Benjamín va al cine, entonces no va al parque.",
+      "alternatives": [
+        "VVF",
+        "FVF",
+        "VFV",
+        "FFV",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/solucionario-cepreuni-examen-final-2019.html",
+      "sourceName": "matematicaj.blogspot.com — CEPREUNI EXAMEN FINAL SOLUCIONARIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De los siguientes enunciados:\nI. ¿El número 64 es cuadrado perfecto y cubo perfecto a la vez?\nII. El número 323 no es primo.\nIII. Todos los números de la forma [(n + 1)(n – 1) + 1] son cuadrados perfectos.\nIV. Si 2! = 2 y 3! = 6, entonces 4! = 12.\n¿Cuáles son proposiciones lógicas?",
+      "alternatives": [
+        "I y III",
+        "I y IV",
+        "I, II y III",
+        "II y III",
+        "II y IV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/solucionario-cepreuni-examen-final-2019.html",
+      "sourceName": "matematicaj.blogspot.com — CEPREUNI EXAMEN FINAL SOLUCIONARIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la proposición equivalente a:\n« Tadeo es médico pero no buen cocinero; o, Tadeo es futbolista o médico dado que no es, médico y buen cocinero ».",
+      "alternatives": [
+        "Tadeo es médico.",
+        "Tadeo es futbolista.",
+        "Tadeo es buen cocinero.",
+        "Tadeo es médico o futbolista.",
+        "Tadeo es médico y futbolista."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/cepreuni-septima-practica-calificada.html",
+      "sourceName": "matematicaj.blogspot.com — CEPREUNI SÉPTIMA PRACTICA SOLUCIONARIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición « No juego fútbol pero juego básquetbol, en consecuencia, o no juego básquetbol o juego vóleibol », es falsa. Determine el valor de verdad de las siguientes proposiciones en el orden indicado.\nI. Si juego fútbol entonces no juego vóleibol.\nII. Juego vóleibol si y solo si juego básquetbol.\nIII. Juego fútbol o no juego básquetbol.\nIV. Es falso que, juego vóleibol, pero no juego fútbol.",
+      "alternatives": [
+        "VFVF",
+        "VFFF",
+        "VVFF",
+        "VFFV",
+        "VVFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/aritmetica-cepreuni-segundo-parcial.html",
+      "sourceName": "matematicaj.blogspot.com — ARITMÉTICA CEPREUNI SEGUNDO EXAMEN DESARROLLADO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De los siguientes enunciados:\nI. Los números 2 y 3 son los únicos primos consecutivos.\nII. Toda fracción impropia es mayor que la unidad.\nIII. Espero que ingreses a la UNI.\nIV. ¡Arriba Perú, vamos al Mundial de Fútbol 2026!\n¿Cuáles son proposiciones lógicas?",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "III y IV",
+        "I, II y III",
+        "I, II y IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/aritmetica-cepreuni-segundo-parcial.html",
+      "sourceName": "matematicaj.blogspot.com — ARITMÉTICA CEPREUNI SEGUNDO EXAMEN DESARROLLADO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la proposición:\n“Existe la justicia, pero hay democracia o solamente empleo, salvo que; es cierto que exista la justicia, no obstante, es falso que no hay democracia siempre y cuando haya empleo”.\nAl formalizarla y simplificarla se obtiene",
+      "alternatives": [
+        "No hay justicia",
+        "Hay democracia",
+        "Hay empleo",
+        "Hay justicia",
+        "O hay democracia o hay empleo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/solucionario-unt-ingenierias-area-b-examen-admision-universidad-nacional-de-trujillo-claves-respuestas-prueba-resuelta-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA B SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD INGENIERÍAS CLAVES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La negación de la proposición:\n“Solo iré de vacaciones si apruebo mis cursos o consigo dinero”.\nes equivalente a:",
+      "alternatives": [
+        "Apruebo mis cursos y consigo dinero, pero no voy de vacaciones.",
+        "Si voy de vacaciones entonces apruebo mis cursos y consigo dinero.",
+        "Si apruebo mis cursos y consigo dinero entonces no voy de vacaciones.",
+        "Si aprobar mis cursos es condición suficiente para ir de vacaciones, entonces consigo dinero y no voy de vacaciones.",
+        "Si bien es cierto que consigo dinero también es cierto que no voy de vacaciones ni apruebo mis cursos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/solucionario-unt-ingenierias-area-b-examen-admision-universidad-nacional-de-trujillo-claves-respuestas-prueba-resuelta-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA B SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD INGENIERÍAS CLAVES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición:\n“Es falso que nadie que sea político es demagogo”.\nEs equivalente a:\n1. No todos son no demagogos salvo que tampoco son políticos.\n2. Existen políticos que sin embargo no son demagogos.\n3. Es falso que cualquier persona si es demagogo, no es político.\n4. Es incierto que ningún no demagogo es político.\n5. Aunque sea un demagogo es político.\nSon ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "1, 3 y 5",
+        "2, 3 y 4",
+        "3, 4 y 5",
+        "2 y 4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/solucionario-unt-ingenierias-area-b-examen-admision-universidad-nacional-de-trujillo-claves-respuestas-prueba-resuelta-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA B SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD INGENIERÍAS CLAVES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La negación de “Todos los estudiantes guardan silencio y el maestro está presente”, es:",
+      "alternatives": [
+        "Todos los estudiantes no guardan silencio y el maestro está ausente.",
+        "Todos los estudiantes guardan silencio y el maestro no está presente.",
+        "Algunos estudiantes no guardan silencio o el maestro está ausente.",
+        "Algunos estudiantes guardan silencio o el maestro está presente.",
+        "Ningún estudiante guarda silencio y el maestro está presente."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-y-cocientes-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO UNC 2027 INGRESO UNIVERSIDAD DE CAJAMARCA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la proposición «Si María limpia la casa, no lava la ropa» es falsa y la proposición «María no irá al cine» es verdadera, halle el valor de verdad de las siguientes proposiciones, en el orden indicado:\nI. María no limpia la casa ya que irá al cine.\nII. Si María limpia la casa entonces irá al cine.\nIII. María no limpia la casa puesto que lava la ropa.",
+      "alternatives": [
+        "VVF",
+        "VFF",
+        "FFF",
+        "FVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-problemas_52.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA C 2025-1 SAN MARCOS INGENIERÍAS INGRESO RESPUESTAS PRESENCIAL DESARROLLO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición «Sandro no fue al parque ya que no terminó su tarea, pero terminó su tarea; entonces fue al cine», es equivalente a",
+      "alternatives": [
+        "Sandro no fue al cine ni terminó su tarea.",
+        "Sandro no terminó su tarea y fue al cine.",
+        "Sandro fue al cine, pero no al parque.",
+        "Sandro no fue al cine y terminó su tarea.",
+        "Sandro fue al cine debido a que terminó su tarea."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-aritmetica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ARITMÉTICA RUBIÑOS 2025 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición « O voy al cine, o veo una película en casa. Además, no es cierto que, si voy al cine entonces veo una película en 3D », es verdadera. Determine el valor de verdad de las siguientes proposiciones, en el orden indicado:\nI) Voy al cine.\nII) Veo una película en casa.\nIII) Veo una película en 3D.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFF",
+        "VFV",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-aritmetica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ARITMÉTICA RUBIÑOS 2025 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De cierto equipo de fútbol se sabe que, «si el equipo pierde al menos dos partidos, entonces su entrenador será despedido. También, si no gana al menos 3 partidos en una temporada, entonces será relegado a una categoría inferior». Dado que, el equipo no ha sido relegado, además el entrenador actual quien ha dirigido al equipo durante toda la temporada no ha sido despedido, ¿cuál de las siguientes afirmaciones es verdadera?",
+      "alternatives": [
+        "El equipo ganó menos de tres partidos.",
+        "El equipo perdió al menos dos partidos.",
+        "El equipo no perdió ningún partido y no ganó partido alguno.",
+        "El equipo perdió menos de dos y ganó al menos tres partidos.",
+        "El equipo perdió más de tres partidos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-aritmetica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ARITMÉTICA RUBIÑOS 2025 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina los valores veritativos de p; q; y, r; sabiendo que la siguiente proposición compuesta es falsa:\n(∼ p ∧ ∼ q) → ∼ r",
+      "alternatives": [
+        "FVV",
+        "FFF",
+        "FFV",
+        "VVF",
+        "FVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/1ro-2do-actividad-11-resuelta-comunicacion-experiencia-7-aprendo-en-casa-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO VALDIZAN ÁREA 4 CONTABLES ECONOMÍA ADMINISTRATIVAS TURISMO Y HOTELERÍA – INGRESO UNIVERSIDAD UNHEVAL CLAVES HERMILIO 2027 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si eres futbolista, entonces no eres pianista y si no eres futbolista, entonces te gusta cantar mucho. ¿Cuál de las siguientes afirmaciones es necesariamente verdadera?",
+      "alternatives": [
+        "Si eres futbolista, te gusta cantar mucho.",
+        "Todos los pianistas son altos.",
+        "Si no eres pianista, entonces no eres futbolista.",
+        "Si eres pianista, entonces te gusta cantar mucho.",
+        "A algunos futbolistas les gusta cantar."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-general-del-cuarto-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA E 2024-2 JURÍDICAS DERECHO SOCIALES EDUCACIÓN PRESENCIAL SAN MARCOS CLAVES INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un centro de salud se colocó un letrero que decía:\n«Si te desabrigas, te resfrías».\nCarlitos al leer este letrero escribió en su cuaderno las siguientes proposiciones:\nI) Si te resfrías, te desabrigas.\nII) Si no te resfrías, no te desabrigas.\nIII) No te desabrigues o te resfriaras.\nIV) No te resfrías o te desabrigas.\n¿Qué proposiciones escritas por Carlitos son equivalentes a lo escrito en el letrero?",
+      "alternatives": [
+        "I",
+        "I y IV",
+        "II y III",
+        "Todas",
+        "II y IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-de-simulacros-y-examenes.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA A 2024-2 PRESENCIAL SAN MARCOS MEDICINA CIENCIAS DE LA SALUD CLAVES INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada las siguientes premisas:\n– Algunos políticos son honestos.\n– Algunos políticos son abogados.\n– Todos los abogados son honestos.\nLuego, se deduce que:",
+      "alternatives": [
+        "Todos los políticos son abogados.",
+        "Ningún político es abogado.",
+        "Todos los honestos son políticos.",
+        "Ningún honesto es político.",
+        "Los políticos que no son honestos no son abogados"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-de-simulacros-y-examenes.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA A 2024-2 PRESENCIAL SAN MARCOS MEDICINA CIENCIAS DE LA SALUD CLAVES INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el valor de verdad de p, q y r, respectivamente, si la proposición\n[ q ∧ (p → r) ] ∧ [ ∼q → (∼q ∨ r) ] es verdadera y (∼q ∨ r) es falsa.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "FVF",
+        "VFF",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/aritmetica-pdf-ejercicios-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Definamos la operación ⊗ entre dos conjuntos A y B mediante A⊗B = A c ∪B c entonces indique cuál de las siguientes expresiones son verdaderas o falsas.\nI. (A – B) ⊗ A = B ∪ A c\nII. (A ⊗ B) ⊗ (A ⊗ B) ⊂ (A ⊗ A) ⊗ (B ⊗ B)\nIII. A ⊗ (A ∪ B) = A c",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "VFV",
+        "VVF",
+        "FVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/aritmetica-pdf-ejercicios-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Karina escribe en su cuaderno el siguiente enunciado:\n«Leo periódicos o no leo revistas porque no leo cómics. En conclusión, no leo revistas ni cómics» .\nLuego le pide a su amigo Jano que halle la matriz principal. Si Jano cumplió con el pedido correctamente, ¿cuántos valores verdaderos encontró en dicha matriz?",
+      "alternatives": [
+        "2",
+        "5",
+        "3",
+        "4",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logica-matematica-y-teoria-de-conjuntos.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA MATEMÁTICA Y TEORÍA DE CONJUNTOS PROBLEMAS RESUELTOS Y DEMOSTRACIONES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición “Si ingresas a la universidad, serás médico; o si no serás admistrador, serás médico”, es equivalente a:",
+      "alternatives": [
+        "Si no ingresas a la universidad, serás administrador",
+        "Si no ingresas a la universidad, no serás médico",
+        "Si ingresas a la universidad, serás administrador y médico",
+        "Si ingresas a la universidad, serás administrador o médico"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/aritmetica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la proposición equivalente a:\n«Si no es cierto que todas las tareas son difíciles y el proyecto no está terminado, entonces es falso que todas las tareas son difíciles o el proyecto está terminado. Además, el proyecto no está terminado».",
+      "alternatives": [
+        "Todas las tareas son difíciles y el proyecto está terminado.",
+        "El proyecto no está terminado.",
+        "Hay al menos una tarea fácil.",
+        "No todas las tareas son difíciles y el proyecto no está terminado.",
+        "No todas las tareas son difíciles y el proyecto está terminado."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-admision-san-marcos-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA E 2023-1 PRUEBA RESUELTA DE INGRESO UNIVERSIDAD DERECHO SOCIALES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean los conjuntos A={1; 2; 3} y B={0; 1}.\n¿Cuál es el valor de verdad de las siguientes proposiciones?\nI ) ∀ x ∈ A, ∃ y ∈ B / x+y=2\nII ) ∀ x ∈ B, ∃ y ∈ A / x+y ≥ 2\nIII ) ∃ x ∈ A, ∃ y ∈ B/ x 2 – y ≤ 1\nIV ) ∃ x ∈ A, ∀ y ∈ B/ x 3 – y 2 =10",
+      "alternatives": [
+        "FFFV",
+        "FVVV",
+        "FVVF",
+        "VVVF",
+        "VFFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-preuniversitaria-libro-de.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El profesor de química, debido a que el examen estuvo difícil, bonificará con dos puntos a cada alumno que encuentre las proposiciones equivalentes entre sí, en las siguientes proposiciones:\nI) La sustancia es adecuada, entonces su pH es menor a 7.\nII) Si el pH de una sustancia es mayor o igual a 7, entonces no es adecuada.\nIII) Si una sustancia es adecuada, entonces su pH es mayor o igual a 7.\nIV) Si el pH de una sustancia es menor a 7, entonces es adecuada.\n¿Cuál debe ser la respuesta correcta para recibir dichos puntos de bonificación?",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "I y III",
+        "III y IV",
+        "I, II y IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-preuniversitaria-libro-de.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pia dice: ‘‘Adelgazo o no hago dieta’’.\nEsto equivale a decir:",
+      "alternatives": [
+        "Si adelgazo , hago dieta.",
+        "Si no adelgazo , hago dieta.",
+        "Si hago dieta , no adelgazo.",
+        "Si hago dieta , adelgazo.",
+        "Hago dieta o no adelgazo."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La negación de la proposición P edro no irá a ver la Copa América y no estudiará Ingeniería es",
+      "alternatives": [
+        "Pedro no irá a ver la Copa América y estudiará Ingeniería.",
+        "Pedro irá a ver la Copa América o no estudiará Ingeniería.",
+        "Pedro no irá a ver la Copa América o no estudiará Ingeniería.",
+        "Pedro irá a ver la Copa América o estudiará Ingeniería."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas de las siguientes alternativas son equivalentes a:\n‘‘Si te desabrigas, te resfrías’’?\nI) Si te resfrías , te desabrigaste.\nII) No te desabrigues o te resfriarás.\nIII) Si no te resfrías , no te desabrigas.\nIV) No te resfrías o te desabrigas.",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El dueño de una tienda de venta de autos desea colocar en la puerta de su establecimiento un letrero con un lema que lo identifique. Al inicio tiene como candidatos los siguientes lemas:\nI) Un buen auto no es barato.\nII) Un auto barato no es bueno.\nIII) Un auto es bueno o no es barato.\nIV) Un auto no es bueno y barato a la vez.\nSu hijo , que estudia lógica , le señala que hay algunos lemas que son equivalentes ; ¿cuáles son?",
+      "alternatives": [
+        "II y III",
+        "I, II y IV",
+        "I,II y III",
+        "I y IV",
+        "I y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un anciano quiere dejar una herencia a su nieta Priscilla , pero como ésta es recién nacida , el abuelo piensa en algunas condiciones:\nI) Priscilla recibirá la herencia cuando cumpla 18 años.\nII) Si Priscilla no cumple 18 años , no recibirá la herencia.\nIII) No puede ocurrir que , Priscilla cumpla 18 años y no reciba la herencia.\nSu abogado le informa que algunas de dichas condiciones son equivalentes.\n¿Cuáles son?",
+      "alternatives": [
+        "I y II",
+        "I y III",
+        "II y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se sabe que: ‘‘El picnic del domingo no se realizará , si el tiempo no es soleado’’.\nEntonces se puede deducir válidamente que:",
+      "alternatives": [
+        "Si se realizara el picnic , el tiempo del domingo es indudablemente soleado.",
+        "Si no se realiza el picnic , el tiempo del domingo posiblemente sea nublado.",
+        "Si no es un domingo soleado , el picnic no se realizará.",
+        "Si es un domingo soleado , el picnic puede ser que se realice.",
+        "El picnic se realizará el domingo , entonces el tiempo es soleado"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto de Si gana Perú , no voy a estudiar Indique la alternativa que se puede concluir.",
+      "alternatives": [
+        "Si estudié , ganó Perú.",
+        "Si no ganó Perú , estudié.",
+        "Si no estudié , ganó Perú.",
+        "Si fui a estudiar , no ganó Perú.",
+        "Nunca estudio porque siempre gana Perú."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La siguiente expresión no es falsa .\nSi Juan no está enfermo o estudia el sábado en la noche , entonces está enfermo .\n¿Cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "Juan estudia sábado en la mañana .",
+        "Juan está enfermo .",
+        "Juan no estudia el sábado .",
+        "Juan va al medio ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es falso que las clases se suspenden o la universidad cierra , si se inician las vacaciones.\nNos han comunicado falsamente que ni las clases se suspenden ni la universidad cierra.\nLuego :",
+      "alternatives": [
+        "Se inician las vacaciones",
+        "No se inician las vacaciones",
+        "Se suspenden siempre las clases",
+        "Las clases no se suspenden",
+        "La universidad cierra"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el valor de verdad (V o F) de cada una de las siguientes proposiciones y señale la alternativa que presente la secuencia correcta.\nI) Si 8 es un número par, entonces 3² es un número par.\nII) Es cierto que | √ 4 | ³ =8 si y solo si 2+3= 2(3) – 1.\nIII) No es cierto que los triángulos tengan cuatro vértices.",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "FFF",
+        "FFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la proposición Si Juan es ingeniero entonces es electrónico , ¿cuáles de las proposiciones I, II y III son su equivalente?\nI) Si Juan no es electrónico entonces no es ingeniero.\nII) Juan es ingeniero y es electrónico.\nIII) Juan no es ingeniero o es electrónico.",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "solo III",
+        "I y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son afirmaciones tautológicas las siguientes:\nI) Un perro es un animal.\nII) Corrí la distancia con mis propios pies.\nIII) Todo lo que está de más, se usa.\nIV) Las cosas cayeron escaleras abajo.\nV) El frío es causado por el ascenso de la temperatura.",
+      "alternatives": [
+        "II, III, IV",
+        "I, II, IV",
+        "I, II, III",
+        "I, II, V",
+        "solo I"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados los conjuntos T = [ – 2;7] , S = [ – 7;2] y P = 〈 – 5;6] , halle la suma de los elementos enteros del conjunto (T ∪ S) – P",
+      "alternatives": [
+        "0",
+        "– 5",
+        "– 6",
+        "– 11",
+        "13"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/san-marcos-2016-ii-solucionario-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA B SAN MARCOS 2024 RESPUESTAS INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Camila y Mathías están practicando para rendir satisfactoriamente su examen parcial de Matemática Básica. Mathías le muestra a Camila el conjunto 𝐴={𝑥∈ℕ/𝑥≤8} y le pide que determine el valor de verdad de las siguientes proposiciones.\nI) ∀𝑥∈𝐴:∃𝑦∈𝐴/𝑥+𝑦<10\nII) ∀𝑥∈𝐴: ∀𝑦∈𝐴:𝑦+1<2𝑥\nIII) ∃𝑥∈𝐴/ ∃𝑦∈𝐴/𝑥²+𝑦²=65\nSi Camila se equivocó en todas, ¿cuál fue su respuesta?",
+      "alternatives": [
+        "VFV",
+        "VVV",
+        "VVF",
+        "FVV",
+        "FVF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/san-marcos-2016-ii-solucionario-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA B SAN MARCOS 2024 RESPUESTAS INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine si cada uno de los enunciados es verdadero V o falso F y escriba la secuencia correcta:\nI) {3}={x∈ ℕ |1<x<5}\nII) Sean A={x∈ ℝ |x<0 ∧ x∈ ℕ } y\nB={x∈ ℝ |x∈ ℚ ∧ x∈ ℂ }, entonces A=B.\nIII) El conjunto {7,8} tiene cuatro subconjuntos.",
+      "alternatives": [
+        "FVV",
+        "VVV",
+        "FVF",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/segunda-prueba-examen-uni-2016-2.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I SEGUNDA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA MATEMÁTICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si A⊂ B simplifique:\n[A ∩ (A ∪ B c )] ∩ [B ∪ (A ∪ B c ) c ]",
+      "alternatives": [
+        "A∪B c",
+        "A c ∪B",
+        "A",
+        "B",
+        "A/B"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/segunda-prueba-examen-de-admision-uni.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2022-1 SEGUNDA PRUEBA SOLUCIONARIO ADMISIÓN UNIVERSIDAD INGENIERÍA MATEMÁTICAS 2022-I PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De los siguientes enunciados:\nI) El número ciento diecinueve es primo.\nII) Los números 2n, 2n + 2 y 2n + 4 son pares consecutivos.\nIII) Si log10=1, entonces log100=3\nIV) ¿El número ciento veintiuno es cuadrado perfecto?\n¿Cuál o cuáles son proposiciones lógicas?",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "I, II y III",
+        "I y III",
+        "I y IV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PRE SAN MARCOS SEMANA 1 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El profesor Edu les dice a sus alumnos que apliquen lo estudiado y determinen el valor de verdad de las siguientes proposiciones, en el orden indicado.\nI) No es verdad que (5 + 5 = 10) o (6 + 8 = 12).\nII) Es falso que, si (6 + 6 = 12) entonces (7 + 7 = 13) o (4 + 10 = 14).\nIII) Si (6 + 8 = 14) entonces no es cierto que [(6 + 5 = 11) y (8 + 8 = 16)].\nIV) Si (7 + 3 ≠ 10) entonces [(3 + 3 = 8) ya que (6 + 6 = 12)]\nSi el alumno Lewis respondió todas correctamente, ¿cuál fue su respuesta?",
+      "alternatives": [
+        "FFFV",
+        "FFFF",
+        "FVFV",
+        "VVVV",
+        "VFFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PRE SAN MARCOS SEMANA 1 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál o cuáles de las siguientes proposiciones es una contingencia?\nI) Juegas o no eres joven, pero eres joven; en consecuencia, juegas.\nII ) Si no te gusta la fresa, entonces, te gusta la mandarina; además no te gusta la mandarina. III ) Joaquín estudia en la UNMSM o no trabaja, pero no vive en Jesús María. Sin embargo, trabaja y no estudia en la UNMSM.",
+      "alternatives": [
+        "Solo I",
+        "III y II",
+        "I y III",
+        "Solo II",
+        "II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PRE SAN MARCOS SEMANA 1 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un profesor de aritmética, debido a que el examen estuvo difícil, bonificará con dos puntos a cada alumno que encuentre las proposiciones equivalentes entre sí, de las cuatro mostradas. I ) Dante recibe medalla si obtiene una nota superior a 16.\nII ) Es falso que Dante no recibe medalla, pero obtiene nota superior a 16.\nIII ) Dante no recibe medalla, puesto que no obtiene nota superior a 16.\nIV ) Dante no obtiene nota superior a 16 y recibe medalla.\n¿Qué respondieron los alumnos que recibieron dicha bonificación?",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "I y III",
+        "III y IV",
+        "I, II y IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PRE SAN MARCOS SEMANA 1 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Karen le pide ayuda a su prima Martha, experta en tablas de verdad, en el siguiente enunciado: «No es cierto que, Julia estudia pero no aprueba el examen; si y solo si, no estudia. Por lo tanto, o Julia estudia o no trabaja». Si Karen obtuvo como resultado una contradicción y Martha le corrigió sus errores, ¿en cuántos valores de la matriz principal se equivocó Karen?",
+      "alternatives": [
+        "2",
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PRE SAN MARCOS SEMANA 1 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La expresión ‘‘La ebullición del agua , en determinadas condiciones , se produce a los 100° C’’, es:",
+      "alternatives": [
+        "un enunciado descriptivo.",
+        "un enunciado explicativo.",
+        "un enunciado hipotético.",
+        "una predicción científica.",
+        "un principio científico."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la proposición (∼ p ∧ q)→ r≡ F, entonces los valores de verdad de p; q; r, respectivamente, son",
+      "alternatives": [
+        "FFF",
+        "FVF",
+        "FVV",
+        "VFF",
+        "VVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-matematico-recreativo.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO MATEMÁTICO AGRARIA PRUEBA UNALM INGRESO UNIVERSIDAD LA MOLINA RESUELTA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El enunciado « Si llueve, entonces las calles se mojan. Si las calles no están mojadas, entonces no ha llovido. Además, es cierto que o bien ha llovido o bien las calles están mojadas », es equivalente a:",
+      "alternatives": [
+        "Las calles están mojadas.",
+        "No ha llovido.",
+        "Las calles no están mojadas y ha llovido.",
+        "Las calles están mojadas y no ha llovido.",
+        "Las calles no están mojadas y no ha llovido."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/223-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023-2 PRIMERA PRUEBA SOLUCIONARIO DE INGRESO UNIVERSIDAD NACIONAL DE INGENIERÍA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Rodrigo presenta las siguientes proposiciones a sus estudiantes y les pide que determinen su valor de verdad:\nI) Es falso que (5 + 3 = 7) o (4 + 4 = 9).\nII) Si (6 + 8 = 14) entonces (5 + 7 = 13) o (7 + 6 = 14).\nIII) No es verdad que [(8 + 6 = 15) y (7 + 5 = 12)] si y solo si (9 + 7 = 17).\nIV. Si (4 + 4 = 8) entonces [(2 + 2 = 4) y (5 + 5 = 10)].\nSi Priscila respondió todas correctamente, ¿cuál fue su respuesta?",
+      "alternatives": [
+        "FFFF",
+        "VFFV",
+        "VVVV",
+        "VFFF",
+        "FVVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/223-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023-2 PRIMERA PRUEBA SOLUCIONARIO DE INGRESO UNIVERSIDAD NACIONAL DE INGENIERÍA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuántos de los siguientes enunciados son proposiciones?\nI) ¡Si se puede!\nII) Somos más, pagamos menos\nIII)¿Por qué no te callas?\nIV) 1 + 5 < 7\nV) Londres es la capital del Perú",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-recreativa-ejercicios-de.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si sabemos que :\n* Luis trabaja en la fábrica ya que no estudia en el colegio .\n* Luis estudia en el colegio si y solo si trabaja en la fábrica .\nSi ambas proposiciones poseen el mismo valor de verdad , señale una proposición verdadera.",
+      "alternatives": [
+        "Luis no estudia en el colegio",
+        "Luis no trabaja en la fábrica .",
+        "Luis estudia en el colegio y trabaja en la fábrica.",
+        "O Luis estudia en el colegio o trabaja en la fábrica.",
+        "Luis no estudia en el colegio cuando trabaja en la fábrica"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-recreativa-ejercicios-de.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No es un buen deportista pero sus notas son excelentes:",
+      "alternatives": [
+        "No es cierto que sea un buen deportista o sus notas no sean excelentes.",
+        "No es cierto que sea un buen deportista o sus notas sean excelentes.",
+        "No es cierto que no sea un buen deportista o sus notas no sean excelentes.",
+        "No es cierto que no sea un buen deportista o sus notas sean excelentes.",
+        "No es cierto que es un buen deportista y sus notas no son excelentes"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-recreativa-ejercicios-de.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición: ‘‘Luchín no estudia o sale de casa tarde’’, es equivalente a:",
+      "alternatives": [
+        "Luchín sale de cada temprano y estudia.",
+        "Si Luchín estudia, entonces sale de casa temprano.",
+        "No es cierto que, Luchín sale de casa temprano o estudia.",
+        "Si Luchín sale de casa temprano. entonces estudia.",
+        "Si Luchín estudia, entonces sale de casa tarde"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-recreativa-ejercicios-de.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA PROPOSICIONAL EJERCICIOS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la proposición equivalente a la siguiente proposición :\n“Si Piero es responsable entonces hace su tarea ”",
+      "alternatives": [
+        "Piero hace su tarea o no es responsable",
+        "Piero es responsable o hace su tarea.",
+        "Piero no hace su tarea y es responsable.",
+        "Piero hace su tarea y es responsable."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA MATEMÁTICA PROPOSICIONAL PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante escucho a su profesor decir: “Si los alumnos realizan preguntas, entonces aprenderán bastante y Si los alumnos leen a menudo, ellos realizarán preguntas”. Indique la conclusión de los argumentos lógicos",
+      "alternatives": [
+        "Si los alumnos leen a menudo, entonces aprenderán bastante.",
+        "Los alumnos no leen a menudo.",
+        "Si los alumnos aprenden bastante, entonces leen a menudo.",
+        "Si los alumnos aprenden, entonces realizan preguntas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LÓGICA MATEMÁTICA PROPOSICIONAL PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea P el conjunto formado por todos los ingresantes a Matemática de la UNI en el año 2023. Si Roberto, Sebastián, Carlos y Enedith pertenecen al conjunto P, determine el valor de verdad de las siguientes proposiciones, en el orden indicado:\nI. Si Carlos no pertenece al conjunto P, entonces ingresó a la UNI.\nII. Roberto ingresó a la UNI en el 2023, dado que pertenece a P.\nIII. Sebastián pertenece a P sin embargo ingresó a la UNMSM en el 2023.\nIV. O Enedith no ingresó a la UNI en el 2023 o Enedith pertenece a P.",
+      "alternatives": [
+        "VVVV",
+        "VFVV",
+        "FFVV",
+        "FFFV",
+        "FFFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — MATEMÁTICAS PROBLEMAS RESUELTOS NIVEL UNI"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la negación de la siguiente proposición:\n«Ningún japonés es distraído»",
+      "alternatives": [
+        "Todos los japoneses son distraídos.",
+        "Al menos un japonés es distraído.",
+        "Todos los japoneses no son distraídos.",
+        "Al menos un japonés no es distraído."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/06/estadistica-admision-catolica-examen.html",
+      "sourceName": "razonamientopdf.blogspot.com — ESTADÍSTICA ADMISIÓN CATÓLICA PUCP EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De los conjuntos de personas que hablan inglés (𝐼), y portugués (𝑃) se sabe que:\n• Los conjuntos 𝐼 y 𝑃 son comparables.\n• Boris habla inglés, pero no portugués.\nSi Artur no habla inglés, determine el valor de verdad de las siguientes proposiciones en el orden indicado.\nI. O Artur no habla portugués, o Boris habla inglés.\nII. Artur y Boris hablan inglés, si y solo si Artur habla portugués.\nIII. No es cierto que Boris habla portugués, pero habla inglés.",
+      "alternatives": [
+        "FVV",
+        "VFF",
+        "VVF",
+        "FFF",
+        "FVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/11/cepreuni-segundo-examen-parcial-solucionario-admision-uni-ingreso-directo-en-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — CEPREUNI SEGUNDO EXAMEN PARCIAL SOLUCIONARIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El equivalente de: ‘‘Carla tendrá el título universitario si sustenta su tesis’’, es:",
+      "alternatives": [
+        "Sustenta su tesis o tiene el título universitario.",
+        "No es el caso que, sustente su tesis y tenga el título universitario.",
+        "No es cierto que, sustente su tesis y no tenga el título universitario.",
+        "No tiene el título universitario, y sustenta su tesis.",
+        "No es verdad que no sustente su tesis o tenga el título universitario."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/logica-proposicional-guia-de-ejercicios.html",
+      "sourceName": "razonamientopdf.blogspot.com — LOGICA MATEMÁTICA PROPOSICIONAL PROBLEMAS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El equivalente de:\n‘‘No es verdad que, iremos al teatro o al concierto’’, es:",
+      "alternatives": [
+        "No iremos al teatro o al concierto.",
+        "No iremos al teatro y al concierto.",
+        "No iremos al teatro y no al concierto.",
+        "Iremos al teatro y no al concierto.",
+        "Iremos al concierto y no al teatro."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/logica-proposicional-guia-de-ejercicios.html",
+      "sourceName": "razonamientopdf.blogspot.com — LOGICA MATEMÁTICA PROPOSICIONAL PROBLEMAS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el equivalente de la siguiente proposición: Si Pepe es economista entonces trabaja en la Dirección de Finanzas’’.",
+      "alternatives": [
+        "Si Pepe trabaja en la Dirección de Finanzas entonces no es economista.",
+        "Si Pepe no trabaja en la Dirección de Finanzas entonces no es economista.",
+        "Pepe no es economista o trabaja en la Dirección de Finanzas.",
+        "Pepe no trabaja en la Dirección de Finanzas y no es economista.",
+        "Pepe trabaja en la Dirección de Finanzas y no es economista."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/logica-proposicional-guia-de-ejercicios.html",
+      "sourceName": "razonamientopdf.blogspot.com — LOGICA MATEMÁTICA PROPOSICIONAL PROBLEMAS PARA RESOLVER CON CLAVES Y RESPUESTAS PDF"
     }
   ]
 }

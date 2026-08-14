@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El protoplasto puede ser definido como aquella parte de una célula vegetal que se encuentra delimitada e incluida dentro de la pared vegetal. Si como parte de un experimento se necesita obtener exclusivamente esta región, ¿qué clase de enzimas deberíamos emplear para extraerlo?",
-      "alternatives": ["Amilasas", "Lipasas", "Nucleasas", "Proteinasas", "Celulasas"],
+      "alternatives": [
+        "Amilasas",
+        "Lipasas",
+        "Nucleasas",
+        "Proteinasas",
+        "Celulasas"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
       "sourceName": "San Marcos Biología preguntas resueltas examen admisión UNMSM, pregunta 7"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Con relación al tejido meristemático, ¿cuál de las siguientes proposiciones es incorrecta?",
-      "alternatives": ["Desaparece en las plantas adultas.", "Está presente en las plantas jóvenes.", "Está formado por células en división activa.", "Puede ser primario o secundario.", "Es responsable del crecimiento en grosor."],
+      "alternatives": [
+        "Desaparece en las plantas adultas.",
+        "Está presente en las plantas jóvenes.",
+        "Está formado por células en división activa.",
+        "Puede ser primario o secundario.",
+        "Es responsable del crecimiento en grosor."
+      ],
       "correctAnswer": "0",
       "sourceUrl": "http://biologia-test.blogspot.com/2014/10/examen-de-admision-san-marcos-2015-i_21.html",
       "sourceName": "Examen de Admisión San Marcos 2015-I, Biología, pregunta N° 97"
@@ -28,7 +40,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Cuando el hueso sufre una fractura, ¿qué nombre reciben las células jóvenes que se activan para regenerar el tejido óseo?",
-      "alternatives": ["Osteocitos", "Osteoblastos", "Osteoclastos", "Periostio"],
+      "alternatives": [
+        "Osteocitos",
+        "Osteoblastos",
+        "Osteoclastos",
+        "Periostio"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/11/biologia-preuniversitaria-clase-4-teoria-y-ejercicios-resueltos.html",
       "sourceName": "Biología Preuniversitaria, Cuarta Guía Resuelta (tipo examen de admisión), pregunta 1"
@@ -39,7 +56,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Con respecto a la célula propiamente dicha del tejido nervioso, marque la alternativa incorrecta.",
-      "alternatives": ["Son células que poseen la propiedad de conductibilidad.", "Tienen un origen ectodérmico.", "Presentan gránulos de retículo endoplasmático rugoso.", "Presenta vainas de mielina a lo largo de toda su estructura."],
+      "alternatives": [
+        "Son células que poseen la propiedad de conductibilidad.",
+        "Tienen un origen ectodérmico.",
+        "Presentan gránulos de retículo endoplasmático rugoso.",
+        "Presenta vainas de mielina a lo largo de toda su estructura."
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/11/biologia-preuniversitaria-clase-4-teoria-y-ejercicios-resueltos.html",
       "sourceName": "Biología Preuniversitaria, Cuarta Guía Resuelta (tipo examen de admisión), pregunta 3"
@@ -50,7 +72,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "A nivel de las hojas encontramos pequeñas estructuras que permiten el intercambio gaseoso de las plantas. Con respecto a estos poros, identifique la alternativa incorrecta.",
-      "alternatives": ["Están formados por las células oclusivas.", "Se encuentran en la epidermis de las plantas.", "Regulan la transpiración de las plantas.", "Se encuentran distribuidas entre las células peridérmicas."],
+      "alternatives": [
+        "Están formados por las células oclusivas.",
+        "Se encuentran en la epidermis de las plantas.",
+        "Regulan la transpiración de las plantas.",
+        "Se encuentran distribuidas entre las células peridérmicas."
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/11/biologia-preuniversitaria-clase-4-teoria-y-ejercicios-resueltos.html",
       "sourceName": "Biología Preuniversitaria, Cuarta Guía Resuelta (tipo examen de admisión), pregunta 5"
@@ -61,7 +88,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Pedro está observando al microscopio una muestra de tejido animal, que se caracteriza por presentar poca sustancia intercelular y células cilíndricas. Además, observó que las células presentan varios núcleos de forma ovoide situados en la periferia. ¿Cuál es el tejido?",
-      "alternatives": ["Tejido conectivo denso irregular.", "Tejido muscular estriado esquelético.", "Tejido muscular estriado cardiaco.", "Tejido cartilaginoso elástico."],
+      "alternatives": [
+        "Tejido conectivo denso irregular.",
+        "Tejido muscular estriado esquelético.",
+        "Tejido muscular estriado cardiaco.",
+        "Tejido cartilaginoso elástico."
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/11/biologia-preuniversitaria-clase-4-teoria-y-ejercicios-resueltos.html",
       "sourceName": "Biología Preuniversitaria, Cuarta Guía Resuelta (tipo examen de admisión), pregunta 8"
@@ -72,10 +104,2012 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "A nivel del riñón encontramos corpúsculos renales donde ocurre la filtración sanguínea. Están revestidos por un tejido epitelial de un solo estrato de células más anchas que altas. ¿A qué tejido epitelial hace referencia?",
-      "alternatives": ["De transición", "Simple escamoso", "Simple cúbico", "Pseudoestratificado"],
+      "alternatives": [
+        "De transición",
+        "Simple escamoso",
+        "Simple cúbico",
+        "Pseudoestratificado"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/11/biologia-preuniversitaria-clase-4-teoria-y-ejercicios-resueltos.html",
       "sourceName": "Biología Preuniversitaria, Cuarta Guía Resuelta (tipo examen de admisión), pregunta 10"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mediante una ecografía computarizada, Jackie diseñó su primera prueba sobre el sistema circulatorio, y configura un software que le permita visualizar todos los vasos sanguíneos mediante el marcaje del tejido elástico que contienen. Sin embargo, su profesor le indica que esa configuración no le permitirá lograr su objetivo. La indicación del profesor se sustenta en que",
+      "alternatives": [
+        "no todas las venas presentan ese tejido.",
+        "las arterias solo presentan tejido muscular.",
+        "el músculo liso encubre el tejido elástico.",
+        "los capilares no presentan tejido elástico.",
+        "el tejido elástico no puede ser coloreado."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/Biologia-prueba-deco-resuelta-de-admision-universidad-san-marcos-solucionario-a-b-d-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tejido muscular es diferenciado y especializado, compuesto de células conocidas como fibras musculares, con propiedades de contractibilidad y tonicidad. Además, forma parte de las paredes de los órganos internos. Sobre este tejido, relacione las columnas y escoja la serie correcta.\nI. Músculo liso\nII. Músculo esquelético\nIII. Músculo cardiaco",
+      "alternatives": [
+        "Uno a dos núcleos",
+        "Múltiples núcleos periféricos",
+        "Núcleo único central",
+        "Ic, IIb, IIIa",
+        "Ib, IIc, IIIa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/biologia-preuniversitaria-examen.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA DECO RESUELTA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cada vez que pasamos por un proceso gripal, nuestra capacidad para percibir los olores se limita o anula. Sin embargo, luego de superar la gripe, recuperamos la capacidad olfativa. Ello se debe a que",
+      "alternatives": [
+        "las células olfativas basales se renuevan constantemente.",
+        "las células de soporte están repletas de gránulos secretores.",
+        "las células receptoras olfativas bloquean las células neurogliales.",
+        "las vías respiratorias se liberan cuando se elimina el mucus.",
+        "la percepción de olores se bloquea al tratar de eliminar el virus."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/biologia-abd-examen-resuelto-deco-san.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La melatonina es una hormona que eleva sus niveles de producción en las horas de poca luz solar, restructurando el tejido nervioso para la consolidación de la memoria durante el sueño; por lo tanto, ¿cuál sería una buena estrategia de estudio?",
+      "alternatives": [
+        "Evitar estudiar hasta altas horas de la noche y descansar.",
+        "Estudiar en la noche cuando la melatonina está más elevada.",
+        "Descansar en la mañana cuando los niveles de melatonina bajen.",
+        "Estudiar en la noche, en una habitación bien iluminada.",
+        "Consumir melatonina antes de empezar a estudiar."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/biologia-deco-abd-admision-universidad-san-marcos-examen-resuelto-unmsm-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mayra se interna en un bosque para estudiar la función de vegetales diminutos en ese ecosistema, ella logra apreciar a estos vegetales sobre la corteza de los árboles, el crecimiento de plantas con tamaño reducido, sin xilema ni floema y poseen estructuras semejantes a hojas, tallos y raíces; ¿Qué característica no se aprecia en el organismo descrito y a qué división pertenece?",
+      "alternatives": [
+        "Desarrollo de arquegonio y pertenece a los briofitos.",
+        "Reproducción por semillas y pertenece a los pterifoditos.",
+        "Desarrollo de alternancia de generaciones y pertenece a los briofitos",
+        "Desarrollo de tráqueas y pertenece a los briofitos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-15-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las principales funciones del tejido nervioso son:",
+      "alternatives": [
+        "La conductividad y relación",
+        "La conducción e irritabilidad",
+        "La irritabilidad y conductividad",
+        "La interrelación y convección",
+        "La convección y relación"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/histologia-ejercicios-anatomia-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "matematicaj.blogspot.com — HISTOLOGÍA PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la familia botánica Loranthaceae , se encuentran las denominadas plantas hemiparásitas que, al igual que el muérdago navideño, crecen sobre otras plantas, de las cuales son parásitas hídricas; es decir, extraen de los árboles hospederos solo el agua, aprovechan los troncos para establecerse en zonas altas para alcanzar la luz y poder hacer fotosíntesis. Las lorantáceas presentan haustorios Solucionario , raíces especializadas para sujetarse en el tronco y atravesar los tejidos. Estos haustorios penetrarán los tejidos hasta alcanzar",
+      "alternatives": [
+        "la endodermis.",
+        "el floema.",
+        "el xilema.",
+        "la peridermis.",
+        "el parénquima. BOTÁNICA"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/biologia-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA EXAMEN RESUELTO DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tejido nervioso es uno de los más especializados. La función esencial del tejido nervioso es la comunicación, que depende de la capacidad de las células nerviosas para recibir estímulos (excitabilidad) y la propiedad de transmitir la excitación resultante desde un punto hasta otro (conductividad). Las células nerviosas que participan directamente en el proceso informativo es",
+      "alternatives": [
+        "el astrocito.",
+        "la microglía.",
+        "el oligodendrocito.",
+        "la neurona.",
+        "la célula ependimaria."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/monotonia-y-curvatura-funciones-con.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNJ 2027 UNIVERSIDAD NACIONAL DE JAÉN EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señalar las características del tejido meristemático:",
+      "alternatives": [
+        "Protegen todas las estructuras internas de las plantas.",
+        "Participan en la hipersecreción extracelular.",
+        "Son indiferenciadas y están en constante división.",
+        "Están muy unidas entre sí, con espacios intracelulares.",
+        "Se encuentran en los tejidos permanentes de la planta."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/vectores-en-el-espacio-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MODALIDADES UNCP GRUPO 2 PRUEBA COMUNEROS INGRESO UNIVERSIDAD PREGUNTAS 2027 PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es correcto sobre los procesos psicológicos superiores:",
+      "alternatives": [
+        "No incluyen la afectividad.",
+        "Son exclusivamente humanos.",
+        "Tienen origen en el tejido nervioso.",
+        "Su base biológica es la subcorteza cerebral.",
+        "Son exclusivamente cognitivos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unica-pdf-ica.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN LUIS GONZAGA 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNICA 2026 TEMARIO VACANTES PROSPECTO ESTRUCTURA PUNTAJES CRONOGRAMA ÁREAS A B C PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tejido nervioso deriva del ectodermo; sin embargo, la única célula nerviosa de origen embriológico distinto es",
+      "alternatives": [
+        "la neurona",
+        "la célula de Shwann",
+        "el oligodentrocito",
+        "el astrocito",
+        "la microglía"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-8-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO NERVIOSO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una de las funciones mencionada no corresponde a las funciones de las células de la neuroglia.",
+      "alternatives": [
+        "Las microglias cumplen función de relleno.",
+        "Los astrocitos soportan a la neurona y cumplen función fagocitaria.",
+        "Los oligodendrocitos generan mielina en el cerebelo.",
+        "Las células ependimarias revisten las cavidades ventriculares del encéfalo.",
+        "La función de los oligodendrocitos es reemplazada por las células de Schwann en el SNP."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-8-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO NERVIOSO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las neuronas y las células de la glía tienen origen ______ excepto la _______ .",
+      "alternatives": [
+        "mesodermo – neuroglia",
+        "ectodermo – microglia",
+        "endodermo – astrocito",
+        "ectodermo – neuroglia",
+        "mesodermo – microglia"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-8-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO NERVIOSO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las glías que proporcionan apoyo estructural y metabólico a las neuronas son",
+      "alternatives": [
+        "los astrocitos",
+        "los oligodentrocitos",
+        "las células de Schwann",
+        "las microglías",
+        "las células ependimarias"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-8-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO NERVIOSO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Correlacione las células que componen el tejido nervioso con sus respectivas funciones:\n1. Astrocitos\n2. Microglia\n3. Oligodrendrocitos\n4. Neuronas\n5. Células ependimarias\n( ) Tapizan el conducto del epéndimo.\n( ) Forman la mielina en el S.N.C.\n( ) Cumplen la función de sostén y nutrición.\n( ) Cumplen la función de defensa.\n( ) Transmiten el impulso nervioso.",
+      "alternatives": [
+        "35124",
+        "53124",
+        "54312",
+        "51342",
+        "12345"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-8-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO NERVIOSO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la secuencia correcta\nI. Astrocito\nII. Oligodendrocito\nIII. Célula de Schwann\nIV. Microglia\nV. Célula ependimaria\n( ) Defensa\n( ) Forma la mielina en el SNP\n( ) Tapiza las cavidades ventriculares del encéfalo\n( ) Sostén y nutrición\n( ) Forma la mielina en el SNC",
+      "alternatives": [
+        "V-IV-III-II-I",
+        "IV-III-V-I-II",
+        "II-I-V-IV-III",
+        "III-II-IV-V-I",
+        "V-IV-I-III-II"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-8-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO NERVIOSO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las neuronas, células muy especializadas que constituyen el tejido nervioso, han perdido una serie de capacidades a fin de permitirles la importante función que desempeñan; por esta razón están acompañadas por toda una gama de células de origen conjuntivo (mesodermales) que las asisten en funciones como sostenimiento protección, nutrición, etc. Una de estas células presenta múltiples ramificaciones citoplasmáticas y su misión es defender a las neuronas de cualquier componente ajeno que pretenda invadir el tejido nervioso. Indique el nombre de estas células.",
+      "alternatives": [
+        "Microglia",
+        "Oligodendrocitos",
+        "Astrocito",
+        "Célula ependimaria",
+        "Célula mesenquimal"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-8-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO NERVIOSO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relacione la función de las siguientes células de la neuroglia.\nI. función de sostén y nutrición de las neuronas.\nII. formación de la vaina de mielina en las neuronas de sistema nervioso central.\nIII. formación de la vaina de mielina en las neuronas del sistema nervioso periférico.\nIV. papel de defensa.\nV. tapizan el conducto epéndimo de la médula espinal.",
+      "alternatives": [
+        "células ependimarias",
+        "microglia",
+        "astrocitos",
+        "oligodendrocitos",
+        "células de Schawn"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-8-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO NERVIOSO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La célula del tejido muscular es _____ y la unidad funcional de contracción es ______.",
+      "alternatives": [
+        "el miocito – el sarcosoma",
+        "el astrocito – la miofibrilla",
+        "la fibra muscular – el sarcómero",
+        "el astrocito – el sarcosoma",
+        "el miocito – la miofibrilla"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/3ro-4to-actividad-7-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia-web-tarea-radio-reto-tv-cta-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO MUSCULAR EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fibra muscular, es la unidad morfofisiológica en el musculo estriado esquelético con capacidad contráctil, éste proceso se da gracias a la",
+      "alternatives": [
+        "intervención de sarcolemas.",
+        "presencia de electrolitos y glucosa.",
+        "presencia de Fe y Ca.",
+        "distribución de actina y miosina.",
+        "Presencia de fibras colágenas."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/3ro-4to-actividad-7-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia-web-tarea-radio-reto-tv-cta-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO MUSCULAR EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Estas células musculares se caracterizan por presentar una morfología alargada (alrededor de 20 a 500 micras de longitud por 5 a 8 micras de espesor) en las cuales el núcleo está situado en una posición central y posee uno o dos nucléolos.",
+      "alternatives": [
+        "Tejido Muscular Cardiaco",
+        "Tejido Muscular Liso",
+        "Tejido Muscular Esquelético",
+        "Tejido Muscular Estriado"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/3ro-4to-actividad-7-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia-web-tarea-radio-reto-tv-cta-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO MUSCULAR EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las células musculares poseen la propiedad de contractibilidad, siendo la unidad estructural denominada sarcómero. El músculo puede ser de dos tipos: estríado y liso, los cuales reúnen algunas características:\nI) célula polinucleadas\nII) células mononucleadas\nIII) solo contracción involuntaria\nIV) contracción voluntaria e involuntaria\nV) núcleos periféricos\nVI) núcleos centrales.",
+      "alternatives": [
+        "Tejido muscular estríado: I, II, V",
+        "Tejido muscular liso: II, III, VI",
+        "Tejido muscular estriado: I, III, V",
+        "Tejido muscular liso: II, IV, V",
+        "Tejido muscular estríado: II, IV, V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/3ro-4to-actividad-7-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia-web-tarea-radio-reto-tv-cta-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO MUSCULAR EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tejido muscular está formado por células o fibras musculares que contiene miofibrillas contráctiles porque poseen proteínas con esta propiedad, están formando paquetes de actina y miosina en forma alterna, generando contracción involuntaria en los órganos internos o viscerales con fibras cortas o voluntarias a nivel muscular, cuyas fibras son de mayor longitud. Al respecto señale la alternativa correcta.\n( ) El corazón está formado por fibras estriadas de tamaño mediano con núcleo central.\n( ) El dolor estomacal es percibido gracias a la contracción muscular voluntaria.\n( ) El útero tiene musculatura lisa de contracción involuntaria.\n( ) Los músculos como los gemelos y el bíceps se contraen voluntariamente.",
+      "alternatives": [
+        "FFVV",
+        "FVFV",
+        "VVVV",
+        "VFFV",
+        "VFFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/3ro-4to-actividad-7-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia-web-tarea-radio-reto-tv-cta-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO MUSCULAR EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tropismo celular es una propiedad de los agentes patógenos que definen la preferencia de estos por infectar a cierto tipo de células del hospedero. Por ejemplo, la enfermedad que se caracteriza por afectar el tejido nervioso y muscular provocando parálisis y deformidades musculares de preferencia en niños menores de 5 años es",
+      "alternatives": [
+        "la poliomielitis.",
+        "la rabia.",
+        "el dengue.",
+        "la gripe.",
+        "el sarampión."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/enfermedades-virales-bacterianas-y-por-parasitos-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ENFERMEDADES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a los tejidos vegetales se afirma:\n1. El meristemo secundario determina el crecimiento en longitud.\n2. El colénquima está formado por células vivas.\n3. Los tricomas y estomas forman parte del tejido protector.\n4. El almacenamiento de almidón se da en el tejido secretor.\n5. Los elementos de los vasos y las traqueídas se observan en el xilema.\nSon ciertas:",
+      "alternatives": [
+        "1, 3 y 5",
+        "1, 2 y 3",
+        "2, 3 y 5",
+        "2, 3 y 4",
+        "2, 4 y 5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las plantas vasculares se distinguen de las no vasculares por la presencia de tejidos especializados en la conducción de agua que lleva sustancias inorgánicas y orgánicas disueltas. Estos tejidos son el xilema y el floema, los que aparecieron hace unos 450 millones de años, cuando las plantas colonizaron la Tierra. Señale la alternativa correcta respecto de las siguientes afirmaciones referidas a las características del xilema.\nI. Transporta agua y sales minerales provenientes de la raíz al resto de la planta.\nII. Es el principal elemento de soporte mecánico de las plantas, con crecimiento secundario.\nIII. Está conformada por células especializadas denominadas traqueidas cubiertas de lignina.\nIV. También es llamado líber o tejido criboso, formado por células vivas.",
+      "alternatives": [
+        "I, II, III y IV",
+        "solo IV",
+        "solo I y IV",
+        "solo I, II y III",
+        "solo I y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/simulacro-presencial-san-marcos-2018-i.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO SAN MARCOS 2027 I INGRESO UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las microglías del tejido nervioso y las células de Kupffer del hígado, son:",
+      "alternatives": [
+        "trombocitos.",
+        "fagocitos.",
+        "inmunoglobulinas.",
+        "CPA.",
+        "antígenos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/  inmunidad-sistema-inmune-humano-organos-linfoides-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA INMUNITARIO EJERCICIOS RESUELTOS DE SISTEMA INMUNOLÓGICO SISTEMA LINFÁTICO – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un paciente de cáncer hace una encefalitis aguda luego de una intervención quirúrgica. El neurocirujano pide la asistencia de un infectólogo, quien diagnostica una encefalitis intrahospitalaria por Neisseria. No obstante, luego de una semana, el paciente sale milagrosamente del cuadro y, finalmente, logra su recuperación. Señale qué célula del tejido nervioso es la responsable de ello.",
+      "alternatives": [
+        "Schwann",
+        "Oligodendrocito",
+        "Neurona",
+        "Ependimacio",
+        "Microglia"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/tejidos-histologia-humana-ejemplos-problemas-resueltos-de-anatomia-biologia-preuniversitaria-y-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — HISTOLOGÍA HUMANA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el laboratorio se están estudiando tejidos de meristemo, epidermis, peridermis, parénquimas, floema y xilema; esta investigación corresponde a plantas",
+      "alternatives": [
+        "sin aparato reproductor definido y pseudoflores.",
+        "que poseen tejidos vasculares definidos y raíces.",
+        "de estructura pluricelular que no poseen raíces.",
+        "correspondientes al grupo de las procariotas.",
+        "que viven exclusivamente en ambientes acuáticos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al xilema y floema, indique si los siguientes enunciados son verdaderos (V) o falsos (F).\n☛ Los tejidos conductores son muy complejos, ya que presentan células conductoras propiamente dichas, parenquimáticas y de sostén. ( )\n☛ Los vasos leñosos son conductos formados por células vivas, alargadas y de paredes lignificadas. ( )\n☛ Los tubos cribosos presentan células vivas pero que han perdido su núcleo. ( )\n☛ El xilema y el floema en conjunto son conocidos como tejido de sostén. ( )",
+      "alternatives": [
+        "VFVF",
+        "FFVV",
+        "VFVV",
+        "VVFF",
+        "VFFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los tejidos son agrupaciones de células que forman estructuras microscópicas bien definidas y que, además, comparten propiedades. Entre los tejidos vegetales se encuentran los meristemos, los cuales se encargan de",
+      "alternatives": [
+        "el crecimiento.",
+        "la protección.",
+        "el sostén.",
+        "la conducción."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una planta de tuna crece en zonas con poca presencia de agua y esta carencia no la afecta, pues produce frutos jugosos. Plantas como la tuna soportan grandes sequías porque algunos de sus órganos almacenan agua. ¿Qué órgano y qué tejido de esta planta permiten que se haya adaptado perfectamente a estos ambientes?",
+      "alternatives": [
+        "hoja - parénquima",
+        "tallo - peridermis",
+        "raíz - meristemo",
+        "tallo - parénquima"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Establezca la relación entre los tipos de tejidos con su correspondiente función.\nI ) xilema\nII ) floema\nIII ) parénquima\nIV ) colénquima\nV ) esclerénquima",
+      "alternatives": [
+        "circulación de la savia elaborada",
+        "función de sostén con células vivas",
+        "circulación de la savia bruta",
+        "función de almacenamiento de azúcares",
+        "función de sostén con células muertas"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tejido _______ está constituido por grandes células incoloras, de bordes irregulares que protegen el mesófilo de las hojas.",
+      "alternatives": [
+        "epidérmico",
+        "meristemático",
+        "colenquimático",
+        "floemático"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el tejido vegetal responsable del crecimiento secundario de las plantas?",
+      "alternatives": [
+        "el meristemo primario",
+        "el meristemo apical",
+        "el cámbium",
+        "la rizodermis"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cámbium vascular es un tejido meristemático que origina tejidos vasculares secundarios y, además, es el responsable del crecimiento del diámetro vegetal. ¿En qué planta se encuentra, este tipo de tejido embrionario?",
+      "alternatives": [
+        "pino",
+        "arroz",
+        "azúcar",
+        "maíz"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La alfalfa se caracteriza por poseer un tallo que además de ser fotosintético es muy flexible, debido a que en su estructura presenta abundante",
+      "alternatives": [
+        "esclerénquima.",
+        "meristemo apical.",
+        "colénquima.",
+        "súber."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El mecanismo que sustenta la movilización de azúcares producidos por fotosíntesis desde las hojas hasta los lugares de consumo y almacenamiento, a través de los vasos del floema, es",
+      "alternatives": [
+        "capilaridad",
+        "Flujo a presión",
+        "Transpiración",
+        "Ósmosis"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La parte joven de los tallos leñosos, que abarca a los últimos anillos de crecimiento del árbol y que son producidos por el cámbium vascular, siendo, además, el único xilema funcional, se denomina",
+      "alternatives": [
+        "endodermis.",
+        "parénquima.",
+        "albura.",
+        "duramen."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El mecanismo que sustenta la movilización de azúcares a través de los vasos del floema es",
+      "alternatives": [
+        "la capilaridad.",
+        "el flujo a presión.",
+        "la transpiración.",
+        "la ósmosis."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando ponemos dos manzanas sobre una mesa, una tal como la obtuvimos de la planta y la otra con la cáscara dañada por golpes se observa que la manzana cuya cáscara está dañada se va a descomponer mucho más rápidamente que la otra. Esto se debe a que la cáscara está constituida por un tejido vegetal protector que impide el ingreso de microorganismos. A nivel celular, qué estructura de la célula vegetal está cumpliendo esa función.",
+      "alternatives": [
+        "Proteínas de membrana",
+        "Pared celular",
+        "Membrana celular",
+        "Glicocálix"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/05/pre-san-marcos-3-deco-2019-i-admision.html",
+      "sourceName": "matematicasn.blogspot.com — CÉLULA EUCARIOTA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – MECANISMOS DE EXPRESIÓN GÉNICA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son las principales células gliales:",
+      "alternatives": [
+        "los astrocitos y las neuronas motoras",
+        "las células de Schwann y las neuronas de asociación",
+        "los astrocitos y las células de Schwann",
+        "microglias y neuronas",
+        "ependimarias y neuronas motoras"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA NERVIOSO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El impulso nervioso representa un estado de excitación de la célula nerviosa y se mueve a lo largo de las fibras nerviosas a una velocidad constante. La conducción saltatoria en las fibras mielínicas se produce porque el impulso nervioso",
+      "alternatives": [
+        "cambia la permeabilidad de la célula de Schwann.",
+        "varía el potencial en la membrana del cuerpo neuronal.",
+        "cambia la permeabilidad de la membrana del nodo de Ranvier.",
+        "cambia la permeabilidad en la vaina de mielina.",
+        "neutraliza las cargas a lo largo de los nodos de Ranvier."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/biologia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA SAN MARCOS PRUEBA DECO DE INGRESO UNIVERSIDAD DESARROLLADA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diversidad de papas cultivadas en el país enriquece la gastronomía peruana. Debido a la cantidad variable de almidón que hay en el tejido de relleno de este tubérculo, podemos disfrutar de diferentes platillos. Complementando lo expresado, determine cuál tejido de esta planta almacena el almidón.",
+      "alternatives": [
+        "parénquima",
+        "colénquima",
+        "peridermis",
+        "meristemo",
+        "floema"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/biologia-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA ANATOMÍA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los productos de la fotosíntesis viajan en solución acuosa por el floema, desde una zona de células fuente con fotosíntesis activa, hacia una zona con células destino o sumidero de algún órgano de almacenamiento. Este ingreso de productos de la fotosíntesis hacia el floema provoca _______ , lo que incrementa la presión y obliga al contenido del floema a desplazarse.",
+      "alternatives": [
+        "apertura de las placas cribosas.",
+        "aumento del diámetro del vaso liberiano.",
+        "una fuerza motriz en la célula destino.",
+        "reducción de la presión en la célula fuente.",
+        "ingreso de agua desde el xilema."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/biologia-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA ANATOMÍA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El flujo de los productos de la fotosíntesis, mediante los vasos liberianos del floema, explicado solo por difusión, da una velocidad de 0,2 milímetros/día, pero las mediciones muestran un flujo de 25 a 200 cm/hora. Este flujo se produce desde las células productoras de azúcares hasta las células que lo utilizan. De los siguientes enunciados, identifique la verdad o falsedad de ellos y marque la alternativa correcta.\nI. En las raíces y tallos, la sacarosa se emplea como sustrato respiratorio o se almacena como almidón.\nII. Las hojas producen sacarosa y esta fluye hacia los tejidos de utilización, mediante el xilema.\nIII. Las zonas productoras de sustancias orgánicas se conectan con los tejidos que la emplean, a través de los tubos cribosos.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "FVF",
+        "FFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCULACIÓN Y TRANSPORTE EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – BIOLOGÍA"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Uldarico presenta una afección catalogada como enfermedad rara, la cual consiste en falta de un movimiento coordinado de sus intestinos. Esta situación, según indica el especialista, se ve agravada por el déficit de calcio que Uldarico presenta.\n¿Qué tejido es el afectado?",
+      "alternatives": [
+        "Músculo esquelético",
+        "Músculo estriado",
+        "Músculo liso",
+        "Epitelio intestinal",
+        "Epitelio de revestimiento"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/tejidos-animales-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO ANIMAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cambium suberógeno contribuye con la formación de",
+      "alternatives": [
+        "Felodermis",
+        "Epidermis",
+        "Meristemo primario",
+        "Estomas",
+        "Xilema"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/botanica-ejercicios-resueltos-de-biologia-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf_0160516445.html",
+      "sourceName": "matematicasn.blogspot.com — BOTÁNICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tejido vegetal constituido por células incoloras cubiertas de cutina es conocido como",
+      "alternatives": [
+        "Endodermis",
+        "Epidermis",
+        "Periciclo",
+        "Líber",
+        "Leño"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/botanica-ejercicios-resueltos-de-biologia-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf_0160516445.html",
+      "sourceName": "matematicasn.blogspot.com — BOTÁNICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La albura y el duramen son parte de un tejido adulto en las plantas, conocido como",
+      "alternatives": [
+        "Xilema",
+        "Floema",
+        "Cambium vascular",
+        "Cambium suberógeno",
+        "Parénquima clorofiliano"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/botanica-ejercicios-resueltos-de-biologia-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf_0160516445.html",
+      "sourceName": "matematicasn.blogspot.com — BOTÁNICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tipo de tejido muscular, se distinguen unas bandas que formas las estrías. Dentro de esta estructura, ¿cuál es el nombre que se les da a las estructuras que dividen las fibras musculares en segmentos individuales y son esenciales para la contracción muscular?",
+      "alternatives": [
+        "Estriaciones",
+        "Discos intercalados",
+        "Discos Z",
+        "Bandas I",
+        "Bandas A"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/02/pre-san-marcos-2018-semana-17.html",
+      "sourceName": "matematicasn.blogspot.com — MEDICINA HUMANA PRUEBA SAN MARCOS INGRESO UNIVERSIDAD DESARROLLADA CLAVES 2024-II PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un texto se lee lo siguiente: «tejido vegetal que proporciona soporte flexible a las partes jóvenes de la planta, mientras que otro brinda un soporte más rígido y resistente a las partes maduras de la planta». Respectivamente, a qué tipos de tejidos se refiere.",
+      "alternatives": [
+        "Esclerénquima – colénquima",
+        "Parénquima – colénquima",
+        "Colénquima – esclerénquima",
+        "Colénquima – parénquima",
+        "Esclerénquima – parénquima"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/02/pre-san-marcos-2018-semana-17.html",
+      "sourceName": "matematicasn.blogspot.com — MEDICINA HUMANA PRUEBA SAN MARCOS INGRESO UNIVERSIDAD DESARROLLADA CLAVES 2024-II PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El mesófilo está ocupando gran parte de las hojas, ubicándose entre la cara superior (el haz) y la cara inferior (el envés); y en él se halla un tejido denominado en empalizada. ¿A qué tipo de tejido vegetal pertenece y cuál es su función?",
+      "alternatives": [
+        "Parénquima aerífero – almacenar oxígeno",
+        "Parénquima de reserva – almacenar nutrientes",
+        "Parénquima clorofiliano – realizar la fotosíntesis",
+        "Xilema – conducir agua y nutrientes",
+        "Colénquima – proporcionar soporte estructural"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-aritmetica-semana-9-2019.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA B 2024-2 INGRESO UNIVERSIDAD PRUEBA RESUELTA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la lectura de un informe de prácticas del curso de Anatomía Humana, se describe al tejido muscular hallado en el sistema digestivo. ¿Cuál de las siguientes afirmaciones sobre este tipo de tejidos es correcta?",
+      "alternatives": [
+        "Se encuentra también en los músculos esqueléticos.",
+        "Está bajo control voluntario.",
+        "Contiene estriaciones transversales.",
+        "Se encuentra en las paredes de órganos internos.",
+        "Realiza contracciones rápidas y poderosas."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ejercicios-resueltos-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA E 2024-2  DERECHO SOCIALES EDUCACIÓN INGRESO UNIVERSIDAD PRUEBA RESUELTA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tejido nervioso se origina del ectodermo; sin embargo, existe una célula nerviosa de origen embriológico distinto que es:",
+      "alternatives": [
+        "La célula de Schwann",
+        "la neurona.",
+        "El astrocito.",
+        "El oligodendrocito",
+        "La microglía"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si deseamos observar células mitóticas (en división celular) para poder determinar las diferentes fases de la mitosis, ¿qué tipo de tejido vegetal es el requerido?",
+      "alternatives": [
+        "Meristemático",
+        "Esclerénquima",
+        "Secretor",
+        "Suberoso",
+        "Parenquimatoso"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/biologia-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los procesos psíquicos superiores se caracterizan porque",
+      "alternatives": [
+        "tienen origen en el tejido nervioso.",
+        "son exclusivamente humanos.",
+        "su base biológica es la subcorteza cerebral.",
+        "son exclusivamente cognitivos.",
+        "no incluyen la afectividad."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-psicologia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PREGUNTAS RESUELTAS MODO EXAMEN ADMISIÓN UNIVERSIDAD CON RESPUESTAS"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la savia bruta, podemos afirmar que",
+      "alternatives": [
+        "circula por el floema transportando sacarosa.",
+        "circula por el xilema transportando agua e iones.",
+        "circula por el floema transportando agua e iones.",
+        "circula por el xilema transportando sacarosa"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/biologia-preguntas-resueltas-de-secundaria-y-preuniversitaria-solucionario-prueba-ingreso-universidad-claves-respuestas-desarrollo-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En nuestra dieta, el término «carne» se refiere al tejido muscular tanto estriado como cardiaco, el cual constituye una de las principales fuentes de proteínas. De las siguientes macromoléculas, indique las que son más abundantes en las carnes.",
+      "alternatives": [
+        "Hemoglobina y transferrina",
+        "Insulina y glucagón",
+        "Queratina y fibrina",
+        "Actina y miosina",
+        "Tripsina y hemoglobina"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/solucionario-villarreal-matematicas.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA PRIMER EXAMEN PRE SAN MARCOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es conocida la actividad cicatrizante de la «sangre de grado» , caracterizada por ser una sustancia gelatinosa rojiza, ubicada en los tubos laticíferos y que se obtiene al cortar la corteza de algunos árboles. Esta sustancia se forma a partir de",
+      "alternatives": [
+        "los pigmentos fotosintéticos sintetizados en el tallo.",
+        "los elementos tóxicos, excretados por la planta.",
+        "las paredes celulares de los tejidos de sostén.",
+        "los residuos del metabolismo primario de la planta.",
+        "las células del tejido meristemático secundario."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/solucionario-villarreal-matematicas.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA PRIMER EXAMEN PRE SAN MARCOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las manchas foliares son lesiones necróticas en las hojas generadas por alguna enfermedad, estas se generan producto de una hormona que ocasiona el colapso de las células por lo cual el tejido vegetal se oscurece.\n¿A qué hormona se refiere el texto?",
+      "alternatives": [
+        "ABA",
+        "Etileno",
+        "IAA",
+        "Citocinina"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-8-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COORDINACIÓN QUÍMICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Compara los tejidos vasculares:\nX: Xilema\nF: Floema\nCon respecto a sus características o función, se determina que",
+      "alternatives": [
+        "X posee vasos leñosos; y F, vasos cribosos.",
+        "X y F son órganos fotosintéticos.",
+        "X y F poseen tráquea y traqueida.",
+        "X posee sabia elaborada; y F, sabia bruta.",
+        "X posee células vivas; y F, células muertas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2019/07/biologia-untels-examen-resuelto.html",
+      "sourceName": "quimicapdf.blogspot.com — BIOLOGÍA RESUELTA DE EXAMEN DE ADMISIÓN A LA UNIVERSIDAD CLAVES RESPUESTAS PREGUNTAS EXPLICADAS PRUEBA DE INGRESO"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El endomisio, perimisio y epimisio son las envolturas conectivas de la fibra, fascículo y todo el paquete muscular, respectivamente. En los extremos del músculo, estos tejidos se unen para originar los ________, los que se insertan en los huesos involucrados en la articulación.",
+      "alternatives": [
+        "meniscos",
+        "retináculos",
+        "ligamentos",
+        "tendones",
+        "cojinetes"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/3ro-4to-actividad-7-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia-web-tarea-radio-reto-tv-cta-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO MUSCULAR EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elegir la alternativa que no le corresponda al sarcómero.",
+      "alternatives": [
+        "Se ubica entre 2 líneas Z.",
+        "La banda H es parte de la banda A.",
+        "La banda I es clara y presenta miofilamentos de actina.",
+        "La línea Z es una banda oscura en el centro de la banda I.",
+        "En el sarcómero contraído la banda H no varía de longitud."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/3ro-4to-actividad-7-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia-web-tarea-radio-reto-tv-cta-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO MUSCULAR EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un examen de histología el profesor muestra una lámina que contiene un tejido con la siguiente descripción: células alargadas y fusiformes con un solo núcleo de posición central, y les indica a los alumnos que determinen de acuerdo al tejido descrito a que estructura u órgano pertenece.",
+      "alternatives": [
+        "Corazón",
+        "Útero",
+        "Vejiga",
+        "Brazo",
+        "Piel"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/3ro-4to-actividad-7-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia-web-tarea-radio-reto-tv-cta-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO MUSCULAR EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una clase de histología, el profesor les pide a sus alumnos que identifiquen a qué clase de tejido corresponde la lámina que ha colocado para observación al microscopio. Dicho tejido presenta células alargadas, de forma cilíndrica, con bandas transversales, un solo núcleo de posición central. Señale usted a qué tejido corresponde.",
+      "alternatives": [
+        "Epitelio de revestimiento",
+        "Muscular liso",
+        "Epitelio glandular",
+        "Muscular cardiaco",
+        "Muscular esquelético"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/3ro-4to-actividad-7-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia-web-tarea-radio-reto-tv-cta-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO MUSCULAR EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se necesita encontrar células que cumplan las características de autoperpetuarse, producir células somáticas y que puedan establecer patrones de desarrollo del órgano. Si se dispone de las siguientes estructuras vegetales.\n¿Cuál sería optima para el propósito planteado?",
+      "alternatives": [
+        "Pétalos.",
+        "Peciolos.",
+        "Hojas.",
+        "Raíz.",
+        "Estambres."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la evolución de los organismos pluricelulares, fue necesario formar asociaciones celulares cooperativas y un medio que permitiera la interacción de las células involucradas; así se dio origen a la matriz extracelular (MEC) que permite",
+      "alternatives": [
+        "regular la comunicación y el dinamismo de la célula.",
+        "formar un material extracelular para los distintos tejidos.",
+        "producir macromoléculas extracelulares y minerales.",
+        "dar soporte a las organelas de las células que participaban.",
+        "incentivar la división de las células de dichas asociaciones."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Solanum carolinense , comúnmente conocido como ortiga, presenta estructuras de defensa que se incrustan en la piel del animal, se rompen liberando sustancias irritantes ¿Qué tipo de estructuras son estas?",
+      "alternatives": [
+        "Nectarios",
+        "Fundamentales",
+        "Estomas",
+        "Cavidades",
+        "Tricomas"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La absorción de agua y sales minerales se da por medio de las raíces de las plantas donde se encuentra un tejido que es permeable al agua. Sin embargo, este proceso no puede llevarse a cabo por medio de las hojas debido a que",
+      "alternatives": [
+        "presentan células incoloras.",
+        "sus células epidérmicas tienen cutina.",
+        "en las hojas ocurre la fotosíntesis.",
+        "las hojas cumplen la función de transpiración.",
+        "presentan células amorfas."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Actualmente, existe un gran interés en el empleo de las plantas medicinales para el tratamiento de diversas enfermedades. Por ello es necesario saber en que parte de la planta se encuentra en mayor concentración, el principio activo para poderla consumir de forma apropiada. Marque la alternativa que relaciona correctamente el órgano de la planta utilizado y el tejido predominante correspondiente.\nI. Hojas de hierba luisa\nII. Tallos subterráneos de maca\nIII. Hojas de aloe\nIV. Corteza de sangre de grado",
+      "alternatives": [
+        "Parénquima acuífero",
+        "Tejido secretor, tubos laticíferos",
+        "Tejido secretor pelos glandulares",
+        "Parénquima de reserva",
+        "Id, IIb, IIIc, IVa"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al ver las hojas de los nenúfares del Jardín Botánico de la UNMSM, un estudiante quedó asombrado. Estas, a pesar de su gran tamaño, flotan con facilidad, lo cual se debe a que tienen abundante parénquima",
+      "alternatives": [
+        "de reserva.",
+        "fundamental.",
+        "aerífero.",
+        "acuífero",
+        "clorofiliano."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Debido a una mutación, una planta provoca una formación anormal y desventajosa del tejido conductor cuyos vasos están rodeados con células vivas anucleadas.\nDel texto se puede inferir que dicha planta",
+      "alternatives": [
+        "tendrá problemas para transportar sustancias orgánicas.",
+        "tendrá inconvenientes en el transporte de la savia bruta.",
+        "no presentará un adecuado soporte mecánico.",
+        "presentará alteraciones en sus vasos leñosos."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Filomena vive en una ciudad donde las sequías son frecuentes, por lo cual decidió reemplazar la mayor parte de plantas de su jardín, por plantas suculentas, las cuales presentan un tejido especializado que le permite tolerar dicho ambiente.\n¿Qué características celulares presenta este tipo de plantas que los puede hacer resistir los periodos de sequía?",
+      "alternatives": [
+        "Células grandes, con paredes delgadas y vacuolas muy desarrolladas.",
+        "Células pequeñas con abundantes plastidios.",
+        "Células con vacuolas muy desarrolladas y paredes engrosadas.",
+        "Con abundantes espacios intercelulares llenos de agua."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Algunas plantas denominadas “carnívoras” para atraer, atrapar y digerir insectos secretan una solución azucarada que forma gotitas visibles a través de la superficie de las hojas, y actúa como papel matamoscas. ¿Qué estructuras de la planta están relacionadas con dicha secreción?",
+      "alternatives": [
+        "Pelos glandulares",
+        "Nectarios",
+        "Tubos laticíferos",
+        "Tricomas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pareja de esposos realizó una excursión a una selva tropical, entusiasmado, el esposo grabó las iniciales de la pareja sobre la corteza de un árbol joven y al volver unos años después observó que las iniciales se mantenían intactas. Del texto se puede inferir que el tejido donde se grabó las iniciales se caracteriza por",
+      "alternatives": [
+        "ser un tejido de protección formado a partir del cambium suberoso.",
+        "presentar una capa de células aplanadas que carecen de cloroplastos.",
+        "recuperar su capacidad meristemática dando lugar al crecimiento en grosor.",
+        "ser el tejido más abundante en las plantas leñosas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las plantas, al igual que los animales, presentan algunos tejidos bastante diferenciados. Considerando ello, determine el valor de verdad (V o F) de las siguientes proposiciones:\nI. El esclerénquima, por ser un tejido vivo de soporte, se lignifica tempranamente.\nII. El clorénquima se halla, por lo general, en la parte interna media de la hoja.\nIII. Una peridermis bien desarrollada presenta lenticelas.",
+      "alternatives": [
+        "FVF",
+        "FVV",
+        "VFV",
+        "FFV",
+        "VVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Compara los tejidos vegetales de soporte:",
+      "alternatives": [
+        "C y E proporcionan dureza.",
+        "C proporciona rigidez y E dureza.",
+        "colénquima",
+        "C posee células vivas y E células muertas.",
+        "esclerénquima Con respecto a sus características o función, se afirma que"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las células esclereídas son componentes estructurales del tejido:",
+      "alternatives": [
+        "embrionario",
+        "mecánico",
+        "conductor",
+        "suberoso",
+        "meristemático"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Existen unas rosas artificiales en las cuales cada pétalo tiene un diferente color y en conjunto simulan un arcoíris, para ello los floristas dividen el tallo en varios cortes colocando cada división en un recipiente con agua teñida con algún color y al cabo de un día cada pétalo adquiere un color único. ¿Gracias a que estructura ocurre este fenómeno?",
+      "alternatives": [
+        "Colénquima",
+        "Vasos leñosos",
+        "Vasos liberianos",
+        "Placa cribosa"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el valor de verdad (V o F) de las siguientes afirmaciones:\nI ) Las células del clorénquima poseen abundantes cloroplastos.\nII ) Las células del aerénquima almacenan gases.\nIII ) Los cactus poseen abundante acuénquima.\nIV ) El parénquima de reservante almacena polisacáridos.",
+      "alternatives": [
+        "VVFF",
+        "VFVF",
+        "FVFV",
+        "VFVV",
+        "VVVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tejido de protección secundario que reemplaza a la epidermis en tallos y raíces que tienen también crecimiento secundario, como se observa en los árboles y arbustos, se denomina",
+      "alternatives": [
+        "endodermis.",
+        "peridermis.",
+        "parénquima cortical.",
+        "periciclo."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la asimilación radical de agua, indicar el enunciado INCORRECTO",
+      "alternatives": [
+        "Ocurre mediante ósmosis",
+        "No requiere gasto de energía",
+        "Es responsable de la presión radical",
+        "Ocurre a nivel del peridermis"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las plantas antofitas como los rosales o manzanos existen los nectarios, los cuales producen el néctar, que es alimento de los animales polinizadores. Este tipo de tejido se denomina",
+      "alternatives": [
+        "meristemático.",
+        "esclerenquimático.",
+        "glandular.",
+        "colenquimático."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/histologia-vegetal-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEJIDO VEGETAL EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un corte transversal de tallo se tiñe primero con safranina y luego con verde rápido (fast green), siguiendo el protocolo habitual de doble tinción para la preparación de una lámina permanente. ¿Cuál sería el color del xilema y el floema teñidos?",
+      "alternatives": [
+        "Rojo y verde",
+        "Verde y rojo",
+        "Naranja y amarillo",
+        "Morado y naranja"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 1"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifica el sistema de tejido simple entre los siguientes",
+      "alternatives": [
+        "Parénquima",
+        "Xilema",
+        "Epidermis",
+        "Floema"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 4"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tejido vegetal, al ser teñido, mostró la presencia de hemicelulosa y pectina en la pared celular de sus células. El tejido representa",
+      "alternatives": [
+        "Colénquima",
+        "Esclerénquima",
+        "Xilema",
+        "Meristemo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 13"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las coníferas, las fibras probablemente están ausentes en",
+      "alternatives": [
+        "Floema secundario",
+        "Xilema secundario",
+        "Floema primario",
+        "Hojas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 14"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el destino del xilema primario en una raíz de dicotiledónea que presenta un crecimiento secundario extenso?",
+      "alternatives": [
+        "Se conserva en el centro del eje",
+        "Se comprime",
+        "Puede o no comprimirse",
+        "Queda rodeado por el floema primario"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 18"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reordene las siguientes zonas tal como se observan en la raíz en corte longitudinal y elija la opción correcta. A. Zona de pelos radicales B. Zona de meristemos C. Zona de la cofia (caliptra) D. Zona de maduración E. Zona de elongación Opciones:",
+      "alternatives": [
+        "C, B, E, A, D",
+        "A, B, C, D, E",
+        "D, E, A, C, B",
+        "E, D, C, B, A"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep405.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.5 MCQ 1"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las células de este tejido están vivas y presentan engrosamiento angular de la pared. También brindan soporte mecánico. El tejido es",
+      "alternatives": [
+        "Xilema",
+        "Esclerénquima",
+        "Colénquima",
+        "Epidermis"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 5"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La forma de azúcar transportada a través del floema es",
+      "alternatives": [
+        "glucosa",
+        "fructosa",
+        "sacarosa",
+        "ribosa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep411.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.11 MCQ 4"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El meristemo que se encuentra en los extremos de las raíces y tallos, relacionado con el crecimiento longitudinal de la planta, se denomina",
+      "alternatives": [
+        "lateral.",
+        "inicial.",
+        "apical.",
+        "epitelial.",
+        "final."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://biologia-test.blogspot.com/2014/10/examen-de-admision-san-marcos-2015-i.html",
+      "sourceName": "biologia-test.blogspot.com — Examen de Admisión San Marcos  2015 - I Preguntas de Biologia Áreas ADE"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los vasos del floema están formados por células vivas, pero sin núcleo, y se encargan del transporte de la savia elaborada desde las hojas hacia el resto de la planta. Esta savia elaborada está formada por productos de la",
+      "alternatives": [
+        "respiración.",
+        "fotosíntesis.",
+        "evaporación.",
+        "transpiración.",
+        "fotorrespiración."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/biologia-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA EXAMEN RESUELTO DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cambium vascular, genera un tejido de células alargadas hacia el exterior concéntrico del tallo. ¿Cuál es la función principal de este tejido en mención?",
+      "alternatives": [
+        "Transportar agua y minerales desde las raíces hacia las hojas",
+        "Facilitar la circulación de la savia bruta desde las hojas hacia las raíces",
+        "Realizar la fotosíntesis y producir carbohidratos",
+        "Soportar mecánicamente a la planta y proporcionar rigidez a los tallos",
+        "Facilitar el transporte de nutrientes y productos fotosintéticos en toda la planta"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/ecuaciones-de-rectas-y-planos.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO MEDICINA UNC 2027 RESUELTO UNIVERSIDAD DE CAJAMARCA MEDICINA HUMANA y VETERINARIA CLAVES MÓDULO B PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el mesófilo de la hoja se encuentra:",
+      "alternatives": [
+        "Estomas",
+        "Epidermis",
+        "Meristemo apical",
+        "Clorénquima",
+        "Parénquima de reserva"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/examen-admision-universidad-federico.html",
+      "sourceName": "matematicasn.blogspot.com — UNICA ÁREA B SOCIALES EXAMEN INGRESO UNIVERSIDAD SAN LUIS GONSAGA RESUELTO HUMANIDADES UNSLG PDF 2026"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante una excursión a la selva central, los estudiantes observaron unas plantas que flotaban sobre las aguas de una laguna. Tomaron algunas muestras y las llevaron al laboratorio para examinar sus tejidos. Descubrieron que, desde las hojas hasta la raíz, había un tejido con grandes espacios vacíos entre las células. ¿Qué tipo de tejido observaron los estudiantes?",
+      "alternatives": [
+        "Epidermis acuífera",
+        "Parénquima de reserva",
+        "Parénquima acuífero",
+        "Aerénquima"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-biologia-semana-15-2020.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las plantas, se denomina parénquimas a los tejidos fundamentales que forman la mayor parte de sus órganos; sus células cumplen la mayor parte de las actividades metabólicas de la planta. Establezca la relación correcta entre los diferentes tipos de parénquima con la función que realiza.\nI. Parénquima clorofiliano - actividad de fotosíntesis\nII. Parénquima de reserva - almacena celulosa\nIII. Parénquima acuífero - aereación de órganos\nIV. Aerénquima - flotación de órganos",
+      "alternatives": [
+        "VFFV",
+        "VFVV",
+        "VVFF",
+        "VFFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos-biologia-semana-11-2020.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA ÁREA C PRUEBA DECO SAN MARCOS SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La absorción de agua en las plantas se debe a los pelos radiculares. Unos científicos buscan aumentar la permeabilidad de los mismos. ¿Cuál es el tejido que deberán modificar?",
+      "alternatives": [
+        "Meristemático",
+        "Parenquimático",
+        "Epidérmico",
+        "Vascular",
+        "Esclerénquima"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/monotonia-y-curvatura-funciones-con.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNJ 2027 UNIVERSIDAD NACIONAL DE JAÉN EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son partes de un estoma:\n1. lenticelas\n2. ostiolo\n3. células oclusivas\n4. células anexas\n5. pelos o tricomas\nSon ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "1, 3 y 4",
+        "2, 3 y 4",
+        "2, 4 y 5",
+        "3, 4 y 5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/3ro-4to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA C CIENCIAS DE LA PERSONA 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con el objetivo de hacer más eficiente la absorción de agua en las plantas unos científicos buscan aumentar la permeabilidad de los pelos radiculares, por lo que deben modificar el tejido del cual se originan estos. ¿Cuál es el tejido que deberán modificar?",
+      "alternatives": [
+        "Meristemático",
+        "Parenquimático",
+        "Epidérmico",
+        "Vascular",
+        "Esclerénquima"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/biologia-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA ÁREA A SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las células de la epidermis presentan características muy particulares que permiten que cumplan su función de manera adecuada. Una de estas características es",
+      "alternatives": [
+        "poseer una pared secundaria con lignina.",
+        "ausencia de cloroplastos.",
+        "estar en continua división.",
+        "tener abundantes espacios intercelulares.",
+        "carecer de cutina."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-aritmetica-semana-9-2019.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA B 2024-2 INGRESO UNIVERSIDAD PRUEBA RESUELTA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las plantas superiores poseen unas células cúbicas pequeñas, con núcleos grandes y paredes celulares delgadas. Mientras que otras son células con núcleos pequeños y escaso citoplasma con paredes celulares engrosadas, ubicadas en el pecíolo de hojas. Estos tejidos son, respectivamente,",
+      "alternatives": [
+        "colénquima – esclerénquima",
+        "meristemo – colénquima",
+        "colénquima – meristemo",
+        "esclerénquima – colénquima",
+        "cambium – parénquima"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/educacion-religiosa-5to-actividad-1-experiencia-8-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA D 2024-2 CONTABILIDAD ECONOMÍA ADMINISTRACIÓN MARKETING INGRESO UNIVERSIDAD PRUEBA RESUELTA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son células vivas que han perdido su núcleo, pero no es un impedimento para el funcionamiento de estas células, ya que presentan _________ que colaboran con su supervivencia y la ejecución del transporte de la savia __________.",
+      "alternatives": [
+        "tubos cribosos – elaborada",
+        "placas cribosas – bruta",
+        "células anexas – elaborada",
+        "placas cribosas – elaborada",
+        "vasos liberianos – bruta"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/biologia-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mientras Los tejidos de sostén de las plantas tienen células vivas que le confieren resistencia y flexibilidad a la planta, pero también tienen otros tejidos con células que permiten el paso de la luz solar. Las células que refiere el enunciado corresponde, respectivamente, a los tejidos",
+      "alternatives": [
+        "parénquima clorofiliano y esclerénquima.",
+        "colénquima y parénquima clorofiliano.",
+        "meristemo primario y parénquima clorofiliano.",
+        "esclerénquima y parénquima clorofiliano.",
+        "meristemo secundario y colénquima."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/biologia-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA ÁREA E SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es una estructura en forma de canal de naturaleza celulósica que permite comunicar las células vecinas:",
+      "alternatives": [
+        "Flagelos",
+        "Cílios",
+        "Plasmodesmos",
+        "Cuerpos basales",
+        "Centrosomas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/biologia-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los vasos conductores de los vegetales como el floema corresponden al nivel de organización:",
+      "alternatives": [
+        "Tisular",
+        "Celular",
+        "Molecular",
+        "Orgánico",
+        "Sistémico"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/biologia-preguntas-resueltas-de-secundaria-y-preuniversitaria-solucionario-prueba-ingreso-universidad-claves-respuestas-desarrollo-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los helechos existe la alternancia de generaciones, siendo la fase esporofítica (2n) la dominante. Durante la producción de esporas, el esporofito forma una estructura (n) en donde se producen los gametos femenino y masculino y se da la fecundación. ¿Cómo se denomina esta estructura?",
+      "alternatives": [
+        "Foliolo",
+        "Esporangio",
+        "Cofia",
+        "Prótalo",
+        "Pedúnculo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/biologia-preguntas-resueltas-de-secundaria-y-preuniversitaria-solucionario-prueba-ingreso-universidad-claves-respuestas-desarrollo-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las células epidérmicas pueden presentar modificaciones como pelos o papilas, las cuales pueden tener funciones defensivas urticantes. Estas células se caracterizan por",
+      "alternatives": [
+        "tener una pared secundaria con lignina.",
+        "no ausencia de cloroplastos.",
+        "estar en división constante",
+        "tener abundantes espacios intercelulares.",
+        "carecer de paredes con protoplasma."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/biologia-preguntas-resueltas-de-secundaria-y-preuniversitaria-solucionario-prueba-ingreso-universidad-claves-respuestas-desarrollo-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María disfruta desayunar todas las mañanas yogurt con pera, fruta que se caracteriza por su textura granulosa que se debe a la presencia de células cuya pared",
+      "alternatives": [
+        "es alargada, parcialmente constituida de celulosa.",
+        "primaria está parcialmente engrosada de celulosa.",
+        "secundaria está parcialmente engrosada de celulosa.",
+        "primaria está engrosada debido a la densa lignina.",
+        "secundaria está significativamente engrosada de lignina."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/biologia-preguntas-resueltas-de-secundaria-y-preuniversitaria-solucionario-prueba-ingreso-universidad-claves-respuestas-desarrollo-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una inflorescencia donde las flores se disponen lateralmente en sucesión acrópeta, la posición del botón floral más joven en el eje floral será",
+      "alternatives": [
+        "Proximal",
+        "Distal",
+        "Intercalar",
+        "Cualquier posición"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep405.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.5 MCQ 2"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las raíces que se desarrollan a partir de partes de la planta distintas de la radícula se llaman",
+      "alternatives": [
+        "Raíces pivotantes",
+        "Raíces fibrosas",
+        "Raíces adventicias",
+        "Raíces nodulares"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep405.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.5 MCQ 4"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La venación es un término usado para describir el patrón de disposición de",
+      "alternatives": [
+        "Órganos florales",
+        "Flores en una inflorescencia",
+        "Venas y venillas en una lámina",
+        "Todas las anteriores"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep405.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.5 MCQ 5"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relaciona lo siguiente y elige la opción correcta de las de abajo Columna I Columna II A. Cutícula i. células oclusivas B. Células buliformes ii. capa única C. Estomas iii. capa cerosa D. Epidermis iv. célula incolora y vacía Opciones:",
+      "alternatives": [
+        "A-iii, B-iv, C-i, D-ii",
+        "A-i, B-ii, C-iii, D-iv",
+        "A-iii, B-ii, C-iv, D-i",
+        "A-iii, B-ii, C-i, D-iv"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 3"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La epiblema de las raíces equivale a",
+      "alternatives": [
+        "Periciclo",
+        "Endodermis",
+        "Epidermis",
+        "Estela"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 6"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un haz vascular conjunto y abierto se observará en el corte transversal de",
+      "alternatives": [
+        "Raíz de monocotiledónea",
+        "Tallo de monocotiledónea",
+        "Raíz de dicotiledónea",
+        "Tallo de dicotiledónea"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 7"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Felógeno y félem denotan, respectivamente",
+      "alternatives": [
+        "Corcho y cambium suberoso",
+        "Cambium suberoso y corcho",
+        "Corteza secundaria y corcho",
+        "Corcho y corteza secundaria"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 9"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando pelamos la piel de un tubérculo de papa, eliminamos",
+      "alternatives": [
+        "Peridermis",
+        "Epidermis",
+        "Cutícula",
+        "Albura"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 15"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un trozo de tallo sin vasos, que posee tubos cribosos prominentes, pertenecería a",
+      "alternatives": [
+        "Pinus",
+        "Eucalyptus",
+        "Pasto",
+        "Trochodendron"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep406.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.6 MCQ 16"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal II y vegetal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La superficie inferior de la hoja tendrá un mayor número de estomas en una",
+      "alternatives": [
+        "hoja dorsiventral",
+        "hoja isobilateral",
+        "ambas a y b",
+        "ninguna de las anteriores"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/biology/keep411.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Biology class 11 ch.11 MCQ 3"
     }
   ]
 }

@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La cantidad de hijos que tiene Manolo coincide con la varianza de las edades de sus cinco alumnos que son 15, 16, 14, 13 y 12. ¿Cuántos hijos tiene Manolo?",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/p/estadistica-resuelta-ingreso-universidad.html",
       "sourceName": "Estadística Banco de Preguntas Resueltas de Examen de Admisión (matematicasn) - Práctica, Pregunta 3, clave B"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una sección del curso de Análisis Matemático, la nota promedio fue 12 y la desviación estándar correspondiente 2. Si la suma de los cuadrados de todas las notas es 1480, ¿cuántos alumnos tiene la sección?",
-      "alternatives": ["6", "7", "8", "9", "10"],
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/p/estadistica-resuelta-ingreso-universidad.html",
       "sourceName": "Estadística Banco de Preguntas Resueltas de Examen de Admisión (matematicasn) - clave E"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En el curso de Ecuaciones Diferenciales, la nota promedio de los 27 estudiantes matriculados es 10, y la desviación estándar es 2√2. Si se decide aumentar la nota de cada uno de los matriculados de dicho curso en un 25 %, ¿cuál sería la diferencia entre la media y la varianza de las nuevas notas?",
-      "alternatives": ["2", "5", "4", "0", "1"],
+      "alternatives": [
+        "2",
+        "5",
+        "4",
+        "0",
+        "1"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/p/estadistica-resuelta-ingreso-universidad.html",
       "sourceName": "Estadística Banco de Preguntas Resueltas de Examen de Admisión (matematicasn) - clave D"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Las edades de cuatro alumnos de primaria tienen mediana 9, media aritmética 8 y moda 9. Halle el menor valor que podría tomar la varianza de sus edades.",
-      "alternatives": ["1", "5", "2", "4", "3"],
+      "alternatives": [
+        "1",
+        "5",
+        "2",
+        "4",
+        "3"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/p/estadistica-resuelta-ingreso-universidad.html",
       "sourceName": "Estadística Banco de Preguntas Resueltas de Examen de Admisión (matematicasn) - clave E"
@@ -50,7 +74,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La medida que obtiene de la mejor manera la dispersión de un conjunto de datos se llama:",
-      "alternatives": ["Amplitud o recorrido", "Promedio", "Desviación", "Desviación típica"],
+      "alternatives": [
+        "Amplitud o recorrido",
+        "Promedio",
+        "Desviación",
+        "Desviación típica"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-desviacion-tipica-ejercicios.html",
       "sourceName": "La Desviación Típica - Ejercicios Resueltos (matematicasn), Ejercicio 4, clave D"
@@ -61,7 +90,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Sean los siguientes grupos de datos: A) 3, 5, 4, 8   B) 5, 5, 5, 5   C) 5, 5, 5, 1   D) 4, 10, 5, 1. Al determinar por simple inspección cuál tiene menor dispersión, este resulta ser:",
-      "alternatives": ["El grupo A", "El grupo B", "El grupo C", "El grupo D"],
+      "alternatives": [
+        "El grupo A",
+        "El grupo B",
+        "El grupo C",
+        "El grupo D"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-desviacion-tipica-ejercicios.html",
       "sourceName": "La Desviación Típica - Ejercicios Resueltos (matematicasn), Ejercicio 5, clave B"
@@ -72,7 +106,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Considera los grupos de datos: A (0, 0, 14, 14), B (0, 6, 8, 14), C (6, 6, 8, 8) y D (4, 10, 0, 14), cada uno tiene una media de 7. ¿Cuál de los grupos tiene desviación típica de 1?",
-      "alternatives": ["B", "D", "C", "A"],
+      "alternatives": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-desviacion-tipica-ejercicios.html",
       "sourceName": "La Desviación Típica - Ejercicios Resueltos (matematicasn), Ejercicio 6, clave C"
@@ -83,7 +122,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Las notas de un examen fueron 10; 12; 15; 16; 17. Determinar la desviación estándar de las notas.",
-      "alternatives": ["2.4", "2.5", "2.6", "2.7", "2.8"],
+      "alternatives": [
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-desviacion-tipica-ejercicios.html",
       "sourceName": "La Desviación Típica - Ejercicios Resueltos (matematicasn), Ejercicio 1, clave C"
@@ -94,7 +139,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una clase de 10 estudiantes, las notas del examen fueron: 08; 09; 09; 10; 10; 12; 14; 14; 15; 17. Calcular la media, varianza y desviación estándar. ¿Cuál es la suma de estos tres valores?",
-      "alternatives": ["19.08", "21.03", "23.05", "24.16", "25.01"],
+      "alternatives": [
+        "19.08",
+        "21.03",
+        "23.05",
+        "24.16",
+        "25.01"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-varianza-ejercicios-resueltos-pdf.html",
       "sourceName": "La Varianza - Ejercicios Resueltos (matematicasn), Problema 1, clave C"
@@ -105,7 +156,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las notas de un grupo de 10 estudiantes en un examen fueron: 12; 14; 14; 11; 15; 13; 14; 12; 14; 13. Halla la varianza.",
-      "alternatives": ["1.54", "1.63", "1.25", "1.30", "1.36"],
+      "alternatives": [
+        "1.54",
+        "1.63",
+        "1.25",
+        "1.30",
+        "1.36"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-varianza-ejercicios-resueltos-pdf.html",
       "sourceName": "La Varianza - Ejercicios Resueltos (matematicasn), Problema 3, clave E"
@@ -116,7 +173,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Las notas finales de Pedro en 5 materias fueron: 7, 8, 7, 10, 8. Calcula la varianza.",
-      "alternatives": ["6", "1.5", "8", "1.2"],
+      "alternatives": [
+        "6",
+        "1.5",
+        "8",
+        "1.2"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-varianza-ejercicios-resueltos-pdf.html",
       "sourceName": "La Varianza - Ejercicios Resueltos (matematicasn), Ejercicio 3, clave D"
@@ -127,7 +189,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Las tarifas de transporte público tienen actualmente una varianza de 50 céntimos. Si todas las tarifas aumentan en 30 céntimos, ¿cuál es la nueva varianza?",
-      "alternatives": ["50", "80", "30", "20"],
+      "alternatives": [
+        "50",
+        "80",
+        "30",
+        "20"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-varianza-ejercicios-resueltos-pdf.html",
       "sourceName": "La Varianza - Ejercicios Resueltos (matematicasn), Ejercicio 4, clave A"
@@ -138,7 +205,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "La varianza de los salarios mensuales de los trabajadores de una empresa es de 100 soles. Si a cada trabajador se le aplican dos descuentos sucesivos del 10 % y del 20 %, y luego se le aumenta 700 soles, ¿cuál es la nueva varianza de los salarios?",
-      "alternatives": ["51", "49", "51.44", "50", "51.84"],
+      "alternatives": [
+        "51",
+        "49",
+        "51.44",
+        "50",
+        "51.84"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-varianza-ejercicios-resueltos-pdf.html",
       "sourceName": "La Varianza - Ejercicios Resueltos (matematicasn), Ejercicio 6, clave E"
@@ -149,7 +222,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Ocho empleados ganan mensualmente (en soles): 1951; 1950; 1954; 1955; 1954; 1951; 1953; 1948. Si se les aplican aumentos sucesivos del 20 % y del 50 % y luego se les descuenta 300 soles, ¿cuál es la nueva varianza?",
-      "alternatives": ["16", "15.8", "16.2", "16.25", "16.5"],
+      "alternatives": [
+        "16",
+        "15.8",
+        "16.2",
+        "16.25",
+        "16.5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-varianza-ejercicios-resueltos-pdf.html",
       "sourceName": "La Varianza - Ejercicios Resueltos (matematicasn), Ejercicio 7, clave C"
@@ -160,7 +239,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Los gastos diarios (en soles) de un grupo de madres son: 9; a; 12; 12; b; c; d; e; 16; 16. Si la media es 13, la mediana es 13.5 y la moda es 14, y cada madre recibe un bono igual a 10 veces la varianza de dichos gastos, ¿cuánto recibe de bono cada madre?",
-      "alternatives": ["48", "42", "32", "38", "52"],
+      "alternatives": [
+        "48",
+        "42",
+        "32",
+        "38",
+        "52"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-varianza-ejercicios-resueltos-pdf.html",
       "sourceName": "La Varianza - Ejercicios Resueltos (matematicasn), Ejercicio 8, clave A"
@@ -171,7 +256,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Al calcular la media y la desviación estándar de 80 datos resultaron 30 y 4, respectivamente. Al revisar, Julio se dio cuenta de que, en lugar del valor 1, introdujo 17, por lo que procedió a corregirlo. ¿Cuál es el valor correcto de la varianza de los 80 datos?",
-      "alternatives": ["24.36", "24.96", "24.63", "24.91", "24.98"],
+      "alternatives": [
+        "24.36",
+        "24.96",
+        "24.63",
+        "24.91",
+        "24.98"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/p/estadistica-resuelta-ingreso-universidad.html",
       "sourceName": "Estadística Banco de Preguntas Resueltas de Examen de Admisión (matematicasn) - Pregunta 7, clave A"
@@ -182,7 +273,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Los pesos, en kilogramos, de un grupo de cinco infantes están representados cada uno por un número de dos cifras. Si dichos pesos tienen como mediana 15, media 13.6 y moda 16, ¿cuál es la varianza de dichos pesos?",
-      "alternatives": ["5.76", "6.24", "6.64", "6.96", "7.24"],
+      "alternatives": [
+        "5.76",
+        "6.24",
+        "6.64",
+        "6.96",
+        "7.24"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/p/estadistica-resuelta-ingreso-universidad.html",
       "sourceName": "Estadística Banco de Preguntas Resueltas de Examen de Admisión (matematicasn) - Pregunta 8, clave C"
@@ -193,7 +290,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La media y la varianza de dos números son 3 y 1.5, respectivamente. Si se agrega el número 6, ¿cuál será la varianza de los tres números?",
-      "alternatives": ["3.2", "2.5", "2.6", "2.8", "3"],
+      "alternatives": [
+        "3.2",
+        "2.5",
+        "2.6",
+        "2.8",
+        "3"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2012/09/estadistica-pdf-ejercicios-y-ejemplos.html",
       "sourceName": "Estadística - Ejercicios y Ejemplos (matematicasn), Pregunta 16, clave E"
@@ -204,7 +307,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Se tienen tres grupos de animales con los siguientes estadísticos: Toros (media = 500 kg, desviación estándar = 40 kg), Perros (media = 20 kg, desviación estándar = 10 kg), Gatos (media = 5 kg, desviación estándar = 0.15 kg). Ordena los grupos de menor a mayor variabilidad relativa.",
-      "alternatives": ["toros, perros, gatos", "perros, gatos, toros", "gatos, perros, toros", "gatos, toros, perros", "toros, gatos, perros"],
+      "alternatives": [
+        "toros, perros, gatos",
+        "perros, gatos, toros",
+        "gatos, perros, toros",
+        "gatos, toros, perros",
+        "toros, gatos, perros"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2012/09/estadistica-pdf-ejercicios-y-ejemplos.html",
       "sourceName": "Estadística - Ejercicios y Ejemplos (matematicasn), Pregunta 18, clave D"
@@ -215,7 +324,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Se le preguntó a 6 parejas sobre el número de hijos en su hogar. Los resultados fueron: 0, 0, 1, 3, 1, 1. Calcule el coeficiente de variación del número de hijos.",
-      "alternatives": ["2.2", "1.5", "0.5", "2", "1"],
+      "alternatives": [
+        "2.2",
+        "1.5",
+        "0.5",
+        "2",
+        "1"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/12/coeficiente-de-variacion-formula-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-pre-universitaria-word-doc-pdf.html",
       "sourceName": "Coeficiente de Variación - Ejercicios Resueltos (matematicasn), Problema 1, clave E"
@@ -226,7 +341,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Para 2 acciones comunes de empresas de la industria electrónica, el precio promedio de cierre en el mercado de valores durante un mes fue: para la acción A, de $1200, con desviación estándar de $500; para la acción B, el precio promedio fue de $5000, con desviación estándar de $300. Determine la suma de los coeficientes de variación de ambas acciones.",
-      "alternatives": ["0.49", "0.44", "0.46", "0.45", "0.48"],
+      "alternatives": [
+        "0.49",
+        "0.44",
+        "0.46",
+        "0.45",
+        "0.48"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/12/coeficiente-de-variacion-formula-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-pre-universitaria-word-doc-pdf.html",
       "sourceName": "Coeficiente de Variación - Ejercicios Resueltos (matematicasn), Problema 2, clave E"
@@ -237,7 +358,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La estatura media de un grupo A de personas es de 168 cm y su desviación típica es de 12 cm. En otro grupo B la estatura media es de 154 cm y su desviación estándar de 7 cm. ¿Cuáles son los coeficientes de variación del grupo A y del grupo B, respectivamente?",
-      "alternatives": ["4.0% del grupo A y 7.0% del grupo B", "4.5% del grupo A y 7.1% del grupo B", "7.0% del grupo A y 4.0% del grupo B", "6.1% del grupo A y 5.5% del grupo B", "7.1% del grupo A y 4.5% del grupo B"],
+      "alternatives": [
+        "4.0% del grupo A y 7.0% del grupo B",
+        "4.5% del grupo A y 7.1% del grupo B",
+        "7.0% del grupo A y 4.0% del grupo B",
+        "6.1% del grupo A y 5.5% del grupo B",
+        "7.1% del grupo A y 4.5% del grupo B"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/12/coeficiente-de-variacion-formula-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-pre-universitaria-word-doc-pdf.html",
       "sourceName": "Coeficiente de Variación - Ejercicios Resueltos (matematicasn), Problema 3, clave E"
@@ -248,7 +375,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "De tres muestras, la primera con media 30 y desviación típica 4, la segunda con media 50 y desviación típica 5, y la tercera con media 70 y desviación típica 8. ¿Cuál es la muestra que aparece más dispersa?",
-      "alternatives": ["Las tres son iguales", "La segunda y la tercera son iguales", "La primera", "La segunda", "La tercera"],
+      "alternatives": [
+        "Las tres son iguales",
+        "La segunda y la tercera son iguales",
+        "La primera",
+        "La segunda",
+        "La tercera"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/12/coeficiente-de-variacion-formula-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-pre-universitaria-word-doc-pdf.html",
       "sourceName": "Coeficiente de Variación - Ejercicios Resueltos (matematicasn), Problema 4, clave C"
@@ -259,7 +392,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Los promedios aritméticos de las notas del examen de aritmética que rindieron los alumnos de las secciones A y B son 15 y 12, respectivamente, y sus varianzas son 9 y 16, en ese orden. Si la edad del profesor coincide con la suma de los términos de la fracción irreducible equivalente a la suma de los coeficientes de variación de las notas de ambas secciones, determine la edad del profesor.",
-      "alternatives": ["22", "23", "25", "24", "26"],
+      "alternatives": [
+        "22",
+        "23",
+        "25",
+        "24",
+        "26"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/12/coeficiente-de-variacion-formula-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-pre-universitaria-word-doc-pdf.html",
       "sourceName": "Coeficiente de Variación - Ejercicios Resueltos (matematicasn), Problema 5, clave B"
@@ -270,7 +409,11 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Ocho estudiantes compitieron en una prueba de velocidad de 50 metros. Los tiempos registrados (en segundos) fueron: 10; 11.5; 12; 12.5; 9; 14; 11.4; 15. Calcula la desviación media.",
-      "alternatives": ["2.3", "1.5", "1.8"],
+      "alternatives": [
+        "2.3",
+        "1.5",
+        "1.8"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://pdfcoffee.com/examen-medidas-de-dispersion-4-pdf-free.html",
       "sourceName": "Examen Medidas de Dispersión (pdfcoffee), Pregunta 3, clave B"
@@ -281,7 +424,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuál de los siguientes conceptos corresponde a la definición: 'Es el promedio de las diferencias de los datos con respecto a la media aritmética'?",
-      "alternatives": ["Varianza", "Rango", "Desviación estándar", "Desviación media"],
+      "alternatives": [
+        "Varianza",
+        "Rango",
+        "Desviación estándar",
+        "Desviación media"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://pdfcoffee.com/examen-medidas-de-dispersion-4-pdf-free.html",
       "sourceName": "Examen Medidas de Dispersión (pdfcoffee), Pregunta 1, clave D"
@@ -292,10 +440,231 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuál de los siguientes estadísticos NO representa una medida de dispersión?",
-      "alternatives": ["Varianza", "Media ponderada", "Desviación estándar", "Rango"],
+      "alternatives": [
+        "Varianza",
+        "Media ponderada",
+        "Desviación estándar",
+        "Rango"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://pdfcoffee.com/respuestas-examen-estadistica-8-pdf-free.html",
       "sourceName": "Respuestas Examen Estadística (pdfcoffee), Pregunta 5, clave B"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean las longitudes de 5 huesos encontrados por unos arqueólogos, expresadas en centímetros: 12; 15; 16; 21 y 26. Si se descubre que el instrumento de medición empleado añadió por error 0,35 centímetros a cada medida, determine la varianza, en centímetros cuadrados, de las medidas reales de dichos huesos encontrados.",
+      "alternatives": [
+        "20,4",
+        "24,4",
+        "18,5",
+        "16,2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/cepre-san-marcos-2019-II-boletin-16-solucionario-2019-2-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CEPRE SAN MARCOS 2019 SEMANA 16 DECO DE ADMISIÓN A LA UNIVERSIDAD SAN MARCOS DESCARGA PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los pesos de los toros de lidia de una ganadería se distribuyen con una media de /x=500 kg y una desviación típica σ= 40 kg.\nLos pesos de los perros de una exposición canina tienen una media de /x=20kg y una desviación típica σ= 10 kg.\nLos pesos de los gatos de un criadero tienen una media de /x=5kg y una desviación típica σ= 0,15 kg.\nOrdena de acuerdo a la variabilidad de cada grupo de menor a mayor",
+      "alternatives": [
+        "toros, perros, gatos",
+        "perros, gatos, toros",
+        "gatos, perros, toros",
+        "gatos, toros, perros",
+        "toros, gatos, perros"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/matematicas-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIOS UNCP 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DEL CENTRO DEL PERÚ PDF TEMAS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El consumo semanal de agua en m 3 de 7 familias tiene una media de 8 m 3 . En carnavales, cada familia incrementó su consumo en 5 m 3 siendo estas de 9; 12; 12; 13; a; b; 17 m 3 cuya varianza es 36/7. Halle la suma del consumo de agua de las familias que consumieron a y b m 3 antes de carnavales.",
+      "alternatives": [
+        "24",
+        "20",
+        "23",
+        "18",
+        "16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/curvas-en-el-plano-lugares-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA BIOMÉDICAS 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las edades de los tres hijos de Ana son 2; 4 y 6 años y las edades de los hijos de Nila son 1; 5 y 7 años. La media y la varianza, del número de años que tienen los seis hijos junto con las dos madres, son 10 y 107 respectivamente. Determine el producto del número de años que tienen ambas madres.",
+      "alternatives": [
+        "700",
+        "750",
+        "600",
+        "450",
+        "250"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/02/pre-san-marcos-2018-2-semana-16.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 16 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las medias de las notas del examen final de Estadística de los alumnos de las secciones A y B son 16 y 18 respectivamente, y sus varianzas 4 y 9 en ese orden. Si la edad del profesor de ese curso coincide con la suma de términos de la fracción irreducible equivalente a la diferencia positiva entre los coeficientes de variación de las notas de ambas secciones, determine la edad del profesor.",
+      "alternatives": [
+        "50",
+        "23",
+        "25",
+        "45"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-aritmetica-semana-16.html",
+      "sourceName": "matematicaj.blogspot.com — ARITMÉTICA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Debido a un reclamo efectuado por un grupo de alumnos del curso de química se ha decidido aumentarles 5 puntos en el examen final. Respecto a las nuevas notas (puntajes) indique el valor de verdad de las siguientes proposiciones:\nI) La varianza disminuye.\nII) La media aritmética aumenta.\nIII) El cociente VAR/MA aumenta (MA: Medía Aritmética y VAR: Varianza).",
+      "alternatives": [
+        "FVF",
+        "FVV",
+        "VFV",
+        "VVF",
+        "VVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-preuniversitaria-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 MATEMÁTICA SEGUNDA PRUEBA RESUELTA – RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al preguntarle a un comerciante por los precios de cinco artículos, esta fue su respuesta: 2, 3, 1, 5 y 4 soles, respectivamente. Además, advierte que, el siguiente mes, todos los precios se duplicarán. ¿Cuál será la varianza de los nuevos precios?",
+      "alternatives": [
+        "6",
+        "8",
+        "4",
+        "2",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/pre-san-marcos-solucionario-semana_82.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA B 2024-1 PRUEBA RESUELTA CIENCIAS BÁSICAS INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la varianza de las horas de trabajo semanal que realizó Pedro como docente de la UNMSM, durante las 6 ultimas semanas, si en ellas laboró 18 ; 20 ; 20 ; 22 ; 20 y 20 horas respectivamente..",
+      "alternatives": [
+        "5/3",
+        "2/3",
+        "4/3",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/aritmetica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las notas obtenidas en un examen de diez estudiantes son:\n12 ; 14 ; 14 , 11 ; 15 ; 13 ; 14 ; 12 ; 14 ; 13\nHalle la varianza de dichas notas.",
+      "alternatives": [
+        "1,54",
+        "1,63",
+        "1,25",
+        "1,30",
+        "1,36"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/admision-callao-2016-i-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — CALLAO 2021 II SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD BLOQUES II III UNAC 2021-2 CIENCIAS EMPRESARIALES Y DE LA SALUD ÁREAS 2 y 3 PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De tres muestras, la primera con media 30 y desviación típica 4, la segunda de media 50 y desviación típica 5 y la tercera con media 70 y desviación típica 8. ¿Cuál es la que aparece más dispersa?",
+      "alternatives": [
+        "Las tres son iguales",
+        "Dos y tres son iguales",
+        "La primera",
+        "La segunda",
+        "La tercera"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/admision-callao-2016-i-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — CALLAO 2021 II SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD BLOQUES II III UNAC 2021-2 CIENCIAS EMPRESARIALES Y DE LA SALUD ÁREAS 2 y 3 PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las notas de un examen fueron 10; 12; 15; 16; 17.\nDeterminar la desviación stándard de los números.",
+      "alternatives": [
+        "2,4",
+        "2,5",
+        "2,6",
+        "2,7",
+        "2,8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-desviacion-tipica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LA DESVIACIÓN ESTÁNDAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considera los grupos de datos:\nA (0, 0, 14, 14), B (0, 6, 8, 14), C (6, 6, 8, 8) y D (4, 10, 0, 14) cada una tiene una media de 7. ¿Cuál de los grupos tiene desviación típica de 1?:",
+      "alternatives": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-desviacion-tipica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LA DESVIACIÓN ESTÁNDAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La desviación típica de las edades 2, 5, 8, 4, y 6 años es igual a:",
+      "alternatives": [
+        "4",
+        "4 años",
+        "2",
+        "2 años"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-desviacion-tipica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — LA DESVIACIÓN ESTÁNDAR EJERCICIOS RESUELTOS PDF"
     }
   ]
 }

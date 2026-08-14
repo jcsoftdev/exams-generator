@@ -135,6 +135,512 @@
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - Tablas de distribución de frecuencias, problemas resueltos preuniversitaria (2022), Problema 8 de datos menores a 120"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar el valor de verdad de las siguientes proposiciones:\nI) La mediana es la medida promedio que depende del número de datos ordenados y no de los valores de estos datos.\nII) La moda es la medida de tendencia central, que señala el valor más común de una serie de datos.\nIII) La mediana es el valor de x que ocupa la posición central de la distribución de frecuencias.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FFV",
+        "VVF",
+        "FVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/medidas-de-tendencia-central-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MEDIDAS DE TENDENCIA CENTRAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los pesos de 100 animales (en kg) están comprendidos entre 10 y 38. Se les clasifica en una distribución de frecuencias, cuyo tamaño de clase es constante e igual a 4. Si el 35% de los animales pesa menos de 22 kg y el 45% pesa 26 kg o más, hallar la suma de las cifras de la mediana , sabiendo que las frecuencias del quinto y sexto intervalo están en la razón de 5 a 3 y que la moda vale 82/3. Se sabe además que el intervalo modal es el quinto.",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/estadistica-ejercicios-quinto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADÍSTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se dan los siguientes valores de una muestra: 2, 1, 2, 2, 7, 8, 5, 15 entonces su alcance es:",
+      "alternatives": [
+        "[2;8]",
+        "[2 ; 15]",
+        "[1 ; 15]",
+        "[1 ; 8]",
+        "[8 ; 15]"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/10/descripcion-de-la-distribucion-de.html",
+      "sourceName": "matematicasn.blogspot.com — DISTRIBUCIÓN DE FRECUENCIAS RELATIVA Y ABSOLUTA PROBLEMAS RESUELTOS DE ESTADÍSTICA PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se dan los siguientes valores de una muestra: 5, 4, 5, 2, 4, 7, 9, 8 entonces su rango es.",
+      "alternatives": [
+        "7",
+        "5",
+        "2",
+        "9",
+        "8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/10/descripcion-de-la-distribucion-de.html",
+      "sourceName": "matematicasn.blogspot.com — DISTRIBUCIÓN DE FRECUENCIAS RELATIVA Y ABSOLUTA PROBLEMAS RESUELTOS DE ESTADÍSTICA PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se dan los siguientes valores de una muestra: 4, 3, 3, 3, 4, 3, 2, 5, 9, 9, 10 hallar la suma de la frecuencia del 3 y de la frecuencia del 4.",
+      "alternatives": [
+        "4",
+        "2",
+        "7",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/10/descripcion-de-la-distribucion-de.html",
+      "sourceName": "matematicasn.blogspot.com — DISTRIBUCIÓN DE FRECUENCIAS RELATIVA Y ABSOLUTA PROBLEMAS RESUELTOS DE ESTADÍSTICA PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se dan los siguientes valores de una muestra: 5, 2, 3, 2, 4, 7, 7, 2, 2, 9, 9, 2, 7 hallar la suma de la frecuencia del 7 y de la frecuencia del 2, mas el tamaño de la muestra.",
+      "alternatives": [
+        "18",
+        "19",
+        "20",
+        "21",
+        "22"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/10/descripcion-de-la-distribucion-de.html",
+      "sourceName": "matematicasn.blogspot.com — DISTRIBUCIÓN DE FRECUENCIAS RELATIVA Y ABSOLUTA PROBLEMAS RESUELTOS DE ESTADÍSTICA PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un hospital de la capital, se informó que, de un total de 375 enfermos, su diagnóstico fue ; 60 con cirrosis hepática, 50 con ulcera gástrica, 200 con úlcera duodenal, 20 con gastritis erosiva, 15 con esofagitis erosiva, 10 con yeyunitis hemorrágicas, y no precisado 20.\nDetermine: El elemento de la población, la variable y tipo de variable.",
+      "alternatives": [
+        "El hospital, Un enfermo del hospital, cuantitativa",
+        "Un enfermo del hospital, diagnóstico y cualitativa",
+        "Las enfermedades, los enfermos del hospital y cualitativa",
+        "Las enfermedades, los enfermos del hospital y cuantitativa",
+        "Un enfermo del hospital, diagnóstico y cuantitativa CLIC AQUÍ Ver LO DE ARITMÉTICA SOLUCIONES ÁLGEBRA"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/simulacro-callao-admision-universidad.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN CALLAO 2022-1 BLOQUE II III ADMISIÓN UNIVERSIDAD DESARROLLO 2022-I CLAVES RESPUESTAS PRUEBA UNAC SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los siguientes enunciados identifica y clasifica las siguientes variables estadísticas cuantitativas:\nI. Peso de un grupo de niños recién nacidos.\nII. Número de hijos de los asistentes a una conferencia.\nIII. Toneladas de desmonte que transporta un volquete.",
+      "alternatives": [
+        "Continua – Continua – Continua",
+        "Continua – Discreta – Continua",
+        "Discreta – Discreta – Discreta",
+        "Continua – Discreta – Discreta",
+        "Discreta – Discreta – Continua"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/matematicas-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIOS UNCP 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DEL CENTRO DEL PERÚ PDF TEMAS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Estadísticamente como se llama a una parte del conjunto de todos los individuos:",
+      "alternatives": [
+        "unidad",
+        "subconjunto",
+        "sub unidad",
+        "variable",
+        "muestra"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/estadistica-problemas-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ESTADÍSTICA PREUNIVERSITARIA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Estadísticamente el “Perú” frente al mundo representa una:",
+      "alternatives": [
+        "invariable",
+        "variable",
+        "muestra",
+        "subconjunto",
+        "unidad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/estadistica-problemas-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ESTADÍSTICA PREUNIVERSITARIA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cantidad de horas que no te bañas es una variable:",
+      "alternatives": [
+        "cualitativa continua",
+        "cuantitativa discreta",
+        "cuantitativa discontinua",
+        "cuantitativa continua",
+        "cualitativa discreta"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/estadistica-problemas-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ESTADÍSTICA PREUNIVERSITARIA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cantidad de personas que gustan del fútbol es una variable:",
+      "alternatives": [
+        "cualitativa continua",
+        "cualitativa",
+        "cuantitativa discontinua",
+        "cuantitativa discreta",
+        "cualitativa discreta"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/estadistica-problemas-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ESTADÍSTICA PREUNIVERSITARIA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar el tamaño de a muestra de la siguiente distribución de datos.\n3 4 0 2 5 3\n2 7 4 3 1 1\n8 6 6 4 5 4\n7 5 4 6 0 2",
+      "alternatives": [
+        "9",
+        "20",
+        "18",
+        "24",
+        "36"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TABLAS DE FRECUENCIAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la suma del tamaño de la muestra más la amplitud de siguiente distribución de datos.\n2 5 0 5 7 0 4\n5 4 1 6 8 5 3\n3 2 2 3 9 3 4\n8 3 0 2 8 2 3\n4 6 4 5 7 1 5",
+      "alternatives": [
+        "35",
+        "9",
+        "44",
+        "56",
+        "39"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TABLAS DE FRECUENCIAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Población o universo es un conjunto de cosas o personas, agrupadas en gran número, de las cuales se desea obtener datos.\n¿Esta definición estadísticamente también se llama?",
+      "alternatives": [
+        "Conjunto",
+        "Muestra",
+        "Datos recolectados",
+        "espacio muestral",
+        "Variable."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/estadistica-4to-de-secundaria-eso.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADÍSTICA DESCRIPTIVA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Estadísticamente como se llama a una porción de la población, extraída cuidadosamente con el objeto de observar en ella los fenómenos que ocurren en la población.",
+      "alternatives": [
+        "Variable",
+        "Sub conjunto",
+        "Parte",
+        "muestra",
+        "Unidad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/estadistica-4to-de-secundaria-eso.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADÍSTICA DESCRIPTIVA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F).\nI. Población es el conjunto del cual se van a estudiar los datos para eliminar los extraños.\nII. Variable es una característica de la población que interesa al estadístico y que puede tomar diferentes valores.\nIII. Muestra es un subconjunto de la población, la cual es representativa que permita hacer deducciones de ella respecto al total de la población.",
+      "alternatives": [
+        "VFF",
+        "FFF",
+        "FVV",
+        "VVV",
+        "VFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionarios-uni-2016-i-examen-de.html",
+      "sourceName": "matematicasn.blogspot.com — SEGUNDA PRUEBA ADMISIÓN UNI 2022 I SOLUCIONARIO MATEMÁTICAS UNIVERSIDAD DE INGENIERÍA 2022-1 PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las variables estadísticas se clasifican en:",
+      "alternatives": [
+        "Cualitativa y Cuantitativa.",
+        "Discreta y continua.",
+        "Nominal y ordinal.",
+        "Descriptiva e inferencial.",
+        "cardinal y ordinal."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/variables-estadisticas-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — VARIABLES ESTADÍSTICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No es una variable estadística.",
+      "alternatives": [
+        "Sexo",
+        "Edad",
+        "Talla",
+        "Azul",
+        "Color"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/variables-estadisticas-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — VARIABLES ESTADÍSTICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "“Cuadro de ingresantes a al universidad”\n¿Es una variable?",
+      "alternatives": [
+        "Cualitativa nominal.",
+        "Cualitativa ordinal.",
+        "Cualitativa.",
+        "Cuantitativa discreta.",
+        "Cuantitativa continua"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/variables-estadisticas-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — VARIABLES ESTADÍSTICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "“Las estaturas de 43 universitarios”\n¿Es una variable?",
+      "alternatives": [
+        "Cualitativa nominal.",
+        "Cualitativa ordinal.",
+        "Cualitativa.",
+        "Cuantitativa discreta.",
+        "Cuantitativa continúa."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/variables-estadisticas-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — VARIABLES ESTADÍSTICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Qué tipo de variable estadística es:\n“Cantidad de árboles talados en la selva del Perú”.",
+      "alternatives": [
+        "Cualitativa nominal.",
+        "Cualitativa ordinal.",
+        "Cualitativa.",
+        "Cuantitativa discreta.",
+        "Cuantitativa continúa."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/variables-estadisticas-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — VARIABLES ESTADÍSTICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las clases de Estadística son:",
+      "alternatives": [
+        "deductiva e inductiva.",
+        "Diferencial y descriptiva.",
+        "Inferencial e inductiva.",
+        "deductiva y descriptiva.",
+        "descriptiva e instructiva."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estadistica-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADÍSTICA FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es la parte de la estadística que trata de las condiciones bajo las cuales tales inferencias son válidas.",
+      "alternatives": [
+        "Inferencial",
+        "Deductiva",
+        "Inductiva",
+        "Descriptiva",
+        "A y C"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estadistica-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADÍSTICA FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ejemplo de población infinita es:",
+      "alternatives": [
+        "Las personas que habitan en un país.",
+        "Los tornillos producidos en una fábrica en forma continua.",
+        "La cantidad de zapatos fabricados en una fábrica en un día.",
+        "Los alumnos que ingresan a todas las universidades del país."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estadistica-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADÍSTICA FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un principio que debe cumplir una muestra para que sea representativa es:",
+      "alternatives": [
+        "Reduce el tiempo de recolección de datos.",
+        "Ayuda a reducir costos.",
+        "Realización de estudios imposibles con toda la población.",
+        "Independencia en la selección de los elementos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estadistica-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADÍSTICA FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De las siguientes situaciones, la que expresa un parámetro es:",
+      "alternatives": [
+        "El puntaje promedio obtenido por las y los estudiantes en la PAES.",
+        "La edad promedio de las mujeres de una empresa que son solteras.",
+        "El porcentaje de aprobados en el examen de admisión.",
+        "La producción promedio de dulces de frutas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estadistica-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADÍSTICA FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Medida cuantitativa obtenida de un conjunto de datos de una muestra:",
+      "alternatives": [
+        "Parámetro.",
+        "Estrato.",
+        "Promedio.",
+        "Estadístico."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estadistica-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADÍSTICA FULL PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La clase de estadística que pretende dar reglas o normas que gobiernan una población es:",
+      "alternatives": [
+        "descriptiva",
+        "normativa",
+        "inferencial",
+        "discreta",
+        "continua"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/estadistica-preuniversitaria-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADÍSTICA BÁSICA Y PREUNIVERSITARIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un estudio se considera las siguientes variables: profesión, número de hijos, grado de instrucción, comida favorita y estatura.\nIndica la variable que es cualitativa ordinal.",
+      "alternatives": [
+        "Número de hijos",
+        "Estatura",
+        "Grado de instrucción",
+        "Profesión",
+        "Comida favorita"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/estadistica-pdf-ejercicios-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADÍSTICA DE ADMISIÓN UNIVERSIDAD SOLUCIONARIO PRUEBA DE INGRESO SIMULACRO DESARROLLADO 2024 2023 PREGUNTAS RESUELTAS"
     }
   ]
 }

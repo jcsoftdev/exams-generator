@@ -424,6 +424,362 @@
       "correctAnswer": "1",
       "sourceUrl": "https://calculo.cc/temas/temas_trigonometria/trian_semejante/teoria/cateto_altura.html",
       "sourceName": "Cálculo.cc – Teorema de la altura y del cateto (CD² = AD × DB = 4 × 9 = 36 → CD = 6 cm)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El territorio peruano está representado en 500 cartas nacionales a escala 1:100 000. ¿Cuántas cartas cubrirán el territorio peruano a la escala 1:50 000?",
+      "alternatives": [
+        "2000",
+        "1500",
+        "1000",
+        "900",
+        "800"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/geografia-examen-pre-universidad.html",
+      "sourceName": "matematicaj.blogspot.com — GEOGRAFÍA DECO RESUELTA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se requiere saber la distancia que un bote recorrerá de ida y vuelta entre dos pueblos de Loreto. En un mapa a escala 1:75,000, la longitud del río con sus meandros totaliza 60 cm. El motor del bote emplea 12 gl. de combustible por hora de funcionamiento y se estima que en la ida (contra corriente) el bote irá a una velocidad media de 15 km/h y, en el retorno, a 20 km/h. El combustible cuesta S/15.00 el galón. La distancia entre los pueblos es de ___ km, el tiempo de ida y vuelta es de _____ , y el costo total del combustible ___ soles.",
+      "alternatives": [
+        "45 - 5 h 15 m - 945",
+        "75 - 10 h 10 m - 790",
+        "60 - 4 h 05 m - 1,260",
+        "90 - 10 h 30 m - 1, 890"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-geografia-semana-17-2020.html",
+      "sourceName": "matematicaj.blogspot.com — GEOGRAFÍA PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un mapa a escala 1:5000, dos localidades presentan una separación por carretera de 20 cm. ¿Cuál será la distancia que las separa en el terreno?",
+      "alternatives": [
+        "8,0 km",
+        "2,0 km",
+        "4,5 km",
+        "1,0 km",
+        "10 km"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARTOGRAFÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el Mapa Oficial del Perú a escala 1:1 000 000, cada mm representa en el terreno:",
+      "alternatives": [
+        "1 km",
+        "1 000 000 m",
+        "100 000 m",
+        "1000 km",
+        "10 000 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARTOGRAFÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la Carta Nacional a escala 1:100 000, la distancia de 10,5 cm, existente entre Huancayo y Sapallanga, representa en el terreno:",
+      "alternatives": [
+        "10,5 km",
+        "2,5 km",
+        "25 km",
+        "71 km",
+        "250 km"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARTOGRAFÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pareja de turistas se encuentran en el Parque Selva Alegre en la ciudad de Arequipa y para concluir con su recorrido turístico deciden visitar la Catedral en la Plaza de Armas.\nPara lograr el objetivo, la pareja emplea el plano del Centro Histórico de la ciudad a escala 1: 50 000, y se percatan que la distancia entre ambos lugares es de 16 cm. Determine la distancia real del terreno.",
+      "alternatives": [
+        "800 m",
+        "800 cm",
+        "8 km",
+        "80 m",
+        "40 km"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARTOGRAFÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Instituto Geográfico Nacional (IGN) es la institución que se encarga de la cartografía nacional. Nuestro territorio está representado por más de 500 cartas nacionales a escala 1:100 000. De lo mencionado, identifique los enunciados correctos con respecto a las características de estas representaciones cartográficas.\nl) Muestran la planimetría y altimetría de la zona representada.\nII) Las cotas son los puntos que indican la longitud de un lugar.\nIII) Dos curvas de nivel al cortarse entre sí representan acantilados rocosos.\nIV) Utilizan solo escalas pequeñas por la generalización de sus representaciones.",
+      "alternatives": [
+        "I y IV",
+        "I y III",
+        "II y III",
+        "III y IV",
+        "I y II"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARTOGRAFÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una hoja de la Carta Nacional a escala 1: 100 000, frente a sus alumnos, el profesor determina una microcuenca en un polígono de 8 cm de largo por 5 cm de ancho. Luego, les indica que el trabajo a realizarse en dicha área debe ser en una escala a 1: 25 000.\n¿Cuales serán las dimensiones de este nuevo polígono?",
+      "alternatives": [
+        "16 cm×10 cm",
+        "32 cm×20 cm",
+        "24 cm×15 cm",
+        "0,32 cm×0.20 cm",
+        "18 cm×40 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARTOGRAFÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a un documento cartográfico elaborado a escala 1:500 000, es correcto afirmar que",
+      "alternatives": [
+        "es de pequeña escala según la Asociación Cartográfica Internacional.",
+        "1 kilómetro del terreno será representado por 2 centímetros.",
+        "brinda información detallada del área representada.",
+        "1 centímetro del documento equivale a 5000 metros del terreno.",
+        "emplea una escala mayor que la Carta Nacional del Perú."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARTOGRAFÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un mapa a escala 1:200 000, ¿cuánto representa 10 cm?",
+      "alternatives": [
+        "10 km",
+        "100 km",
+        "20 km",
+        "2 km",
+        "20 000 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARTOGRAFÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los planos de Lima, a escala 1:6000, se observa que la longitud de la avenida Arequipa, de 50 cuadras, equivale a 50 cm en el plano. ¿Cuál será la distancia real en km?",
+      "alternatives": [
+        "6 km",
+        "5 km",
+        "30 km",
+        "300 km",
+        "3 km"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARTOGRAFÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una carta a escala 1:100 000, dos localidades presentan una separación por carretera de 1,5 dm. ¿Cuál será la distancia que las separa en el terreno?",
+      "alternatives": [
+        "25 km",
+        "35 km",
+        "15 km",
+        "45 km",
+        "30 km"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARTOGRAFÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La Carta Geológica Nacional elaborada por el INGEMMET a escala 1:100 000 está conformada por 501 cuadrángulos, los cuales fueron cartografiados entre los años 1960 y 1999. ¿Qué se usa en las cartas para representar las altitudes y formas del relieve?",
+      "alternatives": [
+        "La escala",
+        "La grilla",
+        "El altímetro",
+        "Las líneas hipsométricas",
+        "La leyenda"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARTOGRAFÍA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: A=(ab)a x a ; B=2 y b ; C=ax⁵ ; son semejantes\nHallar (ab + a + b)",
+      "alternatives": [
+        "5",
+        "25",
+        "35",
+        "20",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/terminos-semejantes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TÉRMINOS SEMEJANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si –7 x a +by³ ; 2x ⁸ y b son semejantes\nHallar a – b",
+      "alternatives": [
+        "5",
+        "8",
+        "3",
+        "2",
+        "0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/terminos-semejantes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TÉRMINOS SEMEJANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: 3x² es semejante con 7 x a\nHallar el valor de a",
+      "alternatives": [
+        "3",
+        "7",
+        "2",
+        "0",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/terminos-semejantes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TÉRMINOS SEMEJANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: B = 3 x m ; C = 5x⁶ son semejantes\nHallar m/2",
+      "alternatives": [
+        "6",
+        "2",
+        "4",
+        "3",
+        "0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/terminos-semejantes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TÉRMINOS SEMEJANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un foco a 12 m. de altura con respecto al suelo. ¿A qué distancia del suelo se tiene que colocar una plancha rectangular de 8 cm. por 4 cm. para que proyecte una sombra de ?",
+      "alternatives": [
+        "8 m",
+        "6 m",
+        "4 m",
+        "5 m",
+        "2 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — PRISMAS Y PIRÁMIDE EJERCICIOS DESARROLLADOS PASO A PASO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La arquitecta Kelly se aleja caminando de un poste cuya luminaria está a 8 m por arriba del suelo. Si ella tiene una estatura de 1,6 m, ¿cuánto mide la sombra de la arquitecta cuando está a 10 m del poste?",
+      "alternatives": [
+        "2,4 m",
+        "2,1 m",
+        "2,5 m",
+        "2,2 m",
+        "2,3 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estudio-y-representacion-de-funciones_4.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA SOCIALES 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el ancho de un río, sabiendo que para medirlo se usan 2 estacas colocados en una orilla de él y se miden simultáneamente las sombras que hacen en tierra en el otro lado, con los siguientes resultados: con la estaca de 2 metros de alto se midieron 3m de sombra en tierra y para una estaca de 3,5m se midieron 12m de sombra en tierra.",
+      "alternatives": [
+        "10,5",
+        "8,5",
+        "13,5",
+        "9",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-9-educacion-fisica-experiencia-8-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPRUNSA INGENIERÍAS 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS EXAMEN RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La casa de . Ana y tres supermercados están ubicados en los puntos A, B, C y O, respectivamente, tal que entre los supermercados B y D se ubica, de manera colineal, el supermercado C. Si AB=560m, BC=300m, CD=100m y m∢ABD=m∢CAD, determine a qué distancia de la casa de Ana se encuentra el supermercado más cercano",
+      "alternatives": [
+        "150 m",
+        "280 m",
+        "200 m",
+        "180 m",
+        "120 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/geometria-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
     }
   ]
 }

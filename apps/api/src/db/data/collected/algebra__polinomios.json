@@ -1076,6 +1076,1510 @@
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/metodo-de-horner-ejercicios-resueltos.html",
       "sourceName": "matematicasn.blogspot.com - Método de Horner ejercicios, 3Q(x)-R(x) para x⁴+1÷(x²-1) (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el grado absoluto del primer término central del C.N.",
+      "alternatives": [
+        "11",
+        "106",
+        "63",
+        "40",
+        "72"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el grado absoluto del término 16 en la expansión de",
+      "alternatives": [
+        "20",
+        "25",
+        "35",
+        "45",
+        "60"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/binomio-de-newton-y-radicacion.html",
+      "sourceName": "matematica-a1.blogspot.com — BINOMIO DE NEWTON Y RADICACIÓN EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Fabrizio sale de sus clases en la universidad rumbo a su casa y se da cuenta de que solo tiene m+n+k soles de dinero. Si gasta 2k soles en su pasaje de regreso y se sabe que 1+ √ 2 y k son raíces del polinomio p(x)=x 3 – 3mx 2 +nx+2m, cuyos coeficientes son enteros, ¿cuántos soles le quedó?",
+      "alternatives": [
+        "1",
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/algebra-problemas-resueltos-examen.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos recipientes, con capacidades de (x ⁴ – x³ +3x – 9) y (2x³ – 7 x² + 11 x – 1 5) litros, con x>10 ; x ∈ ℤ ; se encuentran llenos de agua. Se desea vaciar estos recipientes, con el menor número de extracciones posibles, usando una batea cilíndrica, la cual cada vez que se use se deberá llenar hasta su máxima capacidad, siendo esta capacidad un número entero de litros. Si al realizar estas extracciones no deberá de quedar agua en cada recipiente, halle la suma de los coeficientes, del polinomio que se obtendría al sumar los factores primos en ℤ [ x ] de la expresión que representa a la suma del número total de extracciones realizadas para ambos cilindros.",
+      "alternatives": [
+        "5",
+        "7",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/algebra-semana-11-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 11 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se sabe que el grado del polinomio p(x) y el grado del polinomio q(x) representan el precio en soles de una revista semanal y una revista mensual, respectivamente. Además, se conoce que el grado de [p(x)] ³ [q(x)] ² es igual a 26, y el grado de [p(x)] ⁶ [q(x)] ⁵ costo total? es igual a 59. Si se desea comprar ambas revistas, ¿cuál será el",
+      "alternatives": [
+        "7 soles",
+        "11 soles",
+        "9 soles",
+        "10 soles",
+        "12 soles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/grados-y-polinomios-teoria-y-preguntas.html",
+      "sourceName": "matematicaj.blogspot.com — GRADOS Y POLINOMIOS PROBLEMAS RESUELTOS DE ÁLGEBRA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de gallinas que tiene un galpón es (m+5n) en decenas de miles, donde m y n se obtienen, sabiendo que el polinomio P(x)=4x ⁴ −12x ³ +13x²+2x+2 es idéntico al polinomio Q(x)=(ax ² +bx+c) ² +(m+1)x−n , ¿cuál es el gasto semanal del empresario si el costo por día de cada gallina es de S/.1?",
+      "alternatives": [
+        "S/.14000",
+        "S/.149000",
+        "S/.350000",
+        "S/.3500",
+        "S/.140000"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/grados-y-polinomios-teoria-y-preguntas.html",
+      "sourceName": "matematicaj.blogspot.com — GRADOS Y POLINOMIOS PROBLEMAS RESUELTOS DE ÁLGEBRA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea los polinomios P y Q tales que\nP(x) =5x 4 – 2ax 3 + (b+ 1)x 2 +x\nQ(x) = (a – 1)x 2 – 3bx\nSi la suma de los coeficientes de P + Q y P – Q son –7 y 8 respectivamente, entonces el valor de a – b es:",
+      "alternatives": [
+        "1",
+        "13/10",
+        "7/5",
+        "3/2",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean P(x) y Q(x) dos polinomios tal que la suma de los mismos es 4x 2 – 2x + 4 y la diferencia es 2x 2 – 2. Determine el coeficiente principal de P(x)Q(x).",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-2-ccss-experiencia-8-resuelta-aprendo-en-casa-ciencias-sociales-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la edad actual de Juan, en años, si el valor numérico de esta coincide con el triple de la suma de los coeficientes de los factores primos en ℤ [x] de un polinomio de grado 3 cuyo término independiente es 12 y la suma de sus coeficientes es –12. Además, –3 y 2 son raíces simples del polinomio.",
+      "alternatives": [
+        "10",
+        "15",
+        "18",
+        "24",
+        "19"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/simulacro-presencial-san-marcos-2018-i.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO SAN MARCOS 2027 I INGRESO UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea P(x) un polinomio cuadrático y mónico que tiene término independiente 4, además el producto de sus coeficientes es – 48, halle el conjunto solución de P(x) > – 32.",
+      "alternatives": [
+        "ℝ – {3}",
+        "ℝ – {4}",
+        "ℝ – {5}",
+        "ℝ – {6}",
+        "ℝ – {1}"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — INECUACIÓN CUADRÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la expansión de: B(x;y)=(x ² +y ³ ) ²⁰\nDetermine el grado absoluto del noveno término",
+      "alternatives": [
+        "24",
+        "48",
+        "60",
+        "32",
+        "44"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/binomio-de-newton-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — BINOMIO DE NEWTON EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el grado absoluto del séptimo término del desarrollo de:\n(3x ³ y + 2z²) ¹⁵",
+      "alternatives": [
+        "48",
+        "51",
+        "52",
+        "24",
+        "96"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/binomio-de-newton-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — BINOMIO DE NEWTON EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué lugar ocupa el término de grado absoluto 48 en el desarrollo de: (x ² +y ³ ) ¹⁸",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/binomio-de-newton-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — BINOMIO DE NEWTON EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea repartir (kx⁵+ nx⁴+ mx³− 9x² + 36x + 31) canastas para (2x³− x²+ 7) madres en su día, sobrando (x²+ x + 10) canastas. Si en cada canasta había (m + n + k) productos, determine el polinomio que representa el número total de productos repartidos.",
+      "alternatives": [
+        "T(x) = −10x² + 50x + 30",
+        "T(x) = −8x²+ 40x + 24",
+        "T(x) = −x²+ 5x + 3",
+        "T(x) = −12x²+ 60x + 36"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/metodo-de-horner-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DE HORNER EJERCICIOS RESUELTOS PDF ( PARA DIVIDIR POLINOMIOS ) "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lenin tenía para la venta en total (2n) docenas de conejos entre negros y blancos. Considerando el polinomio p(x–3)=(2x – 1 ) n + (x – 1 ) n + (x – 2) , se sabe que la cantidad de conejos negros que vendió el primer día coincide con la suma de coeficientes de p(x) y los conejos blancos que vendió el segundo día fue igual al término independiente de p(x). Cada día solo se vendieron conejos de un solo color y el primer día se vendieron cuatro conejos más que el segundo día. ¿Cuántos conejos le quedan por vender después del segundo día?",
+      "alternatives": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/grados-y-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — GRADOS Y POLINOMIOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un puesto de abarrote, el kilo de arroz cuesta 4 soles y el kilo de azúcar 3, 80 soles. Los kilogramos de arroz y azúcar, que María compra, coinciden, respectivamente, con el término independiente y la suma de coeficientes del polinomio P(x), el cuál cumple que P(x – 2)=(x + 2) 3 – 3(x – 1)+mx+5. Si, en total, María compró 200 kilos entre arroz y azúcar, ¿cuánto gastó en la compra?",
+      "alternatives": [
+        "S/786",
+        "S/758",
+        "S/774",
+        "S/870",
+        "S/776"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el término independiente de un polinomio P(x) de coeficiente principal uno y de tercer grado, que cumple: P(–1)=P(–2)=P(–3).\nSe sabe, además que la suma de los coeficientes de P(x) es 105.",
+      "alternatives": [
+        "11",
+        "89",
+        "6",
+        "87",
+        "1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/prueba-3-de-matematicas-fisica-y.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-1 SEGUNDA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DESARROLLO MATEMÁTICAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una piscina de forma rectangular cuya medida del largo excede a la medida del ancho en 8 m, está piscina es rodeada por un pasillo enlosado de 2,5 m de ancho; si al sumar el área de la piscina con el área total del pasillo se obtiene un polinomio p(x), halle la suma del coeficiente principal con el término independiente de dicho polinomio.",
+      "alternatives": [
+        "36",
+        "66",
+        "45",
+        "56",
+        "46"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/polinomios-valor-numerico-y-grados.html",
+      "sourceName": "matematicasn.blogspot.com — GRADOS Y POLINOMIOS DE SECUNDARIA EJEMPLOS Y PREGUNTAS RESUELTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los esposos Pepe y Elian, se disponen ahorrar diariamente, (2x −1) y (ax − 2b + c + a) soles, respectivamente.\nSi al cabo de x días, el ahorro de Pepe , disminuido en (−c) soles, representado por el polinomio p(x), coincidirá con el ahorro de su esposa, disminuido en b soles, ¿a cuánto ascendería la suma de los ahorros de ambos esposos, al cabo de (a+b+c) días, aumentado en p(2) soles?",
+      "alternatives": [
+        "17 soles",
+        "30 soles",
+        "10 soles",
+        "15 soles",
+        "21 soles"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/polinomios-valor-numerico-y-grados.html",
+      "sourceName": "matematicasn.blogspot.com — GRADOS Y POLINOMIOS DE SECUNDARIA EJEMPLOS Y PREGUNTAS RESUELTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea el polinomio p(t − 2)=−2t ² + 8t , tal que la gráfica del polinomio p(t) describe la trayectoria recorrida por un móvil en t segundos ( t≥0 ), ¿al cabo de cuántos segundos, dicho móvil caerá a tierra?",
+      "alternatives": [
+        "4s",
+        "3s",
+        "8s",
+        "2s",
+        "6s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/polinomios-valor-numerico-y-grados.html",
+      "sourceName": "matematicasn.blogspot.com — GRADOS Y POLINOMIOS DE SECUNDARIA EJEMPLOS Y PREGUNTAS RESUELTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El grado absoluto del noveno término del desarrollo de (x² + x − ¹ ) ² ⁰ , es",
+      "alternatives": [
+        "14",
+        "16",
+        "18",
+        "20",
+        "22"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/binomio-de-newton-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DESARROLLO DEL BINOMIO DE NEWTON PREGUNTAS RESUELTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de horas de viaje que emplea un ómnibus en ir de una ciudad P a una ciudad Q, en condiciones normales, es de (3n – 1) horas; donde n es tal que en el desarrollo del binomio de Newton (x² + y³)⁶ⁿ se cumple que el grado absoluto del término que ocupa el lugar (2n – 4) es 65. Si el ómnibus parte un día viernes a las 7p.m. y realiza su recorrido en condiciones normales, ¿qué día y a qué hora llegará a la ciudad Q?",
+      "alternatives": [
+        "Sábado 7 a. m.",
+        "Sábado 3 p. m.",
+        "Sábado 9 a. m.",
+        "Sábado 9 p. m."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/binomio-de-newton-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DESARROLLO DEL BINOMIO DE NEWTON PREGUNTAS RESUELTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir un polinomio P(x) entre 3x+2, se obtuvo como residuo –12 y un cociente cuya suma de coeficientes es seis. Determina el residuo de dividir P(x) entre (x–1).",
+      "alternatives": [
+        "20",
+        "14",
+        "18",
+        "16",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/algebra-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea P(x) un polinomio mónico:\nP(x)=(2–a)x 3 –(b–4)x 2 +(2+a+b)x\nDetermina la suma de coeficientes de P(x)",
+      "alternatives": [
+        "8",
+        "9",
+        "7",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/algebra-problemas-resueltos-examen.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado los polinomios P(x)=x 6 +m y Q(x)=x+1, donde m es un número real, halla la suma de los coeficientes del polinomio cociente de P(x) entre Q(x).",
+      "alternatives": [
+        "4",
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/algebra-problemas-resueltos-examen.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la suma de dos polinomios es (4x 2 – 2x+4) y la diferencia de ellos es (2x 2 –2), ¿cuál será el coeficiente principal del producto de estos polinomios?",
+      "alternatives": [
+        "6",
+        "4",
+        "2",
+        "5",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-simulacro-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si – 5+3 √ 2 es raíz del polinomio\nP(x)=x 3 +(5m – 4n – 1)x 2 –33x–(3m+7n+5) donde {m; n} ⊂ ℚ , halle la suma de los coeficientes del residuo al dividir\na(x)=x 20 – (5m – 12)x 14 + 5x 5 – (3n – 5)x 4 + 30 por b(x)=x 4 + 2",
+      "alternatives": [
+        "12",
+        "14",
+        "16",
+        "26",
+        "18"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-simulacro-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El grado absoluto del noveno término del desarrollo de (x 2 + x –1 ) ² ⁰ , es",
+      "alternatives": [
+        "14",
+        "16",
+        "18",
+        "20",
+        "22"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-simulacro-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el polinomio completo y ordenado\nP(x)=(a − 2)x c+2 +(b+2)x b+3 +(2−c)x a +2\nCalcule la suma de sus coeficientes.",
+      "alternatives": [
+        "0",
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-preuniversitaria-libro-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta de verdad (V o F) según corresponda.\nI) P(x) =3x ² +5x+ 7es un polinomio completo y ordenado.\nII ) Q(x) =3x7+x ² –1 es un polinomio ordenado de forma decreciente.\nIII ) T(x) =x+3x³ – x ² + 8 es un polinomio completo.",
+      "alternatives": [
+        "VFF",
+        "FVV",
+        "FFF",
+        "VVV",
+        "VFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN DE POLINOMIOS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el valor de (V o F) de las siguientes proposiciones respecto al siguiente polinomio: P(x) =ax ³ +bx ² + cx +d\nI ) Si a=b= c =d= 0, entonces P(x) es polinomio nulo.\nII ) Si a, b, c y d son diferentes de cero, entonces P(x) es completo y ordenado.\nIII ) Si a=b=d= 1 ∧ c = 0, entonces P(x) es un polinomio completo.",
+      "alternatives": [
+        "FVV",
+        "FFF",
+        "VVV",
+        "VVF",
+        "VFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN DE POLINOMIOS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El grado relativo de “z” en:\nP(x; y; z) = 5x ⁴ y ³ z es:",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/monomios-ejemplos-problemas-resueltos-algebra-matematica-de-primaria-secundaria-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MONOMIOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al efectuar: (x³y ⁴ )(x ² y ª ), resulta un monomio de grado absoluto igual a 13.\nCalcular el valor de “a”.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/monomios-ejemplos-problemas-resueltos-algebra-matematica-de-primaria-secundaria-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MONOMIOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El grado relativo a “y” sumado con el grado relativo a “z” en:\nQ(x;y;z) = 8x ⁴ yz ⁶ da por resultado:",
+      "alternatives": [
+        "5",
+        "10",
+        "7",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/monomios-ejemplos-problemas-resueltos-algebra-matematica-de-primaria-secundaria-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MONOMIOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula la suma de coeficientes del polinomio:\nW(x) = 8x³ – 4x ² + 8x – 6",
+      "alternatives": [
+        "17",
+        "11",
+        "12",
+        "10",
+        "14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/suma-de-coeficientes-de-un-polinomio-ejemplos-problemas-resueltos-algebra-matematica-de-secundaria-y-pre-universidad-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SUMA DE COEFICIENTES DE UN POLINOMIO EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la suma de coeficientes de :\nH(x) = 3x ² + 5x + 7",
+      "alternatives": [
+        "8",
+        "15",
+        "12",
+        "13",
+        "17"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/suma-de-coeficientes-de-un-polinomio-ejemplos-problemas-resueltos-algebra-matematica-de-secundaria-y-pre-universidad-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SUMA DE COEFICIENTES DE UN POLINOMIO EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula la suma de coeficientes del polinomio:\nW(x) = 4x ³ – 5x ² + 3x – 1",
+      "alternatives": [
+        "7",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/suma-de-coeficientes-de-un-polinomio-ejemplos-problemas-resueltos-algebra-matematica-de-secundaria-y-pre-universidad-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SUMA DE COEFICIENTES DE UN POLINOMIO EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la suma de coeficientes de :\nH(x) = 4x² + 8x + 9",
+      "alternatives": [
+        "8",
+        "15",
+        "12",
+        "21",
+        "17"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/suma-de-coeficientes-de-un-polinomio-ejemplos-problemas-resueltos-algebra-matematica-de-secundaria-y-pre-universidad-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SUMA DE COEFICIENTES DE UN POLINOMIO EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pili y Mili reciben diariamente de propina (ax² − 3bx − cx + d) y (x ² + x + 5) soles, respectivamente, durante un período de x días. Al cabo de ese período el monto recibido por Pili genera un polinomio p(x) considerando x como variable y de manera análoga el monto recibido por Mili genera un polinomio q(x) y los polinomios p(x) y q(x) son tales que al disminuir p(x) en c coincide con q(x) disminuido en d.\n¿A cuánto ascendería la suma de los montos recibidos por Pili y Mili , aumentado en p(1) soles?\nSi el período durante el que recibieron la propina fue de (a − b − c + d) días.",
+      "alternatives": [
+        "102 soles",
+        "105 soles",
+        "100 soles",
+        "109 soles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/polinomios-especiales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — POLINOMIOS ESPECIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Olimpia llevó a su gato al veterinario, quién le prescribió dos medicamentos. Por cada kilogramo de peso, le prescribió (2y) mg del primer medicamento y (x) miligramos del segundo medicamento. El gato pesó x kilogramos y el tratamiento médico fue por x días. Respecto del polinomio p(x,y) que representa el total (en miligramos) de ambos medicamentos que recibió el gato de Olimpia al cabo de los x días de tratamiento, se puede afirmar:",
+      "alternatives": [
+        "El grado relativo con respecto a x es 2.",
+        "Su grado absoluto es 2.",
+        "Es un polinomio homogéneo de grado 3.",
+        "La suma de sus coeficientes es 2."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/polinomios-especiales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — POLINOMIOS ESPECIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De n ² estudiantes que dieron el examen de Cálculo I, aprobaron solamente m ² estudiantes.\nAdemás p(x) es un polinomio con coeficientes reales que verifica p(1− x)=2p(x)−mx+2\nSi n y m son, respectivamente, la suma de los coeficientes y el término independiente de p(x) , ¿cuántos estudiantes aprobaron el examen?",
+      "alternatives": [
+        "9",
+        "6",
+        "1",
+        "16"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/polinomios-especiales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — POLINOMIOS ESPECIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un misil es lanzado desde un submarino que se encuentra a una profundidad de 720 metros. La altura que alcanza el misil (en metros) con respecto al nivel del mar está expresado por el polinomio p(x)=−0,25x³+ax ² +bx+c donde x es el tiempo transcurrido en segundos desde que se lanza el misil. Si a los 4 segundos de lanzado el misil, se ubica en la línea del nivel del mar y a los 10 segundos derriba una avión que se encontraba volando a 2640 metros sobre el nivel del mar, las trayectorias del misil y el avión son coplanares. Determine el valor de verdad de las siguientes proposiciones:\nI) A los 2 segundos de lanzado el misil se encuentra a 472 metros sobre el nivel del mar.\nII) A los 2 segundos de lanzado el misil se encuentra a 472 metros por debajo del nivel del mar.\nIII) A los 2 segundos de lanzado el misil se encuentra a 642 metros por debajo del nivel del mar.",
+      "alternatives": [
+        "FFF",
+        "FFV",
+        "FVF",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/polinomios-especiales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — POLINOMIOS ESPECIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina el grado relativo a “y” si el grado respecto de “x” en :\nx n–3 y ⁴ + 2 x n–1 y n+3 + x y n es 9",
+      "alternatives": [
+        "4",
+        "9",
+        "10",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grados-de-un-polinomio-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — GRADOS DE UN POLINOMIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el polinomio:\nP(x)=5 x n+1 – 3x ⁵ + nx + n²\nSi : G.A(P)=6 , calcula P(2)",
+      "alternatives": [
+        "235",
+        "236",
+        "237",
+        "238",
+        "259"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grados-de-un-polinomio-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — GRADOS DE UN POLINOMIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el siguiente polinomio:\nP(x, y) = m x 3m + x 3m–1 y 5m+2 + y 5m–6\nSe cumple que : G.R.(y)=2G.R.(x)\nCalcula el grado absoluto del polinomio",
+      "alternatives": [
+        "13",
+        "17",
+        "14",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grados-de-un-polinomio-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — GRADOS DE UN POLINOMIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle un polinomio P(x) de tercer grado que sea divisible separadamente entre (x+3) y (x–2), que su suma de coeficientes sea 12 y que su término independiente es 12.\nDar el resto de dividir: P(x) entre (5x + 5).",
+      "alternatives": [
+        "6",
+        "13",
+        "12",
+        "24",
+        "42"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/divisibilidad-algebraica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIBILIDAD ALGEBRAICA EJERCICIOS RESUELTOS PDF TEOREMA DEL FACTOR"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el término independiente del polinomio P(x) de tercer grado sabiendo que al dividirlo separadamente entre (x – 5) y (x – 4) deja el mismo resto 4, pero si se le divide entre (x + 1) y (x – 1) deja como resto 34 y 40 respectivamente.",
+      "alternatives": [
+        "44",
+        "43",
+        "12",
+        "24",
+        "18"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/divisibilidad-algebraica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIBILIDAD ALGEBRAICA EJERCICIOS RESUELTOS PDF TEOREMA DEL FACTOR"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir un polinomio cúbico de coeficiente principal 3 entre (x ² – 9), se obtiene como residuo 6. Además, el término independiente del polinomio es – 3. Luego, halle el resto de dividir el polinomio entre (x –2).",
+      "alternatives": [
+        "6",
+        "22",
+        "0",
+        "–29",
+        "x+3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/algoritmo-de-la-division-algebraica.html",
+      "sourceName": "matematicasn.blogspot.com — ALGORITMO DE LA DIVISIÓN ALGEBRAICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta de verdad (V o F) respecto de las siguientes proposiciones.\nI ) Si P(x)=4x ² +9x ³ +6x+10, su coeficiente principal es 4.\nII ) Si T(x)=5x ⁴ +6x ² – 6+4x, su término independiente es – 6.\nIII ) Si K(x)=(x+ 2) ² +7x+x ³ , su grado es 3.",
+      "alternatives": [
+        "VVF",
+        "FVV",
+        "FFF",
+        "FFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/polinomios-ejercicios-resueltos-de_4.html",
+      "sourceName": "matematicasn.blogspot.com — POLINOMIOS ESO EJERCICIOS RESUELTOS MATEMÁTICA SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El polinomio P(x)=1,6×10 − ⁶ x ² –0,016x+ 30,4 modela el rendimiento de gasolina de un vehículo deportivo, donde x es el peso en libras del vehículo (1800≤x≤ 5400).\nDetermine el rendimiento de un Chevrolet Camaro de 4000 libras.",
+      "alternatives": [
+        "5,6",
+        "6,5",
+        "7,2",
+        "4,8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/polinomios-ejercicios-resueltos-de_4.html",
+      "sourceName": "matematicasn.blogspot.com — POLINOMIOS ESO EJERCICIOS RESUELTOS MATEMÁTICA SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El polinomio p(x) = (x – 1) ⁿ + (2x – 3 ) ⁿ + 2x + 5 cumple que su término independiente excede a la suma de sus coeficientes de p(x) en 79 unidades. Si el valor de “n” representa el doble de número de hijos que tiene Rubén, halle el número de nietos que él tiene, si se sabe que dicho número está representado por la mitad del número de hijos, más 2.",
+      "alternatives": [
+        "6",
+        "4",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/algebra-preuniversitaria-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 5 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el polinomio p(x) completo y ordenado de forma creciente tal que sus coeficientes son números enteros pares consecutivos y ordenados con término independiente 4 y cuyo coeficiente principal es cuatro veces el término independiente, halle p(1) .",
+      "alternatives": [
+        "60",
+        "65",
+        "70",
+        "80",
+        "75"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/polinomios-especiales-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — POLINOMIOS ESPECIALES PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La altura, en metros, que alcanza un proyectil al cabo de t segundos está dada por un polinomio cuadrático h(t) , que carece de término independiente y cuyo coeficiente principal es negativo. Si el coeficiente del término lineal de dicho polinomio es diez veces el opuesto de su coeficiente principal, ¿al cabo de cuántos segundos, el proyectil cae a tierra?",
+      "alternatives": [
+        "5s",
+        "12s",
+        "8s",
+        "10s",
+        "6s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/polinomios-especiales-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — POLINOMIOS ESPECIALES PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si dividimos un polinomio p(x) de quinto grado por (x²+ x + 1) se obtiene como resto (10x+2) y como cociente q(x) .\nSabiendo que p(4) = 0 y q(x) = xⁿ − ax² −18 , halle el valor de (n + a) .",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/division-de-polinomios-problemas.html",
+      "sourceName": "razonamientopdf.blogspot.com — DIVISIÓN DE POLINOMIOS PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el menor grado y el término independiente (respectivamente) del polinomio xⁿ+ax+b , a ≠ 0 , n > 1; tal que sea divisible por (x²−1) .",
+      "alternatives": [
+        "3 y 0",
+        "5 y 2",
+        "4 y 1",
+        "5 y 1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/division-de-polinomios-problemas.html",
+      "sourceName": "razonamientopdf.blogspot.com — DIVISIÓN DE POLINOMIOS PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el desarrollo de ( x ² + x − ² ) ¹ ⁰ , calcula el sexto termino.",
+      "alternatives": [
+        "271",
+        "240",
+        "252",
+        "238",
+        "246"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/binomio-de-newton-ejercicios-resueltos.html",
+      "sourceName": "algebraenpdf.blogspot.com — BINOMIO DE NEWTON EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el polinomio cúbico\nSe observa que\nCalcule el valor numérico de",
+      "alternatives": [
+        "- 17",
+        "- 11",
+        "- 21",
+        "- 28",
+        "- 29"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/sistemas-de-ecuaciones-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SISTEMAS DE ECUACIONES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si P(x–2)=3x–5\nHalle P(x+2)",
+      "alternatives": [
+        "x+3",
+        "x+5",
+        "2x+1",
+        "2x+5",
+        "3x+7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/3ro-4to-actividad-2-experiencia-5-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea Q(x)=(2x–1) 10 +(2x+1) 3 +1\nCalcule la suma de coeficientes y término independiente.",
+      "alternatives": [
+        "17 y 2",
+        "3 y 39",
+        "25 y 3",
+        "29 y 2",
+        "30 y 5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/3ro-4to-actividad-2-experiencia-5-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que: P ( x–1 ) =x 2 −x+1\nCalcular P(10)",
+      "alternatives": [
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/resolucion-examen-villarreal-admision.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS DE LA SALUD PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA D 2027 FORMALES Y NATURALES"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la pizarra, el profesor Lino escribe el polinomio\np(x)=x 4 –7x 3 +17x 2 –17x +m∈ ℤ [x], donde el valor de m coincide con el número de años que le faltan al profesor para celebrar 25 años de casado. Si x=2 es raíz de p(x), ¿cuántos años de casado tiene actualmente?",
+      "alternatives": [
+        "14",
+        "12",
+        "10",
+        "19",
+        "21"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/habilidad-algebraica-deco-prueba.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver :\n3xy² + 7x ² y – 3y ² x",
+      "alternatives": [
+        "7xy ²",
+        "7x ² y",
+        "3x ² – 4x ² y³",
+        "0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/terminos-semejantes-y-algebraicos-ejemplos-ejercicios-resueltos-explicados-paso-a-paso-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TÉRMINOS SEMEJANTES Y ALGEBRAICOS EJEMPLOS Y EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con una pieza de cartón de forma rectangular se fabrica una caja sin tapa, y se recorta en cada esquina de la pieza un cuadrado de lado X cm, de modo que uno de sus cuatro vértices es un vértice de la pieza de cartón. Además, V(X) es un polinomio que representa el volumen de la caja en función de su altura X. Si el perímetro de la pieza de cartón es 180 cm y el resto de dividir V(X) entre X – 3 es 4488, ¿qué área tiene la pieza de cartón?",
+      "alternatives": [
+        "2100 cm²",
+        "2000 cm ²",
+        "1960 cm ²",
+        "2132 cm ²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/razonamiento-matematico-del-examen-de-admision-a-la-universidad-problemas-resueltos-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MATEMÁTICA SOLUCIONARIO DE EXAMEN ADMISIÓN UNIVERSIDAD PRUEBA DE INGRESO CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Efectuar:\n4xy – 5xy + 6xy + 7xy – 8xy",
+      "alternatives": [
+        "4xy",
+        "5xy",
+        "7xy",
+        "6xy",
+        "8xy"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/terminos-semejantes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TÉRMINOS SEMEJANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular :\n3 + 3 + 3 + ... + 3\nsi hay 33 sumandos.",
+      "alternatives": [
+        "33",
+        "55",
+        "66",
+        "3",
+        "99"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/terminos-semejantes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TÉRMINOS SEMEJANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una tienda adquirí un pantalón que costó (5x–2y) soles y unos zapatos que costaron (x+7y) soles.\n¿Cuánto invertí en mi vestimenta?",
+      "alternatives": [
+        "6x + 5y",
+        "8x + 8y",
+        "x + y",
+        "0",
+        "5x – 9y"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/terminos-semejantes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TÉRMINOS SEMEJANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el planeta x los habitantes poseen:\n(3n+5m) brazos y (2n–7m) piernas\nUn día, se vio pasear a tres amigas de ese planeta.\n¿Cuántas extremidades pudieron observarse en total?",
+      "alternatives": [
+        "15n – 6m",
+        "– 6 n",
+        "5n – 2m",
+        "15m – 6n",
+        "0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/terminos-semejantes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TÉRMINOS SEMEJANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un salón de clase hay (3a+5b) carpetas, en otra aula hay (2a+5b) carpetas. Si llegaron a dar un examen (5a+7b) alumnos, ¿cuántas carpetas quedaron vacías?",
+      "alternatives": [
+        "b",
+        "2b",
+        "3b",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/terminos-semejantes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TÉRMINOS SEMEJANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la base de un rectángulo es 5a y su altura 3a, su perímetro es:",
+      "alternatives": [
+        "8a",
+        "15a2",
+        "16a",
+        "Ninguna de las anteriores"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/terminos-semejantes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TÉRMINOS SEMEJANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al simplificar la expresión 3x²y + 5xy ² resulta:",
+      "alternatives": [
+        "8x ² y",
+        "8xy ²",
+        "15x ² y",
+        "No se puede simplificar."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/terminos-semejantes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TÉRMINOS SEMEJANTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una zona de forma rectangular destinada a la práctica de manejo de motos tiene de largo (n 2 +2n+5)(n+3)(n–1) metros y de ancho, (n+4)(n–2)(n 2 +2n+10) metros.\nSi 2<n<6, halle la diferencia positiva entre las dimensiones de la zona de práctica.",
+      "alternatives": [
+        "58 m",
+        "63 m",
+        "60 m",
+        "65 m",
+        "57 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁLGEBRA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante los cinco primeros meses del presente año, los gastos mensuales, en soles, de Kittzay, fueron calculados por el polinomio lineal p(t), donde t es el valor del número de mes donde realiza gastos. Se sabe que, en el primer mes, gastó 450 soles; en el segundo,100 soles más que el mes anterior. ¿Cuánto gastó Kittzay en el quinto mes?",
+      "alternatives": [
+        "S/ 850",
+        "S/ 750",
+        "S/ 950",
+        "S/ 650",
+        "S/ 800"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-14-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La temperatura en °C durante las primeras horas de cierto día fue calculada por el polinomio cuadrático T(t) , donde t representa las horas transcurridas luego de iniciado un cierto día y además 0 ≤ t ≤ 6 . Se sabe que, a las dos de la mañana, la temperatura fue de –4°C; a las cuatro, – 2°C y a las seis, – 8°C. ¿Cuál fue la temperatura a la una de la mañana?",
+      "alternatives": [
+        "– 8 °C",
+        "– 12 °C",
+        "– 6 °C",
+        "– 14 °C",
+        "– 10 °C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-14-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las carpetas son individuales en las aulas A, B, C y D del quinto grado de una institución educativa, y están ordenadas en filas y columnas. Las aulas A, B, C y D disponen de m, n, p y (m+n+p) filas y n, p, m y (m+n+p) columnas respectivamente. Si el total de carpetas del aula D es el triple del total de carpetas A, B y C juntas, afirme lo correcto:\nI. A, B y C tienen la misma cantidad de carpetas.\nII. A y B juntas tienen la misma cantidad de carpetas que C.\nIII. A tiene el doble de carpetas de lo que tiene B.",
+      "alternatives": [
+        "Solo I",
+        "I y II",
+        "Solo III",
+        "Solo II",
+        "II y III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-14-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El perímetro de un rectángulo de largo «L» metros y ancho «A» metros, es de 24 metros. Si al largo se le disminuye 3 metros y al ancho 4 metros, su área será 4 m², determine la suma de los volúmenes de dos cubos cuyos lados miden (L – 3) y (A – 4) cm.",
+      "alternatives": [
+        "32 cm ²",
+        "50 cm ²",
+        "16 cm ²",
+        "65 cm ²",
+        "60 cm ²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-algebra-semana-14-2020-i.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tengo (3x – 2y) soles ahorrados. Trabajé una semana y obtuve (5x + 7y) soles, pero el fin de semana gasté 5y soles.\n¿Con cuántos soles me quedé?",
+      "alternatives": [
+        "8x",
+        "3x – 2y",
+        "5x + y",
+        "3y",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/reduccion-de-terminos-semejantes-con.html",
+      "sourceName": "matematicasn.blogspot.com — REDUCCIÓN DE TÉRMINOS SEMEJANTES CON SIGNOS DE AGRUPACIÓN Y COLECCIÓN EJEMPLOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados p(2x−1)=4x ² +2x−1 y q(x)=p(x ² ), se tiene que q(0) representa el número de cuadernos que compró Luis y q(1) el precio, en soles, de cada cuaderno que compró.\n¿Cuánto pagó en total Luis por esta compra?",
+      "alternatives": [
+        "S/ 3",
+        "S/ 4",
+        "S/ 5",
+        "S/ 6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/polinomios-especiales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — POLINOMIOS ESPECIALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina “m”, si el grado de la expresión:\nx ⁴ y m + x ⁵ y m+1 + x y m + m x m y ⁵ es igual a 8",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grados-de-un-polinomio-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — GRADOS DE UN POLINOMIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si P(x) =x³–3x ² +3x–1, determine el valor de P(11) +P(–9)",
+      "alternatives": [
+        "–1",
+        "0",
+        "9",
+        "121"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/valor-numerico-de-un-polinomio-notacion-polinomica-cambio-de-variable-ejemplos-problemas-resueltos-algebra-matematica-de-secundaria-y-pre-universidad-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — NOTACIÓN POLINÓMICA VALOR NUMÉRICO EJERCICIOS RESUELTOS PDF CAMBIO DE VARIABLE EN UN POLINOMIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen las siguientes expresiones matemáticas.\nP(x –1)=2x ² +5x+ 6\nQ(x+2)=x+3\nHalle el valor de P(Q(0))",
+      "alternatives": [
+        "8",
+        "–12",
+        "6",
+        "24"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/valor-numerico-de-un-polinomio-notacion-polinomica-cambio-de-variable-ejemplos-problemas-resueltos-algebra-matematica-de-secundaria-y-pre-universidad-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — NOTACIÓN POLINÓMICA VALOR NUMÉRICO EJERCICIOS RESUELTOS PDF CAMBIO DE VARIABLE EN UN POLINOMIO"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Efectúa el producto 3x ⁵ − 4x ⁴ +8x ³ por 2x −8\nEl resultado es:",
+      "alternatives": [
+        "6x ⁶ + 28x ⁵ +64x ³",
+        "5x ⁶ +15x ⁵ + 20x ⁴ −16x³",
+        "6x ⁶ −32x ⁵ + 48x ⁴ −64x ³",
+        "6x ⁶ + 20x ⁵ −64x ³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/multiplicaciones-algebraicas-ejemplos-problemas-resueltos-matematica-de-secundaria-y-pre-universidad-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ALGEBRAICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si los ingresos totales de la venta de (x+ y +m) artículos durante tres meses son (x+ y) ² soles, (3x+ 1) soles los dos primeros meses y el último mes es (3y + 1) soles, ¿cuánto costará cada artículo si m<2?",
+      "alternatives": [
+        "(x+ y + 1) soles",
+        "(x+ y + 2) soles",
+        "(x+ y) soles",
+        "xy soles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-ejercicios-resueltos_70.html",
+      "sourceName": "matematicasn.blogspot.com — COMO FACTORIZAR POLINOMIOS PREGUNTAS RESUELTAS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Paco paga (3x³+ 2x² + x + n) soles por la compra de (3x − 4) libros (todos del mismo precio) y recibe de vuelto 13 soles. Calcule el precio de cada libro para x=n+9",
+      "alternatives": [
+        "S/120.",
+        "S/132.",
+        "S/123.",
+        "S/93"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/metodo-de-ruffini-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DE RUFFINI EJERCICIOS RESUELTOS ( DIVISIÓN DE POLINOMIOS ) PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el valor de verdad (V o F) respecto a las siguientes proposiciones:\nI) Si S(x; y) =3x²y ⁴ –5, entonces su variable son x e y, y sus constantes son 3; 2; 4 y – 5.\nII ) La variable de la expresión T(2x) =x ² +3x+ 10 es x.\nIII ) Si A(x)=x − ¹ , entonces A(A(2) ) =2",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VFF",
+        "FFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/polinomios-ejercicios-resueltos-de_4.html",
+      "sourceName": "matematicasn.blogspot.com — POLINOMIOS ESO EJERCICIOS RESUELTOS MATEMÁTICA SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea el siguiente monomio y sus grados\nM(x; y)=(a+b)x a+2 y b–2\nGR x (M)=8\nGR y (M)=6\n¿Cuál es el coeficiente de M(x;y)?",
+      "alternatives": [
+        "14",
+        "11",
+        "13",
+        "12",
+        "15"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-intermedia-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el polinomio:\nP(x–6)=4x+1\nCalcula P(1)",
+      "alternatives": [
+        "26",
+        "25",
+        "27",
+        "28",
+        "29"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-intermedia-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el desarrollo de ( x² + x − ² ) ⁶ , calcula el cuarto termino.",
+      "alternatives": [
+        "27",
+        "20",
+        "15",
+        "28",
+        "26"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/binomio-de-newton-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — BINOMIO DE NEWTON EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar a si t 16 de (x ⁵ +y ª ) ³⁰ contiene a x ⁷ ⁵ y ⁶ ⁰",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/binomio-de-newton-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — BINOMIO DE NEWTON PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el resultado de la operación B + 2C - A, si se consideran los siguientes polinomios? A = x - 3, B = 3x^3 - x^2, C = -4x^2 + 2x",
+      "alternatives": [
+        "3x^3 - 9x^2 + 3x + 3",
+        "3x^3 - 9x^2 + x + 3",
+        "3x^3 - 9x^2 - 5x + 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ceneval.edu.mx/wp-content/uploads/2023/02/EXANI-II_Guia-para-el-sustentante_2023_UAA.pdf",
+      "sourceName": "ceneval.edu.mx — Guía del sustentante EXANI-II 2023 (CENEVAL) — EXANI-II Pensamiento matemático — ejemplo de reactivo"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El polinomio:\nP(x, y)=mx 2 y + nx 2 y – 4x 2 y + mxy – xy – nxy\nEs idénticamente nulo.\nHallar : 4mn",
+      "alternatives": [
+        "15",
+        "3",
+        "2",
+        "4",
+        "9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
     }
   ]
 }

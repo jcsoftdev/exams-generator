@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Indique verdadero (V) o falso (F) a las proposiciones siguientes:\nI. En los peróxidos el número de oxidación del oxígeno es -1.\nII. En los compuestos el número de oxidación de los metales alcalinos es +2.\nIII. El número de oxidación y la valencia son iguales.",
-      "alternatives": ["FFV", "VFF", "VFV", "VVV", "VVF"],
+      "alternatives": [
+        "FFV",
+        "VFF",
+        "VFV",
+        "VVV",
+        "VVF"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En los compuestos siguientes el carbono tiene valencia 4. Indique en cuál de ellos tiene número de oxidación cero.",
-      "alternatives": ["CH4", "CH3Cl", "CH2Cl2", "CHCl3", "CCl4"],
+      "alternatives": [
+        "CH4",
+        "CH3Cl",
+        "CH2Cl2",
+        "CHCl3",
+        "CCl4"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Identifique cuál de los siguientes compuestos químicos es un peróxido.",
-      "alternatives": ["NO2", "PbO2", "MnO2", "Fe3O4", "ZnO2"],
+      "alternatives": [
+        "NO2",
+        "PbO2",
+        "MnO2",
+        "Fe3O4",
+        "ZnO2"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 6"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Indique verdadero (V) o falso (F) a las proposiciones siguientes:\nI. Los óxidos, peróxidos, hidruros y sales haloideas neutras son compuestos binarios.\nII. Los hidróxidos y ácidos oxácidos son compuestos ternarios.\nIII. Los metales alcalinos al reaccionar con el agua forman hidróxidos.",
-      "alternatives": ["FVF", "VVF", "VVV", "FFV", "VFF"],
+      "alternatives": [
+        "FVF",
+        "VVF",
+        "VVV",
+        "FFV",
+        "VFF"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 7"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Indique la proposición incorrecta en relación a los siguientes compuestos:\nI. CaO   II. NaOH   III. H2O2   IV. HNO2   V. N2O3   VI. CrO",
-      "alternatives": ["Sólo I es un óxido básico.", "Sólo III es un peróxido.", "Sólo II es un hidróxido.", "IV es un compuesto ternario.", "V y VI son óxidos ácidos."],
+      "alternatives": [
+        "Sólo I es un óxido básico.",
+        "Sólo III es un peróxido.",
+        "Sólo II es un hidróxido.",
+        "IV es un compuesto ternario.",
+        "V y VI son óxidos ácidos."
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 9"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Indique la relación incorrecta entre la fórmula y la función química respectiva.",
-      "alternatives": ["MgH2: hidruro metálico", "SO2: óxido ácido", "MnO3: óxido básico", "K2O2: peróxido", "NaNO3: sal oxisal neutra"],
+      "alternatives": [
+        "MgH2: hidruro metálico",
+        "SO2: óxido ácido",
+        "MnO3: óxido básico",
+        "K2O2: peróxido",
+        "NaNO3: sal oxisal neutra"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 10"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Indique la nomenclatura sistemática del compuesto: Br2O5",
-      "alternatives": ["Anhídrido brómico", "Óxido brómico", "Óxido de bromo(V)", "Pentabromuro de dióxido(V)", "Pentóxido de dibromo"],
+      "alternatives": [
+        "Anhídrido brómico",
+        "Óxido brómico",
+        "Óxido de bromo(V)",
+        "Pentabromuro de dióxido(V)",
+        "Pentóxido de dibromo"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 11"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Indique la nomenclatura de Stock del compuesto: CrO3",
-      "alternatives": ["Óxido crómico", "Anhídrido crómico", "Trióxido de cromo", "Óxido de cromo(VI)", "Óxido crómico(VI)"],
+      "alternatives": [
+        "Óxido crómico",
+        "Anhídrido crómico",
+        "Trióxido de cromo",
+        "Óxido de cromo(VI)",
+        "Óxido crómico(VI)"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 12"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Indique la relación incorrecta entre la fórmula y el nombre respectivo.",
-      "alternatives": ["SO3: trióxido de azufre", "N2O3: trióxido de dinitrógeno", "CuO: óxido de cobre(II)", "Fe2O3: óxido de hierro(III)", "Na2O2: óxido de sodio(II)"],
+      "alternatives": [
+        "SO3: trióxido de azufre",
+        "N2O3: trióxido de dinitrógeno",
+        "CuO: óxido de cobre(II)",
+        "Fe2O3: óxido de hierro(III)",
+        "Na2O2: óxido de sodio(II)"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 13"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Indique la fórmula del tetraóxido de dinitrógeno y del hidróxido de cobalto(II).",
-      "alternatives": ["N2O4 ; Co(OH)2", "NO2 ; Co(OH)2", "N2O4 ; Co2OH", "NO4 ; Co(OH)2", "N4O2 ; Co(OH)2"],
+      "alternatives": [
+        "N2O4 ; Co(OH)2",
+        "NO2 ; Co(OH)2",
+        "N2O4 ; Co2OH",
+        "NO4 ; Co(OH)2",
+        "N4O2 ; Co(OH)2"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 17"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Identifique al posible elemento X y la fórmula de su óxido, sabiendo que la fórmula de su hidróxido es: X(OH)2",
-      "alternatives": ["K ; K2O", "Pb ; PbO2", "Zn ; ZnO2", "Ca ; CaO", "Fe ; Fe2O3"],
+      "alternatives": [
+        "K ; K2O",
+        "Pb ; PbO2",
+        "Zn ; ZnO2",
+        "Ca ; CaO",
+        "Fe ; Fe2O3"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 18"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Indique la proposición incorrecta acerca de los siguientes óxidos:\nI. MnO3   II. CuO   III. CaO   IV. SO3   V. NO2   VI. N2O3",
-      "alternatives": ["I, IV y VI son óxidos ácidos.", "II y III son óxidos básicos.", "V no forma ácidos ni bases.", "Con II y agua se obtiene Cu(OH)2.", "Con VI y agua se obtiene HNO3."],
+      "alternatives": [
+        "I, IV y VI son óxidos ácidos.",
+        "II y III son óxidos básicos.",
+        "V no forma ácidos ni bases.",
+        "Con II y agua se obtiene Cu(OH)2.",
+        "Con VI y agua se obtiene HNO3."
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 19"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En relación a los compuestos I y II, indique la proposición incorrecta.\nCompuesto I: NH3 (g)\nCompuesto II: HBr (l)",
-      "alternatives": ["Ambos compuestos son hidruros no metálicos.", "El nombre de I es azano.", "Ambos compuestos son binarios.", "I en medio acuoso se llama hidróxido de amonio.", "El nombre de II es ácido bromhídrico."],
+      "alternatives": [
+        "Ambos compuestos son hidruros no metálicos.",
+        "El nombre de I es azano.",
+        "Ambos compuestos son binarios.",
+        "I en medio acuoso se llama hidróxido de amonio.",
+        "El nombre de II es ácido bromhídrico."
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 20"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuál de las siguientes fórmulas está escrita con error?",
-      "alternatives": ["FeSO4", "KBr", "NaCO3", "PbS", "CuSO4"],
+      "alternatives": [
+        "FeSO4",
+        "KBr",
+        "NaCO3",
+        "PbS",
+        "CuSO4"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 24"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En relación al compuesto CuSO4·5H2O, indique verdadero (V) o falso (F) a las proposiciones siguientes:\nI. Es una oxisal hidratada.\nII. Es de color blanco.\nIII. Su nombre tradicional es sulfato cúprico pentahidratado.\nIV. Es una sal más estable que la sal anhidra.",
-      "alternatives": ["VVFF", "FFVV", "VFFV", "VVVF", "VFVV"],
+      "alternatives": [
+        "VVFF",
+        "FFVV",
+        "VFFV",
+        "VVVF",
+        "VFVV"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
       "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 22"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿En cuántos de los siguientes óxidos NO se forman hidróxidos?\nFe2O3, P2O5, CrO3, K2O, MgO, SO2, CuO",
-      "alternatives": ["1", "5", "3", "2", "4"],
+      "alternatives": [
+        "1",
+        "5",
+        "3",
+        "2",
+        "4"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html?m=1",
       "sourceName": "Matematicasn - Nomenclatura Inorgánica Ejercicios Resueltos PDF, Problema 1"
@@ -182,10 +278,1690 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Indique la proposición verdadera respecto al compuesto Br2O.",
-      "alternatives": ["Se nombra dióxido de bromo.", "El número de oxidación del Br es -1.", "Se nombra monóxido de dibromo.", "Es un óxido básico.", "Se nombra óxido brómico."],
+      "alternatives": [
+        "Se nombra dióxido de bromo.",
+        "El número de oxidación del Br es -1.",
+        "Se nombra monóxido de dibromo.",
+        "Es un óxido básico.",
+        "Se nombra óxido brómico."
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html?m=1",
       "sourceName": "Matematicasn - Nomenclatura Inorgánica Ejercicios Resueltos PDF, Problema 11"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se dispone de 200 mililitros de hidróxido de potasio 0,1 M y se desea llevarlo a un pH neutro utilizando ácido sulfúrico 0,5 M (considere base y ácido fuerte respectivamente). Al respecto, determine el valor de verdad (V o F) de las siguientes proposiciones:\nI. Están presentes 0,02 equivalentes de la base (KOH).\nII. Para lograr el objetivo se necesita 20 mililitros de ácido.\nIII. La reacción genera una sal oxisal conocida como sulfito de potasio.",
+      "alternatives": [
+        "FFV",
+        "FVF",
+        "VVF",
+        "VFF",
+        "VVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/quimica-deco-examen-resuelto-de-ingreso.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA DECO RESUELTA"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los compuestos binarios formados por la combinación de un elemento y el oxígeno reciben el nombres de óxidos. Identifique el nombre del Cl ₂ O ₃ en la nomenclatura STOCK.",
+      "alternatives": [
+        "Trióxido de dicloro",
+        "Óxido de cloro (III)",
+        "Óxido cloroso",
+        "Óxido clórico"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/quimica-deco-examen-resuelto-de-ingreso.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA DECO RESUELTA"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a los ácidos oxácidos, después de determinar la verdad (V) o falsedad (F) de las afirmaciones, indique la respuesta correcta.\nI. Se pueden obtener al reaccionar un óxido ácido y agua.\nII. Pueden formularse como H a E b O c , siendo E un no-metal.\nIII. Un ejemplo es el ácido tetraoxosulfato (VI) de hidrógeno.",
+      "alternatives": [
+        "solo II",
+        "solo III",
+        "I, II y III",
+        "solo I",
+        "I y II"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Tercera-prueba-uni-solucionario-examen-admision-universidad-ingenieria-fisica-quimica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA QUÍMICA EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA TERCERA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para determinar el contenido de azufre de una muestra, se hace reaccionar ácido sulfúrico con una solución de cloruro de bario, con agitación constante.\nSi la reacción que ocurre es:\nH ₂ SO ₄ (ac) +BaCl ₂ (ac) → BaSO ₄ (s) +HCl (ac)\nIndique la alternativa correcta, luego de balancear la ecuación.",
+      "alternatives": [
+        "La suma de los coeficientes estequiométricos de la reacción es 4.",
+        "Ambos compuestos de bario tienen el mismo número de moles.",
+        "El número de moles del ácido oxácido es igual al del ácido hidrácido.",
+        "La formación de sal oxisal requiere doble número de moles de sal haloidea."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-18-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PRUEBA DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREA E SOLUCIONES CLAVES RESPUESTAS PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los hidróxidos, también llamados bases o álcalis, se producen cuando los óxidos metálicos reaccionan con agua. El nombre del siguiente hidróxido Fe(OH) ₃ en la nomenclatura STOCK es",
+      "alternatives": [
+        "hidróxido férrico.",
+        "hidróxido de hierro (III).",
+        "trihidróxido de hierro.",
+        "hidróxido de hierro."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-18-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PRUEBA DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREA E SOLUCIONES CLAVES RESPUESTAS PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La atomicidad del hidróxido formado a partir de un oxido básico pentatómico, es:",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/monotonia-y-curvatura-funciones-con.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNJ 2027 UNIVERSIDAD NACIONAL DE JAÉN EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El siguiente compuesto a qué función química inorgánica pertenece:\nH 2 SO 4",
+      "alternatives": [
+        "Hidróxido",
+        "Óxido",
+        "Anhidrido",
+        "Ácido hidrácido",
+        "Ácido oxácido"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-upc-examen-admision-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UPC 2027 EXAMEN ADMISIÓN UNIVERSIDAD CRONOGRAMA VACANTES ESTRUCTURA PUNTAJES PROSPECTO TEMAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una forma de purificar el CO 2 exhalado por los astronautas en la cabina de las estaciones espaciales, se realiza mediante la reacción: Con respecto a las sustancias presentes en la reacción, selecciona la secuencia correcta de verdadero (V) o falso (F) de las siguientes proposiciones:\nI. El CO 2 es un anhidrido y su nombre común es dióxido de carbono.\nII. El NaOH es un hidruro metálico y su nombre es hidruro de sodio.\nIII. El nombre de la sal oxisal es carbonato de sodio.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "VVV",
+        "FFV",
+        "FVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/quimica-untels-examen-resuelto-admision.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un óxido básico es un compuesto iónico, que se forma cuando el oxígeno se combina con un metal; un óxido ácido, es un compuesto covalente que resulta cuando el oxígeno reacciona con un no metal. Seleccione la relación incorrecta entre el nombre y la fórmula de los siguientes óxidos.",
+      "alternatives": [
+        "óxido de azufre (IV): SO 2",
+        "óxido sódico: Na 2 O",
+        "trióxido de dinitrogeno: N 2 O 3",
+        "óxido cuproso: CuO",
+        "óxido niquélico: Ni 2 O 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El NiSO 4 es una sal cristalina de color verde y sin olor; es obtenida como subproducto del refinado de cobre y es empleado en procesos de niquelado. Con respecto al compuesto NiSO 4 , indique la alternativa que presenta la secuencia correcta luego de determinar si la proposición es verdadera (V) o falsa (F).\nI) Es una sal oxisal ternaria.\nII) El estado de oxidación del azufre es + 6.\nIII) Su nombre tradicional es sulfato niqueloso.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VFF",
+        "FVV",
+        "VVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ácidos oxácidos son compuestos ternarios, en general, se obtienen por reacción química de un óxido ácido con el agua. Respecto a lo anterior, indique el nombre común o tradicional de los compuestos HBrO 2 , H 2 SO 3 y H 3 PO 4 .",
+      "alternatives": [
+        "ácido bromoso, ácido sulfúrico y ácido fosfórico",
+        "ácido brómico, ácido sulfuroso y ácido fosfórico",
+        "ácido brómico, ácido sulfúrico y ácido fosforoso",
+        "ácido bromoso, ácido sulfuroso y ácido fosfórico",
+        "ácido bromoso, ácido sulfúrico y ácido fosforoso"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De acuerdo a la siguiente reacción química, indique la secuencia correcta de verdad (V) o falsedad (F).\nCH 3 OH+CH 3 COOH ⇄ P +H 2 O\nI ) El producto (P) pertenece a la función éster.\nII ) La fórmula del compuesto (P) es CH 3 COOCH 3 .\nIII ) El nombre del compuesto (P) es metanoato de etilo.",
+      "alternatives": [
+        "VVV",
+        "FVF",
+        "VFF",
+        "VVF",
+        "VFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cloruro de magnesio (Mg Cℓ 2 )( 12 Mg, 17 Cℓ) es una sal haloidea que se usa como lubricante de hilos, como suplemento alimenticio, en la fabricación de papel, etc. Identifique sus configuraciones electrónicas de catión y anión, respectivamente.",
+      "alternatives": [
+        "1s 2 2s 2 2p 6 ; 1s 2 2s 2 2p 6 3s 2 3p 6",
+        "1s 2 2s 2 2p 6 3s 1 ; 1s 2 2s 2 2p 6 3s 2 3p 5",
+        "1s 2 2s 2 2p 6 3s 1 ; 1s 2 2s 2 2p 6 3s 2 3p 6",
+        "1s 2 2s 2 2p 6 1s 2 ; 2s 2 2p 6 3s 2 3p 5",
+        "1s 2 2s 2 2p 6 1s 2 ; 2s 2 2p 8 3s 2 3p 6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/quimica-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La nomenclatura química (símbolos y fórmulas) se basa en un conjunto de reglas que se aplican para nombrar y representar sustancias químicas. Emplee el sistema de nomenclatura de tipo tradicional y seleccione el nombre del compuesto (óxido básico) formado como producto de la máxima oxidación del hierro y los procesos de corrosión metálica.",
+      "alternatives": [
+        "Óxido ferroso",
+        "Óxido de hierro (II)",
+        "Trióxido de dihierro",
+        "Óxido de hierro (III)",
+        "Óxido férrico"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/quimica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fabricación del vidrio se inventó en Egipto hace aproximadamente 5 mil años al calentar una mezcla de arena, cenizas vegetales y piedra caliza. En 1674, G. Ravenscroft sustituyó la piedra caliza por óxido de plomo y obtuvo un vidrio más pesado y también más blando que podía pulirse. Fue hasta el siglo XIX, cuando se conoció la composición química de este material: dióxido de silicio, carbonato de sodio y carbonato de calcio. El color se debe a la presencia de óxidos metálicos en pequeñas cantidades; por ejemplo, de hierro para el color café, de cobalto para el azul, de oro para el rojo.\nDetermine el valor de verdad (V o F) de los siguientes enunciados:\nI) el carbonato de sodio tiene por fórmula Na 2 C O 3 .\nII) el vidrio, arena y cenizas vegetales son compuestos.\nIII) el compuesto dióxido de silicio es óxido básico.\nIV) la piedra caliza es la mezcla de CaC O 3 y Ca O .",
+      "alternatives": [
+        "VFVV",
+        "VFVF",
+        "FFFV",
+        "FVVF",
+        "VFFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-quimica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS QUÍMICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El agua potable contiene carbonatos, bicarbonatos, iones calcio, iones magnesio, etc., por lo cual se la conoce como agua dura. Esta ocasiona la formación del sarro en las tuberías de agua o en las paredes del recipiente donde se hierve el agua. Para removerlo, se utiliza ácido clorhídrico según la reacción\nCaCO 3 (s) +HCI (ac) → CaCl 2(ac) +H 2 O ( ℓ ) +CO 2(g)\nUna forma de comprobar que realmente se está removiendo el sarro es reconocer el desprendimiento de CO2(g), que, al reaccionar con el hidróxido de calcio, forma nuevamente carbonato de calcio.\nRespecto de lo expresado, determine el valor de verdad (V o F) de las siguientes proposiciones:\nI. Si el agua dura contiene sales de carbonato de magnesio, al reaccionar con el ácido clorhídrico, produce la sal haloidea cloruro de magnesio.\nII. Para reconocer el CO 2(g) , la ecuación química es la siguiente:\nCO 2(g) +Ca(OH) 2(ac) → CaCO 3 (s) +H 2 O ( ℓ )\nIII. Las causantes del sarro son sales oxisales, donde la carga catiónica se debe a los metales del grupo IIA.\nIV. La sumatoria de coeficientes en la ecuación que representa la remoción del sarro es cinco.",
+      "alternatives": [
+        "VVFV",
+        "VFVV",
+        "FVVF",
+        "VVFF",
+        "VVVF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-quimica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS QUÍMICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene las siguientes fórmulas químicas y funciones inorgánicas.",
+      "alternatives": [
+        "PbO 2",
+        "SO 2",
+        "Fe(OH) 3",
+        "CaC ℓ 2 i) Hidróxido ii) Óxido básico iii) Sal haloidea iv) Óxido ácido Respecto al ordenamiento a), b), c), d) de los compuestos, asigne la función correspondiente.",
+        "iii, ii, iv, i"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al siguiente compuesto: Br 2 O marque la afirmación verdadera:",
+      "alternatives": [
+        "Su nombre es dióxido de bromo.",
+        "El número de oxidación del átomo de bromo es –1.",
+        "Su nombre es monóxido de dibromo.",
+        "Corresponde a un óxido básico.",
+        "Su nombre es óxido brómico."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica aquella alternativa que representa la mayor atomicidad.",
+      "alternatives": [
+        "Óxido de potasio",
+        "Óxido cobaltoso",
+        "Trióxido de cromo",
+        "Anhídrido sulfuroso",
+        "Anhídrido hipocloroso"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala un óxido ácido en las siguientes alternativas.",
+      "alternatives": [
+        "CaO",
+        "Br 2 O 3",
+        "ZnO",
+        "SiO",
+        "SnO 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las siguientes alternativas indica la alternativa correcta :",
+      "alternatives": [
+        "CuO : Óxido cuproso",
+        "HgO : Óxido mercurioso",
+        "I 2 O 5 : Hexaóxido de diiodo",
+        "P 2 O 5 : Pentóxido de dinitrógeno",
+        "SeO 2 : Anhídrido selenioso"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la fórmula de los siguientes compuestos e indica el de menos atomicidad.",
+      "alternatives": [
+        "Trióxido de manganeso",
+        "Pentaóxido de dinitrógeno",
+        "Óxido de aluminio",
+        "Óxido plúmbico",
+        "Anhídrido Iodoso"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la alternativa que contenga la suma de los estados de oxidación de los diferentes elementos del oxígeno:",
+      "alternatives": [
+        "Óxido de estroncio, anhídrido sulfúrico :4",
+        "Trióxido de difósforo, óxido de sodio : 4",
+        "Óxido áurico, óxido férrico : 5",
+        "Anhídrido perclórico, sílice : 6",
+        "Óxido de aluminio, anhídrido mangánico:7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La roca caliza, materia prima para la industria del cemento, presentan impurezas como Aℓ 2 O 3 , Fe 2 O 3 y SiO 2 .\nAl respecto, seleccione la alternativa que contiene la nomenclatura sistemática del compuesto de aluminio, la nomenclatura tradicional del compuesto de hierro y la nomenclatura stock del compuesto de silicio, respectivamente.",
+      "alternatives": [
+        "Trióxido de dialuminio, óxido ferroso, óxido de silicio (IV)",
+        "Óxido de aluminio, óxido de hierro (III), dióxido de silicio",
+        "Trióxido de dialuminio, óxido férrico, óxido de silicio (IV)",
+        "Óxido de aluminio, trióxido de hierro, dióxido de silicio",
+        "Trióxido de dialuminio, óxido férrico, óxido de silicio (II)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los procesos corrosivos se realizan si existe una zona catódica (reducción) y anódica (oxidación), afectando a los metales como el hierro (Fe). El hierro se oxida primero en el ion Fe (ac) 2+ , dicho anión puede formar compuestos. Indique el nombre del óxido e hidróxido, en nomenclatura Stock y sistemático, respectivamente, que se puede formar inicialmente (antes de posteriores reacciones) con el hierro presente en solución acuosa.",
+      "alternatives": [
+        "Óxido ferroso – hidróxido ferroso",
+        "Óxido ferroso – hidróxido férrico",
+        "Óxido férrico – hidruro de hierro (II)",
+        "Óxido de hierro (III) – hidróxido férrico",
+        "Óxido de hierro (II) – dihidróxido de hierro"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las excretas por microorganismos anaeróbicos pueden presentar compuestos del nitrógeno y continuar a partir de este, una serie de reacciones.\nPosteriormente se pueden formar los compuestos (a) CO 2 ; (b) NH 3 y (c) NH 4 + .\nCon respecto a la información del proceso, indicar el nombre stock del compuesto de (a), el nombre común de (b) y el nombre común de (c).",
+      "alternatives": [
+        "Anhídrido carbónico, amoniaco, ion amonio",
+        "Dióxido de carbono, trihidruro de nitrógeno, ion nitrógeno",
+        "Anhídrido carbónico, amoniaco, ion nitrito",
+        "Dióxido de carbono, hidruro de nitrógeno (III), ion nitrato",
+        "Óxido de carbono (IV), amoníaco, ion amonio"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los elementos químicos, al reaccionar con el oxígeno, forman compuestos conocidos como óxidos; tenemos aquellos formados por metales y no metales, tales como K 2 O, CaO, Br 2 O y Cℓ 2 O 5 .\nCon respecto a los compuestos mencionados, indique la alternativa correcta.",
+      "alternatives": [
+        "Los compuestos K 2 O y MgO son óxidos ácidos.",
+        "El Br 2 O y Cℓ 2 O 5 son considerados óxidos básicos.",
+        "Los compuestos mencionados son sólidos iónicos.",
+        "Si el Br 2 O y Cℓ 2 O 5 reaccionan con agua, forman sales.",
+        "El hidróxido de potasio es formado a partir de K 2 O y agua."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Consumimos alimentos para obtener a partir de ellos materia y energía. Los carbohidratos, lípidos y proteínas son transformados finalmente en CO 2 y H 2 O.\nEn relación al dióxido de carbono y agua, seleccione el valor de verdad (V o F) de cada proposición.\nI) En los compuestos, el estado de oxidación del C = +4, del H = +1 y del O = – 2.\nII) El nombre sistemático del CO 2 es dióxido de carbono y Stock óxido de carbono (IV).\nIII) El anhídrido carbónico reacciona con agua y forma el ácido oxácido (H 2 CO 3 ).",
+      "alternatives": [
+        "VFV",
+        "VVF",
+        "VVV",
+        "FVV",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si al nitrato plumboso se le agrega yoduro de sodio, se obtiene un precipitado amarillo conocido como yoduro de plomo (II); si se le agrega un ácido, puede obtenerse un precipitado blanco de cloruro plumboso, esto es debido a su baja solubilidad.\nCon respecto a los compuestos mencionados, seleccione el valor de verdad (V o F) de las siguientes proposiciones:\nI) En el texto se menciona una sal oxisal y tres sales haloideas.\nII) El yoduro de sodio es un compuesto iónico que tiene por fórmula NaI.\nIII) El nombre sistemático del yoduro de plomo (II), es diyoduro de plomo.\nIV) El cloruro plumboso tiene como fórmula el PbC ℓ 2",
+      "alternatives": [
+        "FVVF",
+        "VFVV",
+        "VVVV",
+        "VFFV",
+        "VVFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La lluvia ácida corroe al mármol (roca que contiene principalmente al carbonato de calcio); uno se los componentes de la dicha lluvia es el ácido sulfúrico, la ecuación que representa la reacción química es la siguiente:\nCaCO 3 ( s ) + H 2 SO 4 ( ac ) → CaSO 4 ( s ) + CO 2 ( g ) + H 2 O ( ℓ )\nCon respecto a la información mostrada, seleccione el valor de verdad (V o F) de las siguientes proposiciones:\nI) El ácido sulfúrico, H 2 SO 4 , es un ácido hidrácido.\nII) El CaSO 4 formado se clasifica como sal oxisal.\nIII) El CO 2 es un gas considerado como óxido básico.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FVF",
+        "FFV",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ácidos neutralizan las bases (hidróxidos). Estas bases, contienen iones hidróxido, [(OH) 1 – ] en su estructura química. Compuestos como el Mg(OH) 2 , Ca(OH) 2 y Aℓ(OH) 3 son algunos de sus representantes.\nCon respecto a estos hidróxidos, seleccione el valor de verdad (V o F) de las siguientes proposiciones:\nI) En la nomenclatura sistemática, el Mg(OH) 2 se llama dihidróxido de magnesio.\nII) El Ca(OH) 2 reacciona con el HNO 3 (ac) y forma como producto Ca(NO 3 ) 2 y H 2 O.\nIII) La nomenclatura stock del Aℓ(OH) 3 es hidróxido de aluminio (III).",
+      "alternatives": [
+        "VVF",
+        "VFF",
+        "VVV",
+        "FFV",
+        "FVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las bacterias realizan diversos procesos para metabolizar y obtener energía, entre ellos realizar la reducción de los iones sulfato (SO 4 2 – ), a iones sulfuro (S 2 – ). Los iones sulfuros están presentes en gas sulfuro de hidrógeno, el cual reacciona con el agua y genera el ácido correspondiente.\nCon respecto a la información presentada, determine el valor de verdad (V o F) de las siguientes proposiciones:\nI) El sulfuro de hidrógeno es un gas que pertenece a los compuestos hidrácidos.\nII) El gas disulfuro de hidrógeno se combina con el agua y forma el ácido hidrácido correspondiente.\nIII) La fórmula del hidrácido sulfuro de hidrógeno es H 2 S (g) y la fórmula del ácido hidrácido es H 2 S (ac) .",
+      "alternatives": [
+        "VVV",
+        "VFF",
+        "FVV",
+        "FFV",
+        "VFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los hidruros metálicos son de tipo binarios, formados por un elemento metálico y el hidrógeno. Muchos de estos compuestos son comercializados a nivel internacional por su gran importancia en la industria.\nAl respecto, indique el valor de verdad (V o F) de las siguientes proposiciones:\nI) El LiH es un hidruro metálico, y su nombre común es hidruro de litio.\nII) La nomenclatura sistemática del AℓH 3 , es trihidruro de aluminio.\nIII ) El FeH 2 tiene el nombre stock como, hidruro ferroso.",
+      "alternatives": [
+        "FVF",
+        "FFV",
+        "VVF",
+        "VVV",
+        "FVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para la agricultura es vital el empleo de fertilizantes para asegurar el volumen de producción esperado. Entre los fertilizantes más empleados se encuentran los nitratos de sodio, potasio y amonio, los fosfatos y otras sales haloideas y oxisales. Indique la alternativa incorrecta en relación a la formación de sales.",
+      "alternatives": [
+        "Las sales oxisales se obtienen por reacción entre un hidróxido y un ácido oxácido.",
+        "La reacción entre el cloro y el magnesio produce una sal haloidea.",
+        "Un ácido oxácido reacciona con algunos metales y forma una sal oxisal.",
+        "El hidróxido y un ácido hidrácido genera un hidruro no metálico."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El dióxido de carbono es un compuesto soluble en agua, forma el ácido carbónico. El ácido carbónico en agua se separa en iones protón (H+) y bicarbonato (HCO 3 ) – , fenómeno que ocurre en la sangre de nuestro cuerpo y en el citoplasma. Pero cuando el ácido carbónico circula en agua naturales o subterráneas en contacto con las rocas forma bicarbonato de magnesio y bicarbonato de calcio; así cuando el agua hierve en una tetera o en un caldero o se evapora durante miles de años puede formar calcita o carbonato de calcio y también carbonato de magnesio.\nIndique la alternativa que contiene el nombre correcto, tradicional, sistemático y stock de las sustancias resaltadas, según el orden que se observa en la ecuación:\nH 2 CO 3 (ac) + Mg(OH) 2 (s) → MgCO 3 (s) + H 2 O ( ℓ )",
+      "alternatives": [
+        "ácido carbónico – hidróxido de magnesio – carbonato magnésico (II)",
+        "carbonato de dihidrógeno – dihidróxido de magnesio – carbonato de monomagnesio",
+        "ácido carbonoso – dihidróxido de magnesio – carbonato de magnesio (I)",
+        "ácido carbónico – dihidróxido de magnesio – carbonato de magnesio"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los antiácidos son sustancias que reaccionan con los ácidos y disminuyen su efecto corrosivo estomacal y alivian el ardor generando sensación de alivio al paciente. Entre los antiácidos de uso clínico tenemos al hidróxido de magnesio e hidróxido de aluminio. Estos neutralizan el exceso de ácido secretado por la mucosa gástrica, el ácido clorhídrico. Luego de la neutralización, las sales obtenidas son cloruro de magnesio y cloruro de aluminio. Indique las fórmulas de las sustancias resaltadas en negritas.",
+      "alternatives": [
+        "Mg(OH) 2 – A ℓ (OH) 3 – MgC ℓ 3 – AℓC ℓ 3",
+        "MgH 2 – A ℓ (OH) 3 – Mg(C ℓ O) 3 – A ℓ C ℓ 3",
+        "Mg(OH) 2 – AℓH 3 – MgC ℓ 2 – A ℓ (C ℓ O 4 ) 3",
+        "Mg(OH) 2 – Aℓ(OH) 3 – MgC ℓ 2 – A ℓ C ℓ 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando una sustancia acepta protones se comporta como un (a) .............. y cuando cede protones se comporta como un (a) ......................",
+      "alternatives": [
+        "Ácido – base",
+        "Oxisal – hidróxido",
+        "Hidrácido - hidróxido",
+        "Base – ácido",
+        "Oxácido - base"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/acido-y-bases-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁCIDOS Y BASES EJERCICIOS RESUELTOS PH POH ARRHENIUS BRONSTED LOWRY LEWIS PDF "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Después de balancear la reacción\nAℓ 2 O 3(s) + HCℓ (ac) → AℓCℓ 3(ac) + H 2 O ( ℓ )\nIndique verdadero (V) o falso (F) respecto a los enunciados siguientes:\nI. El coeficiente del óxido básico es 1.\nII. La suma de los coeficientes de la reacción es 14.\nIII. El coeficiente de la sal haloidea es 2.",
+      "alternatives": [
+        "FVV",
+        "FFV",
+        "VFF",
+        "VVF",
+        "VFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — REACCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el Perú y otros países sudamericanos consumimos el mote , un derivado del maíz, rico en calcio. El mote se obtiene luego de hervir el maíz para mote con cal y cenizas. La cal viva u óxido de calcio, al contacto con el agua se convierte gradualmente en cal apagada o hidróxido de calcio, sustancia muy poco soluble en agua. Por otro lado, el hierro y el cobre, oligoelementos, forman óxidos e hidróxidos importantes. Al respecto, selecciones la alternativa que contiene el nombre tradicional, sistemático y stock del CaO, CuO y Fe(OH) 3 , respectivamente.",
+      "alternatives": [
+        "Óxido cálcico – óxido cúprico – trihidróxido de hierro (III)",
+        "Óxido de calcio – monóxido de monocobre – hidróxido férrico",
+        "Óxido de calcio – óxido de cobre – hidróxido de hierro (III)",
+        "Óxido cálcico – monóxido de cobre – hidróxido de hierro (II)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/nomenclatura-inorganica-10-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS FORMACIÓN DE COMPUESTOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Nombrar compuestos químicos puede ser complicado si no hemos practicado en forma secuencial y progresiva, desde la fórmula de los elementos hasta obtener la fórmula de la sustancia buscada (molécula, compuesto iónico). Seleccione la alternativa que contiene la relación correcta: fórmula – clasificación – nombre de la sustancia.",
+      "alternatives": [
+        "H 2 S (ac) – hidrácido – ácido sulfhídrico",
+        "KI – sal haloidea – yodito de potasio",
+        "HBr (g) – ácido hidrácido – bromuro de hidrógeno",
+        "PbH 2 – hidruro – hidruro plumboso"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/nomenclatura-inorganica-10-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS FORMACIÓN DE COMPUESTOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la tierra existen incontables sustancias cuya existencia desconocemos; su uso cotidiano ignoramos y sus nombres también. Nos referimos a ellas como el producto comercial que adquirimos, por ejemplo, ácido muriático. Pero, ¿qué sustancias contienen? Los químicos han creado muchos sistemas de nomenclatura. Indique el nombre correcto, fórmula química y sistema de nomenclatura empleado para las siguientes sustancias.",
+      "alternatives": [
+        "Clorato de sodio, NaC ℓ , nomenclatura stock",
+        "Óxido de carbono, CO 2 , nomenclatura tradicional o común",
+        "Ácido clorhídrico, HC ℓ (g) , nomenclatura sistemática",
+        "Ácido sulfúrico, H 2 SO 4 , nomenclatura tradicional"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/nomenclatura-inorganica-10-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS FORMACIÓN DE COMPUESTOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El bromato de potasio (KBrO 3 ) es una sustancia cuyo empleo en panadería, como mejorador de masa está prohibido. Una forma de obtener esta sal es mediante la reacción entre hidróxido de potasio y ácido brómico. Selecciones la alternativa que contiene la fórmula correcta de los reactantes.",
+      "alternatives": [
+        "KOH – HBrO",
+        "KH – HBrO 2",
+        "K 2 O – HBrO 4",
+        "KOH – HBrO 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/nomenclatura-inorganica-10-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS FORMACIÓN DE COMPUESTOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según la concentración del ácido y la temperatura, la reacción del ácido nítrico con el cobre metálico forma productos diferentes. Si a temperatura ambiente tiene lugar la reacción\nCu (s) + HNO ₃ (ac) → Cu(NO ₃ ) ₂ (ac) + H ₂ O (s) + NO ₂ (g)\nentonces los productos se forman cuando",
+      "alternatives": [
+        "la suma de los coeficientes estequiométricos de la reacción es cinco.",
+        "al transferir dos electrones, el cobre actúa como agente reductor.",
+        "el ácido. nítrico (HNO ₃ (ac) ) se reduce al transferir dos pares de electrones.",
+        "además del agua, uno de los productos formados es una sal haloidea."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN SAN MARCOS ÁREA A 2022 II MEDICINA HUMANA SOLUCIONARIO PRUEBA DESARROLLADA ADMISIÓN UNIVERSIDAD RESPUESTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una forma de purificar el CO ₂ exhalado por los astronautas en la cabina de las estaciones espaciales, se realiza mediante la reacción: Con respecto a las sustancias presentes en la reacción, selecciona la secuencia correcta de verdadero (V) o falso (F) de las siguientes proposiciones:\nI. El CO ₂ es un anhidrido y su nombre común es dióxido de carbono.\nII. El NaOH es un hidruro metálico y su nombre es hidruro de sodio.\nIII. El nombre de la sal oxisal es carbonato de sodio.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "VVV",
+        "FFV",
+        "FVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2021/10/quimica-unt-solucionario-de-examen-de-admision-universidad-nacional-de-trujillo-simulacro-desarrollado-preguntas-resueltas-word-pdf.html",
+      "sourceName": "quimicapdf.blogspot.com — QUÍMICA ADMISIÓN UNT EXAMEN UNIVERSIDAD NACIONAL DE TRUJILLO RESUELTO SIMULACRO DE INGRESO SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la fórmula química del compuesto formado por la unión electrostática de los iones aluminio y sulfuro?",
+      "alternatives": [
+        "A ℓ S 3",
+        "A ℓ 3 S 2",
+        "A ℓ 2 (SO 4 ) 3",
+        "A ℓ 2 S 3",
+        "A ℓ 3 (SO 4 ) 2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si comparamos los compuestos: ácidos nítrico y ácido fosfórico.\n¿Cuál será su coincidencia?",
+      "alternatives": [
+        "Nitrógeno y Fósforo presentan igual estado de oxidación.",
+        "Ambos son ácidos hidrácidos.",
+        "La cantidad de átomos de oxígeno en cada caso.",
+        "Ambos son monopróticos.",
+        "Presentan igual atomicidad."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla aquel elemento cuyo estado de oxidación sea +4.",
+      "alternatives": [
+        "C ℓ 2 O 3",
+        "SO 3",
+        "CaO",
+        "CO 2",
+        "N 2 O 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marca la alternativa que contenga un metal trivalente.",
+      "alternatives": [
+        "SrO",
+        "Cs 2 O",
+        "Ni 2 O 3",
+        "PtO 2",
+        "SnO"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relaciona correctamente ambas columnas:\nI ) A ℓ 2 O 3\nII ) CaO\nIII ) CO 2 (s)\nIV ) SiO 2",
+      "alternatives": [
+        "Cal viva",
+        "Hielo seco",
+        "Sílice",
+        "Alumina",
+        "Cuprita"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica la alternativa que contenga solo óxidos ácidos:",
+      "alternatives": [
+        "CuO, CO 2 , Hg 2 O",
+        "Au 2 O 3 , PbO 2 , CoO",
+        "MnO 2 , N 2 O 5 , CrO 3",
+        "SiO 2 , K 2 O, CaO",
+        "F 2 O, TeO, RaO"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cultura China es mundialmente conocida por sus famosos cerámicos con variados y vistosos colores. Dentro de sus insumos empleados están los óxidos de hierro y óxidos de plomo. Estos óxidos se comercializan internacionalmente para usarse como pigmentos en cerámica.\nIndique el nombre tradicional del Fe 2 O 3 y el nombre sistemático del PbO 2 , respectivamente.",
+      "alternatives": [
+        "Óxido férrico y óxido plúmbico",
+        "Óxido ferroso y óxido plúmbico",
+        "Óxido férrico y dióxido de plomo",
+        "Óxido de hierro (III) y óxido plumboso"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A partir del carbonato de calcio (CaCO 3 ), se realiza un proceso para obtener productos industriales. El proceso inicia con una molienda de dicho carbonato y desinfección con hipoclorito de sodio, NaClO, luego se añade un reactivo conteniendo el anión fosfato (PO 4 ) 3 – y ácido nítrico HNO 3 .\nCon respecto a la información presentada, determine los estados de oxidación del carbono, cloro, fósforo y del nitrógeno en las especies que lo contienen respectivamente.",
+      "alternatives": [
+        "+4, +2, +5, +5",
+        "+2, +1, +5, +5",
+        "+4, +1, +5, +5",
+        "+2, +1, +3, +5",
+        "+4, +2, +3, +5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las sales se encuentran en forma natural o son sintetizadas para un uso determinado; entre ellas están las haloideas como por ejemplo el sulfuro de potasio, el bromuro de hierro (II) en la síntesis de catalizadores y el fluoruro de sodio en la fabricación de cerámicos.\nAl respecto, seleccione la alternativa que contenga la fórmula de dichas sales.",
+      "alternatives": [
+        "K 2 S ; FeBr 2 ; NaF 2",
+        "K 2 S ; FeBr 3 ; NaF",
+        "K 2 S 2 ; FeBr 2 ; NaF",
+        "K 2 S ; FeBr 2 ; NaF",
+        "K 2 S ; FeBr3 ; NaF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ácidos oxácidos y sales oxisales son ampliamente empleados en diferentes industrias; así el ácido perclórico se emplea en la industria de los explosivos, el bromato de potasio en la industria de la panificación y el hipoclorito de sodio en la industria de los desinfectantes.\nAl respecto, seleccione la alternativa que contiene la fórmula química de los compuestos mencionados respectivamente.",
+      "alternatives": [
+        "HCℓO, KBrO 3 , NaCℓO 3",
+        "HCℓO 4 , KBrO 3 , NaCℓO",
+        "HCℓO 3 , KBrO, NaCℓO 4",
+        "HCℓO 4 , KBrO 2 , NaCℓO",
+        "HCℓO 2 , KBrO 3 , NaCℓO"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Compuesto como el cloruro de sodio es usado en la industria alimentaria; el bromuro de hierro (III), usado en tratamiento de agua y el tricloruro de oro usado en laboratorio químico de síntesis.\nAl respecto, seleccione la alternativa que contenga la fórmula de dichas sales.",
+      "alternatives": [
+        "NaBr; FeBr 2 ; Au C ℓ 3",
+        "NaCℓ; FeBr 2 ; Au C ℓ 3",
+        "NaCℓ; FeBr 3 ; AuC ℓ 3",
+        "NaBr; FeBr 3 ; AuC ℓ",
+        "NaC ℓ l; FeBr 2 ; AuC ℓ"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Después de una cosecha los agricultores suelen quemar la maleza o hierba mala. La ceniza obtenida se emplea como nutriente de la planta, también para evitar presencia de caracoles y hongos al espolvorearla alrededor del tallo. Las cenizas contienen óxidos de sodio, potasio, calcio y magnesio, entre otros. Seleccione la fórmula de los óxidos de sodio y de calcio, respectivamente.",
+      "alternatives": [
+        "Na 2 O – CaO 2",
+        "Na 2 O 2 – CaO",
+        "Na 2 O 2 – CaO 2",
+        "Na 2 O – CaO"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/nomenclatura-inorganica-10-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS FORMACIÓN DE COMPUESTOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cemento, mezcla empleada en la construcción de edificios y casas, está formado por silicatos, cuya composición química se expresa a través de óxidos como cal (CaO), sílice (SiO 2 ), alúmina (A ℓ 2 O 3 ), óxido férrico (Fe 2 O 3 ≈ hematita). Indique el nombre sistemático de la alúmina y el nombre stock de la hematita.",
+      "alternatives": [
+        "Trióxido de dialuminio – óxido ferroso",
+        "Óxido de aluminio – óxido de hierro (II)",
+        "Óxido alumínico – óxido férrico",
+        "Trióxido de dialuminio – óxido de hierro (III)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/nomenclatura-inorganica-10-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NOMENCLATURA INORGÁNICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS FORMACIÓN DE COMPUESTOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando el peróxido de sodio se trata con ácido sulfúrico diluido, se obtiene ______.",
+      "alternatives": [
+        "sulfato de sodio y agua",
+        "sulfato de sodio y oxígeno",
+        "sulfato de sodio, hidrógeno y oxígeno",
+        "sulfato de sodio y peróxido de hidrógeno"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep509.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.9 MCQ 12"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los hidróxidos anfóteros reaccionan tanto con álcalis como con ácidos. ¿Cuál de los siguientes hidróxidos metálicos del Grupo 2 es soluble en hidróxido de sodio?",
+      "alternatives": [
+        "Be(OH)2",
+        "Mg(OH)2",
+        "Ca(OH)2",
+        "Ba(OH)2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep510.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.10 MCQ 10"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La hidroxilamina (NH2OH) es extremadamente reactiva en reacciones de sustitución nucleofílica, lo que justifica su utilización en diversos procesos. La reacción de sustitución nucleofílica entre el anhídrido acético y la hidroxilamina está representada. O O NH2 + OH O O O Producto A + NH2OH O O O Anhídrido OH N acético + OH H Producto B El producto A es favorecido en relación al B, por un factor de 10^5. En un estudio de posible sustitución del uso de hidroxilamina, se probaron las moléculas numeradas de 1 a 5. HO HO N O N HO N NH2 N O H H Entre las moléculas probadas, ¿cuál de ellas presentó menor reactividad?",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2018/2018_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2018 dia 2 caderno azul questão 109"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La reacción de C6H5CH2Br con hidróxido de sodio acuoso sigue ____________.",
+      "alternatives": [
+        "mecanismo SN1",
+        "mecanismo SN2",
+        "Cualquiera de los dos anteriores dependiendo de la temperatura de la reacción",
+        "regla de Saytzeff"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep510.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.10 MCQ 23"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes compuestos reaccionará con una solución de hidróxido de sodio en agua?",
+      "alternatives": [
+        "C6H5OH",
+        "C6H5CH2OH",
+        "(CH3)3COH",
+        "C2H5OH"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep511.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.11 MCQ 11"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el reactivo más adecuado para la siguiente conversión?",
+      "alternatives": [
+        "Reactivo de Tollens",
+        "Peróxido de benzoílo",
+        "Solución de I2 y NaOH",
+        "Solución de Sn y NaOH"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep512.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.12 MCQ 10"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes métodos de preparación de aminas dará el mismo número de átomos de carbono en la cadena de la amina que en el reactivo?",
+      "alternatives": [
+        "Reacción de nitrito con LiAlH4.",
+        "Reacción de amida con LiAlH4 seguida de tratamiento con agua.",
+        "Calentamiento de un haluro de alquilo con la sal de potasio de la ftalimida seguido de hidrólisis.",
+        "Tratamiento de una amida con bromo en solución acuosa de hidróxido de sodio. 185 Aminas 23/04/18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 27"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El bicarbonato de sodio es un antiácido usado para aliviar la acidez estomacal; la fórmula química de dicho antiácido es:",
+      "alternatives": [
+        "Na 2 CO 3",
+        "NaHCO 3",
+        "NaOH",
+        "NaCO 3",
+        "NaCO 4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/simulacro-callao-admision-universidad.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN CALLAO 2022-1 BLOQUE II III ADMISIÓN UNIVERSIDAD DESARROLLO 2022-I CLAVES RESPUESTAS PRUEBA UNAC SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué sal se obtiene de la siguiente reacción?\n2HC ℓ + Fe(OH) 2 →...+2H 2 O",
+      "alternatives": [
+        "Fe(CℓO) 2",
+        "FeCℓ 3",
+        "Fe(CℓO 4 ) 2",
+        "FeCℓ 2",
+        "FeCℓ 4 CLIC AQUÍ Ver LO DE QUÍMICA SOLUCIONES BIOLOGÍA"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/simulacro-callao-admision-universidad.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN CALLAO 2022-1 BLOQUE II III ADMISIÓN UNIVERSIDAD DESARROLLO 2022-I CLAVES RESPUESTAS PRUEBA UNAC SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F).\nI. La valencia es igual al estado de oxidación.\nII. El estado de oxidación del Mn en el KMnO 4 es +7.\nIII. La valencia del S en el H 2 SO 4 es 4.",
+      "alternatives": [
+        "VFV",
+        "FFV",
+        "FVF",
+        "FVV",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/quimica-callao-examen-de-admision-universidad-unac-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ácido que presenta la mayor cantidad de átomos de oxígeno es el",
+      "alternatives": [
+        "ácido bórico",
+        "ácido peryódico",
+        "ácido nítrico",
+        "ácido brómico",
+        "ácido hiposelenioso"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/quimica-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — QUIMICA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considerando la relación fórmula-nombre de los siguientes hidruros:\nI. CsH: Hidruro de cesio\nII. H 2 Se ( ℓ ) : Seleniuro de hidrógeno\nIII. CaH: Hidruro de calcio\nIV. AlH 3 : Hidruro de aluminio\nV. H 2 S (g) : Sulfuro de hidrógeno\nVI. HF (g) : Ácido fluorhídrico\nIndique cuántas proposiciones correctas:",
+      "alternatives": [
+        "5",
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/curvas-en-el-plano-lugares-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA BIOMÉDICAS 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifica al sesquióxido de cromo y el cromato de potasio, son dos compuestos importantes del cromo.",
+      "alternatives": [
+        "Cr 2 O 3 y K 2 Cr 2 O 7",
+        "CrO 3 y K 2 Cr 2 O 7",
+        "Cu 2 O y K 2 CuO 3",
+        "Cr 2 O 3 y K 2 CrO 4",
+        "Cu 2 O 3 y KCuO"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-metricos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA II UNCP 2027 INGENIERÍAS INGRESO UNIVERSIDAD DEL CENTRO DESARROLLO CLAVES ARQUITECTURA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué compuesto presenta mayor número de átomos por fórmula?",
+      "alternatives": [
+        "Nitrato de amonio",
+        "Sulfato plúmbico",
+        "Hipoclorito de sodio",
+        "Cloruro cúprico",
+        "Carbonato de calcio"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-de-razonamiento-logico.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN UNSLG ÁREA A CIENCIAS DE LA SALUD INGRESO UNIVERSIDAD NACIONAL SAN LUIS GONSAGA RESUELTO UNICA PDF MEDICINA 2026"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Muchos óxidos metálicos son usados como componentes en las pilas, que son dispositivos que convierten energía química en energía eléctrica, por ejemplo, el HgO y el NiO. Determine la alternativa que contiene el nombre tradicional del primer óxido y el nombre stock del segundo, respectivamente.",
+      "alternatives": [
+        "Óxido mercúrico, óxido de níquel (II)",
+        "Óxido mercurioso, óxido de níquel (II)",
+        "Óxido de mercurio, óxido de níquel (III)",
+        "Óxido de mercurio (II), óxido de níquel (II)",
+        "Óxido mercúrico, óxido de níquel (III)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-9-educacion-fisica-experiencia-8-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPRUNSA INGENIERÍAS 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS EXAMEN RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la nomenclatura tradicional de los hidróxidos, indique la correspondencia incorrecta.",
+      "alternatives": [
+        "Ca(OH) 2 = Hidróxido de calcio",
+        "Cu(OH) 2 : Hidróxido cúprico",
+        "Mg(OH) 2 : Hidróxido de magnesio",
+        "Fe(OH) 3 : Hidróxido ferroso",
+        "NaOH : Hidróxido de sodio"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-9-educacion-fisica-experiencia-8-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPRUNSA INGENIERÍAS 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS EXAMEN RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes relaciones fórmula - nombre, es correcta?",
+      "alternatives": [
+        "HCℓ - ácido clorhídrico",
+        "NaCℓO - clorito de sodio",
+        "Ba O 2 - peróxido de bario",
+        "HN O 3 - ácido nitroso",
+        "NaHC O 3 - carbonato de sodio"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Qué sustancia no presenta la nomenclatura correcta",
+      "alternatives": [
+        "H 3 BO 3 : ácido bórico",
+        "H 3 PO 4 : ácido fosfórico",
+        "HBrO : ácido hipobromoso",
+        "H 3 AsO 3 : ácido arsenioso",
+        "HMnO 4 : ácido mangánico"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/guia-docente-matematica-primaria-cuadernos-de-trabajo-auto-aprendizaje-aprendo-en-casa-fichas-libros-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL INGENIERÍAS PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA C 2027 – ARQUITECTURA"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifique las proposiciones que son verdaderas (V) o falsas (F) en relación a los estados de oxidación (E.O.) de los elementos químicos.\nI) El sodio tiene un E. O. de –1 en el compuesto NaH.\nII) En el compuesto H 2 O 2 , el E.O. del oxígeno es de –1.\nIII) En el óxido Fe 2 O 3 el E.O. del hierro (Fe) es +2.",
+      "alternatives": [
+        "FFF",
+        "VVV",
+        "FVV",
+        "VVF",
+        "FVF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/quimica-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se debe etiquetar correctamente una sustancia que contiene el anión ClO 2 – , usado para procesos de blanqueo industrial. Nombre del anión:",
+      "alternatives": [
+        "Hipoclorito",
+        "Clorito",
+        "Clorato",
+        "Perclorato",
+        "Diclorato"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para aglomerar los sólidos en suspensión durante el tratamiento de aguas industriales, se añade un compuesto iónico como el Fe ₂ (SO ₄ ) ₃ . Identifique la nomenclatura tradicional de la sustancia que se usa.",
+      "alternatives": [
+        "sulfato de hierro (III)",
+        "sulfato ferroso",
+        "sulfato férrico",
+        "tristetraoxidosulfato(2–) de dihierro"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/quimica-preuniversitaria-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PRUEBA RESUELTA DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS DECO PREGUNTAS EXPLICADAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de oxígeno que contiene el permanganato de calcio:",
+      "alternatives": [
+        "4",
+        "2",
+        "3",
+        "8",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/examen-admision-villareal-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO VILLARREAL 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNFV 2026 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El nombre sistemático del sesquióxido de oro, es:",
+      "alternatives": [
+        "Monóxido de cloro",
+        "Óxido áurico",
+        "Óxido de oro (I)",
+        "Óxido de oro (III)",
+        "Trióxido de cloro"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/1ro-2do-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREVI TERCER EXAMEN INGRESO DIRECTO UNIVERSIDAD PRUEBA FINAL CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De los compuestos: Na 2 O; CaO; SO; H 2 O 2 , se podría afirmar que:",
+      "alternatives": [
+        "El oxígeno tiene en ellos E.O. –2.",
+        "Son funciones binarias",
+        "Son funciones triatómicas",
+        "Son óxidos básicos",
+        "Todos son óxidos ácidos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/1ro-2do-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREVI TERCER EXAMEN INGRESO DIRECTO UNIVERSIDAD PRUEBA FINAL CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la relación nombre-fórmula química correcta:",
+      "alternatives": [
+        "Hexacloruro de fósforo, P C ℓ 5",
+        "Manganato de calcio, CaMnO 4",
+        "Cloruro de bario, Ba(C ℓ O 2 ) 2",
+        "Nitrato de potasio, KNO 2",
+        "Clorito de sodio, NaC ℓ O"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/quimica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para la producción industrial de fertilizantes químicos se requiere de óxido de calcio, amoniaco, ácido fosfórico y ácido sulfúrico (productos inorgánicos de mayor producción). ¿Cuál es el mayor estado de oxidación de algún átomo de un elemento presente en estas especies químicas?",
+      "alternatives": [
+        "+4",
+        "+5",
+        "+2",
+        "+3",
+        "+6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sistemas-de-ecuaciones-lineales-metodo.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 FÍSICA QUÍMICA TERCERA PRUEBA RESUELTA –RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a los siguientes oxoaniones, indique aquel que tenga el nombre correcto.",
+      "alternatives": [
+        "SO 3 2 – : sulfato",
+        "ClO – : clorito",
+        "MnO 4 – : permanganato",
+        "Cr 2 O 7 2 – : cromato",
+        "ClO 7 – : perclorato"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ácido fosfórico es un líquido incoloro y viscoso que se utiliza en detergentes, fertilizante, dentífricos y bebidas gaseosas. Identificar la fórmula del ácido fosfórico:",
+      "alternatives": [
+        "H 3 PO 4",
+        "HPO 3",
+        "H 4 P 2 O 7",
+        "H 4 P 2 O 5",
+        "H 3 PO 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/quimica-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las sales son sustancias que se usan cotidianamente como el cloruro de sodio (sal de mesa), nitrato de potasio (para dar color a los embutidos y como conservante), el permanganato de potasio (como desinfectante), etc. Estas se obtienen por un efecto de neutralización de los iones para formar la sal y los productos. ¿Cuál de las siguientes sales tiene más átomos de oxígeno por molécula?",
+      "alternatives": [
+        "Sulfito de calcio",
+        "Perclorato de cobre (II)",
+        "Permanganato de potasio",
+        "Hiposulfito de magnesio",
+        "Hipoyodito de aluminio"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/quimica-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La estructura del ozono es:",
+      "alternatives": [
+        "O 2",
+        "O 3",
+        "O",
+        "CO 2",
+        "O 4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-quimica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE QUÍMICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La pasta dental contiene una sustancia que protege el esmalte de los dientes, cuya fórmula es:",
+      "alternatives": [
+        "C ℓ Na",
+        "F",
+        "CaPO 4",
+        "NaF",
+        "NaC ℓ O"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-quimica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE QUÍMICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En qué sustancia está presente el calcio?",
+      "alternatives": [
+        "CO 2",
+        "KNO 3",
+        "Ca(OH) 2",
+        "H 3 PO4",
+        "CH 3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-quimica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE QUÍMICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique en la siguiente relación, cuáles son ácidos hidrácidos.\nI. HCℓO\nII. H 2 S\nIII. HNO 3\nIV. HC ℓ\nV. H 2 Te\nVI. HI\nVII. H 3 PO 4",
+      "alternatives": [
+        "II y IV",
+        "I, IV y VI",
+        "I, III y VII",
+        "II, IV y VII",
+        "II, IV, V y VI"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/quimica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fórmula del hidruro de litio es:",
+      "alternatives": [
+        "LiH 2",
+        "Li(OH) 2",
+        "Li 2 H",
+        "LiOH",
+        "LiH"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/admision-callao-2016-i-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — CALLAO 2021 II SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD BLOQUES II III UNAC 2021-2 CIENCIAS EMPRESARIALES Y DE LA SALUD ÁREAS 2 y 3 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes especies químicas es el ion seleniato?",
+      "alternatives": [
+        "Se O 3 2 –",
+        "Se O 4 2 –",
+        "S e 2 2 –",
+        "HSe O 4 –",
+        "Se O 2 2 –"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-prueba-resuelta-de-admision-a-la-universidad-uni-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2022 II TERCERA PRUEBA SOLUCIONARIO ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA 2022-2 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El estado de oxidación del cobre en\n[Cu(NH 3 )OH] + CuS CuSO 4\nRespectivamente, es:",
+      "alternatives": [
+        "+ 1, + 1 y +1",
+        "+ 1, + 1 y +2",
+        "+ 2, + 2 y +1",
+        "+ 2, + 2 y +2",
+        "0, + 2 y +2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/quimica-cayetano-heredia-examen.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique cuántos hidruros no metálicos y cuántos hidruros metálicos, respectivamente, hay en este listado:",
+      "alternatives": [
+        "HC ℓ",
+        "H 2 S",
+        "NH 3",
+        "CaH 2",
+        "LiH"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/quimica-cayetano-heredia-examen.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El óxido que produce H2O2 al tratarse con H2SO4 diluido es —",
+      "alternatives": [
+        "PbO2",
+        "BaO2 .8H2O + O2",
+        "MnO2",
+        "TiO2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep509.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.9 MCQ 7"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes compuestos se usa para ablandar el agua?",
+      "alternatives": [
+        "Ca3 (PO4)2",
+        "Na3PO4",
+        "Na6P6O18",
+        "Na2HPO4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep509.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.9 MCQ 16"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el análisis cualitativo, cuando se hace pasar H2S a través de una solución acuosa de una sal acidificada con HCl diluido, se obtiene un precipitado negro. Al hervir el precipitado con HNO3 diluido, se forma una solución de color azul. La adición de un exceso de solución acuosa de amoniaco a esta solución da _________.",
+      "alternatives": [
+        "precipitado azul intenso de Cu (OH)2 2+",
+        "solución azul intenso de [Cu (NH3)4]",
+        "solución azul intenso de Cu(NO3)2",
+        "solución azul intenso de Cu(OH)2.Cu(NO3)2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep507.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.7 MCQ 2"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El nombre IUPAC correcto de [Pt(NH3)2Cl2] es",
+      "alternatives": [
+        "Diamminodicloridoplatino (II)",
+        "Diamminodicloridoplatino (IV)",
+        "Diamminodicloridoplatino (0)",
+        "Dicloridodiamminoplatino (IV)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep509.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.9 MCQ 5"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El nombre IUPAC de [Pt(NH3)2Cl(NO2)] es:",
+      "alternatives": [
+        "Diaminecloronitrito de platino",
+        "Cloronitrito-N-amminplatino(II)",
+        "Diamminecloridonitrito-N-platino(II)",
+        "Diamminecloronitrito-N-platinato(II)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep509.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.9 MCQ 14"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué compuesto está mal nombrado?",
+      "alternatives": [
+        "CaO: óxido de calcio",
+        "PbO 2 : dióxido de plomo",
+        "HCl: cloruro de hidrógeno",
+        "H 2 SO 3 : ácido sulfúrico",
+        "Cu(OH) 2 : hidróxido de cobre (II)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/quimica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
     }
   ]
 }

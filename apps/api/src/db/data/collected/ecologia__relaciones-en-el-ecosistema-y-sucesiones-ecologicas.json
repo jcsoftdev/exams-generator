@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Cuando un organismo vive a expensas de otro sin causarle daño ni beneficio, es una relación de",
-      "alternatives": ["mutualismo", "protocooperación", "sociabilidad", "simbiosis", "comensalismo"],
+      "alternatives": [
+        "mutualismo",
+        "protocooperación",
+        "sociabilidad",
+        "simbiosis",
+        "comensalismo"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
       "sourceName": "matematicasn - Ecología banco de preguntas resueltas (admisión), Primera Práctica, Pregunta 7"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Los líquenes y las micorrizas son ejemplos de",
-      "alternatives": ["amensalismo", "comensalismo", "parasitismo", "mutualismo", "depredación"],
+      "alternatives": [
+        "amensalismo",
+        "comensalismo",
+        "parasitismo",
+        "mutualismo",
+        "depredación"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
       "sourceName": "matematicasn - Ecología banco de preguntas resueltas (admisión), Examen Principal, Pregunta 4"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La relación en la que dos especies tienen vida en común, obtienen un beneficio recíproco y dependen mutuamente para sobrevivir se denomina",
-      "alternatives": ["sociedades", "compensación", "comensalismo", "predación", "simbiosis"],
+      "alternatives": [
+        "sociedades",
+        "compensación",
+        "comensalismo",
+        "predación",
+        "simbiosis"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
       "sourceName": "matematicasn - Ecología banco de preguntas resueltas (admisión), Examen Principal, Pregunta 33"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La tara libera sustancias que impiden el desarrollo de las gramíneas, sin obtener por ello ningún beneficio. Esta relación corresponde a",
-      "alternatives": ["mutualismo", "neutralismo", "comensalismo", "amensalismo", "parasitismo"],
+      "alternatives": [
+        "mutualismo",
+        "neutralismo",
+        "comensalismo",
+        "amensalismo",
+        "parasitismo"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
       "sourceName": "matematicasn - Ecología banco de preguntas resueltas (admisión), Cuarta Práctica, Pregunta 8"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las aves que se posan sobre los mamíferos para alimentarse de las garrapatas que los parasitan establecen con ellos una relación de",
-      "alternatives": ["amensalismo", "competencia", "protocooperación", "parasitismo", "comensalismo"],
+      "alternatives": [
+        "amensalismo",
+        "competencia",
+        "protocooperación",
+        "parasitismo",
+        "comensalismo"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
       "sourceName": "matematicasn - Ecología banco de preguntas resueltas (admisión), Cuarta Práctica, Pregunta 10"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Algunas plantas, como las pertenecientes a la familia Fabaceae, que incluye hierbas, arbustos o árboles, logran expandir su área de absorción de nutrientes mediante unos hongos que viven en sus raíces, formando endomicorrizas o ectomicorrizas. ¿A qué proceso de interacción biológica nos estamos refiriendo?",
-      "alternatives": ["Cooperación", "Parasitismo", "Mutualismo", "Comensalismo", "Amensalismo"],
+      "alternatives": [
+        "Cooperación",
+        "Parasitismo",
+        "Mutualismo",
+        "Comensalismo",
+        "Amensalismo"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
       "sourceName": "matematicasn - San Marcos Biología preguntas resueltas (admisión UNMSM), Pregunta 13"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "El cambio que experimentan los ecosistemas a través del tiempo se denomina",
-      "alternatives": ["cadena alimenticia", "red trófica", "termoclina", "ecotono", "sucesión"],
+      "alternatives": [
+        "cadena alimenticia",
+        "red trófica",
+        "termoclina",
+        "ecotono",
+        "sucesión"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
       "sourceName": "matematicasn - Ecología banco de preguntas resueltas (admisión), Segunda Práctica, Pregunta 2"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La secuencia de cambios y modificaciones que experimentan las poblaciones de una comunidad a través del tiempo se conoce como",
-      "alternatives": ["equilibrio ecológico", "comunidad clímax", "sucesión ecológica", "distribución ecológica", "eutrofización"],
+      "alternatives": [
+        "equilibrio ecológico",
+        "comunidad clímax",
+        "sucesión ecológica",
+        "distribución ecológica",
+        "eutrofización"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
       "sourceName": "matematicasn - Ecología banco de preguntas resueltas (admisión), Cuarta Práctica, Pregunta 15"
@@ -94,10 +142,1411 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El aprovechamiento de la materia orgánica que queda tras un incendio forestal por parte de nuevos organismos vegetales germinados a través de las semillas sobrevivientes corresponde a la fase inicial de una",
-      "alternatives": ["sucesión ecológica evolutiva", "sucesión ecológica primaria", "sucesión ecológica secundaria", "clímax", "equilibrio ecológico"],
+      "alternatives": [
+        "sucesión ecológica evolutiva",
+        "sucesión ecológica primaria",
+        "sucesión ecológica secundaria",
+        "clímax",
+        "equilibrio ecológico"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
       "sourceName": "matematicasn - San Marcos Biología preguntas resueltas (admisión UNMSM), Pregunta 36"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El período Lítico, ocurrido desde fines del Pleistoceno hasta los inicios del Holoceno (caracterizado por cambios en la temperatura de la Tierra), presentó características sociales, económicas y culturales que permitieron el desarrollo de la vida del hombre en el actual territorio peruano. En relación con los grupos humanos de dicho período determine el valor de verdad (V o F) de los siguientes enunciados:\nI. Se organizaron en bandas dirigidas por un líder, pero sin diferencias sociales.\nII. Presentaron una economía basada en la depredación y división del trabajo por género y edad.\nIII. Alcanzaron conocimiento del trabajo de cestería y redes de pesca en aldeas.\nIV. Desarrollaron una agricultura incipiente y la crianza de animales de corral.",
+      "alternatives": [
+        "VVVF",
+        "VVFF",
+        "FFFF",
+        "FVFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://banco-preguntas.blogspot.com/2021/10/preguntas-deco-de-los-primeros.html",
+      "sourceName": "banco-preguntas.blogspot.com — PREGUNTAS DECO DE LOS PRIMEROS POBLADORES DEL PERÚ 3"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La temperatura, clima, el suelo, agua, son ejemplos de:",
+      "alternatives": [
+        "hábitat.",
+        "comunidad biológica.",
+        "medio ambiente.",
+        "factores físicos.",
+        "biocenosis"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/12/cultura-general-educacion-civica-solucionario-examen-admision-universidad-institutos-superiores-tecnicos-escuela-pnp-prueba-resuelta-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CULTURA GENERAL 2026 PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD INSTITUTOS TÉCNICOS SUPERIORES ESCUELA PNP PRUEBA DE INGRESO RESPUESTAS"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La población de parihuanas que ocupan la bahía Independencia, en Pisco, alcanzó un elevado número de individuos por hectárea durante los años 90. Con el transcurso del tiempo, la población ha descendido notablemente debido al evento de El Niño y a la actividad pesquera intensiva. Gran número de individuos de la especie ha migrado hacia el sur en busca de mejores condiciones de vida. Desde el punto de vista ecológico, ¿qué término describiría estos cambios?",
+      "alternatives": [
+        "sucesión ecológica",
+        "desequilibrio ecológico",
+        "comunidad clímax",
+        "dinámica de poblaciones"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/biologia-preuniversitaria-examen.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA DECO RESUELTA"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la naturaleza, existen relaciones interespecíficas, lo cual puede tener una influencia nula, favorable o desfavorable. Considerando ello, relacione correctamente ambas columnas\nI. Aves guaneras\nII. Líquenes\nIII. Cangrejo ermitaño\nIV. Garrapata",
+      "alternatives": [
+        "Parasitismo",
+        "Comensalismo",
+        "Mutualismo",
+        "Cooperación",
+        "Id, IIa, IIIc, IVb"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/biologia-abd-examen-resuelto-deco-san.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La nutria gigante o lobo de rio es un depredador, que vive en ríos y lagunas amazónicas alimentándose de peces. En las últimas décadas ha reducido considerablemente su rango de distribución y su ubicación se ha tornado discontinua a raíz de la caza para aprovechar su piel y la sobre-explotación de los ríos y cochas donde habita su alimento, por lo que decide no reproducirse. Con el párrafo anterior nos referimos a su",
+      "alternatives": [
+        "nicho ecológico.",
+        "hábitat.",
+        "Población.",
+        "habito alimenticio."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-17-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tenemos dos especies en una relación interespecífica neutral, cuál de las siguientes alternativas es la que mejor se acomoda o corresponde:",
+      "alternatives": [
+        "especie 1 se beneficia y especie 2 se perjudica",
+        "especie 1 ni se beneficia ni se perjudica y especie 2 se perjudica",
+        "especie 1 y 2 ni se benefician ni se perjudican",
+        "especie 1 se perjudica y especie 2 se perjudica"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-17-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos especies que viven en la selva, A y B, presentan ciertas características que definen su nicho ecológico. Por ejemplo, ambas se alimentan de gusanos y habitan en la copa de los árboles. Sin embargo, la especie A busca alimentos por las noches, mientras que la especie B lo hace por las mañanas. De acuerdo con este enunciado, podemos afirmar que las especies A y B",
+      "alternatives": [
+        "conviven en el mismo ecosistema porque, si bien tienen el mismo alimento, lo buscan en diferentes horas del día.",
+        "compiten por el mismo alimento, lo que ocasionará que una de las especies se extinga con el paso del tiempo.",
+        "no conviven en el mismo ecosistema porque, al habitar en la copa de los árboles, el espacio sería insuficiente para ambas.",
+        "compiten por el mismo alimento y tienen el mismo hábitat, entonces A y B pertenecen a la misma especie."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-17-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En algunos ecosistemas microbianos ciertos hongos liberan sustancias químicas, como parte de su metabolismo normal, que al hacer contacto con algunas especies bacterianas ejercen antibiosis. Esta relación es un ejemplo de",
+      "alternatives": [
+        "competencia.",
+        "amensalismo.",
+        "neutralismo.",
+        "parasitismo."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/ecologia-quimica-preguntas-resueltas-biologia-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicaj.blogspot.com — ECOLOGÍA Y MEDIO AMBIENTE PRUEBA RESUELTA DE INGRESO A LA UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de los incendios forestales del 2019 y 2020 en Brasil, se destruyeron bosques primarios en muchas partes de la zona afectada, ¿Cómo se denominaría a la regeneración del bosque luego de muchos años y quienes estarían dentro de los principales agentes que ayuden a su recuperación?",
+      "alternatives": [
+        "Regeneración ecológica – guardaparques",
+        "Sucesión ecológica primaria – conejos",
+        "Sucesión ecológica secundaria – murciélagos",
+        "Sucesión ecológica evolutiva - jaguares"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/ecologia-quimica-preguntas-resueltas-biologia-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicaj.blogspot.com — ECOLOGÍA Y MEDIO AMBIENTE PRUEBA RESUELTA DE INGRESO A LA UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación beneficiosa entre las aves o insectos polinizadores y las plantas correspondientes es un ejemplo de lo que se denomina:",
+      "alternatives": [
+        "MUTUALISMO",
+        "COMENSALISMO",
+        "PARASITISMO",
+        "DEPREDACION",
+        "AMENSALISMO"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/ecologia-quimica-preguntas-resueltas-biologia-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicaj.blogspot.com — ECOLOGÍA Y MEDIO AMBIENTE PRUEBA RESUELTA DE INGRESO A LA UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La aparición de nuevas plantas en los espacios que se deja por la tala en árboles es un buen ejemplo de sucesión ecológica;",
+      "alternatives": [
+        "Evolutiva",
+        "Primaria",
+        "Secundaria",
+        "Biocetónica",
+        "Explosiva"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/ecologia-quimica-preguntas-resueltas-biologia-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicaj.blogspot.com — ECOLOGÍA Y MEDIO AMBIENTE PRUEBA RESUELTA DE INGRESO A LA UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El efecto en la interacción entre dos especies puede ser positivo ( +), negativo (–) o neutro (0). En el comensalismo, ¿cuál es el efecto posible?",
+      "alternatives": [
+        "Positivo ( +), positivo ( +)",
+        "Positivo ( +), negativo (–)",
+        "Negativo (–), negativo (–)",
+        "Negativo (–), positivo ( +)",
+        "Positivo ( +), neutro (0)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/ecologia-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — ECOLOGÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Corresponde a una relación interespecífica de comensalismo\nI ) Las plantas con flores y sus polinizadores\nII ) Las orquídeas sobre las ramas de los arboles\nIII ) Las pulgas y el hombre\nIV ) Las rémoras y el tiburón\nV ) El caracol y el cangrejo ermitaño\nEs cierta:",
+      "alternatives": [
+        "III, IV, V",
+        "I, II, IV",
+        "II, III, V",
+        "II, IV, V",
+        "I, III, V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es el conjunto de especies de un área determinada que interactúan entre ellas y con su ambiente abiótico; mediante procesos como la depredación, el parasitismo, la competencia y la simbiosis, y con su ambiente al desintegrarse y volver a ser parte del ciclo de energía y de nutrientes.",
+      "alternatives": [
+        "Biotopo",
+        "Biósfera",
+        "Comunidad",
+        "Ecosistema",
+        "Biocenosis"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/5to-actividad-1-2-3-4-5-ingles-experiencia-4-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MEDIO AMBIENTE CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luis Felipe es una autoridad policial de Madre de Dios, zona afectada por la depredación de la Amazonia. A pesar de ello. este efectivo recibe dinero de organizaciones dedicadas a la minería ilegal permitiendo actividades ilícitas. ¿Qué acto de corrupción comete Luis Felipe?",
+      "alternatives": [
+        "Cohecho pasivo",
+        "Malversación de fondos",
+        "Colusión",
+        "Nepotismo",
+        "Tráfico de influencias"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/posiciones-de-rectas-y-planos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNAH 2027 UNIVERSIDAD NACIONAL AUTÓNOMA DE HUANTA EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un análisis de relaciones interespecíficas, la expresión (–/–) simboliza una relación de:",
+      "alternatives": [
+        "antibiosis",
+        "cooperación",
+        "comensalismo",
+        "competencia",
+        "depredación"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La sucesión ecológica es un conjunto de procesos que ocurren en las comunidades biológicas. En algunos ambientes se puede observar claramente una sucesión ecológica que se inicia; sin embargo, no siempre es fácil identificar a simple vista o por simple inspección cuando empieza; en algunos casos se puede emplear indicadores biológicos para definir el estado del cambio por sucesión, De manera general, toda sucesión se inicia a consecuencia de",
+      "alternatives": [
+        "la invasión de especies resistentes.",
+        "la desaparición de productores secundarios.",
+        "la disminución de especies.",
+        "una perturbación ecológica.",
+        "la drástica pérdida de flora."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/examen-san-marcos-2019-i-deco.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN MARCOS 2027 I EXAMEN ADMISIÓN UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para alimentarse, una oveja arranca una planta gramínea, dejando al descubierto una lombriz de tierra, inmediatamente, un ave de las inmediaciones la captura y se alimenta con ella. Señale a qué tipo de relación interespecífica corresponde lo descrito.",
+      "alternatives": [
+        "Comensalismo",
+        "Predación",
+        "Competencia",
+        "Compensación",
+        "Amensalismo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación interespecifica que existe entre las plantas gramíneas y las bacterias gram negativas del género Rhizobium se denomina ______.",
+      "alternatives": [
+        "Parasitismo",
+        "Neutralismo",
+        "Cooperación",
+        "Amensalismo",
+        "Mutualismo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con el paso de los años los ecosistemas sufren una variedad de cambios, éstos pueden ser desfavorables a tal punto que los ecosistemas pueden desaparecer, pero en otros casos los cambios a través del tiempo ayudan a los ecosistemas a alcanzar una mayor complejidad y gran estabilidad, es decir que logran obtener una biocenosis clímax y a su vez logran recuperarse de ciertos daños. Este nivel alcanzado por el ecosistema se denomina",
+      "alternatives": [
+        "equilibrio ecológico.",
+        "sucesión evolutiva.",
+        "higiene ambiental.",
+        "sucesión ecológica."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La función que realiza una determinada especie en un ecosistema se llama",
+      "alternatives": [
+        "sucesión ecológica.",
+        "nicho ecológico.",
+        "hábitat.",
+        "ecotono.",
+        "triada ecológica."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La región donde se desarrolla una especie en forma natural recibe el nombre de",
+      "alternatives": [
+        "ecosistema.",
+        "nicho ecológico.",
+        "comunidad.",
+        "población.",
+        "hábitat."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una comunidad biológica está formada por",
+      "alternatives": [
+        "todas las poblaciones animales que viven en un área determinada.",
+        "todos los nichos ecológicos.",
+        "el conjunto de individuos de la misma especie que viven en un mismo espacio.",
+        "el número máximo de seres vivos que ocupan un determinado hábitat.",
+        "todos los biotopos."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación intraespecífica, en la que algunas especies se diferencian morfológicamente de acuerdo a la función que realizan, es conocida como",
+      "alternatives": [
+        "cooperación.",
+        "sociedades.",
+        "mutualismo.",
+        "compensación.",
+        "amensalismo."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación en la que dos organismos viven juntos y se benefician entre ambos se denomina",
+      "alternatives": [
+        "parasitismo.",
+        "amensalismo.",
+        "comensalismo.",
+        "mutualismo.",
+        "depredación."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los pájaros bueyeros se comen los parásitos de la piel del ganado vacuno. ¿Qué relación se produce entre los pájaros y los vacunos?",
+      "alternatives": [
+        "ectoparasitismo",
+        "amensalismo",
+        "comensalismo",
+        "protocooperación",
+        "foresia"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La secuencia de cambios y modificaciones que ocurre en un ecosistema, a través del tiempo, se define como",
+      "alternatives": [
+        "equilibrio ecológico.",
+        "comunidad clímax.",
+        "sucesión ecológica.",
+        "nicho ecológico.",
+        "red alimenticia."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el ______ , un organismo vive a expensas de los nutrientes del hospedador, al que perjudica.",
+      "alternatives": [
+        "amensalismo",
+        "comensalismo",
+        "mutualismo",
+        "parasitismo",
+        "neutralismo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando una especie utiliza excrementos, esqueletos y cadáveres de otra especie con el fin de protegerse o de servirse de ellos como herramientas se denomina",
+      "alternatives": [
+        "parasitismo.",
+        "mutualismo.",
+        "tanatocresis.",
+        "amensalismo.",
+        "comensalismo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El estado por el cual el ecosistema tiene tendencia a adquirir una gran madurez, es decir a evolucionar a una mayor complejidad y estabilidad, se denomina",
+      "alternatives": [
+        "desequilibrio ecológico.",
+        "sucesión ecológica.",
+        "equilibrio ecológico.",
+        "nicho ecológico.",
+        "flujo energético."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la proposición correcta con respecto a la sucesión ecológica secundaria.",
+      "alternatives": [
+        "Solo se alcanza el desarrollo de un tipo de organismo.",
+        "En un área despoblada y sin vida se inician nuevas especies.",
+        "La biomasa alcanza en todos los casos su valor mínimo.",
+        "Se da cuando los organismos emergen e invaden inicialmente la Tierra.",
+        "Desarrolla nuevas especies donde preexistieron otras."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ______ es una interacción biológica que se produce cuando una especie se ve perjudicada. Un ejemplo de esta relación es la que establecen las bacterias con los hongos Penicillium.",
+      "alternatives": [
+        "parasitismo",
+        "mutualismo",
+        "inquilinismo",
+        "amensalismo",
+        "comensalismo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Algunas especies de aves depositan los huevos en el nido de otra especie para que sus huevos reciban los cuidados de los padres sustitutos. A esta relación se denomina",
+      "alternatives": [
+        "amensalismo.",
+        "neutralismo.",
+        "comensalismo.",
+        "parasitismo.",
+        "mutualismo."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación interespecífica denominada competencia en el ecosistema se da cuando",
+      "alternatives": [
+        "hay sobreposición del nicho ecológico, por lo que ambas especies se ven afectadas.",
+        "dos o más organismos de distintas especies se asocian, resultando esto beneficioso para ambas especies.",
+        "los individuos de una especie están ligados por otra especie, para su supervivencia.",
+        "en la interacción, solo uno de los organismos se beneficia.",
+        "un organismo pasa parte de su vida dentro de otro de diferente especie."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La humedad, la temperatura, la salinidad son factores que conforman el ____________ del ecosistema.",
+      "alternatives": [
+        "biocenosis",
+        "biotopo",
+        "factor biótico",
+        "hábitat",
+        "nicho ecológico"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/niveles-de-organizacion-de-la-materia-viva-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ORGANIZACIÓN DE LOS SERES VIVOS  EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Aunque muchos hongos son de vida libre, otros forman asociaciones simbióticas estables con organismos. El mutualismo, una asociación más o menos igualitaria, consiste en que ambos participantes se benefician, tal es el caso de hongos ascomicetos y algas verdes que constituyen",
+      "alternatives": [
+        "micorrizas.",
+        "esporas.",
+        "líquenes.",
+        "quistes."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/reino-fungi-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REINO FUNGI EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una misma especie de murciélago, consume el néctar de las flores de hasta 4 especies diferentes de plantas. A su vez, una de estas plantas, tiene en este murciélago a uno de sus 5 polinizadores, que incluyen especies de insectos y aves nectarívoras. ¿Qué tipo de relación se describe entre ambas especies?",
+      "alternatives": [
+        "Intraespecífica – cooperación",
+        "Intraespecífica – compensación",
+        "Interespecífica – competencia",
+        "Interespecífica – cooperación",
+        "Interespecífica – compensación"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/biologia-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lycalopex sechurae , el zorro del desierto, es característico de la región noroeste del Perú, desde Tumbes a Ica. A pesar de ser un carnívoro, es un importante dispersor de semillas ya que en su dieta se incluyen los frutos del sapote, cuyas semillas pierden parte de su cubierta mientras pasan por su tubo digestivo. La descripción corresponde",
+      "alternatives": [
+        "al Hábitat.",
+        "bioma.",
+        "nicho ecológico.",
+        "ecosistema.",
+        "sucesión ecológica."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/biologia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA SAN MARCOS PRUEBA DECO DE INGRESO UNIVERSIDAD DESARROLLADA"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cada especie ocupa un lugar preciso en el interior de un ambiente; esto se denomina:",
+      "alternatives": [
+        "medio.",
+        "ambiente.",
+        "hábitat.",
+        "nicho ecológico.",
+        "ecosistema."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-12-ccss-experiencia-4-resuelta-aprendo-en-casa-ciencias-sociales-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GRANDES BIOMAS EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Término que se refiere a la comunidad biológica:",
+      "alternatives": [
+        "biotopo",
+        "hábitat",
+        "nicho ecológico",
+        "entorno",
+        "biocenosis"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-12-ccss-experiencia-4-resuelta-aprendo-en-casa-ciencias-sociales-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GRANDES BIOMAS EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La renovación total de lo vivo en un ecosistema se denomina:",
+      "alternatives": [
+        "éxodo.",
+        "cambio.",
+        "purma.",
+        "sucesión ecológica.",
+        "clímax de un ecosistema."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-12-ccss-experiencia-4-resuelta-aprendo-en-casa-ciencias-sociales-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GRANDES BIOMAS EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El derrame de petróleo ocurrido en el 2022 causó un significativo impacto en las comunidades de organismos establecidos en las playas de Ventanilla. Como es de conocimiento, muchos hábitats y nichos ecológicos han sido severamente afectados. La intervención humana en la limpieza ha sido de ayuda, pero será la naturaleza la que lentamente inicie el proceso de recuperación a través del proceso conocido como",
+      "alternatives": [
+        "sucesión secundaria.",
+        "recuperación natural.",
+        "sucesión fundadora.",
+        "sucesión primaria.",
+        "sucesión ecológica."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-11-habilidad-logico.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA A 2024-1 PRUEBA RESUELTA CIENCIAS DE LA SALUD INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La _______ será la ciencia principal para estudiar la variación del tamaño de la población de cebras a causa de la disponibilidad de alimentos y la depredación.",
+      "alternatives": [
+        "Bioquímica",
+        "Evolución",
+        "Ecología",
+        "Zoología",
+        "Fisiología"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la naturaleza los organismos interactúan entre sí y con otras especies, lo que se denomina relaciones intraespecíficas e interespecíficas, respectivamente. ¿Cómo se denomina la relación intraespecífica donde los individuos de una especie se diferencian morfológicamente según la función que desempeñan?",
+      "alternatives": [
+        "Sociedad",
+        "Competencia",
+        "Compensación",
+        "Predominancia",
+        "Predación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/3ro-4to-actividad-10-cta-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia-web-tarea-radio-reto-tv-ct-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PEDRO RUIZ INGRESO UNIVERSIDAD EXAMEN RESUELTO RESPUESTAS 2024 PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La aparición de nuevas plantas, en los espacios que se deja por la tala de árboles, es un buen ejemplo de sucesión ecológica",
+      "alternatives": [
+        "evolutiva.",
+        "primaria.",
+        "secundaria.",
+        "biocetónica.",
+        "explosiva."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/biologia-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar, en forma secuencial, las relaciones interespecíficas que a continuación se mencionan: dos especies participantes se benefician mutuamente; una especie se beneficia y la otra no se perjudica ni se beneficia; una especie se beneficia y la otra se perjudica.",
+      "alternatives": [
+        "antibiosis, comensalismo, mutualismo",
+        "comensalismo, antibiosis, mutualismo",
+        "comensalismo, mutualismo, antibiosis",
+        "mutualismo, comensalismo, antibiosis",
+        "mutualismo, antibiosis, comensalismo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/biologia-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si dos especies comparten el mismo hábitat pero tienen nichos ecológicos distintos, se establece una interacción denominada:",
+      "alternatives": [
+        "Simbiosis",
+        "Neutralismo",
+        "Gregaria",
+        "Colonial",
+        "Comensalismo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/biologia-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las relaciones interespecíficas se dan entre dos especies las cuales pueden ser beneficiosas, perjudiciales o neutrales para una de las especies o para ambas, por ejemplo, en el interior del rumen de las ovejas encontramos al protozoario Entodinium caudatum el cual es responsable del proceso de fermentación de la materia vegetal consumida por las ovejas. Según el texto se puede inferir que entre las ovejas y los protozoarios existe una relación interespecífica denominada:",
+      "alternatives": [
+        "Amensalismo",
+        "Inquilinismo",
+        "Mutualismo",
+        "Depredación"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/biologia-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una expedición biológica se observa a dos especies de insectos habitando en un mismo árbol, donde una de esas especies se alimenta de las hojas mientras que la otra especie de los tejidos leñosos. Del texto se puede inferir que estas especies se encuentran en una relación interespecífica correspondiente a",
+      "alternatives": [
+        "Compensación.",
+        "Neutralismo.",
+        "Competencia.",
+        "Comensalismo."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/biologia-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Formado por los factores físicos y seres vivos:",
+      "alternatives": [
+        "hábitat",
+        "comunidad biológica",
+        "medio ambiente",
+        "seres abióticos",
+        "ecosistema"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-biologia-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE BIOLOGÍA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La unidad fundamental básica de la ecología que resulta de la relación de los seres vivos y su medio es:",
+      "alternatives": [
+        "Población",
+        "Comunidad biótica",
+        "Hábitat",
+        "Nicho ecológico",
+        "Ecosistema"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-biologia-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE BIOLOGÍA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "(I) Hablamos de parasitismo , cuando un parásito vive a expensas del hospedador , causándole daño.\n(II) La acción del parásito no suele matar al hospedador , pero puede acortar su vida.\n(III) Algunas plantas logran defenderse del ataque de los parásitos de diferentes maneras.\n(IV) La papa silvestre , por ejemplo , elabora sustancias que provocan trastornos digestivos en el escarabajo.\n(V) Con el uso de pesticidas , el hombre es capaz de eliminar definitivamente el parasitismo.",
+      "alternatives": [
+        "II",
+        "IV",
+        "I",
+        "V",
+        "III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/Test-de-eliminacion-de-oraciones-resuelto-con-claves-y-respuestas-pre-universidad-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELIMINACIÓN DE ORACIONES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un campo de cultivo de papa presentó problemas sucesivos de plagas por lo que el agricultor decidió aplicar la técnica de campo limpio que consiste en remover toda vegetación del terreno por un año. Al cabo del cual sembró maíz, presentándose, primero, insectos comedores de hojas tiernas; luego comedores de hojas y tallos, insectos comedores de la mazorca hasta insectos insectívoros y parasitoides. De esto se deduce que en un campo de cultivo inicialmente se desarrolla el proceso de",
+      "alternatives": [
+        "compensación,",
+        "territorialidad.",
+        "predominio social.",
+        "sucesión ecológica.",
+        "emigración."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-biologia-semana-12-2020.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA EJERCICIOS DESARROLLADOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un hábitat que no ha sido previamente ocupado por organismo, el cambio en la composición de especies en el tiempo se denomina ...",
+      "alternatives": [
+        "desequilibrio ecológico.",
+        "sucesión primaria.",
+        "sucesión evolutiva.",
+        "cambios seculares.",
+        "sucesión secundaria."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://biologia-test.blogspot.com/2014/10/examen-de-admision-san-marcos-2015-i.html",
+      "sourceName": "biologia-test.blogspot.com — Examen de Admisión San Marcos  2015 - I Preguntas de Biologia Áreas ADE"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Estudia las relaciones de una sola especie con su medio:",
+      "alternatives": [
+        "ecología",
+        "biología",
+        "ginecología",
+        "autoecología",
+        "dinámica de poblaciones"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/12/cultura-general-educacion-civica-solucionario-examen-admision-universidad-institutos-superiores-tecnicos-escuela-pnp-prueba-resuelta-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CULTURA GENERAL 2026 PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD INSTITUTOS TÉCNICOS SUPERIORES ESCUELA PNP PRUEBA DE INGRESO RESPUESTAS"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un bosque existen innumerables seres vivos que interactúan entre sí, además de factores carentes de vida como el agua, el aire y los minerales necesarios para el desarrollo de la vida. El enunciado se refiere a _______.",
+      "alternatives": [
+        "ecosistema",
+        "desarrollo sostenible",
+        "recursos naturales",
+        "medio ambiente",
+        "deforestación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/geografia-y-economia-admision-callao-examen-resuelto-unac-ingreso-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOGRAFÍA Y ECONOMÍA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecología es la ciencia que estudia la interrelación entre los seres bióticos y abióticos, además de los factores que influyen en ellos. Indique un ejemplo de un ser abiótico.",
+      "alternatives": [
+        "Los pastizales",
+        "Las algas",
+        "Las piedras",
+        "Los cactus",
+        "Los totorales"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-8-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los ecosistemas, los animales que se alimentan solo de vegetales se llaman",
+      "alternatives": [
+        "omnívoros.",
+        "fitófagos.",
+        "quimio sintetizadores.",
+        "carroñeros.",
+        "coprófagos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/examen-admision-cantuta-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CANTUTA 2027 UNE EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE EDUCACIÓN ENRIQUE GUZMÁN Y VALLE PROSPECTO CRONOGRAMA VACANTES ESTRUCTURA PUNTAJES TEMAS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante el fenómeno ENSO (también conocido como fenómeno de El Niño), gran parte del desierto de la costa norte del Perú se cubre de vegetación, y también de una fauna acompañante, debido al incremento del régimen pluvial. Este proceso se denomina",
+      "alternatives": [
+        "sucesión secundaria.",
+        "comunidad pionera.",
+        "sucesión primaria.",
+        "comunidad clímax.",
+        "sucesión evolutiva."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La unidad básica de estudio de la ecología es",
+      "alternatives": [
+        "la biodiversidad.",
+        "el biotopo.",
+        "el ecosistema.",
+        "la biosfera.",
+        "la biocenosis."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al nicho ecológico, ¿cuál de las siguientes proposiciones es falsa?",
+      "alternatives": [
+        "Los herbívoros se alimentan de los productores.",
+        "Las bacterias y hongos son desintegradores.",
+        "Los carnívoros se alimentan de los productores.",
+        "Los productores se nutren de la materia inorgánica.",
+        "Los consumidores primarios se alimentan de los productores."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ECOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La palabra ecología proviene de los vocablos griegos oikos (casa) y logos (estudio), es decir es el estudio de los organismos y su interacción con el ambiente en el que habitan y en el que desempeñan todas sus funciones vitales, dicha interacción se denomina ecosistema. Al respecto, indique la(s) proposición(es) INCORRECTA(S).\nI. Un arrecife y una pecera son un ecosistema natural y artificial respectivamente.\nII. Las sales, el oxígeno disuelto y el zooplancton son componentes abióticos.\nIII. En un ecosistema hay un constante intercambio de energía.",
+      "alternatives": [
+        "I y III",
+        "Solo II",
+        "Solo III",
+        "II y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/quimica-semana-18-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PRE SAN MARCOS SEMANA 18 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hasta el año 1900 d.c. en la población humana, el número de individuos se mantuvo en aproximadamente mil millones y en los últimos 100 años ha mostrado un crecimiento exponencial a más de siete mil millones de individuos ¿Qué factores de la tasa de crecimiento poblacional tuvieron que variar para que esto ocurra?",
+      "alternatives": [
+        "Natalidad y mortalidad",
+        "Natalidad e inmigración",
+        "Inmigración y mortalidad",
+        "Mortalidad y emigración"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-17-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los seres vivos pueden presentar relaciones alimentarias y relaciones específicas, estas últimas pueden ser intraespecíficas e interespecíficas.\nTomando en cuenta dicha premisa, relacione ambas columnas y marque la alternativa correcta:\n1. Compensación\n2. Territorialidad\n3. Predominio social\n4. Sociedades\n( ) Tendencia de los organismos a ocupar cierto territorio.\n( ) Diferenciación morfológica de la especie.\n( ) Cuidado de crías propias y ajenas.\n( ) Aparición de jerarquías sociales en individuos.",
+      "alternatives": [
+        "2-4-1-3",
+        "2-3-1-4",
+        "4-3-2-1",
+        "4-2-3-1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/biologia-preguntas-resueltas-semana-17-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se entiende como biodiversidad:",
+      "alternatives": [
+        "El número de especies diferentes en un lugar determinado o el planeta entero.",
+        "El número de miembros de la misma especie que ocupan el planeta.",
+        "La cantidad de miembros de la misma especie que ocupan el planeta.",
+        "La diferencia de especies de animales concentrados en niveles diferentes de la Tierra.",
+        "El número de especies diferentes en concentraciones centralizadas en el planeta."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-religiosa-5to-actividad-1-2-3-experiencia-9-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN QUINTOS INGENIERÍAS 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS PDF SOLUCIONARIO"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la selva peruana, existen distintas poblaciones humanas autóctonas que conviven con diversas poblaciones de animales, plantas y microorganismos de distintas especies. Todas ellas comparten áreas de suelo para tomar sus nutrientes, aprovechan el agua de los ríos y lagunas cercanas y se abastecen de los mismos frutos y especies. ¿En qué nivel de organización biológica podemos considerar a la selva peruana?",
+      "alternatives": [
+        "Biósfera",
+        "Ecosistema",
+        "Comunidad",
+        "Población"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-biologia-semana-15-2020.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los mecanismos reguladores de la población pueden ser extrínsecos e intrínsecos. Indicar cuál de las alternativas se refiere a un mecanismo intrínseco.",
+      "alternatives": [
+        "temperatura",
+        "humedad",
+        "disponibilidad de alimentos",
+        "migración",
+        "presencia de enemigos naturales"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cohesión ecológica se refiere a la presencia de ______ entre ellos, resultantes de poseer requerimientos similares para la supervivencia y la reproducción, ocupando un territorio o espacio en donde obtiene sus recursos.",
+      "alternatives": [
+        "diferencias",
+        "cohesiones",
+        "grupos",
+        "interacciones",
+        "sujetos"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/07/admision-callao-2017-i-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO CALLAO 2026 INGRESO UNAC UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un estuario recién formado, progresivamente se van instalando diferentes organismos, entre los cuales el primer nivel trófico estaría constituido por _____",
+      "alternatives": [
+        "gusanos",
+        "plantas acuáticas",
+        "cianobacterias",
+        "algas y hongos",
+        "larvas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/biologia-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El paiche es un pez óseo que puede ser hallado en los ríos Napo, Marañón, e inclusive, algunas cochas o lagunas del Perú. Por esto, el paiche es un pez que puede ser considerado una especie",
+      "alternatives": [
+        "lótica.",
+        "léntica.",
+        "lótica y léntica.",
+        "nerítica.",
+        "pelágica."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/biologia-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Comprende a todos los organismos vivos (flora, fauna, microorganismos), los ecosistemas y los procesos ecológicos de los que forman parte:",
+      "alternatives": [
+        "recursos naturales",
+        "ecología",
+        "megadiversidad",
+        "medioambiente",
+        "biodiversidad"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/geografia-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOGRAFÍA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a los ecosistemas , ¿cuáles de las siguientes proposiciones son correctas?\nI) Son sistemas en equilibrio de elementos bióticos y abióticos.\nII) El desierto es un ecosistema.\nIII) Un acuario es un ecosistema.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "I y II",
+        "II y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/contaminacion-ambiental-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTAMINACIÓN AMBIENTAL EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el Perú, se ha establecido el 13 de mayo como el Día Nacional de la Apicultura con la finalidad de promover esta actividad comercial de gran importancia económica, social y, sobre todo, ecológica. Desde el punto de vista ecológico, determine el valor de verdad (V o F) de los siguientes enunciados concernientes a la importancia de la apicultura.\nI) Contribuye al desarrollo agrario y a la protección del ambiente.\nII) Promueve el consumo de los productos forestales maderables.\nIII) Promueve el consumo de los productos forestales no maderables.",
+      "alternatives": [
+        "VFV",
+        "FFV",
+        "FVV",
+        "VVF",
+        "VVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS BIOLOGÍA PREGUNTAS RESUELTAS EXAMEN ADMISIÓN UNIVERSIDAD UNMSM"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "L a Tierra posee ecosistemas con diversos componentes, entre ellos, los de tipo biótico y abiótico, están relacionándose permitiendo el desarrollo de la vida en este planeta. Con respecto a estos conceptos, seleccione el valor de verdad (V o F) de las siguientes proposiciones.\nI ) Los manglares corresponden a un ecosistema terrestre natural.\nII ) La atmósfera, las rocas y las montañas son componentes abióticos.\nIII ) Las bacterias, mamíferos y las aves son componentes bióticos.",
+      "alternatives": [
+        "FVV",
+        "VVV",
+        "FFV",
+        "VFV",
+        "FVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS BIOLOGÍA PREGUNTAS RESUELTAS EXAMEN ADMISIÓN UNIVERSIDAD UNMSM"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mide la pluralidad de interrelaciones entre las especies.\nCorresponde a la diversidad ___________.",
+      "alternatives": [
+        "de ecosistemas",
+        "social",
+        "megadiversa",
+        "sostenible",
+        "genética"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-10-dpcc-experiencia-6-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOGRAFÍA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Zonas donde encontramos acantilados y diversos organismos como: estrellas de mar, cangrejos, algas, conchas:",
+      "alternatives": [
+        "Alta mar",
+        "Zona litoral",
+        "Zona continental",
+        "Zona abisal",
+        "Zona fótica"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/ecologia-quimica-preguntas-resueltas-biologia-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicaj.blogspot.com — ECOLOGÍA Y MEDIO AMBIENTE PRUEBA RESUELTA DE INGRESO A LA UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un ecosistema acuático, al conjunto de organismos que viven en íntima relación con el fondo (adheridos, excavando o desplazándose sobre él) se le denomina:",
+      "alternatives": [
+        "Necton.",
+        "Plancton.",
+        "Bentos.",
+        "Perifiton.",
+        "Neuston."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL BIOLOGÍA – ANATOMÍA PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La caza no regulada acaba con los últimos ejemplares de una especie de zorro, que se señalaba como un importante controlador biológico de una especie de liebre. Tras esto, la población de conejos aumenta descontroladamente y reduce la disponibilidad de una especie de gramínea, alterando el ecosistema. ¿Qué enunciado describiría las funciones que están cumpliendo cada uno?",
+      "alternatives": [
+        "Población",
+        "Niveles tróficos",
+        "Biotopo",
+        "Biocenosis",
+        "Diezmo ecológico"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-semana-1-manual-pre-san.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los líquenes, hongos y bacterias son ejemplos de:",
+      "alternatives": [
+        "factores físicos.",
+        "componentes abióticos.",
+        "componentes bióticos.",
+        "medio ambiente.",
+        "ecosistema."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-biologia-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE BIOLOGÍA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La población de una especie de roedor en una provincia peruana se ha reducido notablemente en los últimos 10 años. Parece que esto coincide con la aparición cada vez mayor de una especie de ave rapaz en su territorio, la cual comenzó a alimentarse de él. ¿Qué tipos de tasas estarían alterándose en cada especie respectivamente?",
+      "alternatives": [
+        "Natalidad e inmigración",
+        "Mortalidad e inmigración",
+        "Natalidad y mortalidad",
+        "Mortalidad y natalidad",
+        "Inmigración y natalidad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/biologia-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA ÁREA E SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los humedales suelen declararse áreas protegidas porque representan el lugar de parada de numerosas especies de aves durante su largo viaje en busca de sitios de apareamiento. En ellos, pueden alimentarse y recobrar fuerzas para continuar su camino. Lo descrito se corresponde con el concepto de",
+      "alternatives": [
+        "competencia.",
+        "compensación.",
+        "predominio social.",
+        "migraciones.",
+        "territorialidad."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/biologia-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA ÁREA E SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cómo se denomina al sistema natural y al medio físico donde se desarrollan un conjunto de organismos vivos?",
+      "alternatives": [
+        "Medioambiente",
+        "Flora",
+        "Ecosistema",
+        "Fauna",
+        "Microclima"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/geografia-simulacro-de-examen-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — GEOGRAFÍA SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Completa la oración. Marca la respuesta correcta entre las que se indican. La relación entre el lábrido limpiador y el pez que este limpia es",
+      "alternatives": [
+        "mutualismo.",
+        "comensalismo.",
+        "depredación.",
+        "parasitismo."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://cke.gov.pl/egzamin-maturalny/egzamin-maturalny-w-formule-2023/arkusze/2023-2/",
+      "sourceName": "cke.gov.pl — Matura 2023 biologia poziom rozszerzony zadanie 16.1"
     }
   ]
 }

@@ -815,6 +815,4496 @@
       "correctAnswer": "1",
       "sourceUrl": "https://razonamiento-matematico-problemas.blogspot.com/2021/01/cuatro-operaciones-problemas-resueltos.html",
       "sourceName": "Cuatro Operaciones - Problemas Resueltos (Problema 03, segunda serie)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al extraer la raíz cuadrada por defecto a un número de 5 cifras se observa que:\nI) La cifra del tercer lugar del radicando coincide con su cifra de segundo orden.\nII) La raíz es igual al complemento aritmético del radicando menos 20 unidades.\nCalcular la suma de la raíz y el residuo.",
+      "alternatives": [
+        "315",
+        "440",
+        "755",
+        "851",
+        "871"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2019/01/radicacion-aritmetica-ejercicios.html",
+      "sourceName": "aritmeticapdf.blogspot.com — RADICACIÓN ARITMÉTICA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el complemento aritmético del número\nDar como respuesta la suma de sus cifras.",
+      "alternatives": [
+        "10n+2",
+        "15",
+        "18",
+        "9n-1",
+        "10n-9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/adicion-y-sustraccion-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ADICIÓN Y SUSTRACCIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si N y M son números de 200 y 150 cifras respectivamente, y\nHalle la suma de cifras del complemento aritmético de M.",
+      "alternatives": [
+        "151",
+        "1",
+        "50",
+        "9",
+        "450"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/adicion-y-sustraccion-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — ADICIÓN Y SUSTRACCIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir un número de tres cifras diferentes entre su complemento aritmético se obtuvo cociente 3 y como residuo la última cifra de dicho complemento aritmético. Determine la suma de cifras del numeral primitivo.",
+      "alternatives": [
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/multiplicacion-y-division-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia, en línea recta en kilómetros, de la capital de Brasil a Pekín , ciudad de China es 𝐴−𝐵, donde 𝐵 es un número de 2023 cifras que, al multiplicar por su complemento aritmético, resulta el número 𝐴 de 2024 cifras. Si restamos de 𝐴 el número que resulta de invertir sus cifras, el resultado termina en 55, ¿cuál es la distancia, en kilómetros, entre dichas ciudades?",
+      "alternatives": [
+        "16 638",
+        "16 633",
+        "16 932",
+        "18 207",
+        "17 988"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/aritmetica-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ARITMÉTICA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la máxima diferencia entre el complemento aritmético de un número capicúa de 4 cifras y el complemento aritmético de un capicúa de 3 cifras?",
+      "alternatives": [
+        "9998",
+        "8998",
+        "8100",
+        "998",
+        "990"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "matematicaj.blogspot.com — ADICIÓN Y SUSTRACCIÓN ARITMÉTICA EJERCICIOS RESUELTOS DE SECUNDARIA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un número de k cifras que no termina en cero, cuya suma de cifras es 29 y la suma de las cifras de su complemento aritmético es 44. Calcule el valor de k.",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "matematicaj.blogspot.com — ADICIÓN Y SUSTRACCIÓN ARITMÉTICA EJERCICIOS RESUELTOS DE SECUNDARIA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los tres términos de una sustracción es 144 y el sustraendo excede a la diferencia en 28 unidades. Calcule la suma de cifras de la diferencia.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/sustraccion-aritmetica-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — EJERCICIOS DE SUSTRACCIÓN ARITMÉTICA RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular un número de 3 cifras, sabiendo que al restarle su complemento aritmético se obtiene como resultado la suma de sus tres cifras. Dar como respuesta el producto de dichas cifras.",
+      "alternatives": [
+        "0",
+        "5",
+        "10",
+        "20",
+        "24"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/sustraccion-aritmetica-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — EJERCICIOS DE SUSTRACCIÓN ARITMÉTICA RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la suma de términos de la siguiente progresión aritmética:\n45 + 53 + 61 + ... + 165",
+      "alternatives": [
+        "1860",
+        "1680",
+        "6180",
+        "6810",
+        "8160 CLIC AQUÍ Ver ADICIÓN ARITMÉTICA TEORÍA Y EJERCICIOS RESUELTOS PDF Ver SUMA EN OTRAS BASES Ver SUSTRACCIÓN ARITMÉTICA Ver RESTA EN OTRAS BASES Ver COMPLEMENTO ARITMÉTICO Ver MULTIPLICACIÓN ARITMÉTICA Ver MULTIPLICACIÓN EN OTRAS BASES Ver DIVISIÓN ARITMÉTICA PREGUNTA 5 : Si a un numeral de tres cifras se le suman sus cifras, se obtiene 392. Calcule el producto de cifras de dicho numeral."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/adicion-aritmetica-ejercicios-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — EJERCICIOS DE ADICIÓN ARITMÉTICA RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Adela recibió una bonificación de S/4000 y decidió gastar parte de este dinero en ropa y zapatillas. Destinó A (tanto por mil) del total en ropa y B (tanto por mil) en zapatillas. Si se sabe que A y B son números de dos cifras, y que además A es el complemento aritmético de B, calcule la suma de las cifras de la cantidad de dinero que le queda disponible después de realizar estas compras.",
+      "alternatives": [
+        "0",
+        "3",
+        "6",
+        "9",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/tutoria-5to-actividad-1-experiencia-6-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el valor de aquel número de tres cifras que restado de su complemento aritmético da como resultado 144?",
+      "alternatives": [
+        "572",
+        "527",
+        "482",
+        "428",
+        "718"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule un número de tres cifras si se sabe que al sumarle 245 resulta el doble de su complemento aritmético.",
+      "alternatives": [
+        "485",
+        "575",
+        "536",
+        "585",
+        "435"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-10-resuelta-comunicacion-experiencia-9-aprendo-en-casa-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPRUNSA SOCIALES 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS EXAMEN RESUELTO PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el complemento aritmético de un número de 4 cifras es 6 veces más que el mismo número. Calcule la suma de sus cifras.",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/3ro-4to-experiencia-de-aprendizaje-integrada-2-aprendo-en-casa-tercer-cuarto-grado-de-secundaria-actividades-resueltas-web-tv-radio-word-descargas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN EXTRAORDINARIO UNAH 2027 INGRESO UNIVERSIDAD NACIONAL AUTÓNOMA DE HUANTA CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la suma de cifras de un número de 4 cifras, si se sabe que su complemento aritmético es 6 veces más que el mismo número.",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/posiciones-de-rectas-y-planos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNAH 2027 UNIVERSIDAD NACIONAL AUTÓNOMA DE HUANTA EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El profesor Rubén recibió un bono bibliográfico que le permitió comprar 7 libros de igual precio sin gastar todo el dinero. El precio de cada libro es igual al complemento aritmético del bono que recibió. Además, este precio excede en 44 soles a lo que le sobró después de realizar la compra. Si el valor del bono es un número de tres cifras, ¿cuál es la suma de estas cifras?",
+      "alternatives": [
+        "11",
+        "16",
+        "17",
+        "20",
+        "18"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/aritmetica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA SAN MARCOS EXAMEN RESUELTO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Beto le pregunta a su abuelo, docente jubilado de aritmética, sobre el año de nacimiento de un matemático británico, y este le responde que la última cifra es 2 y que es el resultado de sumar un número N de 3 cifras con el complemento aritmético del número que resulta de invertir el orden de las cifras de N. Determine la suma de las cifras del año en el que nació el matemático.",
+      "alternatives": [
+        "18",
+        "19",
+        "22",
+        "23",
+        "21"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-problemas_52.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA C 2025-1 SAN MARCOS INGENIERÍAS INGRESO RESPUESTAS PRESENCIAL DESARROLLO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los términos de una sustracción es 700. Hallar el sustraendo si es la quinta parte del minuendo.",
+      "alternatives": [
+        "60",
+        "70",
+        "81",
+        "72",
+        "69"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-naturales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RESTA DE NÚMEROS NATURALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los términos de una sustracción es 320. Si el sustraendo es el triple de la diferencia. Calcule el valor de la diferencia. Dé como respuesta la suma de cifras de la diferencia.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/aritmetica-examen-admision-villarreal.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA VILLARREAL RESUELTA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En astronomía, para nombrar las galaxias las agrupan por la cantidad aproximada de estrellas en potencias de 10. Si hay 5 galaxias con cien mil millones de estrellas, 3 galaxias con un billón de estrellas y una galaxia que no cumple dichas características, la suma de las cifras significativas del complemento aritmético de la cantidad de estrellas evaluadas representa a la edad que una joven estudiante boliviana descubrió un asteroide en la galaxia, ¿cuál era la edad de dicha joven cuando descubrió un asteroide en la galaxia?",
+      "alternatives": [
+        "14",
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/aritmetica-problemas-resueltos-examen.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA ÁREA A SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sebastián observa que entre el cuadrado de la cantidad de dinero que tiene, en soles, y el cuadrado de su complemento aritmético existen 2999 valores enteros. Si su dinero está representado con un número de dos cifras, ¿cuánto de dinero tiene Sebastián?",
+      "alternatives": [
+        "65",
+        "40",
+        "45",
+        "35",
+        "25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/aritmetica-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante, al extraer la raíz cuadrada de un número de 6 cifras, observa que esta no es exacta; además, la raíz cuadrada es el complemento aritmético de dicho número. Determine la suma de las seis cifras de este número.",
+      "alternatives": [
+        "18",
+        "20",
+        "27",
+        "28",
+        "25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/aritmetica-examen-resuelto-de-admision-a-la-universidad-uni-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Julián le pregunta a su abuelo, que es historiador y matemático, por el año en que falleció el pintor Tintoretto; y este le responde que la última cifra es 4 y que es el resultado de sumar un número N de 3 cifras con el complemento aritmético del número que resulta de invertir el orden de las cifras de N. ¿En qué año falleció dicho pintor?",
+      "alternatives": [
+        "3072 (8)",
+        "3562 (8)",
+        "2432 (8)",
+        "3515 (8)",
+        "21547 (8)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-aritmetica-semana-11.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la suma del minuendo el sustraendo y la diferencia es igual a 18 halla el valor del minuendo.",
+      "alternatives": [
+        "5",
+        "7",
+        "9",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/sustraccion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SUSTRACCIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF RESTA EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la suma del minuendo el sustraendo y la diferencia es igual a 84. Halla el valor del minuendo",
+      "alternatives": [
+        "20",
+        "24",
+        "42",
+        "21",
+        "19"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/sustraccion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SUSTRACCIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF RESTA EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dividir el mayor número capicúa de tres cifras diferentes entre el menor capicúa de tres cifras diferentes, indicar el complemento aritmético del residuo por exceso.",
+      "alternatives": [
+        "21",
+        "80",
+        "20",
+        "79",
+        "78"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El dividendo en una división entera es un número de 3 cifras, el divisor es el complemento aritmético del dividendo, el cociente es 65 y la razón aritmética del divisor y el resto es 5; calcular la suma de cifras del dividendo.",
+      "alternatives": [
+        "18",
+        "19",
+        "20",
+        "21",
+        "22"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre el cuadrado de un valor entero N de 2 cifras y el cuadrado de su complemento aritmético existen 2999 valores enteros (no se incluyen los cuadrados de ambos).\nCalcule |N–CA(N)|, donde CA(N) significa el complemento aritmético de N.",
+      "alternatives": [
+        "20",
+        "30",
+        "35",
+        "40",
+        "45"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/segunda-prueba-examen-uni-2016-2.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I SEGUNDA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA MATEMÁTICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números capicúas de 5 cifras existen tales que la suma de las cifras de su complemento aritmético sea 31?",
+      "alternatives": [
+        "25",
+        "16",
+        "5",
+        "7",
+        "39"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/10/complemento-aritmetico-problemas-resueltos-formula-ejemplos-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPLEMENTO ARITMÉTICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La edad del abuelo de Miguel, tiene como complemento aritmético la suma de las cifras de su edad. ¿Cuál es la edad de Miguel si el nació cuando el abuelo tenía 45 años?",
+      "alternatives": [
+        "41",
+        "43",
+        "78",
+        "56",
+        "63"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/aritmetica-pdf-ejercicios-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan Manuel ahorra un monto en soles que es igual a un número capicúa de cinco cifras. Para no olvidarse de la clave de su tarjeta de ahorros, digita un número que es el complemento aritmético del monto depositado inicialmente y observa que resulta ser otro número capicúa de cuatro cifras. Determina el monto que ahorró Juan Manuel (dar como respuesta la suma de cifras).",
+      "alternatives": [
+        "36",
+        "42",
+        "48",
+        "28",
+        "47"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/aritmetica-pdf-ejercicios-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los complementos aritméticos de los tres términos de una resta es 1552. Hallar la suma de las cifras del minuendo, si todos los términos son de tres cifras.",
+      "alternatives": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — ADICIÓN Y SUSTRACCIÓN PROBLEMAS RESUELTOS ARITMÉTICA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una sustracción al minuendo le aumentamos 3 decenas y al sustraendo le disminuimos 2 centenas entonces la diferencia aumenta en :",
+      "alternatives": [
+        "220",
+        "240",
+        "230",
+        "250",
+        "210"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sustraccion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los términos de una sustracción es 48.\n¿Cuál es el minuendo ?",
+      "alternatives": [
+        "22",
+        "26",
+        "20",
+        "28",
+        "24"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sustraccion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el complemento aritmético de : 34 562\nDar como respuesta la suma de cifras del resultado",
+      "alternatives": [
+        "26",
+        "25",
+        "27",
+        "24",
+        "28"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sustraccion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar un número de 4 cifras tal que al restarle el quíntuplo de su complemento aritmético se obtenga 1246 de resultado. Dar como respuesta la suma d e sus cifras.",
+      "alternatives": [
+        "15",
+        "16",
+        "17",
+        "18",
+        "20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sustraccion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al multiplicar un número de tres cifras por su complemento aritmético nos da como resultado el quíntuplo del número original. Hallar éste número y dar como respuesta la suma de sus cifras.",
+      "alternatives": [
+        "20",
+        "23",
+        "24",
+        "27",
+        "21"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/multiplicacion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El complemento aritmético de : 213 2 (4) es :",
+      "alternatives": [
+        "1201(4)",
+        "122 2 (4)",
+        "120 2 (4)",
+        "123 2 (4)",
+        "120 0 (4)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — ADICIÓN Y SUSTRACCIÓN ARITMÉTICA EJERCICIOS RESUELTOS DE ARITMÉTICA PREUNIVERSITARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el complemento aritmético del mayor número de cuatro cifras diferentes que existe en base octal, contestar la suma de sus cifras.",
+      "alternatives": [
+        "6",
+        "8",
+        "7",
+        "10",
+        "9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sustraccion-aritmetica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Encuentre un número de cuatro cifras cuyo complemento aritmético sea la suma de sus 4 cifras. Dar su menor cifra.",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sustraccion-aritmetica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usando los números enteros del 1 al 6 de manera que ninguno se repita, y efectuando las operaciones usuales de adición, sustracción, multiplicación y división, en ese orden, una sola vez cada una. ¿Cuál es el máximo resultado que se puede obtener?",
+      "alternatives": [
+        "42",
+        "36",
+        "48",
+        "40",
+        "45"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-logico-numerico-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — HABILIDAD LÓGICA NUMÉRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los tres términos de una sustracción es 1296. Si el sustraendo es el triple de la diferencia. Halla la diferencia.",
+      "alternatives": [
+        "162",
+        "648",
+        "154",
+        "324",
+        "434"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/adicion-y-sustraccion-aritmetica-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — ADICIÓN Y SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de términos de una sustracción es 2548. La diferencia es los 4/7 del minuendo. Calcule el sustraendo.",
+      "alternatives": [
+        "652",
+        "782",
+        "665",
+        "546",
+        "580"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/adicion-y-sustraccion-aritmetica-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — ADICIÓN Y SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un número de 3 cifras se le resta 184, se obtiene el doble de su complemento aritmético. Calcular la suma de las dos primeras cifras del número.",
+      "alternatives": [
+        "10",
+        "9",
+        "15",
+        "12",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/adicion-y-sustraccion-aritmetica-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — ADICIÓN Y SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El complemento aritmético de un número de tres cifras es igual a la suma de las cifras de las centenas y decenas restado con la mitad de, la cifra de las unidades disminuido en 1. Determine el producto de las cifras del complemento aritmético del número formado por las mismas cifras del número inicial pero en orden invertido.",
+      "alternatives": [
+        "5",
+        "4",
+        "8",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/01/pre-san-marcos-2021-boletin-19-solucionario-descarga-manual-cepre-pre-universidad-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — CEPRE SAN MARCOS 2020 SEMANA 19 DECO DE ADMISIÓN A LA UNIVERSIDAD SAN MARCOS 2021 DESCARGA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 6110, si se divide el mayor entre el menor, el cociente es 12 y el residuo 429. Halla los números.",
+      "alternatives": [
+        "734 y 5376",
+        "921 y 5189",
+        "129 y 5981",
+        "500 y 5610",
+        "437 y 5673"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2019/01/division-aritmetica-ejemplos-resueltos.html",
+      "sourceName": "aritmeticapdf.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si en una división, el residuo por exceso, residuo por defecto, divisor y cociente son números pares consecutivos. ¿Cuál es el valor del dividendo?",
+      "alternatives": [
+        "25",
+        "52",
+        "48",
+        "60",
+        "56"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/multiplicacion-y-division-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es una división el residuo por exceso es del divisor. El menor número que se debe sumar al dividendo para aumentar en 2 al cociente es 52. Al triplicar al dividendo, el cociente aumenta en 36. Halle la suma de las cifras del dividendo.",
+      "alternatives": [
+        "15",
+        "17",
+        "20",
+        "23",
+        "24"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/multiplicacion-y-division-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta por defecto, el divisor y el residuo son 34 y 14 respectivamente, si al divisor se le agrega 5 unidades entonces el cociente disminuye en 2 unidades. Halle el nuevo residuo sabiendo que es el menor posible.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/multiplicacion-y-division-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se divide entre ; tanto por defecto como por exceso se obtiene; que la suma del residuo por defecto más el residuo por exceso y más el cociente por exceso es 34. Halle (m + n + a), si el residuo por defecto excede al residuo por exceso en 16.",
+      "alternatives": [
+        "16",
+        "8",
+        "10",
+        "12",
+        "20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/multiplicacion-y-division-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división el dividendo es par, el divisor es , el cociente es y el residuo . Calcule la suma de los términos de la división si se realiza por exceso.",
+      "alternatives": [
+        "2 870",
+        "2 900",
+        "3 000",
+        "3 037",
+        "3 039"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/multiplicacion-y-division-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división le faltan 15 unidades al residuo para ser máximo y sería mínimo al restarle 18 unidades. Determinar el dividendo, si el cociente es el doble del residuo por exceso.",
+      "alternatives": [
+        "1139",
+        "1123",
+        "1107",
+        "1193",
+        "1137"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/multiplicacion-y-division-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si . Con “n” mínimo. ¿Cuál será el residuo por exceso que se obtiene al dividir entre 26 al menor número de 5 cifras diferentes de la base n?",
+      "alternatives": [
+        "8",
+        "12",
+        "14",
+        "16",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/divisibilidad-ii-24-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — DIVISIBILIDAD II 24 EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir un número de dos cifras entre la suma de sus cifras se obtiene cociente 3 y residuo 7, pero si se invierte el orden de sus cifras y se vuelve a efectuar la división se obtiene cociente 7 y residuo 3. Halle la suma de cifras de dicho número.",
+      "alternatives": [
+        "10",
+        "9",
+        "8",
+        "7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/numeros-y-operaciones-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — NÚMEROS Y OPERACIONES ARITMÉTICA CATÓLICA PREGUNTAS RESUELTAS PUCP"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos valores toma el dividendo de una división cuyo cociente es 17 y residuo 12 si es de tres cifras?",
+      "alternatives": [
+        "30",
+        "40",
+        "46",
+        "38",
+        "48"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/03/examen-seleccion-cepreuni-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN SELECCIÓN CEPREUNI 2023 2024 RESUELTO ADMISIÓN UNI UNIVERSIDAD DE INGENIERÍA SOLUCIONARIO"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un división inexacta el dividendo es 494. El cociente es el séxtuplo del divisor y el residuo 8. Calcula el divisor.",
+      "alternatives": [
+        "8",
+        "14",
+        "10",
+        "9",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — EJERCICIOS DE DIVISIÓN ARITMÉTICA RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los términos de una división inexacta es 427. Se multiplica el dividendo y el divisor por 5 y se realiza nuevamente la operación, la suma de términos es ahora 2043. Calcular la suma de cifras del cociente.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — EJERCICIOS DE DIVISIÓN ARITMÉTICA RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Favio trabaja en una fábrica de golosinas, y recibe un sueldo mensual equivalente a una cantidad entera múltiplo de tres de soles mayor que el sueldo mínimo, que en el año 2023 es de 1025 soles. Si al dividir dicho sueldo entre 143 se obtiene un cociente entero que es la quinta parte del residuo por defecto. Si se sabe que en enero y julio recibió el menor y mayor sueldo mensual posible respectivamente, ¿cuánto es la diferencia de dichos sueldos?",
+      "alternatives": [
+        "2220",
+        "2200",
+        "2020",
+        "2000",
+        "2320"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/cepreuni-segunda-practica-calificada-solucionario-admision-UNI-acceso-directo-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CEPREUNI SEGUNDA PRACTICA SOLUCIONARIO"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si al dividendo de una división se le agrega 48 unidades, el cociente y el residuo aumentan en tres unidades. El divisor es",
+      "alternatives": [
+        "21",
+        "18",
+        "16",
+        "15",
+        "24"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/aritmetica-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — ARITMETICA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un número capicúa de cuatro dígitos se divide entre dos números consecutivos. En ambos casos el cociente es 45. Si los residuos obtenidos suman 73, determinar la suma de los dígitos del menor número capicúa que cumple con las condiciones establecidas.",
+      "alternatives": [
+        "12",
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/libro-de-razonamiento-matematico-de-quinto-de-secundaria-ejercicios-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO PROBLEMAS RESUELTOS DE EXAMEN DE ADMISIÓN UNI SOLUCIONARIO"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta cuyo divisor es 28 y residuo r, se cumple que al sumar 160 unidades al dividendo y realizar nuevamente la división con el mismo divisor, el cociente aumente 6 unidades y la división resulta ser exacta. Determine el valor de r.",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/tutoria-5to-actividad-1-experiencia-6-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división le falta 8 unidades al residuo para ser máximo y sería mínimo al restarle 15 unidades. Determine el dividendo, si se sabe que el cociente es el doble del residuo por exceso.",
+      "alternatives": [
+        "444",
+        "455",
+        "466",
+        "477",
+        "488"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/1ro-2do-experiencia-de-aprendizaje-integrada-2-aprendo-en-casa-primer-segundo-grado-de-secundaria-actividades-resueltas-web-tv-radio-word-descargas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNAH 2027 INGRESO UNIVERSIDAD AUTÓNOMA DE HUANTA CLAVES – RESPUESTAS – PRUEBA DE ENSAYO – SIMULACIÓN RESUELTA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir dos números enteros positivos el cociente es 24 y el residuo es el mayor posible. Si la suma del dividendo con el divisor es 233, el residuo es",
+      "alternatives": [
+        "múltiplo de 7.",
+        "múltiplo de 2",
+        "múltiplo de 11.",
+        "múltiplo de 5.",
+        "múltiplo de 3."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/1ro-2do-actividad-11-matematica-resuelta-experiencia-de-aprendizaje-3-aprendo-en-casa-web-tarea-radio-reto-tv-primero-segundo-grado-de-secundaria-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNDC UNIVERSIDAD NACIONAL DE CAÑETE EXAMEN INGRESO RESUELTO ÁLGEBRA PDF 2027"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al efectuar una división entera, se notó que la diferencia entre el resto por exceso y el cociente por exceso es igual a la diferencia del residuo por defecto y el cociente por defecto. Si el dividendo es un número de dos cifras y el mayor posible; además, el divisor es igual a 7. El cociente es:",
+      "alternatives": [
+        "16",
+        "12",
+        "19",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unica-pdf-ica.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN LUIS GONZAGA 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNICA 2026 TEMARIO VACANTES PROSPECTO ESTRUCTURA PUNTAJES CRONOGRAMA ÁREAS A B C PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si A y B suman 123 y si dividimos a A entre el exceso de A sobre B obtenemos 2 de cociente y 6 de residuo. Halla A.",
+      "alternatives": [
+        "75",
+        "78",
+        "80",
+        "82",
+        "85"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/solucionario-unp-examen-admision-universidad-nacional-de-piura-preguntas-resueltas-prueba-de-ingreso-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNP 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE PIURA 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se divide un mismo número entre 2 números consecutivos, obteniéndose en ambos casos 45 de cociente. Si los dos residuos suman 73, uno de ellos es:",
+      "alternatives": [
+        "12",
+        "14",
+        "16",
+        "18",
+        "24"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/01/solucionario-uns-examen-de-admision-universidad-nacional-del-santa-chimbote-claves-respuestas-prueba-resuelta-preguntas-desarrolladas-soluciones-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNS 2027 EXAMEN ADMISIÓN UNIVERSIDAD DEL SANTA CHIMBOTE PROSPECTO CRONOGRAMA VACANTES TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos números suman 94 y si dividimos al mayor entre el menor obtenemos 3 de cociente y 14 de residuo. ¿En cuánto excede el mayor al menor?",
+      "alternatives": [
+        "74",
+        "50",
+        "64",
+        "54",
+        "48"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-esan-examen-admision-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO ESAN 2027 EXAMEN ADMISIÓN UNIVERSIDAD TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un número excede a otro en 36 unidades y si dividimos el mayor entre el menor obtenemos 3 de cociente y 2 de residuo. Halla el menor de dichos números.",
+      "alternatives": [
+        "13",
+        "15",
+        "17",
+        "21",
+        "23"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-ucsur-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CIENTIFÍCA DEL SUR 2027 UCSUR EXAMEN ADMISIÓN UNIVERSIDAD TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dividiendo dos números da 8 por cociente y 6 de residuo. Si la suma de ambos es 582, hallar el número menor.",
+      "alternatives": [
+        "62",
+        "51",
+        "64",
+        "82"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/02/solucionario-coar-examen-admision-pua-resuelto-ingreso-colegio-de-alto-rendimiento-preguntas-claves-respuestas-ejercicios-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO COAR 2027 EXAMEN ADMISIÓN PUA COLEGIO DE ALTO RENDIMIENTO EVALUACIÓN PRUEBA RESUELTA RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Margarita fue de compras llevando cierto número entero de soles. Al dividir dicho número por 56, el residuo por defecto es el triple del residuo por exceso, además el cociente por defecto y el cociente por exceso suman 25. Si al comprar un regalo para su ahijado, Margarita gastó una cantidad de soles equivalente a 15 veces el residuo por exceso de dicha división, ¿cuántos soles le quedó?",
+      "alternatives": [
+        "527",
+        "521",
+        "504",
+        "523",
+        "424"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/10/Cepreuni-practica-2-con-solucionario-ingreso-directo-universidad-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI SEGUNDA PRACTICA CALIFICADA 2027 I RESUELTA RESPUESTAS PDF 2026-2"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 611, su cociente es 32 y el residuo de su división el mayor posible. Halla los números.",
+      "alternatives": [
+        "590;12",
+        "593; 15",
+        "590; 18",
+        "593; 18",
+        "540; 16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-primer-grado-ejercicios_78.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIÓN LINEAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta, el divisor es 6 y el residuo por defecto excede al residuo por exceso en 2 unidades. Si los cocientes por defecto y por exceso suman 29, calcule la suma de cifras del dividendo.",
+      "alternatives": [
+        "14",
+        "16",
+        "12",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-aritmetica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ARITMÉTICA RUBIÑOS 2025 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta el dividendo es 2604, el divisor es una vez más que el cociente y el cociente es dos veces más que el residuo. Calcule la suma de los términos de la división.",
+      "alternatives": [
+        "2676",
+        "2712",
+        "2684",
+        "2718",
+        "2724"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-enteros-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS ENTEROS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir N entre 30 el cociente termina en 12 y el residuo es máximo, calcule la suma de las tres últimas cifras de N.",
+      "alternatives": [
+        "17",
+        "18",
+        "19",
+        "20",
+        "21"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-enteros-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS ENTEROS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El residuo de la división de cierto número entre 12 es 8; pero si dicho número se divide entre 10, el cociente aumenta en 8 y el residuo disminuye en 2. Dé como respuesta la suma de las cifras de dicho número.",
+      "alternatives": [
+        "17",
+        "15",
+        "16",
+        "18",
+        "19"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-de-admision-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CEPREVI PRIMER EXAMEN PARCIAL PDF INGRESO DIRECTO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Samuel nació en el año 2000 y su hermano David “r” años después. ¿Cuántos años cumplirá David en el año 2027, si al dividir (2000) 2027 entre 9, se obtiene “r” como residuo por defecto?",
+      "alternatives": [
+        "22",
+        "21",
+        "20",
+        "23",
+        "24"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-aritmetica-semana-14.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA ÁREA D SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta, el residuo por defecto es 15, la suma de cocientes es 17 y el divisor es el triple del cociente por exceso, halle el producto de las cifras del dividendo.",
+      "alternatives": [
+        "12",
+        "24",
+        "6",
+        "4",
+        "80"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/compendio-de-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Manuel, quien tiene más de veinte años, debía 1736 soles a cierta cooperativa. Él comprueba que, si esta cantidad la eleva al número de años que representa su edad y luego divide este resultado entre 11, obtiene 6 como residuo por exceso. Si su edad es la menor posible, determine la suma de sus cifras.",
+      "alternatives": [
+        "3",
+        "7",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-aritmetica-semana-11.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división el residuo por defecto es 7 y el exceso es 13, el cociente es la mitad del divisor, calcular el dividendo.",
+      "alternatives": [
+        "200",
+        "207",
+        "213",
+        "193",
+        "187"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el residuo por exceso es 13, el divisor 30, el cociente por exceso es 2/5 del divisor, calcular el dividendo.",
+      "alternatives": [
+        "360",
+        "373",
+        "347",
+        "350",
+        "340"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división el divisor termina en ..... 41; el cociente en .... 15 y el residuo termina en .... 12, entonces el dividendo termina en:",
+      "alternatives": [
+        "23",
+        "24",
+        "25",
+        "27",
+        "28"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 43; al dividirlos su cociente es 2 y el residuo 7, calcular el número mayor.",
+      "alternatives": [
+        "31",
+        "30",
+        "32",
+        "33",
+        "29"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el dividendo de una división por defecto si el divisor es 31, el cociente 12 y el residuo 7",
+      "alternatives": [
+        "379",
+        "362",
+        "327",
+        "351",
+        "328"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el dividendo de una división por defecto si el divisor es 47, el cociente 9 y el residuo es lo máximo posible",
+      "alternatives": [
+        "401",
+        "412",
+        "469",
+        "471",
+        "482"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el dividendo de una división por exceso si el divisor es 24, el cociente 16 y el residuo 8.",
+      "alternatives": [
+        "304",
+        "376",
+        "353",
+        "350",
+        "399"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al efectuar una división se obtiene 4 de cociente y 3 de residuo; al agregar 4 unidades al dividendo; el cociente aumenta en 1 y no queda residuo. Hallar el dividendo.",
+      "alternatives": [
+        "24",
+        "32",
+        "31",
+        "43",
+        "57"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cociente y el residuo de una división inexacta son 37 y 19 respectivamente. Si se le aumenta al dividendo 157 y se vuelve a dividir, el cociente aumenta en 8 y el residuo disminuye en 11. Determinar la suma de cifras del dividendo inicial.",
+      "alternatives": [
+        "22",
+        "13",
+        "18",
+        "17",
+        "9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se divide un número de cuatro cifras entre otro de dos cifras, obteniéndose como cociente 181, y como residuos parciales a 17; 2 y 5 respectivamente . Determinar la suma de cifras del mayor dividendo posible.",
+      "alternatives": [
+        "20",
+        "27",
+        "31",
+        "28",
+        "32"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta, el dividendo termina en 95, el cociente en 87 y el residuo en 72. Halle la suma de las dos últimas cifras del divisor.",
+      "alternatives": [
+        "10",
+        "9",
+        "8",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los términos de una división inexacta es 95 y el cociente es 14. Calcule el dividendo.",
+      "alternatives": [
+        "42",
+        "56",
+        "81",
+        "49",
+        "73"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-agraria-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — AGRARIA PRUEBA DE INGRESO UNIVERSIDAD LA MOLINA CLAVES RESPUESTAS RESUELTA 2025 PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 436, y si el mayor se divide entre el menor, el cociente es 2 y el residuo 73. Halla los números.",
+      "alternatives": [
+        "315 – 121",
+        "128 – 308",
+        "200 – 236",
+        "120 –316"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/olimpiada-de-matematicas-de-tercero-de-primaria-con-solucionario-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONCURSO NACIONAL DE MATEMÁTICAS DE TERCER GRADO DE PRIMARIA CON SOLUCIONES RESPUESTAS 2024 PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 59, si el mayor se divide entre el menor el cociente es 2 y el residuo 5. Halla los números.",
+      "alternatives": [
+        "26 – 33",
+        "18 – 41",
+        "42 – 17",
+        "43 – 16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/olimpiada-de-matematicas-de-tercero-de-primaria-con-solucionario-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONCURSO NACIONAL DE MATEMÁTICAS DE TERCER GRADO DE PRIMARIA CON SOLUCIONES RESPUESTAS 2024 PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Repartir 285 en 2 partes, tales que 2/3 de la mayor divididos entre 4/9 de la menor nos da 1 de cociente y 40 de residuo. Hallar la parte menor.",
+      "alternatives": [
+        "167",
+        "135",
+        "140",
+        "120",
+        "118"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-fraccionarias-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — ECUACIONES FRACCIONARIAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta, al residuo le faltan 27 unidades para ser máximo y le sobran 22 unidades para ser mínimo. Determine el dividendo si el cociente es 26.",
+      "alternatives": [
+        "1249",
+        "1350",
+        "1312",
+        "1340",
+        "1349"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/multiplicacion-y-division-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el divisor es 23; además, la diferencia entre el residuo por defecto y exceso es igual al cociente por exceso. Calcule el mayor valor que puede tomar el dividendo.",
+      "alternatives": [
+        "516",
+        "468",
+        "428",
+        "482",
+        "398"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/multiplicacion-y-division-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división de dos números enteros positivos, la suma del cociente por defecto y por exceso es 35, el residuo por defecto es 6 y el residuo por exceso es igual al cociente por defecto. Halle el dividendo.",
+      "alternatives": [
+        "491",
+        "393",
+        "631",
+        "437",
+        "397"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/multiplicacion-y-division-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia de dos números es 832, su cociente es 17 y su residuo el más grande posible. Hallar la suma de los números.",
+      "alternatives": [
+        "881",
+        "993",
+        "934",
+        "890",
+        "930"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sustraccion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se divide N entre 18, obteniéndose 13 de cociente y residuo el mayor posible. El número N es:",
+      "alternatives": [
+        "234",
+        "253",
+        "196",
+        "324",
+        "251"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 310 y al dividir el mayor entre el menor se obtuvo 3 de cociente y 30 de residuo. La diferencia de dichos números es:",
+      "alternatives": [
+        "170",
+        "160",
+        "150",
+        "140",
+        "130"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 94 y su cociente 9; dando de residuo 4. ¿Cuál es el mayor número?",
+      "alternatives": [
+        "85",
+        "94",
+        "84",
+        "68",
+        "86"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea N el dividendo en una división entera. Si se cumple que: 70≤N≤120 , pero el cociente es la quinta parte del residuo, calcular N, si el divisor es 20",
+      "alternatives": [
+        "100",
+        "110",
+        "112",
+        "118",
+        "75"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los cuatro términos de una división entera e inexacta es igual a 544. Calcular el residuo, si el cociente es 12 y el residuo la mitad del divisor.",
+      "alternatives": [
+        "8",
+        "19",
+        "12",
+        "16",
+        "23"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El producto de dos números impares es 925. Si se divide el número mayor entre el menor se obtiene un cociente 1 y residuo 12. Calcular dichos números.",
+      "alternatives": [
+        "25 y 35",
+        "35 y 39",
+        "35 y 41",
+        "25 y 37",
+        "27 y 37"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al efectuar una división entera por defecto y por exceso, el divisor es 21, la diferencia de los residuos por defecto y por exceso es 9. Calcular el dividendo, si el cociente es la tercera parte del residuo por defecto.",
+      "alternatives": [
+        "145",
+        "98",
+        "112",
+        "120",
+        "85"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El residuo por exceso de una división es 37. Si el residuo por defecto es la tercera parte del residuo máximo, calcular el valor del divisor más el residuo por defecto.",
+      "alternatives": [
+        "49",
+        "54",
+        "69",
+        "62",
+        "73"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta, al residuo le falta 15 unidades para ser máximo y sería mínimo al restarle 18 unidades. Calcular el dividendo, si el cociente es el doble del residuo por exceso.",
+      "alternatives": [
+        "1039",
+        "1239",
+        "1139",
+        "939",
+        "945"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta de divisor 42, al efectuarla por defecto la suma de sus términos es 916, pero si se efectúa por exceso sus términos suman 945. Determinar el cociente que se obtendría, si se aumenta 100 unidades al dividendo.",
+      "alternatives": [
+        "22",
+        "25",
+        "20",
+        "7",
+        "35"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división el cociente, el divisor y el residuo son números consecutivos en ese orden. El mínimo número que hay que añadir al dividendo para aumentar el cociente en 3 es 55. Calcular la suma de las cifras del dividendo.",
+      "alternatives": [
+        "11",
+        "13",
+        "15",
+        "17",
+        "19"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cociente y el residuo de una división inexacta son, respectivamente, 43 y 27. Si se le aumenta al dividendo 108 unidades y se efectúa nuevamente la división el cociente aumenta en 3 y el residuo disminuye en 12. Calcular la suma de cifras del dividendo inicial.",
+      "alternatives": [
+        "23",
+        "22",
+        "21",
+        "20",
+        "19"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta la suma del dividendo y del divisor es 32 veces el residuo y el cociente por exceso es igual al residuo por defecto. Calcular la suma de todos los valores que puede tomar el dividendo.",
+      "alternatives": [
+        "13 826",
+        "13 857",
+        "13 888",
+        "13 919",
+        "13 950"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números de 4 cifras que comienzan y terminan en 5 son tales que divididos entre otro número entero dan como cociente 17 y como residuo, su residuo máximo.",
+      "alternatives": [
+        "4",
+        "5",
+        "10",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se sabe que al residuo por defecto le faltan 2x unidades para ser igual al otro residuo, el divisor es mayor en 3x unidades que el residuo por exceso, al divisor le faltan 4x unidades para ser igual al cociente. Si el dividendo es 384x + 12, calcular el residuo por exceso.",
+      "alternatives": [
+        "18",
+        "20",
+        "22",
+        "23",
+        "41"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división el cociente es 9 y el residuo es 87. Si el dividendo se multiplica por 3 y se vuelve a realizar la división, el cociente aumenta en el mayor valor posible y el residuo es 29. Calcular la suma de las cifras del dividendo de la división inicial.",
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división el residuo por exceso es igual a 1/3 del divisor. El menor número que se le debe sumar al dividendo, para que el cociente aumente en 2 unidades es 52, además se sabe que al multiplicar el dividendo de esta operación por 3, la división es exacta y el cociente aumenta en 36 unidades. Calcular la suma de las cifras del dividendo.",
+      "alternatives": [
+        "15",
+        "18",
+        "20",
+        "21",
+        "23"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la verdad (V) o falsedad (F) de las proposiciones:\n( ) En toda división inexacta, con elementos positivos, se tiene que el residuo es menor que la mitad del dividendo.\n( ) En toda división inexacta, con elementos positivos, se tiene que al mayor número que puede numerarse al dividendo, sin que el cociente varíe, es el divisor disminuido en (r + 1), donde r es el residuo.\n( ) Al dividir dos números enteros positivos por su diferencia positiva, se obtienen residuos iguales y los cocientes difieren en una unidad.\n( ) Si en una división de términos positivos, al dividendo le agregamos una cantidad igual al divisor, entonces el cociente aumenta en 1 unidad.",
+      "alternatives": [
+        "VVVV",
+        "VFVV",
+        "FVVV",
+        "VVFV",
+        "VVVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el dividendo de una división por defecto si el divisor es 47, el cociente 18 y el residuo 20",
+      "alternatives": [
+        "820",
+        "866",
+        "478",
+        "780",
+        "698"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el dividendo de una división por defecto si el divisor es 31, el cociente 13 y el residuo es lo máximo posible",
+      "alternatives": [
+        "401",
+        "514",
+        "380",
+        "433",
+        "404"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el dividendo de una división, si el cociente es 41, además el residuo por defecto es 12 y el residuo por exceso es 10.",
+      "alternatives": [
+        "914",
+        "871",
+        "902",
+        "897",
+        "824"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta el cociente por defecto es 9, los residuos por defecto y por exceso son iguales y la suma del dividendo y el divisor es 210. Hallar el dividendo",
+      "alternatives": [
+        "210",
+        "270",
+        "180",
+        "190",
+        "250"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividirse dos números se obtiene 5 de cociente y 20 de residuo. Hallar el menor, si la suma de dichos números es 620.",
+      "alternatives": [
+        "125",
+        "150",
+        "180",
+        "100",
+        "250"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la diferencia de dos números es 361, al ser divididos se obtiene 10 de cociente y un residuo mínimo. Hallar la suma de dichos números.",
+      "alternatives": [
+        "400",
+        "250",
+        "650",
+        "441",
+        "641"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta la suma del residuo por defecto más el residuo por exceso es 24, si el cociente es el triple del residuo por defecto. Cuantos valores puede tomar el dividendo?",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta al residuo le faltan 17 unidades para ser máximo, si el cociente es 43, hallar el dividendo si éste es el menor número posible de 4 cifras. Dar como respuesta la suma de sus cifras.",
+      "alternatives": [
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar un número de 4 cifras tal que dividido por su CA se obtiene 8 de cociente y 28 de residuo. Dar como respuesta la suma de sus cifras.",
+      "alternatives": [
+        "18",
+        "22",
+        "24",
+        "25",
+        "27"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma del dividendo y el divisor en una división es 41 veces el residuo por defecto y la diferencia de ellos es 25 veces dicho residuo. Hallar el cociente por exceso.",
+      "alternatives": [
+        "2",
+        "5",
+        "4",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma del dividendo, divisor, cociente y residuo de una división es 1357; si la división se hubiera hecho por exceso la suma seria 1349. Hallar el dividendo siendo el cociente 25.",
+      "alternatives": [
+        "1154",
+        "1315",
+        "1254",
+        "1024",
+        "1424"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta el dividendo es 345. El cociente es el doble del divisor el residuo 7. Calcula el divisor.",
+      "alternatives": [
+        "10",
+        "16",
+        "13",
+        "18",
+        "19"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-aritmetica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE DIVISIÓN RESUELTOS DE ARITMÉTICA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cociente y el residuo de una división inexacta son respectivamente 43 y 27. Si se la aumenta al dividendo 108 unidades y se efectúa nuevamente la división el cociente aumenta en 3 y el residuo disminuye en 12. ¿Cuál es el divisor respectivo?",
+      "alternatives": [
+        "28",
+        "32",
+        "40",
+        "45",
+        "50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-aritmetica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE DIVISIÓN RESUELTOS DE ARITMÉTICA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cierta división se cumple que el residuo por exceso es igual al cociente por defecto y el residuo por defecto es igual al cociente por exceso. si el divisor es 37, hallar el dividendo.",
+      "alternatives": [
+        "625",
+        "685",
+        "705",
+        "715",
+        "745"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-aritmetica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE DIVISIÓN RESUELTOS DE ARITMÉTICA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resto de una cierta división le faltan 8 unidades para ser máximo. si se le suma 6416 unidades al dividendo, el cociente aumenta en 89 y el residuo se vuelve máximo. ¿Cuál es el divisor?",
+      "alternatives": [
+        "54",
+        "65",
+        "72",
+        "84",
+        "90"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/multiplicacion-y-division-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE MULTIPLICACIÓN Y DIVISIÓN RESUELTOS DE ARITMÉTICA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta el dividendo está comprendido entre 200 y 300, el divisor es 25. Además el residuo por defecto excede al residuo por exceso en 23. Halla el mayor valor que pueda tomar el cociente.",
+      "alternatives": [
+        "11",
+        "9",
+        "21",
+        "15",
+        "8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/multiplicacion-y-division-aritmetica-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es una división el residuo por exceso es 1/3 del divisor. El menor número que se debe sumar al dividendo para aumentar en 2 al cociente es 52. Al triplicar al dividendo, el cociente aumenta en 36. Halle la suma de las cifras del dividendo.",
+      "alternatives": [
+        "15",
+        "17",
+        "20",
+        "23",
+        "24"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/multiplicacion-y-division-aritmetica-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE PRE UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el mayor entero tal que al dividirlo entre 50 da un residuo que es igual al triple del cociente.",
+      "alternatives": [
+        "795",
+        "848",
+        "820",
+        "780",
+        "860"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://aritmeticapdf.blogspot.com/2019/01/division-aritmetica-ejemplos-resueltos.html",
+      "sourceName": "aritmeticapdf.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si al multiplicando y multiplicador se le disminuye en 2 y 4 respectivamente, el producto disminuye en 198. Halle la suma de los factores de dicha multiplicación si su diferencia es 8.",
+      "alternatives": [
+        "63",
+        "65",
+        "67",
+        "66",
+        "69"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/multiplicacion-y-division-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una varilla de fierro ha sido seccionada en pedazos de 24 cm de largo. Si se hicieron 11 cortes, ¿cuál es la longitud de la varilla?",
+      "alternatives": [
+        "242 cm",
+        "264 cm",
+        "288 cm",
+        "292 cm",
+        "300 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/03/admision-unaj-solucionario-pdf-juliaca.html",
+      "sourceName": "matematicaj.blogspot.com — SOLUCIONARIO UNAJ EXAMEN ADMISIÓN UNIVERSIDAD DE JULIACA PROSPECTO CRONOGRAMA VACANTES ESTRUCTURA PUNTAJES TEMARIO PDF 2026"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cuánto excede 120 a 30",
+      "alternatives": [
+        "90",
+        "140",
+        "150",
+        "100"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene 3 sacos, con 130, 12 y 6 docenas de botones cada uno. ¿Cuántos botones hay?",
+      "alternatives": [
+        "1 770",
+        "1980",
+        "1 776",
+        "1 200"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la siguiente operación combinada\n0,25 – 0,5 + 0,333... , resulta:",
+      "alternatives": [
+        "0.83",
+        "0.08",
+        "0.083",
+        "0.008"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos metros tendrá que caminar una persona desde su casa a la plaza de armas, si para llegar a esta camina tres cuadras? Debemos saber que cada cuadra tiene una longitud de 100 metros.",
+      "alternatives": [
+        "100 m.",
+        "200 m.",
+        "300 m.",
+        "400 m."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Don Tomás compró dos alfombras de S/.340 cada una y tres colchones de S/.1 280 cada uno. Si tenía un cupón de descuento de S/.600, si lleva S/.4 000 para pagar. ¿Cuánto trae de vuelto?",
+      "alternatives": [
+        "125",
+        "55",
+        "75",
+        "80"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tenía $14,25 el lunes, el martes cobré $ 16,89, el miércoles cobre $ 97 y el jueves pagué $ 56,07. ¿Cuánto me queda?",
+      "alternatives": [
+        "$ 56,16",
+        "43,25",
+        "72,07",
+        "10,25",
+        "13,71"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/12/aprende-numeros-decimales-paso-paso.html",
+      "sourceName": "matematicaj.blogspot.com — LOS DECIMALES Y SUS OPERACIONES EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dany tiene $ 5,64 ; Jhony $ 2,37 más que Dany y Jeffry $ 1,15 más que Jhony. ¿Cuánto tienen entre los tres?",
+      "alternatives": [
+        "$ 22,81",
+        "19,25",
+        "33,7",
+        "55,7",
+        "63,2."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/12/aprende-numeros-decimales-paso-paso.html",
+      "sourceName": "matematicaj.blogspot.com — LOS DECIMALES Y SUS OPERACIONES EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una caja de chocolates vale $ 4,75 y los chocolates valen $3,75 más que la caja. calcular el precio de los chocolates y de la caja.",
+      "alternatives": [
+        "$ 5,31 y 1,25",
+        "4,25 y 2,05",
+        "5,32 y 3,1",
+        "4,25 y 0,50",
+        "5,45 y 3,25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/12/aprende-numeros-decimales-paso-paso.html",
+      "sourceName": "matematicaj.blogspot.com — LOS DECIMALES Y SUS OPERACIONES EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marcy se cayó de su bicicleta, al accidentarse pagó 40 soles al médico; 91,75 soles en la farmacia y 35,70 soles en el arreglo de la bicicleta. ¿Cuánto tuvo que o pagar en total?",
+      "alternatives": [
+        "S/ 150,3",
+        "167,45",
+        "145,7",
+        "175,13",
+        "120,75"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/12/aprende-numeros-decimales-paso-paso.html",
+      "sourceName": "matematicaj.blogspot.com — LOS DECIMALES Y SUS OPERACIONES EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un hombre se compra un traje, un sombrero, un bastón y una billetera. Ésta le ha costado $ 3,75; el sombrero le ha costado el doble de lo que le costo la billetera, el bastón $ 1,78 más que el sombrero, y el traje cinco veces que la billetera. ¿Cuánto le a costado todo?",
+      "alternatives": [
+        "$ 21,59",
+        "39,28",
+        "46,12",
+        "50, 2",
+        "35,1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/12/aprende-numeros-decimales-paso-paso.html",
+      "sourceName": "matematicaj.blogspot.com — LOS DECIMALES Y SUS OPERACIONES EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división el divisor es 32 y el cociente 13. Calcula el dividendo si el residuo es máximo.",
+      "alternatives": [
+        "447",
+        "443",
+        "464",
+        "471",
+        "494"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — EJERCICIOS DE DIVISIÓN ARITMÉTICA RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el dividendo es 1932; y el divisor es 81. Y el residuo es el triple del cociente. Calcula el cociente.",
+      "alternatives": [
+        "23",
+        "21",
+        "20",
+        "26",
+        "25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — EJERCICIOS DE DIVISIÓN ARITMÉTICA RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La división de dos números da 254 de cociente y 2713 de resto. ¿En cuántas unidades como máximo puede aumentar tanto el dividendo como el divisor sin que varíe el cociente?.",
+      "alternatives": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — EJERCICIOS DE DIVISIÓN ARITMÉTICA RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el divisor es 58 y el cociente 25. Calcula el dividendo si el residuo es máximo.",
+      "alternatives": [
+        "1588",
+        "1564",
+        "1510",
+        "1507",
+        "0540"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/multiplicacion-y-division-aritmetica.html",
+      "sourceName": "matematicaj.blogspot.com — MULTIPLICACIÓN Y DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS DE SECUNDARIA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al efectuar: 400×4,5 + 200×0,5\nobtenemos:",
+      "alternatives": [
+        "1000",
+        "1500",
+        "1800",
+        "1900",
+        "2400"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/01/razonamiento-matematico-aptitud-logica-psicotecnico-solucionario-examen-admision-universidad-institutos-superiores-tecnicos-escuela-pnp-prueba-resuelta-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMÁTICO PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN RESPUESTAS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los n primeros números naturales consecutivos, pares consecutivos e impares consecutivos es 31n+6. Halle el valor de n.",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/unsm-examen-de-admision-a-la-universidad-nacional-de-san-martin-solucionario-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNSM 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE SAN MARTIN ORDINARIO EXTRAORDINARIO TARAPOTO TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la suma de todos los números pares positivos menores que 100.",
+      "alternatives": [
+        "2550",
+        "2450",
+        "4900",
+        "5100",
+        "5250"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Examen-de-admision-universidad-nacional-del-altiplano-unap-ingenierias-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNA 2027 UNIVERSIDAD DEL ALTIPLANO EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división entera, el cociente es 13 y el resto es 5. Si el cociente aumenta en uno y el resto disminuye en la misma cantidad, entonces, ¿el dividendo aumenta o disminuye?",
+      "alternatives": [
+        "no aumenta ni disminuye",
+        "disminuye en el resto mínimo",
+        "aumenta en el resto máximo",
+        "aumenta en el doble del resto",
+        "disminuye en eí doble del resto"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Carmen debe pagar un dulce que cuesta S/ 21,6 usando monedas de S/.1; S/.2; S/.0,5 y S/.0,1. Si utiliza los cuatro tipos de monedas, ¿cuál es la diferencia entre la máxima y mínima cantidad de monedas que puede utilizar respectivamente?",
+      "alternatives": [
+        "184",
+        "190",
+        "171",
+        "194",
+        "178"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-11-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 11 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea N un número natural tal que se cumple\n12× N=...836\n8×N=...224\nCalcule las tres últimas cifras del resultado de multiplicar 28 ×N.",
+      "alternatives": [
+        "144",
+        "368",
+        "244",
+        "424",
+        "284"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-7-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 7 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el mayor número entero que al dividirlo entre 70 se obtiene un cociente que es la raíz cuadrada del residuo. Dar como respuesta el producto de las cifras de dicho número.",
+      "alternatives": [
+        "48",
+        "54",
+        "63",
+        "60",
+        "42"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/resolucion-examen-villarreal-admision.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS DE LA SALUD PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA D 2027 FORMALES Y NATURALES"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una caja tiene 45cm de largo, 30cm de ancho y 15cm de altura. Para hacer su lazo, se requieren 25cm más. Teniendo en cuenta que la amarraremos en cruz, ¿cuántos cm como mínimo necesitamos para atar la caja?",
+      "alternatives": [
+        "230",
+        "235",
+        "225",
+        "240"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/02/solucionario-coar-examen-admision-pua-resuelto-ingreso-colegio-de-alto-rendimiento-preguntas-claves-respuestas-ejercicios-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO COAR 2027 EXAMEN ADMISIÓN PUA COLEGIO DE ALTO RENDIMIENTO EVALUACIÓN PRUEBA RESUELTA RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Javier al multiplicar un número por 50, se olvidó de agregar el cero al resultado, obteniendo un producto qué difiere del verdadero en 3195 unidades. Hallar el multiplicando.",
+      "alternatives": [
+        "71",
+        "91",
+        "69",
+        "45"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/02/solucionario-coar-examen-admision-pua-resuelto-ingreso-colegio-de-alto-rendimiento-preguntas-claves-respuestas-ejercicios-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO COAR 2027 EXAMEN ADMISIÓN PUA COLEGIO DE ALTO RENDIMIENTO EVALUACIÓN PRUEBA RESUELTA RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia de dos números es 14 y su suma es 52; hallar el mayor número.",
+      "alternatives": [
+        "13",
+        "22",
+        "33",
+        "44",
+        "35"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/02/resolucion-de-sistemas-de-ecuaciones-en-primaria-secundaria-ejercicios-resueltos-paso-a-paso-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SISTEMAS DE ECUACIONES EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 190 y su diferencia es 18 . Hallar el mayor número.",
+      "alternatives": [
+        "84",
+        "104",
+        "64",
+        "102",
+        "56"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/02/resolucion-de-sistemas-de-ecuaciones-en-primaria-secundaria-ejercicios-resueltos-paso-a-paso-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SISTEMAS DE ECUACIONES EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia de dos números es 40 y su suma es 88; hallar el menor número.",
+      "alternatives": [
+        "24",
+        "26",
+        "62",
+        "48",
+        "42"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/02/resolucion-de-sistemas-de-ecuaciones-en-primaria-secundaria-ejercicios-resueltos-paso-a-paso-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SISTEMAS DE ECUACIONES EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir un número entre 51, el residuo resulta cuatro veces más que el cociente. ¿Cuántos números cumplen con esta condición?",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "9",
+        "13"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/posiciones-de-rectas-y-planos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNAH 2027 UNIVERSIDAD NACIONAL AUTÓNOMA DE HUANTA EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El producto de dos números es 156. Si uno de los factores se duplica, indique el nuevo producto.",
+      "alternatives": [
+        "112",
+        "212",
+        "120",
+        "412",
+        "312"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/aritmetica-examen-admision-villarreal.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA VILLARREAL RESUELTA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el divisor es 42 y el residuo es 19. Si el dividendo es 649, indique el valor del cociente.",
+      "alternatives": [
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/aritmetica-examen-admision-villarreal.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA VILLARREAL RESUELTA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el residuo es 37 y el cociente es 13. Halle el dividendo sabiendo que es menor que 560 y que termina en 4.",
+      "alternatives": [
+        "504",
+        "514",
+        "524",
+        "534",
+        "544"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-tecsup-pdf-admision.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO TECSUP 2027 EXAMEN ADMISIÓN PROSPECTO CRONOGRAMA VACANTES ESTRUCTURA PUNTAJES TEMARIO PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el resultado de:\n72,2 + {3,5 + (5,3–5)}",
+      "alternatives": [
+        "76",
+        "19",
+        "31,4",
+        "56,8",
+        "21,7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/combinacion-de-fracciones-y-numeros.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES COMBINADAS EN DECIMALES  EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplificar la siguiente operación combinada.\n4,2 + {7,1–[1,5 – (7,3 –7,2)]}",
+      "alternatives": [
+        "5,30",
+        "3,5",
+        "7,2",
+        "9,90",
+        "8,75"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/combinacion-de-fracciones-y-numeros.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES COMBINADAS EN DECIMALES  EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para pagar cierto número de cajas que compre a $0,70 cada una, entregué 14 sacos de azúcar de $ 6,25 cada uno, ¿Cuántas cajas compre?",
+      "alternatives": [
+        "125",
+        "135",
+        "140",
+        "175",
+        "200"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/combinacion-de-fracciones-y-numeros.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES COMBINADAS EN DECIMALES  EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cada luna de una ventana mide 40 cm. De ancho por 55 de alto. ¿Cuál será su precio a razón de 0,20 céntimos el centímetro cuadrado?",
+      "alternatives": [
+        "S/.120",
+        "440",
+        "325",
+        "540",
+        "370"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/combinacion-de-fracciones-y-numeros.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES COMBINADAS EN DECIMALES  EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Magy compra cinco lámparas a S/. 30,99 cada una. Si paga con un billete de 200 soles, ¿Cuánto recibe de vuelto?",
+      "alternatives": [
+        "S/. 45,05",
+        "30,5",
+        "25,05",
+        "19,3",
+        "11,54"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/combinacion-de-fracciones-y-numeros.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES COMBINADAS EN DECIMALES  EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lenin tiene 37,50 soles y su hermana 28,75 soles. ¿Cuánto les falta para poder comprar un discman que cuesta 120 soles?",
+      "alternatives": [
+        "S/. 33,71",
+        "23,38",
+        "41,5",
+        "19,23",
+        "53,75"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/combinacion-de-fracciones-y-numeros.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES COMBINADAS EN DECIMALES  EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por 18 pulseras bruny pagó S/. 103,50. ¿Cuál es el precio de cada pulsera?",
+      "alternatives": [
+        "S/. 4,27",
+        "7,31",
+        "5,41",
+        "6,2",
+        "5,75"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-de-numeros-decimales-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El perímetro de un cuadrado tiene 38m. ¿Cuánto mide su lado?",
+      "alternatives": [
+        "9,5m",
+        "7,2",
+        "10,3",
+        "8,7",
+        "5,91"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-de-numeros-decimales-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por cinco metros de tela se pago 128 soles. ¿A cómo resultó el metro?",
+      "alternatives": [
+        "S/. 29,18",
+        "54,72",
+        "25,6",
+        "31,7",
+        "17,9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/multiplicacion-de-numeros-decimales.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un albañil gana 126 soles en 12 días. ¿Cuál es el jornal diario?",
+      "alternatives": [
+        "S/. 13,7",
+        "20,5",
+        "19,7",
+        "10,5",
+        "24,7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/multiplicacion-de-numeros-decimales.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un galón de gasolina cuesta S/. 9,73. ¿Cuál será el importe de 7 galones?",
+      "alternatives": [
+        "S/. 68,11",
+        "72,25",
+        "63,25",
+        "70,1",
+        "67,5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/multiplicacion-de-numeros-decimales.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si 2400 kg de sal cuestan S/.750, ¿cuánto costarán 84 kg de sal en soles?",
+      "alternatives": [
+        "28,68",
+        "26,88",
+        "62,88",
+        "28,86",
+        "26,25"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — DECIMALES PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al comprar una docena de lapiceros, cuyo precio por unidad es S/.2,60, te regalan uno, por lo que en realidad cada lapicero en soles termina costando:",
+      "alternatives": [
+        "1,20",
+        "2,10",
+        "2,30",
+        "2,40",
+        "2,60"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — DECIMALES PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Katy entra a una tienda y gasta $ 4,75 y para pagar entrega un billete de $ 5, ¿cuál es su vuelto en $?",
+      "alternatives": [
+        "0,30",
+        "0,25",
+        "0,20",
+        "0,15",
+        "0,35"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — DECIMALES PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un barril lleno de vinagre pesa 503,54 kg. Si cada litro de vinagre pesa 0,97 kg, y el barril vacío pesa 84,5 kg, ¿cuántos litros de vinagre contiene el barril?",
+      "alternatives": [
+        "423,1 l",
+        "423",
+        "432",
+        "413,2",
+        "432,1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — DECIMALES PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cierta bodega se han almacenado cierta cantidad de litros de vino, que tiene un peso total de 8 431,24 kg. Si cada litro de vino pesa 0,97 kg, ¿cuántos litros de vino hay en la bodega?",
+      "alternatives": [
+        "8962 l",
+        "8862",
+        "8692",
+        "8682",
+        "8882"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — DECIMALES PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué número sumado con su triple da como resultado 4,70?",
+      "alternatives": [
+        "1,715",
+        "1,175",
+        "1,35",
+        "1 ,25",
+        "1,125"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — DECIMALES PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Perlita sale de su casa con S/.13,55; compró un libro de S/.9,23, luego le pagaron una deuda de S/.13,24, y finalmente compró en S/.15,97 otro libro. ¿Cuánto dinero tiene al final en soles?",
+      "alternatives": [
+        "1,39",
+        "1,45",
+        "1,69",
+        "1,58",
+        "1,59"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — DECIMALES PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La altura de una persona es 1,85 m y la de una torre es 26 veces la altura de la persona menos 1,009m. Determinar la altura de la torre.",
+      "alternatives": [
+        "59,31 m",
+        "47,091",
+        "97, 121",
+        "85,317",
+        "81,32"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-y-sus-operaciones.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Este es el resumen de las operaciones de una empresa durante cierta semana: el lunes hubo ingresos de S/.253,60; el martes ingresos de S/.279, el miércoles ingresos de S/.108,10, el jueves hubo egresos de S/.617,80 y el viernes ingresos de S/.831,80. ¿Cuánto dinero tendrá dicha empresa al finalizar la semana en soles?",
+      "alternatives": [
+        "854,70",
+        "845,70",
+        "854,60",
+        "854,80",
+        "855,70"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-y-sus-operaciones.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En este momento tengo $ 1,70, y necesito $ 4,90 para comprar un libro. Le pedí a mamá $ 2,80, pero ella sólo pudo darme $ 0,80 menos de lo que le pedí; luego le pedí a papá $ 0,50 y él me dio $ 0,40 más de lo que le pedí. ¿Cuánto me falta para poder comprar el libro en $?",
+      "alternatives": [
+        "0,28",
+        "0,30",
+        "0,27",
+        "0,32",
+        "0,35"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-y-sus-operaciones.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al Mercado Central llegan tres camiones trayendo frutas , y sus cargas son: 639,4 kg; 527,6 kg y 721,2 kg. Parte de la carga se reparte a seis vendedores, que llevan 253,1 kg; 125,4 kg; 257,5 kg ; 84,3kg ; 164,6kg y 89,4kg, respectivamente. ¿Cuántos kilogramos de fruta quedaron?",
+      "alternatives": [
+        "913,9",
+        "813,9",
+        "923,9",
+        "913,8",
+        "912,9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-y-sus-operaciones.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un fabricante hace un pedido de 650 kg de materiales, y se lo envían en cuatro partes. En la primera le envían 82,54 kg; en el segundo envío le traen 51 kg más que en el primero; en el tercer envío le traen tanto como en los dos primeros juntos, y en el último lo que resta. ¿Cuántos kilogramos le enviaron en el último envío?",
+      "alternatives": [
+        "217,84",
+        "218,84",
+        "218,48",
+        "217,48",
+        "219,84"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-y-sus-operaciones.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Fico sale de su casa con S/.8,50; compró un libro de S/.7,20; luego le pagaron una deuda de S/.23, y finalmente compró en S/.9,90 otro libro. ¿Cuánto dinero tiene al final en soles?",
+      "alternatives": [
+        "12,80",
+        "11",
+        "14,80",
+        "15,40",
+        "14,40"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-resta-ejemplos-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com —  RESTA DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué número debo sumarle a 15,71 para obtener 20,95?",
+      "alternatives": [
+        "1,36",
+        "2,37",
+        "5,24",
+        "6,64",
+        "4,76"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-resta-ejemplos-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com —  RESTA DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué número debo restarle a 16,76 para obtener 9,48?",
+      "alternatives": [
+        "7,36",
+        "7,28",
+        "2,32",
+        "6,64",
+        "8,76"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-resta-ejemplos-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com —  RESTA DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A la suma de 13,76 y 5,604 restarle 37,48.",
+      "alternatives": [
+        "32,32",
+        "36,24",
+        "38,12",
+        "24,42",
+        "49,16"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-resta-ejemplos-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com —  RESTA DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las tres hermanas García tienen juntas cierta cantidad de soles: Adela tiene S/.6,75; Tania tiene S/.3,48 más que Adela, y Jimena tiene S/.2,40 más que Tania. ¿Cuánto dinero tienen las hermanas García en soles?",
+      "alternatives": [
+        "29,61",
+        "26,51",
+        "29,60",
+        "29,50",
+        "26,61"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/numeros-reales-operaciones-y-ordenacion.html",
+      "sourceName": "matematicasn.blogspot.com — SUMA DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sastre, para poder confeccionar cuatro ternos distintos, necesita 2,73 m de tela para el primero; 1,87.m para el segundo; 3,26 m para el tercero y 2,56 m para el cuarto. ¿Cuántos metros de tela necesita en total?",
+      "alternatives": [
+        "10,24",
+        "10,42",
+        "11,42",
+        "11,04",
+        "10,04"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/numeros-reales-operaciones-y-ordenacion.html",
+      "sourceName": "matematicasn.blogspot.com — SUMA DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Isabel va a la librería y compra una libreta a S/.8,50 y un lápiz corrector a S/.6,50. Ella tenía S/.25, ¿cuánto le quedará en soles?",
+      "alternatives": [
+        "11",
+        "10,50",
+        "10,20",
+        "10,40",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ADICIÓN Y SUSTRACCIÓN DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ciclista ha recorrido tres etapas de una carrera. En la primera etapa recorrió 283,2 km; en la segunda, 222,6.km y en la tercera 197,5 km. ¿Qué distancia total ha recorrido en km ?",
+      "alternatives": [
+        "703,03",
+        "702,3",
+        "703,3",
+        "730,3",
+        "720,3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ADICIÓN Y SUSTRACCIÓN DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Nina va al mercado y hace cinco compras que le cuestan S/.23,80; S/.11; S/.46,50; S/.29,60 y S/.27,30. ¿Cuánto dinero ha gastado en total en soles?",
+      "alternatives": [
+        "139,10",
+        "138,20",
+        "138",
+        "132,80",
+        "138,30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-decimales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ADICIÓN Y SUSTRACCIÓN DE DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un camión lleva cinco paquetes de mercadería. El primero de los paquetes pesa 83,786 kg, el segundo 9 kg menos que el primero; el tercero pesa 8,206 kg más que los dos primeros juntos, y el cuarto tanto como los tres anteriores juntos. Si en total el camión lleva 843,25 kg, ¿cuánto pesa el quinto paquete en kg?",
+      "alternatives": [
+        "192,55",
+        "192,45",
+        "190,25",
+        "192,65",
+        "190,55"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-decimales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Jaime compró unos pantalones, una camisa, unos guantes y unos calcetines. Los calcetines le costaron S/.4,85; los guantes el doble que los calcetines; la camisa S/.2,85 más que los guantes, y los pantalones el doble que la camisa. ¿Cuánto dinero gastó en toda la compra en soles?",
+      "alternatives": [
+        "51,20",
+        "52,10",
+        "51,10",
+        "52,20",
+        "52"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-decimales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Carlos compra una casaca por $13,40, una corbata por $ 4,80 menos que la casaca, y un sombrero por la mitad de lo que cuestan la casaca y la corbata juntas. Como tenía $ 44,50, al final le quedarán en $:",
+      "alternatives": [
+        "12,50",
+        "11,50",
+        "11,60",
+        "12,60",
+        "12,40"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-decimales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un comerciante tiene 32 kg de arroz y pide S/.37,50 por cada kilo. Al no llegar a un acuerdo, vende todo el arroz por un total de S/.1 000. ¿Cuánto perdió en cada kilo en soles?",
+      "alternatives": [
+        "6,35",
+        "6,25",
+        "6,10",
+        "6,20",
+        "6,30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-decimales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pedro realizó tres compras en el mercado. En la primera gastó S/.398,60 ; en la segunda S/. 235,10 y en la tercera S/.706,20. ¿Cuánto gastó en total en soles?",
+      "alternatives": [
+        "1393,90",
+        "1399,80",
+        "1933,80",
+        "1339,80",
+        "1339,90"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-decimales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS DECIMALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados los siguientes números enteros:\n+8; –3; +9; –2; –5; +11.\n¿Qué número está más a la izquierda en la recta numérica?",
+      "alternatives": [
+        "–3",
+        "+8",
+        "+9",
+        "–5",
+        "–11"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-enteros-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS ENTEROS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado los siguientes números enteros: –17; –9; –15; –11; –10; +4. Indicar la suma de los números que están más a la izquierda y más a la derecha en la recta numérica.",
+      "alternatives": [
+        "–11",
+        "–10",
+        "–13",
+        "–14",
+        "–15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-enteros-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS ENTEROS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir N entre 481 se obtuvo un cociente entero positivo que es la quinta parte del residuo. ¿Cuántos valores puede tomar N?",
+      "alternatives": [
+        "480",
+        "95",
+        "96",
+        "192",
+        "más de 500"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/los-numeros-enteros-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — NÚMEROS ENTEROS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un comerciante compró 120 sandías a 3 soles cada uno. Luego vendió la tercera parte a 5 soles la unidad y el resto al precio de costo. ¿Ganó o perdió al final del negocio?",
+      "alternatives": [
+        "Ganó S/. 80",
+        "Perdió S/. 20",
+        "Gano S/. 20",
+        "Perdió S/. 70"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/potenciacion-aritmetica-conceptos.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIACIÓN DE NÚMEROS ENTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si en un corral hay 9 gallinas ponedoras y cada una pone 14 huevos a la semana. En un mes que tiene 4 semanas, ¿cuántos huevos se tendrían?",
+      "alternatives": [
+        "56",
+        "126",
+        "504",
+        "120",
+        "500"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/potenciacion-aritmetica-conceptos.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIACIÓN DE NÚMEROS ENTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Edu ha cosechado 17562 kg de papas; la mitad las vende para hacer chuño, el resto las vende en sacos de 48 kg, y lo que le sobra lo regala a los comedores populares. ¿Cuántos kilogramos regaló?",
+      "alternatives": [
+        "45",
+        "30",
+        "32",
+        "28",
+        "42"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/potenciacion-aritmetica-conceptos.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIACIÓN DE NÚMEROS ENTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "473 personas deben viajar de Cusco a Machupicchu; salen 13 ómnibus con el mismo número de pasajeros. ¿Cuántos van en cada ómnibus? ¿Cuántas personas se quedan sin viajar?. De cómo respuesta la diferencia entre dichas cantidades.",
+      "alternatives": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/potenciacion-aritmetica-conceptos.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIACIÓN DE NÚMEROS ENTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una caja grande hay dos cajas medianas, en cada una de estas hay tres cajas pequeñas y, a su vez, cada una de ellas contiene cuatro cajas chicas. ¿Cuántas cajas hay en total?",
+      "alternatives": [
+        "27",
+        "25",
+        "24",
+        "33",
+        "31"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-de-admision-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CEPREVI PRIMER EXAMEN PARCIAL PDF INGRESO DIRECTO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usando todas las cifras del sistema decimal se forman 2 numerales (N y M) de 5 cifras. Si N es el mayor posible y M el menor posible, calcule N – M. De la suma de cifras.",
+      "alternatives": [
+        "20",
+        "22",
+        "17",
+        "24",
+        "25"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-naturales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RESTA DE NÚMEROS NATURALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ely anota en su cuaderno cada dos años la altura que tiene un árbol, si lleva anotadas las cantidades: 1,25 metros 3,40 metros 5,10 metros 6,23 metros Indique cuánto creció en el 5to. y 6to. año.",
+      "alternatives": [
+        "15,98 metros",
+        "9,32 metros",
+        "1,70 metros",
+        "5,10 metros",
+        "6,20 metros"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/numeros-naturales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RESTA DE NÚMEROS NATURALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el dividendo de una división por exceso si el divisor es 51, el cociente la tercera parte del divisor y el residuo el menor posible.",
+      "alternatives": [
+        "866",
+        "684",
+        "905",
+        "241",
+        "824"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir un número entre 5, el residuo es 3 y al dividirlo entre 8 es 6. Si los cocientes se diferencian en 9. ¿Qué resto dará al dividir el número por 7?",
+      "alternatives": [
+        "6",
+        "3",
+        "1",
+        "5",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los 4 términos de una división es 202. Si al dividendo y divisor se les multiplica por 5, entonces la suma de los 4 términos de esta nueva división es 770. Calcular el primer cociente.",
+      "alternatives": [
+        "120",
+        "70",
+        "50",
+        "60",
+        "100"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos enteros positivos existen, tales que divididos entre 64 dejan un residuo que es el triple del cociente?",
+      "alternatives": [
+        "12",
+        "14",
+        "23",
+        "21",
+        "27"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división entera inexacta de residuo máximo el divisor es 37. Si el cociente es el C.A. de 88. ¿Cuál es el valor del dividendo?",
+      "alternatives": [
+        "440",
+        "480",
+        "450",
+        "410",
+        "540"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el menor número de tres cifras que al ser dividido entre 12 se obtiene un residuo máximo. Contestar la suma de las cifras de dicho número.",
+      "alternatives": [
+        "8",
+        "18",
+        "15",
+        "12",
+        "16"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir A entre B, se obtuvo el resto por exceso y defecto respectivamente 15 y 12, También se encontró un cociente por defecto de 30. Contestar la suma de las cifras de A.",
+      "alternatives": [
+        "10",
+        "12",
+        "15",
+        "18",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-aritmetica-ejercicios-tercero.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el dividendo es 3456; y el divisor es 62. Y el residuo es el doble del cociente. Calcula el cociente.",
+      "alternatives": [
+        "52",
+        "57",
+        "54",
+        "51",
+        "53"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-aritmetica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE DIVISIÓN RESUELTOS DE ARITMÉTICA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división entera inexacta, al resto le falta 8 para ser máximo y le sobran 3 para ser mínimo. Si el cociente es numéricamente igual al exceso de divisor sobre 3. ¿Cuál es el dividendo?",
+      "alternatives": [
+        "132",
+        "131",
+        "133",
+        "135",
+        "134"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-aritmetica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE DIVISIÓN RESUELTOS DE ARITMÉTICA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resto de una división le falta 3 unidades para tomar su máximo valor como resto. Si al dividendo se agrega 309 unidades, el cociente aumentará en 6 unidades y el residuo será nulo. Entonces el divisor es :",
+      "alternatives": [
+        "45",
+        "55",
+        "60",
+        "61",
+        "65"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-aritmetica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE DIVISIÓN RESUELTOS DE ARITMÉTICA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean los números a ; b y r enteros. Al dividir (a+b) entre b , si se obtiene como cociente 3r y como resto r. Si a<15r y b es primo menor a 10. Entonces b es igual a.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-aritmetica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE DIVISIÓN RESUELTOS DE ARITMÉTICA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división el dividendo es 1 081 , el residuo y el cociente son iguales entre sí y el divisor es el doble cociente , ¿cuál es el divisor? .",
+      "alternatives": [
+        "45",
+        "42",
+        "46",
+        "44",
+        "48"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-aritmetica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE DIVISIÓN RESUELTOS DE ARITMÉTICA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los tres términos de una multiplicación es 47. Si se multiplica por 6 al multiplicando, la nueva suma de términos es 207. Calcular el multiplicador.",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "15"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/multiplicacion-y-division-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE MULTIPLICACIÓN Y DIVISIÓN RESUELTOS DE ARITMÉTICA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si N × 17 termina en 2581. ¿cómo termina N × 8?",
+      "alternatives": [
+        "4477",
+        "4744",
+        "4747",
+        "4774",
+        "4474"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/multiplicacion-y-division-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE MULTIPLICACIÓN Y DIVISIÓN RESUELTOS DE ARITMÉTICA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los términos de una división entera exacta es 404. Si el dividendo es el cuádruplo del divisor. ¿Cuál es el dividendo?",
+      "alternatives": [
+        "320",
+        "340",
+        "360",
+        "220",
+        "280"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/multiplicacion-y-division-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE MULTIPLICACIÓN Y DIVISIÓN RESUELTOS DE ARITMÉTICA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se ha efectuado la división de un par de números por defecto y por exceso resultando 12 y 23 los residuos respectivos. Si el cociente por exceso fue 21. ¿Cuál es el valor del dividendo?",
+      "alternatives": [
+        "711",
+        "714",
+        "712",
+        "812",
+        "716"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/multiplicacion-y-division-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE MULTIPLICACIÓN Y DIVISIÓN RESUELTOS DE ARITMÉTICA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "hallar el mayor número de tres cifras tal que al dividirlo entre el número formado por sus dos primeras cifras el resto es 5 y al dividirlo entre el número formado por sus dos últimas cifras la división resulta exacta. Dar como respuesta la suma de sus cifras.",
+      "alternatives": [
+        "24",
+        "21",
+        "20",
+        "18",
+        "17"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/multiplicacion-y-division-aritmetica.html",
+      "sourceName": "matematicasn.blogspot.com — EJERCICIOS DE MULTIPLICACIÓN Y DIVISIÓN RESUELTOS DE ARITMÉTICA"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se da para multiplicar 13 y 20 . Si se aumenta el multiplicando en 5 el producto aumenta en :",
+      "alternatives": [
+        "5",
+        "20",
+        "120",
+        "140",
+        "100"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF MULTIPLICACIONES EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si ‘‘M’’ es igual al producto de tres números enteros positivos, luego cada número se duplica y se vuelve a multiplicar entonces ‘‘M’’ aumenta en cuantas veces su valor.",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF MULTIPLICACIONES EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al multiplicar un número por 37 se cometió el error de colocar los productos parciales uno debajo de otro obteniéndose 200. Dar el producto verdadero",
+      "alternatives": [
+        "370",
+        "740",
+        "640",
+        "1 110",
+        "540"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF MULTIPLICACIONES EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Multiplicar: 37143×99999\nLa suma de las cifras del resultado es:",
+      "alternatives": [
+        "41",
+        "43",
+        "40",
+        "44",
+        "45"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF MULTIPLICACIONES EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el multiplicador de una multiplicación es igual a 57 y el producto es 1026. Halla el multiplicando.",
+      "alternatives": [
+        "10",
+        "15",
+        "18",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF MULTIPLICACIONES EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el multiplicando de una multiplicación es igual a 8 y el producto es igual a 120. Halla el multiplicador.",
+      "alternatives": [
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF MULTIPLICACIONES EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los términos de una multiplicación es igual a 349, pero si el multiplicando y el multiplicador aumentan en uno, el producto aumentará 38. Halle la diferencia entre el multiplicando y el multiplicador.",
+      "alternatives": [
+        "14",
+        "12",
+        "10",
+        "5",
+        "11"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF MULTIPLICACIONES EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El producto de dos números es 53 874, pero si al primer factor le restamos una cantidad igual a la cifra de sus unidades se obtiene 52 890. Dado que el otro factor solo tiene cifras menores que 5, halle la suma de cifras del mayor factor.",
+      "alternatives": [
+        "12",
+        "13",
+        "16",
+        "19",
+        "15"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF MULTIPLICACIONES EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al multiplicar dos números se obtienen como productos parciales 1544; 1158 y 772, pero si a cada cifra del segundo factor le aumento en uno, sus productos parciales serían 1930; 1544 ; y 1158. Si la suma de cifras de este segundo factor es 9, Determinar la suma de cifras del primer factor.",
+      "alternatives": [
+        "16",
+        "17",
+        "18",
+        "19",
+        "15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF MULTIPLICACIONES EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En N×84 = ..... 8836 se indican las últimas cuatro cifras del producto. Entonces las últimas cuatro cifras del producto N×12 suman:",
+      "alternatives": [
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF MULTIPLICACIONES EN CUALQUIER BASE"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al efectuar la división de 234 y 93, indicar la suma del residuo y el cociente.",
+      "alternatives": [
+        "57",
+        "59",
+        "60",
+        "62",
+        "63"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al efectuar la división de 431 y 73, indicar la suma del residuo y cociente por exceso.",
+      "alternatives": [
+        "71",
+        "13",
+        "70",
+        "12",
+        "11"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los términos de una división entera exacta es 39. Si el dividendo es nueve veces el divisor, ¿cuál es el dividendo?",
+      "alternatives": [
+        "12",
+        "27",
+        "24",
+        "26",
+        "36"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el dividendo de una división por exceso si el divisor es 76, el cociente la mitad del divisor y el residuo el menor posible.",
+      "alternatives": [
+        "1457",
+        "3714",
+        "2788",
+        "2887",
+        "2328"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el dividendo de una división por defecto si el residuo máximo es 56, y el cociente es la tercera parte del divisor.",
+      "alternatives": [
+        "1402",
+        "1139",
+        "1024",
+        "1351",
+        "1301"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al sumar dividendo y divisor resulta 21 veces el residuo y al restarlo resulta 11 veces el residuo, hallar el cociente.",
+      "alternatives": [
+        "1",
+        "3",
+        "5",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un número natural N se divide entre 15, por defecto y por exceso, observándose que: el resto por exceso es mínimo y el cociente por defecto igual a 3. Calcular la suma de cifras de N.",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división de términos enteros, la suma de los cuatro términos es 271. Si se multiplica al dividendo y divisor por 4, la suma de términos sería 1030. Halle el dividendo.",
+      "alternatives": [
+        "127",
+        "203",
+        "237",
+        "243",
+        "224"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los cuatro términos de una división es 1079. Si se multiplica el dividendo y el divisor por 3 y se vuelve a realizar la división, la suma de los nuevos términos es 3185. Calcule el dividendo original.",
+      "alternatives": [
+        "912",
+        "985",
+        "983",
+        "989",
+        "812"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se realiza la división de los números 4609 y 218. ¿Cuántos números pueden sumarse al dividendo, de tal manera que el nuevo cociente sea 23?",
+      "alternatives": [
+        "213",
+        "215",
+        "225",
+        "218",
+        "220"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ARITMÉTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Compré 12 entradas al estadio de S/.20 cada una y pagué con 6 billetes de S/. 50 cada uno\n¿Cuál fue el vuelto que recibí?",
+      "alternatives": [
+        "40",
+        "70",
+        "60",
+        "80",
+        "50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sustraccion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia entre los complementos aritméticos de un número de tres cifras y otro de de 2 cifras es 493. Si la suma de dichos números es 557. indicar el número mayor.",
+      "alternatives": [
+        "538",
+        "407",
+        "582",
+        "497",
+        "482"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sustraccion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SUSTRACCIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una multiplicación, si al multiplicando se le aumenta 5 unidades el producto aumenta en 200. Si al multiplicador se le aumenta 7 unidades el producto aumenta en 91. Calcule la suma de las cifras del producto inicial.",
+      "alternatives": [
+        "12",
+        "13",
+        "7",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/multiplicacion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El producto de dos números es 2856. Si al multiplicando se le agrega 13 unidades resulta un producto de 3740. Hallar la suma de los números.",
+      "alternatives": [
+        "110",
+        "115",
+        "120",
+        "127",
+        "130"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/multiplicacion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una multiplicación, si al multiplicando se le agrega 5 y al multiplicador se le quita 5, entonces el producto aumenta en 600. Cual es la diferencia del multiplicando y del multiplicador.",
+      "alternatives": [
+        "100",
+        "515",
+        "325",
+        "645",
+        "125"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/multiplicacion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El producto de un número de dos cifras por el mismo pero con sus cifras en orden inverso es 574. Hallar la suma de sus cifras.",
+      "alternatives": [
+        "8",
+        "10",
+        "15",
+        "5",
+        "11"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/multiplicacion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un alumno tiene que multiplicar un número por 30; pero se olvida de poner el cero a la derecha del multiplicador por lo que se obtiene un resultado que difiere del verdadero en 5751. Hallar dicho número.",
+      "alternatives": [
+        "639",
+        "1917",
+        "213",
+        "219",
+        "543"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/multiplicacion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar un número de 4 cifras, sabiendo que al ser multiplicado por 43 se obtiene como suma de sus productos parciales un número que termina en 5543.",
+      "alternatives": [
+        "20",
+        "22",
+        "24",
+        "25",
+        "23"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/multiplicacion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se aumenta 8 unidades a cada uno de los factores de una multiplicación cuyo multiplicando es 64, el producto aumenta en 800. La suma de cifras del multiplicador es:",
+      "alternatives": [
+        "13",
+        "18",
+        "14",
+        "11",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/multiplicacion-aritmetica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MULTIPLICACIÓN ARITMÉTICA PROBLEMAS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El producto de dos números es 80. Si la suma de dichos números es 21, calcular su diferencia.",
+      "alternatives": [
+        "9",
+        "11",
+        "13",
+        "15",
+        "17"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una multiplicación, si el multiplicando aumenta en 15 unidades, el producto aumenta en 420 unidades. Calcular el multiplicador inicial.",
+      "alternatives": [
+        "24",
+        "49",
+        "21",
+        "28",
+        "32"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el producto de dos números, si a uno se le disminuye tres decenas, el nuevo producto disminuye en 10 830. Calcular la suma de las cifras del factor que no se disminuye.",
+      "alternatives": [
+        "9",
+        "10",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división la diferencia entre el dividendo y el producto del divisor por el cociente es igual a 20. La diferencia entre el divisor y el residuo es igual a 5. Si el cociente es igual a 12, calcular el dividendo",
+      "alternatives": [
+        "300",
+        "280",
+        "310",
+        "320",
+        "340"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — CUATRO OPERACIONES EJERCICIOS RESUELTOS PDF ARITMÉTICA PREUNIVERSITARIA Y SECUNDARIA "
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos números impares hay entre 1113 y 12115?",
+      "alternatives": [
+        "82",
+        "83",
+        "84",
+        "85"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/conteo-de-numeros-metodo-combinatorio.html",
+      "sourceName": "matematicasn.blogspot.com — CANTIDAD DE NÚMEROS CIFRAS PAGINACIÓN CONTEO EJERCICIOS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un número de 7 dígitos es multiplicado por un número de un dígito y el resultado es otro número diferente de 7 dígitos.\nDetermine la mayor suma posible de los dígitos del resultado.",
+      "alternatives": [
+        "42",
+        "43",
+        "49",
+        "56",
+        "63"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/razonamiento-matematico-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — RAZONAMIENTO MATEMATICO PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos árboles hay en un campo triangular que tiene 10 árboles en cada lado y un árbol en cada esquina?",
+      "alternatives": [
+        "30",
+        "33",
+        "29",
+        "27",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/examen-pnp-aptitud-academica.html",
+      "sourceName": "razonamientopdf.blogspot.com — EXAMEN PNP 2026 APTITUD ACADÉMICA SUBOFICIALES ADMISIÓN ESCUELA DE LA POLICÍA NACIONAL DEL PERÚ SOLUCIONARIO PDF"
     }
   ]
 }

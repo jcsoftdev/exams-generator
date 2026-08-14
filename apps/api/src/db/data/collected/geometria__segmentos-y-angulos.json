@@ -6,7 +6,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En una recta se ubican los puntos consecutivos A, B, C, D y E. Se sabe que BC es 2 veces AB, CD es dos veces DE y AE es 12. Calcular BD.",
-      "alternatives": ["2", "4", "8", "10"],
+      "alternatives": [
+        "2",
+        "4",
+        "8",
+        "10"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/04/segementos-de-recta-ejercicios.html",
       "sourceName": "Blog del Profe Alexz - Operaciones con Segmentos de Recta, Ejercicios Resueltos, Problema 1"
@@ -17,7 +22,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "El segmento BC = 20 cm, los puntos B y C dividen al segmento AD en tres partes iguales. ¿Cuánto mide el segmento BD?",
-      "alternatives": ["20 cm", "30 cm", "40 cm", "50 cm", "60 cm"],
+      "alternatives": [
+        "20 cm",
+        "30 cm",
+        "40 cm",
+        "50 cm",
+        "60 cm"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://profe-alexz.blogspot.com/2011/04/segementos-de-recta-ejercicios.html",
       "sourceName": "Blog del Profe Alexz - Operaciones con Segmentos de Recta, Ejercicios Resueltos, Problema 3"
@@ -28,7 +39,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si un ángulo mide 30°, calcular el suplemento del suplemento del complemento del doble de dicho ángulo.",
-      "alternatives": ["60°", "30°", "150°", "120°", "80°"],
+      "alternatives": [
+        "60°",
+        "30°",
+        "150°",
+        "120°",
+        "80°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/angulos-ejercicios-resueltos-pdf.html",
       "sourceName": "MatematicasN - Ángulos Problemas Resueltos Preuniversitarios, Pregunta 1"
@@ -39,7 +56,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Tres ángulos consecutivos suman 130°; el ángulo intermedio mide 20°. Hallar la medida del ángulo formado por las bisectrices del primero y del tercer ángulo.",
-      "alternatives": ["45°", "55°", "65°", "60°", "75°"],
+      "alternatives": [
+        "45°",
+        "55°",
+        "65°",
+        "60°",
+        "75°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/angulos-ejercicios-resueltos-pdf.html",
       "sourceName": "MatematicasN - Ángulos Problemas Resueltos Preuniversitarios, Pregunta 2"
@@ -50,7 +73,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuánto mide un ángulo si la diferencia entre su suplemento y su complemento es seis veces el ángulo?",
-      "alternatives": ["15°", "30°", "22° 30'", "45°", "20°"],
+      "alternatives": [
+        "15°",
+        "30°",
+        "22° 30'",
+        "45°",
+        "20°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/angulos-ejercicios-resueltos-pdf.html",
       "sourceName": "MatematicasN - Ángulos Problemas Resueltos Preuniversitarios, Pregunta 3"
@@ -61,7 +90,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Se tienen dos ángulos complementarios tal que uno es los 4/5 del otro. ¿Cuánto mide el mayor de ellos?",
-      "alternatives": ["60°", "65°", "50°", "55°", "45°"],
+      "alternatives": [
+        "60°",
+        "65°",
+        "50°",
+        "55°",
+        "45°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/angulos-ejercicios-resueltos-pdf.html",
       "sourceName": "MatematicasN - Ángulos Problemas Resueltos Preuniversitarios, Pregunta 4"
@@ -72,7 +107,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcular el suplemento de 127° más el complemento de 79°.",
-      "alternatives": ["62°", "72°", "61°", "64°", "53°"],
+      "alternatives": [
+        "62°",
+        "72°",
+        "61°",
+        "64°",
+        "53°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 4"
@@ -83,7 +124,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "El complemento de un ángulo es igual a 38°. Calcular la medida de dicho ángulo.",
-      "alternatives": ["52°", "30°", "42°", "46°", "48°"],
+      "alternatives": [
+        "52°",
+        "30°",
+        "42°",
+        "46°",
+        "48°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 7"
@@ -94,7 +141,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Encontrar la medida de un ángulo, sabiendo que su suplemento es igual al triple de dicho ángulo.",
-      "alternatives": ["25°", "30°", "35°", "45°", "40°"],
+      "alternatives": [
+        "25°",
+        "30°",
+        "35°",
+        "45°",
+        "40°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 8"
@@ -105,7 +158,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar la medida de un ángulo sabiendo que su suplemento es igual al triple de su complemento.",
-      "alternatives": ["35°", "55°", "65°", "45°", "75°"],
+      "alternatives": [
+        "35°",
+        "55°",
+        "65°",
+        "45°",
+        "75°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 23"
@@ -116,7 +175,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Dados los ángulos consecutivos AOB y BOC, se sabe que el ángulo AOC mide el triple que el ángulo AOB y que éste mide 8°. ¿Cuánto mide el ángulo BOC?",
-      "alternatives": ["6°", "8°", "16°", "20°", "10°"],
+      "alternatives": [
+        "6°",
+        "8°",
+        "16°",
+        "20°",
+        "10°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 1"
@@ -127,7 +192,13 @@
       "gradeLevel": "medium",
       "difficulty": "medium",
       "bodyTypst": "Se tienen dos ángulos consecutivos AOB y BOC que miden 20° y 30°, respectivamente. Se traza OM, bisectriz del ángulo AOC. Determinar la medida del ángulo BOM.",
-      "alternatives": ["5°", "6°", "10°", "12°", "20°"],
+      "alternatives": [
+        "5°",
+        "6°",
+        "10°",
+        "12°",
+        "20°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 2"
@@ -138,7 +209,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Los ángulos consecutivos AOB y BOC miden 40° y 60°, respectivamente. OM es la bisectriz del ángulo mayor (BOC). Hallar la medida del ángulo AOM.",
-      "alternatives": ["20°", "40°", "50°", "60°", "70°"],
+      "alternatives": [
+        "20°",
+        "40°",
+        "50°",
+        "60°",
+        "70°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 3"
@@ -149,7 +226,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Restar el complemento de 60° del suplemento de 80°.",
-      "alternatives": ["70°", "62°", "50°", "30°", "60°"],
+      "alternatives": [
+        "70°",
+        "62°",
+        "50°",
+        "30°",
+        "60°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 5"
@@ -160,7 +243,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Hallar la suma del complemento de 52° y el suplemento de 120°.",
-      "alternatives": ["92°", "102°", "98°", "108°", "88°"],
+      "alternatives": [
+        "92°",
+        "102°",
+        "98°",
+        "108°",
+        "88°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 6"
@@ -171,7 +260,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La suma del suplemento y el complemento de un ángulo es 120°. Hallar dicho ángulo.",
-      "alternatives": ["75°", "45°", "60°", "70°", "65°"],
+      "alternatives": [
+        "75°",
+        "45°",
+        "60°",
+        "70°",
+        "65°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 9"
@@ -182,7 +277,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El suplemento de un ángulo más el doble del complemento de dicho ángulo es igual al doble del ángulo mencionado. Hallar el ángulo.",
-      "alternatives": ["20°", "15°", "12°", "10°", "72°"],
+      "alternatives": [
+        "20°",
+        "15°",
+        "12°",
+        "10°",
+        "72°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 10"
@@ -193,7 +294,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El suplemento de un ángulo es igual a 5/2 de su complemento. Hallar dicho ángulo.",
-      "alternatives": ["20°", "30°", "45°", "25°", "42°"],
+      "alternatives": [
+        "20°",
+        "30°",
+        "45°",
+        "25°",
+        "42°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 11"
@@ -204,7 +311,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un ángulo disminuido en su complemento es igual a la cuarta parte de su suplemento. Hallar dicho ángulo.",
-      "alternatives": ["30°", "45°", "60°", "75°", "55°"],
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "75°",
+        "55°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 13"
@@ -215,7 +328,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El suplemento del suplemento de un ángulo más el complemento del complemento del mismo ángulo es igual a cuatro veces su complemento. Hallar dicho ángulo.",
-      "alternatives": ["30°", "45°", "60°", "75°", "55°"],
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "75°",
+        "55°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 14"
@@ -226,7 +345,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El suplemento de un ángulo menos seis veces su complemento es igual a la mitad del ángulo. Hallar el suplemento del ángulo.",
-      "alternatives": ["100°", "150°", "160°", "140°", "135°"],
+      "alternatives": [
+        "100°",
+        "150°",
+        "160°",
+        "140°",
+        "135°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 15"
@@ -237,7 +362,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Dos ángulos complementarios están en la razón de 2:3. Hallar la diferencia entre ellos.",
-      "alternatives": ["18°", "36°", "24°", "27°", "30°"],
+      "alternatives": [
+        "18°",
+        "36°",
+        "24°",
+        "27°",
+        "30°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 16"
@@ -248,7 +379,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Los ángulos AOB y BOC miden 30° y 60°, respectivamente; OM es la bisectriz del ángulo BOC. Hallar el complemento del ángulo AOM.",
-      "alternatives": ["60°", "45°", "30°", "15°", "20°"],
+      "alternatives": [
+        "60°",
+        "45°",
+        "30°",
+        "15°",
+        "20°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 17"
@@ -259,7 +396,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Los ángulos consecutivos AOB y BOC forman un ángulo recto, y están en la razón de 4:5. Hallar el ángulo AOB.",
-      "alternatives": ["40°", "50°", "30°", "20°", "60°"],
+      "alternatives": [
+        "40°",
+        "50°",
+        "30°",
+        "20°",
+        "60°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 19"
@@ -270,7 +413,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El ángulo AOB mide 2x, el ángulo BOC mide 5x y el ángulo COD mide 3x. Si el ángulo AOD es un ángulo llano (180°), hallar la medida del ángulo BOC.",
-      "alternatives": ["36°", "90°", "48°", "72°", "108°"],
+      "alternatives": [
+        "36°",
+        "90°",
+        "48°",
+        "72°",
+        "108°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 20"
@@ -281,7 +430,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Dos ángulos suman 75°; uno de ellos es igual al doble del complemento de dicha suma. Hallar la diferencia entre los dos ángulos.",
-      "alternatives": ["30°", "45°", "20°", "15°", "25°"],
+      "alternatives": [
+        "30°",
+        "45°",
+        "20°",
+        "15°",
+        "25°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 21"
@@ -292,7 +447,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Dos ángulos consecutivos AOB y BOC difieren en 38°. Hallar el ángulo que forman la bisectriz del ángulo AOC y el rayo OB.",
-      "alternatives": ["76°", "38°", "20°", "19°", "24°"],
+      "alternatives": [
+        "76°",
+        "38°",
+        "20°",
+        "19°",
+        "24°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 22"
@@ -303,7 +464,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si el ángulo AOC mide 40° y el ángulo BOD mide 80°, siendo O un punto donde se cortan los rayos OA, OB, OC y OD (con B entre A y C, y C entre B y D), calcular: ángulo COD menos ángulo AOB.",
-      "alternatives": ["50°", "30°", "60°", "20°", "40°"],
+      "alternatives": [
+        "50°",
+        "30°",
+        "60°",
+        "20°",
+        "40°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 25"
@@ -314,7 +481,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si la suma de los ángulos AOB y COD es 60°, hallar el ángulo formado por las bisectrices del ángulo AOC y del ángulo BOD.",
-      "alternatives": ["20°", "30°", "40°", "60°", "70°"],
+      "alternatives": [
+        "20°",
+        "30°",
+        "40°",
+        "60°",
+        "70°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
       "sourceName": "MatematicasN - Ángulos Ejercicios Resueltos, Pregunta 26"
@@ -325,7 +498,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En los puntos consecutivos A, B, M, C sobre una línea recta, M es punto medio del segmento AC. Si MC = 4 y 2·AM = 3·BC, calcular AC.",
-      "alternatives": ["18", "14", "16", "20", "12"],
+      "alternatives": [
+        "18",
+        "14",
+        "16",
+        "20",
+        "12"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/segmentos-y-angulos-ejercicios.html",
       "sourceName": "MatematicasN - Segmentos y Ángulos Ejercicios Desarrollados Preuniversitaria, Problema 1"
@@ -336,7 +515,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sobre una recta se toman los puntos consecutivos A, B, C, D tal que BC = 3, BD = 5, AC + 4·BC – 2·AD = 3. Calcular AB.",
-      "alternatives": ["1", "2", "1.5", "0.5", "3"],
+      "alternatives": [
+        "1",
+        "2",
+        "1.5",
+        "0.5",
+        "3"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/segmentos-y-angulos-ejercicios.html",
       "sourceName": "MatematicasN - Segmentos y Ángulos Ejercicios Desarrollados Preuniversitaria, Problema 2"
@@ -347,7 +532,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En una línea recta se ubican los puntos consecutivos A, B, C, D tal que AB + CD = 2·BC y además AC + CD = 21. Hallar BC.",
-      "alternatives": ["5", "7", "6", "3", "4"],
+      "alternatives": [
+        "5",
+        "7",
+        "6",
+        "3",
+        "4"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/segmentos-y-angulos-ejercicios.html",
       "sourceName": "MatematicasN - Segmentos y Ángulos Ejercicios Desarrollados Preuniversitaria, Problema 4"
@@ -358,7 +549,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sobre una recta se toman los puntos consecutivos A, B, C, D de modo que 4·AB = 3·BC = 6·CD y 3(BC – AB) = 2(BC – CD) – 2. Hallar AD.",
-      "alternatives": ["24", "18", "22", "12", "30"],
+      "alternatives": [
+        "24",
+        "18",
+        "22",
+        "12",
+        "30"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/segmentos-y-angulos-ejercicios.html",
       "sourceName": "MatematicasN - Segmentos y Ángulos Ejercicios Desarrollados Preuniversitaria, Problema 6"
@@ -369,7 +566,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sobre una línea recta se toman los puntos consecutivos A, B, C, D tal que AB·CD = AD·BC, AB·BC = 13 y AD·CD = 38. Hallar BD.",
-      "alternatives": ["4", "3", "6", "2", "5"],
+      "alternatives": [
+        "4",
+        "3",
+        "6",
+        "2",
+        "5"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/segmentos-y-angulos-ejercicios.html",
       "sourceName": "MatematicasN - Segmentos y Ángulos Ejercicios Desarrollados Preuniversitaria, Problema 7"
@@ -380,7 +583,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En los puntos colineales y consecutivos A, B, C, D se cumple que AB = 7 y AC = BD + BC. Hallar AD.",
-      "alternatives": ["12", "14", "21", "28", "16"],
+      "alternatives": [
+        "12",
+        "14",
+        "21",
+        "28",
+        "16"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/segmentos-y-angulos-ejercicios.html",
       "sourceName": "MatematicasN - Segmentos y Ángulos Ejercicios Desarrollados Preuniversitaria, Problema 8"
@@ -391,7 +600,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En una línea recta se ubican los puntos consecutivos A, B, C, D. Si 17·AC = 5·CD y 5·BD – 17·AB = 132, hallar BC.",
-      "alternatives": ["3", "12", "4", "8", "6"],
+      "alternatives": [
+        "3",
+        "12",
+        "4",
+        "8",
+        "6"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/segmentos-y-angulos-ejercicios.html",
       "sourceName": "MatematicasN - Segmentos y Ángulos Ejercicios Desarrollados Preuniversitaria, Problema 9"
@@ -402,7 +617,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dos ángulos tienen una suma de 100° y la diferencia de sus complementos es 20°. Calcular la razón entre el menor y el mayor ángulo.",
-      "alternatives": ["2/3", "1/3", "1/4", "3/7", "2/9"],
+      "alternatives": [
+        "2/3",
+        "1/3",
+        "1/4",
+        "3/7",
+        "2/9"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
       "sourceName": "Matematica-A1 Blog - Segmentos y Ángulos Ejercicios Desarrollados, Problema 12"
@@ -413,7 +634,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Sobre una recta se ubican los puntos consecutivos A, B, C, D con AB = x + 2, BC = x + 8 y CD = x + 5. Si AD = 30, calcular BC.",
-      "alternatives": ["9", "11", "13", "15", "17"],
+      "alternatives": [
+        "9",
+        "11",
+        "13",
+        "15",
+        "17"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://es.slideshare.net/cesarsuarezcarranza/ejercicios-propuestos-de-segmentos-y-ngulos",
       "sourceName": "SlideShare - Ejercicios Propuestos de Segmentos y Ángulos (Suárez Carranza), Problema 3"
@@ -424,7 +651,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Sobre una recta se ubican los puntos consecutivos P, Q, R, S tal que PS = 40, PQ = 10 y RS = 16. Calcular QR.",
-      "alternatives": ["12", "14", "16", "18", "20"],
+      "alternatives": [
+        "12",
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://es.slideshare.net/cesarsuarezcarranza/ejercicios-propuestos-de-segmentos-y-ngulos",
       "sourceName": "SlideShare - Ejercicios Propuestos de Segmentos y Ángulos (Suárez Carranza), Problema 6"
@@ -435,10 +668,2369 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Sobre una recta están los puntos A, B, C, siendo B punto medio de AC. Si AB = 10 + x y BC = 16 – 2x, hallar el valor de x.",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://es.slideshare.net/cesarsuarezcarranza/ejercicios-propuestos-de-segmentos-y-ngulos",
       "sourceName": "SlideShare - Ejercicios Propuestos de Segmentos y Ángulos (Suárez Carranza), Problema 7"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los ángulos consecutivos AOB, BOC y COD. Si m ∢ AOB=70° y m ∢ COD=20°, halle la medida del ángulo que determinan las bisectrices de los ángulos ∢ BOC y ∢ AOD.",
+      "alternatives": [
+        "36°",
+        "30°",
+        "35°",
+        "50°",
+        "25°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/07/geometria-cepreuni-examen-final.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA CEPREUNI EXAMEN FINAL RESUELTO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene dos ángulos complementarios y uno excede al otro en 50°. Halle el menor ángulo en grados sexagesimales.",
+      "alternatives": [
+        "20°",
+        "18°",
+        "30°",
+        "27°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/sistemas-de-medicion-angular-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "geometriapdf.blogspot.com — SISTEMAS DE MEDIDAS ANGULARES EJERCICIOS Y PROBLEMAS RESUELTOS EN PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene dos ángulos suplementarios, los cuales están en relación de 2 a 3. Halle el menor de los ángulos en radianes.",
+      "alternatives": [
+        "𝛑 /3 rad",
+        "𝛑/ 4 rad",
+        "2 𝛑/5 rad",
+        "2 𝛑/3 rad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/sistemas-de-medicion-angular-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "geometriapdf.blogspot.com — SISTEMAS DE MEDIDAS ANGULARES EJERCICIOS Y PROBLEMAS RESUELTOS EN PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si (2;3) es el punto medio del segmento AB siendo A(–3;5) y B(a;b). Calcular: a+b.",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/inicio-la-geometria-analitica.html",
+      "sourceName": "geometriapdf.blogspot.com — INICIO A LA GEOMETRIA ANALÍTICA EJERCICIOS DE  MATEMÁTICAS PRACTICA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los ángulos consecutivos AOB, BOC y COD, tal que 11(m∠BOC)=2(m∠AOD) y m∠AOB+m∠COD= 108º.\nCalcule m∠BOC.",
+      "alternatives": [
+        "12º",
+        "24º",
+        "36º",
+        "48º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/11/angulo-geometrico-ejercicios-resueltos.html",
+      "sourceName": "geometriapdf.blogspot.com — ÁNGULOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las medidas de dos ángulos suplementarios son proporcionales a 11 y 9. Calcule el suplemento del complemento del menor de dichos ángulos.",
+      "alternatives": [
+        "171º",
+        "150º",
+        "120º",
+        "135º"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/11/angulo-geometrico-ejercicios-resueltos.html",
+      "sourceName": "geometriapdf.blogspot.com — ÁNGULOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los ángulos consecutivos AOB, BOC y COD, donde m∠AOB + m∠COD= 70°. Calcular m∠XOY si OX es bisectriz del ∠AOC y OY es bisectriz del ∠BOD.",
+      "alternatives": [
+        "80°",
+        "45°",
+        "40°",
+        "35°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/11/angulo-geometrico-ejercicios-resueltos.html",
+      "sourceName": "geometriapdf.blogspot.com — ÁNGULOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se consideran los puntos consecutivos A, B y C; E es punto medio del segmento AB y M del segmento EC, si AB+2BC= 56, entonces la longitud de MC es:",
+      "alternatives": [
+        "12",
+        "14",
+        "15",
+        "16",
+        "28"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2021/10/rm-unt-solucionario-de-examen-de-admision-universidad-nacional-de-trujillo-simulacro-desarrollado-preguntas-resueltas-razonamiento-word-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — RAZONAMIENTO MATEMÁTICO EXAMEN ADMISIÓN UNT UNIVERSIDAD NACIONAL DE TRUJILLO RM SOLUCIONARIO SIMULACRO DE INGRESO RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene los ángulos consecutivos AOB, BOC y COD , tal que:\nluego se traza bisectriz del AOC, de tal forma que:\nm AOM - m COB+m COD = 40º.\nCalcule m MOB + m COD",
+      "alternatives": [
+        "30º",
+        "35º",
+        "40º",
+        "45º",
+        "60º"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los ángulos consecutivos AOB, BOC, COD, DOE, EOF de tal manera que:\nm AOD=m BOE=m COF y m DOF + m AOD=224º. Calcule la medida del ángulo formado por la bisectriz del ángulo COD y el rayo , si : m BOC = 52º.",
+      "alternatives": [
+        "52º",
+        "60º",
+        "70º",
+        "82º",
+        "102º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: (–1;2) es el punto medio del segmento formado al unir los puntos, (–3;–1) y (a;b). Determinar: a+b .",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/plano-cartesiano-geometria-analitica.html",
+      "sourceName": "matematicaj.blogspot.com — PLANO CARTESIANO GEOMETRIA ANALÍTICA PLANA COORDENADAS SISTEMA BIDIMENSIONAL FÓRMULAS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar el radio vector del punto medio del segmento formado al unir los puntos (3;1) y (7;9).",
+      "alternatives": [
+        "√ 7",
+        "√ 2",
+        "5 √2",
+        "3",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/plano-cartesiano-geometria-analitica.html",
+      "sourceName": "matematicaj.blogspot.com — PLANO CARTESIANO GEOMETRIA ANALÍTICA PLANA COORDENADAS SISTEMA BIDIMENSIONAL FÓRMULAS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene los ángulos consecutivos ∢ AOB, ∢ BOC y ∢ COD, OX es bisectriz del ángulo ∢ AOC y OY bisectriz de BOD. Si m ∢ AOB – m ∢ COD=18° y m ∢ XOY=12°, halle m ∢ AOB.",
+      "alternatives": [
+        "21°",
+        "22°",
+        "18°",
+        "20°",
+        "23°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/cepreuni-geometria-quinta-practica.html",
+      "sourceName": "matematicaj.blogspot.com — CEPREUNI GEOMETRÍA QUINTA PRACTICA RESUELTA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados los ángulos consecutivos ∢ AOB, ∢ BOC y ∢ COD, tales que la suma de sus medidas es 180°. Si m ∢ BOC=110°, halle la medida del ángulo que forman las bisectrices de los ángulos ∢ AOC y ∢ BOD.",
+      "alternatives": [
+        "28°",
+        "30°",
+        "32°",
+        "35°",
+        "38°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/cepreuni-geometria-quinta-practica.html",
+      "sourceName": "matematicaj.blogspot.com — CEPREUNI GEOMETRÍA QUINTA PRACTICA RESUELTA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos esferas saliendo de la superficie horizontal de una mesa con rapideces de 3 y 8m/s; y caen al piso de tal manera que sus rapideces forman ángulos complementarios con el piso. Calcula la altura de la mesa.\n(g =10 m/s²)",
+      "alternatives": [
+        "1,2m",
+        "1,5m",
+        "1,8m",
+        "2,0m",
+        "0,8m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-parabolico-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO PARABÓLICO EJERCICIOS RESUELTOS DE MPCL –  INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los ángulos consecutivos ∢ AOB, ∢ BOC y ∢ COD. Los rayos OX y OY son las bisectrices de los ángulos AOB y COD respectivamente. Si m ∢ BOD=98° y m ∢ XOY=90°, halle m ∢ AOC.",
+      "alternatives": [
+        "78°",
+        "79°",
+        "80°",
+        "81°",
+        "82°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/01/cepreuni-septima-practica-solucionario-ingreso-directo-universidad-ingenieria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI SÉPTIMA PRACTICA CALIFICADA 2027 1 RESUELTA CLAVES RESPUESTAS PDF 2026-2"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean los ángulos consecutivos ∢ AOB y ∢ BOC. Si m ∢ AOC+m ∢ BOC=120° y OD bisectriz de AOB, halle m ∢ COD.",
+      "alternatives": [
+        "40°",
+        "60°",
+        "80°",
+        "50°",
+        "70°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/01/cepreuni-septima-practica-solucionario-ingreso-directo-universidad-ingenieria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI SÉPTIMA PRACTICA CALIFICADA 2027 1 RESUELTA CLAVES RESPUESTAS PDF 2026-2"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados los ángulos consecutivos AOB y BOC, se sabe que ∠ AOC mide el triple que ∠ AOB y que éste mide 8°. ¿Cuánto mide ∠ BOC?",
+      "alternatives": [
+        "6°",
+        "8°",
+        "16°",
+        "20°",
+        "10°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados los ángulos consecutivos AOB y BOC que miden 40° y 60°, respectivamente, se traza OM, bisectriz del mayor. Calcular la medida del ángulo AOM.",
+      "alternatives": [
+        "20°",
+        "40°",
+        "50°",
+        "60°",
+        "70°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a la medida de unos de los ángulos suplementarios se les disminuye 35° para agregarle a la medida del otro , este resulta ser 8 veces lo que queda de la medida del primero ¿Cuánto vale el complemento del menor ángulo?.",
+      "alternatives": [
+        "45°",
+        "35°",
+        "36°",
+        "40°",
+        "27°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos ángulos complementarios son entre sí como 2 es a 3. La diferencia de estos ángulos es :",
+      "alternatives": [
+        "18°",
+        "36°",
+        "24°",
+        "27°",
+        "30°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los ángulos consecutivos AOB , BOC, COD y DOE ; tal que los rayos OB y OD son las bisectrices de los ángulos AOE y COE ; y m ∠ AOC =100°. Calcular la medida del ángulo formado por las bisectrices de los ángulos BOE y DOE.",
+      "alternatives": [
+        "20°",
+        "35°",
+        "25°",
+        "8 °",
+        "17°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los ángulos consecutivos AOB y BOC tal que el ángulo AOC es recto. Hallar la medida del ángulo AOB si dichos ángulos AOB y BOC están en la relación de 4 a 5.",
+      "alternatives": [
+        "40°",
+        "50°",
+        "30°",
+        "20°",
+        "60°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene los ángulos consecutivos AOB, BOC y COD tal que m∠AOB = 2x , m∠BOC = 5x y m∠COD = 3x. Hallar la medida del ángulo BOC si el ángulo AOD es llano.",
+      "alternatives": [
+        "36°",
+        "90°",
+        "48°",
+        "72°",
+        "108°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los ángulos consecutivos AOB y BOC que se diferencian en 38°. Calcular la medida del ángulo formado por la bisectriz del ángulo AOC y el rayo OB",
+      "alternatives": [
+        "76°",
+        "38°",
+        "20°",
+        "19°",
+        "24°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean los ángulos consecutivos ∠AOB, ∠BOC y ∠COD, si m AOC = 40° y m∠BOD = 80°. Calcular m∠COD – m∠AOB.",
+      "alternatives": [
+        "50°",
+        "30°",
+        "60°",
+        "20°",
+        "40°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los ángulos consecutivos AOB, BOC y COD tal que: m∠AOB + m∠COD = 60°. Calcular la medida del ángulo formado por las bisectrices de los ángulos ∠AOC y ∠BOD.",
+      "alternatives": [
+        "20°",
+        "30°",
+        "40°",
+        "60°",
+        "70°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos A, B, C, D se encuentran sobre una línea recta, tal que C es punto medio del segmento AD , además BD – AB = 18. Calcular BC.",
+      "alternatives": [
+        "9",
+        "7",
+        "8",
+        "6",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las bases de un trapecio miden 6 y 14, los ángulos adyacentes a la base mayor son complementarios. Hallar el segmento que une los puntos medios de las bases.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si las coordenadas del punto medio del segmento AB es (–2;1), calcular las coordenadas del punto B si A tiene como coordenadas (8; 12)",
+      "alternatives": [
+        "(11; 11)",
+        "(11; 12)",
+        "(–12; –10)",
+        "(–13; –12)",
+        "(–14; –11)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/plano-cartesiano-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — PLANO CARTESIANO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos ángulos suplementarios, tales que el doble del menor es igual al mayor disminuido en 30°. Halla el mayor en radianes.",
+      "alternatives": [
+        "13𝛑/7 rad",
+        "13𝛑/20rad",
+        "13𝛑/18rad",
+        "5𝛑/18rad",
+        "𝛑/18rad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/05/sistemas-de-medidas-angulares.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMAS ANGULARES EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si dos ángulos complementarios están en relación de 2 a 3. Calcule la medida del menor de los ángulos.",
+      "alternatives": [
+        "36º",
+        "40º",
+        "46º",
+        "50º",
+        "56º"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/geometria-examen-admision-villarreal.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean los ángulos consecutivos AOB, BOC, COD y DOE tal que OB y OC son bisectrices de los ángulos AOD y BOE respectivamente. Si 4m ∢ COD=3m ∢ DOE y el ángulo AOB es agudo, halle el mayor valor entero de la m ∢ COE.",
+      "alternatives": [
+        "56°",
+        "60°",
+        "65°",
+        "62°",
+        "66°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-geometria-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE GEOMETRÍA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados los ángulos consecutivos AOB y BOC. Si las bisectrices de los ángulos AOB y AOC forman un ángulo de 22°, halle m ∢ BOC.",
+      "alternatives": [
+        "20°",
+        "40°",
+        "44°",
+        "19°",
+        "30°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-13-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si dos ángulos suplementarios están en relación de 5 a 7, calcula el complemento del menor.",
+      "alternatives": [
+        "5°",
+        "15°",
+        "10°",
+        "25°",
+        "20°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/angulos-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — Ángulos ejercicios resueltos"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un lindero de un terreno se tienen los puntos colineales A, B, C, D y E donde se ubicarán unas columnas. Cuando se coloca una columna en B, la distancia a la columna en D es de 12 m. Si AB=2BC, AD=DE y CE=32m, halle AE.",
+      "alternatives": [
+        "56 m",
+        "48 m",
+        "72 m",
+        "66 m",
+        "68 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/07/geometria-cepreuni-examen-final.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA CEPREUNI EXAMEN FINAL RESUELTO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para el armado de un conjunto de tuberías en forma rectilínea se tiene los puntos A y H; luego se han instalado empalmes de manera consecutiva en los puntos B, C, D, E, F y G. Si 5BG =3AH, 6CF=5BG y AD+BE+CF+DG+EH=52,5 km, halle AH.",
+      "alternatives": [
+        "25 km",
+        "24 km",
+        "26 km",
+        "27 km",
+        "28 km"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/07/geometria-cepreuni-examen-final.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA CEPREUNI EXAMEN FINAL RESUELTO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el suplemento del complemento de un ángulo es igual a dos veces el complemento del mismo ángulo, halle el suplemento del complemento del mismo ángulo.",
+      "alternatives": [
+        "100°",
+        "110°",
+        "120°",
+        "130°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/11/angulo-geometrico-ejercicios-resueltos.html",
+      "sourceName": "geometriapdf.blogspot.com — ÁNGULOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos ángulos adyacentes cuyas medidas se diferencian en 40°. Calcular la medida del ángulo formado por el lado común y la bisectriz del ángulo formado por las bisectrices de los ángulos dados.",
+      "alternatives": [
+        "10°",
+        "20°",
+        "25°",
+        "30°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/11/angulo-geometrico-ejercicios-resueltos.html",
+      "sourceName": "geometriapdf.blogspot.com — ÁNGULOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la diferencia de los cuadrados del suplemento del complemento de un ángulo y el complemento de dicho ángulo es seis veces el cuadrado de la medida de dicho ángulo, calcule la medida del ángulo.",
+      "alternatives": [
+        "40º",
+        "50º",
+        "60º",
+        "30º"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/11/angulo-geometrico-ejercicios-resueltos.html",
+      "sourceName": "geometriapdf.blogspot.com — ÁNGULOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se toman los puntos consecutivos A, B, C, D, E y F de tal manera que:\nAC+BD+CE+DF=39\n8BE=5AF\nCalcular “AF”",
+      "alternatives": [
+        "6",
+        "12",
+        "13",
+        "8",
+        "24"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/06/segmentos-nivel-basico-de-geometria.html",
+      "sourceName": "geometriapdf.blogspot.com — SEGMENTOS NIVEL BASICO DE GEOMETRIA PARA PRACTICAR MATEMÁTICAS DE SECUNDARIA GUIA CON RESPUESTAS pdf"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se ubican los puntos consecutivos P, Q, R y S; además :\nQR = RS\nPS² – PQ ² = 12QS\nCalcular : “PR”",
+      "alternatives": [
+        "6",
+        "4",
+        "8",
+        "12",
+        "1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/06/segmentos-nivel-basico-de-geometria.html",
+      "sourceName": "geometriapdf.blogspot.com — SEGMENTOS NIVEL BASICO DE GEOMETRIA PARA PRACTICAR MATEMÁTICAS DE SECUNDARIA GUIA CON RESPUESTAS pdf"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se ubican los puntos consecutivos A, B , C y D ; de manera que :\nAB×BD – AC×CD=96\nAB – CD=8\nCalcular : “BC”",
+      "alternatives": [
+        "8",
+        "2",
+        "6",
+        "12",
+        "3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/06/segmentos-nivel-basico-de-geometria.html",
+      "sourceName": "geometriapdf.blogspot.com — SEGMENTOS NIVEL BASICO DE GEOMETRIA PARA PRACTICAR MATEMÁTICAS DE SECUNDARIA GUIA CON RESPUESTAS pdf"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se ubican los puntos consecutivos A, B, C y D; tal que :\nnAC = mCD\nmBD – nAB = m + n\nCalcular “BC”",
+      "alternatives": [
+        "2",
+        "1",
+        "0,5",
+        "3",
+        "0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/06/segmentos-nivel-basico-de-geometria.html",
+      "sourceName": "geometriapdf.blogspot.com — SEGMENTOS NIVEL BASICO DE GEOMETRIA PARA PRACTICAR MATEMÁTICAS DE SECUNDARIA GUIA CON RESPUESTAS pdf"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se ubica los puntos consecutivos A, B, C y D tal que B es un punto medio de AD y AC – CD=50. Determinar BC.",
+      "alternatives": [
+        "20",
+        "25",
+        "30",
+        "40",
+        "50"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/01/lineas-y-segmentos-explicaciones-y.html",
+      "sourceName": "geometriapdf.blogspot.com — Líneas y Segmentos Explicaciones y Problemas Resueltos de geometría pdf"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos A , B y C . Si , AB =22 y BC=16 , Calcular la medida de la longitud del segmento determinado por los puntos medios de los segmentos AB y AC .",
+      "alternatives": [
+        "7",
+        "6",
+        "11",
+        "8",
+        "16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/01/lineas-y-segmentos-explicaciones-y.html",
+      "sourceName": "geometriapdf.blogspot.com — Líneas y Segmentos Explicaciones y Problemas Resueltos de geometría pdf"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se toman los puntos x, y , z, w en forma consecutiva de modo que: xz=18; xw=30 ; yw=16, calcular: yz",
+      "alternatives": [
+        "2",
+        "6",
+        "4",
+        "12",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/01/lineas-y-segmentos-explicaciones-y.html",
+      "sourceName": "geometriapdf.blogspot.com — Líneas y Segmentos Explicaciones y Problemas Resueltos de geometría pdf"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se tiene los puntos consecutivos A , B, C, D , E , F ,.. y así sucesivamente de tal forma que: AB =1 ; BC = 1/3 ; CD = 1/9 ; DE=1/27 ; EF= 1/81 y así sucesivamente , determinar el límite de la suma de todos los segmentos indicados.",
+      "alternatives": [
+        "1,5",
+        "2",
+        "1",
+        "1,75",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/01/lineas-y-segmentos-explicaciones-y.html",
+      "sourceName": "geometriapdf.blogspot.com — Líneas y Segmentos Explicaciones y Problemas Resueltos de geometría pdf"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El suplemento de un ángulo más el complemento de otro ángulo es 140°. Calcula el suplemento de la suma de los dos ángulos.",
+      "alternatives": [
+        "20°",
+        "30°",
+        "40°",
+        "50°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/11/geometria-simulacro-prueba-beca-18-pronabec-con-solucionario-admision-universidad-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA SIMULACRO EXAMEN BECA 18 PRONABEC ADMISIÓN UNIVERSIDAD PRUEBA ÚNICA NACIONAL CON SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se tienen los puntos consecutivos A, B, C, D, E; siendo: AD + BE = 20 y BD = . Calcule BD.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene los puntos consecutivos A, B, C; tal que:\n(AB).(AC) = 2(AB2–BC2 ), AC = 6u. Calcule BC.",
+      "alternatives": [
+        "1 u",
+        "2 u",
+        "3 u",
+        "4 u",
+        "5 u"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se tienen los puntos consecutivos: G, E, O, M y T, siendo y “O” es punto medio de . Calcule EO + 2MT.",
+      "alternatives": [
+        "27",
+        "39",
+        "31",
+        "33",
+        "35"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos P, Q, R y S, tal que PQ = 2(RS) , QR = 2 y\n= . Calcule QS",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos A, B y C. Si (AB)2 + b(AC) = (AC)2 + (BC)2 ; calcule BC.",
+      "alternatives": [
+        "b",
+        "2b",
+        "b/2",
+        "b/4",
+        "4b"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre la línea recta se ubican los puntos consecutivos A, B y C, luego se ubican los puntos medios X de , y de y Z de .\nSi: AB – BC = 36, calcule ZB.",
+      "alternatives": [
+        "12",
+        "18",
+        "9",
+        "20",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos P, Q, R y S.\nSi (QR)(RS) = K(RS – RQ) y . Calcule PR",
+      "alternatives": [
+        "2K",
+        "K",
+        "K/3",
+        "K/2",
+        "K/4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se toman los puntos consecutivos O ,A, B y C. Calcule OA,\nSi: , (AB).(AC) = 289",
+      "alternatives": [
+        "11",
+        "13",
+        "15",
+        "17",
+        "19"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se tienen los puntos consecutivos: A, B, C; siendo AC = 10, luego se ubican los puntos medios: M, N, R y Q de respectivamente. Calcule RQ.",
+      "alternatives": [
+        "2,0",
+        "2,5",
+        "2,8",
+        "3,0",
+        "3,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean dos ángulos cuya suma de sus medidas es 100º y la diferencia de sus complementos es 20º. Calcule la razón de las medidas de dichos ángulos.",
+      "alternatives": [
+        "2/3",
+        "1/3",
+        "1/4",
+        "3/7",
+        "2/9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los ángulos adyacentes y complementarios AOB y BOC, luego se trazan las bisectrices de los ángulos AOB, BOC, AON y MOC respectivamente. Calcule .",
+      "alternatives": [
+        "15º",
+        "18,5º",
+        "20º",
+        "22,5º",
+        "25º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El suplemento de la diferencia entre el suplemento y el complemento de un ángulo es igual al doble del complemento de la diferencia entre el suplemento y el complemento del complemento del mismo ángulo. Calcule el suplemento del doble de la medida del ángulo.",
+      "alternatives": [
+        "120º",
+        "45º",
+        "135º",
+        "60º",
+        "75º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene dos ángulos adyacentes, AOB y BOC, cuya suma de sus medidas es 100º (m AOB< m BOC). Se trazan las bisectrices y . Calcule la medida del ángulo BOC si la bisectriz del ángulo NOM determina con un ángulo que mide 20º.",
+      "alternatives": [
+        "90º",
+        "40º",
+        "80º",
+        "60º",
+        "70º"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/segmentos-angulos-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — SEGMENTOS - ÁNGULOS EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se toman sobre una recta los puntos consecutivos A, B, C, D y E.\nSi AB = BC/5 ; AC = AD/2 ; DE = AE/4 ; CD= 30 m\nentonces la longitud del segmento BE, en metros es",
+      "alternatives": [
+        "60",
+        "68",
+        "72",
+        "75",
+        "76"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/matematicas-unt-examen-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MATEMÁTICAS UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos F, M, A y G son colineales y consecutivos.\nSi\nFG= 27\nFM=x – y\nMA=x+y\nAG=2y – x\nCalcular el menor valor de x sabiendo que el valor de y es entero.",
+      "alternatives": [
+        "11",
+        "9",
+        "27",
+        "1",
+        "13"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el complemento de un ángulo es el cuádruple de dicho ángulo, calcule el suplemento de dicho ángulo.",
+      "alternatives": [
+        "152°",
+        "160°",
+        "162°",
+        "170°",
+        "172°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-8-experiencia-4-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las casas de Aníbal, Benito, Carlos y Daniel están ubicadas de un mismo lado de una avenida rectilínea. La distancia entre las casas de Aníbal y Carlos, las de Benito y Daniel, y las de Aníbal y Daniel son 100 m, 150 m y 220 m respectivamente.\n¿Cuál no podría ser la distancia entre las casas de Benito y Carlos?",
+      "alternatives": [
+        "30 m",
+        "270 m",
+        "470 m",
+        "170 m",
+        "140 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/solucionario-cepre-san-marcos-semana-3-centro-preuniversitario-cepusm-claves-respuestas-preguntas-resueltas-prueba-pre-desarrollada-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SEMANA 3 PRE SAN MARCOS 2026-2 PDF INGRESO UNIVERSIDAD CEPUSM 2027-1 2025 2024 2023 2022 ORDINARIO ESPECIAL INTENSIVO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se tienen los puntos consecutivos A, B, C, D y E. Si AC+BD+CE=36m, AE=24m y DE=2AB, halle AB.",
+      "alternatives": [
+        "3 m",
+        "5 m",
+        "6 m",
+        "4 m",
+        "8 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/01/cepreuni-septima-practica-solucionario-ingreso-directo-universidad-ingenieria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI SÉPTIMA PRACTICA CALIFICADA 2027 1 RESUELTA CLAVES RESPUESTAS PDF 2026-2"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La medida del ángulo ∢ CDA, es:",
+      "alternatives": [
+        "30°",
+        "37°",
+        "45°",
+        "53°",
+        "74°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de las medidas de dos ángulos es 80° y el complemento de la medida del primero es el doble de la medida del segundo. Calcular la diferencia de la medida de dichos ángulos.",
+      "alternatives": [
+        "40°",
+        "50°",
+        "60°",
+        "70°",
+        "80°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-8-dpcc-experiencia-6-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UPCH 2027 EXAMEN ADMISIÓN UNIVERSIDAD CAYETANO HEREDIA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen, sobre una recta, los puntos consecutivos A, B, C y D, tal que\nBC=5 y 7AD – BC=2AC+7BD.\nCalcule AB.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "1",
+        "2,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/geometria-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRIA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El punto A está a 8 m encima de un plano horizontal P, y el punto B se halla a 4 m encima del mismo plano. Si C es un punto del plano P tal que AC+BC es mínimo y el ángulo que forman la recta ↔CB con el plano P es 53°, entonces (en m) AC es",
+      "alternatives": [
+        "8",
+        "8,5",
+        "9",
+        "9,5",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/examen-uni-resuelto-geometria-admision.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRIA SEGUNDA PRUEBA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos ángulos adyacentes suplementarios ∢ AOB y ∢ BOC tal que m ∢ BOC=56°. Halle el complemento de la medida del ángulo que forman las bisectrices de los ángulos ∢ AOB y ∢ AOC.",
+      "alternatives": [
+        "28°",
+        "34°",
+        "62°",
+        "42°",
+        "52°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/cepreuni-geometria-quinta-practica.html",
+      "sourceName": "matematicaj.blogspot.com — CEPREUNI GEOMETRÍA QUINTA PRACTICA RESUELTA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos: L, O, P, E y Z.\nTal que LO=2(OP) y EZ=3(PE).\nSi EZ+LP=36 cm, halle OE",
+      "alternatives": [
+        "15 cm",
+        "12 cm",
+        "10 cm",
+        "9 cm",
+        "16 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/examen-admision-villareal-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO VILLARREAL 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNFV 2026 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el valor de verdad de cada una de las siguientes proposiciones:\nI) La unión de dos rectas secantes es un conjunto convexo.\nII) Si la unión de dos conjuntos es un conjunto convexo, entonces uno de los dos conjuntos es necesariamente un conjunto convexo.\nIII) Un triángulo determina en el plano, alguna partición de 3 elementos.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "VVV",
+        "FFV",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Cepreuni-practica-1-con-solucionario-ingreso-directo-universidad-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI PRIMERA PRACTICA CALIFICADA RESUELTA RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados dos ángulos adyacentes suplementarios AOB y BOC, se cumple que:\nm∢BOC – m∢AOB=36° y OX, OY y OZ son bisectrices de los ángulos AOB, BOC y XOY, respectivamente, entonces m∢BOZ es",
+      "alternatives": [
+        "9°",
+        "11°",
+        "13°",
+        "16°",
+        "18°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/3ro-4to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA C CIENCIAS DE LA PERSONA 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos A, B y C de tal manera que:\nAC+AB=24.\nCalcular AM, siendo M punto medio de BC.",
+      "alternatives": [
+        "24",
+        "16",
+        "18",
+        "12",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-3ro-4to-actividad-2-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL MEDICINA PRUEBA INGRESO UNIVERSIDAD RESUELTA 2027 CLAVES "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al restar el suplemento de 80° con el complemento de 60°, se obtiene :",
+      "alternatives": [
+        "70°",
+        "62°",
+        "50°",
+        "30°",
+        "60°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Encontrar la suma del complemento de 52° y el suplemento de 120°.",
+      "alternatives": [
+        "92°",
+        "102°",
+        "98°",
+        "108°",
+        "88°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la medida de un ángulo, si la suma de su suplemento y de su complemento es igual a 120°.",
+      "alternatives": [
+        "75°",
+        "45°",
+        "60°",
+        "70°",
+        "65°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el suplemento de la medida de un ángulo es los 5/2 de su complemento. Calcular la medida de dicho ángulo.",
+      "alternatives": [
+        "20°",
+        "30°",
+        "45°",
+        "25°",
+        "42°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un ángulo se le resta su complemento, es igual a 1/4 de su suplemento. Hallar la medida del ángulo",
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "75°",
+        "55°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si al suplemento del suplemento de un ángulo se le aumenta el complemento del complemento del ángulo, resulta el cuádruple del complemento del mismo. Hallar la medida del ángulo.",
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "75°",
+        "55°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si al suplemento de un ángulo se le disminuye el séxtuplo de su complemento. Resulta la mitad del valor del ángulo. Hallar el suplemento del ángulo.",
+      "alternatives": [
+        "100°",
+        "150°",
+        "160°",
+        "140°",
+        "135°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dibujar los ángulos AOB y BOC que midan 30° y 60°, respectivamente, y OM es bisectriz de ∠ BOC. Calcular el complemento del ángulo AOM.",
+      "alternatives": [
+        "60°",
+        "45°",
+        "30°",
+        "15°",
+        "20°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos ángulos suman 75° y uno de ellos mide el doble del complemento de esta suma. Determinar la diferencia de estos dos ángulos.",
+      "alternatives": [
+        "30°",
+        "45°",
+        "20°",
+        "15°",
+        "25°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EJERCICIOS  RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen, sobre una recta, los puntos consecutivos A, B, C y D, tal que\nBC=5\n7AD–BC=2AC+7BD\nCalcule AB",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean los puntos consecutivos y colinelaes A, B, C y D; tales que:\nBC=AB+2\nCD=AB – 4\nSi AB toma su mínimo valor entero, halle AD",
+      "alternatives": [
+        "14",
+        "15",
+        "13",
+        "20",
+        "18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se toman sobre una recta los puntos consecutivos A, B, C, D y E.\nSi AB=BC/5 ; AC=AD/2 ; DE=AE/4 ; CD=30m\nentonces la longitud del segmento BE, en metros es",
+      "alternatives": [
+        "60",
+        "68",
+        "72",
+        "75",
+        "76"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos A, B, C, D, tal que AC =12, AD + CD = 32. Hallar AD.",
+      "alternatives": [
+        "21",
+        "24",
+        "22",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos A, B, C, D se encuentran sobre una línea recta de modo que AB = 8, BC = 12, luego se toma el punto medio F de AC . Calcular BF.",
+      "alternatives": [
+        "1",
+        "2",
+        "1,5",
+        "0,5",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se toman los puntos consecutivos A , B , C , D, de modo que AB = BD = 4·CD. Hallar CD, si AD = 24.",
+      "alternatives": [
+        "1",
+        "2",
+        "4",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se toman los puntos consecutivos A , B , C tal que AB = a, BC = 3a y AC = 24. Hallar BC.",
+      "alternatives": [
+        "12",
+        "14",
+        "8",
+        "18",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se marcan los puntos consecutivos A,B,C,D, tal que CD = 3 · AC, BD – 3 · AB = 28. Calcular BC.",
+      "alternatives": [
+        "6",
+        "7",
+        "4",
+        "3",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos A, B, C, D se encuentran sobre una línea recta de modo que BC = 7, AC + BD = 33. Calcular AD.",
+      "alternatives": [
+        "25",
+        "20",
+        "26",
+        "16",
+        "13"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se ubican los puntos A, B, C, D sobre una línea recta tal que B es punto medio de , además AD = 2CD + 28. Calcular BC.",
+      "alternatives": [
+        "14",
+        "16",
+        "12",
+        "8",
+        "7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se toman los puntos consecutivos A , B , C , D de modo que AD = 6 · BC y AB + CD = 50. Calcular AD.",
+      "alternatives": [
+        "70",
+        "50",
+        "40",
+        "60",
+        "80"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos A, B, C, D se encuentran sobre una línea recta de modo que AC + BD + AD = 54 y BC = 8. Hallar AD.",
+      "alternatives": [
+        "18",
+        "32",
+        "25",
+        "27",
+        "23"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos A, B, C, D se encuentran sobre una línea recta de modo que BC = 4, AD = 18. Encontrar la distancia entre los puntos medios de los segmentos .",
+      "alternatives": [
+        "10",
+        "9",
+        "11",
+        "8",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se toman los puntos consecutivos A, B, C, D de modo que AB/5=BC/5=CD/7 . Hallar ( AB + CD) ÷ BC",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "1,5",
+        "0,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se toman los puntos consecutivos A , B , C, D de modo que AB = 2 · CD y además 3 · AC – BC = 26. Calcular AD.",
+      "alternatives": [
+        "13",
+        "6,5",
+        "14",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos A, B, C, D se encuentran sobre una línea recta de modo que AC = 12, BD = 8, AD = 4 · BC. Calcular BC.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "6",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se toman los puntos consecutivos A , B , C , D de modo que 3.CD = 5.AC y 3.BD – 5.AB = 96. Calcular BC.",
+      "alternatives": [
+        "14",
+        "24",
+        "16",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una línea recta se marcan los puntos consecutivos A , B , C , D tal que AD = 5 · BC , AC + BD = 42. Calcular BC.",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos A, B, C, D, E, F se encuentran sobre una línea recta de modo que AC + BD + CE + DF = 40 y BE = 12. Hallar AF.",
+      "alternatives": [
+        "34",
+        "30",
+        "28",
+        "36",
+        "32"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los puntos consecutivos A, B, C, D que se encuentran sobre una línea recta se cumple que AC = 13, BD = 17, además se toman P punto medio de AB y Q punto medio de . Hallar PQ.",
+      "alternatives": [
+        "14",
+        "15",
+        "16",
+        "18",
+        "20"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los puntos colineales A, B, C, D se cumple que AB = 4, AD = 12, AB · CD = AD · BC. Calcular AC.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos consecutivos A, M, B, C se encuentran sobre una línea recta de modo que M es punto medio de AB . Calcular AC + BC, si MC = 8.",
+      "alternatives": [
+        "12",
+        "14",
+        "18",
+        "16",
+        "24"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se toman los puntos consecutivos A, B, C luego se toman los puntos medios M de AB y N de AC tal que MN = 6, además BC = 3 · AB. Calcular AB.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "1",
+        "1,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los puntos consecutivos A, B, M, C que se encuentran sobre una línea recta se cumple que M es punto medio de BC , MC = 4, además 2·AM =3·BC. Calcular AC.",
+      "alternatives": [
+        "18",
+        "14",
+        "16",
+        "20",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los puntos colineales A, B, C, D,E e cumple que AB = CD, AB×DE=CD × AD, BC+DE = 6. Hallar BD.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una línea recta se ubican los puntos consecutivos A , B , C , D tal que AB + CD = 2 · BC, además AC + CD = 21. Hallar BC.",
+      "alternatives": [
+        "5",
+        "7",
+        "6",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los puntos colineales A, B, C, D, E, se marca el punto medio M del segmento DE . Hallar CD , si AD = 10 , BM = 6 y AB = BC + DE.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "0,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se toman los puntos consecutivos A, B , C , D de modo que 4.AB = 3.BC = 6.CD 3(BC – AB) = 2 · (BC – CD) – 2. Hallar AD.",
+      "alternatives": [
+        "24",
+        "18",
+        "22",
+        "12",
+        "30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una línea recta se toman los puntos consecutivos A , B , C, D, tal que AB×CD=AD×BC,AB×BC=13, AD×CD= 38. Hallar BD.",
+      "alternatives": [
+        "4",
+        "3",
+        "6",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los puntos colineales A, B, C, D se cumple que AB = 7, AC=BD+BC. Hallar AD",
+      "alternatives": [
+        "12",
+        "14",
+        "21",
+        "28",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SEGMENTOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se toman los puntos consecutivos A, B, C y D. Si se sabe que AB=CD y 2AC–BC=12cm, calcule AD.",
+      "alternatives": [
+        "10 cm",
+        "14 cm",
+        "7 cm",
+        "12 cm",
+        "6 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/3ro-4to-actividad-6-experiencia-7-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el suplemento de un ángulo es el triple de la medida de dicho ángulo. Calcule la medida del ángulo mencionado.",
+      "alternatives": [
+        "30º",
+        "35º",
+        "40º",
+        "45º",
+        "50º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/geometria-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos: L, O, P, E y Z.\nTal que LO=2(OP) y EZ=3(PE).\nSi EZ+LP=36cm, halle OE.",
+      "alternatives": [
+        "15 cm",
+        "12 cm",
+        "10 cm",
+        "9 cm",
+        "16 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/geometria-examen-admision-villarreal.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean F, M, A y G puntos colineales y consecutivos, si FG= 27 , FM=x – y , MA=x+y , AG=2y – x.\nCalcule el mayor valor de x sabiendo que el valor de y es entero.",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionarios-uni-2016-i-examen-de.html",
+      "sourceName": "matematicasn.blogspot.com — SEGUNDA PRUEBA ADMISIÓN UNI 2022 I SOLUCIONARIO MATEMÁTICAS UNIVERSIDAD DE INGENIERÍA 2022-1 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene los puntos consecutivos “A”, “B”, “C” y “D” de tal manera:\nAB = CD\nAC + 2CD + BD = 40\nCalcula “AD”",
+      "alternatives": [
+        "10",
+        "15",
+        "18",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/geometria-plana-pdf-ejercicios-y.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PLANA PDF PROBLEMAS Y EJEMPLOS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene los puntos colineales y consecutivos “A”, “B” y “C”.\nSabiendo que:\nAB = 14, BC = 6 y “M” es punto medio de AC.\nCalcula “MB”",
+      "alternatives": [
+        "4",
+        "6",
+        "9",
+        "11",
+        "18"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/geometria-plana-pdf-ejercicios-y.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PLANA PDF PROBLEMAS Y EJEMPLOS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "“A”, “B” y “C” son puntos consecutivos de una recta.\nAC = 28\nAB = BC + 12\nCalcula BC",
+      "alternatives": [
+        "3",
+        "5",
+        "7",
+        "9",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/geometria-plana-pdf-ejercicios-y.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PLANA PDF PROBLEMAS Y EJEMPLOS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos “A”, “B” y “C” .\nSi AB = 22\nBC = 16.\nCalcula la longitud del segmento determinado por los puntos medios de AB y AC.",
+      "alternatives": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/geometria-plana-pdf-ejercicios-y.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PLANA PDF PROBLEMAS Y EJEMPLOS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una línea recta se consideran los puntos consecutivos A, B, C, D y E con la siguiente condición:\nAC + DE + CE = 44m.\nHalla la longitud del segmento AB, si: AE = 24m y DE = 2AB.",
+      "alternatives": [
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/geometria-plana-pdf-ejercicios-y.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PLANA PDF PROBLEMAS Y EJEMPLOS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una línea recta se consideran los puntos consecutivos A, B, C y D tal que:\nAD = 32\nBC = 10.\nCalcula la longitud del segmento que tiene por extremos a los puntos medios de AB y CD.",
+      "alternatives": [
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/geometria-plana-pdf-ejercicios-y.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PLANA PDF PROBLEMAS Y EJEMPLOS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos “A”, “B”, “C” y “D” son colineales y consecutivos, tales que:\nAB = 12\nCD = 17\nAC + BD = 49.\nCalcula BC",
+      "alternatives": [
+        "6",
+        "10",
+        "14",
+        "18",
+        "22"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/geometria-plana-pdf-ejercicios-y.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PLANA PDF PROBLEMAS Y EJEMPLOS RESUELTOS DE SECUNDARIA Y PRE UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos A, B, C y D.\nSi\n4BC=3CD\nCD= AB+BC\nAD= 16 m\nHalle BD",
+      "alternatives": [
+        "12 m",
+        "14 m",
+        "11 m",
+        "15 m",
+        "13 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-geometria-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE GEOMETRÍA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos A, B, C y D tal que AD–BC=15 cm.\nSi M y N son puntos medios de AC y BD, respectivamente, halle MN.",
+      "alternatives": [
+        "7,5 cm",
+        "6 cm",
+        "6,5 cm",
+        "7 cm",
+        "5 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-13-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una recta se ubican los puntos consecutivos A, B, C y D.\nSi AC+BD=5AB+CD\nHalle AD÷BC",
+      "alternatives": [
+        "3",
+        "2,5",
+        "2",
+        "1,5",
+        "3,5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-13-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se ubican los puntos consecutivos “A”, “B” y “C”. Tal que “M” es punto medio de AC. Calcula “BM”. Si: BC = AB + 40.",
+      "alternatives": [
+        "5",
+        "8",
+        "12",
+        "20",
+        "30"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se ubican los puntos consecutivos A, B y C tales que AB = 10 y BC = 8. Si “M” es punto medio de AB. Calcula “MC”.",
+      "alternatives": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los puntos colineales y consecutivos A, B, C y D son tales que: AD = 18, BD = 13 y AC = 12. Calcula “BC”.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se ubican los puntos consecutivos “A”, “B”, “C” y “D” tal que: CD = 4AC, si BD – 4AB = 20. Calcula “BC”.",
+      "alternatives": [
+        "2",
+        "3",
+        "5",
+        "7",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una recta se ubican los puntos consecutivos “A”, “B”, “C” y “D”.\nSi se cumple: AB/2= BC/3 = CD/5\nCalcula “CD”, si: AD = 20",
+      "alternatives": [
+        "12",
+        "9",
+        "6",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el valor de verdad (V) o falsedad (F) de las siguientes proposiciones:\nI) Un triángulo ABC está contenido en un plano ℙ, entonces el triángulo ABC separa al plano ℙ en dos conjuntos convexos.\nII) Si el rayo OC es bisectriz del ángulo AOB, entonces OC es un conjunto convexo.\nIII) Si R es la región triangular ABC de la cual se ha extraído un punto P, entonces R–{P} es un conjunto convexo.",
+      "alternatives": [
+        "FVF",
+        "FFF",
+        "VVV",
+        "VVF",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/01/convexos-problemas-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONJUNTOS CONVEXOS PROBLEMAS RESUELTOS PDF – GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un ángulo es el cuádruplo de su adyacente suplementario, ¿cuánto mide dicho ángulo?",
+      "alternatives": [
+        "144°",
+        "136°",
+        "138°",
+        "124°",
+        "36°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-segundo-de.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON ÁNGULOS EJEMPLOS Y PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos ángulos adyacentes suplementarios difieren en 40°. Hallar la medida del mayor ángulo.",
+      "alternatives": [
+        "100°",
+        "110°",
+        "120°",
+        "98°",
+        "125°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-segundo-de.html",
+      "sourceName": "matematicasn.blogspot.com — OPERACIONES CON ÁNGULOS EJEMPLOS Y PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la suma del complemento más el suplemento de cierto ángulo es igual a 130°, calcula la medida de dicho ángulo.",
+      "alternatives": [
+        "50°",
+        "60°",
+        "70°",
+        "80°",
+        "90°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/angulos-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — Ángulos ejercicios resueltos"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si los ángulos AOB y BOC son adyacentes la m∠BOC = 3m∠AOB y la m∠AOC = 100°, calcula la m∠BOC.",
+      "alternatives": [
+        "45°",
+        "50°",
+        "55°",
+        "60°",
+        "75°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/angulos-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — Ángulos ejercicios resueltos"
     }
   ]
 }

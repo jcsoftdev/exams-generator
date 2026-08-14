@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un ladrillo de plomo de dimensiones 5 cm, 10 cm y 20 cm descansa en un piso horizontal sobre su cara más pequeña. ¿Cuál es la magnitud de la presión que ejerce el ladrillo sobre el piso? (densidad = 2,7 g/cm³; g = 10 m/s²)",
-      "alternatives": ["1,5 kPa", "2,3 kPa", "5,4 kPa", "3,5 kPa", "4,2 kPa"],
+      "alternatives": [
+        "1,5 kPa",
+        "2,3 kPa",
+        "5,4 kPa",
+        "3,5 kPa",
+        "4,2 kPa"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
       "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un buzo que se encuentra sumergido en un lago soporta una presión total de 3,5 atm. Determine la profundidad a la que se encuentra dicho buzo. (P_atm = 10⁵ Pa; densidad del agua = 1000 kg/m³; g = 10 m/s²)",
-      "alternatives": ["15 m", "20 m", "25 m", "30 m", "35 m"],
+      "alternatives": [
+        "15 m",
+        "20 m",
+        "25 m",
+        "30 m",
+        "35 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
       "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema del buzo"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un cuerpo de masa 8 kg pesa 60 N en el agua y 50 N en un líquido desconocido, cuando está sumergido completamente. Determine la densidad (en g/cm³) del líquido desconocido. (densidad del agua = 1000 kg/m³; g = 10 m/s²)",
-      "alternatives": ["1,7", "1,8", "1,3", "1,5", "1,6"],
+      "alternatives": [
+        "1,7",
+        "1,8",
+        "1,3",
+        "1,5",
+        "1,6"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
       "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema de empuje en líquido desconocido"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Qué porcentaje de un cubo de madera flotará (sobresaldrá) en un recipiente que contiene aceite, sabiendo que la densidad de la madera es de 0,6 g/cm³ y la densidad del aceite 0,8 g/cm³?",
-      "alternatives": ["10%", "25%", "50%", "75%", "80%"],
+      "alternatives": [
+        "10%",
+        "25%",
+        "50%",
+        "75%",
+        "80%"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
       "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema cubo de madera en aceite"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Se tiene un ascensor que sube con una aceleración de magnitud 2 m/s². Dentro del ascensor hay un recipiente que contiene agua hasta una altura h = 30 cm. Determine la presión hidrostática en el fondo del recipiente. (densidad del agua = 1000 kg/m³; g = 10 m/s²)",
-      "alternatives": ["450 Pa", "900 Pa", "1800 Pa", "3600 Pa", "7200 Pa"],
+      "alternatives": [
+        "450 Pa",
+        "900 Pa",
+        "1800 Pa",
+        "3600 Pa",
+        "7200 Pa"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
       "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema del ascensor"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un cubo flota en un líquido de tal modo que sobresale las 2/5 partes de su volumen. Encuentre la relación D_S/D_L entre la densidad del sólido y la densidad del líquido.",
-      "alternatives": ["5/2", "2/5", "5/3", "3/5", "2/3"],
+      "alternatives": [
+        "5/2",
+        "2/5",
+        "5/3",
+        "3/5",
+        "2/3"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
       "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema del cubo flotante"
@@ -72,10 +108,1996 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sobre un cubo de madera que se encuentra flotando en agua se coloca un bloque de 2 N de peso. Al retirar lentamente el bloque, el cubo asciende 2 cm hasta lograr nuevamente el equilibrio. Calcule la arista del cubo (en cm). (densidad del agua = 1000 kg/m³; g = 10 m/s²)",
-      "alternatives": ["40", "30", "10", "80", "60"],
+      "alternatives": [
+        "40",
+        "30",
+        "10",
+        "80",
+        "60"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
       "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema del cubo y bloque de 2 N"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante una expedición, un buzo se sumerge en una laguna salada para averiguar los efectos de la presión a 50,0 metros de profundidad. En dicha laguna, la densidad del agua es r=1,10 g/cm³. Si en la superficie la presión atmosférica es 1,20 atmósferas, ¿cuál es la presión absoluta a esa profundidad?\nDatos: g=10,0 m/s²; 1 atm =101000 Pa",
+      "alternatives": [
+        "716,2 kPa",
+        "761,2 kPa",
+        "671,2 kPa",
+        "651,2 kPa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/fisica-ejercicios-resueltos-examen-de.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un buzo se sumerge en el océano alcanzando una presión manométrica de 1×10 5 Pa. Determine aproximadamente la profundidad, en m, que logró descender.\nConsidere g = 9,81 m/s 2 y la densidad del agua igual a 1015 kg/m 3 .",
+      "alternatives": [
+        "25",
+        "20",
+        "15",
+        "5",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Tercera-prueba-uni-solucionario-examen-admision-universidad-ingenieria-fisica-quimica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA QUÍMICA EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA TERCERA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la presión hidrostática sobre el fondo de una piscina de 3m de profundidad.\ng = 10 m/s².",
+      "alternatives": [
+        "1 × 10 4 Pa",
+        "1,5 × 10 4 Pa",
+        "2 × 10 4 Pa",
+        "2,5 × 10 4 Pa",
+        "3 × 10 4 Pa"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/equilibrio-de-fluidos-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — HIDROSTÁTICA EJEMPLOS Y EJERCICIOS RESUELTOS DE ESTÁTICA DE FLUIDOS "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el módulo de la fuerza de empuje sobre un bloque, de tal manera que al ser introducido en agua desaloje 100cm³.\n(g=10m/s²)",
+      "alternatives": [
+        "1 N",
+        "2 N",
+        "3 N",
+        "4 N",
+        "5 N"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/equilibrio-de-fluidos-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — HIDROSTÁTICA EJEMPLOS Y EJERCICIOS RESUELTOS DE ESTÁTICA DE FLUIDOS "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La geodinámica debe su existencia básicamente a la siguiente causa",
+      "alternatives": [
+        "El calor interno de la Tierra",
+        "Las fuerzas gravitatorias de la Luna y el Sol",
+        "El contrapeso isostático de los continentes y océanos",
+        "La presión hidrostática de los materiales fluidos de la geosfera",
+        "Las fuerzas gravitacionales"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/fuerzas-geologicas-internas-y-la-construccion-del-relieve-geodinamica-endogena-de-la-tierra-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-secundaria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEODINÁMICA ENDÓGENA PREGUNTAS RESUELTAS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La presión atmosférica se mide con:",
+      "alternatives": [
+        "la veleta.",
+        "el anemómetro.",
+        "el termómetro.",
+        "el barómetro.",
+        "el pluviómetro."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/cultura-general-preguntas-resueltas-de-actualidad-descarga-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CULTURA GENERAL 2027 EJERCICIOS RESUELTOS – ACTUALIDAD 2026 – 200 PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La técnica narrativa que ha empleado el autor es:",
+      "alternatives": [
+        "cajas chinas",
+        "flash back",
+        "flash forward",
+        "vasos comunicantes",
+        "estilo indirecto libre"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/habilidad-numerica-logica-y-verbal.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA C 2027 DERECHO CIENCIAS DE LA PERSONA INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El barómetro es un instrumento de medición atmosférica, que permite medir:",
+      "alternatives": [
+        "La temperatura",
+        "La humedad",
+        "La presión atmosférica",
+        "Los vientos",
+        "La nubosidad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/simulacro-2-matematicas-fisica-y.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNICA RESUELTO 2027 INGRESO UNIVERSIDAD GONSAGA DESCARGA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El equilibrio del sial encima del sima se realiza de acuerdo con el principio de Arquímedes que se denomina:",
+      "alternatives": [
+        "astenófera",
+        "discontinuidad",
+        "convectiva",
+        "isostasia",
+        "singularidad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/02/geosfera-y-geodinamica-terrestre-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicasn.blogspot.com — GEÓSFERA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD – GEOGRAFÍA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante un ensayo de laboratorio de fisicoquímica se desea determinar la densidad de una esfera de plomo. Para ello se sumerge una esfera de dicho metal cuya masa es de 57 g en una probeta graduada que contiene un volumen inicial de agua de 15,00 mL alcanzándose un volumen final de 20,00 mL. Al respecto, determine la densidad del plomo en unidades del SI.",
+      "alternatives": [
+        "1,14 × 10 3",
+        "1,14 × 10 4",
+        "1,14 × 10 2",
+        "1,14 × 10 5",
+        "1,14 × 10 1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la corteza terrestre existe una condición ideal de equilibrio gravitatorio que regula las alturas de los continentes y sus profundidades denominada isostasia.\nCon relación a este mecanismo de ajuste, determine el valor de verdad (V o F) de los siguientes enunciados:\nI) Genera geoformas como los tablazos.\nII) Es responsable de la actividad sísmica.\nIII) Se basa en el principio de Arquímedes.\nIV) Ocurre solo en límites divergentes de placas.",
+      "alternatives": [
+        "VFFV",
+        "FVFV",
+        "VFVF",
+        "FVVF",
+        "VVFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/geografia-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — GEOGRAFÍA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cilindro circular recto de altura mayor que 30cm y cuya base tiene un diámetro de 40/ √ 𝛑 cm contiene agua hasta los 3/4 de su altura. Si se sumerge un cubo de metal de 10 cm de arista, hasta el fondo del recipiente, ¿cuántos centímetros sube el nivel de agua del cilindro?",
+      "alternatives": [
+        "7/2",
+        "3/2",
+        "5/2",
+        "8/3",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/geometria-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál(es) de las siguientes proposiciones es(son) correcta(s)?\nI) El manómetro es un instrumento que mide diferencia de presiones.\nII) La presión barométrica varía inversamente con la altitud.\nIII) La presión absoluta de un gas contenido en un recipiente siempre es mayor que la presión atmosférica externa.",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "solo III",
+        "I y II",
+        "I, II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique si las siguientes proposiciones son verdaderas (V) o falsas (F)\nI) La presión atmosférica es la misma en cualquier punto de la Tierra.\nII) El barómetro mide la presión manométrica.\nIII) El Pascal (Pa) es la unidad S.I. de la presión.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFF",
+        "VFV",
+        "FFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un laboratorio, un recipiente con gas neón se conectó a un manómetro de agua, lo que provocó una elevación del nivel del agua en la parte de contacto con la atmósfera de 12,8 cm respecto al nivel del agua del ramal conectado al recipiente del gas. El día que se hizo la medición la presión atmosférica fue de 748 torr. ¿Cuál es la presión del gas neón en mm de Hg?",
+      "alternatives": [
+        "9,41",
+        "12,43",
+        "15,38",
+        "18,24",
+        "22,45"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente conectado a un manómetro de mercurio de extremo abierto se llena con un gas a una presión de 835 mmHg. Si la presión atmosférica es de 755 mmHg. Calcule la diferencia de niveles de mercurio en el manómetro (en mm)",
+      "alternatives": [
+        "20",
+        "70",
+        "80",
+        "90",
+        "120"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un barómetro en la localidad \"X\" marca 75 cm de mercurio. En dicha localidad la presión de cierto gas se mide en un manómetro indicando una presión manométrica de 10 cm. Pero cuando el manómetro se lleva a la localidad “Y” la presión manométrica aumenta a 18 cm. Determine la presión barométrica (en cm de mercurio) en la localidad \"Y\".",
+      "alternatives": [
+        "61",
+        "63",
+        "65",
+        "67",
+        "69"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una manera indirecta de medir la presión atmosférica es a través del barómetro de mercurio. Medidas experimentales a nivel del mar revelan que la presión atmosférica en el barómetro de mercurio tiene una altura de 760mm, de manera que la presión atmosférica a nivel del mar es 100 kPa. Si la presión atmosférica en una ciudad de los Andes peruanos es de 97,8 kPa, ¿cuál sería la altura de la columna de mercurio en el barómetro?\n( ρ Hg =13600kg/m³)",
+      "alternatives": [
+        "715,4 mm",
+        "758,1 mm",
+        "743,3 mm",
+        "640,7 mm",
+        "677,3 mm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación al principio de Arquímedes, indique la verdad (V o F) de las siguientes proposiciones:\nI) Todo cuerpo sumergido totalmente o parcialmente en un líquido desplaza un volumen igual al que posee.\nII) El empuje sobre un cuerpo depende de la profundidad a la cual se sumerge totalmente.\nI II) Dos cuerpos de diferentes materiales y formas, pero de volúmenes iguales, soportan diferentes empujes al ser sumergidos totalmente en un líquido.",
+      "alternatives": [
+        "FFF",
+        "FFV",
+        "VVF",
+        "VVV",
+        "VFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque cúbico está flotando con las tres cuartas partes de su volumen sumergido en un líquido. Indique la verdad (V o F) de las siguientes proposiciones:\nI) El peso del bloque y la fuerza de empuje tienen igual magnitud.\nII) La densidad del líquido es la cuarta parte de la densidad del bloque.\nIII) La densidad del líquido es la tercera parte de la densidad del bloque.",
+      "alternatives": [
+        "VFV",
+        "FFF",
+        "VVF",
+        "VFF",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Comenzar la historia con un hecho final o intermedio y terminar con el principio, es una técnica llamada:",
+      "alternatives": [
+        "vasos comunicantes.",
+        "monólogo interior.",
+        "tiempo cíclico o circular.",
+        "las cajas chinas.",
+        "perspectiva múltiple."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/02/narrativa-contemporanea-literatura-latinoamericana-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicasn.blogspot.com — LITERATURA HISPANOAMERICANA EJERCICIOS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El instrumento para medir la presión del aire se denomina",
+      "alternatives": [
+        "Manómetro",
+        "Barómetro",
+        "Picómetro",
+        "Probeta",
+        "Bureta"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A la presión del aire se llama ......",
+      "alternatives": [
+        "Presión absoluta",
+        "Presión manométrica",
+        "Presión de vacío.",
+        "Presión atmosférica",
+        "Presión hidrostática"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar (V) o (F) en las siguientes proposiciones:\nI) Si la densidad de un cuerpo sólido es menor que la de un líquido, entonces el cuerpo se mantiene parcialmente sumergido en dicho líquido.\nII) Si en la luna, una lata e gaseosa vacía flota en agua, en la tierra; ésta se sumergirá totalmente.\nIII) El volumen de la parte sumergida de una pelota es mayor en una tina con agua que en una piscina.\nIV) Si sobre un cuerpo sumergido en un líquido la presión hidrostática aumenta, entonces, el empuje hidrostático sobre dicho cuerpo también aumentará.",
+      "alternatives": [
+        "VFFV",
+        "VFFF",
+        "VFVF",
+        "FVFV",
+        "VFVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo de 30N se sumerge totalmente en un líquido de densidad 2g/cm³ y la lectura de un dinamómetro acoplado al cuerpo indica 20N. ¿Qué lectura indicará el dinamómetro al sumergir dicho cuerpo totalmente en agua?",
+      "alternatives": [
+        "20N",
+        "25N",
+        "30N",
+        "35N",
+        "32N"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando se sumerge un cuerpo en un líquido parece que pesara menos. Lo podemos sentir cuando nos sumergimos en una piscina. Esto es debido a que todo cuerpo sumergido en un líquido recibe una fuerza vertical y hacia arriba llamada empuje. Considere que una persona de 60 kg se sumerge en una piscina llena de agua y logra desalojar 20 L de agua. Indique la fuerza con que presiona al piso de la piscina.\n( g=10m/s²)",
+      "alternatives": [
+        "300 N",
+        "380 N",
+        "480 N",
+        "400 N",
+        "360 N"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El barómetro es un instrumento que mide la presión atmosférica. Fue diseñado inicialmente por Evangelista Torricelli en el siglo xvii y contenía mercurio en un tubo, cuya parte superior está cerrada. El peso de la columna de mercurio compensaba el peso de la atmósfera. Considere que en cierto lugar la columna de mercurio es de 50cm. Determine la presión atmosférica en 10 ³ Pa.\n( ρ Hg = 13,6 ×10 ³ kg/m ³ ; g=10m/s² )",
+      "alternatives": [
+        "50",
+        "55",
+        "60",
+        "46",
+        "68"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene M gramos de hielo a 0°C y se sumerge en M gramos de agua a 100°C. ¿Cuál será la temperatura final de equilibrio del sistema? Despreciar toda ganancia o pérdida de calor con el exterior.",
+      "alternatives": [
+        "10°C",
+        "20°C",
+        "30°C",
+        "40°C",
+        "50°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un trozo de metal de masa 2 kg a una temperatura de 92 °C se sumerge en 1 kg de agua a 20 °C. El sistema agua y metal alcanza el equilibrio a la temperatura de 32 °C. ¿Cuál es el calor específico del metal?\n(c agua = 1 cal/g°C)",
+      "alternatives": [
+        "80 cal/g°C",
+        "90 cal/g°C",
+        "100 cal/g°C",
+        "110 cal/g°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El peso de un cuerpo es 6N y 3,6N al sumergirlo totalmente en el agua. Si en otro líquido el peso aparente es de 2,4N. Determine la densidad de este líquido en kg/m 3",
+      "alternatives": [
+        "2000",
+        "1500",
+        "1200",
+        "900",
+        "800"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/guia-docente-matematica-primaria-cuadernos-de-trabajo-auto-aprendizaje-aprendo-en-casa-fichas-libros-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL INGENIERÍAS PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA C 2027 – ARQUITECTURA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esfera de aluminio se sumerge en agua. ¿Cuál de las siguientes afirmaciones es verdadera?",
+      "alternatives": [
+        "El empuje será menor en agua a 0°C que en agua a 4°C.",
+        "El empuje será mayor en agua a 0°C que en agua a 4°C.",
+        "El empuje en agua a 0°C será el mismo que en agua a 4°C.",
+        "El empuje puede ser mayor o menor en agua a 4°C dependiendo del radio de la esfera."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep311.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.11 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El movimiento de una columna líquida oscilante en un tubo en U es",
+      "alternatives": [
+        "periódico pero no armónico simple.",
+        "no periódico.",
+        "armónico simple, y el periodo es independiente de la densidad del líquido.",
+        "armónico simple, y el periodo es directamente proporcional a la densidad del líquido."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep314.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.14 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De las siguientes proposiciones relacionadas a la tensión superficial de un líquido:\nI. Trata de reducir el área de su superficie libre.\nII. Es una propiedad intrínseca.\nIII. Depende solo de sus propiedades moleculares.\nIndique la secuencia de verdad (V) y falsedad (F).",
+      "alternatives": [
+        "FFV",
+        "VFF",
+        "VVV",
+        "VVF",
+        "FVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/fisica-callao-examen-de-admision-universidad-unac-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La propiedad del agua de formar una membrana elástica y tensa, explica su _______",
+      "alternatives": [
+        "ionización.",
+        "humectación.",
+        "tensión superficial.",
+        "solvatación.",
+        "disociación."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-3ro-4to-actividad-4-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS ECONÓMICAS, FINANCIERAS Y EMPRESARIALES PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA A 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Muchos insectos ponen sus huevos o patinan sobre la superficie del agua sin hundirse. Esto es explicable porque",
+      "alternatives": [
+        "las moléculas de agua están muy cohesionadas debajo de la superficie.",
+        "la tensión superficial es menor a la presión atmosférica.",
+        "las moléculas de agua en la superficie están muy cohesionadas.",
+        "la superficie de agua concentra mayor cantidad de sal.",
+        "las moléculas de la superficie del agua conservan una menor temperatura."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/bioquimica-formulas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOQUÍMICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La transpiración es un proceso muy importante en las plantas para que el agua ascienda hasta las hojas. ¿Qué propiedad del agua se observa en aquel proceso?",
+      "alternatives": [
+        "la capilaridad",
+        "la constante dieléctrica",
+        "la tensión superficial",
+        "la dipolaridad",
+        "la densidad"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/bioquimica-formulas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOQUÍMICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El xilema es el tejido que transporta agua y sales minerales a la planta esta constituida por ______ que permite la ascensión de la savia bruta por el fenómeno de ______",
+      "alternatives": [
+        "vasos espiralados _ transpiración",
+        "tubos cribosos _ Presión",
+        "vasos leñosos _ Capilaridad",
+        "tráqueas _ Cohesión",
+        "parénquima _ Tensión superficial."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA CARDIOVASCULAR EJERCICIOS RESUELTOS – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son interacciones que permiten las propiedades de adhesión, capilaridad y la tensión superficial que experimentan las moléculas de agua, muy necesarias para su distribución en los organismos vivos.",
+      "alternatives": [
+        "Puentes de hidrógeno",
+        "Enlaces disulfuro",
+        "Enlaces oxidantes",
+        "Fuerzas intramoleculares",
+        "Fuerzas extramoleculares"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/02/pre-san-marcos-2018-semana-17.html",
+      "sourceName": "matematicasn.blogspot.com — MEDICINA HUMANA PRUEBA SAN MARCOS INGRESO UNIVERSIDAD DESARROLLADA CLAVES 2024-II PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un aro delgado de 70mm de diámetro es colocado horizontalmente en la superficie de un líquido. Si la mínima fuerza para separar el aro del líquido es 44 ×10 –4 N, determine la tensión superficial del líquido. ( 𝛑 =22/7)",
+      "alternatives": [
+        "22×10 –3 N/m",
+        "26 ×10 –3 N/m",
+        "17 ×10 –3 N/m",
+        "12 ×10 –3 N/m",
+        "20 ×10 –3 N/m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Propiedad que permite que el agua ascienda a través de un tubo de vidrio muy fino:",
+      "alternatives": [
+        "densidad",
+        "cohesión",
+        "capilaridad",
+        "tensión superficial",
+        "adhesión"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biomoleculas-inorganicas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOMOLÉCULAS INORGÁNICAS EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El xilema, ubicado en la raíz de las plantas, tiene como función la ascención del agua y sales a través de un proceso denominado",
+      "alternatives": [
+        "adhesión molecular.",
+        "tensión superficial.",
+        "dipolaridad.",
+        "cohesión molecular.",
+        "capilaridad."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-simulacro-de-examen-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA SIMULACRO DE EXAMEN DE ADMISIÓN UNIVERSIDAD RESUELTO"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se conoce como acción capilar el ascenso que se produce cuando se coloca un tubo de vidrio, de diámetro pequeño, en un líquido y este asciende por el tubo. Señale la alternativa que presenta la afirmación correcta cuando el líquido es el agua.",
+      "alternatives": [
+        "La acción capilar es mayor cuando el diámetro del capilar aumenta.",
+        "El menisco que se forma en la superficie del agua tiene forma convexa.",
+        "Las fuerzas entre el vidrio y el agua son menores que las fuerzas cohesivas.",
+        "La acción capilar tiene relación directa con la tensión superficial."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN SAN MARCOS ÁREA A 2022 II MEDICINA HUMANA SOLUCIONARIO PRUEBA DESARROLLADA ADMISIÓN UNIVERSIDAD RESPUESTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A lo largo de una línea de corriente",
+      "alternatives": [
+        "la velocidad de una partícula del fluido permanece constante.",
+        "la velocidad de todas las partículas del fluido que cruzan una posición dada es constante.",
+        "la velocidad de todas las partículas del fluido en un instante dado es constante.",
+        "la rapidez de una partícula del fluido permanece constante."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep310.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.10 MCQ 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ángulo de contacto en la interfase agua-vidrio es 0°, etanol-vidrio es 0°, mercurio-vidrio es 140° y yoduro de metilo-vidrio es 30°. Se coloca un capilar de vidrio en un recipiente que contiene uno de estos cuatro líquidos. Se observa que el menisco es convexo. El líquido en el recipiente es",
+      "alternatives": [
+        "agua",
+        "etanol",
+        "mercurio",
+        "yoduro de metilo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep310.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.10 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El consumo excesivo de refrescos es preocupante, pues contribuye al aumento de casos de obesidad y diabetes. Considere dos refrescos enlatados, uno común y uno diet, y que ambos posean la misma cantidad de aditivos, excepto por la presencia de azúcar. El refresco común contiene básicamente agua carbonatada y gran cantidad de azúcar; ya el refresco diet tiene agua carbonatada y edulcorantes, cuyas masas son muy pequeñas. CAVAGIS, A. D. M.; PEREIRA, E. A.; OLIVEIRA, L. C. Um método simples para avaliar o teor de sacarose e CO2 em refrigerantes. Química Nova na Escola, n. 3, ago. 2014 (adaptado). Entre las dos versiones presentadas, el refresco común posee",
+      "alternatives": [
+        "mayor densidad.",
+        "menor viscosidad.",
+        "mayor volumen de gas disuelto.",
+        "menor masa de solutos disueltos.",
+        "mayor temperatura de congelación."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2023 dia 2 caderno azul questão 131"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "10 g de aluminio ocupan un volumen de 27 cm 3 .\n¿Qué volumen ocuparán 20 g de aluminio?",
+      "alternatives": [
+        "27 cm 3",
+        "54 cm 3",
+        "81 cm 3",
+        "108 cm 3",
+        "135 cm 3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/densidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — DENSIDAD FÓRMULA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las sustancias tiene mayor densidad?",
+      "alternatives": [
+        "500 g de madera",
+        "8 kg de algodón",
+        "2 kg de hierro",
+        "3 kg de hielo",
+        "5 g de oro"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/densidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — DENSIDAD FÓRMULA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La densidad relaciona otras dos magnitudes físicas que son ______ y ______ .",
+      "alternatives": [
+        "peso - volumen",
+        "volumen - tiempo",
+        "masa - volumen",
+        "peso - longitud",
+        "masa - úrea"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/densidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — DENSIDAD FÓRMULA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la densidad de un líquido de 180 kg que tiene un volumen de 0,2 m 3 .",
+      "alternatives": [
+        "600 kg/m 3",
+        "1000 kg/m 3",
+        "800 kg/m 3",
+        "900 kg/m 3",
+        "22 500 kg/m 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/densidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — DENSIDAD FÓRMULA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la masa de un cuerpo que tiene una densidad de 460 kg/m 3 , si su volumen es de 0,5 m 3 .",
+      "alternatives": [
+        "130 kg",
+        "230 kg",
+        "320 kg",
+        "460 kg",
+        "480 kg"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/densidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — DENSIDAD FÓRMULA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la densidad (en kg/m 3 ) de un bloque de 500 kg que presenta un volumen de 0,5 m 3 .",
+      "alternatives": [
+        "250",
+        "500",
+        "1000",
+        "1500",
+        "2000"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/densidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — DENSIDAD FÓRMULA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los líquidos posee mayor densidad?",
+      "alternatives": [
+        "agua",
+        "aceite",
+        "kerosene",
+        "mercurio",
+        "alcohol"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/densidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — DENSIDAD FÓRMULA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la masa de un ladrillo de 0,04 m 3 , si presenta una densidad de 2000 kg/m 3 .",
+      "alternatives": [
+        "8 kg",
+        "80 kg",
+        "400 kg",
+        "500 kg",
+        "800 kg"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/densidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — DENSIDAD FÓRMULA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la masa de un trozo de hielo cuya densidad es 900 kg/m 3 si ocupa un volumen de 6 m 3 .",
+      "alternatives": [
+        "4800 g",
+        "5600 kg",
+        "5000 kg",
+        "4600 kg",
+        "5400 kg"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/densidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — DENSIDAD FÓRMULA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el volumen que ocupa un bloque de 450 kg de hielo, cuya densidad es 900 kg/m 3 .",
+      "alternatives": [
+        "0,2 m 3",
+        "0,3 m 3",
+        "0,4 m 3",
+        "0,5 m 3",
+        "0,6 m 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/densidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — DENSIDAD FÓRMULA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque de 10 kg de masa tiene el 80% de su volumen sumergido en un depósito de agua. Si el bloque se encuentra en equilibrio, ¿cuál es su densidad?\nDatos: ρH 2 O=1 g/cm 3 ; L=litro",
+      "alternatives": [
+        "0,8 kg/L",
+        "1,6 kg/L",
+        "1,0 kg/L",
+        "1,4 kg/L",
+        "1,8 kg/L"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/fisica-preuniversitaria-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las áreas de los pistones de una prensa hidráulica son 0,5m² y 10m². Halle la carga que podrá levantarse con esta prensa, cuando se aplique una fuerza de 0,4kN.",
+      "alternatives": [
+        "6 kN",
+        "8 kN",
+        "10 kN",
+        "12 kN",
+        "14 kN"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/equilibrio-de-fluidos-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — HIDROSTÁTICA EJEMPLOS Y EJERCICIOS RESUELTOS DE ESTÁTICA DE FLUIDOS "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El peso de un bote de madera, que flota en el lago junto al muelle es de 700N. Halle el volumen sumergido del bote.\ng=10m/s²",
+      "alternatives": [
+        "0,07 m ³",
+        "0,08 m ³",
+        "0,09 m ³",
+        "0,10 m ³",
+        "0,20 m ³"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/equilibrio-de-fluidos-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — HIDROSTÁTICA EJEMPLOS Y EJERCICIOS RESUELTOS DE ESTÁTICA DE FLUIDOS "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una enfermera aplica una fuerza de 40N al pistón de una jeringa cuya área es de × 10 –3 m². Encuentre la presión que ejerce en Pa.",
+      "alternatives": [
+        "2 × 10 4",
+        "3 × 10 4",
+        "4 × 10 4",
+        "8 × 10 4",
+        "9 × 10 4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/equilibrio-de-fluidos-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — HIDROSTÁTICA EJEMPLOS Y EJERCICIOS RESUELTOS DE ESTÁTICA DE FLUIDOS "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea construir una prensa hidráulica para ejercer fuerzas de 10 4 N. ¿Qué superficie deberá tener el pistón grande, si sobre el menor de 0,03 m², se aplicará una fuerza de 500 N?",
+      "alternatives": [
+        "0,03 m²",
+        "0,06 m²",
+        "0,3 m²",
+        "0,6 m²",
+        "6 m²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/equilibrio-de-fluidos-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — HIDROSTÁTICA EJEMPLOS Y EJERCICIOS RESUELTOS DE ESTÁTICA DE FLUIDOS "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tubo en forma de U contiene mercurio. Cuando se vierte un cierto líquido A en una rama del tubo, en la otra, el nivel del mercurio se eleva 5 mm. Calcule, el g/cm³, la densidad volumétrica del líquido A si la altura en la rama que ocupa es de 17 cm.\nDensidad volumétrica del mercurio: 13,6 g/cm³.",
+      "alternatives": [
+        "0,8",
+        "1,1",
+        "1,4",
+        "0,5",
+        "0,2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una piedra pesa en el aire 60 N y sumergido completamente en el agua 35 N. Determinar la densidad de la piedra (kg/m 3 ). Use (g=10m/s 2 )",
+      "alternatives": [
+        "2 800",
+        "2 600",
+        "2 400",
+        "2 200",
+        "2 000"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos cubos, uno pequeño de masa m=200g colocado sobre otro cubo de madera con masa M, son puestos lentamente sobre la superficie de agua contenida en un estanque, notando que el agua cubre solo al cubo de madera. si se quita el cubo de masa m, el de madera se eleva 2cm sobre el nivel del agua. Determine la arista del cubo de madera.\nDato: ρ agua =1,0g/cm³",
+      "alternatives": [
+        "0,20 m",
+        "0,30 m",
+        "0,15 m",
+        "0,10 m",
+        "0,25 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/examen-san-marcos-2019-i-deco.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN MARCOS 2027 I EXAMEN ADMISIÓN UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ancla de acero de densidad ρ acero =7870 kg/m 3 es 200N más ligero en el agua que en el aire. Calcule el valor aproximado (en 10 –2 m 3 ) del volumen del ancla.\nConsidere g=9,81m/s 2",
+      "alternatives": [
+        "0,25",
+        "1,04",
+        "2,04",
+        "3,44",
+        "4,05"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo flota con el 20% de su volumen fuera del agua, si experimenta un empuje de 80N, calcule su volumen.\n(g=10m/s 2 )",
+      "alternatives": [
+        "0,01 m 3",
+        "0,02 m 3",
+        "0,05 m 3",
+        "0,1 m 3",
+        "0,2 m 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/resolucion-examen-villarreal-admision.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS DE LA SALUD PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA D 2027 FORMALES Y NATURALES"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con esas dimensiones se calcula que la velocidad de un grano de arena que se encuentran en la capa inferior para que ingrese a la tolva a las justas, en m/s; es:",
+      "alternatives": [
+        "0,9",
+        "1,0",
+        "1,3",
+        "1,4",
+        "1,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con esas dimensiones se calcula que la velocidad de un grano de arena que se encuentra en la capa superior para que ingrese a las justas a la tolva, en m/s; es:",
+      "alternatives": [
+        "1,9",
+        "2,1",
+        "2,2",
+        "2,3",
+        "2,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tubo en forma de U contiene mercurio. Se vierte un líquido de densidad volumétrica igual a 0,85 g/ cm³ en una rama del tubo, hasta llegar a una altura de 20 cm. Calcule, en mm, la altura en que se eleva el nivel inicial del mercurio en la otra rama.\nDensidad volumétrica del mercurio: 13,6 g/cm³",
+      "alternatives": [
+        "14,25",
+        "10,25",
+        "2,25",
+        "6,25",
+        "8,25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/fisica-problemas-resueltos-del-examen-de-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SEMINARIO DE FÍSICA PROBLEMAS RESUELTOS TIPO EXAMEN DE ADMISIÓN A LA UNIVERSIDAD NACIONAL DE INGENIERÍA UNI PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esfera de 200 cm³ de volumen que tiene una densidad igual a 0,8 g/cm³, está sumergida en un tanque lleno de agua. Si la esfera se suelta del fondo del tanque, calcule aproximadamente el tiempo (en s) que demora en elevarse 5 m dentro del agua. No considere las fuerzas de fricción. (g = 9,81 m/s ² ).",
+      "alternatives": [
+        "2,02",
+        "3,02",
+        "4,02",
+        "5,02",
+        "6,02"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/prueba-de-fisica-ingreso-universidad-de.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO DE FÍSICA UNI DESARROLLADO PRUEBA DE ENSAYO DE EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el gasto de agua por una tubería al circular 1.5 m3 en medio minuto.",
+      "alternatives": [
+        "2 L/s",
+        "5",
+        "20",
+        "30",
+        "50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/03/centro-preuniversitario-cepreunach-simulacion-de-la-prueba-de-ensayo-de-ingreso-universidad-ejercicios-resueltos-solucionario-del-simulacro-actualizado-claves-respuestas-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO CEPREUNACH 2027 INGRESO DIRECTO A LA UNIVERSIDAD SOLUCIONARIO PRUEBA DE ENSAYO – SIMULACIÓN PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las propiedades de los líquidos, ¿cuáles son correctos?\nI. Son isotrópicos\nII. Son mas densos que los gases\nIII. Su evaporación no depende de la temperatura.\nIV. Poseen forma y volumen definido.",
+      "alternatives": [
+        "I, II, III y IV",
+        "III y IV",
+        "I y II",
+        "Solo III",
+        "Solo IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/cepreuni-2019-ii-tercera-practica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI SOLUCIONARIOS 2026 PDF 2027"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el ser humano, la sangre fluye desde el corazón hacia la aorta, pasando hacia las grandes arterias, y estas se ramifican en arteriolas, que a su vez se ramifican en miríadas de delgados capilares. El radio de la aorta es de 1,2cm y la sangre que pasa a través de ella tiene una rapidez de 40cm/s. Si un capilar típico tiene un radio de 4×10 –4 cm, y la sangre que fluye a través de él tiene una rapidez de 5×10 –4 m/s; entonces el número de capilares que hay en el cuerpo es",
+      "alternatives": [
+        "1×10 9",
+        "3×10 9",
+        "5×10 9",
+        "7×10 9",
+        "9×10 9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/educacion-religiosa-1ro-2do-actividad-1-experiencia-7-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA A SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CIENCIAS DE LA SALUD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cascarón esférico homogéneo flota completamente sumergido en agua. Si el diámetro interno es 0,9 veces el diámetro externo, entonces la densidad, en g/cm³, del cascarón esférico, es:",
+      "alternatives": [
+        "0,7",
+        "1,7",
+        "2,7",
+        "3,7",
+        "4,7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por un tubo de sección transversal circular variable fluye agua, llenándolo en todos sus puntos. En un punto el radio del tubo es 0,15m. Si la tasa estable de flujo en este punto es 1,2 m 3 /s, la rapidez del flujo en m/s, es",
+      "alternatives": [
+        "12",
+        "17",
+        "20",
+        "25",
+        "30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con la finalidad de estimar la densidad de una roca desconocida se ha determinado que pesa 80 kgf y sumergida en agua pesa 64 kgf, respectivamente. Calcule la densidad de la roca.",
+      "alternatives": [
+        "ρ roca = 1200 kg/m 3",
+        "ρ roca = 1250 kg/m 3",
+        "ρ roca = 1500 kg/m 3",
+        "ρ roca = 4250 kg/m 3",
+        "ρ roca = 5000 kg/m 3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-y-cocientes-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO UNC 2027 INGRESO UNIVERSIDAD DE CAJAMARCA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pelota de plástico de 18N flota con la tercera parte de su volumen sumergido en agua. ¿Cuál es el módulo de la fuerza vertical que debe aplicarse para mantenerla totalmente sumergida?",
+      "alternatives": [
+        "18N",
+        "27N",
+        "36N",
+        "45N",
+        "54N"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/1ro-2do-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREVI TERCER EXAMEN INGRESO DIRECTO UNIVERSIDAD PRUEBA FINAL CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea V la rapidez con la que la sangre fluye de una arteria. La rapidez en una arteria bloqueada debido a un colesterol alto en la sangre, el cual reduce su radio efectivo en 20 % es",
+      "alternatives": [
+        "10 V.",
+        "25 V.",
+        "5/2 V.",
+        "5/4 V.",
+        "25/16 V."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/hidrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — HIDRODINÁMICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La presión absoluta en el fondo de una piscina es de 2 atm. Calcule aproximadamente, en m, la profundidad del agua en el fondo de la piscina. Considere que 1 atm= 101,3 kPa, la presión atmosférica es igual a 1 atm, la densidad del agua es 1000 kg/m 3 y g= 9,81 m/s 2 .",
+      "alternatives": [
+        "8,3",
+        "10,3",
+        "12,3",
+        "14,3",
+        "16,3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un trozo de madera con 0,60m de largo, 0,25m de ancho y 0,08m de espesor, cuya densidad es 600kg/m 3 , flota parcialmente en la superficie del agua. Determine aproximadamente el volumen (en unidades de 10 –4 m 3 ) de un trozo de plomo (ρ plomo =11300 kg/m 3 ) que debe sujetarse en la base de la madera para hundirla de modo que la cara superior de la madera se encuentre al mismo nivel del agua.\nConsidere: ρ agua =1000 kg/m 3",
+      "alternatives": [
+        "3,2",
+        "3,9",
+        "4,7",
+        "5,6",
+        "6,7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A una profundidad de 120 m de un lago se abandona una esfera de 400 kg/m³. Si no existe rozamiento, g=10 m/s² y ρ H 2 O =10³ kg/m³, el tiempo que emplea la esfera en salir a la superficie es",
+      "alternatives": [
+        "6 s.",
+        "4,5 s.",
+        "5 s.",
+        "4 s.",
+        "5,5 s."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-simulacro-de-examen-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La flotación de un submarino se rige básicamente por el principio de la hidrostática de Arquímedes. Un submarino puede navegar a una profundidad constante, emerger o sumergirse, conforme a la cantidad de agua que almacena en las cámaras de flotación. Si el submarino se encuentra completamente sumergido y sobre la base de lo descrito, identifique el valor de verdad (V o F) de los siguientes enunciados.\nI) Al expulsar el agua de las cámaras, el empuje se hace menor que el módulo de su peso.\nII) A profundidad constante, el empuje sobre el submarino tiene el mismo módulo de su peso.\nIII) Al expulsar el agua de las cámaras de flotación, el submarino tiende a emerger.\nIV) Al ingresar agua de mar en la bodega, aumenta el empuje sobre el submarino.",
+      "alternatives": [
+        "FVVV",
+        "VVVF",
+        "FFVF",
+        "VFVF",
+        "FVVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la presión ejercida por la nieve sobre los esquíes de un esquiador de 80kg que se desliza por una pendiente de 16°. El área de los esquíes juntos es de 0,30 m 2 .\nConsidere la aceleración de la gravedad g=10m/s 2 .",
+      "alternatives": [
+        "5120 Pa",
+        "2560 Pa",
+        "2304 Pa",
+        "3120 Pa",
+        "1707 Pa"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/cepunt-solucionario-de-fisica-examen-resuelto-admision-unt-trujillo.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule en centímetros la \"altura de mercurio\" equivalente a la presión de 1,0335 kg/cm 2 .\n(La densidad del mercurio es 13,6 g/cm 3 ).",
+      "alternatives": [
+        "59 cm",
+        "100 cm",
+        "82 cm",
+        "76 cm",
+        "55 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a la presión, indique la alternativa que contiene la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F) según corresponda:\nI) Una presión manométrica superior a la presión atmosférica siempre es positiva.\nII) Una presión manométrica superior a la presión atmosférica siempre es positiva. Ocasiones se le llama vacío.\nIII) La magnitud de la presión atmosférica varía con la ubicación y condiciones climáticas.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VVF",
+        "VFF",
+        "FFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la experiencia de Torricelli, él utilizó mercurio, alcanzando el nivel de mercurio la altura de 760 mm. ¿Cuál hubiera sido la altura del nivel en metros si en lugar de mercurio se hubiese usado glicerina, cuya densidad es de 1,46 g/mL a temperatura ambiente?\n(La densidad del mercurio es 13,6 g/cm 3 )",
+      "alternatives": [
+        "3,89",
+        "4,56",
+        "7,08",
+        "9,15",
+        "10,33"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la altura en metros de una columna de glicerina líquida (densidad=1,26 g/mL) que se necesita para ejercer la misma presión que 3,02 m de CC ℓ 4 (densidad=1,59 g/mL)",
+      "alternatives": [
+        "1,81",
+        "2,9",
+        "3,81",
+        "3,9",
+        "3,02"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tubo de 80 cm de altura está a medio llenar con glicerina (densidad=1,5 g/mL). Calcular la presión absoluta en el punto más bajo del líquido cuando el tubo se incline 45° respecto al eje vertical, sabiendo que un barómetro cercano marca 700 mmHg.",
+      "alternatives": [
+        "1,44 atm",
+        "0,96 atm",
+        "0,65 atm",
+        "1 atm",
+        "2 atm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la presión barométrica es 754 torr. calcular la presión total en mmHg a una profundidad de 100 mm en un recipiente de mercurio abierto a la atmósfera.",
+      "alternatives": [
+        "500",
+        "654",
+        "75,4",
+        "854",
+        "100"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la presión absoluta (en atm) de un recipiente de vacío, si la presión manométrica es 220 mmHg y la presión barométrica es 720 mmHg",
+      "alternatives": [
+        "0,26",
+        "0,36",
+        "0,46",
+        "0,66",
+        "0,86"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente conectado a un manómetro de extremo abierto cuyo líquido manométrico tiene una densidad de 1,2 g/cm 3 , se llena con un gas a una presión de 1,025 atm. Si la presión barométrica es de 757 mmHg. Calcule la diferencia en centímetros entre los niveles del líquido en el manómetro.\n(ρ Hg =13,6 g/cm 3 )",
+      "alternatives": [
+        "22",
+        "25",
+        "80",
+        "120",
+        "159"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la presión absoluta que soporta el fondo de un recipiente que está lleno de un líquido (densidad=2 g/mL) es 5/3 de su presión manométrica, calcular la profundidad del recipiente, si el barómetro marca 1000 g/cm 2 .",
+      "alternatives": [
+        "5,5 m",
+        "7,5 m",
+        "6,5 m",
+        "8,5 m",
+        "9,5 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/03/presion-manometrica-barometrica-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf-barometro-manometro-presion-absoluta-o-total.html",
+      "sourceName": "matematicasn.blogspot.com — PRESIÓN EJERCICIOS RESUELTOS – ATMOSFÉRICA MANOMÉTRICA BAROMÉTRICA PDF "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál debe ser la presión manométrica en una manguera larga de bombero, si se quiere que el agua lanzada por la boquilla de la manguera alcance una altura de 30 m?",
+      "alternatives": [
+        "270 kPa",
+        "320 kPa",
+        "300 kPa",
+        "200 kPa",
+        "350 kPa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tubo capilar de vidrio cuyo diámetro interno es de 0,5mm es sumergido en agua. La longitud de la columna de agua que asciende por el tubo es 2cm. Asumiendo que el menisco es un segmento esférico, ¿cuál es su radio de curvatura?",
+      "alternatives": [
+        "0,64 mm",
+        "0,73 mm",
+        "0,85 mm",
+        "0,96 mm",
+        "0,58 mm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una manguera tiene 20 agujeros circulares de 1 mm de radio. La manguera está conectada a un tubo de 0.8 cm de radio. Si la rapidez del agua en el tubo es de 3 m/s, ¿con qué rapidez saldrá de los agujeros de la manguera?",
+      "alternatives": [
+        "9,6 m/s",
+        "24 m/s",
+        "12 m/s",
+        "6 m/s"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una prensa hidráulica tiene un émbolo de entrada cuya área es 0,08m² y un émbolo de salida cuya área es de 0,4m². Si se coloca un objeto de 480 N en su embolo de salida, ¿cuánta fuerza es necesaria aplicar a su embolo de entrada para mantener en equilibrio el sistema?",
+      "alternatives": [
+        "96 N",
+        "86 N",
+        "64 N",
+        "54 N",
+        "48 N"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-fisica-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE FÍSICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A qué profundidad dentro de un lago se encuentra sumergido un buzo que soporta una presión total de 3,5 Atm?",
+      "alternatives": [
+        "25m",
+        "20m",
+        "27m",
+        "28m",
+        "30m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un lago flota un témpano de hielo. ¿Qué porcentaje del volumen de dicho cuerpo emerge?\nρ= 0,9g/cm³",
+      "alternatives": [
+        "5%",
+        "7%",
+        "10%",
+        "15%",
+        "20%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la densidad de cierto cuerpo, que al ser pesado en el aire el dinamómetro indica 200N y al ser “pesado” en cierto líquido 160N\n(ρ L = 800 kg/m³ ).",
+      "alternatives": [
+        "200 k/m ³",
+        "300 k/m ³",
+        "3500 k/m ³",
+        "4000 k/m ³",
+        "2500 k/m ³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pieza de metal, cuelga de un dinamómetro el cual indica 40N. Se sumerge dicho metal en ácido sulfúrico y el dinamómetro marca 30N. Calcula la densidad del metal.\nρ H2SO4 = 1800kg/m ³",
+      "alternatives": [
+        "2000 kg/m ³",
+        "4000 kg/m ³",
+        "5400 kg/m³",
+        "7200 kg/m ³",
+        "8600 kg/m ³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un oso polar de masa 550kg flota sobre un trozo de hielo, conforme el hielo se derrite. ¿Cuál será el volumen mínimo a fin de que el oso polar no se moje sus garras?\nDensidad del hielo=0,92g/cc.",
+      "alternatives": [
+        "5 m ³",
+        "2,5 m ³",
+        "4 m ³",
+        "10 m³",
+        "8 m³"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo cilíndrico compacto y homogéneo flota sumergido parcialmente en un líquido ( ρ L =990 kg/m³) el volumen sumergido es el 70% de su volumen total. Calcular la densidad del cilíndrico.",
+      "alternatives": [
+        "690 kg/m ³",
+        "691 kg/m ³",
+        "693 kg/m³",
+        "695 kg/m³",
+        "650 kg/m ³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque de plomo flota sobre mercurio. Si la densidad del plomo es 10,2 g/cm³ y la del mercurio 13,6 g/cm³. ¿Cuál es la fracción del bloque de plomo que se sumerge?",
+      "alternatives": [
+        "0,85",
+        "0,65",
+        "0,75",
+        "0,95",
+        "0,35"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pieza de metal, cuelga de un dinamómetro, el cual indica 50N. Se sumerge dicho metal en ácido nítrico y el dinamómetro marca 30N. Calcular la densidad del metal.\nρ ácido = 1800kg/m³",
+      "alternatives": [
+        "2000kg/m ³",
+        "4500kg/m ³",
+        "5400kg/m ³",
+        "7200kg/m ³",
+        "8600kg/m ³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el tiempo que tarda una esferilla (ρ esferilla =400 kg/m³) para llegar a la superficie del agua. Si fue soltada en el fondo de un lago de 30m de profundidad.",
+      "alternatives": [
+        "2s",
+        "3s",
+        "5s",
+        "4s",
+        "8s"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esferita cuya densidad es 800 kg/m³ es soltada en el fondo de un lago de 20m de profundidad. Calcular el tiempo que tarda la esferita en llegar a la superficie.",
+      "alternatives": [
+        "1s",
+        "2s",
+        "3s",
+        "4s",
+        "5s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la densidad en g/cm³ de cierto mineral tal que al ser pesado en el aire el dinamómetro marcó 200N y al ser pesado en cierto líquido cuya densidad es 800kg/m³ fue de 120N.\n1m³=10⁶cm³\ng=10m/s²",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un submarino tiene un peso total de 398 toneladas, el volumen sumergido cuando flota en la superficie del mar es de: (densidad del agua del mar = 1,026).",
+      "alternatives": [
+        "398 m ³",
+        "408,3 m ³",
+        "1026 m ³",
+        "257 m ³",
+        "387,9 m ³"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el fondo de un recipiente con agua se encuentra una esferita de tecnopor, se suelta y llega a la superficie del agua con una rapidez de 12m/s y en 2s. Calcular la densidad de la esferita. a=6 m/s²",
+      "alternatives": [
+        "620kg/m ³",
+        "628 kg/m ³",
+        "625 kg/m ³",
+        "650 kg/m ³",
+        "450 kg/m ³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cubo está flotando en un líquido de densidad 1g/cm³. Si la mitad del volumen está sumergido. ¿Cuánto es la masa del cubo?\nSe considera: g=9,8 m/s²; V C =1 litro.",
+      "alternatives": [
+        "9,5 kg",
+        "4,9 kg",
+        "3,8 kg",
+        "5,0 kg",
+        "9,8 kg"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Con qué aceleración se hunde un cubo de aluminio de 10cm de arista y densidad 2,7g/cm³ en un recipiente con agua?\n(g=10m/s²)",
+      "alternatives": [
+        "2,7 m/s²",
+        "5 m/s²",
+        "3,2 m/s²",
+        "6,3 m/s²",
+        "4,3 m/s²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La densidad de una balsa de madera es de 150 kg/m ³ . Cuando la balsa flota, ¿qué fracción de ella está sumergida en el agua?",
+      "alternatives": [
+        "10 %",
+        "12 %",
+        "25 %",
+        "20 %",
+        "15 %"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la densidad de una esfera maciza que flota entre dos líquidos de densidades 0,8 g/cm ³ y 1 g/cm ³ , respectivamente. Considere que la línea de separación entre los líquidos pasa por el centro de la esfera.",
+      "alternatives": [
+        "0,6 g/cm ³",
+        "0,8 g/cm ³",
+        "0,9 g/cm ³",
+        "1,2 g/cm ³",
+        "0,2 g/cm ³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esfera metálica pesa 54 N en el aire y sumergida, completamente, en agua su peso es de 36 N. Determine el volumen y la densidad de la esfera.\n( g=10m/s²)",
+      "alternatives": [
+        "1800 cm ³ ; 3 g/cm ³",
+        "1200 cm ³ ; 3 g/cm ³",
+        "1800 cm ³ ; 4 g/cm ³",
+        "1500 cm ³ ; 5 g/cm³",
+        "1400 cm ³ ; 2 g/cm³"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los icebergs están formados por agua dulce congelada procedente de los glaciares, siendo su densidad de 900 kg/m ³ . Si un iceberg está flotando en el mar, cuya densidad es 1012,5 kg/m ³ , ¿qué fracción de su volumen queda sumergido?",
+      "alternatives": [
+        "8/9",
+        "7/8",
+        "6/7",
+        "5/6",
+        "7/6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/hidrostatica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIDROSTÁTICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un laboratorio, se tiene una mezcla conformada por 40 o/o en peso de agua y 60 % en peso de óxido de silicio. Conforme a esta información, se puede concluir que la densidad de la mezcla\nDato: ρ si o ₂ = 2,650 gr/cm³",
+      "alternatives": [
+        "1754 kg/m³",
+        "1596 kg/m ³",
+        "1345 kg/m ³",
+        "1652 kg/m³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN SAN MARCOS ÁREA A 2022 II MEDICINA HUMANA SOLUCIONARIO PRUEBA DESARROLLADA ADMISIÓN UNIVERSIDAD RESPUESTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tubo en forma de U contiene mercurio. Se vierte un líquido de densidad volumétrica igual a 0,85g/cm 3 en una rama del tubo, hasta llegar a una altura de 20cm. Calcule, en mm, la altura en que se eleva el nivel inicial del mercurio en la otra rama.\nDensidad volumétrica del mercurio: 13,6 g/cm³",
+      "alternatives": [
+        "14,25",
+        "10,25",
+        "2,25",
+        "6,25",
+        "8,25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Fisica-problemas-resueltos-de-examen-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tal vez ya hayas bebido jugo usando dos popotes iguales. Sin embargo, se puede verificar que, si se coloca un popote sumergido en el jugo y otro fuera del líquido, haciendo la succión simultáneamente en ambos, tendrás dificultad para beberlo. Esta dificultad ocurre porque el(la)",
+      "alternatives": [
+        "fuerza necesaria para la succión del aire y del jugo simultáneamente duplica su valor.",
+        "densidad del aire es menor que la del jugo, por lo tanto, el volumen de aire aspirado es mucho mayor que el volumen de jugo.",
+        "velocidad con que el jugo sube debe ser constante en los dos popotes, lo que es imposible con uno de los popotes fuera.",
+        "peso de la columna de jugo es considerablemente mayor que el peso de la columna de aire, lo que dificulta la succión del líquido.",
+        "presión en el interior de la boca asume prácticamente el mismo valor que la que actúa sobre el jugo."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2018/2018_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2018 dia 2 caderno azul questão 134"
     }
   ]
 }

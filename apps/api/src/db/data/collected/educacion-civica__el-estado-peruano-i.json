@@ -6,7 +6,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El Estado peruano es la nación jurídica y políticamente organizada sobre un territorio; además, está dotada de poder que es ejercido por el gobierno. Determine el valor de verdad (V o F) de los siguientes enunciados referidos a esta entidad.\nI. Se organiza según el principio de la separación de poderes.\nII. El poder democrático emana del respaldo de las Fuerzas Armadas.\nIII. La defensa de sus intereses está a cargo de los procuradores públicos.\nIV. Su gobierno es unitario, representativo y descentralizado.",
-      "alternatives": ["VFVV", "VVFF", "VFVF", "FFVV"],
+      "alternatives": [
+        "VFVV",
+        "VVFF",
+        "VFVF",
+        "FFVV"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicaj.blogspot.com/2022/05/educacion-civica-preguntas-resueltas-semana-11-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) - Educación Cívica Semana 11, pregunta sobre características del Estado peruano"
@@ -17,7 +22,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Ante la declaración de estado de emergencia nacional decretada por el Presidente de la República para evitar la propagación de la COVID-19, ¿qué deberes del Estado respalda la medida tomada por el Presidente?\nI. Transgredir los acuerdos nacionales e internacionales.\nII. Proteger a la población de las amenazas contra su seguridad.\nIII. Promover el bienestar general que se fundamenta en la justicia.\nIV. Establecer y ejecutar la política según principios consuetudinarios.",
-      "alternatives": ["I, II y III", "II y III", "I, II y IV", "II y IV"],
+      "alternatives": [
+        "I, II y III",
+        "II y III",
+        "I, II y IV",
+        "II y IV"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2022/05/educacion-civica-preguntas-resueltas-semana-11-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) - Educación Cívica Semana 11, pregunta sobre deberes del Estado"
@@ -28,7 +38,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Cuando un gobierno, a pesar de haber sido elegido democráticamente, no garantiza la plena vigencia de los derechos humanos, la población puede ejercer el derecho de insurgencia. Con relación a este mecanismo previsto en la Constitución, identifique otros casos en los que la población pueda invocarlo.\nI. El Consejo de Ministros toma el control político de los otros poderes del Estado.\nII. Un gobierno modifica la Constitución en contra del bienestar general de la población.\nIII. El gobernante de turno administra el país con una clara intervención extranjera.\nIV. El presidente decreta estado de emergencia para recuperar el orden público.",
-      "alternatives": ["I, III y IV", "I, II y IV", "I, II y III", "II, III y IV"],
+      "alternatives": [
+        "I, III y IV",
+        "I, II y IV",
+        "I, II y III",
+        "II, III y IV"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2022/05/educacion-civica-preguntas-resueltas-semana-11-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) - Educación Cívica Semana 11, pregunta sobre derecho de insurgencia"
@@ -39,10 +54,1303 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un estado de derecho es aquel donde los derechos y las libertades fundamentales de las personas son incorporados en el ordenamiento jurídico a fin de protegerlos, mantener el orden público y fomentar el funcionamiento efectivo del país. Para garantizarlo es necesario que la población",
-      "alternatives": ["presente iniciativas legislativas únicamente sobre su seguridad.", "entienda que el poder es uno solo y se concentra en el Ejecutivo.", "siga voluntariamente las disposiciones de la administración pública.", "reconozca que nos organizamos bajo el principio del imperio de la ley."],
+      "alternatives": [
+        "presente iniciativas legislativas únicamente sobre su seguridad.",
+        "entienda que el poder es uno solo y se concentra en el Ejecutivo.",
+        "siga voluntariamente las disposiciones de la administración pública.",
+        "reconozca que nos organizamos bajo el principio del imperio de la ley."
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2022/05/educacion-civica-preguntas-resueltas-semana-11-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) - Educación Cívica Semana 11, pregunta sobre estado de derecho"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la relación correcta entre los elementos del Estado peruano y sus características.\nI) Nación\nII) Gobierno\nIII) Soberanía\nIV) Territorio",
+      "alternatives": [
+        "Espacio delimitado por los grupos humanos en términos políticos y administrativos.",
+        "Base del Estado encargado de dirigir, controlar y administrar sus instituciones.",
+        "Institución que se encarga de regular, proteger y ayudar a los ciudadanos.",
+        "Proponer una ley en función de los intereses del país.",
+        "Ic,IIa,IIId,IVb"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a los elementos del Estado, señale lo incorrecto.",
+      "alternatives": [
+        "Requiere necesariamente de un territorio.",
+        "Tiene una población.",
+        "Ostenta soberanía.",
+        "Debe tener un solo idioma y raza.",
+        "Esta organizado en poderes."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija la alternativa que relacione los elementos del Estado con su respectiva acepción.\nI) Territorio\nII) Gobierno\nIII) Soberanía\nIV) Nación",
+      "alternatives": [
+        "Conjunto de individuos e instituciones que están a cargo de la administración y dirección de un Estado.",
+        "Capacidad para tomar decisiones y llevarlas a cabo dentro del territorio",
+        "Conjunto de personas que posee ciertos vínculos comunes como: costumbres, idioma, fe religiosa e ideales.",
+        "Comprende el suelo, el subsuelo, el dominio marítimo, y el espacio aéreo que los cubre.",
+        "Id, IIb, IIIc, IVa"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El propósito central del texto es mostrar\n\nTexto:\nPor carecer de la credencial de ciudadanía y, por lo tanto, no tener existencia legal, los analfabetos no podían vincularse directamente con las instancias oficiales; para tal propósito debían recurrir a la mediación de un padrino “notable”, de prestigio y de influencia -el gamonal- que estuviera dispuesto a interceder por ellos ante las autoridades. Estos notables se valían de sus conexione personales, así como del dominio del castellano y de una lengua aborigen, para servir de mediadores entre el campesinado y las instituciones oficiales, ostentando un comportamiento “paternalista” con los “minusválidos” indígenas que a cambio, se obligaban a prestar servicios y lealtades al gamonal, acentuando su condición subordinada. \n\nCOTLER, Julio, ciases, Estado y Nación en el Perú.",
+      "alternatives": [
+        "el apoyo del gamonal al campesinado analfabeto.",
+        "cómo el gamonal mantenía su dominio sobre el campesinado.",
+        "la minusvalía de los indígenas al no ser reconocidos legalmente.",
+        "las conexiones personales de las que se valía el gamonal.",
+        "la influencia del gamonal y la dependencia del indígena."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/08/ejercicios-de-comprension-lectora-con.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Ejercicios de Comprensión Lectora con respuestas para secundaria"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las características y elementos del Estado, señale lo\ncorrecto:",
+      "alternatives": [
+        "Sólo puede ser republicano y democrático",
+        "Debe tener siempre un presidente y congresistas",
+        "Requiere necesariamente de un territorio",
+        "Debe tener un sólo idioma y una sola Nación.",
+        "Siempre tiene un gobierno democrático"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lee el siguiente texto referido al proceso de formación del Estado en América Latina, durante el siglo XIX: «Los criollos, descendientes de los conquistadores, nacidos en América, y muchas veces mestizos, se rebelaron y apropiaron del Estado colonial, independizándose de la Corona española, y acometieron la construcción del Estado-Nación. La voluntad fundadora inicial supuso, principalmente, la unificación de la población teniendo como base la ciudadanía jurídica común y la supresión del sistema de castas existente al final de la Colonia». Bengoa, J. (2004). La memoria olvidada. Historia de los pueblos indígenas de Chile. Publicaciones del Bicentenario. A partir del texto, ¿cuál fue uno de los impactos políticos del surgimiento del Estado Nación para los pueblos originarios americanos?",
+      "alternatives": [
+        "La creación de territorios indígenas autónomos del poder central.",
+        "La inclusión de representantes indígenas en los poderes del Estado.",
+        "La instauración de un sistema judicial propio para los pueblos indígenas.",
+        "La asimilación de la población aborigen a la institucionalidad republicana."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-29-paes-regular-oficial-historia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Historia y Ciencias Sociales pregunta 15"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Autoridad Local, elegida por voto popular que se encarga de administrar una ciudad es el:",
+      "alternatives": [
+        "Gobernador",
+        "Prefecto",
+        "Alcalde",
+        "Subprefecto"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para ser nombrado Ministro de Estado se requiere:",
+      "alternatives": [
+        "Ser celestial en tu nacimiento.",
+        "Ser mayor de 20 años.",
+        "No pertenecer a las fuerzas armadas o Policía Nacional.",
+        "Tener estudios universitarios.",
+        "Ser peruano por nacimiento"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/Test-de-cultura-general-resuelto-con-claves-y-respuestas-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CULTURA GENERAL DEL PERÚ 2027 PRUEBA DESARROLLADA 2026 PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Estado peruano es la nación jurídica y políticamente organizada, cuyos gobernantes son designados mediante elecciones democráticas y sufragio universal. Por ello, afirmamos que su gobierno es",
+      "alternatives": [
+        "descentralizado",
+        "autoritario",
+        "representativo",
+        "autónomo",
+        "totalitario"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/12/educacion-civica-solucionario-examen-admision-universidad-institutos-superiores-tecnicos-escuela-pnp-prueba-resuelta-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CÍVICA PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD INSTITUTOS TÉCNICOS SUPERIORES ESCUELA PNP PRUEBA DE INGRESO RESPUESTAS 2024 2023"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el Estado elabora proyectos que deben ser ejecutados con plazos programados, pero estos no se desarrollan en el tiempo estimado porque se exige muchos trámites, requisitos y demandas que no están contempladas de acuerdo a ley. Esto se debe a",
+      "alternatives": [
+        "los errores de planificación en el sector privado.",
+        "la falta de profesionales altamente capacitados.",
+        "los problemas sindicales del sector público.",
+        "las trabas burocráticas y la corrupción.",
+        "los casos de corrupción que han paralizado las obras."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/cultura-general-callao-examen-de-admision-universidad-unac-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — PSICOLOGIA CIVICA ÉTICA EXAMEN ADMISIÓN UNIVERSIDAD DEL CALLAO RESUELTO"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El territorio es la porción de la superficie limitada por fronteras en la que se establece una población. No solo garantiza el espacio para la convivencia, sino que también es fuente de recursos esenciales para la supervivencia de sus habitantes. Con relación a este elemento del Estado peruano, identifique los enunciados correctos.\nI) El dominio marítimo comprende el mar adyacente a las costas hasta las 12 millas.\nII) En el espacio aéreo se propaga el recurso natural denominado espectro radioeléctrico.\nIII) La superficie insular marítima es parte del territorio nacional, así como la lacustre.\nIV) Las fronteras naturales con los países vecinos delimitan todo nuestro espacio físico.",
+      "alternatives": [
+        "II y III",
+        "Solo I",
+        "III y IV",
+        "I y IV",
+        "II, III y IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es la capacidad que tiene el Estado de dictar sus propias leyes y hacerlas cumplir en su territorio.",
+      "alternatives": [
+        "Soberanía",
+        "Territorio",
+        "Población",
+        "Estado",
+        "Nación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son deberes del Estado peruano:",
+      "alternatives": [
+        "Defender la soberanía.",
+        "Garantizar los DD. HH.",
+        "Promover el bienestar general.",
+        "Proteger a la población de las amenazas.",
+        "T. A."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María es una joven ecuatoriana que contrajo matrimonio en el Perú, por tal motivo comienza a residir en el país, junto a su cónyuge. Al tratar de legalizar su situación legal de residencia, un funcionario del Sistema de Migraciones le dice que ella no podrá acceder a la nacionalidad peruana por ser ecuatoriana.\nDel caso anterior ¿es correcto el proceder del funcionario?",
+      "alternatives": [
+        "Sí, porque María debe aceptar la disposición de Migraciones por ser extranjera.",
+        "Sí, porque es Constitucional el proceder del Sistema de Migraciones.",
+        "No, porque María si puede acceder a la nacionalidad peruana por opción.",
+        "Sí, porque no se puede otorgar la nacionalidad por medio de contratos de matrimoniales.",
+        "No, porque el funcionario desconoce las reglas sociales que rigen a los dos estados."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cada uno de los 16 länders o Estados en los que se divide Alemania tiene órganos jurisdiccionales que administran justicia en sus respectivos territorios. Tomando en cuenta las características del Estado peruano, ¿es posible replicar el sistema de justicia alemán?",
+      "alternatives": [
+        "Sí, porque así lo demanda el proceso de descentralización.",
+        "No, porque nuestro Estado presenta un gobierno unitario.",
+        "No, porque la justicia es administrada por los gobiernos locales.",
+        "Sí, porque un deber del Estado es garantizar el acceso a la justicia.",
+        "No, porque nuestro país carece de gobiernos subnacionales."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Estado peruano, según la constitución tiene un gobierno",
+      "alternatives": [
+        "federado.",
+        "representativo.",
+        "soberano.",
+        "independiente.",
+        "dictatorial."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elemento del Estado, a través del cual éste tiene la capacidad de dictar sus propias leyes y hacerlas cumplir en su territorio.",
+      "alternatives": [
+        "gobierno",
+        "nación",
+        "organización política",
+        "soberanía",
+        "territorio"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La mayor influencia del FMI sobre el Estado peruano vulnera a su",
+      "alternatives": [
+        "territorio.",
+        "economía.",
+        "población.",
+        "soberanía.",
+        "gobierno."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Perú nace como Estado independiente en:",
+      "alternatives": [
+        "1532",
+        "1823",
+        "1535",
+        "1825",
+        "1821"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son elementos esenciales del Estado, excepto.",
+      "alternatives": [
+        "Nación.",
+        "Gobierno.",
+        "Parlamento.",
+        "Territorio.",
+        "Soberanía."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La organización jurídico-política de una sociedad, concebida como una nación que ejerce control sobre la sociedad, es",
+      "alternatives": [
+        "el Gobierno Central.",
+        "el gobierno regional.",
+        "el Estado.",
+        "la ciudadanía.",
+        "la municipalidad."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Acerca del proceso de descentralización, señale lo incorrecto.",
+      "alternatives": [
+        "Es un proceso de largo plazo.",
+        "Busca hacer frente a los problemas creados por el centralismo.",
+        "Se realiza por etapas y de manera progresiva.",
+        "Implica concentración de poder por parte del Gobierno Central.",
+        "Su objetivo fundamental es el desarrollo integral del país."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Estado peruano ejerce _____ sobre _____",
+      "alternatives": [
+        "su soberanía - la nación.",
+        "su dominio - la nacionalidad.",
+        "su soberanía - el territorio.",
+        "sus leyes - la nación.",
+        "sus normas - la población."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un deber primordial del Estado peruano señalado en la Constitución Política es",
+      "alternatives": [
+        "garantizar la libertad económica.",
+        "defender la soberanía nacional.",
+        "financiar obras de infraestructura privada.",
+        "incentivar la inversión privada.",
+        "promover el desarrollo de la Antártida."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El gobierno peruano es representativo debido a que los gobernantes",
+      "alternatives": [
+        "dirigen a nivel central.",
+        "son designados por el pueblo.",
+        "descentralizan el poder.",
+        "se autoeligen.",
+        "son soberanos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale aquella característica que no corresponde al Estado peruano.",
+      "alternatives": [
+        "democrático",
+        "social",
+        "independiente",
+        "descentralizado",
+        "soberano"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según la Constitución Política vigente, el gobierno peruano es",
+      "alternatives": [
+        "democrático y social.",
+        "representativo y descentralizado.",
+        "social y representativo.",
+        "independiente y soberano.",
+        "soberano y democrático."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elemento del Estado que consiste en la autoridad suprema para imponer sus normas y hacerlas respectar:",
+      "alternatives": [
+        "justicia",
+        "normas",
+        "poder",
+        "derecho",
+        "Constitución Política"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Grupo social unidos por una misma tradición histórica, con problemas e intereses comunes, lo anterior se relaciona con:",
+      "alternatives": [
+        "la idea de nación",
+        "el Estado",
+        "estatización",
+        "democracia",
+        "factocracia"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El bienestar general es la tranquilidad y el confort que tiene la población al disponer los elementos suficientes para satisfacer sus necesidades vitales. Promoverlo es una obligación del estado peruano, el mismo que se consolida con algunos de los siguientes logros:",
+      "alternatives": [
+        "Remuneración justa y equitativa para todos los trabajadores.",
+        "Reducción de los niveles de desnutrición.",
+        "Erradicación de la violencia juvenil y callejera.",
+        "Acceso a la educación de todos los niños del Perú.",
+        "Fortalecimiento de las fronteras terrestres y marítimas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luciana es una extranjera que reside un año en el Perú y a solicitud de ella, con respaldo del Instituto Peruano de Deporte (IPD), se le ha otorgado la nacionalidad peruana para que pueda representar a nuestro país como deportista calificada en un evento deportivo internacional. Determine el valor de verdad (V o F) de los siguientes enunciados sobre la deportista.\nI) Adquirió la nacionalidad por naturalización.\nII) Puede perder la nacionalidad si no representa más al Perú.\nIII) Debe renunciar a su nacionalidad de origen por obligación.\nIV) Es considerada una ciudadana peruana de nacimiento.",
+      "alternatives": [
+        "VFFF",
+        "FFVF",
+        "VFVF",
+        "FVFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/caracteristicas-y-deberes-del-estado-peruano-identidad-nacional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ESTADO Y LA NACIÓN EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El partido Gris está seleccionando a los candidatos que integrarán su lista al Congreso. Indique cuál o cuáles de las siguientes personas podrían ser postuladas como candidatos y electas como congresistas, de alcanzar los votos necesarios:\nI. Pedro, venezolano de nacimiento, que acaba de nacionalizarse peruano.\nII. María, nacida en Perú, que también postula a la Presidencia de la República.\nIII. Juan, peruano de nacimiento, que acaba de cumplir 25 años.\nIV. Pilar, peruana de nacimiento, que es actualmente congresista.",
+      "alternatives": [
+        "II y IV",
+        "solo I",
+        "solo III",
+        "I y III",
+        "II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/simulacro-presencial-san-marcos-2018-i.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO SAN MARCOS 2027 I INGRESO UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La máxima autoridad del órgano ejecutivo de la región es:",
+      "alternatives": [
+        "consejo regional.",
+        "presidencia regional.",
+        "consejo de coordinación regional.",
+        "A y B",
+        "B y C"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2024/02/preguntas-de-cultura-del-peru-resueltas-explicadas-prueba-con-respuestas-test-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CULTURA PERUANA TEST RESUELTO 2027 "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ciudadano italiano de madre nacida en el Perú, acude al consulado peruano del referido país para solicitar la obtención de la nacionalidad peruana. El servidor público encargado le informa que no puede realizar el trámite; porque para obtener la nacionalidad peruana debió ser inscrito por sus padres durante su minoría de edad. ¿La respuesta brindada por el funcionario es correcta?",
+      "alternatives": [
+        "Sí, porque ya es mayor de edad y no puede ser considerado.",
+        "No, porque tiene derecho a la nacionalidad por opción.",
+        "Sí, porque la única alternativa posible es ser naturalizado.",
+        "No, porque el consulado se encarga del registro de extranjeros."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/01/civica-examen-desarrollado-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN DE CÍVICA RESUELTO DE ADMISIÓN UNIVERSIDAD CON CLAVES Y SOLUCIONES"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Ejecutivo negocia un préstamo internacional para infraestructura y sostiene que basta firma ministerial. Al respecto, se llega a determinar que:",
+      "alternatives": [
+        "La Corte Suprema autoriza empréstitos por control de constitucionalidad.",
+        "El presidente autoriza empréstitos sin autorización del Congreso.",
+        "Los gobiernos regionales autorizan empréstitos de alcance nacional.",
+        "La Contraloría aprueba empréstitos por auditoría previa obligatoria.",
+        "El Congreso autoriza empréstitos conforme a la Constitución."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación a la organización del Congreso está formado por:\n1. El Pleno del Congreso\n2. La Presidencia del Congreso\n3. El Consejo Directivo del Congreso\n4. La Mesa Directiva\n5. Las Comisiones\nSon ciertas:",
+      "alternatives": [
+        "1, 2, 3 y 4",
+        "2, 3, 4 y 5",
+        "1, 3, 4 y 5",
+        "1, 2, 4 y 5",
+        "1, 2, 3, 4 y 5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/expresiones-algebraicas-pdf-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA D 2027 ECONÓMICAS INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Comprende el suelo, subsuelo, el dominio marítimo y el espacio aéreo, ello define",
+      "alternatives": [
+        "soberanía.",
+        "espacio terrestre.",
+        "territorio.",
+        "nación.",
+        "El cielo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/5to-actividad-1-dpcc-experiencia-9-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FORMACIÓN CÍVICA Y CIUDADANA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No es una característica del Estado peruano.",
+      "alternatives": [
+        "es socialista e independiente.",
+        "es democrática y soberana.",
+        "es democrática y social.",
+        "es social e independiente.",
+        "es independiente y soberana."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/5to-actividad-1-dpcc-experiencia-9-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FORMACIÓN CÍVICA Y CIUDADANA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al proceso de formación de leyes, relacione correctamente los siguientes órganos del Congreso con la función que les corresponda.\nI) Pleno\nII) Consejo Directivo\nIII) Comisión Ordinaria\nIV) Presidencia",
+      "alternatives": [
+        "Realiza un estudio exhaustivo para emitir un dictamen.",
+        "Promulga la ley por insistencia cuando esta ha sido observada.",
+        "Vota el proyecto, aprobándola o rechazándola.",
+        "Ordena y agenda el proyecto para su debate.",
+        "Id, IIb, IIIa, IVc"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Establezca la relación correcta entre los siguientes órganos jurisdiccionales con sus principales funciones o características.\nI) Juzgado Mixto\nII) Corte Superior\nIII) Juzgado de Paz Letrado\nIV) Juzgado de Paz",
+      "alternatives": [
+        "Resuelve apelaciones de los Juzgados Especializados.",
+        "Administra justicia en distritos administrativos.",
+        "Tiene competencia en provincias poco pobladas.",
+        "Puede resolver casos por conciliación extrajudicial.",
+        "Ic, IIa, IIIb, IVd"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Congreso puede iniciar investigaciones sobre cualquier asunto de interés público, promoviendo un procedimiento de investigación que garantice el esclarecimiento de los hechos y la formulación de conclusiones, así como recomendaciones orientadas a corregir normas y políticas, además de sancionar la conducta de quienes resulten responsables. A partir de lo mencionado, las acciones que desarrolla el Parlamento se encuentran dentro de sus funciones",
+      "alternatives": [
+        "legislativas.",
+        "especiales.",
+        "de control político.",
+        "de persecución del delito.",
+        "de administración de justicia."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El vocal supremo tiene como uno de sus requisitos, la edad, que debe ser",
+      "alternatives": [
+        "más de treinta y cinco años.",
+        "cuarenta y cinco.",
+        "más de cuarenta y cinco años.",
+        "treinta y cinco.",
+        "cincuenta como máximo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante el interregno parlamentario pasado, la Comisión Permanente estuvo integrada por veintisiete congresistas, quienes siguieron en el cargo hasta la elección de nuevos legisladores; señale cuál de las siguientes atribuciones NO le competían:",
+      "alternatives": [
+        "Ratificar la designación del Presidente de la SBS Y AFP.",
+        "Designar al Contralor General de la República.",
+        "Aprobar los créditos suplementarios.",
+        "Ratificar la designación del Presidente del BCR.",
+        "Aprobar tratados."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación con los congresistas, señale la proposición correcta.",
+      "alternatives": [
+        "Personifican a la Nación.",
+        "Pueden ser revocados por el electorado.",
+        "Gozan de inmunidad parlamentaria.",
+        "Ejecutan las leyes.",
+        "Pueden disolver el Congreso."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El congresista goza de inmunidad parlamentaria, lo cual significa que",
+      "alternatives": [
+        "no puede ser ministro de Estado.",
+        "no responde por sus votos u opiniones.",
+        "no puede ser detenido.",
+        "en ningún caso puede ser juzgado.",
+        "las leyes no le son aplicables."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La interpelación parlamentaria al gabinete ministerial es realizada por",
+      "alternatives": [
+        "la Comisión Permanente.",
+        "el pleno del Congreso.",
+        "el presidente del Congreso.",
+        "la Comisión Ordinaria.",
+        "la comisión Investigadora."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La reunión de los ciento treinta congresistas, o de la mayoría de ellos, se denomina",
+      "alternatives": [
+        "Comisión Permanente.",
+        "Comisión Investigadora.",
+        "Comisión Ordinaria.",
+        "pleno del Congreso.",
+        "Mesa Directiva."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El órgano del Congreso que durante el receso parlamentario goza de atribuciones especiales para legislar es",
+      "alternatives": [
+        "la Mesa Directiva.",
+        "la Comisión investigadora.",
+        "la Comisión Permanente.",
+        "el pleno del Congreso.",
+        "la Comisión Ordinaria."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dentro de la organización parlamentaria del Congreso, el pleno del Congreso es la",
+      "alternatives": [
+        "que designa al contralor General de la República.",
+        "máxima asamblea deliberativa.",
+        "reunión de los grupos parlamentarios mayoritarios.",
+        "dirección administrativa del Congreso.",
+        "encargada de presidir las sesiones del Congreso."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale aquello que no es considerado un principio jurisdiccional.",
+      "alternatives": [
+        "no ser condenado en ausencia",
+        "la gratuidad de la defensa",
+        "la interpelación ministerial",
+        "la publicidad de los procesos",
+        "unidad y exclusividad jurisdiccional"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Número de congresistas actualmente:",
+      "alternatives": [
+        "100",
+        "120",
+        "130",
+        "180",
+        "240"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No forma parte de la organización parlamentaria del Congreso:",
+      "alternatives": [
+        "el pleno",
+        "el consejo directivo",
+        "la presidencia",
+        "el receso",
+        "la mesa directiva"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No es un juzgado especializado:",
+      "alternatives": [
+        "Juzgado Civil",
+        "Juzgado Penal",
+        "Juzgado de Trabajo",
+        "Juzgado Agrario",
+        "Juzgado de Paz"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los procesos de expropiación de predios rústicos son resueltos por los juzgados:",
+      "alternatives": [
+        "agrarios",
+        "de menores",
+        "de familia",
+        "penales",
+        "de trabajo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El órgano jurisdiccional que resuelve asuntos de mínima cuantía, y que está presidido por un representante elegido por la comunidad, es",
+      "alternatives": [
+        "la Corte Suprema.",
+        "la Corte Superior.",
+        "el juzgado mixto.",
+        "el juzgado de paz.",
+        "el juzgado de paz letrado."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La observancia del debido proceso consiste:",
+      "alternatives": [
+        "En un procedimiento específico de cuyos parámetros el Juzgador está imposibilitado de salirse",
+        "En la aplicación de diversas medidas legales aplicables a un caso",
+        "En asegurar un proceso justo así viole otras normas legales",
+        "A y B corresponden",
+        "A, B y C corresponden"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale cuál es un principio de la función jurisdiccional.",
+      "alternatives": [
+        "La privacidad de los procesos.",
+        "Se puede revivir procesos fenecidos.",
+        "no ser condenado en ausencia.",
+        "la detención arbitraria.",
+        "ser penado sin proceso judicial."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los jueces que provienen de la elección popular son los",
+      "alternatives": [
+        "Jueces de Paz Letrados.",
+        "Jueces de Paz.",
+        "Vocales Supremos.",
+        "Jueces Supremos.",
+        "Jueces Superiores."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Escriba verdadero (V) o falso (F) según corresponda.\n– Los candidatos a congresista pueden postular a la presidencia. ( )\n– Se puede desempeñar cualquier cargo, profesión u oficio durante las horas de funcionamiento del Congreso. ( )\n– La función de congresista es a tiempo completo. ( )\n– Es compatible con cualquier otra función pública el cargo de congresista. ( )\n– Los congresistas personifican a la nación. ( )",
+      "alternatives": [
+        "FFVFF",
+        "VVFFF",
+        "VVFVV",
+        "VVVVF",
+        "VFFFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los principios que orientan la acción del Estado, según la Constitución Política son:\n1. Soberanía popular\n2. Descentralización\n3. Representativo\n4. Centralizado\n5. Autoritario\nSon ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "1, 3 y 5",
+        "1, 4 y 5",
+        "2, 3 y 4",
+        "2, 4 y 5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/3ro-4to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA C CIENCIAS DE LA PERSONA 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se encarga y tiene potestad específica de levantar el secreto bancario y/o tributario de una persona:",
+      "alternatives": [
+        "Pleno del Congreso",
+        "El senado",
+        "La comisión permanente del Congreso",
+        "Las comisiones dictaminadoras",
+        "Las comisiones investigadoras"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-11-dpcc-experiencia-5-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lucía, reside más de diez años en Colombia y desea naturalizarse en dicho país porque permite la doble nacionalidad, sin embargo, al acercarse al Consulado peruano en Bogotá para realizar sus trámites, le informaron que perdería nuestra nacionalidad. ¿De acuerdo a nuestra Constitución, es posible que Lucía deje de ser peruana de esta manera?",
+      "alternatives": [
+        "Sí, porque al residir más de cinco años fuera, pierde la nacionalidad.",
+        "No, porque solo será suspendida por el tiempo de residencia en el exterior.",
+        "Sí, porque en Perú no se acepta doble ni múltiple nacionalidad.",
+        "No, porque en nuestro país no se pierde, salvo por renuncia expresa.",
+        "Sí, porque voluntariamente se naturalizará como extranjera."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/Educacion-civica-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Puede un extranjero, como un chileno por ejemplo, ser condenado en el Perú como traidor a la Patria?",
+      "alternatives": [
+        "No, porque rompe el principio de jurisdicción basado en la persona.",
+        "Si, pero únicamente por delito de terrorismo.",
+        "No, porque los tratados internacionales lo impiden.",
+        "Si, excepcionalmente por el delito de traición a la patria.",
+        "No está regulado."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-civica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE CÍVICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué alternativa NO contiene una atribución del Congreso?",
+      "alternatives": [
+        "Ejercer el derecho de amnistía",
+        "Administrar la hacienda pública",
+        "Dar leyes y resoluciones legislativas",
+        "Velar por el respeto a la Constitución",
+        "Autorizar al presidente a salir del país"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/civica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No son atribuciones del Congreso Nacional:\n1. Autorizar empréstitos.\n2. Conceder indultos y conmutar penas.\n3. Ejercer el derecho de amnistía.\n4. Velar por el orden interno y la seguridad exterior de la República.\n5. Elaborar y aprobar su reglamento con fuerza de ley.\nLa alternativa correcta es:",
+      "alternatives": [
+        "1 y 2",
+        "2 y 3",
+        "2 y 4",
+        "2 y 5",
+        "4 y 5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/civica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De las siguientes características reconozca las afirmaciones correctas sobre el Estado peruano.",
+      "alternatives": [
+        "El poder emana del pueblo por que quienes lo ejercen lo hacen con limitaciones y responsabilidades.",
+        "Los Procuradores Públicos están encargados de la defensa de los intereses del Estado.",
+        "Un deber del Estado es fomentar y promover el centralismo económico y político.",
+        "Estado profesa una concepción laica pero a pesar de eso reconoce a la iglesia católica como única en la formación ética de la Nación.",
+        "Gobierno es la forma de organización jurídica del Estado, para organizar y ejecutar el bienestar de la nación."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/civica-examen-resuelto-de-admision-a-la-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA SOLUCIONARIO PRUEBA DE INGRESO A LA UNIVERSIDAD 2027"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La defensa judicial de los\nintereses del está a cargo de:",
+      "alternatives": [
+        "los abogados defensores.",
+        "los procuradores públicos.",
+        "los notarios públicos.",
+        "el Ministerio de Defensa.",
+        "el Ministerio de Justicia."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La descentralización de los poderes del Estado es una aspiración\nnacional e histórica, que permite:",
+      "alternatives": [
+        "Crear instituciones públicas en todo el país.",
+        "Transformar la estructura productiva.",
+        "Crear más universidades.",
+        "Desconcentrar la función pública.",
+        "El desarrollo integral, equilibrado y sostenido del país."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el ordenamiento político\nperuano los ministros son:",
+      "alternatives": [
+        "Elegidos por el Senado",
+        "Ratificados por los Diputados",
+        "Nombrados por el Primer Ministro",
+        "Nombrados por el Presidente",
+        "Propuestos por la Corte Suprema"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El proceso para la dación de una ley desde el inicio del acto\nlegislativo hasta su aprobación es:",
+      "alternatives": [
+        "iniciativa legislativa – dictamen de comisión – aprobación – promulgación",
+        "dictamen de comisión - iniciativa legislativa - aprobación – promulgación",
+        "iniciativa legislativa – dictamen de comisión – debate – promulgación",
+        "dictamen de comisión - iniciativa legislativa - debate – promulgación",
+        "iniciativa popular – dictamen de comisión – aprobación - promulgación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ejercicio de poder que recae sobre una persona o grupo se conoce\ncon el nombre de:",
+      "alternatives": [
+        "Estado",
+        "Pueblo",
+        "Gobierno",
+        "Territorio",
+        "Nación"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando la soberanía reside en una clase noble se llama:",
+      "alternatives": [
+        "Plutocracia",
+        "Teocracia",
+        "Aristocracia",
+        "Democracia",
+        "República"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ejecuta las leyes en cuanto a los poderes y representa al Estado:",
+      "alternatives": [
+        "Ejecutivo",
+        "Legislativo",
+        "Judicial",
+        "Electoral",
+        "Estado"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elemento fundamental por la cual el Estado peruano se organiza\njurídica y políticamente:",
+      "alternatives": [
+        "La Organización",
+        "El ecúmene",
+        "El Territorio",
+        "La atmósfera",
+        "La Nación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Juez de Paz es básicamente un juez de____________y no es\n_________________y es elegido por_____________",
+      "alternatives": [
+        "Conciliación – médico – el congreso",
+        "Menores – profesor – la Corte suprema",
+        "Mujeres – abogado – el gobernador",
+        "Conciliación – abogado – votación popular",
+        "Conciliación – abogado – por el alcalde."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En nuestro país, en toda su historia republicana, han regido hasta la\nfecha:",
+      "alternatives": [
+        "14 constituciones",
+        "15 constituciones",
+        "13 constituciones",
+        "12 constituciones",
+        "16 constituciones"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
     }
   ]
 }

@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La naftalina con el transcurrir del tiempo disminuye su tamaño, debido a que experimenta una:",
-      "alternatives": ["Fusión", "Evaporación", "Condensación", "Sublimación", "Solidificación"],
+      "alternatives": [
+        "Fusión",
+        "Evaporación",
+        "Condensación",
+        "Sublimación",
+        "Solidificación"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y Energía - Ejercicios resueltos preuniversitario, Pregunta 9 (Clave: D)"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Si una sustancia pasa del estado sólido al estado gaseoso sin pasar por el estado líquido, se dice que dicha sustancia ha experimentado una:",
-      "alternatives": ["Fusión", "Vaporización", "Licuación", "Sublimación", "Deposición"],
+      "alternatives": [
+        "Fusión",
+        "Vaporización",
+        "Licuación",
+        "Sublimación",
+        "Deposición"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y Energía - Ejercicios resueltos preuniversitario, Pregunta 12 (Clave: D)"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Cuando se produce la lluvia está ocurriendo una:",
-      "alternatives": ["Fusión", "Vaporización", "Solidificación", "Sublimación", "Condensación"],
+      "alternatives": [
+        "Fusión",
+        "Vaporización",
+        "Solidificación",
+        "Sublimación",
+        "Condensación"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y Energía - Ejercicios resueltos preuniversitario, Pregunta 15 (Clave: E)"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "No es un cambio de estado:",
-      "alternatives": ["Fusión", "Sublimación", "Licuación", "Decantación", "Vaporización"],
+      "alternatives": [
+        "Fusión",
+        "Sublimación",
+        "Licuación",
+        "Decantación",
+        "Vaporización"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y Energía - Ejercicios resueltos preuniversitario, Pregunta 19 (Clave: D)"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Los estados de la materia más comunes en la tierra son el sólido, líquido y gaseoso, los cuales se diferencian en sus propiedades físicas como el volumen y la densidad. Con respecto a los estados de la materia, determine la secuencia correcta de verdadero (V) y falso (F).\n\nI. En el estado gaseoso, predominan las fuerzas de atracción.\nII. Los líquidos tienen forma definida y volumen variable.\nIII. Para que un sólido se funda debe absorber calor.",
-      "alternatives": ["VVV", "FVF", "FFV", "FVV", "VVF"],
+      "alternatives": [
+        "VVV",
+        "FVF",
+        "FFV",
+        "FVV",
+        "VVF"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/12/materia-energia-y-cambios-ejercicios-resueltos-de-quimica-basica-pre-universidad-pdf.html",
       "sourceName": "Materia, Energía y Cambios - Ejercicios resueltos química pre universidad, Pregunta 1 (Clave: C)"
@@ -61,7 +91,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine la relación correcta entre cambio de estado de agregación y proceso.\n\nI. Sublimación\nII. Fusión\nIII. Licuación\n\n( ) Formación del magma\n( ) Desaparición de una esfera de naftalina\n( ) Envasado de gas doméstico",
-      "alternatives": ["abc", "acb", "bac", "bca"],
+      "alternatives": [
+        "abc",
+        "acb",
+        "bac",
+        "bca"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/12/materia-energia-y-cambios-ejercicios-resueltos-de-quimica-basica-pre-universidad-pdf.html",
       "sourceName": "Materia, Energía y Cambios - Ejercicios resueltos química pre universidad, Pregunta 2 (Clave: D)"
@@ -72,10 +107,2063 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Los cambios en el estado de agregación de la materia ocurren debido a una variación en la temperatura. Determine la secuencia correcta de verdadero (V) y falso (F).\n\nI. La formación de nubes se debe a un proceso de condensación.\nII. El hielo seco (CO2(s)) se obtiene por solidificación del CO2(g).\nIII. El magma se origina por la fusión de las rocas en el interior del planeta.",
-      "alternatives": ["VVV", "FVF", "VVF", "VFV", "VFF"],
+      "alternatives": [
+        "VVV",
+        "FVF",
+        "VVF",
+        "VFV",
+        "VFF"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/12/materia-energia-y-cambios-ejercicios-resueltos-de-quimica-basica-pre-universidad-pdf.html",
       "sourceName": "Materia, Energía y Cambios - Ejercicios resueltos química pre universidad, Pregunta 3 (Clave: A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El volumen definido de un líquido se relaciona directamente con las fuerzas de atracción entre moléculas. Si la presión de vapor a 20°C del etanol es 43,9 torr y la del éter etílico es 442,2 torr, se puede afirmar que",
+      "alternatives": [
+        "la atracción entre moléculas de éter es mayor que entre las de alcohol.",
+        "los puentes H que forman el etanol incrementan su vaporización.",
+        "el etanol tiene menor punto de ebullición a presión atmosférica.",
+        "el éter etílico es un líquido mucho más volátil que el alcohol etílico."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-18-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PRUEBA DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREA E SOLUCIONES CLAVES RESPUESTAS PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los sólidos pueden ser tan duros como el diamante o suaves como el caucho. Las propiedades físicas, así como las estructuras de los sólidos se determinan por los tipos de enlaces que mantienen unidos a los átomos. Así, hay sólidos iónicos, corno el cloruro de sodio que tienen enlaces iónicos, o sólidos covalentes, como el caucho o los plásticos que tienen enlaces covalentes. Establezca el valor de verdad (V o F) a partir de las siguientes afirmaciones relacionadas con los tipos de sólidos.\nI. El caucho es un ejemplo de sólido amorfo.\nII. Los sólidos iónicos tienen alto punto de fusión.\nIII. Los sólidos covalentes son malos conductores.",
+      "alternatives": [
+        "FVV",
+        "VFV",
+        "VVV",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/quimica-preuniversitaria-examen-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PRUEBA RESUELTA DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS DECO PREGUNTAS EXPLICADAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos sólidos blancos cristalinos, uno es azúcar ( C 12 H 22 O 11 ) y el otro es bromuro de potasio (KBr) y cada uno está contenido en un frasco transparente sin etiqueta. Para identificarlos, se propone la determinación de las siguientes propiedades:\nI. Punto de fusión\nII. Masa de cada muestra\nIII. Conductividad eléctrica en solución acuosa\n¿Cuáles son las propiedades que nos permiten identificar a estos sólidos blancos cristalinos?",
+      "alternatives": [
+        "Solo II",
+        "II y III",
+        "I, II y III",
+        "Solo I",
+        "I y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cadmio es un metal de color azul plateado, muy venenoso. La exposición continua a este elemento provoca una enfermedad que en Japón se conoce como \"itai-itai\" (que significa \"ay, ay\") decido al dolor que causa en huesos y articulaciones. Es lo suficientemente blando para cortarlo con un cuchillo, posee un punto de fusión de 321ºC y su densidad es de 8,65 g/ml. Con respecto a las propiedades subrayadas, seleccione la proposición correcta.",
+      "alternatives": [
+        "El color es una propiedad química.",
+        "La densidad se obtiene de la relación de dos propiedades físicas intensivas.",
+        "Al menos una de las propiedades es extensiva.",
+        "El punto de fusión es una propiedad aditiva.",
+        "Las 4 propiedades son físicas e intensivas."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Cepreuni-practica-1-con-solucionario-ingreso-directo-universidad-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI PRIMERA PRACTICA CALIFICADA RESUELTA RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina el calor que reciben 10g de hielo, en su punto de fusión, para obtener agua a 80°C.",
+      "alternatives": [
+        "1500 cal",
+        "1200 cal",
+        "1600 cal",
+        "800 cal",
+        "900 cal"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes proposiciones son falsas?\n1) El cobre se utiliza en las instalaciones eléctricas porque es buen conductor eléctrico.\n2) En un «corto circuito» hay una intensa liberación de energía calorífica debido al efecto Joule.\n3) El uso de un cable de cobre grueso como fusible expondría los artefactos electrodomésticos a ser destruidos en un corto circuito.\n4) Los fusibles se fabrican de plomo debido a que tiene alto punto de fusión.\n5) Los artefactos electrodomésticos usualmente se conectan en paralelo para poderlos prender o apagar independientemente.\n6) Un amperímetro es adecuado para un determinado circuito, si su resistencia interna es del mismo orden que la del resistor más pequeño del circuito.\n7) Un voltímetro es adecuado para un determinado circuito, si su resistencia interna es del mismo orden que la del resistor más grande del circuito.\n8) Un amperímetro ideal siempre debe insertarse en serie en un circuito.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTRODINÁMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija la alternativa que describa mejor el proceso de sublimación de una sustancia.",
+      "alternatives": [
+        "Al disminuir la temperatura, las moléculas del líquido se ordenan en posiciones más cercanas, cristalizando.",
+        "Al aumentar la temperatura, la presión de vapor del sólido aumenta hasta pasar completamente a gas.",
+        "Al disminuir la temperatura las moléculas del gas se acercan transformándose en líquido.",
+        "Al aumentar la temperatura las moléculas del sólido se separan cada vez más hasta alcanzar el estado líquido.",
+        "Al aumentar la temperatura, las moléculas del líquido se dispersan cada vez más pasando a la fase gaseosa."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/solucionario-uni-2017-ii-pdf-tercera.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO TERCER EXAMEN UNI 2025 RESUELTO INGRESO UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cloruro de potasio se utiliza en medicina, aplicaciones científicas, procesamiento de alimentos y en ejecución legal por medio de inyección letal. Respecto a las propiedades generales del cloruro de potasio, KCℓ, ¿qué propiedades son correctas?\nI) A 25°C es un sólido cristalino.\nII) En medio acuoso no conduce la corriente eléctrica.\nIII) Posee alto punto de fusión y ebullición.",
+      "alternatives": [
+        "I y III",
+        "Solo III",
+        "II y III",
+        "Solo II",
+        "I, II y III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un líquido es un fluido (además de los gases) cuyo volumen es constante bajo condiciones de temperatura y presión constantes. El estudio de los líquidos requiere el conocimiento de algunas de sus características como la tensión superficial, la viscosidad, la presión de vapor o el punto de ebullición. Al respecto seleccione la relación correcta entre propiedad y definición.",
+      "alternatives": [
+        "Tensión superficial",
+        "Punto de ebullición",
+        "Viscosidad ( ) Energía para aumentar la superficie del líquido. ( ) Medida de la resistencia de los líquidos a fluir. ( ) Temperatura a la que la Pvapor del líquido iguala a la presión externa.",
+        "acb",
+        "cab"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/1ro-2do-actividad-8-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuáles no corresponde a las propiedades de los compuestos covalentes ?.\nI) Muchos son insolubles en el agua .\nII) Al estado líquido o fundido son conductores de la corriente .\nIII) Son gases , líquidos o sólidos con bajo punto de fusión .",
+      "alternatives": [
+        "Sólo I",
+        "Sólo II",
+        "Sólo III",
+        "I y III",
+        "II y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/enlaces-covalentes-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ENLACE COVALENTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Qué propiedad de los líquidos promueve que las gotas de agua sobre una superficie adopten una forma elipsoidal.",
+      "alternatives": [
+        "Temperatura de ebullición",
+        "Presión de vapor",
+        "Capilaridad",
+        "Tensión superficial",
+        "Viscosidad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/admision-callao-2016-i-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — CALLAO 2021 II SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD BLOQUES II III UNAC 2021-2 CIENCIAS EMPRESARIALES Y DE LA SALUD ÁREAS 2 y 3 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El agua es considerada el solvente universal de la materia viva. Esto se debe a que cada molécula de agua es un dipolo, lo que permite la solubilización en ella de compuestos iónicos y polares. Sin embargo, las moléculas de agua muestran una gran cohesividad entre ellas, debido a",
+      "alternatives": [
+        "las fuerzas de van der Waals.",
+        "los enlaces covalentes.",
+        "los puentes de hidrógeno.",
+        "los enlaces hidrofóbicos.",
+        "el alto punto de fusión."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biomoleculas-inorganicas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOMOLÉCULAS INORGÁNICAS EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El butanol (C H 3 C H 2 C H 2 C H 2 OH ) es un líquido con densidad igual a 0,81 g/mL, hierve a 117°C y se funde a –90°C, tiene una presión de vapor de 0,58 kPa a la temperatura de 20°C, al entrar en contacto con el trióxido de cromo forma un gas inflamable. Esta sustancia, por ingestión genera toxicidad. Además, por oxidación, puede formar butanal.\nAl respecto, indique el número de propiedades físicas y químicas mencionadas respectivamente.",
+      "alternatives": [
+        "4 y 5",
+        "5 y 4",
+        "4 y 4",
+        "2 y 5",
+        "4 y 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál será el orden correcto de la presión de vapor del agua, la acetona y el éter a 30°C? Dado que, entre estos compuestos, el agua tiene el punto de ebullición máximo y el éter tiene el punto de ebullición mínimo.",
+      "alternatives": [
+        "Agua < éter < acetona",
+        "Agua < acetona < éter",
+        "Éter < acetona < agua",
+        "Acetona < éter < agua"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep507.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.7 MCQ 17"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El punto de fusión definido de los sólidos cristalinos se debe a ___________.",
+      "alternatives": [
+        "un arreglo regular de las partículas constituyentes observado a corta distancia en la red cristalina.",
+        "un arreglo regular de las partículas constituyentes observado a larga distancia en la red cristalina.",
+        "el mismo arreglo de las partículas constituyentes en diferentes direcciones.",
+        "un arreglo diferente de las partículas constituyentes en diferentes direcciones."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 7"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si dos líquidos A y B forman un azeótropo de punto de ebullición mínimo a una composición específica, entonces _______________.",
+      "alternatives": [
+        "las interacciones A–B son más fuertes que las que existen entre A–A o B–B.",
+        "la presión de vapor de la solución aumenta porque un mayor número de moléculas de los líquidos A y B pueden escapar de la solución.",
+        "la presión de vapor de la solución disminuye porque un menor número de moléculas de solo uno de los líquidos escapa de la solución.",
+        "las interacciones A–B son más débiles que las que existen entre A–A o B–B."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 23"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El estado sólido se caracteriza por tener un volumen definido y una alta densidad debido a que las partículas que lo constituyen se encuentran muy cerca entre ellas. Con respecto al estado sólido, indique la alternativa INCORRECTA.",
+      "alternatives": [
+        "Las fuerzas de repulsión son menores que las de cohesión.",
+        "La madera, el vidrio y el caucho son sólidos amorfos.",
+        "El hielo seco (CO 2(s) ) es un sólido cristalino molecular.",
+        "Los sólidos iónicos conducen la electricidad a 25°C."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/quimica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la naturaleza encontramos una gran cantidad de sólidos con diversas aplicaciones, tales como el cuarzo (SiO 2 ) usado en la fabricación del vidrio, calcita (CaCO 3 ) empleada en la producción del cemento y el hielo seco (CO 2(s) ) utilizado para mantener los alimentos a bajas temperaturas.\nAl respecto, indique la alternativa correcta.",
+      "alternatives": [
+        "El vidrio es un sólido cristalino de red covalente.",
+        "La calcita conduce la electricidad a 25°C.",
+        "El cuarzo presenta una baja dureza.",
+        "El hielo seco tiene baja temperatura de fusión."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/quimica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes es un sólido amorfo?",
+      "alternatives": [
+        "Grafito (C)",
+        "Vidrio de cuarzo (SiO2)",
+        "Alumbre de cromo",
+        "Carburo de silicio (SiC)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El grafito no puede clasificarse como __________.",
+      "alternatives": [
+        "sólido conductor",
+        "sólido reticular (de red)",
+        "sólido covalente",
+        "sólido iónico"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 16"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los cationes están presentes en los sitios intersticiales en __________.",
+      "alternatives": [
+        "el defecto de Frenkel",
+        "el defecto de Schottky",
+        "el defecto de vacancia",
+        "el defecto por deficiencia de metal 3 Estado Sólido 23/04/18"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 17"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuáles de los siguientes defectos puntuales presentan los cristales de AgBr(s)? (A) Defecto de Schottky (B) Defecto de Frenkel (C) Defecto por exceso de metal (D) Defecto por deficiencia de metal",
+      "alternatives": [
+        "(A) y (B)",
+        "(C) y (D)",
+        "(A) y (C)",
+        "(B) y (D)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 22"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones no es verdadera sobre el empaquetamiento compacto hexagonal?",
+      "alternatives": [
+        "El número de coordinación es 12.",
+        "Tiene una eficiencia de empaquetamiento del 74%.",
+        "Los huecos tetraédricos de la segunda capa quedan cubiertos por las esferas de la tercera capa.",
+        "En este arreglo, las esferas de la cuarta capa están exactamente alineadas con las de la primera capa."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 25"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En cuál de las siguientes estructuras el número de coordinación de los cationes y aniones en la estructura empaquetada será el mismo? –",
+      "alternatives": [
+        "Los iones Cl– forman una red fcc y los iones Na+ ocupan todos los huecos octaédricos de la celda unitaria. –",
+        "Los iones Ca2+ forman una red fcc y los iones F– ocupan los ocho huecos tetraédricos de la celda unitaria.",
+        "Los iones O2– forman una red fcc y los iones Na+ ocupan los ocho huecos tetraédricos de la celda unitaria. 2– 2+",
+        "Los iones S2– forman una red fcc y los iones Zn2+ ocupan huecos tetraédricos alternos de la celda unitaria."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 26"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué tipo de defectos se introducen mediante el dopaje?",
+      "alternatives": [
+        "Defecto de dislocación",
+        "Defecto de Schottky",
+        "Defectos de Frenkel",
+        "Defectos electrónicos"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 28"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes defectos también se conoce como defecto de dislocación?",
+      "alternatives": [
+        "Defecto de Frenkel",
+        "Defecto de Schottky",
+        "Defecto no estequiométrico",
+        "Defecto intersticial simple"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 34"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el empaquetamiento compacto cúbico, la celda unitaria tiene ________.",
+      "alternatives": [
+        "4 huecos tetraédricos, cada uno compartido por cuatro celdas unitarias adyacentes.",
+        "4 huecos tetraédricos dentro de la celda unitaria.",
+        "8 huecos tetraédricos, cada uno compartido por cuatro celdas unitarias adyacentes.",
+        "8 huecos tetraédricos dentro de la celda unitaria. 23/04/18"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 35"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En estado sólido, el PCl5 es un _________.",
+      "alternatives": [
+        "sólido covalente",
+        "estructura octaédrica",
+        "sólido iónico con [PCl6] octaédrico y [PCl4] tetraédrico",
+        "sólido iónico con [PCl4] tetraédrico y [PCl6] octaédrico"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep507.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.7 MCQ 25"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los compuestos intersticiales se forman cuando átomos pequeños quedan atrapados dentro de la red cristalina de los metales. ¿Cuál de las siguientes no es una propiedad característica de los compuestos intersticiales?",
+      "alternatives": [
+        "Tienen puntos de fusión altos en comparación con los metales puros.",
+        "Son muy duros.",
+        "Conservan la conductividad metálica.",
+        "Son químicamente muy reactivos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep508.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.8 MCQ 14"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el volumen que ocupa 132g de CO 2 medidos a 8°C bajo cero y 795 torr de presión. Exprese el resultado en libros.\nDatos: PV=nRT ; R=62,4 mm.HG.L.mol –1 k –1",
+      "alternatives": [
+        "70,1",
+        "68,3",
+        "60,2",
+        "64,2",
+        "62, 4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/quimica-callao-examen-de-admision-universidad-unac-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación temperatura - volumen de un gas fue investigado por:",
+      "alternatives": [
+        "Boyle",
+        "Avogadro",
+        "Pascal",
+        "Torricelli",
+        "Charles"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El enunciado:\n“Para una misma masa de un gas a una temperatura dada, siempre en producto de la presión por su volumen respectivo es constante”.\nCorresponde a la:",
+      "alternatives": [
+        "Ley de las Isóbaras",
+        "Ley de las Isócoras",
+        "Ley de las Isotermas",
+        "Ley de Avogadro",
+        "Ley de Dalton"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un gas se encuentra a ciertas condiciones iniciales. Si se aumenta su temperatura, se cumple que:",
+      "alternatives": [
+        "La presión disminuye",
+        "La densidad aumenta",
+        "El volumen disminuye",
+        "La presión es constante",
+        "La densidad disminuye"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El valor de la constante de los Gases Ideales calculado a condiciones normales, según la Ecuación General de los gases Ideales, en las unidades , L.atm mol − ¹ .k − ¹ es:",
+      "alternatives": [
+        "0,820",
+        "760",
+        "22,4",
+        "0,082",
+        "8,20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es el estado de alta energía en el que la materia se encuentra ionizada en forma de cationes y electrones libres, a muy altas temperaturas.",
+      "alternatives": [
+        "Estado sólido",
+        "Estado líquido",
+        "Estado gas",
+        "Estado plasma",
+        "Estado vapor"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente cerrado contiene 64 g de O ₂ y 224 g de N ₂ que ejercen una presión total de 800 mm Hg. Calcular la presión parcial del O ₂ .",
+      "alternatives": [
+        "60,0 mm Hg",
+        "64,0 mm Hg",
+        "160,0 mm Hg",
+        "120,0 mm Hg",
+        "100,0 mm Hg"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un balón de 50 L de capacidad contiene O ₂ a la temperatura de 27 °C y 2 atm de presión. Calcular la masa de O ₂ en el balón.",
+      "alternatives": [
+        "130,0 g",
+        "13,0 g",
+        "150,0 g",
+        "15,0 g",
+        "100,0 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dentro de un recipiente cerrado provisto de un émbolo y acondicionado para tener una temperatura constante, se encuentra un líquido en equilibrio con su vapor. ¿Qué acción aumentaría el proceso de evaporación?",
+      "alternatives": [
+        "Subir el émbolo.",
+        "Disminuir el volumen.",
+        "No corresponde hacer alguna acción, ya que el aumento de la evaporación será espontánea.",
+        "Bajar el émbolo.",
+        "Aumentar la presión."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la densidad (en g/L) de un gas a 30°C y 750 mmHg, si en condiciones normales tiene una densidad de 1,429 g/L.\nDatos:\nCondiciones normales: T=273 K y P=760 mmHg.",
+      "alternatives": [
+        "1,27",
+        "1,30",
+        "1,41",
+        "1,56",
+        "1,85"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente rígido de 1 m 3 de capacidad contiene N 2 O (g) a 227 °C y a una presión de 10 atm. A los 20 minutos de haberse llenado con el gas, se detecta una fuga en una de las paredes del recipiente. Una vez sellada la fuga, la presión del gas en el recipiente es de 8,2 atm. Si la temperatura se mantiene constante, ¿cuál es el volumen (en L), en condiciones normales, del gas N 2 O evacuado?\nDato: R=0,082 atm.L/mol.K",
+      "alternatives": [
+        "916",
+        "939",
+        "961",
+        "983",
+        "1025"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un gas ideal a 150 K y 760 mm de Hg ocupa un volumen de 300 cm 3 , ¿cuál será su volumen a 200 K si se mantiene constante la presión?",
+      "alternatives": [
+        "100 cm 3",
+        "200 cm 3",
+        "400 cm 3",
+        "250 cm3",
+        "500 cm 3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-14-resuelta-comunicacion-experiencia-6-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNASAM ÁREA A INGENIERÍAS INGRESO CLAVES PDF – INGRESO UNIVERSIDAD – 2026–2027"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuatro litros de un gas están a 600 mmHg de presión. ¿Cuál será su nuevo volumen sí aumentamos la presión hasta 800 mmHg?",
+      "alternatives": [
+        "1 L",
+        "2 L",
+        "2,5 L",
+        "3 L",
+        "1,5 L"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/quimica-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — QUIMICA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Teniendo en cuenta que\nFc=Fuerza de cohesión y\nFr=Fuerza de repulsión.\nIndicar las características de los gases.",
+      "alternatives": [
+        "Las moléculas tienen orden, Fr es mayor que Fc, no son compresibles.",
+        "Las moléculas tienen desorden, Fc es mayor que Fr, son compresibles.",
+        "Las moléculas tienen desorden, Fr es mayor que Fc, no son compresibles.",
+        "Las moléculas tienen orden, Fc es mayor que Fr, son compresibles.",
+        "Las moléculas tienen desorden, Fr es mayor que Fc, son compresibles."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-untels-admision-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO  UNTELS 2027 RESUELTO INGRESO UNIVERSIDAD NACIONAL TECNOLÓGICA DEL SUR – VILLA EL SALVADOR PDF CLAVES DE RESPUESTAS – SOLUCIONARIO"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De las siguientes afirmaciones ( ) los estados fluidos son el líquido y gaseoso ) en la fusión y en la vaporización se puede producir una absorción de energía ) en el universo, el estado que más abunda es el gaseoso ) la deposición es la sublimación regresiva ¿Cuántas son verdaderas?",
+      "alternatives": [
+        "4",
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-1-2-3-4-ingles-experiencia-8-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA DE ENSAYO PEDRO RUIZ GALLO INGRESO UNIVERSIDAD UNPRG 2027 CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente de 120L a una presión 0,82atm contiene metano (C H 4 ) a 27ºC. El número de moles de átomos de hidrógeno que existen en el recipiente, es",
+      "alternatives": [
+        "2",
+        "4",
+        "8",
+        "12",
+        "16"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando la temperatura y la presión cambian al mismo tiempo, es posible calcular el nuevo volumen. En tal sentido, si un gas que inicialmente ocupa 50 litros a 2,50 atmósferas y 27 °C es sometido a 1,50 atmósferas y 177 °C, ¿qué volumen, en litros, ocupará?",
+      "alternatives": [
+        "100",
+        "150",
+        "175",
+        "125"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El argón es un gas raro e incoloro, usado en la fabricación de los focos de luz con el fin de retardar la vaporización de los filamentos de tungsteno. Considere al argón como un gas ideal y determine, en atmósferas, su presión dentro de un foco cuando se calienta a 85 °C y tiene una densidad de 1,9 gIL.\nDato: R = 0,082 L.atm/K.mol ; umaAr = 40,00 g/mol",
+      "alternatives": [
+        "0,011",
+        "1,394",
+        "0,017",
+        "0,387"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-14-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA PRUEBA DECO SOLUCIONES DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREAS D B PROBLEMAS DESARROLLADOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente rígido contiene 1000 litros de gas metano (CH4) a 0 °C y una atmósfera. Si se libera el gas hasta que su presión disminuye a la mitad de su valor inicial, manteniendo la misma temperatura, ¿cuántos gramos de metano quedarán en el balón? R=0,082 atm· L/mol K Masas atómicas: H = 1, C =12",
+      "alternatives": [
+        "22,3",
+        "44,6",
+        "357,2",
+        "714,5",
+        "1429,4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/prueba-de-quimica-ingreso-universidad.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO DE QUÍMICA UNI DESARROLLADO PRUEBA DE ENSAYO DE EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Representan cambios endotérmicos:\n1. condensación\n2. fusión\n3. vaporización\n4. sublimación\n5. solidificación\nSon ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "1, 3 y 4",
+        "1, 4 y 5",
+        "2, 3 y 4",
+        "3, 4 y 5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una muestra de oxígeno ocupa 8,5 litros a una presión de 790torr (105kPa). Si la temperatura se mantiene constante, la presión a la cual dicha muestra ocuparía 14,3 litros en torr es",
+      "alternatives": [
+        "455,9",
+        "469,6",
+        "479,6",
+        "481,5",
+        "489,6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un litro de gas se calienta a presión constante desde 250 K hasta 300 K. ¿Qué volumen final ocupará el gas?",
+      "alternatives": [
+        "1,1 L",
+        "1,2 L",
+        "0,8 L",
+        "0,9 L",
+        "1,0 L"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-y-cocientes-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO UNC 2027 INGRESO UNIVERSIDAD DE CAJAMARCA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En cuál de los siguientes casos, el gas mencionado se comportará más cercanamente a un gas ideal? Masas atómicas: H=1; l=127",
+      "alternatives": [
+        "H 2(g) a 1 atm de presión y temperatura ambiente.",
+        "Hl (g) a 1 atm de presión y temperatura ambiente.",
+        "H 2(g) a 10 atm de presión y temperatura ambiente.",
+        "Hl (g) a 10 atm de presión y temperatura ambiente.",
+        "I 2(g) a 1 atm de presión y temperatura ambiente."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se coloca una olla vacía sobre una hornilla encendida. Si la temperatura inicial fue de 17°C y la final de 307°C, ¿qué porcentaje de masa de aire, fue expulsado de la olla, al terminar el calentamiento?",
+      "alternatives": [
+        "40%",
+        "30%",
+        "50%",
+        "70%",
+        "60%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/quimica-untels-examen-resuelto-admision.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente herméticamente cerrado se tiene 10 g de H 2 , 48 g de CH 4 y 64 g de O 2 . Si esta mezcla de gases ejerce una presión total de 5 atmósferas.\n¿Cuál será la presión parcial del oxígeno?\nMasa atómicas: H=1, C=12, O=16",
+      "alternatives": [
+        "1,5 atm",
+        "2,0 atm",
+        "1,0 atm",
+        "3,0 atm",
+        "2,5 atm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/quimica-untels-examen-resuelto-admision.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente cerrado contiene 64 g de O 2 y 224 g de N 2 que ejercen una presión total de 800 mm Hg. Calcular la presión parcial del O 2 .",
+      "alternatives": [
+        "60,0 mm Hg",
+        "64,0 mm Hg",
+        "160,0 mm Hg",
+        "120,0 mm Hg",
+        "100,0 mm Hg"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/quimica-untels-examen-resuelto-admision.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un balón de 50 L de capacidad contiene O ₂ a la temperatura de 27 °C y 2 atm de presión. Calcular la masa de O 2 en el balón.",
+      "alternatives": [
+        "130,0 g",
+        "13,0 g",
+        "150,0 g",
+        "15,0 g",
+        "100,0 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/quimica-untels-examen-resuelto-admision.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El dióxido de nitrógeno, NO 2 , es de color marrón. Se forma como subproducto en los procesos de combustión a temperatura alta como en los vehículos motorizados a 187°C y una presión de 1248 torr. ¿Cuál es la densidad del gas marrón?\nmasa atómica (uma): N=14; O=16",
+      "alternatives": [
+        "1,2 g/L",
+        "1,5 g/L",
+        "2,0 g/L",
+        "2,5 g/L",
+        "3,09 g/L"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la proposición incorrecta con relación a las propiedades de los gases.",
+      "alternatives": [
+        "Los gases ocupan todo el volumen del recipiente que los contiene.",
+        "La propiedad de expansión permite a los gases ocupar un mayor volumen.",
+        "El volumen y la forma de los gases son variables.",
+        "El orden de densidad es gases > líquidos > sólidos.",
+        "Pueden ser monoatómicas. Cálculos en química y Estado gaseoso"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El metano, CH 4 , es un gas liviano altamente inflamable, se utiliza como combustible. Se almacena en un depósito de acero de 20m³ a 27°C y 9 atm. Por seguridad se enfría hasta – 23°C manteniéndose en fase gaseosa. ¿Cuál es la presión absoluta en esta nueva condición?",
+      "alternatives": [
+        "4,5 atm",
+        "5,5 atm",
+        "6,5 atm",
+        "7,5 atm",
+        "8,0 atm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La mezcla que se clasifica como heterogénea es de constitución física no uniforme como por ejemplo el agua con aceite, y si se clasifica como homogénea es cuando su aspecto físico es uniforme; por ejemplo, una solución de suero salino. Respecto al enunciado, seleccione la alternativa que contenga los métodos con los cuales se pueden separar los componentes de las mezclas respectivamente.",
+      "alternatives": [
+        "Destilación – filtración",
+        "Decantación – filtración",
+        "Filtración – evaporación",
+        "Decantación – evaporación",
+        "Filtración – destilación"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El gas natural vehicular (GNV) es una mezcla de hidrocarburos cuyo componente principal es el metano; esta mezcla posee una densidad de 0,737 kg/m³ a 15ºC, es un combustible más amigable y para ser utilizado es necesario colocarlo en cilindros de 323 mm de diámetro, con una capacidad de 20 L y una masa de 58 kg, siendo su máxima presión de operación de 20 MPa. Con respecto a las magnitudes mencionadas, seleccione la alternativa que contiene respectivamente el número de magnitudes básicas y derivadas.",
+      "alternatives": [
+        "3 y 1",
+        "4 y 2",
+        "3 y 3",
+        "1 y 5",
+        "6 y 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La separación de mezclas o separación de fases es un proceso físico mediante el cual se pueden separar los componentes de una mezcla. Al respecto, seleccione la relación correcta método de separación – mezcla.\nI ) Destilación\nII ) Imantación\nIII ) Tamizado\nIV ) Decantación\n( ) Agua con piedras\n( ) tierra y hierro\n( ) arena con piedras\n( ) Agua con acetona",
+      "alternatives": [
+        "III, II, IV, I",
+        "IV, II, III, I",
+        "I, II, III, IV",
+        "IV, III, II, I",
+        "IV, II, I, III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marque la secuencia de verdadero (V) o falso (F) de los siguientes enunciados\nI. Los sólidos tienen forma y volumen definido.\nII. Los gases y líquidos son denominados fluidos.\nIII. Sólidos, líquidos y gases son compresibles.",
+      "alternatives": [
+        "VFF",
+        "VFV",
+        "FVV",
+        "FFV",
+        "VVF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-6-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El agua como el alcohol tienen efecto refrescante, pero el agua refresca más, debido a la propiedad de:",
+      "alternatives": [
+        "Disolvente universal",
+        "Alta ionización",
+        "Tener unidos el oxígeno e hidrógenos de la molécula por puentes de hidrógeno",
+        "Alto calor de vaporización",
+        "Disolver las grasas"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es uno de los estados físicos de la materia, en el cual las partículas tienen libre movimiento y tienden a ocupar el espacio total que las limita:",
+      "alternatives": [
+        "sólido",
+        "líquido",
+        "gaseoso",
+        "plasmático",
+        "coloidal"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-quimica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE QUÍMICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fuerza de atracción entre moléculas se llama:",
+      "alternatives": [
+        "gravedad.",
+        "adhesión.",
+        "afinidad.",
+        "gravitación.",
+        "cohesión."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-quimica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE QUÍMICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique qué sustancia se sublima.",
+      "alternatives": [
+        "Hielo seco",
+        "Agua",
+        "Aceite",
+        "Kerosene",
+        "Gasolina"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-quimica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE QUÍMICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El volumen molar es el volumen ocupado por un mol de cualquier gas a condiciones normales y equivale a 22,4L. Si un mol de gas ocupa un volumen de 50 L y su densidad es 1,25 g/L, a una temperatura y presión determinadas. Determine la densidad de dicho gas en condiciones normales.",
+      "alternatives": [
+        "2,80",
+        "1,40",
+        "8,20",
+        "2,40",
+        "1,20"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/1ro-2do-actividad-8-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ley de Dalton rige el comportamiento de los gases en una mezcla gaseosa. Esta ley explica que los gases se comportarían en la mezcla como si estuvieran individualmente. Si en un recipiente se introducen 56g de CO y 84 g de nitrógeno gaseoso, determine la fracción molar del CO y la presión parcial del N 2 , en atm, si la presión total del sistema es de 2atm.",
+      "alternatives": [
+        "0,8 y 1,2",
+        "0,6 y 1,6",
+        "0,4 y 1,8",
+        "0,4 y 1,2",
+        "0,5 y 1,0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/1ro-2do-actividad-8-ct-experiencia-7-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una mezcla gaseosa tiene la siguiente composición volumétrica: 20% H 2 , 40% O 2 y 40% He. Halle la presión parcial de H 2 en atmósferas si la presión parcial del oxígeno es 2 atm.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/quimica-simulacro-resuelto-examen-pre.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente hermético de volumen V a 50ºC tenemos confinados 50 moles de O 2(g) , 100 moles de N 2(g) y 10 moles de Ne (g) . ¿Cuál de los 3 gases ejerce mayor presión en el recipiente y de producirse un pequeño orificio en este, cuál escaparía a mayor velocidad?\nDatos:\nO: 16 uma\nN: 14 uma\nNe: 20 uma",
+      "alternatives": [
+        "O 2(g) y N 2(g)",
+        "Ne (g) y Ne (g)",
+        "O 2(g) y Ne (g)",
+        "N 2(g) y N 2(g)",
+        "N 2(g) y Ne (g)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/quimica-simulacro-resuelto-examen-pre.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente de 10 litros contiene 8,0 g de CH 4 y 7,5 g de C 2 H 6 a una temperatura de 25 °C. Calcule la presión (en atm) en el recipiente.\nMasas molares (g/mol): CH 4 =16; C 2 H 6 =30\nR = 0,082 atm×L/mol×K",
+      "alternatives": [
+        "0,96",
+        "1,05",
+        "1,83",
+        "2,10",
+        "2,92"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El enunciado:\n“A igual temperatura, la presión de un gas varía en forma inversa a la variación del volumen”\nLey que corresponde a:",
+      "alternatives": [
+        "Charles",
+        "Gau Lussac",
+        "Dalton",
+        "Boyle",
+        "Newton"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se relaciona correctamente\nI) Isotérmico : Gay Lussac\nII) Isobárico : Charles\nIII) Isocoro : Boyle – Mariotte",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "I y III",
+        "Sólo II",
+        "Sólo III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un manómetro registra un valor de 60,5mmHg al nivel del mar.\n¿Cuál es la presión absoluta?",
+      "alternatives": [
+        "760,5 Torr",
+        "760 Torr",
+        "820,5 Torr",
+        "1 Torr",
+        "2 Torr"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Convierte 62,4°C a Kelvin",
+      "alternatives": [
+        "330,2",
+        "335,4",
+        "320,5",
+        "601,7",
+        "421,7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas moles contiene 336L de gas a condiciones normales?",
+      "alternatives": [
+        "10",
+        "12",
+        "15",
+        "7,5",
+        "3,0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué volumen ocupa 132g de gas propano C 3 H 8 a condiciones normales?",
+      "alternatives": [
+        "11,2 L",
+        "33,6 L",
+        "22,4 L",
+        "67,2 L",
+        "100 L"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un gas ocupa 2L a 25°C y 3atm. ¿A qué temperatura se encuentra 1,5l del mismo gas a 5 atm?",
+      "alternatives": [
+        "100°",
+        "99,5°",
+        "75,8°",
+        "60,7°",
+        "54,7°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de oxigeno gaseoso O 2 se debe mezclar con 132g de gas propano C 3 H 8 para que su fracción molar sea 2/5?",
+      "alternatives": [
+        "32",
+        "64",
+        "48",
+        "96",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente se colocan 0,05 mol de NH 3 con 0,3 mol de N 2 O 5 . Calcula la fracción molar del NH 3",
+      "alternatives": [
+        "0,86",
+        "0,14",
+        "0,40",
+        "0,60",
+        "0,75"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se mezclan 4g de Hidrógeno gaseoso: H 2 con 64g de gas metano: CH 4 . Calcula la fracción molar del H 2 .",
+      "alternatives": [
+        "1/3",
+        "2/3",
+        "1/5",
+        "2/5",
+        "3/7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina la densidad del monóxido de carbono CO a condiciones normales.",
+      "alternatives": [
+        "0,75 g/L",
+        "1,15 g/L",
+        "1,25 g/L",
+        "2,25 g/L",
+        "3,75 g/L"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cilindro de 3,6L se coloca 3,2g de gas metano CH 4 con 12g de gas etano C 2 H 6 . Calcula el volumen parcial del gas metano.",
+      "alternatives": [
+        "1,2L",
+        "2,4L",
+        "1,5L",
+        "3,0L",
+        "4,2L"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tanque cerrado se tiene 3 mol de He con 7 mol de O 2 . Si la presión parcial de He es 1,8 atm. Halla la presión parcial del O 2 .",
+      "alternatives": [
+        "3,5 atm",
+        "4,2 atm",
+        "4,5 atm",
+        "4,8 atm",
+        "5,1 atm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cilindro con una presión de 1,5 atm se tiene 2 mol de O 2 con 3 mol de H 2 . Halla la presión parcial del O 2 .",
+      "alternatives": [
+        "0,6",
+        "0,7",
+        "0,8",
+        "1,0",
+        "1,2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de gas hilarante N 2 O se debe mezclar con 8,8 g de dióxido de carbono CO2 para que sus fracciones molares sean iguales?",
+      "alternatives": [
+        "2,2",
+        "3,3",
+        "4,4",
+        "6,6",
+        "8,8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El enunciado :\n“En una mezcla gaseosa a las mismas condiciones de presión y temperatura la suma de presiones parciales es igual a la presión total” corresponde a la ley de:",
+      "alternatives": [
+        "Amagat",
+        "Dalton",
+        "Boyle",
+        "Charles",
+        "Thomson"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de H 2 S se deben mezclar con 2,8g de CO para que las presiones parciales sean iguales.?",
+      "alternatives": [
+        "1,7",
+        "3,4",
+        "5,1",
+        "6,3",
+        "9,2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas moles contiene un tanque de 298 ml con un gas a 22°C y 1,64 atm de presión?",
+      "alternatives": [
+        "0,01",
+        "0,02",
+        "0,15",
+        "0,07",
+        "0,04"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la presión que ejerce 2,8g de monóxido de carbono en un tanque de 400ml a 20°C",
+      "alternatives": [
+        "1,5 atm",
+        "3,0 atm",
+        "4,5 atm",
+        "6,0 atm",
+        "7,5 atm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una mezcla gaseosa de C 2 H 6 y C 4 H 10 la masa molecular es 46,8.\n¿Cuál es la fracción del C 2 H 6 ?",
+      "alternatives": [
+        "0,2",
+        "0,3",
+        "0,4",
+        "0,5",
+        "0,6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se mezcla moles iguales de CO 2 y O 2 . Halla la masa molecular de la mezcla.",
+      "alternatives": [
+        "35g/mol",
+        "36g/mol",
+        "37g/mol",
+        "38g/mol",
+        "40g/mol"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una mezcla gaseosa posee la siguiente composición volumétrica:\nCH 4 : 25%\nC 2 H 6 : 75%\nHalla la masa molecular de la mezcla gaseosa",
+      "alternatives": [
+        "20,4 g/mol",
+        "22,4 g/mol",
+        "24,5 g/mol",
+        "26,5 g/mol",
+        "28,2 g/mol"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de fracciones molares de los componentes de una mezcla es...",
+      "alternatives": [
+        "igual a 1",
+        "menos de 1",
+        "más de 1",
+        "2,5",
+        "1,4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la composición volumétrica de una mezcla gaseosa es:\nO 2 : 20%\nN 2 : 80%\nHalla la fracción molar del O 2",
+      "alternatives": [
+        "0,3",
+        "0,2",
+        "0,4",
+        "0,6",
+        "0,8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/estado-gaseoso-ejemplos-problemas-resueltos-gases-ideales-formulas-quimica-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESTADO GASEOSO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el volumen, en litros, de un globo que contiene inicialmente 2 L de aire, medidos a 27 °C y a la presión barométrica de 1 atm; cuando es llevado a lo alto de una montaña donde la temperatura es 7 °C y la presión barométrica es la mitad de la presión inicial. Calcule el volumen del globo en litros.",
+      "alternatives": [
+        "1,01",
+        "3,73",
+        "5,46",
+        "7,46",
+        "8,73"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/tercera-prueba-examen-uni-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I TERCERA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los métodos de separación de mezclas son procedimientos físicos que permiten separar componentes de una mezcla, valiéndose de las diferentes propiedades físicas de cada uno de ellos. Al respecto, seleccione el valor de verdad (V o F) de cada proposición.\nI. La mezcla de arroz con harina se puede separar usando un tamiz.\nII. Las virutas de hierro se pueden separar de la arena por imantación.\nIII. La grasa y el agua son no miscibles, estos se pueden separar por decantación.",
+      "alternatives": [
+        "VVV",
+        "FVF",
+        "VFV",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-3-ciclo-especial.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRE SAN MARCOS SEMANA 2 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la naturaleza, la materia suele encontrarse en estado sólido, líquido o gaseoso y puede que un material pase de un estado a otro debido principalmente a cambios de temperatura. Con respecto a los estados de la materia y sus cambios, seleccione la alternativa con la proposición correcta.",
+      "alternatives": [
+        "Los sólidos poseen forma definida al igual que los líquidos.",
+        "El paso del estado líquido al sólido requiere un aumento de temperatura.",
+        "La sublimación inversa es el cambio del estado sólido al gaseoso.",
+        "La fusión y la evaporación implican un aumento de temperatura."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-3-ciclo-especial.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRE SAN MARCOS SEMANA 2 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La atmósfera de Marte está formada principalmente por dióxido de carbono (CO 2 ). Si una muestra de 17,6g de este gas es atrapado por el Mars Exploration Rover en un recipiente de 8,2L a 7°C, determine la presión en atm que ejerce dicho gas en el recipiente.\nDatos: R=0,082 atm L mol –1 K –1\nMasas atómicas: H=1; C=12",
+      "alternatives": [
+        "13,56",
+        "49,28",
+        "1,23",
+        "2,24",
+        "1,12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/quimica-prueba-resuelta-de-admision-a-la-universidad-uni-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona que vive en Shimla observó que cocinar alimentos sin usar una olla a presión toma más tiempo. La razón de esta observación es que, a gran altitud:",
+      "alternatives": [
+        "la presión aumenta",
+        "la temperatura disminuye",
+        "la presión disminuye",
+        "la temperatura aumenta"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.5 MCQ 1"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes propiedades del agua puede usarse para explicar la forma esférica de las gotas de lluvia?",
+      "alternatives": [
+        "viscosidad",
+        "tensión superficial",
+        "fenómenos críticos",
+        "presión"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.5 MCQ 2"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La presión de una mezcla 1:4 de dihidrógeno y dioxígeno encerrada en un recipiente es de una atmósfera. ¿Cuál sería la presión parcial del dioxígeno?",
+      "alternatives": [
+        "0.8 atm",
+        "0.008 Nm⁻²",
+        "8×10⁴ Nm⁻²",
+        "0.25 atm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.5 MCQ 6"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A medida que aumenta la temperatura, aumenta la energía cinética promedio de las moléculas. ¿Cuál sería el efecto del aumento de temperatura sobre la presión, si el volumen permanece constante?",
+      "alternatives": [
+        "aumenta",
+        "disminuye",
+        "permanece igual",
+        "se reduce a la mitad"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.5 MCQ 7"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la unidad SI del coeficiente de viscosidad (η)?",
+      "alternatives": [
+        "Pascal",
+        "N s m⁻²",
+        "km⁻² s",
+        "N m⁻²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.5 MCQ 9"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las presiones atmosféricas registradas en diferentes ciudades son las siguientes: Ciudades Shimla Bangalore Delhi Mumbai p en N/m2 1.01×10⁵ 1.2×10⁵ 1.02×10⁵ 1.21×10⁵ Considera los datos anteriores y marca el lugar donde el líquido hervirá primero.",
+      "alternatives": [
+        "Shimla",
+        "Bangalore",
+        "Delhi",
+        "Mumbai"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.5 MCQ 10"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El estado de un gas puede describirse mediante la relación entre___.",
+      "alternatives": [
+        "presión, volumen, temperatura",
+        "temperatura, cantidad, presión",
+        "cantidad, volumen, temperatura",
+        "presión, volumen, temperatura, cantidad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep506.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.6 MCQ 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes no es una característica general de los equilibrios que involucran procesos físicos?",
+      "alternatives": [
+        "El equilibrio solo es posible en un sistema cerrado a una temperatura dada.",
+        "Todas las propiedades medibles del sistema permanecen constantes.",
+        "Todos los procesos físicos se detienen en el equilibrio.",
+        "Los procesos opuestos ocurren a la misma velocidad y existe una condición dinámica pero estable."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep507.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.7 MCQ 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes condiciones favorece la existencia de una sustancia en estado sólido?",
+      "alternatives": [
+        "Temperatura alta",
+        "Temperatura baja",
+        "Alta energía térmica",
+        "Fuerzas cohesivas débiles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 1"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones es verdadera sobre el valor del índice de refracción del vidrio de cuarzo?",
+      "alternatives": [
+        "Igual en todas las direcciones",
+        "Diferente en distintas direcciones",
+        "No se puede medir",
+        "Siempre es cero"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 5"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones no es verdadera sobre los sólidos amorfos?",
+      "alternatives": [
+        "Al calentarse, pueden volverse cristalinos a cierta temperatura.",
+        "Pueden volverse cristalinos si se mantienen durante mucho tiempo.",
+        "Los sólidos amorfos pueden moldearse mediante calentamiento.",
+        "Son de naturaleza anisotrópica."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 6"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes es un sólido reticular (de red covalente)?",
+      "alternatives": [
+        "SO2 (sólido)",
+        "I2",
+        "Diamante",
+        "H2O (hielo)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 9"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes sólidos no es conductor eléctrico? (A) Mg (s) (B) TiO (s) (C) I2 (s) (D) H2O (s)",
+      "alternatives": [
+        "Solo (A)",
+        "Solo (B)",
+        "(C) y (D)",
+        "(B), (C) y (D) 23/04/18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 10"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes no es una característica de los sólidos iónicos?",
+      "alternatives": [
+        "Un valor muy bajo de conductividad eléctrica en estado fundido.",
+        "Naturaleza quebradiza.",
+        "Fuerzas de interacción muy fuertes.",
+        "Naturaleza anisotrópica."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 11"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes óxidos se comporta como conductor o aislante dependiendo de la temperatura?",
+      "alternatives": [
+        "TiO",
+        "SiO2",
+        "TiO3",
+        "MgO"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 13"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes óxidos muestra propiedades eléctricas similares a los metales?",
+      "alternatives": [
+        "SiO2",
+        "MgO",
+        "SO2(s)",
+        "CrO2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 14"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones es verdadera sobre la carga adquirida por los semiconductores tipo p?",
+      "alternatives": [
+        "positiva",
+        "neutra",
+        "negativa",
+        "depende de la concentración de la impureza tipo p"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 19"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En cuál par está presente el empaquetamiento más eficiente?",
+      "alternatives": [
+        "hcp y bcc",
+        "hcp y ccp",
+        "bcc y ccp",
+        "bcc y celda cúbica simple"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 23"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El porcentaje de espacio vacío en un arreglo cúbico centrado en el cuerpo es ________.",
+      "alternatives": [
+        "74 23/04/18",
+        "68",
+        "32",
+        "26"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 24"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones no es verdadera sobre los sólidos iónicos?",
+      "alternatives": [
+        "Los iones más grandes forman la estructura compacta.",
+        "Los iones más pequeños ocupan los huecos tetraédricos u octaédricos dependiendo de su tamaño.",
+        "No es necesario que se ocupen todos los huecos.",
+        "La fracción de huecos octaédricos o tetraédricos ocupados depende de los radios de los iones que los ocupan."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 31"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una sustancia ferromagnética se convierte en un imán permanente cuando se coloca en un campo magnético porque ________.",
+      "alternatives": [
+        "todos los dominios se orientan en la dirección del campo magnético.",
+        "todos los dominios se orientan en la dirección opuesta a la del campo magnético.",
+        "los dominios se orientan al azar.",
+        "los dominios no se ven afectados por el campo magnético."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.1 MCQ 32"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuatro litros de un gas están a 600mmHg de presión. ¿Cuál será su nuevo volumen sí aumentamos la presión hasta 800mmHg?",
+      "alternatives": [
+        "1 L",
+        "2 L",
+        "2,5 L",
+        "3 L",
+        "1,5 L"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/quimica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pregunta 2. El flúor (F), el cloro (Cl), el bromo (Br), el yodo (I) y el astato (At), que pertenecen al grupo 17, se conocen como halógenos. El astato no tiene isótopos estables, pero se considera que presenta propiedades físicas y químicas similares a las que cabría esperar a partir de F, Cl, Br e I. Elige la alternativa que NO sea adecuada respecto a las propiedades de la sustancia simple At o de sus compuestos.",
+      "alternatives": [
+        "El punto de fusión y el punto de ebullición de la sustancia simple At son, ambos, los más altos entre las sustancias simples de los halógenos.",
+        "La sustancia simple At es poco soluble en agua a temperatura ambiente.",
+        "Al añadir una solución acuosa de nitrato de plata a una solución acuosa de astaturo de sodio (NaAt), se forma astaturo de plata (AgAt), que es poco soluble.",
+        "Aunque se añada agua de bromo a una solución acuosa de NaAt, no se produce ninguna reacción de oxidorreducción."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.dnc.ac.jp/albums/abm.php?d=666&f=abm00004707.pdf",
+      "sourceName": "dnc.ac.jp — 共通テスト 2024 化学 第3問 問2"
     }
   ]
 }

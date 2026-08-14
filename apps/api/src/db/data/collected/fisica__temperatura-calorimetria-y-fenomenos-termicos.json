@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine la temperatura a la cual la lectura de un termómetro Fahrenheit es exactamente el doble de la lectura Celsius.",
-      "alternatives": ["300 °F", "320 °F", "320 °C", "400 °C", "160 °F"],
+      "alternatives": [
+        "300 °F",
+        "320 °F",
+        "320 °C",
+        "400 °C",
+        "160 °F"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/temperatura-dilatacion-y-calorimetria.html",
       "sourceName": "fisica-s.blogspot.com - Temperatura, Dilatación y Calorimetría, Problema 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "300 g de vapor de agua a 100 °C se enfrían hasta convertirse en hielo a 0 °C. ¿Qué cantidad de calor (en kcal) se le debe extraer?",
-      "alternatives": ["180", "196", "216", "226", "230"],
+      "alternatives": [
+        "180",
+        "196",
+        "216",
+        "226",
+        "230"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/temperatura-dilatacion-y-calorimetria.html",
       "sourceName": "fisica-s.blogspot.com - Temperatura, Dilatación y Calorimetría, Problema 11"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Se tienen 40 g de hielo a -20 °C. ¿Cuántos gramos de agua a 100 °C se necesitan para obtener finalmente un equilibrio térmico a 0 °C?",
-      "alternatives": ["18 g", "20 g", "30 g", "36 g", "42 g"],
+      "alternatives": [
+        "18 g",
+        "20 g",
+        "30 g",
+        "36 g",
+        "42 g"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/temperatura-dilatacion-y-calorimetria.html",
       "sourceName": "fisica-s.blogspot.com - Temperatura, Dilatación y Calorimetría, Problema 12"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un proyectil penetra en una pared a 200 m/s. Si el 20% de su energía cinética se transforma en calor y su calor específico es 400 J/(kg·°C), determine el aumento de temperatura del proyectil.",
-      "alternatives": ["5 °C", "6 °C", "9 °C", "10 °C", "11 °C"],
+      "alternatives": [
+        "5 °C",
+        "6 °C",
+        "9 °C",
+        "10 °C",
+        "11 °C"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/temperatura-dilatacion-y-calorimetria.html",
       "sourceName": "fisica-s.blogspot.com - Temperatura, Dilatación y Calorimetría, Problema 19"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Se tiene 500 g de un metal cuyo calor específico es 0,4 cal/(g·°C), que se encuentra a 20 °C. Si se le calienta hasta 220 °C, determine el calor ganado por dicho metal (en kcal).",
-      "alternatives": ["80", "20", "40", "60", "30"],
+      "alternatives": [
+        "80",
+        "20",
+        "40",
+        "60",
+        "30"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 1"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "400 g de agua son calentados desde 35 °C hasta 85 °C. Determine la cantidad de calor ganado por el agua (en kcal).",
-      "alternatives": ["10", "25", "20", "15", "30"],
+      "alternatives": [
+        "10",
+        "25",
+        "20",
+        "15",
+        "30"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 2"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un cuerpo tiene una capacidad calorífica de 200 cal/°C. Si se le entrega 4000 cal en forma de calor, determine en cuánto variará su temperatura.",
-      "alternatives": ["30 °C", "25 °C", "20 °C", "40 °C", "45 °C"],
+      "alternatives": [
+        "30 °C",
+        "25 °C",
+        "20 °C",
+        "40 °C",
+        "45 °C"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 3"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un cuerpo posee capacidad calorífica de 4 cal/°C. Calcule la cantidad de calor absorbido (en cal) cuando su temperatura aumenta en 25 °C.",
-      "alternatives": ["20", "200", "180", "100", "160"],
+      "alternatives": [
+        "20",
+        "200",
+        "180",
+        "100",
+        "160"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 5"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Halle la capacidad calorífica (en cal/°C) del plomo, si su calor específico es 0,03 cal/(g·°C) y su masa es 0,5 kg.",
-      "alternatives": ["10", "20", "25", "15", "30"],
+      "alternatives": [
+        "10",
+        "20",
+        "25",
+        "15",
+        "30"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 6"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Se tienen 200 g de agua a 40 °C inicialmente, a los cuales se les entregan 6 kcal de calor. Determine la temperatura final del agua.",
-      "alternatives": ["50 °C", "70 °C", "80 °C", "40 °C", "90 °C"],
+      "alternatives": [
+        "50 °C",
+        "70 °C",
+        "80 °C",
+        "40 °C",
+        "90 °C"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 7"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Qué cantidad de calor (en kcal) debe perder un litro de agua a 90 °C para disminuir su temperatura hasta la tercera parte?",
-      "alternatives": ["60", "20", "25", "120", "30"],
+      "alternatives": [
+        "60",
+        "20",
+        "25",
+        "120",
+        "30"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 9"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una sustancia y un depósito, en conjunto, tienen una capacidad calorífica de 4000 cal/°C y se encuentran inicialmente a 10 °C. Si se les entregan 80 kcal, ¿cuál será la temperatura final del conjunto?",
-      "alternatives": ["40 °C", "25 °C", "20 °C", "30 °C", "15 °C"],
+      "alternatives": [
+        "40 °C",
+        "25 °C",
+        "20 °C",
+        "30 °C",
+        "15 °C"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 10"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Qué cantidad de calor (en kcal) debe perder 500 g de un líquido (Ce = 0,8 cal/(g·°C)) a 80 °C para disminuir su temperatura hasta la mitad?",
-      "alternatives": ["18", "48", "32", "16", "24"],
+      "alternatives": [
+        "18",
+        "48",
+        "32",
+        "16",
+        "24"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 11"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un litro de agua a 20 °C gana 30 kcal de calor, ¿cuál es su temperatura final?",
-      "alternatives": ["50 °C", "25 °C", "20 °C", "40 °C", "45 °C"],
+      "alternatives": [
+        "50 °C",
+        "25 °C",
+        "20 °C",
+        "40 °C",
+        "45 °C"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 13"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Cierto metal de capacidad calorífica 200 cal/°C está a 20 °C, si el metal gana 10 kcal de calor, ¿cuál es su temperatura final?",
-      "alternatives": ["70 °C", "35 °C", "80 °C", "55 °C", "90 °C"],
+      "alternatives": [
+        "70 °C",
+        "35 °C",
+        "80 °C",
+        "55 °C",
+        "90 °C"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 17"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un litro de agua a 90 °C pierde 50 kcal de calor, ¿cuál es su temperatura final?",
-      "alternatives": ["40 °C", "25 °C", "20 °C", "60 °C", "45 °C"],
+      "alternatives": [
+        "40 °C",
+        "25 °C",
+        "20 °C",
+        "60 °C",
+        "45 °C"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 19"
@@ -182,7 +278,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Cierto metal de capacidad calorífica 300 cal/°C está a 90 °C, si pierde 15 kcal de calor, ¿cuál es su temperatura final?",
-      "alternatives": ["30 °C", "25 °C", "20 °C", "40 °C", "45 °C"],
+      "alternatives": [
+        "30 °C",
+        "25 °C",
+        "20 °C",
+        "40 °C",
+        "45 °C"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 20"
@@ -193,7 +295,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Cuando un litro de agua pierde 80 kcal de calor termina a una temperatura de 10 °C, ¿cuál fue su temperatura inicial?",
-      "alternatives": ["80 °C", "75 °C", "85 °C", "70 °C", "90 °C"],
+      "alternatives": [
+        "80 °C",
+        "75 °C",
+        "85 °C",
+        "70 °C",
+        "90 °C"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 23"
@@ -204,7 +312,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un clavo de 50 g se encuentra a 15 °C y es raspado con una lija durante cierto tiempo. Si se observa que dicho clavo alcanzó una temperatura de 75 °C, determine cuánto calor (en cal) ganó por el raspado. (Ce_clavo = 0,10 cal/(g·°C))",
-      "alternatives": ["120", "150", "180", "300", "600"],
+      "alternatives": [
+        "120",
+        "150",
+        "180",
+        "300",
+        "600"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 29"
@@ -215,7 +329,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una cadena de oro tiene una masa de 100 g y se encuentra a 25 °C. Determine la cantidad de calor (en kcal) que debe absorber para calentarse hasta 1025 °C. (Ce_Au = 0,03 cal/(g·°C))",
-      "alternatives": ["4", "5", "6", "2", "3"],
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "2",
+        "3"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 36"
@@ -226,7 +346,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dos litros de agua son sometidos a un proceso de calentamiento, recibiendo 120 kcal, si su temperatura inicial era de 20 °C. ¿Cuál será su temperatura final?",
-      "alternatives": ["80 °C", "75 °C", "85 °C", "70 °C", "90 °C"],
+      "alternatives": [
+        "80 °C",
+        "75 °C",
+        "85 °C",
+        "70 °C",
+        "90 °C"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 38"
@@ -237,10 +363,3000 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si se disipara 1 kW de energía mecánica para agitar el agua contenida en un recipiente, ¿qué cantidad de calor (en kcal) se le habrá proporcionado al cabo de 1 minuto?",
-      "alternatives": ["10,1", "12,2", "14,4", "18,6", "21,2"],
+      "alternatives": [
+        "10,1",
+        "12,2",
+        "14,4",
+        "18,6",
+        "21,2"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 41"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un material de 100g de masa, temperatura de 500°C y calor específico 2000 J/kg . K , es sumergido dentro de un líquido experimental de masa 1 kg, a 20°C de temperatura y calor específico 1000 J/kg.K. El líquido está dentro de un calorímetro. En este contexto, determine la temperatura de equilibrio que alcanza dicho líquido.",
+      "alternatives": [
+        "100 °C",
+        "200 °C",
+        "120 °C",
+        "150 °C",
+        "90 °C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/fisica-ejercicios-resueltos-examen-de.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una determinada sustancia líquida en su proceso de calentamiento absorbe 480 calorías de energía. Si la capacidad calorífica de la sustancia es de 12cal/°C y su temperatura final llega a 72 °C, determinar cuánto fue su temperatura inicial.",
+      "alternatives": [
+        "14 °C",
+        "15 °C",
+        "20 °C",
+        "32 °C",
+        "35 °C"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule aproximadamente la cantidad de calor, en kJ, que se desprende cuando 100 g de vapor de agua a 150 ºC se enfrían hasta convertirlo en 100 g de hielo a 0 ºC.\nCalor específico de vapor de agua=2,01 kJ/kgK\nCalor latente de vaporización del agua=2257 kJ/kg\nCalor específico del agua líquida=4,18 kJ/kgK\nCalor latente de fusión del agua=333,5 kJ/kg",
+      "alternatives": [
+        "305",
+        "311",
+        "327",
+        "332",
+        "353"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/prueba-de-fisica-ingreso-universidad-de.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO DE FÍSICA UNI DESARROLLADO PRUEBA DE ENSAYO DE EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se calienta agua usando una cocina eléctrica de potencia P. En 10 minutos la temperatura del agua aumenta de 10° C a 100° C. Si la cocina sigue suministrando la misma potencia P, calcule aproximadamente el tiempo (en minutos) que se necesita para evaporar toda el agua. El proceso se realiza a presión normal.\nCapacidad calorífica del agua:\n4,18 × 10³ J ·kg–1 °C − ¹\nCalor latente de evaporación del agua:\n2,257 × 10³ J ·kg − ¹",
+      "alternatives": [
+        "10",
+        "30",
+        "50",
+        "60",
+        "70"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/examen-admision-uni-solucionario_28.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente de masa m=10g y calor específico 20 cal/g°C se tienen 40g de hielo a –10°C. Si se requiere derretir todo el hielo, ¿cuál es la mínima masa de una sustancia que tiene un calor específico de 5 cal/g°C a 20°C que se debe colocar en el recipiente?",
+      "alternatives": [
+        "54 g",
+        "5,4 g",
+        "5400 g",
+        "540 g",
+        "1054 g"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/examen-admision-unsa-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNSA 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE SAN AGUSTIN DE AREQUIPA 2026 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene 10 g de hielo a -20 °C y se introducen a un recipiente que contiene 50 g de agua a 80 °C. Determinar la temperatura que alcanzan cuando llegan al equilibrio térmico.",
+      "alternatives": [
+        "48 °C",
+        "51.6 °C",
+        "62.2 °C",
+        "63 °C",
+        "40 °C"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/examen-de-razonamiento-logico.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN UNSLG ÁREA A CIENCIAS DE LA SALUD INGRESO UNIVERSIDAD NACIONAL SAN LUIS GONSAGA RESUELTO UNICA PDF MEDICINA 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tenemos 300cm 3 de tolueno a una temperatura de 0°C en un vaso de 100cm 3 de tolueno a una temperatura de 100°C, entonces el volumen final después de mezclarse los dos líquidos cuando lleguen a su equilibrio térmico en cm 3 , es:\n(coeficiente de expresión térmico volumétrico del tolueno=0,001°C –1 )",
+      "alternatives": [
+        "400",
+        "405",
+        "410",
+        "415",
+        "420"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/educacion-religiosa-1ro-2do-actividad-1-experiencia-7-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA A SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CIENCIAS DE LA SALUD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente de capacidad calorífica 40cal/°C se tiene 400g de hielo a –10°C. La cantidad de calor en kcal, que se debe suministrar al sistema para obtener 200 g de agua líquida es",
+      "alternatives": [
+        "6,5",
+        "14",
+        "18,4",
+        "25,5",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/3ro-4to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA C CIENCIAS DE LA PERSONA 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Conociendo los estados físicos de la materia y sus cambios más comunes.\nSeñale el proceso que explica el cambio de fase del dióxido de carbono (CO 2 gaseoso) a partir de hielo seco (CO 2 sólido).",
+      "alternatives": [
+        "Sublimación",
+        "Fusión",
+        "Congelación",
+        "Licuación",
+        "Evaporación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-upc-examen-admision-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UPC 2027 EXAMEN ADMISIÓN UNIVERSIDAD CRONOGRAMA VACANTES ESTRUCTURA PUNTAJES PROSPECTO TEMAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el laboratorio de física, un estudiante coloca 100g de agua en un calorímetro, ambos están a la temperatura de 20°C . Luego introduce un bloque de metal de 400 g cuya temperatura es 100 °C y debe determinar la temperatura de equilibrio, sabiendo que el calor específico del metal es 0,10cal/gºC. Además, debe considerar que el calorímetro tiene una masa de 20 g y su calor específico es de 0,20 cal/g°C.",
+      "alternatives": [
+        "360/ 11 ºC",
+        "304 / 7 ºC",
+        "300 / 11 ºC",
+        "380 / 9 ºC",
+        "95 / 2 ºC"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-religiosa-5to-actividad-1-2-3-experiencia-9-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN QUINTOS INGENIERÍAS 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS PDF SOLUCIONARIO"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un problema anterior. ¿Cuál es la capacidad calorífica del bloque?",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un calorímetro de equivalente en agua 60g que contiene 20g de agua a 15°C se vierte 70g de agua a 30°C. ¿Cuál será la temperatura final de la mezcla?",
+      "alternatives": [
+        "20°C",
+        "21°C",
+        "22°C",
+        "23°C",
+        "40°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se mezcla 200g de agua a 4°C con 50g de agua a 19°C y 400g de cierta sustancia “x” a 25°C. Si el calor específico de la sustancia “x” es 0,5. ¿Cuál será la temperatura final de la mezcla?",
+      "alternatives": [
+        "10°C",
+        "15°C",
+        "20°C",
+        "25°C",
+        "30°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se mezcla 80g de agua a 10°C con 15 gramos de cierta sustancia a 80°C, terminando la mezcla a una temperatura de 40°C. ¿Cuál es el calor específico de la sustancia?",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un calorímetro de equivalente en agua 80g que esta a 0°C se vierte 16g de agua a 60°C. ¿Cuál será la temperatura final de equilibrio?",
+      "alternatives": [
+        "10°C",
+        "20°C",
+        "30°C",
+        "40°C",
+        "45°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un calorímetro de equivalente en agua 50g que contiene 50g de agua a 10°C se echa un bloque de metal de 400g a 100°C (Ce metal = 0,5) ¿Cuál será la temperatura final de la mezcla?",
+      "alternatives": [
+        "80°C",
+        "70°C",
+        "60°C",
+        "50°C",
+        "40°C"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente de capacidad calorífica despreciable se mezclan 300g de agua a 25°C con 700gr. de agua a 85°C. Determina la temperatura final de la mezcla.",
+      "alternatives": [
+        "60°C",
+        "70°C",
+        "67°C",
+        "61°C",
+        "55°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué cantidad de agua podría reemplazar a un recipiente de 1kg y calor específico igual a 0,3g cal/gºC, experimentando los mismos cambios de temperatura?",
+      "alternatives": [
+        "175g",
+        "1900g",
+        "800g",
+        "600g",
+        "300g"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se dispone de un calorímetro cuyo equivalente en agua es de 20 g y contiene 200g de agua a 17°C. Se introduce en el calorímetro una pieza de metal de 250gr. a 86°C y se logra una temperatura de equilibrio de 20°C. Determina el calor específico del metal en cal/g°C.",
+      "alternatives": [
+        "0,04",
+        "0,08",
+        "0,02",
+        "0,07",
+        "0,05"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula la temperatura de equilibrio de la mezcla de 150gr. de agua líquida a 30°C con 200g de agua líquida a 80°C que se encuentra en un depósito de capacidad calorífica igual a 50 cal/°C.",
+      "alternatives": [
+        "55°C",
+        "42°C",
+        "42,5°C",
+        "60,5°C",
+        "61,25°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un calorímetro de equivalente en H 2 O igual a 20g Se tiene 480g de agua a una temperatura inicial de 18°C. Si se introduce un bloque metálico de 600g . A la temperatura inicial de 100°C, se logra una temperatura final de equilibrio de 20°C. Determina el Ce del metal.",
+      "alternatives": [
+        "0,02",
+        "0,03",
+        "0,04",
+        "0,05",
+        "0,07"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un calorímetro de cobre de 200g de masa y Ce igual a 0,09 que contiene 282g de H 2 O inicialmente a 25°C. Si se introduce un bloque de plomo de 0,5kg. de Ce=0,03 y a la temperatura inicial de 150°C. Calcula la temperatura final de equilibrio.",
+      "alternatives": [
+        "30 °C",
+        "40 °C",
+        "30,9 °C",
+        "43,4 °C",
+        "N.A."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un calorímetro de equivalente en agua despreciable se encuentra 1kg. de agua a 10°C. Se introduce `1kg. de cierto líquido a 52.5°C y un cuerpo de 2kg. (Ce=1,5 cal/g°C) a 40° y se alcanza una temp. final de 42,5°C. Determina el calor específico del líquido en cal/g°C.",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un calorímetro de 4 Cal/ºC de capacidad térmica, se tiene 20cm³ de agua a 20ºC. Si al sistema anterior se le introduce 50g de un mineral desconocido cuya temperatura es de 140ºC, se observa que la temperatura final de la mezcla es de 60ºC. Halla el calor específico de dicho mineral en Cal/gºC.",
+      "alternatives": [
+        "2,4",
+        "0,024",
+        "0,24",
+        "0,48",
+        "0,048"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un calorímetro de equivalente en agua despreciable se tienen 100g de hielo mezclados en equilibrio con 200g de agua. Si se vierte en el calorímetro 20g de vapor de agua a 100ºC. Determina la temperatura de equilibrio.",
+      "alternatives": [
+        "0ºC",
+        "15ºC",
+        "20ºC",
+        "25ºC",
+        "18ºC"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un calorímetro de capacidad calorífica despreciable en cuyo interior hay 100g de hielo a – 10ºC si a éste sistema se le adiciona 25g de vapor a 100ºC. Calcula la temperatura final.",
+      "alternatives": [
+        "81ºC",
+        "72ºC",
+        "40ºC",
+        "48ºC",
+        "60ºC"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente de equivalente en agua despreciable, se tienen 500g de agua a 0°C. Si se introduce un cubo de hielo de 250g a 8°C, determina la masa de agua que se solidifica, cuando el sistema, alcanza el equilibrio térmico.",
+      "alternatives": [
+        "0g",
+        "25g",
+        "5g",
+        "10,5g",
+        "12,5g"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un calorímetro de capacidad despreciable en cuyo interior hay 100g de hielo a –10ºC si a éste sistema se le adiciona 25g de vapor a 100ºC. Encuentra la temperatura final",
+      "alternatives": [
+        "81ºC",
+        "72ºC",
+        "64ºC",
+        "48ºC",
+        "60ºC"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina que cantidad de calor se requiere para poder vaporizar 50gr de hielo que se encuentra inicialmente a la temperatura de –10ºC si el calor especifico del hielo es 0,5 cal/g ºC.",
+      "alternatives": [
+        "36250 cal",
+        "40000 cal",
+        "42340 cal",
+        "32520 cal",
+        "50000 cal"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un calorímetro de equivalente en agua igual a 20g , se encuentra en equilibrio 100g de hielo y 180g de agua. Si ingresan 20g de vapor a 100ºC. Determina la temperatura final de equilibrio.",
+      "alternatives": [
+        "20ºC",
+        "15ºC",
+        "18ºC",
+        "30ºC",
+        "40ºC TERCERA PRACTICA PROBLEMA 1 : Cuando juntamos 190 g de hielo a 0°C con m gramos de vapor de agua a 100°C la temperatura de equilibrio resulta 70°C. Determine m . Desprecie las pérdidas de energía."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la veracidad (V) o falsedad (F) de las siguientes proposiciones:\nI) Si dos cuerpos tienen igual temperatura, éstos necesariamente están en contacto térmico.\nII) La temperatura es una cantidad física fundamental; entre dos cuerpos en contacto térmico , tienden a igualarse.\nIII) Si un cuerpo A está en equilibrio térmico con otro B y también se sabe que A está en equilibrio térmico con otro C, entonces es imposible algún intercambio neto de calor entre B y C.",
+      "alternatives": [
+        "VVV",
+        "FFF",
+        "FVV",
+        "FFV",
+        "VFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/equilibrio-termico-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EQUILIBRIO TÉRMICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la veracidad (V) o falsedad (F) de las siguientes proposiciones:\nI) Si dos cuerpos se encuentran en equilibrio térmico, entonces entre ellos no hay lugar a un intercambio neto de energía.\nII) Dos cuerpos en contacto térmico tienden a un estado final denominado equilibrio térmico.\nIII) Dos cuerpos en equilibrio térmico contienen la misma cantidad de calor.",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "VVF",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/equilibrio-termico-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EQUILIBRIO TÉRMICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un centro de investigación se obtuvo un líquido artificial. Para medir su calor específico se coloca, en un envase de vidrio de 100g de masa, 500 g del líquido artificial. Ambos, envase y líquido, se encuentran a la temperatura de 20°C. En el envase con líquido, se coloca un objeto de oro de 500 g que se encuentra a la temperatura de 200°C. La temperatura final, en el equilibrio, es 25°C.\nConsiderando que el sistema está aislado térmicamente, calcule el calor específico del líquido artificial en J/kg°C.\nConsidere",
+      "alternatives": [
+        "1348",
+        "2348",
+        "e.vidrio =835 J/kg °C",
+        "4348",
+        "5348"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/equilibrio-termico-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EQUILIBRIO TÉRMICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Escoja la verdad o falsedad de las siguientes proposiciones.\nI) Se denomina dilatación térmica de un cuerpo a la variación de su tamaño debido a un cambio en su temperatura.\nII)Las fuerzas en la dilatación de un cuerpo pueden ser tan intensas que estiran objetos duros como el acero.\nIII)Una barra de 50 m de longitud, de acero ( α acero = 1,1 × 10 –5 °C–1) se contrae en 2,75 cm, cuando su temperatura pasa de 100°C a 50°C.",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "VFV",
+        "VVF",
+        "FFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un chiquillo de 7 años de edad se siente enfermo y está con fiebre . En un termómetro con escala Fahrenheit su temperatura es de 101,3°F.\n¿Qué temperatura tiene en la escala centígrada ?.",
+      "alternatives": [
+        "43,8°C",
+        "58,2°C",
+        "38,5°C",
+        "68,7°C",
+        "23,7°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale como verdadero (V) o falso (F) los siguientes enunciados.\nI) Celsius utilizó el agua como sustancia de referencia para definir su escala de temperatura absoluta.\nII) 1 litro de agua a 40ºC tiene igual contenido calórico que 2 litros de agua a 40ºC.\nIII) En la escala Celsius y la escala Fahrenheit se mide el cero absoluto .",
+      "alternatives": [
+        "FFF",
+        "FVF",
+        "FFV",
+        "VFF",
+        "VVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale verdadero (V) o falso (F) según corresponda :\nI) Un cambio de temperatura de 1ºC es mayor que un cambio de temperatura de 1ºF.\nII) Cuando la temperatura en la escala de Celsius es igual a la temperatura en la escala Fahrenheit, se tiene una temperatura de 233K.\nIII) En una escala de temperatura absoluta pueden existir valores negativos.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FFV",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La capacidad termorreguladora del agua se explica porque esta molécula tiene",
+      "alternatives": [
+        "la propiedad de ascender por tubos finos.",
+        "alta constante dieléctrica.",
+        "la propiedad de disolver sustancias.",
+        "un elevado calor específico.",
+        "alta densidad."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/bioquimica-formulas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOQUÍMICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule aproximadamente la cantidad de calor, en kJ, que se desprende cuando 100g de vapor de agua a 150ºC se enfrían hasta convertirlo en 100g de hielo a 0ºC.\nCalor específico de vapor de agua=2,01 kJ/kgK\nCalor latente de vaporización del agua=2257 kJ/kg\nCalor específico del agua líquida=4,18 kJ/kgK\nCalor latente de fusión del agua=333,5 kJ/kg",
+      "alternatives": [
+        "305",
+        "311",
+        "327",
+        "332",
+        "353"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/01/simulacro-admision-uni-tercera-prueba-fisica-quimica-universidad-ingenieria-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNI 2027 TERCERA PRUEBA DE INGRESO SOLUCIONARIO UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Propiedad del agua que logra estabilizar la temperatura del organismo.",
+      "alternatives": [
+        "Difusión térmica",
+        "Calor especifico",
+        "Tensión Superficial",
+        "Constante Dieléctrica",
+        "Solubilidad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/niveles-de-organizacion-de-la-materia-viva-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ORGANIZACIÓN DE LOS SERES VIVOS  EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos cuerpos idénticos con temperaturas T A y T B , se ponen en contacto térmico.\nSi T A > T B , entonces en el equilibrio térmico",
+      "alternatives": [
+        "T A disminuye hasta T B .",
+        "T B aumenta hasta T A .",
+        "los cuerpos tienen la misma temperatura.",
+        "los cuerpos se han dilatado.",
+        "los cuerpos se han contraído."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-simulacro-de-examen-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La mayor parte de las necesidades energéticas actuales se cubren mediante los llamados combustibles fósiles. Al quemar cierto tipo de carbón, se liberó 8,36 × 10 6 J de energía incrementándose la temperatura en 20ºC. Determine la capacidad calorífica en cal/ºC de esta materia carbonífera.\nDato: 1 cal=4,18J",
+      "alternatives": [
+        "1,0×10 5",
+        "4,1 × 10 6",
+        "1,2 × 10 6",
+        "2,0 × 10 5",
+        "2,4 × 10 4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El sodio es una sustancia que se clasifica como elemento químico, es de color plateado, que se vuelve gris al exponerse al aire, y arde violentamente con el agua. Presenta una densidad de 0,968 g/ml, su punto de fusión es 97,81 °C, su capacidad calorífica es de 0,292 cal/g y su calor específico de 2,01 kJ/kg.K. Al respecto, seleccione el valor de verdad (V o F) para cada proposición.\nI ) La temperatura y la densidad son magnitudes derivadas.\nII ) La exposición del metal al aire implica un cambio químico.\nIII ) Se mencionan seis propiedades físicas y una propiedad química.",
+      "alternatives": [
+        "FVF",
+        "VVF",
+        "FVV",
+        "VFV",
+        "VFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el laboratorio de física se realiza el siguiente experimento: se mezclan 10,0 kg de hielo a –20,0°C con un litro de agua a 10,0°C.\nConsiderando c agua = 4,20×10 3 J/kg°C , c hielo = 2,10×10 3 J/kg°C y L f =3,30×10 5 J/kg los calores específicos del agua, del hielo y el calor latente de fusión del agua respectivamente, determine la temperatura final de la mezcla.",
+      "alternatives": [
+        "–2,29 °C",
+        "–2,08 °C CLIC AQUÍ Ver LO DE FISICA SOLUCIONES",
+        "–5,60 °C",
+        "2,08 °C"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionario-semana-6-manual-pre-san.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA A 2024-2 SALUD INGRESO UNIVERSIDAD PRUEBA RESUELTA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los estudiantes de Ingeniería de Industrias Alimentarias preparan una bebida energizante, siguiendo este procedimiento: en un recipiente que no absorba ni ceda calor se mezclan 200 g de agua a 20°C con 60 g de hielo a – 20°C. A esta mezcla se le vierten 150 g de un líquido especial a 90°C que es parte de la receta secreta. Si todo el sistema debe llegar a una temperatura de 10°C, halle el calor específico del líquido especial.\n(Calor específico del agua=1cal/g°C, calor específico del hielo=0,5cal/g°C, calor latente de fusión del hielo =80cal/g)",
+      "alternatives": [
+        "2/3 cal/g °C",
+        "2/5 cal/g °C",
+        "1/3 cal/g °C",
+        "1/2 cal/g °C",
+        "1/5 cal/g °C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/cepunt-solucionario-de-fisica-examen-resuelto-admision-unt-trujillo.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Debido a los fenómenos naturales que se están produciendo y que se producirán, la temperatura en Lima durante el verano es probable que llegue a los 30°C. En la escala Fahrenheit, ¿a cuánto equivale esta temperatura?",
+      "alternatives": [
+        "72 °F",
+        "44 °F",
+        "86 °F",
+        "50 °F",
+        "22 °F"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-6-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Alejandro y Miguel estudian juntos para rendir el examen de admisión. Cuando llegan al tema de calor, ¿cuál de las siguientes alternativas deben marcar como incorrecta?",
+      "alternatives": [
+        "La unidad del calor en el Sistema Internacional es el joule.",
+        "El calor puede desplazarse de una región a otra por conducción, convección o radiación.",
+        "El calor es la transferencia de energía debida a una diferencia de temperaturas.",
+        "1 caloría equivale a 4,186 J.",
+        "El calor latente es la energía necesaria para variar la temperatura de una sustancia."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/fisica-5to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-educacion-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una sustancia sólida de masa m=20g está a 80°C. Se coloca dentro de un recipiente que contiene 500g de agua a 25°C, lo cual produce que el agua y el cuerpo alcance la temperatura de 30°C. En estas circunstancias, despreciando el calor absorbido por el recipiente, determine el calor específico del sólido.\nDato: C ea =1 cal/g °C",
+      "alternatives": [
+        "3,5 cal/g °C",
+        "2,0 cal/g °C",
+        "1,5 cal/g °C",
+        "3,0 cal/g °C",
+        "2,5 cal/g °C"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Por qué en un día de playa podemos absorber mucho calor sin aumentar drásticamente la temperatura corporal de nuestros cuerpos?",
+      "alternatives": [
+        "Porque nuestros cuerpos tienen abundante agua y éste tiene alto calor específico.",
+        "Porque el agua de nuestros cuerpos tiene bajo calor específico y puede absorber abundante calor.",
+        "Porque el agua de nuestros cuerpos se evapora fácilmente y con eso se libera el calor.",
+        "Porque el agua la eliminamos mayormente por la orina",
+        "Porque el agua se ioniza en las células"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/biologia-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un calorímetro hermético que contiene un trozo de hielo de 100g de masa a –20ºC de temperatura y se le agrega, a través de un alambique, vapor de agua a 100ºC. Calcule la cantidad de vapor que debe ingresar al calorímetro para obtener agua a 20ºC.",
+      "alternatives": [
+        "17,7 g",
+        "16,1 g",
+        "20,4 g",
+        "18 ,8 g",
+        "19,7 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine a que temperatura en grados Fahrenheit , la lectura de la temperatura en la escala Celsius es menor en 24º que la lectura de la temperatura en la escala Fahrenheit.",
+      "alternatives": [
+        "18º",
+        "14º",
+        "24º",
+        "32º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una taza de porcelana de 0,5kg de masa y calor específico de 1050 J/g°C , se sirve café, registrándose que la taza eleva su temperatura en 60ºC. Calcular la cantidad de calor que absorbe la taza de porcelana.",
+      "alternatives": [
+        "30,5 MJ",
+        "31,5 MJ",
+        "32,5 MJ",
+        "34,5 MJ",
+        "35,0 MJ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/fisica-cayetano-heredia-examen-admision.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes enunciados es correcto?",
+      "alternatives": [
+        "La radiación electromagnética sólo tiene naturaleza corpuscular.",
+        "Las ondas ultravioletas son menos energéticas que las infrarrojas.",
+        "En el vacío la velocidad de la luz infrarroja es menor que la de la luz ultravioleta.",
+        "Un cuerpo con alta temperatura irradia energía continuamente.",
+        "En equilibrio térmico una esfera metálica a alta temperatura irradia más energía de la que absorve."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un calorímetro de capacidad calorífica 4 cal/C°, contiene 20 g de agua y se encuentran a 20 °C. Se le introduce 50 g de un mineral, que tiene una temperatura de 140 °C. Si la mezcla queda a 60 °C. Determine el calor específico del mineral. Considere el sistema aislado.",
+      "alternatives": [
+        "0,80 cal/g°C",
+        "0,20 cal/g°C",
+        "0,30 cal/g°C",
+        "0,24 cal/g°C",
+        "0,50 cal/g°C"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/fisica-untels-examen-resuelto-admision.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La acción disolvente y el alto calor específico del agua se deben a la presencia de .",
+      "alternatives": [
+        "la estructura primaria",
+        "los enlaces covalentes",
+        "los puentes de hidrógeno",
+        "un poder amortiguador",
+        "la flexibilidad y elasticidad de los tejidos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-biologia-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE BIOLOGÍA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un un recipiente de capacidad calorífica despreciable se mezclan 400 g de agua a 20°C con M gramos de agua a 70°C. Si la temperatura de equilibrio es de 50°C, calcule M.",
+      "alternatives": [
+        "500",
+        "300",
+        "600",
+        "400",
+        "800"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-fisica-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE FÍSICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Propiedad de la Molécula de agua que explica porqué los Tejidos corporales se hielan más rápido que cuando se deshielan:",
+      "alternatives": [
+        "constante Dieléctrica",
+        "calor Latente de Vaporización",
+        "conductividad Térmica",
+        "tensión Superficial",
+        "punto de Ebullición"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biomoleculas-inorganicas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOMOLÉCULAS INORGÁNICAS EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Propiedad que permite que algunos seres vivos puedan vivir sobre la superficie del agua:",
+      "alternatives": [
+        "capilaridad",
+        "calor específico",
+        "adhesión",
+        "tensión superficial",
+        "densidad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biomoleculas-inorganicas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOMOLÉCULAS INORGÁNICAS EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Característica del agua que permite que se mantenga la temperatura constante en los organismos:",
+      "alternatives": [
+        "tensión superficial",
+        "calor específico",
+        "fuerza de adhesión",
+        "densidad",
+        "capilaridad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biomoleculas-inorganicas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOMOLÉCULAS INORGÁNICAS EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Propiedad del agua por la cual las sustancias disueltas en ella son capilarmente activas:",
+      "alternatives": [
+        "conductividad Térmica",
+        "calor Específico",
+        "calor Latente de Vaporización",
+        "tensión Superficial",
+        "constante Dieléctrica"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biologia-molecular-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA MOLECULAR EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El mantenimiento del Cloruro de Sodio bajo la forma disociada, es debido a que el agua goza de la propiedad de:",
+      "alternatives": [
+        "conductividad Térmica",
+        "calor Específico",
+        "calor Latente de Vaporización",
+        "tensión Superficial",
+        "constante Dieléctrica"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biologia-molecular-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOLOGÍA MOLECULAR EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El zinc (Zn) es un metal maleable , dúctil y de color gris. Se ubica en el puesto 24 en cuanto a su abundancia en el planeta. Su calor específico es 0,387 cal/g°C, su densidad es alrededor de 7,14 g/cm³ y su punto de ebullición se alcanza a 907°C. Tiene la capacidad que al combinarse con ácido nítrico (HN O 3 ) se convertiría en nitrato de zinc, (Zn(N O 3 ) 2 ). Con respecto a este metal, clasifique sus propiedades resaltadas como físicas (F) o químicas (Q), respectivamente.",
+      "alternatives": [
+        "FFFQ",
+        "FQQF",
+        "FFQF",
+        "QFFQ",
+        "FQFQ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una barra metálica de 525 g aumenta su temperatura 10 °C cuando absorbe 1,05 kJ de calor. Su calor especifico, es",
+      "alternatives": [
+        "200 J/kg °C",
+        "175 J/kg °C",
+        "120 J/kg °C",
+        "220 J/kg °C",
+        "100 J/kg °C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Con qué velocidad se debe lanzar un trozo de hielo a 0°C, contra la pared, tal que cambie de fase íntegramente? (Agua líquida a 0°C). Calor latente de fusión del agua = 320 kJ/kg",
+      "alternatives": [
+        "800 m/s",
+        "600 m/s",
+        "400 m/s",
+        "200 m/s",
+        "100 m/s"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la diferencia de temperaturas entre las aguas de arriba y las de abajo de una catarata de altura 420 m. Calor específico del agua = 4200 J/kg.°C; g = 10m/s².",
+      "alternatives": [
+        "1,0°C",
+        "0,1°C",
+        "0,2°C",
+        "0,5°C",
+        "5,5°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente de capacidad calorífica despreciable se vierten 300 g de agua a 20°C y 700 g a 90°C. ¿Cuál será la temperatura final de equilibrio?",
+      "alternatives": [
+        "55°C",
+        "60°C",
+        "69°C",
+        "70°C",
+        "79°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo de capacidad calorífica 20 cal/°C, recibe 600 calorías cuando se encontraba a 30°C, ¿cuál será la temperatura final del proceso?",
+      "alternatives": [
+        "30°C",
+        "40°C",
+        "60°C",
+        "70°C",
+        "0°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A un recipiente de 0,4 kg de masa, se le suministra 0,6 kcal cuando se encuentra a una temperatura de 20°C y se observa que la temperatura llega a 35°C. ¿Cuál es el calor específico del material?",
+      "alternatives": [
+        "0,1 cal/g.°C",
+        "0,2 cal/g.°C",
+        "0,3 cal/g.°C",
+        "0,4 cal/g.°C",
+        "0,5 cal/g.°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la cantidad de agua a 50°C que se debe introducir a un calorímetro de capacidad calorífica despreciable que contiene 20 g de hielo a –20°C, para que la temperatura final de equilibrio sea 10°C.",
+      "alternatives": [
+        "50 g",
+        "60 g",
+        "70 g",
+        "80 g",
+        "90 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente de calor específico despreciable contiene 3kg de hielo a 0°C. ¿Cuántos kilogramos de vapor de agua a 100 °C se debe inyectar al recipiente, para obtener finalmente agua líquida a 100°C? Dar como respuesta la mínima cantidad de vapor de agua.",
+      "alternatives": [
+        "1 kg",
+        "2 kg",
+        "3 kg",
+        "4 kg",
+        "5 kg"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente de calor específico despreciable, contiene 20 gramos de hielo a –20 °C. ¿Cuántos gramos de agua a 100°C se debe verter en el recipiente, para obtener finalmente agua líquida a 0°C?",
+      "alternatives": [
+        "18 g",
+        "16 g",
+        "14 g",
+        "12 g",
+        "20 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un calorímetro de calor específico despreciable, en el cual se introduce 800 g de hielo a – 20°C y se vierte agua (líquida) a 0°C una cantidad de 800 g. Hallar la cantidad de hielo que queda en el recipiente cuando se alcanza la temperatura de equilbrio.",
+      "alternatives": [
+        "800 g",
+        "900 g",
+        "1000 g",
+        "1400 g",
+        "1600 g"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se disponen de dos termómetros con escalas Fahrenheit y Kelvin. ¿Qué temperatura en la escala Kelvin es numéricamente igual a la temperatura en la escala Fahrenheit?",
+      "alternatives": [
+        "574,25 K",
+        "275,25 K",
+        "625,20 K",
+        "650,20 K"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un calentador eléctrico de potencia 65 W es utilizado durante 120 s para calentar un líquido de 20 °C a 23 °C. Determine la capacidad calorífica del líquido asumiendo que todo el calor es absorbido por la sustancia.\n(1 J = 0.24 cal)",
+      "alternatives": [
+        "624 cal/°C",
+        "6240 cal/°C",
+        "62.4 cal/°C",
+        "312 cal/ºC"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos placas metálicas idénticas, ambas de igual masa m e igual calor específico c, tienen diferentes temperaturas. La temperatura de una placa es 20 °C y la temperatura de la otra placa es 90 °C. Si las placas se ponen en contacto, en un recinto térmicamente aislado, ¿cuál será su temperatura final de equlibrio?",
+      "alternatives": [
+        "50 °C",
+        "55 °C",
+        "45 °C",
+        "65 °C"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un experimento se determinó que la temperatura de fusión/solidificación de una aleación desconocida es – 25 °C, y su fase en estado líquido tiene un calor específico de 320 J/kg°C. Se coloca 0,1 kg de la aleación desconocida a – 25 °C en un calorímetro de aluminio de masa 0,15 kg que contiene 0,2 kg de mercurio. La temperatura inicial del calorímetro y el mercurio es 32 °C. El resultado de la mezcla es que toda la aleación desconocida se derrite y la temperatura final de equilibrio es 20 °C. ¿Cuál es el calor latente de fusión de la aleación desconocida? El calorímetro se encuentra totalmente aislado con el exterior.\n(c Al = 910 J/kg°C; c Hg = 138 J/kg°C)",
+      "alternatives": [
+        "529.2 J/kg",
+        "1969 J/kg",
+        "5292 J/kg",
+        "4202 J/kg"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente de masa m=10g y calor específico 20cal/g°C se tienen 40g de hielo a –10°C. Si se requiere derretir todo el hielo, ¿cuál es la mínima masa de una sustancia que tiene un calor específico de 5 cal/g°C a 20°C que se debe colocar en el recipiente?",
+      "alternatives": [
+        "54 g",
+        "5,4 g",
+        "5400 g",
+        "540 g",
+        "1054 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/fisica-unsa-examen-admision-agustin.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSA PRUEBA RESUELTA SAN AGUSTIN INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un calorímetro de equivalente en agua de 60g que contiene 20g de agua a 15°C se vierte 70g de agua a 30°C . ¿Cuál será la temperatura final de la mezcla?",
+      "alternatives": [
+        "20°C",
+        "21°C",
+        "22°C",
+        "23 °C",
+        "10°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para calentar 5 litros de agua de 15°C a 30°C se consume 75g de combustible. El agua está depositada en un recipiente cuyo equivalente en agua es de 300g.\nEl calor de combustión del combustible utilizado, (en cal/g), es:",
+      "alternatives": [
+        "1000",
+        "1030",
+        "1060",
+        "1090",
+        "1120"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/equilibrio-termico-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EQUILIBRIO TÉRMICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular las longitudes en cm de una varilla de latón y de una varilla de hierro para que, tengan una diferencia de longitud constante de 5 cm a todas las temperaturas. Los coeficientes de dilatación lineal del latón y del hierro son 0,000018 por °C y 0,000012 por °C respectivamente.",
+      "alternatives": [
+        "20; 15",
+        "10; 15",
+        "5;10",
+        "25; 20",
+        "20; 5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene dos varillas de acero, una mide 2 m a 0°C y la otra 2 m a 35°C. ¿Cuál será la diferencia de sus longitudes, en cm, cuando ambos estén a 30°C (el coeficiente lineal del acero es 12×1 –6 °C –1 ?",
+      "alternatives": [
+        "0,068",
+        "0,070",
+        "0,075",
+        "0,084",
+        "0,096"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tubo de metal tiene una longitud de 1m a 20°C. Se hace pasar a través de él vapor de agua a 95°C y se observa que se alarga hasta 1,003 m. el coeficiente de dilatación líneal del metal es:",
+      "alternatives": [
+        "10 –5 /°C",
+        "4×10 –5 /°C",
+        "4×10 –3 /°C",
+        "10 –3 /°C",
+        "2,5×10 –3 /°C"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea colocar un anillo de 2 cm de radio interno sobre un tubo de 2,1cm de radio externo, si inicialmente el anillo está a 25°C, ¿hasta qué temperatura, en °C, se le deberá colocar para que ingrese justo sobre el tubo? El coeficiente de dilatación superficial del material del cual está hecho el anillo es 0,002C –1 .",
+      "alternatives": [
+        "50",
+        "125",
+        "100",
+        "76",
+        "150"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una placa circular de área 20 cm² y coeficiente de dilatación lineal α=2,5×10 –3 °C –1 experimenta un incremento de su temperatura en 200°C, determine su nueva área.",
+      "alternatives": [
+        "50 cm 2",
+        "72 cm 2",
+        "20,2 cm 2",
+        "20,8 cm 2",
+        "16,8 cm 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A 15°C una rueda tiene un diámetro de 30cm y el diámetro interior de la llanta de acero es 29,96 cm.¿A qué temperatura debe calentarse la llanta para que pueda entrar en la rueda?\n(α acero = 11×10 –6 °C –1 )",
+      "alternatives": [
+        "100°C",
+        "104°C",
+        "136,4°C",
+        "109°C",
+        "120,5°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la relación entre las longitudes de dos varillas, una de cobre y otra de hierro, para que la diferencia de sus longitudes sea de 5cm a cualquier temperatura.\nα Cu = 16 ×10 –6 °C –1 ; α hierro = 12×10 –6 °C –1",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "3/4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una varilla de cobre de 3 m de longitud sujeta por un extremo y apoyada sobre rodillos de 1 cm de diámetro se calienta por acción de la corriente desde 20°C hasta 220°C, lo cual hace girar los rodillos. ¿Cuánto gira el último rodillo contado a partir del extremo fijo?\nα Cu = 17 ×10 –6 °C –1",
+      "alternatives": [
+        "117°C",
+        "105°C",
+        "102°C",
+        "200°C",
+        "98°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El centro de una rueda de locomotora se tornea con un diámetro de 1,427 m y la llanta con un diámetro interior 1,423 m ambos a 15°C. Para colocar la llanta se calienta hasta 400°C. ¿Cuánto puede enfriarse mientras se efectúa la operación de colocarla?\n(α Fe =11,8×10 –6 °C –1 )",
+      "alternatives": [
+        "120°C",
+        "132°C",
+        "143°C",
+        "147°C",
+        "181°C"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un volumen de 960 cm 3 de Hg, (de coeficiente de dilatación cúbica = 0,00018°C –1 ), está dentro de un recipiente de 1000cm 3 de capacidad (exacta) fabricado de un material de coeficiente de dilatación cúbica = 0,0000128/°C. Si se eleva la temperatura del conjunto de 0° a 250°C, entonces:",
+      "alternatives": [
+        "El Hg ocupa exactamente la capacidad del recipiente.",
+        "Se derrama 3,2 cm 3 de Hg.",
+        "Se derrama más de 3,2 cm 3 de Hg.",
+        "Es necesario añadir 3,2 cm 3 de Hg para llenar totalmente el recipiente.",
+        "Queda aún un volumen vacío en el recipiente."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cubo metálico que en condiciones normales de presión y temperatura tiene una masa =79,45 kg, siendo su densidad 11,35 g/cm 3 y su coeficiente de dilatación lineal igual a 2,8×10 –5 °C –1 , se coloca en un ambiente cuya temperatura es diferente y se comprueba que su nuevo volumen es 7058,8 cm 3 . Determine la temperatura del nuevo ambiente en °C.",
+      "alternatives": [
+        "80",
+        "100",
+        "120",
+        "140",
+        "160"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cuánto debe variar la temperatura de una sustancia para que su densidad disminuya en el 0,1% considere γ=10 –4 °C –1 .",
+      "alternatives": [
+        "5°C",
+        "8°C",
+        "12°C",
+        "10°C",
+        "25°C"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El mercurio a 0°C tiene una densidad igual a 13600kg/m 3 , y un coeficiente de dilatación cúbica de 1,82×10 –4 °C –1 . La densidad del mercurio en kg/m 3 a 20°C es entonces aproximadamente igual a:",
+      "alternatives": [
+        "14 550",
+        "91 35",
+        "13 650",
+        "13 550",
+        "13 450"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El período de un péndulo de hilo metálico es √10 , al descender la temperatura asume una frecuencia de 1/3 hertz. Encuéntrese el descenso de la temperatura. El hilo metálico tiene un coeficiente de dilatación lineal de 16×10 –5 °C –1 .",
+      "alternatives": [
+        "720°C",
+        "600°C",
+        "724°C",
+        "625°C",
+        "800°C"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A 0°C de temperatura y una atmósfera de presión la densidad del aluminio es 2,7 g/cm 3 y su coeficiente de dilatación lineal es α=23×10 –6 °C –1 . Calcular la temperatura en °C a la cual su densidad disminuye en 1,0%",
+      "alternatives": [
+        "116,4",
+        "126,4",
+        "136,4",
+        "146,4",
+        "156,4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se construye un cubo de lado a=10 cm, con varillas metálicas, de tal manera que ante un cambio de temperatura de 100°C su volumen aumenta en 1/8, respecto al volumen correspondiente a la temperatura inicial. Entonces el coeficiente de dilatación lineal (en 1/°C) de las varillas es:",
+      "alternatives": [
+        "1/8",
+        "3/8",
+        "1/24",
+        "1/240",
+        "1/2400"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/dilatacion-termica-lineal-superficial-volumetrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DILATACIÓN EJERCICIOS RESUELTOS PDF DILATACIÓN TÉRMICA LINEAL SUPERFICIAL Y VOLUMÉTRICA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente aislado, se agregan 250 g de hielo (0,5 cal/g °C) a 0 °C y 600 g de agua (1,0 cal/g °C) a 18 °C. La temperatura final de la mezcla, es:",
+      "alternatives": [
+        "–3 °C",
+        "–2 °C",
+        "7 °C",
+        "5 °C",
+        "0 °C"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/cambio-de-fase-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf-calor-latente-fusion-vaporizacion-solidificacion-condensacion.html",
+      "sourceName": "matematicasn.blogspot.com — CAMBIO DE FASE EJERCICIOS RESUELTOS PDF FUSIÓN – VAPORIZACIÓN – CONDENSACIÓN – SOLIDIFICACIÓN "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tres bloques de cobre de masas M1, M2 y M3 kg respectivamente se ponen en contacto térmico hasta alcanzar el equilibrio. Antes del contacto, estaban a T1, T2, T3 (T1 > T2 > T3). Suponiendo que no hay pérdida de calor hacia el entorno, la temperatura de equilibrio T es (s es el calor específico del cobre) T1 + T2 + T3",
+      "alternatives": [
+        "T = M1T1 + M 2 T2 + M 3 T3",
+        "T = M1 + M 2 + M 3 M 1T1 + M 2 T2 + M 3 T3",
+        "T = 3 ( M1 + M 2 + M 3 ) M1T1s + M 2 T2s + M 3 T3s",
+        "T = M1 + M 2 + M 3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep312.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.12 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Analizando algunas propiedades físicas del agua, una profesora le solicita a sus estudiantes determinar si el calor específico del agua cambia al disolver café instantáneo en ella. Al respecto, ¿cuál de las siguientes opciones corresponde al procedimiento adecuado para que los estudiantes puedan cumplir con el objetivo planteado?",
+      "alternatives": [
+        "Disolver café instantáneo en agua previamente calentada y medir el tiempo que la mezcla tarda en volver a la temperatura original.",
+        "Calentar agua y agua con café instantáneo disuelto en recipientes separados a una tasa constante y verificar que la evaporación sea la misma en ambos casos.",
+        "Calentar agua y agua con café instantáneo disuelto en recipientes separados a una tasa constante y verificar que ambos alcancen la misma temperatura al ebullir.",
+        "Poner a calentar a una tasa constante, durante un mismo tiempo, iguales cantidades de agua y agua con café instantáneo disuelto, y luego medir el aumento de temperatura en cada caso."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 33"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El radio de una esfera metálica a temperatura ambiente T es R, y el coeficiente de dilatación lineal del metal es α. La esfera se calienta ligeramente en una temperatura ∆T, de modo que su nueva temperatura es T + ∆T. El incremento en el volumen de la esfera es aproximadamente",
+      "alternatives": [
+        "2 π R α ∆ T",
+        "π R 2 α ∆ T",
+        "4π R 3α ∆T /3",
+        "4π R 3α ∆T"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep311.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.11 MCQ 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante la primera fase del proyecto de una planta de generación de energía eléctrica, los ingenieros del equipo de evaluación de impactos ambientales buscan saber si ese proyecto está de acuerdo con las normas ambientales. La nueva planta estará ubicada a orillas de un río, cuya temperatura media del agua es de 25 °C, y usará su agua solamente para refrigeración. El proyecto pretende que la planta opere con 1,0 MW de potencia eléctrica y, debido a restricciones técnicas, el doble de esa potencia será disipada por su sistema de enfriamiento, en forma de calor. Para cumplir con la resolución número 430, del 13 de mayo de 2011, del Consejo Nacional del Medio Ambiente, con un amplio margen de seguridad, los ingenieros determinaron que el agua solo podrá devolverse al río con un aumento de temperatura de, como máximo, 3 °C respecto a la temperatura del agua del río captada por el sistema de enfriamiento. Considere el calor específico del agua igual a 4 kJ/(kg °C). Para cumplir esa determinación, el valor mínimo del flujo de agua, en kg/s, para la refrigeración de la planta debe ser más cercano a",
+      "alternatives": [
+        "42.",
+        "84.",
+        "167.",
+        "250.",
+        "500."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2016/2016_PV_impresso_D1_CD1.pdf",
+      "sourceName": "gov.br-inep — ENEM 2016 dia 1 caderno azul questão 54"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un experimento, un profesor deja dos bandejas de la misma masa, una de plástico y otra de aluminio, sobre la mesa del laboratorio. Después de algunas horas, pide a los alumnos que evalúen la temperatura de las dos bandejas, usando para ello el tacto. Sus alumnos afirman, categóricamente, que la bandeja de aluminio se encuentra a una temperatura más baja. Intrigado, propone una segunda actividad, en la que coloca un cubo de hielo sobre cada una de las bandejas, que están en equilibrio térmico con el ambiente, y les pregunta en cuál de ellas la tasa de derretimiento del hielo será mayor. El alumno que responda correctamente a la pregunta del profesor dirá que el derretimiento ocurrirá",
+      "alternatives": [
+        "más rápidamente en la bandeja de aluminio, pues tiene una mayor conductividad térmica que la de plástico.",
+        "más rápidamente en la bandeja de plástico, pues inicialmente tiene una temperatura más alta que la de aluminio.",
+        "más rápidamente en la bandeja de plástico, pues tiene una mayor capacidad térmica que la de aluminio.",
+        "más rápidamente en la bandeja de aluminio, pues tiene un calor específico menor que la de plástico.",
+        "con la misma rapidez en las dos bandejas, pues presentarán la misma variación de temperatura."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2016/2016_PV_impresso_D1_CD1.pdf",
+      "sourceName": "gov.br-inep — ENEM 2016 dia 1 caderno azul questão 84"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el proceso de concentración del producto, se utiliza energía proveniente",
+      "alternatives": [
+        "solo del calor latente de vaporización.",
+        "solo del calor latente de condensación.",
+        "del calor sensible y del calor latente de vaporización.",
+        "del calor sensible y del calor latente de condensación.",
+        "del calor latente de condensación y del calor latente de vaporización."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2023 dia 2 caderno azul questão 122"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Todos los cambios de fase están asociados a un cambio de energía, pues son procesos isotérmicos. Considerando, en el caso del agua, un calor de vaporización igual a 40,7 kJ/mol, determine la energía en kJ, que absorben 900 mililitros de agua líquida a 100 °C para pasar a vapor (100 °C).\nDatos: Densidad del agua =1 g/mL\nPeso fórmula H 2 O= 18 g/mol",
+      "alternatives": [
+        "2,035×10 3",
+        "1,017×10 3",
+        "2,035×10 6",
+        "2,035×10 5",
+        "1,017×10 4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/quimica-deco-examen-resuelto-de-ingreso.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA DECO RESUELTA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El espacio de separación entre los rieles de acero de una línea ferroviaria es de 2cm. Cada riel tiene una longitud de 20 m a temperatura ambiente (T=20°C). En estas condiciones, calcule la temperatura máxima en que puede dilatarse cada riel antes de doblarse.\nDato: α acero =11×10 –6 °C –1",
+      "alternatives": [
+        "121 °C",
+        "105 °C",
+        "111 °C",
+        "134 °C",
+        "140 °C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/fisica-deco-examen-resuelto-de-ingreso.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA DECO RESUELTA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un depósito, se almacena petróleo en cilindros de 8 m de altura. Cuando la temperatura es –5 °C, el nivel del petróleo en cada cilindro está 30 cm por debajo del borde superior. Asumiendo que el coeficiente de dilatación volumétrica del petróleo es γ =1×10 –3 K –1 , ¿cuál de las siguientes es la afirmación correcta cuando la temperatura es 30 °C? (Considere que el cilindro no se dilata).",
+      "alternatives": [
+        "El petróleo llegará precisamente al borde del cilindro.",
+        "El petróleo estará 1 cm por debajo del borde del cilindro.",
+        "El petróleo estará 3 cm por debajo del borde del cilindro.",
+        "La altura del petróleo subirá más de 30 cm y se derramará."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/fisica-deco-examen-resuelto-de-ingreso.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA DECO RESUELTA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la estrella gigante Betelgeuse emite energía radiante a una tasa de 10 ⁴ veces mayor que el Sol, mientras que su temperatura es la mitad de la temperatura del Sol; considerando que ambas estrellas son absorbedoras perfectas y sea R S el radio del Sol, entonces el radio de la estrella Betelgeuse es",
+      "alternatives": [
+        "380R S",
+        "400R S",
+        "420R S",
+        "440R S",
+        "460R S"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unt-examen-resuelto-pd-trujilo.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la cantidad de calor, en cal, que se debe agregar para vaporizar 1,00 L de agua a 100 °C? Para el agua: L v = 540 cal/g",
+      "alternatives": [
+        "54,0×10²",
+        "27,0×10³",
+        "1,08×10 ⁵",
+        "5,40×10 ⁵",
+        "10,8×10³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para 100 cm³ de mercurio (Hg), cuando su temperatura cambia de 18 °C a 43 °C se calcula que su volumen se incrementa en: (coeficiente de dilatación volumétrica del mercurio 1,80×10 − ⁴ °C − ¹ )",
+      "alternatives": [
+        "0,20 cm ³",
+        "0,35 cm ³",
+        "0,40 cm ³",
+        "0,45 cm ³",
+        "0,65 cm ³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuánto calor sería necesario entregarle a 8g de agua que está a 0°C para vaporizarla?",
+      "alternatives": [
+        "512 cal",
+        "2 660 cal",
+        "10 240 cal",
+        "1 330 cal",
+        "5 120 cal"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala +1° a la temperatura de congelación del agua y 99° a la de ebullición .Se pregunta , ¿Cuál es la verdadera temperatura correspondiente a una lectura de 25°C?.",
+      "alternatives": [
+        "24°C",
+        "25°C",
+        "24,5°C",
+        "25,5°C",
+        "25,7°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A qué temperatura resulta exacta la indicada por el termómetro?.",
+      "alternatives": [
+        "40°",
+        "45°",
+        "50°",
+        "– 55°",
+        "60°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para asar un pollo a la brasa se necesita que la parrilla alcance una temperatura de 372,2°F. ¿A qué temperatura debo de fijar el graduador para asar el pollo, si la graduación está en grados centígrados?.",
+      "alternatives": [
+        "189°°C",
+        "159,4°C",
+        "128,5°C",
+        "325,2°C",
+        "192,0°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La temperatura del hielo seco (en su punto de sublimación normal) es de –109ºF y la temperatura de ebullición normal del etano es de – 88ºC . indique , ¿Cuál de las siguientes afirmaciones es la correcta?.",
+      "alternatives": [
+        "La temperatura del hielo seco menor que la ebullición normal del etano en 32°C.",
+        "Ambas temperaturas son iguales.",
+        "La temperatura de ebullición del etano es 32°F mayor que la del hielo seco .",
+        "La temperatura del hielo seco es mayor que la ebullición normal del etano.",
+        "Entre las dos temperaturas hay 21°C de diferencia ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una ciudad del polo sur, la temperatura promedio en invierno es – 31ºF y en el verano de 456R. Determine la diferencia de temperatura en unidades del SI.",
+      "alternatives": [
+        "3,0×10 1",
+        "3,5 ×10 1",
+        "1,5 ×10 1",
+        "2,5 ×10 2",
+        "5,5 ×10 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El bromo tiene una temperatura de congelación de – 7°C y una de ebullición de 59°C . Si se establece una nueva escala de temperatura en la que el bromo se congela a 0° y hierve a 100° , determine en la nueva escala de temperatura el valor que le correspondería a 26° C.",
+      "alternatives": [
+        "30",
+        "33",
+        "39",
+        "50",
+        "66"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una escala de temperatura «x» el agua hierve a 80°x y el alcohol etílico a 36°x . A cuántos grados «×» funde el hielo , si el punto de ebullición del alcohol etílico es de 78°C.",
+      "alternatives": [
+        "– 60",
+        "– 80",
+        "– 100",
+        "– 120",
+        "– 140"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ordenar en forma creciente las siguientes temperaturas:\n40°C ,300K ,113°F ,122°F , 273K Dar como respuesta el mayor de ellos :",
+      "alternatives": [
+        "40°C",
+        "300K",
+        "113 °F",
+        "122 °F",
+        "273 K"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine a qué temperatura hierve el agua en una nueva escala (°X) si se conoce que el hielo funde a 15°X y que cuando la temperatura es de –40 °F un termómetro en °X indica –15°X.",
+      "alternatives": [
+        "27",
+        "57",
+        "90",
+        "41",
+        "120"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMPERATURA EJERCICIOS RESUELTOS PDF CONVERSIÓN DE ESCALAS TERMOMÉTRICAS CELSIUS  FAHRENHEIT KELVIN RANKINE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la cantidad de calorías que se le debe entregar a 10g de hielo que se encuentra a –10°C para transformarlo en agua a 10°C",
+      "alternatives": [
+        "800",
+        "900",
+        "950",
+        "1000",
+        "650"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/guia-docente-matematica-primaria-cuadernos-de-trabajo-auto-aprendizaje-aprendo-en-casa-fichas-libros-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL INGENIERÍAS PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA C 2027 – ARQUITECTURA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Servicio Nacional de Meteorología e Hidrología del Perú (SENAMHI) informó que durante el inicio del 2023 en la costa se esperaban temperaturas máximas de 27°C y mínimas de 18°C. Al respecto, exprese la temperatura máxima en Fahrenheit y la mínima en Kelvin.",
+      "alternatives": [
+        "80,6 – 291",
+        "80,6 – 306",
+        "40,3 – 291",
+        "40,3 – 306",
+        "80,6 – 582"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/temperatura-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TEMPERATURA PROBLEMAS RESUELTOS DE TRANSFORMACIÓN DE ESCALAS CELSIUS FAHRENHEIT KELVIN RANKINE EN QUIMICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el agua contenida en un recipiente se introduce una resistencia que está conectada a una diferencia de potencial de 10V y se aísla térmicamente todo el conjunto. Luego de 418 segundos se desconecta la batería y se observa que la temperatura del agua se ha elevado en 10°C. Halle la cantidad de agua (en gramos) que hay en el recipiente (despreciar la capacidad térmica del recipiente y de la resistencia).",
+      "alternatives": [
+        "100",
+        "200",
+        "300",
+        "400",
+        "500"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/ley-o-efecto-joule-formulas-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE JOULE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El profesor de física entrega a un estudiante de Ingeniería Mecánica un anillo cuya área interna es de 20 cm 2 y le pide que determine el incremento de temperatura necesaria para que una varilla de sección transversal circular de área 20,008 cm 2 encaje justamente en el anillo; para ello le indica que el coeficiente de dilatación superficial del anillo es 4×10 –6 C.",
+      "alternatives": [
+        "100°C",
+        "10 °C",
+        "800°C",
+        "200°C",
+        "80°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-religiosa-5to-actividad-1-2-3-experiencia-9-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN QUINTOS INGENIERÍAS 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS PDF SOLUCIONARIO"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A cierto bloque de cierto metal con ( Ce =0,5) se le entregó 150 calorías y termino a 40°C.\n¿A qué temperatura se encontraba inicialmente si el bloque tiene 10g de masa?",
+      "alternatives": [
+        "10°C",
+        "20°C",
+        "30°C",
+        "35°C",
+        "40°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si en el problema anterior al bloque se le hubiera dado el doble de calor, entonces\n¿A qué temperatura habría terminado?",
+      "alternatives": [
+        "80°C",
+        "70°C",
+        "60°C",
+        "50°C",
+        "40°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos cuerpos (A) y (B) de la misma sustancia, pero m A = 2 m B . Entonces si queremos que los dos experimenten el mismo calentamiento.\n¿En que relación estarán los calores que se les tiene que dar?",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos cuerpos que están en las temperaturas de 30°C y 70°C se les pone en contacto y llegan a una temperatura final de equilibrio T.\nEntonces:\nI. T es mayor a 30°.\nII. T es mayor a 70°.\nIII. T es menor a 30°.\nIV. T es menor a 70°.\n¿Cuántas afirmaciones son correctas?",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se mezclan 100g de agua a 10°C con 300g de agua a 90°C.\n¿A qué temperatura terminara la mezcla?",
+      "alternatives": [
+        "50°C",
+        "60°C",
+        "70°C",
+        "80°C",
+        "90°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se mezclan 400g de agua a 15°C con 200g de agua a 45°C. ¿Cuál será la temperatura final de la mezcla?",
+      "alternatives": [
+        "20°C",
+        "25°C",
+        "30°C",
+        "35°C",
+        "40°C"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se mezcla agua en cantidades de 200g, 100g y 50g a las temperaturas de 20°C, 50°C y 100°C, respectivamente. ¿Cuál será la?",
+      "alternatives": [
+        "10°C",
+        "20°C",
+        "30°C",
+        "40°C",
+        "41°C"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se coloca un trozo de metal a 80°C, (Ce= 0,4) sobre 200 gramos de agua a 30°C, si al final la temperatura del agua es de 40°C, halla la masa del metal.",
+      "alternatives": [
+        "150g",
+        "125g",
+        "100g",
+        "75g",
+        "50g"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen 0,4 litros de agua a 80ºC en un recipiente de capacidad térmica despreciable.\n¿Qué cantidad de masa de agua a 20ºC se requiere mezclar con la anterior para obtener agua a 30ºC?",
+      "alternatives": [
+        "3kg",
+        "8kg",
+        "5kg",
+        "2kg",
+        "15kg"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea fundir un bloque de hielo de 10kg. que se encuentra a –15°C de temperatura. Halla la mínima cantidad de agua a 87,5°C que se debe utilizar para fundir totalmente el bloque de hielo.",
+      "alternatives": [
+        "7,5kg.",
+        "8kg.",
+        "12kg.",
+        "10kg.",
+        "15kg."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene 64kg. de hielo a 0°C. ¿Qué masa de vapor a 100°C habrá que hacer circular sobre el hielo para derretirlo?",
+      "alternatives": [
+        "8kg.",
+        "9kg.",
+        "7kg.",
+        "6kg.",
+        "10kg."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente que no absorbe calor contiene 60g de hielo a –20ºC, se introduce agua a 70ºC, observándose que la temperatura de la mezcla es de 10ºC. Determina la masa de agua que se utiliza.",
+      "alternatives": [
+        "80g",
+        "85g",
+        "95g",
+        "100g",
+        "120g"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente herméticamente cerrado y de equivalente en agua despreciable contiene 20g de hielo y 20g de agua, al sistema así en equilibrio se le introduce 120g de vapor de agua a 100ºC. Calcula la temperatura final de equilibrio.",
+      "alternatives": [
+        "470ºC",
+        "117,5ºC",
+        "0ºC",
+        "100ºC",
+        "Absurdo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde una altura de 40m., se suelta un bloque de hielo de 21kg. a 0ºC. Halla la cantidad de hielo que se derrite al impactar con el piso. Desprecia las pérdidas de energía al medio ambiente\n(1 cal=4,2 J)",
+      "alternatives": [
+        "24,5g",
+        "20kg",
+        "25,2g",
+        "40g",
+        "18,5g"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al mezclarse hielo a 0°C con agua a cierta temperatura se derriten “m” g. de hielo. Determina la temperatura inicial del agua sabiendo que si se hubieran agregado 20g. más de agua se habrían derretido 25g. más de hielo.",
+      "alternatives": [
+        "50°C",
+        "60°C",
+        "80°C",
+        "100°C",
+        "160°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente de equivalente en agua despreciable se tiene 0,5kg de hielo a 0ºC. Determina que masa de agua a 20ºC debe ingresar para lograr derretir exactamente todo el hielo.",
+      "alternatives": [
+        "3000g",
+        "4000g",
+        "2000g",
+        "1000g",
+        "5000g"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/calorimetria-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CALORIMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La temperatura de tres líquidos diferentes, A, B y C, de masas iguales, es 12, 18 y 28 °C respectivamente. Cuando A y B sean mezclados, la temperatura final de equilibrio es 16 °C. Cuando B y C sean mezclados, la temperatura de equilibrio es 23 °C. ¿Cuál será la temperatura de equilibrio cuando A y C sean mezclados?",
+      "alternatives": [
+        "20,0 °C",
+        "22,7 °C",
+        "17,3 °C",
+        "25,4 °C"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-fisica-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un maestro de carpintería metálica corta placas de acero de 0,06 m 2 que están a 120°C de temperatura; luego se enfrían hasta 20°C. Determine en qué porcentaje decreció el área de las placas si el coeficiente de dilatación lineal térmica del acero es 12×10 –6 (°C) –1 .",
+      "alternatives": [
+        "0,54 %",
+        "0,18 %",
+        "0,32 %",
+        "0,12 %",
+        "0,24 %"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estudio-y-representacion-de-funciones.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA INGENIERÍA INGRESO 2027-2 UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuánto calor será necesario entregarle a 50g de hielo que está a –15C, para que esté a punto de ser derretido?",
+      "alternatives": [
+        "3750cal",
+        "7500",
+        "750",
+        "375",
+        "1500"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/03/centro-preuniversitario-cepreunach-simulacion-de-la-prueba-de-ensayo-de-ingreso-universidad-ejercicios-resueltos-solucionario-del-simulacro-actualizado-claves-respuestas-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO CEPREUNACH 2027 INGRESO DIRECTO A LA UNIVERSIDAD SOLUCIONARIO PRUEBA DE ENSAYO – SIMULACIÓN PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un vaso con 200g de agua a 30°C se coloca un cubo de hielo a –10°C y la temperatura de equilibrio fue de 15°C. Si el sistema estuvo aislado, calcule (en g) la masa del cubo de hielo. La masa del vaso es de 100g.\nC vaso = 0,2 cal/g ° C\nC hielo = 0,5 cal/g °C\nL f =80 cal/g°C",
+      "alternatives": [
+        "22",
+        "59",
+        "44",
+        "11",
+        "33"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sistemas-de-ecuaciones-lineales-metodo.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 FÍSICA QUÍMICA TERCERA PRUEBA RESUELTA –RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la masa mínima aproximada (en g) de vapor de agua que se necesita para descongelar 400 g de hielo a 0 °C y llevarlo hasta 100°C (sin convertirse en vapor).\nL f = 333 kJ/kg\nL v =2260 kJ/kg\nc=4,18 kJ/kg.K",
+      "alternatives": [
+        "102,9",
+        "112,9",
+        "122,9",
+        "132,9",
+        "142,9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al regresar de un viaje, después de conducir toda la mañana, un conductor se detiene, al mediodía, en una estación de combustibles. Llena el tanque de gasolina de su camión con 430 litros y, luego, se retira a descansar. En el día, la temperatura es elevada, pero desciende hasta los 18°C en la noche. Después de descansar y antes de partir, por la noche, el chofer revisa su camión y nota que le faltan 24,5 litros de combustible. Si el tanque está construido con un material que no se dilata, ¿qué temperatura alcanzó al mediodía?\nDato: Coeficiente líneal de la gasolina =950×10 –6 °C –1",
+      "alternatives": [
+        "28°C",
+        "20°C",
+        "34°C",
+        "29°C",
+        "38°C"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/fisica-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente aislado térmicamente que contiene 200g de agua a una temperatura de 25°C se añade 20g de hielo que está a una temperatura de –5°C. Determina la temperatura de equilibrio que se logra (en °C).",
+      "alternatives": [
+        "15,2",
+        "16,8",
+        "10,4",
+        "12,6",
+        "9,6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/cepunt-solucionario-de-fisica-examen-resuelto-admision-unt-trujillo.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando se saca simultáneamente una botella de gaseosa de una congeladora (temperatura promedio igual a –18°C) y otra de la refrigeradora (temperatura promedio igual a 4°C), se observa que en la superficie de la primera se forma escarcha y en la segunda, pequeñas gotas de agua. Respecto de lo que sucede en la superficie de estas botellas, determine la alternativa correcta.",
+      "alternatives": [
+        "En la primera hay un cambio químico y en la segunda un cambio físico.",
+        "En ambas botellas se producen cambios estructurales del agua.",
+        "El cambio en la segunda botella se denomina condensación.",
+        "El cambio en la primera botella se denomina sublimación directa.",
+        "En las dos botellas se produce liberación de calor al entorno."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-quimica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS QUÍMICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para hidratarse en un día de verano, una persona coloca en un vaso 200g de refresco y le agrega un cubo de hielo de masa m=10g a –5°C. Después de cierto tiempo, el hielo se calienta a 0°C. En este contexto, halle el calor absorbido por el hielo.\nDato: C eH =0,5cal/g °C",
+      "alternatives": [
+        "20 cal",
+        "27 cal",
+        "25 cal",
+        "23 cal",
+        "29 cal"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los rieles por donde circulan los trenes se colocan con cierta separación entre ellos para evitar la deformación por los efectos de la dilatación debido a los cambios de temperatura. Si la temperatura durante un año fluctúa de 35°C en verano hasta –40°C en invierno y los rieles son de acero con una longitud de 25m, ¿qué separación mínima debe existir entre dos rieles contiguos para que no se deformen?\nDato: α acero =1,2×10 –5 (°C) –1",
+      "alternatives": [
+        "2,15 cm",
+        "4,50 cm",
+        "2,25 cm",
+        "3,25 cm",
+        "2,45 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se mide la temperatura de un cuerpo mediante dos termómetros, uno en grados centígrados y el otro en grados Fahrenheit, de tal forma que la lectura en grados centígrados es los 2/3 de la lectura en grados Fahrenheit. La temperatura del cuerpo, en grados Rankine, es:",
+      "alternatives": [
+        "255",
+        "156",
+        "600",
+        "345",
+        "300"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-examen-admision-agraria-unalm-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un termómetro fallado indica 5 °C para el hielo y marca 125 °C para el vapor de agua hirviendo. Entonces la temperatura real en grados Celsius cuando dicho termómetro marca 38 °C es",
+      "alternatives": [
+        "27,4",
+        "27,8",
+        "27,6",
+        "27,5",
+        "27,7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionarios-uni-2016-i-examen-de.html",
+      "sourceName": "matematicasn.blogspot.com — SEGUNDA PRUEBA ADMISIÓN UNI 2022 I SOLUCIONARIO MATEMÁTICAS UNIVERSIDAD DE INGENIERÍA 2022-1 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente de masa despreciable se encuentra 100g de hielo a –20°C. Hallar la mínima cantidad de agua a 30°C que se debe introducir para que todo el hielo se derrita.",
+      "alternatives": [
+        "250 g",
+        "300 g",
+        "350 g",
+        "400 g",
+        "450 g"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "indicar verdadero (V) o falso (F):\nI) A una misma temperatura no pueden coexistir dos fases distintas de una misma sustancia.\nII) A una misma temperatura no pueden coexistir dos fases distintas de dos sustancias diferentes.\nIII) A una misma temperatura no pueden coexistir las mismas fases de dos sustancias distintas.",
+      "alternatives": [
+        "VVV",
+        "FFV",
+        "VFF",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se vierten 2 kg de agua a 40°C sobre un gran bloque de hielo a 0°C. ¿Cuánto hielo se funde? ( L f = 80 cal/g)",
+      "alternatives": [
+        "0,5 kg",
+        "1,0 kg",
+        "1,5 kg",
+        "1,75 kg",
+        "0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente contiene 540 g de agua y 60 g de hielo a la temperatura de equilibrio 0 °C. Se introducen en este sistema 200 g de agua a 100 °C. Determinar la temperatura final de la mezcla.",
+      "alternatives": [
+        "0°C",
+        "15,5°C",
+        "19°C",
+        "100°C",
+        "50°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un automóvil de masa 400 kg tiene una velocidad de 5 m/s (hacia el norte). Calcular la cantidad de calorías producidas por los frenos cuando se detiene. 1 J = 0,24 cal.",
+      "alternatives": [
+        "21 000",
+        "1200",
+        "11 000",
+        "1490",
+        "5000"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se mezclan 580g de hielo a 0°C con 720 g de agua a 50°C, ¿qué cantidad de hielo quedará?",
+      "alternatives": [
+        "450 g",
+        "130 g",
+        "200 g",
+        "320 g",
+        "100 g"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una mezcla compuesta por 50 g de hielo y 100 g de agua a 0°C. ¿Qué cantidad de vapor a 120 °C, debe inyectarse para que solo se condense la tercera parte de esta masa de vapor agregada?",
+      "alternatives": [
+        "100 g",
+        "120 g",
+        "130 g",
+        "150 g",
+        "180 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A qué temperatura se enfrían 5 kg de agua a 100°C, dejando fusionar en ella 3 kg de hielo a 0°C?",
+      "alternatives": [
+        "27,5°C",
+        "42,5°C",
+        "37,5°C",
+        "32,5°C",
+        "52,5°C"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la temperatura de equilibrio de la mezcla de 992 g de hielo a 0°C y 160 g de vapor de agua a 100°C. El recipiente no gana ni pierde calor.",
+      "alternatives": [
+        "20°C",
+        "22°C",
+        "24°C",
+        "26°C",
+        "28°C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/hidrodinamica-calorimetria-continuidad-calor-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONTINUIDAD BERNOULLI PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque de hielo de masa 50g, tiene una temperatura de -10ºC cuando se saca de una congeladora y se deja caer dentro de un vaso con agua a 0ºC. Si no hay pérdida ni ganancia de calor con el exterior, ¿cuánta masa de agua se solidificará sobre el bloque?",
+      "alternatives": [
+        "3,1g",
+        "10,2g",
+        "5,4g",
+        "1,7g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo sólido en estado de reposo se puede expandir o contraer si se le aplican fuerzas apropiadas de tensión o comprensión sobre su superficie. Un efecto similar ocurre si un sólido se calienta o se enfría. Respecto de esta relación entre el cambio de volumen de un cubo metálico y la variación de su masa expresada, determine el valor (V o F) de los siguientes enunciados:\nI) Si se expande, el cubo tiene igual masa.\nII) Si se contrae, el cubo tiene menor masa.\nIII) Si se contrae, el cubo tiene igual peso.\nIV) Si se expande el cubo tiene mayor inercia.",
+      "alternatives": [
+        "VFVF",
+        "FVVF",
+        "VFFV",
+        "VVFV",
+        "FVFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepre-san-marcos-fisica-semana-8-2019-1.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una industria de alimentos, hay un proceso en el cual cada 200g de hielo a 0°C se mezcla con cierta cantidad de vapor de agua que está a la temperatura de 100°C y se obtiene, como resultado de este proceso, solo agua a 40°C. En este contexto, determine el valor de verdad (V o F) de las siguientes proposiciones:\nDatos: C agua = 1 cal/g°C , L vap =540 cal/g , L fusión =80 cal/g\nI) El calor absorbido por el hielo para convertirse en agua a 0 °C es 16 000 cal.\nII) La cantidad de vapor de 100°C empleado en el proceso es 30g.\nIII) El calor cedido por el vapor transformado en agua a 100°C para enfriarse a agua a 40°C es 2400 cal.",
+      "alternatives": [
+        "FVV",
+        "VFV",
+        "FFV",
+        "VVF",
+        "VVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/fisica-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ÁREA A SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para 100 cm 3 de mercurio (Hg), cuando su temperatura cambia de 18°C a 43°C se calcula que su volumen se incrementa en: (coeficiente de dilatación volumétrica del mercurio 1,80×10 –4 °C –1 )",
+      "alternatives": [
+        "0,20 cm 3",
+        "0,35 cm 3",
+        "0,40 cm 3",
+        "0,45 cm 3",
+        "0,65 cm 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/solucionario-unc-medicina-humana-veterinaria-examen-de-admision-universidad-nacional-de-cajamarca-modulo-B-prueba-resuelta-claves-desarrollo-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC INGRESO UNIVERSIDAD PRUEBA RESUELTA CAJAMARCA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considera dos varillas cilíndricas de dimensiones idénticas, una de caucho y la otra de acero. Ambas varillas están fijadas rígidamente por un extremo al techo. En el centro de cada uno de los extremos libres se cuelga una masa M.",
+      "alternatives": [
+        "Ambas varillas se alargarán, pero no habrá un cambio perceptible en su forma.",
+        "La varilla de acero se alargará y cambiará de forma, pero la de caucho solo se alargará.",
+        "La varilla de acero se alargará sin ningún cambio perceptible en su forma, pero la de caucho se alargará y la forma de su borde inferior cambiará a una elipse.",
+        "La varilla de acero se alargará, sin ningún cambio perceptible en su forma, pero la de caucho se alargará con la forma de su borde inferior afilándose hasta una punta en el centro."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep309.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.9 MCQ 8"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una tira bimetálica está hecha de aluminio y acero (αAl > αacero). Al calentarla, la tira",
+      "alternatives": [
+        "permanecerá recta.",
+        "se torcerá.",
+        "se doblará con el aluminio en el lado cóncavo.",
+        "se doblará con el acero en el lado cóncavo."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep311.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.11 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una varilla metálica uniforme gira alrededor de su mediatriz perpendicular con velocidad angular constante. Si se calienta uniformemente para elevar ligeramente su temperatura,",
+      "alternatives": [
+        "su velocidad de rotación aumenta.",
+        "su velocidad de rotación disminuye.",
+        "su velocidad de rotación permanece igual.",
+        "su velocidad aumenta porque su momento de inercia aumenta."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep311.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.11 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esfera, un cubo y una placa circular delgada, todos del mismo material y de la misma masa, se calientan inicialmente hasta la misma temperatura alta.",
+      "alternatives": [
+        "La placa se enfriará más rápido y el cubo más lento",
+        "La esfera se enfriará más rápido y el cubo más lento",
+        "La placa se enfriará más rápido y la esfera más lento",
+        "El cubo se enfriará más rápido y la placa más lento."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep311.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.11 MCQ 8"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una persona promedio trota, produce 14.5 × 103 cal/min. Esto se elimina mediante la evaporación del sudor. La cantidad de sudor evaporado por minuto (asumiendo que 1 kg requiere 580 × 103 cal para evaporarse) es",
+      "alternatives": [
+        "0.25 kg",
+        "2.25 kg",
+        "0.05 kg",
+        "0.20 kg"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep312.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.12 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se construye un termómetro con una escala X de modo que el punto de congelación del agua corresponde a – 20 °X y el punto de ebullición a 180 °X. ¿A qué temperatura en la escala X corresponde 20°C?",
+      "alternatives": [
+        "20 °X",
+        "30 °X",
+        "25 °X",
+        "10 °X"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al concepto de calor, indique la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. Cuanto mayor es la temperatura de un cuerpo, mayor es la cantidad de calor que almacena.\nII. El calor es la forma de energía que se propaga espontáneamente desde un cuerpo de mayor de temperatura hacia otro de menor temperatura.\nIII. Todo cuerpo que absorbe o libera calor siempre aumenta o disminuye su temperatura respectivamente.",
+      "alternatives": [
+        "VFF",
+        "FFV",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un laboratorio se dispone de un vaso pirex de vidrio térmicamente aislado, el cual contiene 10 g de hielo a la temperatura de – 15°C. ¿Cuál es la cantidad de calor que se requiere suministrar al hielo para que se transforme en vapor de agua a 100°C?\n(c hielo = 0,5 cal/g°C; c agua = 1 cal/g°C; L F = 80 cal/g; L V = 540 cal/g)",
+      "alternatives": [
+        "727,5 cal",
+        "7275 cal",
+        "72 750 cal",
+        "6 475 cal"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un vaso térmicamente aislado contiene 250 gramos de agua a 70 °C. ¿Qué masa de hielo a – 10 °C debe agregarse en el vaso para que la temperatura final del sistema sea 40 °C?\n(c hielo = 0.5 cal/g°C; c agua = 1 cal/g°C; L F = 80 cal/g)",
+      "alternatives": [
+        "50 g",
+        "90 g",
+        "60 g",
+        "25 g"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente contiene 1,08 kg de agua a la temperatura de 80 °C. Si se desprecia el calor absorbido por el recipiente, ¿cuántos cubitos de hielo de 50 g cada uno a – 6 °C deben introducirse en el recipiente para que la temperatura final de la mezcla sea de 25 °C?\n(c agua = 1 cal/g°C; c hielo = 0,5 cal/g°C; L F = 80 cal/g)",
+      "alternatives": [
+        "8",
+        "14",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A un recipiente térmicamente aislado que contiene 0,6 kg de hielo a – 15 °C se le suministra 99 900 cal de calor. ¿Cuánto calor requiere absorber el hielo para fundirse completamente?\n(c hielo = 0,5 cal/g°C; L F = 80 cal/g)",
+      "alternatives": [
+        "48 kcal",
+        "52,5 kcal",
+        "65,5 kcal",
+        "60 kcal"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un termo contiene 250 gramos de café con agua a 90 °C. Luego a este se le agrega 20 gramos de leche a 5 °C. ¿Cuál es la temperatura de equilibrio de la mezcla?\n(c agua = c café = c leche = 1 cal/g°C)",
+      "alternatives": [
+        "83,7 °C",
+        "55,6 °C",
+        "45,2 °C",
+        "96 °C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se dispone de un termómetro de masa 160 g que indica inicialmente una temperatura de 5 °C. Si al utilizar este termómetro para medir la temperatura de 240 g de agua, indica una temperatura de equilibrio de 45 °C, ¿cuál era la temperatura del agua antes de la inserción del termómetro?\n(c agua = 4190 J/kg°C; c termómetro = 838 J/kg°C)",
+      "alternatives": [
+        "45 °C",
+        "49 °C",
+        "43 °C",
+        "54 °C"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/fisica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una masa de agua de 300 g aumenta su temperatura de 30 °C a 80 °C. Luego, la energía que absorbió en ese proceso se la entrega a una masa de agua de 600 g a 20 °C. Si la masa de agua de 600 g absorbe toda la energía, ¿cuál es su temperatura final?",
+      "alternatives": [
+        "25 °C",
+        "40 °C",
+        "45 °C",
+        "50 °C",
+        "70 °C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 30"
     }
   ]
 }

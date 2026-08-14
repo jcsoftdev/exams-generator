@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Órgano encargado de elaborar el padrón electoral para los procesos electorales en nuestro país.",
-      "alternatives": ["ONPE", "JNE", "RENIEC", "MEF", "INEI"],
+      "alternatives": [
+        "ONPE",
+        "JNE",
+        "RENIEC",
+        "MEF",
+        "INEI"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html",
       "sourceName": "Cívica - Banco de preguntas resueltas examen de admisión (matematicasn), pregunta sobre padrón electoral"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuál de las siguientes alternativas es la finalidad que persigue el BCRP?",
-      "alternatives": ["Emisión de billetes y monedas", "Administrar reservas internacionales", "Fijar el encaje bancario", "Administrar el tipo de cambio", "Preservar la estabilidad monetaria"],
+      "alternatives": [
+        "Emisión de billetes y monedas",
+        "Administrar reservas internacionales",
+        "Fijar el encaje bancario",
+        "Administrar el tipo de cambio",
+        "Preservar la estabilidad monetaria"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html",
       "sourceName": "Cívica - Banco de preguntas resueltas examen de admisión (matematicasn), pregunta finalidad del BCRP"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Encargado de supervisar la legalidad de la ejecución del presupuesto del Estado.",
-      "alternatives": ["MEF", "INEI", "SUNAT", "SBS", "Contraloría General de la República"],
+      "alternatives": [
+        "MEF",
+        "INEI",
+        "SUNAT",
+        "SBS",
+        "Contraloría General de la República"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html",
       "sourceName": "Cívica - Banco de preguntas resueltas examen de admisión (matematicasn), pregunta legalidad presupuesto"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La _____ del Congreso designa al _____ a propuesta del Presidente de la República.",
-      "alternatives": ["Junta de portavoces – Director del BCRP", "Comisión permanente – Contralor General de la República", "Mesa directiva – Superintendente de la SBS", "Plenaria – Defensor del Pueblo", "Comisión de orden interno y seguridad – Director de la PNP"],
+      "alternatives": [
+        "Junta de portavoces – Director del BCRP",
+        "Comisión permanente – Contralor General de la República",
+        "Mesa directiva – Superintendente de la SBS",
+        "Plenaria – Defensor del Pueblo",
+        "Comisión de orden interno y seguridad – Director de la PNP"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-civica-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
       "sourceName": "Cívica - Prueba desarrollada tipo examen de admisión (matematicasn), pregunta 2 - designación Contralor"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Institución obligada a informar a la comunidad financiera sobre la evolución macroeconómica reciente y sobre todo la dinámica de la inflación y la ejecución de la política monetaria.",
-      "alternatives": ["Contraloría General de la República", "Superintendencia de Banca y Seguros", "Ministerio de Transportes y Comunicaciones", "Banco Central de Reserva del Perú", "Ministerio Público"],
+      "alternatives": [
+        "Contraloría General de la República",
+        "Superintendencia de Banca y Seguros",
+        "Ministerio de Transportes y Comunicaciones",
+        "Banco Central de Reserva del Perú",
+        "Ministerio Público"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-civica-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
       "sourceName": "Cívica - Prueba desarrollada tipo examen de admisión (matematicasn), pregunta 10 - política monetaria BCRP"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Órgano rector técnico del Sistema Nacional de Control con funciones relacionadas al uso adecuado de los recursos del Estado.",
-      "alternatives": ["Consejo Nacional de la Magistratura", "Ministerio Público", "Contraloría General de la República", "Poder Judicial", "Tribunal Constitucional"],
+      "alternatives": [
+        "Consejo Nacional de la Magistratura",
+        "Ministerio Público",
+        "Contraloría General de la República",
+        "Poder Judicial",
+        "Tribunal Constitucional"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-civica-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
       "sourceName": "Cívica - Prueba desarrollada tipo examen de admisión (matematicasn), pregunta 13 - Sistema Nacional de Control"
@@ -72,10 +108,1995 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En un referéndum realizado en Santiago de Chuco se comprobaron irregularidades con adulteración flagrante de las actas. La población exige la nulidad del proceso electoral. ¿Qué institución se encarga de declarar dicha nulidad?",
-      "alternatives": ["Oficina Nacional de Procesos Electorales (ONPE)", "Registro Nacional de Identificación y Estado Civil (RENIEC)", "Jurado Nacional de Elecciones (JNE)", "Comisión Permanente del Congreso de la República"],
+      "alternatives": [
+        "Oficina Nacional de Procesos Electorales (ONPE)",
+        "Registro Nacional de Identificación y Estado Civil (RENIEC)",
+        "Jurado Nacional de Elecciones (JNE)",
+        "Comisión Permanente del Congreso de la República"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://pdfz.blogspot.com/2019/08/civica-deco-A-B-D-examen-admision-universidad-san-marcos-resuelto-unmsm-pdf.html",
       "sourceName": "Cívica DECO A-B-D examen admisión UNMSM resuelto (pdfz), pregunta 2 - nulidad de referéndum (JNE)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se encarga de preparar y mantener actualizado el Padrón Electoral: (UNFV 2006)",
+      "alternatives": [
+        "RENIEC",
+        "ONPE",
+        "JNE",
+        "INABEC",
+        "INEI"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://banco-preguntas.blogspot.com/2013/03/preguntas-de-educacion-civica-unfv.html",
+      "sourceName": "banco-preguntas.blogspot.com — PREGUNTAS DE EDUCACION CIVICA (UNFV)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La Oficina Nacional de Procesos Electorales (ONPE) tiene como función principal la (UNMSM 2012)",
+      "alternatives": [
+        "administración de justicia en asuntos electorales.",
+        "organización de los procesos electorales.",
+        "inscripición de los jóvenes mayores de 18 años.",
+        "preparación y actualización del padrón electoral.",
+        "emisión del Documento Nacional de Identidad (DNI)."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://banco-preguntas.blogspot.com/2013/03/preguntas-de-educacion-civica.html",
+      "sourceName": "banco-preguntas.blogspot.com — PREGUNTAS DE EDUCACION CIVICA"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dentro de la estructura del Estado consagrada en la Constitución Política, se encuentra el sistema electoral conformado por el Jurado Nacional de Elecciones (JNE), la Oficina Nacional de Procesos Electorales (ONPE) y el Registro Nacional de Identificación y Estado Civil (Reniec). Resulta incorrecto afirmar que el Jurado Nacional de Elecciones se encarga de",
+      "alternatives": [
+        "organizar y ejecutar los diversos procesos electorales.",
+        "organizar y ejecutar referéndum y otras consultas populares.",
+        "mantener y custodiar el registro de organizaciones políticas.",
+        "administrar y disponer justicia en materia electoral.",
+        "preparar y mantener actualizado el padrón electoral."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/civica-admision-la-universidad-examen.html",
+      "sourceName": "matematicaj.blogspot.com — CÍVICA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El concejo municipal está conformado por el alcalde y los regidores conforme a la Ley Orgánica de Municipalidades. En cierta oportunidad, un nuevo alcalde tomó decisiones autoritarias, se enfrentó con los regidores y contrató a sus ahijados cercanos en la municipalidad. Los pobladores reaccionaron y lo denunciaron, por lo que se le inició un proceso penal por nepotismo. Ante estos hechos, ¿es posible iniciar el procese de vacancia?",
+      "alternatives": [
+        "No, pues no existe una sentencia judicial emitida en última instancia contra el alcalde.",
+        "Sí, si se comprueba la apertura del proceso penal por nepotismo por contratar ahijados.",
+        "No, ya que, primero, debe pronunciarse formalmente el Jurado Nacional de Elecciones.",
+        "No, porque los contratados no están dentro del cuarto grado de consanguinidad."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/civica-simulacro-san-marcos-solucionario-admision-a-la-universidad-2020-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — EDUCACIÓN CÍVICA DECO RESUELTA"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La autoridad máxima en la organización y ejecución de los procesos electorales se denomina.",
+      "alternatives": [
+        "ONPE.",
+        "INEI.",
+        "PNP.",
+        "RENIEC.",
+        "SUNAT"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/Test-de-cultura-general-resuelto-con-claves-y-respuestas-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CULTURA GENERAL DEL PERÚ 2027 PRUEBA DESARROLLADA 2026 PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El sistema electoral peruano está conformado por:",
+      "alternatives": [
+        "Jurado Nacional de Elecciones – Oficina Nacional de Procesos Electorales – Oficina de Normalización Previsional.",
+        "Junta Nacional de Justicia – Instituto Nacional de Estadística e Informática – Registro Nacional de Identificación y Estado Civil.",
+        "Junta Nacional de Elecciones – Oficina Nacional de Procesos Electorales – Registro Nacional de Natalidad",
+        "Junta Nacional de Justicia – Oficina Nacional de Procesos Electorales – Registro Nacional de Identificación y Estado Civil.",
+        "Jurado Nacional de Elecciones – Oficina Nacional de Procesos Electorales – Registro Nacional de Identificación y Estado Civil."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/Test-de-cultura-general-resuelto-con-claves-y-respuestas-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CULTURA GENERAL DEL PERÚ 2027 PRUEBA DESARROLLADA 2026 PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El jefe del Registro Nacional de Identificación y Estado Civil es nombrado por:",
+      "alternatives": [
+        "el Jurado Nacional de Elecciones.",
+        "el Congreso de la República.",
+        "la Oficina Nacional de Procesos Electorales.",
+        "La Junta Nacional de Justicia",
+        "el Tribunal Constitucional."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/la-constitucion-politica-y-el-estado-preguntas-resueltas-civica-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicaj.blogspot.com — CONSTITUCIÓN POLÍTICA–PODERES DEL ESTADO PERUANO PREGUNTAS RESUELTAS DE CÍVICA PREUNIVERSITARIA"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Renacer Republicano es un movimiento político que en su ideario promueve, justifica y sostiene que, en situaciones determinadas, replicaría las violaciones a los derechos humanos ocurridas durante las décadas de conflicto armado interno que padeció nuestro país. Lo anterior, fue tomado como argumento por el Jurado Nacional de Elecciones para denegarle la inscripción en el Registro de las Organizaciones Políticas (ROP). De lo descrito. ¿fue legal la decisión tomada por el ente electoral?",
+      "alternatives": [
+        "No, porque el derecho a la participación política es irrestricto y, por tanto, no está sometido a ningún impedimento.",
+        "Sí, porque están impedidas las organizaciones políticas cuyo contenido doctrinario promueva la destrucción del Estado de Derecho.",
+        "Sí, porque solo pueden ser legalizados los movimientos políticos de alcance regional y local.",
+        "No, porque la entidad deI sistema electoral que tiene esa atribución es la Oficina Nacional de Procesos Electorales."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/01/civica-examen-desarrollado-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN DE CÍVICA RESUELTO DE ADMISIÓN UNIVERSIDAD CON CLAVES Y SOLUCIONES"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El domingo 4 de diciembre se realizó en nueve regiones del país la Segunda Elección Regional 2022 para gobernador y vicegobernador regional. Sobre este proceso electoral, es correcto afirmar que\nI ) el Jurado Nacional de Elecciones se encargó de organizar los debates electorales.\nII ) el padrón electoral de las nueve regiones tuvo que ser renovado por la ONPE.\nIII ) el Reniec fiscalizó los datos consignados en las hoja de vida de los candidatos.\nIV ) la ONPE implementó las medidas de bioseguridad en los locales de votación.",
+      "alternatives": [
+        "I y IV",
+        "II, III y IV",
+        "II y IV",
+        "I y III",
+        "I, III y IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/educacion-civica-preguntas-resueltas-semana-17-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CÍVICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los últimos comicios regionales y municipales se celebraron en octubre del 2022. En Lima Metropolitana los organismos electorales tuvieron una ardua labor, logrando que este evento democrático se desarrolle con total normalidad. De lo mencionado, establezca la relación correcta entre las siguientes entidades y la función realizada en dicho proceso.\nI ) La Oficina Descentralizada de Procesos Electorales de Lima Centro.\nII ) El Jurado Electoral Especial de Lima Centro.\nIII ) El Registro Nacional de Identificación y Estado Civil.\nIV ) El Pleno del Jurado Nacional de Elecciones.",
+      "alternatives": [
+        "Revocó el fallo que anulaba las elecciones municipales en Lince.",
+        "Se encargó del sorteo, publicación y entrega de credenciales de los miembros de mesa.",
+        "Dispuso el cierre del Padrón Electoral en octubre de 2021.",
+        "Proclamó al ganador de las elecciones a la alcaldía provincial del Lima.",
+        "Ib, IId, IIIc, IVa"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/educacion-civica-preguntas-resueltas-semana-17-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CÍVICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Consulado General del Perú en Buenos Aires emitió un comunicado señalando que, un organismo del sistema electoral, ha dispuesto que los peruanos en el exterior podrán elegir en el año 2021 al nuevo Jefe de Estado y dos congresistas que los represente. El requisito es haber realizado el cambio de domicilio en su DNI con dirección en el extranjero. De acuerdo al texto, ¿qué organismo es responsable de dichas disposiciones generales?",
+      "alternatives": [
+        "la Oficina Nacional de Procesos Electorales.",
+        "el Registro Nacional de Identificación y Estado Civil.",
+        "el Jurado Nacional de Elecciones.",
+        "la Oficina Descentralizada de Procesos Electorales."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/educacion-civica-preguntas-resueltas-semana-17-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CÍVICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Registro Nacional de Identificación y Estado Civil, es el organismo público autónomo encargado de la identificación de los peruanos, que registra hechos vitales y otros que modifican el estado civil. Con relación a esta entidad identifique sus funciones.\nI. Preparar y mantener actualizado el padrón electoral.\nII. Emitir el día de las elecciones los duplicados del DNI.\nIII. Acreditar las constancias de los miembros de mesa suplentes.\nIV. Registrar las resoluciones de inhabilitación de ciudadanos.",
+      "alternatives": [
+        "I y III",
+        "I y II",
+        "II y III",
+        "I y IV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/educacion-civica-preguntas-resueltas-semana-17-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CÍVICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un funcionario de un órgano del sistema electoral manifestó: “el objetivo de nuestra entidad, en las elecciones de abril del año 2021 es, triplicar el número de locales de votación, a fin de evitar que haya mucha concentración de personas e impedir posibles contagios de Covid – 19”. A partir de esta declaración, podemos inferir que el funcionario pertenece",
+      "alternatives": [
+        "al Jurado Nacional de Elecciones.",
+        "al Registro Nacional de Identificación y Estado Civil.",
+        "a la Oficina Nacional de Procesos Electorales.",
+        "a los Jurados Especiales Electorales."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/educacion-civica-preguntas-resueltas-semana-17-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — CÍVICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es posible afirmar que la diferencia entre el número de habitantes en el Perú recogido por el censo de 2017 y el de los peruanos consignados por el Reniec tiene su razón de ser en que",
+      "alternatives": [
+        "existen aproximadamente 3 millones de peruanos que viven en el extranjero.",
+        "hubo un porcentaje de la población que no fue censada el día programado.",
+        "las coordinaciones entre las instituciones implicadas tuvieron diversos incidentes.",
+        "la demora en la publicación de los datos del censo de 2017 ha sido excesiva."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/comprension-de-lectura-clase-4-ejercicios-resueltos-de-pre-universidad.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD VERBAL COMPRENSIÓN DE TEXTOS SAN MARCOS SOLUCIONADO"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A Maritza le tocó ser miembro de mesa en las últimas elecciones, ella recibió los planillones con la lista de todos los votantes aptos para esos comicios. ¿Qué entidad se encarga de proporcionar al JNE y a la ONPE información necesaria para que cumplan sus funciones?",
+      "alternatives": [
+        "El Registro Nacional de Identificación y Estado Civil",
+        "El Congreso de la República",
+        "La Fiscalía de la Nación",
+        "La Oficialía Mayor del Congreso",
+        "La Contraloría General de la República"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/curvas-en-el-plano-lugares-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA BIOMÉDICAS 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La siguiente definición:\n“Es el órgano supremo de control de la Constitución. Máximo guardián e intérprete de la Constitución Política del Perú”.\n¿A qué organismo constitucional autónomo se refiere?",
+      "alternatives": [
+        "Tribunal Constitucional",
+        "JNE",
+        "Defensoría del Pueblo",
+        "ONPE",
+        "Fiscalía de la Nación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/1ro-2do-experiencia-de-aprendizaje-integrada-2-aprendo-en-casa-primer-segundo-grado-de-secundaria-actividades-resueltas-web-tv-radio-word-descargas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNAH 2027 INGRESO UNIVERSIDAD AUTÓNOMA DE HUANTA CLAVES – RESPUESTAS – PRUEBA DE ENSAYO – SIMULACIÓN RESUELTA PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando hay elecciones presidenciales o municipales en el Perú, vemos tres instituciones electorales en acción: la que se encarga de la tarea práctica de imprimir las cédulas de votación, distribuir las ánforas a los colegios y contar los votos después de la elección se denomina _______",
+      "alternatives": [
+        "el Jurado Nacional de Elecciones (JNE)",
+        "el Registro Nacional de Identificación y Estado Civil (RENIEC)",
+        "la Oficina Nacional de Procesos Electorales (ONPE)",
+        "el Banco Central de Reserva del Perú (BCRP)",
+        "el Tribunal Constitucional (TC)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/5to-actividad-1-dpcc-experiencia-9-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FORMACIÓN CÍVICA Y CIUDADANA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale cuál no es requisito indispensable para ser candidato a la Presidencia de la República:",
+      "alternatives": [
+        "tener 35 años al momento de postulación.",
+        "haber nacido en el territorio patrio.",
+        "estar inscrito en la RENIEC.",
+        "gozar del derecho de sufragio.",
+        "todos son requisitos formales."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/presidente-de-la-republica-del-peru-consejo-de-ministros-estructura-del-poder-ejecutivo-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com —  EL PODER EJECUTIVO EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale cuál es requisito para el candidato a la Primera Magistratura en nuestro país.",
+      "alternatives": [
+        "Tener 35 años al momento de su inscripción.",
+        "Haber nacido en el territorio patrio.",
+        "Estar inscrito en la RENIEC.",
+        "Gozar del derecho de sufragio.",
+        "Todos son requisitos formales."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/presidente-de-la-republica-del-peru-consejo-de-ministros-estructura-del-poder-ejecutivo-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com —  EL PODER EJECUTIVO EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Auspiciosamente, la mayoría de la comunidad de Santiago de Chuco participó en el último proceso de referéndum convocado por el Ejecutivo para consultar a la ciudadanía sobre ciertos aspectos relacionados con la gobernabilidad. Pero, al concluir los comicios, surgieron dudas en cuanto a la transparencia del acto electoral por adulteración flagrante de las actas.\nLa población reclama, en consecuencia, la nulidad del proceso electoral. ¿Qué institución se encarga de dicho proceso?",
+      "alternatives": [
+        "la Oficina Nacional de Procesos Electorales",
+        "el Registro Nacional de Identificación y Estado Civil",
+        "el Jurado Nacional de Elecciones",
+        "la Comisión Permanente del Congreso de la República"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/contraloria-general-de-la-republica-bcrp-superintendencia-de-banca-organos-constitucionales-autonomos-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CONTRALORÍA GENERAL EN EL PERÚ– SUPERINTENDENCIA – BCRP – SBS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pablo Arroyo, funcionario de la Junta Nacional de Justicia, señala que una de las funciones de su institución es la elección de los:",
+      "alternatives": [
+        "Ministros de Estado.",
+        "Alcaldes y regidores.",
+        "Jueces de Paz.",
+        "Directores del BCRP.",
+        "Jefes de la ONPE y el Reniec."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/contraloria-general-de-la-republica-bcrp-superintendencia-de-banca-organos-constitucionales-autonomos-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CONTRALORÍA GENERAL EN EL PERÚ– SUPERINTENDENCIA – BCRP – SBS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Realiza la verificación de firmas para la inscripción de Partidos Políticos, para la inscripción de candidatos representantes de los colegios profesionales para la elección de consejeros del Consejo Nacional de la Magistratura por los miembros de los colegios profesionales del país, y de referéndum relativo a la conformación y creación de regiones y otras que disponga la ley.",
+      "alternatives": [
+        "ONPE",
+        "JNE",
+        "Reniec",
+        "Registro de Organizaciones Políticas",
+        "Registro especial de organizaciones políticas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/contraloria-general-de-la-republica-bcrp-superintendencia-de-banca-organos-constitucionales-autonomos-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CONTRALORÍA GENERAL EN EL PERÚ– SUPERINTENDENCIA – BCRP – SBS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se encarga de brindar durante los procesos electorales, la máxima cooperación a la Oficina Nacional de Procesos Electorales, facilitando, de ser necesario, el uso de su infraestructura, material y recursos humanos",
+      "alternatives": [
+        "Policía Nacional",
+        "Fuerzas armadas",
+        "ONPE",
+        "RENIEC",
+        "JNE"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/contraloria-general-de-la-republica-bcrp-superintendencia-de-banca-organos-constitucionales-autonomos-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CONTRALORÍA GENERAL EN EL PERÚ– SUPERINTENDENCIA – BCRP – SBS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante las últimas semanas en nuestro país se ha detectado una irregularidad en un partido político muy conocido, esto debido a que no ha informado de donde ha sacado parte de los ingresos usados durante la campaña electoral, mostrando incongruencias con lo usado y lo justificado, es por ello que se piensa establecer una sanción ante mencionada situación, el encargado de realizarlo es:",
+      "alternatives": [
+        "Oficina nacional de procesos electorales",
+        "Jurado nacional de elecciones",
+        "Registro nacional de identidad y estado civil",
+        "Ministerio publico",
+        "Registro de organizaciones políticas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/contraloria-general-de-la-republica-bcrp-superintendencia-de-banca-organos-constitucionales-autonomos-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CONTRALORÍA GENERAL EN EL PERÚ– SUPERINTENDENCIA – BCRP – SBS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Verifica y controla externamente la actividad económico-financiera de las organizaciones políticas y sancionar aquellas que infrinjan las disposiciones sobre financiamiento establecidas en la Ley de Partidos Políticos.",
+      "alternatives": [
+        "JNE",
+        "ONPE",
+        "RENIEC",
+        "SUNAT",
+        "SUNARP"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/contraloria-general-de-la-republica-bcrp-superintendencia-de-banca-organos-constitucionales-autonomos-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CONTRALORÍA GENERAL EN EL PERÚ– SUPERINTENDENCIA – BCRP – SBS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Organismo comprometido con el fortalecimiento de nuestro sistema democrático, se encuentra al servicio de la ciudadanía bajo los principios rectores de imparcialidad, independencia, transparencia y eficacia. Se instaló por primera vez el 22 de septiembre de 1931, desde su inicio tuvo una conformación colegiada.",
+      "alternatives": [
+        "Sistema electoral peruano",
+        "RENIEC",
+        "JNE",
+        "Ministerio Público",
+        "ONPE"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/contraloria-general-de-la-republica-bcrp-superintendencia-de-banca-organos-constitucionales-autonomos-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CONTRALORÍA GENERAL EN EL PERÚ– SUPERINTENDENCIA – BCRP – SBS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entidad encargada de organizar y mantener el registro único de identificación de las personas naturales e inscribir los hechos y actos relativos a su capacidad y estado civil. Con tal fin desarrollará técnicas y procedimientos automatizados que permitan un manejo integrado y eficaz de la información",
+      "alternatives": [
+        "Sunarp",
+        "Reniec",
+        "Onpe",
+        "JNE",
+        "Sunat"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/contraloria-general-de-la-republica-bcrp-superintendencia-de-banca-organos-constitucionales-autonomos-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CONTRALORÍA GENERAL EN EL PERÚ– SUPERINTENDENCIA – BCRP – SBS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Su fin es velar porque se obtenga la fiel y libre expresión de la voluntad popular, manifestada a través de los procesos electorales que se llevan a cabo. Con relación a las organizaciones políticas, nos encargamos de la verificación de firmas de adherentes de los partidos políticos en proceso de inscripción; la verificación y control externos de la actividad económico-financiera, así como brindar asistencia técnico-electoral en los procesos de democracia interna.",
+      "alternatives": [
+        "Sistema electoral peruano",
+        "RENIEC",
+        "JNE",
+        "Ministerio Público",
+        "ONPE"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/contraloria-general-de-la-republica-bcrp-superintendencia-de-banca-organos-constitucionales-autonomos-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CONTRALORÍA GENERAL EN EL PERÚ– SUPERINTENDENCIA – BCRP – SBS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la ciudad de Lima se estará pensando iniciar un proceso de revocatoria contra una autoridad local, esto debido a que durante los primeros 100 días de su gestión no se ha visto una obra considerable en mencionada situación, es por ello que se está tratando de realizar dicho acto, en este caso la institución encargar de recibir mencionado proceso electoral es: Oficina nacional de procesos electorales",
+      "alternatives": [
+        "Oficina nacional de procesos electorales",
+        "Registro nacional de identidad y estado civil",
+        "Defensoría del pueblo",
+        "Registro de organizaciones políticas",
+        "Jurado nacional de elecciones"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/contraloria-general-de-la-republica-bcrp-superintendencia-de-banca-organos-constitucionales-autonomos-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CONTRALORÍA GENERAL EN EL PERÚ– SUPERINTENDENCIA – BCRP – SBS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Jurado Nacional de Elecciones fue creado, para garantizar la disputa electoral, principalmente, entre:",
+      "alternatives": [
+        "Fredena – Acción popular",
+        "Democracia Cristiana - Partido Social Progresista",
+        "Fredepa – APRA",
+        "Unión revolucionaria- Acción Popular",
+        "APRA – Unión Revolucionaria"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-tercer-militarismo-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL TERCER MILITARISMO EN EL PERÚ EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD – SANCHEZ CERRO – OSCAR R. BENAVIDES – BUSTAMENTE Y RIVERO"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para las elecciones presidenciales, el organismo encargado de organizar los procesos electorales, en el Perú, es",
+      "alternatives": [
+        "ONPE",
+        "RENIEC",
+        "INEI",
+        "JNE",
+        "JEE"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/posiciones-de-rectas-y-planos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNAH 2027 UNIVERSIDAD NACIONAL AUTÓNOMA DE HUANTA EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El complemento atributo indica cualidades, características o estados del sujeto a través de los verbos copulativos ser, estar o parecer. Según esta caracterización, señale los enunciados que presentan esta clase de complemento.\nI) Los alumnos han estado leyendo libros de gramática.\nII) Las enfermeras han estado preocupadas por tu salud.\nIII) Los heridos deben ser hospitalizados lo antes posible.\nIV) El uso de mascarillas será optativo para los escolares.\nV) Su organización política ya ha sido inscrita en el JNE.",
+      "alternatives": [
+        "II y IV",
+        "II y V",
+        "I y III",
+        "II y III",
+        "III y V"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/el-predicado-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL PREDICADO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el sistema electoral peruano, el Jurado Nacional de Elecciones es el órgano electoral constitucional autónomo encargado de _______ , siendo sus resoluciones dictadas en instancia final, definitiva, y no revisables. Complementariamente, la Oficina Nacional de Procesos Electorales es la responsable de _______ , velando para que se obtenga la libre expresión de la voluntad popular, en los procesos electorales que se llevan a cabo.",
+      "alternatives": [
+        "inscribir a los candidatos de acuerdo con las normas – expedir las credenciales de los candidatos elegidos.",
+        "actualizar permanentemente el padrón electoral – proclamar oficialmente los resultados electorales",
+        "mantener el registro de organizaciones políticas – diseñar la cédula de sufragio en las elecciones",
+        "emitir los documentos que acrediten al elector – brindar la información estadística acerca del escrutinio.",
+        "entregar las actas para difundir los resultados – otorgar información sobre el cómputo en las mesas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/examen-san-marcos-2019-i-deco.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN MARCOS 2027 I EXAMEN ADMISIÓN UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para ejercer la ciudadanía se requiere",
+      "alternatives": [
+        "inscripción en el JNE",
+        "tener estudios superiores",
+        "inscripción en la ONPE",
+        "saber leer y escribir",
+        "inscripción en el RENIEC"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/derechos-de-la-persona-segun-la-constitucion-politica-del-peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+      "sourceName": "matematicasn.blogspot.com — DERECHOS FUNDAMENTALES DE LA PERSONA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son autoridades que tienen la capacidad jurídica de celebrar el matrimonio civil.",
+      "alternatives": [
+        "Alcalde",
+        "Regidores",
+        "Sacerdotes",
+        "Funcionario de RENIEC",
+        "Todos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/importancia-del-matrimonio-en-la-sociedad-divorcio-requisitos-regimenes-patrimoniales-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+      "sourceName": "matematicasn.blogspot.com — MATRIMONIO Y DIVORCIO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El préstamo lingüístico consiste en la transferencia de un elemento lingüístico, principalmente de tipo léxico, de una lengua a otra. Designa un referente nuevo para el cual la lengua receptora no dispone del término. Tomando en cuenta esta aseveración, lea los enunciados y luego seleccione la alternativa en la que hay arabismos.\nI. Martina comió pan con aceituna .\nII. El alumno portaba una bandera .\nIII. El alcalde fue vacado por el JNE.\nIV. La presidenta pidió una tregua .",
+      "alternatives": [
+        "II y III",
+        "II y IV",
+        "I y III",
+        "I y II",
+        "III y IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/origen-evolucion-historia-del-castellano-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — HISTORIA DE LA LENGUA ESPAÑOLA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se encarga de convocar a elecciones generales:",
+      "alternatives": [
+        "el Presidente del JNE.",
+        "el Presidente del Congreso.",
+        "el Presidente de la Corte Suprema.",
+        "el Jefe de la ONPE.",
+        "el Presidente de la República."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PODERES DEL ESTADO PERUANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el enunciado Fernando se dirigió en bus desde Lima hacia el Reniec de Huamanga para sacar su DNI , las palabras resaltadas se han formado, respectivamente, por",
+      "alternatives": [
+        "acortamiento, acrónimo y sigla.",
+        "acrónimo, sigla y acortamiento.",
+        "sigla, acortamiento y acrónimo.",
+        "acortamiento, sigla y acrónimo.",
+        "acrónimo, acortamiento y sigla."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/morfologia-morfemas-flexivos-y-derivativos-estructura-formacion-de-palabras-ejemplos-preguntas-resueltas-lenguaje-preuniversitario-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MORFOLOGÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tiene como funciones básicas el planeamiento de la organización y la ejecución de procesos electorales y de referéndum.",
+      "alternatives": [
+        "INEI",
+        "ONPE",
+        "Registro Nacional de Identificación y Estado Civil",
+        "Sistema electoral",
+        "Congreso"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De las siguientes funciones cuál no pertenece a la ONPE:",
+      "alternatives": [
+        "Proclama los resultados electorales a los candidatos electos y otorga las credenciales correspondientes.",
+        "Diseña la cedula de sufragio, actas electorales, formatos y cualquier otro material en general.",
+        "Elabora todo el material electoral necesario.",
+        "Diseña y ejecuta el programa de capacitación a los miembros de mesa.",
+        "Realiza la verificación de firmas para la inscripción de los partidos políticos."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En las próximas elecciones generales, las entidades del sistema electoral cumplirán una serie de funciones conforme a lo establecido en la Constitución. De lo mencionado, determine el valor de verdad (V o F) de los siguientes enunciados:\nI) El Jurado Nacional de Elecciones fiscalizará el cumplimiento de las normas electorales.\nII) La Oficina Nacional de Procesos Electorales incorporará en el padrón electoral a las personas que cumplen años hasta el mismo día de la votación.\nIII) El Jurado Electoral Especial de Lima Centro resolverá en primera instancia las tachas de los candidatos presidenciales y congresales.\nIV) El Registro Nacional de Identificación y Estado Civil actualizará el padrón electoral y emitirá los duplicados del DNI.",
+      "alternatives": [
+        "FFVV",
+        "FVFV",
+        "VVVF",
+        "VFVV",
+        "FFFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es la máxima autoridad en lo referido a la organización y ejecución de procesos electorales de referéndum y otra consulta popular:",
+      "alternatives": [
+        "Reniec",
+        "ONPE",
+        "JNE",
+        "el Tribunal Constitucional",
+        "Ministerio Público"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las organizaciones políticas con sus respectivos candidatos que participaron en las Elecciones Regionales y Municipales suscribieron el Pacto Ético Electoral en cada una de las 25 regiones del país.\nAl respecto, ¿qué entidad se encargó de gestionar y promover la firma de dicho acuerdo?",
+      "alternatives": [
+        "El Registro Nacional de Identificación y Estado Civil",
+        "La Oficina Nacional de Procesos Electorales",
+        "Asociación Civil Transparencia",
+        "La Defensoría del Pueblo",
+        "El Jurado Nacional de Elecciones"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son funciones administrativas electorales del JNE:\nI) Determina las circunscripciones electorales y las sedes de los Jurados Electorales Especiales.\nII) Resuelve las apelaciones sobre actas electorales observadas y actas impugnadas. III) Inscribe a las encuestadoras electorales\nIV ) Prepara y mantiene actualizado el padrón electoral en coordinación con las ONPE.\nV ) Aprueba el padrón electoral.",
+      "alternatives": [
+        "I-III-V",
+        "I-III-IV",
+        "I-II-III",
+        "I-II-IV",
+        "III-IV-V"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Jurado Nacional de Elecciones resolvió improcedente el recurso de apelación que había presentado un partido político impugnando una cantidad importante de cédulas de sufragio de una mesa electoral. ¿Es posible que dicho partido pueda seguir con su demanda a una instancia superior?",
+      "alternatives": [
+        "Sí, debido a que un Tribunal de honor puede desestimar dicha declaración.",
+        "No, porque la Defensoría del Pueblo actúa de oficio.",
+        "Sí, demandando a la entidad electoral ante el Ministerio Público.",
+        "No, porque las resoluciones del Jurado Nacional de Elecciones no son revisables.",
+        "Sí, porque la Oficina Nacional de Procesos Electorales puede anular la sentencia."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Uno de los organismos del sistema electoral es el Jurado Nacional de Elecciones que tiene por finalidad asegurar la legalidad del proceso electoral a través de la",
+      "alternatives": [
+        "planificación.",
+        "organización.",
+        "acreditación.",
+        "fiscalización.",
+        "identificación."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante los comicios , en una mesa de sufragio del distrito capitalino de San Miguel, se detectó que tanto el total de votos como el total de votantes eran superiores al número de electores hábiles, razón por la cual se procedió a anular el acta electoral. Al respecto, se puede afirmar que la entidad con potestad para anular dicho documento en primera instancia fue",
+      "alternatives": [
+        "el Pleno del Jurado Nacional de Elecciones.",
+        "la Oficina Descentralizada de Procesos Electorales de Lima Centro.",
+        "el Jurado Electoral Especial de Lima Oeste.",
+        "el Registro Nacional de Identificación y Estado Civil.",
+        "el Jurado Electoral Especial de la Región Lima."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan contraerá nupcias con su novia actual, pero su anterior pareja afirma que no se encuentra divorciada de Juan. Para no retrasar los trámites matrimoniales y cumpliendo con los requisitos, el novio deberá acercarse _______ , para solicitar una constancia negativa de matrimonio y constatar la falsedad de lo dicho por su ex pareja.",
+      "alternatives": [
+        "a la Oficina Nacional de Procesos Electorales",
+        "al Ministerio Público",
+        "a la municipalidad del distrito",
+        "al Registro Nacional de Identificación y Estado Civil",
+        "a la Defensoría del Pueblo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Muchos jóvenes votarán por primera vez en las próximas elecciones, por eso existe la necesidad de brindarles información a través de la página oficial y capacitaciones por módulos virtuales y así asegurarse que el funcionamiento de las mesas de sufragio sea eficiente. La entidad encargada de realizar dichas capacitaciones es:",
+      "alternatives": [
+        "Oficina Nacional de Procesos Electorales.",
+        "Registro Nacional de Identificación y Estado Civil.",
+        "Consejo Electoral Municipal.",
+        "Academia Nacional de la Magistratura.",
+        "Jurado Nacional de Elecciones."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María se encuentra en silla de ruedas y desea ejercer su derecho al voto. Al llegar al local de votación, exige que le den facilidades, ya que no puede acceder a la mesa de sufragio ubicada en el tercer piso. Ante esta situación, el personal de la ONPE debe",
+      "alternatives": [
+        "tomar una decisión sobre la base de la capacidad logística del local de votación.",
+        "levantar un acta dispensando a María del sufragio por incapacidad física.",
+        "solicitar que le otorguen a María la dispensa para las próximas elecciones.",
+        "otorgarle las facilidades del caso, ya que el derecho al voto es irrenunciable.",
+        "darle una constancia de asistencia y dispensarla de la emisión de su voto."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el Perú, el planeamiento, la organización y la ejecución de los procesos electorales están a cargo del Sistema Electoral. Uno de los organismos que lo conforman es la Oficina Nacional de Procesos Electorales (ONPE), que cumple diversas funciones, como",
+      "alternatives": [
+        "brindar asistencia técnica en los comicios de las universidades públicas.",
+        "preparar y mantener actualizado el padrón electoral a nivel nacional.",
+        "designar a los miembros de mesa y entregar las credenciales respectivas.",
+        "resolver apelaciones sobre la elección de candidatos a nivel nacional.",
+        "presentar el presupuesto del sistema electoral para dos procesos seguidos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según el artículo 177 de la Constitución Política del Perú, el Sistema Electoral está conformado por el Jurado Nacional de Elecciones (JNE), la Oficina Nacional de Procesos Electorales (ONPE), y el Registro Nacional de Identificación y Estado Civil (Reniec); que actúan con autonomía y mantienen entre sí relaciones de coordinación, de acuerdo con sus atribuciones. De lo mencionado, relacione correctamente los siguientes organismos autónomos con su respectiva función.\nI) JNE\nII) ONPE\nIII) Reniec",
+      "alternatives": [
+        "Diseña y ejecuta el programa de capacitación operativa, dirigido a los miembros de mesa y ciudadanía en general, durante la realización de los procesos electorales.",
+        "Prepara y mantiene actualizado el padrón electoral que se somete a aprobación y es utilizado en el proceso electoral respectivo.",
+        "Vela por el cumplimiento de las normas sobre organizaciones políticas y demás disposiciones referidas a materia electoral.",
+        "Ic, IIa, IIIb",
+        "Ib, IIa, IIIc"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El sistema electoral tiene por objetivo garantizar que las votaciones traduzcan la expresión auténtica de la ciudadanía, reflejando la voluntad de los electores en las urnas. Los organismos del sistema electoral son el Jurado Nacional de Elecciones (JNE), la Oficina Nacional de Procesos Electorales (ONPE) y el Registro Nacional de Identificación y Estado Civil (RENIEC). Con respecto a las funciones de la ONPE, determine la alternativa que contiene el o los enunciados correctos.\nI. Diseña la cédula de sufragio, entrega las actas y los materiales necesarios para el desarrollo de las elecciones.\nII. Proclama los resultados de las votaciones, reconoce a los candidatos electos y les otorga sus respectivas credenciales.\nIII. Brinda información permanente sobre el cómputo, desde el inicio del escrutinio, en todas las mesas de sufragio.\nIV. Custodia el registro de las organizaciones políticas y les brinda asistencia técnica durante el acto electoral.",
+      "alternatives": [
+        "Solo I",
+        "Solo II y IV",
+        "I y III",
+        "Solo III",
+        "I, II y IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de cumplir los requisitos legales, un grupo de personas se inscribió en el Registro de Organizaciones Políticas con el fin de postular a las elecciones municipales de 2026. Como parte de su campaña, dicho grupo entregó cocinas a comedores populares en situación de precariedad. Al poco tiempo, el grupo fue notificado para ejercer su defensa ante una posible sanción que lo dejaría excluido del proceso electoral. A partir de estos datos, se puede afirmar que el tipo de organización que se inscribió fue ________ y la entidad que cursó la notificación fue ________.",
+      "alternatives": [
+        "un partido político – la Contraloría General de la República",
+        "una organización política – el Ministerio Público",
+        "un movimiento político – el Jurado Nacional de Elecciones",
+        "un movimiento político – la Oficina Nacional de Procesos Electorales",
+        "una organización política – el Poder Judicial"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Registro Nacional de Identificación y Estado Civil (Reniec) es uno de los tres organismos que forma parte del sistema electoral. Sobre las funciones de esta entidad determine el valor de verdad (V o F) de los siguientes enunciados:\nI) Registra los nacimientos, matrimonios, divorcios, defunciones y demás actos que modifiquen el estado civil de las personas.\nII) Garantiza la divulgación de los datos relativos a las personas que son materia de inscripción.\nIII) Prepara y mantiene actualizado el padrón electoral en coordinación con la Oficina Nacional de Procesos Electorales.\nIV) Encarga al JNE que realice la verificación de la autenticidad de las firmas de adherentes para procesos señalados por la ley.",
+      "alternatives": [
+        "VFVV",
+        "FVVF",
+        "VFFV",
+        "VVFF",
+        "VFVF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La oficina del Registro Nacional de Identificación y Estado Civil (RENIEC) no solo tiene la función de registrar la adecuada identificación de los ciudadanos y su estado civil, sino que también cumple otras funciones. De acuerdo con lo anterior, indique las funciones adicionales de esta institución.\nI. Preparar y mantener actualizado el padrón electoral a efectos del cumplimiento de las elecciones\nII. Brindar información actualizada a la Oficina Nacional de Procesos Electorales\nIII. Declarar la nulidad de los comicios cuando los votos viciados superan los dos tercios del número de votos emitidos\nIV. Proporcionar información al Jurado Nacional de Elecciones para que cumpla sus funciones",
+      "alternatives": [
+        "Solo II y IV",
+        "I y III",
+        "I, II y IV",
+        "Solo I y IV",
+        "II, III y IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los organismos del sistema electoral tienen por función básica el planeamiento, la organización y la ejecución de los procesos electorales. Uno de ellos es el Registro Nacional de Identificación y Estado Civil (RENIEC) cuya función es",
+      "alternatives": [
+        "otorgar las dispensas por no sufragar durante las elecciones.",
+        "encargarse de la elaboración y el diseño de la cédula de sufragio.",
+        "aprobar el registro de organizaciones políticas a nivel nacional.",
+        "emitir el documento que acredita la identidad de las personas.",
+        "proponer los trámites que no cambien el estado civil de los ciudadanos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de una exhaustiva investigación, un sintonizado programa televisivo difundió el contenido de un grupo privado en Facebook que pertenece a un partido inscrito en el registro de organizaciones políticas. El partido — que detenta una ideología conservadora y exhibe un ideario abiertamente fascista que promueve y alienta la xenofobia, la homofobia y la discriminación racial— organizó grupos paramilitares que operarían en diversas regiones del país, para alcanzar sus objetivos políticos mediante la violencia. Tomando conocimiento de estos antecedentes, la fiscal de la nación decide solicitar la declaración de ilegalidad del partido por conducta antidemocrática. ¿Ante qué organismo estatal debe hacerlo?",
+      "alternatives": [
+        "El Congreso de la República",
+        "La Corte Suprema de Justicia de la República",
+        "El Tribunal Constitucional",
+        "El Jurado Nacional de Elecciones"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El JNE qué tipo de democracia representa:",
+      "alternatives": [
+        "socialista",
+        "representativa",
+        "anarquista",
+        "dictatorial",
+        "republicana"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La máxima autoridad del JNE es un pleno compuesto por ______ miembros.",
+      "alternatives": [
+        "tres",
+        "cuatro",
+        "cinco",
+        "seis",
+        "diez"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Quién proporciona al JNE y a la ONPE la información necesaria para el cumplimiento de sus funciones?",
+      "alternatives": [
+        "CNM",
+        "el defensor del Pueblo",
+        "JNE",
+        "Reniec",
+        "ONPE"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Quién brinda información acerca del sufragio?",
+      "alternatives": [
+        "ONPE",
+        "Reniec",
+        "el defensor del Pueblo",
+        "JNE",
+        "JNJ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Quién vela por el cumplimiento de las normas sobre organizaciones políticas y demás disposiciones?",
+      "alternatives": [
+        "Reniec",
+        "ONPE",
+        "JNE",
+        "CMN",
+        "el Congreso"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son funciones de la ONPE:",
+      "alternatives": [
+        "investigar y denunciar los delitos",
+        "organizar y dirigir los procesos electorales",
+        "elaborar el padrón electoral",
+        "multar a los infractores de la ley",
+        "proclamar el ganador de una contienda electoral"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Proclama a los candidatos elegidos:",
+      "alternatives": [
+        "el Reniec",
+        "la ONPE",
+        "el JNE",
+        "el defensor del Pueblo",
+        "el representante del presidente"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Quién emite el documento de identidad (DNI)?",
+      "alternatives": [
+        "ONPE",
+        "Reniec",
+        "JNE",
+        "la municipalidad",
+        "el alcalde"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Le corresponde actos referidos al referéndum, incluidos su presupuesto, así como la elaboración de la cédula de sufragio:",
+      "alternatives": [
+        "el JNE",
+        "el presidente del Congreso",
+        "el presidente de la República",
+        "la ONPE",
+        "el Reniec"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es el organismo encargado del proceso electoral en nuestro país y que es el más autónomo de todos.",
+      "alternatives": [
+        "el Sistema Electoral",
+        "el Jurado Nacional de Elecciones",
+        "el presidente de la República",
+        "el Reniec",
+        "la ONPE"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es el encargado de dictar instrucciones y disposiciones para el mantenimiento del orden y la protección de la libertad personal durante los comicios. Estas disposiciones son de cumplimiento obligatorio para las Fuerzas Armadas y la Policía Nacional:",
+      "alternatives": [
+        "el Tribunal Constitucional",
+        "el Jurado Nacional de Elecciones",
+        "la Sala Plena de la Corte Suprema",
+        "la ONPE",
+        "el presidente del Comando Conjunto de las Fuerzas Armadas"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El JNE está dirigido por un pleno de cinco miembros siendo su presidente el:",
+      "alternatives": [
+        "representante de los fiscales supremos.",
+        "representante del Ministerio Público.",
+        "representante de la Corte Suprema.",
+        "representante del CAL.",
+        "elegido por los decanos de las facultades de derecho de las universidades nacionales."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El RENIEC tiene entre sus atribuciones:",
+      "alternatives": [
+        "recibir reclamos ante una ineficiente prestación de servicios públicos.",
+        "elaborar la cédula de sufragio.",
+        "censurar ministros de Estado.",
+        "mantener actualizado el padrón electoral.",
+        "sancionar a los funcionarios públicos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El jefe del RENIEC y el jefe de la ONPE son nombrados respectivamente por:",
+      "alternatives": [
+        "Congreso - Congreso.",
+        "JNE - Congreso.",
+        "CNM - CNM.",
+        "CNM - Tribunal Constitucional.",
+        "Ministerio Público - CNM."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre sus atribuciones se encuentran el de entregar las credenciales a los candidatos que vencieron en una contienda electoral:",
+      "alternatives": [
+        "el Congreso",
+        "el sistema electoral",
+        "el RENIEC",
+        "el JNE",
+        "la ONPE"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Órgano que se encarga de elaborar la cédula de sufragio y dar los cómputos oficiales después de un proceso electoral:",
+      "alternatives": [
+        "ONPE",
+        "Registro Electoral",
+        "Registro Público",
+        "municipalidades",
+        "RENIEC"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La máxima autoridad del JNE es un(a) ____ compuesto (a) por ____ miembros.",
+      "alternatives": [
+        "junta de Fiscales - 5",
+        "pleno - 7",
+        "directorio - 4",
+        "jurado - 6",
+        "pleno - 5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Órgano del sistema electoral encargado de llevar a cabo el proceso electoral en nuestro país:",
+      "alternatives": [
+        "INDECOPI",
+        "COFOPRI",
+        "RENIEC",
+        "ONPE",
+        "JNE"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Declara la nulidad de un proceso electoral:",
+      "alternatives": [
+        "el JNE",
+        "el Congreso",
+        "la ONPE",
+        "la Comisión Permanente",
+        "el presidente de la República"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La actualización constante de los padrones electorales le corresponde a:",
+      "alternatives": [
+        "la ONPE.",
+        "el Congreso.",
+        "el JNE.",
+        "la Contraloría General de la República.",
+        "la RENIEC."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El presidente de la República y los vicepresidentes electos son proclamados por:",
+      "alternatives": [
+        "la ONPE.",
+        "el Jurado Nacional de Elecciones.",
+        "el presidente del Congreso.",
+        "la RENIEC.",
+        "el presidente de la República."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es la autoridad máxima en la organización y ejecución de todos los procesos electorales:",
+      "alternatives": [
+        "el JNE",
+        "la ONPE",
+        "el sistema electoral",
+        "la RENIEC",
+        "el presidente de la República"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Toda modificación del estado civil de las personas se registra dentro de:",
+      "alternatives": [
+        "los Registros Públicos.",
+        "la RENIEC.",
+        "los padrones electorales.",
+        "la Constitución.",
+        "del JNE."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tanto el jefe de la ONPE como de la RENIEC son nombrados por un periodo de _____ años y pueden ser removidos del cargo por el ______ .",
+      "alternatives": [
+        "cuatro - Congreso",
+        "cuatro - el presidente del JNE",
+        "cuatro - el JNE",
+        "cuatro - La Junta Nacional de Justicia",
+        "cuatro - Contraloría General de la República"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de sus miembros preside el JNE?",
+      "alternatives": [
+        "El fiscal supremo",
+        "El representante del Colegio de Abogados de Lima",
+        "El vocal supremo",
+        "El decano representante de las facultades de derecho de las universidades nacionales",
+        "El decano representante de las facultades de derecho de las universidades privadas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El JNE está integrado por ____ miembros los cuales son elegidos por un periodo de _____ años.",
+      "alternatives": [
+        "cinco - cuatro",
+        "tres - cuatro",
+        "siete - cuatro",
+        "cuatro - siete",
+        "siete - cinco."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Forman el sistema electoral desde la Constitución de 1993:",
+      "alternatives": [
+        "el JNE, la ONPE y la RENIEC",
+        "el JNE y la ONPE",
+        "el JNE, la ONP y la RENIEC",
+        "el JNE y el Poder Electoral",
+        "el JNE y la RENIEC"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las autoridades de la ONPE y del RENIEC son nombradas por:",
+      "alternatives": [
+        "la Comisión Permanente.",
+        "el Congreso.",
+        "La Junta Nacional de Justicia",
+        "el Poder Ejecutivo.",
+        "el Tribunal Constitucional."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Piero Corvetto y Carmen Velarde juraron como jefes de la Oficina Nacional de Procesos Electorales (ONPE) y del Registro Nacional de Identificación y Estado Civil (RENIEC) respectivamente, fueron elegidos por el pleno ……… ,entidad que llevó a cabo el proceso.",
+      "alternatives": [
+        "De La Junta Nacional de Justicia",
+        "Del Consejo Nacional de la Magistratura",
+        "Del Poder Judicial",
+        "Del Congreso de la República.",
+        "Del Jurado Nacional de Elecciones."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jnj-organo-constitucional-autonomo-junta-nacional-de-justicia-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — JUNTA NACIONAL DE JUSTICIA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En 2019, la Junta Nacional de Justicia (JNJ) reemplazó al Consejo Nacional de la Magistratura (CNM) y asumió todas sus funciones. Este órgano constitucional autónomo está conformado por siete miembros seleccionados por una comisión presidida por el ____________ y una de sus atribuciones es _______________.",
+      "alternatives": [
+        "fiscal de la Nación - nombrar, previo concurso público de méritos, a los jueces y fiscales de todos los niveles",
+        "ministro de Justicia - supervisar el adecuado cumplimiento de los deberes de la administración de justicia",
+        "defensor del Pueblo - nombrar al jefe del Registro Nacional de Identificación y Estado Civil (RENIEC)",
+        "contralor general de la República - aplicar sanción de destitución a los jueces de la Corte Suprema de Justicia",
+        "presidente del Tribunal Constitucional - ratificar al jefe de la Oficina Nacional de Procesos Electorales (ONPE)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jnj-organo-constitucional-autonomo-junta-nacional-de-justicia-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — JUNTA NACIONAL DE JUSTICIA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cronograma aprobado para las Elecciones Municipales Complementarias 2023 comprende la realización de elecciones internas, que se llevarán a cabo con la intervención de los organismos electorales. En aquel, se detallan las actividades específicas y sus respectivos plazos, como un conjunto de pasos obligatorios y preclusivos para definir las candidaturas que presentarán las organizaciones políticas que participen en las justas electorales. De lo referido, el organismo que se encargará de aprobar la realización de dichos procesos es _______ , como parte de su función _______ .",
+      "alternatives": [
+        "el Registro Nacional de Identificación y Estado Civil – administrativa",
+        "la Oficina Nacional de Procesos Electorales – fiscalizadora",
+        "el Jurado Nacional de Elecciones – administrativa",
+        "la Oficina Nacional de Procesos Electorales – educativa",
+        "el Jurado Nacional de Elecciones – jurisdiccional"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/03/dpcc-3ro-4to-actividad-14-aprendo-en-casa-semana-1-2-3-desarrollo-personal-civica-tercer-cuarto-de-secundaria-web-radio-tarea-resuelta-reto-word-tv-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las instituciones del sistema electoral tienen por objeto organizar, planificar, ejecutar y fiscalizar los procesos electorales para que se desarrollen de manera eficiente y transparente, con respeto a la voluntad popular. El jefe de la Oficina Nacional de Procesos Electorales (ONPE) es",
+      "alternatives": [
+        "designado por el Congreso de la República y puede ser destituido por la Junta Nacional de Justicia.",
+        "nombrado, por concurso público, por la Junta Nacional de Justicia por un periodo renovable de cuatro años.",
+        "ratificado por la Junta de Fiscales Supremos y su cargo es prorrogable por un solo periodo consecutivo.",
+        "elegido por el Congreso con el voto de dos tercios de sus miembros sin estar sujeto a mandato imperativo.",
+        "seleccionado sin concurso de méritos mediante una evaluación personal por la Junta Nacional de Justicia."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/civica-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mediante un comunicado se informa lo siguiente: las organizaciones políticas y los candidatos presentan su situación financiera de aportes e ingresos recibidos, así como los gastos efectuados durante la campaña electoral en dos entregas obligatorias. Asimismo, se precisa que, para la presentación de la segunda entrega de la información financiera, se habilitará el Portal Digital de Financiamiento (Plataforma CLARIDAD). De lo mencionado, ¿qué organismo será el encargado de preparar y habilitar dicha plataforma?",
+      "alternatives": [
+        "El Registro Nacional de Identificación y Estado Civil",
+        "La Oficina Nacional de Procesos Electorales",
+        "El Jurado Nacional de Elecciones",
+        "La Contraloría General de la República.",
+        "El Instituto Nacional de Estadística e Informática"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/civica-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La remoción de autoridades se produce cuando el JNE comprueba que más del ____ de los ciudadanos de una jurisdicción electoral o judicial lo solicitan.",
+      "alternatives": [
+        "3%",
+        "5%",
+        "10%",
+        "50%",
+        "66%"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/iniciativas-en-la-formacion-de-leyes-reforma-constitucional-referendum-revocatoria-remocion-control-ciudadano-preguntas-resueltas-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+      "sourceName": "matematicasn.blogspot.com — MECANISMOS DE PARTICIPACIÓN CIUDADANA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la institución que registra los nacimientos, matrimonios y defunciones en el Perú?",
+      "alternatives": [
+        "Congreso Nacional de la República",
+        "Organizaciones No Gubernamentales",
+        "Registro Nacional de Identificación y Estado Civil",
+        "Oficina Nacional de Procesos Electorales",
+        "Superintendencia Nacional de los Registros Públicos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-3ro-4to-actividad-2-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL MEDICINA PRUEBA INGRESO UNIVERSIDAD RESUELTA 2027 CLAVES "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un requisito para ser alcalde es:",
+      "alternatives": [
+        "gozar de derecho de sufragio.",
+        "ser vecino por lo menos 3 años.",
+        "hallarse inscrito en el Reniec.",
+        "ser ciudadano.",
+        "ser peruano de nacimiento."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/educacion-civica-gobiernos-locales-y-regionales-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GOBIERNO REGIONAL Y LOCAL DESCENTRALIZACIÓN EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Julio Benavente es un deportista español, hijo de madre peruana, que ha decidido realizar una carrera política en el Perú. ¿Qué requisito se le exige a Julio para que pueda ejercer sus derechos ciudadanos en Perú?",
+      "alternatives": [
+        "autorización de migraciones",
+        "renuncia a la ciudadanía española",
+        "permiso del Jurado Nacional de Elecciones",
+        "inscripción electoral"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/declaracion-universal-de-los-derechos-humanos-caracteristicas-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DERECHOS HUMANOS EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es una garantía constitucional, es decir un procedimiento judicial rápido con que cuentan las personas para exigir y proteger sus derechos:",
+      "alternatives": [
+        "ONPE",
+        "acción de amparo",
+        "hábeas data",
+        "hábeas corpus",
+        "JNE"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/simulacion-de-examen-pnp-admision-policia-nacional-del-peru-solucionario-del-simulacro-ejercicios-resueltos-claves-respuestas-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO PNP 2027 RESUELTO DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL CON SOLUCIONARIO"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es aquella que procede ante el hecho u omisión:",
+      "alternatives": [
+        "Reniec",
+        "JNE",
+        "ONPE",
+        "hábeas corpus",
+        "acción de amparo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/simulacion-de-examen-pnp-admision-policia-nacional-del-peru-solucionario-del-simulacro-ejercicios-resueltos-claves-respuestas-word-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO PNP 2027 RESUELTO DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL CON SOLUCIONARIO"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la Institución encargada de dar a conocer los resultados en las elecciones presidencia/es·",
+      "alternatives": [
+        "El Jurado Electoral Especial.",
+        "El Tribunal Electoral Especial.",
+        "El Registro Nacional de Identificación y Estado Civil.",
+        "La Oficina Nacional de Procesos Electorales.",
+        "El Jurado Nacional de Elecciones."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/civica-examen-admision-villarreal-unfv-1.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "_______ elabora y diseña la cédula de sufragio",
+      "alternatives": [
+        "La ONPE",
+        "El JNE",
+        "El RENIEC",
+        "El Sistema Electoral",
+        "El Congreso"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/civica-examen-admision-villarreal-unfv-1.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un miembro de su familia puede solicitar la suspensión del ejercicio de sus derechos ciudadanos mediante",
+      "alternatives": [
+        "Solicitud en una notaría pública",
+        "Una petición expresa al JNE",
+        "La mediación del Ministerio Público",
+        "Una resolución judicial de interdicción",
+        "Una sentencia de apelación pública"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/civica-examen-admision-villarreal-unfv-1.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "“Cuando se acercan nuevas elecciones (sean presidenciales, congresales, regionales o municipales), el jurado nacional de elecciones habilita la página voto informado, para ayudarle a conocer mejor a los candidatos”. Todo ello forma parte de la democracia que hará más libre y consciente:",
+      "alternatives": [
+        "La ley del más fuerte.",
+        "La voluntad popular.",
+        "El principio de la minoría.",
+        "La voluntad privada.",
+        "La lucha de clases."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/liberalismo-comunitarismo-anarquismo-comunismo-democracia-corrientes-filosofico-politicas-ejemplos-preguntas-resueltas-de-filosofia-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CORRIENTES FILOSÓFICO POLÍTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El pleno del Congreso aprobó en primera votación el proyecto de ley que elimina la obligación de entregar cuatro informes financieros, por parte de los partidos políticos, durante los procesos electorales a la ONPE. Con la nueva legislación, sólo deberán hacerlo concluido el proceso electoral.\n¿Cuál es el siguiente paso para que la iniciativa legislativa sea promulgada?",
+      "alternatives": [
+        "Que se eleve al presidente de la república para que ordene su publicación.",
+        "Que la ONPE y el JNE ratifiquen el proyecto de ley del congreso.",
+        "Que el presidente del congreso lo ratifique y lo publique en El Peruano .",
+        "Que la comisión permanente evalué su constitucionalidad.",
+        "Que se mande a segunda votación en un plazo mínimo de siete días hábiles."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/civica-examen-san-marcos-admision.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La Oficina Nacional de Procesos Electorales (ONPE) informó que cerca de 200 formatos de recolección de firmas (kits electorales) fueron adquiridos para ejercer el derecho de iniciativa en la formación de leyes, mediante el cual los ciudadanos pueden presentar proyectos de ley que deben ser tramitados por el Congreso de la República de manera preferente. En relación con este derecho, determine el valor de verdad (V o F) de los siguientes enunciados:\nI. Es un mecanismo dirigido principalmente para someter a consulta popular la aprobación o modificación de normas.\nII. Requiere del mismo número de firmas de ciudadanos que se exigen para la convocatoria a referéndum.\nIII. Permite a la ciudadanía tomar parte de las decisiones públicas del país o incidir en las mismas.\nIV. Es un derecho participativo que permite destituir directamente a autoridades electas o designadas.",
+      "alternatives": [
+        "FFVF",
+        "VFFF",
+        "FVVF",
+        "VFVF",
+        "VVFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/civica-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA ÁREA A SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El sistema electoral tiene por finalidad asegurar que las votaciones y el escrutinio traduzcan la expresión auténtica, libre y espontánea de los ciudadanos, y sea el reflejo exacto y oportuno de la voluntad del elector expresada en las urnas por votación directa y secreta. Sobre la administración electoral, determine el valor de verdad (V o F) de los siguientes enunciados:\nl) Los Jurados Especiales Electorales otorgan las credenciales a los personeros de las agrupaciones políticas que participan en la contienda.\nII) El Reniec sortea y designa conforme a ley a los miembros de mesa titulares y suplentes que participarán en los comicios.\nIII) Las Oficinas Descentralizadas de Procesos Electorales coordinan con las FF. AA. y la PNP el mantenimiento del orden y la protección de la libertad personal.\nIV) Tanto los Jurados Electorales Especiales como las Oficinas Descentralizadas de Procesos Electorales son órganos temporales en un escrutinio.",
+      "alternatives": [
+        "VFVV",
+        "FVVF",
+        "VFFV",
+        "VVFF",
+        "FVFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/civica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Conforme a la ley de Organizaciones Políticas del Perú, determine en qué ocasiones la inscripción de un partido político es cancelada por el Jurado Nacional de Elecciones y marque la alternativa correcta.\nI. Si se fusiona con otros partidos políticos.\nII ) Con la formación de una alianza electoral.\nIII ) Si obtiene menos del 5% de los votos válidos a nivel nacional.\nIV ) Cuando no participa en 2 elecciones generales sucesivas.\nV ) Si cumple con la cuota requerida de género y juventud.",
+      "alternatives": [
+        "I, III y V",
+        "I, II y IV",
+        "II, III y V",
+        "II, III y IV",
+        "I, III y IV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-civica-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — CÍVICA PREGUNTAS RESUELTAS MODO EXAMEN ADMISIÓN UNIVERSIDAD CON RESPUESTAS"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Constitucionalmente es el encargado de convocar a elecciones:",
+      "alternatives": [
+        "el presidente del JNE",
+        "el presidente de la República",
+        "el presidente del Congreso",
+        "el jefe de la ONPE",
+        "el jefe de la RENIEC"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organo-autonomo-tribunal-constitucional-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIBUNAL CONSTITUCIONAL EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifica una característica del concebido.",
+      "alternatives": [
+        "Tiene existencia distinta a la de sus miembros.",
+        "Está inscrito en los registros públicos.",
+        "Está inscrito en el Reniec.",
+        "Es la primera manifestación de la vida humana.",
+        "El Código Civil de 1984 no lo reconoce."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/diferencias-entre-persona-natural-y-juridica-sujetos-de-derecho-segun-nuestro-codigo-civil-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+      "sourceName": "matematicasn.blogspot.com — EL SUJETO DE DERECHO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El presidente del Jurado Nacional de Elecciones instó a los candidatos que participarán en los comicios de abril a respetar las medidas de bioseguridad contra la COVID – 19.",
+      "alternatives": [
+        "Escatimó",
+        "Desdeñó",
+        "Exhortó",
+        "Obnubiló",
+        "Maniobró"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/05/ejercicios-de-sinonimia-contextual.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Ejercicios de SINONIMIA CONTEXTUAL DENOTATIVA - Guía con Respuestas"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se encarga de preparar y mantener actualizado el Padrón Electoral:",
+      "alternatives": [
+        "RENIEC",
+        "ONPE",
+        "JNE",
+        "PODE EJECUTIVO",
+        "INEI"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Nombra al Jefe de la ONPE:",
+      "alternatives": [
+        "JNE",
+        "RENIEC",
+        "CONGRESO",
+        "CNM",
+        "INEI"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Regula el ejercicio de las garantías Constitucionales, expresadas en\nla Constitución:",
+      "alternatives": [
+        "El tribunal Constitucional",
+        "Una Ley Orgánica",
+        "La Policía Nacional",
+        "El Código tributario",
+        "El Jurado Nacional de Elecciones."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se encarga de mantener la lista de agrupaciones políticas:",
+      "alternatives": [
+        "El Jurado Nacional de Elecciones",
+        "La ONPE",
+        "La RENIEC",
+        "La Municipalidad",
+        "JNE"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos días hábiles después de cumplir los 18 años, puede inscribirse gratuitamente?",
+      "alternatives": [
+        "40 días",
+        "50 días",
+        "60 días",
+        "80 días",
+        "90 días"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La máxima autoridad del Jurado Nacional de Lecciones es un pleno compuesto por cinco miembros, siendo mayores de:",
+      "alternatives": [
+        "46 años y menores de 60 años.",
+        "45 años y menores de 70 años.",
+        "45 años y menores de 60 años.",
+        "46 años y menores de 70 años.",
+        "47 años y menores de 65 años."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De las siguientes alternativas, ¿cuál corresponde a la Oficina de Procesos Electorales?",
+      "alternatives": [
+        "Fiscaliza la legalidad del ejercicio del sufragio.",
+        "Difunde de los resultados después de la contienda electoral.",
+        "Proclama candidatos elegidos.",
+        "Administra justicia en materia electoral.",
+        "Custodia el registro de organizaciones políticas."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/jurado-nacional-de-elecciones-del-peru-onpe-jne-registro-de-identificacion-y-estado-civil-reniec-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SISTEMA ELECTORAL ONPE JNE RENIEC EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son personas jurídicas de derecho privado, excepto:",
+      "alternatives": [
+        "Indecopi",
+        "Inka Farma",
+        "Botica Arcángel",
+        "Saga Falabella",
+        "Telefónica"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://wwwmisclasesvirtuales140872.blogspot.com/2016/03/bancos-de-preguntas-de-admision-civica.html",
+      "sourceName": "wwwmisclasesvirtuales140872.blogspot.com — PREGUNTAS  CÍVICA  ADMISIÓN "
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifica la institución que protege a los consumidores en el Peru.",
+      "alternatives": [
+        "Sunass",
+        "Sunat",
+        "Osiptel",
+        "Indecopi",
+        "Osinergmin"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ciencias-sociales-examen-resuelto-de-admision-a-la-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CIENCIAS SOCIALES PREGUNTAS RESUELTAS ADMISIÓN UNIVERSIDAD SIMULACRO SOLUCIONARIO PRUEBA DE INGRESO DESARROLLADA"
     }
   ]
 }

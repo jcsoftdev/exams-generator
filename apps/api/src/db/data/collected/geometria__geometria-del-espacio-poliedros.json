@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Si la arista de un cubo de Rubik es 6 cm, ¿cuál es su volumen?",
-      "alternatives": ["180 cm³", "192 cm³", "206 cm³", "216 cm³", "128 cm³"],
+      "alternatives": [
+        "180 cm³",
+        "192 cm³",
+        "206 cm³",
+        "216 cm³",
+        "128 cm³"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
       "sourceName": "Poliedros regulares - problemas resueltos (matematicasn), Pregunta 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Amy tiene 18√2 cm³ de cera para preparar una vela de la forma de un tetraedro regular. Calcule la altura de la vela aproximadamente.",
-      "alternatives": ["3 cm", "3,5 cm", "5 cm", "5,5 cm", "4 cm"],
+      "alternatives": [
+        "3 cm",
+        "3,5 cm",
+        "5 cm",
+        "5,5 cm",
+        "4 cm"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
       "sourceName": "Poliedros regulares - problemas resueltos (matematicasn), Pregunta 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sean A y B los extremos de una de las aristas de un cubo y sea O el centro de dicho cubo. Entonces el coseno del ángulo AOB es:",
-      "alternatives": ["2/3", "1/6", "3/4", "3/5", "1/3"],
+      "alternatives": [
+        "2/3",
+        "1/6",
+        "3/4",
+        "3/5",
+        "1/3"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
       "sourceName": "Poliedros regulares - problemas resueltos (matematicasn), Pregunta 4"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Hallar en qué relación se encuentran las áreas de un octaedro y un icosaedro, regulares, sabiendo que la arista del primero es el triple de la del segundo.",
-      "alternatives": ["15/7", "20/3", "18/5", "10/7", "12/5"],
+      "alternatives": [
+        "15/7",
+        "20/3",
+        "18/5",
+        "10/7",
+        "12/5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
       "sourceName": "Poliedros regulares - problemas resueltos (matematicasn), Pregunta 8"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle el área total de un tetraedro regular si la suma de las longitudes de sus aristas es igual a 36.",
-      "alternatives": ["36√3 u²", "24 u²", "36 u²", "24√3 u²", "6√3 u²"],
+      "alternatives": [
+        "36√3 u²",
+        "24 u²",
+        "36 u²",
+        "24√3 u²",
+        "6√3 u²"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
       "sourceName": "Poliedros regulares - problemas resueltos (matematicasn), Pregunta 13"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un hexaedro regular, el área de la superficie total es numéricamente igual a su volumen. Calcule la longitud de la diagonal del hexaedro.",
-      "alternatives": ["3√3", "2√3", "6√3", "4√3", "5√3"],
+      "alternatives": [
+        "3√3",
+        "2√3",
+        "6√3",
+        "4√3",
+        "5√3"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
       "sourceName": "Poliedros regulares - problemas resueltos (matematicasn), Pregunta 14"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un poliedro convexo tiene como caras 12 triángulos, 16 cuadriláteros, 24 pentágonos y 13 hexágonos. Halle su número de vértices.",
-      "alternatives": ["84", "85", "86", "87", "88"],
+      "alternatives": [
+        "84",
+        "85",
+        "86",
+        "87",
+        "88"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/poliedros-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
       "sourceName": "Poliedros - problemas desarrollados (razonamientopdf), Problema 1"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un poliedro está formado por 10 triángulos, 20 cuadriláteros y 30 pentágonos. Halle el número de vértices.",
-      "alternatives": ["50", "64", "70", "72", "48"],
+      "alternatives": [
+        "50",
+        "64",
+        "70",
+        "72",
+        "48"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/poliedros-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
       "sourceName": "Poliedros - problemas desarrollados (razonamientopdf), Problema 2"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcular el número de vértices de un poliedro convexo, si la suma de las medidas de los ángulos internos de todas las caras es 1140°.",
-      "alternatives": ["5", "6", "8", "7", "9"],
+      "alternatives": [
+        "5",
+        "6",
+        "8",
+        "7",
+        "9"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 1"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un poliedro está formado por 6 regiones triangulares, 8 regiones cuadrangulares y 10 regiones rectangulares. El número de vértices del poliedro es:",
-      "alternatives": ["23", "26", "28", "30", "32"],
+      "alternatives": [
+        "23",
+        "26",
+        "28",
+        "30",
+        "32"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 6"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un poliedro se cumple que el número de caras es igual al número de vértices. Si la razón entre el número de aristas y el número de caras es 12/7, calcule la suma de los números de caras, aristas y vértices.",
-      "alternatives": ["26", "52", "24", "36", "30"],
+      "alternatives": [
+        "26",
+        "52",
+        "24",
+        "36",
+        "30"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 7"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un poliedro, la relación entre el número de aristas y el número de caras es 5/3. Calcule el número de caras, si el número de vértices es mayor que 6 y menor que 10.",
-      "alternatives": ["3", "9", "5", "6", "8"],
+      "alternatives": [
+        "3",
+        "9",
+        "5",
+        "6",
+        "8"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 8"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar el número de aristas de un poliedro que se encuentra limitado por 3 cuadriláteros convexos y 6 pentágonos convexos.",
-      "alternatives": ["18", "20", "25", "21", "24"],
+      "alternatives": [
+        "18",
+        "20",
+        "25",
+        "21",
+        "24"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 9"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un poliedro se encuentra limitado por 4 triángulos y 5 hexágonos convexos. Hallar el número de vértices.",
-      "alternatives": ["16", "14", "18", "12", "20"],
+      "alternatives": [
+        "16",
+        "14",
+        "18",
+        "12",
+        "20"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 10"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Encontrar el número de aristas de un poliedro que se encuentra limitado por 5 triángulos, 6 cuadriláteros convexos y 7 pentágonos convexos.",
-      "alternatives": ["41", "38", "42", "37", "35"],
+      "alternatives": [
+        "41",
+        "38",
+        "42",
+        "37",
+        "35"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 11"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un poliedro convexo tiene 16 caras de las cuales 6 caras son triángulos y las otras caras son hexágonos convexos; el número de aristas del poliedro es igual al número de aristas de un prisma. ¿Cuántos vértices tiene el prisma?",
-      "alternatives": ["22", "24", "26", "28", "30"],
+      "alternatives": [
+        "22",
+        "24",
+        "26",
+        "28",
+        "30"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 13"
@@ -182,7 +278,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular el número de caras de un poliedro, si la suma de las medidas de los ángulos interiores de todas sus caras es igual a 1440°; además, el número de aristas es el doble del número de vértices.",
-      "alternatives": ["6", "8", "10", "12", "15"],
+      "alternatives": [
+        "6",
+        "8",
+        "10",
+        "12",
+        "15"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 14"
@@ -193,7 +295,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un poliedro se encuentra limitado por 10 pentágonos convexos, 15 cuadriláteros convexos y 20 triángulos. Hallar el número de aristas del poliedro.",
-      "alternatives": ["120", "95", "90", "170", "85"],
+      "alternatives": [
+        "120",
+        "95",
+        "90",
+        "170",
+        "85"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 15"
@@ -204,7 +312,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántas aristas tiene un poliedro que se encuentra limitado por 6 cuadriláteros convexos y 8 pentágonos convexos?",
-      "alternatives": ["28", "34", "36", "40", "32"],
+      "alternatives": [
+        "28",
+        "34",
+        "36",
+        "40",
+        "32"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 16"
@@ -215,7 +329,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuántos vértices tiene un poliedro que se encuentra limitado por 6 cuadriláteros convexos y 8 decágonos convexos?",
-      "alternatives": ["40", "36", "38", "24", "42"],
+      "alternatives": [
+        "40",
+        "36",
+        "38",
+        "24",
+        "42"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 17"
@@ -226,7 +346,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcular el volumen de un cubo si su arista mide 4 u.",
-      "alternatives": ["16 u³", "64 u³", "25 u³", "26 u³", "28 u³"],
+      "alternatives": [
+        "16 u³",
+        "64 u³",
+        "25 u³",
+        "26 u³",
+        "28 u³"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 1"
@@ -237,7 +363,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Las dimensiones de un rectoedro (paralelepípedo rectangular) son 7 cm, 6 cm y 5 cm. Hallar el volumen.",
-      "alternatives": ["210 cm³", "200 cm³", "180 cm³", "196 cm³", "160 cm³"],
+      "alternatives": [
+        "210 cm³",
+        "200 cm³",
+        "180 cm³",
+        "196 cm³",
+        "160 cm³"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 2"
@@ -248,7 +380,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un paralelepípedo rectangular su diagonal mide 10 u y forma un ángulo de 45° con la base y 30° con una cara lateral. Calcule el volumen en u³.",
-      "alternatives": ["210√2", "200√2", "180√2", "196√2", "125√2"],
+      "alternatives": [
+        "210√2",
+        "200√2",
+        "180√2",
+        "196√2",
+        "125√2"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 3"
@@ -259,7 +397,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Las dimensiones de un paralelepípedo rectangular son 2x, x, x. Si el área total es 160 cm², hallar x.",
-      "alternatives": ["1 cm", "2 cm", "3 cm", "4 cm", "5 cm"],
+      "alternatives": [
+        "1 cm",
+        "2 cm",
+        "3 cm",
+        "4 cm",
+        "5 cm"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 4"
@@ -270,7 +414,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Una caja rectangular tiene: área del fondo = 32 cm², área del frente = 24 cm², área del lado = 12 cm². Calcule el volumen.",
-      "alternatives": ["84 cm³", "96 cm³", "105 cm³", "120 cm³", "140 cm³"],
+      "alternatives": [
+        "84 cm³",
+        "96 cm³",
+        "105 cm³",
+        "120 cm³",
+        "140 cm³"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 5"
@@ -281,7 +431,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El área lateral de un tronco de prisma triangular oblicuo, cuya sección recta es un triángulo equilátero de lado 3 u, es igual a 45 u², si la suma de las aristas laterales es 15 u. Verificar que el área lateral es:",
-      "alternatives": ["40 u²", "45 u²", "15 u²", "60 u²", "75 u²"],
+      "alternatives": [
+        "40 u²",
+        "45 u²",
+        "15 u²",
+        "60 u²",
+        "75 u²"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 6"
@@ -292,7 +448,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El área total de un paralelepípedo rectangular cuyas dimensiones están en progresión aritmética de razón 4 y su diagonal mide 5√11. Calcule el área total.",
-      "alternatives": ["420", "454", "480", "492", "512"],
+      "alternatives": [
+        "420",
+        "454",
+        "480",
+        "492",
+        "512"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 8"
@@ -303,7 +465,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un prisma recto tiene como base un hexágono regular inscrito en una circunferencia de radio 8 m y la altura es igual al diámetro de dicha circunferencia. Calcule V/A (volumen entre área lateral).",
-      "alternatives": ["2√3", "2√2", "3√2", "5√3", "√2"],
+      "alternatives": [
+        "2√3",
+        "2√2",
+        "3√2",
+        "5√3",
+        "√2"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 9"
@@ -314,7 +482,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un tronco de prisma triangular recto ABCDEF, las aristas básicas del triángulo ABC son 8, 12 y 6 µ, y las aristas laterales opuestas a cada vértice miden 15, 5 y 10 µ respectivamente. Calcule el área lateral.",
-      "alternatives": ["220 u²", "250 u²", "270 u²", "300 u²", "320 u²"],
+      "alternatives": [
+        "220 u²",
+        "250 u²",
+        "270 u²",
+        "300 u²",
+        "320 u²"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 10"
@@ -325,7 +499,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El desarrollo de la superficie lateral de un prisma regular cuadrangular es una región cuadrada inscrita en una circunferencia cuyo radio mide 2. Calcule el volumen del prisma.",
-      "alternatives": ["2", "4", "8", "16", "32"],
+      "alternatives": [
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 8b"
@@ -336,7 +516,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcule el área lateral de un prisma oblicuo cuya sección recta es un hexágono regular de área 24√3. La altura del prisma mide 8√3 y las aristas laterales forman ángulos de 60° con la base.",
-      "alternatives": ["300", "384", "328", "382", "381"],
+      "alternatives": [
+        "300",
+        "384",
+        "328",
+        "382",
+        "381"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 10b"
@@ -347,7 +533,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un prisma, la razón entre el número de aristas totales y el número de caras laterales es:",
-      "alternatives": ["2", "1,5", "1", "2,5", "3"],
+      "alternatives": [
+        "2",
+        "1,5",
+        "1",
+        "2,5",
+        "3"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 14"
@@ -358,7 +550,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un prisma cuadrangular regular ABCD-EFGH, el volumen es 216√2 u³ y ACGE es un cuadrado. Calcule el área lateral.",
-      "alternatives": ["127√2 u²", "144√2 u²", "146√2 u²", "136√2 u²", "196√2 u²"],
+      "alternatives": [
+        "127√2 u²",
+        "144√2 u²",
+        "146√2 u²",
+        "136√2 u²",
+        "196√2 u²"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 16"
@@ -369,7 +567,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un prisma oblicuo tiene siete caras. ¿Cuál es la suma de los ángulos internos de su base?",
-      "alternatives": ["540°", "900°", "840°", "720°", "680°"],
+      "alternatives": [
+        "540°",
+        "900°",
+        "840°",
+        "720°",
+        "680°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 17"
@@ -380,7 +584,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un tronco de prisma triangular regular ABC-DEF tiene área de base igual a 16 u² y la distancia entre los centroides de las dos bases es 12 u. Calcule el volumen del tronco de prisma.",
-      "alternatives": ["191 u³", "192 u³", "193 u³", "102 u³", "125 u³"],
+      "alternatives": [
+        "191 u³",
+        "192 u³",
+        "193 u³",
+        "102 u³",
+        "125 u³"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 20"
@@ -391,7 +601,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un tronco de prisma regular ABCD-EFGH, la base es un cuadrado de lado 6 u; la arista AE = 3 u y CG = 8 u. Calcule el volumen.",
-      "alternatives": ["198 u³", "186 u³", "200 u³", "210 u³", "236 u³"],
+      "alternatives": [
+        "198 u³",
+        "186 u³",
+        "200 u³",
+        "210 u³",
+        "236 u³"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 24"
@@ -402,7 +618,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule el número de caras de un prisma donde el número de vértices más el número de aristas es 50.",
-      "alternatives": ["10", "20", "30", "12", "18"],
+      "alternatives": [
+        "10",
+        "20",
+        "30",
+        "12",
+        "18"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
       "sourceName": "Prismas y pirámide ejercicios desarrollados (matematica-a1), Problema 1"
@@ -413,7 +635,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Se tiene un prisma cuya altura es congruente con la arista básica. Calcule el número de lados de la base del prisma si su área total y área lateral están en la relación de 3 a 2.",
-      "alternatives": ["3", "4", "5", "6", "8"],
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
       "sourceName": "Prismas y pirámide ejercicios desarrollados (matematica-a1), Problema 4"
@@ -424,7 +652,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcule el área total de un paralelepípedo rectangular cuya diagonal mide 50 y cuyas dimensiones suman 82.",
-      "alternatives": ["4 000", "4 224", "4 424", "4 624", "4 864"],
+      "alternatives": [
+        "4 000",
+        "4 224",
+        "4 424",
+        "4 624",
+        "4 864"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
       "sourceName": "Prismas y pirámide ejercicios desarrollados (matematica-a1), Problema 6"
@@ -435,7 +669,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcule el volumen de un prisma regular octagonal, sabiendo que el área de una de sus caras laterales es 50 u² y el apotema de su base mide 4 u.",
-      "alternatives": ["500 u³", "600 u³", "700 u³", "800 u³", "900 u³"],
+      "alternatives": [
+        "500 u³",
+        "600 u³",
+        "700 u³",
+        "800 u³",
+        "900 u³"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
       "sourceName": "Prismas y pirámide ejercicios desarrollados (matematica-a1), Problema 7"
@@ -446,7 +686,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule el número de aristas de una pirámide donde la suma del número de caras y el número de vértices es 16.",
-      "alternatives": ["7", "21", "12", "14", "16"],
+      "alternatives": [
+        "7",
+        "21",
+        "12",
+        "14",
+        "16"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
       "sourceName": "Prismas y pirámide ejercicios desarrollados (matematica-a1), Problema 15"
@@ -457,7 +703,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcule el volumen de una pirámide regular cuadrangular si su apotema mide 5 u y el apotema de la base mide 3 u.",
-      "alternatives": ["40 u³", "48 u³", "36 u³", "60 u³", "50 u³"],
+      "alternatives": [
+        "40 u³",
+        "48 u³",
+        "36 u³",
+        "60 u³",
+        "50 u³"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
       "sourceName": "Prismas y pirámide ejercicios desarrollados (matematica-a1), Problema 16"
@@ -468,7 +720,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una pirámide regular triangular, el perímetro de su base es 30 u y su altura mide 5√3 u. Calcule su volumen.",
-      "alternatives": ["15 u³", "45 u³", "65 u³", "75 u³", "80 u³"],
+      "alternatives": [
+        "15 u³",
+        "45 u³",
+        "65 u³",
+        "75 u³",
+        "80 u³"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
       "sourceName": "Prismas y pirámide ejercicios desarrollados (matematica-a1), Problema 18"
@@ -479,7 +737,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una pirámide cuadrangular regular cuya base tiene 36 cm² de área y las aristas laterales miden 7 cm. Calcule la altura de la pirámide.",
-      "alternatives": ["√67 cm", "√43 cm", "√37 cm", "√31 cm", "√33 cm"],
+      "alternatives": [
+        "√67 cm",
+        "√43 cm",
+        "√37 cm",
+        "√31 cm",
+        "√33 cm"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-geometria-problemas.html",
       "sourceName": "San Marcos Geometría problemas resueltos de admisión (matematicasn), Problema 10"
@@ -490,7 +754,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un pluviómetro con forma de pirámide cuadrangular regular tiene una base de 15 cm de arista. Al llenarse de agua esta llega a una altura de 9 cm. Si se vierte esa agua en un depósito cúbico de 50 cm de arista, ¿a qué altura llega el agua?",
-      "alternatives": ["0,77 cm", "0,30 cm", "0,27 cm", "0,25 cm", "0,45 cm"],
+      "alternatives": [
+        "0,77 cm",
+        "0,30 cm",
+        "0,27 cm",
+        "0,25 cm",
+        "0,45 cm"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-geometria-problemas.html",
       "sourceName": "San Marcos Geometría problemas resueltos de admisión (matematicasn), Problema 11"
@@ -501,7 +771,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un poliedro se encuentra limitado por un número de triángulos, cuadriláteros y pentágonos, cuyos números son consecutivos y el número de cuadriláteros es n. Hallar el número de vértices del poliedro.",
-      "alternatives": ["2(n+2)", "4(n+2)", "3(n+1)", "n+3", "2n+5"],
+      "alternatives": [
+        "2(n+2)",
+        "4(n+2)",
+        "3(n+1)",
+        "n+3",
+        "2n+5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
       "sourceName": "Poliedros ejercicios resueltos (matematicasn), Problema 12"
@@ -512,7 +788,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un prisma, la razón entre el número de aristas y el número de caras laterales es 3. Si el prisma es oblicuo y de siete caras laterales, el número de vértices de la base es:",
-      "alternatives": ["5", "6", "7", "8", "9"],
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
       "sourceName": "Prisma y paralelepípedo ejercicios resueltos (matematicasn), Problema 17b"
@@ -523,7 +805,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule el volumen de un prisma hexagonal regular cuyas caras laterales son regiones cuadradas y cuya área lateral es 864 u².",
-      "alternatives": ["864√3 u³", "1296√3 u³", "432√3 u³", "648√3 u³", "216√3 u³"],
+      "alternatives": [
+        "864√3 u³",
+        "1296√3 u³",
+        "432√3 u³",
+        "648√3 u³",
+        "216√3 u³"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
       "sourceName": "Prismas y pirámide ejercicios desarrollados (matematica-a1), Problema 2"
@@ -534,10 +822,3647 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule el área lateral de un prisma regular cuadrangular si su arista básica mide 2 m y su arista lateral mide 8 m.",
-      "alternatives": ["16 m²", "32 m²", "64 m²", "48 m²", "24 m²"],
+      "alternatives": [
+        "16 m²",
+        "32 m²",
+        "64 m²",
+        "48 m²",
+        "24 m²"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "http://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
       "sourceName": "Prismas y pirámide ejercicios desarrollados (matematica-a1), Problema 3"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un poliedro está formado por 8 caras triangulares, 9 caras cuadrangulares y m caras pentagonales. Si el poliedro tiene 33 vértices, halle m.",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/poliedros-geometria-del-espacio.html",
+      "sourceName": "geometriapdf.blogspot.com — POLIEDROS PROBLEMAS RESUELTOS DE GEOMETRÍA DEL ESPACIO NIVEL PREUNIVERSITARIO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la suma de los ángulos interiores de todas las caras del poliedro convexo de menor cantidad de caras.",
+      "alternatives": [
+        "180°",
+        "360°",
+        "540°",
+        "720°",
+        "900°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/poliedros-geometria-del-espacio.html",
+      "sourceName": "geometriapdf.blogspot.com — POLIEDROS PROBLEMAS RESUELTOS DE GEOMETRÍA DEL ESPACIO NIVEL PREUNIVERSITARIO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un prisma hexagonal regular ABCDEF-GHIJKL, se inscribe una pirámide regular tal que su base coincide con la base ABCDEF y su vértice coincide con el centro de la base superior. La arista lateral de la pirámide mide 20 u y forma con el plano de la base un ángulo cuya medida es 60º. Calcule el volumen del Prisma.",
+      "alternatives": [
+        "3 500 u³",
+        "4 200 u ³",
+        "4 500 u ³",
+        "5 200 u ³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/solucionario-del-examen-de-ingreso-universidad-catolica-pucp-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área lateral de un prisma oblicuo cuya sección recta es un hexágono regular de de área. La altura del prisma mide y las aristas laterales forman ángulos de 60° con la base.",
+      "alternatives": [
+        "300",
+        "384",
+        "328",
+        "382",
+        "381"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — PRISMAS Y PIRÁMIDE EJERCICIOS DESARROLLADOS PASO A PASO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el número de arista de una pirámide donde la suma del número de caras con el número de vértice es 16.",
+      "alternatives": [
+        "7",
+        "21",
+        "12",
+        "14",
+        "16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — PRISMAS Y PIRÁMIDE EJERCICIOS DESARROLLADOS PASO A PASO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el volumen de una pirámide regular cuadrangular si su apotema mide 5 y la apotema de la base mide 3",
+      "alternatives": [
+        "40",
+        "48",
+        "36",
+        "60",
+        "50"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — PRISMAS Y PIRÁMIDE EJERCICIOS DESARROLLADOS PASO A PASO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide regular triangular, el perímetro de su base es 30 y su altura mide ; calcule su volumen.",
+      "alternatives": [
+        "15",
+        "45",
+        "65",
+        "75",
+        "80"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — PRISMAS Y PIRÁMIDE EJERCICIOS DESARROLLADOS PASO A PASO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide cuadrangular regular, el área de la base es los 4/9 del área total. Si la arista básica mide 8 m, halle la medida de la altura de la pirámide.",
+      "alternatives": [
+        "√21 m",
+        "3 m",
+        "√7 m",
+        "4 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-geometria-semana-14-2020.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 14 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el volumen de un cono recto de altura 3m, sabiendo que el plano que pasa por el vértice determina en la base una cuerda que subtiende un arco de 120° y que la sección determinada por dicho plano es un triángulo rectángulo.",
+      "alternatives": [
+        "9 𝛑",
+        "12 𝛑",
+        "18 𝛑",
+        "24 𝛑",
+        "36 𝛑"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/cono-geometrico-y-tronco-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — CONO DE REVOLUCIÓN Y TRONCO EJEMPLOS Y EJERCICIOS RESUELTOS DE GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un poliedro convexo tiene 12 caras y 20 vértices. Indique la cantidad de aristas.",
+      "alternatives": [
+        "22",
+        "28",
+        "30",
+        "32",
+        "34"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/poliedros-propiedades-y-preguntas.html",
+      "sourceName": "matematicaj.blogspot.com — POLIEDROS EJERCICIOS DESARROLLADOS DE GEOMETRÍA DEL ESPACIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un poliedro convexo tiene 5 caras, indique la cantidad de aristas.",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "7 y 8",
+        "8 y 9"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/poliedros-propiedades-y-preguntas.html",
+      "sourceName": "matematicaj.blogspot.com — POLIEDROS EJERCICIOS DESARROLLADOS DE GEOMETRÍA DEL ESPACIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un poliedro convexo, el número de caras es igual al de vértices, y la suma de los números de caras, vértices y aristas es 34. Indique qué poliedro cumple tales condiciones.",
+      "alternatives": [
+        "hexaedro",
+        "heptaedro",
+        "octaedro",
+        "nonaedro",
+        "decaedro"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/poliedros-propiedades-y-preguntas.html",
+      "sourceName": "matematicaj.blogspot.com — POLIEDROS EJERCICIOS DESARROLLADOS DE GEOMETRÍA DEL ESPACIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la cantidad de diagonales de un poliedro limitado por 1 cara triangular, 5 caras cuadrangulares y 1 cara pentagonal.",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/poliedros-propiedades-y-preguntas.html",
+      "sourceName": "matematicaj.blogspot.com — POLIEDROS EJERCICIOS DESARROLLADOS DE GEOMETRÍA DEL ESPACIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La altura de un tronco de pirámide cuadrangular regular es 6 m y los lados de las bases miden 1,2m y 4,7m respectivamente. ¿Cuál es la longitud de su apotema?",
+      "alternatives": [
+        "6,25m",
+        "7,5",
+        "10,5",
+        "5,25",
+        "11,25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/solidos-geometricos-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — SOLIDOS GEOMÉTRICOS EJEMPLOS Y PROBLEMAS RESUELTOS DE GEOMETRÍA DEL ESPACIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área lateral de una pirámide cuadrangular regular es de 36 m². Si el apotema de la pirámide mide √2 veces el radio del círculo que circunscribe a la base, hallar el lado de la base.",
+      "alternatives": [
+        "3√2",
+        "2√3",
+        "6",
+        "8",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/solidos-geometricos-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — SOLIDOS GEOMÉTRICOS EJEMPLOS Y PROBLEMAS RESUELTOS DE GEOMETRÍA DEL ESPACIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una pirámide regular V-ABCDEF, se ubica los puntos medios M,N y S en las aristas VA, VE y VD, luego se grafica el prisma triangular recto MNS-PQR tal que P, Q y R están en la base de la pirámide. El área de la superficie lateral y la altura del prisma es de 30 √ 3 y 10 respectivamente. Calcule el volumen de la pirámide.",
+      "alternatives": [
+        "10 √ 3",
+        "40",
+        "20 √ 3",
+        "40 √ 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geometria-beca-18-formulario-ejemplos-resueltos-temario-pronabec-del-prospecto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA BECA 18 FORMULARIO CON EJEMPLOS RESUELTOS DEL TEMARIO PRONABEC PRUEBA UNICA NACIONAL PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pirámide cuadrangular regular de 10 m de lado, es cortada por un plano a 6 m de su base, formando un tronco cuya base superior es un cuadrado de lado 6 m. Encontrar la longitud del apotema de la pirámide, arriba del tronco.",
+      "alternatives": [
+        "8",
+        "2√10",
+        "√ 10",
+        "4",
+        "3√10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuadrado de lado R es la base de un prisma recto cuya altura es 4R. Dentro de este prisma hay una pirámide que tiene la misma base y como altura la mitad de la altura del prisma. El espacio comprendido entre el prisma y la pirámide es igual a",
+      "alternatives": [
+        "8R 3 /3",
+        "10 R 3 /3",
+        "5 R 3 /3",
+        "11 R 3 /3",
+        "2 R 3 /3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El apotema de una pirámide regular cuadrangular mide 17 y la arista básica tiene una longitud de 16. Calcule el volumen de dicha pirámide.",
+      "alternatives": [
+        "1200 u 3",
+        "1280 u 3",
+        "1000 u 3",
+        "900 u 3",
+        "800 u 3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-8-experiencia-4-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tronco de pirámide de bases paralelas, las áreas de las bases son 4m 2 y 25m 2 . Si la longitud de la altura del tronco es 3m, calcule la longitud (en m) de la altura de la mayor pirámide que se obtiene al prolongar las aristas laterales de dicho tronco.",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/5to-actividad-5-experiencia-7-resuelta-matematicas-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un poliedro esta formado por 6 regiones triangulares, 8 regiones cuadrangulares y 10 regiones rectangulares. Entonces, el número de vértices del poliedro es:",
+      "alternatives": [
+        "23",
+        "26",
+        "28",
+        "30",
+        "32"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un poliedro se encuentra limitado por 10 pentágonos convexos, 15 cuadriláteros convexos, 20 triángulos. Hallar el número de aristas del poliedro.",
+      "alternatives": [
+        "120",
+        "95",
+        "90",
+        "170",
+        "85"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique verdadero o falso sobre las siguientes proposiciones :\nI) Dos poliedros simétricos respecto de un punto son congruentes .\nII) Todos los hexaedros tienen cuatro diagonales.\nIII) El poliedro conjugado de un icosaedro es un dodecaedro .\nIV) Existe un poliedro que tiene 7 aristas .",
+      "alternatives": [
+        "VFVF",
+        "VFVV",
+        "VFFF",
+        "FVFV",
+        "FFVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pirámide regular de base cuadrada es equivalente con un cubo. Si la arista del cubo mide 6 y la arista básica de la pirámide mide 9; calcular la altura de la pirámide.",
+      "alternatives": [
+        "6",
+        "8",
+        "12",
+        "7",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/figuras-y-cuerpos-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — SÓLIDOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el área de la superficie lateral de un pirámide cuadrangular regular cuyo apotema mide 10cm. y su arista básica mide 3cm.",
+      "alternatives": [
+        "20𝑐𝑚²",
+        "30",
+        "40",
+        "50",
+        "60"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/figuras-y-cuerpos-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — SÓLIDOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el volumen de una pirámide regular cuya base es un triangulo equilátero de 2cm de lado y su altura de la pirámide mide 2√3",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/figuras-y-cuerpos-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — SÓLIDOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de la superficie lateral de una pirámide cuadrangular regular es 600m², el apotema de la pirámide mide 25m . calcular la longitud de sus aristas básicas.",
+      "alternatives": [
+        "6cm",
+        "12",
+        "3",
+        "18",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide triangular, se traza un plano secante y paralelo a su base, tal que biseca a la altura de la pirámide. Calcule la razón de volúmenes de los sólidos determinados.",
+      "alternatives": [
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6",
+        "1/7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide cuadrangular regular, una arista básica mide 10 y una arista lateral mide 13. Calcule el área de la superficie lateral de la pirámide.",
+      "alternatives": [
+        "200 𝑢²",
+        "360 𝑢²",
+        "260 𝑢²",
+        "240 𝑢²",
+        "390 𝑢²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar el volumen de una pirámide hexagonal regular, si su arista lateral mide 6 cm y que ésta forma con la base un ángulo que mide 30°.",
+      "alternatives": [
+        "81√3/2 𝑢³",
+        "2√13",
+        "124",
+        "96",
+        "144"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El volumen de un tronco de pirámide es 208 𝑢³ , su altura 12 y el área de una de sus bases 36 𝑢² . Calcule el área de la otra base.",
+      "alternatives": [
+        "3 𝑢²",
+        "4 𝑢²",
+        "8 𝑢²",
+        "9 𝑢²",
+        "6 𝑢²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una pirámide regular cuadrangular V - ABCD cuyo volumen es 125 𝑐 𝑚³ , en VC se ubica el punto M tal que 3VM= 2(MC). Calcule el volumen de la pirámide M - ABCD.",
+      "alternatives": [
+        "60 𝑐 𝑚³",
+        "100 𝑐 𝑚³",
+        "75 𝑐 𝑚³",
+        "90 𝑐 𝑚³",
+        "45 𝑐 𝑚³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tronco de pirámide triangular regular, los inradios de las bases miden 1 y 2. Calcule el área de la superficie lateral si el apotema del tronco mide 3.",
+      "alternatives": [
+        "48 √ 3 𝑢 ²",
+        "54 √ 3 𝑢 ²",
+        "27 √ 3 𝑢 ²",
+        "36 √ 3 𝑢 ²",
+        "52 √ 3 𝑢 ²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide regular P - ABCDEF, O es centro de la base ABCDEF, tal que m ∢ PBO= 45° y AB= 2. Calcule el volumen de esta pirámide.",
+      "alternatives": [
+        "6 √ 3 𝑢³",
+        "4 √ 3 𝑢³",
+        "5 √ 3 𝑢³",
+        "8 √ 3 𝑢³",
+        "7 √ 3 𝑢³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide cuadrangular regular O-ABCD, su arista básica mide a y su altura mide 2a . Calcule la distancia entre BD y OA .",
+      "alternatives": [
+        "a",
+        "a/3",
+        "2a/5",
+        "2a/3",
+        "a/5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pirámide triangular tiene volumen 120. Calcule el volumen del sólido que tiene como vértices los puntos medios de las aristas .",
+      "alternatives": [
+        "40",
+        "50",
+        "60",
+        "80",
+        "100"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área de la superficie lateral de un tronco de pirámide regular ABCD-EFGH si se sabe que m ∡ FBH= 90°. Su arista lateral mide 2 y determina un ángulo de 60° con la base.",
+      "alternatives": [
+        "2 √ 7",
+        "3 √ 7",
+        "4 √ 7",
+        "5 √ 7",
+        "6 √ 7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide triangular ABCD de base BCD sean M y N baricentros de las caras BCD y ABC, AM y ND se intersectan en F. Si FM = 7m; calcular la longitud de AF (en M ).",
+      "alternatives": [
+        "19",
+        "17",
+        "21",
+        "18",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tronco de pirámide de bases paralelas tiene por base mayor un cuadrado de lado 2 unidades. Si la altura del tronco es de 3 unidades y su volumen es 7 unidades cúbicas. ¿Cuánto mide el lado de la base menor?.",
+      "alternatives": [
+        "1/2",
+        "3",
+        "4",
+        "3/2",
+        "1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tronco de pirámide, se traza un plano secante y paralelo a las bases, que divide a la arista lateral en la razón de 2 a 3. Si la sección determinada está más próxima a la base menor y las áreas de las bases son iguales a 4 y 9, calcule el área de la sección determinada.",
+      "alternatives": [
+        "144/25",
+        "161/25",
+        "144/17",
+        "164/25",
+        "256/25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tronco de pirámide pentagonal regular tiene de perímetros de sus bases 15 cm y 45 cm; y la arista lateral mide 5 cm. Halle el apotema del tronco (en cm).",
+      "alternatives": [
+        "6",
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El volumen de un tronco de pirámide cuadrangular es 74m³ , si su altura mide 6m. y el área de una de las bases es 16m ² . ¿Cuál es el área de la otra base?.",
+      "alternatives": [
+        "49m ²",
+        "25m ²",
+        "9m ²",
+        "16m ²",
+        "12m ²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el volumen de una pirámide O-ABC, cuyas caras laterales determinan diedros de medida 45° con la base, si AB=13, BC=15 y AC=14 .",
+      "alternatives": [
+        "100",
+        "106",
+        "108",
+        "112",
+        "115"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un prisma recto de base cuadrangular de volumen 𝕍 . Calcule el volumen del sólido, cuyos vértices son los puntos de intersección de las diagonales en todas las caras .",
+      "alternatives": [
+        "𝕍/6",
+        "𝕍/3",
+        "𝕍/4",
+        "𝕍/12",
+        "𝕍/8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una pirámide V - ABCD, tal que ABCD es un paralelogramo, cuyas diagonales miden AC= 10 y BD= 8.\nCalcule el valor de (VA)² + (VC) ² – (VB) ² – (VD) ²",
+      "alternatives": [
+        "24",
+        "20",
+        "28",
+        "18"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el volumen de una pirámide triangular regular cuya base está inscrita en una circunferencia de radio 2 y forma con las caras laterales diedros que miden 45°.",
+      "alternatives": [
+        "√3",
+        "2√3",
+        "3√3",
+        "√3/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide A - BCD, las caras ABC, ADC y ABD forman ángulos de igual medida con la base e iguales a 60°. Si el área de la base es 60 𝑢 ² , calcule el área de la superficie lateral de la pirámide.",
+      "alternatives": [
+        "150 𝑢 ²",
+        "160 𝑢 ²",
+        "170 𝑢 ²",
+        "190 𝑢 ²",
+        "120 𝑢 ²"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La generatriz de un cono recto mide 5m y la superficie lateral desarrollada forma un sector circular de 216°. Calcular el volumen en 𝑚³ de dicho cono.",
+      "alternatives": [
+        "12𝜋",
+        "16𝜋",
+        "18𝜋",
+        "20𝜋",
+        "70𝜋"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de la superficie total de un cono es 200𝑚² , el producto de las longitudes de su generatriz y el radio de su base es 136𝑚². Calcular el volumen de dicho cono.",
+      "alternatives": [
+        "154𝜋 𝑚³",
+        "180𝜋 𝑚³",
+        "230𝜋 𝑚³",
+        "285 𝜋 𝑚³",
+        "320𝜋 𝑚³"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cono revolución de vértice V , por el centro O de su base se traza el diámetro AB y se ubica un punto P diferente de B en la circunferencia de la base , halle los valores enteros del ángulo OPB para que la m∡VPB sea mínima.",
+      "alternatives": [
+        "79° y 36°",
+        "26° y 45°",
+        "25° y 89",
+        "59° y 61°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cono oblicuo su altura es trisecada por dos planos paralelos a la base. Calcule la relación entre el volumen del sólido comprendido entre los planos paralelos del sólido , comprende entre la base y el inmediato plano paralelo.",
+      "alternatives": [
+        "5/19",
+        "1/3",
+        "7/19",
+        "9/19",
+        "1/2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cono equilátero, la altura mide 3√3, halle el volumen.",
+      "alternatives": [
+        "3√3 𝜋",
+        "6√3 𝜋",
+        "9√3 𝜋",
+        "12√3 𝜋",
+        "18√3 𝜋"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una región cuadrantal AOB cuyo radio mide 12. Además, al pegar los bordes OA y OB se obtiene un cono. Calcule el volumen del cono.",
+      "alternatives": [
+        "9 𝜋 √ 17",
+        "9 𝜋 √ 13",
+        "9 𝜋 √ 15",
+        "9 𝜋 √ 11",
+        "9 𝜋 √ 19"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CONO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dar el valor de verdad de las siguientes proposiciones:\n☛ En los vértices de todo poliedro regular se forman ángulos diedros.\n☛ El icosaedro regular tiene 100 diagonales.\n☛ En un dodecaedro hay 20 vértices.\n☛ Las diagonales de un octaedro regular son perpendiculares.",
+      "alternatives": [
+        "FVFV",
+        "VVVV",
+        "FFFV",
+        "VFVF",
+        "FFFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique en qué relación se encuentran los volúmenes de un tetraedro regular y el del poliedro que se forma al unir los centros de sus caras.",
+      "alternatives": [
+        "27",
+        "2",
+        "4",
+        "3",
+        "9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un octaedro regular M - ABCD - N, si la distancia del centro de la cara AMB hacia el vértice C es igual a 3, calcule el volumen de dicho poliedro.",
+      "alternatives": [
+        "4√2",
+        "5√2",
+        "6√2",
+        "9√2",
+        "7√2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide triangular regular, su arista básica mide 3 √ 2 y su arista lateral mide 3. Calcule el área lateral de la pirámide.",
+      "alternatives": [
+        "14,5 u 2",
+        "13,5 u 2",
+        "15,5 u 2",
+        "16,5 u 2",
+        "17,5 u 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/01/examen-de-geometria-resuelto-pdf-unmsm.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea calcular el volumen de una pirámide regular de base cuadrada.\nInformación brindada:\nI) Se conoce la longitud, en centímetros, de la altura de la pirámide y la longitud, en centímetros, de una de sus aristas laterales.\nII) Se conoce el área de la base, expresada en centímetros cuadrados. Para resolver el problema,",
+      "alternatives": [
+        "la información I es suficiente.",
+        "la información II es suficiente.",
+        "es necesario usar ambas informaciones.",
+        "cada una de las informaciones por separado es suficiente.",
+        "se necesita más información."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-ejercicios-del-segundo_22.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS MEDICINA 2023-1 PRUEBA RESUELTA DE INGRESO UNIVERSIDAD RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tronco de pirámide regular de aristas básicas 8 y 2 y arista lateral 5, calcule el área lateral de dicho tronco de pirámide cuadrangular.",
+      "alternatives": [
+        "50",
+        "45",
+        "60",
+        "100",
+        "80"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-geometria-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE GEOMETRÍA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un poliedro convexo tiene como caras 12 triángulos, 16 cuadriláteros, 24 pentágonos y 13 exágonos. Halle su número de vértices.",
+      "alternatives": [
+        "84",
+        "85",
+        "86",
+        "87",
+        "88"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/poliedros-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — POLIEDROS PROBLEMAS DESARROLLADOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es común que los artistas plásticos se apropien de entes matemáticos para producir, por ejemplo, formas e imágenes mediante manipulaciones. Un artista plástico, en una de sus obras, pretende retratar los diversos polígonos obtenidos por las intersecciones de un plano con una pirámide regular de base cuadrada. Según la clasificación de los polígonos, ¿cuáles de ellos es posible que el artista plástico obtenga?",
+      "alternatives": [
+        "Cuadrados, solamente.",
+        "Triángulos y cuadrados, solamente.",
+        "Triángulos, cuadrados y trapecios, solamente.",
+        "Triángulos, cuadrados, trapecios y cuadriláteros irregulares, solamente.",
+        "Triángulos, cuadrados, trapecios, cuadriláteros irregulares y pentágonos, solamente."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2016/2016_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2016 dia 2 caderno azul questão 175"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un sólido compacto, con forma de un paralelepípedo rectangular recto, cuyas dimensiones de su base son (a + 2) cm y (3a + 2) cm. Si su altura mide (a + 3) cm y su volumen es 160 cm³, determine el perímetro de su base en centímetros.",
+      "alternatives": [
+        "48",
+        "32",
+        "16",
+        "24"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/09/algebra-deco-problemas-resueltos-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — ÁLGEBRA SAN MARCOS PRUEBA DECO RESUELTA DE EXAMEN DE ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área total de un prisma recto es 144 m² y la longitud de su altura es 6 m. Si la base es un rectángulo cuyo largo mide el doble de su ancho, halle la longitud de la diagonal del prisma.",
+      "alternatives": [
+        "6 m",
+        "7 m",
+        "8 m",
+        "9 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-13-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 13 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un prisma regular tiene 18 aristas y la longitud de la altura es el triple de longitud de la arista de la base. Si el área lateral es 1800 m², halle el volumen del prisma.",
+      "alternatives": [
+        "4800 √ 3 m³",
+        "5400 √ 3 m³",
+        "4500 √ 3 m³",
+        "4400 √ 3 m³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-13-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 13 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un poliedro convexo está formado por 60 regiones triangulares y 80 regiones cuadrangulares, halle el número de vértices.",
+      "alternatives": [
+        "112",
+        "100",
+        "92",
+        "88"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-13-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 13 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una piscina tiene la forma de un rectoedro cuyas dimensiones son 10 m de largo, 6 m de ancho y 3 m de profundidad, se necesita cubrir la parte interior totalmente de losetas cuadradas. Halle el número de losetas cuadradas de 20 cm de lado que se necesita.",
+      "alternatives": [
+        "2200",
+        "2500",
+        "3000",
+        "3900"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-13-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 13 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia de un punto P en el espacio a un plano H es 15 cm. Si el punto Q pertenece a la recta L contenida en H y la proyección de PQ sobre H mide 8 cm, halle la distancia entre P y Q.",
+      "alternatives": [
+        "13 cm",
+        "14 cm",
+        "15 cm",
+        "17 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-12.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 12 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre uno de los bordes de un terreno ABCD de forma cuadrada se construye una pared rectangular ABEF perpendicular al plano que contiene al cuadrado ABCD. Para instalar un toldo se ubican tres clavos en M, N (M en CD y N en EF ) y en A. Si CM = DM = EN = FN = AF = 2 m, halle el área del toldo representado por la región triangular MNA.",
+      "alternatives": [
+        "4 m ²",
+        "6 m ²",
+        "10 m ²",
+        "3√2 m ²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-12.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 12 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por el vértice A de un rombo ABCD, se traza AP perpendicular al plano que contiene al rombo. Si BC = 10 m, AP = 8 m y BD = 12 m, halle la medida del diedro P–BD–A.",
+      "alternatives": [
+        "60°",
+        "53°",
+        "30°",
+        "45°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-12.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 12 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El hexaedro regular tiene",
+      "alternatives": [
+        "12 aristas.",
+        "8 aristas.",
+        "10 aristas.",
+        "15 aristas.",
+        "14 aristas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2021/11/geometria-examen-resuelto-de-admision-a-la-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PREGUNTAS RESUELTAS ADMISIÓN UNIVERSIDAD SIMULACRO SOLUCIONARIO PRUEBA DE INGRESO DESARROLLADA 2023"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La base de un asta de bandera es de concreto y está formada por dos prismas hexagonales regulares concéntricos puestos uno sobre otro. El primero tiene 1,20 m y el segundo 0,80 m de lado; la altura de cada uno de ellos es 0,30 m. Si ambos prismas tienen un hueco central cilíndrico de radio de 8 cm, entonces la cantidad de radio de 8 cm, entonces la cantidad de concreto utilizado para construir esta base (en m³) es aproximadamente:",
+      "alternatives": [
+        "1,55",
+        "1,57",
+        "1,59",
+        "1,61",
+        "1,63"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/prisma-geometria-del-espacio-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com — PRISMA-GEOMETRIA DEL ESPACIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las tres dimensiones de un paralelepípedo rectángulo suman 14 u. Si una de ellas es el doble de otra y el área total del prisma es máxima, determine la tercera dimensión de este sólido.",
+      "alternatives": [
+        "3 u",
+        "4 u",
+        "5 u",
+        "6 u",
+        "7 u"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/prisma-geometria-del-espacio-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com — PRISMA-GEOMETRIA DEL ESPACIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triedro trirrectángulo V - ABC, AB= 9, BC= 13 y AC= 10. Se toma el punto medio M de AC Calcule la m∢VMB.",
+      "alternatives": [
+        "30°",
+        "23°",
+        "45°",
+        "60°",
+        "53°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/poliedros-geometria-del-espacio.html",
+      "sourceName": "geometriapdf.blogspot.com — POLIEDROS PROBLEMAS RESUELTOS DE GEOMETRÍA DEL ESPACIO NIVEL PREUNIVERSITARIO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un ángulo triedro O - ABC, tal que m∢AOB=m∢AOC= 53°, m∢BOC= 60° y OA =5√3 . Calcule la distancia de A hacia la cara BOC.",
+      "alternatives": [
+        "37",
+        "39",
+        "35",
+        "33",
+        "31"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/poliedros-geometria-del-espacio.html",
+      "sourceName": "geometriapdf.blogspot.com — POLIEDROS PROBLEMAS RESUELTOS DE GEOMETRÍA DEL ESPACIO NIVEL PREUNIVERSITARIO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ángulos diedros consecutivos forman un diedro llano, la medida de los diedros son proporcionales a 1 ; 5 y 3 . Hallar la medida del mayor de los ángulos diedros.",
+      "alternatives": [
+        "90°",
+        "120°",
+        "100°",
+        "110°",
+        "135°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/diedros-y-triedros-geometria-del.html",
+      "sourceName": "geometriapdf.blogspot.com — DIEDROS Y TRIEDROS - GEOMETRIA DEL ESPACIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el máximo valor de una cara de un triedro equilátero.",
+      "alternatives": [
+        "100°",
+        "110°",
+        "130°",
+        "119°",
+        "141°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/diedros-y-triedros-geometria-del_8.html",
+      "sourceName": "geometriapdf.blogspot.com — DIEDROS Y TRIEDROS GEOMETRIA DEL ESPACIO FÓRMULAS Y PROPIEDADES PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el máximo valor entero de las caras de un triedro si las otras dos miden 100° y 120°.",
+      "alternatives": [
+        "100°",
+        "112°",
+        "139°",
+        "140°",
+        "141°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/diedros-y-triedros-geometria-del_8.html",
+      "sourceName": "geometriapdf.blogspot.com — DIEDROS Y TRIEDROS GEOMETRIA DEL ESPACIO FÓRMULAS Y PROPIEDADES PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos caras de un triedro miden 60° y 130°, ¿entre qué límites varía la tercera cara?",
+      "alternatives": [
+        "80° y 150°",
+        "70° y 150°",
+        "60° y 200°",
+        "70° y 170°",
+        "60° y 170°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/diedros-y-triedros-geometria-del_8.html",
+      "sourceName": "geometriapdf.blogspot.com — DIEDROS Y TRIEDROS GEOMETRIA DEL ESPACIO FÓRMULAS Y PROPIEDADES PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Colocando cinco cubos verticalmente, se determina un prisma de diagonal 18; calcula el área total del prisma.",
+      "alternatives": [
+        "216 u²",
+        "172 u²",
+        "241 u²",
+        "264 u²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/11/geometria-simulacro-prueba-beca-18-pronabec-con-solucionario-admision-universidad-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA SIMULACRO EXAMEN BECA 18 PRONABEC ADMISIÓN UNIVERSIDAD PRUEBA ÚNICA NACIONAL CON SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El apotema de una pirámide cuadrangular regular mide 25 cm y su área total es 600 cm². Halle la medida de la altura de dicha pirámide.",
+      "alternatives": [
+        "10√6 m",
+        "5√10 m",
+        "4√15 m",
+        "8√6 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/pre-san-marcos-geometria-semana-14-deco.html",
+      "sourceName": "geometriapdf.blogspot.com — PRE SAN MARCOS GEOMETRIA SEMANA 14 DECO SOLUCIONARIO ADMISIÓN A LA UNIVERSIDAD UNMSM PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide cuadrangular regular el apotema de la base es 6 cm y el apotema del sólido es 10 cm. Calcula el volumen de la pirámide.",
+      "alternatives": [
+        "250 cm³",
+        "384 cm ³",
+        "275√3 cm ³",
+        "420 cm ³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/solucionario-del-examen-de-ingreso-universidad-catolica-pucp-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la pirámide P–ABC, de altura PA , M es punto medio de PC y AM=BC. Si m ∠ ABC=90°, calcula el orden de las medidas de los ángulos CPB , PCB y PBC.",
+      "alternatives": [
+        "45°, 45°, 90°",
+        "30°, 75°, 75°",
+        "30°, 60°, 90°",
+        "60°, 60°, 60°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/solucionario-del-examen-de-ingreso-universidad-catolica-pucp-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La superficie lateral de un prisma recto regular triangular es un rectángulo cuya diagonal mide 12 m y su altura 6 √ 3 m. Calcule el área total del sólido (en m²).",
+      "alternatives": [
+        "38 √ 3",
+        "39 √ 3",
+        "40 √ 3",
+        "41 √ 3",
+        "42 √ 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/01/examen-admision-uni-resuelto-geometria.html",
+      "sourceName": "geometriapdf.blogspot.com — EXAMEN ADMISION UNI RESUELTO GEOMETRIA INGRESO UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el máximo número de planos que quedan determinados con 20 puntos y 40 rectas.",
+      "alternatives": [
+        "2 720",
+        "2 820",
+        "2 630",
+        "2 650",
+        "2 550"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/geometria-del-espacio-i-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — GEOMETRÍA DEL ESPACIO I EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De las siguientes proposiciones Indicar verdadero (V) o falso (F)\n* Tres puntos determinan siempre un plano.\n* Dos rectas determinan siempre un plano.\n* Una recta y un punto exterior a ella.\n* Si una recta es perpendicular a un plano, será perpendicular a todas las rectas contenidas en dicho plano.",
+      "alternatives": [
+        "VVVV",
+        "FFFF",
+        "VVFF",
+        "FFVV",
+        "FVFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/geometria-del-espacio-i-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — GEOMETRÍA DEL ESPACIO I EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea “P” un punto exterior al plano que contiene a un rectángulo ABCD, PA = 15, PC = 20, PB = 7. Calcule PD",
+      "alternatives": [
+        "18",
+        "20",
+        "22",
+        "24",
+        "25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/geometria-del-espacio-i-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — GEOMETRÍA DEL ESPACIO I EJERCICIOS DESARROLLADOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área total de un paralelepípedo rectangular cuya diagonal mide 50 y sus dimensiones suman 82.",
+      "alternatives": [
+        "4 000",
+        "4 224",
+        "4 424",
+        "4 624",
+        "4 864"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — PRISMAS Y PIRÁMIDE EJERCICIOS DESARROLLADOS PASO A PASO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el volumen de un prisma regular octagonal, sabiendo que el área de una de sus caras laterales es 50 y el apotema de su base mide 4.",
+      "alternatives": [
+        "500",
+        "600",
+        "700",
+        "800",
+        "900"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — PRISMAS Y PIRÁMIDE EJERCICIOS DESARROLLADOS PASO A PASO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área total del sólido que resulta al unir los puntos medios de las aristas de un tetraedro regular, sabiendo que el área total del tetraedro es 18.",
+      "alternatives": [
+        "6",
+        "9",
+        "3",
+        "18",
+        "4,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/02/prismas-y-piramide-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — PRISMAS Y PIRÁMIDE EJERCICIOS DESARROLLADOS PASO A PASO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un cubo cuya diagonal de una cara es 12. Calcule el área total de dicho cubo.",
+      "alternatives": [
+        "400 u 2",
+        "200 u 2",
+        "432 u 2",
+        "462 u 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geometria-simulacro-catolica-resuelto-examen-admision-universidad-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PUCP RESUELTA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la medida del ángulo determinado por dos diagonales adyacentes de las caras de un hexaedro regular.",
+      "alternatives": [
+        "90°",
+        "45°",
+        "60°",
+        "120°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geometria-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRIA CATÓLICA PREGUNTAS RESUELTAS PUCP "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas losetas cuadradas de 20 cm de lado se necesitan para recubrir las caras de una piscina de 10 m de largo por 6 m de ancho y de 3 m de profundidad?",
+      "alternatives": [
+        "3656",
+        "3900",
+        "3877",
+        "3999"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/sencico-examen-admision-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SENCICO 2026 EXAMEN ADMISIÓN RESUELTO ACCESO A LA ESCUELA SUPERIOR TÉCNICA DE LA CONSTRUCCIÓN PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una cartulina cuadrada de 1 m de lado, se corta y se separa, en cada una de sus esquinas, un cuadrado cuyo lado tiene longitud en centímetros. Luego, se dobla las partes laterales sobrantes hacia arriba y se forma así una caja sin tapa cuyo volumen es de 48 000 cm3. Si se pinta de color celeste la parte exterior de la caja, ¿cuántos centímetros cuadrados de área se pintará?",
+      "alternatives": [
+        "6400",
+        "5000",
+        "4000",
+        "4900",
+        "5400"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos-algebra-semana-10-2020.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La base de una pirámide es un hexágono regular de √ 3 m de apotema. Si la altura es el doble del apotema de su base, entonces el volumen de dicho sólido, en m³, es",
+      "alternatives": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/matematicas-unt-examen-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MATEMÁTICAS UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el perímetro de la sección que determina un plano secante a un tetraedro regular ABCD, sabiendo que pasa por los puntos medios de AD y CD y es paralelo a BD (a: longitud de la arista del tetraedro regular).",
+      "alternatives": [
+        "a/ 2",
+        "2 a",
+        "4 √ 2",
+        "3a",
+        "5a"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicaj.blogspot.com — POLIEDROS REGULARES EJERCICIOS CON RESPUESTAS DE SECUNDARIA Y PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El segmento que une los puntos medios de dos aristas concurrentes de un tetraedro regular mide m. Hallar el área total del tetraedro y su volumen respectivamente.",
+      "alternatives": [
+        "2√6",
+        "2√2",
+        "6√2",
+        "3",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/solidos-geometricos-propiedades-y.html",
+      "sourceName": "matematicaj.blogspot.com — SOLIDOS GEOMÉTRICOS EJEMPLOS Y PROBLEMAS RESUELTOS DE GEOMETRÍA DEL ESPACIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un carpintero pintó la superficie de un cubo de madera, luego hizo marcas en cada arista del cubo , de tal manera que , ésta quedaba dividida en «m» partes iguales. Una vez seca la pintura serruchó el cubo por las marca y obtuvo 488 cubitos de al menos una cara pintada . Hallar «m» .",
+      "alternatives": [
+        "6",
+        "8",
+        "10",
+        "14",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/planteo-ecuaciones-ejercicios-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — PLANTEO DE ECUACIONES EJEMPLOS Y EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con 64 cubitos congruentes se forma un cubo grande, pegándolos apropiadamente. Si se pintan las seis caras del cubo grande, ¿cuántos de los cubitos pequeños quedarán pintados exactamente dos caras?",
+      "alternatives": [
+        "22",
+        "16",
+        "24",
+        "20",
+        "28"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/aptitud-logico-matematico-callao-examen-de-admision-universidad-unac-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — APTITUD LÓGICO MATEMÁTICO UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El desarrollo lateral de un prisma cuadrangular regular es un cuadrado de lado 18 m. Calcula el volumen del prisma.",
+      "alternatives": [
+        "360,5 m³",
+        "362,5 m³",
+        "364,5 m³",
+        "371,6 m³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geometria-beca-18-formulario-ejemplos-resueltos-temario-pronabec-del-prospecto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA BECA 18 FORMULARIO CON EJEMPLOS RESUELTOS DEL TEMARIO PRONABEC PRUEBA UNICA NACIONAL PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un prisma hexagonal regular, la arista lateral es el doble de su arista básica, si su volumen es 24 √ 3 . Calcule el área de su superficie lateral.",
+      "alternatives": [
+        "56 u²",
+        "36u²",
+        "48 u²",
+        "64 u²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/geometria-beca-18-formulario-ejemplos-resueltos-temario-pronabec-del-prospecto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA BECA 18 FORMULARIO CON EJEMPLOS RESUELTOS DEL TEMARIO PRONABEC PRUEBA UNICA NACIONAL PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tetraedro regular se proyecta sobre un plano perpendicular a una arista. Si la longitud de la arista del tetraedro es 8, determine el área de dicha proyección.",
+      "alternatives": [
+        "16√2",
+        "8√2",
+        "12√2",
+        "16√3",
+        "9√2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada una pirámide de base cuadrada, se traza un plano paralelo a la base consiguiéndose así una pirámide menor tal que su base cortante tiene área de 6 unidades cuadradas. Si la relación de alturas entre las pirámides es de 1 a 3 y el lado de la base de la pirámide mayor es el doble de su altura, determine el volumen de la pirámide menor.",
+      "alternatives": [
+        "5√6/3",
+        "8 √ 6/3",
+        "2 √ 6/3",
+        "√ 6",
+        "4 √6/3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se ubican los puntos A y B, uno a cada lado de un plano 𝛑, de modo que la distancia de estos hacia el plano están en la relación de 1 a 3, respectivamente. Si la proyección del segmento AB sobre el plano mide 24 unidades y el ángulo que forma AB con el plano 𝛑 es de 53°, determine AB (en unidades).",
+      "alternatives": [
+        "40",
+        "30",
+        "20",
+        "15",
+        "60"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean los planos P y Q paralelos, cuya distancia entre ellos es de 7 u. Se ubica el punto A en el plano P y el punto Ben el plano Q. Si AB = 25 u, determine aproximadamente la medida en grados sexagesimales del ángulo entre la recta AB y el plano P. ¿Cuál es la suma de las cifras del complemento de dicho ángulo?",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/tutoria-5to-actividad-1-experiencia-6-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el lado de un cubo se duplica, el incremento en porcentaje del área superficial es",
+      "alternatives": [
+        "100.",
+        "200.",
+        "250.",
+        "300.",
+        "400."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/tutoria-3ro-4to-actividad-2-experiencia-8-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 PRIMERA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF APTITUD LETRAS Y HUMANIDADES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las áreas de las bases de dos pirámides semejantes son entre sí como 4 es a 9. La relación entre sus volúmenes es",
+      "alternatives": [
+        "13/5",
+        "22/8",
+        "27/8",
+        "11/5",
+        "31/8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de la superficie total de una pirámide cuadrangular regular es 56𝑚². El radio del círculo inscrito en la base es 2m. La altura de la pirámide es:",
+      "alternatives": [
+        "√17𝑚",
+        "√18𝑚",
+        "√21𝑚",
+        "√19𝑚",
+        "√15𝑚"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unica-pdf-ica.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN LUIS GONZAGA 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNICA 2026 TEMARIO VACANTES PROSPECTO ESTRUCTURA PUNTAJES CRONOGRAMA ÁREAS A B C PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el lado de un cubo se duplica, ¿en qué porcentaje se incrementa el área de la superficie del cubo?",
+      "alternatives": [
+        "100 %",
+        "200 %",
+        "250 %",
+        "300 %",
+        "400 %"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/ept-5to-actividad-1-experiencia-7-resuelta-aprendo-en-casa-educacion-para-el-trabajo-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 PRIMERA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF RM RV APTITUD LETRAS Y HUMANIDADES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta luego de determinar si cada proposición es verdadera (V) o falsa (F).\nI. Tres puntos cualesquiera determinan un plano.\nII. Una recta y un punto exterior a ella, determinan un plano.\nIII. Todo plano contiene infinitas rectas.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FFV",
+        "FVV",
+        "VVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/geometria-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un bloque de madera de forma cúbica cuyo lado mide un número cuadrado perfecto, más uno (en centímetros). Al sólido se le hace un corte recto a 10 cm de algún lado de una cara, originándose dos sólidos que tienen la forma de un paralelepípedo recto. Si la cara de menor área mide 416 cm², ¿cuál es el volumen del mayor sólido así formado?",
+      "alternatives": [
+        "6 760 cm³",
+        "5 760 cm ³",
+        "2 980 cm ³",
+        "6 250 cm ³"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-habilidad-logico-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA PRE SAN MARCOS SEMANA 14 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un carpintero construye dos pirámides de madera con alturas congruentes. Si la suma de volúmenes es 40 cm³ y el área de la base de una de ellas es el triple de la otra, halle el volumen de la menor pirámide.",
+      "alternatives": [
+        "8 cm³",
+        "12 cm ³",
+        "10 cm ³",
+        "15 cm ³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-geometria-semana-14-2020.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 14 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide cuadrangular regular, el área de la base es igual al área de una cara lateral. Si la altura de la pirámide mide 2√15 m, halle el área lateral de dicha pirámide.",
+      "alternatives": [
+        "32 m²",
+        "16 m ²",
+        "64 m²",
+        "72 m²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-geometria-semana-14-2020.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 14 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan tiene tres varillas de 6,9 m de longitud, dos de 5,6 m y una caja cúbica de 4 m de arista. Cierta cantidad de varillas pueden colocarse fácilmente y sin tener contacto entre sí, dentro de la caja. ¿Cuál es el número máximo de varillas que podrán ser transportadas en dicha caja cúbica y cuáles serían?",
+      "alternatives": [
+        "Tres - una varilla de 6,9 m y dos de 5,6 m",
+        "Dos - una varilla de 6,9 m y una de 5,6 m",
+        "Tres - dos varillas de 6,9 m y una de 5,6 m",
+        "Cuatro - dos varilla de 6,9 m y dos de 5,6 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/geometria-basica-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PRUEBA DECO SOLUCIONES DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREAS D B PROBLEMAS DESARROLLADOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un prisma hexagonal regular, la arista lateral es el doble de su arista básica y el volumen del prisma es 24 √ 3 u³. Calcule el área lateral del prisma.",
+      "alternatives": [
+        "36 u²",
+        "64 u ²",
+        "40 u²",
+        "50 u²",
+        "48 u ²"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/geometria-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRIA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área total de un prisma regular hexagonal es el cuádruple de su área lateral. Determine el volumen (en cm³) del prisma si su lado de la base es 4 cm.",
+      "alternatives": [
+        "42",
+        "38",
+        "46",
+        "52",
+        "48"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes proposiciones es verdadera?",
+      "alternatives": [
+        "Si L ₁ y L ₂ son rectas paralelas y sean 𝛑 ₁ y 𝛑 ₂ planos que las contienen, respectivamente, de modo que se intersectan. Entonces la recta de intersección es paralela a L ₁ y L ₂ .",
+        "Si 2 planos son intersectados por un tercer plano, entonces las rectas de intersección son paralelas.",
+        "Si los planos 𝛑 ₁ y 𝛑 ₂ son perpendiculares a las rectas L ₁ y L ₂ , respectivamente, entonces dichos planos son secantes.",
+        "Si L ₁ y L ₂ son rectas paralelas y sean 𝛑 ₁ y 𝛑 ₂ planos que las contienen, respectivamente, de modo que se intersectan. Entonces la recta de intersección es paralela solo a L ₁ o solo a L ₂ .",
+        "Si desde un punto exterior a un plano se traza una recta L perpendicular a una recta contenida en el plano, entonces la recta es perpendicular al plano."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El volumen de un octaedro regular es de 9 √ 2u³. Si se duplica la arista, determine el incremento del área total (u²).",
+      "alternatives": [
+        "50 √ 3",
+        "52 √ 3",
+        "54 √ 3",
+        "56 √ 3",
+        "58 √ 3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas cajas cúbicas, cuyas aristas miden entre70 cm y 130 cm, se podrán utilizar para empaquetar28 800 cajas de fósforo de dimensiones 4 cm, 5 cm y 6 cm?",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/10/mapeos-definidos-por-funciones.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNAMAD 2027 ADMISIÓN UNIVERSIDAD NACIONAL AMAZÓNICA PREGUNTAS RECIENTES PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un plano está determinado por _______.",
+      "alternatives": [
+        "tres puntos no colineales.",
+        "tres puntos colineales.",
+        "una recta y un punto que pertenece a ella.",
+        "solo una recta.",
+        "dos puntos no colineales."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/04/aprendo-en-casa-inicial-minedu-ninos-3-4-5-anos-jardin-peru-educa-actividades-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNHEVAL 2027 RESUELTO INGRESO UNIVERSIDAD NACIONAL PDF CLAVES DE RESPUESTAS – SOLUCIONARIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el volumen del sólido que se forma al unir los centros de las caras de un cubo cuya arista mide 4 cm.",
+      "alternatives": [
+        "64 /3 cm 3",
+        "8/3 cm 3",
+        "16/3 cm 3",
+        "32/3 cm 3",
+        "128/3 cm 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un cubo cuya arista es 10. Calcule la distancia de un vértice al centro de la cara opuesta.",
+      "alternatives": [
+        "3 √ 6",
+        "4 √ 6",
+        "5 √ 6",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/solucionario-catolica-2019-admision.html",
+      "sourceName": "matematicasn.blogspot.com — EVALUACIÓN DE TALENTO CATÓLICA 2027 RESUELTA INGRESO UNIVERSIDAD RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un acuarista elaboró un novedosos acuario, cuya base es un hexágono de 10 cm de arista, y una altura de 15 cm. Halle la cantidad de vidrio que utilizó:",
+      "alternatives": [
+        "(900 + 150√3) cm²",
+        "800 cm²",
+        "1800 cm²",
+        "1000 cm²",
+        "700√3 cm²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/examen-admision-villareal-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO VILLARREAL 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNFV 2026 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el volumen de un cubo si su arista mide 4u.",
+      "alternatives": [
+        "16 u³",
+        "64",
+        "25",
+        "26",
+        "28"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las dimensiones de un rectoedro son 7cm, 6cm y 5 cm. Hallar el volumen del rectoedro .",
+      "alternatives": [
+        "210cm³",
+        "200",
+        "180",
+        "196",
+        "160"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un paralelepípedo rectangular su diagonal mide 10u y forma un ángulo que mide 45° con la base y un ángulo que mide 30° con una cara lateral , entonces el volumen (en u³) del sólido limitado por el paralelepípedo .",
+      "alternatives": [
+        "210√2",
+        "200√2",
+        "180√2",
+        "196√2",
+        "125√2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las dimensiones de un paralelepípedo rectangular son 2x , x y x , el área de su superficie total es igual a 160cm² . hallar el valor de “x”.",
+      "alternatives": [
+        "1 cm",
+        "2 cm",
+        "3 cm",
+        "4 cm",
+        "5 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con relación a una caja rectangular, el área del fondo, del frente y del lado; es 32cm ² , 24cm ² y 12cm ² respectivamente . Calcular el volumen de la caja .",
+      "alternatives": [
+        "84 cm³",
+        "96",
+        "105",
+        "120",
+        "140"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área de la superficie lateral de un tronco de prisma triangular oblicuo, si la sección recta es regular, cuyo lado mide 3 u, y la suma de longitudes de las aristas laterales es 15 u.",
+      "alternatives": [
+        "40 u ²",
+        "45 u ²",
+        "15 u ²",
+        "60 u ²",
+        "75 u ²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el volumen del prisma triangular, si el área de una de sus caras laterales es 50 y la distancia de la arista opuesta a dicha cara lateral es 3.",
+      "alternatives": [
+        "60",
+        "66",
+        "68",
+        "75",
+        "72"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado un prisma recto, cuya base es un hexágono regular inscrito en un círculo de 8m de radio y cuya altura es igual al diámetro del círculo. Calcular 𝕍/𝔸 en metros, donde 𝔸 es el área lateral y 𝕍 es el volumen del prisma.",
+      "alternatives": [
+        "2√3",
+        "2√2",
+        "3√2",
+        "5√3",
+        "√2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tronco de prisma triangular recto tiene por aristas básicas a segmentos cuyas longitudes son 8 ; 12 y 6µ. Las aristas laterales opuestas a estos lados miden 15 ; 5 y 10µ respectivamente, halle el área lateral del tronco.",
+      "alternatives": [
+        "220 u²",
+        "250",
+        "270",
+        "3000",
+        "320"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tronco de prisma recto cuya base es un cuadrado ABCD de lado 1m , se levantan perpendicularmente al plano de su base las cuales miden:\nAE= 3 m; BF= 10 m CG= 9 m y DH= x m . Calcular el volumen del tronco de prisma. (en m³).",
+      "alternatives": [
+        "36",
+        "27",
+        "18",
+        "6",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una batea de 10 pies de largo y sección trapecial isósceles de altura 2 pies, base inferior 2 pies y base superior 3 pies. Se vierte agua en la batea a una razón constante . Cuando el volumen del agua es de 45/2 pies³. ¿A que altura de la base se encuentra el agua?",
+      "alternatives": [
+        "2/3",
+        "1/4",
+        "3/2",
+        "1/2",
+        "1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC se traza AM y BN, perpendiculares al plano que contiene a dicho triángulo y en el mismo semiespacio. Si BN=2(MA) y S es punto medio de MC, calcule la razón de volúmenes de los sólidos MSBN y ABCM.",
+      "alternatives": [
+        "1",
+        "2/3",
+        "1/4",
+        "1/2",
+        "1/3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado un prisma, calcule la razón entre el número de aristas y el número de caras laterales.",
+      "alternatives": [
+        "2",
+        "1,5",
+        "1",
+        "2,5",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un prisma hexagonal regular ABCDEF -A'B'C'D'E'F' de volumen 48√3 se ubica M punto medio de DD', si AA'= 8 calcule A'M.",
+      "alternatives": [
+        "4√2",
+        "3",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un prisma cuadrangular regular ABCD - EFGH de volumen 216 √ 2 𝑢³ si ACGE es un cuadrado, calcule el área de la superficie lateral.",
+      "alternatives": [
+        "127 √ 2 𝑢³",
+        "144 √ 2 𝑢³",
+        "146 √ 2 𝑢³",
+        "136 √ 2 𝑢³",
+        "196 √ 2 𝑢³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un hexaedro regular de volumen igual a 27, se traza un plano secante a la superficie lateral que divide al segmento que une los centros de las bases en la razón de 3 a 2. Calcule el volumen del tronco de prisma cuadrangular de menor volumen que se ha formado.",
+      "alternatives": [
+        "24/5",
+        "14/5",
+        "32/5",
+        "54/5",
+        "43/5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta de verdad (V) o falsedad (F) respecto a los siguientes enunciados.\nI. En todo prisma, sus bases son paralelas y congruentes.\nII. En un prisma regular, sus aristas laterales son iguales con las aristas básicas.\nIII. En todo prisma, el número de aristas básicas es el doble del número de aristas laterales.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VFF",
+        "FVV",
+        "FVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tronco de prisma triangular regular, ABC - DEF, la base regular ABC tiene área igual a 16. Si la distancia entre los centroides es igual a 12, calcule el volumen de dicho sólido.",
+      "alternatives": [
+        "191",
+        "192",
+        "193",
+        "102",
+        "125"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una región equilátera ABC cuyo lado mide √ 3; hacia el mismo semiespacio, por A y B, se levantan las perpendiculares al plano AE=2 y BF=6. Calcule el volumen del sólido ABCEF.",
+      "alternatives": [
+        "4 𝑢³",
+        "3 √ 2 𝑢³",
+        "3 𝑢³",
+        "2 √ 3 𝑢³",
+        "2 𝑢³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tronco de prisma triangular oblicuo, la longitud del segmento que une los baricentros de sus bases es 16. Calcule la longitud de la menor arista, si estas están en razón de 3, 4 y 5.",
+      "alternatives": [
+        "4",
+        "12",
+        "48",
+        "16",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un prisma cuadrangular regular ABCD-EFGH, tal que AC=6 y m ∢ EDG = 74º. Calcule el área de la superficie lateral del prisma.",
+      "alternatives": [
+        "8 √ 7 𝑢²",
+        "4 √ 14 𝑢²",
+        "16 √ 7 𝑢²",
+        "12 √ 14 𝑢²",
+        "32 √ 7 𝑢²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tronco de prisma regular ABCD-EFGH, la base ABCD es una región cuadrada de lado igual a 6. Si AE= 3 y CG= 8, calcule el volumen del tronco.",
+      "alternatives": [
+        "198 𝑢³",
+        "186 𝑢³",
+        "200 𝑢³",
+        "210 𝑢³",
+        "236 𝑢³"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un prisma regular ABCD-EFGH cuya arista básica mide 4m y P es punto medio de CG.\nSi AP = 2 √1 7 m, calcule (en m²) el área de la superficie total del prisma.",
+      "alternatives": [
+        "112",
+        "224",
+        "256",
+        "290",
+        "178"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si con un galón de pintura se pintan 30m². ¿Cuántos galones se necesitarán para pintar las paredes de una habitación que tiene por dimensiones 20 m, 10 m y 3 m respectivamente, si la habitación tiene una puerta de 1,5m×2m, una ventana de 8,5m×2m y dos ventanas de 2,5 m×2 m?",
+      "alternatives": [
+        "1",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/prisma-y-paralelepipedo-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PRISMA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la arista de un cubo de Rubik es 6 𝑐𝑚, ¿cuál es su volumen?",
+      "alternatives": [
+        "180 𝑐𝑚³",
+        "192 𝑐𝑚³",
+        "206 𝑐𝑚³",
+        "216 𝑐𝑚³",
+        "128 𝑐𝑚³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Amy tiene 18√2 𝑐𝑚³ de cera para preparar una vela de la forma de un tetraedro regular. Calcule la altura de la vela aproximadamente.",
+      "alternatives": [
+        "3 𝑐𝑚",
+        "3,5 𝑐𝑚",
+        "5 𝑐𝑚",
+        "5,5 𝑐𝑚",
+        "4 𝑐𝑚"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un hexaedro regular, la distancia entre los centros de dos caras adyacentes es √2𝑢 . determine el volumen de dicho hexaedro .",
+      "alternatives": [
+        "4𝑢³",
+        "2",
+        "10",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un hexaedro regular ABCD – EFGH, calcule la medida del ángulo diedro entre los planos que contienen a EBC y EDG .",
+      "alternatives": [
+        "60°",
+        "75°",
+        "90°",
+        "45°",
+        "53°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el área total de un hexaedro regular, sabiendo que la distancia de uno de sus vértices al centro de una cara opuesta es de 2 𝑚 .",
+      "alternatives": [
+        "48 𝑚²",
+        "45 𝑚²",
+        "25 𝑚²",
+        "16 𝑚²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tetraedro ABCD, se tiene que : AC = AD y BC = BD. Hallar la medida del ángulo que forman las aristas AB y CD.",
+      "alternatives": [
+        "45º",
+        "60º",
+        "90º",
+        "30º",
+        "120º"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado un tetraedro regular cuya arista mide 2, calcule el área de la sección determinada por un plano de simetría que pasa por una de sus aristas.",
+      "alternatives": [
+        "4√2 𝑢²",
+        "2√2 𝑢²",
+        "3√2 𝑢²",
+        "2√6 𝑢²",
+        "2 𝑢²"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un octaedro regular, su arista mide 6 cm. Calcule la distancia entre dos caras opuestas.",
+      "alternatives": [
+        "2√6",
+        "6",
+        "3√6",
+        "4√6",
+        "5√6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El plano bisector del diedro formado por dos caras de un tetraedro regular divide a la altura en dos segmentos, calcular la relación de ellos.",
+      "alternatives": [
+        "1/2",
+        "2/3",
+        "1",
+        "1/3",
+        "1/4 PROBLEMAS RESUELTOS PROBLEMA 1 : Calcule la medida del ángulo determinado por dos diagonales adyacentes de las caras de un hexaedro regular."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F).\nI) Si dos planos son perpendiculares a dos rectas diferentes que se intersectan, entonces dichos planos también se intersectan.\nII) El lugar geométrico que determinan los pies de los segmentos oblicuos de longitudes iguales trazadas desde un punto exterior a un plano es una circunferencia.\nIII) Toda recta es perpendicular a un plano, si es ortogonal a dos rectas diferentes no paralelas contenidas en dicho plano.",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "FFV",
+        "VVV",
+        "FFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucionario-simulacro-ien-uni-examen-nacional-escolar-ingreso-admision-universidad-nacional-de-ingenieria-prueba-resuelta-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO IEN UNI 2027 SOLUCIONARIO INGRESO UNIVERSIDAD DE INGENIERÍA 2026 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La superficie lateral de un prisma recto regular triangular es un rectángulo cuya diagonal mide 12m y su altura 6 √ 3m. Calcule el área total del sólido (en m 2 ).",
+      "alternatives": [
+        "38 √ 3",
+        "39 √ 3",
+        "40 √ 3",
+        "41 √ 3",
+        "42 √ 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/02/solucionario-segunda-prueba-examen.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-1 SEGUNDA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DE INGENIERÍA SOLUCIONES DE MATEMÁTICA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usando 343 cubos pequeños de 2cm, por lado, se forma un solo cubo. Indique la longitud del lado del cubo grande en centímetros.",
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "14",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/01/simulacro-admision-uni-primera-prueba-aptitud-academica-universidad-ingenieria-solucionario-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNI 2027 PRIMERA PRUEBA DE INGRESO SOLUCIONARIO UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las caras de un triedro equilátero miden 45°. Determine la medida (en grados sexagesimales) de una de las caras del triedro polar, cuyo vértice está en el interior del triedro dado.",
+      "alternatives": [
+        "arc cos( √ 3 – √ 2)",
+        "arc cos(1 – √ 2)",
+        "arc cos(1 – √ 3)",
+        "arc cos( √ 2 – √ 3)",
+        "arc cos( √ 3 – 1)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-7-experiencia-8-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-primero-segundo-grado-de-secundaria-word-aprendizaje-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos caras de un ángulo triedro miden 60° y 90°. Calcule el mínimo valor entero de la tercera cara.",
+      "alternatives": [
+        "30°",
+        "32°",
+        "29°",
+        "31°",
+        "28°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un ángulo triedro equilátero. Calcule el máximo valor entero de su cara.",
+      "alternatives": [
+        "60°",
+        "120°",
+        "90°",
+        "119°",
+        "121°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si dos caras de un ángulo triedro miden 115° y 125°, calcule el máximo valor entero de la tercera cara.",
+      "alternatives": [
+        "119°",
+        "121°",
+        "118°",
+        "122°",
+        "120°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de todos los ángulos diedros de un tetraedro cualquiera, está comprendido entre:",
+      "alternatives": [
+        "4 rectos y 12 rectos",
+        "4 rectos y 24 rectos",
+        "6 rectos y 16 rectos",
+        "8 rectos y 24 rectos",
+        "2 rectos y 6 rectos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un prisma cuyo número de aristas básicas es m, calcule la suma de medidas de los ángulos diedros determinados por las caras laterales contiguas .",
+      "alternatives": [
+        "90°(m – 4)",
+        "180°(m – 2)",
+        "90°(m – 1)",
+        "180°m",
+        "90°(m – 3)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POLIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos caras de un triedro miden 80° y 118° respectivamente. Halle los valores enteros , mínimo y máximo de la medida de la tercera cara.",
+      "alternatives": [
+        "40°, 161°",
+        "60°, 161°",
+        "30°, 161°",
+        "28°, 161°",
+        "39°, 161°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/diedros-y-triedros-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DIEDROS Y TRIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un ángulo diedro, las distancias de un punto interior a las caras y a la arista miden 4√2 u, 4 u y 8 u respectivamente. Calcule la medida del ángulo diedro.",
+      "alternatives": [
+        "65º",
+        "70º",
+        "75º",
+        "80º",
+        "85º"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/diedros-y-triedros-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DIEDROS Y TRIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC , recto en B, los lados miden AB=6 y BC = 8 . Por el vértice de B se traza BF perpendicular al plano ABC tal que BF = 4,8.\nHallar la medida del ángulo diedro que forman los planos ABC y AFC .",
+      "alternatives": [
+        "15°",
+        "30°",
+        "45°",
+        "75°",
+        "90°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/diedros-y-triedros-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DIEDROS Y TRIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área proyectada de un cuadrado sobre un plano que pasa por una de sus diagonales es de 18,6 𝑐𝑚² , si el ángulo formado por dichas superficies es de 53°.\nHalle el área (en 𝑐𝑚² ) del cuadrado.",
+      "alternatives": [
+        "30,0",
+        "30,5",
+        "30,75",
+        "31",
+        "31,5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/diedros-y-triedros-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DIEDROS Y TRIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las regiones rectangulares ABCD y ABMN determinan un diedro que mide 120°.\nSi 2BM = AB =2BC = 2a. Halle la distancia de D al punto medio de MN .",
+      "alternatives": [
+        "a",
+        "3a",
+        "2a",
+        "4a",
+        "5a"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/diedros-y-triedros-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DIEDROS Y TRIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado un exágono regular ABCDEF de centro el punto O y AB = 4. Se traza perpendicular al plano del exágono , de modo que el diedro S–AB–O mide 60° . Halle la distancia del punto O al plano ABS.",
+      "alternatives": [
+        "4",
+        "3",
+        "5",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/diedros-y-triedros-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DIEDROS Y TRIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tetraedro O – ABC,OA=BC,OB=AC y OC= AB. Además se cumple AC >OC>AO. Halle la suma del máximo y mínimo entero de la cara AOC.",
+      "alternatives": [
+        "90°",
+        "100°",
+        "120°",
+        "150°",
+        "160°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/diedros-y-triedros-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DIEDROS Y TRIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos regiones cuadradas están contenidos en plano perpendiculares ; ABCD y ABEF. Halle la medida del ángulo que determinan las rectas AC y BF .",
+      "alternatives": [
+        "45°",
+        "150°",
+        "90°",
+        "120°",
+        "135°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/diedros-y-triedros-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DIEDROS Y TRIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un triángulo ABC recto en B, contenido en un plano P, se ubica E un punto exterior a dicho plano tal que EA = EB = EC, si la distancia de E al plano P es 49 y AB = 14. Halle la medida del ángulo diedro (BC).",
+      "alternatives": [
+        "Arc tg 45",
+        "Arc tg 7",
+        "Arc tg 10",
+        "Arc tg 11",
+        "Arc tg 13"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/diedros-y-triedros-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DIEDROS Y TRIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la verdad de las siguientes proposiciones :",
+      "alternatives": [
+        "En todo triedro a caras congruentes se oponen diedros congruentes.",
+        "En todo triedro la suma de las medidas de los ángulos de sus caras está entre 180° y 540°",
+        "Triedro equilátero es aquel cuya medida de los ángulos de sus caras miden 60° cada uno",
+        "FFV",
+        "FVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/diedros-y-triedros-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DIEDROS Y TRIEDROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La arista básica de un prisma de base triangular regular mide 4m. Calcular su volumen. Si su altura mide 10m",
+      "alternatives": [
+        "40√3",
+        "24√3",
+        "26",
+        "18",
+        "32"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/figuras-y-cuerpos-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — SÓLIDOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuánto mide el apotema y la altura de una pirámide cuadrangular regular si su arista lateral mide 20 cm y la arista de la base 24 cm?",
+      "alternatives": [
+        "40√7",
+        "24√7",
+        "4√7",
+        "18",
+        "32"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/figuras-y-cuerpos-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — SÓLIDOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique verdadero (V) o falso (F) según corresponda.\nI. Si dos rectas no se cortan entonces son paralelas.\nII. Una recta se encuentra contenida en un plano cuando todos sus puntos se encuentran en dicho plano.\nIII. Si una recta no es secante a un plano es porque debe ser paralela a dicho plano.",
+      "alternatives": [
+        "FVF",
+        "FFF",
+        "VFV",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Exteriormente a un cuadrado de centro O se ubica el punto Q, tal que AO=OQ, en CD se ubica el punto P. Si PC= 3(PD) = 3, calcule PQ. m∢POQ= 90°.",
+      "alternatives": [
+        "√13",
+        "3",
+        "√17",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos puntos A y B situados a uno y otro lado de un plano ℙ distan 2 u y 10 u de dicho plano y la proyección de AB sobre el plano P mide 5 u. Halle AB.",
+      "alternatives": [
+        "11 u",
+        "12 u",
+        "13 u",
+        "14 u"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un plano ℍ se ubican los puntos A y B. P es un punto exterior a dicho plano, si la medida del ángulo que forma PA y PB con el plano ℍ es el 45° y 30° respectivamente. Además AP y PB son perpendiculares, calcule AB, si AP =2√2.",
+      "alternatives": [
+        "2√5",
+        "3√6",
+        "2√6",
+        "4√2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un segmento AB, la diferencia de las distancia de A y B a un plano exterior es 7. Si la proyección de AB sobre el plano es igual a 24. Hallar AB.",
+      "alternatives": [
+        "26",
+        "24",
+        "25",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia de un punto P a un plano es 5, se traza PQ (Q pertenece al plano), de tal manera que la proyección de PQ sobre el plano es de 12. Halle PQ.",
+      "alternatives": [
+        "7",
+        "13",
+        "18",
+        "17"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean ℙ y ℚ dos planos paralelos, A y B son dos puntos en los planos ℙ y ℚ respectivamente. Si la distancia entre los planos es 40 cm y la proyección del segmento AB en el plano ℚ tiene una longitud de 30 cm, halle AB.",
+      "alternatives": [
+        "45 cm",
+        "50 cm",
+        "55 cm",
+        "60 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta de verdad (V) o falsedad (F) respecto a las siguientes proposiciones.\nI. Tres puntos determinan un plano.\nII. Una recta y un punto determinan un plano.\nIII. Dos rectas determinan un plano.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FFF",
+        "FVF",
+        "VFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta de verdad (V) o falsedad (F) respecto a las siguientes proposiciones:\nI. La intersección de dos planos secantes es un segmento.\nII. La intersección de tres planos puede ser un punto.\nIII. El plano divide al espacio en dos semiespacios.",
+      "alternatives": [
+        "VFV",
+        "FVV",
+        "FFV",
+        "VVV",
+        "VVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta de verdad (V) o falsedad (F) con relación a las siguientes proposiciones.\nI. Si dos planos no son secantes, entonces son paralelos.\nII. Si dos rectas no son paralelas, entonces son alabeadas.\nIII. Dos rectas alabeadas están contenidas en el mismo plano.",
+      "alternatives": [
+        "FVV",
+        "FVF",
+        "VFV",
+        "FFV",
+        "VFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta de verdad (V) o falsedad (F) respecto a las siguientes proposiciones. I. Por un punto se pueden trazar solo 3 rectas.\nII. Por una recta pasan infinitos planos.\nIII. Dos puntos determinan una recta.",
+      "alternatives": [
+        "FVV",
+        "FVF",
+        "FFV",
+        "VFV",
+        "VVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la cantidad máxima de planos que se pueden determinar con 7 puntos.",
+      "alternatives": [
+        "24",
+        "28",
+        "32",
+        "35",
+        "30"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un segmento está comprendido entre dos planos paralelos cuya distancia es 15. Si la longitud del segmento es 17, halle la longitud de la proyección ortogonal del segmento sobre uno de los planos.",
+      "alternatives": [
+        "2",
+        "4",
+        "5",
+        "8",
+        "16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/rectas-y-planos-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — RECTAS Y PLANOS EN EL ESPACIO EJERCICIOS RESUELTOS PDF TEOREMA DE LAS TRES PERPENDICULARES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La base de un prisma recto es un rectángulo, el lado menor de dicha base mide 4cm y el otro lado mide 5cm. Si la diagonal del prisma mide 13cm, calcule el volumen del prisma.",
+      "alternatives": [
+        "20 √ 2 cm 3",
+        "80 √ 2 cm 3",
+        "160 √ 2 cm 3",
+        "40 √ 2 cm 3",
+        "60 √ 2 cm 3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/01/examen-de-geometria-resuelto-pdf-unmsm.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un paralelepípedo rectangular, el área de la superficie total es 180u 2 , la diagonal de la base mide 10u y la suma de las longitudes de las tres dimensiones es 17u. Calcular el volumen del sólido limitado por el paralelepípedo rectangular.",
+      "alternatives": [
+        "70 u 3",
+        "172 u 3",
+        "74 u 3",
+        "76 u 3",
+        "144 u 3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/01/examen-de-geometria-resuelto-pdf-unmsm.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área total de un prisma regular hexagonal es el cuádruple de su área lateral. Determine el volumen (en cm 3 ) del prisma si su lado de la base es 4 cm.",
+      "alternatives": [
+        "42",
+        "38",
+        "46",
+        "52",
+        "48"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/geometria-plana-y-del-espacio-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNI RESUELTA– INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado un prisma oblicuo cuya sección recta es un triángulo de inradio 4 unidades y área lateral de 36 unidades cuadradas. Determine el volumen del prisma (en unidades cúbicas).",
+      "alternatives": [
+        "82",
+        "54",
+        "52",
+        "62",
+        "72"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/geometria-plana-y-del-espacio-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNI RESUELTA– INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes proposiciones es falsa?",
+      "alternatives": [
+        "Solo en el tetraedro regular se puede inscribir, circunscribir y exinscribir esferas.",
+        "En toda pirámide de A aristas, C caras y V vértices se cumple V=C=(A/2) +1",
+        "El menor número de aristas que concurren en cada vértice, para todo poliedro convexo, es tres.",
+        "En todo poliedro convexo de A aristas, C caras y V vértices se cumple C+V=A+ 2.",
+        "En todo prisma de A aristas, C caras y V vértices se cumple C= (A/3) + 2 V = 3A/2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/geometria-plana-y-del-espacio-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNI RESUELTA– INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una caja con forma de un paralelepípedo rectangular de 56 cm de largo, 56 cm de ancho y 32 cm de altura; además, dispone de 200 barras de madera con forma de paralelepípedo rectangular de 32 cm de largo, 8 cm de ancho y 2 cm de altura. ¿Cuántas barras de madera, como máximo, se puede colocar dentro de la caja, sin que sobresalga más allá de las dimensiones de la caja?",
+      "alternatives": [
+        "192",
+        "190",
+        "188",
+        "196",
+        "194"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/03/examen-de-concurso-de-becas-academia.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA B 2024-2 GENÉTICA ESTADÍSTICA QUÍMICA FÍSICA COMPUTACIÓN PRESENCIAL SAN MARCOS CLAVES INGRESO UNIVERSIDAD RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un padre mandó a confeccionar recordatorios de material acrílico en forma de una pirámide cuadrangular regular cuya base tiene 36cm 2 de área y las aristas laterales miden 7cm. Para introducirlos en su caja, el padre requiere saber la longitud de la altura de los recordatorios. Halle dicha altura.",
+      "alternatives": [
+        "√ 67 cm",
+        "√ 43 cm",
+        "√ 37 cm",
+        "√ 31 cm",
+        "√ 33 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-geometria-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS GEOMETRÍA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un prisma triangular regular cuya arista básica y lateral mide 2 y 15, respectivamente. Calcule el volumen del prisma.",
+      "alternatives": [
+        "15 √ 3 u 3",
+        "25 √ 3 u 3",
+        "18 √ 3 u 3",
+        "5 √ 3 u 3",
+        "10 √ 3 u 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/geometria-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un acuarista elaboró un novedosos acuario, cuya base es un hexágono de 10cm de arista, y una altura de 15cm. Halle la cantidad de vidrio que utilizó:",
+      "alternatives": [
+        "(900+150√3) cm 2",
+        "800 cm 2",
+        "1800 cm 2",
+        "1000 cm 2",
+        "700√3 cm 2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/geometria-examen-admision-villarreal.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un niño fabricó un acuario que tiene la forma de un prisma, sin tapa, con una cierta cantidad de piezas de vidrios. Si en cada esquina el niño colocó una cinta adhesiva para reforzar el acuario y en total utilizó 16 cintas, halle el número de piezas de vidrio que utilizó el niño.",
+      "alternatives": [
+        "12",
+        "8",
+        "7",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/geometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un salón de clase 11 estudiantes están celebrando el cumpleaños de su profesor, para ello compran una torta de forma circular de 30 cm de diámetro y 8 cm de altura. Si a todos los asistentes les corresponden porciones iguales, halle el volumen de cada porción de torta.",
+      "alternatives": [
+        "12𝜋 cm³",
+        "115,5𝜋 cm³",
+        "125,5𝜋 cm³",
+        "150𝜋 cm³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/geometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide cuadrangular regular la altura mide 2 √ 3 cm y el área de una cara lateral es igual al área de la base. Halle el área total de la pirámide.",
+      "alternatives": [
+        "8 √ 3 cm 2",
+        "8 √ 2 cm 2",
+        "16 cm 2",
+        "12 cm 2",
+        "18 cm 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/geometria-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las áreas de dos paredes de un almacén y el techo son 12 m², 7,2 m² y 15 m², además el almacén tiene forma de prisma cuadrangular recto.\n¿Cuál es la capacidad de dicho almacén?",
+      "alternatives": [
+        "42 m³",
+        "30 m ³",
+        "48 m³",
+        "36 m ³",
+        "32 m³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-geometria-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE GEOMETRÍA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un prisma regular ABCDEF–A'B'C'D'E'F', donde CA'=2√6 y la medida del ángulo entre CA' y DF es 45º.\nCalcule el área de la superficie lateral del prisma.",
+      "alternatives": [
+        "24√3",
+        "26√3",
+        "28√3",
+        "30√3",
+        "24√6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-geometria-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE GEOMETRÍA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una pirámide triangular cuyo volumen es 64, se traza un plano paralelo a la base de dicha pirámide, tal que biseca su altura.\nCalcule el volumen de la pirámide parcial.",
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-geometria-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE GEOMETRÍA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cubo compacto de madera de 1 m de arista es cortado totalmente y en forma exacta en cubitos de 5 cm de arista. Todos los cubitos obtenidos son colocados sobre un plano horizontal en línea recta, uno a continuación de otro y unidos por una de sus caras, formando una fila. ¿Cuál es la longitud de dicha fila?",
+      "alternatives": [
+        "440 m",
+        "420 m",
+        "400 m",
+        "80 m",
+        "390m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/01/seccionamientos-y-cortes-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SECCIONAMIENTOS Y CORTES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un prisma regular ABCD - EFGH cuya arista básica mide 4 m y P es punto medio de CG. Si AP = 2 √1 7 m, calcule (en m²) el área de la superficie total del prisma.",
+      "alternatives": [
+        "112",
+        "224",
+        "256",
+        "290",
+        "178"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/segunda-prueba-examen-uni-2016-2.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I SEGUNDA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA MATEMÁTICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Del vértice A del cuadrado ABG D se traza AP perpendicular al plano que contiene al cuadrado mencionado. Luego, se une el punto P con- los puntos medios M y N de BC y CD respectivamente. Si AP=18 cm y AB=12 √ 2 cm, en el tetraedro A-PMN calcule la medida del ángulo diedro P-MN-A.",
+      "alternatives": [
+        "30°",
+        "37°",
+        "60°",
+        "45°",
+        "53°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/segunda-prueba-examen-uni-2016-2.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I SEGUNDA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA MATEMÁTICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene el hexágono regular ABCD-EFGH ; AB = 2m. Halle la longitud del menor camino para ir de A hacia B pasando sólo por cuatro caras.",
+      "alternatives": [
+        "2√7u",
+        "3√7u",
+        "√7u",
+        "5√7u",
+        "2√5u"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/maximos-y-minimos-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — MÁXIMOS Y MÍNIMOS GEOMÉTRICOS EJERCICIOS RESUELTOS PDF APLICANDO DERIVADAS OPTIMIZACIÓN GEOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un recipiente que tiene la forma de un cilindro recto de base circular, se introduce un bloque de hielo en forma de un cubo de modo que sus vértices se ubican en las circunferencias de las bases. Si la arista del cubo mide 1cm, calcular el volumen (en cm 3 ) del liquido necesario par a llenar el recipiente luego de que se derrita totalmente el bloque de hielo:",
+      "alternatives": [
+        "(𝛑 –3)/3",
+        "(𝛑 –2)/3",
+        "(𝛑 –3)/2",
+        "(𝛑 –2)/2",
+        "(𝛑 +1)/2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/segunda-prueba-resuelta-de-geometria.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una recta ℒ está contenida en el plano P y separa a este plano en dos semiplanos 𝛑 1 y 𝛑 2 . Indique el valor de verdad o falsedad de las siguientes proposiciones:\nI) Semiplano 𝛑 1 ∪ semiplano 𝛑 2 = plano P.\nII) Semiplano 𝛑 1 ∩ semiplano 𝛑 2 = recta ℒ.\nIII) Semiplano 𝛑 1 ∪ recta ℒ ∪ semiplano 𝛑 2 = plano P.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VVF",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/segunda-prueba-resuelta-de-geometria.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un tronco de prisma triangular recto ABC-DEF, las aristas laterales AD, BE y CF son perpendiculares a la base ABC y miden 8m, 4m y 6m respectivamente. Si el área de la región cuadrangular BEFC es 30m 2 y la distancia del vértice A a la arista BC es 5m. Calcule (en m 3 ) el volumen del tronco de prisma recto.",
+      "alternatives": [
+        "75",
+        "81",
+        "84",
+        "87",
+        "90"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/segunda-prueba-resuelta-de-geometria.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el volumen de un cubo cuya diagonal es igual a 4 √ 3.",
+      "alternatives": [
+        "8 u 3",
+        "16 u 3",
+        "24 u 3",
+        "36 u 3",
+        "64 u 3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área de la superficie total del octaedro cuya diagonal es 4 √ 2.",
+      "alternatives": [
+        "8 √ 3 u 2",
+        "16 √ 3 u 2",
+        "32 √ 3 u 2",
+        "64 √ 3 u 2",
+        "4 √ 3 u 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "SUna estatua G hecha de bronce pesa 500 kg. Si se construyera una estatua P con el mismo material y cuyas dimensiones fueran todas las quintas partes de G , ¿cuánto pesaría P ?",
+      "alternatives": [
+        "4 kg",
+        "10 kg",
+        "8 kg",
+        "5 kg"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Razonamiento-matematico-deco-C-E-examen-admision-universidad-san-marcos-resuelto-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO MATEMÁTICO PRUEBA DECO SOLUCIONES DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREAS D B PROBLEMAS DESARROLLADOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un recipiente de forma de un paralelepípedo recto de dimensiones 4 m, 6 m y 8 m. Si Luz coloca dos cubos idénticos en el fondo de dicho recipiente lleno de agua, entonces se derrama 1/12 de su volumen. Halle el área total de uno de los cubos.",
+      "alternatives": [
+        "24 m 2",
+        "90 m 2",
+        "48 m 2",
+        "54 m 2",
+        "96 m 2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-logico-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO LÓGICO MATEMÁTICO PREUNIVERSITARIO PREGUNTAS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El volumen de un octaedro regular es de 9 √ 2u 3 . Si se duplica la arista, determine el incremento del área total (u 2 ).",
+      "alternatives": [
+        "50 √ 3",
+        "52 √ 3",
+        "54 √ 3",
+        "56 √ 3",
+        "58 √ 3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/geometria-preuniversitaria-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PROBLEMAS RESUELTOS NIVEL UNI"
     }
   ]
 }

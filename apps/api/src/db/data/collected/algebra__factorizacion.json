@@ -1119,6 +1119,1358 @@
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-divisores-binomios.html",
       "sourceName": "matematicasn - Factorización por Divisores Binomios (Ejercicios Resueltos), Ejercicio 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la suma de coeficientes de un factor primo del polinomio.\nP(a; b; c) = a ² +2ab – c ² +b ²",
+      "alternatives": [
+        "3",
+        "–1",
+        "2",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/factorizacion-ejercicios-para-clase-de-tercero-de-secundaria-en-word.html",
+      "sourceName": "geometriapdf.blogspot.com — FACTORIZACIÓN FÓRMULAS Y EJERCICIOS DESARROLLADOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de factorizar\nen , indique el número de factores primos.",
+      "alternatives": [
+        "5",
+        "3",
+        "4",
+        "6",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al factorizar:\nIndicar la suma de sus términos de sus factores primos.",
+      "alternatives": [
+        "7x-4y+1",
+        "7x-1",
+        "4x-7y-1",
+        "4y-1",
+        "5x+2y-1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar:\n, e\nindicar un factor primo lineal.",
+      "alternatives": [
+        "3x +2",
+        "-3x1",
+        "-2x+1",
+        "x+2",
+        "4x+3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al factorizar:\nCalcule el número de factores algebraicos.",
+      "alternatives": [
+        "4",
+        "3",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar en , luego indique la cantidad de factores algebraicos.",
+      "alternatives": [
+        "2",
+        "5",
+        "3",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la suma de coeficientes, de un factor primo del polinomio factorizado.",
+      "alternatives": [
+        "7",
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factoriza el siguiente polinomio.\n(x+1) ⁴ +(x+2)³+(x+3) ² – 7(x+1) – 5",
+      "alternatives": [
+        "(x+2) ² (x ² +4x+5)",
+        "(x+1)(x ² +7x+3)",
+        "(x – 1) ² (x ² +5x+3)",
+        "(x+1) ² (x ² +x+4)",
+        "(x+1) ² (x ² +3x+6)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/12/aprende-factorizar-paso-paso-desde-cero.html",
+      "sourceName": "matematicaj.blogspot.com — FACTORIZACIÓN EJEMPLOS Y EJERCICIOS RESUELTOS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: (x + 2y + 3z)(x + 3y + 5z) + 2yz es un polinomio factorizable, entonces un factor primo es:",
+      "alternatives": [
+        "x+y+2z",
+        "x+y+z",
+        "x+y+3z",
+        "x+2y+5z",
+        "x+2y+z"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicaj.blogspot.com — FACTORIZACIÓN DE POLINOMIOS FÓRMULAS Y PROBLEMAS RESUELTOS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un contenedor tiene forma de paralelepípedo rectangular. Su volumen, en metros cúbicos, está representado por el polinomio p(x)=(x 2 +x+1)(x 2 – x+1)+7x 2 – 385 ; además , la altura del contenedor viene representada por el factor primo de p(x) con coeficientes enteros de mayor grado y las longitudes de las dimensiones de la base están representadas por los factores lineales de p(x). Indique el perímetro de la base del contenedor.",
+      "alternatives": [
+        "8x m",
+        "2xm",
+        "4xm",
+        "4(x+1)m",
+        "6x m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/algebra-examen-preuniversidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un aula de de secundaria se sabe que hay un total de 35 estudiantes. Si se sabe que el número de varones está dado por el término independiente de un factor primo de\nM(x)=x 2 –400\n¿Cuántas mujeres hay en dicho salón?",
+      "alternatives": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-de-una-diferencia-de_26.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN POR DIFERENCIA DE CUADRADOS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al factorizar el polinomio\nP(x, y, z) =18x²+6xy – 12y² – 15xz +25yz – 12z ² , uno de los factores es",
+      "alternatives": [
+        "x+y – z",
+        "2x+y – 2z",
+        "x+3y – z",
+        "6x – 4y+3z",
+        "2x+2y+ z"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-doble-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — ASPA DOBLE EJERCICIOS RESUELTOS DE FACTORIZACIÓN PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La edad de Juan es p(1) años. Si x ² +3x+α es un factor primo de p(x)=x ² (x ² +7x)+7x(2x+1)+α en ℤ [x] , determine la edad de Juan hace dos años.",
+      "alternatives": [
+        "25 años",
+        "23 años",
+        "28 años",
+        "22 años",
+        "27 años"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-doble-especial.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN POR ASPA DOBLE ESPECIAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a los polinomios P, indique el valor de verdad (V o F) de las siguientes proposiciones.\nP(x)=10(x –1) ² (x – 2)(x ² + 1)x\nI) (x+ 1) ² es un factor primo de P(x).\nII ) P(x) tiene 4 factores primos.\nIII ) Un factor primo de P(x) es (x – 1)\nIV ) 10 no es factor primo.",
+      "alternatives": [
+        "VVFF",
+        "VVVV",
+        "FVVV",
+        "VFVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-ejercicios-resueltos_19.html",
+      "sourceName": "matematicasn.blogspot.com — CASOS DE FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar el polinomio:\n15x² + 11xy + 2y ² + 16x + 6y + 4",
+      "alternatives": [
+        "(5x + y + 2)(3x + 2y + 2)",
+        "(5x + 2y + 2)(3x + y + 2)",
+        "(3x + y + 2)(5x + y + 2)",
+        "(3x + 2y + 1)(5x + y + 4)",
+        "(5x + y + 1)(3x + 2y + 4)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/productos-notables-y-factorizacion-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE FACTORIZACIÓN EJERCICIOS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar el polinomio:\n2m ² – 15n ² + 7mn + 22n – 6m – 8\nIndicando uno de sus factores primos.",
+      "alternatives": [
+        "2m + 3n + 4",
+        "m – 5n + 2",
+        "2m – 3n + 2",
+        "m + 5n + 4",
+        "2m + 5n –2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/productos-notables-y-factorizacion-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE FACTORIZACIÓN EJERCICIOS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un factor primo del Polinomio:\nx ⁴ + 3x ³ + 7x ² + 7x + 6\ntiene la forma: ax ² + bx + c, calcular a.b.c, siendo «c» par.",
+      "alternatives": [
+        "2",
+        "6",
+        "4",
+        "8",
+        "12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/productos-notables-y-factorizacion-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE FACTORIZACIÓN EJERCICIOS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un factor primo del polinomio:\n2x ² – 5xy –12y ² + 14x + 21y es de la forma: px + qy.\nCalcular: p ² q + pq ²",
+      "alternatives": [
+        "15",
+        "20",
+        "25",
+        "30",
+        "35"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/productos-notables-y-factorizacion-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA DE FACTORIZACIÓN EJERCICIOS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relacione un polinomio con su respectiva forma factorizada.\nI ) x ² – 6x+5\nII ) 3x ² – 13x+14\nIII ) 12x ² – 17xy +6y ²",
+      "alternatives": [
+        "(4x – 3y)(3x – 2y)",
+        "(3x – 7)(x – 2)",
+        "(x – 1)(x – 5)",
+        "Ic, IIb, IIIa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-ejercicios-resueltos_70.html",
+      "sourceName": "matematicasn.blogspot.com — COMO FACTORIZAR POLINOMIOS PREGUNTAS RESUELTAS DE SECUNDARIA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el valor numérico de un factor primo de la expresión:\n6x ² – 25y ² + 20z² – 5xy – 5yz – 23xz para x=0; y=1; z=2",
+      "alternatives": [
+        "–1",
+        "5",
+        "–15",
+        "3",
+        "0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN PROBLEMAS RESUELTOS PREUNIVERSITARIOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar el polinomio:\n2x ⁴ + x ³ – 16x ² + 8x – 1\nDar como respuesta la factorización de la suma de sus factores primos.",
+      "alternatives": [
+        "x(2x–1)",
+        "2x(x–3)",
+        "x(2x–3)",
+        "2x(3x–1)",
+        "x(3x–2)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN PROBLEMAS RESUELTOS PREUNIVERSITARIOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar:\na ² – b ² – c ² + 2(a + b – c + bc)\nDar como respuesta la suma de sus factores primos.",
+      "alternatives": [
+        "2a",
+        "2b+c",
+        "2a+2",
+        "3a+c",
+        "2a+b+1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN TEORÍA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la suma de factores primos de\nf(a; b) =a ² – 2a+1 – b ²",
+      "alternatives": [
+        "2b+2",
+        "2a+a",
+        "2a – 2",
+        "a – 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — FACTORIZACIÓN DE POLINOMIOS PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de factores primos de la siguiente expresión polinomial.\nP(a; b) = (a+b) ³ (a – b) – (a – b) ³ (a+b)",
+      "alternatives": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "algebraenpdf.blogspot.com — FACTORIZACIÓN DE POLINOMIOS PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la suma de los coeficientes de uno de los factores primos de p(x)=2x²−b−bx+1+3x en ℤ [x] es 9, halle el valor de L=5−b .",
+      "alternatives": [
+        "– 10",
+        "11",
+        "– 5",
+        "9",
+        "– 3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-simple-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN POR ASPA SIMPLE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de factores primos de (x ² +2x – 3)(x ² +x – 2)(x ² +5x+ 6)",
+      "alternatives": [
+        "5",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN DE POLINOMIOS PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el factor primo común de los siguientes polinomios:\nP(x) =x²+x – 2\nQ(x) =x ² +7x+10",
+      "alternatives": [
+        "x",
+        "(x+ 2)",
+        "(x+ 5)",
+        "(x – 1)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN DE POLINOMIOS PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Del polinomio P(a;b) = (a+b) ² +2a+2b – 3, determine la suma de los términos independientes de los factores primos.",
+      "alternatives": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN DE POLINOMIOS PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorice el siguiente polinomio:\nP(x) =x ³ +6x ² – 9x – 14",
+      "alternatives": [
+        "P(x) =x (x – 3)(x – 7)",
+        "P(x) = (x+ 2) x (x+ 3)",
+        "P(x) = (x+ 2)(x – 3)(x – 2)",
+        "P(x) = (x – 2)(x+ 1)(x+ 7)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN DE POLINOMIOS PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las áreas verdes de una institución educativa se ubican sobre un terreno de forma rectangular cuya diferencia de sus dimensiones es 7 metros y cuya área está representada por (a ⁴ + 9a ³ + 28a ² + 48a + 24) m ² . Si a jardineros le dan mantenimiento diariamente a las áreas verdes de dicha institución educativa, calcule la longitud del ancho del terreno.",
+      "alternatives": [
+        "21 metros",
+        "15 metros",
+        "24 metros",
+        "18 metros",
+        "16 metros"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-doble-especial.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN POR ASPA DOBLE ESPECIAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un padre de familia le da a su hijo (m+1) decenas de soles para su gasto en la universidad. Al llegar la noche, el hijo le dice a su papá gasté los 3/4 de lo que no gasté. Si m es la suma de los coeficientes del factor primo no mónico de p(x)=2x ⁴ +3x ³ +3x ² −x+6 en ℤ [x] , ¿cuánto gastó el hijo?",
+      "alternatives": [
+        "50 soles",
+        "60 soles",
+        "70 soles",
+        "80 soles",
+        "64 soles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-doble-especial.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN POR ASPA DOBLE ESPECIAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea el polinomio:\n(n ² + 3n – 9) ² + n ² + 3n – 11\nDar el valor de verdad de las siguientes proposiciones:\n( ) (n – 5) es un factor primo.\n( ) (n²+ 3n – 7) es un factor primo.\n( ) Presenta dos factores primos lineales.",
+      "alternatives": [
+        "FFV",
+        "FVV",
+        "FVF",
+        "VVF",
+        "VFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/12/factorizacion-metodos-ejemplos-pdf.html",
+      "sourceName": "algebraenpdf.blogspot.com — MÉTODOS DE FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué tipo de polinomio representa la suma de factores primos de T(x) =2x ³ – 6x ² +3x – 9?",
+      "alternatives": [
+        "lineal y mónico",
+        "lineal",
+        "cuadrático",
+        "cúbico"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/factorizacion-de-polinomios-guias-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — FACTORIZACIÓN (ÁLGEBRA) EJERCICIOS CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de factores primos lineales del siguiente polinomio.\nP(x) = (x ² − 2x − 3)(x ² + 6x + 5)(x ² + 4x − 21)",
+      "alternatives": [
+        "3",
+        "4",
+        "2",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/factorizacion-de-polinomios-guias-de.html",
+      "sourceName": "algebraenpdf.blogspot.com — FACTORIZACIÓN (ÁLGEBRA) EJERCICIOS CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el número de factores primos del siguiente polinomio.\nf(a; b) = −4a ² b ² + (a ² + b ² − 9)²",
+      "alternatives": [
+        "4",
+        "3",
+        "6",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/factorizacion-de-polinomios-metodos-y.html",
+      "sourceName": "algebraenpdf.blogspot.com — CRITERIOS PARA FACTORIZAR PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la suma de factores primos de Q(x; y) = x ⁴ y ² – x ² y ⁴",
+      "alternatives": [
+        "2x+ y",
+        "x+3y",
+        "x+ y",
+        "3x+ y"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/12/factorizacion-guia-ejercicios-pdf-con.html",
+      "sourceName": "algebraenpdf.blogspot.com — GUIA DE FACTORIZACIÓN CON RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de factores primos del polinomio P(x) =2x ³ +x ² +5x – 3",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/12/factorizacion-guia-ejercicios-pdf-con.html",
+      "sourceName": "algebraenpdf.blogspot.com — GUIA DE FACTORIZACIÓN CON RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorice el siguiente polinomio.\nP(x) =x ³ – 11x ² +31x – 21",
+      "alternatives": [
+        "P(x) = (x – 1)(x – 2)(x – 3)",
+        "P(x) = (x – 1)(x – 3)(x – 7)",
+        "P(x) = (x – 2)(x – 5)(x – 6)",
+        "P(x) = (x – 3)(x – 4)(x – 11)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/factorizacion-ejercicios-para-clase-de-tercero-de-secundaria-en-word.html",
+      "sourceName": "geometriapdf.blogspot.com — FACTORIZACIÓN FÓRMULAS Y EJERCICIOS DESARROLLADOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factor Primo de:\n1+b+c+a(1+b+c+bc)+bc\nserá:",
+      "alternatives": [
+        "1+c",
+        "1+b",
+        "1+ab",
+        "1+bc",
+        "1+abc"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/divisibilidad-cocientes-notables.html",
+      "sourceName": "matematica-a1.blogspot.com — DIVISIBILIDAD COCIENTES NOTABLES FACTORIZACIÓN I EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos factores primos binómicos admite el polinomio;",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "n",
+        "ninguno"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/divisibilidad-cocientes-notables.html",
+      "sourceName": "matematica-a1.blogspot.com — DIVISIBILIDAD COCIENTES NOTABLES FACTORIZACIÓN I EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuántos divisores admitirá el Polinomio:",
+      "alternatives": [
+        "8",
+        "7",
+        "15",
+        "4",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/divisibilidad-cocientes-notables.html",
+      "sourceName": "matematica-a1.blogspot.com — DIVISIBILIDAD COCIENTES NOTABLES FACTORIZACIÓN I EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un divisor del Polinomio:\nserá:",
+      "alternatives": [
+        "3x-4y",
+        "4x-3y",
+        "2x-3y",
+        "2x-3x",
+        "2x-5y+12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/divisibilidad-cocientes-notables.html",
+      "sourceName": "matematica-a1.blogspot.com — DIVISIBILIDAD COCIENTES NOTABLES FACTORIZACIÓN I EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorice\n,\ne indicar el número de factores.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorice:\nIndique el número de factores cuadráticos.",
+      "alternatives": [
+        "2",
+        "3",
+        "1",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuántos factores lineales presenta:",
+      "alternatives": [
+        "1",
+        "0",
+        "2",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el número de factores algebraicos en , el polinomio.",
+      "alternatives": [
+        "23",
+        "8",
+        "10",
+        "72",
+        "71"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al factorizar el polinomio\np(x) = (x + 4)(x + 2)(x³ – 5) – x² – 4x – 2(x + 3)(x + 4)\nel término independiente del factor primo cuadrático de p(x) es",
+      "alternatives": [
+        "–3.",
+        "6.",
+        "5.",
+        "4.",
+        "–2."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/algebra-callao-examen-de-admision-universidad-unac-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al factorizar x 2 – 6x+9 – 25m 2\nEl número de factores primos representa el precio de un kilogramo de azúcar, ¿cuánto será el costo de 30 kg de azúcar?",
+      "alternatives": [
+        "S/2",
+        "S/30",
+        "S/60",
+        "S/120",
+        "S/100"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/3ro-4to-actividad-2-experiencia-5-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se requiere poner mayólicas cuadradas para el piso de una habitación de forma rectangular de (x ⁴ + 7x³ + 12x² + 11x + 5) centímetros de largo por (x ⁴ + 5x ³ – x – 5) centímetros de ancho, ambas con x>2,x ∈ ℤ . Indique el polinomio en ℤ [ x ] que representa la mínima cantidad de mayólicas que se deberán usar, de modo que el piso sea recubierto de forma exacta con piezas enteras de mayólicas.",
+      "alternatives": [
+        "x² + x – 2",
+        "x ² – 4",
+        "x ² – 3x – 10",
+        "x ² – 1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/algebra-semana-11-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 11 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un empresario, dedicado a la distribución y venta de alcohol en gel, invirtió p(x)=x³ + 19x² – 19x + 20 y q(x)=x ⁶ + x ⁴ + x ² soles ( x ∈ ℤ ⁺ ) para la compra de dichos productos que serán distribuídos en las provincias de Caravelí y Bambamarca ,respectivamente. El día que realizó la compra , el costo unitario (en soles) representado por el polinomio d(x), estuvo fijado en el mayor valor posible ; de modo que gastó el total de su inversión para cada provincia. Si h(x) representa la cantidad de productos que será destinado a Bambamarca, halle h(6).",
+      "alternatives": [
+        "1548",
+        "559",
+        "775",
+        "1075"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/algebra-semana-11-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA PRE SAN MARCOS SEMANA 11 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que: x.y > 0 , se cumple, x(19y−10x)=6y². Halle la razón x/y",
+      "alternatives": [
+        "3/2; 2/5",
+        "1/3; 1/5",
+        "2/3; 1/2",
+        "4/5: 2/3",
+        "2/3; 2/5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/examen-admision-villareal-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO VILLARREAL 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNFV 2026 PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Olimpia tiene en el banco x(x+ 1) soles y al salir de compras, adquiere una tablet a 9x soles, luego gasta al cenar S/.65 más.\n¿Cuánto será el monto que le queda a Olimpia en el banco?",
+      "alternatives": [
+        "S/(x+ 5)(x+ 41)",
+        "S/(x+ 11)(x – 13)",
+        "S/(x+ 5)(x – 13)",
+        "S/(x+ 21)(x – 31)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-ejercicios-resueltos_28.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN DE SECUNDARIA EJEMPLOS Y PREGUNTAS RESUELTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al polinomio sobre ℤ P(a; b) =a ⁴ – 3a ² b ² – 4b ⁴ indique la secuencia correcta de verdad (V) o falsedad (F) de las siguientes proposiciones.\nI) f(a; b) =a+2b es un factor primo.\nII ) f(a; b) =a – 2b es un factor primo.\nIII ) f(a; b) =a ² +b ² es un factor primo.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFV",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-ejercicios-resueltos_28.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN DE SECUNDARIA EJEMPLOS Y PREGUNTAS RESUELTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa paga a sus trabajadores al terminar cada proyecto. Se sabe que Alejandro recibió un total de (x 4 +7x 3 +19x 2 +63x+90) soles, mientras que Emir recibió (x 4 +5x 3 +8x+40) soles por los días que trabajaron donde x∈ℤ + . Si el pago por día es de 130 soles y es el mayor posible, determine cuántos días más trabajó Alejandro que Emir.",
+      "alternatives": [
+        "21",
+        "48",
+        "72",
+        "36",
+        "54"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ancho de una caja rectangular mediana mide 15cm, mientras que su área lateral es de (x 4 +4x 3 +12x 2 +15x+18)cm 2 . Las longitudes del largo y del alto laterales de una caja similar grande exceden a las de la caja mediana en 10cm y 8cm respectivamente; además la longitud de su ancho es de (x+9)cm. Determine el volumen de la caja grande, si en ambas cajas la longitud del largo es mayor que la longitud del alto mientras que sus anchos tienen la misma medida.",
+      "alternatives": [
+        "56050 cm 3",
+        "56550 cm 3",
+        "50565 cm 3",
+        "55650 cm 3",
+        "50600 cm 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El alumbrado público de cierto distrito inicia a las 6:00 pm. Después de esa hora, Juan se percata que el poste de luz que se encuentra al frente de su casa se apaga y prende cada (x 3 −10x 2 +29𝑥−20) minutos, mientras que otro poste de luz un poco alejado de su casa se apaga y prende cada (x 3 −11x 2 +40x−48) minutos con x>5, determine cada qué tiempo se apaga y prende el poste de luz que se encuentra al frente de la casa de Juan, sabiendo que estos dos postes se apagan y prenden a la vez después de 1 hora de iniciado el alumbrado público.",
+      "alternatives": [
+        "12 min",
+        "8 min",
+        "10 min",
+        "15 min",
+        "20 min"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan decide comprar «m» audífonos para luego venderlos a 5(m+1) soles cada uno. Si el valor numérico para m>1 de uno de los factores primos en ℤ[m] del polinomio p(m)=m 4 −56m 2 +16 es igual a 13, determine la ganancia total de Juan si cada audífono le costó 42 soles",
+      "alternatives": [
+        "130 soles",
+        "90 soles",
+        "63 soles",
+        "72 soles",
+        "198 soles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Edu quiere dibujar un cuadrado cuyo lado mide (2x+2) unidades y dicha medida también es equivalente al valor numérico del factor cuadrático primo del polinomio p(x)=x 5 −2x 4 −2x 3 +8x 2 −23x−30 en ℤ [x] para algunos valores adecuados de la variable x.\nDetermine el máximo valor de perímetro del cuadrado que dibujó Edu .",
+      "alternatives": [
+        "26 unidades",
+        "32 unidades",
+        "28 unidades",
+        "40 unidades",
+        "30 unidades"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Jhony sufre un accidente que le provocó un corte en la pierna, por lo que el médico le receta dos pastillas para evitar la infección; una de las pastillas la debe tomar cada (𝑥 3 −2𝑥 2 −𝑥+2) horas; y la otra pastilla cada (𝑥 3 −𝑥 2 −2𝑥) horas; siendo 𝑥∈ℤ y 𝑥>2. Al iniciar el tratamiento toma ambas pastillas, de las cuales vuelven a coincidir al día siguiente y a la misma hora. Determine cada qué tiempo toma una de las pastillas.",
+      "alternatives": [
+        "12 horas",
+        "6 horas",
+        "7 horas",
+        "5 horas",
+        "10 horas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Diana y Milagros compraron abrigos a 90 soles la unidad, para la temporada de invierno; si Diana pagó en total (𝑥 3 +𝑥 2 −10𝑥+8) soles y Milagros pagó (2𝑥 2 −6𝑥+4) soles menos que Diana por los abrigos que adquirieron, determine cuántos abrigos pudieron comprar juntas si el precio del abrigo fue el mayor posible con 𝑥∈ℤ y 𝑥>2.",
+      "alternatives": [
+        "24",
+        "18",
+        "21",
+        "15",
+        "28"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los amigos Beto y Jael trabajan en el mismo lugar y el mes anterior recibieron de pago total (x 8 − 9x 6 − 64x 2 + 576) soles y (x 5 − 9x 3 + 8x 2 − 72) soles respectivamente. Si por día trabajado les pagan x 2 + 5x + 6 soles, determine la diferencia de la cantidad de hijos que tienen, sabiendo que dicha cantidad es el número de factores primos (en ℤ [x] ) de los días que ellos trabajaron el mes anterior.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Paola tiene «𝑚» meses estudiando el idioma portugués; determine cuánto tiempo le falta para culminar, si el curso dura 1 año; además «𝑚» es el mayor término independiente de los factores primos del polinomio 𝑝(𝑥)=𝑥 4 +𝑥 3 −19𝑥 2 −49𝑥−30 en ℤ[𝑥].",
+      "alternatives": [
+        "8 meses",
+        "4 meses",
+        "9 meses",
+        "5 meses",
+        "7 meses"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un campeonato deportivo, la selección de futbol del distrito A jugó un partido contra la selección del distrito B. Si la mayor y la menor suma de coeficientes de los factores primos de p(x,y)=(3x+2y) 3 −(x+y) 3 −(2x+y) 3 + (3x+2y)(3x+3y)(2x+y) en ℤ [x,y] representan la cantidad de goles anotados por la selección de A y de B respectivamente, ¿cuál fue la diferencia de goles en el resultado del partido mencionado?",
+      "alternatives": [
+        "5 goles",
+        "4 goles",
+        "3 goles",
+        "2 goles",
+        "6 goles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "René compra polos para dama y caballero, al mismo precio cada uno, para luego venderlos en su tienda. Si llegó a pagar (𝑥 12 −1) soles por polos para dama; y (𝑥 5 +3𝑥 4 +𝑥 3 +3𝑥 2 +𝑥+3) soles por polos para caballeros con 𝑥∈ℤ y 𝑥>1, determine cuántos polos para caballero compró, si llegó a comprar la menor de cantidad de polos en total y a un precio unitario de 21 soles.",
+      "alternatives": [
+        "12",
+        "5",
+        "13",
+        "4",
+        "15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Manuel necesita comprar una impresora multifuncional para su trabajo, cuyo precio, en soles, asciende a (18𝑛+15𝑚−10𝑝), siendo «𝑛» el número de factores en ℤ[𝑥] del polinomio 𝑝(𝑥)=𝑥 5 −2𝑥 4 +3𝑥 3 −10𝑥 2 −40𝑥+48; «𝑚» y «𝑝» son respectivamente, el mayor y menor término independiente de los factores primos de 𝑝(𝑥). Determine el monto que le falta a Manuel, si solo cuenta con 350 soles.",
+      "alternatives": [
+        "80 soles",
+        "140 soles",
+        "70 soles",
+        "35 soles",
+        "40 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar:\nx 2 +2xy+y 2 +xz+yz\ne indique un factor:",
+      "alternatives": [
+        "x + y + z",
+        "x – y",
+        "y + z",
+        "x",
+        "y"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-7-experiencia-6-resuelta-matematicas-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la suma de los factores primos que se obtienen al factorizar:\nP(x)=x 4 +x 3 –19x 2 –49x–30",
+      "alternatives": [
+        "4x – 2",
+        "4x + 1",
+        "4x + 3",
+        "4x – 5",
+        "4x + 7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-7-experiencia-6-resuelta-matematicas-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorice\nM(a,b)=a 4 –16b 4",
+      "alternatives": [
+        "(a 2 –4b 2 )(a 2 +4b 2 )",
+        "(a 2 –8b 2 )(a 2 +8b 2 )",
+        "(a+2b)(a–2b)(a 2 +4b)",
+        "(a–2b)(a 2 +4)(a+2b)",
+        "(a–4b)(a+4b)(a+2b)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-examen-admision-agraria-unalm.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Jaime recibe diariamente, de parte de su papá, una propina en soles que es igual al número de factores primos en ℚ [x] del siguiente polinomio: p(x)=x 2 (4x 2 –1}{x 2 – 6)+32x 2 – 8\n¿Cuántos soles habrá recibido en quince días de propina?",
+      "alternatives": [
+        "90",
+        "60",
+        "45",
+        "75",
+        "105"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/algebra-examen-preuniversidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de factores primos racionales que tiene el polinomio P(x;y) = x 3 2 – y 3 2 , es",
+      "alternatives": [
+        "7",
+        "8",
+        "16",
+        "32",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/coleccion-rubinos-2017-libro-de-algebra.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE ÁGEBRA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de factores primos del siguiente polinomio.\nP(x; y; z)=zx ² +zx+zyx+ zy",
+      "alternatives": [
+        "2",
+        "3",
+        "5",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-ejercicios-resueltos_19.html",
+      "sourceName": "matematicasn.blogspot.com — CASOS DE FACTORIZACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el factor primo cuadrático del polinomio: x ³ – 3x ² + 4x – 2 adopta la forma: x ² +mx+n.\nMarcar la alternativa correcta.",
+      "alternatives": [
+        "m = n",
+        "m+n=0",
+        "m.n = 4",
+        "mn=–4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN PROBLEMAS RESUELTOS PREUNIVERSITARIOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuántos factores lineales admite la expresión:\nx ⁷ – x ³ y4 + x4y ³ – y ⁷",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN TEORÍA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que: x ² + 2x + 3, es un factor de:\nx ⁴ + x ³ + 6x ² + mx + n entonces es verdad que:",
+      "alternatives": [
+        "m + n = 21",
+        "mn< 0",
+        "m< 0",
+        "n es par",
+        "n – 2m = 1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN TEORÍA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el número de factores cuadráticos de:\nP(x) = 4x ⁴ – 37x ² + 9",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN TEORÍA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos valores admite ‘‘n’’ para que el polinomio:\nP(x)=(x–n)(x–6 ) n–5 (2x–3 ) 12–n admite dos factores primos repetidos?",
+      "alternatives": [
+        "6",
+        "7",
+        "5",
+        "4",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — FACTORIZACIÓN TEORÍA Y EJEMPLOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al factorizar el polinomio\nP(x;y)=x 3 – x 2 y +xy 2 – y 3 , se obtiene como factores (ax+by)(cx 2 +dy 2 ), determina el valor de a+b+c+d",
+      "alternatives": [
+        "0",
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-intermedia-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factoriza el siguiente polinomio.\n(x+1) 4 +(x+2) 3 +(x+3) 2 – 7(x+1) – 5",
+      "alternatives": [
+        "(x+2) 2 (x 2 +4x+5)",
+        "(x+1)(x 2 +7x+3)",
+        "(x – 1) 2 (x 2 +5x+3)",
+        "(x+1) 2 (x 2 +3x+6)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/algebra-preuniversitaria-problemas-con_46.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA EVALUACIÓN DE TALENTO CATÓLICA SOLUCIONADA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorice el siguiente polinomio.\nP(x; y) =x ⁴ y ⁶ +x ⁴ y ⁵ +x ³ y ⁶ +x ³ y ⁵\nLuego indique la alternativa correcta.",
+      "alternatives": [
+        "x es un factor primo.",
+        "y ⁵ es un factor primo.",
+        "(x – 1) es un factor primo.",
+        "(x+ y) es un factor primo."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/factorizacion-de-polinomios-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "razonamientopdf.blogspot.com — FACTORIZACIÓN ALGEBRAICA EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de factores primos de la siguiente expresión.\nM(a; b; c) = (a ² + b ² − c ² ) ² − (2ab) ²",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/factorizacion-ejercicios-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — FACTORIZACIÓN (ÁLGEBRA) PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de factores primos de T(x) =3x ³ – 4x ² +4x – 1",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/factorizacion-ejercicios-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — FACTORIZACIÓN (ÁLGEBRA) PROBLEMAS RESUELTOS"
     }
   ]
 }

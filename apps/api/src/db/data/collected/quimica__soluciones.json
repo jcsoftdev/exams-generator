@@ -6,7 +6,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El gasohol E10 es una solución formada por 90% en volumen de gasolina y 10% en volumen de etanol y se puede emplear como combustible en la mayoría de vehículos modernos. Si se emplea 4 L de gasohol E10, determine el porcentaje masa/volumen de etanol en dicha solución. (Densidad etanol = 0,78 g/mL)",
-      "alternatives": ["3,9", "9,0", "7,8", "4,5"],
+      "alternatives": [
+        "3,9",
+        "9,0",
+        "7,8",
+        "4,5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/05/quimica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) - Química Semana 10 - Pregunta 3"
@@ -17,7 +22,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las soluciones de soda cáustica (NaOH) se emplean como agente de limpieza de equipos de acero inoxidable. Si se tiene 450 g de dicha solución al 48% en masa y una densidad de 1,5 g/mL, determine su concentración expresada en ppm.",
-      "alternatives": ["7,2×10⁻¹", "3,6×10⁵", "7,2×10⁵", "3,6×10⁻¹"],
+      "alternatives": [
+        "7,2×10⁻¹",
+        "3,6×10⁵",
+        "7,2×10⁵",
+        "3,6×10⁻¹"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/05/quimica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) - Química Semana 10 - Pregunta 4"
@@ -28,7 +38,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La dilución es una operación física que consiste en agregar una mayor cantidad de solvente a una solución, con la finalidad de disminuir su concentración. En una práctica de laboratorio un estudiante adiciona 400 mL de agua a 800 mL de una solución de CaCl₂ 3,0 M, determine la normalidad de la solución resultante.",
-      "alternatives": ["1,5", "2,0", "3,0", "4,0"],
+      "alternatives": [
+        "1,5",
+        "2,0",
+        "3,0",
+        "4,0"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/05/quimica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) - Química Semana 10 - Pregunta 5"
@@ -39,7 +54,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El ácido nítrico (HNO₃) es altamente corrosivo, provoca quemaduras al entrar en contacto con los ojos o la piel y debido a su peligrosidad se disuelve con mucho cuidado en agua evitando salpicaduras. Determine el volumen, en litros, de HNO₃(ac) 1,0 M que se requiere mezclar con 2 L de HNO₃(ac) 12,0 M, para obtener una solución de HNO₃(ac) 6,0 M.",
-      "alternatives": ["1,2", "3,6", "2,4", "4,8"],
+      "alternatives": [
+        "1,2",
+        "3,6",
+        "2,4",
+        "4,8"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/05/quimica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) - Química Semana 10 - Pregunta 6"
@@ -50,7 +70,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El agua regia es una solución que contiene HNO₃ y HCl, dicha mezcla es altamente corrosiva y es capaz de reaccionar con el oro y el platino. Si se tiene 500 mL de agua regia cuya densidad es 1,25 g/mL, la cual contiene HNO₃ al 25% en volumen, determine el porcentaje en masa del ácido nítrico en dicha solución. (Densidad HNO₃ = 1,50 g/mL)",
-      "alternatives": ["15,0", "30,0", "45,0", "7,5"],
+      "alternatives": [
+        "15,0",
+        "30,0",
+        "45,0",
+        "7,5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/05/quimica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) - Química Semana 10 - Pregunta 9"
@@ -61,10 +86,1903 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las soluciones de potasa cáustica (KOH) se emplean en la producción de fertilizantes y detergentes. Si se disuelve 6,72 g de KOH en cantidad suficiente de agua para formar 200 mL de solución, determine la molaridad y normalidad de dicha solución, respectivamente. (M(g/mol): KOH = 56)",
-      "alternatives": ["0,6 y 1,2", "1,2 y 0,6", "1,2 y 1,2", "0,6 y 0,6"],
+      "alternatives": [
+        "0,6 y 1,2",
+        "1,2 y 0,6",
+        "1,2 y 1,2",
+        "0,6 y 0,6"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/05/quimica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) - Química Semana 10 - Pregunta 10"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la molaridad de una solución que contiene 120 g de CO(NH 2 ) 2 , el volumen de la solución es 1250 ml.\nC=12, O=16, N=14, H=1",
+      "alternatives": [
+        "1,8",
+        "1,7",
+        "2,0",
+        "1,6",
+        "1,9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/quimica-callao-examen-de-admision-universidad-unac-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La solubilidad del cloruro de sodio (NaCl) a 25°C es 36g de sal disuelta por cada 100g de H 2 O. Si la densidad de dicha solución es 1,20 g/ml, entonces la molalidad de la solución saturada de sal es P.A. (Na =23, Cl = 35,5)",
+      "alternatives": [
+        "6,15",
+        "7,24",
+        "8,42",
+        "9,42",
+        "9,97"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/qumica-unt-examen-resuelto-pdf-trujilo.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una solución preparada mezclando 5 g de tolueno, C7H8, con 225 g de benceno, C6H6, tiene una densidad de 0,976 g/mL. Calcule la molaridad del tolueno en dicha solución.\nMasas molares (g/mol): tolueno=92; benceno=78",
+      "alternatives": [
+        "0,05",
+        "0,11",
+        "0,15",
+        "0,23",
+        "0,26"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/quimica-ejercicios-y-problemas-resueltos-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El hidróxido de sodio es un aditivo inorgánico que en solución se utiliza para obtener efectos blanqueadores. Determine la molaridad, en moles/L, de una solución acuosa de NaOH que fue preparada por dilución de 200 mL de NaOH 2,5 M en 300 mL de agua.",
+      "alternatives": [
+        "0,2",
+        "1,0",
+        "2,0",
+        "0,5",
+        "0,1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un químico añade más solvente a una solución sin modificar la cantidad de soluto, el efecto que causa en la molaridad es:",
+      "alternatives": [
+        "Permanece constante",
+        "Aumenta levemente",
+        "Se duplica",
+        "Disminuye",
+        "Se vuelve igual a la normalidad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se disuelve 60 g de NaOH hasta completar 750 mL, la molaridad de la solución resultante es:",
+      "alternatives": [
+        "0,02",
+        "0,04",
+        "0,20",
+        "2",
+        "20"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Ingles-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA B 2027 INGENIERÍAS INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se forma una solución acuosa de urea donde la masa de solvente es 10 veces la masa del soluto. La molalidad de la solución es",
+      "alternatives": [
+        "1,67",
+        "3,64",
+        "5,64",
+        "8,46",
+        "10,2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se prepara una disolución mezclando 40,0 g de NaCl con 110,0 g de agua, resultando una disolución con una densidad de 1,2 g/mL. Determinar el porcentaje en masa.",
+      "alternatives": [
+        "26,7",
+        "33,3",
+        "73,3",
+        "80,0",
+        "32,0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-14-resuelta-comunicacion-experiencia-6-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNASAM ÁREA A INGENIERÍAS INGRESO CLAVES PDF – INGRESO UNIVERSIDAD – 2026–2027"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El vinagre comercial usualmente contiene un 5% masa/volumen de ácido acético (CH 3 COOH). Calcule la molaridad (en mol/L) del ácido acético en el vinagre.\nDatos:\nMasas atómicas:\nH = 1, C =12, O=16",
+      "alternatives": [
+        "0,042",
+        "0,083",
+        "0,420",
+        "0,830",
+        "1,200"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las soluciones son mezclas homogéneas cuyos componentes son soluto y solvente. ¿Cuál de las siguientes alternativas corresponde a una solución?",
+      "alternatives": [
+        "Neblina",
+        "Mayonesa",
+        "Gelatina",
+        "Bronce",
+        "Propanona"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/quimica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con relación a las soluciones, indique las proposiciones incorrectas.\nI ) El solvente determina el nombre de la solución.\nII ) El soluto determina el estado físico de la solución.\nIII ) La concentración de la solución depende de la cantidad de soluto.\nIV ) NaOH(ac) es solución electrolítica.",
+      "alternatives": [
+        "solo I",
+        "II y III",
+        "II y IV",
+        "I y II",
+        "solo III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una fiola de 400 mL de capacidad se almacena 16 mL de peróxido de hidrógeno H 2 O 2 ( ℓ ) , en seguida se completa la capacidad de la fiola con agua destilada. ¿Cuál es la concentración en porcentaje en volumen? Sabiendo a esta concentración la solución es utilizada como desinfectante.",
+      "alternatives": [
+        "4%",
+        "3%",
+        "8%",
+        "5%",
+        "6%"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El agua conduce muy débilmente la electricidad, si se mezcla con una pequeña cantidad de H 2 SO 4 se hace más conductora. Si a esta condición la temperatura es 25°C y la molaridad 0,05 M determinar el pH y pOH.",
+      "alternatives": [
+        "1 y 13",
+        "1,3 y 12,7",
+        "1,7 y 12,3",
+        "2 y 12",
+        "3 y 11"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La neutralización es el proceso en el que la cantidad de equivalentes gramos, tanto del ácido como de la base, son exactamente iguales. Se tiene 400 mL de una solución de hidróxido de sodio 0,2 N. A esta solución se le añade 1200 mL de agua destilada. Determine la molaridad de la nueva solución, luego de la adición de agua destilada. A 20 mL de esta dilución, se le agrega 50 mL de ácido clorhídrico para neutralizarlo. ¿Cuál es la concentración del ácido utilizado, en normalidad?",
+      "alternatives": [
+        "5 × 10 –2 M; 2,5 × 10 –2 N",
+        "2,5 × 10 –1 M; 1 × 10–1 N",
+        "5 × 10 –2 M; 2 × 10 –2 N",
+        "2 × 10 –2 M; 2,5 × 10 –2 N",
+        "2 × 10 –1 M; 5× 10 –2 N"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/quimica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una solución preparada mezclando 5g de tolueno, C 7 H 8 , con 225g de benceno, C 6 H 6 , tiene una densidad de 0,976 g/mL. Calcule la molaridad del tolueno en dicha solución.\nMasas molares (g/mol): tolueno=92; benceno=78",
+      "alternatives": [
+        "0,05",
+        "0,11",
+        "0,15",
+        "0,23",
+        "0,26"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/02/solucionario-uni-2017-i-tercera-prueba.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023-2 TERCERA PRUEBA SOLUCIONARIO DE INGRESO UNIVERSIDAD NACIONAL DE INGENIERÍA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la molaridad (M) de 4,9 g de ácido sulfúrico (H 2 SO 4 ) en agua para formar una solución de 200 ml.\nDatos: PA (H =1; S = 32; O = 16)",
+      "alternatives": [
+        "0,35 M",
+        "0,45 M",
+        "0,50 M",
+        "0,65 M",
+        "0,25 M"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/quimica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la molaridad de una solución que contiene 120g de CO(NH 2 ) 2 , el volumen de la solución es 1250 ml.\nC=12, O=16, N=14, H=1",
+      "alternatives": [
+        "1,8",
+        "1,7",
+        "2,0",
+        "1,6",
+        "1,9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A cierta temperatura la solubilidad del KI es 23,8. ¿Cuántos gramos de KI se podrá disolver en 200ml de agua?",
+      "alternatives": [
+        "47,6",
+        "11,9",
+        "35,7",
+        "59,5",
+        "60,2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué volumen de solución de H 3 PO 4 de 0,25 molar contiene 4,9 g de soluto?\nMasa atómica (H=1, P=31, O=16)",
+      "alternatives": [
+        "100ml",
+        "150ml",
+        "175ml",
+        "200ml",
+        "400ml"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de soluto contiene 600 mililitros de una solución de Ca(OH) 2 0,62 molar?",
+      "alternatives": [
+        "20,3",
+        "22,6",
+        "27,5",
+        "30,2",
+        "52,3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cantidad de 5l de solución contiene 189g de HNO 3 . Halla la molaridad de la solución.",
+      "alternatives": [
+        "0,5",
+        "0,6",
+        "0,7",
+        "0,8",
+        "0,9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se disuelven 80g de NaOH en 5l de H 2 O. Calcula la molalidad de la solución. Masa atómica (Na=23, O=16 , H=1)",
+      "alternatives": [
+        "2,50",
+        "1,20",
+        "0,75",
+        "0,40",
+        "0,32"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos equivalentes de soluto contiene 600 mililitros de una solución de KNO 3 , 0,092N?",
+      "alternatives": [
+        "22,6×10 –3",
+        "55,2 ×10 –3",
+        "60,7 ×10 –4",
+        "37,5 ×10 –6",
+        "13,5 ×10 –4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A cierta temperatura la solubilidad del Pb Cℓ 4 es 40,5. ¿Cuántos gramos de PbI 4 se podrá disolver en 300ml de agua?",
+      "alternatives": [
+        "121,5",
+        "108,5",
+        "145,3",
+        "135,0",
+        "125,0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se disuelven 49g de H 2 SO 4 en agua formada 2L de solución. Halla la molaridad de la solución.\nMasa atómica (H=1, S=32, O=16)",
+      "alternatives": [
+        "1,25",
+        "2,50",
+        "0,25",
+        "0,75",
+        "0,01"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos mililitros de solución de HNO 3 0,8 molar contiene 6,3g de soluto?\nMasa atómica (H=1, N=14, O=16)",
+      "alternatives": [
+        "100",
+        "120",
+        "125",
+        "250",
+        "500"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de soluto contienen 250 mililitros de una solución de NaC ℓ 0,6 molar?\nMasa atómica (Na =23; Cℓ =35,5)",
+      "alternatives": [
+        "1,572",
+        "8,775",
+        "4,221",
+        "6,725",
+        "9,361"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos miliequivalentes de soluto contiene 750 mililitros de una solución de Ba Cℓ 2 0,085 normal?",
+      "alternatives": [
+        "60,25",
+        "62,75",
+        "63,25",
+        "63,75",
+        "65,25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una solución preparada mezclando 5g de tolueno, C 7 H 8 , con 225 g de benceno, C 6 H 6 , tiene una densidad de 0,976 g/mL. Calcule la molaridad del tolueno en dicha solución.\nMasas molares (g/mol): tolueno=92; benceno=78",
+      "alternatives": [
+        "0,05",
+        "0,11",
+        "0,15",
+        "0,23",
+        "0,26"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/01/soluciones-del-tercer-examen-admision-uni-fisica-quimica-universidad-de-ingenieria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2021 II TERCERA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA RESPUESTAS SOLUCIONARIO 2021-2 CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El agua regia es una solución que contiene HNO 3 y HCℓ, dicha mezcla es altamente corrosiva y es capaz de reaccionar con el oro y el platino. Si se tiene 500 mL de agua regia cuya densidad es 1,25 g/mL, la cual contiene HNO 3 al 25 % en volumen, determine el porcentaje en masa del ácido nítrico en dicha solución.\nDato: Densidad: HNO 3 = 1,50 g/mL",
+      "alternatives": [
+        "15,0",
+        "30,0",
+        "45,0",
+        "7,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/quimica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El vinagre es una solución acuosa que posee efectos benéficos sobre la salud cardiovascular y contiene 5% en masa de ácido acético (CH 3 COOH). Si 500 mL de la solución pesan 600g, determine la molaridad de la solución.\n(𝑫𝒂𝒕𝒐;masa molecular del CH 3 COOH =𝟔𝟎)",
+      "alternatives": [
+        "5,00",
+        "2,00",
+        "3,00",
+        "4,00",
+        "1,00"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/quimica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál será la molaridad de una solución que contiene 5.85 g de NaCl(s) por 500 mL?",
+      "alternatives": [
+        "4 mol/L",
+        "20 mol/L",
+        "0.2 mol/L",
+        "2 mol/L"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.1 MCQ 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si 500 mL de una solución 5M se diluyen a 1500 mL, ¿cuál será la molaridad de la solución obtenida?",
+      "alternatives": [
+        "1.5 M",
+        "1.66 M",
+        "0.017 M",
+        "1.59 M"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.1 MCQ 4"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la concentración de glucosa (C6H12O6) en la sangre es de 0.9 g/L, ¿cuál será la molaridad de la glucosa en la sangre?",
+      "alternatives": [
+        "5M",
+        "50 M",
+        "0.005 M",
+        "0.5 M"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.1 MCQ 6"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el porcentaje en masa del carbono en el dióxido de carbono?",
+      "alternatives": [
+        "0.034%",
+        "27.27%",
+        "3.4%",
+        "28.7%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.1 MCQ 9"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes unidades es útil para relacionar la concentración de una solución con su presión de vapor?",
+      "alternatives": [
+        "fracción molar",
+        "partes por millón",
+        "porcentaje en masa",
+        "molalidad"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 1"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el equilibrio, la velocidad de disolución de un soluto sólido en un solvente líquido volátil es __________.",
+      "alternatives": [
+        "menor que la velocidad de cristalización",
+        "mayor que la velocidad de cristalización",
+        "igual a la velocidad de cristalización",
+        "cero"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cantidad máxima de un soluto sólido que se puede disolver en una cantidad específica de un solvente líquido dado no depende de ____________.",
+      "alternatives": [
+        "La temperatura",
+        "La naturaleza del soluto",
+        "La presión",
+        "La naturaleza del solvente"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 5"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las propiedades coligativas dependen de ____________.",
+      "alternatives": [
+        "la naturaleza de las partículas de soluto disueltas en la solución.",
+        "el número de partículas de soluto en la solución.",
+        "las propiedades físicas de las partículas de soluto disueltas en la solución.",
+        "la naturaleza de las partículas del solvente."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 8"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La unidad de la constante ebulloscópica es _______________. –1 –1",
+      "alternatives": [
+        "K kg mol o K (molalidad) –1 –1",
+        "mol kg K o K (molalidad) 23/04/18 –1 –1 –1 –1",
+        "kg mol K o K (molalidad) –1",
+        "K mol kg o K (molalidad)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 10"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones es falsa?",
+      "alternatives": [
+        "Dos soluciones diferentes de sacarosa de la misma molalidad, preparadas en distintos solventes, tendrán el mismo descenso del punto de congelación.",
+        "La presión osmótica de una solución está dada por la ecuación Π = CRT (donde C es la molaridad de la solución).",
+        "El orden decreciente de la presión osmótica para soluciones acuosas 0.01 M de cloruro de bario, cloruro de potasio, ácido acético y sacarosa es BaCl2 > KCl > CH3COOH > sacarosa.",
+        "Según la ley de Raoult, la presión de vapor ejercida por un componente volátil de una solución es directamente proporcional a su fracción molar en la solución."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 14"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "4 L de una solución acuosa 0.02 M de NaCl se diluyeron añadiendo un litro de agua. La molalidad de la solución resultante es _____________.",
+      "alternatives": [
+        "0.004 21 Soluciones 23/04/18",
+        "0.008",
+        "0.012",
+        "0.016"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 24"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante la audiencia de un caso judicial, el juez sospechó que se habían realizado ciertos cambios en los documentos. Pidió al departamento forense que verificara la tinta utilizada en dos lugares diferentes. Según tu criterio, ¿qué técnica puede dar los mejores resultados?",
+      "alternatives": [
+        "Cromatografía en columna",
+        "Extracción con solvente",
+        "Destilación",
+        "Cromatografía en capa fina"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep512.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.12 MCQ 7"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El principio involucrado en la cromatografía en papel es",
+      "alternatives": [
+        "Adsorción",
+        "Partición",
+        "Solubilidad",
+        "Volatilidad 145 Química Orgánica – Algunos Principios y Técnicas Básicas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep512.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.12 MCQ 8"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El valor de la constante de Henry KH es _____________.",
+      "alternatives": [
+        "mayor para gases con mayor solubilidad.",
+        "mayor para gases con menor solubilidad.",
+        "constante para todos los gases.",
+        "no está relacionado con la solubilidad de los gases."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 18"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los valores de KH para Ar(g), CO2(g), HCHO(g) y CH4(g) son 40.39, 1.67, 1.83×10–5 y 0.413, respectivamente. Ordena estos gases según su solubilidad creciente.",
+      "alternatives": [
+        "HCHO < CH4 < CO2 < Ar",
+        "HCHO < CO2 < CH4 < Ar",
+        "Ar < CO2 < CH4 < HCHO",
+        "Ar < CH4 < CO2 < HCHO"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 26"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las plantas necesitan de un medio de transporte eficiente que lleve el agua y los minerales a las hojas para que realicen la fotosíntesis. Durante el ascenso del agua, ocurre una secuencia de procesos. Al respecto, resulta correcto afirmar que",
+      "alternatives": [
+        "el ascenso se basa en la diferencia de presión osmótica entre las células de las hojas y las raíces.",
+        "las bandas de Caspari facilitan que el agua del apoplasto pase por las células de la endodermis.",
+        "la transpiración de las hojas produce una fuerza de tensión para el ascenso del agua.",
+        "el agua viaja a través de las membranas celulares y cruza las paredes celulares.",
+        "el agua se desplaza a través de las células de la endodermis por difusión."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/biologia-abd-examen-resuelto-deco-san.html",
+      "sourceName": "matematicaj.blogspot.com — BIOLOGÍA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina la verdad (v) o falsedad (F) de las siguientes preposiciones:\n– El calcio mantiene la presión osmótica de las células.\n– El magnesio es un importante cofactor enzimático.\n– El sodio participa en la contracción muscular y la coagulación sanguínea.",
+      "alternatives": [
+        "FVF",
+        "VVF",
+        "FVV",
+        "VFV",
+        "VVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematicas-1-de-secundaria-texto-de.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA I UNCP 2027 INGRESO MEDICINA ENFERMERÍA UNIVERSIDAD DEL CENTRO DESARROLLO CLAVES DE RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes alternativas está relacionada con el transporte de la savia bruta?",
+      "alternatives": [
+        "El agua penetra a la raíz por osmosis, pero a nivel de las bandas de Caspary circula gracias al transporte activo.",
+        "Existe evaporación del agua y del oxígeno a nivel de las hojas, lo que facilita el arrastre por transpiración.",
+        "La transpiración en las hojas proporciona una fuerza de tensión proporcionando energía para la circulación ascendente del agua.",
+        "El movimiento descendente de la savia elaborada ocurre gracias a las diferencias de presión osmótica entre las hojas y las raíces."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/mecanismos-de-transporte-en-plantas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MECANISMOS DE TRANSPORTE EN PLANTAS EJERCICIOS RESUELTOS DE BIOLOGÍA EXAMEN ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En comparación con una solución 0.01 M de glucosa, el descenso del punto de congelación de una solución 0.01 M de MgCl2 es _____________.",
+      "alternatives": [
+        "el mismo",
+        "aproximadamente el doble",
+        "aproximadamente el triple",
+        "aproximadamente seis veces mayor"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 11"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A una temperatura dada, la presión osmótica de una solución concentrada de una sustancia _____________.",
+      "alternatives": [
+        "es mayor que la de una solución diluida.",
+        "es menor que la de una solución diluida.",
+        "es igual a la de una solución diluida.",
+        "no se puede comparar con la presión osmótica de una solución diluida."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 13"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los valores del factor de Van't Hoff para el KCl, el NaCl y el K2SO4, respectivamente, son _____________.",
+      "alternatives": [
+        "2, 2 y 2",
+        "2, 2 y 3",
+        "1, 1 y 2",
+        "1, 1 y 1 19 Soluciones 23/04/18"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 15"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El valor de la constante de Henry KH ____________.",
+      "alternatives": [
+        "aumenta al aumentar la temperatura.",
+        "disminuye al aumentar la temperatura.",
+        "permanece constante.",
+        "primero aumenta y luego disminuye."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 17"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los valores de las propiedades coligativas de una solución coloidal son de orden pequeño en comparación con los que muestran las soluciones verdaderas de la misma concentración, debido a que las partículas coloidales __________________.",
+      "alternatives": [
+        "presentan un área superficial enorme.",
+        "permanecen suspendidas en el medio de dispersión.",
+        "forman coloides liófilos.",
+        "son comparativamente menos numerosas."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep505.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.5 MCQ 20"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cocinera puso sal de más en los frijoles que estaba cocinando. Para solucionar el problema, agregó papas crudas y sin condimentar dentro de la olla. Cuando terminó de cocinarlos, las papas estaban saladas, porque absorbieron parte del caldo con exceso de sal. Finalmente, agregó agua para completar el caldo de los frijoles. La sal fue absorbida por las papas por",
+      "alternatives": [
+        "ósmosis, por involucrar solamente el transporte del solvente.",
+        "fagocitosis, porque la sal transportada es una sustancia sólida.",
+        "exocitosis, ya que la sal fue transportada del agua hacia la papa.",
+        "pinocitosis, porque la sal estaba diluida en el agua cuando fue transportada.",
+        "difusión, porque el transporte ocurrió a favor del gradiente de concentración."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2019/2019_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2019 dia 2 caderno azul questão 130"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A partir de una solución de NaCl 0,9 M y KCl 0,5 M, se le indica a una persona preparar 2000 mL de una solución que contenga 142 mEq/L de catión sodio y 4,2 mEq/L de catión potasio. ¿Qué volumen de las soluciones, respectivamente, se deben diluir al volumen requerido?",
+      "alternatives": [
+        "157,8 - 8,4",
+        "78,9 - 4,2",
+        "315,5 - 16,8",
+        "284,0 - 9,3",
+        "142 - 4,2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/quimica-simulacro-san-marcos-solucionario-admision-a-la-universidad-2020-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las células humanas tienen dos espacios: el intracelular y el extracelular. Si el extracelular contiene 142 mEq-g/L de ion sodio (cloruro de sodio), ¿en cuántos mililitros de esta solución salina fisiológica (NaCl 0,9 M) se encuentran contenidos estos miliequivalentes?\nDatos: Na=23,0 g/mol; Cl=35,5 g/mol",
+      "alternatives": [
+        "230",
+        "316",
+        "79",
+        "158",
+        "170"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/quimica-ejercicios-resueltos-examen-de.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se le pide a una persona preparar 500 mL de una solución que contenga 142 mEq/L de ion sodio y 4,2 mEq/L de ion potasio a partir de una solución de NaCl 0,9 M y KCl 0,5 M. ¿Qué volumen de las soluciones, respectivamente, se deben diluir al volumen requerido?",
+      "alternatives": [
+        "39,5 y 2,0",
+        "157,8 y 8,4",
+        "78,9 y 4,2",
+        "90,0 y 4,2",
+        "78,9 y 8,4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-quimica-de-admision-la_22.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes alternativas expresa un ejemplo de una disolución verdadera?",
+      "alternatives": [
+        "Aire",
+        "Emulsión",
+        "Suspensión",
+        "Humo",
+        "Niebla"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué volumen de disolvente debe agregarse a 5 cm³ de disolución de HC1 6 M para obtener una disolución de HC1 0,1 M?",
+      "alternatives": [
+        "285 cm³",
+        "275 cm³",
+        "295 cm ³",
+        "266 cm³",
+        "235 cm³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea preparar 500 mL de una solución acuosa 1 M de HN O 3 a partir de otra solución acuosa de HN O 3 al 15% en masa y densidad 1.1 g/mL.\n¿Qué volumen, en mL, de esta última solución debe tomarse para tal fin?\nMasa molecular molar de HN O 3 =63",
+      "alternatives": [
+        "196",
+        "186",
+        "201",
+        "191",
+        "206 *"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "40 gramos de una solución acuosa, cuya densidad es 1,20 g/mL, contiene 8 gramos de soluto. La concentración, expresada en gramos de soluto, por 100 mL de solución es",
+      "alternatives": [
+        "32.",
+        "5.",
+        "8.",
+        "25.",
+        "24."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/07/unaj-solucionario-del-examen-de-admision-universidad-nacional-de-juliaca-claves-de-respuestas-desarrollo-descarga-doc-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNAJ EXAMEN ADMISIÓN UNIVERSIDAD DE JULIACA NACIONAL (MODELO) 2027 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la masa (en gramos) de cloruro de magnesio (Mg Cℓ 2 ) necesario para preparar 1 litro de disolución acuosa al 12% en masa, con una densidad de 1,1 g/mL.",
+      "alternatives": [
+        "12",
+        "36",
+        "95",
+        "132",
+        "145"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a los sistemas dispersos que pueden producirse en sistemas químicos, indique la secuencia correcta luego de confirmar si las proposiciones son verdaderas (V) o falsas (F):\nI. Las suspensiones no se sedimentan.\nII. Las soluciones no dispersan la luz.\nIII. Los coloides dispersan la luz.",
+      "alternatives": [
+        "FVV",
+        "VVV",
+        "FFF",
+        "VFF",
+        "VVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Tercera-prueba-uni-solucionario-examen-admision-universidad-ingenieria-fisica-quimica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA QUÍMICA EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA TERCERA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La solubilidad del KNO 3 a 25°C es 55g/100g H 2 O. Determine la masa del KNO 3 , en gramos, que se disuelve como máximo en 1L de agua a dicha temperatura, si la densidad del agua es 1g/ml",
+      "alternatives": [
+        "5,5",
+        "55",
+        "550",
+        "155",
+        "150"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un vaso de precipitación se vierten 100 mL de tetracloruro de carbono (CC ℓ 4 ) y 100 mL de benceno (C 6 H 6 ), luego se agita con una varilla de vidrio El tipo de sistema formado es",
+      "alternatives": [
+        "heterogéneo, debido a que ambos solventes presentan moléculas asimétricas",
+        "heterogéneo, debido a que ambos solventes presentan moléculas simétricas",
+        "homogéneo, debido a que ambos solventes presentan moléculas asimétricas",
+        "homogéneo, debido a que ambos solventes presentan moléculas simétricas",
+        "homogéneo, debido a que el CC ℓ 4 presentan moléculas simétricas y el C 6 H 6 moléculas asimétricas"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unprg-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNPRG 2026 EXAMEN ADMISIÓN UNIVERSIDAD PEDRO RUIZ GALLO PDF 2027"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se mezclan 40mL de ácido nítrico 0,5N y 10mL de ácido nítrico 2,0N, luego la solución sirve para titular 60mL de hidróxido de sodio. La concentración del hidróxido de sodio es",
+      "alternatives": [
+        "0,57 N",
+        "0,67 N",
+        "0,77 N",
+        "0,87 N",
+        "0,97 N"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una farmacia local se compra un frasco de un litro de alcohol medicinal (alcohol etílico al 70% en masa y de densidad 0,79 g/mL). La masa en gramos de alcohol contenido en el recipiente es:",
+      "alternatives": [
+        "490",
+        "553",
+        "700",
+        "790",
+        "960"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/expresiones-algebraicas-pdf-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA D 2027 ECONÓMICAS INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una práctica de laboratorio, un estudiante agrega en un vaso 70 g de glicerina (C 3 H 8 O 3 ), 20 g de metanol (CH 3 OH) y 250 g de agua (H 2 O). Calcule la fracción molar de la glicerina y del metanol, respectivamente, en la mezcla resultante: Masas atómicas: H = 1; C = 12; O = 16",
+      "alternatives": [
+        "0,04 y 0,05",
+        "0,05 y 0,04",
+        "0,20 y 0,06",
+        "0,40 y 0,50",
+        "0,50 y 0,40"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-11-educacion-fisica-experiencia-6-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una solución de peróxido de hidrógeno al 4% (w/w) se utiliza para desinfectar heridas. Cuando esta solución entra en contacto con la piel, se descompone en agua y oxígeno por la acción de una enzima que se encuentra en las células. Las burbujas de oxígeno que se desprenden matan a los microbios y actúan, por tanto, como desinfectante. Luego. la reacción que ocurre es\n2H 2 O 2 → 2H 2 O+O 2\nAsí, el volumen de oxígeno, en mL, expresado a condiciones normales y desprendido al desinfectar una herida con 5 g de dicha solución, es\nDatos:\nH 2 O 2 =34 g/mol ; H 2 O=18 g/mol; O 2 =32 g/mol",
+      "alternatives": [
+        "33",
+        "17",
+        "94",
+        "66"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-quimica-de-admision-la.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los sistemas dispersos se pueden clasificar de acuerdo con el tamaño de partícula de su fase dispersa en suspensión, coloide y solución.\nRespecto a los sistemas dispersos, señale la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F).\nI. El tamaño de la partícula dispersa en un coloide es mayor que la de una suspensión.\nII. La fase dispersa en una suspensión se puede separar por filtración.\nIII. Los componentes de una solución pueden sedimentar por acción a la gravedad.",
+      "alternatives": [
+        "FVF",
+        "FFF",
+        "FVV",
+        "VFV",
+        "VVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/quimica-problemas-resueltos-del-examen-de-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SEMINARIO DE QUÍMICA PROBLEMAS RESUELTOS TIPO EXAMEN DE ADMISIÓN A LA UNIVERSIDAD NACIONAL DE INGENIERÍA UNI PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando la concentración de NaCl en el suero fisiológico es 0,154 M, el valor que corresponde en unidades de porcentaje peso/volumen es\nDato masas atómicas: Na = 23 ; Cl =35,5",
+      "alternatives": [
+        "0,9",
+        "9,0",
+        "0,009",
+        "0,0009"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos-quimica-semana-12-2020.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EJERCICIOS RESUELTOS DEL EXAMEN DE INGRESO A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de sulfato de cobre pentahidrato, CuSO4 · 5H2O, serán necesarios para preparar 250 mL de una solución 0,1 M de CuSO4?\nMasa atómica: Cu=63,5; S=32; O=16; H=1",
+      "alternatives": [
+        "3,99",
+        "5,12",
+        "6,24",
+        "8,75",
+        "10,23"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/quimica-ejercicios-y-problemas-resueltos-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se mezclan cantidades equimolares de hidróxido de sodio e hidróxido de potasio con agua hasta 1 litro de solución, el porcentaje peso/volumen de solutos más probables, es:\n(Dato: Pesos atómicos K =39,1; Na=23)",
+      "alternatives": [
+        "0,25",
+        "0,55",
+        "1,61",
+        "9,61",
+        "11,20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se dispone de una solución de NaOH 2M, que presenta una densidad de 1,08 g/mL. Entonces, porcentaje en peso de NaOH en dicha solución es:",
+      "alternatives": [
+        "6,4",
+        "7,0",
+        "7,4",
+        "8,0",
+        "8,4 Un avión de la aerolínea Aerocontinente viaja de Trujillo a Lima y luego retorna a Trujillo. La distancia entre Trujillo y Lima es “L”. La velocidad del avión en el aire es V 1 y la velocidad del viento es V 2 . Referente a este enunciado hallar:"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Ingles-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA B 2027 INGENIERÍAS INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la concentración molar, en mol/L, de una solución de ácido acético (CH 3 COOH), al 10% en masa y con una densidad de 1,010 g/mL.\nMasas atómicas: C =12; O=16; H=1",
+      "alternatives": [
+        "0,17",
+        "1,68",
+        "2,92",
+        "4,48",
+        "6,72"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/quimica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la alternativa que presenta la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F):\nI) Las sustancias iónicas tienden a disolverse en solventes polares.\nII) La solubilidad de un sólido soluble en agua, a una temperatura definida, es mayor cuando el sólido se encuentra más pulverizado.\nIII) La solubilidad de un gas en un líquido aumenta al aumentar la temperatura.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFF",
+        "FVV",
+        "FVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/solucionario-uni-2017-ii-pdf-tercera.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO TERCER EXAMEN UNI 2025 RESUELTO INGRESO UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El vinagre es una mezcla líquida, contiene agua H 2 O y ácido acético CH 3 COOH. En laboratorio de química se analiza la composición porcentual del ácido acético a partir de 200 mL de vinagre. Indique el resultado del carbono e hidrógeno respectivamente.\nPA (uma): C=12, O=16, H=1",
+      "alternatives": [
+        "40,00 % 53,33%",
+        "53,33% 6,67%",
+        "40,00% 13,34%",
+        "40,00% 6,67%",
+        "20,00% 5,00%"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A 20°C, se preparan diferentes cantidades de soluciones saturadas NaC ℓ (ac) sabiendo que la solubilidad es 36. Determinar la masa de la solución saturada preparada utilizando 180 g de cristal NaC ℓ (s) .",
+      "alternatives": [
+        "500 g",
+        "580 g",
+        "680 g",
+        "360 g",
+        "480 g"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En laboratorio de química se cuenta con ácidos concentrados, tal como H 2 SO 4(ac) 8M, sin embargo para un ensayo se necesita 80mL de H 2 SO 4(ac) 5N, ¿cuantos mL de agua destilada se tuvo que utilizar para diluir?",
+      "alternatives": [
+        "55",
+        "25",
+        "50",
+        "30",
+        "40"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando la concentración de NaCl en el suero fisiológico es 0,154M, el valor que corresponde en unidades de porcentaje peso/volumen es\nDato masas atómicas: Na=23 ; Cl=35,5",
+      "alternatives": [
+        "0,999",
+        "9,0",
+        "0,009",
+        "0,0009",
+        "0,9"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-quimica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS QUÍMICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se disuelven 20g de NaC ℓ en 200g de agua temperatura ambiente, luego se evapora un 30% del disolvente. La concentración de la solución resultante en %, en peso, es",
+      "alternatives": [
+        "4,0",
+        "6,5",
+        "9,2",
+        "12,5",
+        "25,0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/quimica-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale los pares de compuestos que son solubles:\nI) NaC ℓ (s) con H 2 O ( ℓ ) a 20 ºC\nII) CH 3 OH ( ℓ ) con C 2 H 5 OH ( ℓ ) a 25 ºC\nIII) H 2 O ( ℓ ) con CC ℓ 4 ( ℓ ) a 20 ºC",
+      "alternatives": [
+        "I, II y III",
+        "I y II",
+        "solo II",
+        "II y III",
+        "solo I"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/resolucion-de-sistemas-de-ecuaciones.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-1 TERCERA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DESARROLLO DE FÍSICA QUÍMICA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A las mezclas homogéneas se les denomina también ______ puesto que solo tienen ____ fase.",
+      "alternatives": [
+        "líquidos - 2",
+        "coloides - 1",
+        "soluciones - 2",
+        "soluciones - 1",
+        "líquidos - sin"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-quimica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE QUÍMICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un grupo de estudiantes realiza un experimento, para esto, ellos preparan una solución acuosa a partir de 0,5 gramos de NaOH al 80% de masa, disolviendo en agua destilada y completando en una fiola de 1 litro. Determine la concentración molar de NaOH y el pH de la solución acuosa.\nDato: Masa molecular de NaOH=40",
+      "alternatives": [
+        "1,0 ×10 –2 y 13",
+        "1,0 ×10 –3 y 11",
+        "1,0 ×10 –2 y 2",
+        "1,0 ×10 –3 y 4",
+        "1,0 ×10 –2 y 12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/quimica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de sulfato de cobre pentahidrato, CuSO 4 ·5H 2 O, serán necesarios para preparar 250 mL de una solución 0,1 M de CuSO 4 ?\nMasa atómica: Cu=63,5; S=32; O=16; H=1",
+      "alternatives": [
+        "3,99",
+        "5,12",
+        "6,24",
+        "8,75",
+        "10,23"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/02/solucionario-uni-2017-i-tercera-prueba.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023-2 TERCERA PRUEBA SOLUCIONARIO DE INGRESO UNIVERSIDAD NACIONAL DE INGENIERÍA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El pisco peruano contiene 40% de volumen de etanol, al realizar el análisis del contenido alcohólico a un pisco adulterarlo se encontró que contiene 28% en volumen de etanol. Determine el volumen de pisco peruano extraído a cada botella de 675 ml, con la finalidad de adulterarlo para ser comercializado.\nDensidad del etanol: 0,8 g/ml",
+      "alternatives": [
+        "81 ml",
+        "202,5 ml",
+        "189 ml",
+        "472,5 ml",
+        "486 ml"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/quimica-simulacro-resuelto-examen-pre.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una disolución de ácido sulfurico ( H 2 S O 4 ) de 250 mL tiene una concentración de 3 mol/L, este compuesto quimico es extremadamente corrosivo. Presenta una densidad aproximada de 1,83 g/mL, y tiene una temperatura de ebullición de 337°C. Cuando reacciona con una solución de hidróxido de sodio (NaOH), libera una energía de 0,3 kJ/mol. Al respecto, indique las magnitudes básicas y derivadas que se han mencionado respectivamente",
+      "alternatives": [
+        "1 y 5",
+        "3 y 3",
+        "4 y 2",
+        "1 y 4",
+        "4 y 1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/examen-admision-san-marcos-2015-i.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se mezcla 250 mL de una solución acuosa 0,2M de ácido nítrico, HNO 3 , con 150 mL de una solución acuosa 0,3M de amoniaco, NH 3 , como producto de la reacción se obtiene la sal conocida como nitrato de amonio, NH 4 NO 3 . Determine la concentración de la sal formada al final de la reacción.",
+      "alternatives": [
+        "0,1025 M",
+        "0,2375 M",
+        "0,1250 M",
+        "0,1125 M",
+        "0,2500 M"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/admision-callao-2016-i-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — CALLAO 2021 II SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD BLOQUES II III UNAC 2021-2 CIENCIAS EMPRESARIALES Y DE LA SALUD ÁREAS 2 y 3 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se disuelven 40g de NaOH en 200ml de alcohol de densidad 0,8g/ml. ¿Cuál es el %w en la solución?",
+      "alternatives": [
+        "20%",
+        "15%",
+        "12%",
+        "10%",
+        "7,5%"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se disuelven 20g de azúcar en 140ml de agua. Halla el % w en la solución.",
+      "alternatives": [
+        "14,28%",
+        "12,50%",
+        "15,32%",
+        "20,33%",
+        "51,67%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se agregan 180g de NaNO 3 en 600ml de H 2 O. ¿Cuántos gramos de NaNO 3 de precipitan?\nDato : S NaNO 3",
+      "alternatives": [
+        "40,5",
+        "42,7",
+        "49,8",
+        "51,3",
+        "No se precipitan"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de sal se deben disolver en 600ml de agua para formar una solución al 25%?",
+      "alternatives": [
+        "100",
+        "120",
+        "150",
+        "175",
+        "200"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula la normalidad de una solución de Ca(OH) 2 al 18,5% y densidad 0,8 g/ml.\nMasa atómica (Ca=40, O=16, H=1).",
+      "alternatives": [
+        "2,0N",
+        "2,4N",
+        "3,6N",
+        "4,0N",
+        "6,8N"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica la normalidad de una solución de A ℓ (OH) 3 0,37 molar.",
+      "alternatives": [
+        "1,11N",
+        "0,64",
+        "0,123",
+        "0,617",
+        "2,15"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se agregan 250g de K Cℓ en 400 ml de H 2 O. ¿Cuántos gramos de KC ℓ se precipitan?\nDato : S K Cℓ =52,3",
+      "alternatives": [
+        "40,8",
+        "20,4",
+        "10,2",
+        "5,1",
+        "2,25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos litros de agua deben disolver a 12,6g de HNO 3 para formar una solución de concentración 1,25 molal.",
+      "alternatives": [
+        "1,25",
+        "0,75",
+        "0,25",
+        "0,20",
+        "0,16"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de sal se deben disolver en 360ml de agua para formar una solución al 10%?",
+      "alternatives": [
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se disuelven 20g de azúcar en 600ml de alcohol de densidad 0,8g/ml. Halla el % en peso en la solución.",
+      "alternatives": [
+        "3%",
+        "4%",
+        "5%",
+        "7,5%",
+        "10%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se disuelven 35g de sal en 140ml de agua. Halla el %w en la solución.",
+      "alternatives": [
+        "22,5%",
+        "20,0%",
+        "24,5%",
+        "52,5%",
+        "25,0%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina la normalidad de una solución de H 2 SO 4 al 14% y densidad 0,7g/ml.\nMasa atómica (S=32)",
+      "alternatives": [
+        "1,0",
+        "1,5",
+        "2,0",
+        "2,5",
+        "1,3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la normalidad de una solución de Ca(OH) 2 , 0,49 molar.",
+      "alternatives": [
+        "0,245N",
+        "0,980",
+        "0,122",
+        "0,880",
+        "1,35"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos litros de agua pueden disolver a 7,4g g de Ca(OH) 2 para formar una solución 2 molal?\nMasa atómica (Ca=40, O=16, H=1)",
+      "alternatives": [
+        "20",
+        "10",
+        "1,0",
+        "0,5",
+        "0,05"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/solucion-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONES QUÍMICAS EJERCICIOS RESUELTOS PDF SOLUBILIDAD DISOLUCIÓN UNIDADES DE CONCENTRACIÓN "
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea preparar 500 mL de una solución acuosa 1M de HN O 3 a partir de otra solución acuosa de HNO 3 al 15% en masa y densidad 1,1 g/mL.\n¿Qué volumen, en mL, de esta última solución debe tomarse para tal fin?\nMasa molecular molar de HN O 3 =63",
+      "alternatives": [
+        "196",
+        "186",
+        "201",
+        "191",
+        "206 *"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-prueba-resuelta-de-admision-a-la-universidad-uni-en-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2022 II TERCERA PRUEBA SOLUCIONARIO ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA 2022-2 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al disolver azúcar en agua a temperatura ambiente, la solución se siente fría al tacto. ¿En cuál de los siguientes casos la disolución del azúcar será más rápida?",
+      "alternatives": [
+        "Cristales de azúcar en agua fría.",
+        "Cristales de azúcar en agua caliente.",
+        "Azúcar en polvo en agua fría.",
+        "Azúcar en polvo en agua caliente."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 2"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un vaso de precipitados contiene una solución de la sustancia 'A'. Se produce la precipitación de la sustancia 'A' cuando se añade una pequeña cantidad de 'A' a la solución. La solución es _________.",
+      "alternatives": [
+        "saturada 23/04/18",
+        "sobresaturada",
+        "insaturada",
+        "concentrada"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 4"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La baja concentración de oxígeno en la sangre y los tejidos de las personas que viven a gran altitud se debe a ____________.",
+      "alternatives": [
+        "la baja temperatura",
+        "la baja presión atmosférica",
+        "la alta presión atmosférica",
+        "tanto la baja temperatura como la alta presión atmosférica"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 6"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes soluciones acuosas debería tener el punto de ebullición más alto?",
+      "alternatives": [
+        "1.0 M NaOH",
+        "1.0 M Na2SO4",
+        "1.0 M NH4NO3",
+        "1.0 M KNO3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 9"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un mango verde (no maduro) colocado en una solución salina concentrada para preparar encurtido se arruga porque _____________.",
+      "alternatives": [
+        "gana agua debido a la ósmosis.",
+        "pierde agua debido a la ósmosis inversa.",
+        "gana agua debido a la ósmosis inversa.",
+        "pierde agua debido a la ósmosis."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 12"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con base en la información dada a continuación, marca la opción correcta. Información: (A) En la mezcla de bromoetano y cloroetano, las interacciones intermoleculares del tipo A–A y B–B son casi iguales a las interacciones del tipo A–B. (B) En la mezcla de etanol y acetona, las interacciones intermoleculares del tipo A–A o B–B son más fuertes que las interacciones del tipo A–B. (C) En la mezcla de cloroformo y acetona, las interacciones intermoleculares del tipo A–A o B–B son más débiles que las interacciones del tipo A–B.",
+      "alternatives": [
+        "Las soluciones (B) y (C) seguirán la ley de Raoult.",
+        "La solución (A) seguirá la ley de Raoult.",
+        "La solución (B) mostrará una desviación negativa de la ley de Raoult.",
+        "La solución (C) mostrará una desviación positiva de la ley de Raoult."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 21"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con base en la información dada a continuación, marca la opción correcta. Información: al añadir acetona al metanol, se rompen algunos de los enlaces de hidrógeno entre las moléculas de metanol.",
+      "alternatives": [
+        "A una composición específica, la mezcla metanol-acetona formará un azeótropo de punto de ebullición mínimo y mostrará una desviación positiva de la ley de Raoult.",
+        "A una composición específica, la mezcla metanol-acetona forma un azeótropo de punto de ebullición máximo y mostrará una desviación positiva de la ley de Raoult.",
+        "A una composición específica, la mezcla metanol-acetona formará un azeótropo de punto de ebullición mínimo y mostrará una desviación negativa de la ley de Raoult.",
+        "A una composición específica, la mezcla metanol-acetona formará un azeótropo de punto de ebullición máximo y mostrará una desviación negativa de la ley de Raoult."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep502.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.2 MCQ 25"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los sistemas dispersos son mezclas en la que una o más sustancias se encuentran diseminadas en un medio y se clasifican según el tamaño de las partículas dispersas en soluciones, coloides y suspensiones.\nAl respecto, indique el valor de verdad (V o F) de las siguientes proposiciones.\nI. Las partículas dispersas de un coloide son de menor tamaño que las de una suspensión.\nII. Las soluciones y los coloides son sistemas dispersos homogéneos debido a que presentan una fase.\nIII. El aire es una solución, el humo es un coloide y el jugo de frutas es una suspensión.",
+      "alternatives": [
+        "FVF",
+        "VFV",
+        "VVV",
+        "VFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/quimica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ácido nítrico (HNO 3 ) es altamente corrosivo, provoca quemaduras al entrar en contacto con los ojos o la piel y debido a su peligrosidad se disuelve con mucho cuidado en agua evitando salpicaduras. Determine el volumen, en litros, de HNO 3(ac) 1,0 M que se requiere mezclar con 2L de HNO 3(ac) 12,0 M, para obtener una solución de HNO 3(ac) 6,0 M (considere volúmenes aditivos).",
+      "alternatives": [
+        "1,2",
+        "3,6",
+        "2,4",
+        "4,8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/quimica-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRE SAN MARCOS SEMANA 10 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
     }
   ]
 }

@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En un triángulo rectángulo sus catetos miden 15 m y 20 m. Hallar su inradio.",
-      "alternatives": ["3", "5", "6", "8", "12"],
+      "alternatives": [
+        "3",
+        "5",
+        "6",
+        "8",
+        "12"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/circunferencia-plana-ejercicios.html",
       "sourceName": "matematicasn - Circunferencia plana ejercicios resueltos, Pregunta 1 (clave B)"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo ABC, de lados AB = 8, BC = 10 y AC = 12, la circunferencia inscrita determina sobre AC el punto M. Calcular AM.",
-      "alternatives": ["3", "5", "6", "8", "12"],
+      "alternatives": [
+        "3",
+        "5",
+        "6",
+        "8",
+        "12"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/circunferencia-plana-ejercicios.html",
       "sourceName": "matematicasn - Circunferencia plana ejercicios resueltos, Pregunta 2 (clave B)"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Se tiene un triángulo rectángulo de semiperímetro 16 cm y de inradio 4 cm. Calcular la longitud de su hipotenusa.",
-      "alternatives": ["13", "15", "16", "18", "12"],
+      "alternatives": [
+        "13",
+        "15",
+        "16",
+        "18",
+        "12"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/circunferencia-plana-ejercicios.html",
       "sourceName": "matematicasn - Circunferencia plana ejercicios resueltos, Pregunta 3 (clave E)"
@@ -39,7 +57,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si la ecuación de la circunferencia es x² + y² − 3x + 5y − 14 = 0, entonces su radio es:",
-      "alternatives": ["√11", "5", "15", "3√10/2"],
+      "alternatives": [
+        "√11",
+        "5",
+        "15",
+        "3√10/2"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 1 (clave D)"
@@ -50,7 +73,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sean las curvas C₁, C₂ de ecuaciones x² + y² = 1 ; x² + y² − 2x − 2y + 1 = 0. Halle la ecuación de la recta que pasa por las intersecciones de C₁ y C₂.",
-      "alternatives": ["x + 2y = 1", "x + y = 1", "x − y = 3", "x = 5", "x + y = 2"],
+      "alternatives": [
+        "x + 2y = 1",
+        "x + y = 1",
+        "x − y = 3",
+        "x = 5",
+        "x + y = 2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 2 (clave B)"
@@ -61,7 +90,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar el valor de k para que la ecuación x² + y² − 8x + 10y + k = 0 represente una circunferencia de radio 7.",
-      "alternatives": ["8", "−6", "−12", "10", "−8"],
+      "alternatives": [
+        "8",
+        "−6",
+        "−12",
+        "10",
+        "−8"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 10 (clave E)"
@@ -72,7 +107,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Halle la ecuación de la recta que pasa por la intersección de las rectas ℒ₁: x + 2y + 1 = 0, ℒ₂: 2x + y − 1 = 0 y que es perpendicular a la cuerda común de las circunferencias C₁: x² + y² + 3x = 0, C₂: x² + y² + 3y = 0.",
-      "alternatives": ["2x + y − 1 = 0", "y − 2x + 3 = 0", "2y + x + 1 = 0", "x − y − 2 = 0", "y + x = 0"],
+      "alternatives": [
+        "2x + y − 1 = 0",
+        "y − 2x + 3 = 0",
+        "2y + x + 1 = 0",
+        "x − y − 2 = 0",
+        "y + x = 0"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 12 (clave E)"
@@ -83,7 +124,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Convertir a forma ordinaria: x² + y² + 4x + 6y = 23. La ecuación ordinaria de la circunferencia es:",
-      "alternatives": ["(x − 2)² + (y + 3)² = 36", "(x + 2)² + (y + 3)² = 28", "(x + 2)² + (y + 3)² = 36", "(x − 2)² + (y + 3)² = 28", "(x + 2)² + (y − 3)² = 36"],
+      "alternatives": [
+        "(x − 2)² + (y + 3)² = 36",
+        "(x + 2)² + (y + 3)² = 28",
+        "(x + 2)² + (y + 3)² = 36",
+        "(x − 2)² + (y + 3)² = 28",
+        "(x + 2)² + (y − 3)² = 36"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Ejercicio 1 (clave C)"
@@ -94,7 +141,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Hallar la ecuación general de la circunferencia de radio 5 y centro C(−1, −3).",
-      "alternatives": ["x² + y² + 2x + 6y − 15 = 0", "x² + y² − 2x + 6y + 15 = 0", "x² + y² − 2x − 6y + 15 = 0", "x² + y² + 2x + 6y − 15 = 0", "x² + y² + 2x + 6y − 10 = 0"],
+      "alternatives": [
+        "x² + y² + 2x + 6y − 15 = 0",
+        "x² + y² − 2x + 6y + 15 = 0",
+        "x² + y² − 2x − 6y + 15 = 0",
+        "x² + y² + 2x + 6y − 15 = 0",
+        "x² + y² + 2x + 6y − 10 = 0"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Ejercicio 3 (clave D)"
@@ -105,7 +158,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Hallar la ecuación de la circunferencia de radio 6 u y centro C(−4, 5).",
-      "alternatives": ["x² + y² + 8x − 10y + 5 = 0", "x² + y² − 8x − 10y + 5 = 0", "x² + y² + 8x + 10y − 5 = 0", "x² + y² − 8x − 10y − 5 = 0", "x² + y² + 8x − 10y − 5 = 0"],
+      "alternatives": [
+        "x² + y² + 8x − 10y + 5 = 0",
+        "x² + y² − 8x − 10y + 5 = 0",
+        "x² + y² + 8x + 10y − 5 = 0",
+        "x² + y² − 8x − 10y − 5 = 0",
+        "x² + y² + 8x − 10y − 5 = 0"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Ejercicio 4 (clave E)"
@@ -116,7 +175,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar la ecuación de la circunferencia con centro (2, 1) que pasa por el punto (7, 6).",
-      "alternatives": ["x² + y² − 4x − 2y − 45 = 0", "x² + y² + 4x + 2y + 45 = 0", "x² + y² − 4x + 2y − 45 = 0", "x² + y² + 4x − 2y + 45 = 0", "x² + y² − 4x + 2y + 45 = 0"],
+      "alternatives": [
+        "x² + y² − 4x − 2y − 45 = 0",
+        "x² + y² + 4x + 2y + 45 = 0",
+        "x² + y² − 4x + 2y − 45 = 0",
+        "x² + y² + 4x − 2y + 45 = 0",
+        "x² + y² − 4x + 2y + 45 = 0"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Ejercicio 5 (clave A)"
@@ -127,7 +192,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Hallar la ecuación de la circunferencia con centro C(7, −6) que pasa por el punto A(2, 2).",
-      "alternatives": ["(x − 7)² + (y + 6)² = 80", "(x + 7)² + (y − 6)² = 89", "(x + 7)² + (y − 6)² = 84", "(x − 7)² + (y + 6)² = 89", "(x − 7)² + (y + 6)² = 84"],
+      "alternatives": [
+        "(x − 7)² + (y + 6)² = 80",
+        "(x + 7)² + (y − 6)² = 89",
+        "(x + 7)² + (y − 6)² = 84",
+        "(x − 7)² + (y + 6)² = 89",
+        "(x − 7)² + (y + 6)² = 84"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Ejercicio 6 (clave D)"
@@ -138,7 +209,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Hallar el centro de la circunferencia cuya ecuación es: x² + y² + 4x + 6y − 23 = 0.",
-      "alternatives": ["(2, 1)", "(2, 3)", "(−2, −3)", "(−2, −1)", "(−3, −2)"],
+      "alternatives": [
+        "(2, 1)",
+        "(2, 3)",
+        "(−2, −3)",
+        "(−2, −1)",
+        "(−3, −2)"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Ejercicio 7 (clave C)"
@@ -149,7 +226,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Los puntos K(4, 1), L(14, 1), N(a, b) son vértices de un triángulo rectángulo con el ángulo recto en N. La ecuación de la circunferencia circunscrita al triángulo KLN es:",
-      "alternatives": ["(x − 1)² + (y − 9)² = 9", "(x − 9)² + (y − 1)² = 16", "(x − 1)² + (y − 9)² = 25", "(x − 9)² + (y − 1)² = 25"],
+      "alternatives": [
+        "(x − 1)² + (y − 9)² = 9",
+        "(x − 9)² + (y − 1)² = 16",
+        "(x − 1)² + (y − 9)² = 25",
+        "(x − 9)² + (y − 1)² = 25"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Ejercicio 8 (clave D)"
@@ -160,7 +242,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El triángulo ABC está inscrito en una circunferencia. Si A(−3, 2), B(9, 6) y C(1, −2), hallar la ecuación de la circunferencia.",
-      "alternatives": ["(x + 3)² + (y + 3)² = 40", "(x + 3)² + (y + 4)² = 40", "(x − 3)² + (y − 4)² = 40", "(x + 4)² + (y − 4)² = 40"],
+      "alternatives": [
+        "(x + 3)² + (y + 3)² = 40",
+        "(x + 3)² + (y + 4)² = 40",
+        "(x − 3)² + (y − 4)² = 40",
+        "(x + 4)² + (y − 4)² = 40"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Ejercicio 9 (clave C)"
@@ -171,7 +258,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Una circunferencia de radio 10 pasa por el origen e intercepta al eje X en un punto que es el punto de tangencia con una recta de pendiente 3/4. Hallar la suma de las coordenadas del centro de la circunferencia.",
-      "alternatives": ["12", "13", "14", "15", "18"],
+      "alternatives": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "18"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 11 (clave C)"
@@ -182,7 +275,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Dado el punto N = (2, 4) y la circunferencia C: (x − 2)² + (y − 4)² = 25. Determine el área del triángulo cuyos vértices son N y las intersecciones de C con el eje de abscisas.",
-      "alternatives": ["8", "9", "10", "11", "12"],
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 14 (clave E)"
@@ -193,7 +292,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcule el área de la región cuadrada inscrita en la circunferencia x² + y² − 14x + 18y + 9 = 0.",
-      "alternatives": ["242", "250", "150", "121"],
+      "alternatives": [
+        "242",
+        "250",
+        "150",
+        "121"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 15 (clave A)"
@@ -204,7 +308,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Una recta con pendiente positiva que pasa por el punto (−4, 0) determina en la circunferencia x² + y² = 16 una cuerda de longitud 6.4. Hallar la ecuación de la recta.",
-      "alternatives": ["3x − 4y + 3 = 0", "3x − 4y + 12 = 0", "3x − 4y + 6 = 0", "3x − 2y + 12 = 0", "2x + 3y + 6 = 0"],
+      "alternatives": [
+        "3x − 4y + 3 = 0",
+        "3x − 4y + 12 = 0",
+        "3x − 4y + 6 = 0",
+        "3x − 2y + 12 = 0",
+        "2x + 3y + 6 = 0"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 16 (clave B)"
@@ -215,7 +325,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Hallar la ecuación de la recta tangente a la circunferencia x² + y² + 2x − 2y − 23 = 0 en el punto P(2, 5).",
-      "alternatives": ["4x + 3y − 26 = 0", "3x + 4y − 26 = 0", "4x − 3y + 26 = 0", "3x + 4y + 26 = 0"],
+      "alternatives": [
+        "4x + 3y − 26 = 0",
+        "3x + 4y − 26 = 0",
+        "4x − 3y + 26 = 0",
+        "3x + 4y + 26 = 0"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 17 (clave B)"
@@ -226,7 +341,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Hallar la ecuación de la circunferencia cuyo centro está sobre el eje X y que pasa por los puntos A(1, 3) y B(4, 5).",
-      "alternatives": ["(x − 3)² + y² = 13", "(x − 7)² + y² = 45", "(x − 4)² + y² = 18", "(x − 2)² + y² = 20"],
+      "alternatives": [
+        "(x − 3)² + y² = 13",
+        "(x − 7)² + y² = 45",
+        "(x − 4)² + y² = 18",
+        "(x − 2)² + y² = 20"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 18 (clave B)"
@@ -237,7 +357,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Hallar la ecuación de la circunferencia con centro sobre el eje X, que pasa por el origen y determina en la recta y = x una cuerda de longitud 3√2.",
-      "alternatives": ["x² + y² − 6x = 0", "x² + y² − 6y = 0", "x² + y² − 4x = 0", "x² + y² + 6x = 0", "x² + y² − 8x = 0"],
+      "alternatives": [
+        "x² + y² − 6x = 0",
+        "x² + y² − 6y = 0",
+        "x² + y² − 4x = 0",
+        "x² + y² + 6x = 0",
+        "x² + y² − 8x = 0"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 19 (clave A)"
@@ -248,7 +374,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Una circunferencia de radio √10 pasa por P(7, 5) y es tangente a la recta x − 3y + 4 = 0. Calcule la suma de las coordenadas del centro de la circunferencia.",
-      "alternatives": ["8", "9", "10", "11", "12"],
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 21 (clave C)"
@@ -259,7 +391,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Una circunferencia de centro A es tangente al eje X y determina en la parte positiva del eje Y un segmento de 8 u. Si y = x + 2 contiene a A, hallar la longitud del radio.",
-      "alternatives": ["3", "4", "5", "6", "7"],
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 22 (clave C)"
@@ -270,7 +408,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Se tiene una circunferencia con centro en el origen y radio 25. Si la suma de las componentes de un punto de dicha circunferencia es 31 (con la abscisa mayor que la ordenada), calcule la ecuación de la recta tangente en ese punto.",
-      "alternatives": ["x + 7y = 625", "24x + 7y = 625", "24x − y = 625", "24x − 7y = 625", "7x − 7y = 625"],
+      "alternatives": [
+        "x + 7y = 625",
+        "24x + 7y = 625",
+        "24x − y = 625",
+        "24x − 7y = 625",
+        "7x − 7y = 625"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 23 (clave B)"
@@ -281,7 +425,11 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Determinar la ecuación de la circunferencia ubicada en el primer cuadrante, tangente al eje de ordenadas en el punto (0, 6) y cuyo centro se encuentra a 5 unidades de la recta 3x − 4y − 10 = 0.",
-      "alternatives": ["(x − 3)² + (y − 6)² = 9", "(x + 3)² + (y − 1)² = 32", "(x − 2)² + (y − 4)² = 32"],
+      "alternatives": [
+        "(x − 3)² + (y − 6)² = 9",
+        "(x + 3)² + (y − 1)² = 32",
+        "(x − 2)² + (y − 4)² = 32"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
       "sourceName": "matematicasn - Ecuación de la circunferencia ejercicios resueltos, Pregunta 24 (clave A)"
@@ -292,7 +440,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo rectángulo cuya hipotenusa mide 48, se inscribe una circunferencia de longitud 24π. ¿Cuál es el perímetro de dicho triángulo?",
-      "alternatives": ["120", "144", "96", "72", "60"],
+      "alternatives": [
+        "120",
+        "144",
+        "96",
+        "72",
+        "60"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/06/practicas-de-circunferencia-guias-de.html",
       "sourceName": "matematicaj - Guía de ejercicios Circunferencia geometría plana preuniversitaria, Problema 2 (clave b)"
@@ -303,7 +457,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sean O y O' los centros de dos circunferencias tangentes exteriormente cuyos diámetros son 2 y 6 respectivamente. Calcule el ángulo agudo formado por la recta que une los centros y la tangente común a ambas circunferencias.",
-      "alternatives": ["60°", "45°", "30°", "15°", "75°"],
+      "alternatives": [
+        "60°",
+        "45°",
+        "30°",
+        "15°",
+        "75°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2018/06/practicas-de-circunferencia-guias-de.html",
       "sourceName": "matematicaj - Guía de ejercicios Circunferencia geometría plana preuniversitaria, Problema 3 (clave c)"
@@ -314,7 +474,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcule el semiperímetro de un triángulo rectángulo sabiendo que el inradio mide 2 m y la longitud de la hipotenusa es 13 m.",
-      "alternatives": ["12 m", "13 m", "15 m", "21 m", "28 m"],
+      "alternatives": [
+        "12 m",
+        "13 m",
+        "15 m",
+        "21 m",
+        "28 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://geometriapdf.blogspot.com/2018/11/circunferencia-propiedades-ejercicios.html",
       "sourceName": "geometriapdf - La circunferencia y sus propiedades ejercicios resueltos, Problema 3 (clave C)"
@@ -325,7 +491,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La mediana de un trapecio rectángulo circunscrito a una circunferencia mide 18 cm y uno de sus ángulos es 53°. Calcule el radio de la circunferencia inscrita.",
-      "alternatives": ["2 cm", "8 cm", "6 cm", "3 cm", "5 cm"],
+      "alternatives": [
+        "2 cm",
+        "8 cm",
+        "6 cm",
+        "3 cm",
+        "5 cm"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://geometriapdf.blogspot.com/2018/11/circunferencia-propiedades-ejercicios.html",
       "sourceName": "geometriapdf - La circunferencia y sus propiedades ejercicios resueltos, Problema 1 (clave E)"
@@ -336,7 +508,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Una cuerda de 24 m de longitud dista 5 m del centro de la circunferencia. Hallar el radio de dicha circunferencia.",
-      "alternatives": ["22 m", "12 m", "13 m", "11 m", "8 m"],
+      "alternatives": [
+        "22 m",
+        "12 m",
+        "13 m",
+        "11 m",
+        "8 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/relaciones-metricas-en-la.html",
       "sourceName": "matematicasn - Relaciones métricas en la circunferencia ejercicios resueltos, Problema 1 (clave C)"
@@ -347,7 +525,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En una circunferencia, una cuerda mide 16 m y su flecha mide 4 m. Calcule el radio de la circunferencia.",
-      "alternatives": ["22 m", "12 m", "10 m", "11 m", "18 m"],
+      "alternatives": [
+        "22 m",
+        "12 m",
+        "10 m",
+        "11 m",
+        "18 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/relaciones-metricas-en-la.html",
       "sourceName": "matematicasn - Relaciones métricas en la circunferencia ejercicios resueltos, Problema 2 (clave C)"
@@ -358,7 +542,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Sobre el arco de la circunferencia circunscrita al triángulo equilátero ABC se toma el punto E tal que AE = 4 y EC = 11. Calcular BE.",
-      "alternatives": ["11", "9", "8", "7", "5"],
+      "alternatives": [
+        "11",
+        "9",
+        "8",
+        "7",
+        "5"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/relaciones-metricas-en-la.html",
       "sourceName": "matematicasn - Relaciones métricas en la circunferencia ejercicios resueltos, Problema 3 (clave D)"
@@ -369,7 +559,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El triángulo ABG está inscrito en una circunferencia, con lados AB = 12 cm, AG = 10 cm y BG = 8 cm. La tangente en B intersecta la prolongación de AG en el punto N. Hallar BN.",
-      "alternatives": ["10", "9", "12", "8", "14"],
+      "alternatives": [
+        "10",
+        "9",
+        "12",
+        "8",
+        "14"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/relaciones-metricas-en-la.html",
       "sourceName": "matematicasn - Relaciones métricas en la circunferencia ejercicios resueltos, Problema resuelto 3 (clave C)"
@@ -380,7 +576,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo acutángulo ABC con circuncentro O, m∠ABC = 65°. Hallar m∠OAC.",
-      "alternatives": ["20°", "30°", "40°", "35°", "25°"],
+      "alternatives": [
+        "20°",
+        "30°",
+        "40°",
+        "35°",
+        "25°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/puntos-notables-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Puntos notables ejercicios resueltos, Problema 1 (clave E)"
@@ -391,7 +593,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo acutángulo ABC con circuncentro O, AO = 4 y m∠BAC = 60°. Hallar BC.",
-      "alternatives": ["4", "4√3", "4√2", "8", "2√2"],
+      "alternatives": [
+        "4",
+        "4√3",
+        "4√2",
+        "8",
+        "2√2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/puntos-notables-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Puntos notables ejercicios resueltos, Problema 2 (clave B)"
@@ -402,7 +610,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En un triángulo ABC se tiene m∠A = m∠C = 30° y AC = 6 m. Hallar la distancia entre el circuncentro y el excentro relativo al lado BC.",
-      "alternatives": ["2√2 m", "2√3 m", "3√6 m", "2√6 m", "3 m"],
+      "alternatives": [
+        "2√2 m",
+        "2√3 m",
+        "3√6 m",
+        "2√6 m",
+        "3 m"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/puntos-notables-ejercicios-resueltos-pdf.html",
       "sourceName": "matematicasn - Puntos notables ejercicios resueltos, Problema 5 (clave D)"
@@ -413,7 +627,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un trapecio isósceles ABCD inscrito en una circunferencia, la diferencia de los arcos de las bases es 160°. Calcular uno de los ángulos agudos del trapecio.",
-      "alternatives": ["30°", "50°", "70°", "80°"],
+      "alternatives": [
+        "30°",
+        "50°",
+        "70°",
+        "80°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/angulos-en-la-circunferencia-ejercicios.html",
       "sourceName": "matematicasn - Ángulos en la circunferencia ejercicios resueltos, Problema 1 (clave B)"
@@ -424,7 +643,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un cuadrilátero inscrito en una circunferencia tiene tres lados iguales, cada uno subtendiendo un arco de 60°. Hallar la suma de las medidas del ángulo interior mayor y el menor.",
-      "alternatives": ["240°", "180°", "160°", "150°", "210°"],
+      "alternatives": [
+        "240°",
+        "180°",
+        "160°",
+        "150°",
+        "210°"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/angulos-en-la-circunferencia-ejercicios.html",
       "sourceName": "matematicasn - Ángulos en la circunferencia ejercicios resueltos, Problema 4 (clave B)"
@@ -435,10 +660,2327 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo rectángulo con un ángulo agudo de 30°, calcular el ángulo HIK donde H es el ortocentro, I es el incentro y K es el circuncentro.",
-      "alternatives": ["130°", "90°", "150°", "120°", "135°"],
+      "alternatives": [
+        "130°",
+        "90°",
+        "150°",
+        "120°",
+        "135°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2018/06/circunferencia-ejercicios-con.html",
       "sourceName": "matematicasn - Circunferencia I problemas resueltos secundaria y preuniversitaria, Problema 1 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un sector circular cuyo ángulo central es 2 𝛑/5 rad . Calcula la relación de áreas de dicho sector y el círculo al cual pertenece.",
+      "alternatives": [
+        "2/5",
+        "1/4",
+        "1/6",
+        "1/5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/09/solucionario-del-examen-de-ingreso-universidad-catolica-pucp-pdf.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un sector circular le cuadruplicamos su ángulo central y aumentamos 5 m a su radio, se obtendrá un nuevo sector circular que tiene un área que es 49 veces el área del sector circular inicial. Determine el radio del nuevo sector.",
+      "alternatives": [
+        "2 m",
+        "3 m",
+        "5 m",
+        "7 m",
+        "9 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/longitud-de-arco-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene el triángulo ABC inscrito en una circunferencia, en el arco BC se ubica el punto P, tal que , luego se traza perpendicular a en H. Calcule la si la y = .",
+      "alternatives": [
+        "53º",
+        "35º",
+        "10º",
+        "20º",
+        "30º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-i-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA I EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un rectángulo ABCD se traza la bisectriz del ángulo B, interceptando en “E” a . Calcule la longitud del radio de la circunferencia inscrita en el cuadrilátero BEDC, si ésta determina el punto “N” en y BN – NE = 16.",
+      "alternatives": [
+        "16",
+        "12",
+        "10",
+        "8",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una circunferencia de centro “O” se ubican los puntos A, B y C de modo que es diámetro y º. En y en la prolongación de se ubica los puntos P y S respectivamente. Siendo m<PSC = 90º. Calcule la m<SPC.",
+      "alternatives": [
+        "30º",
+        "45º",
+        "60º",
+        "37º",
+        "20º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde el punto C exterior a la circunferencia de diámetro AB se traza la tangente CT (T en el arco AB) y (H en ) siendo , calcule la .",
+      "alternatives": [
+        "53º",
+        "37º",
+        "30º",
+        "60º",
+        "45º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La circunferencia inscrita en un triángulo rectángulo ABC recto en B, (BC  AB), es tangente en N a y en P a . Exteriormente se construye el trapezoide BCED en el cuál la circunferencia inscrita es tangente en M a y en Q a . Calcule PQ si ED = 5, AC = CE y DM + AN = 3.",
+      "alternatives": [
+        "1",
+        "1,5",
+        "2",
+        "2,5",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una circunferencia se ubica los puntos A, B, C y D de modo que Si el inradio del triángulo BPC mide 1 cm, cm y calcule BP.",
+      "alternatives": [
+        "2 cm",
+        "3 cm",
+        "4 cm",
+        "5 cm",
+        "8 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una circunferencia se encuentra inscrita en un trapecio ABCD cuyo perímetro es 20 m. Calcule la longitud de la base media de dicho trapecio.",
+      "alternatives": [
+        "2,5",
+        "5",
+        "7,5",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo ABC recto en B, T es el punto de contacto entre y la circunferencia inscrita. P es el punto medio del arco BC de la circunferencia circunscrita. La medida del ángulo PTC es:",
+      "alternatives": [
+        "30",
+        "45",
+        "60",
+        "63,5",
+        "71,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/circunferencia-ejercicios-desarrollados.html",
+      "sourceName": "matematica-a1.blogspot.com — CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una circunferencia de centro “O” se ubican los puntos A y B; luego se ubica “M” en tal que: AB = 9 m, AM = MO = 4m; calcule BO:",
+      "alternatives": [
+        "4m",
+        "5 m",
+        "6 m",
+        "7 m",
+        "8 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por lo vértices B y C de un rectángulo ABCD se traza una circunferencia tangente a que intersecta a en “M”; calcule “BC”, si BM = 99 m y AM = 1m",
+      "alternatives": [
+        "10 m",
+        "15 m",
+        "20 m",
+        "25 m",
+        "100 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas 2 circunferencias tangentes exteriores en “E”; se traza una recta tangente a una de ellas en “D” que intercepta a la otra circunferencia en “B” y “A”; ; la recta tangente común interior intercepta a en “C”; Calcule “DC” si:",
+      "alternatives": [
+        "2,5",
+        "5",
+        "10",
+        "15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un paralelogramo ABCD, la circunferencia circunscrita al triángulo ACD intercepta en “E” a la prolongación de ; calcule EB si: AC = 12 m y BD = 8m.",
+      "alternatives": [
+        "6",
+        "4",
+        "3",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado un hexágono regular ABCDEF inscrito en una circunferencia; se ubica el punto “P” en el arco AB; calcule: “PE” si PC = 5 m y PA = 1 m.",
+      "alternatives": [
+        "1 m",
+        "2 m",
+        "4 m",
+        "6 m",
+        "3 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos circunferencias exteriores, se trazan las rectas tangentes comunes exteriores AB y CD, A y C en una misma circunferencia; calcule la razón entre las longitudes de las cuerdas determinadas en las circunferencias por: AD.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cuadrado ABCD (AB = 20 m), con centro en “A” y radio AB se traza el arco BD que intercepta a la circunferencia inscrita en el cuadrado en: M y N; calcule “MP” si “P” es el punto de intersección de la circunferencia inscrita con .",
+      "alternatives": [
+        "5 m",
+        "10 m",
+        "15 m",
+        "20 m",
+        "25 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos circunferencias exteriores, se trazan las rectas tangentes comunes interiores AB y CD; A y C en una misma circunferencia; BC intercepta a las circunferencias en M y N ; calcule MB si: CN=2 m.",
+      "alternatives": [
+        "1 m",
+        "2 m",
+        "4 m",
+        "0,5 m",
+        "1 ,5 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto exterior “E” a una circunferencia se trazan las rectas secantes EAB y ECD; es la cuerda tangente en “M” a ; calcule , si: , CD = 10 m y EA = AM.",
+      "alternatives": [
+        "8 m",
+        "9 m",
+        "10 m",
+        "11 m",
+        "12 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC se traza una circunferencia tangente a y en M y N respectivamente, dicha circunferencia intercecta a y en P y Q respectivamente; calcule AM si: NC = 4 m, PC = 1m y AQ = 5 m.",
+      "alternatives": [
+        "5 m",
+        "6 m",
+        "8 m",
+        "9 m",
+        "10 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto exterior “E” a una circunferencia se trazan la recta tangente EA y la recta secante EBC; el punto medio “M” de determina en una cuerda de dicha circunferencia segmentos de longitudes 3 m y 4 m. Calcule EA si B y M trisecan a .",
+      "alternatives": [
+        "4 m",
+        "5 m",
+        "6 m",
+        "7 m",
+        "8 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto “A” exterior a una circunferencia, se trazan las rectas tangentes y , también se traza la recta secante ADE; . Calcule: AD; DM = 2 m y ME = 3 m",
+      "alternatives": [
+        "10 m",
+        "5 m",
+        "21 m",
+        "8",
+        "16 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un barco que realiza una búsqueda marina por sectores circulares está explorando un primer sector circular POQ de radio OP=3 √ 6 millas, con un ángulo central α , donde\ncos α =1/4 . Estando el barco en el punto P, recibe el aviso de ir directamente al punto Q. ¿Cuál es la, menor distancia, en millas, que debe recorrer el barco para llegar al punto Q?",
+      "alternatives": [
+        "12",
+        "9",
+        "6",
+        "6 √ 6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/10/trigonometria-problemas-resueltos.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un terreno de cultivo utilizado para el sembrío de hortalizas tiene la forma de un sector circular. El ángulo central, medido en sentido antihorario, es m° y n g en los sistemas sexagesimal y centesimal, respectivamente. Si se verifica que (n–m)(m+n)=475, determine la medida de dicho ángulo en radianes.",
+      "alternatives": [
+        "𝛑/ 4 rad",
+        "𝛑/ 10 rad",
+        "𝛑/ 18 rad",
+        "𝛑/ 6 rad",
+        "𝛑/ 3 rad"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/habilidad-trigonometrica-deco-prueba.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una circunferencia de centro O, desde un punto P exterior a dicha circunferencia se traza la recta tangente PQ, Q es punto de tangencia y la recta secante PAB (A en la circunferencia), tal que la medida del arco AB es el doble de la medida del ángulo de vértice P. Si PA = 5 cm y AB = 4 cm, halle la longitud del radio de la circunferencia.",
+      "alternatives": [
+        "1 cm",
+        "2 cm",
+        "3 cm",
+        "4 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/geometria-semana-9-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 9 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuadrilátero ABCD está circunscrito a una circunferencia, m∠A=90° y T es punto de tangencia en BC; si AD=15 cm, DC=24 cm y CT=18 cm, halle la medida del radio de la circunferencia.",
+      "alternatives": [
+        "7 cm",
+        "6 cm",
+        "9 cm",
+        "10 cm",
+        "8 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/geometria-callao-examen-admision.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el área (en cm²) de la región comprendida entre un círculo y el triángulo inscrito a este, de lados: 7 cm, 24 cm y 25 cm (considere 𝜋 = 3).",
+      "alternatives": [
+        "468,75",
+        "384,75",
+        "256,14",
+        "318,25",
+        "418,32"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/geometria-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la relación entre el área de un sector circular, cuyo ángulo central es 2 𝛑/5 radianes, y el área de un círculo, sabiendo que tienen el mismo radio.",
+      "alternatives": [
+        "2/5",
+        "1/5",
+        "3/5",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/trigonometria-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para tres circunferencias tangentes (exteriormente) dos a dos, la suma de sus radios es 10 cm y el producto de los mismos es 40 cm³. Halle el área (en cm²) de la región triangular cuyos vértices son los centros de la circunferencia.",
+      "alternatives": [
+        "18",
+        "18,5",
+        "19",
+        "19,5",
+        "20"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/examen-uni-resuelto-geometria-admision.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRIA SEGUNDA PRUEBA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El desarrollo de la superficie lateral de un cono de revolución es un sector circular de radio 10 cm y un ángulo central de medida 216°. Determine el volumen del cono original (en cm³).",
+      "alternatives": [
+        "92𝛑",
+        "96𝛑",
+        "76𝛑",
+        "128 𝛑",
+        "81𝛑"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo ABC inscrito en una circunferencia miden:\nAB= 12, AC= 10 y BC=8\nPor B se traza una recta tangente a la circunferencia que corta a la prolongación del lado AC en M. Redondee el valor de BM.",
+      "alternatives": [
+        "27",
+        "12",
+        "14",
+        "10",
+        "9 * *"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área en cm² del mayor rectángulo inscrito en un círculo de 12 √ 2cm de radio, es:",
+      "alternatives": [
+        "576",
+        "864",
+        "1152",
+        "1296",
+        "1440"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante, al calcular el área de un sector circular de radio 5 unidades y de ángulo central de 72°, comete un error, porque al utilizar dos métodos, en el primero utiliza el ángulo en grados sexagesimales que es el equivocado y, en el segundo, utiliza el ángulo en radianes.\nCalcule el error.",
+      "alternatives": [
+        "180(4 – 𝛑 )",
+        "180(5 – 𝛑 )",
+        "5(180 – 𝛑)",
+        "360(5 – p)",
+        "360(4 – 𝛑 )"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/solucionario-unc-ingenierias-examen-de-admision-universidad-nacional-de-cajamarca-modulo-A-prueba-resuelta-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO INGENIERÍA UNC 2027 RESUELTO UNIVERSIDAD DE CAJAMARCA ECONOMÍA ADMINISTRACIÓN Y CONTABILIDAD CLAVES MÓDULO A PDF "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo realiza un M.C.U con un período de 11s. Si su rapidez tangencial es 4m/s, halla el radio de la circunferencia (𝛑 = 22/7)",
+      "alternatives": [
+        "1m",
+        "2",
+        "3,5",
+        "7",
+        "11"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/mcu-ejercicios-resueltos-de-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO CIRCULAR UNIFORME EJERCICIOS RESUELTOS DE MCU – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una partícula con M.C.U. posee una rapidez de 30m/s. Si el radio de la circunferencia que se describe es de 0,5m., halla su frecuencia de rotación en R.P.M.",
+      "alternatives": [
+        "900/𝛑",
+        "1800/𝛑",
+        "200/ 𝛑",
+        "360/ 𝛑",
+        "3000/ 𝛑"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/mcu-ejercicios-resueltos-de-fisica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO CIRCULAR UNIFORME EJERCICIOS RESUELTOS DE MCU – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea conocer las dimensiones de un rectángulo de lados x e y.\nInformación brindada:\nI. La tangente de uno de sus ángulos agudos formado por su diagonal y uno de sus lados es 0,75.\nII. El radio de la circunferencia circunscrita al rectángulo es igual a 10 u.\nPara resolver el problema",
+      "alternatives": [
+        "la información I por sí sola es suficiente.",
+        "la información II por sí sola es suficiente.",
+        "se requieren ambas informaciones.",
+        "cada información por sí sola es suficiente.",
+        "las informaciones dadas son insuficientes."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/ept-5to-actividad-1-experiencia-7-resuelta-aprendo-en-casa-educacion-para-el-trabajo-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 PRIMERA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF RM RV APTITUD LETRAS Y HUMANIDADES"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un automóvil viaja con rapidez constante de 90 km/h en una pista circular de 80m de diámetro. Halle el ángulo central generado por el recorrido del automóvil cuando viajó un tiempo de seis segundos.",
+      "alternatives": [
+        "3,2 rad",
+        "2,8 rad",
+        "3,5 rad",
+        "3,75 rad",
+        "3 rad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/cepreuni-2019-ii-cuarta-practica.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI CUARTA PRACTICA CALIFICADA 2026 II RESUELTA CLAVES RESPUESTAS PDF 2026-1"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La longitud de un arco de circunferencia es 10𝛑 m. Si la longitud del radio aumenta en 50% y la medida del ángulo central disminuye en 20%, calcule la longitud (en m) del nuevo arco.",
+      "alternatives": [
+        "8 𝛑",
+        "10𝛑",
+        "12 𝛑",
+        "13 𝛑",
+        "14𝛑"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-7-experiencia-8-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-primero-segundo-grado-de-secundaria-word-aprendizaje-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una circunferencia 𝒞 cuyo radio mide 10cm, se inscribe un cuadrilátero ABCD. Si m ∢ CAD=45°, AB=BD, ℓ 1 es la longitud del arco BC y ℓ 2 es la longitud del arco AD, calcule (en cm) 2 ℓ 1 + ℓ 2 .",
+      "alternatives": [
+        "12 𝛑",
+        "10 𝛑",
+        "7 𝛑",
+        "15 𝛑",
+        "5 𝛑"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/circunferencia-plana-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un trapecio isósceles se encuentra inscrito en una circunferencia. Si la diferencia de los arcos de las bases es 160°, calcular uno de los ángulos agudos.",
+      "alternatives": [
+        "30°",
+        "50°",
+        "70°",
+        "80°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/angulos-en-la-circunferencia-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EN LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuadrilátero inscrito en una circunferencia tiene tres lados iguales, cada uno de los cuales subtiende un arco de 60°. Halle la suma de las medidas del mayor y menor ángulo interno del cuadrilátero.",
+      "alternatives": [
+        "240°",
+        "180°",
+        "160°",
+        "150°",
+        "210°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/angulos-en-la-circunferencia-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS EN LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen tres circunferencias tangentes exteriores dos a dos, con centros A, B y C respectivamente, donde AB= 5, AC= 7 y BC= 8, M ∈ BC es punto común de tangencia entre dos circunferencias. Determine AM.",
+      "alternatives": [
+        "√16",
+        "√17",
+        "√18",
+        "√19",
+        "√20"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/07/relaciones-metricas-en-el-triangulo-oblicuangulo-ejemplos-problemas-preguntas-resueltas-geometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — RELACIONES MÉTRICAS EN TRIÁNGULOS OBLICUÁNGULOS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cuerda de 24 m de longitud dista del centro de la circunferencia 5m; hallar el radio de dicha circunferencia .",
+      "alternatives": [
+        "22m",
+        "12",
+        "13",
+        "11",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/relaciones-metricas-en-la.html",
+      "sourceName": "matematicasn.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una circunferencia, una cuerda mide 16m ; y su flecha mide 4m.\nCalcule el radio de la circunferencia.",
+      "alternatives": [
+        "22m",
+        "12",
+        "10",
+        "11",
+        "18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/relaciones-metricas-en-la.html",
+      "sourceName": "matematicasn.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo ABG inscrito en una circunferencia miden: AB=12cm, AG=10cm y BG=8 cm. Por el punto B se traza una tangente a la circunferencia que interseca a la prolongación del lado AG en el punto N.\nCalcule (en cm) la longitud de BN.",
+      "alternatives": [
+        "10",
+        "9",
+        "12",
+        "8",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/relaciones-metricas-en-la.html",
+      "sourceName": "matematicasn.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un cuadrilátero inscrito en una circunferencia miden 7u, 15u, 20u y 24u respectivamente; hallar la longitud de cada una de las diagonales de dicho cuadrilátero.",
+      "alternatives": [
+        "15u y 23u",
+        "18u y 20u",
+        "15u y 10 √ 7 u",
+        "8 √ 3 u y 24u",
+        "20u y 25u"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/relaciones-metricas-en-la.html",
+      "sourceName": "matematicasn.blogspot.com — RELACIONES MÉTRICAS EN LA CIRCUNFERENCIA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el área (en cm 2 ) de la región comprendida entre un círculo y el triángulo inscrito a este, de lados: 7cm, 24cm y 25cm (considere 𝜋=3).",
+      "alternatives": [
+        "468,75",
+        "384,75",
+        "256,14",
+        "318,25",
+        "418,32"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-de-regiones-circulares-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁREAS DE REGIONES CIRCULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el área de la superficie generada por la circunferencia cuyo radio mide 3m, si gira 360º alrededor de una recta tangente a la circunferencia.",
+      "alternatives": [
+        "36𝛑²",
+        "38𝛑²",
+        "40𝛑²",
+        "42𝛑²",
+        "50𝛑²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/teorema-de-pappus-y-gulding-rotaciones.html",
+      "sourceName": "matematicasn.blogspot.com — PAPPUS Y GULDING EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de la superficie lateral de una pirámide cuadrangular regular es 128 𝑐𝑚² . Si el radio de la circunferencia circunscrita a la base es 2 √ 2 𝑐𝑚 , calcule el volumen de la pirámide:",
+      "alternatives": [
+        "67 √ 15/3 𝑐 𝑚³",
+        "32 √ 7 𝑐 𝑚³",
+        "32 √ 15 𝑐 𝑚³",
+        "65 √ 15/3 𝑐 𝑚³",
+        "64 √ 15/3 𝑐 𝑚³"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-piramide-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PIRÁMIDE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un sector circular el ángulo central mide 20° y el arco correspondiente mide 4 𝛑 . ¿Cuál es el área del sector circular? .",
+      "alternatives": [
+        "24 𝛑",
+        "36 𝛑",
+        "48 𝛑",
+        "72 𝛑",
+        "96 𝛑"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — SECTOR CIRCULAR EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el área de un sector circular cuyo ángulo central mide 1° y su radio mide 90 m.",
+      "alternatives": [
+        "20 𝛑 m²",
+        "45/2 𝛑 m²",
+        "45 𝛑 m²",
+        "30 𝛑 m²",
+        "15 𝛑 m²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — SECTOR CIRCULAR EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un sector circular de radio R y un ángulo central de 36°. ¿Cuánto hay que aumentar al ángulo central de dicho sector para que el área no varíe, si su radio disminuye un cuarto del anterior?",
+      "alternatives": [
+        "28°",
+        "26°",
+        "24°",
+        "22°",
+        "20°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — SECTOR CIRCULAR EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un sector circular le cuadruplicamos su ángulo central y aumentamos 5 m a su radio, se obtendrá que el sector resultante tiene un área que es 49 veces el área del sector inicial, determine el radio del sector resultante.",
+      "alternatives": [
+        "1 m",
+        "3 m",
+        "5 m",
+        "7 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — SECTOR CIRCULAR EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una oveja está amarrada a una estaca de tal manera que puede pastar en un sector circular de ángulo central de 120º . Además se sabe que la distancia más larga que puede andar estando la soga tirante es de 10 m. ¿Cuál es el área de la superficie en la que la oveja puede pastar?",
+      "alternatives": [
+        "75/4𝛑 m²",
+        "65/𝛑 m²",
+        "50/𝛑 m²",
+        "75/2𝛑 m²",
+        "75/𝛑 m²"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — SECTOR CIRCULAR EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un sector circular le multiplicamos por nueve su ángulo central y aumentamos 15 u a su radio, se obtendrá un nuevo sector circular que tiene un área que es sesenta y cuatro veces el área del sector circular inicial. Con la información dada, determine el radio del nuevo sector circular.",
+      "alternatives": [
+        "20 u",
+        "26 u",
+        "21 u",
+        "24 u",
+        "27 u"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — SECTOR CIRCULAR EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un profesor le indica a sus estudiantes que r cm es la longitud del radio de un sector circular, cuya medida de su ángulo central es (4r)° y que su área es 10 𝛑 r cm² . En base a la información dada, ¿cuál es la medida del radio?",
+      "alternatives": [
+        "60 cm",
+        "30 cm",
+        "20 cm",
+        "10 cm",
+        "15 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — SECTOR CIRCULAR EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un arquitecto al momento de elaborar los planos de una ciudad, se percata que la región designada para el plantado de rosas y el parque principal de un distrito cercano tienen igual área y perímetro. Si la región designada al parque tiene forma de un cuadrado mientras que la región designada al plantado de rosas tiene forma de sector circular, determine la medida de su ángulo central.",
+      "alternatives": [
+        "1,5 rad",
+        "2 rad",
+        "1 rad",
+        "2,5 rad",
+        "3 rad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — SECTOR CIRCULAR EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un pedazo de cartulina con forma de un sector circular de 40° de ángulo central y que subtiende un arco de 6 𝛑 cm. Si para obtener un sector circular mas pequeño, se reduce 9cm el radio y se corta con tijera, eliminado el trapecio circular. ¿Cuál es el área del nuevo sector circular?.",
+      "alternatives": [
+        "32 𝛑 cm²",
+        "42 𝛑 cm²",
+        "36 𝛑 cm²",
+        "72 𝛑 cm²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — SECTOR CIRCULAR EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una corona circular, el radio de la circunferencia mayor mide 20m y el radio de la circunferencia menor mide 6m. Determine el área de la corona circular .",
+      "alternatives": [
+        "320 𝛑 m²",
+        "420 𝛑 m²",
+        "364 𝛑 m²",
+        "72 𝛑 m²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — SECTOR CIRCULAR EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un pedazo de cartulina con forma de un sector circular de 60° de ángulo central y cuyo radio mide 24cm. Si para obtener un sector circular mas pequeño, se reduce 12cm el radio y se corta con tijera, eliminado el trapecio circular. ¿Cuál es el área del nuevo sector circular?.",
+      "alternatives": [
+        "24 𝛑 𝑐m²",
+        "12 𝛑 cm²",
+        "2 𝛑 cm²",
+        "30 𝛑 cm²",
+        "20 𝛑 cm²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — SECTOR CIRCULAR EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la longitud de arco que corresponde a un ángulo central de 5 0° en una circunferencia de diámetro 36m.",
+      "alternatives": [
+        "25 𝛑m",
+        "5 𝛑m",
+        "10 𝛑m",
+        "20 𝛑m",
+        "1 5 𝛑m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un sector circular, se cumple que el arco mide 2𝛑 y el radio mide 6. ¿Cuál es la medida sexagesimal del ángulo central?.",
+      "alternatives": [
+        "10°",
+        "20°",
+        "60°",
+        "40°",
+        "90°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un sector circular, el ángulo central mide 36° y el arco correspondiente mide 6 𝛑cm . ¿Cuál es la longitud del radio de dicho sector?.",
+      "alternatives": [
+        "10m",
+        "20m",
+        "30m",
+        "15m",
+        "5m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la longitud del radio de una circunferencia en la que un ángulo central , que comprende un arco que mide 61( 𝛑/50)m , tiene una medida en grados centesimales representada por un número entero y en grados sexagesimales representaba en la forma x°x’.",
+      "alternatives": [
+        "3m",
+        "4m",
+        "2m",
+        "2,5m",
+        "3,5m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un sector circular de 6 cm de radio y 12 cm de longitud de arco. Si el radio aumenta en 2 cm sin que el ángulo central varíe. ¿Cuál será la nueva longitud de arco?",
+      "alternatives": [
+        "8 cm",
+        "10 cm",
+        "12 cm",
+        "14 cm",
+        "16 cm"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un sector circular la longitud de su arco es 1 m. Si su ángulo central se aumenta en 10% y su radio se disminuye en 10%, se determina un nuevo sector circular cuya longitud del arco, en cm , es:",
+      "alternatives": [
+        "0,99",
+        "1",
+        "10",
+        "99",
+        "100"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sí a un sector circular le duplicamos el ángulo central y a su radio le aumentamos 3m, se obtendrá un nuevo sector cuya longitud de arco es el quíntuple de la longitud del arco inicial. Determine el radio del sector inicial.",
+      "alternatives": [
+        "1m",
+        "2m",
+        "3m",
+        "4m",
+        "5m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos ángulos en el centro de una circunferencia son complementarios y las longitudes de los arcos que subtienden suman 4 𝛑 m. Calcular la longitud del radio de la circunferencia.",
+      "alternatives": [
+        "2m",
+        "4m",
+        "6m",
+        "8m",
+        "10m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un sector circular le triplicamos su radio y a su ángulo central le añadimos 60°, se obtendrá un nuevo sector de longitud de arco igual al quíntuple de la longitud del arco inicial. Calcule el ángulo central del nuevo sector.",
+      "alternatives": [
+        "2 𝛑/ 3 rad",
+        "3π/4 rad",
+        "4 𝛑/3 rad",
+        "3 𝛑/7 rad",
+        "5 𝛑/6 rad"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el diámetro de la circunferencia en la cual un ángulo inscrito de 30° subtiende un arco con 11 m de longitud. (Usar 𝛑 = 22/7 )",
+      "alternatives": [
+        "11 m",
+        "21 m",
+        "22 m",
+        "42 m",
+        "44 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ángulo central que subtiende un arco de radio 36 mide C rad, si se disminuye dicho ángulo hasta que mida S rad. ¿Cuánto debe aumentar el radio para que la longitud de dicho arco no varié? (S y C son lo convencional)",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las medidas de dos ángulos en el centro de una circunferencia son complementarias y las longitudes de los arcos que subtienden suman 4 𝛑 m, luego la longitud del radio de la circunferencia es:",
+      "alternatives": [
+        "2 m",
+        "4 m",
+        "6 m",
+        "8 m",
+        "16 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un sector circular se conoce que su radio mide (x+1)cm, su longitud de arco 9(x–1)cm, y la medida de su ángulo central correspondiente (x²–1) rad. Hallar el valor de \"x\".",
+      "alternatives": [
+        "9",
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una lámina de cobre en forma de un sector circular cuyo ángulo central (200/3) g . Si se desea cubrir el arco con una cinta de 6 𝛑 /7 cm, este no queda cubierto totalmente, pero si es cubierto con un cinta cuya longitud es de 10 𝛑 /7 cm, sobra una longitud dos veces más de la que faltaba anteriormente. Calcule el radio de la lámina.",
+      "alternatives": [
+        "1 cm",
+        "2 cm",
+        "4 cm",
+        "3cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Boby tiene un terreno en forma de sector circular en el cual siembra maíz. Debido a la temporada de lluvias, el radio de su terreno ha disminuido 32 metros sin que el ángulo central varíe. Si inicialmente el terreno es de radio 420 m y de longitud de arco 105𝛑 m, determine la nueva longitud de arco después de la temporada de lluvias.",
+      "alternatives": [
+        "87𝛑 m",
+        "85𝛑 m",
+        "97𝛑 m",
+        "95𝛑 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/longitud-de-arco-y-sector-circular.html",
+      "sourceName": "matematicasn.blogspot.com — ARCO Y SECTOR EJERCICIOS DESARROLLADOS DE SECUNDARIA Y PREUNIVERSITARIA EN TRIGONOMETRÍA MATEMÁTICA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Edu y su prima Any están jugando con plastilina y moldes que tienen forma de sector circular. Any se percata que si a uno de esos moldes le duplican su ángulo central y a su radio le aumentan 3 u, van a obtener un nuevo molde cuya longitud de arco es el quíntuple de la longitud del arco inicial. Edu le pide a Any que busque un molde cuyo radio sea el quíntuplo del radio del molde inicial. ¿Cuánto mide el radio del molde que debe buscar Any ?",
+      "alternatives": [
+        "10 u",
+        "5 u",
+        "8 u",
+        "7 u"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/longitud-de-arco-y-sector-circular.html",
+      "sourceName": "matematicasn.blogspot.com — ARCO Y SECTOR EJERCICIOS DESARROLLADOS DE SECUNDARIA Y PREUNIVERSITARIA EN TRIGONOMETRÍA MATEMÁTICA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la longitud de un arco en un sector circular cuyo ángulo central mide 1º y su radio mide 1800 cm.",
+      "alternatives": [
+        "𝛑/10 m",
+        "𝛑/5 m",
+        "𝛑/15 m",
+        "𝛑/12 m",
+        "𝛑/7 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/longitud-de-arco-y-sector-circular.html",
+      "sourceName": "matematicasn.blogspot.com — ARCO Y SECTOR EJERCICIOS DESARROLLADOS DE SECUNDARIA Y PREUNIVERSITARIA EN TRIGONOMETRÍA MATEMÁTICA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un sector circular y un cuadrado, con equivalente área e igual perímetro; luego la medida, en radianes, de su ángulo central correspondiente resulta ser:",
+      "alternatives": [
+        "1 rad",
+        "2 rad",
+        "1/2 rad",
+        "4 rad",
+        "1/4 rad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/longitud-de-arco-y-sector-circular.html",
+      "sourceName": "matematicasn.blogspot.com — ARCO Y SECTOR EJERCICIOS DESARROLLADOS DE SECUNDARIA Y PREUNIVERSITARIA EN TRIGONOMETRÍA MATEMÁTICA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC, se ubican M y N en AB y BC respectivamente. Si AB = BC y m∠AMN = 2m∠BAN=90° , y el radio de la circunferencia inscrita en el triángulo BMN mide 4 cm, halle CN.",
+      "alternatives": [
+        "8 cm",
+        "4 cm",
+        "6 cm",
+        "5 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/geometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un puente tiene la forma de un arco de circunferencia y une las orillas de un río de 50m de ancho. El punto más alto del puente está a 5m de la horizontal. Halle el radio de la circunferencia.",
+      "alternatives": [
+        "65 m",
+        "40 m",
+        "60 m",
+        "70 m",
+        "75 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/geometria-preuniversitaria-libro-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una partícula realiza un movimiento circunferencial uniformemente variado (MCUV), iniciando con una rapidez de 6 m/s. Luego de 3 segundos, su rapidez es 9 m/s. Determine el número de vueltas que da en los 6 primeros segundos de su movimiento.\n(Radio de la circunferencia = 3 m)",
+      "alternatives": [
+        "9/ 𝛑",
+        "5 / 𝛑",
+        "15 / 𝛑",
+        "18 / 𝛑",
+        "10 / 𝛑"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/fisica-untels-examen-resuelto-admision.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PREUNIVERSITARIA 2027 LIBRO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un automóvil viaja con rapidez constante de 90 km/h en una pista circular de 80 m de diámetro. Halle el ángulo central generado por el recorrido del automóvil cuando viajó un tiempo de cuatro segundos.",
+      "alternatives": [
+        "3 rad",
+        "2 rad",
+        "1,5 rad",
+        "2,5 rad",
+        "3,5 rad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-trigonometria-semana-10.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un puente colgante tiene la forma de un arco de circunferencia cuyo radio mide 63 m y su ángulo central mide 80°. Calcule el tiempo que le tomaría a una persona que camina a velocidad constante de 𝛑/ 6 m/s atravesar el puente.",
+      "alternatives": [
+        "110 s",
+        "182 s.",
+        "162 s",
+        "168 s",
+        "120 s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-trigonometria-semana-10.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo miden 3, 4 y 5 metros. Halle el radio de la circunferencia exinscrita al lado menor.",
+      "alternatives": [
+        "1 m",
+        "3 m",
+        "2 m",
+        "5 m",
+        "2/3 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/geometria-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la longitud de una circunferencia si el ángulo central de 1rad subtiende un arco de longitud 6m.",
+      "alternatives": [
+        "12𝛑m",
+        "13𝛑m",
+        "14𝛑m",
+        "16𝛑m",
+        "19𝛑m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la longitud de un arco en un sector circular cuyo ángulo central mide 60° y el radio 12m.",
+      "alternatives": [
+        "2𝛑m",
+        "4𝛑m",
+        "6𝛑m",
+        "8𝛑m",
+        "12𝛑m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina la longitud de arco de un sector cuyo ángulo central mide (x/3) rad y su radio mide (6x)m; sabiendo además que el perímetro de este sector es de 110m.",
+      "alternatives": [
+        "20m",
+        "30m",
+        "40m",
+        "50m",
+        "60m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la longitud del arco de un sector circular de ángulo central 45°, sabiendo que la longitud de la circunferencia es 600m.",
+      "alternatives": [
+        "75m",
+        "60m",
+        "120m",
+        "65m",
+        "80m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un sector circular, se le triplica el radio y a su ángulo central se le disminuye en 36°; se obtendrá un nuevo sector de longitud de arco igual al doble de la longitud del arco inicial; determina la longitud del nuevo ángulo central.",
+      "alternatives": [
+        "𝛑/10 rad",
+        "𝛑/5 rad",
+        "2𝛑/5 rad",
+        "3𝛑/5 rad",
+        "3𝛑/10 rad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un sector circular se le duplica el ángulo central y a su radio se le disminuye en 3m, se obtendrá un nuevo sector de longitud de arco igual a la mitad de la longitud del arco inicial; determina el radio del nuevo sector.",
+      "alternatives": [
+        "5m",
+        "4m",
+        "3m",
+        "2m",
+        "1m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un sector circular se le duplica el ángulo central y a su radio se le reduce en 3m, se obtendrá un nuevo sector cuya área es la mitad que la del área del sector inicial, determina el radio del sector inicial.",
+      "alternatives": [
+        "2m",
+        "3m",
+        "4m",
+        "5m",
+        "6m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un sector circular le cuadruplicamos su ángulo central y aumentamos 5m a su radio, se obtendrá que el sector resultante tiene un área que es 49 veces el área del sector inicial; determina el radio del sector resultante.",
+      "alternatives": [
+        "1m",
+        "3m",
+        "5m",
+        "7m",
+        "9m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sector circular tiene un ángulo central de 9º y su radio mide 36 m. Si se quiere aumentar su ángulo en 7º , ¿en cuánto habrá que disminuir su radio para que su área no varíe?",
+      "alternatives": [
+        "7 m",
+        "8 m",
+        "9 m",
+        "10 m",
+        "11 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el ángulo central de un sector circular se reduce a la mitad, su longitud de arco del sector circular se disminuye en 5𝛑 u. Calcule la longitud de arco del sector.",
+      "alternatives": [
+        "10𝛑 u",
+        "4𝛑 u",
+        "5𝛑 u",
+        "8𝛑 u",
+        "9𝛑 u"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El profesor de Física le pide a sus alumnos que determinen la rapidez de un móvil, el cual se desplaza con movimiento uniforme sobre un arco de circunferencia de 200 m de diámetro. Si el mejor alumno de la clase observa que en 20 s , el móvil recorre un arco cuyo ángulo central es 5 0 g , determine la rapidez de dicho móvil.",
+      "alternatives": [
+        "3 𝛑 m/s",
+        "5𝛑/4 m/s",
+        "7 m/s",
+        "9𝛑/4 m/s",
+        "5𝛑/3 m/s"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una lámina de aluminio en forma de sector circular cuyo ángulo central es (20000/3) m . Si se desea cubrir el arco con una cinta de 6𝛑/7 m , este no queda cubierto totalmente; pero si es cubierto con una cinta de 10𝛑/7 m , sobra una longitud dos veces más de lo que faltaba anteriormente. Teniendo en cuenta la información dada, determine el radio de dicha lámina.",
+      "alternatives": [
+        "3 m",
+        "5 m",
+        "4 m",
+        "7 m",
+        "6 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En uno de los ejercicios de trigonometría, Miguel observa que si se duplican las medidas del ángulo central y del radio de un sector circular se obtiene un nuevo sector de área Mu² . Si el área del sector inicial es 2 N u² , determine M÷N .",
+      "alternatives": [
+        "4",
+        "16",
+        "8",
+        "12",
+        "10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Jorge realiza cortes sobre una lámina de cartón que tiene forma de sector circular y cuyo ángulo central mide 234°, obteniendo sectores circulares del mismo radio y cuyos ángulos centrales miden 6 g y 𝛑/ 25 rad . Si se necesita obtener más de dos sectores circulares de cada tipo para su trabajo, ¿cuántos sectores circulares como máximo, podrá obtener Jorge sin desperdiciar cartón?",
+      "alternatives": [
+        "42 sectores circulares",
+        "43 sectores circulares",
+        "36 sectores circulares",
+        "40 sectores circulares",
+        "45 sectores circulares"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-trigonometria.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI TRIGONOMETRÍA EXAMEN FINAL RESUELTO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La municipalidad de Surco designa un terreno de 180 m 2 para la construcción de un parque, dicho terreno tiene forma de sector circular, cuyo ángulo central mide α rad. Para realizar una ampliación del terreno, el ángulo central se aumenta en θ rad y el radio se mantiene constante. Si el terreno ampliado tiene un área de 240 m 2 , determine la relación α/θ .",
+      "alternatives": [
+        "1,5",
+        "3",
+        "2,5",
+        "2",
+        "3,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-trigonometria.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI TRIGONOMETRÍA EXAMEN FINAL RESUELTO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El valor del área de un sector circular, es igual al producto del número de radianes de la medida de su ángulo central, la longitud de su radio y su longitud del arco respectiva, e igual a 9 u. Hallar su perímetro.",
+      "alternatives": [
+        "27 u",
+        "24 u",
+        "18 u",
+        "15 u",
+        "9 u"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/sector-circular-problemas-resueltos-de-trigonometria-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — SECTOR CIRCULAR EJEMPLOS Y EJERCICIOS RESUELTOS DE SECUNDARIA Y PREUNIVERSITARIO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un puente en la forma de un arco de circunferencia une las orillas de un río de 100 metros de ancho, el punto más alto del puente está a 10 metros de la horizontal. Hallar el radio de la circunferencia.",
+      "alternatives": [
+        "80 m",
+        "100 m",
+        "120 m",
+        "130 m",
+        "110 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/razonamiento-geometrico-ejercicios.html",
+      "sourceName": "razonamientopdf.blogspot.com — RAZONAMIENTO GEOMÉTRICO PROBLEMAS RESUELTOS DE GEOMETRÍA RECREATIVA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos círculos secantes determinan 3 regiones, cuyas áreas son 100 𝜋 , 300 𝜋 y 800 𝜋 , tal que, la de menor área es la región común. Halle la suma de los radios de dichos círculos.",
+      "alternatives": [
+        "5",
+        "25",
+        "50",
+        "100"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/areas-circulares-ejercicios-y-fichas-de.html",
+      "sourceName": "geometriapdf.blogspot.com — ÁREAS DE REGIONES CIRCULARES EJERCICIOS Y FICHAS DE GEOMETRIA-PRACTICAR MATEMÁTICAS DE SECUNDARIA Y PREUNIVERSITARIA pdf"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una circunferencia de diámetro AB se traza la cuerda CD paralela a dicho diámetro, si . Calcule , si",
+      "alternatives": [
+        "10º",
+        "15º",
+        "18º",
+        "8º",
+        "36º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-regulares-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS REGULARES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De un punto D exterior a una circunferencia se trazan las secantes DCB y DEA, siendo diámetro. Calcule , si: y , siendo “R” radio de dicha circunferencia.",
+      "alternatives": [
+        "10º",
+        "12º",
+        "24º",
+        "20º",
+        "15º"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/poligonos-regulares-ejercicios.html",
+      "sourceName": "matematica-a1.blogspot.com — POLÍGONOS REGULARES EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una bicicleta tiene ruedas de tamaños diferentes. La rueda delantera tiene 50 cm de radio y la rueda posterior tiene 40 cm. ¿Qué distancia recorrerá la bicicleta, cuando la suma del número de vueltas de ambas ruedas sea 18?",
+      "alternatives": [
+        "900T cm",
+        "800T cm",
+        "600T cm",
+        "500T cm",
+        "700T cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/arte-cultura-experiencia-8-5to-actividad-1-2-3-4-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CUARTO EXAMEN CEPRU ORDINARIO INGRESO DIRECTO PREGUNTAS CLAVES UNIVERSIDAD SAN ANTONIO 2027"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el valor de verdad (V) o falsedad (F) de cada una de las siguientes proposiciones:\nI. Si dos circunferencias no congruentes son tangentes exteriores, entonces los segmentos tangentes no comunes trazados desde un punto exterior a ambas son congruentes. ( )\nII. Si dos circunferencias no congruentes son tangentes, entonces toda recta que contiene al punto de tangencia, secante a ambas circunferencias, determina sobre cada una de ellas, arcos que tomados dos a dos son de igual medida en grados sexagesimales. ( )\nI II. Desde un punto exterior a una circunferencia, se trazan las rectas tangentes. Si se traza la recta bisectriz del ángulo determinado por dichas rectas, entonces el cuadrilátero determinado por los puntos de tangencia y los puntos de intersección de la bisectriz con la circunferencia es un trapezoide simétrico. ( )\nIndique la secuencia correcta.",
+      "alternatives": [
+        "VFV",
+        "VVV",
+        "VVF",
+        "FVV",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-2-ccss-experiencia-8-resuelta-aprendo-en-casa-ciencias-sociales-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 SEGUNDA PRUEBA RESUELTA RESPUESTAS INGRESO UNIVERSIDAD PDF MATEMÁTICA"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un circo, actúa un malabarista que hace uso de una bicicleta cuya rueda trasera tiene un radio que mide 24 cm y el radio de la rueda delantera mide 36 cm. Si en un acto de su función, la rueda delantera dio 100 vueltas menos que la trasera al desplazarse por el escenario, halle la longitud que recorrió la bicicleta en su desplazamiento.",
+      "alternatives": [
+        "144𝛑 m",
+        "140𝛑 m",
+        "124𝛑 m",
+        "146𝛑 m",
+        "150𝛑 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/simulacro-presencial-san-marcos-2018-i.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO SAN MARCOS 2027 I INGRESO UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una circunferencia cuyo radio mide 12 cm se traza una cuerda AB , sobre la cuerda se ubica el punto M de modo que los segmentos determinados sobre dicha cuerda miden 14 cm y 6 cm. Halle la distancia del punto M al centro de la circunferencia.",
+      "alternatives": [
+        "2√15 cm",
+        "√15 cm",
+        "10√6 cm",
+        "6√3 cm",
+        "4√15 cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/geometria-semana-9-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA PRE SAN MARCOS SEMANA 9 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El diámetro de una circunferencia es 30 unidades. Si una cuerda se encuentra a 12 unidades del centro, entonces la longitud de dicha cuerda es:",
+      "alternatives": [
+        "14",
+        "16",
+        "18",
+        "20",
+        "22"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene dos monedas tangentes, de radios diferentes, que en todo momento mantienen una cara apoyada sobre una mesa. Cuando la primera moneda se hace rodar, alrededor de todo el perímetro de la segunda, que permanece fija, dará 5 vueltas, respecto de su propio centro. ¿Cuántas vueltas respecto de su propio centro, dará la segunda rueda, al rodar alrededor del perímetro de la primera rueda?",
+      "alternatives": [
+        "0,25",
+        "1,25",
+        "0,2",
+        "1,5",
+        "2,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-7-dpcc-experiencia-8-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA D 2026-2 EVALUACIÓN INGRESO UNIVERSIDAD DESARRROLLO RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al interior de un terreno triangular ABC, donde AB = BC = 400 m y AC = 480 m, se va a construir una piscina circular concéntrica al círculo inscrito en el triángulo ABC. Si la distancia mínima de esta región circular a los lados AB, BC y AC es igual a 45 metros, determine el radio de la región circular destinada para la piscina.",
+      "alternatives": [
+        "85 m",
+        "75 m",
+        "120 m",
+        "65 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/razonamiento-matematico-del-examen-de-admision-a-la-universidad-problemas-resueltos-en-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MATEMÁTICA SOLUCIONARIO DE EXAMEN ADMISIÓN UNIVERSIDAD PRUEBA DE INGRESO CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una superficie plana, un disco circular metálico rueda en línea recta 24 vueltas y recorre una distancia de (6 𝛑 )² u. ¿Cuál es el área del círculo?",
+      "alternatives": [
+        "3/8 𝛑³ u²",
+        "3/4 𝛑³ u²",
+        "9/16 𝛑³ u²",
+        "9/8 𝛑³ u²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/03/habilidad-logico-matematica-c-e-examen.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA ÁREA C PRUEBA DESARROLLADA DE EXAMEN DE ADMISIÓN A LA UNIVERSIDAD SAN MARCOS SOLUCIONADO"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al cortarse dos cuerdas de una misma circunferencia perpendicularmente, una de ellas queda dividida en segmentos de 3 y 4 unidades y la otra en segmentos de 6 y 2 unidades. Determine el diámetro de la circunferencia.",
+      "alternatives": [
+        "√87",
+        "√73",
+        "√68",
+        "√65",
+        "√63"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/razonamiento-geometrico-problemas.html",
+      "sourceName": "matematicaj.blogspot.com — GEOMETRÍA UNI DE EXAMEN DE ADMISIÓN UNIVERSIDAD DE INGENIERÍA SOLUCIONADO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una circunferencia de radio 12 m se traza una cuerda PQ, siendo la medida del arco PQ= 60°. Hallar la longitud del arco PQ.",
+      "alternatives": [
+        "4𝛑 m",
+        "6𝛑 m",
+        "8𝛑 m",
+        "5𝛑 m",
+        "7𝛑 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un cuadrilátero ABCD circunscrito a una circunferencia. Se conoce que las medidas de los lados del cuadrilátero son:\nAB=3x+2\nBC=3x+1\nCD=4x+3\nAD=7x–2\nCalcular x.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene inscrita una circunferencia en un rombo; si un punto de tangencia determina sobre un lado longitudes 1,2 u y 4,8 u, calcule el diámetro de la circunferencia.",
+      "alternatives": [
+        "2,4",
+        "3,6",
+        "4,8",
+        "7,2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/solucionario-catolica-2019-admision.html",
+      "sourceName": "matematicasn.blogspot.com — EVALUACIÓN DE TALENTO CATÓLICA 2027 RESUELTA INGRESO UNIVERSIDAD RESPUESTAS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una circunferencia de radio T, si se duplica su radio, la longitud de la circunferencia mayor es x veces la longitud de la circunferencia menor.\nCalcule x",
+      "alternatives": [
+        "3",
+        "2,5",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/11/Solucionarios-catolica-pucp-examenes-admision-universidad-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CATÓLICA EXAMEN ADMISIÓN UNIVERSIDAD PUCP PDF 2026"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una rueda de radio 4cm, recorre por una sola vez la parte externa de un triángulo con perímetro de 528cm. Considere el valor de 𝛑=22/7 y calcule aproximadamente el número de vueltas que gira la rueda.",
+      "alternatives": [
+        "15",
+        "22",
+        "24",
+        "28",
+        "30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Cepreuni-practica-1-con-solucionario-ingreso-directo-universidad-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI PRIMERA PRACTICA CALIFICADA RESUELTA RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los diámetros AB y CD de una circunferencia son perpendiculares. Si E pertenece al arco BD, AE interseca a CD en el punto F y FD=1cm, entonces la longitud de la circunferencia circunscrita al triángulo FED (en cm) es:",
+      "alternatives": [
+        "𝜋√2",
+        "2𝜋√2",
+        "2𝜋√3",
+        "3𝜋√2",
+        "3𝜋√3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poligonos-regulares-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La longitud de la altura de un trapecio rectángulo circunscrito a una circunferencia, es igual a 12 y uno de sus ángulos internos mide 53º. Calcule el perímetro de la región trapecial.",
+      "alternatives": [
+        "40",
+        "54",
+        "36",
+        "60",
+        "58"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/geometria-examen-admision-villarreal.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En dos circunferencias de centros O y Q, se traza una recta tangente a ellas en B y C. Otra recta es también tangente a dichas circunferencias en A y T. Si la recta AT interseca a BC en P, calcule m∢OPQ.",
+      "alternatives": [
+        "150°",
+        "120°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-geometria-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE GEOMETRÍA RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una circunferencia dibujada en el piso, hay cuatro amigos: Alberto, Boris, Carlos y Daniel, ubicados en los puntos A, B, C y D respectivamente. Alberto y Boris se encuentran lo más separados posible, Carlos se ubica de tal manera que m ∢ CAB=2m ∢ CBA. Si Daniel está diametralmente opuesto a Carlos y la distancia entre Alberto y Carlos es 10 m, halle la distancia entre Alberto y Daniel.",
+      "alternatives": [
+        "5 √ 3 m",
+        "8 √ 3 m",
+        "6 √ 2 m",
+        "10 √ 3 m",
+        "6 √ 3m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-13-2020.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC, donde BC = 15 m, AC = 14m, AB = 13 m, se traza un semicírculo tangente a AB y BC y cuyo diámetro se halla contenido a AC. Calcule la longitud de su radio.",
+      "alternatives": [
+        "3",
+        "2",
+        "5",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/areas-de-regiones-sombreadas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁREAS DE REGIONES SOMBREADAS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Sr. Sifuentes traslada todos los días a su hija Cecilia a su centro de estudios una distancia aproximada de 1,5 km a lo largo de una pista horizontal y plana. Si el diámetro de una de las llantas es de 0,6 m y N representa el número de vueltas que da dicha llanta, calcule el valor de N𝛑/5",
+      "alternatives": [
+        "1/10",
+        "10",
+        "7",
+        "5",
+        "1/5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/longitud-de-arco-sector-circular-ruedas.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO Y SECTOR CIRCULAR PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una rueda de una bicicleta tiene un radio de 50 cm si la rueda esta rodando sobre un plano horizontal a una velocidad de 10 RPM (revolución por minuto). ¿Cuál es la distancia aproximada que recorre la rueda en una hora?",
+      "alternatives": [
+        "300𝛑m",
+        "600𝛑",
+        "400𝛑",
+        "500𝛑",
+        "650𝛑"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una rueda de radio a metros da 10 vueltas para recorrer un tramo de longitud L metros; otra rueda de radio (a² + 62a – 3) metros gira 60° para recorrer el mismo tramo. Calcule a² + 2a , en metros.",
+      "alternatives": [
+        "3",
+        "8",
+        "15",
+        "24",
+        "35"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una rueda de radio “6a” se mantiene fija y otra rueda de radio “a”, puede girar alrededor de ella, ¿cuántas vueltas dará la rueda pequeña si parte y llega al mismo punto por primera vez?",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos ruedas cuyos radios miden 3m y 15m recorren espacios iguales. ¿cuánto debe medir el radio (en m) de una tercera rueda, para que recorriendo el doble del espacio de las anteriores realice como número de vueltas 5 veces la diferencia de las otras dos?",
+      "alternatives": [
+        "1,25",
+        "1,5",
+        "1,75",
+        "2",
+        "2,25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una rueda de radio 7c u se mantiene fija, y otra rueda de radio c u puede girar alrededor de ella, ¿cuántas vueltas dará la rueda pequeña, si parte y llega al mismo punto por primera vez?",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean dos ruedas, las cuales están sujetas por una correa transmisora, donde la primera rueda tiene un diámetro de 50 cm mientras que la segunda rueda tiene el triple de la primera. Si se sabe que la primera rueda da 150 vueltas, calcule el número de vueltas que dará la segunda rueda.",
+      "alternatives": [
+        "50",
+        "75",
+        "100",
+        "120",
+        "150"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Harumi y Cecilia juegan en el patio de su casa con dos ruedas de 60 cm y 12 cm de diámetro, las cuales recorren el mismo espacio. Si las niñas quisieran jugar con una tercera rueda para que juegue su primo Miguelito, ¿cuánto debería medir su radio, para que recorriendo el doble del espacio de las anteriores realice como número de vueltas, cinco veces la diferencia de las otras dos?",
+      "alternatives": [
+        "3 cm",
+        "2,4 cm",
+        "3,4 cm",
+        "4,2 cm",
+        "4 cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ciclista pasea en bicicleta desde su casa hacia el parque. Él sabe que la distancia por recorrer es de 9𝛑/20 km . ¿Cuántas vueltas dio cada rueda de la bicicleta, si las mismas tienen 60 cm de diámetro?",
+      "alternatives": [
+        "805",
+        "700",
+        "725",
+        "750",
+        "720"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los radios de las ruedas delantera y posterior de un tractor que se desplaza por un camino llano, miden 60 cm y 90 cm. Si la rueda delantera dio 8 vueltas más que la rueda posterior, calcule la distancia que recorrió el tractor.",
+      "alternatives": [
+        "30,4𝛑 m",
+        "28,8𝛑 m",
+        "20,6𝛑 m",
+        "16,5𝛑 m",
+        "15,6𝛑 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Yober se traslada en su bicicleta de un punto A hacia un punto B, por un camino en línea recta. Si los radios de las ruedas están en la relación de 2 a 5 y el ángulo barrido por el centro de la rueda de mayor radio es 164𝛑 rad, calcule el número de vueltas que da la rueda de menor radio en ese trayecto.",
+      "alternatives": [
+        "32,8 vueltas",
+        "205 vueltas",
+        "132 vueltas",
+        "200,5 vueltas",
+        "185,8 vueltas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los radios de las ruedas de una bicicleta están en la relación de 3 a 1. Si en hacer un recorrido la rueda mayor dio 25 vueltas menos que la rueda menor, halle la suma de los ángulos girados por cada rueda.",
+      "alternatives": [
+        "25𝛑 rad",
+        "50𝛑 rad",
+        "75𝛑 rad",
+        "100𝛑 rad",
+        "125𝛑 rad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ruedas-y-vueltas-aplicaciones-de-la.html",
+      "sourceName": "matematicasn.blogspot.com — RUEDAS Y VUELTAS APLICACIONES DE LA LONGITUD DE ARCO EJERCICIOS RESUELTOS DE TRIGONOMETRÍA PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el área de un círculo es numéricamente igual a su perímetro, halle la longitud de el radio del círculo.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — GEOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen monedas de la misma dimensión. El número máximo de monedas tangentes dos a dos que pueden colocarse tangencialmente alrededor de una de ellas es:",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/razonamiento-geometrico-ejercicios.html",
+      "sourceName": "razonamientopdf.blogspot.com — RAZONAMIENTO GEOMÉTRICO PROBLEMAS RESUELTOS DE GEOMETRÍA RECREATIVA PDF"
     }
   ]
 }

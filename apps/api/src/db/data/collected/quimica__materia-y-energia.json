@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "¿Cuál de las siguientes clases de materia no posee masa?",
-      "alternatives": ["Tierra", "Agua", "Aire", "Calor", "Neblina"],
+      "alternatives": [
+        "Tierra",
+        "Agua",
+        "Aire",
+        "Calor",
+        "Neblina"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y energía - ejercicios resueltos, pregunta 2"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuál de los siguientes no representa una sustancia simple?",
-      "alternatives": ["Mercurio", "Grafito", "Yodo", "Agua", "Azufre"],
+      "alternatives": [
+        "Mercurio",
+        "Grafito",
+        "Yodo",
+        "Agua",
+        "Azufre"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y energía - ejercicios resueltos, pregunta 4"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuál de los siguientes no representa una propiedad intensiva de la materia?",
-      "alternatives": ["Densidad", "Punto de fusión", "Color", "Calor", "Punto de ebullición"],
+      "alternatives": [
+        "Densidad",
+        "Punto de fusión",
+        "Color",
+        "Calor",
+        "Punto de ebullición"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y energía - ejercicios resueltos, pregunta 7"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La naftalina disminuye de tamaño con el paso del tiempo debido al proceso de:",
-      "alternatives": ["Fusión", "Evaporación", "Condensación", "Sublimación", "Solidificación"],
+      "alternatives": [
+        "Fusión",
+        "Evaporación",
+        "Condensación",
+        "Sublimación",
+        "Solidificación"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y energía - ejercicios resueltos, pregunta 9"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Cuando una sustancia pasa del estado sólido al estado gaseoso sin pasar por el estado líquido, el cambio de estado se denomina:",
-      "alternatives": ["Fusión", "Vaporización", "Licuación", "Sublimación", "Deposición"],
+      "alternatives": [
+        "Fusión",
+        "Vaporización",
+        "Licuación",
+        "Sublimación",
+        "Deposición"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y energía - ejercicios resueltos, pregunta 12"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "La ocurrencia de la lluvia involucra principalmente el cambio de estado denominado:",
-      "alternatives": ["Fusión", "Vaporización", "Solidificación", "Sublimación", "Condensación"],
+      "alternatives": [
+        "Fusión",
+        "Vaporización",
+        "Solidificación",
+        "Sublimación",
+        "Condensación"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y energía - ejercicios resueltos, pregunta 15"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuál de los siguientes no corresponde a un cambio de estado de la materia?",
-      "alternatives": ["Fusión", "Sublimación", "Licuación", "Decantación", "Vaporización"],
+      "alternatives": [
+        "Fusión",
+        "Sublimación",
+        "Licuación",
+        "Decantación",
+        "Vaporización"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y energía - ejercicios resueltos, pregunta 19"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Las sustancias puras son aquellas que:",
-      "alternatives": ["Presentan una sola fase", "Son mezclas homogéneas", "Poseen el mismo tipo de átomo", "Son solo elementos químicos", "Tienen composición química definida"],
+      "alternatives": [
+        "Presentan una sola fase",
+        "Son mezclas homogéneas",
+        "Poseen el mismo tipo de átomo",
+        "Son solo elementos químicos",
+        "Tienen composición química definida"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
       "sourceName": "Materia y energía - ejercicios resueltos, pregunta 20"
@@ -94,10 +142,1451 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En la materia homogénea sus componentes no pueden ser distinguidos a simple vista. Seleccione la alternativa que contiene una solución y una sustancia compuesta, respectivamente.",
-      "alternatives": ["Sal común y arena", "Arena y acetona", "Agua pura y acetona", "Aire y bronce", "Gasolina y sal común"],
+      "alternatives": [
+        "Sal común y arena",
+        "Arena y acetona",
+        "Agua pura y acetona",
+        "Aire y bronce",
+        "Gasolina y sal común"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicaj.blogspot.com/2019/12/materia-energia-y-cambios-ejercicios-resueltos-de-quimica-basica-pre-universidad-pdf.html",
       "sourceName": "Materia, energía y cambios - ejercicios resueltos, pregunta 2"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El nitrato de potasio (KNO 3 ) es un compuesto químico que, a temperatura ambiente, está presente en estado sólido. Al respecto, señale la alternativa que contiene el correcto valor de verdad (V o F) de las siguientes proposiciones:\nI. El compuesto mencionado es una sal oxisal.\nII. Su estructura presenta enlace iónico.\nIII. Puede formar una mezcla homogénea en agua.",
+      "alternatives": [
+        "VFV",
+        "VVV",
+        "FVV",
+        "FVF",
+        "VFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-quimica-de-admision-la.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifique si las proposiciones son verdaderas (V) o falsas (F), respecto a la composición de la materia.\nI) El aire es una sustancia.\nII) El agua potable es una mezcla.\nIII) El gas licuado de petróleo (GLP) es una mezcla homogénea.",
+      "alternatives": [
+        "VFF",
+        "FVV",
+        "FVF",
+        "VVF",
+        "FFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/quimica-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las propiedades de la materia se pueden clasificar en físicas y químicas. En las primeras no es necesario alterar la composición de la muestra para ser observadas, mientras que en las segundas sí lo es. Indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F).\nI. Las propiedades físicas son cualidades que pueden ser medidas cuando ocurre un cambio físico.\nII. Son ejemplos de propiedades químicas la inflamabilidad y la corrosividad.\nIII. La propiedad relacionada con la reacción violenta del sodio en agua se denomina reactividad.",
+      "alternatives": [
+        "VFV",
+        "VFF",
+        "FVF",
+        "FFF",
+        "VVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/quimica-problemas-resueltos-del-examen-de-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SEMINARIO DE QUÍMICA PROBLEMAS RESUELTOS TIPO EXAMEN DE ADMISIÓN A LA UNIVERSIDAD NACIONAL DE INGENIERÍA UNI PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son acumulaciones de till (depósitos compuestos por una mezcla heterogénea de fragmentos rocosos de diferentes tamaños, que van desde arcillas, arena, grava, hasta el canto rodado). Se suelen ubicar en la base de los glaciares.",
+      "alternatives": [
+        "Rocas acarriladas",
+        "Drumlins",
+        "Marmitas",
+        "Morrenas",
+        "Estalactitas"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/fuerzas-externas-y-la-modelacion-del-relieve-geodinamica-exogena-de-la-tierra-meteorizacion-erosion-sedimentacion-ejemplos-preguntas-resueltas-de-geografia-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — GEODINÁMICA EXÓGENA PREGUNTAS RESUELTAS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál no es un fenómeno químico?",
+      "alternatives": [
+        "Dilusión de azúcar en agua.",
+        "Fermentación de la glucosa.",
+        "Oxidación de acero.",
+        "Respiración",
+        "Crecimiento de la planta."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/1ro-2do-actividad-1-2-3-ingles-experiencia-7-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando un evento natural afecta al hombre generando pérdidas materiales o humanas, estamos ante un",
+      "alternatives": [
+        "fenómeno natural.",
+        "movimiento sísmico.",
+        "desastre natural.",
+        "fenómeno físico.",
+        "fenómeno geográfico."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/fenomenos-y-desastres-naturales-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LOS DESASTRES NATURALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando el fenómeno natural afecta al ser humano de manera negativa, intensa y directa, se convierte en:",
+      "alternatives": [
+        "hecho geográfico.",
+        "desastre natural.",
+        "fenómeno físico.",
+        "fenómeno geográfico.",
+        "hecho físico."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/fenomenos-y-desastres-naturales-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LOS DESASTRES NATURALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la alternativa que presenta en forma correcta el par (propiedad extensiva; propiedad intensiva).",
+      "alternatives": [
+        "(Color; volumen)",
+        "(Presión; temperatura)",
+        "(Densidad; maleabilidad)",
+        "(Longitud; acidez)",
+        "(Paramagnetismo; masa)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/solucionario-uni-2017-ii-pdf-tercera.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO TERCER EXAMEN UNI 2025 RESUELTO INGRESO UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los fenómenos físicos son cambios en donde la materia no pierde su identidad, es decir, su composición química no se altera; mientras que en un fenómeno químico la composición química sí se altera. Identifique como fenómeno físico (F) o químico (Q) según corresponda a los siguientes cambios:\nI ) Condensación de la lluvia\nII ) Volatilización de la acetona\nIII ) Fermentación de frutas\nIV ) Solubilidad del azúcar\nV ) Oxidación de los metales",
+      "alternatives": [
+        "FQQFQ",
+        "FFQFQ",
+        "QQQFQ",
+        "QFFFQ",
+        "FQFQQ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la alternativa que corresponda a una mezcla homogénea.",
+      "alternatives": [
+        "KC ℓ (ac)",
+        "O 3(g)",
+        "K 4 [Fe(CN) 6 ] (s)",
+        "Sangre",
+        "Mayonesa"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sistemas-de-ecuaciones-lineales-metodo.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 FÍSICA QUÍMICA TERCERA PRUEBA RESUELTA –RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El bronce es un ejemplo de",
+      "alternatives": [
+        "compuesto químico.",
+        "mezcla homogénea.",
+        "alotropía.",
+        "mezcla heterogénea.",
+        "elemento químico."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-6-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marque la alternativa que contiene una propiedad extensiva y una intensiva respectivamente",
+      "alternatives": [
+        "dureza - punto de fusión.",
+        "inercia - volumen.",
+        "volumen - peso.",
+        "color - temperatura.",
+        "transparencia - densidad."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-6-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el proceso metalúrgico de tostación, se produce gases de óxido de azufre (SO x ). Bajo ciertas condiciones, esta sustancia liberada al ambiente puede reaccionar con el agua presente en la atmósfera formando el ácido sulfúrico. Este ácido acuoso, al precipitarse sobre los suelos, produce la lixiviación de iones, como el potasio (K + ) acuoso. Respecto de lo señalado, determine el valor de verdad (V o F) de las siguientes proposiciones:\nI. El gas producido en la tostación forma inicialmente una mezcla homogénea con el aire atmosférico.\nII. Al reaccionar con agua, los SO x forman un ácido oxácido y esta mezcla puede precipitarse en forma acuosa.\nIII. La lixiviación de los iones de potasio implica su disolución desde la fase sólida.",
+      "alternatives": [
+        "VVV",
+        "VFF",
+        "FVF",
+        "FFV",
+        "VVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-quimica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS QUÍMICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre las siguientes alternativas, escoja la que no representa una mezcla homogénea:",
+      "alternatives": [
+        "Vinagre",
+        "Aire",
+        "Acero inoxidable",
+        "Oro de 18k",
+        "Sangre"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/quimica-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique verdadero (V) o falso (F), según la clasificación de la materia:\nI ) El ozono es un compuesto.\nII ) El amoníaco es una mezcla.\nIII ) El propano es un elemento.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FFF",
+        "FVF",
+        "FFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2020/03/quimica-ejercicios-de-examen-admision-universidad-desarrollado-claves-respuestas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando la materia no sufre cambios en su estructura interna, se denomina:",
+      "alternatives": [
+        "fenómeno físico.",
+        "fenómeno químico.",
+        "fenómeno biológico.",
+        "fenómeno social.",
+        "fenómeno natural."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al derretirse un bloque de hielo diremos que estamos frente a un:",
+      "alternatives": [
+        "fenómeno biológico.",
+        "fenómeno químico.",
+        "fenómeno físico.",
+        "fenómeno social.",
+        "fenómeno cósmico."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la proposición que no implica un fenómeno químico:\nI ) Oxidación de un clavo.\nII ) Fundición del hierro.\nIII ) Digestión de los alimentos.",
+      "alternatives": [
+        "Sólo I",
+        "Sólo II",
+        "Sólo III",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No es una propiedad intensiva de la materia:",
+      "alternatives": [
+        "Densidad",
+        "Temperatura de fusión",
+        "Color",
+        "Calor",
+        "Temperatura de ebullición"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la proposición que no implica un fenómeno físico :",
+      "alternatives": [
+        "Preparar agua azucarada.",
+        "Congelamiento de l agua.",
+        "Destilación del petróleo.",
+        "Mezclar sal de Andrews con agua.",
+        "Mezclar alcohol con agua"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La materia es todo aquello que ocupa un lugar en el espacio y posee masa, estamos rodeados de ella, por ejemplo: el aire, las rocas, el agua, el ozono, etc.\nCon respecto a la materia, identifique la secuencia correcta de verdadero (V) o falso (F).\nI) El agua pura se puede separar en sus componentes por métodos físicos.\nII) La masa de una roca es variable, mientras que el peso no lo es.\nIII) El aire es una mezcla homogénea, es decir presenta una sola fase.",
+      "alternatives": [
+        "FVV",
+        "FVF",
+        "VFV",
+        "VVV",
+        "FFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las propiedades de la materia, ¿cuáles de las siguientes proposiciones son correctas?\nI) La temperatura de ebullición es una propiedad extensiva.\nII) La energía es una propiedad intensiva.\nIII) La densidad del agua líquida es mayor que la del hielo.",
+      "alternatives": [
+        "solo II",
+        "solo I",
+        "solo III",
+        "I y II",
+        "II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El flúor es un gas de color amarillo, que reacciona explosivamente con el hidrógeno, 1000 L de flúor gaseoso pesa 1,67 kg ya que posee una densidad de 1,67 kg/m³, y un punto de ebullición de –188°C, con respecto a las propiedades del flúor, identifique la secuencia correcta de verdad (V) o falsedad (F).\nI) La reacción explosiva con el hidrógeno es una propiedad química.\nII) El volumen del flúor es una propiedad extensiva.\nIII) El punto de ebullición es una propiedad química.\nIV) La densidad es una propiedad intensiva.",
+      "alternatives": [
+        "VVFF",
+        "VVFV",
+        "VFFV",
+        "VFVV",
+        "VVVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la naturaleza, encontramos diferentes tipos de materia que pueden ser clasificadas como sustancias (elementos o compuestos) y mezclas (homogéneas o heterogéneas). Al respecto, indique la alternativa incorrecta.",
+      "alternatives": [
+        "El latón que es una aleación conformada por 65% de cobre y 35% de zinc, es una solución sólida.",
+        "El ácido acetil salicílico ( C 9 H 8 O 4 ) que presenta propiedades farmacológicas, es un compuesto.",
+        "El y odo (I 2 ) empleado en el laboratorio, que es un sólido de color oscuro y tiene la propiedad de sublimarse, es un elemento.",
+        "El vino , bebida que contiene agua, azúcar, levadura y extracto de uvas, es una mezcla heterogénea.",
+        "La roca granito que contiene cuarzo, feldespato y mica, empleado en la construcción, es una mezcla heterogénea."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la naturaleza encontramos diferentes materiales que pueden ser clasificados como sustancias y mezclas, indique la alternativa correcta con respecto a las siguientes proposiciones.",
+      "alternatives": [
+        "El titanio encontrado en las prótesis es una sustancia compuesta.",
+        "El grafito de la máscara de Batman es una mezcla homogénea.",
+        "El agua llamada también líquido elemento es una sustancia elemental.",
+        "El humo generado por los autos es una mezcla heterogénea."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-3-ciclo-especial.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRE SAN MARCOS SEMANA 2 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones es correcta?",
+      "alternatives": [
+        "ECelda y ∆rG de la reacción de celda son ambas propiedades extensivas.",
+        "ECelda y ∆rG de la reacción de celda son ambas propiedades intensivas.",
+        "ECelda es una propiedad intensiva, mientras que ∆rG de la reacción de celda es una propiedad extensiva.",
+        "ECelda es una propiedad extensiva, mientras que ∆rG de la reacción de celda es una propiedad intensiva."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep503.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.3 MCQ 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A 25 °C y 1 atm, un estudiante mezcla, en un tubo de ensayo, 5 mL de agua destilada y 5 mL de aceite de maravilla. El estudiante se da cuenta que el aceite queda en la parte superior del tubo y el agua en la parte inferior. Luego, en un segundo intento agita el tubo manualmente por 1 minuto, lo deja reposar, y evidencia que las sustancias no se mezclan. En un tercer intento, en un instrumento de laboratorio pone a agitar el tubo por 10 minutos, posteriormente lo deja reposar y evidencia el mismo resultado. En un cuarto intento, en el mismo instrumento de laboratorio pone a agitar el tubo por 10 minutos pero esta vez aumenta la temperatura de la mezcla, sin embargo, obtiene el mismo resultado. Al respecto, ¿cuál de las siguientes opciones es una inferencia correcta respecto a los resultados obtenidos por el estudiante en las condiciones experimentales descritas?",
+      "alternatives": [
+        "El tiempo de agitación de las sustancias impide la formación de una mezcla homogénea.",
+        "El volumen añadido de cada sustancia impide la formación de una mezcla homogénea.",
+        "La temperatura a la que están sometidas las sustancias impide la formación de una mezcla homogénea.",
+        "La diferencia de polaridad entre las sustancias impide la formación de una mezcla homogénea."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 37"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifique la acción en la que se producen cambios químicos:\nI. doblar un alambre por calentamiento\nII. descomponer el agua por acción de la corriente eléctrica\nIII. hervir agua mediante paneles solares\nIV. hacer que se oxide un clavo de hierro",
+      "alternatives": [
+        "I solamente",
+        "I y II",
+        "III solamente",
+        "II y IV",
+        "IV solamente"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/quimica-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — QUIMICA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale cuál de las siguientes opciones no es una mezcla.",
+      "alternatives": [
+        "aire",
+        "agua de mesa",
+        "nube",
+        "mayonesa",
+        "ozono"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/quimica-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — QUIMICA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el tipo de materia, señalando si son elementos (E), compuestos (C) o mezclas (M), para las siguientes muestras:\nI. Grafito\nII. Granito\nIII. Agua\nIV. Agua de manantial\nV. Vino blanco",
+      "alternatives": [
+        "ECMEM",
+        "ECMMC",
+        "MMECM",
+        "EMCMM",
+        "EECMM"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unica-pdf-ica.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN LUIS GONZAGA 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNICA 2026 TEMARIO VACANTES PROSPECTO ESTRUCTURA PUNTAJES CRONOGRAMA ÁREAS A B C PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes no es un cambio químico?",
+      "alternatives": [
+        "Combustión de la gasolina.",
+        "Extracción de la sal común del agua de mar.",
+        "Digestión de los alimentos.",
+        "Corrosión de un clavo.",
+        "Calentamiento del cobre en el aire."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/30-ejercicios-desarrollados-de.html",
+      "sourceName": "matematicasn.blogspot.com — UNSLG INGENIERÍAS ÁREA C EXAMEN INGRESO UNIVERSIDAD SAN LUIS GONSAGA RESUELTO UNICA PDF 2026"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relacione\nI. Los metales se convierten en hilos.\nII. Los metales se convierten en láminas.\nIII. Resistencia a la rotura.",
+      "alternatives": [
+        "Maleabilidad",
+        "Tenacidad",
+        "Ductibilidad",
+        "Ia, IIc, IIIb",
+        "Ia, IIb, IIIc"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/1ro-2do-actividad-1-2-3-ingles-experiencia-7-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a los cambios que ocurren en la materia, identifique como cambio físico (F) o cambio químico (Q) a cada una de las siguientes proposiciones:\nI) Liberación de un gas al sumergir una lámina de metal zinc a una solución acuosa de ácido clorhídrico.\nII) Cambio de color azul a blanco al calentar 3 gramos de sulfato de cobre pentahidratado sólido.\nIII) Evaporación del alcohol etílico a condiciones ambientales.\nMarque la alternativa correcta.",
+      "alternatives": [
+        "QQQ",
+        "QQF",
+        "QFF",
+        "FFF",
+        "FQQ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A una determinada temperatura y presión, 2,28 gramos de gas ocupan un volumen de 1987 ml. ¿Cuál es la densidad de este gas?.",
+      "alternatives": [
+        "0,00122 g/ml",
+        "0,342 g/ml",
+        "2 atmósferas",
+        "0,4 g",
+        "0,0005 ml"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/la-densidad-formula-ejemplos-problemas-resueltos-de-quimica-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA DENSIDAD EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una muestra de plata metálica que pesa 210 g se introduce en una probeta que contiene 153 mL de agua. La lectura de la probeta es ahora de 163 mL. Calcule la densidad, en g/mL de la plata con estos datos.",
+      "alternatives": [
+        "21,0",
+        "17,0",
+        "10,8",
+        "10,2",
+        "31,0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/la-densidad-formula-ejemplos-problemas-resueltos-de-quimica-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA DENSIDAD EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un recipiente cúbico de 70 cm de lado interno, contiene a un gas con densidad 2,0 g/L. Determine la masa, en gramos, del gas.",
+      "alternatives": [
+        "6,86×10 3",
+        "5,56×10 1",
+        "6,86×10 2",
+        "5,12×10 2",
+        "7,12×10 1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/la-densidad-formula-ejemplos-problemas-resueltos-de-quimica-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA DENSIDAD EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Volúmenes iguales de dos líquidos no miscibles A y B, se colocan en un cilindro graduado (probeta) cuya masa inicial es de 200 g. Si la masa de la probeta mas el conteniendo es 326 g y el volumen leído es 120mL, ¿cuál es la densidad del líquido B?.\nρ A = 0,80 g/ mL",
+      "alternatives": [
+        "1,3 g/ mL",
+        "1,5 g/ mL",
+        "2,9 g/ mL",
+        "2,2 g/ mL",
+        "0,8 g/ mL"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/la-densidad-formula-ejemplos-problemas-resueltos-de-quimica-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA DENSIDAD EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un litro de leche pesa 1,032g . El contenido de grasa es 4% en volumen. ¿Cuál es la densidad de la leche descremada, sabiendo que la densidad de la grasa es 0,865 g/cc?.",
+      "alternatives": [
+        "0,130 gr/cc.",
+        "0,865 gr/cc.",
+        "0,997 gr/cc.",
+        "1,039 gr/cc.",
+        "1,535 gr/cc."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/la-densidad-formula-ejemplos-problemas-resueltos-de-quimica-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA DENSIDAD EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La densidad relativa del líquido A con respecto al líquido B es 3,2. Halle las densidades de ambos líquidos A y B, respectivamente , en g/cm 3 , sabiendo que si se mezclan volúmenes iguales de ellos , la densidad resultante es 3,78 g/cm 3 .",
+      "alternatives": [
+        "3,84 y 1,2",
+        "4,21 y 1,3",
+        "5,76 y 1,8",
+        "6,08 y 1,9",
+        "7,36 y 2,3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/la-densidad-formula-ejemplos-problemas-resueltos-de-quimica-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA DENSIDAD EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la secuencia correcta de verdadero (V) o falso (F) con respecto a las siguientes proposiciones.\nI. En una sustancia compuesta están combinados átomos de elementos diferentes.\nII. Las moléculas elementales están formadas por átomos del mismo tipo.\nIII. Las mezclas están formadas por la unión física de dos o más sustancias.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VVF",
+        "FVF",
+        "VFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/guia-docente-matematica-primaria-cuadernos-de-trabajo-auto-aprendizaje-aprendo-en-casa-fichas-libros-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL INGENIERÍAS PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA C 2027 – ARQUITECTURA"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son fenómenos físicos\nI) La fusión del hielo\nII) La disolución de azúcar en agua\nIII) El calentamiento del hierro hasta el rojo\nIV) La congelación del agua líquida",
+      "alternatives": [
+        "I y IV",
+        "II y III",
+        "I, III y IV",
+        "I, III y V",
+        "Todos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-3ro-4to-actividad-4-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL CIENCIAS ECONÓMICAS, FINANCIERAS Y EMPRESARIALES PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA A 2027"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La química es una ciencia que estudia la materia y su relación con la energía, cuyo trabajo de investigación se divide en ramas de estudio. Determine las ramas de la química presentes en el siguiente texto:\n«Un análisis realizado por un laboratorio de la UNMSM determinó la concentración de ácido ascórbico en el limón. El ácido ascórbico tiene propiedades antioxidantes, es decir, ayuda a disminuir los radicales libres que causan daños a nivel celular durante el proceso de la respiración en la mitocondria».",
+      "alternatives": [
+        "Bioquímica - Orgánica",
+        "Fisicoquímica - Analítica",
+        "Orgánica - Bioquímica",
+        "Analítica - Bioquímica"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos-quimica-segundo-examen.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA ÁREA C PRUEBA DECO SAN MARCOS SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un pequeño volumen de cierta muestra líquida y se determina su densidad mediante un método sencillo. Para esto se midió la masa de un vaso de precipitado vacío y seco obteniéndose 12,074 gramos. Luego se vertió en el vaso 5,6 mL de la muestra líquida y la masa medida del vaso y el líquido contenido fue de 17,632 gramos. ¿Cuál es la densidad de la muestra líquida? (kg/m³)",
+      "alternatives": [
+        "8,83×10²",
+        "9,93×10²",
+        "1,04×10³",
+        "2,09×10 ³",
+        "3,06×10 ³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/prueba-de-quimica-ingreso-universidad.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO DE QUÍMICA UNI DESARROLLADO PRUEBA DE ENSAYO DE EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos de los siguientes fenómenos presentados en las proposiciones son químicos?\nI. Laminación del cobre\nII. Oxidación del hierro\nIII. Evaporación del agua\nIV. Fermentación de la uva\nV. Disolución del azúcar en agua",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/prueba-de-quimica-ingreso-universidad.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO DE QUÍMICA UNI DESARROLLADO PRUEBA DE ENSAYO DE EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los elementos y los compuestos son sustancias puras. Mientras que los primeros poseen en su composición átomos de un solo elemento, los compuestos están formados por la combinación de dos o más elementos. Se sabe que en el aire hay, principalmente, oxígeno y nitrógeno, y, en menor proporción, dióxido de carbono, metano y gases raros. Luego, es válido afirmar que el aire constituye una\nI. mezcla de compuestos únicamente.\nII. solución en estado gaseoso.\nIII. mezcla de elementos únicamente.\nIV. mezcla de elementos y compuestos.",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "III y IV",
+        "II y IV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos-quimica-semana-10-2020.html",
+      "sourceName": "matematicaj.blogspot.com — PRUEBA DE QUÍMICA DEL EXAMEN DE INGRESO A LA UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes proposiciones, respecto a las sustancias y mezclas.\nI. Las sustancias compuestas están constituidas por átomos de elementos diferentes.\nII. Las mezclas homogéneas se pueden separar en sus componentes por filtración.\nIII. Las sustancias y las mezclas homogéneas son materia homogénea.\nSon correctas:",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "II y III",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-aritmetica-uni.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA 1 CE PREUNI CLAVES SOLUCIONES 2027"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique cuál de las siguientes mezclas se pueden separar con una decantación, seguida de una destilación.",
+      "alternatives": [
+        "Salmuera",
+        "Agua y arena.",
+        "Vinagre.",
+        "Clavos de hierro, arena y sal.",
+        "Aceite, agua y sal."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-aritmetica-uni.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA 1 CE PREUNI CLAVES SOLUCIONES 2027"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El aluminio, de color plateado, reacciona vigorosamente con bromo, un líquido de color naranja y de olor desagradable, formando bromuro de aluminio, una sustancia cristalina.\nRespecto al enunciado, indique la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F).\nI. Se menciona tres sustancias simples.\nII. La sustancia formada es un compuesto\nIII. El bromuro de aluminio presenta forma definida.",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "FFV",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-aritmetica-uni.html",
+      "sourceName": "matematicasn.blogspot.com — PRACTICA 1 CE PREUNI CLAVES SOLUCIONES 2027"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La materia es toda realidad objetiva, susceptible de cambios y transformaciones, que puede ser apreciada directa o indirectamente. Respecto a la materia, indique la proposición correcta.",
+      "alternatives": [
+        "Experimentalmente, se determina que la materia es continua.",
+        "El aire no posee masa por lo que no puede ser considerado materia.",
+        "La materia es de naturaleza corpuscular.",
+        "La masa de un objeto en la tierra es distinta a su masa en la luna.",
+        "La materia puede dividirse infinitamente."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Cepreuni-practica-1-con-solucionario-ingreso-directo-universidad-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI PRIMERA PRACTICA CALIFICADA RESUELTA RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A nuestro alrededor encontramos todo tipo de materia; por ejemplo, el ácido acético presente en el vinagre usado al preparar ensaladas, el propano que forma parte del gas de cocina (GLP) y el cloruro de sodio que se encuentra en la sal de mesa que se usa en las comidas.\nCon respecto a los tres tipos de materia mencionados y su estado físico a condiciones ambientales.\nIndique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F).\nI) En el ácido acético (líquido) las fuerzas de repulsión son de magnitud similar que las fuerzas de atracción.\nII) El cloruro de sodio (sólido) posee forma y volumen variable.\nIII) El propano (gaseoso) es compresible.",
+      "alternatives": [
+        "VFF",
+        "VVF",
+        "VFV",
+        "FFV",
+        "VVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Cepreuni-practica-1-con-solucionario-ingreso-directo-universidad-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI PRIMERA PRACTICA CALIFICADA RESUELTA RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La densidad de la plata es 10,5 g/mL. Calcule el volumen, en litros, de un bloque de plata con una masa de 10,5 kg. (1 kg=10 3 g ; 1 L=10 3 mL).",
+      "alternatives": [
+        "1,0 L",
+        "2,0 L",
+        "3,0 L",
+        "4,0 L",
+        "5,0 L"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/productos-y-cocientes-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO UNC 2027 INGRESO UNIVERSIDAD DE CAJAMARCA PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la construcción de un laboratorio de química, encontramos diferentes materiales; por ejemplo, hormigón, clavos de acero, alambres de cobre, agua y andamios de aluminio. Respecto al texto, determine si la proposición es verdadera (V) o falsa (F).\nI ) Se mencionan 3 sustancias y 2 mezclas.\nII ) El agua, H 2 O, es una sustancia heterogénea.\nIII ) El cobre y el aluminio son sustancias elementales.\nMarque la secuencia correcta.",
+      "alternatives": [
+        "VFV",
+        "FFV",
+        "VFF",
+        "VVV",
+        "FFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las pirámides de Egipto son consideradas una de las maravillas de la humanidad. Las dimensiones de la pirámide de Keops son las siguientes: 138 metros de altura, un volumen de 2,59×106 m³ y un área total de 53055 m². Está formada por un techo de granito cuya densidad aproximada es 2,69 g/cm³ y una masa de 400 toneladas. Dichas pirámides se encuentran ubicadas en la meseta de Guiza donde la temperatura promedio anual es 27°C. Al respecto, determine el número de magnitudes básicas y derivadas mencionadas en el texto respectivamente.",
+      "alternatives": [
+        "4 y 2",
+        "5 y 1",
+        "1 y 5",
+        "6 y 0",
+        "3 y 3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La química es una ciencia natural que estudia a la materia con la finalidad de obtener productos que mejoren la calidad de vida del ser humano. Para un mejor estudio la química está dividida en diferentes. Al respecto, determine la relación correcta entre rama de la química – tema de investigación.",
+      "alternatives": [
+        "Química analítica",
+        "Química inorgánica",
+        "Fisicoquímica",
+        "Bioquímica ( ) Determinación de la velocidad de reacción ( ) Concentración de mercurio en agua ( ) Efectos secundarios de la morfina. ( ) Obtención de bronce a partir del cobre.",
+        "bacd"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los balones de fútbol tienen diversas dimensiones según su utilidad. Los que se emplean en el fútbol profesional presentan las siguientes dimensiones aprobadas por la FIFA: su volumen es 5500 cm³ y la presión máxima del aire en su interior es 15,6 PSI. Exprese el volumen y la presión en unidades del SI, del aire en el interior de dicho balón de fútbol.\n(Datos: 1 atm = 14,7 PSI =1,0×10 5 Pa)",
+      "alternatives": [
+        "5,50 × 10 –2 – 1,06 × 10 5",
+        "5,50 × 10 –3 – 1,06 × 10 5",
+        "5,50 × 10 –2 – 1,06 × 10 3",
+        "5,50 × 10 –3 – 1,06 × 10 3",
+        "5,50 × 10 –3 – 1,06 × 10 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale un cambio químico.",
+      "alternatives": [
+        "Fusión del hielo.",
+        "Estirar un resorte",
+        "Cortar un papel",
+        "Combustión del gas natural.",
+        "Evaporación del agua."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-6-ct-experiencia-9-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "______ es todo CAMBIO que experimenta la materia.",
+      "alternatives": [
+        "Campo",
+        "Sustancia",
+        "Materia",
+        "Fenómeno",
+        "Masa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El objetivo de la química es estudiar la composición de la _____ .",
+      "alternatives": [
+        "física",
+        "química",
+        "tierra",
+        "materia",
+        "estrella"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-quimica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE QUÍMICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Completa el texto:\nSe llama ____ cuando todo cuerpo ocupa un lugar en el espacio - universo.",
+      "alternatives": [
+        "inercia",
+        "extensión",
+        "impenetrabilidad",
+        "atracción",
+        "porosidad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-quimica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE QUÍMICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Completa:\nProbablemente, la Química se inicia con el descubrimiento del ______ por el hombre primitivo.",
+      "alternatives": [
+        "tierra",
+        "aire",
+        "fuego",
+        "agua",
+        "lluvia"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-quimica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE QUÍMICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De los siguientes tipos de materia:\n• Helio\n• Gasolina\n• Aire\n• Uranio\n• Agua potable\n• Alcohol etílico\n• Ácido sulfúrico\nIndica el número de elementos y compuestos, respectivamente.",
+      "alternatives": [
+        "3 - 2",
+        "3 - 3",
+        "2 - 2",
+        "2 - 3",
+        "5 - 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/quimica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son sustancias compuestas:\nI ) Ácido sulfúrico\nII ) Óxido de calcio\nIII ) Ácido muriático\nIV ) Glucosa",
+      "alternatives": [
+        "Sólo I",
+        "I y II",
+        "I y III",
+        "I, II y IV",
+        "Todos"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala las especies químicas que no son elementos :\nI ) Acero\nII ) Diamante\nIII ) Sacarosa\nIV ) Platino",
+      "alternatives": [
+        "Sólo I",
+        "Sólo II",
+        "II y IV",
+        "I y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No son sustancias químicas puras :\nI ) Agua oxigenada\nII ) Leche magnesia\nIII ) Bronce\nIV ) Aire.",
+      "alternatives": [
+        "Sólo IV",
+        "Sólo III",
+        "I y II",
+        "I, II y IV",
+        "Todas"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son mezclas homogéneas.\nI ) Agua potable.\nII ) Gasolina\nIII ) Humo.\nIV ) Arena.",
+      "alternatives": [
+        "Sólo I",
+        "Sólo II",
+        "I y II",
+        "I, II y III",
+        "Todas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La naftalina con el transcurrir del tiempo disminuye su tamaño, debido a que experimenta un:",
+      "alternatives": [
+        "Fusión",
+        "Evaporación",
+        "Condensación",
+        "Sublimación",
+        "Solidificación"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica cuántos de los siguientes procesos implican un cambio físico :\n☛ Descomposición de la leche.\n☛ Combustión de la gasolina.\n☛ Derretimiento del hielo.\n☛ Ruptura del vidrio",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes sustancias no es un compuesto químico?",
+      "alternatives": [
+        "Sacarosa",
+        "Propano",
+        "Hielo seco",
+        "Glucosa",
+        "Ácido muriático"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre las siguientes especies químicas, ¿cuántos elementos hay?\nBronce, grafito, mercurio, aire, paladio, latón.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son propiedades extensiva de la materia :\nI ) Temperatura\nII ) Masa.\nIII ) Volumen\nIV ) Densidad.",
+      "alternatives": [
+        "Sólo II",
+        "I y II",
+        "II y III",
+        "I, II y III",
+        "II, III y IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas fases se forman si en un recipiente cerrado de 5 litros se añade 1 litro de agua salada, 1 litro de agua azucarada, una moneda y 1 litro de mercurio liquido?",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la siguiente relación cuántas son mezclas:\nAgua destilada, petróleo, kerosene, bebida gaseosa, alcohol etílico, sal yodada, ozono.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un analista químico recibe una muestra metálica para su caracterización e identificación, y empieza describiendo las siguientes propiedades: Muestra de volumen pequeño, elevada densidad, maleable, alto brillo, muy poco reactivo con los ácidos, no se oxida al ambiente. Determine el número de propiedades intensivas mencionadas.",
+      "alternatives": [
+        "5",
+        "4",
+        "3",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En cuál de las siguientes alternativas se produce un cambio químico?",
+      "alternatives": [
+        "Hierro+Oxígeno",
+        "Sacarosa+Agua",
+        "Etanol+Agua",
+        "Fusión del hierro",
+        "Yodo+Alcohol"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante encuentra un vaso en el laboratorio, el cual contiene salmuera (una mezcla de sal común y agua), con respecto al proceso de separación de la mezcla, seleccione la alternativa correcta:",
+      "alternatives": [
+        "la sal se separa del agua por decantación.",
+        "la separación por evaporación se basa en la diferencia de los puntos de ebullición.",
+        "la sal común se separa por medio de un tamizado.",
+        "si se quieren recuperar ambas sustancias se usará una evaporación.",
+        "el agua se separa de la sal por medio de una filtración."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un bulbo de vidrio se introduce un trozo de fósforo (sólido) y luego se llena de oxígeno; se cierra herméticamente y se mide la masa inicial del sistema.\nCon ayuda de la lupa, los rayos solares inciden sobre la mezcla, el fósforo arde y se observan humos; se enfría el sistema y se mide la masa final del mismo.\nDadas las siguientes afirmaciones referidas al experimento:\nI) El fósforo ha sufrido un cambio químico.\nII) El humo formado es vapor de agua.\nIII) En cualquier circunstancia: masa inicial=masa final\nSon correctas:",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "solo III",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los cambios en el universo se dan a cada momento, la evaporación del agua, la oxidación de una superficie metálica, la fusión de los isótopos del hidrógeno en el sol.\nClasifique los siguientes cambios como físicos (F), químicos (Q) o nucleares (N):\nI) Laminación del hierro.\nII) Oxidación del hierro.\nIII) Transmutación del plutonio.\nIV) Disolución de aceite con gasolina.\nV) Desintegración del torio",
+      "alternatives": [
+        "FQNFN",
+        "QQNFN",
+        "FFNQN",
+        "FQNQN",
+        "QFNFQ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "matematicasn.blogspot.com — MATERIA Y ENERGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La química se encarga de estudiar la materia que se caracteriza por presentar masa y volumen. Además, estudia los cambios o transformaciones que experimenta la energía involucrada en estos procesos. Al respecto, determine la alternativa que contenga a la(s) proposición(es) correcta(s).\nI. La masa es una medida de la cantidad de materia que un cuerpo posee.\nII. El peso de un cuerpo no varía con la gravedad, pero la masa sí.\nIII. La energía se define como la capacidad para realizar trabajo.",
+      "alternatives": [
+        "Solo II",
+        "I y II",
+        "I y III",
+        "II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-3-ciclo-especial.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA PRE SAN MARCOS SEMANA 2 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos estudiantes realizaron el mismo experimento por separado y cada uno registró dos lecturas de masa, las cuales se muestran a continuación. La lectura correcta de masa es 3.0 g. Con base en los datos dados, marca la opción correcta entre las siguientes afirmaciones. Lecturas de los estudiantes",
+      "alternatives": [
+        "Los resultados de ambos estudiantes no son ni exactos ni precisos.",
+        "Los resultados del estudiante A son tanto precisos como exactos.",
+        "Los resultados del estudiante B no son ni precisos ni exactos.",
+        "Los resultados del estudiante B son tanto precisos como exactos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.1 MCQ 1"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una temperatura medida en la escala Fahrenheit es de 200 °F. ¿Cuál será esta lectura en la escala Celsius?",
+      "alternatives": [
+        "40 °C",
+        "94 °C",
+        "93.3 °C",
+        "30 °C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.1 MCQ 2"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la densidad de una solución es 3.12 g/mL, la masa de 1.5 mL de solución expresada en cifras significativas es _______.",
+      "alternatives": [
+        "4.7 g",
+        "4680 × 10⁻³ g",
+        "4.680 g",
+        "46.80 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.1 MCQ 11"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones sobre un compuesto es incorrecta?",
+      "alternatives": [
+        "Una molécula de un compuesto tiene átomos de diferentes elementos.",
+        "Un compuesto no puede separarse en sus elementos constituyentes mediante métodos físicos de separación.",
+        "Un compuesto conserva las propiedades físicas de sus elementos constituyentes.",
+        "La proporción de átomos de diferentes elementos en un compuesto es fija."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/chemistry/keep501.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 11 ch.1 MCQ 12"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las propiedades intensivas de la materia",
+      "alternatives": [
+        "viscosidad, presión",
+        "viscosidad, peso especifico",
+        "temperatura de ebullición, calor transferido",
+        "olor, inercia",
+        "impenetrabilidad, masa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/quimica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para preparar una pasta de limpieza para plásticos se necesita 20% de titanio en polvo, 10% de óxido de zinc, 10% de hidróxido de potasio, 5% de etanol puro, 1% de cloro y 45% de aceite (ácido oleico, C 18 H 34 O 2 , y ácido palmítico, C 16 H 32 O 2 ) y el resto de agua; entonces la muestra está formada por:",
+      "alternatives": [
+        "dos elementos y cuatro compuestos.",
+        "un elemento, dos compuestos y dos mezclas.",
+        "un elemento, tres compuestos y una mezcla.",
+        "dos elementos, cuatro compuestos y una mezcla.",
+        "un elemento, cuatro compuestos y una mezcla."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2019/07/quimica-cepreuni-examen-final-resuelto.html",
+      "sourceName": "quimicapdf.blogspot.com — QUÍMICA CEPREUNI EXAMEN FINAL RESUELTO"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La química es una ciencia que estudia la materia, así como sus transformaciones, realizando una relación directa con otras áreas del conocimiento como la física, biología, ingeniería, medicina, entre otras; por ello, se realiza su estudio y se divide en ramas. Al respecto, determine la relación correcta entre la rama de la química – tema de estudio.",
+      "alternatives": [
+        "Química orgánica",
+        "Fisicoquímica",
+        "Química analítica",
+        "Bioquímica",
+        "Química inorgánica ( ) Energía liberada por combustión en el tiempo ( ) Grupos oxigenados en la estructura de la curcumina ( ) Determinación de mercurio en agua contaminada ( ) Intoxicación por plomo contenido en alimentos ( ) Estalagmita formada a base de carbonato de calcio"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2019/07/quimica-cepreuni-examen-final-resuelto.html",
+      "sourceName": "quimicapdf.blogspot.com — QUÍMICA CEPREUNI EXAMEN FINAL RESUELTO"
     }
   ]
 }

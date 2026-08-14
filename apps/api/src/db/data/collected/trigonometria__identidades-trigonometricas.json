@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si x − y = π/3, calcular: E = (cos x + cos y)² + (sen x + sen y)²",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2020/03/trigonometria-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
       "sourceName": "Trigonometría — Preguntas del examen de admisión a la universidad resueltas con claves (matematicaj.blogspot.com), Problema 9, clave C"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular K = |tan(148°) + tan(328°)|. Si tan(58°) = 8/5.",
-      "alternatives": ["89/40", "5/4", "0", "39/40", "16/5"],
+      "alternatives": [
+        "89/40",
+        "5/4",
+        "0",
+        "39/40",
+        "16/5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-trigonometria-problemas.html",
       "sourceName": "San Marcos Trigonometría — Problemas resueltos de admisión (matematicasn.blogspot.com), clave B"
@@ -28,7 +40,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si 1 + sen α − 2 cos α = 0, calcule 4 sec α + 3 csc α.",
-      "alternatives": ["3", "6", "5", "4"],
+      "alternatives": [
+        "3",
+        "6",
+        "5",
+        "4"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/02/trigonometria-examen-pre-universidad.html",
       "sourceName": "Trigonometría — Examen resuelto de admisión a la universidad (matematicasn.blogspot.com), Problema 6, clave D"
@@ -39,7 +56,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Reducir: (sec x − cos x) csc x",
-      "alternatives": ["tan x", "cot x", "1", "sec x", "1/2"],
+      "alternatives": [
+        "tan x",
+        "cot x",
+        "1",
+        "sec x",
+        "1/2"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-problemas.html",
       "sourceName": "Identidades Trigonométricas Pitagóricas/Recíprocas/Cociente — Problemas resueltos preuniversitarios (matematicasn.blogspot.com), Ejercicio 3, clave A"
@@ -50,7 +73,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Reducir: (csc x − sen x) sec x",
-      "alternatives": ["tan x", "cot x", "1", "sec x", "0"],
+      "alternatives": [
+        "tan x",
+        "cot x",
+        "1",
+        "sec x",
+        "0"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-problemas.html",
       "sourceName": "Identidades Trigonométricas Pitagóricas/Recíprocas/Cociente — Problemas resueltos preuniversitarios (matematicasn.blogspot.com), Ejercicio 4, clave B"
@@ -61,7 +90,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcular: sen x(sen x + csc x) + cos x(cos x + sec x)",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-problemas.html",
       "sourceName": "Identidades Trigonométricas Pitagóricas/Recíprocas/Cociente — Problemas resueltos preuniversitarios (matematicasn.blogspot.com), Ejercicio 5, clave C"
@@ -72,7 +107,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Simplificar: sen⁴ x − cos⁴ x − 1",
-      "alternatives": ["2cos2x", "−2cos2x", "−2sen2x", "sen2x", "cos2x"],
+      "alternatives": [
+        "2cos2x",
+        "−2cos2x",
+        "−2sen2x",
+        "sen2x",
+        "cos2x"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-problemas.html",
       "sourceName": "Identidades Trigonométricas Pitagóricas/Recíprocas/Cociente — Problemas resueltos preuniversitarios (matematicasn.blogspot.com), Ejercicio 2, clave B"
@@ -83,7 +124,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Reducir: sec x − tan x · sen x",
-      "alternatives": ["sen x", "csc x", "cos x", "sec x", "1"],
+      "alternatives": [
+        "sen x",
+        "csc x",
+        "cos x",
+        "sec x",
+        "1"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
       "sourceName": "Problemas de Identidades Trigonométricas resueltos preuniversitarios de ingreso universidad (matematicasn.blogspot.com), Problema 1, clave C"
@@ -94,7 +141,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si tan x + cot x = 3, calcular: tan³ x + cot³ x",
-      "alternatives": ["15", "16", "17", "18", "19"],
+      "alternatives": [
+        "15",
+        "16",
+        "17",
+        "18",
+        "19"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
       "sourceName": "Problemas de Identidades Trigonométricas resueltos preuniversitarios de ingreso universidad (matematicasn.blogspot.com), Problema 2, clave D"
@@ -105,7 +158,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si sen x + cos x = √2, calcular: sen⁴ x + cos⁴ x",
-      "alternatives": ["1", "1/2", "−1", "−1/2", "2"],
+      "alternatives": [
+        "1",
+        "1/2",
+        "−1",
+        "−1/2",
+        "2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
       "sourceName": "Problemas de Identidades Trigonométricas resueltos preuniversitarios de ingreso universidad (matematicasn.blogspot.com), Problema 3, clave B"
@@ -116,7 +175,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si: 1 + tan x = U·sec x y 1 − tan x = V·sec x, hallar U² + V²",
-      "alternatives": ["1", "2", "1/2", "3", "1/4"],
+      "alternatives": [
+        "1",
+        "2",
+        "1/2",
+        "3",
+        "1/4"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
       "sourceName": "Problemas de Identidades Trigonométricas resueltos preuniversitarios de ingreso universidad (matematicasn.blogspot.com), Problema 4, clave B"
@@ -127,7 +192,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si cos x + cos² x = 1, calcular: sen² x + sen⁴ x",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
       "sourceName": "Problemas de Identidades Trigonométricas resueltos preuniversitarios de ingreso universidad (matematicasn.blogspot.com), Problema 5, clave A"
@@ -138,7 +209,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Simplificar: sen² x · cos² x · (sec² x + csc² x)",
-      "alternatives": ["1", "1/2", "2", "sen x", "cos x"],
+      "alternatives": [
+        "1",
+        "1/2",
+        "2",
+        "sen x",
+        "cos x"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
       "sourceName": "Problemas de Identidades Trigonométricas resueltos preuniversitarios de ingreso universidad (matematicasn.blogspot.com), Problema 6, clave A"
@@ -149,7 +226,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si csc x − sen x = a y sec x − cos x = 2a, hallar tan x",
-      "alternatives": ["√2", "∛2", "2", "∛3", "1"],
+      "alternatives": [
+        "√2",
+        "∛2",
+        "2",
+        "∛3",
+        "1"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
       "sourceName": "Problemas de Identidades Trigonométricas resueltos preuniversitarios de ingreso universidad (matematicasn.blogspot.com), Problema 8, clave B"
@@ -160,7 +243,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Reducir: cos²(α − β) − 2 sen α · sen β · cos(α − β) + sen² α",
-      "alternatives": ["sen²α", "cos²α", "sen²β", "cos²β", "tan²β"],
+      "alternatives": [
+        "sen²α",
+        "cos²α",
+        "sen²β",
+        "cos²β",
+        "tan²β"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-ejercicios-resueltos-pdf.html",
       "sourceName": "Trigonometría Rubiños — ejercicios resueltos PDF (matematicasn.blogspot.com), Ejercicio 7, clave D"
@@ -171,7 +260,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular el valor de: (cos 70° + cos 10°)² + (sen 70° + sen 10°)²",
-      "alternatives": ["1", "2", "3", "4", "1/2"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "1/2"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-del-arco.html",
       "sourceName": "Identidades Trigonométricas de Arcos Compuestos — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 1, clave C"
@@ -182,7 +277,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El valor de: cos 40° − 2 cos 50° · cos 10° es:",
-      "alternatives": ["1", "2√3", "3", "4", "−1/2"],
+      "alternatives": [
+        "1",
+        "2√3",
+        "3",
+        "4",
+        "−1/2"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-del-arco.html",
       "sourceName": "Identidades Trigonométricas de Arcos Compuestos — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 3, clave E"
@@ -193,7 +294,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Reducir la expresión: [sen(α + β) − sen(α − β)] · sec α",
-      "alternatives": ["2 sen β", "cos β", "sen α", "cos α", "1"],
+      "alternatives": [
+        "2 sen β",
+        "cos β",
+        "sen α",
+        "cos α",
+        "1"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-del-arco.html",
       "sourceName": "Identidades Trigonométricas de Arcos Compuestos — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 6, clave A"
@@ -204,7 +311,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Halle el valor de la expresión: cos(x − y) − 2 sen x · sen y; dado que sen x = cos y, con 0° < x, y < 90°",
-      "alternatives": ["0.1", "0", "1", "0.5", "1/2"],
+      "alternatives": [
+        "0.1",
+        "0",
+        "1",
+        "0.5",
+        "1/2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-del-arco.html",
       "sourceName": "Identidades Trigonométricas de Arcos Compuestos — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 7, clave B"
@@ -215,7 +328,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle el valor de K en: K · tan 56° = tan 73° − tan 17°",
-      "alternatives": ["1/2", "1", "3/2", "2", "2/3"],
+      "alternatives": [
+        "1/2",
+        "1",
+        "3/2",
+        "2",
+        "2/3"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-del-arco.html",
       "sourceName": "Identidades Trigonométricas de Arcos Compuestos — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 9, clave D"
@@ -226,7 +345,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El valor de la expresión: 4 cos 7° + 3 sen 7° es:",
-      "alternatives": ["3√2/7", "2", "√3", "5√3/2", "3√3/8"],
+      "alternatives": [
+        "3√2/7",
+        "2",
+        "√3",
+        "5√3/2",
+        "3√3/8"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-del-arco.html",
       "sourceName": "Identidades Trigonométricas de Arcos Compuestos — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 10, clave D"
@@ -237,7 +362,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcular el valor de: 4(tan 19° + tan 18°) + 3 · tan 19° · tan 18°",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-del-arco.html",
       "sourceName": "Identidades Trigonométricas de Arcos Compuestos — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 11, clave C"
@@ -248,7 +379,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcular: (tan 36° + 1)(tan 9° + 1)",
-      "alternatives": ["1/2", "1", "2", "3/2", "4"],
+      "alternatives": [
+        "1/2",
+        "1",
+        "2",
+        "3/2",
+        "4"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-del-arco.html",
       "sourceName": "Identidades Trigonométricas de Arcos Compuestos — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 12, clave C"
@@ -259,7 +396,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si 3 cos(α − β) = 5 cos(α + β), hallar: cot α · cot β",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-del-arco.html",
       "sourceName": "Identidades Trigonométricas de Arcos Compuestos — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 13, clave D"
@@ -270,7 +413,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcular el valor de: sen 19° · cos 18° + sen 18° · cos 19°",
-      "alternatives": ["4/5", "3/5", "3/4", "4/3", "5/4"],
+      "alternatives": [
+        "4/5",
+        "3/5",
+        "3/4",
+        "4/3",
+        "5/4"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-para-el.html",
       "sourceName": "Identidades Trigonométricas de Ángulo Compuesto — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 4, clave B"
@@ -281,7 +430,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcular el valor de: E = sen 30° · cos 7° + sen 7° · cos 30°",
-      "alternatives": ["sen 23°", "cos 7°", "sen 37°", "sen 7°", "cos 37°"],
+      "alternatives": [
+        "sen 23°",
+        "cos 7°",
+        "sen 37°",
+        "sen 7°",
+        "cos 37°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-para-el.html",
       "sourceName": "Identidades Trigonométricas de Ángulo Compuesto — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 6, clave C"
@@ -292,7 +447,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcule un valor agudo de x si: cos x · cos 10° − sen 10° · sen x = cos 80°",
-      "alternatives": ["60°", "50°", "70°", "90°", "100°"],
+      "alternatives": [
+        "60°",
+        "50°",
+        "70°",
+        "90°",
+        "100°"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-para-el.html",
       "sourceName": "Identidades Trigonométricas de Ángulo Compuesto — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 7, clave C"
@@ -303,7 +464,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si a − tan 20° · tan 37° = tan 33° · tan 37° + tan 33° · tan 20°, calcular el valor de a.",
-      "alternatives": ["1/2", "1", "3/4", "4/3", "2"],
+      "alternatives": [
+        "1/2",
+        "1",
+        "3/4",
+        "4/3",
+        "2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-para-el.html",
       "sourceName": "Identidades Trigonométricas de Ángulo Compuesto — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 8, clave B"
@@ -314,7 +481,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el triángulo ABC, tgA = a − 1, tgB = a, tgC = a + 1. Calcular el valor de: a³ + a² + a + 1.",
-      "alternatives": ["5", "10", "15", "20", "25"],
+      "alternatives": [
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-para-el.html",
       "sourceName": "Identidades Trigonométricas de Ángulo Compuesto — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 9, clave B"
@@ -325,7 +498,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dados A + B + C = π, tgA = 5 y tgB = 3. Calcular: Q = cot C",
-      "alternatives": ["1/7", "7", "4/7", "3", "3/7"],
+      "alternatives": [
+        "1/7",
+        "7",
+        "4/7",
+        "3",
+        "3/7"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-para-el.html",
       "sourceName": "Identidades Trigonométricas de Ángulo Compuesto — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 10, clave A"
@@ -336,7 +515,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si sen β · cos β = 0.3, calcular: cot 2β + tan 2β",
-      "alternatives": ["25/12", "12/25", "4/3", "3/4", "7/25"],
+      "alternatives": [
+        "25/12",
+        "12/25",
+        "4/3",
+        "3/4",
+        "7/25"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-del-angulo-doble-ejercicios.html",
       "sourceName": "Identidades del Ángulo Doble — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 2, clave A"
@@ -347,7 +532,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Calcular: 117 · tan 21° + 31 · tan 29°",
-      "alternatives": ["59", "60", "61", "62", "63"],
+      "alternatives": [
+        "59",
+        "60",
+        "61",
+        "62",
+        "63"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-del-arco.html",
       "sourceName": "Identidades Trigonométricas de Arcos Compuestos — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 4, clave C"
@@ -358,10 +549,2444 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si: cot x = 4, calcular: tan(x + 37°)",
-      "alternatives": ["11/16", "11/13", "12/15", "12/11", "16/13"],
+      "alternatives": [
+        "11/16",
+        "11/13",
+        "12/15",
+        "12/11",
+        "16/13"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-para-el.html",
       "sourceName": "Identidades Trigonométricas de Ángulo Compuesto — ejercicios resueltos preuniversitarios (matematicasn.blogspot.com), Problema 3, clave D"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique la expresión trigonométrica\n4senθ.sen(15º +θ).sen(15º −θ) + ( √3 + 1)senθ",
+      "alternatives": [
+        "sen3θ",
+        "sen2θ",
+        "cos3θ",
+        "tgθ",
+        "cos2θ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN TRIGONOMÉTRICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule “n” para que la siguiente igualdad sea una identidad.",
+      "alternatives": [
+        "tg x",
+        "ctg x",
+        "sen x",
+        "cos x",
+        "sec x"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/identidades-trigonometricas-para-el.html",
+      "sourceName": "matematica-a1.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS PARA EL ARCO SIMPLE EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique la expresión\n8cos2θcos4θcos8θ",
+      "alternatives": [
+        "sen16θ csc2θ",
+        "cos16θ sec2θ",
+        "sen8θ cscθ",
+        "tg16θ cscθ",
+        "ctg16θ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/razones-trigonometricas-multiples-arcos.html",
+      "sourceName": "matematicaj.blogspot.com — ARCOS MÚLTIPLES EJEMPLOS Y EJERCICIOS RESUELTOS DE TRIGONOMETRÍA IDENTIDADES TRIGONOMÉTRICAS DE ÁNGULOS MÚLTIPLOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El salario semanal de Luis es de 500 soles más el 15% de comisión sobre las ventas semanal que realice; si ésta llega a 600(sen54° – sen18°) soles; ¿cuál es el salario semanal de Luis?",
+      "alternatives": [
+        "524 soles",
+        "555 soles",
+        "545 soles",
+        "654 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/01/razones-trigonometricas-multiples-arcos.html",
+      "sourceName": "matematicaj.blogspot.com — ARCOS MÚLTIPLES EJEMPLOS Y EJERCICIOS RESUELTOS DE TRIGONOMETRÍA IDENTIDADES TRIGONOMÉTRICAS DE ÁNGULOS MÚLTIPLOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si actgC + ctgB + ctgA = 0\nCalcule: ctgA +ctgB en función de Q.\nSi: A + B + C = 90°",
+      "alternatives": [
+        "Q",
+        "2Q",
+        "1 – Q",
+        "2Q + 1",
+        "Q + 1 PROBLEMAS PROPUESTOS PROBLEMA 1 Si cosx=sen(x+ 60°), determine tanx"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-para-el.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS DE ÁNGULO COMPUESTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique la siguiente expresión:\ncotx(1 + senx) – cos 2 xsecx",
+      "alternatives": [
+        "cotx",
+        "2cotx",
+        "senx",
+        "2senx"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique :\ntanx(1 + cosx) – sen 2 xcscx",
+      "alternatives": [
+        "2tanx",
+        "tanx",
+        "cosx",
+        "2cosx"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tanx + cotx=2; calcule el valor de 3tanx + 2cotx",
+      "alternatives": [
+        "1",
+        "3",
+        "5",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el valor de sen3x+csc3x\nSi se sabe que sen3x – csc3x= 7",
+      "alternatives": [
+        "√ 51",
+        "√ 52",
+        "√ 53",
+        "√ 55"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de seguidores de una página matemática está dado por la siguiente expresión:\nS= tan 4 x+ cot 4 x+12000\nSi tanx – cot x= 5, ¿cuántos seguidores tiene dicha página?",
+      "alternatives": [
+        "12 729",
+        "12 726",
+        "12 727",
+        "12 730"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduzca la siguiente expresión\ntanx(1 – cot 2 x) + cotx(1 – tan 2 x)",
+      "alternatives": [
+        "cosx",
+        "senx",
+        "0",
+        "– 1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se tiene que :\ntan 3 x.cot 4 x + cscx.cosx=3\nCalcule el valor de tanx + cotx",
+      "alternatives": [
+        "13/6",
+        "11/3",
+        "12/5",
+        "10/3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si θ es un ángulo agudo y además senθ(cotθ + cscθ) =1,5\nCalcule la medida del ángulo θ",
+      "alternatives": [
+        "45°",
+        "37°",
+        "60°",
+        "30°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduzca la expresión:\n(senx – 3cosx) 2 + (3senx + cosx) 2",
+      "alternatives": [
+        "4",
+        "5",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se tiene que secx+ tanx= 3, calcule el valor de cosx",
+      "alternatives": [
+        "4/5",
+        "1/3",
+        "1/5",
+        "3/5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Eliminar x a partir de senx=m, cosx=n",
+      "alternatives": [
+        "m 2 +n 2 =1",
+        "m 2 +n 2 =5",
+        "m 2 +n 2 =3",
+        "m 2 +n 2 =7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduzca\ncotxcosx – cscx(1 – 2sen 2 x)",
+      "alternatives": [
+        "senx",
+        "cosx",
+        "cotx",
+        "tanx"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplificar\n(1 + tan 2 x)cos4x + (1 + cot 2 x)sen4x",
+      "alternatives": [
+        "1",
+        "sen2xcos2x",
+        "sen2x",
+        "cos2x"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si 5secx – 3tanx= 4\nCalcule cscx + cotx",
+      "alternatives": [
+        "3",
+        "2",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tanx + cotx=3 √ 2\nCalcule sec 2 x + csc 2 x",
+      "alternatives": [
+        "9",
+        "12",
+        "16",
+        "18"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante la campaña navideña, un comerciante compra\nA= sen 4 x+cos 4 x+2sen 2 xcos 2 x+ 8\narbolitos al precio de\nS= sen 2 x+cos 2 x+ csc30°\nsoles cada uno.\n¿Cuánto paga por los A arbolitos?",
+      "alternatives": [
+        "S/.27",
+        "S/.30",
+        "S/.33",
+        "S/.24"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si √ 3senx = √ 7 − 2cosx\nCalcule senxcosx",
+      "alternatives": [
+        "3 √ 7",
+        "3 √ 2",
+        "2 √ 7",
+        "2 √ 3/7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si sen 6 x + cos 6 x =0,5\nCalcule sec 2 x + csc 2 x",
+      "alternatives": [
+        "3",
+        "4",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número de seguidores de un youtuber está dado por la siguiente expresión:\nM=sec 4 x + csc 4 x + 32000\nSi tanx + cotx= √ 13\n¿cuántos seguidores tiene dicho youtuber en la actualidad?",
+      "alternatives": [
+        "32 169",
+        "32 143",
+        "32 727",
+        "32 156"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante la campaña escolar, un padre de familia compra\nC= sen 6 x+cos 6 x+3sen 2 xcos 2 x+10\ncuadernos al precio de\nP= sen 2 x+cos 2 x+ sec60°\nsoles cada uno.\n¿Cuánto paga por los C cuadernos?",
+      "alternatives": [
+        "S/27",
+        "S/30",
+        "S/33",
+        "S/24"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduce : secx – tanx.senx",
+      "alternatives": [
+        "senx",
+        "cscx",
+        "cosx",
+        "secx",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PROBLEMAS DE IDENTIDADES TRIGONOMÉTRICAS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: Tanx + Cotx = 3\nCalcula: Tan 3 x + Cot 3 x",
+      "alternatives": [
+        "15",
+        "16",
+        "17",
+        "18",
+        "19"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PROBLEMAS DE IDENTIDADES TRIGONOMÉTRICAS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si:\n1 + Tanx = Usecx\n1 – Tanx = VSecx\nHalla : U 2 + V 2",
+      "alternatives": [
+        "1",
+        "2",
+        "1/2",
+        "3",
+        "1/4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PROBLEMAS DE IDENTIDADES TRIGONOMÉTRICAS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: Cosx + Cos 2 x = 1\nCalcula: Sen 2 x + Sen 4 x",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PROBLEMAS DE IDENTIDADES TRIGONOMÉTRICAS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica :\nSen 2 xCos 2 x(Sec 2 x + Csc 2 x)",
+      "alternatives": [
+        "1",
+        "1/2",
+        "2",
+        "Senx",
+        "Cosx"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PROBLEMAS DE IDENTIDADES TRIGONOMÉTRICAS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si : Ctgx – Cosx = 4\nCalcula: 4Tgx + Senx",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PROBLEMAS DE IDENTIDADES TRIGONOMÉTRICAS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si Tgx – Ctgx = 6\nCalcula Tg 2 x + Ctg 2 x",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — PROBLEMAS DE IDENTIDADES TRIGONOMÉTRICAS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el valor de: Sen159°",
+      "alternatives": [
+        "117/225",
+        "107/225",
+        "44/225",
+        "44/125",
+        "22/225"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIPLE EJERCICIOS RESUELTOS DE IDENTIDADES TRIGONOMÉTRICAS DE UN ARCO TRIPLE PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule:\n3sen50º – 4sen³50º",
+      "alternatives": [
+        "1/4",
+        "0,45",
+        "4",
+        "6",
+        "0,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIPLE EJERCICIOS RESUELTOS DE IDENTIDADES TRIGONOMÉTRICAS DE UN ARCO TRIPLE PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si cos ω = 1/3\nCalcule cos ω",
+      "alternatives": [
+        "–1/47",
+        "–23/27",
+        "4/9",
+        "6/7",
+        "5/8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIPLE EJERCICIOS RESUELTOS DE IDENTIDADES TRIGONOMÉTRICAS DE UN ARCO TRIPLE PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tg θ = 0,25\nCalcule 52tg3 θ",
+      "alternatives": [
+        "34",
+        "47",
+        "49",
+        "67",
+        "51"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIPLE EJERCICIOS RESUELTOS DE IDENTIDADES TRIGONOMÉTRICAS DE UN ARCO TRIPLE PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduzca:\n9sen² σ + 16sen ⁶ σ – 24sen ⁴ σ",
+      "alternatives": [
+        "sen²2 σ",
+        "0",
+        "sen²3σ",
+        "1",
+        "sen²σ"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIPLE EJERCICIOS RESUELTOS DE IDENTIDADES TRIGONOMÉTRICAS DE UN ARCO TRIPLE PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular: Sec20°.Sec40°.Sec80°",
+      "alternatives": [
+        "8",
+        "6",
+        "16",
+        "4",
+        "32"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIPLE EJERCICIOS RESUELTOS DE IDENTIDADES TRIGONOMÉTRICAS DE UN ARCO TRIPLE PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduzca: 3Tan²ψ ·Tan3ψ + 3Tanψ – Tan3 ψ",
+      "alternatives": [
+        "Tan ψ",
+        "Tan3 ψ",
+        "Tan6ψ",
+        "Cot ψ",
+        "Cot3 ψ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIPLE EJERCICIOS RESUELTOS DE IDENTIDADES TRIGONOMÉTRICAS DE UN ARCO TRIPLE PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el equivalente de: Tan²20°.Tan²40° + Cot²80°",
+      "alternatives": [
+        "2Tan10°",
+        "4Tan10°",
+        "2Tan²10°",
+        "4Tan²10°",
+        "2Tan 20°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIPLE EJERCICIOS RESUELTOS DE IDENTIDADES TRIGONOMÉTRICAS DE UN ARCO TRIPLE PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular: Sen10°.Sen50°.Sen70°",
+      "alternatives": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/16",
+        "1/32"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIPLE EJERCICIOS RESUELTOS DE IDENTIDADES TRIGONOMÉTRICAS DE UN ARCO TRIPLE PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique: H = (4sen³x + sen3x)cscx",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO TRIPLE EJERCICIOS RESUELTOS DE IDENTIDADES TRIGONOMÉTRICAS DE UN ARCO TRIPLE PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule θ si es un ángulo agudo.\nctg20º – ctg40º = sec2θ",
+      "alternatives": [
+        "32º",
+        "25º",
+        "31º",
+        "28º",
+        "19º"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo_27.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULO MITAD EJERCICIOS RESUELTOS DE IDENTIDADES TRIGONOMÉTRICAS DE UN ARCO MITAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tanx = 1/2 , calule el valor de sen2x",
+      "alternatives": [
+        "− 1",
+        "3/5",
+        "4/5",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo_64.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS DEL ÁNGULO DOBLE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el valor de tan2x,\nsi: 3tan²x+4tanx=3",
+      "alternatives": [
+        "0,5",
+        "1",
+        "1,5",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo_64.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS DEL ÁNGULO DOBLE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si 5tan²x+ 14tanx= 5, calcule tan2x.",
+      "alternatives": [
+        "5/7",
+        "7/5",
+        "2/7",
+        "7/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo_64.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS DEL ÁNGULO DOBLE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tanθ = 3, halle 5(csc2θ) − ¹",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/identidades-trigonometricas-del-angulo_64.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES TRIGONOMÉTRICAS DEL ÁNGULO DOBLE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: x – y= 𝛑 /3\nCalcular:\nE=(cosx+cosy) 2 +(senx+seny) 2",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/simulacro-resuelto-de-admision-a-la-universidad-catolica-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO CATÓLICA SOLUCIONARIO DE ACCESO UNIVERSIDAD PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: θ=15º\nM=cosθ.cos2θ.cos3θ.cos4θ.csc5θ\nCalcular 64M 2",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/simulacro-resuelto-de-admision-a-la-universidad-catolica-pucp-talento-pop-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO CATÓLICA SOLUCIONARIO DE ACCESO UNIVERSIDAD PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: cosx ctgx = 3\ndetermina cscx – senx.",
+      "alternatives": [
+        "1",
+        "2",
+        "6",
+        "4",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/solucionario-admision-pacifico-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DEL PACÍFICO 2026 PRUEBA UP RESUELTA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La expresión :\nM= sen7º+ sen21º+ sen35º+ sen49º\nes equivalente a",
+      "alternatives": [
+        "4sen28º cos14º cos7º.",
+        "sen28º cos14º cos7º.",
+        "4sen21º cos15º cos7º.",
+        "sen35º cos14º cos7º."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos-trigonometria-semana-9.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: x – y= 𝛑 /3\nCalcular:\nE=(cosx+cosy)²+(senx+seny) ²",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/trigonometria-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PREGUNTAS DEL EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: θ=15º\nM= cosθ. cos2θ . cos3θ . cos4θ . csc5θ\nCalcular 64M²",
+      "alternatives": [
+        "5",
+        "16",
+        "7",
+        "8",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/trigonometria-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PREGUNTAS DEL EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tan(x) = 3, calcule el valor de\nM=13sen(3x) – 9cos(3x) +5",
+      "alternatives": [
+        "8",
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si senx · cosx = 1/3 , determine\nM = (senx + cosx) 2",
+      "alternatives": [
+        "5/3",
+        "2/7",
+        "3/4",
+        "4/5",
+        "3/7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/5to-actividad-9-matematica-resuelta-experiencia-de-aprendizaje-3-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\ntan(a + b) = 5\ntan(a – b) = 3\ncoloca verdadero (V) o falso (F) según corresponda.\nI. tan2a = 8 ( )\nII. tan2b = –2 ( )\nIII.tan2a =4/7 ( )",
+      "alternatives": [
+        "FFV",
+        "VFF",
+        "VVV",
+        "FFF",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/5to-actividad-9-matematica-resuelta-experiencia-de-aprendizaje-3-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fábrica MEMORY produce y vende semanalmente chip de memoria que está modelada por la expresión V(x)=400√3(csc2x – cot2x) en miles de unidades aproximadamente, donde x 𝛑/6≤x≤𝛑/3 . ¿Cuántos chip de memoria se produjeron y vendieron en dicha semana?",
+      "alternatives": [
+        "400 mil unidades",
+        "350 mil unidades",
+        "200 mil unidades",
+        "450 mil unidades"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/trigonometria-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se cumple que cot θ + tan θ =3,\nentonces el valor de csc2 θ es:",
+      "alternatives": [
+        "3 2",
+        "5 2",
+        "7 2",
+        "9 2",
+        "11 2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un ángulo de medida ∝, calcule el valor de la siguiente expresión:\n(2+tan∝.cot∝) 2 −1",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-ucsur-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CIENTIFÍCA DEL SUR 2027 UCSUR EXAMEN ADMISIÓN UNIVERSIDAD TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\nx+y =2 𝛑/3\ncos 2 x+ cos 2 y=1\nHallar: M=x – y",
+      "alternatives": [
+        "85°",
+        "75°",
+        "90°",
+        "100°",
+        "80°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si cosx.cotx=3\nDetermine: cscx–senx",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/solucionario-catolica-2019-admision.html",
+      "sourceName": "matematicasn.blogspot.com — EVALUACIÓN DE TALENTO CATÓLICA 2027 RESUELTA INGRESO UNIVERSIDAD RESPUESTAS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si M= sen²105º– sen²15º, entonces, el valor de M+0,5 es:",
+      "alternatives": [
+        "( √3 +1)/2",
+        "( √3 +3)/2",
+        "( √3 +5)/2",
+        "( √3 +7)/2",
+        "( √3 + 9)/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La Sra. Lourdes tiene un pequeño jardín rectangular en el patio de su casa, cuyos lados miden 2 | 4sen5°cos5 ° cos70 ° –cos10 ° | m y 4(4cos5 ° cos55°– 2cos50 ° )m. Si para sembrar rosas y begonias coloca una cerca en la diagonal de su jardín, halle la longitud de la cerca.",
+      "alternatives": [
+        "√ 13 m",
+        "3 m",
+        "√ 19 m",
+        "6 m",
+        "7 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/trigonometria-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: KTan50º+Tan20º= Tan70º\nEl valor de “k” es:",
+      "alternatives": [
+        "1/2",
+        "2",
+        "3",
+        "1/3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/tutoria-3ro-4to-actividad-2-experiencia-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria--aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL MEDICINA PRUEBA INGRESO UNIVERSIDAD RESUELTA 2027 CLAVES "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el valor de:\n(Csc2θ + Csc4θ + Csc8θ + Ctg8θ)Tgθ",
+      "alternatives": [
+        "1",
+        "Tg²θ",
+        "Ctgθ",
+        "2",
+        "1/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-del-angulo-mitad-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO MITAD EJERCICIOS RESUELTOS PDF (TRIGONOMETRÍA)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica la expresión siguiente:\nTgθ + 2Tg2θ + 4Ctg4θ",
+      "alternatives": [
+        "Ctgθ",
+        "2Ctg2θ",
+        "Ctg2θ",
+        "4Csc4θ",
+        "4Ctg4θ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-del-angulo-mitad-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO MITAD EJERCICIOS RESUELTOS PDF (TRIGONOMETRÍA)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al factorizar la expresión: uno de sus factores es:\n√3 + 2Cos10°",
+      "alternatives": [
+        "Cos8º",
+        "Cos12º",
+        "Cos16º",
+        "Cos20º",
+        "Cos24º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado que:\nSen2x.Sen5x+Cosx Cos6x=Senx.Cos4x\nCalcula: Ctgx",
+      "alternatives": [
+        "1",
+        "1/2",
+        "2",
+        "1/4",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduce\nCos10º + Cos30º + Cos50º + Cos70º",
+      "alternatives": [
+        "2",
+        "0,5cot10°",
+        "2Tg10º",
+        "2Ctg10º",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el valor de:\nW= Sen 2 10º + Sen 2 50º + Sen 2 70º",
+      "alternatives": [
+        "3/4",
+        "1",
+        "5/4",
+        "3/2",
+        "7/4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula la medida de ω que maximice el valor de “Y” en :\nY = 1 – Cosω.Cos(ω+40)",
+      "alternatives": [
+        "20º",
+        "30º",
+        "50º",
+        "70º",
+        "90º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el valor de:\nP=32Sen36º.Sen72º.Sen108º.Sen144º",
+      "alternatives": [
+        "1",
+        "2",
+        "5",
+        "10",
+        "20"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factoriza :\nN = Cos 2 5x – Sen 2 3x",
+      "alternatives": [
+        "Cos8xCos2x",
+        "Cos10xCos2x",
+        "Cos6xCos2x",
+        "Cos8xCos4x",
+        "Cos8xCos6x"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factoriza : 4CosθCos3θ + 1",
+      "alternatives": [
+        "Sen5θCscθ",
+        "Sen6θCscθ",
+        "Sen8θCscθ",
+        "Sen5θCsc2θ",
+        "Sen5θCsc3θ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica :\nE = 2(Cos5x + Cos3x)(Sen3x – Senx)",
+      "alternatives": [
+        "Sen2x",
+        "Sen4x",
+        "Sen6x",
+        "Sen8x",
+        "Sen10x"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Después de transformar\n(Cosx + Cos4x – Cos8x – Cos11x)\nes un monomio, uno de los factores es :",
+      "alternatives": [
+        "Sen4x",
+        "Cos7x/2",
+        "Sen7x/2",
+        "Cos4x",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "SenA/2=3/5\nCalcula : 2500Sen5A/4Sen3A/4",
+      "alternatives": [
+        "1000",
+        "1280",
+        "1804",
+        "2608",
+        "2000"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si : Cosx=1/2\nCalcula : 4Senx/2Sen5x/2",
+      "alternatives": [
+        "1/3",
+        "2/3",
+        "1",
+        "4/3",
+        "5/3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula k si :\n2Cos6ASen3A + Sen3A = SenkA",
+      "alternatives": [
+        "6",
+        "3",
+        "9",
+        "18",
+        "1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduce :\n(Tg2A + TgA)(Cos3A + CosA)",
+      "alternatives": [
+        "2Sen3A",
+        "Cos3A",
+        "2Sec3A",
+        "Tg3A",
+        "1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica :\nSen7ASen3A + Sen 2 2A",
+      "alternatives": [
+        "Csc25A",
+        "Sen27A",
+        "Sec27A",
+        "Sen25A",
+        "1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduce :\nSen6ASen4A – Sen15ASen13A+Sen19ASen9A",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean x, y tales que:\ncos(x+y)=1/3\ncos(x)+cos(y)=2/3\nCalcule el valor de cos(x).cos(y)",
+      "alternatives": [
+        "–1/6",
+        "–1/2",
+        "1/3",
+        "1/4",
+        "–1/12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES TRIGONOMÉTRICAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para un ángulo agudo \"x\" se cumple:\n5Sen(x−37°)= Cosx\nCalcule P=Tan 2 (x+15°)",
+      "alternatives": [
+        "9/16",
+        "2",
+        "1",
+        "3",
+        "1/3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-8-experiencia-8-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Siendo α y β ángulos agudos los cuales cumplen que\nsec3 α –csc7 β =tan45º–2sen30º\ntan α ⋅cot β = √ 2.sen45º\nCalcular tan(2 α +3 β )",
+      "alternatives": [
+        "1",
+        "3",
+        "3 3",
+        "3 4",
+        "4 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-prueba.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique\nE=4sen3x.senx+2cos4x",
+      "alternatives": [
+        "2cos2x",
+        "cos4x",
+        "2sen2x",
+        "3cosx",
+        "cos2x"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-prueba.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique la expresión:\n(1–2cos 2 x)(1–2sen 2 x cos 2 x)+cos 8 x",
+      "alternatives": [
+        "sen 2 x",
+        "sen 4 x",
+        "cosx",
+        "sen 8 x",
+        "cos 4 x"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-prueba.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el máximo valor de la expresión\ncos 4 x−sen 4 x+1,5senx cos x",
+      "alternatives": [
+        "3/4",
+        "2",
+        "7/4",
+        "5/4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-del-angulo-doble-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO DOBLE EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si M=1– sen(2°)cos(2°)cos(4°)cos(8°), calcule el valor de 200M",
+      "alternatives": [
+        "207",
+        "193",
+        "181",
+        "197",
+        "204"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-del-angulo-doble-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO DOBLE EJERCICIOS RESUELTOS PDF TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: 2Sen3x = 3Senx\nCalcular: Cos2x",
+      "alternatives": [
+        "0,20",
+        "0,25",
+        "0,30",
+        "0,40",
+        "0,50"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-del-angulo-triple.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO TRIPLE EJERCICIOS RESUELTOS  PDF (TRIGONOMETRÍA)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: Cscβ/3 = Cosβ\nCalcule: Sen6 β",
+      "alternatives": [
+        "22/27",
+        "11/27",
+        "2/27",
+        "9/11",
+        "1/27"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-del-angulo-triple.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO TRIPLE EJERCICIOS RESUELTOS  PDF (TRIGONOMETRÍA)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula Cos20° Cos40°Cos80°",
+      "alternatives": [
+        "1/2",
+        "1/4",
+        "1/6",
+        "1/8",
+        "1/10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-del-angulo-triple.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO TRIPLE EJERCICIOS RESUELTOS  PDF (TRIGONOMETRÍA)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula Sen70° Sen50° Sen10°",
+      "alternatives": [
+        "1/2",
+        "1/4",
+        "1/6",
+        "1/8",
+        "1/10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-del-angulo-triple.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO TRIPLE EJERCICIOS RESUELTOS  PDF (TRIGONOMETRÍA)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: M = 4 – 8Sen29° – 3Sec 18°\nEntonces una expresión equivalente para M será:",
+      "alternatives": [
+        "Tg9°",
+        "Tg18°",
+        "2Tg18°",
+        "2Tg9°",
+        "Tg36°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-del-angulo-triple.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO TRIPLE EJERCICIOS RESUELTOS  PDF (TRIGONOMETRÍA)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica:\nCos3xCos 3 x – Sen3xSen 3 x",
+      "alternatives": [
+        "0,25(4+3Cos4x)",
+        "4Cosx",
+        "Cos4x",
+        "3Cos4x",
+        "0,5(4–3Cos4x)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-del-angulo-triple.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO TRIPLE EJERCICIOS RESUELTOS  PDF (TRIGONOMETRÍA)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique la siguiente expresión.\ncos² α +cos ² (60°+ α ) +cos ² (60° – α )",
+      "alternatives": [
+        "2",
+        "3/4",
+        "1/4",
+        "3/2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN TRIGONOMÉTRICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique la siguiente expresión.\nsen²2β +cos²3β +sen5β senβ",
+      "alternatives": [
+        "2",
+        "1",
+        "1/4",
+        "1/2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN TRIGONOMÉTRICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique la expresión\n√3 cos40º − 2sen20º",
+      "alternatives": [
+        "cos20°",
+        "sen20°",
+        "2sen20°",
+        "sen40°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN TRIGONOMÉTRICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el valor de la expresión trigonométrica sen10º +sen130º +sen250º .",
+      "alternatives": [
+        "1/4",
+        "1/2",
+        "0",
+        "2/3",
+        "2/5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN TRIGONOMÉTRICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para el ángulo agudo α es cierto que la tangente de α es igual a la tangente del doble de α multiplicado por (− 3/2) . Si E = sen5α + sen3α, halle 125.E .",
+      "alternatives": [
+        "–48 √11",
+        "–48 √7",
+        "–42 √5",
+        "–4 √5",
+        "–48 √5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN TRIGONOMÉTRICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ganancia de un fabricante de relojes, en un mes, está determinada por la expresión 5sen(x + 30º) + 5cos(60º +x) + 12senx , en miles de soles. Halle la máxima ganancia del fabricante.",
+      "alternatives": [
+        "10 mil soles",
+        "12 mil soles",
+        "14 mil soles",
+        "16 mil soles",
+        "13 mil soles"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN TRIGONOMÉTRICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para qué valor ψ agudo, la expresión:\nM = sen( ψ + 35º) · cos( ψ + 5º) es máxima.",
+      "alternatives": [
+        "15º",
+        "20º",
+        "25º",
+        "30º",
+        "35º"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/transformaciones-trigonometricas.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIÓN TRIGONOMÉTRICA PROBLEMAS RESUELTOS DE SECUNDARIA Y PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el valor de la siguiente expresión:\n2sen50° – 4cos40°sen10°",
+      "alternatives": [
+        "4",
+        "1/4",
+        "2",
+        "1/2",
+        "1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/trigonometria-examen-admision.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Siendo α y β ángulos agudos los cuales cumplen que\ntan α –cot4 β =5sen37º–3\ncos α ⋅sec5 β = √ 3.tan30º\nCalcular sen( α + β )",
+      "alternatives": [
+        "√ 3/2",
+        "1/2",
+        "√ 3",
+        "3/5",
+        "√ 2/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/trigonometria-examen-admision-agraria.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que α = 𝛑 /12 , determine el valor de\nE=sen α ⋅cos 5 α – sen 5 α ⋅cos α",
+      "alternatives": [
+        "√ 3/4",
+        "√ 3/8",
+        "1/4",
+        "1/2",
+        "1/8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/trigonometria-examen-admision-agraria.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA AGRARIA PRUEBA RESUELTA UNALM INGRESO UNIVERSIDAD LA MOLINA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tanx=3, calcule el valor de\nM=13sen3x–9cos3x+5",
+      "alternatives": [
+        "8",
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Solucionario-de-trigonometria-uni-examen-resuelto-de-admision-universidad-de-ingenieria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNI PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tanx + cotx= 3, entonces el valor de\nM= (tan ⁴ x – sec ⁴ x)(csc ⁴ x – cot ⁴ x) es",
+      "alternatives": [
+        "–16",
+        "–20",
+        "–18",
+        "–17",
+        "–19"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/solucionarios-uni-2016-i-examen-de.html",
+      "sourceName": "matematicasn.blogspot.com — SEGUNDA PRUEBA ADMISIÓN UNI 2022 I SOLUCIONARIO MATEMÁTICAS UNIVERSIDAD DE INGENIERÍA 2022-1 PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x∈ ℝ , determine la variación de L=(3+senx)(3–senx)",
+      "alternatives": [
+        "[8; 9]",
+        "[8; 10]",
+        "[6; 8]",
+        "[8; 12]",
+        "[4; 6]"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-trigonometria-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE TRIGONOMETRÍA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A partir de la siguiente identidad:\nsenθ+4cosθ =Asen(θ+β)\ncalcule 4A²cot β",
+      "alternatives": [
+        "10",
+        "20",
+        "30",
+        "40",
+        "17"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-trigonometria-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE TRIGONOMETRÍA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La profesora de trigonometría les pide a sus alumnos que a partir de tanφ+cotφ=5 determinen el valor del seno del ángulo doble de φ. ¿Cuál será el valor que la profesora espera que sus alumnos encuentren?",
+      "alternatives": [
+        "0,1",
+        "0,2",
+        "0,3",
+        "0,4",
+        "0,5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-trigonometria-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE TRIGONOMETRÍA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A Leandro le falta 2T meses para ingresar a la universidad. Si T=A+B, donde\nsen 4 x–sen 2 xcos 2 x+cos 4 x=Acos(4x)+B\nDetermine cuántos meses le falta a Leandro para ingresar a la universidad.",
+      "alternatives": [
+        "1 mes",
+        "3 meses",
+        "4 meses",
+        "2 meses",
+        "5 meses"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-trigonometria-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE TRIGONOMETRÍA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: Cos²x + Sec ² x = 11\nCalcula: Cosx + Secx",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES PITAGÓRICAS RECÍPROCAS O INVERSAS POR COCIENTE O DIVISIÓN DEMOSTRACIÓN TRIGONOMÉTRICA DE ARCO SIMPLE CONDICIONALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduce:\n(Secx – Cosx) Cscx",
+      "alternatives": [
+        "Tanx",
+        "Cotx",
+        "1",
+        "Secx",
+        "1/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES PITAGÓRICAS RECÍPROCAS O INVERSAS POR COCIENTE O DIVISIÓN DEMOSTRACIÓN TRIGONOMÉTRICA DE ARCO SIMPLE CONDICIONALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduce: (Cscx – Senx) Secx",
+      "alternatives": [
+        "Tanx",
+        "Cotx",
+        "1",
+        "Secx",
+        "0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES PITAGÓRICAS RECÍPROCAS O INVERSAS POR COCIENTE O DIVISIÓN DEMOSTRACIÓN TRIGONOMÉTRICA DE ARCO SIMPLE CONDICIONALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula:\nSenx(Senx+Cscx) + Cosx(Cosx+Secx)",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/identidades-trigonometricas-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES PITAGÓRICAS RECÍPROCAS O INVERSAS POR COCIENTE O DIVISIÓN DEMOSTRACIÓN TRIGONOMÉTRICA DE ARCO SIMPLE CONDICIONALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC, calcule la medida del ángulo A si\nsen²A=3senB senC+(senB – senC)²",
+      "alternatives": [
+        "60°",
+        "90°",
+        "105°",
+        "120°",
+        "150°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/transformaciones-trigonometricas-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES DE SUMA A PRODUCTO Y DE PRODUCTO A SUMA EN TRIGONOMETRÍA EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Transformar a producto la expresión\ncos11x +cos5x + cos9x + cos3x.",
+      "alternatives": [
+        "4cos6xcos4xcos2x",
+        "4cos5xcos4xcos2x",
+        "4cos7xcos3xcosx",
+        "4cos7xcos3xcos2x",
+        "4cos6xcos5xcos2x"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/transformaciones-trigonometricas-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES DE SUMA A PRODUCTO Y DE PRODUCTO A SUMA EN TRIGONOMETRÍA EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si Pcos40°cos80° = csc100° – csc40°, halle el valor de P.",
+      "alternatives": [
+        "– 4sen10°",
+        "– 4csc10°",
+        "– sec10°",
+        "– 4cos10°",
+        "– 4sec10°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/transformaciones-trigonometricas-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES DE SUMA A PRODUCTO Y DE PRODUCTO A SUMA EN TRIGONOMETRÍA EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si\ncos7x + cos11x + cos15x + cos19x = Zcos13xcsc2x\ndetermine Z",
+      "alternatives": [
+        "cos8x",
+        "cos4x",
+        "sen4x",
+        "sen8x",
+        "2sen8x"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/transformaciones-trigonometricas-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES DE SUMA A PRODUCTO Y DE PRODUCTO A SUMA EN TRIGONOMETRÍA EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de simplificar la expresión (sen²200°– cos²100°)cos10°, se obtiene",
+      "alternatives": [
+        "4sen20°.",
+        "0,25sen20°",
+        "2sen10°.",
+        "4sen10°.",
+        "cos20°."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/transformaciones-trigonometricas-de.html",
+      "sourceName": "matematicasn.blogspot.com — TRANSFORMACIONES DE SUMA A PRODUCTO Y DE PRODUCTO A SUMA EN TRIGONOMETRÍA EJEMPLOS RESUELTOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplificar la expresión M = 3csc2 ψ + 6ctg ψ – 9tg ψ",
+      "alternatives": [
+        "10ctg2 ψ",
+        "15tg2 ψ",
+        "5ctg2 ψ",
+        "15ctg2 ψ",
+        "10tg2 ψ"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/identidades-trigonometricas-de-angulos-multiples-arco-multiplo-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO MÚLTIPLE EJERCICIOS RESUELTOS DE TRIGONOMETRÍA ARCOS MÚLTIPLOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se cumple que 3tg²x + 2tgx – 3 = 0, calcular el valor de sec²2x",
+      "alternatives": [
+        "9",
+        "10",
+        "8",
+        "12",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/identidades-trigonometricas-de-angulos-multiples-arco-multiplo-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO MÚLTIPLE EJERCICIOS RESUELTOS DE TRIGONOMETRÍA ARCOS MÚLTIPLOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si sen4 ω sec ω = 8a, hallar 0,5(cos ω – sen ω ) sen ω (cos ω + sen ω )",
+      "alternatives": [
+        "4 + a",
+        "3 + a",
+        "a",
+        "1 + a",
+        "2 + a"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/identidades-trigonometricas-de-angulos-multiples-arco-multiplo-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO MÚLTIPLE EJERCICIOS RESUELTOS DE TRIGONOMETRÍA ARCOS MÚLTIPLOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique la expresión\nsen39 ° sen ³ 13 ° + cos39 ° cos³13 °",
+      "alternatives": [
+        "Sen²26 °",
+        "Cos ³ 39 °",
+        "Sen ² 13 °",
+        "Cos ³ 26 °",
+        "Cos ² 13 °"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/identidades-trigonometricas-de-angulos-multiples-arco-multiplo-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO MÚLTIPLE EJERCICIOS RESUELTOS DE TRIGONOMETRÍA ARCOS MÚLTIPLOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique usted la expresión 4cos24 ° sen ³ 38 ° + 4sen24 cos ³ 8 °",
+      "alternatives": [
+        "3cos32 °",
+        "sen32 °",
+        "2cos28 °",
+        "3sen28 °",
+        "3sen32 °"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/identidades-trigonometricas-de-angulos-multiples-arco-multiplo-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO MÚLTIPLE EJERCICIOS RESUELTOS DE TRIGONOMETRÍA ARCOS MÚLTIPLOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si “x” e “y” son las medidas de 2 ángulos positivos, cuya suma no excede a 30° y tal que\ntg ² 2y + 2tg4xtg2y −1= 0 .\nCalcule (1+ tg2x)(1+ tg2y)",
+      "alternatives": [
+        "1",
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/identidades-trigonometricas-de-angulos-multiples-arco-multiplo-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO MÚLTIPLE EJERCICIOS RESUELTOS DE TRIGONOMETRÍA ARCOS MÚLTIPLOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un científico observa el movimiento de una mariposa en el aire y ve que en un instante de tiempo t, la altura en metros respecto al suelo está dada por la siguiente expresión\nh(t) = 16sent ⋅cos2t ⋅cos8t ⋅cos4t .\nSi t está dado en segundos, ¿a qué altura se encuentra la mariposa cuando t = π/30 s ?",
+      "alternatives": [
+        "1 m",
+        "2 m",
+        "1,5 m",
+        "2,1 m",
+        "3,1 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/identidades-trigonometricas-de-angulos-multiples-arco-multiplo-ejercicios-resueltos-ejemplos-problemas-trigonometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IDENTIDADES DEL ÁNGULO MÚLTIPLE EJERCICIOS RESUELTOS DE TRIGONOMETRÍA ARCOS MÚLTIPLOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos proyectiles serán lanzados desde un mismo punto con ángulos agudos de lanzamiento respecto a la horizontal α ° y β °, siendo β > α . Si dichos ángulos se diferencian en 15° y satisfacen la ecuación\n√ 3sen β °+cos β °= √ 2(cos α °−sen α °)tan(85°)\ncalcule el menor ángulo de lanzamiento.",
+      "alternatives": [
+        "35°",
+        "45°",
+        "55°",
+        "30°",
+        "40°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/trigonometria-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA ÁREA A SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una partícula se mueve en el espacio, en un sistema tridimensional y, al cabo de un instante t 1 , se mide su distancia al origen del sistema y se obtiene un primer resultado:\nA = sec 4 10º – tan 4 10º unidades.\nSe repite el experimento en otro tiempo t 2 y se obtiene un segundo resultado:\nB = cos 2 10º – sen 2 10°.tan 2 10º unidades.\nHalle A – B unidades entre ambas mediciones.",
+      "alternatives": [
+        "3tan 2 20º",
+        "2sec 2 10º",
+        "3ctg 2 10º",
+        "tan 2 10º",
+        "3tan 2 10º"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/trigonometria-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tan60º.cos19° – sen41º=n , halle el valor de la expresión sen79º+sen41º+cos71º en términos de n.",
+      "alternatives": [
+        "n",
+        "2n",
+        "3n",
+        "4n",
+        "5n"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/trigonometria-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el valor de la siguiente expresión sec40 ° +8cos 2 40 °",
+      "alternatives": [
+        "5",
+        "7",
+        "6",
+        "9",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepreuni-trigonometria-sexta-practica.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Centro comercial Brisas Plaza adquiere 40 carritos de compras por motivo de renovación. Si cada carrito cuesta 4M+ θ dólares, donde M es el máximo valor de la expresión\n8+2sen θ (4cos θ –3sen θ ), ¿cuánto se pagó por dicha compra?",
+      "alternatives": [
+        "1 800 dólares",
+        "2 140 dólares",
+        "1 860 dólares",
+        "1780 dólares",
+        "1 920 dólares"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepreuni-trigonometria-sexta-practica.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la medida del ángulo agudo x, que cumple.\n(sen20º) tan(x+10°) =(cos70º) cotx",
+      "alternatives": [
+        "30º",
+        "45º",
+        "60º",
+        "40º",
+        "50º"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/trigonometria-cayetano-heredia-examen.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tan(53°+β)=0,6 , calcule tan β",
+      "alternatives": [
+        "– 11/27",
+        "– 9/11",
+        "– 1/5",
+        "– 7/23",
+        "– 11/29"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/trigonometria-cayetano-heredia-examen.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduzca\nK=2sen(60°+x)–3cosx",
+      "alternatives": [
+        "cosx",
+        "senx",
+        "√ 3senx",
+        "√ 3cosx",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/trigonometria-cayetano-heredia-examen.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica:\n(Cos⁴θ – Sen⁴θ)² + (2Senθ Cosθ) ²",
+      "alternatives": [
+        "Cos2θ",
+        "Sen2θ",
+        "Tg2θ",
+        "Sec2θ",
+        "1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-del-arco_5.html",
+      "sourceName": "matematicasn.blogspot.com — ARCO DOBLE EJERCICIOS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si: Tgx – Tg2x = a\nHalla: Tg²xSec²2x",
+      "alternatives": [
+        "a²",
+        "2a²",
+        "a²/2",
+        "4a²",
+        "3a ²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-del-arco_5.html",
+      "sourceName": "matematicasn.blogspot.com — ARCO DOBLE EJERCICIOS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reduce:\n16Senα Cosα Cos2αCos4α Cos8α",
+      "alternatives": [
+        "Sen8α",
+        "Cos8α",
+        "Sen16α",
+        "Cos16α",
+        "Sen32α"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-del-arco_5.html",
+      "sourceName": "matematicasn.blogspot.com — ARCO DOBLE EJERCICIOS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica :\n2SenαCos³ + 2Sen³αCosα",
+      "alternatives": [
+        "Cos2α",
+        "Sen2α",
+        "Sen4α",
+        "Cos4α",
+        "Senα"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-del-arco_5.html",
+      "sourceName": "matematicasn.blogspot.com — ARCO DOBLE EJERCICIOS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si : Tgα + Ctgα = n.\nHalla : sen2α",
+      "alternatives": [
+        "n",
+        "2n",
+        "n/2",
+        "1/n",
+        "2/n"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-del-arco_5.html",
+      "sourceName": "matematicasn.blogspot.com — ARCO DOBLE EJERCICIOS RESUELTOS PREUNIVERSITARIOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si : 1+senα–2cosα=0\nCalcule 4secα+3cscα",
+      "alternatives": [
+        "3",
+        "6",
+        "5",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/trigonometria-examen-pre-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EXAMEN RESUELTO DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si sen84°=m, halle el valor de\nR=sen30°⋅sec78°– 2cos18°",
+      "alternatives": [
+        "1/2m",
+        "2/m",
+        "m",
+        "2m",
+        "m/2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/trigonometria-simulacro-resuelto-examen.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una partícula se mueve en el espacio, en un sistema tridimensional y, al cabo de un instante t ₁ , se mide su distancia al origen del sistema y se obtiene un primer resultado:\nA = sec ⁴ 10º – tan ⁴ 10º unidades.\nSe repite el experimento en otro tiempo t ₂ y se obtiene un segundo resultado:\nB = cos²10º – sen²10° tan²10º unidades.\nHalle A – B unidades entre ambas mediciones.",
+      "alternatives": [
+        "3tan²10º",
+        "2sec²10º",
+        "3ctg²10º",
+        "tan²10º CLIC AQUÍ Ver LO DE TRIGONOMETRÍA SOLUCIONES"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-fisica-semana-12-2020.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN SAN MARCOS ÁREA D 2022 II PRUEBA DE ADMISIÓN UNIVERSIDAD 2022-2 CIENCIAS ECONÓMICAS Y DE LA GESTIÓN CLAVES RESPUESTAS UNMSM PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tanx+cotx=3, entonces el valor de\nM=(tan 4 x–sec 4 x)(csc 4 x–cot 4 x) es",
+      "alternatives": [
+        "–16",
+        "–20",
+        "–18",
+        "–17",
+        "–19"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/trigonometria-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si (2tgα+1)(tgα+2)cos²α=3\nCalcule senαcosα.",
+      "alternatives": [
+        "0,60",
+        "0,30",
+        "0,25",
+        "0,20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/07/trigonometria-admision-catolica-talento.html",
+      "sourceName": "razonamientopdf.blogspot.com — TRIGONOMETRÍA CATÓLICA PREGUNTAS RESUELTAS PUCP"
     }
   ]
 }

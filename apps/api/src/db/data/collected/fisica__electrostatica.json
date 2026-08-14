@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Después de frotar suficientemente dos cuerpos inicialmente neutros en un ambiente seco ocurre que:\nI) Ambos cuerpos quedan cargados eléctricamente.\nII) Uno de los cuerpos queda con exceso de carga negativa.\nIII) Ambos cuerpos quedan electrizados con cargas iguales.\nIndique la secuencia correcta de verdad (V) o falsedad (F).",
-      "alternatives": ["VVV", "VVF", "FVV", "FFV", "VFF"],
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FVV",
+        "FFV",
+        "VFF"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/electrostatica-problemas-resueltos-tipo.html",
       "sourceName": "Electrostática problemas resueltos tipo examen de ingreso a la universidad — Pregunta 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Cuatro esferas idénticas con cargas q1 = 10 µC, q2 = -15 µC, q3 = 17 µC y q4 = 20 µC se ponen simultáneamente en contacto físico. Inmediatamente después del contacto, la carga de cada esfera será:",
-      "alternatives": ["8 µC", "-8 µC", "4 µC", "-4 µC", "-2 µC"],
+      "alternatives": [
+        "8 µC",
+        "-8 µC",
+        "4 µC",
+        "-4 µC",
+        "-2 µC"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/electrostatica-problemas-resueltos-tipo.html",
       "sourceName": "Electrostática problemas resueltos tipo examen de ingreso a la universidad — Pregunta 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una partícula con carga q1 = -4 µC se encuentra en una región donde existe un campo eléctrico uniforme, el cual ejerce una fuerza eléctrica de magnitud 12 µN. Indicar la verdad (V) o falsedad (F):\nI. La magnitud de la intensidad de campo eléctrico es 12 µN/C.\nII. La dirección de la intensidad de campo eléctrico es opuesta a la dirección de la fuerza eléctrica sobre la carga.\nIII. La intensidad de campo eléctrico es negativa.",
-      "alternatives": ["VVV", "VVF", "FVF", "FFV", "VFF"],
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FVF",
+        "FFV",
+        "VFF"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "http://fisica-s.blogspot.com/2013/02/electrostatica-problemas-resueltos-tipo.html",
       "sourceName": "Electrostática problemas resueltos tipo examen de ingreso a la universidad — Pregunta 11"
@@ -39,7 +57,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En relación al concepto de carga eléctrica, indique la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. Todo cuerpo eléctricamente neutro tiene igual número de protones y electrones.\nII. Un electrón y un protón tienen cargas eléctricas de igual magnitud.\nIII. La magnitud de la carga eléctrica es un múltiplo entero de la carga fundamental de un electrón.",
-      "alternatives": ["VVV", "VVF", "FFV", "FFF"],
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FFV",
+        "FFF"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-11-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) Física Semana 11 — Pregunta 1"
@@ -50,7 +73,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Una esfera metálica está eléctricamente neutra. Mediante un proceso de irradiación de Rayos X, la esfera adquiere una carga positiva de 32×10^-6 C. Determine el número de electrones que perdió la esfera. (Considerar: e- = 1,6×10^-19 C)",
-      "alternatives": ["2×10^14", "64×10^26", "40×10^15", "16×10^14"],
+      "alternatives": [
+        "2×10^14",
+        "64×10^26",
+        "40×10^15",
+        "16×10^14"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-11-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) Física Semana 11 — Pregunta 2"
@@ -61,7 +89,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Indicar la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. En el proceso de electrización de un metal, son los electrones libres los que se transfieren.\nII. En el proceso de electrización por contacto, se transfieren protones.\nIII. Cuando se frota una barra de vidrio con un paño de seda, el vidrio queda cargado positivamente.",
-      "alternatives": ["VFV", "VVV", "FVF", "FFV"],
+      "alternatives": [
+        "VFV",
+        "VVV",
+        "FVF",
+        "FFV"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-11-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) Física Semana 11 — Pregunta 3"
@@ -72,10 +105,801 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Teniendo en cuenta la definición de campo eléctrico creado por una partícula cargada eléctricamente, indicar la verdad (V) o falsedad (F):\nI. Es directamente proporcional a la carga eléctrica de la partícula.\nII. Es un campo vectorial y sus unidades son Newton/Coulomb.\nIII. Con respecto a la partícula, a mayor distancia mayor campo eléctrico.",
-      "alternatives": ["VFV", "VVV", "VVF", "FFV"],
+      "alternatives": [
+        "VFV",
+        "VVV",
+        "VVF",
+        "FFV"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-11-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (CEPUSM) Física Semana 11 — Pregunta 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El campo eléctrico máximo de una onda electromagnética es de 1,8 V/m. Calcule el campo magnético máximo (en nT). c =3×10 ^ 8 m/s; nT =10 ^ –96 T",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/prueba-de-fisica-ingreso-universidad-de.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO DE FÍSICA UNI DESARROLLADO PRUEBA DE ENSAYO DE EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Afirmaciones con respecto a la fuerza eléctrica:\n1. La fuerza eléctrica es no conservativa.\n2. Las líneas de campo eléctrico se pueden cruzar.\n3. Si las líneas de campo eléctrico están muy juntas, entonces la intensidad del campo es muy intensa.\n4. La fuerza eléctrica entre dos cargas eléctricas depende directamente del medio donde se colocan las cargas eléctricas.\nLa secuencia correcta es:",
+      "alternatives": [
+        "FVFV",
+        "FVVF",
+        "FFVV",
+        "VVFF",
+        "VFVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar si las afirmaciones siguientes son verdaderas (V) o falsas (F):\nI) Las superficies equipotenciales de una distribución arbitraria de carga eléctrica, son superficies esféricas.\nII) Si se tiene dos planos equipotenciales en cada punto de ambos planos, el potencial eléctrico es el mismo.\nIII) En superficies equipotenciales esféricas, el campo eléctrico tiene componentes tangenciales a dicha superficie.",
+      "alternatives": [
+        "FVV",
+        "VFV",
+        "VFF",
+        "FFF",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/potencial-electrico-formulas-ejemplos-energia-potencial-electrica-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIAL ELÉCTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las características de los conductores señale la veracidad (V) o falsedad (F) de las siguientes proposiciones:\nI) Los puntos internos y superficiales de un cilindro conductor macizo tienen el mismo potencial.\nII) El campo eléctrico en cualquier punto de la superficie de un conductor es perpendicular a la superficie.\nIII) La carga neta en un conductor está repartida en todo su volumen.",
+      "alternatives": [
+        "FVF",
+        "VFF",
+        "VVF",
+        "VVV",
+        "FFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/potencial-electrico-formulas-ejemplos-energia-potencial-electrica-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIAL ELÉCTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Matemáticamente, un campo eléctrico es la fuerza eléctrica dividida entre una carga puntual de prueba q ₀ . La energía potencial, por unidad de carga U/q ₀ (potencial eléctrico V), es independiente del valor de q ₀ y tiene un valor en cada punto dentro de un campo eléctrico. Con estas definiciones, si consideramos una carga puntual de 2,0×10 –7 C en el vacío y aislada que se encuentra a 6,0 cm de un punto P, ¿cuál es la proposición correcta respecto al potencial y al campo eléctrico en el punto P?\nDato: k c =9,0×10 ⁹ N·m²/C²",
+      "alternatives": [
+        "El campo eléctrico es nulo porque no hay ninguna carga en el punto P.",
+        "El campo eléctrico en el punto P está dirigido hacia la carga.",
+        "El campo eléctrico en el punto P es negativo y vale –5,0×10 ⁴ V.",
+        "El potencial eléctrico en el punto P es positivo y vale 3,0×10 ⁴ V."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/potencial-electrico-formulas-ejemplos-energia-potencial-electrica-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIAL ELÉCTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos cargas puntuales +Q y – Q/9 se encuentran fijas y separadas una distancia X, de tal forma que en un punto P a 3 cm de +Q, la intensidad del campo eléctrico es cero. Determine el valor de X (en cm).",
+      "alternatives": [
+        "0,5",
+        "1,0",
+        "2,0",
+        "2,5",
+        "1,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/resolucion-de-sistemas-de-ecuaciones.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-1 TERCERA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DESARROLLO DE FÍSICA QUÍMICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Matemáticamente, un campo eléctrico es la fuerza eléctrica dividida entre una carga puntual de prueba q 0 . La energía potencial, por unidad de carga U/q 0 (potencial eléctrico V), es independiente del valor de q 0 y tiene un valor en cada punto dentro de un campo eléctrico. Con estas definiciones, si consideramos una carga puntual de 2,0×10 –7 C en el vacío y aislada que se encuentra a 6cm de un punto P, ¿cuál es la proposición correcta respecto al potencial y al campo eléctrico en el punto P?\nDato: k 0 =9,0×10 9 N·m 2 /C 2",
+      "alternatives": [
+        "El campo eléctrico es nulo porque no hay ninguna carga en el punto P.",
+        "El campo eléctrico en el punto P está dirigido hacia la carga.",
+        "El campo eléctrico en el punto P es negativo y vale –5,0×10 4 V.",
+        "El potencial eléctrico en el punto P es positivo y vale 3,0×10 4 V.",
+        "El campo eléctrico en el punto P es negativo y vale –2,0×10 6 V."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razonamiento-logico-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al fenómeno de polarización puede decirse que:",
+      "alternatives": [
+        "Todas las ondas electromagnéticas (O.E.M.) son polarizadas linealmente.",
+        "La superposición de dos O.E.M. polarizadas linealmente siempre es una O.E.M. polarizada linealmente.",
+        "Las ondas polarizadas linealmente tienen el campo eléctrico paralelo a la dirección de propagación.",
+        "El campo magnético de una O.E.M. polarizada linealmente siempre es perpendicular a la dirección de polarización.",
+        "El campo eléctrico de una O.E.M. polarizada linealmente siempre es perpendicular a la dirección de polarización."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones es incorrecta?",
+      "alternatives": [
+        "Una característica de la luz es la polarización.",
+        "La dirección de polarización de una onda electromagnética es la dirección del campo eléctrico oscilante.",
+        "La luz solar consiste de una enorme cantidad de ondas electromagnéticas cada una de las cuales está poralizada en una dirección de propagación de la luz.",
+        "Un polarizador perfecto trasmite la luz polarizada en una sola dirección.",
+        "Un rayo de la luz viaja en la dirección del eje Z e incide sobre un polarizador cuyo eje de polarización es perpendicular al eje Z. Si al rotar el polarizador alrededor del eje Z se observa que el rayo de luz siempre es transmitido , entonces , el rayo de luz está polarizado."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marque la secuencia correcta luego de determinar si la proposición es verdadera (V) o falsa (F):\nI) Toda relación electromagnética está conformada por la superposición de dos ondas, una debida al campo eléctrico y la otra debida a un campo magnético.\nII) Tanto la frecuencia como la velocidad de propagación de las OEM dependen de las características del medio en el cual se propagan.\nIII) En una OEM, el hecho que el campo magnético y el eléctrico sean perpendiculares significa que su diferencia de fase es, en todo instante, 90°.",
+      "alternatives": [
+        "FVF",
+        "VFV",
+        "VFF",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los rayos emitidos por una fuente radiactiva pueden desviarse por efecto de un campo eléctrico. ¿Cuál de las siguientes sentencias es(son) verdadera(s)?\nI) Los rayos α se desvían hacia la placa negativa.\nII) Los rayos β se desvían hacia la placa positiva.\nIII) Los rayos 𝛾 no sufren desviación.",
+      "alternatives": [
+        "I, II",
+        "II, III",
+        "I, III",
+        "III",
+        "I, II, III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/quimica-nuclear-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA NUCLEAR EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación a las partículas subatómicas, determine las proposiciones verdaderas (V) o falsas (F) y marque la alternativa que corresponda\nI) Los protones y neutrones están presentes en el núcleo atómico.\nII) Los protones , neutrones y electrones tienen la misma masa .\nIII) Un haz de neutrones es desviado por un campo eléctrico .",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFF",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/el-atomo-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL ÁTOMO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina con que fuerza se repelerían mutuamente dos cargas eléctricas puntuales las cuales teóricamente tienen 1C y están separadas por una distancia de 1km.",
+      "alternatives": [
+        "3000N",
+        "6000N",
+        "9000N",
+        "12000N",
+        "15000N"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/fuerzas-electricas-ley-de-coulomb-formula-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUERZA ELÉCTRICA EJERCICIOS RESUELTOS PDF LEY DE COULOMB"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al colocar dos cargas eléctricas a cierta distancia se obtienen los siguientes resultados, “A” y “B” se atraen , “A” y “C” se repelen , además “B” y “D” se repelen. Indica lo incorrecto:",
+      "alternatives": [
+        "B y C se atraen",
+        "C y D se atraen",
+        "A y C se atraen",
+        "A y C se repelen",
+        "A y D se atraen"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/fuerzas-electricas-ley-de-coulomb-formula-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUERZA ELÉCTRICA EJERCICIOS RESUELTOS PDF LEY DE COULOMB"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un hemisferio está cargado positivamente de manera uniforme. El campo eléctrico en un punto sobre un diámetro, alejado del centro, está dirigido",
+      "alternatives": [
+        "perpendicular al diámetro",
+        "paralelo al diámetro",
+        "en un ángulo inclinado hacia el diámetro",
+        "en un ángulo inclinado alejándose del diámetro. 21/04/2018"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep101.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.1 MCQ 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considere un alambre que transporta corriente (corriente I) con forma circular. Note que, a medida que la corriente avanza a lo largo del alambre, la dirección de j (densidad de corriente) cambia de manera exacta, mientras que la corriente I permanece inalterada. El agente esencialmente responsable de esto es",
+      "alternatives": [
+        "la fuente de fem.",
+        "el campo eléctrico producido por las cargas acumuladas en la superficie del alambre.",
+        "las cargas justo detrás de un segmento dado del alambre, que las empujan en la dirección correcta por repulsión.",
+        "las cargas que están adelante."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep103.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.3 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si E y B representan los vectores de campo eléctrico y magnético de la onda electromagnética, la dirección de propagación de la onda electromagnética es a lo largo de",
+      "alternatives": [
+        "E.",
+        "B.",
+        "B × E.",
+        "E × B."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep108.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.8 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El modelo simple de Bohr no puede aplicarse directamente para calcular los niveles de energía de un átomo con muchos electrones. Esto se debe a que",
+      "alternatives": [
+        "los electrones no están sujetos a una fuerza central.",
+        "los electrones colisionan entre sí.",
+        "existen efectos de apantallamiento.",
+        "la fuerza entre el núcleo y un electrón ya no estará dada por la ley de Coulomb."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep112.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.12 MCQ 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un conjunto de átomos en un estado excitado decae.",
+      "alternatives": [
+        "en general, a cualquiera de los estados de menor energía.",
+        "a un estado inferior solo cuando es excitado por un campo eléctrico externo.",
+        "todos juntos y simultáneamente a un estado inferior.",
+        "a emitir fotones solo cuando colisionan."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep112.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.12 MCQ 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esfera conductora de 25 cm de diámetro tiene una carga de 1,25 μ C.\nCalcule la densidad de carga en μ C/m².",
+      "alternatives": [
+        "4,45",
+        "2,22",
+        "1,25",
+        "5,13",
+        "6,37"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considere un condensador plano de placas paralelas, cada una de área A y separación entre ellas igual a d en el vacío, cuya permitividad eléctrica es ε 0 Si el condensador posee una carga q, determine el valor de la energía almacenada U.",
+      "alternatives": [
+        "q 2 /2ε 0",
+        "q 2 d/4ε 0 A",
+        "q 2 d/2ε 0 A",
+        "q 2 /2A",
+        "q 2 d/2pε 0 A"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante una clase de laboratorio, dos alumnos conectan dos condensadores 6 μF cada uno, en serie, y los cargan a una diferencia de potencial de 12 V. Al releer el manual, se dan cuenta de que debieron conectar los condensadores en paralelo, pero, para no desconectar todo, deciden cambiar la diferencia de potencial para llegar a almacenar la misma energía que con el montaje original. ¿Cuál debería ser dicha diferencia de potencial?",
+      "alternatives": [
+        "24 V",
+        "6 V",
+        "26 V",
+        "48 V"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-fisica-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un condensador plano se carga en una batería de 6 V, luego se le desconecta. Después se disminuye la distancia de las placas de dicho condensador a la mitad. Calcule la diferencia de potencial (en V) entre las placas en este caso.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/examen-admision-uni-solucionario_28.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una barra de vidrio frotada con un paño pierde 25×10 ² ⁰ electrones, calcula la carga en “C”.",
+      "alternatives": [
+        "200C",
+        "150C",
+        "100C",
+        "300C",
+        "400C"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/carga-electrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CARGA ELÉCTRICA EJERCICIOS RESUELTOS PDF ELECTRIZACIÓN"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una gota de agua cargada uniformemente. Se juntan 27 de estas gotas formando una sola gota. Determinar la relación entre el potencial eléctrico en la superficie de la gota mayor respecto del potencial en la superficie de una de las pequeñas gotas.",
+      "alternatives": [
+        "27",
+        "1",
+        "3",
+        "9",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/potencial-electrico-formulas-ejemplos-energia-potencial-electrica-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIAL ELÉCTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos esferas metálicas A y B, de radios 3R y R, respectivamente, están aisladas y en equilibrio electrostático. Ambas están cargadas positivamente con cargas 6Q y Q, respectivamente. Si se las conecta mediante un hilo metálico, entonces:",
+      "alternatives": [
+        "Hay una transferencia de electrones de la esfera B a la esfera A.",
+        "Hay una transferencia de electrones de la esfera A a la esfera B.",
+        "Hay una transferencia de cargas positivas de la esfera A la esfera B.",
+        "No hay transferencia de cargas.",
+        "Hay una transferencia de cargas positivas de la esfera B a la esfera A."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/potencial-electrico-formulas-ejemplos-energia-potencial-electrica-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIAL ELÉCTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen 8 gotitas de agua. Cuando están aisladas y separadas tienen la misma carga, y el potencial eléctrico en la superficie de cada una de ellas es V 1 . Si las gotitas se juntan para formar una sola gota, el potencial en la superficie de todo et conjunto es V G . Calcule el cociente V G /V 1 .",
+      "alternatives": [
+        "4",
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/potencial-electrico-formulas-ejemplos-energia-potencial-electrica-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — POTENCIAL ELÉCTRICO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ciudad de Cuzco se caracteriza por tener un clima seco gran parte del año. Por esta causa, algunas veces, al quitarnos una prenda de vestir que entra en contacto con el cabello se producen descargas eléctricas que pueden sentirse; y en otros casos, incluso, visibilizarse. Al respecto, si se frota vigorosamente la prenda con el cabello, se puede afirmar que:\nI ) Ningún cuerpo pierda carga.\nII ) Un cuerpo se carga con un tipo de carga y el otro cuerpo se carga con la carga opuesta.\nIII ) Ambos cuerpos se cargan con el mismo tipo de carga.\nSeñale la verdad (V) o falsedad (F) de las proposiciones anteriores.",
+      "alternatives": [
+        "FVF",
+        "FFV",
+        "VFF",
+        "VVF",
+        "FFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un condensador plano se conecta a una batería de 1,5V y se observa que almacena 1,8pJ de energía. Calcule aproximadamente, en pF, la capacitancia del condensador.",
+      "alternatives": [
+        "1,6",
+        "0,6",
+        "2,6",
+        "3,6",
+        "4,6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un laboratorio se investiga sobre la energía electrostática almacenada en un arreglo de n capacitadores iguales. Para ello, se conecta todos, en serie o en paralelo, a una fuente de 100V. Si la razón entre las energías, cuando los capacitadores se conectan en paralelo sobre las que se conectan en serie, es 16, halle, el número n de capacitadores empleados en el experimento.",
+      "alternatives": [
+        "16",
+        "4",
+        "8",
+        "12",
+        "9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un trozo de plástico frotado totalmente gana 14×10 ² ⁰ electrones, determina su carga en “C”.",
+      "alternatives": [
+        "112C",
+        "200C",
+        "150C",
+        "300C",
+        "224C"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROSTÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la veracidad (V) o falsedad (F) de las siguientes proposiciones:\nI) La carga eléctrica es una cantidad física fundamental en cualquier sistema de unidades.\nII) La carga eléctrica es una cantidad física de naturaleza escalar.\nIII) El número de cargas elementales negativas y positivas que tiene un cuerpo neutro es el mismo.\nIV) Un trozo de vidrio es frotado con lana quedando cargado eléctricamente, luego el vidrio es puesto en contacto con tierra la cual le suministra electrones.",
+      "alternatives": [
+        "VFFV",
+        "VVFV",
+        "FFFV",
+        "VFVF",
+        "VVVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROSTÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con un electroscopio descargado se efectúan las siguientes acciones sucesivas:\nI) Se le acerca un cuerpo cargado negativamente (sin tocarlo).\nII) Sin retirar el cuerpo, se conecta el electroscopio a tierra por unos momentos, desconectándolo luego.\nIII) Se retira el cuerpo cargado negativamente. Al final de estas operaciones, el electroscopio queda:",
+      "alternatives": [
+        "Cargado negativamente",
+        "Descargado",
+        "Cargado positivamente",
+        "No se puede predecir el resultado",
+        "El tipo de carga depende del material del que está hecho el electroscopio."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROSTÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos esferas metálicas idénticas electrizadas con Q 1 =–0,5nC y Q 2 = +0,1nC son acercados hasta el contacto. Si después del contacto quedan electrizados con iguales cantidades de carga, determine dichas cargas finales.",
+      "alternatives": [
+        "–0,2nC",
+        "0,3nC",
+        "0,4nC",
+        "0,1nC",
+        "1nC"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROSTÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante realiza un experimento para medir la carga eléctrica de 4 cuerpos.\nLos siguientes son sus resultados experimentales:\nQ 1 =2,4×10 − ¹ ⁹ C\nQ 2 =11,2×10 − ¹ ⁹ C\nQ 3 =8,8×10 − ¹ ⁹ C\nQ 4 = 8,0×10 − ¹ ⁹ C\n¿Cuáles de las mediciones diría Ud. que no son compatibles con sus conocimientos teóricos? (Carga el electrón = 1,6×10 − ¹ ⁹ C )",
+      "alternatives": [
+        "Q 1 y Q 3",
+        "Q 3 y Q 4",
+        "Q 1 y Q 2",
+        "Q 2 y Q 4",
+        "Q 1 y Q 4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROSTÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una pequeña placa de zinc eléctricamente neutra, es irradiada con luz ultravioleta (UV) hasta que adquiere una cantidad de carga de 3,2×10 − ¹ ⁸ C.\n¿Ganó o perdió electrones?\n¿Cuál fue la cantidad de electrones que se transfirieron?",
+      "alternatives": [
+        "Ganó 20 e –",
+        "Perdió 30 e –",
+        "Ganó 30 e –",
+        "Perdió 20 e –"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROSTÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a un conductor en equilibrio electrostático, señale la veracidad (V) o falsedad (F) de las siguientes proposiciones:\nI) Cualquier carga en exceso que posea el conductor debe residir enteramente en la superficie del mismo.\nII) En un conductor de forma irregular la carga tiene acumularse en regiones cóncavas.\nIII) La densidad de carga superficial puede variar de un punto a otro de la superficie.",
+      "alternatives": [
+        "VVV",
+        "FVF",
+        "FFF",
+        "VFF",
+        "VFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROSTÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene dos cargas de 5μC y –4μC separadas por una distancia de 3cm. Calcula la fuerza de atracción entre ellas.",
+      "alternatives": [
+        "2N",
+        "12N",
+        "20N",
+        "120N",
+        "200N"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROSTÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fricción tiene ciertos efectos eléctricos sobre el cuerpo; por ejemplo, al peinarnos o caminar descalzo sobre la alfombra nos electrizamos por frotamiento o contacto. Si un peine luego de ser frotado se electriza con –128μC, indique la cantidad de electrones transferidos.",
+      "alternatives": [
+        "2×10¹²",
+        "8×10¹⁴",
+        "9×10¹⁵",
+        "5×10¹⁶"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROSTÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde el punto de vista eléctrico podemos clasificar los cuerpos en dos categorías: aquellos que al ser frotados se comportan como el vidrio, o eléctricamente vítreos con carga positiva, o aquellos que al ser frotados se comportan como la resina o eléctricamente resinosos con carga negativa. Considere dos esferas puntuales de vidrio y resina con 20μC y – 30μC. Si se las separa 30 cm, ¿cuál será la fuerza eléctrica ejercida por ambos en kN?",
+      "alternatives": [
+        "50",
+        "60",
+        "80",
+        "90"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ELECTROSTÁTICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un médico quiere diseñar un desfibrilador. Según su experiencia, se necesita entregar una magnitud de 18J de energía con una diferencia de potencial de 2000 voltios. Para su primer prototipo, quiere acumular dicha energía mediante un condensador. ¿Cuál debería ser la capacidad de dicho condensador?",
+      "alternatives": [
+        "8µF",
+        "10µF",
+        "9µF",
+        "11µF",
+        "7µF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un técnico posee cinco condensadores de 2 μ F cada uno; necesita distintas capacitancias equivalentes y coloca diferentes configuraciones para obtener el valor necesario. Correlacione para señalar las correspondencias entre configuraciones y sus distintas capacitancias equivalentes.\nI) Un condensador en serie con cuatro condensadores en paralelo entre sí\nII) Tres condensadores en serie colocados en serie con dos condensadores en paralelo\nIII) Dos condensadores en serie colocados en serie con tres condensadores en paralelo",
+      "alternatives": [
+        "C= 4/7 μ F",
+        "C= 6/7 μ F",
+        "C= 8/5 μ F",
+        "Ic, IIb, IIIa",
+        "Ib, IIa, IIIc"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/fisica-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ÁREA A SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un protón se mantiene en reposo. Una partícula con carga positiva se libera desde el reposo a una distancia d dentro de su campo. Considera dos experimentos: en uno la partícula cargada también es un protón y en el otro es un positrón. En el mismo tiempo t, el trabajo realizado sobre las dos partículas cargadas en movimiento es",
+      "alternatives": [
+        "el mismo, ya que en ambos experimentos interviene la misma ley de fuerza.",
+        "menor en el caso del positrón, ya que este se aleja más rápidamente y la fuerza sobre él se debilita.",
+        "mayor en el caso del positrón, ya que este se aleja una distancia mayor.",
+        "el mismo que el trabajo realizado por la partícula cargada sobre el protón estacionario."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep306.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.6 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las superficies equipotenciales a gran distancia de un conjunto de cargas cuya suma total no es cero son aproximadamente",
+      "alternatives": [
+        "esferas.",
+        "planos.",
+        "paraboloides",
+        "elipsoides. 21/04/2018"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep102.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.2 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una reciente investigación sobre accidentes incendiarios en estaciones de autoservicio reveló que en casi todos los casos el origen de estos incendios era producto de cargas eléctricas en las personas al estar en contacto con el vapor que sale de la gasolina justo en el punto donde la pistola carga combustible al vehículo. En un 70 % de los casos las personas, luego de iniciar la carga de combustible, habían entrado y salido nuevamente del vehículo, tocando la pistola de descarga de combustible. En relación a los resultados de esta investigación, ¿cuál es la causa más probable de estos incendios?",
+      "alternatives": [
+        "Las personas, previamente cargadas con la pistola, se descargan al entrar al vehículo, luego al volver a tocar la pistola ocurre una descarga que origina los incendios.",
+        "Las personas, al desplazarse mientras se llena el estanque de combustible, producen carga estática producto de la fricción con el aire.",
+        "Las personas, al entrar y salir del vehículo previamente cargado, adquieren carga estática por contacto.",
+        "Las personas, al entrar y salir del vehículo, friccionan sus ropas con el tapiz de los asientos, cargándose eléctricamente."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 35"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una varilla de plástico luego de ser frotada con un paño de seda se electriza con –4mC de carga eléctrica. Determine el número de electrones transferidos a la varilla.",
+      "alternatives": [
+        "4×10 18",
+        "10 17",
+        "25×10 15",
+        "8×10 18",
+        "9×10 19"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El siguiente texto describe cierto tipo de onda. Entre las placas paralelas de un condensador conectado a una fuente de (A), se genera un campo eléctrico que varía con el tiempo, y este campo eléctrico induce un campo magnético. El campo eléctrico y el campo magnético se inducen mutuamente de forma continua, propagándose por el espacio en forma de onda, a la que se llama (B). ¿Cuál es la opción más adecuada para A y B?",
+      "alternatives": [
+        "A: corriente alterna — B: onda electromagnética",
+        "A: corriente alterna — B: ultrasonido",
+        "A: corriente continua — B: onda electromagnética",
+        "A: corriente continua — B: onda gravitacional",
+        "A: corriente continua — B: ultrasonido"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://horaeng.com/wp-content/uploads/2023%ED%95%99%EB%85%84%EB%8F%84-%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98-%EB%AC%BC%EB%A6%AC%ED%95%992-%EB%AC%B8%EC%A0%9C.pdf",
+      "sourceName": "ebsi.co.kr — 수능 2023 물리학II 1번"
     }
   ]
 }

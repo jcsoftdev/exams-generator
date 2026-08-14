@@ -6,7 +6,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un torneo de tenis, 39 personas de la categoría singles se inscriben para damas senior y todas ellas participarán desde la primera fase. Las fases son eliminatorias y, en cada una de ellas, si el número de tenistas es impar, se elige por sorteo a una que pasa directamente a la siguiente fase. ¿Cuántos partidos se jugarán para determinar a la campeona?",
-      "alternatives": ["29", "38", "39", "20"],
+      "alternatives": [
+        "29",
+        "38",
+        "39",
+        "20"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-inductivo-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Razonamiento Inductivo Ejercicios Resueltos, Pregunta torneo de tenis (clave B)"
@@ -17,7 +22,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un cuadrado se parte en 4 cuadraditos. Uno de los cuadraditos se parte en otros 4 cuadrados y así sucesivamente. Después de 69 particiones, ¿cuántos cuadrados se contabilizan en total?",
-      "alternatives": ["276", "277", "384", "385", "762"],
+      "alternatives": [
+        "276",
+        "277",
+        "384",
+        "385",
+        "762"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-inductivo-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Razonamiento Inductivo Ejercicios Resueltos, Pregunta particiones de cuadrado (clave B)"
@@ -28,7 +39,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine la última cifra del resultado en W = 1341^3 + 2576^5 + 3835^7.",
-      "alternatives": ["1", "2", "3", "4", "5"],
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/07/razonamiento-deductivo-ejemplos-problemas-resueltos-preguntas-de-habilidad-logico-matematica-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Razonamiento Deductivo Ejercicios Resueltos, Pregunta última cifra de W (clave B)"
@@ -39,7 +56,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El rango de una lista de números es la diferencia entre el mayor número y el menor número de la lista. Por ejemplo, en la lista 1, 5, 1, 6, 3 el rango es 6 − 1 = 5, ya que 6 es el mayor y 1 el menor. Si la lista 11, 5, a, 13, 10 tiene como rango 12, determine la suma de todos los posibles valores que tiene a.",
-      "alternatives": ["20", "16", "18", "21", "17"],
+      "alternatives": [
+        "20",
+        "16",
+        "18",
+        "21",
+        "17"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/07/razonamiento-deductivo-ejemplos-problemas-resueltos-preguntas-de-habilidad-logico-matematica-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
       "sourceName": "matematicasn.blogspot.com - Razonamiento Deductivo Ejercicios Resueltos, Pregunta rango de lista (clave C)"
@@ -50,7 +73,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Determine el elemento que continúa en la sucesión: 3; 4; 7; 10; 16; 21; ?",
-      "alternatives": ["22", "23", "27", "30", "32"],
+      "alternatives": [
+        "22",
+        "23",
+        "27",
+        "30",
+        "32"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-numericas-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sucesiones Numéricas Ejercicios Resueltos, Pregunta 1 (clave D)"
@@ -61,7 +90,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Determine el siguiente número en la sucesión: 3; 5; 9; 17; 33; …",
-      "alternatives": ["66", "34", "60", "65", "63"],
+      "alternatives": [
+        "66",
+        "34",
+        "60",
+        "65",
+        "63"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-numericas-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sucesiones Numéricas Ejercicios Resueltos, Pregunta 2 (clave D)"
@@ -72,7 +107,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Determine el primer término negativo de la sucesión: 84; 80; 76; 72; 68; ...",
-      "alternatives": ["-4", "-2", "-6", "-10", "-8"],
+      "alternatives": [
+        "-4",
+        "-2",
+        "-6",
+        "-10",
+        "-8"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-numericas-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sucesiones Numéricas Ejercicios Resueltos, Pregunta 3 (clave A)"
@@ -83,7 +124,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dada la sucesión: -8; 2; -4; 4; 0; 6; X; Y. Calcule X + Y.",
-      "alternatives": ["12", "14", "8", "15", "10"],
+      "alternatives": [
+        "12",
+        "14",
+        "8",
+        "15",
+        "10"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-numericas-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sucesiones Numéricas Ejercicios Resueltos, Pregunta 4 (clave A)"
@@ -94,7 +141,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halle x en la siguiente sucesión: 4; 56; 92; x; 180.",
-      "alternatives": ["108", "118", "124", "128", "147"],
+      "alternatives": [
+        "108",
+        "118",
+        "124",
+        "128",
+        "147"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-numericas-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sucesiones Numéricas Ejercicios Resueltos, Pregunta 5 (clave D)"
@@ -105,7 +158,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En la sucesión: -33; -26; -15; 0; 19; 42; x. Calcule la suma de x con sus cifras.",
-      "alternatives": ["61", "69", "73", "84", "93"],
+      "alternatives": [
+        "61",
+        "69",
+        "73",
+        "84",
+        "93"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-numericas-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sucesiones Numéricas Ejercicios Resueltos, Pregunta 6 (clave D)"
@@ -116,7 +175,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Halle X en la sucesión: 2; 6; 12; X; 30; 42; 56.",
-      "alternatives": ["18", "20", "22", "24", "26"],
+      "alternatives": [
+        "18",
+        "20",
+        "22",
+        "24",
+        "26"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-numericas-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sucesiones Numéricas Ejercicios Resueltos, Pregunta 8 (clave B)"
@@ -127,7 +192,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En la sucesión: 1; 4; 27; 256; X. Calcule la suma de las cifras de X.",
-      "alternatives": ["14", "10", "12", "11"],
+      "alternatives": [
+        "14",
+        "10",
+        "12",
+        "11"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-numericas-ejercicios.html",
       "sourceName": "matematicasn.blogspot.com - Sucesiones Numéricas Ejercicios Resueltos, Pregunta 9 (clave D)"
@@ -138,7 +208,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcular el valor del término 50 de la siguiente sucesión: 1; 1+3; 1+3+5; 1+3+5+7; ... (donde cada término es la suma de los primeros números impares consecutivos).",
-      "alternatives": ["50", "2505", "500", "2500", "3005"],
+      "alternatives": [
+        "50",
+        "2505",
+        "500",
+        "2500",
+        "3005"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/razonamiento-inductivo-explicacion.html",
       "sourceName": "razonamientopdf.blogspot.com - Razonamiento Inductivo Explicación y Ejemplos, Problema sucesión suma de impares término 50 (clave D)"
@@ -149,7 +225,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En una cuadrícula cuadrada de 21 casilleros por lado, se escriben en todas sus casillas los primeros números impares consecutivos, fila por fila, iniciando con 1 en el casillero superior izquierdo. ¿Cuánto suman los números que se ubican en los vértices del cuadrado?",
-      "alternatives": ["1735", "1824", "1764", "1836"],
+      "alternatives": [
+        "1735",
+        "1824",
+        "1764",
+        "1836"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/metodos-de-razonamiento-induccion-y.html",
       "sourceName": "matematicasn.blogspot.com - Inductivo Numérico y Literal Ejercicios Resueltos, Problema cuadrícula 21×21 (clave C)"
@@ -160,7 +241,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Edu, con un lápiz, ha trazado 2 rectas paralelas sobre una plancha rectangular de triplay. Si luego traza 8 rectas secantes a las paralelas anteriores y procede a cortar por las líneas trazadas, ¿cuántos pedazos de triplay podrá obtener como máximo?",
-      "alternatives": ["45", "55", "54", "46"],
+      "alternatives": [
+        "45",
+        "55",
+        "54",
+        "46"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/metodos-de-razonamiento-induccion-y.html",
       "sourceName": "matematicasn.blogspot.com - Inductivo Numérico y Literal Ejercicios Resueltos, Problema rectas paralelas y secantes (clave B)"
@@ -171,7 +257,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si x, y son dos enteros positivos de 2 cifras con x·y = 555, calcule x − y siendo x el mayor de los dos números.",
-      "alternatives": ["20", "22", "26", "30", "32"],
+      "alternatives": [
+        "20",
+        "22",
+        "26",
+        "30",
+        "32"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/cifras-terminales-ejercicios-resueltos.html",
       "sourceName": "razonamientopdf.blogspot.com - Razonamiento Deductivo Problemas Resueltos Preuniversitarios, Problema enteros de 2 cifras xy=555 (clave B)"
@@ -182,7 +274,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un número palíndromo se lee igual de izquierda a derecha que de derecha a izquierda. Halle la suma de cifras del mayor número palíndromo menor que 200 que sea igual a la suma de tres enteros consecutivos.",
-      "alternatives": ["8", "9", "10", "11", "12"],
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/cifras-terminales-ejercicios-resueltos.html",
       "sourceName": "razonamientopdf.blogspot.com - Razonamiento Deductivo Problemas Resueltos Preuniversitarios, Problema palíndromo menor que 200 (clave B)"
@@ -193,7 +291,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Se tienen n cajas numeradas del 1 al n, todas abiertas. Una persona va cerrando cajas de izquierda a derecha de manera alterna, luego de derecha a izquierda de manera alterna, y así sucesivamente hasta quedar una sola caja abierta. Se define f(n) como el número de la última caja abierta. Si f(15) = 11, halle f(50).",
-      "alternatives": ["49", "33", "17", "5", "1"],
+      "alternatives": [
+        "49",
+        "33",
+        "17",
+        "5",
+        "1"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/cifras-terminales-ejercicios-resueltos.html",
       "sourceName": "razonamientopdf.blogspot.com - Razonamiento Deductivo Problemas Resueltos Preuniversitarios, Problema cajas f(n) (clave B)"
@@ -204,7 +308,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Indique el valor del producto m × n × p, sabiendo que m, n y p son números enteros consecutivos con m < n < p; además, se cumple que mmm + nnn + ppp = 1998, donde mmm, nnn y ppp representan números de tres cifras iguales formados por m, n y p respectivamente.",
-      "alternatives": ["60", "120", "210", "336", "504"],
+      "alternatives": [
+        "60",
+        "120",
+        "210",
+        "336",
+        "504"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/02/razonamiento-matematico-deductivo.html",
       "sourceName": "matematicasn.blogspot.com - Razonamiento Matemático Deductivo Problemas Resueltos de Admisión, Problema mmm+nnn+ppp=1998 (clave C)"
@@ -215,7 +325,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Calcule la suma de cifras del resultado de: M = 44...4 − 88...8, donde el primer número tiene 200 cifras y el segundo tiene 100 cifras.",
-      "alternatives": ["1200", "600", "400", "330", "666"],
+      "alternatives": [
+        "1200",
+        "600",
+        "400",
+        "330",
+        "666"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://pdfcoffee.com/raz-inductivo-deductivo-2pdf-pdf-free.html",
       "sourceName": "pdfcoffee.com - RAZ INDUCTIVO-DEDUCTIVO 2.pdf (Prof. Ronald Carhuancho), Problema 1 suma de cifras (clave B)"
@@ -226,10 +342,453 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuántos apretones de manos se producirán al saludarse 1000 personas asistentes a una reunión, si cada persona saluda exactamente una vez a cada una de las demás?",
-      "alternatives": ["1000", "10000", "5005", "499500", "4950"],
+      "alternatives": [
+        "1000",
+        "10000",
+        "5005",
+        "499500",
+        "4950"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://pdfcoffee.com/raz-inductivo-deductivo-2pdf-pdf-free.html",
       "sourceName": "pdfcoffee.com - RAZ INDUCTIVO-DEDUCTIVO 2.pdf (Prof. Ronald Carhuancho), Problema 2 apretones de manos (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Milagros no demuestra creatividad: se adecúa a cualquier tipo de trabajo académico buscando una sola alternativa para solucionar problemas; mientras que Priscilla siempre busca respuestas originales a los problemas académicos propuestos. ¿Qué tipo de pensamiento predomina en Milagros y Priscilla, respectivamente?",
+      "alternatives": [
+        "Inductivo - Deductivo",
+        "Convergente - Divergente",
+        "Divergente - Convergente",
+        "Crítico - Analítico",
+        "Deductivo - Inductivo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/filosofia-etica-valores-admision-callao-examen-resuelto-unac-ingreso-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FILOSOFÍA CÍVICA ÉTICA VALORES UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según su estructura, el párrafo es:",
+      "alternatives": [
+        "analizante",
+        "deductivo",
+        "inductivo",
+        "deductivo - inductivo",
+        "sintetizante"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/razonamiento-verbal-unt-examen-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RV ADMISIÓN UNT EXAMEN UNIVERSIDAD NACIONAL DE TRUJILLO RESUELTO SIMULACRO DE INGRESO SOLUCIONARIO RAZONAMIENTO VERBAL PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un informe escolar, se describe el siguiente perfil de un alumno: Crecimiento corporal desacelerado; intelectualmente, presenta razonamiento lógico, pero no abstracto; pensamiento concreto con predominio de razonamiento inductivo. En el aspecto emocional y social, en general, el estudiante se' muestra estable, pero cuando se equivoca, tiende a pensar que no cubre con las expectativas. Estas características corresponden a la etapa de la",
+      "alternatives": [
+        "pubertad.",
+        "niñez temprana.",
+        "niñez intermedia.",
+        "infancia"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/psicologia-abd-examen-resuelto-deco-san.html",
+      "sourceName": "matematicaj.blogspot.com — PSICOLOGÍA EXAMEN RESUELTO SAN MARCOS ÁREA A DE ADMISIÓN A LA UNIVERSIDAD PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La gente de algunas culturas considera que su nombre propio es prácticamente tan importante como su persona por eso lo cuidan como a sí mismo. Por ejemplo, los indios de las islas Célebres no dejan que nadie escriba su nombre, pues con ello pueden llevarse a su alma.\nLos indios de Norteamérica describen su personalidad a través de su nombre: se llama “paloma blanca”, por ejemplo, si tiene un carácter pacífico o “trueno mortal” si su carácter es belicoso. En Alaska, algunas personas se cambian de nombre al llegar a viejos, pues consideran que así empieza para ellos una nueva vida. Así, muchos pueblos atienden extremadamente a su nombre, porque lo confunden consigo mismos.\nSegún su estructura, es:",
+      "alternatives": [
+        "deductivo",
+        "inductivo",
+        "inductivo - deductivo",
+        "deductivo - inductivo",
+        "ideas principales múltiples"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/solucionario-unt-area-C-examen-admision-universidad-nacional-de-trujillo-derecho-ciencias-de-la-persona-claves-respuestas-prueba-resuelta-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA C SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CIENCIAS DE LA PERSONA CLAVES PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Suele decirse que todo hombre tiene su precio. Esta difundida frase destaca que hasta la persona más decente está dispuesta a quebrantar las normas morales por la cantidad de dinero adecuada. Y es que una persona que en circunstancias normales es afable y bondadosa puede transformarse en un ser desagradable y agresivo cuando hay dinero de por medio. Basta con repasar los numerosos delitos motivados por la avaricia, el chantaje, la extorsión, el fraude, el secuestro e incluso el asesinato.\nEl párrafo según su estructura es:",
+      "alternatives": [
+        "deductivo-inductivo",
+        "deductivo",
+        "implícito",
+        "inductivo-deductivo",
+        "inductivo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si decimos que Manuel es mayor que Raúl, luego Raúl es mayor que Ana y finalmente concluimos que Manuel es mayor que Ana, podemos afirmar que\nI. se llegó a un razonamiento deductivo.\nII. realizamos un razonamiento inductivo.\nIII. se arribó a una conclusión necesaria.",
+      "alternatives": [
+        "solo I",
+        "I y II",
+        "solo II",
+        "I y III",
+        "II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale cuál de las siguientes alterativas no se considera como uno de los métodos de estudio utilizados por la economía",
+      "alternatives": [
+        "deductivo",
+        "matemático",
+        "estadístico",
+        "dialéctico",
+        "inductivo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/ciencia-economica-preguntas-resueltas-de-economia-de-secundaria-y-examen-admision-universidad-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CIENCIA ECONÓMICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El estudio de casos particulares para llegar a establecer una ley implica el uso del método",
+      "alternatives": [
+        "deductivo",
+        "de comprobación",
+        "descendente",
+        "inductivo",
+        "comparativo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/ciencia-economica-preguntas-resueltas-de-economia-de-secundaria-y-examen-admision-universidad-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CIENCIA ECONÓMICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si primero se formula una ley, y luego se analiza casos particulares se aplica el método",
+      "alternatives": [
+        "inductivo",
+        "deductivo",
+        "dialéctico",
+        "científico",
+        "experimental"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/ciencia-economica-preguntas-resueltas-de-economia-de-secundaria-y-examen-admision-universidad-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA CIENCIA ECONÓMICA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El razonamiento «Pedro es disciplinado. Todos los disciplinados son responsables. Por lo tanto, Pedro es responsable » corresponde a un argumento",
+      "alternatives": [
+        "falaz.",
+        "inductivo.",
+        "deductivo.",
+        "abductivo.",
+        "sofístico."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/analisis-de-argumentos-premisas-y-conclusiones-la-argumentacion-ejemplos-preguntas-resueltas-de-filosofia-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍA DE LA ARGUMENTACIÓN EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD "
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ministro de Educación, en uno de sus discursos dijo «Como se sabe, la mayor parte de los alumnos de colegios primarios ha bajado su rendimiento escolar. Recientemente, una prueba diagnóstica prueba que la mayoría reconoció que pasa mucho tiempo viendo televisión, frente a la computadora o con el teléfono celular. Esto es un llamado de atención a los padres, que no advierten los daños que puede ocasionar el abuso en el uso de las herramientas tecnológicas».\nSe deduce que el discurso del ministro",
+      "alternatives": [
+        "es un ejemplo de explicación científica.",
+        "es un caso típico de argumento inductivo.",
+        "es una forma posible de contraargumentar.",
+        "es una muestra de incapacidad moral.",
+        "se caracteriza por ser persuasivo."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/analisis-de-argumentos-premisas-y-conclusiones-la-argumentacion-ejemplos-preguntas-resueltas-de-filosofia-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍA DE LA ARGUMENTACIÓN EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD "
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Históricamente, los cachimbos sanmarquinos se han caracterizado por ser estudiosos. Por tanto, los ingresantes sanmarquinos del presente año serán también estudiosos». Esto es un ejemplo de razonamiento",
+      "alternatives": [
+        "inductivo.",
+        "deductivo.",
+        "falaz.",
+        "abductivo.",
+        "silogístico."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/analisis-de-argumentos-premisas-y-conclusiones-la-argumentacion-ejemplos-preguntas-resueltas-de-filosofia-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍA DE LA ARGUMENTACIÓN EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD "
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Quien evada impuestos será condenado a pena privativa de la libertad entre 5 a 10 años y al pago de una multa. Juan Pérez ha evadido impuestos; por lo tanto, debe ser condenado a pena privativa de la libertad entre 5 a 10 años y al pago de una multa.\nLo expuesto es un ejemplo de argumento",
+      "alternatives": [
+        "explícito.",
+        "inductivo.",
+        "implícito.",
+        "falaz.",
+        "deductivo."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/filosofia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FILOSOFÍA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María siempre presentaba dificultades para aprender los contenidos de los cursos de su academia, debido a la aplicación inadecuada de un método de lectura. Hasta que, en una clase sobre el método de investigación científica, se percató inmediatamente que, al leer un texto, debería previamente formularse suposiciones a partir de los subtítulos y luego verificarlas. Adoptado este cambio, mejoró notablemente su habilidad lectora. Este ejemplo es un caso de aprendizaje _____ , que se explica porque _____ .",
+      "alternatives": [
+        "vicario – reestructuró la información",
+        "por insight – realizó una comprensión repentina",
+        "por descubrimiento – adoptó un razonamiento inductivo",
+        "significativo – integra conocimientos con su experiencia",
+        "por metacognición – asocia información trascendente"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/enfoque-cognitivo-del-aprendizaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DESARROLLO COGNITIVO EJERCICIOS RESUELTOS PDF METACOGNICIÓN – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué método debe de usar el científico para investigar, según el Círculo de Viena?",
+      "alternatives": [
+        "científico",
+        "deductivo",
+        "analítico",
+        "dialéctico",
+        "inductivo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/neopositivismo-filosofia-analitica-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-con-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FILOSOFÍA ANALÍTICA Y NEOPOSITIVISMO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el párrafo:\nLos estudios científicos sobre la radiación en teléfonos celulares deducen que emiten cantidades pequeñas de radiación. Esto no tendría importancia de no ser porque estas radiaciones son emitidas a corta distancia de la cabeza. Hasta ahora no ha sido comprobado que usar un teléfono celular sea una causa de cáncer; sin embargo, hay evidencias para registrar la posibilidad del efecto de la radiación.\nPOR SU ESTRUCTURA ES:",
+      "alternatives": [
+        "inductivo – deductivo",
+        "inductivo",
+        "deductivo",
+        "de excepción",
+        "deductivo – inductivo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/el-parrafo-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL PÁRRAFO EJERCICIOS RESUELTOS DE RAZONAMIENTO VERBAL PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las primeras ciudades aparecieron en respuesta a una serie de necesidades. Por ejemplo, la de asegurar la defensa de los núcleos habitados frente a los ataques de los enemigos. Por otra parte, la vida en la ciudad permitía la especialización de sus habitantes en distintos oficios.\nPor su estructura, el párrafo es",
+      "alternatives": [
+        "deductivo.",
+        "inductivo-deductivo.",
+        "inductivo.",
+        "de excepción.",
+        "deductivo-inductivo."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/el-parrafo-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL PÁRRAFO EJERCICIOS RESUELTOS DE RAZONAMIENTO VERBAL PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La graciosa serrana posee encantos que son desconocidos fuera de los andes, es la suave violeta que se oculta entre las hierbas del arroyo liberteño. La Trujillana se levanta como gallarda rosa que resalta sobre las flores del jardín. La Libertad ofrece, en las mujeres de la costa y sierra, dos tipos de belleza, cuyos rasgos son diferentes; pero igualmente encantadores.\nEl párrafo por su estructura es:",
+      "alternatives": [
+        "Deductivo",
+        "Inductivo",
+        "Deductivo - Inductivo",
+        "Inductivo - Deductivo",
+        "De excepción"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/el-parrafo-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL PÁRRAFO EJERCICIOS RESUELTOS DE RAZONAMIENTO VERBAL PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marzo es mes clave para las luchas por los derechos de las mujeres quienes, a pesar de persistentes obstáculos, alcanzaron enormes logros en la búsqueda por garantizar su autonomía física, economía y en la toma de decisiones. En América Latina y el Caribe, las mujeres son capaces de sobrellevar obstáculos y de organizarse, pero, a pesar de estos esfuerzos, la desigualdad de género es un rasgo estructural, que además de ser injusta es profundamente ineficiente, un obstáculo que conspira para alcanzar el desarrollo sostenible. Urge reconocer los derechos de las mujeres y la igualdad como elementos centrales y transversales de toda acción del Estado para fortalecer la democracia y para un desarrollo inclusivo y sostenible\nAlicia Bárcena\nSecretaria Ejecutiva de la CEPAL\nSegún su estructura, el párrafo es:",
+      "alternatives": [
+        "inductivo – deductivo",
+        "retrospectivo",
+        "inductivo",
+        "deductivo",
+        "deductivo – inductivo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/el-parrafo-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL PÁRRAFO EJERCICIOS RESUELTOS DE RAZONAMIENTO VERBAL PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por su estructura el párrafo es:",
+      "alternatives": [
+        "inductivo",
+        "deductivo",
+        "inductivo – deductivo",
+        "deductivo – inductivo",
+        "de excepción"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/comprension-textual-ejercicios-resueltos-de-lecturas-razonamiento-verbal-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — COMPRENSIÓN TEXTUAL EJERCICIOS RESUELTOS DE RAZONAMIENTO VERBAL PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María es una estudiante universitaria que está en contra del aborto ya que el quinto mandamiento señala «No mataras». Además, a su juicio, el feto es una persona y como tal tiene el derecho a la vida. Sin embargo, Lucía su amiga no está de acuerdo con ella y le dice que son las personas las que poseen derechos y un feto no es una persona ya que no posee racionalidad, ni tiene conciencia.\nLa réplica de Lucía a María es",
+      "alternatives": [
+        "un ejemplo de falacia ad hominem .",
+        "un caso de argumento inductivo.",
+        "una forma posible de contrargumentar.",
+        "una muestra del enfoque pragmático.",
+        "un caso de la crítica filosófica."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/filosofia-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FILOSOFÍA PRE SAN MARCOS SEMANA 7 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "____________es la actividad intelectual que consiste en analizar y ___________ la información existente para esclarecer la veracidad de la misma y alcanzar una idea justificada.",
+      "alternatives": [
+        "análisis – engendrar",
+        "pensamiento crítico – evaluar",
+        "descomponer – comprender",
+        "sintetizar – separar",
+        "razonamiento inductivo - descomponer"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/06/oraciones-incompletas-guia-con.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Oraciones Incompletas - Guía con soluciones"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una clase de Educación Física, el docente realiza junto con sus estudiantes algunos movimientos con los brazos siguiendo esta secuencia: brazos hacia adelante, brazos hacia arriba, brazos hacia abajo, brazos hacia adelante, brazos hacia arriba, brazos hacia abajo y así sucesivamente.\nSi se continúa esta secuencia, ¿qué posición tienen los brazos de los estudiantes en el movimiento número 20?",
+      "alternatives": [
+        "Brazos hacia adelante.",
+        "Brazos hacia arriba.",
+        "Brazos hacia abajo."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/solucionario-examen-de-nombramiento-docente-prueba-unica-nacional-pun-resuelta-minedu-claves-respuestas-simulacro-desarrollado-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO EXAMEN NOMBRAMIENTO DOCENTE 2026 DESARROLLADA INICIAL PRIMARIA SECUNDARIA CLAVES–RESPUESTAS PREGUNTAS RESUELTAS PDF PRUEBA ÚNICA NACIONAL PUN 2025 MINEDU"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La regularidad de un conjunto de casos particulares se establece:",
+      "alternatives": [
+        "por medio de la deducción lógica de diversos hallazgos.",
+        "por medio de una observación inductiva sistemática.",
+        "mediante comprobaciones empíricas en situaciones controladas.",
+        "formulando leyes generales de alcance cada vez mayor."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-uigv-examen-admision-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UPN 2027 EXAMEN ADMISIÓN UNIVERSIDAD PRIVADA DEL NORTE TEMARIO PDF ESTRUCTURA PUNTAJES VACANTES PROSPECTO CRONOGRAMA"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una predicción se hace a base de:",
+      "alternatives": [
+        "deducciones",
+        "intuiciones",
+        "observaciones",
+        "inducciones"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-uigv-examen-admision-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UPN 2027 EXAMEN ADMISIÓN UNIVERSIDAD PRIVADA DEL NORTE TEMARIO PDF ESTRUCTURA PUNTAJES VACANTES PROSPECTO CRONOGRAMA"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los números desde el 1 hasta el 2307 se escriben consecutivamente en la pizarra. En una primera pasada se borran el primer número escrito, el tercero, el quinto y así sucesivamente hasta borrar el 2307. En una segunda pasada se aplica el mismo procedimiento a los números que quedaron, borrando el primero de ellos, el tercero, el quinto y así sucesivamente. Esto se repite mientras queden números en la pizarra. ¿En qué pasada se elimina el 2300?",
+      "alternatives": [
+        "Quinta",
+        "Primera",
+        "Segunda",
+        "Tercera",
+        "Cuarta"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razonamiento-logico-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — BOLETIN 1 ESPECIAL RESUELTO CEPRE SAN MARCOS 2024 RESPUESTAS PREUNMSM 2025 PDF"
     }
   ]
 }

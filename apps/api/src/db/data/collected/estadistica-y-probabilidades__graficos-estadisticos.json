@@ -509,6 +509,107 @@
       "correctAnswer": "1",
       "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
       "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 12 (climatograma de Málaga)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El texto trata fundamentalmente sobre",
+      "alternatives": [
+        "la escritura y protoescritura.",
+        "la escritura y la forma de registrar los datos.",
+        "los orígenes de la escritura.",
+        "la escritura y los quipus.",
+        "la escritura y los pictogramas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/1ro-2do-experiencia-de-aprendizaje-integrada-2-aprendo-en-casa-primer-segundo-grado-de-secundaria-actividades-resueltas-web-tv-radio-word-descargas-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNAH 2027 INGRESO UNIVERSIDAD AUTÓNOMA DE HUANTA CLAVES – RESPUESTAS – PRUEBA DE ENSAYO – SIMULACIÓN RESUELTA PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el valor de verdad de las siguientes proposiciones\nI ) El número de hijos de una familia es una variable cuantitativa continua.\nII ) En un diagrama de sectores 58% equivale a 205° de ángulo central.\nIII ) Una muestra es un subconjunto de la población.",
+      "alternatives": [
+        "FFF",
+        "VVV",
+        "VFF",
+        "FVF",
+        "FFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-admision-universidad-del.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO CALLAO 2027 EXAMEN ADMISIÓN UNIVERSIDAD CRONOGRAMA PUNTAJES ESTRUCTURA UNAC 2026 PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿ Cuántas de las siguientes proposiciones son verdaderas ?\n1) Una muestra es una parte de la población, seleccionada con el fin de obtener una información de la población de la cual proviene.\n2) El histograma es una gráfica de barras rectangulares verticales juntas donde la base es proporcional a la amplitud del intervalo, y la altura es proporcional a su frecuencia (absoluta, o relativa, o porcentaje).\n3) La mediana es un número que separa a una serie de datos ordenados en forma creciente (o decreciente) en dos partes de igual números de datos.\n4) La moda no siempre existe y si existe, no siempre es única.\n5) La media es una estadística que utiliza toda la información muestral.\n6) La media se ve afectada por los valores extremos.\n7) La mediana de ve afectada por los valores extremos.",
+      "alternatives": [
+        "8",
+        "1",
+        "6",
+        "7",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/medidas-de-tendencia-central-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MEDIDAS DE TENDENCIA CENTRAL EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifique la alternativa donde se presenta la secuencia correcta de verdad (V) o falsedad (F) sobre la escritura.\nI) La escritura surgió a partir de la evolución sociocultural de las poblaciones.\nII) Los pictogramas precedieron a los sistemas de escritura propiamente dichos.\nIII) Las primeras escrituras no aparecieron en Sumeria ni en el antiguo Egipto.\nIV) Todos los sistemas de escritura son dependientes de las lenguas naturales.",
+      "alternatives": [
+        "VVFF",
+        "VVVF",
+        "VFFV",
+        "FFFV",
+        "VVFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/lenguaje-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — LENGUAJE EXAMEN RESUELTO DE ADMISIÓN UNIVERSIDAD 2024 2023 PRUEBA DE INGRESO DESARROLLADA"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el valor de verdad de las siguientes proposiciones:\nI) El histograma es una gráfica de barras rectangulares verticales juntas donde la base es proporcional a la amplitud del intervalo, y la altura es proporcional a su frecuencia (absoluta, o relativa, o porcentaje).\nII) La suma de las frecuencias absolutas es igual a 1.\nIII) El tamaño de la muestra siempre es mayor que la población.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FFF",
+        "VVF",
+        "VFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/10/descripcion-de-la-distribucion-de.html",
+      "sourceName": "matematicasn.blogspot.com — DISTRIBUCIÓN DE FRECUENCIAS RELATIVA Y ABSOLUTA PROBLEMAS RESUELTOS DE ESTADÍSTICA PDF"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la siguiente tabla, una empresa encuestadora, basada en el principio de igualdad e imparcialidad, informa sus proyecciones acerca de los resultados de votación para la alcaldía de Lima.\nCandidatos Nº de electores Porcentaje\nCarlos Ibarra 50 8,33\nJuan Enrique 150 25,00\nElena Candamo 220 33,67\nMario Chocano 100 16,67\nOtros candidatos 80 16,33\nTotal 600 100,00\nDe acuerdo con este informe, señale el número mínimo de candidatos que se presentaron a dicha elección.",
+      "alternatives": [
+        "7",
+        "5",
+        "8",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-de-graficas-estadisticas.html",
+      "sourceName": "matematicasn.blogspot.com — INTERPRETACIÓN DE GRÁFICOS ESTADÍSTICOS EJERCICIOS RESUELTOS PDF"
     }
   ]
 }

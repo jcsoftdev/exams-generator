@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo ABC, de lados a, b y c, respectivamente, se cumple que 2b = 3c y m∡A = 74°. Calcule tan B.",
-      "alternatives": ["24/29", "15/29", "29/15", "29/72", "72/29"],
+      "alternatives": [
+        "24/29",
+        "15/29",
+        "29/15",
+        "29/72",
+        "72/29"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Los lados de un triángulo ABC tienen por medida AB = 7 u, BC = 5 u y AC = 6 u. Calcule 13·cos A + 12·cos B + 11·cos C.",
-      "alternatives": ["18", "20", "24", "16", "36"],
+      "alternatives": [
+        "18",
+        "20",
+        "24",
+        "16",
+        "36"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En un triángulo ABC la bisectriz exterior relativa al lado a mide 48 cm. Calcule el valor de la bisectriz interior relativa al mismo lado, si además B − C = 32°.",
-      "alternatives": ["10 cm", "12 cm", "14 cm", "15 cm", "16 cm"],
+      "alternatives": [
+        "10 cm",
+        "12 cm",
+        "14 cm",
+        "15 cm",
+        "16 cm"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 3"
@@ -39,7 +57,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Con respecto a un terreno de forma triangular, se sabe que las longitudes de dos de sus lados menores difieren en 20 m, mientras que la longitud del lado mayor es de 80 m. Calcule el área del terreno, sabiendo que el ángulo formado por los lados de mayor y menor longitud es 60°.",
-      "alternatives": ["500√3 m²", "1200√3 m²", "1000 m²", "1000√3 m²"],
+      "alternatives": [
+        "500√3 m²",
+        "1200√3 m²",
+        "1000 m²",
+        "1000√3 m²"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 4"
@@ -50,7 +73,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En un triángulo ABC, si A = 60°, b = 4√7 y c = 6√7, halle el lado a.",
-      "alternatives": ["7", "10", "13", "14", "20"],
+      "alternatives": [
+        "7",
+        "10",
+        "13",
+        "14",
+        "20"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 5"
@@ -61,7 +90,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Los lados de un triángulo son proporcionales a los números 3; 5 y 7. Siendo θ la medida de su menor ángulo interno, halle sec θ.",
-      "alternatives": ["7/13", "13/6", "13/7", "14/13", "14/11"],
+      "alternatives": [
+        "7/13",
+        "13/6",
+        "13/7",
+        "14/13",
+        "14/11"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 6"
@@ -72,7 +107,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo ABC, se conoce que B = 45°, b = 2 y c = √6. Indicar la medida del ángulo C.",
-      "alternatives": ["sólo 30°", "sólo 45°", "sólo 60°", "30° ó 150°", "60° ó 120°"],
+      "alternatives": [
+        "sólo 30°",
+        "sólo 45°",
+        "sólo 60°",
+        "30° ó 150°",
+        "60° ó 120°"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 7"
@@ -83,7 +124,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En un triángulo uno de sus lados mide 20 cm y los ángulos internos adyacentes a él miden 16° y 37°. Halle su perímetro.",
-      "alternatives": ["22 cm", "24 cm", "42 cm", "44 cm", "50 cm"],
+      "alternatives": [
+        "22 cm",
+        "24 cm",
+        "42 cm",
+        "44 cm",
+        "50 cm"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 9"
@@ -94,7 +141,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "En un triángulo ABC se tiene AB = 3 m, m∡A = 45° y m∡B = 105°. Calcule BC.",
-      "alternatives": ["2√2 m", "3√2 m", "3 m", "√6 m", "2√6 m"],
+      "alternatives": [
+        "2√2 m",
+        "3√2 m",
+        "3 m",
+        "√6 m",
+        "2√6 m"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 1"
@@ -105,7 +158,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Determine el mayor ángulo de un triángulo cuyos lados son proporcionales a los números 7, 8 y 13.",
-      "alternatives": ["30°", "60°", "90°", "120°", "150°"],
+      "alternatives": [
+        "30°",
+        "60°",
+        "90°",
+        "120°",
+        "150°"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 2"
@@ -116,7 +175,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En un triángulo ABC se cumple que a² = b² + c² + bc y además b² = a² + c² − √2·ac. Calcule el ángulo C.",
-      "alternatives": ["15°", "45°", "75°", "60°", "30°"],
+      "alternatives": [
+        "15°",
+        "45°",
+        "75°",
+        "60°",
+        "30°"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 3"
@@ -127,7 +192,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el triángulo ABC se cumple que a² − b² − c² = 2bc/3. Halle tan(A/2).",
-      "alternatives": ["1", "√2", "3", "2", "√2/2"],
+      "alternatives": [
+        "1",
+        "√2",
+        "3",
+        "2",
+        "√2/2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 5"
@@ -138,7 +209,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el triángulo ABC se cumple que 3(a + c)(a − c) = b(2c + 3b). Calcule cos A.",
-      "alternatives": ["1", "−1/3", "1/3", "1/2", "−1/2"],
+      "alternatives": [
+        "1",
+        "−1/3",
+        "1/3",
+        "1/2",
+        "−1/2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 6"
@@ -149,7 +226,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Los lados de un triángulo son números enteros consecutivos y el coseno de su mayor ángulo es 1/5. Calcule el perímetro de dicho triángulo.",
-      "alternatives": ["12", "14", "16", "18", "20"],
+      "alternatives": [
+        "12",
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 8"
@@ -160,7 +243,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Resuelva el triángulo ABC sabiendo que a = √3, b² + c² = 5 y A = 60°. Indique los ángulos B y C, y los valores de b y c.",
-      "alternatives": ["B=45°, C=75°, b=1, c=2", "B=30°, C=90°, b=1, c=2", "B=15°, C=105°, b=2, c=3", "B=45°, C=75°, b=2, c=√6", "B=30°, C=90°, b=3, c=2"],
+      "alternatives": [
+        "B=45°, C=75°, b=1, c=2",
+        "B=30°, C=90°, b=1, c=2",
+        "B=15°, C=105°, b=2, c=3",
+        "B=45°, C=75°, b=2, c=√6",
+        "B=30°, C=90°, b=3, c=2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 9"
@@ -171,7 +260,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el triángulo ABC se cumple que a² = b² + c² − (2/3)bc. Calcule tan A.",
-      "alternatives": ["1/3", "3", "2√2", "2/3", "3/2"],
+      "alternatives": [
+        "1/3",
+        "3",
+        "2√2",
+        "2/3",
+        "3/2"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 11"
@@ -182,7 +277,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "En el triángulo ABC reduzca la expresión: E = abc · sen A · (cot B + cot C).",
-      "alternatives": ["a³", "b³", "c³", "abc", "3abc"],
+      "alternatives": [
+        "a³",
+        "b³",
+        "c³",
+        "abc",
+        "3abc"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 12"
@@ -193,7 +294,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Se tiene el triángulo rectángulo ABC con ángulo recto en B, AB = 3 y BC = √7. Al rotar 60° alrededor de BC, la hipotenusa AC pasa a la posición A'C. Halle el coseno del ángulo entre AC y A'C.",
-      "alternatives": ["21/25", "23/32", "25/32", "27/32", "18/25"],
+      "alternatives": [
+        "21/25",
+        "23/32",
+        "25/32",
+        "27/32",
+        "18/25"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 13"
@@ -204,7 +311,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el triángulo ABC, siendo p el semiperímetro, reduzca: E = (b + c)cos A + (a + c)cos B + (a + b)cos C.",
-      "alternatives": ["p", "2p", "2", "p/2", "1"],
+      "alternatives": [
+        "p",
+        "2p",
+        "2",
+        "p/2",
+        "1"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 14"
@@ -215,7 +328,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "El perímetro de un triángulo ABC es 24 cm y el radio de la circunferencia circunscrita es 5 cm. Calcule sen A + sen B + sen C.",
-      "alternatives": ["1,2", "2,4", "2,8", "2,6", "1,8"],
+      "alternatives": [
+        "1,2",
+        "2,4",
+        "2,8",
+        "2,6",
+        "1,8"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
       "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 15"
@@ -226,7 +345,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un triángulo tiene tres lados que son números impares consecutivos y uno de sus ángulos mide 120°. Calcule el perímetro del triángulo.",
-      "alternatives": ["9 m", "12 m", "15 m", "18 m", "21 m"],
+      "alternatives": [
+        "9 m",
+        "12 m",
+        "15 m",
+        "18 m",
+        "21 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
       "sourceName": "matematicasn - Ley de cosenos ejercicios resueltos, ejercicio 1"
@@ -237,7 +362,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el triángulo ABC el ángulo del medio mide 60°. Los dos lados menores difieren en 2 unidades y los dos lados mayores difieren en 1 unidad. Determine los tres lados del triángulo.",
-      "alternatives": ["3, 5, 6", "4, 6, 7", "5, 7, 8", "6, 8, 9", "7, 9, 10"],
+      "alternatives": [
+        "3, 5, 6",
+        "4, 6, 7",
+        "5, 7, 8",
+        "6, 8, 9",
+        "7, 9, 10"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
       "sourceName": "matematicasn - Ley de cosenos ejercicios resueltos, ejercicio 3"
@@ -248,7 +379,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un móvil parte de un punto O, recorre 40 km en dirección S60°W y luego 20 km en dirección N60°W. Calcule la distancia entre la posición inicial y la posición final del móvil.",
-      "alternatives": ["20√7 km", "20√5 km", "25√7 km", "29√5 km", "23√7 km"],
+      "alternatives": [
+        "20√7 km",
+        "20√5 km",
+        "25√7 km",
+        "29√5 km",
+        "23√7 km"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
       "sourceName": "matematicasn - Ley de cosenos ejercicios resueltos, ejercicio 8"
@@ -259,7 +396,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un estudiante observa la parte superior de una estatua con líneas visuales de 8 m y 7 m que forman entre sí un ángulo de 60°. Calcule la altura de la estatua (distancia entre los dos extremos observados).",
-      "alternatives": ["√57 m", "√59 m", "√47 m", "√37 m", "√67 m"],
+      "alternatives": [
+        "√57 m",
+        "√59 m",
+        "√47 m",
+        "√37 m",
+        "√67 m"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
       "sourceName": "matematicasn - Ley de cosenos ejercicios resueltos, ejercicio 11"
@@ -270,7 +413,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El triángulo isósceles ABC tiene ángulos internos de medidas 2ψ, 5ψ y 5ψ. Si los dos lados iguales miden x y el lado diferente mide y, calcule x/y.",
-      "alternatives": ["(√6 − √2)/2", "(√6 + √2)/2", "√6 − √2", "√6 + √2", "(√6 + √2)/3"],
+      "alternatives": [
+        "(√6 − √2)/2",
+        "(√6 + √2)/2",
+        "√6 − √2",
+        "√6 + √2",
+        "(√6 + √2)/3"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-senos-ejercicios-resueltos-y.html",
       "sourceName": "matematicasn - Ley de senos ejercicios resueltos, problema 2"
@@ -281,10 +430,2061 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El triángulo isósceles ABC tiene base AC = 10 m y AB = BC. La bisectriz interior del ángulo A intersecta a BC en el punto D, de modo que AD = 12 m. Calcule la longitud de AB.",
-      "alternatives": ["20 m", "25 m", "30 m", "35 m", "40 m"],
+      "alternatives": [
+        "20 m",
+        "25 m",
+        "30 m",
+        "35 m",
+        "40 m"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-senos-ejercicios-resueltos-y.html",
       "sourceName": "matematicasn - Ley de senos ejercicios resueltos, problema propuesto 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una comunidad de la provincia de Yauyos está a la venta un terreno con forma triangular cuyos lados miden 5 km, 7 km y 8 km. Si θ es la medida del mayor ángulo interior del terreno y el precio por kilómetro cuadrado del terreno es (7√3cosθ)miles de soles, ¿cuánto es el precio del terreno?",
+      "alternatives": [
+        "S / . 25 000",
+        "S / . 30 000",
+        "S / . 35 000",
+        "S / . 28 000"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/ley-de-cosenos-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE COSENOS EJERCICIOS RESUELTOS Y DEMOSTRACIÓN PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las longitudes de los lados de un triángulo miden (2x+3)cm, (x²+3x+3) cm y (x²+2x) cm, con x>0. Halle la medida del mayor ángulo interior de dicho triángulo.",
+      "alternatives": [
+        "150°",
+        "120°",
+        "90°",
+        "135°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/ley-de-cosenos-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE COSENOS EJERCICIOS RESUELTOS Y DEMOSTRACIÓN PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Andrés, Benjamín y Carlos son tres jóvenes corriendo sobre una pista atlética de forma circular. En cierto instante Andrés desde su posición observa a Benjamín en la dirección E10°S a 35 m y también observa a Carlos en la dirección S27°E a 42 m. Calcule la distancia entre Benjamín y Carlos.",
+      "alternatives": [
+        "35 m",
+        "36 m",
+        "48 m",
+        "42 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/ley-de-cosenos-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE COSENOS EJERCICIOS RESUELTOS Y DEMOSTRACIÓN PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la base militar de la marina de guerra ubicada en el puerto del Callao, una Fragata se desplaza a una rapidez constante de 80 km/h en la dirección S65°O por el tiempo de media hora. Luego cambia de dirección hacia N55°O por el lapso de un cuarto de hora y con la misma velocidad, logrando así intervenir a una embarcación sospechosa.\n¿A qué distancia del Puerto del Callao se intervino a la embarcación?",
+      "alternatives": [
+        "30√7 km",
+        "20√7 km",
+        "140 km",
+        "60 km"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/ley-de-cosenos-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE COSENOS EJERCICIOS RESUELTOS Y DEMOSTRACIÓN PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un triángulo ABC, m ∠ A=60°, AB=2 cm y AC=5 cm. Calcula BC.",
+      "alternatives": [
+        "√ 21",
+        "√ 17",
+        "√ 19",
+        "2 √ 5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/06/geometria-admision-catolica-pucp-examen.html",
+      "sourceName": "geometriapdf.blogspot.com — GEOMETRÍA ADMISIÓN CATÓLICA PUCP 2022 2023 EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC, reduce:",
+      "alternatives": [
+        "5",
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/arco-compuesto-ejercicios-resueltos.html",
+      "sourceName": "matematica-a1.blogspot.com — ARCO COMPUESTO EJERCICIOS RESUELTOS "
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La circunferencia inscrita en un triángulo ABC determinará sobre el lado AC un punto tangente como M. si: AM=a y MC= b, hallar el área de dicho triángulo en función de: a, b y B",
+      "alternatives": [
+        "a.b",
+        "a.b.senB",
+        "a.b.cosB",
+        "a.b.ctgB",
+        "a.bctg(B/2)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/resolucion-figuras-en-trigonometria-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RESOLUCIÓN DE FIGURAS POR FÓRMULAS TRIGONOMÉTRICAS LÍNEAS NOTABLES Y CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC se cumple : cosA+cosB = 4sen²(C/2), halle (a+b)/c.",
+      "alternatives": [
+        "1",
+        "2",
+        "3/2",
+        "5/2",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/resolucion-figuras-en-trigonometria-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — RESOLUCIÓN DE FIGURAS POR FÓRMULAS TRIGONOMÉTRICAS LÍNEAS NOTABLES Y CUADRILÁTEROS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La elevación de la cumbre de una montaña vista desde un punto del suelo es 45°. Caminando desde dicho punto una distancia de 30m en un plano horizontal en dirección a la cumbre y luego otros 260m, sobre un plano ascendente cuya inclinación tiene como cotangente 2,4 respecto de la horizontal, se encuentra que la elevación de la cumbre, vista desde esta última posición es de 53°. La altura de la cumbre es:",
+      "alternatives": [
+        "400m",
+        "780m",
+        "700m",
+        "680m",
+        "720m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unica-pdf-ica.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN LUIS GONZAGA 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNICA 2026 TEMARIO VACANTES PROSPECTO ESTRUCTURA PUNTAJES CRONOGRAMA ÁREAS A B C PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un acantilado de 60m, los ángulos de depresión de dos botes que están en el mar en la misma dirección son de 30° y 15°. ¿Qué distancia hay entre los botes?",
+      "alternatives": [
+        "150m",
+        "120m",
+        "100m",
+        "60m",
+        "80m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/30-ejercicios-desarrollados-de.html",
+      "sourceName": "matematicasn.blogspot.com — UNSLG INGENIERÍAS ÁREA C EXAMEN INGRESO UNIVERSIDAD SAN LUIS GONSAGA RESUELTO UNICA PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo (recto en C), se sabe que senA=2/3\nCalcule el valor de M=cot A⋅senB",
+      "alternatives": [
+        "6/5",
+        "3/4",
+        "4/3",
+        "5/6",
+        "2/3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/5to-actividad-9-matematica-resuelta-experiencia-de-aprendizaje-3-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS RESUELTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo son proporcionales a 5 ; 7 y 8. Halle el ángulo (agudo) que forman el mayor y menor de los lados",
+      "alternatives": [
+        "30°",
+        "60°",
+        "45°",
+        "37°",
+        "53°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA DEL COSENO PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo, el ángulo intermedio es 60°. Halle los lados, si los dos menores se diferencian en 2u y los dos mayores en 1.",
+      "alternatives": [
+        "3, 5,6",
+        "4, 6,7",
+        "5, 7, 8",
+        "6, 8, 9",
+        "7, 9, 10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA DEL COSENO PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo, los lados son 3 números enteros consecutivos, y el ángulo mayor es el doble del menor. Entonces, los lados son:",
+      "alternatives": [
+        "5, 6, 7",
+        "3, 4 y 5",
+        "2, 3, 4",
+        "1, 2, 3",
+        "4;5 y 6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA DEL COSENO PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC se cumple que:\nabcosC + bcCosA + accosB =10\nCalcular : a² + b² + c²",
+      "alternatives": [
+        "12",
+        "20",
+        "10",
+        "8",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA DEL COSENO PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un móvil se desplaza 40 km según la dirección S60°O con respecto a un punto inicial, luego se desplaza 20 km según la dirección N60°O. Halle la distancia en (km) entre el punto inicial y la nueva ubicación.",
+      "alternatives": [
+        "20√7",
+        "20√5",
+        "25√7",
+        "29√5",
+        "23√7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA DEL COSENO PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante observa una estatua, con visuales que miden 8m y 7m; las cuales forman un ángulo de 60°. Calcule la altura de la estatua.",
+      "alternatives": [
+        "√57m",
+        "√59m",
+        "√47m",
+        "√37m",
+        "√67m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA DEL COSENO PROBLEMAS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Víctor se encuentra extraviado en un bosque con una brújula en la mano, para encontrar el pueblo más cercano camina 3√2 𝑘𝑚 al NE, 10 𝑘𝑚 al este, 4√2 𝑘𝑚 al SE y 5√2 𝑘𝑚 al SO. ¿Cuál es la distancia mínima que pudo haber recorrido desde su posición inicial, en el bosque, hasta el pueblo?",
+      "alternatives": [
+        "5√6 km",
+        "3√5 km",
+        "5√2 km",
+        "7√2 km",
+        "6√5 km"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Solucionarios-cepre-san-marcos-en-pdf-ingreso-directo-unmsm-deco-centro-preuniversitario-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIOS PRE SAN MARCOS 2026 I 2025 II 2024 2023 2022 DESCARGA PDF 2027"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Javier, quien tiene un negocio y entrega pedidos a domicilio, cierto día hizo el siguiente recorrido: parte de su tienda y recorre 54 m en dirección al sur, llegando a la casa de Isabel; luego se va hacia el oeste, recorriendo una distancia igual al doble de la anterior, hasta la casa de Roberto; y finalmente recorre 180 m en dirección N37°O hasta la casa de Manuel. ¿A qué distancia mínima de la tienda se encuentra la casa de Manuel?",
+      "alternatives": [
+        "234 m",
+        "207 m",
+        "238 m",
+        "230 m",
+        "224 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Solucionarios-cepre-san-marcos-en-pdf-ingreso-directo-unmsm-deco-centro-preuniversitario-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIOS PRE SAN MARCOS 2026 I 2025 II 2024 2023 2022 DESCARGA PDF 2027"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan se encuentra en su casa y para ir a la casa de su amigo Roberto hace el siguiente recorrido: 50 km al N53°E, luego 20√2 km al NO, 40 km al S37°O y por último 10√2 km al NO. Desde la casa de Juan, ¿en qué dirección se observa la casa de Roberto?",
+      "alternatives": [
+        "N 63,5° O",
+        "N 26,5° O",
+        "N 60° O",
+        "N45°O",
+        "N 53° E"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Solucionarios-cepre-san-marcos-en-pdf-ingreso-directo-unmsm-deco-centro-preuniversitario-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIOS PRE SAN MARCOS 2026 I 2025 II 2024 2023 2022 DESCARGA PDF 2027"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ariel y Beto están ubicados en un parque de Lima. Deciden caminar durante algunos minutos en dirección al norte hasta el punto M y luego parten en direcciones diferentes: Ariel recorre 40 m en dirección S(90°–2 α )O hasta el punto P y Beto recorre 60 m en dirección S(90°– α ) E hasta un punto Q. Si P y Q están alineados en la misma línea horizontal de donde partieron inicialmente. Calcule la distancia entre P y Q.",
+      "alternatives": [
+        "48 m",
+        "46 m",
+        "54 m",
+        "50 m",
+        "52 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-arte-cultura-actividad-1-2-3-4-experiencia-8-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PRUEBA UNAC OTRAS MODALIDADES INGRESO UNIVERSIDAD 2027 – PREGUNTAS CON CLAVES DE RESPUESTAS pdf"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Gael se encuentra ubicado al frente de una estatua y observa la parte más alta de esta con un ángulo de 30°. Si se acerca 10 √ 3, observa la parte más alta con un ángulo de 60°. La altura de la estatua es:",
+      "alternatives": [
+        "10m",
+        "12m",
+        "15 m",
+        "18 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-u-de-lima-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNIVERSIDAD DE LIMA 2027 EXAMEN ADMISIÓN TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un triángulo tiene por lados tres números impares consecutivos, siendo el mayor ángulo 120°, entonces la longitud del mayor lado es:",
+      "alternatives": [
+        "3",
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/habilidad-numerica-logica-y-verbal.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA C 2027 DERECHO CIENCIAS DE LA PERSONA INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de dicho triángulo es:",
+      "alternatives": [
+        "15 √ 3/4",
+        "20/7",
+        "25/3",
+        "15 √ 3/2",
+        "15 √ 3/7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/habilidad-numerica-logica-y-verbal.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA C 2027 DERECHO CIENCIAS DE LA PERSONA INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La longitud del lado menor es:",
+      "alternatives": [
+        "3",
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/habilidad-numerica-logica-y-verbal.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA C 2027 DERECHO CIENCIAS DE LA PERSONA INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo, sus lados están representados por números enteros consecutivos, medidos en centímetros. Si la medida del mayor ángulo es el doble de la medida del menor ángulo, determine el perímetro del dicho triángulo.",
+      "alternatives": [
+        "12 cm",
+        "18 cm",
+        "21 cm",
+        "24 cm",
+        "15 cm"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-9-dpcc-experiencia-8-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA E 2026-2 EVALUACIÓN INGRESO UNIVERSIDAD DESARRROLLO RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Iker se encuentra de visita en la casa su suegro. Para regresar a su casa sigue las direcciones que le proporcionaron, 20 km al S53°O, 10√2 km al SO, 40 km al N53°O y, por último, 18√2 km al NE finalmente llegó a su casa. ¿Cuál es la dirección que se encuentra la casa del suegro de Iker con respecto a su casa?",
+      "alternatives": [
+        "S 63,5° E",
+        "S 26,5° E",
+        "S 60° E",
+        "S45°E",
+        "S 53° E"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-7-dpcc-experiencia-8-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA D 2026-2 EVALUACIÓN INGRESO UNIVERSIDAD DESARRROLLO RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Manuel, quien entrega pedidos a domicilio, realiza el siguiente recorrido desde su tienda: primero recorre 600 m en dirección N30ºE, hasta la casa de Alex; luego recorre 1200 √ 3 m, en dirección S60°E, hasta la casa de Belén; y finalmente recorre 1800 m en dirección oeste, hasta la casa de Carlos. ¿Qué dirección debe tomar Manuel, desde la casa de Carlos, para retornar a la tienda realizando un recorrido mínimo?",
+      "alternatives": [
+        "N30ºO",
+        "N60°O",
+        "NO",
+        "N37ºO"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-habilidad-logico_18.html",
+      "sourceName": "matematicaj.blogspot.com — HABILIDAD LÓGICO MATEMÁTICO PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos edificios, A y B, están ubicados uno frente al otro y a una distancia de 10 m. Desde una ventana del edificio A se observan la parte inferior y superior del edificio B con ángulos de depresión y de elevación de 20° y 50°, respectivamente. Calcule la altura del edificio B, en metros.",
+      "alternatives": [
+        "10 sec 50° m",
+        "10 sen 40° m",
+        "10 csc 50° m",
+        "10 cos 50° m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/09/trigonometria-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PRUEBA DECO SOLUCIONES DE EXAMEN ADMISIÓN UNIVERSIDAD SAN MARCOS ÁREAS D B PROBLEMAS DESARROLLADOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos estudiantes de 2 metros de altura alineados sobre una misma línea recta y separados a una distancia de 1 metro, observan con ángulos de elevación α y β ( α > β ), respectivamente, un poste de 4 metros de altura.\nSi tan α + tan β = 3/2\nEntonces la distancia en metros del estudiante que se encuentra más cerca del poste es",
+      "alternatives": [
+        "(3 + √ 73)/6",
+        "(4 + √ 73)/6",
+        "(5 + √ 73)/6",
+        "(2 + √ 73)/6",
+        "(6 + √ 73)/6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona parte desde A hacia B con rumbo S60º0, luego se dirige hacia C con rumbo S75ºE, hasta ubicarse al sur de A. Si la distancia entre A y C es 10 m; halle aproximadamente la distancia entre B y C.",
+      "alternatives": [
+        "10 m",
+        "20 m",
+        "15 m",
+        "12 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/11/trigonometria-admision-universidad-catolica-examen-resuelto-PUCP-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — TRIGONOMETRÍA PUCP EXAMEN INGRESO UNIVERSIDAD CATÓLICA PRUEBA DE ADMISIÓN SOLUCIONARIO PRIMERA OPCIÓN EVALUACIÓN DE TALENTO DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un triángulo tiene por lados tres números impares consecutivos. Hallar el perímetro si uno de sus ángulos mide 120° y sus lados se miden en metros.",
+      "alternatives": [
+        "18 m",
+        "16 m",
+        "17 m",
+        "14 m",
+        "15 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNC 2027 SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD DE CAJAMARCA MÓDULOS A B C D E 2026 TEMAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la parte superior de una torre se observa 2 piedras en el suelo con ángulos de depresión de 37° y 53º . Si la altura de la torre es de 12 metros y las piedras están en línea recta y a un mismo lado de la base de la torre. Calcular la distancia entre las piedras.",
+      "alternatives": [
+        "4m",
+        "5 m",
+        "6 m",
+        "7m",
+        "8 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/1ro-2do-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREVI TERCER EXAMEN INGRESO DIRECTO UNIVERSIDAD PRUEBA FINAL CLAVES RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luis se encuentra a 195m de Carlos en la dirección S37°O; Juan se encuentra a 125m de Luis en la dirección N 37°O. Halle la distancia aproximada entre Juan y Carlos (en m).",
+      "alternatives": [
+        "225",
+        "200",
+        "220",
+        "230",
+        "210"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-preuniversitaria-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 MATEMÁTICA SEGUNDA PRUEBA RESUELTA – RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Wesley entrega pedidos a domicilio, cierto día hizo el siguiente recorrido: parte de su restaurante y se desplaza 40 km en la dirección S60°O por la calle Abanto, luego se desplaza 20√3 km en la dirección N30°O por la calle Bastro, finalmente, continúa por la calle Cisco 20 km en la dirección N60°E, llegando a la casa de Anderson.\n¿Cuál es la distancia mínima que hay desde el restaurante a la casa de Anderson?",
+      "alternatives": [
+        "20√3 km",
+        "40 km",
+        "25 km",
+        "20 km",
+        "36 km"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/03/comunicacion-1ro-2do-actividad-14-aprendo-en-casa-semana-1-2-3-primer-segundo-de-secundaria-web-radio-word-tarea-resuelta-reto-tv.html",
+      "sourceName": "matematicasn.blogspot.com — BOLETIN 4 ESPECIAL RESUELTO CEPRE SAN MARCOS 2024 RESPUESTAS PREUNMSM 2025 PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "José sale de su casa para ir a una reunión. Camina 60 m en dirección N53ºE, luego camina 46 m hacia el este, luego camina 22√10 m en dirección S18,5ºO, llegando al lugar de reunión. ¿A qué distancia del lugar de reunión está la casa de José?",
+      "alternatives": [
+        "78 m",
+        "74 m",
+        "68 m",
+        "70 m",
+        "72 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/03/comunicacion-5to-actividad-13-semana-1-2-3-quinto-grado-de-secundaria-aprendo-en-casa-web-radio-tv-tarea-resuelta-word-reto-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BOLETIN 2 ESPECIAL RESUELTO CEPRE SAN MARCOS 2024 RESPUESTAS PREUNMSM 2025 PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los barcos A, B, C y D están anclados en alta mar; desde el barco A se observa a B en la dirección N15ºE, y desde C se observa a B y A en las direcciones NO y S75ºO respectivamente. Si el barco D equidista de los otros tres barcos, ¿en qué dirección se observa el barco D desde el barco B?",
+      "alternatives": [
+        "S15ºE",
+        "S30ºE",
+        "SE",
+        "N15ºE",
+        "NO"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-12-educacion-fisica-experiencia-8-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA B 2025-2 INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mario se encuentra en un pueblo; para ir a otro pueblo sigue las direcciones: 40 Km al N37°E, luego 28 Km al este, después 60 Km al S37°E y finalmente 20√5 Km al S α ° O. Si desde ese punto final, Mario observa en la dirección N 53°O, al punto desde donde inició su recorrido y, además, esa distancia es menor a 80 Km, ¿cuál es la distancia entre los dos pueblos?",
+      "alternatives": [
+        "30 Km",
+        "40 Km",
+        "60 Km",
+        "50 Km",
+        "45 Km"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/ept-5to-actividad-1-experiencia-8-resuelta-aprendo-en-casa-educacion-para-el-trabajo-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2025-2 INGENIERÍAS INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un barco parte de un puerto y se desplaza 25√3 km en la dirección N60ºE, y luego una cierta distancia en la dirección N30ºO, ubicándose, finalmente, al norte del puerto. ¿A qué distancia del puerto se encuentra?",
+      "alternatives": [
+        "70 km",
+        "75√3 km",
+        "60 km",
+        "80 km",
+        "50√3 km"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-11-dpcc-experiencia-9-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA D 2025-2 ADMINISTRACIÓN MARKETING CONTABILIDAD ECONOMÍA INGRESO UNIVERSIDAD PRUEBA DESARRROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Javier se encuentra en un pueblo, para ir a una ciudad, sigue las direcciones que le proporcionaron. Sale del pueblo y camina 20 km al N53 ° E, luego 10√2 km al NE, después camina 40 km al S37 ° E y por último 30√2 Km al SO llegando a la ciudad. ¿Cuál es la dirección en la que se encuentra el pueblo con respecto a la ciudad?",
+      "alternatives": [
+        "N 63,5° O",
+        "N 26,5° O",
+        "N 60° O",
+        "N45°O",
+        "N 53° E"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/1ro-2do-actividad-4-dpcc-experiencia-9-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA E 2025-2 DERECHO SOCIALES EDUCACIÓN INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona cuya altura es 1,75m se encuentra a una distancia horizontal de 40m de la base de un edificio cuya altura es 25,75m y observa que, en la parte superior del edificio, está instalada una antena de radio. Si la diferencia entre los ángulos de elevación de la persona que observa la parte superior de la antena y la parte superior del edificio es un ángulo θ , donde tan θ =1/7, determine la altura de la antena de radio.",
+      "alternatives": [
+        "9,5 m",
+        "10,5 m",
+        "13 m",
+        "16 m",
+        "8,5 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-trigonometria-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS TRIGONOMETRÍA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un barco parte de un punto A ubicado al norte de un puerto M, al mismo tiempo que otro barco lo hace desde el punto E ubicado al SE del mismo puerto M. Si el barco que salió de A recorre 200 millas hacia el este y llega al puerto N, y el barco salió de E recorre 160√2 millas hacia el NE, y llega también al puerto N, ¿cuál es la distancia, en millas, entre el puerto M y el puerto N?",
+      "alternatives": [
+        "40√17",
+        "40√34",
+        "30√14",
+        "50√34",
+        "30√15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/habilidad-logico-matematica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA SAN MARCOS PRUEBA DECO RESUELTA 2027 INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para ir a la casa de su amiga Tania, Sandra hace el siguiente recorrido: primero, camina 25m al este de su casa; luego, 200 m en la dirección N30°E; seguidamente, 80 m en la dirección S30°E; después 30 √ 3m en la dirección sur; y, finalmente, 60 m en dirección S30°E hasta llegar a la casa de su amiga Tania.\n¿Qué distancia hay entre las casas de ambas?",
+      "alternatives": [
+        "200 m",
+        "170 m",
+        "195 m",
+        "205 m",
+        "210 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-habilidad-logico-matematica.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS HABILIDAD LÓGICO MATEMÁTICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD 2027"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para visitar a su tía Rosa, Miguel realiza el siguiente recorrido desde su casa: 500 m en dirección este, luego 200 m en direción N30°E y finalmente 700√3 m en dirección sur, hasta llegar a la casa de su tía. ¿A qué distancia y en qué dirección de la casa de Miguel se encuentra la casa de su tía?",
+      "alternatives": [
+        "1200√3 m y S 60° E",
+        "1200 m y S 30° E",
+        "1200 m y N 30° O",
+        "1200√3 m y N 60° E",
+        "800√3 m y S 60° E"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/habilidad-logico-matematica-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — HABILIDAD LÓGICO MATEMÁTICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC 𝑚∢A = 45°y su circunradio mide 4. Calcular BC .",
+      "alternatives": [
+        "4",
+        "6",
+        "8",
+        "4√2",
+        "4√3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poligonos-regulares-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC 𝑚∢A = 60° y su circunradio mide 4. calcular BC.",
+      "alternatives": [
+        "4",
+        "6",
+        "8",
+        "4√2",
+        "4√3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poligonos-regulares-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — POLÍGONOS REGULARES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Licha está ubicada en un centro recreacional. Ella camina 52m al oeste, luego 40m en la dirección S53°O, seguidamente se dirige 50m en la dirección S74 ° E , luego se dirige 2m al sur y finalmente recorre 45 m al este. ¿A qué distancia del punto de partida se encontrará después de haber realizado dicho recorrido?",
+      "alternatives": [
+        "41 m",
+        "42 m",
+        "43 m",
+        "44 m",
+        "46 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/1ro-2do-actividad-2-ct-experiencia-6-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS MEDICINA 2025-1 INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un faro X se observa los barcos A y B al este, con A más cerca del faro que B, y desde un faro Y, el cual se encuentra al norte del faro X, se observa los mismos barcos A y B con direcciones S30ºE y S60ºE respectivamente. Si el barco B avanza 1600 m hacia el norte para anclarse y la distancia del faro Y al barco A es 1200 m, ¿en qué dirección debe partir el barco A para alcanzar al barco B?",
+      "alternatives": [
+        "N57°E",
+        "N60°E",
+        "N37°E",
+        "N30°E",
+        "NE"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/1ro-2do-actividad-2-ct-experiencia-6-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS MEDICINA 2025-1 INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un móvil parte con rumbo N20°E y recorre 20km, otro móvil parte del mismo punto con rumbo N70°O y recorre 21km.\nCalcula la distancia entre los móviles.",
+      "alternatives": [
+        "13",
+        "20",
+        "29",
+        "30",
+        "31"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto se observan dos barcos en la dirección N20°O y S70°O, a las distancias de 40 y 9 m respectivamente. ¿Cuál es la distancia de separación de los barcos?",
+      "alternatives": [
+        "40 m",
+        "49",
+        "41",
+        "9",
+        "81"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Después de haber caminado 20km, se observa que se ha recorrido 4km más hacia el sur que hacia el este.\nDetermina el rumbo de la persona.",
+      "alternatives": [
+        "S37°E",
+        "S53°O",
+        "NE",
+        "NO",
+        "SE"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona A se encuentra al este de otra persona B, si B se desplaza en la dirección N25° E y la persona A en la dirección NO se encuentra en el punto P. Calcula cuanto mide el ángulo APB.",
+      "alternatives": [
+        "60°",
+        "70°",
+        "80°",
+        "85°",
+        "90°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona sale de su casa y hace el siguiente recorrido : 37m hacia el norte. 40m al este. 108m al sur y finalmente 802m en dirección NO.\n¿A qué distancia de su casa se encuentra?",
+      "alternatives": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "50"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un faro envía un haz de luz en forma de abanico que se extiende del ESE al OSO. Una embarcación a 2 km del faro que navega hacia el OESTE entra al haz de luz en el ESE y después de una hora sale del haz de luz en el OSO. ¿Cuál es la velocidad (en km/h) aproximada del barco?",
+      "alternatives": [
+        "1,85",
+        "2,85",
+        "3,7",
+        "4,85",
+        "5,85"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "José sale de su casa con destino a la casa de Carlos, para lo cual toma la dirección N30°E; pero en el trayecto se arrepiente y se va, tomando la dirección S60°E; si en total José recorrió 273m y el lugar en el cual se encuentra está justamente al este de su casa. Calcula la distancia que la separa de su casa. (considere √ 3=1,73)",
+      "alternatives": [
+        "100",
+        "200",
+        "300",
+        "400",
+        "500"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un buque detecta a un faro en la dirección 20° al norte del este, luego avanza 173km con rumbo E50°N, desde donde observa nuevamente al faro pero ahora en la dirección E40°S. Calcula la distancia que separa esta vez el buque del faro. ( √ 3=1,73)",
+      "alternatives": [
+        "100km",
+        "10 √ 3km",
+        "20 √ 3km",
+        "100 √ 3km",
+        "50km"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La recta que une los puntos A y B está en la dirección E30°N de A y la distancia entre ellos es 12km. Un barco que navega en la dirección S30°E es visto desde A en la dirección NO a las 8a.m.. A qué hora cruza la recta que une los faros (velocidad del barco 12km/h).",
+      "alternatives": [
+        "8",
+        "8:15",
+        "8:13",
+        "7",
+        "8:14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una hormiga sale de un hormiguero y se desplaza 7 km hacia el oeste de su hormiguero, luego se desplaza 5 √ 2km hacia el “NO” de su nueva posición. Halla el desplazamiento total que efectúo la hormiga.",
+      "alternatives": [
+        "9km",
+        "13km",
+        "18km",
+        "17km",
+        "12km"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un móvil recorre 40 km en la dirección N53°O. luego recorre 40 √ 2km en la dirección SO y finalmente recorre 60km hacia el este. ¿A qué distancia se encuentra el móvil de su posición inicial?",
+      "alternatives": [
+        "20km",
+        "25km",
+        "16km",
+        "12km",
+        "30km"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un navío que se dirige hacia el Norte, ve sobre una misma línea 2 faros en la dirección del Oeste ; después de una hora de marcha , los faros aparecen uno al Sur–Oeste y al otro al Oeste – Sur– Oeste. Sabiendo que la distancia de los faros es de 10√2 km , Determinar la velocidad del navío en km/h.",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si Pedro ve aparecer a Guillermo que está en un carrusel en la dirección E17°S y lo ve desaparecer en la dirección S37°E luego de 4 segundos. Calcula cuántas vueltas habrá dado Guillermo en 30 minutos.",
+      "alternatives": [
+        "120 vueltas",
+        "150 vueltas",
+        "160 vueltas",
+        "180 vueltas",
+        "200 vueltas"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un pueblo se encuentra a 25 km al Norte de otro que a su vez está a 25√3 km al Este de un tercero, ¿en qué dirección está el primer pueblo del tercero?",
+      "alternatives": [
+        "E60°N",
+        "N60°O",
+        "060°S",
+        "S60°O",
+        "N60°E"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Antonio sale de su casa con destino a la casa de Carmen, para lo cual realiza el recorrido siguiente: 39 km en la dirección NαO y luego cambia de dirección recorriendo ahora en el rumbo 53° al este del norte una distancia que es 16km mayor que la recorrida inicialmente; llegando así a la casa de Carmen, halla la distancia que separa la casa de Carmen de la de Antonio. Si Tgα=12/5.",
+      "alternatives": [
+        "8 √ 37",
+        "3 √ 7",
+        "7 √ 37",
+        "4 √ 37",
+        "5 √ 37"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Alejandro se encuentra al pie de un edificio y a 20m de distancia observa un auto en la dirección ESTE. El auto se desplaza en la dirección N67,5°O. Luego, Alejandro sube a lo alto del edificio de 20m de altura y observa al auto en la dirección NNE. Halle la distancia aproximada (en m) recorrida por el auto.",
+      "alternatives": [
+        "18,48",
+        "19,48",
+        "20,18",
+        "21,08",
+        "22"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-horizontales-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS HORIZONTALES EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos faros P y Q están separados 12 km uno del otro. El faro Q está situado en la dirección N60ºE con respecto de P. A las 11:00 a.m., desde P y Q se observa un barco M en las direcciones NE y NO respectivamente. Si dicho barco navega en la dirección S30ºE a la velocidad constante de 18 km/h, ¿a qué hora cruza la recta que une los faros?",
+      "alternatives": [
+        "11:10 a.m.",
+        "11:12 a.m.",
+        "11:11 a.m.",
+        "11:08 p.m.",
+        "11:09 a.m."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/09/ept-3ro-4to-actividad-1-experiencia-7-resuelta-aprendo-en-casa-educacion-para-el-trabajo-tarea-web-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2025-1 INGENIERÍA INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un atleta practica en la playa y realiza su recorrido, desde cierto punto, de la siguiente manera: recorre 50 m al oeste; luego, 40 m en la dirección S53ºO; luego. 40 m al este; luego, 25 m N74ºE; luego. 20 m en la dirección N53ºE y, finalmente, 7 m al este. ¿A qué distancia del punto de partida se encontrará después haber hecho el recorrido?",
+      "alternatives": [
+        "6 √ 2 m",
+        "4 √ 2 m",
+        "5 √ 2 m",
+        "5 √ 3 m",
+        "10 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/1ro-2do-actividad-11-dpcc-experiencia-6-resuelta-aprendo-en-casa-desarrollo-personal-civica-web-tarea-radio-reto-tv-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA D 2025-1 ADMINISTRACIÓN MARKETING CONTABILIDAD ECONOMÍA INGRESO UNIVERSIDAD PRUEBA DESARRROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los barcos A y B están anclados en alta mar. Desde un faro se observa el barco A en la dirección N75ºE y B hacia el norte. Si el barco B es observado desde el barco A en la dirección N60ºO y la distancia del barco A al faro es 3000√6 m, ¿cuál es la distancia del faro al barco B?",
+      "alternatives": [
+        "2000 √ 3 m",
+        "6000 m",
+        "4000 m",
+        "3500 m",
+        "4500 √ 3 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/3ro-4to-actividad-7-comunicacion-experiencia-6-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA E 2025-1 DERECHO SOCIALES EDUCACIÓN INGRESO UNIVERSIDAD PRUEBA DESARROLLADA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una antena de radio está sobre la azotea de un edificio. Desde un punto a 12m de distancia de la base del edificio los ángulos de elevación de la punta de la antena y de la parte superior son 53° y 37° respectivamente. Calcula la altura de la antena.",
+      "alternatives": [
+        "6m",
+        "7m",
+        "8m",
+        "9m",
+        "10m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto de un faro, se divisan dos barcos a un mismo lado del faro, con ángulos de depresión de 45º y 37º. Si la altura del faro es de 96m. ¿Cuál sería la distancia entre los barcos",
+      "alternatives": [
+        "4m",
+        "8m",
+        "16m",
+        "32m",
+        "64m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un a colina está inclinada con un ángulo ”θ” respecto a la horizontal. A una distancia “m” del inicio de la colina y sobre ella se encuentra un objeto. ¿A qué altura se encuentra respecto a ala horizontal?",
+      "alternatives": [
+        "msenθ",
+        "mcosθ",
+        "mtgθ",
+        "mctgθ",
+        "msecθ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la parte más alta de un poste se observa en el suelo dos piedras separadas a una distancia de 10m con ángulos de depresión de 45° y “α” ( “α” para la piedra que se halla más cerca del poste). Calcula la tangente de “α” si la altura del poste es de 30m, además ambas piedras se hallan a un mismo lado del poste.",
+      "alternatives": [
+        "1",
+        "1,5",
+        "2,5",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ángulos de elevación de la cúspide de una torre, vistos desde 2 puntos situados en línea recta con el pie de la torre, son de 45° y 30° respectivamente , si la distancia entre los puntos de observación es de 60m, la altura de la torre, es :",
+      "alternatives": [
+        "60m",
+        "60( √3 – 1) − ¹ m",
+        "110m",
+        "602 m",
+        "120 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la parte superior e inferior del segundo piso de un edificio de cuatro pisos iguales, se observa una piedra en el suelo y a una distancia de 9m de la base del edificio con ángulos de depresión “β” y “θ” respectivamente. Desde la parte más alta del edificio la depresión angular para la piedra es “α”. Si se conoce que :\nTgα – Tgβ – Tgθ = 1/4\n¿La altura del edificio es?",
+      "alternatives": [
+        "6m",
+        "10m",
+        "9m",
+        "8m",
+        "4m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-de-elevacion-y-depresion-rosa.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS DE ELEVACIÓN Y DEPRESIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un poste de 2m de longitud es apoyado sobre una pared, formando con éste un ángulo de 30°, calcula la distancia entre la parte más baja del poste y la pared.",
+      "alternatives": [
+        "5",
+        "4",
+        "8",
+        "6",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A 40 m del pie de un poste la elevación angular para lo alto del mismo es de 37°. ¿Cuál es la altura del poste?",
+      "alternatives": [
+        "24 m",
+        "20 m",
+        "30 m",
+        "28 m",
+        "40 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde lo alto y bajo de un muro se observa lo alto de un poste con ángulos de elevación de 37° y 45°, respectivamente. Si la distancia entre muro y poste es 8m , halle la suma de sus alturas.",
+      "alternatives": [
+        "10m",
+        "20",
+        "12",
+        "24",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde el extremo superior de una torre de 24m de altura se observan los puntos “A” y “B” con ángulos de depresión de 37° y 53° respectivamente, si los puntos A y B se encuentran alineados con la torre. Determinar la distancia entre dichos puntos .",
+      "alternatives": [
+        "14m",
+        "18",
+        "32",
+        "6",
+        "16"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La elevación de una torre desde un punto A al oeste de ella es 60° y desde un punto B al sur de A , la elevación es de 30° . Si la torre tiene 75 m de altura ,Determinar la distancia comprendida entre A y B .",
+      "alternatives": [
+        "50√6",
+        "30√3",
+        "32√6",
+        "6√31",
+        "16√2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un avión que vuela sobre la línea que separa a dos ciudades A y B, se observa con ángulos de depresión de 30° y 45°. Halle la altura a la cual se encuentra el avión, sabiendo que la distancia que separa a las dos ciudades es 125( √ 3 + 1) km.",
+      "alternatives": [
+        "120 km",
+        "110 km",
+        "125 km",
+        "150 km"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un globo aerostático, una persona observa en una misma dirección dos barcos con ángulos de depresión de 53° y 45°, respectivamente. Si los barcos distan entre sí 80 m, calcule la altura de vuelo del globo.",
+      "alternatives": [
+        "320 m",
+        "340 m",
+        "350 m",
+        "600 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona ubicada en la parte más alta de un edificio observa a dos puntos opuestos a ambos lados del edificio con ángulos de depresión de 37° y 53°. Si los puntos distan entre sí 20 metros, hallar la suma de las visuales.",
+      "alternatives": [
+        "20 m",
+        "22 m",
+        "24 m",
+        "26 m",
+        "28 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La estatura de un hombre es 1,68 m. Observa su sombra a las 2 de la tarde, asumiendo que amanece a las 6 de la mañana y que él sol sigue una trayectoria circular sobre el hombre. ¿Cuánto mide su sombra aproximadamente?",
+      "alternatives": [
+        "79 cm",
+        "48 cm",
+        "97 cm",
+        "84 cm",
+        "63 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde dos puntos “P” y “Q” situados al Sur y al Este de un poste de luz se observa su foco con ángulos de elevación que son complementarios. Si la distancia PQ es igual al triple de la altura del poste, y uno de los ángulos de elevación mencionados mide “θ\".\nHallar: Tgθ + Ctgθ",
+      "alternatives": [
+        "1",
+        "3",
+        "9",
+        "11",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una antena de radio de 15m. de longitud se encuentra en la azotea de un edificio. Desde un punto del plano horizontal que pasa por la base del edifico las elevaciones angulares de la parte superior e inferior de la antena son “α” y “β” respectivamente.\nSi: tanα = 0,76 y tanβ=0,19 Determinar (en m) la altura del edifico.",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos_30.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las ubicaciones de los barcos A, B, C y D, los cuales están anclados en altamar, coinciden con los vértices de un cuadrado; además, el barco A observa al barco B, quien está más alejado de él, en la dirección N60°O. Si en ese instante un submarino se ubica en el centro del cuadrado formado por estos, ¿en qué dirección debe dirigirse uno de los barcos más cercanos a B para alcanzar el submarino?",
+      "alternatives": [
+        "S60°O",
+        "S15°O",
+        "N30°E",
+        "N15°E",
+        "SO"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-matematico-rumbos-y.html",
+      "sourceName": "matematicasn.blogspot.com — RUMBOS Y DIRECCIONES EJERCICIOS RESUELTOS DE RAZONAMIENTO MATEMÁTICO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan se encuentra en un pueblo; para ir a otro pueblo, sigue las siguientes direcciones: 20 km al N37°E, 14 km al Este, 30 km al S37°E y 10√5 km al S α O. Si el punto donde Juan inicio su recorrido se encuentra a una distancia menor a 40 km y en la dirección N53°O, del punto donde terminó su recorrido, halle el ángulo α.",
+      "alternatives": [
+        "45°",
+        "26,5°",
+        "60°",
+        "63,5°",
+        "37°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-matematico-rumbos-y.html",
+      "sourceName": "matematicasn.blogspot.com — RUMBOS Y DIRECCIONES EJERCICIOS RESUELTOS DE RAZONAMIENTO MATEMÁTICO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El capitán de un barco, el cual está anclado en alta mar, observa tres islas: la isla P, la más cercana al barco, en la dirección N50ºE; la isla Q en la dirección N10ºE y la isla R, la más lejana al barco. Con la ayuda del GPS se determina que las tres islas están ubicadas en los vértices de un triángulo equilátero y que la isla P se encuentra a la misma distancia de la isla R y el barco. ¿En qué dirección se observa la isla Q desde la isla R?",
+      "alternatives": [
+        "N70ºO",
+        "N80ºO",
+        "N75ºO",
+        "N65ºE",
+        "Oeste"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-matematico-rumbos-y.html",
+      "sourceName": "matematicasn.blogspot.com — RUMBOS Y DIRECCIONES EJERCICIOS RESUELTOS DE RAZONAMIENTO MATEMÁTICO PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo rectángulo están representados numéricamente por tres números consecutivos; determine la suma de los cosenos de los ángulos agudos del triángulo.",
+      "alternatives": [
+        "13/5",
+        "7/5",
+        "17/13",
+        "13/8",
+        "31/25"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-8-experiencia-8-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un árbol es cortado a 4m con respecto al suelo, al caer la punta del árbol forma con el suelo un ángulo agudo “α” y si se cortara a 9m, con respecto al suelo, el ángulo seria 37°. Entonces el “Senα” es:",
+      "alternatives": [
+        "1/6",
+        "1/5",
+        "1/4",
+        "1/3",
+        "1/2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/3ro-4to-actividad-8-experiencia-8-resuelta-matematica-aprendo-en-casa-web-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Abel participó en una maratón 36k, cuyos puntos de partida y llegada coinciden. Él comenzó su recorrido por el circuito de la maratón, desplazándose 9 km en dirección E53°N, para luego dirigirse al S53°E hasta quedar rendido por el cansancio al Este del punto de partida. Si el tramo que le faltó recorrer es el menor posible, ¿cuántos kilómetros le faltó a Abel para llegar a la meta?",
+      "alternatives": [
+        "27 km",
+        "15 km",
+        "21 km",
+        "22 km",
+        "25 km"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/5to-actividad-7-experiencia-9-resuelta-matematicas-aprendo-en-casa-web-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — RM CEPREVI PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC recto en A, se sabe que ctgC+ctgB=4\nEntonces al calcular 16senB.senC.cosB.cosC se obtiene:",
+      "alternatives": [
+        "1/4",
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/seno-coseno-tangente-cotangente-secante.html",
+      "sourceName": "matematicasn.blogspot.com — SENO COSENO TANGENTE COTANGENTE SECANTE COSECANTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC recto en B, se verifica\nsecA + tgA=1/4\nHallar el valor de 6(cscC – ctgC)",
+      "alternatives": [
+        "36",
+        "42",
+        "24",
+        "30",
+        "48"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/seno-coseno-tangente-cotangente-secante.html",
+      "sourceName": "matematicasn.blogspot.com — SENO COSENO TANGENTE COTANGENTE SECANTE COSECANTE EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un determinado instante, Luis, Manuel, Jorge y Carlos se encuentran ubicados en los vértices de un campo deportivo de forma cuadrada MNPQ. Luis está ubicado en el vértice M; Manuel, en el vértice N; Jorge en el vértice P; y Carlos en el vértice Q. Si Luis observa a Manuel en la dirección N 30º E y a Carlos en la dirección S 60º E, ¿en qué dirección observa Carlos a Manuel?",
+      "alternatives": [
+        "N 15º O",
+        "N 30º O",
+        "N 20º O",
+        "N 10º O",
+        "N 18º O"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/razonamiento-matematico-de-pre.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO MATEMÁTICO SAN MARCOS EXAMEN RESUELTO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un motociclista parte del punto P y se dirige en dirección este. Luego, recorre 20 √ 3 km en la dirección N30ºE. Después, recorre 120 km en la dirección oeste y 90 √ 2 km en la dirección S45ºE. Finalmente, llegó al punto P recorriendo en la dirección N30ºO. ¿Qué distancia recorrió en el último tramo?",
+      "alternatives": [
+        "(60– √ 3) km",
+        "60 km",
+        "40 √ 3 km",
+        "30 √ 3 km",
+        "80 km"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/razonamiento-matematico-de-pre.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONAMIENTO MATEMÁTICO SAN MARCOS EXAMEN RESUELTO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una escalera de 6m de longitud es apoyada sobre una pared, formando con éste un ángulo de 30°, calcula la distancia entre los pies de la escalera y la pared.",
+      "alternatives": [
+        "6",
+        "4",
+        "3",
+        "8",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A 20 m del pie de un poste la elevación angular para lo alto del mismo es de 37°. ¿Cuál es la altura del poste?",
+      "alternatives": [
+        "12 m",
+        "10 m",
+        "15 m",
+        "14 m",
+        "20 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto en el suelo se ubica la parte superior de un ángulo con una elevación angular de 37°. Nos acercamos 5m y la nueva elevación angular es de 45°. Halla la altura del árbol.",
+      "alternatives": [
+        "12°",
+        "14°",
+        "15°",
+        "10°",
+        "8°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos personas ubicadas al sur y este de un poste; divisan su parte más alta con ángulos de elevación de 30° y 45° respectivamente. Si la distancia entre las personas es de 20m. ¿Cuál es la altura del poste?",
+      "alternatives": [
+        "20m",
+        "5m",
+        "15m",
+        "10m",
+        "10 √ 2m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona sale de su casa y hace el siguiente recorrido 37m hacia el norte, 40m al este, luego 108m al sur; para finalmente caminar con dirección NO 80 √ 2m. ¿A qué distancia de su casa se halla?",
+      "alternatives": [
+        "38m",
+        "39m",
+        "40m",
+        "41m",
+        "51m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Amy está ubicada en el centro de una pista circular; y camina al N40°E hasta ubicarse en la pista; de donde divisa la parte más nórdica de la pista al NαO. ¿Cuánto vale “α”?",
+      "alternatives": [
+        "10°",
+        "20°",
+        "80°",
+        "70°",
+        "40°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde el centro de una circunferencia un móvil se desplaza en la dirección Eθ°N, hasta encontrar a la circunferencia. ¿Cuál debe ser el valor para que desde un punto se observe la parte más nórdica de la circunferencia en la dirección N60°θ .",
+      "alternatives": [
+        "15°",
+        "30°",
+        "60°",
+        "45°",
+        "37 °"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un móvil se desplaza 40 √ 2m al NO; y luego 60m al este, de donde observa su punto de partida en la dirección OαS. Calcula “tanα”.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un punto “P” parten 2 autos hacia el Norte y el Este, a la misma velocidad. Luego de un cierto tiempo, parte del mismo punto otro auto en la dirección N37°E hasta ubicarse sobre la línea que une a los otros 2 autos. Si la distancia que separa a los dos primeros autos es de 21 √ 2km. ¿Cuánto recorrió el tercer auto?",
+      "alternatives": [
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un faro tiene 31 m de altura, desde su parte más alta se observan dos barcos con ángulos de depresión de 30° y 45° respectivamente, uno al sur y el otro al este. Determina la distancia entre los barcos.",
+      "alternatives": [
+        "50 m",
+        "60 m",
+        "62 m",
+        "31 m",
+        "40 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia entre 2 barcos “A” y “B” es de 12km y la recta que las une está en el rumbo E15°N de A. A medianoche una embarcación que navega hacia el S15°E con la velocidad uniforme de 10 √ 3km/h está al NE de “A” y al “NO” de “B”. Halla el tiempo que emplea la embarcación en navegar la recta que une los barcos a partir de su posición en medianoche.",
+      "alternatives": [
+        "10 min",
+        "18 min",
+        "20 min",
+        "1 hora",
+        "2 horas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/trigonometria-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC, AB=4 u, BC=5 u, AC=6 u. Calcule el valor de la expresión\nE= √ 7 [ tan(A/2)+tan (B/2) ]",
+      "alternatives": [
+        "52/15",
+        "53/15",
+        "54/15",
+        "55/15",
+        "56/15"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Solucionario-de-trigonometria-uni-examen-resuelto-de-admision-universidad-de-ingenieria-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNI PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elver al salir de su casa se dirige hacia su universidad siguiendo la dirección N30°E, pero en el camino se arrepiente y se va en busca de Norma en la dirección S60°E y la encuentra justo al Este de su punto de partida. Si el recorrido total que hizo Elver es 100 (1+ √ 3) m, calcular la distancia entre su casa y el punto de encuentro.",
+      "alternatives": [
+        "200 m",
+        "300 m",
+        "400 m",
+        "200 √ 3 m",
+        "100 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/admision-san-marcos-2016-2-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA D 2023-1 PRUEBA RESUELTA DE INGRESO UNIVERSIDAD CIENCIAS ECONÓMICAS RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un vehículo recorre el perímetro de un terreno triangular ABC. Si parte del punto A con velocidad rectilínea constante de 20 m/s, luego de 10 s llega al punto B donde gira un ángulo φ en sentido horario con dirección al punto C, al cual llega en 5s. Encuentre el área generada por el vehículo al ir del punto A al punto C. Si senφ =−3/20",
+      "alternatives": [
+        "1350 m²",
+        "1500 m²",
+        "2000 m ²",
+        "2500 m²",
+        "1270 m²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-trigonometria-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE TRIGONOMETRÍA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cobrador sale de la oficina y va a realizar sus cobranzas. Primero, se desplaza 1,6 km al norte de la oficina; luego, va a un segundo lugar en la dirección N68ºE; de allí continúa en la dirección S22ºE y finalmente 1,2 km hacia el oeste hasta llegar de nuevo a la oficina. Halle el producto de los números de kilómetros recorridos en el segundo y tercer tramo.",
+      "alternatives": [
+        "3",
+        "4",
+        "6",
+        "2",
+        "1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-razonamiento-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE RAZONAMIENTO MATEMÁTICO RUBIÑOS 2027 PDF DESCARGA GRATIS"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El señor Joel Rivera, quien vive en una comunidad altoandina, lleva a su padre a la posta médica. Para ello, Joel realiza el siguiente recorrido: camina 300 √ 2. metros en la dirección NE desde su casa hasta la casa de su papá, luego recorre una distancia de 600 √ 2. metros en la dirección SE llegando justo a tiempo a la consulta médica. Si existe un camino en línea recta más corto desde la posta médica hasta su casa y Joel decidiera regresar por este camino, ¿qué distancia como mínimo recorrería?",
+      "alternatives": [
+        "300 √ 11 m",
+        "330 √ 10m",
+        "300 √ 5 m",
+        "301 √ 10 m",
+        "300 √ 10m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-habilidad-logico.html",
+      "sourceName": "matematicasn.blogspot.com — HABILIDAD LÓGICO MATEMÁTICO PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Carlos realiza una caminata, parte de su casa desplazándose 7 kilómetros en la dirección E36°S, luego camina en dirección E54°N avanzando 24 kilómetros, finalmente decide regresar a casa.\n¿Qué rumbo debe tomar Carlos para regresar a casa?",
+      "alternatives": [
+        "O38°S",
+        "O36°S",
+        "S52°O",
+        "S53°O",
+        "S56°O"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-trigonometria-semana-13.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ely participó en una maratón 36k, cuyos puntos de partida y llegada coinciden. Él comenzó su recorrido por el circuito de la maratón, desplazándose 9 km en dirección E53°N, para luego dirigirse al S53°E hasta quedarse rendido por el cansancio al Este del punto de partida. Si el tramo que le faltó recorrer es el menor posible.\n¿Cuántos kilómetros le faltó a Ely para llegar a la meta?",
+      "alternatives": [
+        "27 km",
+        "15 km",
+        "21 km",
+        "22 km",
+        "25 km"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-trigonometria-semana-10.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar en cuántos de los siguientes casos , existen un triángulo esférico cuyas partes sean:\nI) A = 60° ; B = 70° ; C = 90°\nII) A = 60° ; B = 115° ; C = 145°\nIII) A = 60° ; B = 20° ; C = 90°",
+      "alternatives": [
+        "I",
+        "II",
+        "III",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/trigonometria-esferica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA ESFÉRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo esférico rectángulo ABC , recto en ‘‘C’’.\nReducir :\nE = (1 – cos2A) (1+ cos2b) (1+ tan²B)",
+      "alternatives": [
+        "6",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/trigonometria-esferica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA ESFÉRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un maratonista parte desde un punto O, corriendo hacia el Oeste hasta llegar a un punto de hidratación ubicado en el punto A, luego cambia de dirección moviéndose hacia E72°N y avanza hasta quedar a 6 km al Norte del punto de partida.\n¿Cuántos kilómetros recorrió el maratonista?",
+      "alternatives": [
+        "6tan32 ° km",
+        "5cot44 ° km",
+        "6cot36 ° km",
+        "3cot18 ° km",
+        "2tan36 ° km"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepreuni-trigonometria-sexta-practica.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un topógrafo usando un teodolito anotó que el ancho y el largo de un terreno de forma rectangular miden 4cos24 ° sen 3 8 ° km y 4sen24 ° cos 3 8 ° km respectivamente. Si el perímetro de dicho terreno es Lcos58 ° km, halle el valor de L.",
+      "alternatives": [
+        "5",
+        "4",
+        "1",
+        "2",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepreuni-trigonometria-sexta-practica.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un globo aerostático, que está en la vertical que cae sobre un camino recto, en un instante se observa dos piedras consecutivas separadas por (6−2√3) km, con ángulos de depresión de 45° y 60°. Calcular a qué altura se encuentra el globo en ese instante de observación.",
+      "alternatives": [
+        "6 km",
+        "2 km",
+        "3 km",
+        "7 km",
+        "5 km"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/cepreuni-examen-final-trigonometria.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI TRIGONOMETRÍA EXAMEN FINAL RESUELTO"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula la altura de un árbol, si desde dos puntos ubicados a un mismo extremo del árbol, se observa lo alto con ángulos de elevación de 30° y 60°, además se sabe que la distancia entre ellos es de 20 m.",
+      "alternatives": [
+        "30",
+        "28",
+        "24",
+        "20",
+        "16"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/trigonometria-examen-pre-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EXAMEN RESUELTO DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una antena de radio está colocada en la azotea de un edificio, a 12m de distancia del edificio, sobre el suelo; los ángulos de elevación de la punta de la antena y de la parte superior del edificio son 53° y 37° respectivamente. Halla la longitud de la antena.",
+      "alternatives": [
+        "14",
+        "7 √ 3",
+        "7",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/trigonometria-examen-pre-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — TRIGONOMETRÍA EXAMEN RESUELTO DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde un helicóptero que vuela a 600m sobre el nivel del mar se miden los ángulos de depresión de dos buques que forman con el helicóptero un plano vertical, estando además a un mismo lado de él, obteniéndose 37° y 53°. Calcula la distancia entre los buques.",
+      "alternatives": [
+        "400",
+        "300",
+        "350",
+        "450",
+        "500"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES PROBLEMAS RESUELTOS DE TRIGONOMETRÍA DE SECUNDARIA Y PREUNIVERSITARIA – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la base y la parte superior de una torre se observa la parte superior de un edificio con ángulos de elevación de 60° y 30° respectivamente, si la torre mide 24m. Entonces la altura del edificio es:",
+      "alternatives": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-verticales-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁNGULOS VERTICALES PROBLEMAS RESUELTOS DE TRIGONOMETRÍA DE SECUNDARIA Y PREUNIVERSITARIA – INGRESO UNIVERSIDAD"
     }
   ]
 }

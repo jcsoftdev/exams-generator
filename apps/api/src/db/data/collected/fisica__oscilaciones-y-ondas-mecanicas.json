@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un bloque se encuentra sostenido de un resorte, cuya constante elástica es K = 20 N/m y realiza un M.A.S. Además, la masa del bloque es 200 g. Calcula el período.",
-      "alternatives": ["π/5 s", "π/2 s", "1 s", "π s", "10π s"],
+      "alternatives": [
+        "π/5 s",
+        "π/2 s",
+        "1 s",
+        "π s",
+        "10π s"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Según la ecuación del M.A.S. x(t) = 4 sen(2πt + 0,5π) m, calcula la posición del móvil para t = 0 s.",
-      "alternatives": ["0 m", "2 m", "4 m", "-4 m", "-2 m"],
+      "alternatives": [
+        "0 m",
+        "2 m",
+        "4 m",
+        "-4 m",
+        "-2 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un bloque de 20 kg cuelga de un resorte de k = 2000 N/m. Si el sistema se encuentra en equilibrio, calcula la deformación que experimenta el resorte.",
-      "alternatives": ["10 m", "1 m", "10 cm", "0,1 cm", "0,01 m"],
+      "alternatives": [
+        "10 m",
+        "1 m",
+        "10 cm",
+        "0,1 cm",
+        "0,01 m"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 4"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Para un bloque de 0,2 kg que realiza un M.A.S. sujeto a un resorte de constante K = 20 N/m, si su amplitud es 2 m, calcula su velocidad máxima.",
-      "alternatives": ["20 m/s", "10 m/s", "15 m/s", "2 m/s", "5 m/s"],
+      "alternatives": [
+        "20 m/s",
+        "10 m/s",
+        "15 m/s",
+        "2 m/s",
+        "5 m/s"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 6"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Con los datos del ejercicio anterior (bloque de 0,2 kg, resorte K = 20 N/m, amplitud 2 m), calcula su aceleración máxima.",
-      "alternatives": ["20 m/s²", "100 m/s²", "150 m/s²", "200 m/s²", "40 m/s²"],
+      "alternatives": [
+        "20 m/s²",
+        "100 m/s²",
+        "150 m/s²",
+        "200 m/s²",
+        "40 m/s²"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 7"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Calcula el período de un bloque que realiza un M.A.S. si se sabe que realiza 80 oscilaciones simples en 160 s.",
-      "alternatives": ["2 s", "4 s", "3 s", "1 s", "5 s"],
+      "alternatives": [
+        "2 s",
+        "4 s",
+        "3 s",
+        "1 s",
+        "5 s"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 8"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Si un bloque realiza un M.A.S., calcula su energía potencial elástica máxima si se sabe que cuando su aceleración es máxima su deformación es 2 m. (k = 25 N/m)",
-      "alternatives": ["10 J", "20 J", "50 J", "100 J", "200 J"],
+      "alternatives": [
+        "10 J",
+        "20 J",
+        "50 J",
+        "100 J",
+        "200 J"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 9"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si una partícula atada a una cuerda de longitud L realiza un M.A.S. de período T y la misma partícula es llevada a otro planeta donde la gravedad es 3 veces la gravedad de la Tierra, ¿en cuánto se debe aumentar o disminuir la longitud de la cuerda L para que el período no cambie?",
-      "alternatives": ["Disminuir en L/2", "Aumentar en 2L", "Aumentar en 3L", "Disminuir en 2L", "Aumentar en L"],
+      "alternatives": [
+        "Disminuir en L/2",
+        "Aumentar en 2L",
+        "Aumentar en 3L",
+        "Disminuir en 2L",
+        "Aumentar en L"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 10"
@@ -94,7 +142,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Halla el período de un M.A.S. si se sabe que la relación entre la máxima aceleración y su máxima velocidad es 4π.",
-      "alternatives": ["0,5 s", "0,2 s", "0,4 s", "0,1 s", "0,8 s"],
+      "alternatives": [
+        "0,5 s",
+        "0,2 s",
+        "0,4 s",
+        "0,1 s",
+        "0,8 s"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 11"
@@ -105,7 +159,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un cuerpo de 2 kg está suspendido de un resorte. Si se aplica una fuerza adicional de 10 newton el resorte se alarga 5 cm. ¿Cuál es el período de oscilación si se le suelta?",
-      "alternatives": ["π/2", "π/3", "π/10", "π/4", "π/5"],
+      "alternatives": [
+        "π/2",
+        "π/3",
+        "π/10",
+        "π/4",
+        "π/5"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 12"
@@ -116,7 +176,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Una masa de 5 kg está animada de un M.A.S. en el que realiza 3 oscilaciones por segundo. Calcula el valor de la fuerza recuperadora para una elongación de 5 cm.",
-      "alternatives": ["56,4 N", "48,2 N", "88,7 N", "62,8 N", "74,5 N"],
+      "alternatives": [
+        "56,4 N",
+        "48,2 N",
+        "88,7 N",
+        "62,8 N",
+        "74,5 N"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 13"
@@ -127,7 +193,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Un sistema oscila armónicamente con una frecuencia de 10 Hz y una amplitud de 4 m. Determina la ecuación del movimiento respecto a su posición en cualquier instante t segundos. Considera una constante de fase de 30°.",
-      "alternatives": ["x = 4 sen(20πt + π/6)", "x = 4 sen(10πt + π/6)", "x = 4 sen(20πt + π/3)", "x = 2 sen(10πt + π/6)", "x = 2 sen(20πt + π/3)"],
+      "alternatives": [
+        "x = 4 sen(20πt + π/6)",
+        "x = 4 sen(10πt + π/6)",
+        "x = 4 sen(20πt + π/3)",
+        "x = 2 sen(10πt + π/6)",
+        "x = 2 sen(20πt + π/3)"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 14"
@@ -138,7 +210,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Si la ecuación x = 0,40 cos(2t + 0,25π) m representa la elongación de un oscilador armónico de 5 kg de masa, halla la energía total del sistema en cualquier instante (en J).",
-      "alternatives": ["1,2", "1,6", "1,8", "1,5", "2,2"],
+      "alternatives": [
+        "1,2",
+        "1,6",
+        "1,8",
+        "1,5",
+        "2,2"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 17"
@@ -149,7 +227,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un cuerpo de masa m cuelga del extremo de un resorte realizando un movimiento armónico simple de período T. Determina el valor de la masa que se debe colocar en el extremo de este resorte (en lugar de la masa anterior) para que el período del movimiento sea 3T.",
-      "alternatives": ["9m", "6m", "3m", "m/3", "m/9"],
+      "alternatives": [
+        "9m",
+        "6m",
+        "3m",
+        "m/3",
+        "m/9"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 18"
@@ -160,7 +244,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El período de oscilación de un péndulo simple es √10 s. Si su longitud disminuye en un 10%, determina su nuevo período.",
-      "alternatives": ["1 s", "2 s", "3 s", "4 s", "6 s"],
+      "alternatives": [
+        "1 s",
+        "2 s",
+        "3 s",
+        "4 s",
+        "6 s"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 19"
@@ -171,7 +261,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Halla el período de oscilación de un péndulo simple, el cual se encuentra a una altura sobre la superficie terrestre igual a la mitad del radio de la Tierra. (longitud = 1 m y π² = 9,8)",
-      "alternatives": ["1 s", "3 s", "2 s", "4 s", "5 s"],
+      "alternatives": [
+        "1 s",
+        "3 s",
+        "2 s",
+        "4 s",
+        "5 s"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 20"
@@ -182,7 +278,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un sistema masa-resorte ejecuta un M.A.S. con un período de 4 s. Halla la aceleración máxima si la velocidad máxima es de 2 m/s (en m/s²).",
-      "alternatives": ["2", "π", "π/2", "2/π", "2π"],
+      "alternatives": [
+        "2",
+        "π",
+        "π/2",
+        "2/π",
+        "2π"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 21"
@@ -193,7 +295,13 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Una partícula de masa m = 200 g oscila sobre una superficie horizontal lisa, unida a un resorte, con una amplitud de 80 cm. Cuando su estiramiento es 62,1 cm en la dirección +x, su velocidad es 5 m/s. ¿Cuál es el valor de la constante del resorte (en N/m)?",
-      "alternatives": ["5", "20", "2", "10", "25"],
+      "alternatives": [
+        "5",
+        "20",
+        "2",
+        "10",
+        "25"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Segunda Práctica, Problema 3"
@@ -204,7 +312,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Un cuerpo realiza un movimiento armónico simple sujeto al extremo de un resorte. Indica en cuál de los siguientes casos la frecuencia del movimiento aumenta:",
-      "alternatives": ["El cuerpo es sustituido por otro de menor masa.", "El cuerpo oscila con mayor amplitud.", "El cuerpo oscila con menor amplitud.", "El cuerpo es sustituido por otro de mayor peso.", "El resorte es sustituido por otro con constante de resorte menor."],
+      "alternatives": [
+        "El cuerpo es sustituido por otro de menor masa.",
+        "El cuerpo oscila con mayor amplitud.",
+        "El cuerpo oscila con menor amplitud.",
+        "El cuerpo es sustituido por otro de mayor peso.",
+        "El resorte es sustituido por otro con constante de resorte menor."
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Segunda Práctica, Problema 5"
@@ -215,10 +329,2068 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Un cuerpo cuelga del extremo de un resorte y oscila verticalmente con período de 2 s. Al aumentar la masa del cuerpo en 1 kg, el nuevo período es de 4 s. ¿Cuál es el valor de la masa inicial?",
-      "alternatives": ["1/2 kg", "1/3 kg", "1/4 kg", "1/6 kg", "1 kg"],
+      "alternatives": [
+        "1/2 kg",
+        "1/3 kg",
+        "1/4 kg",
+        "1/6 kg",
+        "1 kg"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Segunda Práctica, Problema 10"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un estudiante cuelga de un resorte un objeto y obtiene que el periodo de las oscilaciones es T ₁ =12 s. Luego cuelga del mismo resorte otro objeto y obtiene un periodo de oscilación T ₂ = 5 s. ¿Cuál será el periodo de las oscilaciones si cuelga del resorte los dos objetos?",
+      "alternatives": [
+        "15 s",
+        "7 s",
+        "19 s",
+        "13 s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/fisica-ejercicios-resueltos-examen-de.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNMSM PRUEBA DESARROLLADA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un día de verano, un estudiante mide la rapidez del sonido de una fuente sonora y registra el valor de 340,8 m/s, y una longitud de onda de λ=2,130 m. En estas condiciones, usando la misma fuente, mide la rapidez del sonido en invierno y registra el valor de 300 m/s. ¿Cuál es la longitud de onda del sonido en el invierno?",
+      "alternatives": [
+        "1,558 m",
+        "2,130 m",
+        "4,265 m",
+        "2,650 m",
+        "1,875 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/fisica-deco-examen-resuelto-de-ingreso.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA DECO RESUELTA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El piano, cuyo nombre original era pianoforte, ‘piano fuerte’, es el instrumento armónico por excelencia En la actualidad, los pianos tienen 88 teclas, 36 negras y 52 blancas, que van desde la ₀(A₀) hasta do ₈(C₈), es decir, van desde 27,5 Hz hasta 4186 Hz, respectivamente, que está dentro del rango auditivo humano, de 20 a 20 000 Hz. Si la velocidad del sonido en un lugar es de 340 m/s, ¿qué longitud de onda tendrá la ₀?",
+      "alternatives": [
+        "11,5 m",
+        "9,4 m",
+        "10,6 m",
+        "12,4 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-fisica-de-admision-la.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El Gobierno alemán le encargó a Max Planck que determinara el color que debían emitir las bombillas eléctricas para obtener la máxima eficiencia energética. Para resolver el problema, planteó la hipótesis de que, cuando las partículas ligadas cambian de estado energético, lo hacen absorbiendo o emitiendo energía a través de ondas electromagnéticas, en cantidades discretas proporcionales a la frecuencia de la onda. Con esta información, determine la longitud de onda de los rayos X con fotones de energía 14,2 k eV.\nDato: h c =I240×10 –9 eV · m",
+      "alternatives": [
+        "0,77 ×10–10 m",
+        "0,63 ×10–10 m",
+        "0,82 ×10–10 m",
+        "0,87 × 10–10 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-fisica-de-admision-la.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA RESUELTA SAN MARCOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación a los fenómenos ondulatorios, indique la verdad (V) o falsedad (F) de las siguientes proposiciones.\nI. En el fenómeno de reflexión para un haz de luz, la rapidez del haz incidente es igual a la rapidez del haz reflejado.\nII. Una onda superficial en un líquido se difracta, cuando su longitud de onda es comparable con el tamaño del obstáculo.\nIII. El sonido se puede difractar y polarizar.",
+      "alternatives": [
+        "VVF",
+        "VVV",
+        "FFV",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La longitud de onda en una cuerda es de 20 cm. Si la rapidez de la onda es de 1 m/s, determine su frecuencia.",
+      "alternatives": [
+        "10 Hz",
+        "25 Hz",
+        "1 Hz",
+        "5 Hz"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se dejan caer 10 esferitas idénticas a intervalos de tiempo iguales durante 5 s sobre la superficie de agua en reposo contenida en un recipiente de 12 m de diámetro Las esferitas caen en el centro; produciendo en cada impacto ondas circulares. Si cada cresta de la onda tarda 2 s en alcanzar el borde del recipiente, determine la longitud de onda.",
+      "alternatives": [
+        "1,5 m",
+        "0,3 m",
+        "9 m",
+        "0,09 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación al movimiento armónico simple, indique la verdad (V) o falsedad (F) de las siguientes proposiciones.\nI. El movimiento circular uniforme es un MAS.\nII. Todo movimiento oscilatorio es un MAS.\nIII. Un péndulo simple siempre realiza un MAS.",
+      "alternatives": [
+        "FFF",
+        "VVF",
+        "VVV",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la longitud de la cuerda de un péndulo simple que oscila con MAS, para que su periodo sea de 1 s. (Considere g =10 m/s, π²=10)",
+      "alternatives": [
+        "1,25 m",
+        "0,25 m",
+        "1,00 m",
+        "2,00 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un péndulo simple realiza 12 oscilaciones cada 4 segundos. Si la longitud del péndulo se reduce en un 64% y la masa se triplica, determine su nuevo periodo.",
+      "alternatives": [
+        "0,02 s",
+        "2,0 s",
+        "0,4 s",
+        "0,2 s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un péndulo simple se encuentra oscilando dentro de un ascensor en reposo con MAS. Cuando el ascensor acelera hacia arriba el nuevo periodo es 3/4 del periodo inicial. Determine la aceleración del ascensor.",
+      "alternatives": [
+        "7/9 g",
+        "5/9 g",
+        "3/7 g",
+        "11/9 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sistema bloque–resorte de masa 10 kg y constante elástica k = 50 N/m. Oscila con MAS, con amplitud de 50 cm en el plano horizontal. Determine la energía cinética del bloque cuando la elongación del resorte es de 30 cm.",
+      "alternatives": [
+        "4,0 J",
+        "1,0 J",
+        "0,4 J",
+        "10,0 J"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sistema bloque-resorte oscila con MAS, con un período de 4 s. Si pierde la mitad de su masa, determine el nuevo periodo.",
+      "alternatives": [
+        "10√2 s",
+        "√2s",
+        "6√2 s",
+        "2√2 s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sistema bloque–resorte oscila verticalmente con MAS, con una frecuencia de 10 Hz. Si la masa del bloque es de 500 g, determine la constante elástica del resorte.",
+      "alternatives": [
+        "28π² N/m",
+        "400π² N/m",
+        "20π² N/m",
+        "200π² N/m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque unido a un resorte, oscila con MAS, con amplitud de 5√2 cm. Determine la distancia (medida desde la posición de equilibrio), cuando la energía cinética del bloque es igual a la energía potencial del resorte.",
+      "alternatives": [
+        "6 cm",
+        "5 cm",
+        "3 cm",
+        "4 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sistema masa-resorte horizontal oscila de modo que su energía es de 36 mJ. La fuerza máxima que aplica el resorte sobre el cuerpo es de 3 N. Calcule la constante de elasticidad del resorte en N/m.",
+      "alternatives": [
+        "125",
+        "135",
+        "115",
+        "145",
+        "155"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Tercera-prueba-uni-solucionario-examen-admision-universidad-ingenieria-fisica-quimica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA QUÍMICA EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA TERCERA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los sistemas de alerta de mareas y tsunamis consisten en conjuntos de boyas que envían información a un centro de monitoreo en el cual los especialistas determinan si el movimiento del mar es peligroso para las embarcaciones o las costas. Si dos boyas que se encuentran separadas 6 m se ubican sobre dos crestas consecutivas de las olas y registran que la velocidad de las olas es de 1,5 m/s, determine el periodo de oscilación de las olas del mar.",
+      "alternatives": [
+        "9,0 s",
+        "2,0 s",
+        "4,0 s",
+        "0,5 s",
+        "0,8 s"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/ondas-problemas-resueltos-de-fisica-preuniverisitaria-en-movimiento-ondulatorio-sonido-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MOVIMIENTO ONDULATORIO PROBLEMAS RESUELTOS DE ONDAS MECÁNICAS DE EXAMEN ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La velocidad máxima que adquiere una masa con movimiento armónico simple es 2m/s y su amplitud es 5×10 − ² m. Si el sistema duplica su amplitud manteniendo su frecuencia, la aceleración máxima en m/s², que adquiere bajo esta condición es",
+      "alternatives": [
+        "20",
+        "40",
+        "80",
+        "160",
+        "320"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/mas-movimiento-armonico-simple-pendulo-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MOVIMIENTO ARMÓNICO SIMPLE Y PÉNDULO PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El extremo inferior de un resorte que cuelga del techo, que está unido a un cuerpo de 150 g, oscila con una frecuencia de 3 Hz. Si la velocidad máxima del cuerpo es de 0,9 m/s, calcule aproximadamente, en N, la fuerza máxima en el resorte.",
+      "alternatives": [
+        "1,5",
+        "5,5",
+        "3,5",
+        "4,5",
+        "2,5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/mas-movimiento-armonico-simple-pendulo-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MOVIMIENTO ARMÓNICO SIMPLE Y PÉNDULO PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ladrillo de 1,6 kg se coloca en un resorte vertical con constante elástica igual a 1500 N/m comprimiendo al resorte 20cm. Cuando se suelta el resorte, la altura en m que alcanzará el ladrillo será: ( g=10 m/s²)",
+      "alternatives": [
+        "0,88",
+        "1,88",
+        "2,56",
+        "3,70",
+        "4,50"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-unt-examen-resuelto-pd-trujilo.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El pistón de un dispositivo eléctrico oscila con un movimiento armónico simple de modo que su posición varía de acuerdo con la ley x(t) = ( √ 2cm)cos(ωt+π/4), donde x está dado en centímetros y t en segundos. Si la velocidad media del pistón para un intervalo de tiempo varia entre t = 0,0 s y t = 1,0 s es –1,0 cm/s, determine el valor de la frecuencia angular de la oscilación.",
+      "alternatives": [
+        "(π/2) rad/s",
+        "(π/4) rad/s",
+        "(3π/4) rad/s",
+        "(3π/2) rad/s"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-fisica-semana-17-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PROBLEMAS RESUELTOS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante el ciclo de funcionamiento de una lavadora, Juan observa que el tambor no gira completamente, sino que oscila con movimiento armónico simple de partícula. Si Juan mide la frecuencia en 12 RPM, ¿cuál es el período de oscilación del tambor de la lavadora durante el ciclo de lavado?",
+      "alternatives": [
+        "4,0 s",
+        "8,0 s",
+        "5,0 s",
+        "6,0 s"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/fisica-simulacro-san-marcos-solucionario-admision-a-la-universidad-2020-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA ÁREA C PRUEBA DECO SAN MARCOS SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule la diferencia de potencial con que ha de ser acelerado un electrón para producir rayos X de 0,625 Anstrong de longitud de onda (considere que no hay pérdida de energía).\nDato: h= 6,63×10 − ³ ⁴ J·s",
+      "alternatives": [
+        "19 890 V",
+        "18 980 V",
+        "17 700 V",
+        "16 760 V"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-pre-san-marcos-primer-examen.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA SOLUCIONARIO SAN MARCOS ÁREAS D B ADMISIÓN UNIVERSIDAD SIMULACRO DESARROLLO DE LA PRUEBA DECO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se hace incidir desde el vacío un rayo de luz de 5×10 ^ – 7 m de longitud de onda sobre la superficie plana de un cierto material en un ángulo de 60º con respecto a la normal a la superficie. Si el rayo refractado hace un ángulo de 30º con respecto de la normal, calcule, en m, la longitud de onda de este rayo en el interior del material.",
+      "alternatives": [
+        "0,88×10 ^ – 7",
+        "1,38×10 ^ – 7",
+        "2,88×10 ^ – 7",
+        "3,48×10 ^ – 7",
+        "5,78×10 ^ – 7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/examen-admision-uni-solucionario_28.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La velocidad máxima que adquiere una masa con movimiento armónico simple es 2 m/s y su amplitud es 5×10 ^ –2 m. Si el sistema duplica su amplitud manteniendo su frecuencia, la aceleración máxima en m/s², que adquiere bajo esta condición es",
+      "alternatives": [
+        "20",
+        "40",
+        "80",
+        "160",
+        "320"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/examen-admision-uni-solucionario_28.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo de masa \"m\" oscila en el extremo de un resorte con un periodo de 2 s. Si al cuerpo se le agrega una masa de 2kg su nuevo periodo de oscilación es de 3s. Determinar la masa (en kg) del cuerpo.",
+      "alternatives": [
+        "1,2",
+        "1,6",
+        "2,4",
+        "3,2",
+        "4,8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/monotonia-y-curvatura-funciones-con.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNJ 2027 UNIVERSIDAD NACIONAL DE JAÉN EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cuerda muy larga se encuentra fija por un extremo; el otro extremo está sujeto a un vibrador. Si la onda que se genera tiene una rapidez igual a 10 m/s y su longitud de onda es 40cm. Determine la frecuencia del vibrador.",
+      "alternatives": [
+        "20 Hz",
+        "25 Hz",
+        "30 Hz",
+        "35 Hz",
+        "40 Hz"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/monotonia-y-curvatura-funciones-con.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNJ 2027 UNIVERSIDAD NACIONAL DE JAÉN EXAMEN ADMISIÓN PDF 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un péndulo de longitud L y masa m, se lleva a un planeta donde la aceleración de la gravedad es 4 veces el de la tierra. ¿En qué porcentaje ( %) cambia el periodo de oscilación del péndulo en el nuevo planeta respecto de la Tierra?",
+      "alternatives": [
+        "15",
+        "25",
+        "60",
+        "30",
+        "50"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El oído humano percibe sonidos de frecuencias comprendidas entre 20 Hz y 20 kHz. En un determinado medio el sonido se propaga con una rapidez de 330 m/s. Calcule en m, la máxima longitud de onda del sonido que puede percibir el oído humano en dicho medio.",
+      "alternatives": [
+        "20,5",
+        "14,5",
+        "16,5",
+        "18,5",
+        "12,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque oscila realizando un MAS con una energía mecánica de 160 J. Si A es la amplitud de las oscilaciones, determine los valores de la energía cinética y potencial (en J) respectivamente, cuando el bloque se encuentra a una distancia A/2 de la posición de equilibrio.",
+      "alternatives": [
+        "60; 100",
+        "80; 80",
+        "100; 60",
+        "120; 40",
+        "140; 20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-8-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una partícula de masa m=0,32kg está oscilando en el extremo de un resorte, con 0,25 m de amplitud se encuentra en su posición de equilibrio (x=0), moviéndose en dirección de +x, cuando t = 0 y 0,12 s después está en x=0,2 m. Calcule la constante del resorte (en N/m).",
+      "alternatives": [
+        "1,89",
+        "36,2",
+        "18,9",
+        "3,62",
+        "200"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO ARMÓNICO SIMPLE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo realiza un movimiento armónico simple sujeto al extremo de un resorte. Diga en cuál de los siguientes casos la frecuencia del movimiento aumenta:",
+      "alternatives": [
+        "El cuerpo es sustituido por otro de menor masa.",
+        "El cuerpo oscila con mayor amplitud.",
+        "El cuerpo oscila con menor amplitud.",
+        "El cuerpo es sustituido por otro de mayor peso.",
+        "El resorte es sustituido por otro con constante de resorte menor."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO ARMÓNICO SIMPLE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas de las siguientes proposiciones son verdaderas?\n1) La frecuencia de oscilación depende de la amplitud.\n2) La frecuencia de un sistema masa-resorte que oscila horizontalmente, es diferente a la frecuencia del mismo sistema que oscila verticalmente.\n3) La frecuencia de oscilación depende de la constante k del resorte.\n4) Para un mismo sistema masa-resorte las oscilaciones verticales y horizontales tienen la misma frecuencia.\n5) Un sistema masa-resorte que realiza un M.A.S., se lleva a un planeta de mayor aceleración de la gravedad que en la tierra. En este planeta la frecuencia del M.A.S. se incrementa.\n6) Las oscilaciones en el M.A.S. se consideran respecto al estado no deformado del resorte.\n7) En todo M.A.S. la energía se conserva.\n8) La energía potencial y cinética, en función de la posición, en un M.A.S. son funciones cuadráticas.\n9) Los valores máximos de la energía potencial y cinética en un M.A.S. son iguales a la energía total.",
+      "alternatives": [
+        "1",
+        "9",
+        "6",
+        "7",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO ARMÓNICO SIMPLE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo de masa m unido a un resorte de constante k se mueve con amplitud A en un plano horizontal.\n¿Cuál de las siguientes afirmaciones es falsa?",
+      "alternatives": [
+        "La energía del sistema masa-resorte no depende de la masa m del cuerpo.",
+        "La energía cinética es máxima en los extremos del movimiento.",
+        "La aceleración es máxima en los extremos de su trayectoria.",
+        "La energía potencial es mínima en la posición de equilibrio.",
+        "El período de oscilación es proporcional a √m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO ARMÓNICO SIMPLE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una masa de 1 kg fija al extremo de un resorte de constante k = 49 N/m se mueve con M.A.S. con una amplitud de 12 cm, al respecto señale la veracidad (V) o falsedad (F) de las siguientes proposiciones:\nI) La energía total del sistema es 0,70J\nII) Su energía cinética cuando x=6cm es 3/4 de la energía mecánica total.\nIII) Su rapidez máxima es 0,84 m/s",
+      "alternatives": [
+        "FVV",
+        "FFF",
+        "VVV",
+        "FFV",
+        "VVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO ARMÓNICO SIMPLE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo cuelga del extremo de un resorte y oscila verticalmente con el período de 2 s. Al aumentar la masa del cuerpo en 1 kg, el nuevo período es de 4s.\n¿Cuál es el valor de la masa inicial?",
+      "alternatives": [
+        "1/2 kg",
+        "1/3 kg",
+        "1/4 kg",
+        "1/6 kg",
+        "1 kg"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO ARMÓNICO SIMPLE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una masa de 0,2 kg fija al extremo de un resorte de constante k=1N/m se suelta partiendo del reposo, cuando t=0s desde una posición de estiramiento máximo. Después de 0,5s se mide la velocidad y resulta –1,5 m/s. Determine la energía total del sistema en joule.",
+      "alternatives": [
+        "0,17",
+        "0,27",
+        "0,47",
+        "0,32",
+        "0,57"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO ARMÓNICO SIMPLE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque de masa 2 kg se une a un resorte de constante elástica de 50 N/m, el conjunto oscila en una superficie sin rozamiento, con una amplitud de 0,40 m. La rapidez del bloque cuando pasa por la posición de 0,24 m medida desde el equilibrio es:",
+      "alternatives": [
+        "1,2 m/s",
+        "1,4 m/s",
+        "1,6 m/s",
+        "1,8 m/s",
+        "2,0 m/s"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El fotosistema I absorbe luz a una longitud de onda de:",
+      "alternatives": [
+        "700 nm",
+        "680 nm",
+        "650 nm",
+        "620 nm",
+        "540 nm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/fotosintesis-ejercicios-resueltos-de-biologia-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LA FOTOSÍNTESIS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cierto dispositivo emisor de rayos X de longitud de onda de 10 angström produce energía a un ritmo de 198,9J/s. El número de fotones emitidos al cabo de medio minuto es:\n(h=6,63×10 –34 J · s)",
+      "alternatives": [
+        "1×10 19",
+        "2×10 19",
+        "3×10 19",
+        "4×10 19",
+        "5×10 19"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un resorte se mantiene unido en un extremo a una pared fija y en el otro, a un bloque de 2 kilogramos de masa que reposa sobre una superficie horizontal. El resorte es deformado por la aplicación de una fuerza externa al bloque y luego es liberado, de manera que el sistema bloque-resorte realiza 7 oscilaciones en 11 segundos. Si este movimiento es caracterizado por su amplitud A=0,5 m, determine la energía mecánica máxima adquirida por el bloque.\nDato: 𝛑≈ 22/7",
+      "alternatives": [
+        "4 J",
+        "3 J",
+        "6 J",
+        "2 J",
+        "5 J"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/simulacro-presencial-san-marcos-2018-i.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SIMULACRO SAN MARCOS 2027 I INGRESO UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una cuerda tensa de densidad lineal 300 g/m, se produce una onda mecánica armónica. Calcule aproximadamente, en mN, la tensión en la cuerda, si la fuente que produce la onda oscila con un periodo de 0,2 s y la onda tiene una longitud de onda de 5 cm.",
+      "alternatives": [
+        "15,75",
+        "16,75",
+        "17,75",
+        "18,75",
+        "19,75"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un rayo de luz ingresa desde el aire hacia un cristal con un ángulo de incidencia de 45°. Si al pasar por el cristal el rayo de luz tiene una longitud de onda de 375 nm y el ángulo de refracción es de 30°, calcule aproximadamente, en nm, la longitud de onda del rayo de luz mientras viaja en el aire.",
+      "alternatives": [
+        "430",
+        "480",
+        "530",
+        "580",
+        "630"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La luz de un láser, con longitud de onda λ en el aire (η 1 = 1), es dirigida a una depósito con agua η 2 = 4/3 . Su longitud de onda en el agua es",
+      "alternatives": [
+        "1/4 λ.",
+        "λ.",
+        "3/4 λ.",
+        "4/3 λ.",
+        "1/2 λ."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-simulacro-de-examen-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un trabajador observa una masa m del mecanismo de una máquina pesada. Durante su funcionamiento, determina que oscila linealmente con MAS y, cuando mide el periodo de oscilación de la masa, encuentra que es igual a 0,5s. Así las cosas, ¿cuál es la aceleración instantánea de la masa cuando está a x metros de su posición de equilibrio x=0m?",
+      "alternatives": [
+        "12 𝛑 ² x m/s²",
+        "4 𝛑 ² x m/s ²",
+        "–8 𝛑 ² x m/s ²",
+        "–16 𝛑 ² x m/s ²",
+        "10 𝛑 ² x m/s²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/fisica-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA SAN MARCOS PREGUNTAS RESUELTAS DECO DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María está interesada en comprobar la utilidad de la segunda ley de Newton. Entonces, une un resorte y un bloque de 0,2kg de masa y los hace oscilar con MAS. En cierto instante, durante el movimiento del bloque, el resorte está estirado 0,1m y el cuerpo tiene una aceleración de –0,4 m/s². En estas condiciones, al calcular la frecuencia de oscilación del sistema, ¿qué valor hallará María?",
+      "alternatives": [
+        "1,0 rad/s",
+        "2,0 rad/s",
+        "3,0 rad/s",
+        "0,5 rad/s",
+        "4,0 rad/s"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el extremo de una cuerda, sometida a una fuerza de tensión de magnitud 20N, se genera una onda que se propaga con una amplitud de 0,05 m y con una longitud de onda de 3,14 m. Calcule (en J/m) la energía por unidad de longitud que se transmite a lo largo de la cuerda.\nConsidere 𝛑 =3,14.",
+      "alternatives": [
+        "0,1",
+        "0,2",
+        "0,3",
+        "0,4",
+        "0,5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/resolucion-de-sistemas-de-ecuaciones.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-1 TERCERA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DESARROLLO DE FÍSICA QUÍMICA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sistema masa-resorte horizontal oscila, de tal forma que su energía es de 36mJ. La fuerza máxima que aplica el resorte sobre el cuerpo es de 3N. Calcule en N/m, la constante elástica del resorte.",
+      "alternatives": [
+        "115",
+        "125",
+        "145",
+        "155",
+        "135"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sistemas-de-ecuaciones-lineales-metodo.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 FÍSICA QUÍMICA TERCERA PRUEBA RESUELTA –RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sistema bloque-resorte oscila sobre una superficie lisa con un periodo T. Si la masa m del bloque se triplica y la constante del resorte se reduce a la tercera parte, determine el nuevo periodo.",
+      "alternatives": [
+        "2T/3",
+        "T/3",
+        "3T/2",
+        "3T",
+        "T"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La velocidad del sonido fue medida por primera vez por el científico francés Jean-Baptiste Biot, quien obtuvo el valor de 340m/s, cuando el sonido se propagaba por el aire. Además, determinó que el sonido se propagaba a diferentes velocidades en diferentes medios. En este contexto, para determinar la velocidad del sonido en un metal fundido se realiza el siguiente experimento: se toma un riel de metal fundido de 918 m de longitud y se golpea en uno de sus extremos con un martillo. En el otro extremo, un observador escucha primero el sonido que llegaba por el riel y 2,5s después escucha el sonido que se propagaba por el aire. Si la frecuencia del sonido es de 4590Hz, determine la longitud de onda del sonido que se propaga en el riel del metal fundido.",
+      "alternatives": [
+        "3,0 m",
+        "2,0 m",
+        "1,5 m",
+        "1,0 m",
+        "3,5 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un resorte ideal, de constante elástica k, es colgado de un soporte. En la parte inferior del resorte se une un bloque de masa m, el cual queda en equilibrio cuando el resorte se estira 1,0cm. Seguidamente, se jala hacia abajo el bloque hasta que el resorte se estira 10cm y luego se lo deja oscilar libremente con un periodo de 0,2s. En estas condiciones, halle el valor de la gravedad local g.\nDato: considerar: 𝛑 =𝟑,𝟏",
+      "alternatives": [
+        "9,4 m/s²",
+        "9,6 m/s²",
+        "9,5 m/s²",
+        "9,7 m/s²",
+        "9,8 m/s²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El péndulo simple es uno de los sistemas oscilatorios muy importantes en la física porque muchas veces se le utiliza como instrumento para medir el tiempo, si el periodo de esté es dos segundos, tendremos un segundo para la oscilación en una dirección y un segundo para la oscilación de retorno. Un péndulo se encuentra oscilando dentro de un ascensor en reposo; pero si el ascensor acelera hacia arriba su nuevo periodo es 3/4 del periodo inicial. Determine la aceleración del ascensor.",
+      "alternatives": [
+        "7/9 g",
+        "5/9 g",
+        "3/7 g",
+        "11/9 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/fisica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El péndulo simple es un sistema usado frecuentemente para medir la aceleración aproximada de la gravedad en la superficie terrestre. En el laboratorio de física, un grupo de estudiantes determinó el valor de la gravedad en 9,92m/s 2 usando un péndulo con periodo de 2,0s. Es conocido que el valor de la aceleración de la gravedad en Plutón es de 0,62m/s 2 . En estas circunstancias, ¿cuál sería el valor del periodo del mismo péndulo en la superficie de Plutón? Asuma la longitud de la cuerda del péndulo inextensible.",
+      "alternatives": [
+        "5,5 s",
+        "4,0 s",
+        "3,0 s",
+        "8,0 s",
+        "6,5 s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razonamiento-logico-matematico.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La velocidad máxima que adquiere una masa con movimiento armónico simple es 2m/s y su amplitud es 5×10 –2 m. Si el sistema duplica su amplitud manteniendo su frecuencia, la aceleración máxima en m/s², que adquiere bajo esta condición es",
+      "alternatives": [
+        "20",
+        "40",
+        "80",
+        "160",
+        "320"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/02/solucionario-uni-2017-i-tercera-prueba.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023-2 TERCERA PRUEBA SOLUCIONARIO DE INGRESO UNIVERSIDAD NACIONAL DE INGENIERÍA RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una O.E.M. de longitud λ 0 =3km en el espacio vacío, tiene una longitud de onda λ =2km cuando se propaga en un medio no-magnético, cuya constante dieléctrica k es:",
+      "alternatives": [
+        "1,25",
+        "1,50",
+        "2,25",
+        "2,50",
+        "2,75"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una O.E.M. que se está propagando en el espacio vacío, tiene una frecuencia f=3MHz. Si la onda penetra en un medio dieléctrico de constante k=4. Halle en qué porcentaje varía su longitud de onda.",
+      "alternatives": [
+        "30",
+        "50",
+        "60",
+        "70",
+        "80"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De las afirmaciones siguientes:\nI) La longitud de onda de la señal emitida por una estación de radio, que transmite con una frecuencia de 100Mhz. es mayor que la de los rayos X.\nII)Las ondas siempre necesitan un medio material para propagarse.\nIII) Las ondas electromagnéticas son portadores de energía y se propagan sin transportar materia consigo.",
+      "alternatives": [
+        "Sólo I es correcta.",
+        "I y II son correctas.",
+        "I y III son correctas.",
+        "Todas son falsas.",
+        "Sólo III es correcta."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El orden que le corresponde al tipo de ondas indicando, dentro del espectro electromagnético de mayor a menor longitud de onda considerando las siguientes ondas: infrarrojo, microondas, radio, ultravioleta, visible es:",
+      "alternatives": [
+        "Radio, infrarrojo, microondas, ultravioleta, visible.",
+        "Ultravioleta, visible, infrarrojo, microondas, radio.",
+        "Radio, ultravioleta, microondas, visible, infrarrojo.",
+        "Radio, microondas, infrarrojo, visible, ultravioleta."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto que se ve blanco cuando está expuesto a la luz solar, si se le coloca en un cuarto oscuro y se enciende dentro del cuarto una luz monocromática de longitud de onda λ =550nm, indique de que color se verá el objeto.",
+      "alternatives": [
+        "Rojo",
+        "Naranja",
+        "Amarillo",
+        "Verde",
+        "Azul"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la proposición falsa.",
+      "alternatives": [
+        "Luz no polarizada se puede polarizar por reflexión.",
+        "La interferencia es un fenómeno que se manifiesta cuando dos ondas de la misma naturaleza se superponen.",
+        "Cuando una onda pasa por el borde de un obstáculo comparable con su longitud de onda experimenta el fenómeno de difracción.",
+        "En el experimento de Young se originan franjas brillantes si la interferencia es constructiva.",
+        "Cuando la luz interacciona con la sustancia siempre se le considera como onda."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique las proposiciones correctas respecto de la radiación visible.\nI) Son de mayor frecuencia que los rayos X\nII) Son de menor frecuencia que las ondas de radio.\nIII) Su longitud de onda está aproximadamente entre 400nm y 700nm.",
+      "alternatives": [
+        "Sólo I",
+        "Sólo II",
+        "Sólo III",
+        "Sólo I y II",
+        "Sólo II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la veracidad (V) o falsedad (F) de las siguientes proposiciones referentes al espectro electromagnético.\nI) El espectro electromagnético describe a las ondas según su energía.\nII) Las ondas de luz visible tienen mayor frecuencia que los rayos infrarrojos.\nIII) La longitud de onda de los rayos x es menor que la de las microondas.",
+      "alternatives": [
+        "VFF",
+        "FVF",
+        "FFF",
+        "FVV",
+        "VFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique cual podría ser la longitud de onda (en m) de la señal de radio de ondas largas emitida por una antena.",
+      "alternatives": [
+        "10 –4",
+        "10 –12",
+        "10 –8",
+        "10 3",
+        "10 –14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la superficie del agua de una piscina, se generan ondas periódicas que se propagan con una rapidez de 1,5 m/s. Si la longitud de onda de estas ondas es 3 m, ¿cuál es el periodo de oscilación de un objeto que flota en la piscina y oscila debido a ellas?",
+      "alternatives": [
+        "1/3 s",
+        "1/2 s",
+        "9/2 s",
+        "2 s",
+        "3 s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-fisica-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE FÍSICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cuerda de 0,01 kg/m de densidad lineal y con una tensión de 9 N es utilizada para generar una onda mecánica transversal de 20 Hz. Determine la longitud de onda en la cuerda.",
+      "alternatives": [
+        "3,0 m",
+        "2,5 m",
+        "0,5 m",
+        "1,5 m",
+        "2,0 m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-fisica-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE FÍSICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la longitud de un péndulo simple aumentase en 2m, su periodo se triplica.\nLa longitud del péndulo es:",
+      "alternatives": [
+        "2 m",
+        "1,5",
+        "0,25",
+        "0,5",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/pendulo-simple-o-matematico-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento pendular-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PÉNDULO SIMPLE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos ondas armónicas que se propagan en dos cuerdas diferentes, tienen una misma longitud de onda de 20 cm, pero distintas frecuencias de 5Hz y 6 Hz. Calcule en mis, el valor absoluto de la diferencia de las rapideces de dichas ondas.",
+      "alternatives": [
+        "0,1",
+        "0,2",
+        "0,3",
+        "0,4",
+        "0,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/tercera-prueba-examen-uni-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I TERCERA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una onda mecánica es una perturbación de un medio elástico que transmite energía y momento a través del medio, tal es el caso de una onda que viaja por una cuerda y tiene 'la ecuación y= 0,3cos(2x – 60t) m. A partir de los enunciados siguientes, elija la respuesta correcta.\nI. La velocidad de esta onda, a lo largo de la cuerda, es 30 mis.\nII. La longitud de onda es 𝛑 m.\nIII. Si la onda viaja por otra cuerda con velocidad 10 m/s, su longitud de onda es 2 m.",
+      "alternatives": [
+        "Solo I",
+        "I y III",
+        "II y III",
+        "I y II"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/examen-de-admision-san-marcos-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN SAN MARCOS ÁREA A 2022 II MEDICINA HUMANA SOLUCIONARIO PRUEBA DESARROLLADA ADMISIÓN UNIVERSIDAD RESPUESTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El extremo inferior de un resorte que cuelga del techo, que está unido a un cuerpo de 150g, oscila con una frecuencia de 3Hz. Si la velocidad máxima del cuerpo es de 0,9m/s, calcule aproximadamente, en N, la fuerza máxima en el resorte.",
+      "alternatives": [
+        "1,5",
+        "5,5",
+        "3,5",
+        "4,5",
+        "2,5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Fisica-problemas-resueltos-de-examen-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sistema masa-resorte horizontal oscila de modo que su energía es de 36mJ. La fuerza máxima que aplica el resorte sobre el cuerpo es de 3N. Calcule la constante de elasticidad del resorte en N/m.",
+      "alternatives": [
+        "125",
+        "135",
+        "115",
+        "145",
+        "155"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Fisica-problemas-resueltos-de-examen-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PROBLEMAS RESUELTOS DE UNIVERSIDAD DE INGENIERÍA–UNI"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Rayos X\nI. El poder de penetración de los rayos X varía de acuerdo con la densidad del material.\nII. Otras sustancias menos densas son penetradas en mayor o menor grado.\nIII. Los rayos X son radiaciones electromagnéticas.\nIV. Determinados materiales absorben casi por completo la radiación, por ejemplo, los huesos que contienen mucho calcio.\nV. Poseen las características de la luz, pero su longitud de onda es mucho menor por la que su energía es mayor.",
+      "alternatives": [
+        "III – I – V – II – IV",
+        "III – I – IV – V – II",
+        "III – IV – II – I – V",
+        "III – II – I – IV – V",
+        "III – V – I – IV – II"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/10/examen-ordinario-unach-2021-banco-de.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Examen ordinario UNACH 2021 Banco de Preguntas RV"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un sistema masa-resorte; la masa tiene un valor de 7 kg y oscila con un período de 2,6 s. Calcule, aproximadamente, en N/m, la constante elástica del resorte.",
+      "alternatives": [
+        "12",
+        "24",
+        "32",
+        "41",
+        "59"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2015.pdf",
+      "sourceName": "uni.edu.pe-pdf — UNI 2015-1 Física pregunta 8"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos resortes, R 1 de alargamiento 2mm/N y R 2 de 5mm/N, tienen la misma longitud sin carga. Son colgados del mismo soporte en la parte superior y son ligados solidarios en la parte inferior. Al colocar una pesa de 5N, el sistema se va a estirar:",
+      "alternatives": [
+        "25/7mm",
+        "50/7mm",
+        "75/7mm",
+        "5/7mm",
+        "7/5mm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO ARMÓNICO SIMPLE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un reloj de péndulo ‘‘bate el segundo’’. Si se duplica su longitud.\n¿En cuántos segundos se adelantará o atrasará al término de un minuto?",
+      "alternatives": [
+        "Se adelantará en 30 s",
+        "Se atrasa en 2 s",
+        "Se mantiene sin variar",
+        "Se adelanta en 25 s",
+        "Se atrasa en 25 s"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/pendulo-simple-o-matematico-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento pendular-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PÉNDULO SIMPLE EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El desplazamiento de una partícula varía con el tiempo según la relación y = a sin ωt + b cos ωt.",
+      "alternatives": [
+        "El movimiento es oscilatorio pero no es M.A.S.",
+        "El movimiento es M.A.S. con amplitud a + b.",
+        "El movimiento es M.A.S. con amplitud a2 + b2.",
+        "El movimiento es M.A.S. con amplitud a +b . 2 2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep314.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.14 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cambio de temperatura del medio modifica",
+      "alternatives": [
+        "la frecuencia de las ondas sonoras.",
+        "la amplitud de las ondas sonoras.",
+        "la longitud de onda de las ondas sonoras.",
+        "la intensidad sonora de las ondas sonoras."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep315.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.15 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La longitud de onda de un fotón necesario para extraer un protón de un núcleo, sabiendo que está ligado al núcleo con una energía de 1 MeV, es aproximadamente",
+      "alternatives": [
+        "1.2 nm",
+        "1.2 × 10–3 nm",
+        "1.2 × 10–6 nm",
+        "1.2 × 101 nm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep111.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.11 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un electrón se mueve con una velocidad inicial v = v0 î y se encuentra en un campo magnético B = B0 ĵ. Entonces su longitud de onda de De Broglie",
+      "alternatives": [
+        "permanece constante.",
+        "aumenta con el tiempo.",
+        "disminuye con el tiempo.",
+        "aumenta y disminuye periódicamente."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep111.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.11 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al comparar la radiación infrarroja con la ultravioleta, propagándose en un mismo medio, es correcto concluir que",
+      "alternatives": [
+        "ambas poseen distinta frecuencia pero igual longitud de onda.",
+        "ambas poseen la misma frecuencia, dado que son invisibles al ojo humano.",
+        "una es una onda mecánica y la otra electromagnética, porque poseen distinta frecuencia.",
+        "ambas son ondas electromagnéticas, y se mueven con la misma rapidez en el vacío.",
+        "ambas son ondas electromagnéticas y los fotones asociados a cada una de ellas tienen la misma energía."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 24"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La magnitud de la fuerza elástica ejercida por un resorte ideal sobre un objeto que cuelga de él, en equilibrio, se puede determinar por medio del producto entre",
+      "alternatives": [
+        "la longitud natural del resorte y la constante elástica de este.",
+        "la constante elástica del resorte y el estiramiento de este.",
+        "la constante elástica del resorte y la masa del objeto.",
+        "la masa del objeto y la longitud natural del resorte.",
+        "la masa del objeto y el estiramiento del resorte."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 25"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una investigación, se utilizaron varias plantas de la misma especie para evaluar el comportamiento de dos pigmentos fotosensibles (1 y 2) bajo ciertas condiciones ambientales. Los resultados obtenidos se representaron en los siguientes gráficos: Basándose en el análisis de estos gráficos, y considerando que X → Y significa “Y depende de X”, ¿cuál de las siguientes opciones relaciona las variables representadas?",
+      "alternatives": [
+        "Absorción de luz → Tasa de fotosíntesis → Pigmentos 1 y 2",
+        "Tasa de fotosíntesis → Longitud de onda → Absorción de luz",
+        "Longitud de onda → Absorción de luz → Tasa de fotosíntesis",
+        "Pigmentos 1 y 2 → Tasa de fotosíntesis → Longitud de onda"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 78"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un resorte se estira al aplicar una carga en su extremo libre. La deformación producida en el resorte es",
+      "alternatives": [
+        "volumétrica.",
+        "de cizalladura (cortante).",
+        "longitudinal y de cizalladura.",
+        "longitudinal."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep309.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.9 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una onda sonora pasa a través de una columna de aire en forma de compresión y rarefacción. En compresiones y rarefacciones consecutivas,",
+      "alternatives": [
+        "la densidad permanece constante.",
+        "se cumple la ley de Boyle.",
+        "el módulo de compresibilidad del aire oscila.",
+        "no hay transferencia de calor."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep315.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.15 MCQ 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una señal de voz de 3 kHz se utiliza para modular una señal portadora de frecuencia 1 MHz, mediante modulación de amplitud. Las frecuencias de las bandas laterales serán",
+      "alternatives": [
+        "1.003 MHz y 0.997 MHz.",
+        "3001 kHz y 2997 kHz.",
+        "1003 kHz y 1000 kHz.",
+        "1 MHz y 0.997 MHz."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep115.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.15 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifique la expresión matemática para una onda modulada en amplitud:",
+      "alternatives": [
+        "Ac sin [{ωc + k1vm (t)}t + φ ].",
+        "Ac sin {ωct + φ + k2 vm (t)}.",
+        "{Ac + k2 vm (t)} sin (ωct + φ ).",
+        "Ac vm (t) sin (ωct + φ )."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep115.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.15 MCQ 9"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un péndulo oscila describiendo un ángulo cuya medida es 28° y un arco de longitud 66 cm. Encontrar la longitud del péndulo, en m. (Considerar: 𝛑 = 22 7 )",
+      "alternatives": [
+        "0,135",
+        "1,35",
+        "13,5",
+        "135",
+        "1350"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/longitud-de-arco-problemas-resueltos-de.html",
+      "sourceName": "matematicasn.blogspot.com — LONGITUD DE ARCO EJERCICIOS RESUELTOS PDF – TRIGONOMETRÍA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A medida que aumenta la temperatura, el periodo de un péndulo",
+      "alternatives": [
+        "aumenta porque su longitud efectiva aumenta, aunque su centro de masa sigue estando en el centro de la lenteja.",
+        "disminuye porque su longitud efectiva aumenta, aunque su centro de masa sigue estando en el centro de la lenteja.",
+        "aumenta porque su longitud efectiva aumenta debido a que el centro de masa se desplaza por debajo del centro de la lenteja.",
+        "disminuye porque su longitud efectiva permanece igual, pero el centro de masa se desplaza por encima del centro de la lenteja."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep311.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.11 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la práctica, a medida que se aumenta la longitud del cordel, ¿ocurre la reducción de cuál característica de la onda sonora?",
+      "alternatives": [
+        "Altura.",
+        "Período.",
+        "Amplitud.",
+        "Velocidad.",
+        "Longitud de onda."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2023 dia 2 caderno azul questão 111"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la máxima deformación del resorte de rigidez K = 5000 N/m, si el bloque de 2kg se suelta en la posición mostrada (g =10m/s²).",
+      "alternatives": [
+        "0,1m",
+        "0,2m",
+        "0,3m",
+        "0,4m",
+        "0,5m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/04/universidad-nacional-piura-examen-unp.html",
+      "sourceName": "matematicaj.blogspot.com — SOLUCIONARIO EXAMEN INGRESO UNIVERSIDAD DE PIURA UNP PDF 2025"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El módulo de rigidez de los líquidos ideales es",
+      "alternatives": [
+        "infinito.",
+        "cero.",
+        "uno (unidad).",
+        "algún valor constante finito, pequeño y distinto de cero."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep309.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.9 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia entre dos crestas sucesivas de una onda transversal es 1,20m. Si un punto P que se encuentra en la trayectoria de la onda realiza ocho ciclos en un tiempo de 12,0s, ¿cuál es la rapidez de la onda?",
+      "alternatives": [
+        "0,80 m/s",
+        "0,10 m/s",
+        "0,90 m/s",
+        "0,70 m/s"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-fisica-de-admision-la_21.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cuerda se fija por ambos extremos haciéndola vibrar bajo una tensión de 180 N generándose ondas estacionarias. Dos armónicos consecutivos tienen frecuencias de 45 Hz y de 37,5 Hz. Si la densidad lineal de masa de la cuerda es igual a 0,2 kg/m, calcule la longitud de la cuerda (en m).",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/ondas-problemas-resueltos-de-fisica-preuniverisitaria-en-movimiento-ondulatorio-sonido-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — MOVIMIENTO ONDULATORIO PROBLEMAS RESUELTOS DE ONDAS MECÁNICAS DE EXAMEN ADMISIÓN UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un hombre dispara un rifle sobre un blanco. Dos segundos después de disparar oye el sonido de la bala al dar en el blanco, si la velocidad del sonido es 340m/s y la velocidad de la bala es 510m/s. ¿A qué distancia está el blanco?",
+      "alternatives": [
+        "425m",
+        "850m",
+        "408m",
+        "688m",
+        "1020m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/problemas-de-moviles-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — PROBLEMAS DE MOVILES EJEMPLOS Y EJERCICIOS RESUELTOS DE RAZONAMIENTO MATEMATICO"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona ubicada entre dos montañas emite un grito y recibe el primer eco a los 4 segundos y el siguiente a los 6 segundos. ¿Cuál es la separación entre las montañas? (velocidad del sonido en el aire igual a 340 m/s )",
+      "alternatives": [
+        "262m",
+        "1648m",
+        "1580m",
+        "1660m",
+        "1536m"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/problemas-de-moviles-resueltos-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — PROBLEMAS DE MOVILES EJEMPLOS Y EJERCICIOS RESUELTOS DE RAZONAMIENTO MATEMATICO"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un técnico de seguridad percibe que el nivel de intensidad del sonido de una alarma es 50 dB; decide conectar varias a la vez para que el nivel de intensidad llegue a 60 dB y resulte así más disuasiva para los ladrones. ¿Cuántas alarmas de 50 dB debe colocar para llegar a los 60 dB?",
+      "alternatives": [
+        "50",
+        "20",
+        "30",
+        "40",
+        "10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/examen-san-marcos-2019-i-deco.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN MARCOS 2027 I EXAMEN ADMISIÓN UNIVERSIDAD PDF 2026 II"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La frecuencia fundamental a la que vibra la cuerda de una guitarra es de 400 Hz. Calcule la nueva frecuencia fundamental (en Hz) si cuadruplicamos la tensión en la cuerda y los otros parámetros se mantienen constantes.",
+      "alternatives": [
+        "100",
+        "200",
+        "400",
+        "800",
+        "1600"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación al movimiento ondulatorio, Indique la verdad (V) o falsedad (F) de las siguientes proposiciones.\nI. Todas las ondas transportan materia y energía.\nII. Las ondas se propagan solo en medios materiales.\nIII. La rapidez de las ondas sonoras son iguales tanto en el agua como en el aire.",
+      "alternatives": [
+        "FFF",
+        "VFV",
+        "VVV",
+        "FFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tiempo mínimo que demora una partícula que realiza un MAS en alcanzar la amplitud máxima desde la posición de equilibrio, es de 1,5 s. Si el módulo de la aceleración máxima es de 4 cm/s 2 , calcule aproximadamente la rapidez máxima de la partícula en cm/s.",
+      "alternatives": [
+        "2,82",
+        "1,82",
+        "4,82",
+        "5,82",
+        "3,82"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Tercera-prueba-uni-solucionario-examen-admision-universidad-ingenieria-fisica-quimica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA QUÍMICA EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA TERCERA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el concepto incorrecto:",
+      "alternatives": [
+        "Si una partícula comienza a vibrar, puede transmitir esa vibración a la partícula que tiene a lado.",
+        "Las ondas se representan mediante una línea ondulatoria formada por una sucesión de crestas y valles.",
+        "Tanto la luz como el sonido son fenómenos ondulatorios.",
+        "Una onda es una perturbación que se propaga en el espacio y transporta materia.",
+        "Las partículas en las ondas transversales vibran en dirección perpendicular al avance de la perturbación."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN QUINTOS BIOMÉDICAS 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS PDF SOLUCIONARIO"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el nivel de intensidad de una onda sonora en un punto es 120 dB, calcule el valor de su correspondiente intensidad en dicho punto (en W/m 2 ). Considere que la intensidad del sonido en el umbral de audición es 10 –12 W/m 2 .",
+      "alternatives": [
+        "10 –4",
+        "10 –3",
+        "10 –2",
+        "10 –1",
+        "1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-11-educacion-fisica-experiencia-6-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque de masa m realiza un MAS. Calcule qué porcentaje de la rapidez máxima tiene el bloque cuando su elongación es el 28% de su amplitud máxima.",
+      "alternatives": [
+        "28",
+        "42",
+        "50",
+        "75",
+        "96"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/examen-admision-uni-solucionario_28.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un péndulo en el polo norte realiza 1796 oscilaciones completas en una hora. Calcule aproximadamente el número de oscilaciones completas que realizará el mismo péndulo en una hora en el ecuador. Considere que en el ecuador g=9,78 m/s 2 y que en el polo norte g=9,83 m/s 2 .",
+      "alternatives": [
+        "1291",
+        "1491",
+        "1691",
+        "1791",
+        "1891"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un conjunto de violines, cada uno ubicado a una misma distancia “d” de cierto observador, de modo que los violines son considerados como fuentes sonoras puntuales idénticas. Al tocar un violín, el observador mide el nivel de intensidad obteniendo 80 dB. Si en otro momento tocan diez violines simultáneamente, determine el nuevo nivel de intensidad (en dB) medido por el observador.",
+      "alternatives": [
+        "90",
+        "88",
+        "86",
+        "84",
+        "82"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepreuni-fisica-quinta-practica.html",
+      "sourceName": "matematicasn.blogspot.com — SEXTA PRACTICA CEPREUNI 2023 DESARROLLADA CLAVES"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la longitud de un péndulo se cuadruplica, su periodo cambia en 0,1 s. Calcule el periodo (en s) que el péndulo tenía inicialmente.",
+      "alternatives": [
+        "0,1",
+        "0,3",
+        "0,4",
+        "0,5",
+        "0,6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación y=3sen(x –10t), con unidades en el Sistema Internacional, representa a una onda que se propaga a través de una cuerda tensa. Si la densidad lineal de la cuerda es μ= 1 g/m, calcule la potencia media que propaga la onda (en W).",
+      "alternatives": [
+        "3",
+        "3,5",
+        "4",
+        "4,5",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considere que las seis cuerdas de una guitarra tienen una misma longitud y que están sometidas a la misma tensión. Respecto a la prolongación de las ondas por dichas cuerdas, indique cuál de las siguientes proposiciones es verdadera.",
+      "alternatives": [
+        "Las ondas viajan con mayor rapidez en la cuerda más gruesa.",
+        "La rapidez de las ondas es la misma en todas las cuerdas.",
+        "Las ondas viajan con mayor rapidez en la cuerda más delgada.",
+        "La rapidez de las ondas es la misma solo en la cuerda más delgada y en la más gruesa.",
+        "En la cuerda más delgada, la rapidez de las ondas es la mitad de la rapidez en la cuerda más gruesa."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/fisica-simulacro-de-examen-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA DE SECUNDARIA 2027 LIBRO SOLUCIONARIO DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un experimento de física sobre el MAS, se coloca un bloque de masa M sobre una plataforma lisa. Luego, sobre este bloque, se coloca otro de masa m. La superficie de contacto entre los bloques es rugosa con coeficiente de fricción estático μ s =0,8. Si al sistema se le hace oscilar con una frecuencia f=1,5Hz, determine la aceleración máxima a la que oscila el sistema para que los bloques no se separen.\nDato: g=10 m/s 2",
+      "alternatives": [
+        "9,0 m/s 2",
+        "8,5 m/s 2",
+        "8,0 m/s 2",
+        "7,0 m/s 2",
+        "7,5 m/s 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la zona industrial del distrito de Villa El Salvador, el nivel de ruido debe limitarse a 60 dB. Un empresario decide abrir una lavandería y ha cotizado un modelo de lavadora cuya ficha técnica indica una intensidad máxima de 10 –7 W/m 2 .\n¿Cuántas lavadoras podrá instalar en su lavandería?\nDato: (I 0 =10 –12 W/m 2 )",
+      "alternatives": [
+        "10",
+        "20",
+        "18",
+        "15",
+        "14"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/fisica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS FÍSICA PROBLEMAS RESUELTOS DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una onda sonora se propaga en el aire. Si a 2m de la fuente la intensidad sonora es I. ¿Cuál será la intensidad sonora a 5 m de la fuente?",
+      "alternatives": [
+        "0,16 I",
+        "0,32 I",
+        "0,4 I",
+        "0,5 I",
+        "0,64 I"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-geometria-semana-16-2020.html",
+      "sourceName": "matematicasn.blogspot.com — SAN MARCOS ÁREA C 2024-1 PRUEBA RESUELTA INGENIERÍAS INGRESO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto el fenómeno de polarización señale la veracidad (V) o falsedad (F) de las siguientes proposiciones:\nI) El sonido es una onda polarizada.\nII) Las ondas en una cuerda tensa no se pueden polarizar.\nIII) En una onda polarizada la dirección de las oscilaciones puede cambiar aleatoriamente.",
+      "alternatives": [
+        "FVV",
+        "FFV",
+        "FVF",
+        "FFF",
+        "VVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se hace oscilar un péndulo de longitud L=2m con frecuencia f 1 . Luego, su longitud aumenta en X metros y se hace oscilar nuevamente, con frecuencia f 2 , de tal forma que f 1 /f 2 =2. Si se considera que los péndulos oscilan con MAS, el valor de X es",
+      "alternatives": [
+        "6",
+        "5",
+        "4",
+        "3",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepre-san-marcos-fisica-semana-8-2019-1.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un automóvil se aleja en línea recta y en dirección perpendicular a una pared vertical con rapidez de 20 m/s. Si a cierta distancia de la pared el conductor toca la bocina y escucha el eco del sonido después de 4s, ¿a qué distancia de la pared se encontrará el automóvil cuando el conductor escuche el eco?\nConsidere: v sonido = 340 m/s.",
+      "alternatives": [
+        "720 m",
+        "780 m",
+        "850 m",
+        "540 m",
+        "660 m"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-fisica-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE FÍSICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos péndulos de longitudes ℓ 1 y ℓ 2 empiezan a oscilar simultáneamente. Durante un mismo intervalo de tiempo, el primero realiza 20 oscilaciones, y el segundo, 10 oscilaciones. Determine ℓ 1 /ℓ 2 .",
+      "alternatives": [
+        "1/2",
+        "1",
+        "2",
+        "1/4",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-fisica-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE FÍSICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un parlante emite sonido con una potencia de 5×10 –4 W. Si tenemos 20 parlantes idénticos ubicados en la misma posición, y a determinada distancia de estos se mide el nivel de intensidad que causan estos parlantes ¿cuánto seria dicho resultado de la medición?",
+      "alternatives": [
+        "80 dB",
+        "100 dB",
+        "25 dB",
+        "40 dB",
+        "60 dB"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-fisica-rubinos-pdf-descarga.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE FÍSICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El tiempo mínimo que demora una partícula que realiza un MAS, para alcanzar la amplitud máxima desde la posición de equilibrio, es de 1,5 s. Si la magnitud de la aceleración máxima es de 4cm/s² calcule en cm/s, la rapidez máxima.",
+      "alternatives": [
+        "12/𝛑",
+        "4/𝛑",
+        "6/𝛑",
+        "8/𝛑",
+        "15/𝛑"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/tercera-prueba-examen-uni-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I TERCERA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El desplazamiento de una partícula está representado por la ecuación y = sin3 ωt. El movimiento es",
+      "alternatives": [
+        "no periódico.",
+        "periódico pero no armónico simple.",
+        "armónico simple con periodo 2π/ω.",
+        "armónico simple con periodo π/ω."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep314.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.14 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación de movimiento de una partícula es x = a cos (α t)2. El movimiento es",
+      "alternatives": [
+        "periódico pero no oscilatorio.",
+        "periódico y oscilatorio.",
+        "oscilatorio pero no periódico.",
+        "ni periódico ni oscilatorio."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep314.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.14 MCQ 9"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las ondas de agua producidas por una lancha a motor que navega en el agua son",
+      "alternatives": [
+        "ni longitudinales ni transversales.",
+        "tanto longitudinales como transversales.",
+        "solo longitudinales.",
+        "solo transversales."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep315.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.15 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La velocidad de una onda sonora en el aire",
+      "alternatives": [
+        "es independiente de la temperatura.",
+        "aumenta con la presión.",
+        "aumenta al aumentar la humedad.",
+        "disminuye al aumentar la humedad."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep315.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.15 MCQ 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones es verdadera para el movimiento ondulatorio?",
+      "alternatives": [
+        "Las ondas mecánicas transversales pueden propagarse a través de todos los medios.",
+        "Las ondas longitudinales solo pueden propagarse a través de sólidos.",
+        "Las ondas mecánicas transversales solo pueden propagarse a través de sólidos.",
+        "Las ondas longitudinales pueden propagarse a través del vacío."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep315.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.15 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cuerda de masa 2.5 kg está sometida a una tensión de 200 N. La longitud de la cuerda estirada es de 20.0 m. Si se produce un tirón transversal en un extremo de la cuerda, la perturbación llegará al otro extremo en",
+      "alternatives": [
+        "un segundo",
+        "0.5 segundos",
+        "2 segundos",
+        "los datos dados son insuficientes."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep315.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.15 MCQ 9"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona ubicada entre dos montañas emite un grito y recibe el primer eco a los 3s y el segundo a las 3,6s. ¿Cuál es la separación entre las montañas?",
+      "alternatives": [
+        "2080 m",
+        "2040",
+        "1020",
+        "1122",
+        "2244"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/tiempo-encuentro-alcance-cruce-guias.html",
+      "sourceName": "razonamientopdf.blogspot.com — MÓVILES EJERCICIOS PARA RESOLVER CON CLAVES Y RESPUESTAS DE TIEMPO DE ENCUENTRO Y ALCANCE"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El siguiente texto describe la dualidad de la materia. • Si se hace incidir un haz de electrones sobre una lámina metálica delgada, aparece un patrón de difracción, igual que ocurre al usar rayos X. Este fenómeno puede explicarse por (㉠) del electrón. • Cuanto mayor es la magnitud del momento lineal del electrón, (㉡) es la longitud de onda de De Broglie asociada. El microscopio (㉢), que utiliza ondas de materia, puede distinguir estructuras más pequeñas que un microscopio que utiliza luz visible. ¿Cuál es la opción más adecuada para completar (㉠), (㉡) y (㉢)? [3 puntos]",
+      "alternatives": [
+        "㉠ ― naturaleza ondulatoria; ㉡ ― larga; ㉢ ― electrónico",
+        "㉠ ― naturaleza ondulatoria; ㉡ ― corta; ㉢ ― electrónico",
+        "㉠ ― naturaleza ondulatoria; ㉡ ― larga; ㉢ ― óptico",
+        "㉠ ― naturaleza corpuscular; ㉡ ― corta; ㉢ ― electrónico",
+        "㉠ ― naturaleza corpuscular; ㉡ ― larga; ㉢ ― óptico"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://horaeng.com/wp-content/uploads/2023%ED%95%99%EB%85%84%EB%8F%84-%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98-%EB%AC%BC%EB%A6%AC%ED%95%991-%EB%AC%B8%EC%A0%9C.pdf",
+      "sourceName": "ebsi.co.kr — 수능 2023 물리학I 4번"
     }
   ]
 }

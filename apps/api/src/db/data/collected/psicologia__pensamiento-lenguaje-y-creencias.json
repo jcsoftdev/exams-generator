@@ -6,7 +6,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "¿Cuál es la forma más compleja del pensar, que consiste en llegar a una conclusión mediante la relación de dos o más juicios?",
-      "alternatives": ["Conceptuar", "Razonar", "Sintetizar", "Juzgar", "Generalizar"],
+      "alternatives": [
+        "Conceptuar",
+        "Razonar",
+        "Sintetizar",
+        "Juzgar",
+        "Generalizar"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
       "sourceName": "Matematicasn - Funciones del pensamiento y lenguaje (Psicología preuniversitaria), pregunta 1"
@@ -17,7 +23,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Señale aquella operación del pensar que nos permite aislar la cualidad más importante de los elementos.",
-      "alternatives": ["Analizar", "Abstraer", "Generalizar", "Razonar", "Juzgar"],
+      "alternatives": [
+        "Analizar",
+        "Abstraer",
+        "Generalizar",
+        "Razonar",
+        "Juzgar"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
       "sourceName": "Matematicasn - Funciones del pensamiento y lenguaje (Psicología preuniversitaria), pregunta 2"
@@ -28,7 +40,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La estrategia del pensamiento que busca abreviar pasos en la solución de problemas, apelando a la intuición es:",
-      "alternatives": ["El algoritmo", "La heurística", "El razonar", "El juzgar", "El abstraer"],
+      "alternatives": [
+        "El algoritmo",
+        "La heurística",
+        "El razonar",
+        "El juzgar",
+        "El abstraer"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
       "sourceName": "Matematicasn - Funciones del pensamiento y lenguaje (Psicología preuniversitaria), pregunta 3"
@@ -39,7 +57,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Al pensamiento divergente, también se le llama:",
-      "alternatives": ["Lógico", "Vertical", "Convergente", "Convencional", "Lateral"],
+      "alternatives": [
+        "Lógico",
+        "Vertical",
+        "Convergente",
+        "Convencional",
+        "Lateral"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
       "sourceName": "Matematicasn - Funciones del pensamiento y lenguaje (Psicología preuniversitaria), pregunta 4"
@@ -50,7 +74,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En el ________ la conclusión a la que se arriba tiene carácter probable respecto a las premisas:",
-      "alternatives": ["Pensamiento creativo", "Pensamiento convergente", "Razonamiento inductivo", "Razonamiento deductivo", "Pensamiento lógico"],
+      "alternatives": [
+        "Pensamiento creativo",
+        "Pensamiento convergente",
+        "Razonamiento inductivo",
+        "Razonamiento deductivo",
+        "Pensamiento lógico"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
       "sourceName": "Matematicasn - Funciones del pensamiento y lenguaje (Psicología preuniversitaria), pregunta 5"
@@ -61,7 +91,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La expresión externa de los razonamientos se llama:",
-      "alternatives": ["Deducción", "Argumentación", "Inducción", "Pensar", "Juicio"],
+      "alternatives": [
+        "Deducción",
+        "Argumentación",
+        "Inducción",
+        "Pensar",
+        "Juicio"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-psicologia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
       "sourceName": "Matematicasn - Prueba de Psicología tipo examen de admisión, Primera Práctica pregunta 3"
@@ -72,7 +108,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dayco tiene que rendir su segundo examen en un centro preuniversitario. Está preocupado porque en el anterior obtuvo un puntaje bajo en Habilidad numérica. Por lo tanto, se entrena en la resolución de problemas matemáticos. ¿Qué uso de pensamiento está haciendo Dayco?",
-      "alternatives": ["Pensamiento vertical", "Pensamiento lateral", "Pensamiento convergente", "Pensamiento divergente", "Pensamiento empírico"],
+      "alternatives": [
+        "Pensamiento vertical",
+        "Pensamiento lateral",
+        "Pensamiento convergente",
+        "Pensamiento divergente",
+        "Pensamiento empírico"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-psicologia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
       "sourceName": "Matematicasn - Prueba de Psicología tipo examen de admisión, Primera Práctica pregunta 40"
@@ -83,7 +125,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "El componente de la actitud que orienta a que las personas acepten o rechacen algo es el:",
-      "alternatives": ["Cognitivo", "Afectivo", "Conductual", "Valorativo", "Orientador"],
+      "alternatives": [
+        "Cognitivo",
+        "Afectivo",
+        "Conductual",
+        "Valorativo",
+        "Orientador"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-psicologia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
       "sourceName": "Matematicasn - Prueba de Psicología tipo examen de admisión, Primera Práctica pregunta 19"
@@ -94,7 +142,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Luis Miguel sale del colegio rumbo a su casa. Al subir al carro, prende su teléfono, se coloca sus auriculares y comienza a escuchar música. Pasada una hora, el teléfono se apaga. Ante ello, Luis Miguel comienza a sacar la pila del teléfono, lo comienza a mover y de repente prende. ¿Qué estrategia de solución de problemas empleó?",
-      "alternatives": ["Ensayo y error", "Secuencia", "Algoritmo", "Heurística"],
+      "alternatives": [
+        "Ensayo y error",
+        "Secuencia",
+        "Algoritmo",
+        "Heurística"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/08/psicologia-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
       "sourceName": "Matematicasn - Psicología preguntas resueltas de examen de admisión, pregunta 42"
@@ -105,7 +158,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Marjorie es una estudiante de nivel secundario que estudia el curso de Biología. Cuando el docente le realiza alguna pregunta, ella brinda respuestas originales y siempre utiliza una 'lluvia de ideas' para buscar la respuesta. ¿Qué tipo de pensamiento emplea?",
-      "alternatives": ["Convergente", "Divergente", "Vertical", "Horizontal"],
+      "alternatives": [
+        "Convergente",
+        "Divergente",
+        "Vertical",
+        "Horizontal"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/08/psicologia-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
       "sourceName": "Matematicasn - Psicología preguntas resueltas de examen de admisión, pregunta 43"
@@ -116,10 +174,2085 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "La madre de Javier ha observado que, al jugar, el niño habla solo, y no espera respuesta alguna. ¿Qué tipo de lenguaje presenta Javier?",
-      "alternatives": ["Holofrásica", "Telegráfica", "Egocéntrica", "Simbólica"],
+      "alternatives": [
+        "Holofrásica",
+        "Telegráfica",
+        "Egocéntrica",
+        "Simbólica"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2019/08/psicologia-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
       "sourceName": "Matematicasn - Psicología preguntas resueltas de examen de admisión, pregunta 44"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se asocia con ciertos aspectos de la mente humana y se considera un estímulo importante para el pensamiento lógico y matemático, la adquisición del lenguaje, el desarrollo psicomotriz y otro vasto rango de actividades sociales y mentales propias del género humano. Por eso se la incluye usualmente en los distintos programas escolares. Pueden ser producidas por una orquesta clásica, y otras más contemporáneas como una banda de rock. Sin embargo, el principio que las guía es similar. Cada una pertenece a un contexto específico en cuanto a historia, cultura, valores y consideraciones en torno a lo que es y lo que no es el arte. Además, constituye el sostén de una gigantesca industria global.\nDe lo anterior, se sigue que",
+      "alternatives": [
+        "es una caracterización de la música.",
+        "señala la importancia de una manifestación artística.",
+        "son argumentos de la filosofía estética de Hume.",
+        "es apreciación crítica sobre las armonías sonoras.",
+        "esbozan los juicios estéticos kantianos."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/filosofia-preguntas-resueltas-semana-15-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FILOSOFÍA PRE SAN MARCOS SEMANA 15 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El rasgo mínimo significativo que permite la formación de conceptos y su diferenciación es el",
+      "alternatives": [
+        "lexema.",
+        "morfema.",
+        "sema.",
+        "fonema.",
+        "clasema."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/el-signo-linguistico-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL SIGNO LINGUÍSTICO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Como parte de la adquisición del lenguaje, el condicionamiento clásico como variable de aprendizaje es muy importante para que los niños, por ejemplo, puedan asociar los fonemas con los objetos y así mejorar su vocabulario. Si se le presenta a un infante, un patito de hule mientras se le dice continuamente «pa-to» y este lo repite, se espera eventualmente que la sola presencia de este elemento plástico sea suficiente para que el infante emita ese sonido. En ese sentido, el patito de hule termina cumpliendo la función de",
+      "alternatives": [
+        "un estímulo condicionado.",
+        "una respuesta condicionada.",
+        "un estímulo neutro.",
+        "una respuesta incondicionada.",
+        "un estímulo incondicionado."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aprendizaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EL APRENDIZAJE PREGUNTAS PREUNIVERSITARIAS RESUELTAS EN PSICOLOGÍA"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los estudiantes de la facultad de Educación de la UNT deben motivar a niños de primaria. Mientras la mayoría propone videos o lecturas, el grupo de Mariana sugiere' elaborar un \"laboratorio vivo\" con botellas recicladas, plantas y residuos orgánicos, donde los niños registren observaciones con celulares antiguos. El grupo de Mariana demostró principalmente haber desarrollado un:",
+      "alternatives": [
+        "Pensamiento convergente",
+        "Pensamiento crítico",
+        "Pensamiento divergente",
+        "Pensamiento lógico-deductivo",
+        "Razonamiento inductivo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/solucionario-unt-area-C-examen-admision-universidad-nacional-de-trujillo-derecho-ciencias-de-la-persona-claves-respuestas-prueba-resuelta-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT ÁREA C SUMATIVO I 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CIENCIAS DE LA PERSONA CLAVES PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una de las labores de Patty en su centro de trabajo consiste en calcular los impuestos que la empresa debe pagar sobre las ganancias obtenidas en el año. Según Guilford, para realizar dicha actividad, ella debe utilizar su pensamiento",
+      "alternatives": [
+        "convergente.",
+        "egocéntrico.",
+        "lateral.",
+        "divergente.",
+        "vertical."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La dislalia por déficit auditivo es un trastorno que afecta a la articulación de los fonemas del habla. Pedro es un niño que ha sido diagnosticado con dicho trastorno, sugiriéndose a los padres que lleve rehabilitación con un logopeda. Considerando la adquisición del lenguaje en el caso presentado, identifique los enunciados correctos.\nI ) La dislalia que presenta el niño se debe a variables de aprendizaje.\nII ) Un funcionamiento auditivo óptimo facilita la adquisición del lenguaje.\nIII ) El trastorno del habla que presenta Pedro ya no tiene solución.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "II y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la etapa de adquisición del lenguaje, participan diferentes variables que favorecen el desarrollo de esta importante capacidad. Determine el valor de verdad (V o F) de las proposiciones siguientes referidas a este proceso.\nI) El componente fonológico es independiente de la maduración en el proceso de incorporación que realiza el infante.\nII) La asociación objeto-sonido que hacen los padres para estimular el lenguaje se basa en el comportamiento por acto reflejo.\nI II ) Las variaciones tonales recién aparecen en la etapa lingüística por aprendizaje imitativo, siendo indispensable un modelo.",
+      "alternatives": [
+        "VVF",
+        "FVV",
+        "VVV",
+        "FVF",
+        "FFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una profesora menciona a sus alumnos que algunos meses del año tienen 31 días, mientras que otros tienen 30. A continuación, les pregunta «¿Cuántos meses tienen 28 días?» y un alumno le responde que solo febrero tiene esa cantidad de días. Aun así, la docente menciona que no es el único mes. Todos los alumnos se quedan absortos, pero una alumna levanta la mano y contesta «Todos los meses tienen 28 días». Según la teoría de E. De Bono, la respuesta de esta niña es un ejemplo de pensamiento",
+      "alternatives": [
+        "divergente.",
+        "vertical.",
+        "convergente.",
+        "lateral."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El proceso de formación de conceptos, mediante el cual reconocemos las características comunes que existen entre elementos de una misma clase se denomina",
+      "alternatives": [
+        "generalización.",
+        "discriminación.",
+        "pensamiento.",
+        "percepción.",
+        "razonamiento."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un argumento que fundamenta la tesis del texto es:",
+      "alternatives": [
+        "Estimula el pensamiento divergente y creativo.",
+        "Describe objetivamente la conducta humana.",
+        "Distorsiona la realidad y no tiene una utilidad práctica.",
+        "Ofrece explicaciones sobre las causas fundamentales de un fenómeno sociocultural.",
+        "Informa sobre el acontecer diario actual."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/10/Cepreuni-practica-2-con-solucionario-ingreso-directo-universidad-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPREUNI SEGUNDA PRACTICA CALIFICADA 2027 I RESUELTA RESPUESTAS PDF 2026-2"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Acontecimiento decisivo de la infancia que marca el ingreso del niño al mundo socializado de los adultos:",
+      "alternatives": [
+        "desaparición de los reflejos del neonato",
+        "adquisición del lenguaje",
+        "aprender a caminar",
+        "ingreso a la escuela",
+        "aprender a controlar la micción"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/desarrollo-humano-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DESARROLLO HUMANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD "
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La adquisición del lenguaje se da generalmente en la:",
+      "alternatives": [
+        "primera infancia.",
+        "segunda infancia.",
+        "tercera infancia.",
+        "niñez."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/desarrollo-humano-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — DESARROLLO HUMANO EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD "
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según la teoría de Joy Paul Guilford, existen dos tipos de pensamiento: el pensamiento divergente (PO) y el pensamiento convergente (PC). Asimismo, Edward de Bono, con otro método de investigación, propone el pensamiento lateral (PL) y el pensamiento vertical (PV).\nDetermine el valor de verdad (V o F) de las siguientes proposiciones acerca de tipos de problemas y soluciones.\nI. Los estereotipos heurísticos pertenecen al PO; los algoritmos matemáticos, al PC.\nII. Las fórmulas de física pertenecen al PL; los problemas de química, al PV.\nIII. Resolver crucigramas pertenece al PD; las fórmulas de lógica, al PC.\nIV. Probar posibilidades pertenece al PL; el razonamiento inductivo, al PV.",
+      "alternatives": [
+        "FFVV",
+        "FVFV",
+        "VVFF",
+        "VFVV",
+        "VFVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/psicologia-examen-resuelto-de-admision-universidad-san-marcos-deco-domingo-areas-C-E-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA ÁREA C SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La búsqueda de una interpretación libre frente a las ideologías monolíticas, universales y homogeneizantes corresponde con el:",
+      "alternatives": [
+        "pensamiento fuerte.",
+        "pensamiento duro.",
+        "pensamiento débil.",
+        "pensamiento divergente."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/06/la-filosofia-actual-postmoderna-hermeneutica-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-con-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEMAS ACTUALES DE LA FILOSOFÍA EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Propuso la inteligencia Emocional:",
+      "alternatives": [
+        "Gardner",
+        "Cattell",
+        "Piaget",
+        "Goleman",
+        "Guilford"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-las-inteligencias-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍAS DEL DESARROLLO DE LA INTELIGENCIA PREGUNTAS RESUELTAS – INGRESO UNIVERSIDAD – PSICOLOGÍA"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Capacidad psicológica de crear nuevas imágenes sensoriales o racionales en la conciencia humana:",
+      "alternatives": [
+        "pensamiento divergente",
+        "inteligencia",
+        "creatividad",
+        "imaginación",
+        "memoria"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El profesor de Literatura les pidió a sus alumnos que olviden el final de la novela La Metamorfosis de Franz Kafka y que le traigan para la siguiente semana, tres finales alternativos y novedosos que le den un cierre en género comedia a dicha obra. Según Edward de Bono, para dicha tarea, los alumnos tendrán que hacer uso de su pensamiento",
+      "alternatives": [
+        "convergente.",
+        "divergente.",
+        "lateral.",
+        "vertical."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/psicologia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PRE SAN MARCOS SEMANA 9 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El título del texto es:\n\nTexto:\nEl tema de la ortografía en las redes sociales es realmente algo polémico para algunos, mientras que para otros no les importa en lo más mínimo.\nLos lingüistas aseguran que no existe “lenguaje incorrecto” siempre y cuando se use el contexto correcto, es decir, que se respete su registro y su uso en la región donde se esté utilizando, pero hoy hablemos sobre la relación que tienen las redes sociales en la deformación del lenguaje. \nEn un principio con el fin de ahorrarse caracteres a fin de no exceder el máximo de caracteres y evitar el cobro de dos mensajes de texto se crearon las primeras abreviaturas, tales como: K (¿qué?), PQ (¿por qué?) y ¿? (qué pasa).\nActualmente, el lugar donde se observan estas variaciones lingüísticas con mayor frecuencia es en las redes sociales como lo es Facebook y Twitter, espacios sin cesura, sin patrones de escritura y por lo tanto sin exigencia alguna en cuestión de ortografía. No obstante, la libertad de la escritura promueve la falta de interés por la buena ortografía y comúnmente nos encontramos con usuarios que «ezcriven azzii» en el «Feis», pero lo grave no es la forma de escritura, sino que los niños que están en etapa de adquisición del lenguaje se encuentran expuestos a estos hábitos de escritura poco ortodoxos y estos malos hábitos de escritura se siguen cultivando. Por ejemplo, se puede observar una evidente deficiencia en la ortografía de los que ahora rondan por la edad de 12 o 13 años. Por otro lado, para quien está en una edad por encima de los 25 años, esto puede llegar a ser hasta cierto punto aceptable, pues se entiende que estas generaciones ya cuentan con las bases necesarias a nivel cognitivo de una escritura adecuada. \nLa tecnología es una excelente herramienta que ha llegado a nuestras vidas, pero debemos educar a nuestros niños sobre el correcto uso de esta, y sobre todo ocuparnos de la educación de las futuras generaciones para mantener la buena costumbre de una escritura correcta.",
+      "alternatives": [
+        "Los elementos básicos de la ortografía",
+        "El poder de los medios de comunicación",
+        "El efecto de la tecnología en la cotidianeidad",
+        "Las nuevas técnicas de escritura",
+        "La ortografía y las redes sociales"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/05/ejercicios-de-campo-semantico-guia-con.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Ejercicios de Campo Semántico - Guía con soluciones"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones coincide con el texto?\n\nTexto:\nEl tema de la ortografía en las redes sociales es realmente algo polémico para algunos, mientras que para otros no les importa en lo más mínimo.\nLos lingüistas aseguran que no existe “lenguaje incorrecto” siempre y cuando se use el contexto correcto, es decir, que se respete su registro y su uso en la región donde se esté utilizando, pero hoy hablemos sobre la relación que tienen las redes sociales en la deformación del lenguaje. \nEn un principio con el fin de ahorrarse caracteres a fin de no exceder el máximo de caracteres y evitar el cobro de dos mensajes de texto se crearon las primeras abreviaturas, tales como: K (¿qué?), PQ (¿por qué?) y ¿? (qué pasa).\nActualmente, el lugar donde se observan estas variaciones lingüísticas con mayor frecuencia es en las redes sociales como lo es Facebook y Twitter, espacios sin cesura, sin patrones de escritura y por lo tanto sin exigencia alguna en cuestión de ortografía. No obstante, la libertad de la escritura promueve la falta de interés por la buena ortografía y comúnmente nos encontramos con usuarios que «ezcriven azzii» en el «Feis», pero lo grave no es la forma de escritura, sino que los niños que están en etapa de adquisición del lenguaje se encuentran expuestos a estos hábitos de escritura poco ortodoxos y estos malos hábitos de escritura se siguen cultivando. Por ejemplo, se puede observar una evidente deficiencia en la ortografía de los que ahora rondan por la edad de 12 o 13 años. Por otro lado, para quien está en una edad por encima de los 25 años, esto puede llegar a ser hasta cierto punto aceptable, pues se entiende que estas generaciones ya cuentan con las bases necesarias a nivel cognitivo de una escritura adecuada. \nLa tecnología es una excelente herramienta que ha llegado a nuestras vidas, pero debemos educar a nuestros niños sobre el correcto uso de esta, y sobre todo ocuparnos de la educación de las futuras generaciones para mantener la buena costumbre de una escritura correcta.",
+      "alternatives": [
+        "La ortografía es relevante para los cibernautas de las redes sociales",
+        "La tecnología es perniciosa, pero también necesaria para la sociedad",
+        "Las abreviaturas en los diálogos de las redes son beneficiosas para los púberes",
+        "La cacografía en las redes sociales es perjudicial para la adquisición del lenguaje",
+        "Los mensajes transaccionales son pertinentes en la comunicación diaria"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/05/ejercicios-de-campo-semantico-guia-con.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Ejercicios de Campo Semántico - Guía con soluciones"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el texto, el término “cesura” refiere a:\n\nTexto:\nEl tema de la ortografía en las redes sociales es realmente algo polémico para algunos, mientras que para otros no les importa en lo más mínimo.\nLos lingüistas aseguran que no existe “lenguaje incorrecto” siempre y cuando se use el contexto correcto, es decir, que se respete su registro y su uso en la región donde se esté utilizando, pero hoy hablemos sobre la relación que tienen las redes sociales en la deformación del lenguaje. \nEn un principio con el fin de ahorrarse caracteres a fin de no exceder el máximo de caracteres y evitar el cobro de dos mensajes de texto se crearon las primeras abreviaturas, tales como: K (¿qué?), PQ (¿por qué?) y ¿? (qué pasa).\nActualmente, el lugar donde se observan estas variaciones lingüísticas con mayor frecuencia es en las redes sociales como lo es Facebook y Twitter, espacios sin cesura, sin patrones de escritura y por lo tanto sin exigencia alguna en cuestión de ortografía. No obstante, la libertad de la escritura promueve la falta de interés por la buena ortografía y comúnmente nos encontramos con usuarios que «ezcriven azzii» en el «Feis», pero lo grave no es la forma de escritura, sino que los niños que están en etapa de adquisición del lenguaje se encuentran expuestos a estos hábitos de escritura poco ortodoxos y estos malos hábitos de escritura se siguen cultivando. Por ejemplo, se puede observar una evidente deficiencia en la ortografía de los que ahora rondan por la edad de 12 o 13 años. Por otro lado, para quien está en una edad por encima de los 25 años, esto puede llegar a ser hasta cierto punto aceptable, pues se entiende que estas generaciones ya cuentan con las bases necesarias a nivel cognitivo de una escritura adecuada. \nLa tecnología es una excelente herramienta que ha llegado a nuestras vidas, pero debemos educar a nuestros niños sobre el correcto uso de esta, y sobre todo ocuparnos de la educación de las futuras generaciones para mantener la buena costumbre de una escritura correcta.",
+      "alternatives": [
+        "La contradicción de ideas ajenas",
+        "El incumplimiento de preceptos",
+        "El manejo de armonía gráfica",
+        "La imposición de sinalefas en lo escrito",
+        "La reprobación de algo o alguien"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/05/ejercicios-de-campo-semantico-guia-con.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Ejercicios de Campo Semántico - Guía con soluciones"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si las redes sociales tuvieran un lenguaje juvenil que sobresaliera por ser creativo, dinámico y correcto, entonces:\n\nTexto:\nEl tema de la ortografía en las redes sociales es realmente algo polémico para algunos, mientras que para otros no les importa en lo más mínimo.\nLos lingüistas aseguran que no existe “lenguaje incorrecto” siempre y cuando se use el contexto correcto, es decir, que se respete su registro y su uso en la región donde se esté utilizando, pero hoy hablemos sobre la relación que tienen las redes sociales en la deformación del lenguaje. \nEn un principio con el fin de ahorrarse caracteres a fin de no exceder el máximo de caracteres y evitar el cobro de dos mensajes de texto se crearon las primeras abreviaturas, tales como: K (¿qué?), PQ (¿por qué?) y ¿? (qué pasa).\nActualmente, el lugar donde se observan estas variaciones lingüísticas con mayor frecuencia es en las redes sociales como lo es Facebook y Twitter, espacios sin cesura, sin patrones de escritura y por lo tanto sin exigencia alguna en cuestión de ortografía. No obstante, la libertad de la escritura promueve la falta de interés por la buena ortografía y comúnmente nos encontramos con usuarios que «ezcriven azzii» en el «Feis», pero lo grave no es la forma de escritura, sino que los niños que están en etapa de adquisición del lenguaje se encuentran expuestos a estos hábitos de escritura poco ortodoxos y estos malos hábitos de escritura se siguen cultivando. Por ejemplo, se puede observar una evidente deficiencia en la ortografía de los que ahora rondan por la edad de 12 o 13 años. Por otro lado, para quien está en una edad por encima de los 25 años, esto puede llegar a ser hasta cierto punto aceptable, pues se entiende que estas generaciones ya cuentan con las bases necesarias a nivel cognitivo de una escritura adecuada. \nLa tecnología es una excelente herramienta que ha llegado a nuestras vidas, pero debemos educar a nuestros niños sobre el correcto uso de esta, y sobre todo ocuparnos de la educación de las futuras generaciones para mantener la buena costumbre de una escritura correcta.",
+      "alternatives": [
+        "Las generaciones futuras serían inmunes a la influencia de las redes sociales",
+        "Los adolescentes tendrían un manejo desacertado de los fonemas y grafías",
+        "Prevalecerían los hábitos de escritura poco ortodoxos y mal estructurados",
+        "La relación de las redes sociales con la formación del lenguaje sería ínfima",
+        "La tendencia de los usuarios sería tener una apropiada redacción"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/05/ejercicios-de-campo-semantico-guia-con.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Ejercicios de Campo Semántico - Guía con soluciones"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifique el concepto correcto que completa la definición siguiente: La ......... es la capacidad del ser humano para construir imágenes mentales de lo que no está presente en la realidad inmediata.",
+      "alternatives": [
+        "memoria",
+        "inteligencia",
+        "imaginación",
+        "creatividad",
+        "percepción"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/psicologia-admision-la-universidad.html",
+      "sourceName": "matematicaj.blogspot.com — PSICOLOGÍA EXAMEN RESUELTO DE ADMISIÓN UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Vilma tiene la habilidad para reflexionar cuidadosamente sobre lo que debe realizar ante una situación nueva, advirtiendo las ventajas y desventajas. ¿Cuál es la habilidad que refleja Vilma?",
+      "alternatives": [
+        "Autoconocimiento",
+        "Autoestima",
+        "Asertividad",
+        "Empatía",
+        "Toma de decisiones"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/filosofia-etica-valores-admision-callao-examen-resuelto-unac-ingreso-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FILOSOFÍA CÍVICA ÉTICA VALORES UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mario, luego de visitar el Cusco y reconocer la majestuosidad de Machu Picchu; a llegar a Bagua e impactarse con Yumbrilla, la tercera catarata más alta del mundo; probar en Trujillo un delicioso cebiche, afirma con emoción que: “No existe un país con mayor riqueza natural y cultural como el Perú”. La función del pensar que ha llevado a Mario a tal afirmación es el:",
+      "alternatives": [
+        "conceptuar",
+        "analizar",
+        "juzgar",
+        "razonar",
+        "comparar"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/picologia-unt-examen-resuelto-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — PSICOLOGIA UNT EXAMEN ADMISION UNIVERSIDAD DE TRUJILLO DESARROLLADO"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Operación mental que nos permitirá discriminar una especie de animal de otra.",
+      "alternatives": [
+        "Generalización",
+        "Análisis",
+        "Síntesis",
+        "Comparación",
+        "Abstracción"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unica-pdf-ica.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO SAN LUIS GONZAGA 2027 EXAMEN ADMISIÓN UNIVERSIDAD UNICA 2026 TEMARIO VACANTES PROSPECTO ESTRUCTURA PUNTAJES CRONOGRAMA ÁREAS A B C PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Características del pensamiento que emplea un código de signos para trasmitir las ideas.",
+      "alternatives": [
+        "Motivado",
+        "Simbólico",
+        "Convencional",
+        "Comparación",
+        "Análisis"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el pensamiento la representación mental de un hecho u objeto se llama.",
+      "alternatives": [
+        "Regla",
+        "Concepto",
+        "Símbolo",
+        "Imagen",
+        "Pensar"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los sueños, juegos imaginativos, fantasías diurnas pertenecen al pensamiento:",
+      "alternatives": [
+        "Racional",
+        "No –racional",
+        "Consciente",
+        "Inconsciente",
+        "Concreto"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El pensamiento consiste en modificar y reorganizar la información guardada en ______ para generar nueva información.",
+      "alternatives": [
+        "La imaginación",
+        "La memoria",
+        "La inteligencia",
+        "La mente",
+        "El concepto"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pensar implica el uso de procesos cognitivos en forma transversal como, imaginar, atender, evocar, reconocer, etc., sin limitarse a ellos, pues su función es desarrollar la capacidad de operar con representaciones mentales de objetos y eventos con el fin de resolver problemas. En tal sentido, identifique la alternativa que ilustre la función elaborativa del pensamiento.",
+      "alternatives": [
+        "La abuelita entona una canción de cuna a su nieto mientras lo acuesta.",
+        "Un alumno orienta su atención al llamado sorpresivo de su profesor.",
+        "Un joven descubre el nombre del antepenúltimo mes del año.",
+        "Un adolescente identifica la batería de un mototaxi cuando la observa.",
+        "El conserje saluda cordialmente a los residentes que ingresan al edificio."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pretender enseñar conceptos a un niño mediante definiciones o solo haciendo uso del diccionario podría resultar estéril y fútil, pues sería como querer enseñar a caminar a un niño con las leyes del equilibrio. El concepto se asimila en un contexto con intención comunicativa y con experiencias que permitan un curso del pensamiento de lo particular a lo general o de lo simple a lo complejo. Por tanto, podemos inferir que los conceptos se forman por un proceso intelectual denominado",
+      "alternatives": [
+        "imaginación.",
+        "predicción.",
+        "simbolismo.",
+        "abstracción.",
+        "heurística."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Adela es considerada como «una joven creativa» por los docentes de la universidad donde estudia. Para establecer dicha afirmación, los profesores deben haber observado que ella",
+      "alternatives": [
+        "disfruta al observar actividades artísticas en su universidad.",
+        "imita las estrategias exitosas de otros estudiantes.",
+        "elabora soluciones novedosas ante los problemas presentados.",
+        "utiliza constantemente su pensamiento lógico ante un desafío.",
+        "sigue una secuencia definida de pasos para resolver problemas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El lenguaje evoluciona en diferentes etapas. A continuación, establezca la relación correcta entre los estadios del lenguaje con los casos presentados.\nI ) Explosión del lenguaje.\nII ) Habla telegráfica\nIII ) Estadio holofrásico",
+      "alternatives": [
+        "Rosy dice «agüita» cada vez que desea que le alcancen su botella para beber líquido.",
+        "Cada día, Teresa aprende nuevas palabras y a veces usa frases de dos palabras.",
+        "Aunque omite conectores, Lulú ya usa pronombres posesivos al hablar.",
+        "Ib, IIc, IIIa",
+        "Ic, IIb, IIIa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El lenguaje egocéntrico es un estadio de la etapa lingüística en el desarrollo del niño. En relación a las características de dicho periodo, identifique el valor de verdad (V o F) de las siguientes proposiciones.\nI ) Los niños comunican intencionalmente sus pensamientos en voz alta.\nII ) Constituye un eslabón en el tránsito del habla vocal al pensamiento verbal.\nIII ) Los niños usan soliloquios para responder a las voces que oyen en su entorno.",
+      "alternatives": [
+        "FFV",
+        "VFF",
+        "FVV",
+        "VVF",
+        "FVF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una campaña electoral un candidato que se perfilaba a ganar una elección, la perdió, porque rechazó ingerir comida típica en una zona popular. Ante ello, el elector masivamente tomó la decisión de no darle su voto a este candidato por considerarlo soberbio y repudiable, sin considerar sus propuestas políticas. El elector de este caso asumió la estrategia de solución de problemas denominada _____ la cual se basa en una _____ cognitiva.",
+      "alternatives": [
+        "ensayo y error – práctica",
+        "algoritmo – taxonomía",
+        "heurística – simplificación",
+        "recuperación de la información – evocación",
+        "divergente – inferencia"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Darwin no experimentó un golpe súbito de inspiración ni pensamientos o teorías totalmente novedosas. Más bien, compuso listas interminables de pensamientos, imágenes, preguntas, sueños, guiones, comentarios, argumentos y notas, para su propio uso que, continuamente, organizaba y reorganizaba. Los descubrimientos cruciales se anticipaban en los primeros escritos y, en ocasiones, eran «descubiertos» dos veces.\nDe acuerdo con el pasaje referido al trabajo de Darwin, se puede inferir que",
+      "alternatives": [
+        "solo puede lograrse un avance a través de descubrimientos controlados y repentinos.",
+        "es imperativo abandonar cualquier idea creativa si no ofrece un resultado inmediato.",
+        "disponer de un rico acervo de conocimientos es más que suficiente para la creatividad.",
+        "el pensamiento creativo supone flexibilidad, reorganización y un vasto conocimiento.",
+        "la creatividad es un proceso de pensamiento rígido en el que se debe persistir siempre."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Solucionar algunos problemas nos exige realizar operaciones mentales complejas y, en ciertos casos, de un alto nivel cognitivo. Estas operaciones se aprenden por experiencia. Determine la alternativa que relaciona correctamente cada estrategia de solución con el caso que le corresponde.\nI. Ensayo y error\nII. Algoritmo\nIII. Heurística",
+      "alternatives": [
+        "Al leer la historia de los incas, Matías notó que los sucesos históricos de dicha civilización comprenden conocimiento de diferentes actividades.",
+        "Fernando compró un juguete sofisticado para su hijo sin que le expliquen cómo se ensambla, Frente a la insistencia del hijo, comenzó a armarlo y, después de varios intentos, logró su objetivo.",
+        "Leonor se ha dado cuenta que para hallar el área del prisma tiene que seguir pasos sistemáticos que van de lo simple a lo complejo.",
+        "Ib, IIa, IIIc",
+        "Ic, IIb, IIIa"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Establezca relación entre los casos presentados y los estadios de la etapa lingüística del desarrollo del lenguaje.\nI) La mamá de Alonso está preocupada porque su hijo habla solo mientras juega.\nII) Renata, quien aún no va al Inicial, aparta sus juguetes de su prima diciéndole «Barbie mía»\nIII) Junior le dice «ato» a su papá, mientras señala su pie, cada vez que se le sale su zapato.",
+      "alternatives": [
+        "Habla telegráfica.",
+        "Lenguaje egocéntrico.",
+        "Habla polisintética.",
+        "Ia, IIc, IIIb"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relacione los casos presentados con las estrategias de solución de problemas:\nI) Pedro arma la cuna de su bebé siguiendo las instrucciones del manual.\nII) Javier usa un atajo conocido ante el inesperado cierre de una avenida.\nIII) Manuel intenta reparar su tablet, que hace un año le regalaron, apretando cualquier botón.",
+      "alternatives": [
+        "Recuperación de la información.",
+        "Ensayo y error.",
+        "Algoritmos.",
+        "Ic, IIa, IIIb"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando Pedro tenía cuatro años mostraba su enojo, en el juego, golpeando sus muñecos entre sí mientras decía en voz alta «pega, pega, pum, pum». Años más tarde, cuando algo lo enojaba se quedaba callado y fruncía el ceño, mientras repetía mentalmente «¡cálmate, cálmate!». De acuerdo a la explicación de L. Vigotsky sobre la relación del pensamiento y el lenguaje, es correcto afirmar que",
+      "alternatives": [
+        "el habla egocéntrica se manifiesta con mayor frecuencia después de los seis años de edad.",
+        "desde los cuatro años, debieron enseñarle a Pedro a internalizar sus verbalizaciones.",
+        "ahora Pedro regula su enojo mediante el pensamiento verbal, mientras que a los cuatro años utilizaba el habla autodirigida.",
+        "este caso ejemplifica cómo el habla interna se vuelve habla externa mediante la mediación cognitiva."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un adolescente está decidido a seguir la carrera de Ingeniería de Software. Cuando se le pregunta el motivo, responde que es un amante de los videojuegos en computadora y todos los que se dedican a esta carrera tienen ese tipo de preferencia. Respecto a las estrategias de solución de problemas, marque las proposiciones correctas.\nI) Su criterio de decisión se ajusta a la estrategia por algoritmos.\nII) El motivo de la elección de su carrera está relacionada a estereotipos.\nIII) Su carrera ha sido elegida al azar y por ello se vincula a la heurística.",
+      "alternatives": [
+        "II y III",
+        "Solo III",
+        "Solo II",
+        "I y II"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la comparación se establecen ______ y _____ entre elementos.",
+      "alternatives": [
+        "segmentaciones - reintegraciones",
+        "lo común - esencial",
+        "similitudes - divergencias",
+        "identidades - convergencias",
+        "aseveraciones – conclusiones"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El proceso que nos permite crear representaciones mentales generales, abstractas de los objetos y sus relaciones se denomina",
+      "alternatives": [
+        "pensamiento.",
+        "percepción.",
+        "memoria.",
+        "sensación.",
+        "pasión."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La forma de pensar más simple cuyo producto surge a partir de la generalización y la abstracción se denomina",
+      "alternatives": [
+        "analizar.",
+        "sintetizar.",
+        "conceptuar.",
+        "razonar.",
+        "inducir."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las funciones de la actividad pensante resulta incorrecto afirmar que",
+      "alternatives": [
+        "generan conceptos.",
+        "establecen juicios.",
+        "forman preceptos.",
+        "obtienen conclusiones.",
+        "solucionan problemas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las diversas facetas que la actividad pensante presenta y emplea para poder generar las representaciones mediadoras y la solución de problemas se conocen como",
+      "alternatives": [
+        "formas del pensar.",
+        "estrategias del pensar.",
+        "tipos de pensamiento.",
+        "operaciones del pensar.",
+        "productos del pensamiento."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El proceso cognitivo que permite generar imágenes jamás representadas se denomina",
+      "alternatives": [
+        "pensamiento.",
+        "inteligencia.",
+        "imaginación.",
+        "creatividad.",
+        "ilusión."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las principales formas del razonamiento son",
+      "alternatives": [
+        "técnica y razonamiento.",
+        "inducción y deducción.",
+        "inducción y técnica.",
+        "método y deducción.",
+        "simple y compleja."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las estrategias del pensar algorítmicas son las que nos permiten resolver problemas",
+      "alternatives": [
+        "innovadores.",
+        "conocidos.",
+        "novedosos.",
+        "desconocidos.",
+        "diferentes."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique cuál de los siguientes enunciados expresa con mayor propiedad la actividad del pensar.",
+      "alternatives": [
+        "Expresar verbalmente un deseo o una necesidad impostergable.",
+        "Representarse mentalmente objetos externos y sus relaciones.",
+        "Reconocer un suceso vivido anteriormente con gran intensidad.",
+        "Tomar decisiones por iniciativa propia en situaciones de urgencia.",
+        "Crear algo que no existía antes ni objetiva ni subjetivamente."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ______ consiste en extraer conclusiones a partir de varias premisas.",
+      "alternatives": [
+        "conceptuar",
+        "analizar",
+        "juicio",
+        "razonar",
+        "sintetizar"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ponerse frente a determinada realidad objetiva y emitir una opinión, afirmando o negando algo con respecto a ella, se denomina",
+      "alternatives": [
+        "observación.",
+        "razonamiento.",
+        "inferencia.",
+        "juicio.",
+        "descripción."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A la mediación simbólica entre la presentación de los estímulos y las respuestas que se dan se denomina",
+      "alternatives": [
+        "sensación.",
+        "observación.",
+        "pensamiento.",
+        "proyección.",
+        "percepción."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las operaciones del pensar, indique los enunciados correctos.\nI. Abstraer es fragmentar o separar un todo en partes.\nII. Cuando comparamos, identificamos lo desigual.\nIII. Encontrar lo parecido entre varios objetos es generalizar.",
+      "alternatives": [
+        "solo I",
+        "I y III",
+        "I y II",
+        "II y III",
+        "solo II"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados los siguientes enunciados, señale los correctos respecto a las estrategias algorítmicas y heurísticas del pensar.\nI. Ambas obtienen los mismos resultados.\nII. La heurística requiere de la creatividad.\nIII. La algorítmica emplea procesos conocidos.",
+      "alternatives": [
+        "solo I",
+        "I y II",
+        "I, II y III",
+        "I y III",
+        "II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mamífero, energía o número son conceptos y se caracterizan por ser",
+      "alternatives": [
+        "particulares.",
+        "sensibles.",
+        "generales.",
+        "concretos.",
+        "perceptibles."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/funciones-del-pensamiento-y-lenguaje-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES DEL PENSAMIENTO EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Mencione cómo se llama la operación intelectual que permite identificar la idea esencial de un material de estudio, para lo cual dejamos de lado lo secundario.",
+      "alternatives": [
+        "análisis",
+        "síntesis",
+        "generalización",
+        "abstracción",
+        "elaboración"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/04/guia-docente-matematica-primaria-cuadernos-de-trabajo-auto-aprendizaje-aprendo-en-casa-fichas-libros-descarga-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — VILLARREAL INGENIERÍAS PRUEBA INGRESO UNIVERSIDAD CLAVES RESUELTA ÁREA C 2027 – ARQUITECTURA"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una evaluación sobre su desempeño laboral, Fernando es descrito como una persona muy reflexiva, de mentalidad flexible y con un juicio crítico que le permite cuestionar algunos planteamientos del proyecto, obteniendo sus propias conclusiones y aportando con nuevas ideas en su equipo de trabajo. El ejemplo citado describe el concepto denominado",
+      "alternatives": [
+        "pensamiento concreto.",
+        "egocentrismo racional.",
+        "pensamiento posformal.",
+        "fabulación personal."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/psicologia-preguntas-resueltas-semana-16-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — PSICOLOGÍA PRE SAN MARCOS SEMANA 16 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cuál de las siguientes áreas no se requiere necesariamente “resolver problemas”.",
+      "alternatives": [
+        "Matemáticas",
+        "Física",
+        "Química",
+        "Historia",
+        "Lógica"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/pensamiento-inteligencia-proceso-cognoscitivo-preguntas-resueltas-psicologia-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicaj.blogspot.com — PENSAMIENTO E INTELIGENCIA EJERCICIOS RESUELTOS DE PSICOLOGÍA PROCESO COGNOSCITIVO"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es una actividad psíquica cognitiva superior",
+      "alternatives": [
+        "Emoción",
+        "Sentimiento",
+        "Pasión",
+        "Pensamiento",
+        "Motivación"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/01/psicologia-prueba-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN DE PSICOLOGÍA RESUELTO DE ADMISIÓN UNIVERSIDAD CLAVES SOLUCIONES"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relacione los siguientes enunciados con las áreas del procesamiento del lenguaje.\nI. Ana escucha un audiolibro en internet y comprende la trama principal.\nII. Ramiro brinda un discurso sobre la filosofía contemporánea del Perú.\nIII. Lorenza lee un artículo científico para entender la sintomatología de la COVID-19.",
+      "alternatives": [
+        "Área de Broca",
+        "Área de Wernicke",
+        "Área de Déjerine",
+        "Ib, IIc, IIIa"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/01/psicologia-prueba-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN DE PSICOLOGÍA RESUELTO DE ADMISIÓN UNIVERSIDAD CLAVES SOLUCIONES"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale cuál es la forma de pensar racional que corresponde a la siguiente proposición:\n“El bronce se dilata con el calor, el cobre se dilata con el calor, el oro se dilata con el calor; todos son metales.\nEntonces todos los metales se dilatan con el calor”.",
+      "alternatives": [
+        "La deducción.",
+        "La abstracción.",
+        "La generalización.",
+        "La inducción.",
+        "La captación."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/02/examen-pnp-suboficiales-psicologia.html",
+      "sourceName": "matematicaj.blogspot.com — EXAMEN PNP CONOCIMIENTOS DE PSICOLOGÍA SUBOFICIALES RESUELTO ADMISIÓN ESCUELA DE LA POLICÍA NACIONAL DEL PERÚ ETS EESTP"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un concurso, se pide hallar un único valor numérico correcto siguiendo reglas definidas. El participante descarta rápidamente alternativas inconsistentes con los datos. Se privilegia exactitud, selección de la mejor respuesta y cierre rápido del problema. En este ejemplo se evidencia el tipo de pensamiento:",
+      "alternatives": [
+        "Divergente",
+        "Convergente",
+        "No lógico",
+        "Fantástico",
+        "Intuitivo puro"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los tabúes tienen su fuente principal en:",
+      "alternatives": [
+        "El inconsciente colectivo del hombre.",
+        "Las imposiciones de cada generación.",
+        "Las generaciones precedentes.",
+        "Las reglas adoptadas por el hombre.",
+        "Las generaciones actuales."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/simulacro-villarreal-presencial-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO VILLARREAL 2027 RESUELTO INGRESO UNIVERSIDAD RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La actitud ambivalente ante el tabú se reduce al:",
+      "alternatives": [
+        "Primitivismo – censura",
+        "Deseo – temor",
+        "Inconsciente – violación",
+        "Inconsciente – temor",
+        "Temor – prohibición"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/simulacro-villarreal-presencial-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO VILLARREAL 2027 RESUELTO INGRESO UNIVERSIDAD RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La finalidad del tabú es:",
+      "alternatives": [
+        "Infundir temor para no obrar contra lo establecido.",
+        "Registrar en el inconsciente del hombre hasta exceder sus temores.",
+        "Restringir el deseo en el hombre hasta exceder sus temores.",
+        "Restringir la conducta prohibida del hombre en su modelo social.",
+        "Complementar la educación en la formación moral del hombre."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/03/simulacro-villarreal-presencial-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO VILLARREAL 2027 RESUELTO INGRESO UNIVERSIDAD RESPUESTAS 2026 PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando a Alonso, un niño de un año de edad, le dicen «despídete de tu papá», mueve su mano reproduciendo un gesto de adiós, pero sin articular palabra alguna. Esto revela que\nI. la comprensión del lenguaje es anterior a la producción del lenguaje.\nII. los componentes del lenguaje no se desarrollan de una manera uniforme.\nIII. a esa edad no hay expresión oral porque aún no se puede imitar palabras.\nIV. el desarrollo del lenguaje es mucho más lento en los niños que en las niñas.",
+      "alternatives": [
+        "I y II",
+        "III y IV",
+        "I y III",
+        "II y IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-psicologia-semana-17.html",
+      "sourceName": "matematicaj.blogspot.com — PSICOLOGÍA PREGUNTAS RESUELTAS DE EXAMEN ADMISIÓN UNIVERSIDAD ÁREAS C E DECO SAN MARCOS"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La representación mental de los objetos que se centra en las características básicas de estos y prescinde de las concretas define la:",
+      "alternatives": [
+        "Conceptualización",
+        "Comprensión",
+        "Discriminación",
+        "Evocación",
+        "Elaboración"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/endomorfismos-y-diagonalizacion-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO ÁREA V UNCP AGRARIAS SATIPO TARMA INGRESO UNIVERSIDAD DEL CENTRO PREGUNTAS  2027 PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el ejemplo de cuando el bebé coge un sonajero lo agita y suena, luego lo tira al suelo y hace un gran ruido, mientras que cuando agita un oso y no suena y lo tira al suelo produciendo un ruido sordo al caer, ¿qué tipo de realidad está construyendo?",
+      "alternatives": [
+        "Perceptual",
+        "Imaginativa",
+        "Innovadora",
+        "Imitación diferida",
+        "Razonada"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-las-inteligencias-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍAS DEL DESARROLLO DE LA INTELIGENCIA PREGUNTAS RESUELTAS – INGRESO UNIVERSIDAD – PSICOLOGÍA"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Estadio de la inteligencia según Piaget, donde se desarrolla el pensamiento simbólico e intuitivo:",
+      "alternatives": [
+        "Sensorio motriz",
+        "Operatorio Formal",
+        "Operatorio Concreto",
+        "Preoperacional",
+        "Reversibilidad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-las-inteligencias-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍAS DEL DESARROLLO DE LA INTELIGENCIA PREGUNTAS RESUELTAS – INGRESO UNIVERSIDAD – PSICOLOGÍA"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María entiende que decir a quien madruga dios le ayuda significa que las personas son responsables o realizan sus tareas a tiempo obtendrán beneficios. Podemos concluir que María se encuentra en la etapa del pensamiento",
+      "alternatives": [
+        "lógico - formal.",
+        "intuitivo.",
+        "sensorio motriz.",
+        "concreto.",
+        "preoperatoria."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-las-inteligencias-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍAS DEL DESARROLLO DE LA INTELIGENCIA PREGUNTAS RESUELTAS – INGRESO UNIVERSIDAD – PSICOLOGÍA"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según J. Piaget, antes de la aparición del lenguaje articulado se desarrolla la etapa denominada",
+      "alternatives": [
+        "sensorio - motora.",
+        "preconceptual.",
+        "intuitiva.",
+        "preoperatoria.",
+        "operatoria."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-las-inteligencias-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍAS DEL DESARROLLO DE LA INTELIGENCIA PREGUNTAS RESUELTAS – INGRESO UNIVERSIDAD – PSICOLOGÍA"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las deducciones e hipótesis se logran en el estadio",
+      "alternatives": [
+        "operatorio concreto.",
+        "preconceptual.",
+        "sensoriomotor.",
+        "subsimbólico.",
+        "operatorio formal."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-las-inteligencias-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍAS DEL DESARROLLO DE LA INTELIGENCIA PREGUNTAS RESUELTAS – INGRESO UNIVERSIDAD – PSICOLOGÍA"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La _____ se produce cuando un niño agrupa objetos por sus características comunes.",
+      "alternatives": [
+        "reversibilidad",
+        "clasificación",
+        "noción de conservación",
+        "operación lógica",
+        "seriación"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-las-inteligencias-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍAS DEL DESARROLLO DE LA INTELIGENCIA PREGUNTAS RESUELTAS – INGRESO UNIVERSIDAD – PSICOLOGÍA"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El estadio que se presenta antes de la comprensión de las operaciones lógicas, y se caracteriza por dar vida a las cosas se denomina",
+      "alternatives": [
+        "preoperatorio.",
+        "operatorio abstracto.",
+        "operatorio concreto.",
+        "operatorio formal.",
+        "sensoriomotor."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-las-inteligencias-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍAS DEL DESARROLLO DE LA INTELIGENCIA PREGUNTAS RESUELTAS – INGRESO UNIVERSIDAD – PSICOLOGÍA"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Uno de los problemas más habituales en el autismo es la angustia por la interacción personal. Otro es la literalidad radical a la hora de comprender una conversación, quiere decir, _____ .",
+      "alternatives": [
+        "a veces, solo si es de un sexo diferente al que escucha puede comprender una ironía, una broma o una frase hecha",
+        "comprender después de meditar una ironía, una broma o una frase hecha",
+        "que no pueden comprender una ironía, una broma o una frase hecha",
+        "interpretar a medias una ironía, una broma o una frase hecha",
+        "comprender inmediatamente una ironía, una broma o una frase hecha"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/alteraciones-anomalias-de-la-personalidad-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TRASTORNOS DE LA PERSONALIDAD EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Miguelito es hijo único y vive con sus abuelos, primos y tíos; sus familiares quieren jugar con él porque logran entenderlo, se sorprenden porque ya se comunica con pronombres personales («yo», «tú») y posesivos («mío» , «tuyo»). Según el caso, estamos hablando de la etapa de lenguaje.",
+      "alternatives": [
+        "habla telegráfica",
+        "explosión del lenguaje",
+        "lenguaje simpráxico",
+        "holofrásica",
+        "lenguaje egocéntrico"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/psicologia-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Fermín es sordo de nacimiento al igual que su abuelo materno. Desde muy pequeño, su madre estimuló su lenguaje expresivo además de llevarlo a terapia para niños sordos. A sus 7 años de edad, puede hablar, leer los labios y es muy sociable. Los avances en el lenguaje de Fermín se deben a la fuerte influencia",
+      "alternatives": [
+        "de los hitos críticos del desarrollo que favorecen su lenguaje infantil.",
+        "de la herencia genética que le brinda su familia paterna.",
+        "de los factores maduracionales que se expresan a los 7 años.",
+        "del medio ambiente que le ofrecen sus grupos de referencia.",
+        "de lo cognitivo para superar los obstáculos de su desarrollo."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/pre-san-marcos-psicologia-semana-13.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al estadio operatorio formal, indique la secuencia correcta de verdad (V) o falsedad (F) de los siguientes enunciados.\nI. Depende de elementos materiales al pensar.\nII. Aplica principios lógicos a problemas reales.\nIII. Interpreta refranes y establece probabilidades.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FVV",
+        "FVF",
+        "VFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-las-inteligencias-preguntas-resueltas-de-psicologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TEORÍAS DEL DESARROLLO DE LA INTELIGENCIA PREGUNTAS RESUELTAS – INGRESO UNIVERSIDAD – PSICOLOGÍA"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es considerado como la mínima función del pensamiento:",
+      "alternatives": [
+        "juzgar",
+        "generalizar",
+        "simbolizar",
+        "analizar",
+        "conceptuar"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/psicologia-examen-resuelto-de-admision-a-la-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA 2027 LIBRO PREUNIVERSITARIO RESUELTO CON RESPUESTAS DESCARGA PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La representación simbólica de personas, hechos y relaciones se denomina",
+      "alternatives": [
+        "creatividad.",
+        "aprendizaje.",
+        "comunicación.",
+        "imaginación.",
+        "pensamiento."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-psicologia-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE PSICOLOGÍA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Algunos estudiantes son poetas, corresponde a un(a):",
+      "alternatives": [
+        "Pensamiento",
+        "Mensaje",
+        "Juicio",
+        "Deducción",
+        "Razonamiento"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-psicologia-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE PSICOLOGÍA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuáles son las formas de la imaginación?",
+      "alternatives": [
+        "Inmediata – mediata.",
+        "Real – irreal.",
+        "Lógica – abstracta.",
+        "Creadora – reproductora.",
+        "Simbólica – concreta."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-psicologia-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE PSICOLOGÍA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si estudias en la academia es porque deseas ingresar a la universidad, entonces estás desarrollando un conjunto de estrategias para resolver adecuadamente problemas. Lo anterior ejemplificaría procesos psíquicos de tipo:",
+      "alternatives": [
+        "afectivo - cognitivo.",
+        "cognitivo - volitivo.",
+        "conativo - afectivo.",
+        "conativo - efectivo."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/fenomenos-psiquicos-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PROCESOS PSÍQUICOS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es la representación de imágenes sobre la base de aquello anteriormente percibido:",
+      "alternatives": [
+        "imaginación reproductora",
+        "imaginación creadora",
+        "imaginación analítica",
+        "imaginación difusa"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es la capacidad de trasladar ideas de un contexto a otro:",
+      "alternatives": [
+        "problematización",
+        "plexibilización",
+        "capacidad de redefinición",
+        "autonomía",
+        "tolerancia o la frustración"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es la etapa de acumulación y sistematización de información. Esta es una fase del proceso creativo denominado:",
+      "alternatives": [
+        "problematización.",
+        "incubación.",
+        "iluminación.",
+        "acopio de datos.",
+        "verificación."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Edwin y Alicia son una pareja de empresarios exitosos, educan a sus hijos para que logren una personalidad creativa, ¿cuál sugerencia no deben tomar en cuenta?",
+      "alternatives": [
+        "Establecer buena comunicación cuando estén innovando.",
+        "Dar importancia al rol de los sexos.",
+        "Favorecer su motivación para superar obstáculos.",
+        "Propiciar la motivación para superar obstáculos.",
+        "Estimular la seguridad en sí mismos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una escuela, la creatividad se puede entrenar dando libertad a los estudiantes para diseñar sus propios experimentos científicos, promoviendo la generación de ideas, usando su pensamiento _______ ;y en lo simple, cuando los alumnos siguen la proporción justa de ingredientes para la preparación de una receta de cocina, están utilizando su pensamiento _______",
+      "alternatives": [
+        "divergente - convergente",
+        "convergente - vertical",
+        "divergente - lateral",
+        "lateral - divergente",
+        "convergente - lateral"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La creatividad es la capacidad del ser humano para inventar o innovar cosas. Estas pueden ser objetos físicos, ideas, representaciones o simplemente fantasías. En relación con la aplicación del pensamiento creativo, determine qué situaciones planteadas se pueden denominar como tales.\nI) Francisco es una persona que le interesa estar siempre a la vanguardia, por lo cual de manera continua investiga en internet qué novedades hay respecto a la enseñanza.\nII) A Ernesto le gusta desarrollar un trabajo activo con sus alumnos, promoviendo que participen haciendo preguntas por más improbables que parezcan y cuántas más, mejor.\nIII) Juan incluye diversos materiales en sus clases (hojas de plantas, objetos con diferentes texturas, paseos y otros): los considera valiosos para pensar de manera diferente.\nIV) Manuel, profesor de primaria, prepara sus clases con minuciosidad como le han sugerido hacerlo; su objetivo es que sus alumnos presten atención durante la clase.",
+      "alternatives": [
+        "l y II",
+        "I, III y IV",
+        "II y III",
+        "Solo III",
+        "II y IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La imaginación se caracteriza por la:",
+      "alternatives": [
+        "reproducción.",
+        "diversidad.",
+        "convergencia.",
+        "creación.",
+        "aplicación."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La imaginación es exclusiva de:",
+      "alternatives": [
+        "los organismos vivos.",
+        "el ser humano.",
+        "el varón.",
+        "la mujer.",
+        "los niños."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la actividad en la que interviene la imaginación.",
+      "alternatives": [
+        "resolver un problema de física",
+        "cantar una canción",
+        "leer un libro",
+        "dormir",
+        "jugar"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es una característica de la imaginación:",
+      "alternatives": [
+        "Es biológica únicamente.",
+        "Sólo interviene la memoria.",
+        "Se da en la adolescencia, preferentemente.",
+        "Tiene como base su experiencia interna.",
+        "T. A."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El uso de _____ es importante para la actividad imaginaria.",
+      "alternatives": [
+        "el lenguaje",
+        "la experiencia",
+        "la sensación",
+        "las figuras",
+        "la opinión"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Imaginar que en el próximo examen de admisión ingreso, puedo:",
+      "alternatives": [
+        "proyectarme.",
+        "ilusionarme.",
+        "frustrarme.",
+        "soñar.",
+        "alucinar."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los personajes de la Guerra de las galaxias nunca fueron propuestos, por lo cual la imaginación de Lucas al respecto:",
+      "alternatives": [
+        "tiene como referente a la realidad.",
+        "es la creación de algo novedoso.",
+        "tuvo que ver con su actividad práctica.",
+        "se proyectó al futuro.",
+        "retrocedió al pasado."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando una persona presenta una imaginación particular, podemos conocer en ella de manera indirecta:",
+      "alternatives": [
+        "inteligencia.",
+        "sensaciones.",
+        "sus intereses.",
+        "memoria.",
+        "personalidad."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Representar mentalmente lo que quiere decir un “mimo” con su lenguaje corporal, es usar la imaginación:",
+      "alternatives": [
+        "creadora.",
+        "colectiva.",
+        "innata.",
+        "propia.",
+        "reproductora."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si imaginas cómo era Lima colonial con sus coches jalados a caballo, y su gente con su vestuario de la época, tu imaginación es:",
+      "alternatives": [
+        "proyectiva.",
+        "propia.",
+        "colectiva.",
+        "retrospectiva.",
+        "social."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al crear un extraterrestre, hago uso de la:",
+      "alternatives": [
+        "percepción.",
+        "imaginación.",
+        "atención.",
+        "memoria.",
+        "sensación."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El pensamiento creativo también es conocido como:",
+      "alternatives": [
+        "divergente.",
+        "convergente.",
+        "lateral.",
+        "A y B",
+        "B y C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Modalidad del pensamiento que caracteriza a la creatividad:",
+      "alternatives": [
+        "convergente",
+        "lógico",
+        "divergente",
+        "analítico",
+        "sintético"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale qué comportamiento identifica mejor el acto creativo.",
+      "alternatives": [
+        "hacer el resumen de un texto",
+        "enumerar las cualidades de un objeto",
+        "planificar actividades",
+        "cambiar la letra de un tema musical",
+        "imaginar tu plato favorito"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al escuchar un chiste, represento mentalmente el contexto del chiste, en aquel momento hago uso de mi imaginación:",
+      "alternatives": [
+        "reproductora.",
+        "creativa.",
+        "creadora.",
+        "innovadora.",
+        "social."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un pintor expresa en sus cuadros lo que imagina, cómo percibe él la realidad. En él su imaginación involucra:",
+      "alternatives": [
+        "su actividad práctica.",
+        "su personalidad.",
+        "algo novedoso.",
+        "su hemisferio izquierdo.",
+        "su hemisferio derecho."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pedro Suárez Vértiz expresa su imaginación a través de la música; en él la imaginación se caracteriza por:",
+      "alternatives": [
+        "ser la creación de algo novedoso.",
+        "tener como referencia la realidad.",
+        "por estar relacionada con su personalidad.",
+        "búsqueda de algo novedoso ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dibujar el submarino “Nautilus” a partir de leer Veinte leguas de viaje submarino. Hago uso de mi imaginación:",
+      "alternatives": [
+        "creadora.",
+        "social.",
+        "dinámica.",
+        "innata.",
+        "reproductora."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un comediante tiene que inventar chistes nuevos para su show, en ese momento hace uso de su imaginación:",
+      "alternatives": [
+        "reproductora.",
+        "innata.",
+        "creadora.",
+        "social.",
+        "fisiológica."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la imaginación reproductora:",
+      "alternatives": [
+        "obtenemos imágenes nuevas.",
+        "obtenemos imágenes originales.",
+        "reproducimos códigos o símbolos.",
+        "A y B"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/creatividad-e-imaginacion-ejemplos-preguntas-resueltas-de-psicologia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — IMAGINACIÓN Y CREATIVIDAD EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Otto al desarrollar experimentos de biología planifica las acciones que debe llevar a cabo y al advertir errores en un procedimiento, implementa una acción correctiva para obtener un resultado positivo. Podemos decir que ha desarrollado habilidades de",
+      "alternatives": [
+        "tolerancia a la frustración",
+        "toma de decisiones",
+        "autoaprendizaje",
+        "solución de problemas",
+        "metacognición"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/psicologia-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Reyner es el estudiante más destacado en su instituto, donde estudia ensamblaje de computadoras. Su habilidad para acoplar las piezas siguiendo el manual es impresionante. Él usa la estrategia de solución denominada",
+      "alternatives": [
+        "tanteo.",
+        "algoritmo.",
+        "recuperación de información.",
+        "ensayo y error.",
+        "heurística."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-psicologia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PREGUNTAS RESUELTAS MODO EXAMEN ADMISIÓN UNIVERSIDAD CON RESPUESTAS"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es considerado un proceso cognitivo superior:",
+      "alternatives": [
+        "la erección",
+        "la pasión",
+        "el pensamiento",
+        "el sentimiento",
+        "la motivación"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-psicologia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PREGUNTAS RESUELTAS MODO EXAMEN ADMISIÓN UNIVERSIDAD CON RESPUESTAS"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes alternativas no incluye ningún proceso cognitivo?",
+      "alternatives": [
+        "sentimientos - estados de ánimo",
+        "memoria - atención",
+        "pensamiento - interés",
+        "percepción - emoción",
+        "inteligencia - sentimientos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-psicologia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PREGUNTAS RESUELTAS MODO EXAMEN ADMISIÓN UNIVERSIDAD CON RESPUESTAS"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si conocemos el mundo al verlo, al escucharlo o incluso al recordarlo, entonces en nosotros se manifiestan los procesos",
+      "alternatives": [
+        "volitivos.",
+        "afectivos.",
+        "motivacionales.",
+        "conativos.",
+        "cognitivos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-psicologia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PREGUNTAS RESUELTAS MODO EXAMEN ADMISIÓN UNIVERSIDAD CON RESPUESTAS"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es la operación del pensamiento que permite establecer características comunes dentro de un conjunto de objetos:",
+      "alternatives": [
+        "Análisis",
+        "Síntesis",
+        "Comparación",
+        "Generalización",
+        "Abstracción"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/psicologia-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones describe correctamente el pensamiento?",
+      "alternatives": [
+        "Se desarrolla solo en la infancia y se detiene en la adultez.",
+        "Es la capacidad de procesar, analizar y comprender la información.",
+        "Es la capacidad de procesar y resolución de problemas con creatividad.",
+        "Es un proceso exclusivamente lógico y matemático.",
+        "Se basa en la experiencia y la creatividad."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/psicologia-cayetano-heredia-examen-upch.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA CAYETANO HEREDIA EXAMEN INGRESO UNIVERSIDAD UPCH RESUELTO PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Raúl y Mariela intentan hacer hablar a su pequeño bebé de 3 meses de edad, pero él solo se limita a emitir sonidos guturales a pesar de los constantes esfuerzos de sus padres porque hable. En dicho caso, el factor que aún no permite al bebé pronunciar palabras está vinculado a las variables",
+      "alternatives": [
+        "comportamentales.",
+        "maduracionales.",
+        "del aprendizaje.",
+        "situacionales."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/psicologia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PRE SAN MARCOS SEMANA 9 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando le preguntan a Miguelito si podría definir lo que es un perro, él piensa en las características generales que tienen estos seres y le dice a su profesora que los perros son animalitos mamíferos, domésticos y que ladran. Podemos afirmar que Miguelito está formando un concepto por",
+      "alternatives": [
+        "composición.",
+        "abstracción.",
+        "ensayo y error.",
+        "imitación."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/psicologia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PRE SAN MARCOS SEMANA 9 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué estrategia para la solución de problemas utiliza una persona que luego de tres años de no visitar la casa de su amiga, intenta llegar a la dirección por otra ruta, pero al perderse, decide retornar al paradero que conocía y retomar la ruta que habitualmente utilizaba?",
+      "alternatives": [
+        "heurística.",
+        "ensayo y error.",
+        "recuperación de la información.",
+        "algoritmo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/psicologia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PRE SAN MARCOS SEMANA 9 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Como no estaba muy seguro sobre qué regalarle a su sobrino, Martín fue a la tienda de videojuegos y le pidió al vendedor que le trajera el juego más vendido este verano entre los jóvenes de entre 13 y 15 años. En este caso, Martín empleó la estrategia de solución de problemas conocida como",
+      "alternatives": [
+        "heurística.",
+        "ensayo y error.",
+        "recuperación de la información.",
+        "algoritmo."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/psicologia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PRE SAN MARCOS SEMANA 9 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Susana está preocupada pues ha notado a su pequeño hijo de 4 años hablando mientras juega a solas en su habitación. Lo que no sabe Susana es que esto es algo completamente natural en niños de la edad de su menor hijo, el cual está pasando por la etapa del lenguaje llamada",
+      "alternatives": [
+        "estadio holofrásico.",
+        "habla telegráfica.",
+        "habla polisintética.",
+        "lenguaje egocéntrico."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/psicologia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PRE SAN MARCOS SEMANA 9 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juanito intenta llamar la atención de su madre para que le alcance su juguete, por lo que mirándola, pronuncia la palabra «ete» y apunta con su dedo índice hacia el elemento en mención. Este caso ilustra un ejemplo del uso del lenguaje",
+      "alternatives": [
+        "telegráfico.",
+        "egocéntrico.",
+        "interno.",
+        "simpráxico."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/psicologia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — PSICOLOGÍA PRE SAN MARCOS SEMANA 9 SOLUCIONARIO EJERCICIOS RESUELTOS PDF"
     }
   ]
 }

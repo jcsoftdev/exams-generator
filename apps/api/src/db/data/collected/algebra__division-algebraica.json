@@ -212,6 +212,684 @@
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/05/metodo-de-ruffini-ejercicios-resueltos.html",
       "sourceName": "matematicasn - Método de Ruffini (Ejercicios Resueltos), Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el menor término racional del cociente notable.",
+      "alternatives": [
+        "9",
+        "-1",
+        "3",
+        "5",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el siguiente cociente notable . Calcule el lugar que ocupa el término que contiene a x10.",
+      "alternatives": [
+        "sexto",
+        "quinto",
+        "octavo",
+        "cuarto",
+        "décimo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una partida de ajedrez, el vencedor termina el duelo en su jugada (a+b+c)÷17, Si los valores de a, b y c están determinados por el cociente notable (x a −y b )÷(x²−y ⁵ ), cuyo término central es de x c y ¹ ² ⁰ , determine el número de la jugada en la que el vencedor termina la partida.",
+      "alternatives": [
+        "25",
+        "21",
+        "27",
+        "23",
+        "19"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cocientes-notables-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — COCIENTES NOTABLES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un motorista ha adquirido D(x) = 6x⁵+ 13x⁴+ 4x³+ 9x²+ 13x − 2 litros de petróleo y los ha distribuido en forma equitativa en envases de d(x) = 2x³+ 3x²+ 4 litros (x ∈ ℤ + ). Si la cantidad de petróleo que quedó sin envasar es 12 litros, determine cuántos envases empleó el motorista.",
+      "alternatives": [
+        "15",
+        "8",
+        "10",
+        "13"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/metodo-de-horner-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DE HORNER EJERCICIOS RESUELTOS PDF ( PARA DIVIDIR POLINOMIOS ) "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sabiendo que el resto de la división de p(x) = 6x⁵+ x⁴− x³ + ax² +bx + c por d(x) = 3x³ − x² −1 es r(x) = 3x² + 2x +1, determine el valor de abc.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/metodo-de-horner-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DE HORNER EJERCICIOS RESUELTOS PDF ( PARA DIVIDIR POLINOMIOS ) "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Greissy, una vendedora de tejidos, vende bufandas al precio unitario de (x⁴+ ax + a) soles y chalecos a (3x − x²+ b)soles cada uno. El día de hoy vendió 3 bufandas y 2 chalecos; con el dinero recaudado, compró paquetes de lana a un precio de (−1+ x²− x) soles cada uno. Si compró la mayor cantidad de paquetes que podía y le sobró (10x + 6) soles después de la compra, determine el valor de a +b .",
+      "alternatives": [
+        "1,5",
+        "2",
+        "0",
+        "3,5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/metodo-de-horner-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — MÉTODO DE HORNER EJERCICIOS RESUELTOS PDF ( PARA DIVIDIR POLINOMIOS ) "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el valor de «k» para que el polinomio: u³+v ³ +w ³ +kuvw sea divisible entre: u+v+w",
+      "alternatives": [
+        "1",
+        "0",
+        "–10",
+        "–2",
+        "–3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/teorema-del-resto-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA DEL RESTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El cociente de dividir un polinomio de tercer grado entre 2x–1es: x ² +2x–3 y el resto al dividir dicho polinomio entre 2x+1 es 1.\nAverigüe el resto que se obtiene al dividirlo entre 2x–1.",
+      "alternatives": [
+        "– 6,5",
+        "–15",
+        "4,5",
+        "3,5",
+        "2,5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/teorema-del-resto-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA DEL RESTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si al dividir P(x) separadamente entre (x – 2) y (x – 3) se obtiene el mismo residuo 5, el término principal del polinomio es 2x³ y el término independiente es 17.\nDetermine el resto de la división: P(x)÷(x –1)",
+      "alternatives": [
+        "6 – x",
+        "13",
+        "12",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/algoritmo-de-la-division-algebraica.html",
+      "sourceName": "matematicasn.blogspot.com — ALGORITMO DE LA DIVISIÓN ALGEBRAICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir un polinomio P(x) entre (x – 3) el residuo es 6, pero al dividir P(x) entre (x + 3) el resto es 0. Luego, halle el resto de dividir P(x)÷(x ² – 9).",
+      "alternatives": [
+        "6",
+        "x",
+        "0",
+        "2–x",
+        "x+3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/algoritmo-de-la-division-algebraica.html",
+      "sourceName": "matematicasn.blogspot.com — ALGORITMO DE LA DIVISIÓN ALGEBRAICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De la identidad ax ¹ ⁰ – bx ⁵ + cx–666 ≡ (x ² +2x–3)Q(x) calcule el valor de a–b+ c.",
+      "alternatives": [
+        "666",
+        "665",
+        "3",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-algebraica-ejercicios_28.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ALGEBRAICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene que repartir ax ⁴ –x+4 caramelos en partes iguales en (x–2) bolsitas. Al final de la repartición notamos que sobró (x+32) carmelos. Halle el valor de a.",
+      "alternatives": [
+        "30",
+        "3",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-algebraica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ALGEBRAICA DE POLINOMIOS EJEMPLOS Y EJERCICIOS RESUELTOS DE SECUNDARIA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si los polinomios\nP(x) =ax ² + (b –1)x+6\nQ(x) =5x ² +2x+ (5 – c)\nson idénticos, calcule el valor de ab+ c.",
+      "alternatives": [
+        "–16",
+        "8",
+        "15",
+        "14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-algebraica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ALGEBRAICA DE POLINOMIOS EJEMPLOS Y EJERCICIOS RESUELTOS DE SECUNDARIA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir:\nP(x)=(2a+b)x³ – (a+2b)x²+ (a+b)x – (a – b) entre x – 1, se obtuvo 40 por resto. Calcula a + b.",
+      "alternatives": [
+        "10",
+        "50",
+        "40",
+        "20",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-algebraica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ALGEBRAICA DE POLINOMIOS EJEMPLOS Y EJERCICIOS RESUELTOS DE SECUNDARIA"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir x ⁴ – 2x ³ + 4x² – x + 1 por (x – 2), el resto es:",
+      "alternatives": [
+        "3",
+        "9",
+        "15",
+        "51",
+        "61"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-algebraica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ALGEBRAICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La empresa de caramelos “Diente Feliz”, produce diariamente (6x³+5x ² – 2x+10 ) caramelo. Para su exportación se debe preparar paquetes de (3x+1) caramelos.\nDetermine cuántos paquetes se debe preparar y cuántos caramelos sobran si x ∈ ℤ + .",
+      "alternatives": [
+        "(2x ² – x –1); 10",
+        "(2x ² +x –1); 11",
+        "(x ² +x –1); 9",
+        "(x ² +x –1); 11"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-algebraica-problemas-con.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ALGEBRAICA PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir P(x)=ax²+x+6 entre Q(x)=ax – 3a se obtuvo como resto 18.\nHalla P(a+1).",
+      "alternatives": [
+        "8",
+        "6",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/06/algebra-admision-catolica-pucp-examen.html",
+      "sourceName": "algebraenpdf.blogspot.com — ALGEBRA ADMISIÓN CATÓLICA PUCP 2022 2023 EXAMEN INGRESO A LA UNIVERSIDAD SOLUCIONARIO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine “abc” sabiendo que el polinomio :\nes divisible por",
+      "alternatives": [
+        "-2",
+        "-34",
+        "40",
+        "-1360",
+        "2720"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/divisibilidad-cocientes-notables.html",
+      "sourceName": "matematica-a1.blogspot.com — DIVISIBILIDAD COCIENTES NOTABLES FACTORIZACIÓN I EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se desea conocer de cuántos términos está constituido el cociente de : sabiendo que",
+      "alternatives": [
+        "396",
+        "133",
+        "132",
+        "236",
+        "131"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/divisibilidad-cocientes-notables.html",
+      "sourceName": "matematica-a1.blogspot.com — DIVISIBILIDAD COCIENTES NOTABLES FACTORIZACIÓN I EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si…\nson términos consecutivos del desarrollo de un C.N. Halle el número de términos.",
+      "alternatives": [
+        "61",
+        "59",
+        "58",
+        "60",
+        "65"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/cocientes-notables-factorizacion.html",
+      "sourceName": "matematica-a1.blogspot.com — COCIENTES NOTABLES FACTORIZACIÓN EJERCICIOS RESUELTOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule “a x b” si el resto de\nEs equivalente a: (ax+b)",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematica-a1.blogspot.com/2013/03/binomio-de-newton-y-radicacion.html",
+      "sourceName": "matematica-a1.blogspot.com — BINOMIO DE NEWTON Y RADICACIÓN EJERCICIOS DESARROLLADOS IMPRIMIR GRATIS "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por el aniversario de la UVC se realiza un evento, donde se reparte\n4x ³ + (5 – 8b)x ² + (4 – 10b)x – 21 camisas\na los docentes asistentes, sobrando 3 camisas.\nSi la cantidad de camisas a repartir fuese\n4x ³ – 12bx ² + 25bx – 10 entre la misma cantidad de asistentes d(x) = x – 2b, ¿cuántas camisas sobrarían?",
+      "alternatives": [
+        "7",
+        "4",
+        "12",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/algebra-callao-examen-de-admision-universidad-unac-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — ÁLGEBRA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El resto de dividir un polinomio de tercer grado entre (2x+1) es 1. Si la división de dicho polinomio entre (2x – 1) no es exacta y x²+2x – 3 es el cociente obtenido entonces el valor del resto es:",
+      "alternatives": [
+        "–4,5",
+        "4",
+        "–5",
+        "6",
+        "–6,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea :\np(x) = x ⁴ + 2x³ + 3x² + 5\nq(x) = x² + 5x – 4.\nSea r(x) el resto que se obtiene al hacer la división de p(x) entre q(x).\nHalle r(1).",
+      "alternatives": [
+        "– 35",
+        "– 33",
+        "– 31",
+        "– 29",
+        "– 27"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Uni-solucionario-examen-admision-universidad-nacional-de-ingenieria-descarga-pdf.html",
+      "sourceName": "matematicaj.blogspot.com —  MATEMÁTICAS EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA SEGUNDA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si los polinomios:\nP(x) =6x 4 +6x 3 +5x 2 +mx+n\nR(x) =2mx 3 +9nx 2 +px+q\n, admiten como MCD a 3x 2 +3x+1\nDetermina el valor de m+n+p+q",
+      "alternatives": [
+        "6",
+        "9",
+        "7",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/algebra-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por el aniversario de la UCV se realiza un evento, donde se reparte\n4x 3 + (5 – 8b)x 2 + (4 – 10b)x – 21 camisas a los docentes asistentes, sobrando 3 camisas.\nSi la cantidad de camisas a repartir fuese\n4x 3 – 12bx 2 + 25bx – 10 entre la misma cantidad de asistentes d(x)=x–2b, ¿cuántas camisas sobrarían?",
+      "alternatives": [
+        "8",
+        "7",
+        "9",
+        "12",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-simulacro-resuelto-pre.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD RESUELTO "
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir: (x ⁴ – 2x ² – 6) por (x + 3), el residuo es:",
+      "alternatives": [
+        "69",
+        "62",
+        "59",
+        "57",
+        "54"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/division-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ENTRE POLINOMIOS MÉTODOS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Efectuar la siguiente división: (6x ³ – 5x ² – 4x + 4)÷(x – 1)\nHallar el residuo de dicha división",
+      "alternatives": [
+        "1",
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/division-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN ENTRE POLINOMIOS MÉTODOS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el valor de verdad de cada una de las siguientes proposiciones:\nI) Al dividir (x ² ¹ ² − x ⁵ ⁰ + x ⁶ ⁰ + 2) por (x ¹ ² −1) el residuo es (x²+ 3).\nII) Si p(x) es divisible separadamente por (x + 2) y (x − 2) , entonces p(x) es divisible por (x²−4).\nIII) Si p(x) = d(x).q(x) + r(x) , entonces [p(x) − r(x)] es divisible por q(x) .",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "FVF",
+        "FFV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/teorema-especial-del-resto-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA ESPECIAL DEL RESTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea p(x) un polinomio mónico de tercer grado que, al dividirlo separadamente por (x−3) y (x+2) , se obtiene como resto el mismo valor de 7.\nDetermine el resto al dividir p(x) por (x + 3) , sabiendo que al dividirlo por (x + 1) el resto es −5 .",
+      "alternatives": [
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/teorema-especial-del-resto-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA ESPECIAL DEL RESTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI) En una división de polinomios se cumple que el término independiente (T.I.) del dividendo D(x) es igual al producto de los T.I. del divisor d(x) y el cociente q(x), más el T.I. del resto r(x).\nII) En una división inexacta, el grado del resto r(x) es siempre menor que el grado del cociente q(x).\nIII) Si un polinomio p(x) es divisible por otro polinomio q(x), y a su vez q(x) es divisible por t(x), entonces p(x) es divisible por t(x).",
+      "alternatives": [
+        "VFF",
+        "VFV",
+        "VVV",
+        "FVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/teorema-especial-del-resto-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA ESPECIAL DEL RESTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un polinomio de tercer grado es tal que, al dividirlo por (x ² +2) , el resto es (10x+7) y al dividirlo por (x ² −6) el resto que se obtiene es (34x+23).\nHalle el resto al dividir dicho polinomio por (x+2).",
+      "alternatives": [
+        "–32",
+        "42",
+        "–37",
+        "47"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/teorema-especial-del-resto-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — TEOREMA ESPECIAL DEL RESTO EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un polinomio P(x) de tercer grado, al dividirlo entre (x – 1), (x + 2) y (x – 3) da el mismo resto 3. Si se divide P(x) entre (x + 1) se obtiene como resto 19.\nCalcule P(4)",
+      "alternatives": [
+        "6",
+        "13",
+        "39",
+        "24",
+        "18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/05/divisibilidad-algebraica-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIBILIDAD ALGEBRAICA EJERCICIOS RESUELTOS PDF TEOREMA DEL FACTOR"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lewis ganó un premio de (x ¹ ⁶ +x) soles. Piensa quedarse con (x ⁵ +1) soles, y el resto repartirlo entre sus (x ² + 1) hijos, en partes iguales.\n¿Cuánto dinero sobró luego de la repartición a los hijos?",
+      "alternatives": [
+        "No sobró nada.",
+        "Sobró x soles.",
+        "Sobró (x–1) soles.",
+        "Faltó dinero."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/division-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN DE POLINOMIOS PREGUNTAS RESUELTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el resto de dividir 4(3x – 7) ⁸ – (3x – 5) ⁵ + 8 por x – 3, en ℝ",
+      "alternatives": [
+        "32",
+        "–16",
+        "– 5",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/division-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN DE POLINOMIOS PREGUNTAS RESUELTAS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el resto de dividir P(x) ÷ (x+ 1) es uno y resto de P(x)÷(x–2) es cuatro. Halle el resto R(x)=ax+b de dividir P(x) entre (x–2)(x+ 1).",
+      "alternatives": [
+        "x",
+        "x+2",
+        "2x",
+        "x+1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-de-polinomios-raices.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN DE POLINOMIOS RAÍCES EJERCICIOS RESUELTOS DE SECUNDARIA MATEMÁTICA ESO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la identidad\nmx ⁵ +nx ⁴ +px ³ +x ² – 8≡(x²+x – 2).q(x)\ncalcule el valor de m+n+p.",
+      "alternatives": [
+        "8",
+        "9",
+        "7",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/division-de-polinomios-raices.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN DE POLINOMIOS RAÍCES EJERCICIOS RESUELTOS DE SECUNDARIA MATEMÁTICA ESO PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Talía y Edu trabajan juntos para la venta de chocotejas. Para ponerlas en el mercado, la empacan en cajas de (x ² +2x–1) chocotejas cada una.\nSi producen (3x ³ –15x+ 6) chocotejas, ¿cuántas cajas necesitan para empacarlas todas?",
+      "alternatives": [
+        "(3x–6) cajas",
+        "(x+ 6) cajas",
+        "(3x) cajas",
+        "(3x–2) cajas",
+        "(3x–1) cajas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN DE POLINOMIOS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un restaurante se usan (5x–1) gramos por cada porción de arroz por persona. Si un día se preparan (5x ⁴ –11x ³ +nx²+x+2) gramos de arroz, ¿cuánto es el valor de n si se sabe que al preparar las porciones sobraron 3 gramos de arroz?",
+      "alternatives": [
+        "31",
+        "22",
+        "20",
+        "21"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/division-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — DIVISIÓN DE POLINOMIOS EJEMPLOS Y EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si al dividir P(x) entre 4x 2 –5x–6, se obtiene como residuo 2x+3, ¿cuál es el resto de dividirlo entre x–2?",
+      "alternatives": [
+        "6",
+        "9",
+        "7",
+        "5",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/algebra-intermedia-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al dividir el polinomio:\nP(x)=x 4 –4 entre el polinomio x 2 +1, se obtiene un cociente Q(x) y residuo R(x). Calcule el valor de Q(3).R(64).",
+      "alternatives": [
+        "– 16",
+        "– 32",
+        "– 40",
+        "– 24"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/algebra-admision-catolica-pucp-examen.html",
+      "sourceName": "matematicasn.blogspot.com — ÁLGEBRA ADMISIÓN CATÓLICA DESARROLLADA"
     }
   ]
 }

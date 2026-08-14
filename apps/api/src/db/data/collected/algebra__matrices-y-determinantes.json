@@ -419,6 +419,57 @@
       "correctAnswer": "2",
       "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
       "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 9"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a tres familias que van a una confitería cierto día, se sabe lo siguiente: la primera familia consumió 4 alfajores, un suspiro a la limeña y 3 helados de barquillo; la segunda consumió 2 alfajores, 2 suspiros a la limeña y 4 helados de barquillo; y la tercera consumió 3 alfajores, 3 suspiros a la limeña y 3 helados de barquillo.\ni) Calcule el determinante de la matriz de orden 3×3 que expresa la información sobre las compras en la confitería, por familia y por producto.\nii) Si cada familia gasta en dicha confitería: 22 soles la primera, 22 soles la segunda y 27 soles la tercera, calcule el precio de un suspiro a la limeña.",
+      "alternatives": [
+        "– 18 y 3 soles",
+        "– 16 y 3 soles",
+        "– 15 y 2 soles",
+        "– 18 y 4 soles",
+        "– 16 y 4 soles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/sistemas-de-ecuaciones-lineales-ejemplos-resueltos-de-matematicas-de-secundaria-en-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — SISTEMAS DE ECUACIONES PROBLEMAS RESUELTOS PREUNIVERSITARIOS"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La Transferencia Electrónica Disponible (TED) es una transacción financiera de valores entre diferentes bancos. Un economista decide analizar los valores enviados mediante TED entre cinco bancos (1, 2, 3, 4 y 5) durante un mes. Para ello, dispone esos valores en una matriz A = [aij], en la que 1 ≤ i ≤ 5 y 1 ≤ j ≤ 5, y el elemento aij corresponde al total proveniente de las operaciones realizadas vía TED, en millones de reales, transferidos del banco i al banco j durante el mes. Observe que los elementos aii = 0, ya que TED es una transferencia entre bancos distintos. Esta es la matriz obtenida para este análisis: A = Con base en esta información, el banco que transfirió la mayor cantidad vía TED es el banco",
+      "alternatives": [
+        "1.",
+        "2.",
+        "3.",
+        "4.",
+        "5."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2018/2018_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2018 dia 2 caderno azul questão 136"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un profesor aplica, durante los cinco días hábiles de una semana, pruebas con cuatro preguntas de opción múltiple a cinco alumnos. Los resultados se representaron en la matriz. En esa matriz, los elementos de las filas de 1 a 5 representan las cantidades de preguntas acertadas por los alumnos Ana, Bruno, Carlos, Denis y Érica, respectivamente, mientras que las columnas de 1 a 5 indican los días de la semana, de lunes a viernes, respectivamente, en que se aplicaron las pruebas. La prueba que presentó la mayor cantidad de aciertos fue la aplicada el",
+      "alternatives": [
+        "lunes.",
+        "martes.",
+        "miércoles.",
+        "jueves.",
+        "viernes."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2019/2019_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2019 dia 2 caderno azul questão 144"
     }
   ]
 }

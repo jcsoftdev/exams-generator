@@ -101,6 +101,1569 @@
       "correctAnswer": "3",
       "sourceUrl": "https://matematicasn.blogspot.com/2022/11/refraccion-de-la-luz-ley-de-snell-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
       "sourceName": "matematicasn - Refracción de la luz / Ley de Snell (Problemas Resueltos), Ejercicio 13"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante una excursión, un estudiante descubre un cristal muy brillante y decide medir la velocidad de la luz en este y obtiene como resultado 1,31×10 8 m/s. En este contexto, determine el índice de refracción del cristal.\nDato: c =3×10 8 m/s",
+      "alternatives": [
+        "1,79",
+        "1,50",
+        "2,49",
+        "2,29",
+        "3,02"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/fisica-deco-examen-resuelto-de-ingreso.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA DECO RESUELTA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una lente delgada convergente proyecta sobre una pantalla la imagen de una vela con un aumento cuatro veces mayor. Si la vela y la pantalla se encuentran separadas 10 cm, ¿cuál es la distancia focal de la lente?",
+      "alternatives": [
+        "+ 1,6 cm",
+        "+ 1,8 cm",
+        "+ 1,2 cm",
+        "+ 1,5 cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto de 3 cm de altura está situado a 8 cm de un espejo esférico cóncavo. Si produce una imagen a 10 cm a la derecha del espejo. Determinar la distancia focal.",
+      "alternatives": [
+        "0,50 m",
+        "0,40 m",
+        "0,30 m",
+        "0,20 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A qué distancia de un espejo esférico cóncavo de radio de curvatura 180 cm se debe situar un objeto para que se forme una imagen real de modo que tenga la mitad de las dimensiones lineales del objeto?",
+      "alternatives": [
+        "240 cm",
+        "270 cm",
+        "310 cm",
+        "250 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto luminoso de 3 cm de altura está situado a 20 cm de una lente divergente de distancia focal 10 cm. Determine las características de la imagen.",
+      "alternatives": [
+        "virtual, derecha, 1 cm",
+        "virtual, derecha, 4 cm",
+        "real, invertida, 2 cm",
+        "virtual, invertida, 1 cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto se encuentra a una distancia S frente a un espejo convexo de distancia focal f, tal que |f|<S. Indique cuál de las siguientes proposiciones es verdadera.",
+      "alternatives": [
+        "La imagen formada es virtual.",
+        "La posición de la imagen S' es tal |S'|>|f|",
+        "La imagen forma es invertida.",
+        "La imagen formada es de mayor tamaño que el objeto.",
+        "La imagen formada es real."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/fisica-callao-examen-de-admision-universidad-unac-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el laboratorio, se hace incidir luz a 30° a una sustancia sólida transparente y el rayo se refracta en el aire a 60°. Luego se hace incidir luz a 30° a dicha sustancia, pero esta vez en otro medio (diferente al aire), cuyo índice de refracción es de 1,5. ¿Con qué ángulo se refracta en este segundo medio?",
+      "alternatives": [
+        "sen θ = √3/2",
+        "sen θ = √3/3",
+        "sen θ = 3 √3/2",
+        "sen θ = √3/6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/fisica-simulacro-san-marcos-solucionario-admision-a-la-universidad-2020-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA ÁREA C PRUEBA DECO SAN MARCOS SIMULACRO DE EXAMEN ADMISIÓN UNIVERSIDAD SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Debido al tratamiento con productos químicos, el índice de refracción del agua de una piscina es n H₂O = 1,34. Una nadadora deja caer su celular, protegido en su funda, hasta el fondo de la piscina de 1,79 m de profundidad. Va en su búsqueda dando saltos en el agua con su cabeza afuera del agua hasta que logra distinguirlo. ¿A cuánta distancia de sus pies se encuentra el celular?\nCálculos rápidos: (1,34)²= 1,80 y (1,79)²=3,20",
+      "alternatives": [
+        "1,00 m",
+        "2,00 m",
+        "1,79 m",
+        "2,40 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/fisica-pre-san-marcos-primer-examen.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA SOLUCIONARIO SAN MARCOS ÁREAS D B ADMISIÓN UNIVERSIDAD SIMULACRO DESARROLLO DE LA PRUEBA DECO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una porción de un cascarón esférico delgado que puede usarse como un espejo cóncavo o convexo. Se coloca un objeto a 100 cm de la parte cóncava formándose una imagen real a 75 cm del espejo. Sin mover al objeto se da vuelta al espejo de tal manera que la parte convexa mire al objeto y se mueve el espejo acercándolo o alejándolo del objeto hasta que se forme una imagen a 35 cm detrás del espejo. Calcule aproximadamente la distancia (en cm) que se desplazó el cascarón esférico.",
+      "alternatives": [
+        "37,5",
+        "70,3",
+        "90,9",
+        "123,4",
+        "135,1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/examen-admision-uni-solucionario_28.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNI EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La imagen de un objeto que se encuentra muy lejos de una lente convergente, se forma a 20 cm de la misma. Calcule aproximadamente en cm, la distancia focal.",
+      "alternatives": [
+        "70",
+        "40",
+        "80",
+        "20",
+        "60"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un rayo de luz se transmite desde un medio de índice de refracción n hacia el aire. El ángulo de incidencia es de 30° y el seno del ángulo de refracción es 3/5. Calcule el coseno del ángulo de incidencia para que la reflexión sea total.",
+      "alternatives": [
+        "0,35",
+        "0,45",
+        "0,55",
+        "0,65",
+        "0,85"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-8-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El principio de mínimo tiempo incluye:",
+      "alternatives": [
+        "Leyes de la mercancía de partículas.",
+        "El modelo de Hyugens.",
+        "Todas las leyes de la óptica.",
+        "La reflexión y la refracción.",
+        "Sólo la propagación rectilínea de la luz."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-esan-examen-admision-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO ESAN 2027 EXAMEN ADMISIÓN UNIVERSIDAD TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la característica de los sólidos cristalinos cuyos valores de sus propiedades (conductividad eléctrica, índice de refracción) varían según la dirección en la que son medidos?",
+      "alternatives": [
+        "Alotropía",
+        "Anisotropía",
+        "Polimorfismo",
+        "Isotropía",
+        "Isomorfismo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/08/5to-actividad-11-educacion-fisica-experiencia-6-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2027-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto de 6cm de altura se coloca a 20cm de un espejo cóncavo de 10 cm de radio de curvatura.\nCalcule el tamaño de su imagen (en cm).",
+      "alternatives": [
+        "0,50",
+        "1,00",
+        "1,50",
+        "2,00",
+        "2,50"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea una radiación electromagnética propagándose en el vacío con energía E 0 , longitud de onda λ 0 y frecuencia f 0 . Considere que toda la radiación se transmite a un medio con índice de refracción n>1, siendo su energía E, longitud de onda λ y frecuencia f. Dadas las siguientes proposiciones:\nI. E < E 0 y f > f 0\nII. f >f 0 y λ< λ 0\nIII. E=E 0 y λ< λ 0\nDetermine la alternativa correcta.",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "solo III",
+        "II y III",
+        "I y II"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se coloca un objeto a 3,0 m de un espejo esférico convexo cuya distancia focal es –0,25 m. Calcule aproximadamente el aumento de la imagen.",
+      "alternatives": [
+        "0,055",
+        "0,066",
+        "0,077",
+        "0,088",
+        "0,099"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/optica-geometrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÓPTICA GEOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A 40cm de un espejo convexo de distancia focal 10cm se coloca un objeto. Calcule la distancia (en cm) de la imagen al espejo.",
+      "alternatives": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/optica-geometrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÓPTICA GEOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto luminoso se encuentra entre una pared vertical y un espejo cóncavo de 1,2m de distancia focal. Sabiendo que la imagen se forma sobre la pared, ¿a qué distancia (en m) de la pared se encuentra el espejo, si el objeto se ubica a 1,8m de la pared?",
+      "alternatives": [
+        "0,9",
+        "1,8",
+        "2,4",
+        "3,6",
+        "4,8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/optica-geometrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÓPTICA GEOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia focal de una lente convergente es de 8cm. Se coloca un objeto frente a la lente y se obtiene una imagen real e invertida. Si la distancia entre el objeto y su imagen es de 32cm, calcula la distancia, en cm, de la imagen a la lente.",
+      "alternatives": [
+        "2",
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/optica-geometrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÓPTICA GEOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un espejo esférico cóncavo produce una imagen real tres veces mayor que el objeto. Determine la distancia focal del espejo, en cm, si la distancia entre el objeto y su imagen es 20 cm.",
+      "alternatives": [
+        "7,0",
+        "7,5",
+        "8,0",
+        "8,5",
+        "9,0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/optica-geometrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ÓPTICA GEOMÉTRICA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántas de las siguientes proposiciones son falsas? respecto de la refracción de la luz.\ni) Para que produzca refracción la luz debe penetrar oblicuamente hacia un medio distinto del vacío.\nii) El fenómeno de refracción involucra un cambio en la frecuencia de la luz.\niii) Un haz de luz que se refracta hacia un medio de mayor índice de refracción, lo hace bajo un ángulo mayor que el de incidencia.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "ninguna"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/refraccion-de-la-luz-ley-de-snell-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REFRACCIÓN DE LA LUZ EJERCICIOS RESUELTOS DE LEY DE SNELL PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El agua tiene un índice de refracción 4/3, ¿bajo que ángulo debiera incidir un haz luminoso sobre la superficie del agua para que el haz reflejado esté polarizado en un plano?",
+      "alternatives": [
+        "16°",
+        "37°",
+        "45°",
+        "53°",
+        "60°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/refraccion-de-la-luz-ley-de-snell-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REFRACCIÓN DE LA LUZ EJERCICIOS RESUELTOS DE LEY DE SNELL PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un haz de luz luego de incidir en un vidrio de forma esférica de índice de refracción, se refracta con un ángulo de 37°.\nDetermine el ángulo de refracción cuando emergen de vidrio.",
+      "alternatives": [
+        "15°",
+        "30°",
+        "37°",
+        "53°",
+        "60°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/refraccion-de-la-luz-ley-de-snell-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REFRACCIÓN DE LA LUZ EJERCICIOS RESUELTOS DE LEY DE SNELL PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un espejo esférico cóncavo da una imagen real cuyo tamaño es tres veces mayor que el objeto. Determinar la distancia focal del espejo, si la distancia entre el objeto y su imagen es 20 cm.",
+      "alternatives": [
+        "7,5 cm",
+        "8,0 cm",
+        "8,5 cm",
+        "9,0 cm",
+        "9,5 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El radio de curvatura de un espejo esférico cóncavo es de 40 cm. ¿A qué distancia del espejo (en cm) debe colocarse el objeto para obtener una imagen real cuya altura sea la mitad del objeto?",
+      "alternatives": [
+        "15",
+        "30",
+        "60",
+        "80",
+        "90"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A qué distancia (en cm) de un objeto se coloca su imagen, si esta se coloca a 180 cm de un espejo cóncavo cuyo radio de curvatura es 120 cm?",
+      "alternatives": [
+        "60",
+        "90",
+        "120",
+        "150",
+        "180"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La imagen real de un objeto producido por un espejo cóncavo de 20 cm de distancia focal es cuatro veces el tamaño del objeto.\n¿A qué distancia (en cm) se encuentra el tamaño del objeto?",
+      "alternatives": [
+        "20",
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un móvil se encuentra a 80 cm de un espejo cóncavo de radio 40 cm. ¿Con qué rapidez deberá acercarse un móvil al espejo, moviéndose sobre su eje, para que luego de 10 s, desaparezca su imagen?",
+      "alternatives": [
+        "2 cm/s",
+        "4 cm/s",
+        "6 cm/s",
+        "8 cm/s",
+        "10 cm/s"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Frente a un espejo cóncavo de 60 cm de radio de curvatura se coloca una vela de 20 cm de altura. Si esta vela se ubica a 40 cm del espejo, calcular el tamaño (en cm) de la imagen.",
+      "alternatives": [
+        "20",
+        "30",
+        "40",
+        "50",
+        "60"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto de 4 cm de altura situado frente a un espejo cóncavo, dista 15 cm del vértice del espejo. Si el radio de curvatura es 40 cm, ¿qué característica tiene la imagen?",
+      "alternatives": [
+        "Virtual, invertida, de 4 cm de altura",
+        "Real, derecha, de 8 cm de altura",
+        "Virtual, derecha, de 16 cm de altura",
+        "Virtual, derecha, de 8 cm de altura",
+        "Real, invertida, de 16 cm de altura"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un lente biconvexo, hecho de un vidrio cuyo índice de refracción es 1,6. Se encuentra en el aire. Si se desea duplicar la distancia focal del lente.\n¿Cuál debe ser el índice de refracción del vidrio, del cual hagamos el lente?",
+      "alternatives": [
+        "4,6",
+        "6,2",
+        "4,9",
+        "1,3",
+        "3,2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto se encuentra frente a un lente convergente focal. Si la distancia entre el objeto y su imagen respectiva es 90 cm, calcula la distancia máxima posible entre la imagen y la lente.",
+      "alternatives": [
+        "90cm",
+        "30cm",
+        "45cm",
+        "50cm",
+        "20cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula la distancia que existe entre un objeto y una lente divergente de 60cm de distancia focal, sabiendo que si el objeto se coloca frente al lente la imagen obtenida se ubica a 54 cm del objeto.",
+      "alternatives": [
+        "36cm",
+        "90cm",
+        "60cm",
+        "54cm",
+        "66cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula a qué distancia de un espejo esférico de 30cm de distancia focal se debe colocar un objeto, para obtener una imagen virtual, tres veces menor que el objeto.",
+      "alternatives": [
+        "30cm",
+        "45cm",
+        "60cm",
+        "75cm",
+        "90cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A qué distancia de un lente convergente de 18cm de distancia focal se debe colocar una vela para obtener una imagen de cuádruple tamaño?",
+      "alternatives": [
+        "15cm",
+        "12,5 cm",
+        "16cm",
+        "13,5cm",
+        "14cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una lente biconvexa hecha de vidrio con índice de refracción 1,6 tiene una distancia focal, cuando se encuentra en el aire, de 10cm. Si el lente se sumerge en un líquido de índice n=1,5.\n¿Cuál será su nueva distancia focal?",
+      "alternatives": [
+        "30cm",
+        "45cm",
+        "60cm",
+        "75cm",
+        "90cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A qué distancia de un lente de 20 cm de distancia focal se debe colocar un objeto para obtener una imagen virtual cinco veces menor que el objeto?",
+      "alternatives": [
+        "80cm",
+        "60cm",
+        "120cm",
+        "16cm",
+        "24cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia focal de una lente convergente es de 30 cm. ¿A qué distancia de la misma ha de situarse un objeto para que la imagen sea real y cuatro veces mayor?",
+      "alternatives": [
+        "37,5 cm",
+        "32,5 cm",
+        "30,5 cm",
+        "35,6 cm",
+        "38 cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La imagen virtual se ubica a 40 cm de la lente, el objeto fue colocado a 120 cm de la misma, halle la distancia focal.",
+      "alternatives": [
+        "–80 cm",
+        "–60 cm",
+        "–40 cm",
+        "–50 cm",
+        "–45 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usando una lente convergente, un objeto tiene su imagen real a 180 cm del mismo, si el objeto se acerca a la lente en 10 cm, su nueva imagen real se forma a 250 cm del objeto. Hallar la distancia focal de la lente.",
+      "alternatives": [
+        "30 cm",
+        "35 cm",
+        "36 cm",
+        "32 cm",
+        "40 cm"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto de 12 cm de altura colocado frente una lente de vidrio biconvexa, genera una imagen real de 4cm de altura a 60cm del objeto, determine la potencia en dioptrías de la lente.",
+      "alternatives": [
+        "2,4",
+        "3,4",
+        "4,4",
+        "6,6",
+        "8,8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La distancia entre un foco (lámpara eléctrica) y una pantalla (plana) es: d=1m ¿para qué posiciones de una lente convergente, intermedia entre el foco y la pantalla, con distancia focal f=21cm, la imagen del filamento incandescente de la lámpara se verá nítida en la pantalla.",
+      "alternatives": [
+        "15 cm y 85 cm de la lámpara.",
+        "60 cm y 40 cm de la lámpara.",
+        "56 cm y 44 cm de la lámpara.",
+        "70 cm y 30 cm de la lámpara.",
+        "42 cm y 58 cm de la lámpara."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto situado a 20 cm a la izquierda de una lente convergente de 12 cm de distancia focal, se desplaza 15 cm hacia la derecha respecto de la lente. Halle la magnitud de desplazamiento de su imagen (en cm)",
+      "alternatives": [
+        "15,85",
+        "4,43",
+        "28,62",
+        "38,57",
+        "45,31"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una lente biconvexa delgada, de índice de refacción 1,8 tiene una distancia focal de 60cm en el aire, cuando se sumerge en un líquido transparente, la distancia focal resulta ser 360cm. Determine el índice de refracción del medio líquido.",
+      "alternatives": [
+        "1,59",
+        "1,02",
+        "1,41",
+        "2,00",
+        "1,00"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una partícula se aproxima con velocidad constante, a lo largo del eje principal, al vértice de una lente convergente cuya distancia focal es de 20 cm. Si el objeto pasa de una distancia a la lente de 100 cm a otra de 30 cm en 5 s, calcule la rapidez media (en cm/s) de la imagen.",
+      "alternatives": [
+        "5",
+        "7",
+        "9",
+        "11",
+        "13"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto se coloca frente a una lente convergente. La distancia entre el objeto y la lente es igual a dos veces la magnitud de la distancia focal. Si la distancia entre el objeto y su imagen es de 20 cm, calcule en cm, la magnitud de la distancia focal.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/fisica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una onda electromagnética, de frecuencia 1,0×10 15 Hz, se propaga en el aire. Esta onda incide de manera normal en otro medio cuyo índice de refracción es n=1,5. Si la onda se propaga en dicho medio 15 km, halle la longitud de onda y el tiempo que demora en recorrer esa distancia.",
+      "alternatives": [
+        "2,3×10 –7 m y 8,0 ×10 –5 s",
+        "1,5×10 –7 m y 7,0 ×10 –5 s",
+        "2,1×10 –7 m y 8,5 ×10 –5 s",
+        "1,8×10 –7 m y 6,5 ×10 –5 s",
+        "2,0×10 –7 m y 7,5 ×10 –5 s"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La elipse de ecuación:\n5x 2 +4xy+8y 2 =M, con (M>0) tiene distancia focal igual a 5. Calcule el valor de M.",
+      "alternatives": [
+        "45",
+        "36",
+        "25",
+        "70",
+        "40"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/prueba-3-de-matematicas-fisica-y.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-1 SEGUNDA PRUEBA CLAVES DE INGRESO UNIVERSIDAD DESARROLLO MATEMÁTICAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Escríbase la ecuación canónica de la hipérbola si la distancia focal es igual a 10 y la hipérbola pasa por el punto (3;0)",
+      "alternatives": [
+        "16x ² – 9y ² =144",
+        "9x ² – 16y ² =144",
+        "3x ² – 4y ² =30",
+        "4x ² – 5y ² =100",
+        "16y ² – 4x ² =35"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — HIPÉRBOLA EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La lente convergente de 10cm de sustancia focal forma la imagen de un objeto de 30cm de altura. Si la imagen tiene una altura de 6cm y está invertida, determine aproximadamente la distancia objeto y distancia imagen (en cm) e indique si la imagen es real o virtual.",
+      "alternatives": [
+        "20, 12, real",
+        "44, 60, virtual",
+        "60, 12, real",
+        "32, 4, virtual",
+        "16, 6, real"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sistemas-de-ecuaciones-lineales-metodo.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2024-2 FÍSICA QUÍMICA TERCERA PRUEBA RESUELTA –RESPUESTAS INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se ilumina normalmente, con luz blanca, una lámina de vidrio de 1 μm de espesor. La longitud de onda de una de las radiaciones que atraviesa la lámina con máxima intensidad, en Â , es: (longitud de onda de luz visible entre 7800Â a 7800Â, índice de refracción del vidrio = 1,5)",
+      "alternatives": [
+        "4235",
+        "4245",
+        "4255",
+        "4265",
+        "4285"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/cepunt-solucionario-de-fisica-examen-resuelto-admision-unt-trujillo.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA CALLAO PRUEBA RESUELTA UNAC INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la mejor síntesis de ambos textos?",
+      "alternatives": [
+        "Mientras que Isaac Newton explicaba la naturaleza de la reflexión, Huygens se dedicaba a estudiar con detenimiento los fenómenos de la refracción.",
+        "Newton propugnó la teoría corpuscular de la luz y Huygens defendió la teoría ondulatoria, pero en esa época no había manera de resolver la controversia.",
+        "Si en el siglo XVII se hubiese podido medir la velocidad de la luz, probablemente se habría confirmado la verdad de la teoría corpuscular de Isaac Newton.",
+        "En tanto que para Isaac Newton el concepto fundamental es «densidad óptica», para Christiaan Huygens la noción capital es el conjetural «éter lumínico».",
+        "Mientras que Isaac Leyniz explicaba la naturaleza de la inflexión, Huygens se dedicaba a estudiar con detenimiento los fenómenos de la refracción."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Ingles-prueba-deco-A-B-D-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — HABILIDAD VERBAL ÁREA A SAN MARCOS EXAMEN RESUELTO INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una O.E.M. que se propaga en un medio de índice de refracción n=1,5 tiene una longitud de onda de 2km. ¿Cuál es la frecuencia (en kHz) de la O.E.M.",
+      "alternatives": [
+        "50",
+        "100",
+        "150",
+        "200",
+        "250"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considerando que una onda electromagnética (O.E.M.) en el rango visible incide sobre una superficie que separa dos medios diferentes. Indique cuales de las siguientes proposiciones son verdaderas:\nI) El cambio de dirección de la O.E.M. en la reflexión implica un cambio en la longitud de onda.\nII)Cuando los dos medios físicos son transparentes la O.E.M. transmitida varía porcentualmente su velocidad en el mismo factor que la incrementa su longitud de onda.\nIII) Cuando la O.E.M. se propaga en medios transparentes, el índice de refracción y la longitud de onda cambian de modo que su producto es constante.",
+      "alternatives": [
+        "FFV",
+        "FVV",
+        "VVV",
+        "VVF",
+        "VFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique cuáles de los fenómenos propuestos pueden ocurrir cuando un haz de luz no polarizada se desvía de su dirección original de propagación al pasar de un medio a otro.\nI) Reflexión sin transmisión.\nII) Transmisión sin reflexión.\nIII) Dispersión sin refracción.",
+      "alternatives": [
+        "I y II",
+        "Sólo III",
+        "Sólo II",
+        "Sólo I"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un rayo de luz pasa a un cristal desde un medio cuyo índice de refracción es igual a 1,5. La. refracción total se produce cuando el ángulo de incidencia es igual a 60°, Encuentre el ángulo de incidencia con el cual se produce la refracción total cuando el rayo de luz pasa a dicho cristal desde un medio cuyo índice de refracción es igual a 1,8. Dé como respuesta . la tangente del mencionado ángulo.",
+      "alternatives": [
+        "3/√23",
+        "4/√23",
+        "5/√23",
+        "6/√23",
+        "7/√23"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/tercera-prueba-examen-uni-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I TERCERA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto se coloca frente a un espejo convexo de 5cm de distancia focal y la imagen se forma a 3cm del vértice. Calcule en centímetros la distancia del objeto al vértice del espejo.",
+      "alternatives": [
+        "5,5",
+        "6,5",
+        "7,5",
+        "8,5",
+        "9,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/08/tercera-prueba-examen-uni-2016-ii.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2023 I TERCERA PRUEBA ADMISIÓN UNIVERSIDAD INGENIERÍA FÍSICA QUÍMICA RESPUESTAS SOLUCIONARIO 2023-1 CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un haz de luz se propaga pasando de un medio transparente 1 a otro transparente 2 con un ángulo de incidencia de 45°. Si su rapidez en el medio 1 es v 1 = √ 2×10 8 m/s y en el medio 2 es v 2 =10 8 ms, determine el ángulo de refracción.\nDato: c=3×10 8 m/s",
+      "alternatives": [
+        "53°",
+        "45°",
+        "60°",
+        "37°",
+        "30°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/examen-de-fisica-de-admision-la_21.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA SAN MARCOS SOLUCIONES DE ADMISIÓN"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos espejos planos forman un ángulo de 55°. Calcular el ángulo de incidencia de un rayo en uno de los espejos para que después de reflejarse en el segundo espejo sea paralelo al primer espejo.",
+      "alternatives": [
+        "10°",
+        "20°",
+        "30°",
+        "24°",
+        "15°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/reflexion-de-la-luz-ejemplos-problemas-resueltos-formulas-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — REFLEXIÓN DE LA LUZ EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un rayo de luz que incide con un ángulo θ sobre una cara refractante de un prisma emerge normalmente por la otra cara. Si el ángulo del prisma es 5° y el prisma está hecho de un material con índice de refracción 1.5, el ángulo de incidencia es",
+      "alternatives": [
+        "7.5°.",
+        "5°.",
+        "15°.",
+        "2.5°."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep109.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.9 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto se aproxima a una lente convergente desde la izquierda de la lente con una rapidez uniforme de 5 m/s y se detiene en el foco. La imagen",
+      "alternatives": [
+        "se aleja de la lente con una rapidez uniforme de 5 m/s.",
+        "se aleja de la lente con una aceleración uniforme.",
+        "se aleja de la lente con una aceleración no uniforme.",
+        "se acerca a la lente con una aceleración no uniforme."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep109.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.9 MCQ 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se le dan cuatro fuentes de luz, cada una emitiendo luz de un solo color: rojo, azul, verde y amarillo. Suponga que el ángulo de refracción de un haz de luz amarilla, correspondiente a un ángulo de incidencia particular en la interfaz entre dos medios, es de 90°. ¿Cuál de las siguientes afirmaciones es correcta si la fuente de luz amarilla se reemplaza por las otras luces, sin cambiar el ángulo de incidencia?",
+      "alternatives": [
+        "El haz de luz roja experimentaría reflexión interna total.",
+        "El haz de luz roja se desviaría hacia la normal al refractarse en el segundo medio.",
+        "El haz de luz azul experimentaría reflexión interna total.",
+        "El haz de luz verde se desviaría alejándose de la normal al refractarse en el segundo medio."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep109.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.9 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El radio de curvatura de la superficie curva de una lente plano-convexa es de 20 cm. Si el índice de refracción del material de la lente es 1.5, esta",
+      "alternatives": [
+        "actuará como lente convergente solo para los objetos que se encuentren en su lado curvo.",
+        "actuará como lente divergente para los objetos que se encuentren en su lado curvo.",
+        "actuará como lente convergente sin importar el lado en que se encuentre el objeto.",
+        "actuará como lente divergente sin importar el lado en que se encuentre el objeto."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep109.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.9 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un actor debe maquillarse para representar su personaje. Para esto necesita ver su imagen derecha y de mayor tamaño. ¿Qué tipo de espejo debe usar y dónde debe ubicarse?",
+      "alternatives": [
+        "Espejo convexo, ubicándose a una distancia del espejo igual al doble de su distancia focal.",
+        "Espejo cóncavo o convexo, ubicándose a una distancia del espejo igual a su distancia focal.",
+        "Espejo cóncavo, ubicándose a una distancia del espejo igual a su distancia focal.",
+        "Espejo cóncavo, ubicándose entre el espejo y el foco del espejo.",
+        "Espejo plano, ubicándose cerca del espejo."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 19"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una persona hace incidir un haz de luz láser verde con un determinado ángulo sobre la superficie del agua contenida en un vaso y mide el ángulo de refracción del haz. Luego, agrega una gota de colorante rojo al agua el cual se dispersa uniformemente y mide nuevamente el ángulo de refracción. A continuación, repite esta medición agregando una gota del mismo colorante cada vez, hasta completar 10 gotas. Al respecto, ¿cuál de las siguientes opciones corresponde a un objetivo de investigación pertinente a este procedimiento?",
+      "alternatives": [
+        "Determinar la relación entre el ángulo de incidencia y el ángulo de refracción en el medio.",
+        "Determinar la relación entre el ángulo de incidencia y la cantidad de gotas de colorante.",
+        "Determinar la relación entre el ángulo de refracción y la cantidad de gotas de colorante.",
+        "Determinar la relación entre el ángulo de refracción y el índice de refracción de un medio."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 22"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El fenómeno involucrado en la reflexión de las ondas de radio por la ionosfera es similar a",
+      "alternatives": [
+        "la reflexión de la luz por un espejo plano.",
+        "la reflexión interna total de la luz en el aire durante un espejismo.",
+        "la dispersión de la luz por moléculas de agua durante la formación de un arcoíris.",
+        "la dispersión (scattering) de la luz por las partículas del aire. 21/04/2018"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep109.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.9 MCQ 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La trayectoria real de un rayo de luz , según Fermat , es:",
+      "alternatives": [
+        "El camino óptico de longitud geométrica.",
+        "Una recta orientada hacia determinada dirección.",
+        "Aquella que lo lleva más rápido de un punto a otro.",
+        "Una ruta que no cambia con el tiempo y el espacio.",
+        "La que no varía en nada con el tiempo transcurrido."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-esan-examen-admision-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO ESAN 2027 EXAMEN ADMISIÓN UNIVERSIDAD TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El láser es en esencia un rayo de luz. (II) La palabra viene de las siglas en inglés de Light Amplification by Simulated Emision of Radiation. (III) El rayo láser tiene un color único y es fácil de ser dirigido. (IV) La bombilla eléctrica produce una luz multicolor y dispersa. (V) Hay rayos láser de cristal líquido y gas.",
+      "alternatives": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/textos-escolares-2016-2017-pdf-kinder.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO DE PREGUNTAS RESUELTAS 2027 DE EXAMEN ADMISIÓN POR CURSOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "(I) Las dimensiones del cosmos son enormes. (II) Es una distancia enorme. (III) Por eso, medimos la distancia con la velocidad de la luz. (IV) En un segundo, un rayo de luz recorre 300 mil kilómetros, es decir, da 10 veces la vuelta a la Tierra. (V) La distancia que la luz recorre en un año se llama año luz.",
+      "alternatives": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/textos-escolares-2016-2017-pdf-kinder.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO DE PREGUNTAS RESUELTAS 2027 DE EXAMEN ADMISIÓN POR CURSOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la formación de imágenes en lentes delgadas, indicar la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. Las lentes convergentes siempre forman imágenes reales.\nII. Las lentes divergentes siempre forman imágenes virtuales.\nIII. Si un objeto se coloca en el foco de una lente biconvexa, su imagen se forma en el infinito.",
+      "alternatives": [
+        "FFV",
+        "VFF",
+        "FVV",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A qué distancia de un espejo esférico cóncavo de radio de curvatura 120 cm debe estar un objeto para que su imagen sea derecha y cuatro veces mayor que su tamaño natural?",
+      "alternatives": [
+        "90 cm",
+        "27 cm",
+        "45 cm",
+        "36 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-17-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA PRE SAN MARCOS SEMANA 17 SOLUCIONARIO PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una piscina de forma cilíndrica tiene una superficie del agua de 36𝛑 m 2 . En el fondo y en la parte central se coloca un pequeño foco. El valor mínimo de la profundidad de la piscina para que una persona ubicada fuera de ella observe toda la superficie iluminada es: (n agua = 4/3)",
+      "alternatives": [
+        "6 m",
+        "√ 7 m",
+        "4 m",
+        "8 m",
+        "2√7 m"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNT 2027 EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE TRUJILLO PDF A B C D 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El axioma euclideano establece que la distancia entre dos puntos es la recta que los une. Esta proposición se aproxima.",
+      "alternatives": [
+        "Al principio de los rayos de luz.",
+        "A la ley del mínimo tiempo.",
+        "Al principio de longitud de camino óptico.",
+        "Al principio de Hero de Alejandría.",
+        "Al fenómeno de reflexión."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-esan-examen-admision-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO ESAN 2027 EXAMEN ADMISIÓN UNIVERSIDAD TEMAS PDF 2026"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la interferencia y difracción de la luz.\nI. Los fenómenos de interferencia y difracción que se observan en la luz son consecuencia de considerar que la luz se comporta como una onda.\nII. La interferencia constructiva se distingue porque la amplitud resultante de las ondas disminuye.\nIII. La difracción se observa cuando la luz pasa a través de una ventana de una casa.\nLA SECUENCIA DE VERDAD CORRECTA ES:",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FVV",
+        "FFV",
+        "VFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/derivacion-e-integracion-numerica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERCER SUMATIVO CEPUNT INGENIERÍAS ÁREA B INGRESO DIRECTO UNIVERSIDAD RESUELTO CLAVES DE RESPUESTAS PREGUNTAS 2027 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos espejos planos paralelos están separados a una distancia de 20cm. Las distancias, en cm, desde cada espejo a la tercera imagen obtenida, de un objeto puntual luminoso situado en el centro de los espejos, son",
+      "alternatives": [
+        "10 y 50",
+        "20 y 40",
+        "30 y 70",
+        "50 y 70",
+        "50 y 100"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/07/5to-actividad-3-educacion-fisica-experiencia-5-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — CEPUNT SUMATIVO 2 ÁREA B INGENIERÍAS 2027 EXAMEN INGRESO DIRECTO UNIVERSIDAD CLAVES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el radio de curvatura (en cm) de un espejo de afeitar que da un aumento triple de un rostro a 30 cm del vértice del espejo?",
+      "alternatives": [
+        "60",
+        "70",
+        "80",
+        "90",
+        "95"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto es colocado a 6 cm de un espejo esférico obteniéndose una imagen invertida con un aumento de – 5, luego son ciertas:\ni. La imagen del objeto es virtual.\nii. La imagen está a 30 cm del espejo\niii. El espejo es cóncavo.",
+      "alternatives": [
+        "VFV",
+        "VVF",
+        "FVV",
+        "VFF",
+        "FVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un espejo esférico cóncavo de 20 cm de radio, se utiliza para proyectar la imagen de un objeto sobre una pantalla a 110 cm del espejo. ¿Dónde debe ser colocado el objeto y cómo se verá la imagen?",
+      "alternatives": [
+        "9 cm, invertida",
+        "10 cm, invertida",
+        "11 cm, invertida",
+        "12 cm, invertida",
+        "15 cm, invertida"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un espejo esférico convexo, se obtuvo una imagen de un objeto reducida diez veces, que dista 1,8 m del espejo. Calcular el radio de curvatura del espejo.",
+      "alternatives": [
+        "60 cm",
+        "55 cm",
+        "50 cm",
+        "45 cm",
+        "40 cm"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Con qué ángulo se refleja un rayo luminoso en un espejo plano, que ha girado 15° en sentido horario con respecto al rayo reflejado en el espejo en su posición original?",
+      "alternatives": [
+        "10°",
+        "20°",
+        "30°",
+        "40°",
+        "50°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/espejos-planos-y-esfericos-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ESPEJOS EJERCICIOS RESUELTOS PDF PLANOS Y ESFÉRICOS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un lente biconvexa de radios de curvatura 30cm y 60cm con n=1,5.\nHalla la potencia de la lente (en dioptrías)",
+      "alternatives": [
+        "1,5",
+        "2",
+        "3",
+        "2,5",
+        "1,2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una vela de 5cm está colocada a 30 cm de una esfera metálica perfectamente pulida de 80 cm de diámetro.\n¿Cuál será el tamaño de la imagen de la vela, formada por la esfera metálica?",
+      "alternatives": [
+        "1cm",
+        "2,8cm",
+        "3,6cm",
+        "10cm",
+        "2cm"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/lentes-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LENTES EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la luz roja tiene una frecuencia de 2,3×10 14 Hz y la luz violeta 7,8×10 14 Hz ¿Cuál es aproximadamente la diferencia (en nm) de sus longitudes de onda en el vacío?",
+      "alternatives": [
+        "297,6",
+        "305,6",
+        "316,5",
+        "327",
+        "354,6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las alternativas siguientes expresa dos características de los rayos láser?",
+      "alternatives": [
+        "Monocromática e incoherente.",
+        "Elevada potencia e incoherencia.",
+        "Policromática y elevada potencia.",
+        "Monocromática y baja potencia.",
+        "Monocromática y coherente."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la veracidad (V) o falsedad (F) de cada una de las siguientes proposiciones:\nI) Luz polarizada es aquella que se propaga en una sola dirección.\nII)La difracción es uno de los fenómenos probatorios de la naturaleza ondulatoria de la luz.\nIII) La intensidad resultante en una interferencia de O.E.M.s es igual a la suma de intensidades de las ondas que se superponen.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FVV",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la veracidad (V) o falsedad (F) de las siguientes proposiciones:\nI) La difracción es un fenómeno exclusivo de las ondas electromagnéticas.\nII) La difracción de la luz es otra evidencia de su naturaleza ondulatoria.\nIII) La luz sólo se difracta cuando atraviesa orificios pequeños.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FVV",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un experimento de interferencia de doble rendija, se observa en la pantalla que la distancia entre dos franjas brillantes es de 3mm. Determine la posición de la franja oscura de tercer orden respecto al eje del sistema de la pantalla.",
+      "alternatives": [
+        "1,5mm",
+        "3",
+        "4,5",
+        "6",
+        "7,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale el valor de verdad de las siguientes proposiciones:\nI) Se dice que la luz está polarizada cuando se refleja totalmente al incidir sobre el parabrisas de un automóvil.\nII) Cuando un haz de luz incide sobre la interfaz entre dos dieléctricos bajo el ángulo crítico, el haz resultante está polarizado paralelamente a la interfaz.\nIII) Cuando la luz solar se polariza al reflejarse sobre una autopista, el vector eléctrico reflejado vibra paralelamente a la autopista.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FFV",
+        "VFV",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A qué tipo de radiación electromagnética corresponde una frecuencia de 4,7×10 14 Hz?",
+      "alternatives": [
+        "IF",
+        "RF",
+        "UV",
+        "γ",
+        "visible"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De las siguientes alternativas señale la correcta.",
+      "alternatives": [
+        "Según la experiencia de Tomas Young, la interferencia constructiva en una pantalla se dará únicamente por la superposición de dos ondas de diferentes frecuencias.",
+        "La luz monocromática presenta dos colores.",
+        "La luz blanca no puede ser polarizada.",
+        "La luz, en su propagación se comporta como partícula.",
+        "El fenómeno de interferencia lo experimenta todas las ondas."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/oem-espectro-radiaciones-electromagneticas-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ONDAS ELECTROMAGNÉTICAS EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considere luz solar incidiendo sobre una rendija de ancho 104 A. La imagen que se observa a través de la rendija 21/04/2018 Óptica ondulatoria",
+      "alternatives": [
+        "será una rendija fina y nítida, blanca en el centro.",
+        "una rendija brillante blanca en el centro, que se difumina hasta intensidad cero en los bordes.",
+        "una rendija brillante blanca en el centro, que se difumina hacia regiones de colores diferentes.",
+        "será solamente una rendija difusa de color blanco."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep110.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.10 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un experimento de doble rendija de Young, la fuente es luz blanca. Uno de los orificios está cubierto por un filtro rojo y el otro por un filtro azul. En este caso,",
+      "alternatives": [
+        "habrá patrones de interferencia alternados de rojo y azul.",
+        "habrá un patrón de interferencia para el rojo distinto del correspondiente al azul.",
+        "no habrá franjas de interferencia.",
+        "habrá un patrón de interferencia para el rojo que se mezclará con el del azul."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/physics/leep110.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 12 ch.10 MCQ 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando se considera la extrema velocidad con que la luz se propaga por todos lados y que, cuando provienen de diferentes lugares, incluso totalmente opuestos, [los rayos luminosos] se atraviesan unos a otros sin estorbarse, se comprende que, cuando vemos un objeto luminoso, esto no podría ocurrir por el transporte de una materia que venga del objeto hasta nosotros, como una flecha o una bala atraviesa el aire; pues ciertamente esto repugna bastante a estas dos propiedades de la luz, principalmente la última. HUYGENS, C. En: MARTINS, R. A. Tratado sobre a luz, de Cristian Huygens. Caderno de História e Filosofia da Ciência, supl. 4, 1986. ¿Qué concepción acerca del comportamiento de la luz cuestiona el texto?",
+      "alternatives": [
+        "El entendimiento de que la luz necesita un medio de propagación, difundido por los defensores de la existencia del éter.",
+        "El modelo ondulatorio para la luz, el cual considera la posibilidad de interferencia entre haces luminosos.",
+        "El modelo corpuscular defendido por Newton, que describe la luz como un haz de partículas.",
+        "La creencia en la velocidad infinita de la luz, defendida por la mayoría de los filósofos griegos.",
+        "La idea defendida por los griegos de que la luz era producida por los ojos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2019/2019_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2019 dia 2 caderno azul questão 135"
     }
   ]
 }

@@ -6,7 +6,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "There's ______ man at the door.",
-      "alternatives": ["some", "many", "a", "a few"],
+      "alternatives": [
+        "some",
+        "many",
+        "a",
+        "a few"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q1"
@@ -17,7 +22,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "We ate ______ rice cooked in a different way for dinner last night.",
-      "alternatives": ["some", "many", "a", "a few"],
+      "alternatives": [
+        "some",
+        "many",
+        "a",
+        "a few"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q2"
@@ -28,7 +38,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "You need ______ to make the cake.",
-      "alternatives": ["a butter", "some butter", "some butters", "many butters"],
+      "alternatives": [
+        "a butter",
+        "some butter",
+        "some butters",
+        "many butters"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q3"
@@ -39,7 +54,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "There were a lot of ______ at the station yesterday.",
-      "alternatives": ["person", "peoples", "people", "a persons"],
+      "alternatives": [
+        "person",
+        "peoples",
+        "people",
+        "a persons"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q4"
@@ -50,7 +70,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Please add ______ strawberries to the shopping list.",
-      "alternatives": ["some", "a", "much", "a lot"],
+      "alternatives": [
+        "some",
+        "a",
+        "much",
+        "a lot"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q5"
@@ -61,7 +86,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "You need to make ______ money if you want to go on holiday in the summer.",
-      "alternatives": ["a", "an", "many", "some"],
+      "alternatives": [
+        "a",
+        "an",
+        "many",
+        "some"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q6"
@@ -72,7 +102,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "There is a ______ in front of the store.",
-      "alternatives": ["woman", "women", "womans", "womens"],
+      "alternatives": [
+        "woman",
+        "women",
+        "womans",
+        "womens"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q7"
@@ -83,7 +118,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "There aren't ______ things to do in this town on Sundays.",
-      "alternatives": ["an", "many", "a", "much"],
+      "alternatives": [
+        "an",
+        "many",
+        "a",
+        "much"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q8"
@@ -94,7 +134,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Jessica needs to buy ______ furniture for her new house.",
-      "alternatives": ["some", "a", "an", "many"],
+      "alternatives": [
+        "some",
+        "a",
+        "an",
+        "many"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q9"
@@ -105,7 +150,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Can you give us ______ about the buses in the area, please?",
-      "alternatives": ["any informations", "some informations", "an information", "some information"],
+      "alternatives": [
+        "any informations",
+        "some informations",
+        "an information",
+        "some information"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q10"
@@ -116,7 +166,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "They could get around easily because they didn't have ______.",
-      "alternatives": ["many luggages", "much luggage", "luggages", "a luggage"],
+      "alternatives": [
+        "many luggages",
+        "much luggage",
+        "luggages",
+        "a luggage"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q11"
@@ -127,7 +182,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "We don't have ______ chairs in the room, let me get some in the other classroom.",
-      "alternatives": ["any", "a", "an", "much"],
+      "alternatives": [
+        "any",
+        "a",
+        "an",
+        "much"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q12"
@@ -138,7 +198,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Do you want ______?",
-      "alternatives": ["some coffees", "some coffee", "coffee", "a coffees"],
+      "alternatives": [
+        "some coffees",
+        "some coffee",
+        "coffee",
+        "a coffees"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q13"
@@ -149,7 +214,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Robert needs to ask his lawyer for ______.",
-      "alternatives": ["some advices", "an advice", "some advice", "advices"],
+      "alternatives": [
+        "some advices",
+        "an advice",
+        "some advice",
+        "advices"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q14"
@@ -160,7 +230,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Pamella is going to London to visit ______ friends.",
-      "alternatives": ["a", "an", "much", "some"],
+      "alternatives": [
+        "a",
+        "an",
+        "much",
+        "some"
+      ],
       "correctAnswer": "3",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q15"
@@ -171,7 +246,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "There was ______ cute dog at the park this morning.",
-      "alternatives": ["a", "an", "many", "a lot of"],
+      "alternatives": [
+        "a",
+        "an",
+        "many",
+        "a lot of"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q16"
@@ -182,7 +262,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "Sarah has ______ very long ______.",
-      "alternatives": ["many / hairs", "– / hair", "an / hair", "– / hairs"],
+      "alternatives": [
+        "many / hairs",
+        "– / hair",
+        "an / hair",
+        "– / hairs"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q17"
@@ -193,7 +278,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Paul has ______ news about the deal with the client.",
-      "alternatives": ["a", "some", "an", "very"],
+      "alternatives": [
+        "a",
+        "some",
+        "an",
+        "very"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q18"
@@ -204,7 +294,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "We were lucky because we had ______ wonderful weather on Sunday.",
-      "alternatives": ["– (no word)", "a", "an", "many"],
+      "alternatives": [
+        "– (no word)",
+        "a",
+        "an",
+        "many"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q19"
@@ -215,7 +310,12 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Jack has brown ______.",
-      "alternatives": ["eyes", "an eye", "eye", "an eyes"],
+      "alternatives": [
+        "eyes",
+        "an eye",
+        "eye",
+        "an eyes"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://lecenglish.com/countable-and-uncountable-nouns-quiz/",
       "sourceName": "Little English Centre - Countable and Uncountable Nouns Quiz, Q20"
@@ -226,7 +326,11 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I don't carry ______ with me.",
-      "alternatives": ["many luggages", "much luggage", "a few luggages"],
+      "alternatives": [
+        "many luggages",
+        "much luggage",
+        "a few luggages"
+      ],
       "correctAnswer": "1",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q1"
@@ -237,7 +341,10 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "They gave us a lot of ______.",
-      "alternatives": ["information", "informations"],
+      "alternatives": [
+        "information",
+        "informations"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q2"
@@ -248,7 +355,10 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "There is plenty of ______ for everybody to sit down.",
-      "alternatives": ["room", "rooms"],
+      "alternatives": [
+        "room",
+        "rooms"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q3"
@@ -259,7 +369,10 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "We haven't got any ______.",
-      "alternatives": ["furniture", "furnitures"],
+      "alternatives": [
+        "furniture",
+        "furnitures"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q4"
@@ -270,7 +383,10 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "She has got lovely black ______.",
-      "alternatives": ["hair", "hairs"],
+      "alternatives": [
+        "hair",
+        "hairs"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q5"
@@ -281,7 +397,10 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "He is making good ______.",
-      "alternatives": ["progress", "progresses"],
+      "alternatives": [
+        "progress",
+        "progresses"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q6"
@@ -292,7 +411,11 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "We didn't do ______ yesterday.",
-      "alternatives": ["much work", "many works", "much works"],
+      "alternatives": [
+        "much work",
+        "many works",
+        "much works"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q7"
@@ -303,7 +426,10 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "He is unemployed. He can't find ______.",
-      "alternatives": ["work", "works"],
+      "alternatives": [
+        "work",
+        "works"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q8"
@@ -314,7 +440,10 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Before you can leave, you have to ask for ______.",
-      "alternatives": ["permission", "permissions"],
+      "alternatives": [
+        "permission",
+        "permissions"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q9"
@@ -325,7 +454,10 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "I hate it when people give unsolicited ______.",
-      "alternatives": ["advice", "advices"],
+      "alternatives": [
+        "advice",
+        "advices"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q10"
@@ -336,7 +468,10 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "He doesn't have enough ______ for the job.",
-      "alternatives": ["experience", "experiences"],
+      "alternatives": [
+        "experience",
+        "experiences"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q11"
@@ -347,10 +482,1440 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "What ______ we are having today!",
-      "alternatives": ["horrible weather", "a horrible weather"],
+      "alternatives": [
+        "horrible weather",
+        "a horrible weather"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://www.englishgrammar.org/countable-or-uncountable-nouns-b2-grammar-exercise/",
       "sourceName": "EnglishGrammar.org - Countable or Uncountable Nouns (B2), Q12"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la alternativa que hace uso correcto de los cuantificadores.\nWe like movies, so we like going to the cinema _______",
+      "alternatives": [
+        "a lot of.",
+        "much.",
+        "many.",
+        "a lot.",
+        "more."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/ingles-preguntas-resueltas-de-examen-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — INGLÉS EJERCICIOS RESUELTOS DE EXAMEN INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Read the conversation and choose the FALSE statements\nJack : I have some information here about a new apartment.\nJill: Right! How many bedrooms are there?\nJack: There are three and there is a nice bathroom for you.\nJill: Sounds good. What about the kitchen? Is there a cooker?\nJack: Yes, there is. Also, there are kitchen cupboards but there isn’t a garage.\nJill: Ok, don’t worry! I don’t have a car.\n1. There are two nice bathrooms.\n2. There is a kitchen in the apartment.\n3. There isn’t a cooker.\n4. There is only one bedroom.\n5. There isn’t a garage.",
+      "alternatives": [
+        "1, 3 y 4",
+        "2, 3 y 4",
+        "1, 3 y 5",
+        "2, 4 y 5",
+        "1, 2 y 5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/ingles-preguntas-resueltas-de-examen-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — INGLÉS EJERCICIOS RESUELTOS DE EXAMEN INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la alternativa que debe insertarse en el espacio en blanco para que la oración presente sentido completo.\nAccording to last researches, dolphins, whales and _______ other sea creatures use highly sophisticated navigation systems.",
+      "alternatives": [
+        "any",
+        "many",
+        "each one",
+        "a little",
+        "much"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/solucionario-admision-unheval-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNHEVAL 2027 EXAMEN ADMISIÓN UNIVERSIDAD HERMILIO VALDIZAN PDF"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete the sentences:\n1. How _______ sweet potatoes do you want for lunch?\n2. How _______ salt do you need for your soup?\n3. How _______ French bread is there in the bakery?\n4. How _______ leopards are there in that zoo?",
+      "alternatives": [
+        "many - many - much - much",
+        "many - many - much - many",
+        "many - much - much - many",
+        "much - many - much - many",
+        "much - much - much - much"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/expresiones-algebraicas-pdf-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA D 2027 ECONÓMICAS INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "_____ do you go swimming?",
+      "alternatives": [
+        "how times",
+        "how often",
+        "how many"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/level1a/level-1a-beginners-question-words-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Question Words Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "_____ brothers and sisters do you have?",
+      "alternatives": [
+        "how much",
+        "what",
+        "how many"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level1a/level-1a-beginners-question-words-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Question Words Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "_____ type of pizza do you want to order?",
+      "alternatives": [
+        "how",
+        "which",
+        "how much"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/level1a/level-1a-beginners-question-words-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Question Words Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "_____ season of the year is your favourite?",
+      "alternatives": [
+        "when",
+        "how much",
+        "what"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level1a/level-1a-beginners-question-words-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Question Words Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What was the Facebook musician found to inaccurate about?",
+      "alternatives": [
+        "crime by whites",
+        "how many white killers there are",
+        "crime against whites"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level5/level-5-advanced-new-african-website-multiple-choice-reading.php",
+      "sourceName": "esl-lounge.com — New Fact Checking Website Arrives"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "How much would it cost to put a new ____________ on this old picture Larry? It's for the wife's birthday.",
+      "alternatives": [
+        "border",
+        "surround",
+        "frame",
+        "square"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "You can join our team ___________ as you follow the rules.",
+      "alternatives": [
+        "as long",
+        "as much",
+        "as well",
+        "as many"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-28.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 28"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "How many bricks can he ______ in a day?",
+      "alternatives": [
+        "lie",
+        "lay",
+        "laid"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-general-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — General Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "How many times have you ______ your trousers?",
+      "alternatives": [
+        "tore",
+        "tearing",
+        "torn"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-verbs-and-adverbs-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Verbs & Adverbs Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "It takes one hour or more to drive to the city depending on weather and ______.",
+      "alternatives": [
+        "how much traffic there is",
+        "if traffic is heavy",
+        "traffic"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-parallel-structures-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Parallel Structures Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "______ refugees are from Syria.",
+      "alternatives": [
+        "The majority of",
+        "Much",
+        "Large",
+        "The many"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-comparatives-modifiers-multiple-choice-3.php",
+      "sourceName": "esl-lounge.com — Comparatives & Modifiers Multiple Choice Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "We ______ too much money at the store.",
+      "alternatives": [
+        "spended",
+        "spent",
+        "spented"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/level1b/level-1b-elementary-irregular-past-simple-multiple-choice-worksheet-10.php",
+      "sourceName": "esl-lounge.com — Irregular Past Simple Multiple Choice Worksheet 10"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The price of gas hasn't fallen much recently, _________",
+      "alternatives": [
+        "has it?",
+        "is it?",
+        "will it?"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level2/level-2-pre-intermediate-question-tag-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Question Tag Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "There's too many chairs around that table, _________",
+      "alternatives": [
+        "are they?",
+        "isn't there?",
+        "aren't there?"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level2/level-2-pre-intermediate-question-tag-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Question Tag Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Moscow is a much colder city ____ Paris.",
+      "alternatives": [
+        "than",
+        "of",
+        "to"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level2/level-2-pre-intermediate-prepositions-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Prepositions Multiple Choice Worksheet 1"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "There is a lot of _____ in this part of the country, so the new factory is very welcome.",
+      "alternatives": [
+        "unemployed",
+        "poor",
+        "unemployment"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/level5/level-5-advanced-quantifiers-agreement-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Quantifiers Agreement Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "We had a little _____ left at the end of the vacation, so bought a gift for my mother.",
+      "alternatives": [
+        "money",
+        "coins",
+        "finances"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/level5/level-5-advanced-quantifiers-agreement-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Quantifiers Agreement Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Many companies now promote their products as _____ to attract environmentally conscious consumers.",
+      "alternatives": [
+        "eco-friendly",
+        "profit-driven",
+        "low-cost"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/business/business-vocabulary-intermediate-environmentalism-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Environmental Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "When a company holds too much stock, this creates unnecessary costs in ______.",
+      "alternatives": [
+        "logistics",
+        "procurement",
+        "inventory"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/business/business-vocabulary-advanced-supply-chain-management-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Supply Chain Management Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Many businesses are focusing on ______ to remain competitive and drive growth.",
+      "alternatives": [
+        "Innovation",
+        "Cybersecurity",
+        "Blockchain"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/business/business-vocabulary-advanced-emerging-technology-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Emerging Technology Multiple Choice"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The ___________ gave us a lot of homework for the weekend. Everyone was very unhappy.",
+      "alternatives": [
+        "teacher",
+        "pupil",
+        "coach"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-15.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 15"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The lorry crashed and many ___________ of milk went onto the road.",
+      "alternatives": [
+        "kilogrammes",
+        "kilometres",
+        "litres"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-cloze-20.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 20"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What do we do when we recycle things?",
+      "alternatives": [
+        "Keep plastic in the house.",
+        "Organise our rubbish.",
+        "Send many containers back to the shops."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-4.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 4"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why is recycling good for the environment?",
+      "alternatives": [
+        "It saves a lot of water.",
+        "Less rubbish goes into the ground.",
+        "It cleans the air."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-4.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 4"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What can people see in the clear waters of the Keys?",
+      "alternatives": [
+        "A lot of sea life.",
+        "Old ships.",
+        "Rare birds."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-11.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 11"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What do many people wrongly think about Rottweilers?",
+      "alternatives": [
+        "They are friendly.",
+        "They are aggressive.",
+        "They are not intelligent."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/key/a2-key-reading-multiple-choice-12.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 12"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "According to Kate Dobbs, what misconception do people have about reducing heating costs?",
+      "alternatives": [
+        "It's only possible to save money in a newer house.",
+        "It costs too much to prepare your house for winter.",
+        "Saving money means feeling cold.",
+        "You need a professional to help you."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-2.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why is physical activity crucial for long-term weight management?",
+      "alternatives": [
+        "Exercise is only needed until you lose weight.",
+        "Physical activity is not as important as diet.",
+        "Exercise can be replaced by diet pills.",
+        "There are many benefits to your overall health."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-3.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What would be a good first sentence for this article?",
+      "alternatives": [
+        "Losing weight is a daunting task.",
+        "Gaining weight back after losing it is inevitable.",
+        "Everyone can easily maintain their weight loss with no effort.",
+        "Long-term weight management is about a balance of many factors."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-3.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why is it recommended to change your perspective on first dates?",
+      "alternatives": [
+        "It will help you feel less nervous.",
+        "It will help you talk more.",
+        "It will make you seem friendlier.",
+        "It will make you look much more confident."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-10.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 10"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What role does lighting play in interior design?",
+      "alternatives": [
+        "It makes rooms look smaller.",
+        "It is only needed at night.",
+        "It can have too much impact.",
+        "It can bring focus to particular aspects of the room."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-11.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice Worksheet 11"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Many ancient ___________ are studied by archaeologists.",
+      "alternatives": [
+        "artefacts",
+        "bits",
+        "stuff",
+        "trends"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-2.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "___________ can be an early sign of many illnesses.",
+      "alternatives": [
+        "fitness",
+        "diet",
+        "headache",
+        "doctor"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A professional ___________ often plays many different instruments, depending on the style of music.",
+      "alternatives": [
+        "singer",
+        "pop",
+        "professor",
+        "musician"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-16.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 16"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The ___________ was very spicy, I needed a lot of water to cool down.",
+      "alternatives": [
+        "apple",
+        "curry",
+        "banana",
+        "strawberry"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/preliminary/b1-preliminary-pet-reading-multiple-choice-cloze-17.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 17"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sharon never stops telling us how wonderful she is. She can be a little ___________.",
+      "alternatives": [
+        "selfish",
+        "arrogant",
+        "sensible",
+        "silly"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-1.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 1"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "By studying fossils, many things can be learnt including even the events that ____________ to the animal's death.",
+      "alternatives": [
+        "caused",
+        "went",
+        "led",
+        "influenced"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-11.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 11"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The visit to his old family home ___________ a lot of old memories.",
+      "alternatives": [
+        "let go of",
+        "stirred up",
+        "held onto",
+        "brought up"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-20.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 20"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "She was so nervous during the interview that she ___________ up her words a few times.",
+      "alternatives": [
+        "mixed",
+        "melted",
+        "missed",
+        "moved"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-21.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 21"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "She is kind and intelligent, but ___________ her honesty stands out.",
+      "alternatives": [
+        "as much as",
+        "in case of",
+        "above all",
+        "by contrast"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-23.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 23"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I need to ___________ for a few days to relax and clear my head.",
+      "alternatives": [
+        "get up",
+        "get away",
+        "get over",
+        "get by"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-27.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 27"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "He's been ___________ a lot of responsibilities at work lately, but he's handling it well.",
+      "alternatives": [
+        "giving up",
+        "putting down",
+        "taking on",
+        "taking in"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-27.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 27"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why do astronomers call the constellation 'Ursa Major' by this name?",
+      "alternatives": [
+        "Because the Russians insisted",
+        "Because Russia provides much of the finance for these organisations",
+        "To ease international communication",
+        "They decided that's what it most looks like"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-reading-multiple-choice-3-the-constellations.php",
+      "sourceName": "esl-lounge.com — The Constellations"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "What is Ms Ziff's point at the end?",
+      "alternatives": [
+        "the image created revolutionary change in Europe",
+        "the image is used to sell many things in Latin America",
+        "the image's legacy lasts because it means many things to many people",
+        "the image is losing its appeal in the West"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-reading-multiple-choice-5-a-revolutionary-photo.php",
+      "sourceName": "esl-lounge.com — A Revolutionary Photo"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Much of the neighbourhood was demolished in the 1940s when living ___________ had deteriorated.",
+      "alternatives": [
+        "situations",
+        "conditions",
+        "circumstances",
+        "states"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-3.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "We paid the lawyer to ___________ up a totally new will, one which left the three boys much better off.",
+      "alternatives": [
+        "draw",
+        "bring",
+        "sign",
+        "make"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-8.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 8"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sharon had broken many regulations at work and finally paid the ___________ by losing her job.",
+      "alternatives": [
+        "cost",
+        "fee",
+        "fine",
+        "price"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-11.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 11"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The rules and regulations were explained many times, but he has failed to ___________ them.",
+      "alternatives": [
+        "assimilate",
+        "comprehend",
+        "know",
+        "envision"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-15.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 15"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pesticides have meant that many butterflies ___________ to this area are no longer found.",
+      "alternatives": [
+        "native",
+        "located",
+        "occupied",
+        "marked"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-16.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 16"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Many animals are endangered because humans have ___________ their usual habitat.",
+      "alternatives": [
+        "impinged",
+        "invaded",
+        "interfered",
+        "infected"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-16.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 16"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Oh, that dress ___________ too much, Carol. I'd change it.",
+      "alternatives": [
+        "reveals",
+        "betrays",
+        "publishes",
+        "tells"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-18.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 18"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "After many failed attempts, they were finally ___________ in completing the task.",
+      "alternatives": [
+        "fortunate",
+        "successful",
+        "confident",
+        "hopeful"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-22.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 22"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "He ___________ a lot of effort into organising the surprise party.",
+      "alternatives": [
+        "gave",
+        "paid",
+        "put",
+        "showed"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-25.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 25"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The film's theme was quite ___________ and sparked a lot of debate.",
+      "alternatives": [
+        "controversial",
+        "standard",
+        "ordinary",
+        "intrusive"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-30.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 30"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The team's ___________ spirit helped them overcome many obstacles and achieve their goals.",
+      "alternatives": [
+        "indomitable",
+        "defeated",
+        "subdued",
+        "infinite"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/advanced/advanced-multiple-choice-cloze-32.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 32"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "They had to buy a lot of equipment for the old boat, _____________ a new anchor.",
+      "alternatives": [
+        "including",
+        "coupled with",
+        "joined to",
+        "partnered with"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-4.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 4"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The company has a lot of problems but they all seem to _____________ to money.",
+      "alternatives": [
+        "boil down",
+        "cook up",
+        "lead over",
+        "reason out"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-5.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 5"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "There is no way you will be able to lift that stone up to here. Get a few of the men to help you _____________ it up with a rope.",
+      "alternatives": [
+        "drag",
+        "wrench",
+        "swivel",
+        "pluck"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-6.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 6"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The smoke was seen to rise a few metres up from the bonfire and then _____________ slowly down the valley on the slight breeze that blew.",
+      "alternatives": [
+        "float",
+        "sweep",
+        "billow",
+        "drift"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-6.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 6"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Not many people have the _____________ to combine both a highly successful business career and a happy marriage.",
+      "alternatives": [
+        "capacity",
+        "ability",
+        "panache",
+        "know-how"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-9.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 9"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Now I am unemployed, I have too much time _____________ and don't know what to do with myself!",
+      "alternatives": [
+        "to hand",
+        "on my hands",
+        "in hand",
+        "in my hands"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-9.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 9"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Soldiers reported many of the prisoners of war to be drunk from the effects of vodka, used by the poorly equipped enemy soldiers to _____________ the pain of toothache.",
+      "alternatives": [
+        "lighten",
+        "lose",
+        "soothe",
+        "calm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-10.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 10"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "And, finally, remember that in the desert, your body will _____________ a lot of energy just on keeping cool.",
+      "alternatives": [
+        "waste",
+        "spend",
+        "invest",
+        "expend"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-13.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 13"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "That car is a bit on the costly _____________! I think I will think about it for a few days.",
+      "alternatives": [
+        "part",
+        "front",
+        "side",
+        "level"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-14.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Archaeology students often go on a lot of _____________ to get practical experience of archaeological digs happening in their area.",
+      "alternatives": [
+        "field trips",
+        "apprenticeships",
+        "seminars",
+        "conferences"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-16.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 16"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Many celebrities complain about the media attention but I think many of them thrive on being in the _____________.",
+      "alternatives": [
+        "torch-light",
+        "headlight",
+        "floodlight",
+        "limelight"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-24.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 24"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Three of the escapees have now been recaptured but police spokesmen have said they are concerned that, of the fourth prisoner, _____________ information is known that could help the authorities put him back behind bars.",
+      "alternatives": [
+        "scant",
+        "rare",
+        "slight",
+        "a little"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-26.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 26"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "We had a great birthday dinner but I didn't expect it to _____________ us back quite so much. That place is expensive!",
+      "alternatives": [
+        "get",
+        "hit",
+        "cost",
+        "set"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-27.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 27"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Many stakeholders felt there was a lack of _____________ in the decision-making process.",
+      "alternatives": [
+        "process",
+        "conversation",
+        "contention",
+        "consultation"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-multiple-choice-cloze-30.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 30"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why didn't Aspen cry when he looked at the photo he loved so much?",
+      "alternatives": [
+        "He couldn't cry.",
+        "He didn't want to embarrass himself in front of Kieran.",
+        "He knew Kieran would get angry and he didn't want that.",
+        "He only faked being sad. It really left him unaffected."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-last-photo-reading-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice - Last Photo From The Third Planet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Why is the photo the last remaining one?",
+      "alternatives": [
+        "The others were poor quality, out of focus, and were thus thrown away.",
+        "Kieran wasn't allowed to keep them.",
+        "Kieran had thrown them away because they reminded him too much of Earth.",
+        "They slipped out of a box and got lost."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/proficiency/proficiency-last-photo-reading-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Reading Multiple Choice - Last Photo From The Third Planet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "They have achieved so much ______ the difficulties they have had to overcome.",
+      "alternatives": [
+        "considering",
+        "regarding",
+        "against"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-preposition-multiple-choice-worksheet.php",
+      "sourceName": "esl-lounge.com — Preposition Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "They ______ across the river many times.",
+      "alternatives": [
+        "have swum",
+        "have swam",
+        "are swimming"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-verbs-and-adverbs-multiple-choice.php",
+      "sourceName": "esl-lounge.com — Verbs & Adverbs Multiple Choice Worksheet"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "When he SPEAKING in Philadelphia, the Pope ADDRESSED many ISSUES, INCLUDING poverty and immigration.",
+      "alternatives": [
+        "addressed",
+        "issues",
+        "speaking",
+        "including"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-out-of-place-words-multiple-choice-2.php",
+      "sourceName": "esl-lounge.com — Out Of Place Words Multiple Choice Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The servant had given his employer many years of LOYAL AND STEADFAST service.",
+      "alternatives": [
+        "reliable",
+        "faithful",
+        "obediant"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-match-the-definition-multiple-choice-worksheet-2.php",
+      "sourceName": "esl-lounge.com — Match The Definition Multiple Choice Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Her COMMITMENT to her family was much appreciated.",
+      "alternatives": [
+        "dedication",
+        "enthusiasm",
+        "efforts"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-match-the-definition-multiple-choice-worksheet-3.php",
+      "sourceName": "esl-lounge.com — Match The Definition Multiple Choice Worksheet 3"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "After she became redundant she was under a lot of NERVOUS STRAIN.",
+      "alternatives": [
+        "stress",
+        "anxiety",
+        "problems"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-match-the-definition-multiple-choice-worksheet-7.php",
+      "sourceName": "esl-lounge.com — Match The Definition Multiple Choice Worksheet 7"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "There are many conflicts in that REGION.",
+      "alternatives": [
+        "area",
+        "country",
+        "state"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-match-the-definition-multiple-choice-worksheet-8.php",
+      "sourceName": "esl-lounge.com — Match The Definition Multiple Choice Worksheet 8"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "The family had a rather ______ history. Many of it's descendants were morally base and mercenary.",
+      "alternatives": [
+        "degenerate",
+        "sordid",
+        "grubby"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-4.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 4"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Eastern Monarch butterflies ______ many miles to winter in Mexico.",
+      "alternatives": [
+        "spend",
+        "run",
+        "migrate"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-12.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 12"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Many women have started wearing long skirts. It's the new ______.",
+      "alternatives": [
+        "image",
+        "trend",
+        "dress"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-14.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Frequent absences from work could be ______ of too much stress.",
+      "alternatives": [
+        "a form",
+        "pointing to",
+        "an indication"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-vocabulary-most-suitable-word-multiple-choice-worksheet-14.php",
+      "sourceName": "esl-lounge.com — Most Suitable Word Multiple Choice Worksheet 14"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Choose the correct alternative:\nI don’t want to eat __________ kind of fruit!",
+      "alternatives": [
+        "Some",
+        "A",
+        "Any",
+        "An",
+        "None of these"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/3ro-4to-actividad-1-2-3-4-ingles-experiencia-de-aprendizaje-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INGLÉS CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "My mom says that __________ are good to keep us healthy.",
+      "alternatives": [
+        "sweets",
+        "butter",
+        "potato chips",
+        "vegetables",
+        "All of these"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/05/3ro-4to-actividad-1-2-3-4-ingles-experiencia-de-aprendizaje-3-resuelta-aprendo-en-casa-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — INGLÉS CANTUTA DE INGRESO UNIVERSIDAD – PREGUNTAS – CLAVES – RESPUESTAS"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "I need to buy ___________ groceries before dinner tonight.",
+      "alternatives": [
+        "any",
+        "such",
+        "some",
+        "few"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/first-certificate/first-certificate-multiple-choice-cloze-22.php",
+      "sourceName": "esl-lounge.com — Multiple Choice Cloze Worksheet 22"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "He also updated the Prime Minister on Pakistan's ______ towards a peace process.",
+      "alternatives": [
+        "works",
+        "the works",
+        "work"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-noun-grammar-multiple-choice-worksheet-2.php",
+      "sourceName": "esl-lounge.com — Noun Grammar Multiple Choice Worksheet 2"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Today we stand together to honor ______ of the thousands of men and women who served our country.",
+      "alternatives": [
+        "the bravery and sacrifices",
+        "the braveries and sacrifices",
+        "a bravery and sacrifice"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.esl-lounge.com/toefl/toefl-grammar-noun-grammar-multiple-choice-worksheet-2.php",
+      "sourceName": "esl-lounge.com — Noun Grammar Multiple Choice Worksheet 2"
     }
   ]
 }

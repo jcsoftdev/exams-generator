@@ -6,7 +6,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Los aldehídos y las cetonas contienen en su estructura al grupo carbonilo y a menudo se les denomina compuestos carbonílicos, este grupo funcional es el que determina en gran medida las propiedades químicas de estos compuestos. Con respecto al grupo carbonilo, seleccione la secuencia correcta de verdad (V o F) de las siguientes proposiciones.\n\nI. Su carbono presenta hibridación sp.\nII. Presenta una geometría trigonal plana.\nIII. Si su carbono es secundario corresponde a un aldehído.",
-      "alternatives": ["FVF", "VVF", "FVV", "VFV"],
+      "alternatives": [
+        "FVF",
+        "VVF",
+        "FVV",
+        "VFV"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicaj.blogspot.com/2022/05/quimica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (UNMSM) - Química Semana 16, Pregunta sobre grupo carbonilo (clave A)"
@@ -17,7 +22,12 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "La hexosa es un carbohidrato y está formada por una cadena de seis átomos de carbono siendo su principal función producir energía. Con respecto al siguiente compuesto, seleccione la secuencia correcta de verdad (V o F), para las siguientes proposiciones.\n\nCH₂OH – CO – CHOH – CHOH – CHOH – CH₂OH\n\nI. Es un monosacárido o glúcido.\nII. Se clasifica como una aldohexosa.\nIII. Su nombre es 1, 3, 4, 5, 6 – pentahidroxihexan – 2 – ona",
-      "alternatives": ["VFV", "FVF", "VFF", "FFV"],
+      "alternatives": [
+        "VFV",
+        "FVF",
+        "VFF",
+        "FFV"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicaj.blogspot.com/2022/05/quimica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (UNMSM) - Química Semana 16, Pregunta sobre hexosa/cetona (clave A)"
@@ -28,10 +38,1345 @@
       "gradeLevel": "pre",
       "difficulty": "hard",
       "bodyTypst": "El ácido butírico es una sustancia que da el hedor a la mantequilla rancia y se aísla a partir de la grasa formada en la leche de vaca. Con respecto a este compuesto, seleccione la secuencia correcta de verdad (V o F) de las siguientes proposiciones.\n\nI. Por esterificación, al reaccionar con fenol forma el benzoato de butilo.\nII. Posee puentes de hidrógeno entre sus moléculas.\nIII. Al reaccionar con KOH forma el butanoato de potasio, una sal orgánica.",
-      "alternatives": ["FVF", "VFV", "FVV", "FFV"],
+      "alternatives": [
+        "FVF",
+        "VFV",
+        "FVV",
+        "FFV"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicaj.blogspot.com/2022/05/quimica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
       "sourceName": "CEPRE San Marcos (UNMSM) - Química Semana 16, Pregunta sobre ácido butírico (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los éteres, cotonas, aldehídos, ácidos y ésteres son compuestos que confieren olor agradable o desagradable a productos naturales o procesados. Algunos de estos compuestos son\nI. etanoato de 3-metilbutilo (plátano)\nII. butano-2, 3-diona (margarina)\nIII. acetato de octilo (naranja)\nIV. 3-fenilprop-2-enal (canela)\n¿Cuál es el nombre y clasificación correcta de cada compuesto?",
+      "alternatives": [
+        "I - éster; II - aldehído; III - éster; IV - cetona",
+        "I - ácido; II - cetona; III - ácido; IV - aldehído",
+        "I - éster; II - cetona; III - éster; IV - aldehído",
+        "I - éster; II - aldehído; III - éter; IV- cetona"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/quimica-simulacro-san-marcos-solucionario-admision-a-la-universidad-2020-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA MEDICINA SAN MARCOS EXPLICACIONES"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al desarrollar la siguiente secuencia de reacciones, el compuesto B corresponde a:\nbuteno + H ₂ O / H + , calor → A\nA+KMnO ₄ / H + , calor → B",
+      "alternatives": [
+        "alcohol sec-butílico",
+        "ácido butanoico",
+        "dimetil cetona",
+        "butanal",
+        "2-butano"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/qumica-unt-examen-resuelto-pdf-trujilo.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA UNT PRUEBA RESUELTA TRUJILLO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ácido carboxílico es una función oxigenada que presenta el grupo CARBOXILO en su estructura molecular; este a su vez está formado por:",
+      "alternatives": [
+        "2 grupos hidroxilo",
+        "2 grupos carbonilos",
+        "1 grupo oxidrilo y 1 grupo acilo",
+        "2 grupos oxicarbonilo",
+        "1 grupo hidroxilo y 1 grupo carbonilo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los alcoholes se clasifican por el número de grupos alquilos unidos al átomo de carbono enlazado al grupo hidroxilo. Indique cuál de los siguientes alcoholes es un alcohol terciario.",
+      "alternatives": [
+        "2 - metilpropan - 2 - ol",
+        "4 - metilhexano - 3,5 - diol",
+        "2 - etilpent - 1 - en - 3 - ol",
+        "propan - 2 - ol",
+        "etanol"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/curvas-en-el-plano-lugares-geometricos.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA BIOMÉDICAS 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La cantidad de carbonato de calcio, en gramos, que se eliminó del hervidor es:",
+      "alternatives": [
+        "0,4",
+        "0,80",
+        "1,6",
+        "3,2",
+        "4,8 Los nitrilos son compuestos orgánicos nitrogenados que suelen ser utilizados como productos intermedios en la síntesis de ácidos carboxílicos. Los nitrilos se pueden obtener haciendo reaccionar un haluro alquílico con cianuro de sodio. El producto intermedio puede luego ser hidrolizado al correspondiente ácido carboxílico. En relación a lo expresado:"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Ingles-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA B 2027 INGENIERÍAS INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los alcoholes son compuestos orgánicos que se relacionan con hidrocarburos, sustituyendo uno o más átomos de hidrógeno por un grupo hidroxilo ( – OH). Con respecto a sus propiedades físicas, señale verdadero (V) o falso (F) según corresponda:\nI. El oxígeno del grupo hidroxilo de alta electronegatividad permite polarizar las moléculas de los alcoholes.\nII. La alta electronegatividad del oxígeno en la molécula del alcohol no le permite establecer enlaces puente hidrógeno con el agua.\nIII. La solubilidad en agua de los alcoholes disminuye al aumentar el número de carbonos.",
+      "alternatives": [
+        "VFV",
+        "FVF",
+        "VVF",
+        "VVV",
+        "FFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-religiosa-5to-actividad-1-2-3-experiencia-9-resuelta-aprendo-en-casa-religion-tarea-web-radio-reto-tv-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — EXAMEN QUINTOS INGENIERÍAS 2027 INGRESO UNIVERSIDAD CLAVES RESPUESTAS PDF SOLUCIONARIO"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación a la reacción de esterificación para obtener el acetato de pentilo, de las siguientes proposiciones:\n1. La esterificación es una reacción de equilibrio químico.\n2. Para la obtención del éster se requiere un catalizador ácido.\n3. La esterificación es una reacción irreversible.\n4. La obtención del éster se produce por reacción entre un aldehído y un alcohol.\n5. El subproducto de la reacción es ácido clorhídrico.\nSon ciertas:",
+      "alternatives": [
+        "solo 1 y 2",
+        "1, 2 y 5",
+        "1, 3 y 5",
+        "2, 3 y 4",
+        "3, 4 y 5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/expresiones-algebraicas-pdf-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA D 2027 ECONÓMICAS INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes moléculas es una aldopentosa de forma furanosa que en el carbono 2 presenta grupo hidroxilo?",
+      "alternatives": [
+        "fructosa",
+        "desoxirribosa",
+        "adenina",
+        "ribosa",
+        "guanina"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/bioquimica-formulas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOQUÍMICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La estructura de un aminoácido está formada por:",
+      "alternatives": [
+        "Un carbono unido a un hidrógeno, un grupo cetona y un grupo amino",
+        "Un carbono unido a un hidrógeno, un radical, un grupo amino y otro carboxilo",
+        "Un carbono unido a un radical y un grupo carboxilo",
+        "Un hidrógeno unido a un grupo aldehído"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biomoleculas-organicas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BIOMOLÉCULAS ORGÁNICA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ácido pirúvico (C 3 H 4 O 3 ) es un ácido carboxílico de tres carbonos con un grupo carbonilo secundario; se forma en nuestro organismo a partir del metabolismo de carbohidratos después de realizar ejercicios físicos extremos. En el músculo, se forma ácido láctico (C 3 H 6 O 3 ) por reducción del grupo carbonilo del ácido pirúvico. Respecto de lo expresado, determine el valor de verdad (V o F) de las siguientes proposiciones:\nI. El nombre IUPAC del ácido pirúvico es ácido 2 - oxopropanoico.\nII. El nombre IUPAC del ácido láctico es ácido 2 - formilpropanoico.\nIII. El ácido pirúvico se disocia parcialmente:\nCH 3 -CO-COOH ⇄ CH 3 -CO-COO – +H +\nIV. El ácido láctico es considerado un ácido débil porque tiene poca fuerza de disociación.",
+      "alternatives": [
+        "FVFV",
+        "VVFV",
+        "FFFV",
+        "VFVV",
+        "VFFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/quimica-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique en cual de los opciones las dos proposiciones indicadas son correctas :\nI) CH 3 – COO – CH 2 – CH 3 Es un ester.\nII) CH 3 – CONH 2 Es una amina.\nIII) CH 3 – CH 2 OH Es un éter\nIV) CH 3 – CO – CH 3 Es una cetona.",
+      "alternatives": [
+        "I y IV",
+        "I y II",
+        "II y III",
+        "III y IV",
+        "II y IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-nitrogenados-organicos-nomenclatura-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES NITROGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al desarrollar la siguiente secuencia de reacciones, el compuesto B corresponde a:\nbuteno + H 2 O / H + , calor → A\nA+KMnO 4 / H + , calor → B",
+      "alternatives": [
+        "alcohol sec-butílico",
+        "ácido butanoico",
+        "dimetil cetona",
+        "butanal",
+        "2-butano"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Completar las siguientes proposiciones:\nI) Por _______ De un alcohol primario se obtiene un aldehído.\nII) Por la deshidratación de un _______ con H 2 SO 4 a 140°C se obtiene un éter.",
+      "alternatives": [
+        "oxidación; alcohol.",
+        "reducción; aldehído.",
+        "hibroboración; ácido.",
+        "halogenación; alcohol.",
+        "hidroboración; aldehído."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifique el compuesto que no es ácido carboxílico.",
+      "alternatives": [
+        "Ácido palmítico",
+        "Ácido acético",
+        "Ácido benzoico",
+        "Ácido muriático",
+        "Ácido fórmico"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/admision-callao-2016-i-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — CALLAO 2021 II SOLUCIONARIO EXAMEN ADMISIÓN UNIVERSIDAD BLOQUES II III UNAC 2021-2 CIENCIAS EMPRESARIALES Y DE LA SALUD ÁREAS 2 y 3 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El grupo funcional presente en el siguiente compuesto O CH2 C NH CH3 corresponde a",
+      "alternatives": [
+        "un ácido carboxílico.",
+        "una cetona.",
+        "una amida.",
+        "una amina.",
+        "un éster."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://demre.cl/publicaciones/pdf/2024-23-11-28-paes-regular-oficial-ciencias-biologia-p2024.pdf",
+      "sourceName": "demre.cl — DEMRE PAES Regular 2024 Ciencias Biología pregunta 41"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La monocloración del tolueno a la luz solar seguida de hidrólisis con NaOH acuoso produce.",
+      "alternatives": [
+        "o-Cresol",
+        "m-Cresol",
+        "2,4-Dihidroxitolueno",
+        "Alcohol bencílico"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep511.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.11 MCQ 1"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes es el más ácido?",
+      "alternatives": [
+        "Alcohol bencílico",
+        "Ciclohexanol",
+        "Fenol",
+        "m-Clorofenol"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep511.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.11 MCQ 13"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes es una amina 3°?",
+      "alternatives": [
+        "1-metilciclohexilamina",
+        "Trietilamina",
+        "terc-butilamina",
+        "N-metilanilina"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 1"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El nombre IUPAC correcto para CH2==CHCH2NHCH3 es",
+      "alternatives": [
+        "Alilmetilamina",
+        "2-amino-4-penteno",
+        "4-aminopent-1-eno",
+        "N-metilprop-2-en-1-amina"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 2"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes reactivos no sería una buena opción para reducir un compuesto nitroarílico a una amina?",
+      "alternatives": [
+        "H2 (exceso)/Pt",
+        "LiAlH4 en éter",
+        "Fe y HCl",
+        "Sn y HCl"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 6"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre el conjunto de reactivos dado, el más apropiado para preparar una amina 2° es _____.",
+      "alternatives": [
+        "2° R—Br + NH3",
+        "2° R—Br + NaCN seguido de H2/Pt 181 Aminas 23/04/18",
+        "1° R—NH2 + RCHO seguido de H2/Pt",
+        "1° R—Br (2 mol) + ftalimida de potasio seguido de H3O+/calor"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 9"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los anhídridos de ácido al reaccionar con aminas primarias dan ____________.",
+      "alternatives": [
+        "amida",
+        "imida",
+        "amina secundaria",
+        "imina 183 Aminas 23/04/18 + – Cu/HCl"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 19"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El biodiésel es un biocombustible obtenido a partir de fuentes renovables, que surgió como alternativa al uso del diésel de petróleo para motores de combustión interna. Puede obtenerse mediante la reacción entre triglicéridos, presentes en aceites vegetales y grasas animales, entre otros, y alcoholes de bajo peso molecular, como el metanol o el etanol, en presencia de un catalizador, según la ecuación química: CH CH R1 R1 CH OH + + catalizador CH OH 3 CH3OH R2 R2 CH CH CH OH CH CH R3 R3 La función química presente en el producto que representa el biodiésel es",
+      "alternatives": [
+        "éter.",
+        "éster.",
+        "alcohol.",
+        "cetona.",
+        "ácido carboxílico."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://download.inep.gov.br/educacao_basica/enem/provas/2017/2017_PV_impresso_D2_CD7.pdf",
+      "sourceName": "gov.br-inep — ENEM 2017 dia 2 caderno azul questão 114"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El nombre IUPAC del compuesto es ______________.",
+      "alternatives": [
+        "1-metoxi-1-metiletano",
+        "2-metoxi-2-metiletano 155 Alcoholes, Fenoles y Éteres 23/04/18",
+        "2-metoxipropano",
+        "éter isopropilmetílico"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep511.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.11 MCQ 9"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El fenol es menos ácido que ______________.",
+      "alternatives": [
+        "etanol",
+        "o-nitrofenol",
+        "o-metilfenol",
+        "o-metoxifenol"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep511.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.11 MCQ 12"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El orden correcto de fuerza ácida creciente es _____________.",
+      "alternatives": [
+        "Fenol < Etanol < Ácido cloroacético < Ácido acético",
+        "Etanol < Fenol < Ácido cloroacético < Ácido acético",
+        "Etanol < Fenol < Ácido acético < Ácido cloroacético",
+        "Ácido cloroacético < Ácido acético < Fenol < Etanol 23/04/18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep512.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.12 MCQ 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El compuesto puede prepararse mediante la reacción de _____________.",
+      "alternatives": [
+        "Fenol y ácido benzoico en presencia de NaOH",
+        "Fenol y cloruro de benzoílo en presencia de piridina",
+        "Fenol y cloruro de benzoílo en presencia de ZnCl2",
+        "Fenol y benzaldehído en presencia de paladio"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep512.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.12 MCQ 4"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la reducción de Clemmensen, el compuesto carbonílico se trata con _____________.",
+      "alternatives": [
+        "Amalgama de zinc + HCl",
+        "Amalgama de sodio + HCl",
+        "Amalgama de zinc + ácido nítrico",
+        "Amalgama de sodio + HNO3 23/04/18"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep512.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.12 MCQ 12"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fuente de nitrógeno en la síntesis de Gabriel de aminas es _____________.",
+      "alternatives": [
+        "Azida de sodio, NaN3",
+        "Nitrito de sodio, NaNO2",
+        "Cianuro de potasio, KCN – +",
+        "Ftalimida de potasio, C6H4(CO)2N K"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 8"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes compuestos no experimentará una reacción de acoplamiento azoico con cloruro de bencenodiazonio?",
+      "alternatives": [
+        "Anilina",
+        "Fenol",
+        "Anisol",
+        "Nitrobenceno"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 22"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La reacción química entre una grasa y un hidróxido de sodio se llama reacción de",
+      "alternatives": [
+        "Esterificación",
+        "Eterificación",
+        "condensación",
+        "saponificación",
+        "sublimación"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/quimica-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "matematicaj.blogspot.com — QUÍMICA EXAMEN DESARROLLADO PRUEBA ADMISIÓN UNIVERSIDAD UNC CLAVES RESPUESTAS SOLUCIONES PREGUNTAS RESUELTAS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ésteres se derivan de la reacción entre los ácidos carboxílicos y los alcoholes. En las siguientes relaciones compuesto-nombre, señale cuál es la incorrecta.",
+      "alternatives": [
+        "C 6 H 5 COOC 2 H 5 : benzoato de etilo",
+        "C 2 H 5 COOCH 3 : etanoato de metilo",
+        "C 3 H 7 COOC 2 H 5 : butanoato de etilo",
+        "CSH 11 COOCH 3 : hexanoato de metilo",
+        "C 3 H 7 COOCH 3 : butanoato de metilo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/estudio-y-representacion-de-funciones_4.html",
+      "sourceName": "matematicasn.blogspot.com — UNSA SOCIALES 2027 INGRESO UNIVERSIDAD PRUEBA RESUELTA CLAVES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los jabones son compuestos que se forman a partir de los ácidos grasos que provienen de los lípidos, químicamente pertenecen a la función:",
+      "alternatives": [
+        "Éster",
+        "Sal",
+        "Amida",
+        "Alcohol",
+        "Cera"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/quimica-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — QUIMICA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES Y RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el ácido propanoico reacciona con LiAℓ H 4 se obtiene:",
+      "alternatives": [
+        "butilenglicol",
+        "propanol",
+        "1,4-butanodiol",
+        "1,3-propanodiol",
+        "1,5-pentanodiol LENGUAJE / COMUNICACIÓN"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-primera-seleccion-examen.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA A 2027  SALUD INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al respecto, las materias primas para sintetizar el acetato de pentilo son:",
+      "alternatives": [
+        "ácido acético y etanol",
+        "ácido valérico y metanol",
+        "ácido acético y etanoato de etilo",
+        "ácido pentanoico y etanol",
+        "ácido acético y pentanol"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/expresiones-algebraicas-pdf-ejercicios.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA D 2027 ECONÓMICAS INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fenilamina, comúnmente conocida como anilina, pertenece al grupo de hidrocarburos aromáticos y es una de las sustancias que causa daños significativos al medio ambiente. Identifique la alternativa correcta respecto de este hidrocarburo.",
+      "alternatives": [
+        "La molécula está formada solamente por dobles enlaces.",
+        "Un enlace C – N reemplaza a un enlace C – H del benceno.",
+        "La molécula de la fenilamina es una molécula no polar.",
+        "La fórmula global de la molécula del compuesto es C ₆ H ₈ N."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-quimica-semana-19-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — CEPRE SAN MARCOS QUÍMICA SEMANA 19 EXAMEN DE INGRESO UNIVERSIDAD SAN MARCOS ÁREA C PRUEBA DECO RESPUESTAS PREGUNTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando se hace reaccionar la anilina con el ácido acético, se obtiene como producto principal:",
+      "alternatives": [
+        "N-alquilacetamida",
+        "N-fenilacetamida",
+        "N-propilacetamida",
+        "N-metilacetanilida",
+        "N,N-fenilacetanilida"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/derivacion-e-integracion-numerica-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — TERCER SUMATIVO CEPUNT INGENIERÍAS ÁREA B INGRESO DIRECTO UNIVERSIDAD RESUELTO CLAVES DE RESPUESTAS PREGUNTAS 2027 PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La hidrólisis completa del 3 - metilpentanodinitrilo da como resultado:",
+      "alternatives": [
+        "ácido 5 - ciano - 3 - metilpentanoico",
+        "ácido 3 - metilpentanoico",
+        "ácido 3 - metilpentanodioico",
+        "ácido pentanoico",
+        "ácido pentanodioico Una síntesis orgánica es un proceso en el cual, mediante una secuencia de reacciones, un determinado compuesto se convierte sucesivamente en productos intermedios, hasta transformarse en un producto final. De acuerdo a lo expuesto:"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/09/Ingles-prueba-deco-C-E-examen-san-marcos-admision-universidad-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — SIMULACRO UNT ÁREA B 2027 INGENIERÍAS INGRESO UNIVERSIDAD DE TRUJILLO CLAVES RESPUESTAS RESUELTO PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifica cuál es la fórmula correcta del alcohol etílico.",
+      "alternatives": [
+        "CH 3 OH",
+        "C 4 H 9 OH",
+        "C 2 H 5 OH",
+        "C 3 H 5 OH",
+        "C 2 H 2 OH"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/02/quimica-examen-pre-universidad-resuelto.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA UNSAAC PRUEBA RESUELTA SAN ANTONIO DE ABAD INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una fábrica de aditivos alimentarios produce ésteres sintéticos, los cuales son sustancias responsables de los olores o fragancias artificiales, por ejemplo: el etanoato de isopentilo (olor a plátano) o etanoato de butilo (olor a manzana). Para sintetizar los esteres se requiere hidruros de bario y estaño, los cuales son empleados como agentes reductores químicos. Indique el nombre sistemático del BaH 2 y el nombre Stock de SnH 2 , respectivamente.",
+      "alternatives": [
+        "Dihidruro de bario e hidruro de estaño (II)",
+        "DiHidruro de bario e dihidruro de estaño",
+        "Hidruro bárico e hidruro de estaño (II)",
+        "Dihidruro de bario e hidruro estánnico",
+        "Hidruro de bario (II) e hidruro de estaño (II)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/libro-de-quimica-rubinos-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LIBRO DE QUÍMICA RUBIÑOS 2027 DESCARGA GRATIS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El actual ritmo de vida origina muchas alteraciones de la salud en niños, jóvenes, adultos y adultos mayores. Una explicación común que escuchamos le atribuye a esto al estrés, generado por el aumento de radicales libres (especies químicas con un electrón desapareado). Se nos sugiere ingerir alimentos naturales como frutas, verduras y otros, principalmente crudos, por contener vitaminas y colorantes o pigmentos que neutralizan a los radicales libres, previniendo los procesos de oxidación y posterior proceso inflamatorio. Marque la alternativa que contiene el radical libre.",
+      "alternatives": [
+        "Piridoxal",
+        "Hidroxilo, OH •",
+        "Peróxido, (O 2 ) 2 –",
+        "α-tocoferol",
+        "Hidroperóxido, ROOH"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/quimica-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA ADMISIÓN SAN MARCOS 2027 SIMULACRO RESUELTO INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique si la proposición es verdadera (V) o falsa (F):\nI) Las amidas son ligeramente básicas.\nII) CH 3 – CH 2 – CH 2 – COO – NH 2 es la pentancamida.\nIII) El úrea , CO(NH 2 ) 2 es la carbodiamida.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFV",
+        "FVV",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-nitrogenados-organicos-nomenclatura-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES NITROGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la proposición incorrecta, acerca de los siguientes compuestos :\nI) CH 3 CONH 2\nII) CH 3 – CO – NH – CH 3\nIII) (CH 3 ) 3 N",
+      "alternatives": [
+        "El compuesto III es una amina terciaria .",
+        "El compuesto I se llama etanamida .",
+        "Los tres compuestos son solubles en agua.",
+        "El nombre IUPAC del compuesto III es N, N dimetilmetanamina .",
+        "Los compuestos I y II son amidas secundarias."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-nitrogenados-organicos-nomenclatura-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES NITROGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Después del análisis cualitativo a un compuesto orgánico, se determinó además del carbono e hidrógeno la presencia de nitrógeno. ¿Cuál de la alternativas correspondería al compuesto?.",
+      "alternatives": [
+        "Una amida",
+        "Una amina",
+        "Aminoácidos",
+        "Amoniaco",
+        "Falta información ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-nitrogenados-organicos-nomenclatura-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES NITROGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de la siguientes es una amina secundaria de 5 carbonos ?.",
+      "alternatives": [
+        "n-pentilamina .",
+        "ciclobutiletilamina",
+        "etilisopropilamina",
+        "trietilamina",
+        "metiletilpropilamina"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-nitrogenados-organicos-nomenclatura-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES NITROGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija la amina secundaria con cinco átomos de carbono.",
+      "alternatives": [
+        "Ciclopentilamina",
+        "n – hexilamina",
+        "Dietilamina",
+        "Trimetilamina",
+        "Etil, n – propilamina"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-nitrogenados-organicos-nomenclatura-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES NITROGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes compuestos reacciona mejor con el NaOH?.",
+      "alternatives": [
+        "Nitrobenceno",
+        "Ácido acético",
+        "Etanol",
+        "Acetona",
+        "Metilamina"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique verdadero (V) o falso (F):\nI) Los alcoholes son más volátiles que los éteres.\nII) Los alcoholes secundarios se oxidan dando cetonas.\nIII) Los fenoles tienen mayor solubilidad en agua que los alcoholes .",
+      "alternatives": [
+        "FVV",
+        "VFV",
+        "FVF",
+        "FFF",
+        "VVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las propiedades de los ácidos carboxílicos indicar lo que no corresponde :",
+      "alternatives": [
+        "Los primeros no monocarboxílicos son solubles en agua.",
+        "El olor de la mantequilla rancia se debe al ácido butílico y los ácidos superiores tienen un olor débil.",
+        "Son generalmente más débil que los ácidos inorgánicos fuertes , al disociarse.",
+        "Reaccionan con NaHCO 3 desprendiendo CO 2 y H 2 O.",
+        "Para igual número de carbono los dicarboxílicos poseen menor punto de ebullición respecto , a los glicoles."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considerando la Química de los alcoholes , señale las proposiciones verdaderas (V) y falsas (F).\nI) Todos los alcoholes son solubles en agua .\nII) Los alcoholes se combinan con los ácidos orgánicos formando ésteres .\nIII) El etanol en contacto con el aire y a temperatura ambiente se inflama formando CO 2 y H 2 O.",
+      "alternatives": [
+        "VFV",
+        "VVV",
+        "FFV",
+        "VFF",
+        "FVF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Deshidratando el alcohol etílico con ácido sulfúrico se obtiene etileno (gas). ¿Cuántos litros de etileno obtendremos en condiciones normales (OC y 1 atm.) a partir de 10 gramos de alcohol?.\n(Pesos atómicos : C = 12; O = 16; H = 1)",
+      "alternatives": [
+        "4,5 l",
+        "5,0",
+        "8,0",
+        "4,9",
+        "5,2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene los siguientes compuestos:\nCH 3 – O – CH 2 CH 3 y el CH 3 – O – CH 3 ; con respecto a estos indique si las siguientes proposiciones son verdaderas (V)o falsas (F):\nI) Ambos son compuestos polares .\nII) El metoxietano tiene mayor punto de ebullición que el metoximetano .\nIII) El dimetiléter tiene menor masa molecular.",
+      "alternatives": [
+        "FFF",
+        "FFV",
+        "FVV",
+        "VVV",
+        "VVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué nombre corresponde a la fórmula?.\nCH 3 – CHOH – CH 2 – CH 3",
+      "alternatives": [
+        "Metil metano etilo",
+        "Metil hidroximetil",
+        "Butanol – 2",
+        "Butanal – 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija en cada caso el concepto más exacto. Alcoholes secundarios son las sustancias que :",
+      "alternatives": [
+        "Contiene carbono, hidrógeno y oxígeno.",
+        "Se produce durante la fermentación.",
+        "Se encuentra en las bebidas alcohólicas.",
+        "Contiene nitrógeno.",
+        "Pueden convertirse en cetonas por oxidación."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija el grupo (par de los compuestos orgánicos que se indican en cada caso), que reaccionen mejor con el hidróxido de sodio.",
+      "alternatives": [
+        "2 – pentano y 1 – butino",
+        "Octano y dietiléter",
+        "Ácido acético y fenol",
+        "Nitrobenceno y anilina",
+        "Propanona y etanol"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué compuestos se producen por la oxidación de alcoholes secundarios?",
+      "alternatives": [
+        "Ésteres",
+        "Aldehídos",
+        "Éteres",
+        "Cetonas",
+        "Ácidos carboxílicos"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale como verdadera (V) o falsa (F) a cada proposición:\nI) Los aldehidos y cetonas de igual número de carbonos, entre si son isómeros funcionales.\nII) La oxidación de las cetonas produce ácidos carboxilicos de igual número de carbonos que la cetona de origen.\nIII) Los ácidos carboxilícos son ácidos fuertes en solución acuosa .",
+      "alternatives": [
+        "FFV",
+        "VVF",
+        "VFF",
+        "FVV",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿ Qué sustancia se obtiene de la oxidación del alcohol :\nCH 3 CH 2 CH 2 OH ?",
+      "alternatives": [
+        "propanal",
+        "butanal",
+        "hexano",
+        "éter propílico",
+        "butileter"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre los alcoholes y éteres es (son) correcto(s)\nI) El alcohol n-butílico es más volátil que el alcohol propílico .\nII) Los éteres inferiores presentan poca solubilidad frente al agua.\nIII) El CH 3 CH 2 OH es isómero funcional con el dimetil éter.",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "Sólo III",
+        "I y III",
+        "Sólo I"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el peso de la triestearina , que por saponificación con rendimiento del 80% logre producirse 320 kg de jabón blando.\nDato : P.A(u.m.a) (K=39, C=12, O=16)",
+      "alternatives": [
+        "385kg",
+        "510,5kg",
+        "410,5kg",
+        "368,5kg",
+        "289kg"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos gramos de ácidos propanoico se obtendrá de una hidrólisis completa en medio ácido de 102 g de propanoato de etilo?.",
+      "alternatives": [
+        "74 g",
+        "56 g",
+        "148g",
+        "60g",
+        "51 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El proceso químico que invierte la esterificación en sus reactantes se denomina :",
+      "alternatives": [
+        "Hidrogenación",
+        "Reducción",
+        "Hidratación",
+        "Oxidación",
+        "Hidrólisis"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se hace reaccionar el etileno con ácido sulfúrico concentrado y posteriormente con agua , el producto que resulta será :",
+      "alternatives": [
+        "Sulfato de etilo",
+        "Sulfato ácido de etileno.",
+        "Alcohol etílico",
+        "Ácido acético.",
+        "Acetaldehído."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El aroma agradable de las frutas se debe a uno de los siguientes grupos de compuestos orgánicos:",
+      "alternatives": [
+        "éteres",
+        "aminas",
+        "alcoholes",
+        "ácidos orgánicos",
+        "ésteres"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respectivamente , ¿cuántos alcoholes y éteres pueden tener la misma fórmula global C 4 H 10 O?",
+      "alternatives": [
+        "2 y 2",
+        "2 y 3",
+        "3 y 1",
+        "3 y 4",
+        "4 y 3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — FUNCIONES OXIGENADAS EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fecha de vencimiento de un producto corresponde a la fecha de caducidad del:",
+      "alternatives": [
+        "edulcorante.",
+        "saborizante.",
+        "refrigerante.",
+        "preservante.",
+        "colorante."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-quimica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE QUÍMICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El clorometano, al tratarlo con exceso de amoníaco, produce principalmente",
+      "alternatives": [
+        "N,N-Dimetilmetanamina ( )",
+        "N-metilmetanamina (CH3—NH—CH3)",
+        "Metanamina (CH3NH2)",
+        "Una mezcla que contiene todas estas en igual proporción"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep510.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.10 MCQ 21"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El CH3CH2OH puede convertirse en CH3CHO mediante ______________.",
+      "alternatives": [
+        "hidrogenación catalítica",
+        "tratamiento con LiAlH4 23/04/18",
+        "tratamiento con clorocromato de piridinio",
+        "tratamiento con KMnO4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep511.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.11 MCQ 4"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El nombre IUPAC del m-cresol es ___________.",
+      "alternatives": [
+        "3-metilfenol",
+        "3-clorofenol",
+        "3-metoxifenol",
+        "benceno-1,3-diol"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep511.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.11 MCQ 8"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ordene los siguientes compuestos en orden creciente de punto de ebullición. Propan-1-ol, butan-1-ol, butan-2-ol, pentan-1-ol",
+      "alternatives": [
+        "Propan-1-ol, butan-2-ol, butan-1-ol, pentan-1-ol",
+        "Propan-1-ol, butan-1-ol, butan-2-ol, pentan-1-ol",
+        "Pentan-1-ol, butan-2-ol, butan-1-ol, propan-1-ol",
+        "Pentan-1-ol, butan-1-ol, butan-2-ol, propan-1-ol"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep511.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.11 MCQ 16"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El reactivo que no reacciona ni con la acetona ni con el benzaldehído.",
+      "alternatives": [
+        "Bisulfito de sodio",
+        "Fenilhidrazina",
+        "Solución de Fehling",
+        "Reactivo de Grignard"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep512.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.12 MCQ 5"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes compuestos dará butanona al oxidarse con una solución alcalina de KMnO4?",
+      "alternatives": [
+        "Butan-1-ol",
+        "Butan-2-ol",
+        "Ambos",
+        "Ninguno de estos"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep512.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.12 MCQ 11"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre los siguientes, la base más fuerte en medio acuoso es ____________.",
+      "alternatives": [
+        "CH3NH2",
+        "NCCH2NH2",
+        "(CH3)2NH",
+        "C6H5NHCH3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El mejor reactivo para convertir 2-fenilpropanamida en 2-fenilpropanamina es _____.",
+      "alternatives": [
+        "exceso de H2",
+        "Br2 en NaOH acuoso",
+        "yodo en presencia de fósforo rojo",
+        "LiAlH4 en éter"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 10"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El mejor reactivo para convertir 2-fenilpropanamida en 1-feniletanamina es ____.",
+      "alternatives": [
+        "exceso de H2/Pt",
+        "NaOH/Br2",
+        "NaBH4/metanol",
+        "LiAlH4/éter"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 11"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La reacción de degradación de bromamida de Hofmann la presenta __________.",
+      "alternatives": [
+        "ArNH2",
+        "ArCONH2",
+        "ArNO2",
+        "ArCH2NH2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 12"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La metilamina reacciona con HNO2 para formar _________.",
+      "alternatives": [
+        "CH3—O—N ==O",
+        "CH3—O—CH3 23/04/18",
+        "CH3OH",
+        "CH3CHO"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 14"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El gas liberado cuando la metilamina reacciona con ácido nitroso es __________.",
+      "alternatives": [
+        "NH3",
+        "N2",
+        "H2",
+        "C2H6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXII/chemistry/leep513.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Chemistry class 12 ch.13 MCQ 15"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique las fórmulas del alcohol etílico, del acetaldehído y del ácido acético, respectivamente.",
+      "alternatives": [
+        "CH 3 CH 2 OH; CH 3 CHO; HCOOH",
+        "CH 3 CH 2 OH; CH 3 CHO; CH 3 COOH",
+        "CH 3 CH 2 OH; HCHO; CH 3 COOH",
+        "CH 3 CH 2 OH; CH 3 CHO; CH 3 CH 2 COOH",
+        "CH 3 OH; CH 3 CHO; CH 3 COOH"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/quimica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al hacer reaccionar ácido propanoico con etanol en presencia de ácido sulfúrico y calor, se obtiene como producto principal:",
+      "alternatives": [
+        "éter etil propílico.",
+        "etanoato de propilo.",
+        "propanoato de etilo.",
+        "propana",
+        "propanoato de propilo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/04/quimica-examen-admision-villarreal-unfv.html",
+      "sourceName": "matematicasn.blogspot.com — QUÍMICA VILLARREAL PRUEBA RESUELTA UNFV INGRESO UNIVERSIDAD PDF"
     }
   ]
 }

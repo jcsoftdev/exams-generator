@@ -6,7 +6,12 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Con respecto a la ley de gravitación universal, indique si la proposición es verdadera (V) o falsa (F).\n\nI. La fuerza que la Luna ejerce sobre una masa de 1 kg en un punto más cercano a la Luna y en un punto más alejado de esta son iguales.\nII. Las mareas que se producen en el mar se asocian con la presencia del Sol.\nIII. Las mareas que se producen en el mar se asocian con la presencia de la Luna.",
-      "alternatives": ["FFV", "FVF", "VVF", "VVV"],
+      "alternatives": [
+        "FFV",
+        "FVF",
+        "VVF",
+        "VVV"
+      ],
       "correctAnswer": "0",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
       "sourceName": "matematicasn - Gravitación Universal Problemas Resueltos, Pregunta 1"
@@ -17,7 +22,13 @@
       "gradeLevel": "pre",
       "difficulty": "easy",
       "bodyTypst": "Considera un planeta X que tiene la misma masa de la Tierra, pero la mitad del radio. El valor de la aceleración de la gravedad en la superficie del planeta X es:",
-      "alternatives": ["g/4", "g/2", "g", "2g", "4g"],
+      "alternatives": [
+        "g/4",
+        "g/2",
+        "g",
+        "2g",
+        "4g"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
       "sourceName": "matematicasn - Gravitación Universal Problemas Resueltos, Pregunta 2"
@@ -28,7 +39,13 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dos cuerpos se atraen con una fuerza de 36 kN. ¿Con qué fuerza (en kN) se atraerán si la distancia se triplica y las masas se duplican?",
-      "alternatives": ["16", "18", "32", "6", "8"],
+      "alternatives": [
+        "16",
+        "18",
+        "32",
+        "6",
+        "8"
+      ],
       "correctAnswer": "4",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
       "sourceName": "matematicasn - Gravitación Universal Problemas Resueltos, Ejercicio 1"
@@ -39,10 +56,651 @@
       "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "Dos masas se atraen con una fuerza de 64 N. Si se cuadruplica la masa de uno de ellos y la del otro se triplica, además la distancia entre ellos se duplica, ¿cuál es la nueva fuerza (en N)?",
-      "alternatives": ["48", "96", "192", "384", "174"],
+      "alternatives": [
+        "48",
+        "96",
+        "192",
+        "384",
+        "174"
+      ],
       "correctAnswer": "2",
       "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
       "sourceName": "matematicasn - Gravitación Universal Problemas Resueltos, Ejercicio 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Físico y matemático británico, descubrió la teoría de la gravitación universal, contribuyó en el campo de la óptica, descomposición de la luz y leyes de refracción y reflexión:",
+      "alternatives": [
+        "Nicolás Copérnico",
+        "Galileo Galilei",
+        "Johannes Kepler",
+        "Isaac Newton",
+        "Tycho Brahe"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://banco-preguntas.blogspot.com/2019/04/preguntas-del-examen-de-admision.html",
+      "sourceName": "banco-preguntas.blogspot.com — PREGUNTAS DEL EXAMEN DE ADMISION VILLARREAL 2019"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un bloque de masa 1,6 kg se ubica a la altura h, que se mide desde la superficie de la Tierra y pesa 9 N. Si el radio de la Tierra es R T , determine la altura en función del radio terrestre.\nDato: la gravedad en la superficie de la tierra, g=10 m/s 2",
+      "alternatives": [
+        "3/4 R T",
+        "R T /2",
+        "2 R T",
+        "R T /3",
+        "4/3 R T"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/09/fisica-deco-examen-resuelto-de-ingreso.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA DECO RESUELTA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule aproximadamente en horas, el periodo de un satélite que realiza una órbita circular alrededor de un planeta de 8×10 22 kg de masa y de 1750 km de radio, si el satélite se encuentra a 1250 km de altura sobre la superficie del planeta. Considere que la constante de gravitación universal es G= 6,67×10 –11 N⋅m 2 /kg 2 .",
+      "alternatives": [
+        "0,09",
+        "0,9",
+        "3,9",
+        "5,9",
+        "7,9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/fisica-escolar-ien-uni-examen-nacional-admision-universidad-resuelto-talento-beca-18-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA IEN UNI ESCOLAR PRUEBA RESUELTA INGRESO UNIVERSIDAD DE INGENIERÍA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un astrónomo descubre un planeta que puede ser habitable. El radio de dicho planeta es 20% mayor que el radio de la Tierra y su densidad volumétrica es ρ. Si ρ T es la densidad volumétrica de la Tierra, encuentre cuánto debe de ser ρ/ρ T para que la aceleración de la gravedad en la superficie del planeta descubierto sea la misma que la de la Tierra.\n(g= 9,81 m/s 2 )",
+      "alternatives": [
+        "1/2",
+        "1/3",
+        "5/6",
+        "2/3",
+        "1/6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/Tercera-prueba-uni-solucionario-examen-admision-universidad-ingenieria-fisica-quimica-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA QUÍMICA EXAMEN ADMISIÓN UNIVERSIDAD NACIONAL DE INGENIERÍA TERCERA PRUEBA DESARROLLADA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considera un planeta X que tiene la misma masa de la Tierra, pero la mitad del radio. Si “g” es el valor de la aceleración de la gravedad en la superficie de la Tierra, entonces el valor de la aceleración de la gravedad en la superficie del planeta X es:",
+      "alternatives": [
+        "g/4",
+        "g/2",
+        "g",
+        "2g",
+        "4g"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/fisica-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "matematicaj.blogspot.com — FISICA PREGUNTAS DEL EXAMEN DE ADMISION A LA UNIVERSIDAD RESUELTO CON CLAVES"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La masa de un planeta desconocido es igual a la masa de la Tierra, mientras que su radio es la tercera parte del radio terrestre. Calcule (en m/s²) la aceleración de la gravedad en la superficie de dicho planeta. Considere la magnitud de la aceleración de la gravedad en la superficie de la Tierra igual a 9,81 m/s².",
+      "alternatives": [
+        "58,29",
+        "68,29",
+        "78,29",
+        "88,29",
+        "98,29"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/5to-actividad-8-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-quinto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un satélite de masa m orbita la Tierra con una trayectoria circular de radio igual al doble del radio terrestre. Calcule aproximadamente el tiempo (en minutos) que emplea para recorrer un cuarto de la longitud de su órbita. Considere que el radio de la Tierra es 6371 km y que el valor de la aceleración de la gravedad sobre su superficie es 9,81 m/s 2 .",
+      "alternatives": [
+        "30,6",
+        "36,6",
+        "47,6",
+        "59,6",
+        "63,6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/11/educacion-fisica-3ro-4to-actividad-1-2-3-4-5-experiencia-9-resuelta-aprendo-en-casa-web-ef-tarea-radio-reto-tv-tercer-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2026-1 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la ley de gravitación universal, indique la proposición verdadera (V) o falsa (F)\nI) La fuerza que la luna ejerce sobre una masa de 1 kg en un punto más cercano a la luna y en un punto más alejado de esta son iguales.\nII) Las mareas que se producen en el mar se asocian con la presencia del sol.\nIII) Las mareas que se producen en el mar se asocian con la presencia de la luna.",
+      "alternatives": [
+        "FFV",
+        "FVF",
+        "VVF",
+        "VVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE GRAVITACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se descubre un nuevo planeta X que orbita alrededor del Sol a una distancia media de 1496 millones de kilómetros. Calcule en años, el periodo medio con el que órbita el planeta X.\nConsidere que la distancia media de la tierra al Sol es 149,6 millones de kilómetros.",
+      "alternatives": [
+        "1",
+        "5",
+        "5 √ 5",
+        "10",
+        "10 √ 10"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/01/leyes-de-kepler-del-movimiento-planetario-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LEYES DE KEPLER EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las causas fundamentales por las que la Tierra es redonda son:",
+      "alternatives": [
+        "traslación - rotación - flexibilidad de las rocas.",
+        "rotación - gravedad - flexibilidad de las rocas.",
+        "rotación - atracción solar - flexibilidad de las rocas.",
+        "traslación - gravitación universal - composición."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/02/la-tierra-forma-movimientos-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicasn.blogspot.com — LA TIERRA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué explica la primera ley de Johannes Kepler?",
+      "alternatives": [
+        "la órbita elíptica de los planetas",
+        "la ubicación concéntrica del Sol",
+        "la inclinación del eje imaginario terrestre",
+        "la atracción gravitacional Tierra-Luna",
+        "la velocidad variable de los planetas en su órbita"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/02/la-tierra-forma-movimientos-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicasn.blogspot.com — LA TIERRA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué ley explica la mayor duración de los años en los planetas exteriores a comparación de los planetas interiores?",
+      "alternatives": [
+        "la primera ley de Kepler",
+        "la ley gravitacional de Newton",
+        "la tercera ley de Kepler",
+        "la segunda ley de Kepler",
+        "la ley de relatividad de Einstein"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/02/la-tierra-forma-movimientos-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "matematicasn.blogspot.com — LA TIERRA EJERCICIOS RESUELTOS PDF – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un planeta tiene una masa igual a 4 veces la masa de la Tierra y el mismo radio. Calcule a qué altura de la superficie de dicho planeta la aceleración de la gravedad es igual a g.\ng: aceleración de la gravedad en la superficie de la Tierra.\nR: radio de la Tierra.",
+      "alternatives": [
+        "R/4",
+        "R/2",
+        "R",
+        "2R",
+        "4R"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/10/1ro-2do-actividad-4-ct-experiencia-8-resuelta-aprendo-en-casa-ciencia-tecnologia--web-tarea-radio-reto-tv-cta-primer-segundo-grado-de-secundaria-aprendizaje-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2025-2 TERCERA PRUEBA RESUELTA RESPUESTAS FÍSICA QUÍMICA INGRESO UNIVERSIDAD PDF CIENCIAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La velocidad orbital de los planetas tiene un comportamiento diferencial creciente o decreciente, dependiendo de (la):",
+      "alternatives": [
+        "influencia de las nubes de Oort.",
+        "distancia al Sol.",
+        "actividad solar cíclica.",
+        "sus tamaños y volúmenes.",
+        "cantidad de satélites."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-movimiento-de-traslacional-de-la-tierra-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — MOVIMIENTO DE TRASLACIÓN TERRESTRE EJERCICIOS RESUELTOS DE LAS ESTACIONES GEOGRAFÍA – INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El radio de Luna es 3/11 del radio terrestre y el diámetro del Sol es igual a 108 veces el diámetro de la Tierra. ¿Cuál es la relación de los radios de la Luna y el Sol?",
+      "alternatives": [
+        "1/396",
+        "5/396",
+        "13/396",
+        "7/396"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/06/aritmetica-preguntas-resueltas-de-repaso-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — ARITMÉTICA TERCER EXAMEN PRE SAN MARCOS RESUELTO PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El radio de la Luna es los 3/11 del radio terrestre y el diámetro del Sol es igual a 108 diámetros terrestres. ¿Cuál es la razón geométrica entre los radios de la Luna y el Sol?",
+      "alternatives": [
+        "2/37",
+        "1/350",
+        "2/367",
+        "5/87",
+        "1/396"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/11/razones-y-proporciones-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — RAZONES Y PROPORCIONES PROBLEMAS RESUELTOS PDF ARITMÉTICA "
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un satélite artificial gira alrededor de la tierra en una trayectoria circular a una altura de 1800 km sobre la superficie terrestre y con periodos de 30 𝛑 minutos. Si el radio terrestre es 6300 km, ¿Cuál es la aceleración centrípeta de la órbita del satélite artificial?",
+      "alternatives": [
+        "10 m/s²",
+        "12 m/s²",
+        "16 m/s²",
+        "24 m/s²",
+        "8 m/s²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/pre-san-marcos-fisica-segundo-examen.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA PRIMER EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El texto aborda fundamentalmente\n\nTexto:\nEl respeto del hombre por el conocimiento es una de sus características más peculiares. Conocimiento en latín es scientia y la ciencia devino en el nombre de la clase más respetable de conocimiento. ¿Pero qué diferencia al conocimiento de la superstición, la ideología o la seudociencia? La Iglesia Católica excomulgó a los seguidores de Copérnico, el Partido Comunista persiguió a los mendelianos sobre la base de que sus doctrinas eran seudocientíficas. La demarcación entre ciencia y seudociencia no es simplemente un problema de filosofía de gabinete, es de relevancia vital social y política. \nMuchos filósofos han tratado de resolver el problema de la demarcación en los siguientes términos: un enunciado constituye conocimiento si un número suficiente de personas lo cree con suficiente firmeza. Pero la historia del pensamiento nos muestra que muchas personas estaban totalmente comprometidas con creencias absurdas. Si la fuerza de las creencias era un sello distintivo, tendríamos que incluir con el rango de conocimiento a algunos relatos sobre demonios, ángeles, cielos e infierno. Por otro lado, los científicos son escépticos incluso acerca de sus propias teorías. La de Newton es la más poderosa que la ciencia haya producido, pero el mismo Newton nunca creyó que los cuerpos se atrajeran a distancia. De modo que ningún grado de compromiso con las creencias las convierte en conocimiento. En verdad el sello distintivo de la conducta científica es cierto escepticismo, incluso hacia las teorías más acariciadas de uno. El aferrarse ciegamente a una teoría no es una virtud intelectual: es un crimen intelectual. \nDe este modo, un enunciado puede ser seudocientífico, aunque sea eventualmente plausible y todos crean en él, y puede ser científicamente válido aun cuando sea increíble y nadie crea en él. Una teoría puede ser incluso de valor científico supremo aun cuando nadie la entienda y menos la crea. El valor cognoscitivo de una teoría no tiene nada que ver con su influencia psicológica en la mente de las personas. La creencia, el compromiso y la comprensión son estados de la mente humana. Pero el objetivo, el valor científico de una teoría es independiente de la mente humana que la crea o la entiende. Su valor científico depende solo de qué apoyo objetivo tienen estas conjeturas en los hechos. \n[Imre Lakatos (1978). La metodología de los programas de investigación científica. Madrid: Alianza Editorial]",
+      "alternatives": [
+        "la poderosa capacidad explicativa de las teorías científicas.",
+        "el influjo de la teoría de la gravitación universal de Newton.",
+        "la relación entre las teorías y su influencia psicológica.",
+        "el problema de la demarcación entre ciencia y seudociencia."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2021/03/solucionario-habilidad-verbal-pre-san_24.html",
+      "sourceName": "razonamiento-verbal1.blogspot.com — Solucionario Habilidad Verbal - Pre San Marcos 2020-I, semana 18"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Observado desde la Tierra, el Sol parece moverse en una órbita aproximadamente circular. Para el movimiento de otro planeta, como Mercurio, observado desde la Tierra, esto",
+      "alternatives": [
+        "sería igualmente cierto.",
+        "no sería cierto, porque la fuerza entre la Tierra y Mercurio no obedece la ley del inverso del cuadrado.",
+        "no sería cierto, porque la principal fuerza gravitacional sobre Mercurio se debe al Sol.",
+        "no sería cierto, porque Mercurio está influido por fuerzas distintas de las gravitacionales."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep308.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.8 MCQ 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tanto la Tierra como la Luna están sujetas a la fuerza gravitacional del Sol. Observada desde el Sol, la órbita de la Luna",
+      "alternatives": [
+        "será elíptica.",
+        "no será estrictamente elíptica, porque la fuerza gravitacional total sobre ella no es central.",
+        "no es elíptica, pero necesariamente será una curva cerrada.",
+        "se desvía considerablemente de ser elíptica debido a la influencia de planetas distintos de la Tierra."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep308.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.8 MCQ 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En nuestro sistema solar, la región interplanetaria contiene fragmentos de materia (de tamaño mucho menor comparado con los planetas) llamados asteroides. Estos",
+      "alternatives": [
+        "no se moverán alrededor del Sol, ya que tienen masas muy pequeñas comparadas con la del Sol.",
+        "se moverán de manera irregular debido a sus pequeñas masas y se alejarán a la deriva hacia el espacio exterior.",
+        "se moverán alrededor del Sol en órbitas cerradas, pero sin obedecer las leyes de Kepler.",
+        "se moverán en órbitas como los planetas y obedecerán las leyes de Kepler."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep308.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.8 MCQ 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La Tierra es aproximadamente una esfera. Si su interior contuviera materia que no tuviera la misma densidad en todas partes, entonces en la superficie de la Tierra, la aceleración debida a la gravedad",
+      "alternatives": [
+        "estará dirigida hacia el centro, pero no será la misma en todas partes.",
+        "tendrá el mismo valor en todas partes, pero no estará dirigida hacia el centro.",
+        "será la misma en todas partes en magnitud y estará dirigida hacia el centro.",
+        "no puede ser cero en ningún punto."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://ncert.nic.in/pdf/publication/exemplarproblem/classXI/physics/keep308.pdf",
+      "sourceName": "ncert.nic.in — NCERT Exemplar Physics class 11 ch.8 MCQ 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ciclos de ascenso y descenso en la superficie de los oceános se producen debido",
+      "alternatives": [
+        "a la radiación solar.",
+        "a la atracción de la Luna.",
+        "a las corrientes marinas.",
+        "al efecto de Coriolis.",
+        "a la rotación terrestre."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://banco-preguntas.blogspot.com/2013/03/preguntas-de-geografia_29.html",
+      "sourceName": "banco-preguntas.blogspot.com — PREGUNTAS DE GEOGRAFÍA"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La aceleración de la gravedad de los planetas depende tanto de la masa como de su radio. Por ejemplo, en la Luna que tiene dimensiones más pequeñas que la Tierra la aceleración de la gravedad es la sexta parte de la aceleración en la Tierra, entonces una persona que pesa en la Tierra 900 N, en la Luna tendría un peso de\n( g Tierra =10 m/s²).",
+      "alternatives": [
+        "80 N",
+        "150 N",
+        "180 N",
+        "250 N",
+        "280 N"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/01/estatica-ejercicios-problemas-para-practicar-con-claves-y-respuestas-secundaria-pre-universidad-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — ESTÁTICA EJERCICIOS CON RESPUESTAS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las siguientes proposiciones relacionadas con las leyes de Kepler.\nI. Todos los planetas se mueven alrededor del Sol en trayectorias elípticas y planas, con el Sol en el centro de la elipse.\nII. El radio vector trazado desde el Sol a un planeta barre áreas iguales en intervalos de tiempos iguales.\nIII. El periodo orbital de cualquier planeta es proporcional al cubo de la distancia media del planeta al Sol.\nIndique la secuencia de verdad (V) o falsedad (F).",
+      "alternatives": [
+        "FVF",
+        "VVV",
+        "FVV",
+        "VFV",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/fisica-callao-examen-de-admision-universidad-unac-resuelto.html",
+      "sourceName": "matematicaj.blogspot.com — FÍSICA UNAC EJERCICIOS RESUELTOS ADMISIÓN CALLAO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule aproximadamente en horas, el periodo de una órbita circular de un satélite que se mueve alrededor de un planeta de 8×10 ² ² kg de masa y de 1750 km de radio. El satélite se encuentra a 1250 km de altura sobre la superficie del planeta.\nG =6,67×10 − ¹ ¹ N·m²/kg²",
+      "alternatives": [
+        "0,9",
+        "0,09",
+        "3,9",
+        "5,9",
+        "7,9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/examen-admision-uni-2017-ii.html",
+      "sourceName": "matematicasn.blogspot.com — SOLUCIONARIO UNI 2027 I UNIVERSIDAD DE INGENIERÍA EXAMEN ADMISIÓN RESULTADOS E INGRESANTES 2026 II 2025 2024 2023 2022 2021 PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle aproximadamente la altura h sobre la superficie de la Tierra donde la aceleración de la gravedad es 1m/s². El radio de la Tierra es R. ( g=9,81 m/s²).",
+      "alternatives": [
+        "2,1R",
+        "4,4R",
+        "6,2R",
+        "8,7R",
+        "12,1R"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE GRAVITACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Exprese en función del radio de la Tierra (R), a qué distancia de la misma un objeto que tiene una masa de 1 kg pesaría 1 N.\n(considere 𝑔=10𝑚/𝑠²)",
+      "alternatives": [
+        "𝑅 √ 10",
+        "𝑅 √ 5",
+        "2𝑅",
+        "1,5𝑅"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE GRAVITACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Metis es un satélite de Júpiter que tarda 0,5 días aproximadamente en recorrer su órbita de radio 𝑅 M . Determine el periodo orbital de Amaltea, otro satélite de Júpiter que describe una órbita de radio 𝑅 A =0,64𝑅 M",
+      "alternatives": [
+        "0,256 días",
+        "0,512 días",
+        "0,128 días",
+        "0,064 días"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
+      "sourceName": "matematicasn.blogspot.com — LEY DE GRAVITACIÓN EJERCICIOS RESUELTOS PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos satélites idénticos S 1 y S 2 orbitan circularmente alrededor de un mismo planeta. El primero tiene un periodo de 512 horas y el segundo de 343 horas Calcule la relación de los radios de sus órbitas R 1 /R 2",
+      "alternatives": [
+        "16/15",
+        "8/7",
+        "41/35",
+        "56/42",
+        "64/49"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/01/leyes-de-kepler-del-movimiento-planetario-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — LEYES DE KEPLER EJERCICIOS RESUELTOS DE INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área que barre el vector posición de un planeta respecto del Sol durante el mes de ene-ro en su movimiento alrededor del Sol es «a» km 2 . ¿Cuánto será el área (en km 2 ) que barrerá el vector posición del planeta durante los meses de julio y agosto?",
+      "alternatives": [
+        "a√2",
+        "a√3",
+        "a",
+        "2a",
+        "4a"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-cepreuni-segundo-parcial.html",
+      "sourceName": "matematicasn.blogspot.com — SEGUNDO EXAMEN PARCIAL CEPREUNI RESUELTO 2027 I RESPUESTAS PDF 2026-2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cosmonauta en la Estación Espacial Internacional (EEI) tiene una masa de 80 kg y el campo gravitacional local en la estación es, para un observador en la Tierra, igual a 0,9 g. Cuando él sale a dar una caminata espacial, la masa total del astronauta y su equipo es 240 kg. Determine cuál o cuáles de las siguientes proposiciones son correctas.\nDato: para la Tierra g= 10 m/s²\nI. La razón entre los pesos del cosmonauta en la Tierra y del cosmonauta con su equipo es 0,33.\nII. Si se aplica una misma fuerza F al cosmonauta en la estación y en la Tierra, la aceleración de él es mayor en la estación espacial.\nIII. En la Estación Espacial Internacional, el peso del cosmonauta es 780 N.",
+      "alternatives": [
+        "I y III",
+        "solo I",
+        "solo II",
+        "II y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/07/pre-san-marcos-fisica-semana-19-2020-i.html",
+      "sourceName": "matematicaj.blogspot.com — CEPRE SAN MARCOS FÍSICA SEMANA 19 EXAMEN DE INGRESO UNIVERSIDAD SAN MARCOS ÁREA C PRUEBA DECO RESPUESTAS PREGUNTAS SOLUCIONES PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La densidad volumétrica de un planeta es 10% menos que la de la Tierra. Encuentre, aproximadamente, cuánto debe ser el radio del planeta, para que la aceleración de la gravedad en su superficie sea la misma que la de la Tierra. El radio de la Tierra es R.",
+      "alternatives": [
+        "4,44R",
+        "2,22R",
+        "1,11R",
+        "3,33R",
+        "5,55R"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/fisica-problemas-resueltos-del-examen-de-admision-universidad-nacional-de-ingenieria-UNI-pdf.html",
+      "sourceName": "matematicaj.blogspot.com — SEMINARIO DE FÍSICA PROBLEMAS RESUELTOS TIPO EXAMEN DE ADMISIÓN A LA UNIVERSIDAD NACIONAL DE INGENIERÍA UNI PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos satélites idénticos S ₁ y S ₂ orbitan circularmente alrededor de un mismo planeta. El primero tiene un periodo de 512 horas y el segundo de 343 horas Calcule la relación de los radios de sus órbitas R ₁ /R ₂ .",
+      "alternatives": [
+        "16/15",
+        "8/7",
+        "41/35",
+        "56/42",
+        "64/49"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/prueba-de-fisica-ingreso-universidad-de.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO DE FÍSICA UNI DESARROLLADO PRUEBA DE ENSAYO DE EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle aproximadamente la altura h sobre la superficie de la Tierra donde la aceleración de la gravedad es 1 m/s². El radio de la Tierra es R. ( g=9,81 m/s²).",
+      "alternatives": [
+        "2,1R",
+        "4,4R",
+        "6,2R",
+        "8,7R",
+        "12,1R"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/10/prueba-de-fisica-ingreso-universidad-de.html",
+      "sourceName": "matematicaj.blogspot.com — SIMULACRO DE FÍSICA UNI DESARROLLADO PRUEBA DE ENSAYO DE EXAMEN ADMISIÓN UNIVERSIDAD DE INGENIERÍA PDF"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Fuerza con que la Tierra atrae a todos los cuerpos que se encuentran en sus cercanías:",
+      "alternatives": [
+        "fuerza terrestre",
+        "fuerza de acción",
+        "fuerza de reacción",
+        "fuerza de tensión",
+        "fuerza de gravedad"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/cuestionario-de-fisica-pnp-desarrollado-banco-de-preguntas-resueltas-de-ingreso-a-la-policia-nacional-del-peru-prueba-con-respuestas-en-academia-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — BANCO PNP DE FÍSICA DE INGRESO A LA ESCUELA DE LA POLICÍA NACIONAL PREGUNTAS RESUELTAS CLAVES RESPUESTAS"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se sabe que la fuerza gravitacional entre los cuerpos es atractiva. Se toman esferas de masas m 1 =1kg y m 2 =9kg, las mismas que se colocan en las posiciones x 1 =0cm y x 2 =12cm, respectivamente. En estas condiciones, ¿a qué distancia de la esfera más ligera, la fuerza gravitacional sobre una esferita de masa m será nula?",
+      "alternatives": [
+        "2 cm",
+        "5 cm",
+        "3 cm",
+        "4 cm",
+        "1 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/06/cepre-san-marcos-fisica-semana-8-2019-1.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA MEDICINA SAN MARCOS PRUEBA RESUELTA INGRESO UNIVERSIDAD"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos satélites artificiales (1) y (2) orbitan alrededor de un planeta. El primero barre las 2/5 partes del área total de su órbita en 50 horas y el segundo tiene un período de 64 horas. Entonces R 1 /R 2 es igual a:",
+      "alternatives": [
+        "12/19",
+        "25/16",
+        "41/15",
+        "50/19",
+        "61/23"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/cepre-san-marcos-fisica-semana-7-2020.html",
+      "sourceName": "matematicasn.blogspot.com — FÍSICA SEGUNDO EXAMEN PRE SAN MARCOS PROBLEMAS RESUELTOS PDF"
     }
   ]
 }
