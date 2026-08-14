@@ -60,6 +60,19 @@ export const questions = pgTable(
      * silently duplicating — see `hash-body-typst.ts`.
      */
     bodyHash: text("body_hash"),
+    /**
+     * Where a web-sourced question came from. NULL for anything authored in
+     * the app (tenant banks, AI generation) — these only ever get filled by
+     * the collected/*.json seeder.
+     *
+     * `sourceUrl` is load-bearing, not decorative: the central bank mixes
+     * channels whose licensing differs (state exams published for public
+     * preparation, CC-licensed material, exam boards that reserve rights).
+     * Storing the URL is what makes "remove every question from host X" a
+     * query instead of a re-derivation from the seed files.
+     */
+    sourceUrl: text("source_url"),
+    sourceName: text("source_name"),
     correctAnswer: text("correct_answer").notNull(),
     aiGenerated: boolean("ai_generated").notNull().default(false),
     createdBy: uuid("created_by")
@@ -75,6 +88,9 @@ export const questions = pgTable(
     gradeLevelIdx: index("questions_grade_level_idx").on(table.gradeLevel),
     difficultyIdx: index("questions_difficulty_idx").on(table.difficulty),
     statusIdx: index("questions_status_idx").on(table.status),
+    // Supports pulling a whole channel back out by host when its licensing
+    // changes — the reason source_url is stored at all.
+    sourceUrlIdx: index("questions_source_url_idx").on(table.sourceUrl),
     poolIdx: index("questions_pool_idx").on(table.gradeLevel, table.status),
     // Multiple NULL body_hash rows (all `type = 'image'` questions) never
     // collide under Postgres' NULL-distinct unique-index semantics.

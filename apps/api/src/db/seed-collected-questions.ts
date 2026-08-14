@@ -79,6 +79,50 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
   let skipped = 0;
   let failed = 0;
 
+  /**
+   * Rows waiting to be written. The bank crossed 60k questions, and one
+   * awaited INSERT per question is 60k sequential round-trips on every boot
+   * — minutes of blocked startup against a remote database. This runs inside
+   * our own deploy, with no rate limit to respect, so rows go out in chunks
+   * instead. `BATCH_SIZE` stays well under Postgres' 65535-parameter cap:
+   * ~13 columns per row leaves plenty of headroom at 1000.
+   */
+  const BATCH_SIZE = 1000;
+  let pending: (typeof questions.$inferInsert)[] = [];
+
+  const flush = async (): Promise<void> => {
+    if (pending.length === 0) {
+      return;
+    }
+    const batch = pending;
+    pending = [];
+    try {
+      await db.insert(questions).values(batch);
+      ok += batch.length;
+    } catch (error) {
+      // One bad row must not cost the other 999. Retry the batch row by row
+      // so the failure is attributed to the entry that actually caused it.
+      console.error(
+        `[seed-collected-questions] batch of ${batch.length} failed, retrying individually: ${
+          error instanceof Error ? error.message : String(error)
+        }`,
+      );
+      for (const row of batch) {
+        try {
+          await db.insert(questions).values(row);
+          ok++;
+        } catch (rowError) {
+          failed++;
+          console.error(
+            `[seed-collected-questions] FAIL ${row.sourceName ?? row.bodyHash}: ${
+              rowError instanceof Error ? rowError.message : String(rowError)
+            }`,
+          );
+        }
+      }
+    }
+  };
+
   for (const file of files) {
     const data = JSON.parse(readFileSync(join(COLLECTED_DIR, file), "utf8")) as CollectedData;
 
@@ -115,7 +159,7 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
           continue;
         }
 
-        await db.insert(questions).values({
+        pending.push({
           tenantId: null,
           type: "structured",
           topicId,
@@ -126,17 +170,29 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
           bodyHash,
           alternatives: entry.alternatives,
           correctAnswer: entry.correctAnswer,
+          // Provenance was being parsed and then dropped. Without it the bank
+          // cannot answer "which questions came from this source", which is
+          // exactly what a licensing change asks.
+          sourceUrl: entry.sourceUrl,
+          sourceName: entry.sourceName,
           aiGenerated: false,
           createdBy,
         });
+        // Added here, not after the write: two entries with the same statement
+        // inside one batch would otherwise both pass the check and collide on
+        // questions_tenant_id_body_hash_idx.
         existingHashes.add(bodyHash);
-        ok++;
+        if (pending.length >= BATCH_SIZE) {
+          await flush();
+        }
       } catch (error) {
         failed++;
         console.error(`[seed-collected-questions] FAIL ${label}: ${error instanceof Error ? error.message : String(error)}`);
       }
     }
   }
+
+  await flush();
 
   console.log(`[seed-collected-questions] ${ok} seeded, ${skipped} already existed, ${failed} failed (${files.length} files).`);
 }
