@@ -2,7 +2,8 @@ import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { Difficulty } from "@exams-generator/shared";
 import { and, isNotNull, isNull } from "drizzle-orm";
-import { hashBodyTypst } from "../modules/bank/domain/hash-body-typst";
+import { findUnescapedTypstMarkup } from "../modules/bank/domain/find-unescaped-typst-markup";
+import { prepareCollectedContent } from "../modules/bank/domain/prepare-collected-content";
 import { validateStructuredContent } from "../modules/bank/domain/validate-structured-content";
 import { isGradeLevel } from "../modules/exams/domain/value-objects/grade-level";
 import { db } from "./client";
@@ -153,8 +154,27 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
           throw new Error(`topic not found: ${entry.topicName} (${entry.gradeLevel}) in ${entry.courseName}`);
         }
 
-        const bodyHash = hashBodyTypst(entry.bodyTypst);
-        if (existingHashes.has(bodyHash)) {
+        // Scraped prose is NOT Typst markup — escape it before it ever
+        // reaches a column the PDF template embeds verbatim. `bodyHash`
+        // still keys off the RAW statement so this boot recognises the rows
+        // seeded before escaping existed; see `prepare-collected-content.ts`.
+        const content = prepareCollectedContent({
+          bodyTypst: entry.bodyTypst,
+          alternatives: entry.alternatives,
+        });
+        // Self-check on the escaper rather than a real compile: 64k entries
+        // through the typst binary would add minutes to every boot. It has
+        // already shipped with one gap (`/` opening a term list), so an entry
+        // that still holds live markup is refused `approved` here instead of
+        // failing an exam weeks later.
+        const unescaped = [content.bodyTypst, ...content.alternatives]
+          .map((value) => findUnescapedTypstMarkup(value))
+          .find((found) => found !== undefined);
+        if (unescaped !== undefined) {
+          throw new Error(`unescaped Typst markup '${unescaped}' survived escaping`);
+        }
+
+        if (existingHashes.has(content.bodyHash)) {
           skipped++;
           continue;
         }
@@ -166,9 +186,9 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
           difficulty: entry.difficulty as Difficulty,
           gradeLevel: entry.gradeLevel,
           status: "approved",
-          bodyTypst: entry.bodyTypst,
-          bodyHash,
-          alternatives: entry.alternatives,
+          bodyTypst: content.bodyTypst,
+          bodyHash: content.bodyHash,
+          alternatives: content.alternatives,
           correctAnswer: entry.correctAnswer,
           // Provenance was being parsed and then dropped. Without it the bank
           // cannot answer "which questions came from this source", which is
@@ -181,7 +201,7 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
         // Added here, not after the write: two entries with the same statement
         // inside one batch would otherwise both pass the check and collide on
         // questions_tenant_id_body_hash_idx.
-        existingHashes.add(bodyHash);
+        existingHashes.add(content.bodyHash);
         if (pending.length >= BATCH_SIZE) {
           await flush();
         }

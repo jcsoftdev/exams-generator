@@ -14,7 +14,8 @@
     "db:migrate": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/db/migrate.ts",
     "db:seed": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/db/seed.ts",
     "db:seed:bank-sample": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/seed-bank-sample.ts",
-    "db:purge-test-taxonomy": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/purge-test-taxonomy.ts"
+    "db:purge-test-taxonomy": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/purge-test-taxonomy.ts",
+    "db:escape-collected-typst": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/escape-collected-typst.ts"
   },
   "dependencies": {
     "@exams-generator/shared": "workspace:*",

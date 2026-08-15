@@ -6,6 +6,7 @@ import { GRADE_LEVELS } from "../modules/exams/domain/value-objects/grade-level"
 import type { GradeLevel, Stage } from "../modules/exams/domain/value-objects/grade-level";
 import { hashPassword } from "../modules/auth/password.util";
 import { db, pool } from "./client";
+import { escapeCollectedTypst } from "../scripts/escape-collected-typst";
 import { seedCollectedQuestions } from "./seed-collected-questions";
 import {
   courses,
@@ -1281,6 +1282,14 @@ export async function seed(): Promise<void> {
   const [bankSampleAdmin] = await db.select({ id: users.id }).from(users).where(eq(users.email, BANK_SAMPLE_ADMIN.email));
   if (bankSampleAdmin) {
     await seedCollectedQuestions(bankSampleAdmin.id);
+    // Backfills the Typst escaping onto rows seeded BEFORE the seeder started
+    // escaping at ingest. Runs on every boot, like the seeder itself: it is
+    // idempotent, and after the first pass its per-entry statement matches
+    // nothing, so steady-state cost is a lookup rather than a write.
+    const { updated } = await escapeCollectedTypst();
+    if (updated > 0) {
+      console.log(`[seed] escaped Typst markup on ${updated} previously seeded questions.`);
+    }
   }
 }
 
