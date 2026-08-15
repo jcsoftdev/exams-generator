@@ -2,6 +2,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { Difficulty } from "@exams-generator/shared";
 import { and, isNotNull, isNull } from "drizzle-orm";
+import { findPrivateUseGlyph } from "../modules/bank/domain/find-private-use-glyph";
 import { findUnescapedTypstMarkup } from "../modules/bank/domain/find-unescaped-typst-markup";
 import { prepareCollectedContent } from "../modules/bank/domain/prepare-collected-content";
 import { validateStructuredContent } from "../modules/bank/domain/validate-structured-content";
@@ -79,6 +80,7 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
   let ok = 0;
   let skipped = 0;
   let failed = 0;
+  let unprintable = 0;
 
   /**
    * Rows waiting to be written. The bank crossed 60k questions, and one
@@ -174,6 +176,20 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
           throw new Error(`unescaped Typst markup '${unescaped}' survived escaping`);
         }
 
+        // Legacy Symbol-font codepoints print as tofu boxes and cannot be
+        // translated back safely — see `find-private-use-glyph.ts`. Skipped
+        // rather than thrown: this is a KNOWN, permanent property of ~60
+        // source entries, so routing it through the failure path would log
+        // sixty errors on every single boot and train everyone to ignore the
+        // seeder's output. Counted separately and summarised once instead.
+        const privateUse = [content.bodyTypst, ...content.alternatives]
+          .map((value) => findPrivateUseGlyph(value))
+          .find((found) => found !== undefined);
+        if (privateUse !== undefined) {
+          unprintable++;
+          continue;
+        }
+
         if (existingHashes.has(content.bodyHash)) {
           skipped++;
           continue;
@@ -214,5 +230,7 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
 
   await flush();
 
-  console.log(`[seed-collected-questions] ${ok} seeded, ${skipped} already existed, ${failed} failed (${files.length} files).`);
+  console.log(
+    `[seed-collected-questions] ${ok} seeded, ${skipped} already existed, ${unprintable} unprintable, ${failed} failed (${files.length} files).`,
+  );
 }

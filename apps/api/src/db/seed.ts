@@ -6,6 +6,7 @@ import { GRADE_LEVELS } from "../modules/exams/domain/value-objects/grade-level"
 import type { GradeLevel, Stage } from "../modules/exams/domain/value-objects/grade-level";
 import { hashPassword } from "../modules/auth/password.util";
 import { db, pool } from "./client";
+import { archiveUnprintableQuestions } from "../scripts/archive-unprintable-questions";
 import { escapeCollectedTypst } from "../scripts/escape-collected-typst";
 import { seedCollectedQuestions } from "./seed-collected-questions";
 import {
@@ -1289,6 +1290,12 @@ export async function seed(): Promise<void> {
     const { updated } = await escapeCollectedTypst();
     if (updated > 0) {
       console.log(`[seed] escaped Typst markup on ${updated} previously seeded questions.`);
+    }
+    // Same shape as the backfill above: the seeder refuses these at ingest
+    // now, so this only catches rows that predate that check.
+    const { archived } = await archiveUnprintableQuestions();
+    if (archived > 0) {
+      console.log(`[seed] archived ${archived} questions carrying unprintable glyphs.`);
     }
   }
 }
