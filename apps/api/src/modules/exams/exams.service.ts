@@ -11,7 +11,8 @@ import { ExamStatus } from "../../db/schema/enums";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BlueprintRow, Candidate, select, selectPreview } from "./domain/blueprint-selector";
 import { computeCurrentWeek } from "./domain/current-week";
-import { Rng, createSeededRng, shuffleArray } from "./domain/ports/random.port";
+import { matchesRowCriteria, pickReplacementQuestion } from "./domain/pick-replacement-question";
+import { Rng, createSeededRng } from "./domain/ports/random.port";
 import { CourseScope, resolveBlueprint, WeekScope } from "./domain/resolve-blueprint";
 import { CreateExamInput, validateCreateExamInput } from "./domain/validate-create-exam-input";
 import { PreviewExamInput, validatePreviewExamInput } from "./domain/validate-preview-exam-input";
@@ -22,7 +23,6 @@ import {
   ExamListFilters,
   ExamListItem,
   ExamsRepository,
-  QuestionPoolCandidateRecord,
   StockCellFilter,
   VersionSummaryRecord,
 } from "./exams.repository";
@@ -189,19 +189,6 @@ function requireTenant(user: AuthTokenPayload): string {
     throw new ForbiddenException("Only tenant users (school_admin/teacher) can manage exams");
   }
   return user.tenantId;
-}
-
-function matchesRowCriteria(candidate: QuestionPoolCandidateRecord, row: BlueprintRowRecord): boolean {
-  if (candidate.courseId !== row.courseId) {
-    return false;
-  }
-  if (row.topicId !== undefined && candidate.topicId !== row.topicId) {
-    return false;
-  }
-  if (row.difficulty !== undefined && candidate.difficulty !== row.difficulty) {
-    return false;
-  }
-  return true;
 }
 
 /**
@@ -444,12 +431,13 @@ export class ExamsService {
     let newQuestionId: string;
 
     if (dto.mode === "reroll") {
-      if (matching.length === 0) {
+      const picked = pickReplacementQuestion({ pool, row, excludedIds: usedIds, rng: this.rngFactory() });
+      if (!picked) {
         throw new ConflictException(
           `No alternative question available for row ${row.courseName}${row.topicName ? `/${row.topicName}` : ""}`,
         );
       }
-      newQuestionId = shuffleArray(matching, this.rngFactory())[0]!.id;
+      newQuestionId = picked;
     } else {
       const candidate = matching.find((c) => c.id === dto.replacementQuestionId);
       if (!candidate) {

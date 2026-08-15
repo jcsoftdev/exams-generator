@@ -11,6 +11,7 @@ import {
 } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
 import { SelectedQuestion, Version, buildVersions } from "./domain/version-shuffler";
+import { pickReplacementQuestion } from "./domain/pick-replacement-question";
 import { Rng, createSeededRng } from "./domain/ports/random.port";
 import {
   AnswerKeyDocumentInput,
@@ -61,6 +62,14 @@ const DEFAULT_EXTENSION = "png";
 // against a request that would otherwise synchronously compile N PDFs in
 // the request/response cycle with no queue behind it (audit P0).
 const MAX_VERSION_COUNT = 5;
+
+/**
+ * How many uncompilable questions one generation run will swap out before
+ * giving up. Bounded because each swap costs a full re-compile of every
+ * form: a bank section that is broken wholesale should surface as a loud
+ * failure a human looks at, not as an unbounded grind through it.
+ */
+const MAX_BROKEN_QUESTION_SWAPS = 3;
 
 function extensionForMime(mime: string | null): string {
   return (mime && MIME_EXTENSIONS[mime]) || DEFAULT_EXTENSION;
@@ -160,14 +169,128 @@ export class ExamVersionGenerationService {
     versionCount: number,
     onVersionCompleted?: (result: GeneratedVersionResult) => Promise<void>,
   ): Promise<GeneratedVersionResult[]> {
-    const exam = await this.prepareGeneration(user, examId, versionCount);
+    // Questions this run has already proven uncompilable. Carried across
+    // attempts so a swap can never pick one back up, and so the same broken
+    // question is only ever archived/counted once.
+    const brokenQuestionIds = new Set<string>();
+    // Form codes already reported through `onVersionCompleted`. A retry
+    // regenerates every form from scratch (`clearVersions` wipes the partial
+    // run first), so without this the job's `completed_count` would keep
+    // counting forms it had already counted and overshoot `versionCount`.
+    const reportedCodes = new Set<string>();
 
+    for (let attempt = 0; ; attempt++) {
+      const exam = await this.prepareGeneration(user, examId, versionCount);
+      try {
+        return await this.runGeneration(exam, versionCount, async (result) => {
+          if (reportedCodes.has(result.code)) {
+            return;
+          }
+          reportedCodes.add(result.code);
+          await onVersionCompleted?.(result);
+        });
+      } catch (error) {
+        if (
+          !(error instanceof ExamPdfGenerationError) ||
+          !error.questionId ||
+          attempt >= MAX_BROKEN_QUESTION_SWAPS ||
+          !(await this.swapBrokenQuestion(exam, error.questionId, brokenQuestionIds))
+        ) {
+          throw error;
+        }
+      }
+    }
+  }
+
+  /**
+   * Quarantines one uncompilable question and refills its slot from the same
+   * blueprint row, returning whether the exam is now worth retrying.
+   *
+   * The question is archived bank-wide BEFORE looking for a replacement, and
+   * regardless of whether one is found: a question that cannot be compiled is
+   * broken for every exam, not just this one, and leaving it `approved` is
+   * what turned a single bad row into a permanently unusable exam — the
+   * frozen `exam_questions` selection meant "Reintentar" re-picked it every
+   * single time.
+   */
+  private async swapBrokenQuestion(
+    exam: ExamForGenerationRecord,
+    brokenQuestionId: string,
+    brokenQuestionIds: Set<string>,
+  ): Promise<boolean> {
+    try {
+      return await this.trySwapBrokenQuestion(exam, brokenQuestionId, brokenQuestionIds);
+    } catch (error) {
+      // Recovery is best-effort by definition. If quarantining or refilling
+      // trips over anything, the caller must still surface the ORIGINAL
+      // "question X does not compile" — that names the actual problem, and
+      // is what the UI shows the teacher. Swallowing it in favour of a
+      // failure from the recovery attempt would lose that.
+      console.error(
+        `[exam-generation] could not swap uncompilable question ${brokenQuestionId} on exam ${exam.id}: ${
+          error instanceof Error ? error.message : String(error)
+        }`,
+      );
+      return false;
+    }
+  }
+
+  private async trySwapBrokenQuestion(
+    exam: ExamForGenerationRecord,
+    brokenQuestionId: string,
+    brokenQuestionIds: Set<string>,
+  ): Promise<boolean> {
+    if (!brokenQuestionIds.has(brokenQuestionId)) {
+      brokenQuestionIds.add(brokenQuestionId);
+      await this.repository.archiveQuestion(brokenQuestionId);
+    }
+
+    const examQuestion = await this.repository.findExamQuestion(exam.id, brokenQuestionId);
+    if (!examQuestion?.blueprintRowId) {
+      return false;
+    }
+
+    const rows = await this.repository.getBlueprintRows(exam.id);
+    const row = rows.find((candidate) => candidate.id === examQuestion.blueprintRowId);
+    if (!row) {
+      return false;
+    }
+
+    const examRecord = await this.repository.getExamById(exam.id, exam.tenantId);
+    if (!examRecord) {
+      return false;
+    }
+
+    const pool = await this.repository.getQuestionPool({
+      tenantId: exam.tenantId,
+      gradeLevel: examRecord.gradeLevel,
+    });
+    const usedIds = await this.repository.getSelectedQuestionIds(exam.id);
+    const replacement = pickReplacementQuestion({
+      pool,
+      row,
+      excludedIds: new Set([...usedIds, ...brokenQuestionIds]),
+      rng: this.rngFactory(),
+    });
+    if (!replacement) {
+      return false;
+    }
+
+    await this.repository.replaceQuestion(exam.id, brokenQuestionId, replacement);
+    return true;
+  }
+
+  private async runGeneration(
+    exam: ExamForGenerationRecord,
+    versionCount: number,
+    onVersionCompleted: (result: GeneratedVersionResult) => Promise<void>,
+  ): Promise<GeneratedVersionResult[]> {
     // B4-B idempotent regeneration: wipe any prior versions (DB rows first,
     // then best-effort delete their storage objects) BEFORE building new
     // ones, so a second `POST /versions` call never collides on the
     // `(examId, code)` unique index (B4-R5/R6). No-op on first-time
     // generation (B4-R7).
-    const deletedStorageKeys = await this.repository.clearVersions(examId);
+    const deletedStorageKeys = await this.repository.clearVersions(exam.id);
     for (const key of deletedStorageKeys) {
       try {
         await this.storage.delete(key);
@@ -231,7 +354,7 @@ export class ExamVersionGenerationService {
           logoPath,
         );
         results.push(result);
-        await onVersionCompleted?.(result);
+        await onVersionCompleted(result);
       }
       return results;
     } finally {

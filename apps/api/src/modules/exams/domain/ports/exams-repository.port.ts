@@ -256,6 +256,13 @@ export interface ExamsRepositoryPort {
   getSelectedQuestionIds(examId: string): Promise<string[]>;
   findExamQuestion(examId: string, questionId: string): Promise<ExamQuestionRecord | undefined>;
   replaceQuestion(examId: string, oldQuestionId: string, newQuestionId: string): Promise<void>;
+  /**
+   * Takes one question out of circulation bank-wide (`status='archived'`), so
+   * no future selection can pick it. Used when generation proves a question
+   * cannot be compiled at all — leaving it `approved` would let it break the
+   * next exam, and the one after that.
+   */
+  archiveQuestion(questionId: string): Promise<void>;
   confirmExam(examId: string): Promise<void>;
   getExamForGeneration(examId: string, tenantId: string): Promise<ExamForGenerationRecord | undefined>;
   getExamDetail(examId: string, tenantId: string): Promise<ExamDetailRecord | undefined>;

@@ -428,6 +428,17 @@ export class ExamsRepository implements ExamsRepositoryPort {
       .where(and(eq(examQuestions.examId, examId), eq(examQuestions.questionId, oldQuestionId)));
   }
 
+  /**
+   * Takes one question out of circulation bank-wide. `archived` is the only
+   * non-selectable terminal status the schema has (`getQuestionPool` filters
+   * on `approved`), so this is what quarantines a question that generation
+   * proved uncompilable — without it the same broken row keeps poisoning
+   * every future exam that happens to select it.
+   */
+  async archiveQuestion(questionId: string): Promise<void> {
+    await this.db.update(questions).set({ status: "archived" }).where(eq(questions.id, questionId));
+  }
+
   /** Moves an exam from `draft` to `ready` — no-op (0 rows) if it isn't currently `draft`. */
   async confirmExam(examId: string): Promise<void> {
     await this.db

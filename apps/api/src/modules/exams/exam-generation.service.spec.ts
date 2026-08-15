@@ -1,4 +1,4 @@
-import { Role } from "@exams-generator/shared";
+import { Difficulty, Role } from "@exams-generator/shared";
 import { BadRequestException, ConflictException, NotFoundException } from "@nestjs/common";
 import { InMemoryStorageAdapter } from "./adapters/storage/in-memory-storage.adapter";
 import { createSeededRng } from "./domain/ports/random.port";
@@ -81,6 +81,12 @@ function buildDeps() {
     confirmExam: jest.fn().mockResolvedValue(undefined),
     clearVersions: jest.fn().mockResolvedValue([]),
     getVersionAssetRecords: jest.fn(),
+    // The uncompilable-question swap path calls these. Left as "nothing to
+    // swap" by default (no blueprint row for the question) so the base
+    // fixture keeps the original fail-loudly behaviour; the swap tests
+    // override them with a bank that actually has a replacement.
+    archiveQuestion: jest.fn().mockResolvedValue(undefined),
+    findExamQuestion: jest.fn().mockResolvedValue(undefined),
   } as unknown as jest.Mocked<ExamsRepository>;
 
   const storage = new InMemoryStorageAdapter();
@@ -315,6 +321,115 @@ describe("ExamVersionGenerationService.generateVersions", () => {
       expect(structuredQuestion.alternativeImagePaths?.[indexOfSeven]).toMatch(/^\//);
       expect(structuredQuestion.alternativeImagePaths?.[indexOfSix]).toBeUndefined();
     }
+  });
+
+  describe("a question that does not compile", () => {
+    /**
+     * Wires the repository lookups the swap path needs: the failing question
+     * belongs to blueprint row `row-1`, and the bank holds one healthy
+     * candidate (`q9`) for that same row.
+     */
+    function wireSwappableBank(repository: jest.Mocked<ExamsRepository>) {
+      repository.createAsset.mockResolvedValue({ id: "asset-id" });
+      repository.findExamQuestion = jest.fn().mockResolvedValue({ questionId: "q2", blueprintRowId: "row-1" });
+      repository.getExamById = jest.fn().mockResolvedValue({ id: "exam-1", gradeLevel: "pre" });
+      repository.getBlueprintRows = jest
+        .fn()
+        .mockResolvedValue([{ id: "row-1", courseId: "course-1", courseName: "Aritmética", count: 2 }]);
+      repository.getQuestionPool = jest
+        .fn()
+        .mockResolvedValue([{ id: "q9", courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Medium }]);
+      repository.getSelectedQuestionIds = jest.fn().mockResolvedValue(["q1", "q2"]);
+      repository.replaceQuestion = jest.fn().mockResolvedValue(undefined);
+      repository.archiveQuestion = jest.fn().mockResolvedValue(undefined);
+    }
+
+    const HEALTHY_REPLACEMENT = {
+      questionId: "q9",
+      position: 1,
+      type: "image" as const,
+      correctAnswer: "a",
+      imageStorageKey: "bank/questions/q9",
+      imageMime: "image/png",
+      bodyTypst: null,
+      alternatives: null,
+      figureCode: null,
+    };
+
+    it("swaps it for another question from the same blueprint row instead of failing the whole job", async () => {
+      const { service, repository, storage, pdfCompiler } = buildDeps();
+      void storage.put("bank/questions/q9", Buffer.from("fake-png-9"), "image/png");
+      wireSwappableBank(repository);
+      repository.getExamForGeneration
+        .mockResolvedValueOnce(READY_EXAM)
+        .mockResolvedValue({
+          ...READY_EXAM,
+          selectedQuestions: [READY_EXAM.selectedQuestions[0]!, HEALTHY_REPLACEMENT],
+        });
+      jest
+        .spyOn(pdfCompiler, "compileExam")
+        .mockRejectedValueOnce(new TypstCompilationError("typst compile failed", "q2", "stderr contents"));
+
+      const results = await service.generateVersions(TEACHER, "exam-1", 1);
+
+      expect(results).toHaveLength(1);
+      expect(repository.replaceQuestion).toHaveBeenCalledWith("exam-1", "q2", "q9");
+    });
+
+    it("archives it so it stops breaking every other exam that selects it", async () => {
+      const { service, repository, storage, pdfCompiler } = buildDeps();
+      void storage.put("bank/questions/q9", Buffer.from("fake-png-9"), "image/png");
+      wireSwappableBank(repository);
+      repository.getExamForGeneration
+        .mockResolvedValueOnce(READY_EXAM)
+        .mockResolvedValue({
+          ...READY_EXAM,
+          selectedQuestions: [READY_EXAM.selectedQuestions[0]!, HEALTHY_REPLACEMENT],
+        });
+      jest
+        .spyOn(pdfCompiler, "compileExam")
+        .mockRejectedValueOnce(new TypstCompilationError("typst compile failed", "q2", "stderr contents"));
+
+      await service.generateVersions(TEACHER, "exam-1", 1);
+
+      expect(repository.archiveQuestion).toHaveBeenCalledWith("q2");
+    });
+
+    it("still fails loudly when the blueprint row has no healthy question left to swap in", async () => {
+      const { service, repository, pdfCompiler } = buildDeps();
+      wireSwappableBank(repository);
+      repository.getQuestionPool = jest.fn().mockResolvedValue([]);
+      repository.getExamForGeneration.mockResolvedValue(READY_EXAM);
+      jest
+        .spyOn(pdfCompiler, "compileExam")
+        .mockRejectedValue(new TypstCompilationError("typst compile failed", "q2", "stderr contents"));
+
+      const promise = service.generateVersions(TEACHER, "exam-1", 1);
+
+      await expect(promise).rejects.toBeInstanceOf(ExamPdfGenerationError);
+      await expect(promise).rejects.toMatchObject({ examId: "exam-1", questionId: "q2" });
+    });
+
+    it("gives up rather than swapping forever when replacements keep failing", async () => {
+      const { service, repository, storage, pdfCompiler } = buildDeps();
+      void storage.put("bank/questions/q9", Buffer.from("fake-png-9"), "image/png");
+      wireSwappableBank(repository);
+      repository.getQuestionPool = jest.fn().mockResolvedValue(
+        Array.from({ length: 20 }, (_unused, index) => ({
+          id: `q-bad-${index}`,
+          courseId: "course-1",
+          topicId: "topic-1",
+          difficulty: Difficulty.Medium,
+        })),
+      );
+      repository.getExamForGeneration.mockResolvedValue(READY_EXAM);
+      const compileExam = jest
+        .spyOn(pdfCompiler, "compileExam")
+        .mockRejectedValue(new TypstCompilationError("typst compile failed", "q2", "stderr contents"));
+
+      await expect(service.generateVersions(TEACHER, "exam-1", 1)).rejects.toBeInstanceOf(ExamPdfGenerationError);
+      expect(compileExam.mock.calls.length).toBeLessThanOrEqual(5);
+    });
   });
 
   it("wraps TypstCompilationError into ExamPdfGenerationError, surfacing the failing question id", async () => {
