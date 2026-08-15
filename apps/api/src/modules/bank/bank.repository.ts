@@ -1,6 +1,6 @@
 import { Inject, Injectable } from "@nestjs/common";
 import { Difficulty } from "@exams-generator/shared";
-import { and, count, eq, isNull, or, SQL } from "drizzle-orm";
+import { and, count, desc, eq, isNull, or, SQL } from "drizzle-orm";
 import { Database, DRIZZLE_DB } from "../../db/client";
 import { assets, courses, questionAlternativeImages, questions, subtopics, topics } from "../../db/schema";
 import { QuestionStatus } from "../../db/schema/enums";
@@ -204,8 +204,23 @@ export class BankRepository implements BankRepositoryPort {
       figureCode: questions.figureCode,
     };
 
+    // Newest first, with `id` breaking ties. Both halves are load-bearing.
+    // LIMIT/OFFSET over an UNORDERED scan lets Postgres return rows in
+    // whatever physical order the heap is in, so the same row can appear on
+    // two pages while another appears on none — and because the default
+    // window is only the first 100 of a 64k bank, a question a teacher just
+    // uploaded was simply never in it. `createdAt` alone is not enough
+    // either: the collected bank is seeded in bulk, so thousands of rows
+    // share a timestamp and ties would still shuffle between calls.
+    const order = [desc(questions.createdAt), desc(questions.id)];
+
     if (!pagination) {
-      return this.db.select(selection).from(questions).innerJoin(topics, eq(questions.topicId, topics.id)).where(where);
+      return this.db
+        .select(selection)
+        .from(questions)
+        .innerJoin(topics, eq(questions.topicId, topics.id))
+        .where(where)
+        .orderBy(...order);
     }
 
     const [{ value: total }] = await this.db
@@ -219,6 +234,7 @@ export class BankRepository implements BankRepositoryPort {
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
       .where(where)
+      .orderBy(...order)
       .limit(pagination.pageSize)
       .offset((pagination.page - 1) * pagination.pageSize);
 

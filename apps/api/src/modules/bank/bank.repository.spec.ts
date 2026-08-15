@@ -548,6 +548,119 @@ describe("BankRepository", () => {
     });
   });
 
+  describe("listQuestions() ordering", () => {
+    /**
+     * Without an explicit ORDER BY, `LIMIT/OFFSET` runs over an unordered
+     * scan: Postgres is free to return rows in whatever physical order the
+     * heap happens to be in, which changes after any bulk UPDATE or VACUUM.
+     * Two consequences, both observed against the real 64k bank — a
+     * just-created question never appeared in the first page, and the same
+     * row could be returned on two different pages while another was never
+     * returned at all.
+     */
+    it("returns the newest question first", async () => {
+      const older = await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
+      const newer = await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
+
+      const results = await repository.listQuestions({ currentTenantId: null, topicId });
+      const ids = results.map((q) => q.id);
+
+      expect(ids.indexOf(newer)).toBeLessThan(ids.indexOf(older));
+    });
+
+    it("paginates without ever repeating or dropping a row", async () => {
+      for (let i = 0; i < 5; i++) {
+        await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
+      }
+
+      const firstPage = await repository.listQuestions({ currentTenantId: null, topicId }, { page: 1, pageSize: 3 });
+      const secondPage = await repository.listQuestions({ currentTenantId: null, topicId }, { page: 2, pageSize: 3 });
+
+      const firstIds = firstPage.items.map((q) => q.id);
+      const secondIds = secondPage.items.map((q) => q.id);
+      const seen = [...firstIds, ...secondIds];
+
+      expect(new Set(seen).size).toBe(seen.length);
+      expect(firstIds).toHaveLength(3);
+    });
+
+    it("keeps the same page stable across identical calls", async () => {
+      await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
+
+      const once = await repository.listQuestions({ currentTenantId: null, topicId }, { page: 1, pageSize: 4 });
+      const twice = await repository.listQuestions({ currentTenantId: null, topicId }, { page: 1, pageSize: 4 });
+
+      expect(once.items.map((q) => q.id)).toEqual(twice.items.map((q) => q.id));
+    });
+  });
+
+  describe("countByCourseAndTopic() — lazy tree summary", () => {
+    /**
+     * Every assertion here scopes the filter to THIS file's own `courseId`
+     * (created with a random suffix in `beforeAll`), so the aggregate is
+     * immune to central rows other spec files insert concurrently into the
+     * shared dev Postgres — unlike `countByDifficultyAndStatus` below, which
+     * has no course dimension to isolate on and has to compare deltas
+     * against a control tenant.
+     */
+    async function totalForTopic(
+      currentTenantId: string | null,
+      wantedTopicId: string,
+      extra: { difficulty?: Difficulty; gradeLevel?: string } = {},
+    ): Promise<number> {
+      const rows = await repository.countByCourseAndTopic({ currentTenantId, courseId, ...extra });
+      return rows.find((row) => row.topicId === wantedTopicId)?.total ?? 0;
+    }
+
+    it("returns one {courseId, topicId, total} bucket per topic that has questions", async () => {
+      const before = await totalForTopic(null, topicId);
+      await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
+      await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
+
+      const rows = await repository.countByCourseAndTopic({ currentTenantId: null, courseId });
+      const bucket = rows.find((row) => row.topicId === topicId);
+
+      expect(bucket).toEqual({ courseId, topicId, total: before + 2 });
+    });
+
+    it("applies the SAME filters as listQuestions (difficulty/gradeLevel) so the tree counts match what expanding a topic returns", async () => {
+      const before = await totalForTopic(null, topicId, {
+        difficulty: Difficulty.Hard,
+        gradeLevel: "secundaria_5",
+      });
+      await createQuestion({
+        tenantId: null,
+        createdBy: centralUserId,
+        topicId,
+        difficulty: Difficulty.Hard,
+        gradeLevel: "secundaria_5",
+      });
+      await createQuestion({
+        tenantId: null,
+        createdBy: centralUserId,
+        topicId,
+        difficulty: Difficulty.Easy,
+        gradeLevel: "secundaria_5",
+      });
+
+      const after = await totalForTopic(null, topicId, {
+        difficulty: Difficulty.Hard,
+        gradeLevel: "secundaria_5",
+      });
+
+      expect(after).toBe(before + 1);
+    });
+
+    it("NEVER counts another tenant's private questions (same visibility rule as listQuestions)", async () => {
+      const before = await totalForTopic(tenantAId, otherTopicId);
+      await createQuestion({ tenantId: tenantBId, createdBy: tenantBUserId, topicId: otherTopicId });
+
+      const after = await totalForTopic(tenantAId, otherTopicId);
+
+      expect(after).toBe(before);
+    });
+  });
+
   describe("countByDifficultyAndStatus() — dashboard aggregate", () => {
     // Every assertion below is DIFFERENTIAL: the delta of the tenant under
     // test is compared against the delta of a CONTROL tenant this file never
