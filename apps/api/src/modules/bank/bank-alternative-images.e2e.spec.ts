@@ -118,6 +118,12 @@ describe("Bank module — set structured question alternative images (e2e)", () 
       await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
     }
     await db.delete(users).where(inArray(users.id, [tenantATeacherId, tenantBTeacherId]));
+    // Every asset these tenants own, not just the ones reached through
+    // `question_alternative_images` above: the image questions this file
+    // uploads each carry their own `image_asset_id`, and `assets.tenant_id`
+    // has an FK to `tenants`, so leaving them behind made the tenant delete
+    // below fail and took the whole suite down in teardown.
+    await db.delete(assets).where(inArray(assets.tenantId, [tenantAId, tenantBId]));
     await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]));
     await db.delete(topics).where(inArray(topics.id, [topicId]));
     await db.delete(courses).where(inArray(courses.id, [courseId]));

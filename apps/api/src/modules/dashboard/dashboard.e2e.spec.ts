@@ -10,6 +10,7 @@ import { runMigrations } from "../../db/migrate";
 import { assets, courses, questions, tenants, topics, users } from "../../db/schema";
 import { TokenService } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
+import { hashBodyTypst } from "../bank/domain/hash-body-typst";
 import { ExamsRepository } from "../exams/exams.repository";
 
 describe("GET /dashboard/stats (e2e)", () => {
@@ -107,6 +108,7 @@ describe("GET /dashboard/stats (e2e)", () => {
       difficulty: Difficulty.Hard,
       gradeLevel: "primaria_1",
       bodyTypst: "$x = 1$",
+      bodyHash: hashBodyTypst("$x = 1$"),
       alternatives: ["1", "2"],
       correctAnswer: "0",
       figureCode: undefined,
