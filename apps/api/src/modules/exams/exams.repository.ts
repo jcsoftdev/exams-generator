@@ -12,6 +12,7 @@ import {
   examQuestions,
   exams,
   examTypes,
+  examVersionJobs,
   examVersions,
   questionAlternativeImages,
   questions,
@@ -706,6 +707,12 @@ export class ExamsRepository implements ExamsRepositoryPort {
         .where(and(eq(exams.id, examId), eq(exams.tenantId, tenantId)));
       if (!existing) return false;
 
+      // Four tables carry an FK to `exams`; every one has to go first.
+      // `exam_version_jobs` was the one missing, and its row is written at
+      // ENQUEUE time — so any exam whose generation had ever been requested,
+      // including one whose generation failed, could not be deleted at all
+      // (audit 2026-08-15).
+      await tx.delete(examVersionJobs).where(eq(examVersionJobs.examId, examId));
       await tx.delete(examVersions).where(eq(examVersions.examId, examId));
       await tx.delete(examQuestions).where(eq(examQuestions.examId, examId));
       await tx.delete(examBlueprintRows).where(eq(examBlueprintRows.examId, examId));

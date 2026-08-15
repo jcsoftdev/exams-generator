@@ -13,6 +13,7 @@ import {
   examQuestions,
   exams,
   examTypes,
+  examVersionJobs,
   examVersions,
   questions,
   syllabusWeekMaps,
@@ -744,6 +745,40 @@ describe("ExamsRepository", () => {
       const deletedKeys = await repository.clearVersions(examId);
 
       expect(deletedKeys).toEqual([]);
+    });
+  });
+
+  /**
+   * `exams` is referenced by FOUR tables, and `deleteExam` only cleared
+   * three of them. Any exam whose generation had ever been REQUESTED — the
+   * job row is written at enqueue time, so this includes every exam whose
+   * generation failed — hit `exam_version_jobs_exam_id_exams_id_fk` and
+   * surfaced as a bare 500 from `DELETE /exams/:examId` (audit 2026-08-15).
+   */
+  describe("deleteExam() — every table that references exams", () => {
+    it("deletes an exam that has a version job", async () => {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Exam with a generation job",
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      await db.insert(examVersionJobs).values({
+        tenantId: tenantAId,
+        examId,
+        createdBy: tenantAUserId,
+        createdByRole: Role.Teacher,
+        versionCount: 2,
+      });
+
+      const deleted = await repository.deleteExam(examId, tenantAId);
+
+      expect(deleted).toBe(true);
+      const remainingJobs = await db.select().from(examVersionJobs).where(eq(examVersionJobs.examId, examId));
+      expect(remainingJobs).toHaveLength(0);
+      const remainingExams = await db.select().from(exams).where(eq(exams.id, examId));
+      expect(remainingExams).toHaveLength(0);
     });
   });
 
