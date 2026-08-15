@@ -346,8 +346,42 @@ describe("renderAnswerKeyTypst", () => {
 
     const source = renderAnswerKeyTypst(input);
 
-    expect(source).toContain("[q1]");
     expect(source).toContain("[B]");
+  });
+
+  it("prints the question's position, not its id — the id is unusable for hand grading", () => {
+    const input: AnswerKeyDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      entries: [
+        { questionId: "324a9515-febf-4f76-9309-c8e680904dd9", correctOption: "C" },
+        { questionId: "f9969f3c-e77e-4ee2-872b-7709c64d1060", correctOption: "B" },
+      ],
+    };
+
+    const source = renderAnswerKeyTypst(input);
+
+    expect(source).toContain("[1], [C],");
+    expect(source).toContain("[2], [B],");
+    expect(source).not.toContain("[324a9515-febf-4f76-9309-c8e680904dd9]");
+  });
+
+  it("numbers from the entry order so each form gets its own shuffled numbering", () => {
+    const input: AnswerKeyDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version B",
+      entries: [
+        { questionId: "q9", correctOption: "A" },
+        { questionId: "q4", correctOption: "E" },
+        { questionId: "q7", correctOption: "D" },
+      ],
+    };
+
+    const source = renderAnswerKeyTypst(input);
+
+    expect(source).toContain("[1], [A],");
+    expect(source).toContain("[2], [E],");
+    expect(source).toContain("[3], [D],");
   });
 
   it("is a separate document from the exam (does not embed question images)", () => {

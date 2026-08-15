@@ -77,10 +77,15 @@ ${alternativesBlock}`;
 }
 
 export function renderAnswerKeyTypst(input: AnswerKeyDocumentInput): string {
+  // The printed cell is the question's POSITION in this form, matching the
+  // `*N.*` numbering `renderStructuredQuestionBlock` prints on the exam — a
+  // teacher grades against "14 -> C", and cannot do anything with a uuid.
+  // The id stays in the `// q:` marker, which is what `typst-error-mapper.ts`
+  // reads and is invisible in the rendered PDF.
   const rows = input.entries
     .map(
-      (entry) =>
-        `// q:${entry.questionId}\n  [${entry.questionId}], [${entry.correctOption}],`,
+      (entry, index) =>
+        `// q:${entry.questionId}\n  [${index + 1}], [${entry.correctOption}],`,
     )
     .join("\n");
 
