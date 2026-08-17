@@ -917,6 +917,126 @@ describe("ExamsRepository", () => {
     });
   });
 
+  /**
+   * Audit 2026-08-15: el dropdown "Grado" ofrece los 12 niveles del catálogo y
+   * 11 llevan a un callejón sin salida ("No hay preguntas aprobadas para este
+   * grado todavía") — el banco sembrado es 100% `pre`. El frontend no tenía
+   * forma de saberlo ANTES de que el docente eligiera, porque no existía un
+   * conteo por grado.
+   */
+  describe("countApprovedByGradeLevel() — stock por grado (para no ofrecer callejones sin salida)", () => {
+    /**
+     * Assertions are DELTAS, not absolutes: this aggregate spans the whole
+     * tenant-visible bank, and the local Postgres carries the seeded bank plus
+     * whatever sibling specs left behind. Same before/after convention the
+     * dashboard's `countByStatus` tests already use.
+     */
+    async function availableFor(tenantId: string, gradeLevel: string): Promise<number> {
+      const counts = await repository.countApprovedByGradeLevel(tenantId);
+      return counts.find((row) => row.gradeLevel === gradeLevel)?.available ?? 0;
+    }
+
+    it("counts only APPROVED questions, grouped by grade level", async () => {
+      const { topicId: freshTopicId } = await createCourseAndTopic();
+      const before = await availableFor(tenantAId, "secundaria_4");
+
+      await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        topicId: freshTopicId,
+        gradeLevel: "secundaria_4",
+      });
+      await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        topicId: freshTopicId,
+        gradeLevel: "secundaria_4",
+      });
+      // A draft must NOT move the number — the builder offers grades by what
+      // an exam could actually select from.
+      await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        topicId: freshTopicId,
+        gradeLevel: "secundaria_4",
+        status: "draft",
+      });
+
+      expect(await availableFor(tenantAId, "secundaria_4")).toBe(before + 2);
+    });
+
+    it("applies the SAME visibility rule as the question pool — global questions count, another tenant's never do", async () => {
+      const { topicId: freshTopicId } = await createCourseAndTopic();
+      const before = await availableFor(tenantAId, "primaria_3");
+
+      await createQuestion({
+        tenantId: null,
+        createdBy: staffUserId,
+        topicId: freshTopicId,
+        gradeLevel: "primaria_3",
+      });
+      await createQuestion({
+        tenantId: tenantBId,
+        createdBy: tenantBUserId,
+        topicId: freshTopicId,
+        gradeLevel: "primaria_3",
+      });
+
+      // +1, not +2: the global (tenant_id NULL) one is visible to A, tenant B's is not.
+      expect(await availableFor(tenantAId, "primaria_3")).toBe(before + 1);
+    });
+
+    it("omits grade levels with nothing available (the caller treats a missing row as 0)", async () => {
+      const counts = await repository.countApprovedByGradeLevel(tenantAId);
+
+      expect(counts.every((row) => row.available > 0)).toBe(true);
+    });
+  });
+
+  /**
+   * Audit 2026-08-15: el título se autogenera ("Examen {grado} — {fecha}") y no
+   * existía forma de cambiarlo después, así que dos exámenes del mismo día y
+   * grado quedaban con nombres idénticos en una lista que se busca por título
+   * — y duplicar apilaba "Copia de Copia de".
+   */
+  describe("renameExam() — S4 rename", () => {
+    it("renames the exam and reports it changed", async () => {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Nombre viejo",
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+
+      const renamed = await repository.renameExam(examId, tenantAId, "Simulacro de marzo");
+
+      expect(renamed).toBe(true);
+      expect((await repository.getExamById(examId, tenantAId))?.title).toBe("Simulacro de marzo");
+    });
+
+    it("never renames another tenant's exam — returns false and leaves the row untouched", async () => {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Intocable",
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+
+      const renamed = await repository.renameExam(examId, tenantBId, "Robado");
+
+      expect(renamed).toBe(false);
+      expect((await repository.getExamById(examId, tenantAId))?.title).toBe("Intocable");
+    });
+
+    it("returns false for an exam that does not exist", async () => {
+      expect(await repository.renameExam(randomUUID(), tenantAId, "Fantasma")).toBe(false);
+    });
+  });
+
   describe("getVersions() — B4 versions-history read", () => {
     it("returns {code, pdfUrl, answerSheetUrl}[] ordered by code ASC, using /assets/:id paths (DECISION B4-A/C)", async () => {
       const { id: examId } = await repository.createExam({

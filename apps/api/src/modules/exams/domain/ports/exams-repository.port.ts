@@ -65,6 +65,16 @@ export interface ExamRecord {
   readonly createdBy: string;
 }
 
+/**
+ * One grade level's approved-question count (`GET /exams/stock/grades`). Only
+ * grades with `available > 0` are returned — see
+ * `countApprovedByGradeLevel`.
+ */
+export interface GradeLevelStockRecord {
+  readonly gradeLevel: string;
+  readonly available: number;
+}
+
 /** `GET /exams` (S1) list filters — `page`/`pageSize` are always resolved (defaulted/clamped) by the controller before reaching the repository. */
 export interface ExamListFilters {
   readonly status?: "draft" | "ready";
@@ -256,6 +266,8 @@ export interface ExamsRepositoryPort {
   getBlueprintRows(examId: string): Promise<BlueprintRowRecord[]>;
   getQuestionPool(filter: QuestionPoolFilter): Promise<QuestionPoolCandidateRecord[]>;
   countStock(filter: QuestionPoolFilter, cells: readonly StockCellFilter[]): Promise<number[]>;
+  countApprovedByGradeLevel(tenantId: string): Promise<GradeLevelStockRecord[]>;
+  renameExam(examId: string, tenantId: string, title: string): Promise<boolean>;
   saveSelection(examId: string, selections: readonly SaveSelectionEntry[]): Promise<void>;
   getSelectedQuestionIds(examId: string): Promise<string[]>;
   findExamQuestion(examId: string, questionId: string): Promise<ExamQuestionRecord | undefined>;

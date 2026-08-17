@@ -8,6 +8,7 @@ import {
   HttpCode,
   HttpStatus,
   Param,
+  Patch,
   Post,
   Query,
   Res,
@@ -41,6 +42,7 @@ import {
   ReplaceQuestionDto,
   ReplaceQuestionResult,
   ResolveExamBlueprintResult,
+  GradeLevelStockResult,
   StockBatchDto,
   StockBatchResult,
 } from "./exams.service";
@@ -67,6 +69,10 @@ interface ResolveExamBlueprintBody {
   readonly trackId?: string;
   readonly selectedCourseIds?: readonly string[];
   readonly totalQuestionsOverride?: number;
+}
+
+interface RenameExamBody {
+  readonly title?: string;
 }
 
 interface ReplaceQuestionBody {
@@ -134,6 +140,18 @@ export class ExamsController {
     return this.examsService.countStock(user, body as StockBatchDto);
   }
 
+  /**
+   * `GET /exams/stock/grades` — approved-question count per grade level, so
+   * the builder can flag the grades that have no bank BEFORE the teacher picks
+   * one (audit 2026-08-15: 11 of the 12 catalog grades dead-ended). Declared
+   * above `@Get(":examId")` for the same reason `@Get()` is — otherwise the
+   * param route swallows the literal path.
+   */
+  @Get("stock/grades")
+  async countStockByGradeLevel(@CurrentUser() user: AuthTokenPayload): Promise<GradeLevelStockResult> {
+    return this.examsService.countStockByGradeLevel(user);
+  }
+
   /** `POST /exams/preview` (B2) — same body shape as `POST /exams` minus `title`; pure read, no persistence (200 not 201). */
   @Post("preview")
   @HttpCode(HttpStatus.OK)
@@ -194,6 +212,19 @@ export class ExamsController {
       search,
       ...clampPagination(page, pageSize),
     });
+  }
+
+  /**
+   * `PATCH /exams/:examId` (S4) — rename. The only mutable field: everything
+   * else about an exam is either derived or immutable once selected.
+   */
+  @Patch(":examId")
+  async renameExam(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("examId") examId: string,
+    @Body() body: RenameExamBody,
+  ): Promise<{ id: string; title: string }> {
+    return this.examsService.renameExam(user, examId, body.title ?? "");
   }
 
   @Get(":examId")
