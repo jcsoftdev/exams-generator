@@ -1,7 +1,7 @@
 <!-- project-brain:start -->
 # Project: exams-generator
 
-This project is indexed with project-brain.
+This project is indexed with [project-brain](https://github.com/jcsoftdev/project-brain).
 
 ## project-brain MCP
 
@@ -44,10 +44,12 @@ You have access to the `project-brain` MCP server for codebase knowledge retriev
 
 Call `search_context` first for fuzzy/conceptual questions → it returns ranked snippets with a `chunk_id`; call `expand_context(chunk_id)` for full bodies instead of re-reading whole files. For exact symbols, callers/callees, and blast radius use the structural tools above — they are faster and more precise than `search_context`.
 
+When answering questions about this codebase, run `search_context` first to find semantically relevant context before reading files directly — and reach for the structural tools when you know the exact symbol, caller, or want the impact of a change.
+
 ### Project Context
 
 - **Project ID**: exams-generator
-- **Stack**: TypeScript, JavaScript — frameworks: Angular, NestJS — package manager: pnpm
+- **Stack**: TypeScript, JavaScript — frameworks: Astro, Angular, Express, NestJS — package manager: pnpm
 
 ## Module Documentation
 
@@ -64,4 +66,6 @@ For each module stub in docs/modules/:
    tags: ["module", "<name>"].
 Do this automatically when you open a project session and a stub is unfilled.
 
+
 <!-- project-brain:end -->
+

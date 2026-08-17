@@ -2,6 +2,9 @@
 
 > Generada 2026-07-24. Tres auditorías paralelas: web (Angular), API (NestJS), landing (Astro).
 > Prioridades: **P0** = vergonzoso/roto/seguridad · **P1** = claramente no profesional o frágil · **P2** = pulido.
+>
+> **Estado: cerrada.** Los `[ ]` que quedan son diferidos razonados, no pendientes de trabajo.
+> La auditoría vigente es [`docs/audit-2026-08-14.md`](./audit-2026-08-14.md).
 
 ---
 

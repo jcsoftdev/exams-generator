@@ -116,7 +116,7 @@ infra/
    - Cuerpo a **dos columnas**: preguntas numeradas; imágenes insertadas tal cual (escaladas al ancho de columna); estructuradas renderizadas con matemáticas y figuras.
    - Documento aparte: **hoja de claves** de esa versión (tabla número → letra).
 4. Compila con `typst compile` (workspace temporal con imágenes descargadas), sube ambos PDFs a MinIO, entrega URLs de descarga.
-5. Compilación síncrona en el MVP (Typst compila en ms–s). Si un examen con muchas imágenes tarda, se migra a cola (BullMQ) — decisión pospuesta a evidencia real.
+5. ~~Compilación síncrona en el MVP (Typst compila en ms–s). Si un examen con muchas imágenes tarda, se migra a cola (BullMQ) — decisión pospuesta a evidencia real.~~ **SUPERSEDIDO**: la migración a cola ya se hizo (no quedó pospuesta). `POST /exams/:id/versions` encola en BullMQ (cola `exam-versions`, tabla `exam_version_jobs` — migración `0014_lively_umar.sql`) y responde `202` con el job; `ExamVersionJobsProcessor` compila en el worker y el progreso se sigue por SSE (`GET /exams/:id/versions/jobs/:jobId/stream`). Detalle de diseño y motivo del cambio: `docs/audit-todo.md`, ítem P0 "Generación de PDFs síncrona y sin tope de `versionCount`".
 
 ## 6. Stack (decidido)
 
@@ -134,7 +134,7 @@ infra/
 
 ## 7. Manejo de Errores
 
-- **IA devuelve JSON inválido**: reintento 1 vez con el error en el prompt; si falla, se descarta y reporta. Nunca se guarda sin validar contra schema.
+- **IA devuelve JSON inválido**: se descarta y reporta de inmediato, sin reintento — ver `apps/api/src/modules/ai/generate-questions.service.ts:19-28,63-71`. El único reintento que existe en este flujo es sobre fallo de *compilación Typst* (`MAX_COMPILE_ATTEMPTS = 2`): recompilar es determinístico y barato porque el prompt no cambia (salvo que se le adjunte el `stderr` del compilador). Reintentar un JSON inválido, en cambio, vuelve a llamar al modelo con las mismas probabilidades de fallar — quema presupuesto de la API por el mismo resultado esperado, así que el código falla el ítem al toque en vez de re-promptear a ciegas.
 - **Marcado Typst inválido en pregunta**: la vista previa compila ANTES de guardar; error de compilación bloquea el guardado con mensaje.
 - **Stock insuficiente para blueprint**: error por fila ("Aritmética/media: pides 5, hay 3") antes de generar nada.
 - **Compilación de examen falla**: se reporta la pregunta culpable (compilación incremental por pregunta en la vista previa reduce este riesgo a casi cero).
@@ -158,7 +158,7 @@ Auth + tenants + roles · banco de preguntas-imagen (carga, taxonomía, filtros)
 Preguntas estructuradas (editor con vista previa Typst) · generación IA con revisión de borradores · figuras CeTZ.
 
 **Fase 3 — Según demanda real**
-Cola de compilación · estadísticas de uso del banco · export a Word · OMR (lectura de fichas ópticas) · facturación.
+~~Cola de compilación~~ **SUPERSEDIDO** (ver §5.4.5 — ya implementada, no es trabajo futuro) · estadísticas de uso del banco · export a Word · OMR (lectura de fichas ópticas) · facturación.
 
 La Fase 1 NO incluye IA a propósito: el valor central (banco → examen barajado en PDF) se valida sin gastar en integración IA.
 
