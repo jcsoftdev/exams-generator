@@ -72,6 +72,14 @@ describe("seed idempotency", () => {
     // 2.5s in isolation, but non-e2e's default 5s budget (jest.config.js) is
     // tight once other spec files hit the same Postgres concurrently. Scoped
     // to this one test so a genuinely hung test elsewhere still fails fast.
-    20_000,
+    // 90s, not 20s: this spec's budget was calibrated against a warm dev
+    // database, where both `seed()` calls are almost entirely
+    // `onConflictDoNothing` no-ops (~5s each). On a FRESH database — CI, or a
+    // newly created local one — the first call actually ingests the collected
+    // bank: 64,158 rows, measured at ~10s locally and slower on CI hardware.
+    // The point of this test is "twice doesn't duplicate or throw", not "is
+    // fast", and 90s still fails a genuine hang (audit 2026-08-17: this was the
+    // second thing keeping CI red).
+    90_000,
   );
 });

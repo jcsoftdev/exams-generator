@@ -178,6 +178,18 @@ jobs:
       # Same story for MinioStorageAdapter (also non-e2e, also self-guards
       # via `describe.skip` when MinIO is unreachable) — no MinIO service
       # is started in this job either, so that suite skips too.
+      # Migrations create the catalog TABLES; they do not fill them. The suites
+      # insert questions/topics, which FK into `grade_levels` (and exams into
+      # `exam_types`), so on a virgin Postgres every one of those inserts fails
+      # with `questions_grade_level_grade_levels_code_fk` — CI was red for
+      # exactly this on 2026-08-17 while every dev machine passed, because a dev
+      # DB was seeded months ago. `db:seed:catalogs` is the cheap half of the
+      # seeder (4 catalog tables, no question ingest); it is idempotent, so
+      # re-running it costs nothing.
+      - name: Prepare the test database (schema + FK-target catalogs)
+        working-directory: apps/api
+        run: pnpm run db:migrate && pnpm run db:seed:catalogs
+
       - name: Run non-e2e + db-serial suites
         working-directory: apps/api
         run: |

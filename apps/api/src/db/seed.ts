@@ -1271,12 +1271,32 @@ const BANK_SAMPLE_ADMIN = {
  * `onConflictDoNothing`, so running this twice (or a hundred times) never
  * creates duplicates and never throws.
  */
-export async function seed(): Promise<void> {
+/**
+ * The FK-target catalogs, and nothing else: `grade_levels`, `exam_types`,
+ * `universities`, `tracks`. Split out of `seed()` because a test database needs
+ * exactly this much and nothing more.
+ *
+ * Migrations create the tables; they do NOT fill a seeded catalog. So on a
+ * fresh database every `questions` insert fails with
+ * `questions_grade_level_grade_levels_code_fk` — which is precisely how CI
+ * broke on 2026-08-17: it ran the suites against a virgin Postgres, while a dev
+ * machine passes because its DB was seeded months ago. Running the FULL `seed()`
+ * there is not an option: it also ingests 276 collected-question files (~64k
+ * rows).
+ *
+ * Idempotent like every other seeder here (`onConflictDoNothing` throughout),
+ * so calling it before each CI run is free.
+ */
+export async function seedCatalogs(): Promise<void> {
   await seedGradeLevels();
   await seedExamTypes();
   await seedUniversities();
   await seedTracks("uncp", UNCP_TRACKS);
   await seedTracks("uni", UNI_TRACKS);
+}
+
+export async function seed(): Promise<void> {
+  await seedCatalogs();
   const tenantId = await seedDemoTenant();
   await seedDemoAdmin(tenantId);
   await seedBankSampleAdmin();

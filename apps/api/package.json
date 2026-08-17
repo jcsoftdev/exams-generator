@@ -12,6 +12,7 @@
     "lint": "eslint .",
     "db:generate": "drizzle-kit generate --schema=./src/db/schema/index.ts --dialect=postgresql --out=./drizzle",
     "db:migrate": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/db/migrate.ts",
+    "db:seed:catalogs": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/db/seed-catalogs.ts",
     "db:seed": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/db/seed.ts",
     "db:seed:bank-sample": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/seed-bank-sample.ts",
     "db:purge-test-taxonomy": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/purge-test-taxonomy.ts",
