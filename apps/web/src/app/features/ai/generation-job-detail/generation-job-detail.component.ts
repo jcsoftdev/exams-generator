@@ -3,6 +3,8 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { DatePipe } from '@angular/common';
+import { forkJoin, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { ProgressComponent } from '../../../ui/progress/progress.component';
 import { BannerComponent } from '../../../ui/banner/banner.component';
@@ -36,13 +38,32 @@ const STATUS_LABEL: Record<GenerationJob['status'], string> = {
 };
 
 /**
+ * Screen-reader progress announcements (audit P2 — a11y): a batch job can run
+ * for a while with nothing pushed to assistive tech except silent DOM
+ * updates. Announcing every SSE frame would turn the live region into a
+ * machine gun (createdCount can tick once per question), so this only fires
+ * on genuine milestones: the very first frame (start OR an already-terminal
+ * reload), a quarter of the batch completing, and the terminal state. See
+ * `updateAnnouncement()`.
+ */
+const PROGRESS_QUARTILES = 4;
+
+/**
  * Live view of ONE generation job (design doc §6) — reachable directly by
  * URL, so refreshing or returning later always shows current server state.
  * Subscribes to `AiService.streamGenerationJob()` — a server-pushed SSE
  * stream, not a client interval — so job progress arrives the moment the
  * backend writes it, with no polling anywhere in the request path. Question
- * cards render via the same `listDrafts()`-diff-by-id technique
- * `AiGenerateComponent` used to use inline, now driven by each pushed frame.
+ * cards render via a direct-by-id diff, driven by each pushed frame: for
+ * every id in `job.createdQuestionIds` not already shown, one
+ * `AiService.getDraft(id)` (`GET /bank/questions/:id`) — NOT
+ * `listDrafts()`'s flat unpaginated array, which this screen used to
+ * download in full just to pick a handful of ids out of it
+ * (docs/audit-2026-08-14.md, "`GET /bank/questions` sin `page` sigue sin
+ * tope"). The sidebar draft-count badge is kept in sync via
+ * `DraftCountService.refresh()` (a real `countDrafts()` round-trip) instead
+ * of a locally-derived length, since this screen no longer has the whole
+ * queue in hand to count.
  *
  * `jobId` is read REACTIVELY from `route.paramMap` (never `route.snapshot`)
  * because `retry()` navigates to this exact same route with a different
@@ -84,6 +105,9 @@ export class GenerationJobDetailComponent {
   protected readonly previewUrls = signal<ReadonlyMap<string, SafeResourceUrl>>(new Map());
   protected readonly previewFailedIds = signal<ReadonlySet<string>>(new Set());
   protected readonly chain = signal<readonly GenerationJob[]>([]);
+  protected readonly progressAnnouncement = signal('');
+  private hasAnnouncedStart = false;
+  private lastAnnouncedMilestone = 0;
 
   protected readonly isTerminal = computed(() => {
     const status = this.job()?.status;
@@ -127,6 +151,7 @@ export class GenerationJobDetailComponent {
             this.job.set(job);
             this.loadError.set(null);
             this.loadNewQuestions(job.createdQuestionIds);
+            this.updateAnnouncement(job);
           },
           error: () => this.loadError.set('No se pudo cargar el estado de la generación.'),
         });
@@ -152,6 +177,46 @@ export class GenerationJobDetailComponent {
     this.chain.set([]);
     this.loadedQuestionIds.clear();
     this.revokeObjectUrls();
+    this.progressAnnouncement.set('');
+    this.hasAnnouncedStart = false;
+    this.lastAnnouncedMilestone = 0;
+  }
+
+  /**
+   * Fires the sr-only live-region text for exactly the milestones worth
+   * interrupting a screen reader for — see the `PROGRESS_QUARTILES` comment
+   * above. A terminal status always wins, even on the first frame (a page
+   * reload of an already-finished job must not say "Generando…").
+   */
+  private updateAnnouncement(job: GenerationJob): void {
+    if (TERMINAL_STATUSES.includes(job.status)) {
+      if (job.status === 'completed') {
+        this.progressAnnouncement.set(`Generación completada: ${job.createdCount} de ${job.count} preguntas creadas.`);
+      } else if (job.status === 'failed') {
+        this.progressAnnouncement.set('La generación falló.');
+      } else {
+        this.progressAnnouncement.set('Generación cancelada.');
+      }
+      return;
+    }
+
+    const done = job.createdCount + job.failedCount;
+    const milestone = job.count > 0 ? Math.floor((done / job.count) * PROGRESS_QUARTILES) : 0;
+
+    if (!this.hasAnnouncedStart) {
+      this.hasAnnouncedStart = true;
+      // Whatever quartile the job already sits at on this first frame counts
+      // as "covered" — a reload mid-batch shouldn't immediately re-announce
+      // the same progress the start message just implied.
+      this.lastAnnouncedMilestone = milestone;
+      this.progressAnnouncement.set(`Generando ${job.count} preguntas…`);
+      return;
+    }
+
+    if (milestone > this.lastAnnouncedMilestone) {
+      this.lastAnnouncedMilestone = milestone;
+      this.progressAnnouncement.set(`${done} de ${job.count} preguntas completadas.`);
+    }
   }
 
   private revokeObjectUrls(): void {
@@ -162,18 +227,24 @@ export class GenerationJobDetailComponent {
   private loadNewQuestions(ids: readonly string[]): void {
     const unseen = ids.filter((id) => !this.loadedQuestionIds.has(id));
     if (unseen.length === 0) return;
-    // Marked seen synchronously — BEFORE the async listDrafts() call below
-    // resolves — so two stream frames arriving close together can never see
-    // the same id as "unseen" twice and fire a duplicate previewDraft()
+    // Marked seen synchronously — BEFORE the async getDraft() calls below
+    // resolve — so two stream frames arriving close together can never see
+    // the same id as "unseen" twice and fire a duplicate fetch/preview
     // compile for it.
     unseen.forEach((id) => this.loadedQuestionIds.add(id));
 
-    this.aiService.listDrafts().subscribe((drafts) => {
-      const idSet = new Set(ids);
-      const alreadyShown = new Set(this.batchQuestions().map((q) => q.id));
-      const newlyLoaded = drafts.filter((d) => idSet.has(d.id) && !alreadyShown.has(d.id));
+    // One direct-by-id fetch per unseen id (not the whole queue) — a failed
+    // fetch for one id (e.g. a race with a reject) resolves to `null` rather
+    // than failing the whole batch via forkJoin.
+    forkJoin(
+      unseen.map((id) => this.aiService.getDraft(id).pipe(catchError(() => of(null)))),
+    ).subscribe((results) => {
+      const newlyLoaded = results.filter((q): q is DraftQuestion => q !== null);
       this.batchQuestions.update((prev) => [...prev, ...newlyLoaded]);
-      this.draftCountService.set(drafts.length);
+      // No flat array in hand to derive a count from anymore — ask the
+      // server for the real total instead (same `countDrafts()` round-trip
+      // DraftCountService already exposes for exactly this).
+      this.draftCountService.refresh();
       newlyLoaded.forEach((q) => this.compilePreview(q.id));
     });
   }

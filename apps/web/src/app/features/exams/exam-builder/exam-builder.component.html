@@ -74,6 +74,12 @@
             >Cargar plantilla</ui-button>
           </div>
 
+          @if (loadTemplateBlockedReason(); as blockedReason) {
+            <p data-testid="load-template-hint" class="text-xs text-warn-text">
+              {{ blockedReason }}
+            </p>
+          }
+
           <p data-testid="total-questions-override-hint" class="text-xs text-n500">
             Opcional — solo necesario si la universidad no publica la cantidad de preguntas por curso (p. ej. UNI). Si la plantilla la requiere, verás un mensaje pidiéndotela.
           </p>
@@ -83,6 +89,14 @@
           <div data-testid="template-error" class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text">
             {{ templateError() }}
           </div>
+        }
+
+        @if (templateCumulativeFallback()) {
+          <p data-testid="cumulative-fallback-hint" class="text-xs text-warn-text">
+            El temario semanal aún no llega a la semana actual — este examen cubre hasta la semana
+            {{ templateFallbackWeek() }}, la última con temario cargado (modo acumulativo), no solo el de esta
+            semana.
+          </p>
         }
       }
     </div>
@@ -129,6 +143,29 @@
         </div>
       }
 
+      <!--
+        Recibo de lo pedido + "ver solo lo pedido": una plantilla llena 11
+        filas repartidas entre 287, así que sin esto el resultado es correcto
+        pero invisible (audit 2026-08-15).
+      -->
+      @if (requestedSummary(); as summary) {
+        <div
+          data-testid="template-summary"
+          class="flex flex-wrap items-center justify-between gap-3 rounded-card border border-primary-200 bg-primary-50 px-4 py-3"
+        >
+          <p class="text-sm text-n800">
+            <strong>{{ summary.total }}</strong> preguntas pedidas en
+            <strong>{{ summary.cells }}</strong>
+            {{ summary.cells === 1 ? 'celda' : 'celdas' }}.
+          </p>
+          <span data-testid="only-requested-toggle">
+            <ui-button variant="ghost" (clicked)="toggleOnlyRequested()">
+              {{ onlyRequested() ? 'Ver todo el temario' : 'Ver solo lo pedido' }}
+            </ui-button>
+          </span>
+        </div>
+      }
+
       <!-- Expand/collapse controls — fold away courses the teacher isn't filling (design doc §5.1 "árbol") -->
       <div data-testid="tree-controls" class="flex items-center gap-2">
         <ui-button data-testid="expand-all" variant="ghost" (clicked)="expandAll()">Expandir todo</ui-button>
@@ -145,17 +182,19 @@
             }
             @for (group of groupedRows(); track group.courseId) {
               <ng-container body>
-                <tr
-                  data-testid="course-group-header"
-                  class="cursor-pointer bg-n100 hover:bg-n200"
-                  (click)="toggleCourse(group.courseId)"
-                >
-                  <td colspan="4" class="px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-n700">
-                    <span class="flex items-center gap-2">
+                <tr class="bg-n100">
+                  <td colspan="4" class="p-0">
+                    <button
+                      type="button"
+                      data-testid="course-group-header"
+                      [attr.aria-expanded]="isCourseExpanded(group.courseId)"
+                      class="flex w-full items-center gap-2 px-3 py-1.5 text-left text-xs font-semibold uppercase tracking-wide text-n700 hover:bg-n200 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-inset"
+                      (click)="toggleCourse(group.courseId)"
+                    >
                       <lucide-icon [name]="chevronFor(isCourseExpanded(group.courseId))" [size]="16" class="shrink-0 text-n600"></lucide-icon>
                       {{ group.courseName }}
                       <span class="text-n500">· {{ group.rows.length }}</span>
-                    </span>
+                    </button>
                   </td>
                 </tr>
                 @if (isCourseExpanded(group.courseId)) {
@@ -272,7 +311,33 @@
         </div>
       }
 
-      <footer class="flex items-center gap-4 border-t border-n200 pt-4">
+      <!--
+        Nombre y cantidad de formas ANTES del botón, ambos opcionales con
+        default sano: el docente que no los toca vive exactamente la
+        experiencia de siempre, y el que quiere 4 formas ya no tiene que
+        generar 2 y regenerar (audit 2026-08-15).
+      -->
+      <div class="flex flex-wrap items-end gap-3 border-t border-n200 pt-4">
+        <div class="min-w-[260px] flex-1">
+          <ui-input
+            name="exam-title"
+            label="Nombre del examen (opcional)"
+            [placeholder]="titlePlaceholder()"
+            [value]="examTitle()"
+            (valueChange)="onExamTitleChange($event)"
+          ></ui-input>
+        </div>
+        <div class="w-40" data-testid="builder-version-count">
+          <ui-select
+            label="¿Cuántas formas?"
+            [options]="versionCountOptions"
+            [value]="versionCount()"
+            (valueChange)="onVersionCountChange($event)"
+          ></ui-select>
+        </div>
+      </div>
+
+      <footer class="flex items-center gap-4 pt-2">
         <ui-progress [current]="store.progress().current" [total]="store.progress().total"></ui-progress>
 
         <ui-button
@@ -285,11 +350,12 @@
           @if (!store.allSatisfiable()) {
             <lucide-icon name="lock" [size]="16"></lucide-icon>
           }
-          Generar versiones
+          Revisar examen
         </ui-button>
 
-        @if (!store.allSatisfiable() && store.requestedCells().length > 0) {
-          <p data-testid="lock-reason" class="text-sm text-warn-text">{{ lockReason() }}</p>
+        <!-- Rendered for EVERY locked state, including the empty grid — a padlocked button with no explanation was the audit's finding, not the lock itself. -->
+        @if (lockReason(); as reason) {
+          <p data-testid="lock-reason" class="text-sm text-warn-text">{{ reason }}</p>
         }
       </footer>
     }

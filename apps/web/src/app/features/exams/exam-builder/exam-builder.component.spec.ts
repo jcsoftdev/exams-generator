@@ -1,11 +1,17 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { Subject, of, throwError } from 'rxjs';
 import { Difficulty } from '@exams-generator/shared';
 import { GRADE_LEVEL_LABELS, GradeLevel } from '../exams.models';
-import { ExamBuilderComponent, toApiTopicId, toCreateExamBlueprintRow } from './exam-builder.component';
+import {
+  BUILDER_STATE_KEY,
+  ExamBuilderComponent,
+  PREVIEW_DEBOUNCE_MS,
+  toApiTopicId,
+  toCreateExamBlueprintRow,
+} from './exam-builder.component';
 import { buildCellKey } from './exam-builder.store';
 import { ExamsService } from '../exams.service';
 import { ExamVersionsService } from '../../exam-versions/exam-versions.service';
@@ -189,7 +195,34 @@ function setCellCount(
   }
   input.value = value;
   input.dispatchEvent(new Event('input'));
+  // The preview call is debounced per cell (see PREVIEW_DEBOUNCE_MS) — every
+  // existing assertion about `previewExam` was written against the old
+  // fire-on-every-keystroke behaviour, so the shared helper flushes the
+  // debounce window instead of each test having to know about it. `type()`
+  // below is the helper for tests that care about the debounce itself.
+  vi.advanceTimersByTime(PREVIEW_DEBOUNCE_MS);
   fixture.detectChanges();
+}
+
+/**
+ * Types `value` one character at a time WITHOUT flushing the debounce between
+ * keystrokes — the real browser behaviour `setCellCount` deliberately hides.
+ */
+function typeCellCount(
+  compiled: HTMLElement,
+  fixture: { detectChanges: () => void },
+  cellKey: string,
+  value: string,
+): void {
+  const input = compiled.querySelector<HTMLInputElement>(`input[name="requested-${cellKey}"]`);
+  if (!input) {
+    throw new Error(`input for cell ${cellKey} not found`);
+  }
+  for (let i = 1; i <= value.length; i += 1) {
+    input.value = value.slice(0, i);
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+  }
 }
 
 /** Types into the optional "Cantidad total de preguntas" field (`totalQuestionsOverride`). */
@@ -208,6 +241,92 @@ function setTotalQuestionsOverride(
 }
 
 describe('ExamBuilderComponent', () => {
+  // Fake timers for the whole file: the per-cell preview debounce is the only
+  // timer this component uses, and `setCellCount` flushes it so every
+  // pre-existing test keeps its original fire-and-assert shape.
+  beforeEach(() => {
+    vi.useFakeTimers();
+    sessionStorage.clear();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+    sessionStorage.clear();
+  });
+
+  /**
+   * Audit 2026-08-15, reproducido: con 2 celdas llenas (total 24) tocar
+   * "Generar N con IA" navegaba fuera, y al volver con Atrás el grado estaba
+   * en "Selecciona un grado", la grilla vacía y 0 inputs con valor. El store
+   * es component-scoped a propósito (resetea al navegar), así que el estado
+   * tiene que sobrevivir FUERA del componente.
+   */
+  describe('no perder el trabajo al salir de la pantalla', () => {
+    it('guarda grado y cantidades pedidas apenas se edita una celda', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+
+      const saved = JSON.parse(sessionStorage.getItem(BUILDER_STATE_KEY)!);
+      expect(saved.gradeLevel).toBe('secundaria_1');
+      expect(saved.requested).toEqual([['c1:t1:easy', 6]]);
+    });
+
+    it('restaura grado y cantidades al volver a montar la pantalla', () => {
+      sessionStorage.setItem(
+        BUILDER_STATE_KEY,
+        JSON.stringify({
+          examTypeCode: 'manual',
+          gradeLevel: 'secundaria_1',
+          universityId: null,
+          trackId: null,
+          selectedCourseIds: [],
+          totalQuestions: '',
+          requested: [['c1:t1:easy', 6]],
+        }),
+      );
+
+      const { compiled } = setup();
+
+      const gradeTrigger = compiled.querySelector('[data-testid="grade-level-select"] [role="combobox"]')!;
+      expect(gradeTrigger.textContent).toContain(GRADE_LEVEL_LABELS['secundaria_1']);
+      const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:easy"]')!;
+      expect(input.value).toBe('6');
+      expect(compiled.querySelector('[data-testid="grand-total"]')!.textContent).toContain('6');
+    });
+
+    it('no restaura nada cuando no hay estado guardado (pantalla en blanco, como siempre)', () => {
+      const { compiled } = setup();
+
+      const gradeTrigger = compiled.querySelector('[data-testid="grade-level-select"] [role="combobox"]')!;
+      expect(gradeTrigger.textContent).toContain('Selecciona un grado');
+      expect(compiled.querySelector('[data-testid="builder-row"]')).toBeFalsy();
+    });
+
+    it('descarta un estado guardado corrupto en vez de romper la pantalla', () => {
+      sessionStorage.setItem(BUILDER_STATE_KEY, '{no es json');
+
+      const { compiled } = setup();
+
+      expect(compiled.querySelector('[data-testid="exam-builder"]')).toBeTruthy();
+      expect(sessionStorage.getItem(BUILDER_STATE_KEY)).toBeNull();
+    });
+
+    it('olvida el estado una vez que el examen se generó', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+      expect(sessionStorage.getItem(BUILDER_STATE_KEY)).not.toBeNull();
+
+      compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!.click();
+      fixture.detectChanges();
+
+      expect(sessionStorage.getItem(BUILDER_STATE_KEY)).toBeNull();
+    });
+  });
+
   describe('loading', () => {
     it('shows a loading indicator while the stock-batch call is pending and renders no stale data', () => {
       const stockSubject = new Subject<StockBatchResult>();
@@ -369,6 +488,24 @@ describe('ExamBuilderComponent', () => {
       expect(compiled.querySelector('[data-testid="lock-reason"]')).toBeTruthy();
     });
 
+    /**
+     * Audit 2026-08-15: on a freshly loaded grid the button was disabled with a
+     * padlock, `title=null` and NO `lock-reason` in the DOM at all — the reason
+     * only rendered once at least one cell had a count. Same "dead, mute
+     * control" class of bug the previous audit fixed for "Cargar plantilla".
+     */
+    it('explains the lock on a freshly loaded grid, before any cell has a count', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!;
+      expect(button.disabled).toBe(true);
+      const reason = compiled.querySelector('[data-testid="lock-reason"]');
+      expect(reason).toBeTruthy();
+      expect(reason!.textContent).toContain('Escribe cuántas preguntas');
+    });
+
     it('unlocks when every requested cell is fully satisfiable', () => {
       const { compiled, fixture } = setup();
 
@@ -378,6 +515,106 @@ describe('ExamBuilderComponent', () => {
       const button = compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!;
       expect(button.disabled).toBe(false);
       expect(compiled.querySelector('[data-testid="lock-reason"]')).toBeFalsy();
+    });
+  });
+
+  /**
+   * Audit 2026-08-15, reproducido en la app corriendo: escribir "12" en una
+   * celda disparaba DOS `POST /exams/preview` (uno por tecla) y la celda
+   * terminaba mostrando 1 solo id — la respuesta del "1" llegaba después de la
+   * del "12" y la sobrescribía, porque `mergePreview` no tenía ningún guard de
+   * orden (a diferencia de `loadTemplate`, que sí lo tiene).
+   */
+  describe('preview — debounce por celda y descarte de respuestas obsoletas', () => {
+    it('dispara UNA sola preview por celda aunque el número se escriba tecla por tecla', () => {
+      const previewExam = vi.fn((_payload: { blueprint: { count: number }[] }) =>
+        of<PreviewExamResult>({
+          selections: [{ rowIndex: 0, courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, questionIds: [] }],
+          shortages: [],
+        }),
+      );
+      const { compiled, fixture } = setup({ previewExam });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      previewExam.mockClear();
+
+      typeCellCount(compiled, fixture, 'c1:t1:easy', '12');
+      expect(previewExam).not.toHaveBeenCalled();
+
+      vi.advanceTimersByTime(PREVIEW_DEBOUNCE_MS);
+      fixture.detectChanges();
+
+      expect(previewExam).toHaveBeenCalledTimes(1);
+      expect(previewExam.mock.calls[0][0].blueprint[0].count).toBe(12);
+    });
+
+    it('se queda con la respuesta del ÚLTIMO valor aunque la anterior llegue tarde', () => {
+      const first = new Subject<PreviewExamResult>();
+      const second = new Subject<PreviewExamResult>();
+      let call = 0;
+      const previewExam = vi.fn(() => (call++ === 0 ? first : second));
+      const { compiled, fixture } = setup({ previewExam });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      previewExam.mockClear();
+      call = 0;
+
+      setCellCount(compiled, fixture, 'c1:t1:easy', '1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '12');
+      expect(previewExam).toHaveBeenCalledTimes(2);
+
+      // La respuesta del "12" llega primero, la del "1" (obsoleta) después.
+      second.next({
+        selections: [
+          { rowIndex: 0, courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, questionIds: ['q1', 'q2', 'q3'] },
+        ],
+        shortages: [],
+      });
+      first.next({
+        selections: [
+          { rowIndex: 0, courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, questionIds: ['zz'] },
+        ],
+        shortages: [],
+      });
+      fixture.detectChanges();
+
+      const ids = compiled.querySelector('[data-testid="preview-ids"][data-cell-key="c1:t1:easy"]')!.textContent;
+      expect(ids).toContain('q1');
+      expect(ids).not.toContain('zz');
+    });
+
+    it('no cancela la preview de OTRA celda — el debounce es por celda, no global', () => {
+      const previewExam = vi.fn((payload: { blueprint: { difficulty: Difficulty }[] }) =>
+        of<PreviewExamResult>({
+          selections: [
+            {
+              rowIndex: 0,
+              courseId: 'c1',
+              topicId: 't1',
+              difficulty: payload.blueprint[0].difficulty,
+              questionIds: payload.blueprint[0].difficulty === Difficulty.Easy ? ['e1'] : ['m1'],
+            },
+          ],
+          shortages: [],
+        }),
+      );
+      const { compiled, fixture } = setup({ previewExam });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      previewExam.mockClear();
+
+      typeCellCount(compiled, fixture, 'c1:t1:easy', '2');
+      typeCellCount(compiled, fixture, 'c1:t1:medium', '3');
+      vi.advanceTimersByTime(PREVIEW_DEBOUNCE_MS);
+      fixture.detectChanges();
+
+      expect(previewExam).toHaveBeenCalledTimes(2);
+      expect(
+        compiled.querySelector('[data-testid="preview-ids"][data-cell-key="c1:t1:easy"]')!.textContent,
+      ).toContain('e1');
+      expect(
+        compiled.querySelector('[data-testid="preview-ids"][data-cell-key="c1:t1:medium"]')!.textContent,
+      ).toContain('m1');
     });
   });
 
@@ -608,6 +845,17 @@ describe('ExamBuilderComponent', () => {
       expect(rows[0].textContent).toContain('Lectura');
     });
 
+    it('renders the desktop course header as a keyboard-focusable <button>, not a bare <tr> (audit P2 — a11y)', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const desktop = compiled.querySelector('[data-testid="content-table-desktop"]')!;
+      const header = desktop.querySelector('[data-testid="course-group-header"]') as HTMLElement;
+      expect(header.tagName).toBe('BUTTON');
+      expect(header.getAttribute('type')).toBe('button');
+    });
+
     it('collapses every course with "Colapsar todo" and restores them with "Expandir todo"', () => {
       const { compiled, fixture } = setup();
 
@@ -698,19 +946,129 @@ describe('ExamBuilderComponent', () => {
   });
 
   describe('commit lifecycle', () => {
-    it('creates the exam, generates versions, and navigates to the versions screen', () => {
-      const { compiled, fixture, createExam, generateVersions, navigate } = setup();
+    /**
+     * DECISIÓN de producto (2026-08-17, opción (a) del audit 2026-08-15): el
+     * builder ya NO genera. Crea el examen `draft` y lleva a la pantalla de
+     * revisión, que es la única donde las preguntas se pueden LEER — antes el
+     * builder saltaba directo a las formas y el backend auto-confirmaba, así
+     * que un click sellaba para siempre un examen que el docente nunca vio.
+     * La cantidad de formas elegida acá viaja como query param al punto donde
+     * ahora sí se genera.
+     */
+    it('creates the exam and goes to the review screen, carrying the chosen form count', () => {
+      const { compiled, fixture, createExam, navigate } = setup();
 
       selectGradeLevel(compiled, fixture, 'secundaria_1');
       setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+      selectFromUiSelect(compiled, fixture, 'builder-version-count', '4');
 
       const button = compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!;
       button.click();
       fixture.detectChanges();
 
       expect(createExam).toHaveBeenCalled();
-      expect(generateVersions).toHaveBeenCalledWith('exam-1', expect.any(Number));
-      expect(navigate).toHaveBeenCalledWith(['/app/exams', 'exam-1', 'versions']);
+      expect(navigate).toHaveBeenCalledWith(['/app/exams', 'exam-1'], { queryParams: { formas: 4 } });
+    });
+
+    it('never generates anything from the builder — nothing gets sealed before it is read', () => {
+      const { compiled, fixture, generateVersions } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+      compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!.click();
+      fixture.detectChanges();
+
+      expect(generateVersions).not.toHaveBeenCalled();
+    });
+
+    it('labels the primary action for what it now does', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const button = compiled.querySelector('[data-testid="generate-versions"]')!;
+      expect(button.textContent).toMatch(/revisar/i);
+    });
+
+    /**
+     * Audit 2026-08-15: el título se autogeneraba como
+     * "Examen {grado} — {fecha}" sin forma de cambiarlo, así que dos exámenes
+     * del mismo día y grado quedaban con el MISMO nombre en una lista que se
+     * busca por título. Y la cantidad de formas estaba hardcodeada en 2: el
+     * docente que quería 4 tenía que generar 2, entrar a la pantalla de formas
+     * y regenerar (compilación desperdiciada + 4 clicks + modal de peligro).
+     */
+    it('usa el nombre escrito por el docente', () => {
+      const { compiled, fixture, createExam } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+      const nameInput = compiled.querySelector<HTMLInputElement>('input[name="exam-title"]')!;
+      nameInput.value = 'Simulacro Área II — marzo';
+      nameInput.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+
+      compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!.click();
+      fixture.detectChanges();
+
+      expect(createExam).toHaveBeenCalledWith(expect.objectContaining({ title: 'Simulacro Área II — marzo' }));
+    });
+
+    it('cae al título autogenerado cuando el campo queda vacío (o en puros espacios)', () => {
+      const { compiled, fixture, createExam } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+      const nameInput = compiled.querySelector<HTMLInputElement>('input[name="exam-title"]')!;
+      nameInput.value = '   ';
+      nameInput.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+
+      compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!.click();
+      fixture.detectChanges();
+
+      const payload = createExam.mock.calls[0][0] as { title: string };
+      expect(payload.title).toMatch(/^Examen .+ — /);
+    });
+
+    it('lleva la cantidad de formas elegida a la pantalla que ahora genera', () => {
+      const { compiled, fixture, navigate } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+      selectFromUiSelect(compiled, fixture, 'builder-version-count', '4');
+
+      compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!.click();
+      fixture.detectChanges();
+
+      expect(navigate).toHaveBeenCalledWith(['/app/exams', 'exam-1'], { queryParams: { formas: 4 } });
+    });
+
+    it('lleva 2 formas por defecto — el docente que no toca nada no cambia de experiencia', () => {
+      const { compiled, fixture, navigate } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+      compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!.click();
+      fixture.detectChanges();
+
+      expect(navigate).toHaveBeenCalledWith(['/app/exams', 'exam-1'], { queryParams: { formas: 2 } });
+    });
+
+    it('conserva nombre y cantidad de formas si el docente sale y vuelve', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+      const nameInput = compiled.querySelector<HTMLInputElement>('input[name="exam-title"]')!;
+      nameInput.value = 'Simulacro de marzo';
+      nameInput.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+      selectFromUiSelect(compiled, fixture, 'builder-version-count', '3');
+
+      const saved = JSON.parse(sessionStorage.getItem(BUILDER_STATE_KEY)!);
+      expect(saved.title).toBe('Simulacro de marzo');
+      expect(saved.versionCount).toBe(3);
     });
   });
 
@@ -862,6 +1220,68 @@ describe('ExamBuilderComponent', () => {
 
       const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:hard"]');
       expect(input?.value).toBe('9');
+    });
+
+    /**
+     * Audit 2026-08-15: la plantilla acierta (UNCP Área II = 80 preguntas en
+     * 11 filas) pero el resultado era invisible — esas 11 filas quedaban
+     * repartidas dentro de 287 filas / 23,335 px de scroll, sin resumen ni
+     * forma de aislarlas. El docente recibía una caja negra que no podía
+     * verificar.
+     */
+    it('resume lo que cargó la plantilla: total de preguntas y cuántas filas', () => {
+      const resolveBlueprint = vi.fn(() =>
+        of<ResolveBlueprintResult>({
+          blueprint: [
+            { courseId: 'c1', topicId: 't1', count: 9, difficulty: Difficulty.Hard },
+            { courseId: 'c1', topicId: 't1', count: 6, difficulty: Difficulty.Easy },
+          ],
+          weekNumber: 2,
+          templateId: 'tpl-1',
+        }),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectGradeLevel(compiled, fixture, 'pre');
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      const summary = compiled.querySelector('[data-testid="template-summary"]');
+      expect(summary).toBeTruthy();
+      expect(summary!.textContent).toContain('15');
+      expect(summary!.textContent).toMatch(/2 celdas/i);
+    });
+
+    it('"Ver solo lo pedido" deja únicamente las filas con cantidades, y se puede apagar', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '4');
+
+      const allRows = compiled.querySelectorAll('[data-testid="content-table-desktop"] [data-testid="builder-row"]').length;
+      expect(allRows).toBeGreaterThan(0);
+
+      const toggle = compiled.querySelector('[data-testid="only-requested-toggle"] button') as HTMLButtonElement;
+      toggle.click();
+      fixture.detectChanges();
+
+      const filtered = [...compiled.querySelectorAll('[data-testid="content-table-desktop"] [data-testid="builder-row"]')];
+      expect(filtered.length).toBe(1);
+      expect(filtered[0].querySelector('input')!.value).toBe('4');
+
+      (compiled.querySelector('[data-testid="only-requested-toggle"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(
+        compiled.querySelectorAll('[data-testid="content-table-desktop"] [data-testid="builder-row"]').length,
+      ).toBe(allRows);
+    });
+
+    it('no ofrece el filtro cuando todavía no hay ninguna celda pedida', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      expect(compiled.querySelector('[data-testid="only-requested-toggle"]')).toBeFalsy();
     });
 
     it('shows a clear inline message on a 404 (no template/cycle for that scope) without crashing', () => {
@@ -1120,6 +1540,181 @@ describe('ExamBuilderComponent', () => {
 
       const c2Input = compiled.querySelector<HTMLInputElement>('input[name="requested-c2::medium"]');
       expect(c2Input?.value).toBe('8');
+    });
+  });
+
+  describe('tipo de examen — "Cargar plantilla" explains why it is disabled (reported bug: dead silent button)', () => {
+    it('disables the button and shows a hint asking for a university right after picking a non-manual exam type', () => {
+      const { compiled, fixture } = setup();
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="load-template"] button')!;
+      expect(button.disabled).toBe(true);
+      const hint = compiled.querySelector('[data-testid="load-template-hint"]');
+      expect(hint).toBeTruthy();
+      expect(hint!.textContent).toMatch(/universidad/i);
+    });
+
+    it('disables the button and shows a hint asking for a track once the university has tracks but none is chosen yet', () => {
+      const { compiled, fixture } = setup({ getUniversityTracks: () => of(TRACKS) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      fixture.detectChanges();
+
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="load-template"] button')!;
+      expect(button.disabled).toBe(true);
+      const hint = compiled.querySelector('[data-testid="load-template-hint"]');
+      expect(hint).toBeTruthy();
+      expect(hint!.textContent).toMatch(/track/i);
+    });
+
+    it('disables the button and shows a hint asking for at least one course for a "selected" course-scope type (fastest) once university is chosen', () => {
+      const { compiled, fixture } = setup({ getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      fixture.detectChanges();
+
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="load-template"] button')!;
+      expect(button.disabled).toBe(true);
+      const hint = compiled.querySelector('[data-testid="load-template-hint"]');
+      expect(hint).toBeTruthy();
+      expect(hint!.textContent).toMatch(/curso/i);
+    });
+
+    it('enables the button and hides the hint once every precondition for the selected exam type is met', () => {
+      const { compiled, fixture } = setup({ getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      fixture.detectChanges();
+
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="load-template"] button')!;
+      expect(button.disabled).toBe(false);
+      expect(compiled.querySelector('[data-testid="load-template-hint"]')).toBeFalsy();
+    });
+
+    it('enables the button for "fastest" once a university (with no tracks) and at least one course are chosen', () => {
+      const { compiled, fixture } = setup({ getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      (compiled.querySelector('[data-testid="course-checkbox-c1"]') as HTMLInputElement).click();
+      fixture.detectChanges();
+
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="load-template"] button')!;
+      expect(button.disabled).toBe(false);
+      expect(compiled.querySelector('[data-testid="load-template-hint"]')).toBeFalsy();
+    });
+  });
+
+  describe('"Rápido (semana actual)" past the loaded syllabus — the P0 fix (docs/audit-2026-08-14.md)', () => {
+    it('shows a warning hint when resolveBlueprint reports usedCumulativeFallback, so the teacher knows the exam is NOT scoped to just this week', () => {
+      const resolveBlueprint = vi.fn(() =>
+        of<ResolveBlueprintResult>({
+          blueprint: [{ courseId: 'c1', topicId: 't1', count: 5, difficulty: Difficulty.Medium }],
+          weekNumber: 23,
+          templateId: 'tpl-1',
+          usedCumulativeFallback: true,
+          effectiveWeekNumber: 20,
+        }),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      (compiled.querySelector('[data-testid="course-checkbox-c1"]') as HTMLInputElement).click();
+      fixture.detectChanges();
+
+      const hint = compiled.querySelector('[data-testid="cumulative-fallback-hint"]');
+      expect(hint).toBeTruthy();
+      expect(hint!.textContent).toMatch(/acumulativ/i);
+    });
+
+    it('names the last week WITH syllabus content in the hint (effectiveWeekNumber), not the calendar week nobody taught', () => {
+      const resolveBlueprint = vi.fn(() =>
+        of<ResolveBlueprintResult>({
+          blueprint: [{ courseId: 'c1', topicId: 't1', count: 5, difficulty: Difficulty.Medium }],
+          weekNumber: 23,
+          templateId: 'tpl-1',
+          usedCumulativeFallback: true,
+          effectiveWeekNumber: 20,
+        }),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      (compiled.querySelector('[data-testid="course-checkbox-c1"]') as HTMLInputElement).click();
+      fixture.detectChanges();
+
+      const hint = compiled.querySelector('[data-testid="cumulative-fallback-hint"]');
+      expect(hint!.textContent).toMatch(/semana 20/);
+      expect(hint!.textContent).not.toMatch(/semana 23/);
+    });
+
+    it('does NOT show the warning hint when usedCumulativeFallback is false (normal current-week match)', () => {
+      const resolveBlueprint = vi.fn(() =>
+        of<ResolveBlueprintResult>({
+          blueprint: [{ courseId: 'c1', topicId: 't1', count: 5, difficulty: Difficulty.Medium }],
+          weekNumber: 3,
+          templateId: 'tpl-1',
+          usedCumulativeFallback: false,
+          effectiveWeekNumber: 3,
+        }),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      (compiled.querySelector('[data-testid="course-checkbox-c1"]') as HTMLInputElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="cumulative-fallback-hint"]')).toBeFalsy();
+    });
+
+    it('does NOT show the warning hint when the field is absent from the response (older/default mock shape)', () => {
+      const resolveBlueprint = vi.fn(() =>
+        of<ResolveBlueprintResult>({
+          blueprint: [{ courseId: 'c1', topicId: 't1', count: 5, difficulty: Difficulty.Medium }],
+          weekNumber: 3,
+          templateId: 'tpl-1',
+        }),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      (compiled.querySelector('[data-testid="course-checkbox-c1"]') as HTMLInputElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="cumulative-fallback-hint"]')).toBeFalsy();
+    });
+
+    it('clears a previous fallback warning once a fresh exam type selection is made', () => {
+      const resolveBlueprint = vi.fn(() =>
+        of<ResolveBlueprintResult>({
+          blueprint: [{ courseId: 'c1', topicId: 't1', count: 5, difficulty: Difficulty.Medium }],
+          weekNumber: 23,
+          templateId: 'tpl-1',
+          usedCumulativeFallback: true,
+          effectiveWeekNumber: 20,
+        }),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      (compiled.querySelector('[data-testid="course-checkbox-c1"]') as HTMLInputElement).click();
+      fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="cumulative-fallback-hint"]')).toBeTruthy();
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Manual');
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="cumulative-fallback-hint"]')).toBeFalsy();
     });
   });
 

@@ -1,39 +1,28 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
 import { of, throwError } from 'rxjs';
-import { Difficulty } from '@exams-generator/shared';
 import { DraftCountService } from './draft-count.service';
 import { AiService } from './ai.service';
-import { DraftQuestion } from './ai.models';
 
-function draft(id: string): DraftQuestion {
-  return {
-    id,
-    tenantId: 't1',
-    courseId: 'c1',
-    topicId: 't1',
-    difficulty: Difficulty.Easy,
-    gradeLevel: 'pre',
-    correctAnswer: 'a',
-    bodyTypst: '¿2+2?',
-    alternatives: ['4', '3'],
-    figureCode: null,
-  };
-}
-
-function setup(listImpl?: () => unknown) {
-  const listDrafts = vi.fn(listImpl ?? (() => of([draft('d1'), draft('d2')])));
+/**
+ * `countDrafts()` (not `listDrafts()`) is the fetch under test here — the
+ * badge only ever needs a number, never the actual draft rows. See
+ * `ai.service.ts` `countDrafts()` doc for why sharing `listDrafts()` was the
+ * bug: it downloaded every draft row just to call `.length` on it.
+ */
+function setup(countImpl?: () => unknown) {
+  const countDrafts = vi.fn(countImpl ?? (() => of(2)));
   TestBed.configureTestingModule({
-    providers: [{ provide: AiService, useValue: { listDrafts } }],
+    providers: [{ provide: AiService, useValue: { countDrafts } }],
   });
   const service = TestBed.inject(DraftCountService);
-  return { service, listDrafts };
+  return { service, countDrafts };
 }
 
 describe('DraftCountService', () => {
   it('fetches the draft count once on construction', () => {
-    const { service, listDrafts } = setup();
-    expect(listDrafts).toHaveBeenCalledTimes(1);
+    const { service, countDrafts } = setup();
+    expect(countDrafts).toHaveBeenCalledTimes(1);
     expect(service.count()).toBe(2);
   });
 
@@ -49,10 +38,10 @@ describe('DraftCountService', () => {
   });
 
   it('re-fetches the count via refresh()', () => {
-    const { service, listDrafts } = setup();
-    listDrafts.mockReturnValue(of([draft('d1')]));
+    const { service, countDrafts } = setup();
+    countDrafts.mockReturnValue(of(1));
     service.refresh();
-    expect(listDrafts).toHaveBeenCalledTimes(2);
+    expect(countDrafts).toHaveBeenCalledTimes(2);
     expect(service.count()).toBe(1);
   });
 });

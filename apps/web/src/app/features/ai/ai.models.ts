@@ -111,6 +111,18 @@ export interface DraftQuestion {
 }
 
 /**
+ * Paginated envelope for `GET /bank/questions?status=draft&page=&pageSize=`
+ * (`AiService.listDraftsPaged`, docs/audit-2026-08-14.md — the review queue
+ * used to fetch the flat unpaginated array via `listDrafts()`, the same
+ * unbounded shape that caused the `/app/bank` P0). Mirrors `PagedQuestions`
+ * in `bank.models.ts`, narrowed to `DraftQuestion`.
+ */
+export interface DraftListResult {
+  readonly items: readonly DraftQuestion[];
+  readonly total: number;
+}
+
+/**
  * `PATCH /bank/questions/:id` request body. The backend recompiles the
  * Typst preview server-side and responds 400 (never persists) if the
  * markup is invalid after applying the patch — see

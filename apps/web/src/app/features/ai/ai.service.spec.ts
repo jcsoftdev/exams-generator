@@ -7,6 +7,7 @@ import { AiService } from './ai.service';
 import { environment } from '../../../environments/environment';
 import {
   AiRevisedQuestion,
+  DraftListResult,
   DraftQuestion,
   GenerateQuestionStreamEvent,
   GenerationJob,
@@ -125,19 +126,21 @@ describe('AiService', () => {
     });
   });
 
-  describe('listDrafts', () => {
-    it('GETs /bank/questions with status=draft', () => {
-      service.listDrafts().subscribe();
+  describe('listDraftsPaged', () => {
+    it('GETs /bank/questions with status=draft&page=&pageSize=', () => {
+      service.listDraftsPaged(2, 20).subscribe();
 
       const req = httpMock.expectOne(
         (request) => request.url === `${environment.apiBaseUrl}/bank/questions`,
       );
       expect(req.request.method).toBe('GET');
       expect(req.request.params.get('status')).toBe('draft');
-      req.flush([]);
+      expect(req.request.params.get('page')).toBe('2');
+      expect(req.request.params.get('pageSize')).toBe('20');
+      req.flush({ items: [], total: 0 });
     });
 
-    it('resolves with the list of draft questions returned by the API', () => {
+    it('resolves with the paginated envelope {items, total} — NOT the flat array `listDrafts()` used to return', () => {
       const drafts: DraftQuestion[] = [
         {
           id: 'q1',
@@ -152,16 +155,74 @@ describe('AiService', () => {
           figureCode: null,
         },
       ];
-      let result: DraftQuestion[] | undefined;
+      let result: DraftListResult | undefined;
 
-      service.listDrafts().subscribe((response) => (result = response));
+      service.listDraftsPaged(1, 20).subscribe((response) => (result = response));
 
       const req = httpMock.expectOne(
         (request) => request.url === `${environment.apiBaseUrl}/bank/questions`,
       );
-      req.flush(drafts);
+      // `items` deliberately has fewer rows than `total` — a page is not the
+      // whole queue, same guarantee as `countDrafts()` below.
+      req.flush({ items: drafts, total: 4231 });
 
-      expect(result).toEqual(drafts);
+      expect(result).toEqual({ items: drafts, total: 4231 });
+    });
+  });
+
+  describe('getDraft', () => {
+    it('GETs /bank/questions/:id and resolves with the single draft — the diff-by-id fetch `GenerationJobDetailComponent` uses instead of downloading the whole queue', () => {
+      const draft: DraftQuestion = {
+        id: 'q1',
+        tenantId: 'tenant-1',
+        courseId: 'course-1',
+        topicId: 'topic-1',
+        difficulty: Difficulty.Medium,
+        gradeLevel: 'secundaria_2',
+        correctAnswer: 'b',
+        bodyTypst: '$1 + 1 = 2$',
+        alternatives: ['a', 'b', 'c', 'd', 'e'],
+        figureCode: null,
+      };
+      let result: DraftQuestion | undefined;
+
+      service.getDraft('q1').subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/q1`);
+      expect(req.request.method).toBe('GET');
+      req.flush(draft);
+
+      expect(result).toEqual(draft);
+    });
+  });
+
+  describe('countDrafts', () => {
+    it('GETs /bank/questions with status=draft&page=1&pageSize=1', () => {
+      service.countDrafts().subscribe();
+
+      const req = httpMock.expectOne(
+        (request) => request.url === `${environment.apiBaseUrl}/bank/questions`,
+      );
+      expect(req.request.method).toBe('GET');
+      expect(req.request.params.get('status')).toBe('draft');
+      expect(req.request.params.get('page')).toBe('1');
+      expect(req.request.params.get('pageSize')).toBe('1');
+      req.flush({ items: [], total: 0 });
+    });
+
+    it('resolves with the paginated envelope\'s total, not items.length', () => {
+      let result: number | undefined;
+      service.countDrafts().subscribe((total) => (result = total));
+
+      const req = httpMock.expectOne(
+        (request) => request.url === `${environment.apiBaseUrl}/bank/questions`,
+      );
+      // `items` deliberately has fewer rows than `total` — proves the
+      // service reads `total`, not `items.length` (the whole point of the
+      // fix: never download rows just to count them).
+      req.flush({ items: [{ id: 'q1' }], total: 4231 });
+
+      expect(result).toBe(4231);
     });
   });
 

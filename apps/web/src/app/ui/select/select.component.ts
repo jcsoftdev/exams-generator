@@ -38,6 +38,14 @@ interface SelectListItem<T> {
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @if (label()) {
+      <!--
+        Justified exemption: the label is wired to the trigger via
+        \`aria-labelledby="labelId"\` (see the button below), which is the
+        WAI-ARIA combobox authoring pattern this component follows. A \`for\`
+        attribute would name the same control a second time and lose to
+        \`aria-labelledby\` anyway. The rule only knows about \`for\`/wrapping.
+      -->
+      <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
       <label [id]="labelId" class="mb-1 block text-sm font-medium text-n700">{{ label() }}</label>
     }
     <div class="relative">
@@ -65,6 +73,14 @@ interface SelectListItem<T> {
           class="absolute z-20 mt-1 max-h-60 w-full overflow-auto rounded-card border border-n200 bg-surface py-1 shadow-lg"
         >
           @for (item of listItems(); track $index; let i = $index) {
+            <!--
+              eslint-disable-next-line @angular-eslint/template/click-events-have-key-events,
+              @angular-eslint/template/interactive-supports-focus -- WAI-ARIA combobox/listbox
+              authoring pattern: options are intentionally NOT independently focusable. DOM
+              focus stays on the trigger button; keyboard selection (ArrowUp/Down + Enter)
+              is handled there via onTriggerKeydown and communicated to AT through
+              aria-activedescendant. Adding tabindex/keydown here would break that pattern.
+            -->
             <li
               [id]="optionId(i)"
               role="option"

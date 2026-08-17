@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
-import { Subject, of, throwError } from 'rxjs';
+import { Observable, Subject, map, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { Router } from '@angular/router';
@@ -24,7 +24,7 @@ import { Difficulty } from '@exams-generator/shared';
 import { BankListComponent } from './bank-list.component';
 import { BankService } from '../bank.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
-import { BankQuestion } from '../bank.models';
+import { BankQuestion, BankTopicCount } from '../bank.models';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { AiRevisedQuestion } from '../../ai/ai.models';
@@ -65,8 +65,28 @@ const QUESTIONS: BankQuestion[] = [
   makeQuestion({ id: 'q4', courseId: 'c2', topicId: 't3' }),
 ];
 
+/**
+ * The fake bank's per-topic summary, derived from the same question array
+ * the fake `listQuestionsPaged` pages through — mirroring the real backend,
+ * where `GET /bank/questions/summary` and `GET /bank/questions` answer the
+ * same filter set and therefore can never disagree.
+ */
+function countsFrom(questions: readonly BankQuestion[]): BankTopicCount[] {
+  const byTopic = new Map<string, BankTopicCount>();
+  for (const question of questions) {
+    const existing = byTopic.get(question.topicId);
+    byTopic.set(question.topicId, {
+      courseId: question.courseId,
+      topicId: question.topicId,
+      total: (existing?.total ?? 0) + 1,
+    });
+  }
+  return [...byTopic.values()];
+}
+
 function setup(
   over: {
+    /** The fake bank's FULL contents — the summary counts and every per-topic page are both derived from it. */
     listImpl?: (...a: unknown[]) => unknown;
     getQuestionImpl?: (id: string) => unknown;
     archiveImpl?: (id: string) => unknown;
@@ -78,7 +98,22 @@ function setup(
     updateQuestionImpl?: (id: string, patch: unknown) => unknown;
   } = {},
 ) {
-  const listQuestions = vi.fn(over.listImpl ?? (() => of(QUESTIONS)));
+  const questionSource = vi.fn(over.listImpl ?? (() => of(QUESTIONS)));
+  const getQuestionCounts = vi.fn((_filters?: unknown) =>
+    (questionSource() as Observable<BankQuestion[]>).pipe(map(countsFrom)),
+  );
+  const listQuestionsPaged = vi.fn(
+    (filters: { topicId?: string }, page: number, pageSize: number) =>
+      (questionSource() as Observable<BankQuestion[]>).pipe(
+        map((all) => {
+          const inTopic = all.filter((q) => q.topicId === filters.topicId);
+          return {
+            items: inTopic.slice((page - 1) * pageSize, page * pageSize),
+            total: inTopic.length,
+          };
+        }),
+      ),
+  );
   const getQuestion = vi.fn(over.getQuestionImpl ?? ((id: string) => of(makeQuestion({ id }))));
   const archiveQuestion = vi.fn(over.archiveImpl ?? ((id: string) => of({ id, status: 'archived' })));
   const deleteQuestion = vi.fn(over.deleteImpl ?? (() => of(void 0)));
@@ -139,7 +174,8 @@ function setup(
       {
         provide: BankService,
         useValue: {
-          listQuestions,
+          getQuestionCounts,
+          listQuestionsPaged,
           getQuestion,
           archiveQuestion,
           deleteQuestion,
@@ -159,7 +195,9 @@ function setup(
   return {
     fixture,
     compiled: fixture.nativeElement as HTMLElement,
-    listQuestions,
+    questionSource,
+    getQuestionCounts,
+    listQuestionsPaged,
     getQuestion,
     archiveQuestion,
     deleteQuestion,
@@ -283,6 +321,104 @@ describe('BankListComponent', () => {
       expect(fetchQuestionImage).not.toHaveBeenCalled();
     });
 
+    it('loads the tree from the per-topic summary alone — not a single question row is fetched on entry', () => {
+      const { getQuestionCounts, listQuestionsPaged, compiled } = setup();
+
+      expect(getQuestionCounts).toHaveBeenCalledTimes(1);
+      expect(listQuestionsPaged).not.toHaveBeenCalled();
+      // …and the skeleton is complete anyway: both courses render, with their real counts.
+      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
+      expect(courseHeader(compiled, 'c1').textContent).toMatch(/3/);
+    });
+
+    it('shows a topic\'s real total on its header while it is still collapsed (count comes from the summary)', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      expandCourse(compiled, fixture, 'c1');
+
+      expect(topicHeader(compiled, 't1').textContent).toMatch(/2/);
+      expect(listQuestionsPaged).not.toHaveBeenCalled();
+    });
+
+    it('expanding a course costs NO question request — only the topic list, which the summary already carries', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      expandCourse(compiled, fixture, 'c1');
+      expect(listQuestionsPaged).not.toHaveBeenCalled();
+    });
+
+    it('expanding a topic fetches ONLY that topic, paginated', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      expect(listQuestionsPaged).toHaveBeenCalledTimes(1);
+      expect(listQuestionsPaged).toHaveBeenCalledWith(
+        expect.objectContaining({ topicId: 't1' }),
+        1,
+        expect.any(Number),
+      );
+    });
+
+    it('re-expanding an already-loaded topic does NOT re-fetch it', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      expandTopic(compiled, fixture, 't1'); // collapse
+      expandTopic(compiled, fixture, 't1'); // re-open
+
+      expect(listQuestionsPaged).toHaveBeenCalledTimes(1);
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
+    });
+
+    it('offers "Ver más" when the topic holds more than one page, and appends the next page on click', () => {
+      // 3 questions in t1 with a page size of 2 forces a second page.
+      const many = [
+        makeQuestion({ id: 'm1', courseId: 'c1', topicId: 't1' }),
+        makeQuestion({ id: 'm2', courseId: 'c1', topicId: 't1' }),
+        makeQuestion({ id: 'm3', courseId: 'c1', topicId: 't1' }),
+      ];
+      const { compiled, fixture, listQuestionsPaged } = setup({ listImpl: () => of(many) });
+      listQuestionsPaged.mockImplementation((filters: { topicId?: string }, page: number) => {
+        const inTopic = many.filter((q) => q.topicId === filters.topicId);
+        return of({ items: inTopic.slice((page - 1) * 2, page * 2), total: inTopic.length });
+      });
+
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
+
+      const loadMore = compiled.querySelector('[data-testid="topic-load-more"]') as HTMLButtonElement;
+      expect(loadMore.textContent).toMatch(/1/);
+      loadMore.click();
+      fixture.detectChanges();
+
+      expect(listQuestionsPaged).toHaveBeenLastCalledWith(
+        expect.objectContaining({ topicId: 't1' }),
+        2,
+        expect.any(Number),
+      );
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(3);
+      expect(compiled.querySelector('[data-testid="topic-load-more"]')).toBeFalsy();
+    });
+
+    it('a failed topic page shows an inline retry inside that branch, leaving the rest of the tree intact', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      listQuestionsPaged.mockReturnValueOnce(throwError(() => new HttpErrorResponse({ status: 500 })));
+
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      expect(compiled.querySelector('[data-testid="topic-error"]')).toBeTruthy();
+      // The whole-screen error state is NOT used — the other branches still render.
+      expect(compiled.querySelector('[data-testid="error-state"]')).toBeFalsy();
+      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
+
+      (compiled.querySelector('[data-testid="topic-retry"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="topic-error"]')).toBeFalsy();
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
+    });
+
     it('shows a neutral file-text placeholder (never blank gray) for a structured question with no image', () => {
       const { compiled, fixture } = setup();
       expandCourse(compiled, fixture, 'c1');
@@ -348,11 +484,31 @@ describe('BankListComponent', () => {
       expect(courseHeader(compiled, 'c1')).toBeFalsy();
     });
 
-    it('filters by question clave and auto-expands the matching branch to reveal the leaf', () => {
+    it('auto-expands matching COURSES so the matching topic is visible without a click', () => {
       const { compiled, fixture } = setup();
-      typeSearch(compiled, fixture, 'a'); // q1's correctAnswer is 'a'
-      // matching branches auto-expand: leaves render without a manual topic click
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBeGreaterThan(0);
+      typeSearch(compiled, fixture, 'fracciones');
+
+      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(1);
+      expect(topicHeader(compiled, 't1')).toBeTruthy();
+      expect(topicHeader(compiled, 't2')).toBeFalsy();
+    });
+
+    it('does NOT auto-expand matching TOPICS — auto-opening every match would fire one request per topic', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      typeSearch(compiled, fixture, 'fracciones');
+
+      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('false');
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
+      expect(listQuestionsPaged).not.toHaveBeenCalled();
+    });
+
+    it('does NOT match a question clave — search scope is curso/tema only now that leaves load lazily', () => {
+      const { compiled, fixture } = setup();
+      typeSearch(compiled, fixture, 'a'); // 'a' is every fixture question's correctAnswer
+      // 'a' still substring-matches the course names ("Aritmética"/"Álgebra"), so assert on
+      // a clave that matches NO name instead.
+      typeSearch(compiled, fixture, 'zzz-clave');
+      expect(compiled.querySelector('[data-testid="tree-no-matches"]')).toBeTruthy();
     });
 
     it('restores the full tree when the search box is cleared', () => {
@@ -365,13 +521,18 @@ describe('BankListComponent', () => {
   });
 
   describe('expand all / collapse all', () => {
-    it('expand all reveals every topic and leaf without manual clicks', () => {
-      const { compiled, fixture } = setup();
+    it('expand all opens every COURSE, revealing all topic lists without a single question request', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
       (compiled.querySelector('[data-testid="expand-all"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
-      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
-      expect(topicHeader(compiled, 't2').getAttribute('aria-expanded')).toBe('true');
-      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(4);
+
+      expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('true');
+      expect(courseHeader(compiled, 'c2').getAttribute('aria-expanded')).toBe('true');
+      expect(compiled.querySelectorAll('[data-testid="topic-header"]').length).toBe(3);
+      // Topics stay closed on purpose: opening all 3 here means opening all 276 in production.
+      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('false');
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
+      expect(listQuestionsPaged).not.toHaveBeenCalled();
     });
 
     it('collapse all hides every topic', () => {
@@ -873,32 +1034,54 @@ describe('BankListComponent', () => {
     });
 
     it('archives the selected approved question and reloads the tree, after confirming', () => {
-      const { compiled, fixture, archiveQuestion, listQuestions } = setup();
+      const { compiled, fixture, archiveQuestion, getQuestionCounts } = setup();
       expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
-      listQuestions.mockClear();
+      getQuestionCounts.mockClear();
       (compiled.querySelector('[data-testid="panel-archive"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
       expect(archiveQuestion).not.toHaveBeenCalled();
       (compiled.querySelector('[data-testid="archive-confirm-yes"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
       expect(archiveQuestion).toHaveBeenCalledWith('q1');
-      expect(listQuestions).toHaveBeenCalledTimes(1);
+      expect(getQuestionCounts).toHaveBeenCalledTimes(1);
     });
   });
 
   describe('filters', () => {
-    it('re-fetches questions with the selected nivel (difficulty) filter on Buscar', () => {
-      const { fixture, listQuestions } = setup();
-      listQuestions.mockClear();
+    it('re-fetches the summary with the selected nivel (difficulty) filter on Buscar', () => {
+      const { fixture, getQuestionCounts } = setup();
+      getQuestionCounts.mockClear();
       (fixture.componentInstance as unknown as { difficulty: { set(v: Difficulty): void } }).difficulty.set(
         Difficulty.Hard,
       );
       (fixture.componentInstance as unknown as { search(): void }).search();
       fixture.detectChanges();
-      expect(listQuestions).toHaveBeenCalledWith(expect.objectContaining({ difficulty: Difficulty.Hard }));
+      expect(getQuestionCounts).toHaveBeenCalledWith(
+        expect.objectContaining({ difficulty: Difficulty.Hard }),
+      );
+    });
+
+    it('discards already-loaded topic pages on Buscar — they were fetched under the OLD filters', () => {
+      const { compiled, fixture, listQuestionsPaged } = setup();
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
+      listQuestionsPaged.mockClear();
+
+      (fixture.componentInstance as unknown as { search(): void }).search();
+      fixture.detectChanges();
+
+      // Everything collapsed again, nothing stale on screen, and no page re-fetched behind the scenes.
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
+      expect(listQuestionsPaged).not.toHaveBeenCalled();
+
+      // Re-opening the same topic now goes back to the server, under the new filters.
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      expect(listQuestionsPaged).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -937,16 +1120,16 @@ describe('BankListComponent', () => {
 
   describe('error', () => {
     it('shows an error state with retry that reloads the tree', () => {
-      const { compiled, fixture, listQuestions } = setup({
+      const { compiled, fixture, questionSource } = setup({
         listImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
       });
       expect(compiled.querySelector('[data-testid="error-state"]')).toBeTruthy();
       expect(compiled.textContent).toMatch(/no se pudieron cargar/i);
-      listQuestions.mockClear();
-      listQuestions.mockReturnValue(of(QUESTIONS));
+      questionSource.mockClear();
+      questionSource.mockReturnValue(of(QUESTIONS));
       (compiled.querySelector('[data-testid="retry-button"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
-      expect(listQuestions).toHaveBeenCalledTimes(1);
+      expect(questionSource).toHaveBeenCalledTimes(1);
       expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
     });
   });

@@ -20,6 +20,9 @@
   }
 
   @if (job(); as j) {
+    <!-- Screen-reader-only milestone announcements — see updateAnnouncement() (audit P2 — a11y). -->
+    <div data-testid="job-live-region" class="sr-only" aria-live="polite" role="status">{{ progressAnnouncement() }}</div>
+
     <div class="flex items-center gap-3 rounded-card border border-n200 bg-surface p-4">
       <div class="text-2xl font-extrabold text-primary-900">
         {{ j.createdCount }}<span class="text-sm font-medium text-n500">/{{ j.count }}</span>

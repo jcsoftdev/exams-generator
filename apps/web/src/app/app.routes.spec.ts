@@ -1,6 +1,24 @@
 import { describe, it, expect } from 'vitest';
 import { routes } from './app.routes';
 import { authGuard } from './core/auth/auth.guard';
+import { LoginComponent } from './features/login/login.component';
+import { AuthCallbackComponent } from './features/auth-callback/auth-callback.component';
+import { ShellComponent } from './features/shell/shell.component';
+import { ForbiddenComponent } from './features/forbidden/forbidden.component';
+import { NotFoundComponent } from './features/not-found/not-found.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { BankListComponent } from './features/bank/bank-list/bank-list.component';
+import { BankNewComponent } from './features/bank/bank-new/bank-new.component';
+import { ExamListComponent } from './features/exams/exam-list/exam-list.component';
+import { ExamVersionsPanelComponent } from './features/exam-versions/exam-versions-panel/exam-versions-panel.component';
+import { ExamBuilderComponent } from './features/exams/exam-builder/exam-builder.component';
+import { ExamReviewComponent } from './features/exams/exam-review/exam-review.component';
+import { AiGenerateComponent } from './features/ai/ai-generate/ai-generate.component';
+import { GenerationJobDetailComponent } from './features/ai/generation-job-detail/generation-job-detail.component';
+import { GenerationHistoryComponent } from './features/ai/generation-history/generation-history.component';
+import { AiReviewQueueComponent } from './features/ai/ai-review-queue/ai-review-queue.component';
+import { TenantSettingsComponent } from './features/tenant-settings/tenant-settings.component';
+import { AdminTenantsComponent } from './features/admin-tenants/admin-tenants.component';
 
 describe('app routes', () => {
   it('registers a public /login route', () => {
@@ -119,5 +137,77 @@ describe('app routes', () => {
       (route) => route.path === '' && route.redirectTo,
     );
     expect(indexRoute?.redirectTo).toBe('dashboard');
+  });
+
+  describe('code-splitting (audit P2 — no route should statically import the whole app)', () => {
+    // Login/auth-callback are on the critical first-paint path; lazy-loading
+    // them would only add a round-trip. Forbidden/NotFound are tiny and rare.
+    // Shell is the immediate landing target for any already-authenticated
+    // session and is a thin layout shell — its heavy children below are what
+    // actually get split out, so keeping Shell eager costs nothing.
+    const eagerRoutes: Array<{ path: string; component: unknown }> = [
+      { path: 'login', component: LoginComponent },
+      { path: 'auth/callback', component: AuthCallbackComponent },
+      { path: 'forbidden', component: ForbiddenComponent },
+      { path: '**', component: NotFoundComponent },
+      { path: 'app', component: ShellComponent },
+    ];
+
+    it.each(eagerRoutes)(
+      'keeps $path eagerly loaded via `component`, not `loadComponent`',
+      ({ path, component }) => {
+        const route = routes.find((r) => r.path === path);
+        expect(route?.component).toBe(component);
+        expect(route?.loadComponent).toBeUndefined();
+      },
+    );
+
+    // Every route reachable only once a user is inside the authenticated
+    // shell is an obvious lazy-load candidate — none of it is needed for
+    // /login or the initial shell paint.
+    const lazyChildren: Array<{ path: string; component: unknown }> = [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'bank', component: BankListComponent },
+      { path: 'bank/new', component: BankNewComponent },
+      { path: 'exams', component: ExamListComponent },
+      { path: 'exams/new', component: ExamBuilderComponent },
+      { path: 'exams/:examId', component: ExamReviewComponent },
+      { path: 'exams/:examId/versions', component: ExamVersionsPanelComponent },
+      { path: 'ai/generate', component: AiGenerateComponent },
+      { path: 'ai/jobs', component: GenerationHistoryComponent },
+      { path: 'ai/jobs/:id', component: GenerationJobDetailComponent },
+      { path: 'ai/review', component: AiReviewQueueComponent },
+      { path: 'settings', component: TenantSettingsComponent },
+      { path: 'admin/tenants', component: AdminTenantsComponent },
+    ];
+
+    it.each(lazyChildren)(
+      'lazy-loads /app/$path via `loadComponent`, not `component`',
+      ({ path }) => {
+        const appRoute = routes.find((route) => route.path === 'app');
+        const child = appRoute?.children?.find((route) => route.path === path);
+        expect(child).toBeTruthy();
+        expect(child?.component).toBeUndefined();
+        expect(typeof child?.loadComponent).toBe('function');
+      },
+    );
+
+    it.each(lazyChildren)(
+      'resolves /app/$path loadComponent to the correct component class',
+      async ({ path, component }) => {
+        const appRoute = routes.find((route) => route.path === 'app');
+        const child = appRoute?.children?.find((route) => route.path === path);
+        const resolved = await child?.loadComponent?.();
+        expect(resolved).toBe(component);
+      },
+    );
+
+    it('every /app child still resolves via component or loadComponent, never neither', () => {
+      const appRoute = routes.find((route) => route.path === 'app');
+      for (const child of appRoute?.children ?? []) {
+        if (child.path === '') continue; // the dashboard redirect has no component
+        expect(Boolean(child.component) || Boolean(child.loadComponent)).toBe(true);
+      }
+    });
   });
 });

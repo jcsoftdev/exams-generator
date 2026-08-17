@@ -33,6 +33,19 @@ export default tseslint.config(
     },
   },
   {
+    // Design-system primitives live under `app/ui/` and are prefixed `ui-`
+    // (`ui-button`, `ui-modal`, `ui-table`, …) to mark them as generic,
+    // feature-agnostic building blocks; feature components keep `app-`.
+    // The split is exact today: every `ui-*` selector is inside this folder and
+    // every component outside it uses `app-`. Scoping the override to this path
+    // (instead of adding "ui" to the global prefix list) keeps that true — a
+    // feature component still cannot claim a `ui-` selector.
+    files: ["src/app/ui/**/*.ts"],
+    rules: {
+      "@angular-eslint/component-selector": ["error", { type: "element", prefix: "ui", style: "kebab-case" }],
+    },
+  },
+  {
     // Test files use Vitest globals (describe/it/expect/vi) injected by the
     // Angular CLI's unit-test builder, not imported explicitly.
     files: ["**/*.spec.ts"],

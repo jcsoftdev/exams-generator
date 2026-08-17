@@ -194,3 +194,26 @@
 body {
   @apply font-sans bg-n50 text-n900;
 }
+
+/*
+ * `prefers-reduced-motion` (audit P2 — a11y). Transitions/animations here are
+ * Tailwind utility classes (`transition-colors`, `animate-pulse`, `animate-spin`…)
+ * spread across ~12 feature files, not named CSS classes like the landing's
+ * scoped `<style>` block — so there is no fixed list of selectors to target.
+ * The universal override below is the standard way to honor the preference
+ * under those conditions: it collapses every animation/transition to
+ * effectively instant (not `none`, so a component reading its own
+ * `transitionend`/`animationend` — e.g. skeleton loaders — still fires that
+ * event) rather than requiring every future utility class to be re-audited
+ * here by hand.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

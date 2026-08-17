@@ -74,7 +74,11 @@ function setup(
 ) {
   const streamGenerationJob = vi.fn(over.streamImpl ?? ((_id: string) => of(RUNNING_JOB)));
   const cancelGenerationJob = vi.fn(over.cancelImpl ?? (() => of({ ...RUNNING_JOB, status: 'cancelled' as const })));
-  const listDrafts = vi.fn(() => of([DRAFT]));
+  const getDraft = vi.fn((_id: string) => of(DRAFT));
+  // `DraftCountService` (providedIn: 'root') is injected transitively via
+  // this component and calls `countDrafts()` once on construction — must be
+  // present on the mock or DI throws `countDrafts is not a function`.
+  const countDrafts = vi.fn(() => of(1));
   const previewDraft = vi.fn(
     over.previewImpl ?? (() => of(new Blob(['%PDF'], { type: 'application/pdf' }))),
   );
@@ -93,7 +97,8 @@ function setup(
         useValue: {
           streamGenerationJob,
           cancelGenerationJob,
-          listDrafts,
+          getDraft,
+          countDrafts,
           previewDraft,
           createGenerationJob,
           getGenerationJobChain,
@@ -110,7 +115,8 @@ function setup(
     compiled: fixture.nativeElement as HTMLElement,
     streamGenerationJob,
     cancelGenerationJob,
-    listDrafts,
+    getDraft,
+    countDrafts,
     previewDraft,
     createGenerationJob,
     getGenerationJobChain,
@@ -128,12 +134,21 @@ describe('GenerationJobDetailComponent', () => {
     expect(compiled.textContent).toContain('3');
   });
 
-  it('renders question cards for created ids via listDrafts(), mapped to the right question data', () => {
-    const { compiled } = setup();
+  it('renders question cards for created ids via getDraft() (one direct-by-id fetch per id, not the whole queue), mapped to the right question data', () => {
+    const { compiled, getDraft } = setup();
 
+    expect(getDraft).toHaveBeenCalledWith('q1');
     const card = compiled.querySelector('[data-testid="job-question"]');
     expect(card).toBeTruthy();
     expect(compiled.textContent).toContain('clave: b');
+  });
+
+  it('refreshes the sidebar draft-count badge via DraftCountService (AiService.countDrafts(), a real server round-trip), NOT a locally-computed length — loading new questions no longer has the full queue in hand to derive one from', () => {
+    const { countDrafts } = setup();
+
+    // Once on DraftCountService's own construction, once more after
+    // loadNewQuestions() resolves for the job's initial createdQuestionIds.
+    expect(countDrafts.mock.calls.length).toBeGreaterThanOrEqual(2);
   });
 
   it('compiles a real PDF preview for each newly-created question', () => {
@@ -163,6 +178,53 @@ describe('GenerationJobDetailComponent', () => {
 
     expect(compiled.textContent).toContain('completed');
     expect(streamGenerationJob).toHaveBeenCalledTimes(1);
+  });
+
+  describe('aria-live progress announcements (audit P2 — a11y)', () => {
+    it('announces the start of generation on the first frame, not every field it renders', () => {
+      const { compiled } = setup({ streamImpl: () => of(RUNNING_JOB) });
+
+      const region = compiled.querySelector('[data-testid="job-live-region"]');
+      expect(region?.getAttribute('aria-live')).toBe('polite');
+      expect(region?.textContent).toContain('Generando 3 preguntas');
+    });
+
+    it('does not repeat the same announcement when a later frame reports no meaningful progress change', () => {
+      const source$ = new Subject<GenerationJob>();
+      const { fixture, compiled } = setup({ streamImpl: () => source$.asObservable() });
+
+      source$.next(RUNNING_JOB);
+      fixture.detectChanges();
+      const region = compiled.querySelector('[data-testid="job-live-region"]')!;
+      const firstText = region.textContent;
+
+      // Same milestone bucket as before (createdCount unchanged) — must NOT re-announce.
+      source$.next({ ...RUNNING_JOB });
+      fixture.detectChanges();
+      expect(region.textContent).toBe(firstText);
+    });
+
+    it('announces a successful terminal state distinctly from the start message', () => {
+      const source$ = new Subject<GenerationJob>();
+      const { fixture, compiled } = setup({ streamImpl: () => source$.asObservable() });
+
+      source$.next(RUNNING_JOB);
+      fixture.detectChanges();
+      source$.next({ ...RUNNING_JOB, status: 'completed' as const, createdCount: 3, failedCount: 0 });
+      fixture.detectChanges();
+
+      const region = compiled.querySelector('[data-testid="job-live-region"]')!;
+      expect(region.textContent).toContain('completada');
+      expect(region.textContent).toContain('3 de 3');
+    });
+
+    it('announces a failed terminal state even when it is the very first frame (no spurious "start" announcement)', () => {
+      const { compiled } = setup({ streamImpl: () => of(FAILED_JOB) });
+
+      const region = compiled.querySelector('[data-testid="job-live-region"]')!;
+      expect(region.textContent).toContain('falló');
+      expect(region.textContent).not.toContain('Generando');
+    });
   });
 
   it('unsubscribes from the stream on destroy', () => {

@@ -27,7 +27,9 @@ const EXAM_DETAIL: ExamDetail = {
       position: 0,
       type: 'structured',
       courseId: 'c1',
+      courseName: 'Biología',
       topicId: 't1',
+      topicName: 'La célula',
       difficulty: Difficulty.Easy,
       correctAnswer: '0',
       imageAssetId: null,
@@ -40,7 +42,9 @@ const EXAM_DETAIL: ExamDetail = {
       position: 1,
       type: 'image',
       courseId: 'c2',
+      courseName: 'Química',
       topicId: 't2',
+      topicName: 'Átomos',
       difficulty: Difficulty.Medium,
       correctAnswer: '1',
       imageAssetId: 'img-1',
@@ -188,6 +192,35 @@ describe('ExamVersionsPanelComponent', () => {
       expect(answerLinks.length).toBe(3);
       expect(pdfLinks[0].getAttribute('href')).toMatch(/^blob:/);
       expect(answerLinks[0].getAttribute('href')).toMatch(/^blob:/);
+    });
+
+    /**
+     * Audit 2026-08-15: los links por forma tenían `download=""` sobre un
+     * `blob:`, así que el archivo se guardaba con el UUID del blob
+     * (`05ad20b5-….pdf`) — imposible saber cuál es cuál después de bajar dos
+     * exámenes. Los nombres DENTRO del ZIP ya eran correctos; los de afuera no.
+     */
+    it('names each downloaded PDF after the exam and its forma, not the blob id', () => {
+      const { compiled } = setup({});
+
+      const pdfLink = compiled.querySelector<HTMLAnchorElement>('[data-testid="version-pdf-link"]')!;
+      const answerLink = compiled.querySelector<HTMLAnchorElement>('[data-testid="version-answer-link"]')!;
+
+      expect(pdfLink.getAttribute('download')).toBe('Examen de Biología — Forma A.pdf');
+      expect(answerLink.getAttribute('download')).toBe('Examen de Biología — Claves A.pdf');
+    });
+
+    it('names the ZIP after the exam title', () => {
+      const clickSpy = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => undefined);
+      const downloadSpy = vi.spyOn(HTMLAnchorElement.prototype, 'download', 'set');
+      const { compiled, fixture } = setup({});
+
+      compiled.querySelector<HTMLButtonElement>('[data-testid="download-zip"] button')!.click();
+      fixture.detectChanges();
+
+      expect(downloadSpy).toHaveBeenCalledWith('Examen de Biología — formas.zip');
+      clickSpy.mockRestore();
+      downloadSpy.mockRestore();
     });
 
     it('downloads all versions as a ZIP via a blob: object URL when the button is clicked (N1)', () => {
@@ -372,6 +405,53 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
       expect(listVersions).toHaveBeenCalledTimes(2);
       expect(compiled.querySelector('[data-testid="generate-count-panel"]')).toBeFalsy();
       expect(compiled.querySelector('[data-testid="versions-skeleton"]')).toBeFalsy();
+    });
+
+    describe('aria-live progress announcements (audit P2 — a11y)', () => {
+      it('announces the start of the job and the terminal success, without repeating on every SSE frame', () => {
+        const stream = new Subject<ExamVersionJob>();
+        const { compiled, fixture } = setup({
+          generateVersionsImpl: () => of(job({ versionCount: 4 })),
+          streamVersionJobImpl: () => stream.asObservable(),
+        });
+
+        openGeneratePanel(compiled, fixture);
+        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+        fixture.detectChanges();
+        (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+        fixture.detectChanges();
+
+        const region = compiled.querySelector('[data-testid="version-job-live-region"]')!;
+        expect(region.getAttribute('aria-live')).toBe('polite');
+        expect(region.textContent).toContain('Generando 4 formas');
+
+        // Same milestone bucket as the queued job (0/4) — must not re-announce.
+        stream.next(job({ versionCount: 4, status: 'pending', completedCount: 0 }));
+        fixture.detectChanges();
+        expect(region.textContent).toContain('Generando 4 formas');
+
+        stream.next(job({ versionCount: 4, status: 'completed', completedCount: 4 }));
+        fixture.detectChanges();
+        expect(region.textContent).toContain('4 de 4 formas');
+        expect(region.textContent).not.toContain('Generando');
+      });
+
+      it('announces a total failure distinctly from a partial one', () => {
+        const { compiled, fixture } = setup({
+          generateVersionsImpl: () => of(job()),
+          streamVersionJobImpl: () =>
+            of(job({ status: 'failed', completedCount: 0, failedReason: 'Typst no compiló' })),
+        });
+
+        openGeneratePanel(compiled, fixture);
+        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+        fixture.detectChanges();
+        (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+        fixture.detectChanges();
+
+        const region = compiled.querySelector('[data-testid="version-job-live-region"]')!;
+        expect(region.textContent).toContain('No se pudo generar ninguna forma');
+      });
     });
 
     it('reports a PARTIAL failure honestly — the forms that generated stay listed, not hidden behind a blanket error', () => {

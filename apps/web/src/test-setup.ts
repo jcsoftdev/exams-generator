@@ -42,3 +42,33 @@ if (typeof globalThis.matchMedia === 'undefined') {
     dispatchEvent: () => false,
   })) as unknown as typeof window.matchMedia;
 }
+
+/**
+ * Node 22+ ships its own experimental `localStorage`/`sessionStorage`
+ * globals (the Web Storage API), non-functional unless the process is
+ * started with `--localstorage-file`. Because that global already exists
+ * on `globalThis` before Vitest's jsdom environment initializes, Vitest's
+ * global-key allowlist — which predates Node's native Web Storage API —
+ * skips re-defining `localStorage`/`sessionStorage` as accessors onto
+ * jsdom's real implementation (it only overrides keys already present on
+ * `global` when they're in its hardcoded key list). The result: every spec
+ * that touches `localStorage` sees Node's inert stub instead of jsdom's
+ * working one and throws `TypeError: Cannot read properties of undefined`.
+ * Vitest exposes the underlying JSDOM instance as `globalThis.jsdom` for
+ * exactly this kind of override — rewire both Storage globals to it.
+ * `window === globalThis` in this environment, so this also fixes
+ * `window.localStorage`/`window.sessionStorage`.
+ */
+const jsdomInstance = (globalThis as unknown as { jsdom?: { window: Window } }).jsdom;
+if (jsdomInstance) {
+  Object.defineProperty(globalThis, 'localStorage', {
+    value: jsdomInstance.window.localStorage,
+    configurable: true,
+    writable: true,
+  });
+  Object.defineProperty(globalThis, 'sessionStorage', {
+    value: jsdomInstance.window.sessionStorage,
+    configurable: true,
+    writable: true,
+  });
+}

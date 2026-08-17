@@ -5,7 +5,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { Difficulty } from '@exams-generator/shared';
 import { BankService } from './bank.service';
 import { environment } from '../../../environments/environment';
-import { BankQuestion, PagedQuestions } from './bank.models';
+import { BankQuestion, BankTopicCount, PagedQuestions } from './bank.models';
 
 describe('BankService', () => {
   let service: BankService;
@@ -21,64 +21,6 @@ describe('BankService', () => {
 
   afterEach(() => {
     httpMock.verify();
-  });
-
-  describe('listQuestions', () => {
-    it('GETs /bank/questions with no query params when called without filters', () => {
-      service.listQuestions().subscribe();
-
-      const req = httpMock.expectOne(
-        (request) => request.url === `${environment.apiBaseUrl}/bank/questions`,
-      );
-      expect(req.request.method).toBe('GET');
-      expect(req.request.params.keys().length).toBe(0);
-      req.flush([]);
-    });
-
-    it('forwards courseId/topicId/difficulty/gradeLevel as combinable query params', () => {
-      service
-        .listQuestions({
-          courseId: 'course-1',
-          topicId: 'topic-1',
-          difficulty: Difficulty.Hard,
-          gradeLevel: 'primaria_3',
-        })
-        .subscribe();
-
-      const req = httpMock.expectOne(
-        (request) => request.url === `${environment.apiBaseUrl}/bank/questions`,
-      );
-      expect(req.request.params.get('courseId')).toBe('course-1');
-      expect(req.request.params.get('topicId')).toBe('topic-1');
-      expect(req.request.params.get('difficulty')).toBe('hard');
-      expect(req.request.params.get('gradeLevel')).toBe('primaria_3');
-      req.flush([]);
-    });
-
-    it('resolves with the list of questions returned by the API', () => {
-      const questions: BankQuestion[] = [
-        {
-          id: 'q1',
-          tenantId: null,
-          courseId: 'course-1',
-          topicId: 'topic-1',
-          difficulty: Difficulty.Easy,
-          gradeLevel: 'primaria_1',
-          correctAnswer: 'a',
-          imageAssetId: 'asset-1',
-        },
-      ];
-      let result: BankQuestion[] | undefined;
-
-      service.listQuestions().subscribe((response) => (result = response));
-
-      const req = httpMock.expectOne(
-        (request) => request.url === `${environment.apiBaseUrl}/bank/questions`,
-      );
-      req.flush(questions);
-
-      expect(result).toEqual(questions);
-    });
   });
 
   describe('uploadImageQuestion', () => {
@@ -177,6 +119,37 @@ describe('BankService', () => {
       req.flush({ items: [], total: 0 });
 
       expect(result).toEqual({ items: [], total: 0 });
+    });
+  });
+
+  describe('getQuestionCounts', () => {
+    it('GETs /bank/questions/summary with no query params when called without filters', () => {
+      service.getQuestionCounts().subscribe();
+
+      const req = httpMock.expectOne(
+        (r) => r.url === `${environment.apiBaseUrl}/bank/questions/summary`,
+      );
+      expect(req.request.method).toBe('GET');
+      expect(req.request.params.keys().length).toBe(0);
+      req.flush([]);
+    });
+
+    it('forwards the same filters the list endpoint takes, so counts match what expanding a topic returns', () => {
+      let result: readonly BankTopicCount[] | undefined;
+      const counts: BankTopicCount[] = [{ courseId: 'c1', topicId: 't1', total: 42 }];
+
+      service
+        .getQuestionCounts({ difficulty: Difficulty.Hard, gradeLevel: 'primaria_3' })
+        .subscribe((r) => (result = r));
+
+      const req = httpMock.expectOne(
+        (r) => r.url === `${environment.apiBaseUrl}/bank/questions/summary`,
+      );
+      expect(req.request.params.get('difficulty')).toBe('hard');
+      expect(req.request.params.get('gradeLevel')).toBe('primaria_3');
+      req.flush(counts);
+
+      expect(result).toEqual(counts);
     });
   });
 

@@ -4,7 +4,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ButtonComponent } from '../../ui/button/button.component';
 import { InputComponent } from '../../ui/input/input.component';
 import { AuthService } from '../../core/auth/auth.service';
-import { extractTenantSlug, TENANT_ROOT_DOMAIN } from '../../core/tenant/tenant-lookup.service';
+import {
+  extractTenantSlug,
+  isTenantScopedHost,
+  TENANT_ROOT_DOMAIN,
+} from '../../core/tenant/tenant-lookup.service';
 
 /**
  * Login screen (design doc §4, spec LG-R1/R2). Panel dividido: marca oscura
@@ -58,8 +62,14 @@ export class LoginComponent {
 
     this.authService.login({ email: this.email(), password: this.password() }).subscribe({
       next: (response) => {
-        const currentSlug = extractTenantSlug(window.location.hostname);
-        if (response.tenantSlug && response.tenantSlug !== currentSlug) {
+        const hostname = window.location.hostname;
+        const currentSlug = extractTenantSlug(hostname);
+        // The handoff only makes sense on hosts that PARTICIPATE in the
+        // tenant-subdomain scheme. On localhost or the sslip.io fallback there
+        // is no other origin to hand off TO — localStorage is already the right
+        // one — and redirecting would send the developer (plus a live one-time
+        // code) straight to production.
+        if (isTenantScopedHost(hostname) && response.tenantSlug && response.tenantSlug !== currentSlug) {
           // Wrong subdomain for this account (e.g. an old bookmark, or the
           // tenant was renamed) — localStorage doesn't cross origins, so
           // hand the session off via a one-time code instead of just

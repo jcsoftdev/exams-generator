@@ -1,59 +1,54 @@
 # Web
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.7.
+Angular SPA for GeneraExamen — the teacher/admin app (bank browser, AI question
+generation, exam builder, exam versions). Part of the `exams-generator`
+monorepo.
 
 ## Development server
 
-To start a local development server, run:
+Run from `apps/web/` (or via the root `pnpm --filter @exams-generator/web <script>`):
 
 ```bash
-ng serve
+pnpm dev
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This runs `PORT=4201 ng serve --proxy-config proxy.conf.json` (see
+`apps/web/package.json`) and serves on `http://localhost:4201/`.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
+**Do not run a bare `ng serve`** — it starts on port 4200 without
+`proxy.conf.json`, and every `/api` call 404s (login included).
+`proxy.conf.json` forwards `/api` to the API at `http://localhost:3012`, so
+the API needs to be running too. From the repo root, `pnpm dev` starts
+api + web + landing together via turbo.
 
 ## Building
 
-To build the project run:
-
 ```bash
-ng build
+pnpm build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Compiles the project and stores the build artifacts in `dist/` (via
+`ng build`).
 
 ## Running unit tests
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
 ```bash
-ng test
+pnpm test
 ```
 
-## Running end-to-end tests
+Runs `ng test`, which executes unit tests with the
+[Vitest](https://vitest.dev/) runner (`test` architect target in
+`angular.json`).
 
-For end-to-end (e2e) testing, run:
+## Code scaffolding
+
+Angular CLI scaffolding still works normally, e.g.:
 
 ```bash
-ng e2e
+pnpm ng generate component component-name
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For more on the Angular CLI, see the
+[Angular CLI Overview and Command Reference](https://angular.dev/tools/cli).

@@ -92,14 +92,18 @@ const JOB: GenerationJob = {
  */
 function setup() {
   const streamGenerationJob = vi.fn(() => of(JOB));
-  const listDrafts = vi.fn(() => of([]));
+  // JOB.createdQuestionIds is empty, so GenerationJobDetailComponent's
+  // loadNewQuestions() never actually calls getDraft() here — kept on the
+  // mock only so the AiService shape stays accurate for anyone extending
+  // this fixture with a non-empty createdQuestionIds later.
+  const getDraft = vi.fn(() => of(null));
   const listGenerationJobs = vi.fn(() => of<GenerationJobListResult>({ items: [], total: 0 }));
   const getGenerationJobChain = vi.fn(() => of({ items: [JOB] }));
 
   TestBed.configureTestingModule({
     providers: [
       provideRouter(routes),
-      { provide: AiService, useValue: { streamGenerationJob, listDrafts, listGenerationJobs, getGenerationJobChain } },
+      { provide: AiService, useValue: { streamGenerationJob, getDraft, listGenerationJobs, getGenerationJobChain } },
       {
         provide: AuthService,
         useValue: {
@@ -152,7 +156,7 @@ function setup() {
     ],
   });
 
-  return { streamGenerationJob, listDrafts, listGenerationJobs };
+  return { streamGenerationJob, getDraft, listGenerationJobs };
 }
 
 describe('AI generation-jobs routing (integration — real app.routes.ts)', () => {

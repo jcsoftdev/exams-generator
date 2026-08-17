@@ -46,7 +46,7 @@ const TOPICS_C1: Topic[] = [{ id: 't1', name: 'Célula', courseId: 'c1' }];
 
 function setup(
   over: {
-    listImpl?: () => unknown;
+    listImpl?: (page: number, pageSize: number) => unknown;
     previewImpl?: (id: string) => unknown;
     approveImpl?: () => unknown;
     getCoursesImpl?: () => unknown;
@@ -55,7 +55,9 @@ function setup(
     reviseQuestionImpl?: (id: string, instruction: string) => unknown;
   } = {},
 ) {
-  const listDrafts = vi.fn(over.listImpl ?? (() => of(DRAFTS)));
+  const listDraftsPaged = vi.fn(
+    over.listImpl ?? (() => of({ items: DRAFTS, total: DRAFTS.length })),
+  );
   const previewDraft = vi.fn(
     over.previewImpl ?? (() => of(new Blob(['%PDF'], { type: 'application/pdf' }))),
   );
@@ -81,7 +83,7 @@ function setup(
       importProvidersFrom(LucideAngularModule.pick({ Check, Pencil, X, Sparkles, ChevronDown })),
       {
         provide: AiService,
-        useValue: { listDrafts, previewDraft, approveQuestion, rejectQuestion, reviseQuestion },
+        useValue: { listDraftsPaged, previewDraft, approveQuestion, rejectQuestion, reviseQuestion },
       },
       { provide: BankService, useValue: { updateQuestion } },
       { provide: TaxonomyService, useValue: { getCourses, getTopicsForCourses } },
@@ -93,7 +95,7 @@ function setup(
   return {
     fixture,
     compiled: fixture.nativeElement as HTMLElement,
-    listDrafts,
+    listDraftsPaged,
     previewDraft,
     approveQuestion,
     rejectQuestion,
@@ -133,7 +135,18 @@ describe('AiReviewQueueComponent', () => {
   });
 
   it('approves the current draft and advances to the next', () => {
-    const { compiled, fixture, approveQuestion, previewDraft } = setup();
+    let approved = false;
+    const { compiled, fixture, approveQuestion, previewDraft } = setup({
+      approveImpl: () => {
+        approved = true;
+        return of({ id: 'd1' });
+      },
+      // The real server no longer returns 'd1' once it's approved (it left
+      // status=draft) — the reload after approve must reflect that, same as
+      // it would against the real API.
+      listImpl: () =>
+        approved ? of({ items: [DRAFTS[1]], total: 1 }) : of({ items: DRAFTS, total: 2 }),
+    });
     previewDraft.mockClear();
     (compiled.querySelector('[data-testid="approve"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
@@ -152,7 +165,7 @@ describe('AiReviewQueueComponent', () => {
   });
 
   it('shows the empty state when the queue is empty', () => {
-    const { compiled } = setup({ listImpl: () => of([]) });
+    const { compiled } = setup({ listImpl: () => of({ items: [], total: 0 }) });
     expect(compiled.querySelector('[data-testid="empty-queue"]')).toBeTruthy();
   });
 
@@ -211,7 +224,9 @@ describe('AiReviewQueueComponent', () => {
     // correctAnswer is stored as a 0-based index ("0"-"4") — the panel must
     // convert it to a letter (a-e) the same way ai-generate.component.ts
     // does, not render the raw digit.
-    const { compiled } = setup({ listImpl: () => of([draft({ id: 'd1', correctAnswer: '1' })]) });
+    const { compiled } = setup({
+      listImpl: () => of({ items: [draft({ id: 'd1', correctAnswer: '1' })], total: 1 }),
+    });
     const header = compiled.querySelector('[data-testid="panel-header"]')!;
     expect(header.textContent).toContain('clave: b');
     expect(header.textContent).not.toContain('clave: 1');
@@ -234,22 +249,123 @@ describe('AiReviewQueueComponent', () => {
     expect(draftCountSet).toHaveBeenCalledWith(2);
   });
 
-  it('updates DraftCountService after approving a draft', () => {
-    const { compiled, fixture, draftCountSet } = setup();
+  it('pushes the server TOTAL (not the current page\'s items.length) to DraftCountService — the whole point of paginating', () => {
+    // A page can legitimately be smaller than the full queue; the badge must
+    // never read `items.length` off a paginated response.
+    const { draftCountSet } = setup({
+      listImpl: () => of({ items: DRAFTS, total: 4231 }),
+    });
+    expect(draftCountSet).toHaveBeenCalledWith(4231);
+    expect(draftCountSet).not.toHaveBeenCalledWith(2);
+  });
+
+  it('updates DraftCountService with the fresh server total after approving a draft', () => {
+    let approved = false;
+    const { compiled, fixture, draftCountSet } = setup({
+      approveImpl: () => {
+        approved = true;
+        return of({ id: 'd1' });
+      },
+      listImpl: () =>
+        approved ? of({ items: [DRAFTS[1]], total: 1 }) : of({ items: DRAFTS, total: 2 }),
+    });
     draftCountSet.mockClear();
     (compiled.querySelector('[data-testid="approve"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(draftCountSet).toHaveBeenCalledWith(1);
   });
 
-  it('updates DraftCountService after rejecting a draft', () => {
-    const { compiled, fixture, draftCountSet } = setup();
+  it('updates DraftCountService with the fresh server total after rejecting a draft', () => {
+    let rejected = false;
+    const { compiled, fixture, draftCountSet } = setup({
+      listImpl: () =>
+        rejected ? of({ items: [DRAFTS[1]], total: 1 }) : of({ items: DRAFTS, total: 2 }),
+    });
     draftCountSet.mockClear();
     (compiled.querySelector('[data-testid="reject"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
+    rejected = true;
     (compiled.querySelector('[data-testid="reject-confirm-yes"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(draftCountSet).toHaveBeenCalledWith(1);
+  });
+
+  describe('pagination', () => {
+    it('requests page 1 at the component PAGE_SIZE on initial load', () => {
+      const { fixture, listDraftsPaged } = setup();
+      const component = fixture.componentInstance as unknown as { PAGE_SIZE: number };
+      expect(listDraftsPaged).toHaveBeenCalledWith(1, component.PAGE_SIZE);
+    });
+
+    it('does not render pagination controls when everything fits on one page', () => {
+      const { compiled } = setup();
+      expect(compiled.querySelector('[data-testid="pagination-summary"]')).toBeFalsy();
+    });
+
+    it('renders pagination controls with the real total once the queue exceeds one page', () => {
+      const { compiled, fixture } = setup({
+        listImpl: () => of({ items: DRAFTS, total: 45 }),
+      });
+      const component = fixture.componentInstance as unknown as { PAGE_SIZE: number };
+      expect(compiled.querySelector('[data-testid="pagination-summary"]')?.textContent).toContain(
+        `${DRAFTS.length}`,
+      );
+      expect(compiled.querySelector('[data-testid="pagination-summary"]')?.textContent).toContain(
+        '45',
+      );
+      expect(compiled.querySelector('[data-testid="pagination-current"]')?.textContent).toContain(
+        `1 / ${Math.ceil(45 / component.PAGE_SIZE)}`,
+      );
+    });
+
+    it('re-fetches the requested page when pagination-next is clicked', () => {
+      const { compiled, fixture, listDraftsPaged } = setup({
+        listImpl: () => of({ items: DRAFTS, total: 45 }),
+      });
+      listDraftsPaged.mockClear();
+      const component = fixture.componentInstance as unknown as { PAGE_SIZE: number };
+      (compiled.querySelector('[data-testid="pagination-next"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(listDraftsPaged).toHaveBeenCalledWith(2, component.PAGE_SIZE);
+    });
+
+    it('falls back to the previous page — instead of showing the "no hay borradores" empty state — when approving the last draft on a page empties it out but drafts remain on earlier pages', () => {
+      let approvedOnPage2 = false;
+      const { compiled, fixture, listDraftsPaged } = setup({
+        listImpl: (page: number) => {
+          if (page === 2 && !approvedOnPage2) {
+            return of({ items: [draft({ id: 'd3' })], total: 21 });
+          }
+          if (page === 2 && approvedOnPage2) {
+            // The lone draft on page 2 just got approved server-side — this
+            // page is now genuinely empty, but the queue is NOT.
+            return of({ items: [], total: 20 });
+          }
+          return of({ items: DRAFTS, total: 20 });
+        },
+        approveImpl: () => {
+          approvedOnPage2 = true;
+          return of({ id: 'd3' });
+        },
+      });
+      const component = fixture.componentInstance as unknown as {
+        onPageChange: (p: number) => void;
+        PAGE_SIZE: number;
+      };
+      component.onPageChange(2);
+      fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="review-item"]')?.textContent).toBeTruthy();
+
+      listDraftsPaged.mockClear();
+      (compiled.querySelector('[data-testid="approve"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      // Went back to page 1 automatically instead of rendering a false "empty" state.
+      expect(listDraftsPaged).toHaveBeenNthCalledWith(1, 2, component.PAGE_SIZE);
+      expect(listDraftsPaged).toHaveBeenNthCalledWith(2, 1, component.PAGE_SIZE);
+      expect(compiled.querySelector('[data-testid="empty-queue"]')).toBeFalsy();
+      expect(compiled.querySelectorAll('[data-testid="review-item"]').length).toBeGreaterThan(0);
+    });
   });
 
   it('starts edit mode from the Editar button, seeding every field from the selected draft', () => {
@@ -315,7 +431,7 @@ describe('AiReviewQueueComponent', () => {
 
   it('sends figureCode in the save payload when the draft has one', () => {
     const { compiled, fixture, updateQuestion } = setup({
-      listImpl: () => of([draft({ id: 'd1', figureCode: '#circle((0,0))' })]),
+      listImpl: () => of({ items: [draft({ id: 'd1', figureCode: '#circle((0,0))' })], total: 1 }),
     });
     (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
@@ -330,7 +446,7 @@ describe('AiReviewQueueComponent', () => {
 
   it('sends an empty figureCode ("" = explicit clear, per the PATCH contract) when the teacher blanks a previously-set figure', () => {
     const { compiled, fixture, updateQuestion } = setup({
-      listImpl: () => of([draft({ id: 'd1', figureCode: '#circle((0,0))' })]),
+      listImpl: () => of({ items: [draft({ id: 'd1', figureCode: '#circle((0,0))' })], total: 1 }),
     });
     (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
@@ -390,16 +506,16 @@ describe('AiReviewQueueComponent', () => {
   });
 
   it('reloads the queue and refreshes the preview after a successful save', () => {
-    const { compiled, fixture, listDrafts, previewDraft } = setup();
+    const { compiled, fixture, listDraftsPaged, previewDraft } = setup();
     (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
-    listDrafts.mockClear();
+    listDraftsPaged.mockClear();
     previewDraft.mockClear();
 
     (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    expect(listDrafts).toHaveBeenCalledTimes(1);
+    expect(listDraftsPaged).toHaveBeenCalledTimes(1);
     expect(previewDraft).toHaveBeenCalledWith('d1');
     expect(previewDraft).toHaveBeenCalledTimes(1);
   });

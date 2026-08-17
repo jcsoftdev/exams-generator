@@ -1,12 +1,17 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Difficulty } from '@exams-generator/shared';
-import { LucideAngularModule, Shuffle, Check, Lock } from 'lucide-angular';
+import { LucideAngularModule, Shuffle, Check, Lock, ArrowRight, ChevronDown } from 'lucide-angular';
+import { MathTextComponent } from '../../../ui/math-text/math-text.component';
+import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { BannerComponent } from '../../../ui/banner/banner.component';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { TagVariant } from '../../../ui/ui.types';
+import { extractErrorMessage } from '../../ai/extract-error-message';
+import { ExamVersionsService } from '../../exam-versions/exam-versions.service';
+import { DEFAULT_VERSION_COUNT, VERSION_COUNT_OPTIONS } from '../../exam-versions/exam-versions.models';
 import { ExamsService } from '../exams.service';
 import { ExamDetailQuestion, ExamStatus } from '../exams.models';
 
@@ -32,15 +37,78 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
  */
 @Component({
   selector: 'app-exam-review',
-  imports: [LucideAngularModule, TagComponent, BannerComponent, ButtonComponent],
-  providers: [LucideAngularModule.pick({ Shuffle, Check, Lock }).providers ?? []],
+  imports: [
+    LucideAngularModule,
+    MathTextComponent,
+    SelectComponent,
+    TagComponent,
+    BannerComponent,
+    ButtonComponent,
+  ],
+  // `ChevronDown` is for the nested `ui-select` (Formas), not this template itself.
+  providers: [LucideAngularModule.pick({ Shuffle, Check, Lock, ArrowRight, ChevronDown }).providers ?? []],
   templateUrl: './exam-review.component.html',
 })
 export class ExamReviewComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
   private readonly examsService = inject(ExamsService);
+  private readonly examVersionsService = inject(ExamVersionsService);
 
   protected readonly examId = signal(this.route.snapshot.paramMap.get('examId') ?? '');
+
+  /**
+   * How many forms to compile. Seeded from `?formas=N`, which the builder
+   * carries over so the extra review step costs the teacher no extra decision
+   * (product decision 2026-08-17). Anything that isn't one of the offered
+   * counts — a hand-edited URL, a stale link — falls back to the default
+   * rather than sending `NaN` to the API. Still a select here: this is the
+   * moment before the compile, so it's the right place to change your mind.
+   */
+  protected readonly versionCount = signal(this.readFormasParam());
+  protected readonly versionCountOptions: readonly SelectOption<number>[] = VERSION_COUNT_OPTIONS.map((count) => ({
+    value: count,
+    label: String(count),
+  }));
+
+  private readFormasParam(): number {
+    const raw = Number(this.route.snapshot.queryParamMap.get('formas'));
+    return VERSION_COUNT_OPTIONS.includes(raw) ? raw : DEFAULT_VERSION_COUNT;
+  }
+
+  protected onVersionCountChange(value: number | null): void {
+    this.versionCount.set(value ?? DEFAULT_VERSION_COUNT);
+  }
+
+  protected readonly generating = signal(false);
+  protected readonly generateError = signal<string | null>(null);
+
+  /**
+   * Confirms and compiles in ONE action. `POST /exams/:id/versions`
+   * auto-confirms a draft with a non-empty selection server-side
+   * (`prepareGeneration`), so asking the teacher to press "Confirmar" first
+   * and "Generar" second would be two clicks for one decision. That
+   * auto-confirm is exactly what used to be dangerous when the BUILDER called
+   * it — the exam got sealed unseen; called from here it seals what the
+   * teacher just read.
+   */
+  protected generateVersions(): void {
+    if (this.generating() || this.isReady()) {
+      return;
+    }
+    this.generating.set(true);
+    this.generateError.set(null);
+    this.examVersionsService.generateVersions(this.examId(), this.versionCount()).subscribe({
+      next: () => {
+        this.generating.set(false);
+        this.router.navigate(['/app/exams', this.examId(), 'versions']);
+      },
+      error: (error: HttpErrorResponse) => {
+        this.generating.set(false);
+        this.generateError.set(extractErrorMessage(error, 'No se pudo generar el examen. Inténtalo de nuevo.'));
+      },
+    });
+  }
   protected readonly title = signal('');
   protected readonly questions = signal<readonly ExamDetailQuestion[]>([]);
   protected readonly status = signal<ExamStatus>('draft');
@@ -101,8 +169,13 @@ export class ExamReviewComponent implements OnInit {
       next: () => {
         this.loadExam();
       },
-      error: (_error: HttpErrorResponse) => {
-        this.errorMessage.set('No se pudo reemplazar la pregunta. Inténtalo de nuevo.');
+      error: (error: HttpErrorResponse) => {
+        // The API answers a bad/foreign replacement id with a 400 that SAYS
+        // why. Swallowing it for a generic "inténtalo de nuevo" told the
+        // teacher to retry the exact input that just failed (audit
+        // 2026-08-15). `extractErrorMessage` already normalizes both 400 body
+        // shapes this API produces and falls back to a generic line.
+        this.errorMessage.set(extractErrorMessage(error, 'No se pudo reemplazar la pregunta.'));
       },
     });
   }
@@ -124,6 +197,28 @@ export class ExamReviewComponent implements OnInit {
     return this.status() === 'ready';
   }
 
+  /**
+   * Where the "Ver / generar formas" CTA goes once the exam is confirmed. The
+   * success banner promised the teacher they could generate the versions and
+   * the screen had no control at all to do it (audit 2026-08-15) — the only
+   * way out was guessing the path through "Mis exámenes". `navigate` rather
+   * than a `routerLink`, matching every other navigation in this feature.
+   */
+  protected goToVersions(): void {
+    this.router.navigate(['/app/exams', this.examId(), 'versions']);
+  }
+
+  /**
+   * The intro line only makes sense while the exam can still change — with a
+   * `ready` exam every "Cambiar" is disabled, so telling the teacher to swap
+   * questions described an action the UI refuses.
+   */
+  protected introText(): string {
+    return this.isReady()
+      ? 'Este examen ya está confirmado. Estas son las preguntas que quedaron.'
+      : 'Estas son las preguntas que sacamos de tu banco. Cámbialas si quieres y confirma cuando estés conforme.';
+  }
+
   protected statusLabel(status: ExamStatus): string {
     return status === 'ready' ? 'Listo' : 'Borrador';
   }
@@ -138,5 +233,28 @@ export class ExamReviewComponent implements OnInit {
 
   protected difficultyVariant(difficulty: Difficulty): TagVariant {
     return DIFFICULTY_TAG_VARIANT[difficulty];
+  }
+
+  /**
+   * How the correct answer is spelled for a human.
+   *
+   * The two question types store it differently (see `version-shuffler.ts`):
+   * `structured` keeps the 0-BASED INDEX into `alternatives`, `image` keeps
+   * the letter itself (the alternatives are baked into the picture). The
+   * screen used to print the raw value, so a structured question showed
+   * "Respuesta correcta: 4" — a number that means nothing to a teacher
+   * reading options A–E (audit 2026-08-15).
+   */
+  protected correctAnswerLabel(question: ExamDetailQuestion): string {
+    if (question.type === 'image' || !question.alternatives) {
+      return question.correctAnswer.toUpperCase();
+    }
+    const index = Number(question.correctAnswer);
+    const text = question.alternatives[index];
+    if (!Number.isInteger(index) || text === undefined) {
+      // Never invent a letter for a value we can't place — show what's stored.
+      return question.correctAnswer;
+    }
+    return `${String.fromCharCode(65 + index)}) ${text}`;
   }
 }

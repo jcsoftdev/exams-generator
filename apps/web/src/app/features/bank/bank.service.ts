@@ -5,11 +5,35 @@ import { environment } from '../../../environments/environment';
 import {
   BankQuestion,
   BankQuestionFilters,
+  BankTopicCount,
   CreateImageQuestionPayload,
   CreateStructuredQuestionPayload,
   PagedQuestions,
   UpdateQuestionPayload,
 } from './bank.models';
+
+/**
+ * The taxonomy/difficulty query params shared by every read of the bank:
+ * the unpaginated list, the paginated list, and the tree summary. Extracted
+ * so the three can never drift — the tree's counts and the per-topic fetch
+ * that fills them in MUST be asking the server the same question.
+ */
+function buildFilterParams(filters: BankQuestionFilters): HttpParams {
+  let params = new HttpParams();
+  if (filters.courseId) {
+    params = params.set('courseId', filters.courseId);
+  }
+  if (filters.topicId) {
+    params = params.set('topicId', filters.topicId);
+  }
+  if (filters.difficulty) {
+    params = params.set('difficulty', filters.difficulty);
+  }
+  if (filters.gradeLevel) {
+    params = params.set('gradeLevel', filters.gradeLevel);
+  }
+  return params;
+}
 
 /**
  * Angular client for the Fase 1 bank API (design doc §9):
@@ -22,47 +46,31 @@ import {
 export class BankService {
   private readonly http = inject(HttpClient);
 
-  listQuestions(filters: BankQuestionFilters = {}): Observable<BankQuestion[]> {
-    let params = new HttpParams();
-    if (filters.courseId) {
-      params = params.set('courseId', filters.courseId);
-    }
-    if (filters.topicId) {
-      params = params.set('topicId', filters.topicId);
-    }
-    if (filters.difficulty) {
-      params = params.set('difficulty', filters.difficulty);
-    }
-    if (filters.gradeLevel) {
-      params = params.set('gradeLevel', filters.gradeLevel);
-    }
-
-    return this.http.get<BankQuestion[]>(`${environment.apiBaseUrl}/bank/questions`, { params });
+  /**
+   * Per-topic question counts (`GET /bank/questions/summary`) — the skeleton
+   * the bank tree renders on entry: every course and topic with its real
+   * total, and zero question payload. The filters are the same ones
+   * `listQuestionsPaged` takes, so a topic's `total` is exactly what
+   * expanding that topic will fetch.
+   */
+  getQuestionCounts(filters: BankQuestionFilters = {}): Observable<BankTopicCount[]> {
+    return this.http.get<BankTopicCount[]>(`${environment.apiBaseUrl}/bank/questions/summary`, {
+      params: buildFilterParams(filters),
+    });
   }
 
   /**
-   * S6: paginated variant of `listQuestions` — `GET /bank/questions` with
-   * `page`/`pageSize` params returns `{ items, total }` instead of the
-   * legacy bare array (see `listQuestions` above, kept for other callers).
+   * S6: `GET /bank/questions` with `page`/`pageSize` params, returns
+   * `{ items, total }`.
    */
   listQuestionsPaged(
     filters: BankQuestionFilters,
     page: number,
     pageSize: number,
   ): Observable<PagedQuestions> {
-    let params = new HttpParams().set('page', String(page)).set('pageSize', String(pageSize));
-    if (filters.courseId) {
-      params = params.set('courseId', filters.courseId);
-    }
-    if (filters.topicId) {
-      params = params.set('topicId', filters.topicId);
-    }
-    if (filters.difficulty) {
-      params = params.set('difficulty', filters.difficulty);
-    }
-    if (filters.gradeLevel) {
-      params = params.set('gradeLevel', filters.gradeLevel);
-    }
+    const params = buildFilterParams(filters)
+      .set('page', String(page))
+      .set('pageSize', String(pageSize));
 
     return this.http.get<PagedQuestions>(`${environment.apiBaseUrl}/bank/questions`, { params });
   }

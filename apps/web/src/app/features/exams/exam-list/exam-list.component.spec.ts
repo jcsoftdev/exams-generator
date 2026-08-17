@@ -107,6 +107,40 @@ describe('ExamListComponent', () => {
     expect(compiled.textContent).toMatch(/aún no tienes exámenes/i);
   });
 
+  /**
+   * Audit 2026-08-15: filtrar por Estado=Borrador sin coincidencias mostraba
+   * "Aún no tienes exámenes. Crea el primero para empezar." teniendo 6
+   * exámenes — el usuario cree que perdió su trabajo.
+   */
+  it('distinguishes "no matches for these filters" from "no exams at all"', () => {
+    const { compiled, fixture, listExams } = setup();
+
+    listExams.mockReturnValue(of({ items: [], total: 0 }));
+    const container = compiled.querySelector('[data-testid="status-filter"]') as HTMLElement;
+    selectOption(container, fixture, 'Borrador');
+
+    expect(compiled.querySelector('[data-testid="empty-exams"]')).toBeFalsy();
+    expect(compiled.querySelector('[data-testid="empty-filtered"]')).toBeTruthy();
+    expect(compiled.textContent).toMatch(/no hay exámenes con estos filtros/i);
+  });
+
+  it('clears every filter and reloads from the filtered empty state', () => {
+    const { compiled, fixture, listExams } = setup();
+
+    listExams.mockReturnValue(of({ items: [], total: 0 }));
+    selectOption(compiled.querySelector('[data-testid="status-filter"]') as HTMLElement, fixture, 'Borrador');
+    listExams.mockClear();
+    listExams.mockReturnValue(of(RESULT));
+
+    (compiled.querySelector('[data-testid="clear-filters"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(listExams).toHaveBeenCalledWith(
+      expect.objectContaining({ status: undefined, gradeLevel: undefined, search: undefined, page: 1 }),
+    );
+    expect(compiled.querySelectorAll('[data-testid="exam-row"]').length).toBeGreaterThan(0);
+  });
+
   it('shows an error state with retry', () => {
     const { compiled, fixture, listExams } = setup({ listImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })) });
     expect(compiled.querySelector('[data-testid="error-state"]')).toBeTruthy();

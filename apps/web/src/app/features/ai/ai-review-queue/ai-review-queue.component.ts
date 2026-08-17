@@ -10,6 +10,7 @@ import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { ModalComponent } from '../../../ui/modal/modal.component';
 import { MathTextComponent } from '../../../ui/math-text/math-text.component';
+import { PaginationComponent } from '../../../ui/pagination/pagination.component';
 import { truncateTypst, typstToPlainText } from '../../../shared/typst/typst-to-latex';
 import { SelectOption } from '../../../ui/select/select.component';
 import { AiService } from '../ai.service';
@@ -62,6 +63,17 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
  * The pending-drafts count is pushed to `DraftCountService.set()` whenever
  * the queue loads or a draft is approved/rejected, keeping the shell
  * sidebar's "Cola de revisión · N" badge in sync without it polling itself.
+ *
+ * S6-paginated (`AiService.listDraftsPaged`, `page`/`pageSize`,
+ * `ui-pagination` — same shape as `exam-list`/`generation-history`,
+ * docs/audit-2026-08-14.md "`GET /bank/questions` sin `page` sigue sin
+ * tope"). `draftCountService` is always fed the server-returned `total`,
+ * NEVER `drafts().length` / `items.length` — a page is not the whole queue.
+ * Approving/rejecting the LAST draft on a page beyond page 1 refetches that
+ * same page; if the server now reports it empty (the mutation just emptied
+ * it) but the queue is not actually empty, `fetchPage()` steps back a page
+ * and refetches instead of rendering the "no hay borradores" empty state —
+ * that state is reserved for a genuinely empty queue (`total === 0`).
  */
 @Component({
   selector: 'app-ai-review-queue',
@@ -72,6 +84,7 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
     TagComponent,
     ModalComponent,
     MathTextComponent,
+    PaginationComponent,
     QuestionTaxonomyFieldsComponent,
     QuestionContentFieldsComponent,
     AiReviseBoxComponent,
@@ -87,7 +100,10 @@ export class AiReviewQueueComponent {
   private readonly destroyRef = inject(DestroyRef);
   private readonly sanitizer = inject(DomSanitizer);
 
+  protected readonly PAGE_SIZE = 20;
   protected readonly drafts = signal<DraftQuestion[]>([]);
+  protected readonly total = signal(0);
+  protected readonly page = signal(1);
   protected readonly loading = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
 
@@ -190,19 +206,75 @@ export class AiReviewQueueComponent {
   }
 
   private load(): void {
-    this.loading.set(true);
-    this.errorMessage.set(null);
-    this.aiService.listDrafts().subscribe({
-      next: (drafts) => {
+    this.fetchPage({ showLoading: true });
+  }
+
+  protected onPageChange(page: number): void {
+    this.page.set(page);
+    this.fetchPage({ showLoading: true });
+  }
+
+  /**
+   * The single fetch path behind `load()`, `onPageChange()`, and any
+   * post-mutation reload (`reloadAfterSave`/`advanceAfter`) — always asks
+   * the server for `page()`/PAGE_SIZE and always trusts its `total` for the
+   * sidebar badge.
+   *
+   * `keepSelectedId`: after a plain edit-save, the just-saved draft is still
+   * on the same page (its status never left `draft`) — pass its id to keep
+   * it selected instead of jumping back to the page's first row.
+   *
+   * Page-underflow guard: if the response comes back with zero items on a
+   * page beyond the first, that's NOT "the queue is empty" — it's "the
+   * mutation that just ran (approve/reject) emptied exactly this page".
+   * Steps back one page and refetches rather than rendering the empty
+   * state, so approving/rejecting the last draft on the last page never
+   * strands the reviewer on a page that no longer exists.
+   */
+  private fetchPage(
+    opts: { showLoading?: boolean; keepSelectedId?: string; onError?: () => void } = {},
+  ): void {
+    if (opts.showLoading) {
+      this.loading.set(true);
+      this.errorMessage.set(null);
+    }
+    this.aiService.listDraftsPaged(this.page(), this.PAGE_SIZE).subscribe({
+      next: (res) => {
         this.loading.set(false);
-        this.drafts.set([...drafts]);
-        this.draftCountService.set(drafts.length);
-        if (drafts.length > 0) this.select(drafts[0]);
-        else this.selected.set(null);
+        this.total.set(res.total);
+
+        if (res.items.length === 0 && this.page() > 1) {
+          this.page.update((p) => p - 1);
+          this.fetchPage(opts);
+          return;
+        }
+
+        this.drafts.set([...res.items]);
+        this.draftCountService.set(res.total);
+
+        const keep = opts.keepSelectedId
+          ? res.items.find((d) => d.id === opts.keepSelectedId)
+          : undefined;
+        if (keep) {
+          // A successful save implicitly resolves any stale approve/reject
+          // error banner — `select()` used to clear this incidentally
+          // before this reload path bypassed it.
+          this.actionError.set(null);
+          this.selected.set(keep);
+          this.compilePreview(keep.id);
+        } else if (res.items.length > 0) {
+          this.select(res.items[0]);
+        } else {
+          this.selected.set(null);
+        }
       },
       error: (_e: HttpErrorResponse) => {
         this.loading.set(false);
-        this.errorMessage.set('No se pudo cargar la cola. Inténtalo de nuevo.');
+        if (opts.onError) {
+          opts.onError();
+        } else {
+          this.errorMessage.set('No se pudo cargar la cola. Inténtalo de nuevo.');
+        }
       },
     });
   }
@@ -327,23 +399,9 @@ export class AiReviewQueueComponent {
    * fresh saved content) and recompiles its preview exactly once.
    */
   private reloadAfterSave(savedId: string): void {
-    this.aiService.listDrafts().subscribe({
-      next: (drafts) => {
-        this.drafts.set([...drafts]);
-        this.draftCountService.set(drafts.length);
-        const stillThere = drafts.find((d) => d.id === savedId);
-        if (stillThere) {
-          // A successful save implicitly resolves any stale
-          // approve/reject error banner — `select()` used to clear this
-          // incidentally before `reloadAfterSave` bypassed it.
-          this.actionError.set(null);
-          this.selected.set(stillThere);
-          this.compilePreview(stillThere.id);
-        } else {
-          this.selected.set(null);
-        }
-      },
-      error: () => {
+    this.fetchPage({
+      keepSelectedId: savedId,
+      onError: () => {
         /* row list falls out of sync until the next natural reload — the save itself already succeeded, so this is non-fatal */
       },
     });
@@ -417,12 +475,17 @@ export class AiReviewQueueComponent {
     });
   }
 
-  private advanceAfter(id: string): void {
-    const remaining = this.drafts().filter((d) => d.id !== id);
-    this.drafts.set(remaining);
-    this.draftCountService.set(remaining.length);
-    if (remaining.length > 0) this.select(remaining[0]);
-    else this.selected.set(null);
+  /**
+   * Refetches the current page after an approve/reject — the mutated draft
+   * left `status=draft` server-side, so it's already gone from whatever
+   * `fetchPage()` gets back; no local array filtering needed. Handles the
+   * page-underflow edge case (last draft on a page beyond page 1) via
+   * `fetchPage()`'s own guard — see its doc.
+   */
+  private advanceAfter(): void {
+    this.fetchPage({
+      onError: () => this.actionError.set('No se pudo actualizar la cola. Inténtalo de nuevo.'),
+    });
   }
 
   protected approve(): void {
@@ -430,7 +493,7 @@ export class AiReviewQueueComponent {
     if (!current) return;
     this.actionError.set(null);
     this.aiService.approveQuestion(current.id).subscribe({
-      next: () => this.advanceAfter(current.id),
+      next: () => this.advanceAfter(),
       error: () => this.actionError.set('No se pudo aprobar. Inténtalo de nuevo.'),
     });
   }
@@ -447,7 +510,7 @@ export class AiReviewQueueComponent {
     if (!current) return;
     this.actionError.set(null);
     this.aiService.rejectQuestion(current.id).subscribe({
-      next: () => this.advanceAfter(current.id),
+      next: () => this.advanceAfter(),
       error: () => this.actionError.set('No se pudo rechazar. Inténtalo de nuevo.'),
     });
   }

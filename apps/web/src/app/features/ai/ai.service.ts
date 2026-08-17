@@ -1,10 +1,11 @@
 import { HttpClient, HttpDownloadProgressEvent, HttpEventType, HttpParams, HttpResponse } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import {
   AiRevisedQuestion,
   CreateGenerationJobPayload,
+  DraftListResult,
   DraftQuestion,
   EditDraftPayload,
   GenerateQuestionsPayload,
@@ -85,9 +86,51 @@ export class AiService {
     });
   }
 
-  listDrafts(): Observable<DraftQuestion[]> {
-    const params = new HttpParams().set('status', 'draft');
-    return this.http.get<DraftQuestion[]>(`${environment.apiBaseUrl}/bank/questions`, { params });
+  /**
+   * S6-paginated `GET /bank/questions?status=draft&page=&pageSize=` —
+   * `AiReviewQueueComponent`'s row fetch (docs/audit-2026-08-14.md, "`GET
+   * /bank/questions` sin `page` sigue sin tope"). Replaces the old
+   * `listDrafts()`, which asked the backend's retro-compat unpaginated form
+   * (`page` omitted) and decoded the full flat array — exactly the shape
+   * that caused the `/app/bank` 41MB P0, just waiting for a bulk AI-generation
+   * run to pile up enough drafts to hurt. The caller is responsible for
+   * keeping any "total drafts" badge in sync with `total`, NOT
+   * `items.length` — a page is not the whole queue.
+   */
+  listDraftsPaged(page: number, pageSize: number): Observable<DraftListResult> {
+    const params = new HttpParams()
+      .set('status', 'draft')
+      .set('page', String(page))
+      .set('pageSize', String(pageSize));
+    return this.http.get<DraftListResult>(`${environment.apiBaseUrl}/bank/questions`, { params });
+  }
+
+  /**
+   * Direct-by-id fetch of a single draft — `GET /bank/questions/:id`.
+   * `GenerationJobDetailComponent.loadNewQuestions()` uses this to resolve
+   * each newly-created id pushed by the job stream, one request per unseen
+   * id, instead of downloading the entire draft queue (the old
+   * `listDrafts()`-diff-by-id technique) just to pick a handful of rows out
+   * of it — its actual need was never "the queue", it was "these specific
+   * ids" (docs/audit-2026-08-14.md).
+   */
+  getDraft(id: string): Observable<DraftQuestion> {
+    return this.http.get<DraftQuestion>(`${environment.apiBaseUrl}/bank/questions/${id}`);
+  }
+
+  /**
+   * Pending-drafts COUNT only, for `DraftCountService` (sidebar badge "Cola
+   * de revisión · N") — asks the S6 paginated form (`page=1&pageSize=1`)
+   * and reads `total`, instead of downloading rows just to call `.length`
+   * on them (docs/audit-2026-08-14.md).
+   */
+  countDrafts(): Observable<number> {
+    const params = new HttpParams().set('status', 'draft').set('page', '1').set('pageSize', '1');
+    return this.http
+      .get<{ items: DraftQuestion[]; total: number }>(`${environment.apiBaseUrl}/bank/questions`, {
+        params,
+      })
+      .pipe(map((response) => response.total));
   }
 
   approveQuestion(id: string): Observable<{ id: string }> {

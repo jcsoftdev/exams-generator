@@ -147,7 +147,11 @@ export interface ExamDetailQuestion {
   readonly position: number;
   readonly type: QuestionType;
   readonly courseId: string;
+  /** Display name for `courseId` — the review screen renders this, never the uuid (audit 2026-08-15). */
+  readonly courseName: string;
   readonly topicId: string;
+  /** Display name for `topicId` — same reason as `courseName`. */
+  readonly topicName: string;
   readonly difficulty: Difficulty;
   readonly correctAnswer: string;
   readonly imageAssetId: string | null;
@@ -322,9 +326,26 @@ export interface ResolveBlueprintPayload {
  * screen can feed them straight back into `POST /exams` as provenance
  * without re-deriving anything client-side (design doc §4) — the
  * exam-builder screen today only consumes `blueprint`.
+ *
+ * `usedCumulativeFallback` (optional — older/mocked responses may omit it,
+ * treated as `false`): true when a `current_only` type ("Rápido (semana
+ * actual)") got widened to cumulative because the current week has no
+ * syllabus of its own — the P0 fix in docs/audit-2026-08-14.md. The exam
+ * builder MUST show this, not swallow it: the teacher asked for "current
+ * week" and got "everything seen so far" instead.
  */
 export interface ResolveBlueprintResult {
   readonly blueprint: readonly ResolvedBlueprintRow[];
   readonly weekNumber: number | null;
   readonly templateId: string | null;
+  readonly usedCumulativeFallback?: boolean;
+  /**
+   * Refinement on top of `usedCumulativeFallback` (docs/audit-2026-08-14.md,
+   * same item): the last week this (university, track) syllabus actually has
+   * content for — `null` when the backend has nothing to report (older/mocked
+   * responses may omit the field entirely, treated the same as `null`).
+   * `weekNumber` stays the calendar-computed week (provenance snapshot); this
+   * is the one to SHOW the teacher — "cubre hasta la semana N".
+   */
+  readonly effectiveWeekNumber?: number | null;
 }

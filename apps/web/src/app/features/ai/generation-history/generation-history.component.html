@@ -26,9 +26,13 @@
   }
 
   @for (job of jobs(); track job.id) {
-    <div
+    <!-- Fila de lista clickeable de ancho completo (ui-tag + timestamp alineado a la
+         derecha) — <button> crudo a propósito, no el primitivo del design system, mismo
+         patrón que `retry-history-item` en generation-job-detail. -->
+    <button
+      type="button"
       data-testid="job-row"
-      class="flex cursor-pointer items-center gap-3 rounded-card border border-n200 bg-surface p-3 hover:border-primary-300"
+      class="flex w-full cursor-pointer items-center gap-3 rounded-card border border-n200 bg-surface p-3 text-left hover:border-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-300"
       (click)="open(job)"
     >
       <ui-tag [variant]="statusTag(job.status)">{{ statusLabel(job.status) }}</ui-tag>
@@ -45,7 +49,7 @@
         </div>
       </div>
       <span class="text-xs text-n500">{{ job.createdAt | date: 'short' }}</span>
-    </div>
+    </button>
   }
 
   <ui-pagination [page]="page()" [pageSize]="PAGE_SIZE" [total]="total()" (pageChange)="onPageChange($event)"></ui-pagination>

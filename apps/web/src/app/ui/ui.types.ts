@@ -32,10 +32,3 @@ export interface NavGroup {
   readonly title: string;
   readonly items: readonly NavItem[];
 }
-
-/** Simple-mode column definition for `ui/table`. */
-export interface Column<T = unknown> {
-  readonly key: string;
-  readonly label: string;
-  readonly render?: (row: T) => string;
-}

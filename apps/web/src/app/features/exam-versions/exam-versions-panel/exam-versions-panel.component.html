@@ -25,12 +25,29 @@
     </p>
   }
 
+  <!--
+    Screen-reader-only milestone announcements (audit P2 — a11y). Deliberately
+    OUTSIDE the `@if (generating())` block below: a terminal frame flips
+    `generating` to false in the same tick that sets this text, and a region
+    that unmounts in that same change-detection pass risks the browser
+    dropping the announcement entirely. Staying mounted for as long as
+    `versionJob()` exists (set on start, cleared only by a fresh generation)
+    keeps it alive through that transition. See `updateJobAnnouncement()`.
+  -->
+  @if (versionJob()) {
+    <div data-testid="version-job-live-region" class="sr-only" aria-live="polite" role="status">{{ jobAnnouncement() }}</div>
+  }
+
   <div class="mb-4 flex flex-col gap-3">
     <div class="flex items-center justify-between">
+      <!--
+        "Generar más formas" prometía sumar y la acción REEMPLAZA todo (el
+        panel y el modal ya lo decían; el botón no) — audit 2026-08-15.
+      -->
       <div data-testid="generate-more-versions">
         <ui-button variant="ghost" (clicked)="toggleGenerateForm()" [disabled]="generating()">
           <lucide-icon name="plus" class="h-4 w-4"></lucide-icon>
-          Generar más formas
+          {{ versions().length === 0 ? 'Generar formas' : 'Regenerar formas' }}
         </ui-button>
       </div>
       <span data-testid="download-zip">
@@ -131,14 +148,19 @@
           <span class="font-medium text-n900">Forma {{ version.code }}</span>
           <div class="flex gap-4">
             @if (downloadUrlFor(version.pdfUrl); as url) {
-              <a [href]="url" download data-testid="version-pdf-link" class="text-sm text-primary-500 underline">
+              <a
+                [href]="url"
+                [attr.download]="downloadNameFor(version.code, 'exam')"
+                data-testid="version-pdf-link"
+                class="text-sm text-primary-500 underline"
+              >
                 Examen (PDF)
               </a>
             }
             @if (downloadUrlFor(version.answerSheetUrl); as url) {
               <a
                 [href]="url"
-                download
+                [attr.download]="downloadNameFor(version.code, 'answers')"
                 data-testid="version-answer-link"
                 class="text-sm text-primary-500 underline"
               >

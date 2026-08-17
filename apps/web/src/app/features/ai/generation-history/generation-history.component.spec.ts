@@ -80,6 +80,15 @@ describe('GenerationHistoryComponent', () => {
     expect(navigate).toHaveBeenCalledWith(['/app/ai/jobs', 'job-1']);
   });
 
+  it('renders each history row as a native button so it is keyboard-reachable', () => {
+    const { compiled } = setup({ items: [job({ id: 'job-1' })], total: 1 });
+
+    const row = compiled.querySelector('[data-testid="job-row"]') as HTMLElement;
+
+    expect(row.tagName).toBe('BUTTON');
+    expect(row.getAttribute('type')).toBe('button');
+  });
+
   it('does not show an attempt-count badge for a job that was never retried', () => {
     const { compiled } = setup({ items: [job({ id: 'job-1', attemptCount: 1 })], total: 1 });
 

@@ -45,7 +45,7 @@
         <ui-button variant="primary" (clicked)="retry()">Reintentar</ui-button>
       </div>
     </div>
-  } @else if (questions().length === 0 && !bankHasAnyQuestions()) {
+  } @else if (totalQuestions() === 0 && !bankHasAnyQuestions()) {
     <div data-testid="empty-bank">
       <ui-empty-state message="Tu banco vacío aún no tiene preguntas. Sube preguntas o genéralas con IA.">
         <div cta class="flex gap-2">
@@ -53,7 +53,7 @@
         </div>
       </ui-empty-state>
     </div>
-  } @else if (questions().length === 0) {
+  } @else if (totalQuestions() === 0) {
     <div data-testid="empty-no-results">
       <ui-empty-state message="No hay preguntas con esos filtros. Prueba limpiar los filtros."></ui-empty-state>
     </div>
@@ -62,18 +62,25 @@
       <!-- Árbol Curso -> Tema -> preguntas -->
       <div class="flex flex-col gap-2">
         <div class="flex items-end gap-2">
+          <!--
+            Placeholder states the search scope on purpose: the tree loads
+            lazily per branch, so a collapsed topic's questions aren't in the
+            browser and the filter can only honestly match curso/tema names.
+            See `filterQuestionTree`.
+          -->
           <div data-testid="tree-search" class="flex-1">
             <ui-input
-              placeholder="Buscar por clave, curso o tema…"
+              placeholder="Buscar por curso o tema…"
               [value]="filterQuery()"
               (valueChange)="filterQuery.set($event)"
             ></ui-input>
           </div>
+          <!-- Expands COURSES only — one open topic is one request, so opening every topic would be a fan-out. -->
           <div data-testid="expand-all">
             <ui-button variant="ghost" (clicked)="expandAll()">
               <span class="flex items-center gap-1">
                 <lucide-angular name="expand" class="h-4 w-4"></lucide-angular>
-                Expandir todo
+                Expandir cursos
               </span>
             </ui-button>
           </div>
@@ -126,7 +133,8 @@
                       >
                         <lucide-angular [name]="chevronFor(isTopicExpanded(topic.topicId))" class="h-3.5 w-3.5 shrink-0 text-n400"></lucide-angular>
                         <span class="text-sm font-medium text-n700">{{ topic.name }}</span>
-                        <span class="text-xs text-n400">· {{ topic.questions.length }}</span>
+                        <!-- Count comes from the server summary, NOT from the loaded leaves — it's the topic's real total even while collapsed. -->
+                        <span class="text-xs text-n400">· {{ topic.questionCount }}</span>
                       </button>
 
                       @if (isTopicExpanded(topic.topicId)) {
@@ -162,6 +170,39 @@
                                 }
                               </div>
                               <ui-tag [variant]="tagVariantFor(q.difficulty)">{{ difficultyLabel(q.difficulty) }}</ui-tag>
+                            </button>
+                          }
+
+                          @if (isTopicLoading(topic.topicId)) {
+                            <div data-testid="topic-loading" class="flex flex-col gap-1 pl-14">
+                              @for (i of [1, 2, 3]; track i) {
+                                <div class="h-10 animate-pulse rounded-field bg-n100"></div>
+                              }
+                            </div>
+                          } @else if (hasTopicFailed(topic.topicId)) {
+                            <!-- Scoped to this branch: a failed topic never blanks the rest of the tree. -->
+                            <div data-testid="topic-error" class="flex items-center gap-2 pl-14 text-sm text-n700">
+                              <span>{{ topicErrorMessage }}</span>
+                              <button
+                                type="button"
+                                data-testid="topic-retry"
+                                [attr.data-topic-id]="topic.topicId"
+                                class="rounded-field px-2 py-0.5 text-sm font-medium text-primary-600 underline focus:outline-none focus:ring-2 focus:ring-primary-300"
+                                (click)="retryTopic(topic.topicId)"
+                              >
+                                Reintentar
+                              </button>
+                            </div>
+                          } @else if (remainingIn(topic) > 0) {
+                            <!-- The API caps pageSize at 100 and a seeded topic can hold ~230 questions — the rest is one click away, never an implicit fetch. -->
+                            <button
+                              type="button"
+                              data-testid="topic-load-more"
+                              [attr.data-topic-id]="topic.topicId"
+                              class="ml-14 mr-2 rounded-field border border-n200 px-2 py-1 text-left text-xs font-medium text-n600 transition-colors hover:border-primary-300 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-300"
+                              (click)="loadMoreQuestions(topic.topicId)"
+                            >
+                              Ver más ({{ remainingIn(topic) }} restantes)
                             </button>
                           }
                         </div>

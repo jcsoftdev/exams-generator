@@ -30,7 +30,14 @@ import { MathTextComponent } from '../../../ui/math-text/math-text.component';
 import { truncateTypst, typstToPlainText } from '../../../shared/typst/typst-to-latex';
 import { TagVariant } from '../../../ui/ui.types';
 import { BankService } from '../bank.service';
-import { BankQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, UpdateQuestionPayload } from '../bank.models';
+import {
+  BankQuestion,
+  BankQuestionFilters,
+  BankTopicCount,
+  GRADE_LEVELS,
+  GRADE_LEVEL_LABELS,
+  UpdateQuestionPayload,
+} from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
@@ -55,6 +62,17 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
 };
 
 const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.';
+const TOPIC_ERROR_MESSAGE = 'No se pudieron cargar las preguntas de este tema.';
+
+/**
+ * How many questions one "page" of a topic holds. The API clamps `pageSize`
+ * at 100 (`clampPagination`), and the seeded central bank averages ~230
+ * questions per topic — so a topic genuinely can need more than one page,
+ * which is what the "Ver más" affordance is for. 50 keeps the first paint of
+ * an expanded topic small (it's also 50 thumbnail fetches at worst) while
+ * making a second page rare for tenant-sized topics.
+ */
+const TOPIC_PAGE_SIZE = 50;
 
 /**
  * Question-bank screen, tree redesign: a two-column split where the left
@@ -62,45 +80,68 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
  * flat paginated list + raw UUID subtitles) and the right column is the
  * unchanged `bank-panel` detail view.
  *
- * Grouping/name-resolution is a pure transform (`buildQuestionTree`) fed by
- * the flat `GET /bank/questions` array (`BankService.listQuestions` — no
- * pagination needed, ~71 rows) plus id->name maps resolved once from
- * `TaxonomyService.getCourses()` + one `getTopics(courseId)` call per course
- * (the Angular `TaxonomyService` wrapper requires a `courseId`, so this
- * fetches all courses' topics in a single batched
- * `TaxonomyService.getTopicsForCourses()` call instead of one `getTopics`
- * request per course (fixes the N+1 fan-out that used to trip the global
- * ThrottlerGuard).
+ * LAZY BY BRANCH (this is the load-bearing decision — see the P0 in
+ * `docs/audit-2026-08-14.md`). The tree used to be built by grouping the
+ * flat, UNPAGINATED `GET /bank/questions` array client-side, on the premise
+ * recorded in this very docstring: "no pagination needed, ~71 rows". That
+ * premise died when the collected-questions seeder grew the central bank to
+ * 64,257 rows, all `tenantId: null, status: 'approved'` and therefore
+ * visible to every tenant: `/app/bank` — the first screen a teacher opens —
+ * was downloading tens of MB and building a 64k-node client tree on load.
+ *
+ * Now the screen loads TWO cheap things up front: the taxonomy id->name maps
+ * and `GET /bank/questions/summary` (`BankService.getQuestionCounts`), which
+ * returns one `{courseId, topicId, total}` row per topic and no question
+ * payload at all. That is enough to render the entire Curso -> Tema skeleton
+ * with real counts. A topic's actual questions are fetched — paginated,
+ * `TOPIC_PAGE_SIZE` at a time via `listQuestionsPaged` — only when that topic
+ * is expanded (`loadTopicQuestions`), cached in `loadedQuestions`, and never
+ * re-fetched while the current filter set holds.
+ *
+ * Taxonomy comes from `TaxonomyService.getCourses()` plus a single batched
+ * `TaxonomyService.getTopicsForCourses()` call (the Angular wrapper requires
+ * a `courseId`, and one `getTopics` request per course was an N+1 fan-out
+ * that tripped the global ThrottlerGuard).
  *
  * Courses AND topics default COLLAPSED on every fetch (progressive
- * disclosure — avoids dumping every topic of every course on load, which
- * for a bank of ~19 courses/40+ topics per course was an unscannable wall).
- * Expanding a course reveals only its topic list (still collapsed);
- * expanding a topic reveals its leaf questions. Search force-expands
- * matching branches (`isFiltering()`), and "Expandir todo" still opens
- * everything at once. Only branches with at least one question render
- * (empty branches never appear).
+ * disclosure — and now also the thing that keeps the network bounded).
+ * Expanding a course reveals only its topic list (still collapsed) and costs
+ * NOTHING: the counts are already in hand. Expanding a topic is what issues
+ * the one request that fills that branch. Only branches with at least one
+ * question render (empty branches never appear).
+ *
+ * "Expandir todo" opens every COURSE, not every topic. Opening 276 topics at
+ * once would be 276 parallel requests — exactly the fan-out this redesign
+ * exists to kill. The button's job (see every course's topics at a glance)
+ * survives; the leaves stay one deliberate click away.
  *
  * Distinguishes TWO empty states (QB-R2): "banco vacío" (the tenant's bank
  * has zero questions at all, regardless of filters) vs "sin resultados"
  * (the bank has questions, but the current filters match none). Tracked via
- * `bankHasAnyQuestions`, set `true` the first time ANY response (filtered or
- * not) returns at least one question.
+ * `bankHasAnyQuestions`, set `true` the first time ANY summary (filtered or
+ * not) reports at least one question.
  *
  * Thumbnails are fetched as authenticated blobs (see `loadImages` —
  * `/assets/:id` is Bearer-JWT protected, a raw `<img src>` never sends that
  * header), lazily: only for topics that are actually expanded/visible
  * (`visibleExpandedTopics` + an `effect` that fires `loadImages` once per
- * newly-visible topic) — avoids up to 71 parallel fetches on initial load.
- * Structured questions (no `imageAssetId`) and image questions with no
- * asset yet get a neutral lucide placeholder icon instead of a blank box.
+ * newly-visible topic). With lazy branches this is now doubly bounded — a
+ * topic's questions don't even exist client-side until it's expanded, so the
+ * worst case is one page (`TOPIC_PAGE_SIZE`) of thumbnails per opened topic
+ * instead of the whole bank's. Structured questions (no `imageAssetId`) and
+ * image questions with no asset yet get a neutral lucide placeholder icon
+ * instead of a blank box.
  *
  * The free-text search box (`filterQuery`) filters the tree live via the
- * pure `filterQuestionTree` transform (clave/course/topic substring match);
- * while a query is active, every surviving branch renders force-expanded
- * (`isFiltering()` short-circuits `isCourseExpanded`/`isTopicExpanded`) so
- * matches are always visible without extra clicks. Expand-all/collapse-all
- * operate on the underlying expand-state signals directly.
+ * pure `filterQuestionTree` transform. Its scope is CURSO/TEMA NAMES ONLY —
+ * it deliberately no longer matches a question's clave, because with lazy
+ * branches the leaves of a collapsed topic aren't in memory and a clave
+ * match would silently only search whatever the user happened to have
+ * opened. See `filterQuestionTree`'s doc. While a query is active every
+ * surviving COURSE renders force-expanded (`isFiltering()` short-circuits
+ * `isCourseExpanded`) so matching topics are visible without extra clicks;
+ * topics are NOT force-expanded, for the same fan-out reason "Expandir todo"
+ * isn't. Expand-all/collapse-all operate on the expand-state signals.
  *
  * Action gating (`canArchive`/`canDelete`/`isCentral`) mirrors the backend's
  * own rules (Lane D4: S4 archives only `approved`, S5 deletes only own
@@ -202,7 +243,22 @@ export class BankListComponent {
   protected readonly difficulty = signal<Difficulty | null>(null);
   protected readonly gradeLevel = signal<string | null>(null);
 
-  protected readonly questions = signal<BankQuestion[]>([]);
+  /** `GET /bank/questions/summary` — one `{courseId, topicId, total}` row per topic. The whole tree skeleton, no question payload. */
+  protected readonly topicCounts = signal<readonly BankTopicCount[]>([]);
+  /** `topicId` -> the questions fetched so far for that topic. Absent key = never expanded; the tree renders its count from `topicCounts` regardless. */
+  private readonly loadedQuestions = signal<ReadonlyMap<string, readonly BankQuestion[]>>(new Map());
+  /**
+   * `topicId` -> highest page number already fetched. Tracked explicitly
+   * rather than derived from `loadedQuestions[topicId].length / PAGE_SIZE`:
+   * that division silently assumes every page came back full, which stops
+   * being true the moment the server trims a page (deleted rows, a smaller
+   * server-side cap) and would then re-request the page just loaded, forever.
+   */
+  private readonly loadedPages = signal<ReadonlyMap<string, number>>(new Map());
+  /** Topics with a page request in flight — drives the per-branch spinner and guards against double-fetching on rapid toggles. */
+  private readonly loadingTopics = signal<ReadonlySet<string>>(new Set());
+  /** Topics whose last page request failed — renders an inline retry inside that branch only, never blanking the whole tree. */
+  private readonly failedTopics = signal<ReadonlySet<string>>(new Set());
   private readonly courseNames = signal<ReadonlyMap<string, string>>(new Map());
   private readonly topicNames = signal<ReadonlyMap<string, string>>(new Map());
   /** Full taxonomy (every course/topic, unscoped by grade) loaded once in `fetchTaxonomy` — reused by the edit form's curso/tema selects instead of new HTTP calls. */
@@ -298,9 +354,19 @@ export class BankListComponent {
   /** Every `topicId` an image fetch has already been requested for — guards the lazy-load effect against duplicate HTTP calls. */
   private readonly requestedImageTopics = new Set<string>();
 
-  /** Curso -> Tema -> preguntas, grouped/sorted/name-resolved from the flat question list (QB tree redesign). */
+  /** Curso -> Tema -> preguntas: skeleton + counts from the server summary, leaves filled in per expanded topic (QB tree redesign, lazy by branch). */
   protected readonly tree = computed<QuestionTreeCourseNode[]>(() =>
-    buildQuestionTree(this.questions(), this.courseNames(), this.topicNames()),
+    buildQuestionTree(
+      this.topicCounts(),
+      this.loadedQuestions(),
+      this.courseNames(),
+      this.topicNames(),
+    ),
+  );
+
+  /** Total questions the current filters match, summed from the summary — drives the two empty states without holding a single question row. */
+  protected readonly totalQuestions = computed(() =>
+    this.topicCounts().reduce((sum, bucket) => sum + bucket.total, 0),
   );
 
   /** `tree()` filtered live by `filterQuery()` — matching branches stay, non-matching hide. */
@@ -331,8 +397,9 @@ export class BankListComponent {
         URL.revokeObjectURL(url);
       }
     });
-    // Lazy thumbnail loading: fetch a topic's images the first time it becomes visible+expanded
-    // (manual toggle, "expand all", or auto-expand while filtering) — never all 71 up front.
+    // Lazy thumbnail loading: fetch a topic's images the first time it becomes visible+expanded.
+    // Doubly bounded now — a topic's questions only exist client-side after its own page fetch,
+    // so this can never see more than TOPIC_PAGE_SIZE questions per opened topic.
     effect(() => {
       for (const topic of this.visibleExpandedTopics()) {
         if (!this.requestedImageTopics.has(topic.topicId)) {
@@ -347,14 +414,14 @@ export class BankListComponent {
     this.loading.set(true);
     this.errorMessage.set(null);
 
-    forkJoin({ taxonomy: this.fetchTaxonomy(), questions: this.fetchQuestions() }).subscribe({
-      next: ({ taxonomy, questions }) => {
+    forkJoin({ taxonomy: this.fetchTaxonomy(), counts: this.fetchCounts() }).subscribe({
+      next: ({ taxonomy, counts }) => {
         this.courseNames.set(taxonomy.courseNames);
         this.topicNames.set(taxonomy.topicNames);
         this.courses.set(taxonomy.courses);
         this.topics.set(taxonomy.topics);
         this.taxonomyLoaded.set(true);
-        this.applyQuestions(questions);
+        this.applyCounts(counts);
         this.loading.set(false);
       },
       error: () => {
@@ -368,9 +435,9 @@ export class BankListComponent {
     this.loading.set(true);
     this.errorMessage.set(null);
 
-    this.fetchQuestions().subscribe({
-      next: (questions) => {
-        this.applyQuestions(questions);
+    this.fetchCounts().subscribe({
+      next: (counts) => {
+        this.applyCounts(counts);
         this.loading.set(false);
       },
       error: () => {
@@ -388,11 +455,16 @@ export class BankListComponent {
     }
   }
 
-  private fetchQuestions(): Observable<BankQuestion[]> {
-    return this.bankService.listQuestions({
+  /** The active filter set, shared by the summary request and every per-topic page request so the counts can never disagree with the leaves. */
+  private currentFilters(): BankQuestionFilters {
+    return {
       difficulty: this.difficulty() ?? undefined,
       gradeLevel: this.gradeLevel() ?? undefined,
-    });
+    };
+  }
+
+  private fetchCounts(): Observable<readonly BankTopicCount[]> {
+    return this.bankService.getQuestionCounts(this.currentFilters());
   }
 
   /**
@@ -421,14 +493,25 @@ export class BankListComponent {
     );
   }
 
-  private applyQuestions(questions: readonly BankQuestion[]): void {
-    this.questions.set([...questions]);
-    if (questions.length > 0) {
+  /**
+   * Applies a fresh summary. Every per-topic page already fetched is
+   * DISCARDED: the filters that produced those pages are exactly the ones
+   * that just changed, so keeping them would leave leaves that contradict
+   * their own branch's count. Expansion state resets to collapsed for the
+   * same reason (and because that's the progressive-disclosure default).
+   * Thumbnails are NOT loaded here — the `visibleExpandedTopics` effect
+   * lazy-loads a topic's images the first time it becomes visible+expanded.
+   */
+  private applyCounts(counts: readonly BankTopicCount[]): void {
+    this.topicCounts.set([...counts]);
+    if (counts.some((bucket) => bucket.total > 0)) {
       this.bankHasAnyQuestions.set(true);
     }
-    // Courses AND topics reset to collapsed (progressive disclosure) on every fetch — see class doc.
-    // Thumbnails are NOT loaded here — the `visibleExpandedTopics` effect lazy-loads a topic's
-    // images the first time it actually becomes visible+expanded.
+    this.loadedQuestions.set(new Map());
+    this.loadedPages.set(new Map());
+    this.loadingTopics.set(new Set());
+    this.failedTopics.set(new Set());
+    this.requestedImageTopics.clear();
     this.expandedCourses.set(new Set());
     this.expandedTopics.set(new Set());
   }
@@ -437,22 +520,109 @@ export class BankListComponent {
     this.expandedCourses.update((current) => toggleInSet(current, courseId));
   }
 
+  /** Expanding a topic is what triggers its (single, paginated) question fetch — collapsing keeps the page cached, so re-opening costs nothing. */
   protected toggleTopic(topicId: string): void {
     this.expandedTopics.update((current) => toggleInSet(current, topicId));
+    if (this.expandedTopics().has(topicId)) {
+      this.loadTopicQuestions(topicId);
+    }
   }
 
   protected isCourseExpanded(courseId: string): boolean {
     return this.isFiltering() || this.expandedCourses().has(courseId);
   }
 
+  /**
+   * NOTE the asymmetry with `isCourseExpanded`: an active search force-opens
+   * matching COURSES (free — the topic list is already in the summary) but
+   * never topics, because each open topic is one HTTP request. Auto-opening
+   * every topic that matched a query would restore the fan-out this redesign
+   * removed.
+   */
   protected isTopicExpanded(topicId: string): boolean {
-    return this.isFiltering() || this.expandedTopics().has(topicId);
+    return this.expandedTopics().has(topicId);
   }
 
-  /** Expands every course and topic currently in the (unfiltered) tree. */
+  protected isTopicLoading(topicId: string): boolean {
+    return this.loadingTopics().has(topicId);
+  }
+
+  protected hasTopicFailed(topicId: string): boolean {
+    return this.failedTopics().has(topicId);
+  }
+
+  protected readonly topicErrorMessage = TOPIC_ERROR_MESSAGE;
+
+  /** How many more questions the topic holds beyond the pages already fetched — the "Ver más" affordance renders only while this is > 0. */
+  protected remainingIn(topic: QuestionTreeTopicNode): number {
+    return Math.max(0, topic.questionCount - topic.questions.length);
+  }
+
+  /**
+   * Fetches ONE page of a topic's questions and appends it to the cache.
+   * Idempotent per page: a topic already fully loaded (or with a request in
+   * flight) is a no-op, so re-expanding a branch — or the `expandAll` path —
+   * never re-issues a request. `force` is the inline-retry escape hatch: it
+   * re-runs the same page after a failure, which the `failedTopics` guard
+   * would otherwise block.
+   */
+  private loadTopicQuestions(topicId: string, force = false): void {
+    if (this.loadingTopics().has(topicId)) {
+      return;
+    }
+    if (!force && this.failedTopics().has(topicId)) {
+      return;
+    }
+
+    const alreadyLoaded = this.loadedQuestions().get(topicId) ?? [];
+    const expectedTotal = this.topicCounts().find((bucket) => bucket.topicId === topicId)?.total ?? 0;
+    if (alreadyLoaded.length > 0 && alreadyLoaded.length >= expectedTotal) {
+      return;
+    }
+
+    const page = (this.loadedPages().get(topicId) ?? 0) + 1;
+    this.loadingTopics.update((current) => addToSet(current, topicId));
+    this.failedTopics.update((current) => removeFromSet(current, topicId));
+
+    this.bankService
+      .listQuestionsPaged({ ...this.currentFilters(), topicId }, page, TOPIC_PAGE_SIZE)
+      .subscribe({
+        next: (paged) => {
+          this.loadedQuestions.update((current) => {
+            const next = new Map(current);
+            next.set(topicId, [...(current.get(topicId) ?? []), ...paged.items]);
+            return next;
+          });
+          this.loadedPages.update((current) => {
+            const next = new Map(current);
+            next.set(topicId, page);
+            return next;
+          });
+          this.loadingTopics.update((current) => removeFromSet(current, topicId));
+        },
+        error: () => {
+          this.loadingTopics.update((current) => removeFromSet(current, topicId));
+          this.failedTopics.update((current) => addToSet(current, topicId));
+        },
+      });
+  }
+
+  /** "Ver más": pulls the next page of an already-open topic. */
+  protected loadMoreQuestions(topicId: string): void {
+    this.loadTopicQuestions(topicId);
+  }
+
+  /** Inline retry inside a branch whose page request failed — never reloads the whole tree. */
+  protected retryTopic(topicId: string): void {
+    this.loadTopicQuestions(topicId, true);
+  }
+
+  /**
+   * Expands every COURSE (revealing all topic lists), not every topic — see
+   * the class doc: opening every topic would fire one request per topic.
+   */
   protected expandAll(): void {
     this.expandedCourses.set(new Set(this.tree().map((course) => course.courseId)));
-    this.expandedTopics.set(new Set(this.tree().flatMap((course) => course.topics.map((topic) => topic.topicId))));
   }
 
   /** Collapses every course and topic. */
@@ -839,5 +1009,17 @@ function toggleInSet(current: ReadonlySet<string>, id: string): ReadonlySet<stri
   } else {
     next.add(id);
   }
+  return next;
+}
+
+function addToSet(current: ReadonlySet<string>, id: string): ReadonlySet<string> {
+  const next = new Set(current);
+  next.add(id);
+  return next;
+}
+
+function removeFromSet(current: ReadonlySet<string>, id: string): ReadonlySet<string> {
+  const next = new Set(current);
+  next.delete(id);
   return next;
 }

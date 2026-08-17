@@ -7,9 +7,13 @@
     }
     <ui-tag [variant]="statusTag(status())">{{ statusLabel(status()) }}</ui-tag>
   </header>
-  <p class="mb-5 text-sm text-n600">
-    Estas son las preguntas que sacamos de tu banco. Cámbialas si quieres y confirma cuando estés conforme.
-  </p>
+  <p class="mb-5 text-sm text-n600">{{ introText() }}</p>
+
+  @if (generateError()) {
+    <div class="mb-4">
+      <ui-banner variant="error" [message]="generateError()!"></ui-banner>
+    </div>
+  }
 
   @if (errorMessage()) {
     <div class="mb-4 flex flex-col gap-2">
@@ -50,15 +54,28 @@
           >
           <div class="min-w-0 flex-1">
             <div class="flex flex-wrap items-center gap-2">
-              <span class="text-sm font-medium text-n900">{{ question.courseId }}</span>
+              <span class="text-sm font-medium text-n900">{{ question.courseName }}</span>
               <span class="text-n300">·</span>
-              <span class="text-sm text-n600">{{ question.topicId }}</span>
+              <span class="text-sm text-n600">{{ question.topicName }}</span>
               <ui-tag [variant]="difficultyVariant(question.difficulty)">{{
                 difficultyLabel(question.difficulty)
               }}</ui-tag>
             </div>
-            <p class="mt-1 text-xs text-n500">
-              Respuesta correcta: <span class="font-medium text-n700">{{ question.correctAnswer }}</span>
+
+            <!-- El enunciado: sin esto el docente decidía a ciegas (audit 2026-08-15). -->
+            @if (question.bodyTypst) {
+              <div data-testid="question-body" class="mt-2 text-sm text-n800">
+                <ui-math-text [value]="question.bodyTypst"></ui-math-text>
+              </div>
+            } @else if (question.type === 'image') {
+              <p data-testid="question-body" class="mt-2 text-sm text-n500">
+                Pregunta con imagen — se ve completa en el PDF.
+              </p>
+            }
+
+            <p data-testid="correct-answer" class="mt-1 text-xs text-n500">
+              Respuesta correcta:
+              <span class="font-medium text-n700">{{ correctAnswerLabel(question) }}</span>
             </p>
           </div>
 
@@ -98,16 +115,52 @@
     class="sticky bottom-0 mt-6 flex items-center justify-between gap-3 rounded-card border border-n200 bg-surface px-4 py-3"
   >
     <span class="text-sm text-n600">{{ questions().length }} preguntas</span>
-    <span data-testid="confirm-button">
-      <ui-button [disabled]="isReady()" (clicked)="confirm()">
-        @if (isReady()) {
-          <lucide-icon name="lock" class="h-4 w-4"></lucide-icon>
-          Confirmado
-        } @else {
-          <lucide-icon name="check" class="h-4 w-4"></lucide-icon>
-          Confirmar examen
-        }
-      </ui-button>
+    <span class="flex items-center gap-2">
+      <!--
+        Acción principal del flujo: generar desde acá, la única pantalla donde
+        las preguntas se pueden LEER (decisión de producto 2026-08-17, opción
+        (a) del audit 2026-08-15). `POST versions` ya auto-confirma un borrador
+        en el backend, así que confirmar y generar es UNA decisión, un click.
+        "Confirmar examen" se queda al lado, secundario, para congelar la
+        selección sin compilar todavía — es un estado que la API modela.
+      -->
+      @if (!isReady()) {
+        <span class="w-24" data-testid="review-version-count">
+          <ui-select
+            label="Formas"
+            [options]="versionCountOptions"
+            [value]="versionCount()"
+            (valueChange)="onVersionCountChange($event)"
+          ></ui-select>
+        </span>
+        <span data-testid="generate-from-review">
+          <ui-button variant="primary" [loading]="generating()" (clicked)="generateVersions()">
+            <lucide-icon name="check" class="h-4 w-4"></lucide-icon>
+            Generar {{ versionCount() }} formas
+          </ui-button>
+        </span>
+      }
+
+      <span data-testid="confirm-button">
+        <ui-button variant="ghost" [disabled]="isReady()" (clicked)="confirm()">
+          @if (isReady()) {
+            <lucide-icon name="lock" class="h-4 w-4"></lucide-icon>
+            Confirmado
+          } @else {
+            Solo confirmar
+          }
+        </ui-button>
+      </span>
+
+      <!-- The exit the confirmation banner promises — without it the screen was a dead end (audit 2026-08-15). -->
+      @if (isReady()) {
+        <span data-testid="go-to-versions">
+          <ui-button variant="primary" (clicked)="goToVersions()">
+            Ver / generar formas
+            <lucide-icon name="arrow-right" class="h-4 w-4"></lucide-icon>
+          </ui-button>
+        </span>
+      }
     </span>
   </footer>
 </section>

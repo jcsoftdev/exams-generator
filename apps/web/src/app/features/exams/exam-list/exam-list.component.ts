@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
@@ -71,6 +71,16 @@ export class ExamListComponent {
   protected readonly gradeLevel = signal<string | null>(null);
   protected readonly search = signal('');
 
+  /**
+   * True while any filter narrows the list. Drives WHICH empty state renders:
+   * "aún no tienes exámenes" is only honest when nothing is filtered — with a
+   * filter on it told a teacher with 6 exams that they had none (audit
+   * 2026-08-15).
+   */
+  protected readonly hasActiveFilters = computed(
+    () => this.status() !== null || this.gradeLevel() !== null || this.search().trim() !== '',
+  );
+
   private searchDebounceHandle: ReturnType<typeof setTimeout> | null = null;
 
   constructor() {
@@ -128,6 +138,19 @@ export class ExamListComponent {
   }
 
   /** Debounces the título search box (spec §2.1) so it doesn't re-fetch on every keystroke. */
+  /** "Quitar filtros" from the filtered empty state — one click back to the full list. */
+  protected clearFilters(): void {
+    if (this.searchDebounceHandle !== null) {
+      clearTimeout(this.searchDebounceHandle);
+      this.searchDebounceHandle = null;
+    }
+    this.status.set(null);
+    this.gradeLevel.set(null);
+    this.search.set('');
+    this.page.set(1);
+    this.load();
+  }
+
   protected onSearchChange(value: string): void {
     this.search.set(value);
     this.page.set(1);

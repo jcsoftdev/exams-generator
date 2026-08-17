@@ -1,3 +1,15 @@
+/**
+ * "¿Cuántas formas?" (design doc §5.2) — the only counts the product offers.
+ *
+ * Shared by the two screens that can start a generation: the versions panel
+ * (regenerate) and the exam builder (first generation). The builder used to
+ * hardcode 2 with no way to change it, so a teacher who wanted 4 had to
+ * generate 2 and then regenerate — a wasted compile plus a danger modal
+ * (audit 2026-08-15). One catalog so the two screens can't drift.
+ */
+export const VERSION_COUNT_OPTIONS: readonly number[] = [2, 3, 4, 5];
+export const DEFAULT_VERSION_COUNT = 2;
+
 /** Lifecycle of an `exam_version_jobs` row — same vocabulary as the AI generation jobs. */
 export type ExamVersionJobStatus = 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';
 

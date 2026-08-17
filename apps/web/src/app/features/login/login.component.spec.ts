@@ -173,6 +173,29 @@ describe('LoginComponent', () => {
       expect(navigateByUrl).toHaveBeenCalledWith('/app');
     });
 
+    // Local dev and the sslip.io fallback are NOT under the tenant root domain,
+    // so there is no cross-origin hop to make: localStorage is already same-origin.
+    // Before this case existed, `extractTenantSlug('localhost')` returned null,
+    // every tenant account compared `'colegio-demo' !== null` as a mismatch, and
+    // login bounced the developer to PRODUCTION — carrying a live one-time code.
+    it.each(['localhost', 'exams-generator-fabvti-fe6ea2-45-8-132-213.sslip.io'])(
+      'stays on %s instead of redirecting to the production tenant domain',
+      (hostname) => {
+        setHostname(hostname);
+        const { compiled, fixture, requestExchangeCode, navigateByUrl } = setup({
+          loginImpl: () => of({ accessToken: 'jwt-abc', tenantSlug: 'colegio-demo' }),
+        });
+        typeInto(compiled, 'login-email', 'profe@colegio.pe');
+        typeInto(compiled, 'login-password', 'secret123');
+        fixture.detectChanges();
+        submit(compiled);
+
+        expect(requestExchangeCode).not.toHaveBeenCalled();
+        expect(window.location.href).toBe('');
+        expect(navigateByUrl).toHaveBeenCalledWith('/app');
+      },
+    );
+
     it('shows an inline error when minting the exchange code fails', () => {
       setHostname('creaexamen.com');
       const { compiled, fixture } = setup({

@@ -15,6 +15,19 @@ export function extractTenantSlug(hostname: string): string | null {
 }
 
 /**
+ * Is this host part of the tenant-subdomain scheme at all?
+ *
+ * `extractTenantSlug` collapses two very different answers into `null`: "this
+ * IS the tenant root, no subdomain" (`creaexamen.com`) and "this host has
+ * nothing to do with tenant subdomains" (`localhost`, the sslip.io fallback).
+ * Callers deciding whether to hand a session across origins need them apart —
+ * treating the second as the first sent every local login to production.
+ */
+export function isTenantScopedHost(hostname: string): boolean {
+  return hostname === TENANT_ROOT_DOMAIN.slice(1) || hostname.endsWith(TENANT_ROOT_DOMAIN);
+}
+
+/**
  * Pre-login guard: a tenant subdomain that doesn't map to a real tenant
  * redirects to the landing page before the app renders anything. Wired into
  * `app.config.ts` via `provideAppInitializer`. Only a definitive 404 means

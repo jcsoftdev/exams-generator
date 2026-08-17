@@ -5,11 +5,13 @@
 
   @if (mobileOpen()) {
     <div data-testid="shell-mobile-drawer" class="fixed inset-0 z-40 md:hidden">
-      <div
+      <button
+        type="button"
         data-testid="shell-mobile-backdrop"
-        class="absolute inset-0 bg-primary-900/40"
+        aria-label="Cerrar menú"
+        class="absolute inset-0 block w-full border-0 bg-primary-900/40 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-300"
         (click)="closeMobileMenu()"
-      ></div>
+      ></button>
       <div class="relative h-full w-60">
         <ui-sidebar [groups]="navGroups()"></ui-sidebar>
       </div>

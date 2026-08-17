@@ -31,6 +31,9 @@
           </p>
         </button>
       }
+      <div class="mt-2">
+        <ui-pagination [page]="page()" [pageSize]="PAGE_SIZE" [total]="total()" (pageChange)="onPageChange($event)"></ui-pagination>
+      </div>
     }
   </div>
 

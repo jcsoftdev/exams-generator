@@ -83,6 +83,21 @@ export interface BankQuestion {
   readonly alternatives?: readonly string[] | null;
 }
 
+/**
+ * One row of `GET /bank/questions/summary` — mirrors `BankTopicQuestionCount`
+ * in apps/api/src/modules/bank/domain/ports/bank-repository.port.ts.
+ *
+ * This is what the bank tree loads on entry INSTEAD of the question list:
+ * enough to render Curso -> Tema with real counts, and not one byte of
+ * question payload. `total` is the count under the SAME filters the summary
+ * request carried, so it always equals what fetching that topic returns.
+ */
+export interface BankTopicCount {
+  readonly courseId: string;
+  readonly topicId: string;
+  readonly total: number;
+}
+
 /** S6: paginated envelope for `GET /bank/questions?page=&pageSize=`. */
 export interface PagedQuestions {
   readonly items: readonly BankQuestion[];

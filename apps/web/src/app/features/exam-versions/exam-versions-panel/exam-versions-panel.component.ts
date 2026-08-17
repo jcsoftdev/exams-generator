@@ -12,13 +12,22 @@ import { ModalComponent } from '../../../ui/modal/modal.component';
 import { MathTextComponent } from '../../../ui/math-text/math-text.component';
 import { truncateTypst } from '../../../shared/typst/typst-to-latex';
 import { ExamVersionsService } from '../exam-versions.service';
-import { ExamVersion, ExamVersionJob } from '../exam-versions.models';
+import {
+  DEFAULT_VERSION_COUNT,
+  ExamVersion,
+  ExamVersionJob,
+  VERSION_COUNT_OPTIONS,
+} from '../exam-versions.models';
 import { ExamsService } from '../../exams/exams.service';
 import { ExamDetail, ExamDetailQuestion, GRADE_LEVEL_LABELS, GradeLevel } from '../../exams/exams.models';
 
-/** "¿Cuántas formas?" mockup step 3 (design doc §5.2) — only these counts are offered. */
-const VERSION_COUNT_OPTIONS: readonly number[] = [2, 3, 4, 5];
-const DEFAULT_VERSION_COUNT = 2;
+/**
+ * Screen-reader progress announcements (audit P2 — a11y), same milestone
+ * idea as `GenerationJobDetailComponent`: quarters of the batch, not every
+ * SSE frame — otherwise a screen reader turns into a machine gun as
+ * `completedCount` ticks up one forma at a time.
+ */
+const PROGRESS_QUARTILES = 4;
 
 /**
  * Standalone versions screen (design doc §6, spec VS-R1..R3). Reads the
@@ -105,6 +114,9 @@ export class ExamVersionsPanelComponent {
    */
   protected readonly versionJob = signal<ExamVersionJob | null>(null);
   private jobSubscription: Subscription | null = null;
+  protected readonly jobAnnouncement = signal('');
+  private hasAnnouncedJobStart = false;
+  private lastAnnouncedJobMilestone = 0;
 
   // "Descargar todo (ZIP)" (design doc §5.2, N1).
   protected readonly downloadingZip = signal(false);
@@ -189,6 +201,18 @@ export class ExamVersionsPanelComponent {
 
   protected downloadUrlFor(assetUrl: string): string | null {
     return this.downloadUrls()[assetUrl] ?? null;
+  }
+
+  /**
+   * Filename the browser saves a per-forma link under. Without an explicit
+   * value the `download` attribute on a `blob:` href falls back to the object
+   * URL's uuid (`05ad20b5-….pdf`) — after downloading two exams nothing on
+   * disk says which is which (audit 2026-08-15). Slashes and colons are
+   * stripped because they are path separators on the OSes we target.
+   */
+  protected downloadNameFor(code: string, kind: 'exam' | 'answers'): string {
+    const title = (this.examDetail()?.title ?? 'Examen').replace(/[/\\:]/g, '-').trim();
+    return kind === 'exam' ? `${title} — Forma ${code}.pdf` : `${title} — Claves ${code}.pdf`;
   }
 
   // Same status-tag/grade-label convention as ExamListComponent (kept as a
@@ -279,10 +303,14 @@ export class ExamVersionsPanelComponent {
   private followJob(job: ExamVersionJob): void {
     this.generating.set(true);
     this.versionJob.set(job);
+    this.hasAnnouncedJobStart = false;
+    this.lastAnnouncedJobMilestone = 0;
+    this.updateJobAnnouncement(job);
     this.jobSubscription?.unsubscribe();
     this.jobSubscription = this.examVersionsService.streamVersionJob(this.examId(), job.id).subscribe({
       next: (update) => {
         this.versionJob.set(update);
+        this.updateJobAnnouncement(update);
         if (update.status !== 'pending' && update.status !== 'running') {
           this.generating.set(false);
           this.load();
@@ -295,6 +323,36 @@ export class ExamVersionsPanelComponent {
         this.load();
       },
     });
+  }
+
+  /** Fires the sr-only live-region text for start / quarter-milestones / terminal state — see `PROGRESS_QUARTILES`. */
+  private updateJobAnnouncement(job: ExamVersionJob): void {
+    if (job.status === 'failed' || job.status === 'cancelled') {
+      this.jobAnnouncement.set(
+        job.completedCount > 0
+          ? `Generación con fallas: se generaron ${job.completedCount} de ${job.versionCount} formas.`
+          : 'No se pudo generar ninguna forma.',
+      );
+      return;
+    }
+    if (job.status === 'completed') {
+      this.jobAnnouncement.set(`Generación completada: ${job.completedCount} de ${job.versionCount} formas.`);
+      return;
+    }
+
+    const milestone = job.versionCount > 0 ? Math.floor((job.completedCount / job.versionCount) * PROGRESS_QUARTILES) : 0;
+
+    if (!this.hasAnnouncedJobStart) {
+      this.hasAnnouncedJobStart = true;
+      this.lastAnnouncedJobMilestone = milestone;
+      this.jobAnnouncement.set(`Generando ${job.versionCount} formas…`);
+      return;
+    }
+
+    if (milestone > this.lastAnnouncedJobMilestone) {
+      this.lastAnnouncedJobMilestone = milestone;
+      this.jobAnnouncement.set(`${job.completedCount} de ${job.versionCount} formas completadas.`);
+    }
   }
 
   /** Human-readable progress for the template: "2 de 5 formas". */
@@ -336,7 +394,7 @@ export class ExamVersionsPanelComponent {
         const url = URL.createObjectURL(blob);
         const anchor = document.createElement('a');
         anchor.href = url;
-        anchor.download = `examen-${this.examId()}-versiones.zip`;
+        anchor.download = `${(this.examDetail()?.title ?? 'Examen').replace(/[/\\:]/g, '-').trim()} — formas.zip`;
         anchor.click();
         URL.revokeObjectURL(url);
       },
