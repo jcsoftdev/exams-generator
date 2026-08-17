@@ -24,10 +24,20 @@ describe("resolveQuestionGeneratorAdapter", () => {
     expect(() => resolveQuestionGeneratorAdapter()).toThrow(/AI_MODEL/);
   });
 
-  it("throws a clear error when OPENROUTER_API_KEY is not set", () => {
+  it("throws a clear error when no API key is set", () => {
     process.env.AI_MODEL = "deepseek/deepseek-r1:free";
     delete process.env.OPENROUTER_API_KEY;
+    delete process.env.AI_API_KEY;
 
     expect(() => resolveQuestionGeneratorAdapter()).toThrow(/OPENROUTER_API_KEY/);
+  });
+
+  it("builds against a non-OpenRouter provider when AI_BASE_URL is set", () => {
+    process.env.AI_MODEL = "deepseek-chat";
+    process.env.AI_API_KEY = "sk-deepseek";
+    process.env.AI_BASE_URL = "https://api.deepseek.com/chat/completions";
+    delete process.env.OPENROUTER_API_KEY;
+
+    expect(resolveQuestionGeneratorAdapter()).toBeInstanceOf(OpenRouterAdapter);
   });
 });
