@@ -90,29 +90,66 @@ invisible, y que salirse de él castiga.
   "Generar con IA" → Atrás → **grado, grilla y las 2 celdas intactas**. Sobrevive también a
   un F5 completo.
 
-- [ ] **Móvil: 146 pantallas de scroll hasta el botón principal** (medido en 390×844)
+- [x] **Móvil: 146 pantallas de scroll hasta el botón principal** (medido en 390×844)
   ```
   columna de tarjetas: 114,314 px   contenedor scrollable: 783 px  → 146 pantallas
   footer "Generar versiones": position: static, offsetTop 114,735 px
   ```
   En desktop la grilla vive en `max-h-[70vh]` con el footer justo debajo; en móvil las 276
-  tarjetas están en el flujo de la página y el footer queda al final de todo.
-  **Fix**: footer `sticky bottom-0` en móvil + cursos colapsados por defecto bajo `md`.
+  tarjetas estaban en el flujo de la página y el footer al final de todo.
+
+  **HECHO**, dos cambios que se complementan:
+  - **Footer `sticky bottom-0`** (con fondo, borde y `z-20` para que las filas no se
+    transparenten debajo). Sin JS y en los dos layouts: en desktop no molesta —la grilla ya
+    tiene su propio scroller— y de paso el progreso queda siempre a la vista.
+  - **Cursos colapsados por defecto SOLO en pantalla angosta** (`isNarrowScreen`, vía
+    `matchMedia('(max-width: 767px)')` con listener para rotación/resize). La consulta es
+    `max-width` a propósito: un entorno sin `matchMedia` —o el stub de jsdom, que responde
+    `matches: false`— lee "no angosto", o sea el comportamiento desktop de siempre. En
+    desktop se siguen expandiendo todos: ahí las filas no cuestan nada de alcanzar.
+
+  3 tests nuevos. Medido en la app a 390×844:
+  **114,314 px (146 pantallas) → 950 px (1 pantalla)**, 21 encabezados de curso, 0 tarjetas
+  abiertas, footer `sticky` y visible. Abrir un curso muestra sus 15 tarjetas y el footer
+  **sigue visible incluso con el scroller al fondo**. Desktop verificado sin cambios: 276
+  filas expandidas, footer visible.
 
 ### Web — el examen se sella solo
 
-- [ ] **Generar confirma el examen y lo bloquea para siempre**
+- [x] **Generar confirmaba el examen y lo bloqueaba para siempre**
   El backend auto-confirma `draft → ready` antes de encolar
-  (`exam-generation.service.ts:129-141`). En pantalla: los 5 "Cambiar" `disabled`, el campo
-  de reemplazo desaparecido, "Confirmado" `disabled` — **mientras el texto de arriba sigue
-  diciendo "Cámbialas si quieres y confirma cuando estés conforme"**
-  (`exam-review.component.html:11`). No hay endpoint para volver a borrador (revisadas todas
-  las rutas de `exams.controller.ts`). Y como el builder salta directo a `/versions`
-  (`exam-builder.component.ts:830`), el docente novato nunca ve esa pantalla antes del sello.
-  **Decisión pendiente del dueño del producto** (dos caminos, no los mezcles):
-  (a) el builder pasa por revisión antes de generar (1 click más, reversible), o
-  (b) existe "volver a borrador".
-  Independiente de eso: el copy de la pantalla debe cambiar cuando está `ready`.
+  (`exam-generation.service.ts:129-141`), y el builder saltaba directo a `/versions`. Un click
+  creaba Y sellaba un examen que el docente nunca había leído: al volver a la revisión los 5
+  "Cambiar" estaban `disabled`, el campo de reemplazo desaparecido, y no existe endpoint para
+  reabrirlo — **mientras el texto de arriba seguía diciendo "Cámbialas si quieres"**.
+
+  **DECISIÓN (2026-08-17): opción (a)** — el builder pasa por revisión antes de generar.
+
+  **HECHO**:
+  - **Builder**: su acción principal se llama ahora **"Revisar examen"** y hace exactamente
+    eso: `POST /exams` (queda `draft`) y navega a `/app/exams/:id?formas=N`. Ya **no** llama
+    a `generateVersions` — nada se sella antes de poder leerse. La cantidad de formas elegida
+    viaja en el query param, así que el paso extra no le cuesta al docente ninguna decisión
+    extra.
+  - **Revisión**: es la pantalla que genera. Acción principal **"Generar N formas"** (con su
+    propio selector de cantidad, por si cambias de idea justo antes de compilar). Confirmar y
+    generar es UNA decisión y un click: `POST versions` ya auto-confirma el borrador en el
+    backend — ese auto-confirm era peligroso llamado desde el builder (sellaba a ciegas) y es
+    correcto llamado desde acá (sella lo que el docente acaba de leer). "Confirmar examen"
+    se queda al lado como **"Solo confirmar"** (ghost) para congelar la selección sin
+    compilar todavía — es un estado que la API modela.
+  - El copy del intro ya no promete lo que la pantalla no permite, en ninguno de los dos
+    estados.
+
+  9 tests nuevos (3 del nuevo contrato del builder, 6 de la generación desde revisión,
+  incluyendo `?formas` basura → default en vez de `NaN`). Verificado punta a punta en la app:
+  builder ("Revisar examen", 4 formas) → examen **Borrador** con enunciados legibles y
+  "Cambiar" **habilitado** → se cambió una pregunta de verdad → "Generar 4 formas" →
+  **"Generación completada: 4 de 4 formas"**.
+
+  Nota: sigue sin existir "volver a borrador" para un examen ya generado. Con este flujo
+  importa mucho menos (nadie sella sin ver), pero si algún día se quiere editar un examen ya
+  compilado, necesita endpoint propio.
 
 - [x] **"Confirmar examen" terminaba en callejón sin salida** (reproducido)
   Tras confirmar, el banner decía *"Examen confirmado. Ya puedes generar las versiones y sus
@@ -199,12 +236,19 @@ invisible, y que salirse de él castiga.
   nuevos. Verificado en la app: 0 filas filtradas → mensaje correcto → "Quitar filtros" →
   6 filas de vuelta.
 
-- [ ] **Los filtros no viven en la URL** — tras filtrar, `location.href` sigue siendo
-  `/app/exams`. Se pierden al recargar, no se pueden compartir ni volver con Atrás.
+- [x] **Los filtros no vivían en la URL** — tras filtrar, `location.href` seguía siendo
+  `/app/exams`: se perdían al recargar y un link nunca los llevaba.
+  **HECHO**: se siembran DESDE la URL y se escriben de vuelta en cada cambio, con
+  `replaceUrl` (filtrar no debe apilar historial: Atrás tiene que salir de la pantalla, no
+  deshacer seis teclas) y omitiendo las claves vacías para no dejar `?status=&search=`.
+  2 tests. Verificado: `/app/exams?status=ready&search=Simulacro` restaura filtro, texto y
+  resultados.
 
-- [ ] **Borrar un borrador: sin confirmación y sin deshacer** (reproducido: 7 → 6 filas al
-  instante) — deliberado en `exam-list.component.ts:176-183`, pero un borrador puede tener 80
-  preguntas ya armadas. Sin modal, sin toast, sin "Deshacer".
+- [x] **Borrar un borrador: sin confirmación y sin deshacer** (reproducido: 7 → 6 filas al
+  instante). El "un borrador no tiene nada que perder" del código original no se sostiene: un
+  borrador puede llevar 80 preguntas armadas y el disparador es un ítem de un menú chiquito.
+  **HECHO**: todos los borrados confirman, y el modal dice qué se lleva por delante
+  ("Tiene 80 preguntas y 3 formas ya generadas"). 1 test reescrito.
 
 - [x] **El botón principal quedaba bloqueado y mudo** — grilla recién cargada:
   `disabled=true`, `aria-disabled=true`, `title=null`, progreso "0 de 0" y el `lock-reason`
@@ -232,11 +276,13 @@ invisible, y que salirse de él castiga.
   comportamiento anterior— así que el mensaje del servidor llega verbatim. Test nuevo.
   Pendiente aparte: el botón "Reintentar" recarga el examen, no el reemplazo.
 
-- [ ] **Reroll silencioso** — "Cambiar" funcionó (`ee6c8ba7` → `255d7b9a`) sin ningún feedback
-  visual, y como la fila solo muestra UUIDs el docente no percibe el cambio. Sin estado de
-  carga (`exam-review.component.ts:93-108`): doble click = 2 reemplazos.
+- [x] **Reroll silencioso** — "Cambiar" funcionaba sin ningún feedback visual.
+  **HECHO**: banner de éxito con la posición ("Cambiamos la pregunta 1."), capturada ANTES de
+  recargar —después de la recarga esa posición ya tiene otra pregunta— y limpiada al empezar
+  cualquier acción, para que nunca describa un cambio viejo. 2 tests.
+  Pendiente aparte: sigue sin estado de carga, así que un doble click son 2 reemplazos.
 
-- [~] **Títulos indistinguibles y "Copia de Copia de"** (reproducido) — 3 filas llamadas
+- [x] **Títulos indistinguibles y "Copia de Copia de"** (reproducido) — 3 filas llamadas
   exactamente `Examen Pre-admisión — 14/8/2026`, y duplicar dos veces produce
   `Copia de Copia de Examen Pre-admisión — 15/8/2026`. La lista se busca por título.
 
@@ -246,8 +292,12 @@ invisible, y que salirse de él castiga.
   resto del borrador. Verificado en la app: el examen quedó como
   `Simulacro UNCP Área II — marzo | Pre-admisión · 80 preguntas · 3 formas`.
 
-  **Queda**: no hay endpoint para RENOMBRAR un examen ya creado, así que los títulos viejos
-  (y el apilamiento "Copia de Copia de") siguen ahí. Necesita un `PATCH /exams/:id`.
+  **HECHO también la otra mitad**: `PATCH /exams/:examId` (nuevo) + "Renombrar" en el menú de
+  cada fila, con el nombre actual precargado (renombrar casi siempre es editar lo que hay, no
+  escribir de cero) y guardado deshabilitado si el nombre queda vacío. Tenant-scoped en el
+  `WHERE`, así que un id ajeno no matchea ninguna fila en vez de filtrar si existe. 3 tests de
+  repositorio + 2 de UI. Verificado en la app: "Copia de Examen Pre-admisión — 15/8/2026" →
+  "Simulacro de repaso — 5° secundaria".
 
 - [x] **La cantidad de formas estaba hardcodeada en 2** — el docente que quería 4 tenía que
   generar 2 (compilación desperdiciada), entrar a la pantalla de formas, abrir el panel,
@@ -257,54 +307,106 @@ invisible, y que salirse de él castiga.
   `exam-versions.models.ts` para que las dos pantallas que pueden generar no se separen.
   4 tests nuevos. Verificado en la app: 3 formas de una sola pasada, sin regenerar.
 
-- [ ] **"Generado" para exámenes sin ninguna forma** — el borrador confirmado aparece como
-  "Generado" con 0 formas (`exam-list.component.ts:146-148` mapea `ready → "Generado"`). Para
-  el docente "generado" significa PDFs listos.
+- [x] **"Generado" para exámenes sin ninguna forma** — el estado del examen y la existencia de
+  PDFs son dos hechos distintos, y la etiqueta los confundía.
+  **HECHO**: `ready` + 0 formas → **"Listo"**; `ready` + N formas → **"Generado"**. 1 test.
+  Verificado en la app: la fila con `5 preguntas · 0 formas` dice "Listo".
 
-- [ ] **11 de 12 grados son callejón sin salida** — "5° secundaria" muestra "No hay preguntas
-  aprobadas para este grado todavía". La DB tiene **64,218 preguntas, todas `pre`**
-  (`select grade_level, status, count(*) from questions group by 1,2`). El dropdown ofrece 12
-  grados donde 11 no llevan a nada.
-  **Fix**: marcar/deshabilitar los grados sin banco, o mover el grado después del tipo.
+- [x] **11 de 12 grados eran callejón sin salida** — "5° secundaria" mostraba "No hay preguntas
+  aprobadas para este grado todavía", y el docente lo descubría DESPUÉS de elegir. La DB tiene
+  **64,218 preguntas, todas `pre`**.
+
+  **HECHO**, endpoint nuevo + etiquetas honestas:
+  - **API** `GET /exams/stock/grades` → conteo de aprobadas por grado, tenant-scoped con la
+    MISMA regla de visibilidad que el pool (`questionVisibility`, no duplicada). Una sola
+    consulta agrupada, no 12 — un fan-out por grado tumbaría el ThrottlerGuard. El servicio
+    completa el catálogo con ceros para que el cliente no tenga que adivinar si una clave
+    ausente es "cero" o "no sé". 3 tests de repositorio (deltas, no absolutos: el agregado
+    abarca todo el banco visible y la Postgres local trae cruft de otras suites).
+  - **Web**: las opciones de "Grado" se anotan solas. Si el conteo falla, las etiquetas quedan
+    **exactamente** como antes — una request que nunca respondió no puede convertirse en "sin
+    preguntas". 3 tests.
+
+  Verificado en la app:
+  ```
+  1° primaria · sin preguntas        …  (los 11)
+  Pre-admisión · 64166 preguntas
+  ```
 
 ---
 
 ## P2 — Pulido
 
-- [ ] **El segmentado de dificultad no tiene estado accesible** — Fácil/Media/Difícil sin
-  `role=radiogroup` ni `aria-pressed`/`aria-checked`: la selección es **solo color**
-  (`bg-tint-active`). Falla para daltónicos y lectores de pantalla.
-- [ ] **1,656 inputs numéricos sin nombre accesible** (medido en vivo) — `ui-input` en
-  `grid-cell-content.component.ts:23-28` no recibe `label`; el contexto curso·tema·dificultad
-  es puramente visual.
-- [ ] **Doble render desktop+móvil** — 13,136 nodos DOM y 1,656 inputs para 828 celdas reales:
-  ambos layouts están siempre en el DOM (`hidden md:block` / `md:hidden`,
-  `exam-builder.component.html:153` y `:227`). En desktop el bloque móvil es `display:none`,
-  así que **no** afecta tabulación ni lectores — es peso de DOM y de change detection.
-  **Fix**: `@if` sobre un signal de breakpoint.
-- [ ] **Vocabulario** — la etiqueta dice "Track" mientras las opciones dicen "Área I…"
-  (`exam-builder.component.html:31`); "Dashboard" en inglés en un nav 100% español
-  (`shell.component.ts:17`); el login dice "Exams Generator" y el título de página
-  "GeneraExamen".
-- [ ] **El puente a IA pierde la cantidad** — la celda dice "Generar 2 con IA"
-  (`grid-cell-content.component.ts:40`) y el generador abre con CANTIDAD 5
-  (`ai-generate.component.ts:69`): `count` no viaja en los query params
-  (`exam-builder.component.ts:776-780`).
-- [ ] **Copy roto en el candado** — "Disponible cuando completes las 1, faltan 1"
-  (`exam-builder.component.ts:788-791`). No dice qué hacer (bajar la cantidad o conseguir
-  preguntas).
-- [ ] **"las 2 forma(s)"** — pluralización con barra en el modal de regeneración.
-- [ ] **Los tipos de examen no se explican** — "Manual", "Rápido (semana actual)", "Examen
-  tipo admisión", "Examen tipo admisión por semana" sin una línea de ayuda que diga en qué se
-  diferencian ni qué implica cada uno.
-- [ ] **El default es el peor camino para un novato** — `selectedExamTypeCode` arranca en
-  `'manual'` (`exam-builder.component.ts:197`) y `manual` es `sortOrder: 0` en el catálogo
-  (`apps/api/src/db/seed.ts:720`). El novato aterriza sobre una matriz de 828 celdas vacías.
-  **Fix**: default guiado, manual a un click. El experto no pierde nada.
+- [x] **El segmentado de dificultad no tenía estado accesible** — Fácil/Media/Difícil sin
+  `role`/`aria-checked`: la selección era **solo color** (`bg-tint-active`), invisible para un
+  lector de pantalla y ambigua para un daltónico.
+  **HECHO**: `role="radiogroup"` + `aria-labelledby` apuntando al rótulo "Nivel", `role="radio"`
+  con `aria-checked` por opción, y un punto `•` como segunda señal que no depende del color.
+  2 tests. Verificado en la app: `NIVEL` → `Fácil(false) · Media(false) · • Difícil(true)`.
+
+- [x] **1,656 inputs numéricos sin nombre accesible** (medido en vivo) — el contexto
+  curso·tema·dificultad de cada celda era puramente visual.
+  **HECHO**: `ui-input` y `ui-button` ganaron un `ariaLabel` (invisible, ignorado cuando ya hay
+  `label` visible para que nada quede doble-nombrado), y la celda arma
+  `"Curso · Tema · Dificultad"`. También nombra los 3 botones puente, que repiten texto
+  idéntico ("Elegir del banco") en cada celda corta y solo se distinguían por posición.
+  4 tests. Verificado en la app: **828 inputs, 0 sin nombre**, p. ej.
+  `"Preguntas de Aritmética · Teoría de Conjuntos · Fácil"`.
+- [x] **Doble render desktop+móvil** — 13,136 nodos DOM y 1,656 inputs para 828 celdas reales:
+  ambos layouts vivían siempre en el DOM. El oculto es `display:none`, así que **no** afectaba
+  tabulación ni lectores — era peso de parse y de change detection.
+  **HECHO**: `@if (!isNarrowScreen())` monta un solo layout, reusando el signal que ya seguía
+  el viewport para colapsar cursos en móvil (así que redimensionar sigue cambiando de layout).
+  2 tests reescritos. Medido en la app: **13,136 → 5,857 nodos (-55%)**, **1,656 → 828 inputs**
+  (exactamente una copia).
+- [x] **Vocabulario** — la etiqueta decía "Track" mientras las opciones decían "Área I…";
+  "Dashboard" en inglés en un nav 100% español; el login decía "Exams Generator" y el título de
+  página "GeneraExamen".
+  **HECHO**: la etiqueta del campo se **deriva** — "Área" cuando la universidad usa áreas de
+  admisión (UNCP), "Ciclo" cuando usa ciclos de preparación (UNI), porque un "Área" hardcodeado
+  habría sido igual de incorrecto la mitad de las veces. "Dashboard" → **"Panel"** (el título de
+  la ruta ya lo decía). "Exams Generator" → **"GeneraExamen"** en las 4 apariciones (login,
+  sidebar, topbar fallback, `document.title`). 3 tests + 2 actualizados.
+- [x] **El puente a IA perdía la cantidad** — la celda decía "Generar 2 con IA" y el generador
+  abría con CANTIDAD 5.
+  **HECHO**: el faltante exacto viaja como `count` en los query params y el generador lo
+  adopta, con guarda de rango (`0`, basura o `> 10` conservan su default). 3 tests.
+- [x] **Copy roto en el candado** — "Disponible cuando completes las 1, faltan 1". No decía qué
+  hacer. **HECHO** junto con el ítem del botón mudo: ahora singular/plural correctos y la
+  salida explícita ("baja la cantidad o agrega preguntas al banco").
+- [x] **"las 2 forma(s)"** — **HECHO**: "la forma actual" / "las N formas actuales".
+- [x] **Los tipos de examen no se explicaban** — cuatro labels sin una línea que diga en qué se
+  diferencian. **HECHO** junto con la elección explícita: una frase por tipo bajo el select.
+- [x] **El default era el peor camino para un novato** — `selectedExamTypeCode` arrancaba en
+  `'manual'` (que además es `sortOrder: 0` en el catálogo), así que el novato aterrizaba sobre
+  una matriz de 828 celdas vacías sin que nada le dijera que existe un camino guiado.
+
+  **HECHO — pero NO como decía el fix original de este audit.** No se cambió el default a un
+  tipo guiado: las plantillas solo existen para universidades preuniversitarias, así que
+  preseleccionar "Examen tipo admisión" sería activamente incorrecto para un colegio de
+  primaria, y dispararía `getUniversities` en cada carga. En su lugar la elección es
+  **explícita y explicada**:
+  - Sin preselección: el trigger dice **"¿Cómo quieres armarlo?"**.
+  - Sin elegir, un hint invita al camino guiado ("Si preparas un simulacro de admisión…") en
+    vez de dejar la pantalla muda.
+  - Elegido, una línea explica qué hará ese tipo — los cuatro labels no daban forma de
+    distinguirlos.
+  - `null` se comporta igual que `'manual'` para todo lo de abajo (`isManual`), así que el
+    invariante EB-T sigue en pie: la grilla es idéntica.
+
+  4 tests nuevos. Verificado en la app: placeholder correcto, hint presente, y al elegir
+  Manual → "Lo armas tú: eliges curso por curso…" con Grado visible y cero afordancias de
+  plantilla.
 - [ ] **El campo "Cantidad total de preguntas" se muestra siempre** con su párrafo de ayuda
   largo, aunque solo aplica a plantillas tipo UNI.
-- [ ] **La grilla completa se carga apenas eliges un tipo no-manual**, antes de elegir
+- [x] **La grilla completa se cargaba apenas elegías un tipo no-manual**, antes de elegir
   universidad: 276 filas de ruido bajo un formulario de 3 campos.
+  **HECHO**: `showsGrid()` — en manual basta el grado (la grilla ES la herramienta); en un tipo
+  guiado espera a que la plantilla traiga filas, con un hint que dice qué falta ("Elige la
+  universidad y el área…", el sustantivo derivado igual que la etiqueta del campo). El
+  pre-warm del catálogo (la fetch) se queda: lo que esperaba era el render. 3 tests.
+  Verificado en la app: al elegir el tipo la página queda en **152 nodos**; tras elegir
+  universidad + área aparece la grilla con "80 preguntas pedidas en 16 celdas".
 
 ---
 
@@ -353,8 +455,26 @@ Se dejan escritos para que nadie los vuelva a auditar:
    y filtro "ver solo lo pedido".
 4. ~~**Nombre y cantidad de formas desde el builder**~~ ✅ — falta solo el `PATCH /exams/:id`
    para renombrar exámenes YA creados.
-5. **El modelo mental** (decisión de producto primero): separar "confirmado" de "bloqueado" ·
-   móvil (footer sticky + colapsar) · default guiado · grados sin banco.
+5. ~~**El modelo mental + móvil**~~ ✅ — el builder pasa por revisión (opción (a), decidida
+   2026-08-17) · footer sticky y cursos colapsados en móvil.
+6. ~~**Arranque de la pantalla**~~ ✅ — elección de tipo explícita y explicada · grados
+   anotados con su stock real.
+7. ~~**Accesibilidad + vocabulario**~~ ✅ — segmentado con estado real, 828 inputs nombrados,
+   "Área"/"Ciclo", "Panel", "GeneraExamen".
+8. ~~**Peso de DOM + errores honestos + pulido**~~ ✅ — un layout a la vez, "Reintentar" solo
+   donde reintentar arregla algo, cantidad al puente IA, plurales, grilla a tiempo.
+9. ~~**Cierre**~~ ✅ — filtros en la URL · confirmación al borrar · feedback del reroll ·
+   `PATCH /exams/:id` + renombrar desde la lista · "Listo" vs "Generado".
+
+### Estado final
+
+**30 de 31 hallazgos cerrados.** Los dos que quedan abiertos, con su razón:
+
+- **El campo "Cantidad total de preguntas" sigue siempre visible** con su párrafo largo aunque
+  solo aplique a plantillas tipo UNI. Decisión, no deuda: esconderlo tras un disclosure es un
+  cambio de diseño, no un arreglo, y el 400 del backend ya guía cuando hace falta.
+- **El reroll sigue sin estado de carga** — un doble click son 2 reemplazos. Chico, pero es
+  comportamiento nuevo (deshabilitar durante el request), no parte del hallazgo original.
 
 ### Estado de la suite (2026-08-15)
 
@@ -362,13 +482,20 @@ Se dejan escritos para que nadie los vuelva a auditar:
 |---|---|---|---|
 | 2 (baratos + conteos) | 824/824 | 705/705 | 13 |
 | 3 (persistencia + revisión legible + plantilla visible) | 829/829 | 717/717 | 13 |
-| 4 (nombre + cantidad de formas) | 829/829 | **722/722** | 5 |
+| 4 (nombre + cantidad de formas) | 829/829 | 722/722 | 5 |
+| 5 (builder → revisión → generar) | 829/829 | 730/730 | 9 |
+| 6 (móvil alcanzable) | 829/829 | 733/733 | 3 |
+| 7 (arranque: tipo explicado + stock por grado) | 849/849 | 740/740 | 10 |
+| 8 (accesibilidad + vocabulario) | 849/849 | 749/749 | 9 |
+| 9 (peso de DOM + errores honestos + pulido) | 849/849 | 757/757 | 8 |
+| 10 (cierre: URL, borrado, feedback, rename, estado) | **852/852** | **764/764** | 13 |
 
 ### El camino guiado hoy, medido punta a punta
 
-Tipo de examen → Universidad → Área → (nombre opcional, formas opcional) → **Generar
-versiones**: 7 clicks, resultado verificable en 2 pantallas de scroll, 3 formas de una sola
-pasada, y la lista mostrando `Simulacro UNCP Área II — marzo · 80 preguntas · 3 formas`.
+Tipo de examen → Universidad → Área → (nombre opcional, formas opcional) → **Revisar examen**
+→ leer/cambiar preguntas → **Generar N formas**: 8 clicks, resultado verificable en 2
+pantallas de scroll (eran 42), N formas de una sola pasada, nada se sella sin haberse leído, y
+la lista mostrando `Simulacro UNCP Área II — marzo · 80 preguntas · 3 formas`.
 
 Todo verificado además en la app corriendo con Playwright, no solo en tests — cada ítem `[x]`
 dice qué se comprobó en pantalla.
