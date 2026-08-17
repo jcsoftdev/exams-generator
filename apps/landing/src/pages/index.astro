@@ -4,55 +4,14 @@ import katex from "katex";
 import "katex/dist/katex.min.css";
 
 /**
- * Central-bank scale. Measured on 2026-07-30 against the seeded bank:
+ * Central-bank scale and its per-course breakdown. Re-measured 2026-08-14.
  *
- *   SELECT COUNT(*), COUNT(DISTINCT t.id), COUNT(DISTINCT t.course_id)
- *   FROM questions q JOIN topics t ON t.id = q.topic_id
- *   WHERE q.tenant_id IS NULL AND q.status = 'approved';
- *
- * `status = 'approved'` is load-bearing: 55 more rows exist but are archived,
- * and an archived question never reaches an exam — quoting the raw 1121 would
- * be advertising stock a customer cannot draw from.
- *
- * Hardcoded on purpose: this page is statically built and must not depend on
- * the API being reachable at build time. Re-run the query (see README) when it
- * drifts — publishing a number we have not measured is worse than publishing
- * none.
+ * Both live in `src/data/bank.ts` — with the query, the provenance and the
+ * reason each figure is what it is — so `src/data/bank.spec.ts` can import and
+ * assert them. They used to sit inline here, unguarded, which is how the
+ * headline number stayed 60x stale on a live page for two weeks.
  */
-const bank = {
-	questions: 1066,
-	/** Pre-formatted (Peruvian convention: comma groups thousands) instead of
-	 *  `toLocaleString`, so the baked output cannot shift with the ICU data of
-	 *  whichever machine runs the static build. */
-	questionsLabel: "1,066",
-	courses: 21,
-	topics: 276,
-};
-
-/** Same query, grouped by course. Order: most questions first. */
-const courses: readonly (readonly [string, number])[] = [
-	["Física", 102],
-	["Biología", 87],
-	["Química", 86],
-	["Comunicación", 82],
-	["Ecología", 69],
-	["Razonamiento Verbal", 60],
-	["Aritmética", 59],
-	["Álgebra", 52],
-	["Historia", 51],
-	["Economía", 42],
-	["Geografía", 42],
-	["Inglés", 40],
-	["Psicología", 40],
-	["Geometría", 39],
-	["Educación Cívica", 37],
-	["Lenguaje", 36],
-	["Trigonometría", 35],
-	["Filosofía", 34],
-	["Literatura", 28],
-	["Razonamiento Matemático", 27],
-	["Estadística y Probabilidades", 18],
-];
+import { bank, courses } from "../data/bank.ts";
 
 /**
  * Typeset at BUILD time, so the page ships static HTML with no KaTeX runtime.
@@ -95,8 +54,27 @@ const mathShowcase = [
 /** Shared by the meta description, OG tags and the JSON-LD payload. */
 const metaDescription = `Banco central con ${bank.questionsLabel} preguntas de admisión en ${bank.courses} cursos + el banco privado de tu colegio + generación con IA que tú apruebas. Hasta 5 formas barajadas, cada una con su hoja de claves, en PDF.`;
 
-// TODO: swap in the real razón social/RUC once registered (same placeholder
-// bucket as astro.config.mjs's `site` and the /privacidad, /terminos pages).
+/**
+ * Gate del footer legal (audit 2026-08-14, P0). `/privacidad` y `/terminos`
+ * existen y se sirven, pero ambas abren con un banner "TODO antes de publicar:
+ * completar con la razón social, RUC y datos de contacto legales". Enlazarlas
+ * desde el footer le mostraba esa nota interna a todo visitante — y el
+ * visitante típico es un colegio evaluando si confiarnos datos de menores.
+ *
+ * Va como flag en el frontmatter, NO como bloque comentado en el template:
+ * Astro conserva los comentarios `<!-- -->` en el HTML servido, así que
+ * comentar el markup habría dejado la explicación (razón social, RUC incluidos)
+ * legible en view-source — el mismo defecto, solo que escondido.
+ *
+ * Poner en `true` en cuanto ambas páginas tengan contenido legal real. El
+ * trabajo pendiente está en ellas, no aquí.
+ */
+const legalFooterReady = false;
+
+// TODO: swap in the real razón social/RUC once registered. Solo eso queda —
+// el dominio YA no es placeholder: `creaexamen.com` está registrado y en
+// producción (zona Cloudflare activa + compose de Dokploy apuntando a este
+// servicio), así que las URLs de aquí abajo son las definitivas.
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@graph": [
@@ -477,11 +455,13 @@ const jsonLd = {
 				</section>
 				</main>
 
-				<footer class="legal-footer">
-					<a href="/privacidad">Privacidad</a>
-					<span aria-hidden="true">·</span>
-					<a href="/terminos">Términos</a>
-				</footer>
+				{legalFooterReady && (
+					<footer class="legal-footer">
+						<a href="/privacidad">Privacidad</a>
+						<span aria-hidden="true">·</span>
+						<a href="/terminos">Términos</a>
+					</footer>
+				)}
 			</div>
 		</div>
 

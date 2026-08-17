@@ -1,8 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+/**
+ * `noindex` mientras el banner TODO siga arriba (audit 2026-08-14, P0): la
+ * página ya no se enlaza desde el footer, así que la búsqueda sería la única
+ * vía por la que un visitante llegaría a la nota interna. Quitar el flag junto
+ * con el banner, y devolver la entrada de `NOINDEXED` en `astro.config.mjs` y
+ * el link del footer en `index.astro`.
+ *
+ * Va en el frontmatter y no como comentario de template a propósito: Astro
+ * conserva los `<!-- -->` en el HTML servido.
+ */
 ---
 
-<Layout title="Privacidad — GeneraExamen" description="Política de privacidad de GeneraExamen.">
+<Layout title="Privacidad — GeneraExamen" description="Política de privacidad de GeneraExamen." noindex>
 	<main class="legal">
 		<a class="back" href="/">← Volver al inicio</a>
 		<h1>Política de privacidad</h1>
