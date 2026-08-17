@@ -10,7 +10,22 @@
         [value]="selectedExamTypeCode()"
         (valueChange)="onExamTypeChange($event)"
         label="Tipo de examen"
+        placeholder="¿Cómo quieres armarlo?"
       ></ui-select>
+
+      <!--
+        Sin tipo elegido, la pantalla no puede quedar muda: "Manual" ya no viene
+        preseleccionado, así que hay que decir que existe el camino guiado
+        (audit 2026-08-15). Con tipo elegido, una línea explica qué hará.
+      -->
+      @if (examTypeHelp(); as help) {
+        <p data-testid="exam-type-help" class="text-xs text-n600">{{ help }}</p>
+      } @else {
+        <p data-testid="exam-type-hint" class="text-xs text-n600">
+          Si preparas un simulacro de admisión, elige el tipo aquí arriba y lo armamos por ti con la plantilla de la
+          universidad. Si no, elige <strong>Manual</strong> y ármalo curso por curso.
+        </p>
+      }
 
       @if (!isManual()) {
         <ui-select
@@ -28,8 +43,8 @@
             [options]="trackOptions()"
             [value]="selectedTrackId()"
             (valueChange)="onTrackChange($event)"
-            label="Track"
-            placeholder="Selecciona un track"
+            [label]="trackFieldLabel()"
+            [placeholder]="'Selecciona ' + (trackFieldLabel() === 'Área' ? 'un área' : 'un ciclo')"
           ></ui-select>
         }
 
@@ -106,7 +121,7 @@
   @if (isManual()) {
     <ui-select
       data-testid="grade-level-select"
-      [options]="gradeLevelOptions"
+      [options]="gradeLevelOptions()"
       [value]="selectedGradeLevel()"
       (valueChange)="onGradeLevelChange($event)"
       label="Grado"
@@ -118,7 +133,14 @@
     </p>
   }
 
-  @if (selectedGradeLevel()) {
+  @if (selectedGradeLevel() && !showsGrid() && !loading()) {
+    <p data-testid="template-pending-hint" class="text-sm text-n600">
+      Elige la universidad{{ tracks().length > 0 ? ' y ' + (trackFieldLabel() === 'Área' ? 'el área' : 'el ciclo') : '' }}
+      y cargamos la plantilla — el temario aparece cuando haya algo que mostrar.
+    </p>
+  }
+
+  @if (showsGrid()) {
     @if (loading()) {
       <div data-testid="loading-indicator" class="py-6 text-sm text-n600">Cargando existencias…</div>
     } @else if (errorMessage()) {
@@ -172,8 +194,15 @@
         <ui-button data-testid="collapse-all" variant="ghost" (clicked)="collapseAll()">Colapsar todo</ui-button>
       </div>
 
+      <!--
+        Un solo layout montado a la vez (audit 2026-08-15): antes ambos vivían
+        en el DOM vía `hidden md:block` / `md:hidden`, o sea 1,656 inputs para
+        828 celdas. `isNarrowScreen` sigue el viewport en vivo, así que
+        redimensionar cambia de layout igual que antes.
+      -->
+      @if (!isNarrowScreen()) {
       <!-- Desktop: full grid table (curso · tema rows x dificultad columns), grouped by course, sticky header -->
-      <div data-testid="content-table-desktop" class="hidden overflow-hidden rounded-card border border-n200 bg-surface md:block">
+      <div data-testid="content-table-desktop" class="overflow-hidden rounded-card border border-n200 bg-surface">
         <div class="max-h-[70vh] overflow-y-auto">
           <ui-table>
             <th head class="sticky top-0 z-10 border-b border-n200 bg-surface px-3 py-2 font-semibold text-n700">Curso · Tema</th>
@@ -210,6 +239,7 @@
                         <app-grid-cell-content
                           [inputName]="'requested-' + cellKey(row, difficulty)"
                           [cellKey]="cellKey(row, difficulty)"
+                          [cellLabel]="cellLabel(group.courseName, row, difficulty)"
                           [requestedStr]="requestedStrFor(row, difficulty)"
                           [requested]="requestedFor(row, difficulty)"
                           [stock]="stockFor(row, difficulty)"
@@ -246,8 +276,9 @@
         </div>
       </div>
 
+      } @else {
       <!-- Mobile: stacked per-topic cards grouped by course, totals summary + preview panel below the cards -->
-      <div data-testid="content-cards-mobile" class="md:hidden flex flex-col gap-4">
+      <div data-testid="content-cards-mobile" class="flex flex-col gap-4">
         @for (group of groupedRows(); track group.courseId) {
           <button
             type="button"
@@ -273,6 +304,7 @@
                   <app-grid-cell-content
                     [inputName]="'requested-' + cellKey(row, difficulty)"
                     [cellKey]="cellKey(row, difficulty)"
+                    [cellLabel]="cellLabel(group.courseName, row, difficulty)"
                     [requestedStr]="requestedStrFor(row, difficulty)"
                     [requested]="requestedFor(row, difficulty)"
                     [stock]="stockFor(row, difficulty)"
@@ -304,6 +336,7 @@
           Vista previa: selección indicativa, la selección final se confirma al generar versiones.
         </div>
       </div>
+      }
 
       @if (generateError()) {
         <div data-testid="generate-error" class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text">
@@ -337,7 +370,16 @@
         </div>
       </div>
 
-      <footer class="flex items-center gap-4 pt-2">
+      <!--
+        `sticky bottom-0`: en móvil la columna de tarjetas mide 114,314 px, así
+        que un footer estático dejaba la acción principal a 146 pantallas de
+        scroll (audit 2026-08-15). En desktop no molesta — la grilla ya vive en
+        un `max-h-[70vh]` — y de paso el progreso queda siempre a la vista.
+        Fondo y borde propios para que las filas no se transparenten debajo.
+      -->
+      <footer
+        class="sticky bottom-0 z-20 -mx-1 flex flex-wrap items-center gap-4 border-t border-n200 bg-surface px-1 py-3"
+      >
         <ui-progress [current]="store.progress().current" [total]="store.progress().total"></ui-progress>
 
         <ui-button

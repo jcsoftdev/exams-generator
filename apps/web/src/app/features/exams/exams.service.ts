@@ -18,6 +18,7 @@ import {
   ResolveBlueprintPayload,
   ResolveBlueprintResult,
   StockBatchPayload,
+  GradeLevelStockResult,
   StockBatchResult,
   Track,
   University,
@@ -65,6 +66,16 @@ export class ExamsService {
     return this.http.post<StockBatchResult>(`${environment.apiBaseUrl}/exams/stock/batch`, payload);
   }
 
+  /**
+   * `GET /exams/stock/grades` — approved-question count per grade level. Feeds
+   * the "Grado" dropdown so it can flag the grades with no bank BEFORE the
+   * teacher picks one (audit 2026-08-15: 11 of 12 dead-ended). Returns the FULL
+   * catalog, zeros included.
+   */
+  gradeLevelStock(): Observable<GradeLevelStockResult> {
+    return this.http.get<GradeLevelStockResult>(`${environment.apiBaseUrl}/exams/stock/grades`);
+  }
+
   /** `POST /exams/preview` (B2) — same body shape as `createExam` minus `title`; pure read, no persistence. */
   previewExam(payload: PreviewExamPayload): Observable<PreviewExamResult> {
     return this.http.post<PreviewExamResult>(`${environment.apiBaseUrl}/exams/preview`, payload);
@@ -87,6 +98,11 @@ export class ExamsService {
   }
 
   /** `DELETE /exams/:id` (S3). */
+  /** `PATCH /exams/:examId` (S4) — rename; the only mutable field of an exam. */
+  renameExam(examId: string, title: string): Observable<{ id: string; title: string }> {
+    return this.http.patch<{ id: string; title: string }>(`${environment.apiBaseUrl}/exams/${examId}`, { title });
+  }
+
   deleteExam(examId: string): Observable<void> {
     return this.http.delete<void>(`${environment.apiBaseUrl}/exams/${examId}`);
   }

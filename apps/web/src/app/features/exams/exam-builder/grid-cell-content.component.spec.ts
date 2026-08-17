@@ -12,11 +12,33 @@ function setup(overrides: { status?: 'ok' | 'short' } = {}) {
   fixture.componentRef.setInput('status', overrides.status ?? 'ok');
   fixture.componentRef.setInput('stockOkClasses', 'text-xs text-n500');
   fixture.componentRef.setInput('previewIds', ['q1', 'q2']);
+  fixture.componentRef.setInput('cellLabel', 'Aritmética · Conjuntos · Fácil');
   fixture.detectChanges();
   return { fixture, compiled: fixture.nativeElement as HTMLElement };
 }
 
 describe('GridCellContentComponent', () => {
+  /**
+   * Audit 2026-08-15: los 1,656 inputs de la grilla no tenían nombre
+   * accesible — un lector de pantalla anunciaba "spin button" y nada más, y el
+   * curso·tema·dificultad de la celda solo existía en la posición visual.
+   */
+  it('names the count input after its cell, for a screen reader', () => {
+    const { compiled } = setup();
+
+    expect(compiled.querySelector('input')!.getAttribute('aria-label')).toBe(
+      'Preguntas de Aritmética · Conjuntos · Fácil',
+    );
+  });
+
+  it('names the bridge actions after the cell too — three identical "Elegir del banco" are useless out of context', () => {
+    const { compiled } = setup({ status: 'short' });
+
+    expect(
+      compiled.querySelector('[data-testid="bridge-choose-bank"] button')!.getAttribute('aria-label'),
+    ).toContain('Aritmética · Conjuntos · Fácil');
+  });
+
   it('shows the stock-ok indicator when status is ok', () => {
     const { compiled } = setup({ status: 'ok' });
     expect(compiled.querySelector('[data-testid="stock-ok"]')?.textContent).toContain('de 5');

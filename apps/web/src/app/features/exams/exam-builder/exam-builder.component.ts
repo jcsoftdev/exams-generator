@@ -90,7 +90,7 @@ export const BUILDER_STATE_KEY = 'exam-builder-state-v1';
 
 /** Everything needed to put the builder back exactly where the teacher left it. */
 interface PersistedBuilderState {
-  readonly examTypeCode: string;
+  readonly examTypeCode: string | null;
   readonly gradeLevel: GradeLevel | null;
   readonly universityId: string | null;
   readonly trackId: string | null;
@@ -242,10 +242,37 @@ export class ExamBuilderComponent implements OnInit {
 
   protected readonly difficulties: readonly Difficulty[] = [Difficulty.Easy, Difficulty.Medium, Difficulty.Hard];
   protected readonly difficultyLabels = DIFFICULTY_LABELS;
-  protected readonly gradeLevelOptions = GRADE_LEVELS.map((gradeLevel) => ({
-    value: gradeLevel,
-    label: GRADE_LEVEL_LABELS[gradeLevel],
-  }));
+  /**
+   * Approved-question count per grade (`GET /exams/stock/grades`), empty until
+   * it arrives — and empty forever if the call fails, which is what keeps the
+   * labels honest: a request that never answered must not turn into "sin
+   * preguntas".
+   */
+  private readonly gradeLevelStock = signal<ReadonlyMap<string, number>>(new Map());
+
+  /**
+   * Grado options, annotated with what each grade actually has behind it.
+   *
+   * The catalog offers 12 grades and, on the seeded bank, 11 of them dead-end
+   * on "No hay preguntas aprobadas para este grado todavía" — but only AFTER
+   * the teacher commits to one (audit 2026-08-15). With the counts loaded the
+   * dropdown says it up front; with no counts loaded the labels are exactly
+   * what they always were.
+   */
+  protected readonly gradeLevelOptions = computed<readonly SelectOption<GradeLevel>[]>(() => {
+    const stock = this.gradeLevelStock();
+    return GRADE_LEVELS.map((gradeLevel) => {
+      const label = GRADE_LEVEL_LABELS[gradeLevel];
+      if (stock.size === 0) {
+        return { value: gradeLevel, label };
+      }
+      const available = stock.get(gradeLevel) ?? 0;
+      return {
+        value: gradeLevel,
+        label: available > 0 ? `${label} · ${available} preguntas` : `${label} · sin preguntas`,
+      };
+    });
+  });
   /** Label shown by the read-only derived-grade indicator (template) for every non-manual exam type — see `TEMPLATE_GRADE_LEVEL`. */
   protected readonly templateGradeLevelLabel = GRADE_LEVEL_LABELS[TEMPLATE_GRADE_LEVEL];
 
@@ -254,8 +281,19 @@ export class ExamBuilderComponent implements OnInit {
 
   // --- "Tipo de examen" (design doc §3.11) ---------------------------------
 
-  /** Defaults to `'manual'` — selecting/keeping it is the EB-T invariant: the grid below stays byte-identical to today. */
-  protected readonly selectedExamTypeCode = signal<string>('manual');
+  /**
+   * No preselection (`null`) — the first decision of the screen is explicit.
+   *
+   * It used to default to `'manual'`, which is also `sortOrder: 0` in the
+   * catalog, so a novice landed on a 828-cell blank matrix with nothing saying
+   * a guided path even exists (audit 2026-08-15). It is NOT defaulted to a
+   * guided type either: every template belongs to a preuniversitario
+   * university, so preselecting "Examen tipo admisión" would be actively wrong
+   * for a primaria teacher and would fetch the university catalog on every
+   * load. `null` behaves exactly like `'manual'` for everything below (see
+   * `isManual`), so the EB-T invariant holds: the grid is byte-identical.
+   */
+  protected readonly selectedExamTypeCode = signal<string | null>(null);
   protected readonly examTypes = signal<readonly ExamType[]>([]);
   protected readonly universities = signal<readonly University[]>([]);
   protected readonly selectedUniversityId = signal<string | null>(null);
@@ -307,6 +345,20 @@ export class ExamBuilderComponent implements OnInit {
    * por el nombre largo. `kind: 'cycle_track'` (UNI's Básico/Preuniversitario/
    * Intensivo) has no such convention, so its `name` renders as-is.
    */
+  /**
+   * What the track field is CALLED for the selected university. UNCP's tracks
+   * are admission areas (the options already read "Área II — …"), UNI's are
+   * prep cycles — so a hardcoded "Track" was both jargon and, half the time,
+   * the wrong word (audit 2026-08-15).
+   */
+  protected readonly trackFieldLabel = computed(() => {
+    const list = this.tracks();
+    if (list.length > 0 && list.every((track) => track.kind === 'area')) {
+      return 'Área';
+    }
+    return 'Ciclo';
+  });
+
   protected readonly trackOptions = computed(() =>
     this.tracks().map((track) => ({
       value: track.id,
@@ -317,7 +369,39 @@ export class ExamBuilderComponent implements OnInit {
   protected readonly selectedExamType = computed<ExamType | null>(
     () => this.examTypes().find((type) => type.code === this.selectedExamTypeCode()) ?? null,
   );
-  protected readonly isManual = computed(() => this.selectedExamTypeCode() === 'manual');
+  /**
+   * "The grid is the teacher's to fill" — true for `'manual'` AND for "nothing
+   * chosen yet", which is the state a fresh screen starts in. Both hide every
+   * template affordance and keep Grado an interactive choice.
+   */
+  protected readonly isManual = computed(() => {
+    const code = this.selectedExamTypeCode();
+    return code === null || code === 'manual';
+  });
+
+  /**
+   * One line explaining what the chosen type will do, right under the select —
+   * the four labels ("Manual", "Rápido (semana actual)", "Examen tipo
+   * admisión", "… por semana") gave a teacher no way to tell them apart
+   * (audit 2026-08-15). `null` while nothing is chosen; the invitation to the
+   * guided path lives in the template for that state.
+   */
+  protected readonly examTypeHelp = computed<string | null>(() => {
+    switch (this.selectedExamTypeCode()) {
+      case null:
+        return null;
+      case 'manual':
+        return 'Lo armas tú: eliges curso por curso, tema por tema, y cuántas preguntas de cada dificultad.';
+      case 'fastest':
+        return 'Para una práctica rápida: eliges los cursos y usamos el temario de la semana actual de la academia.';
+      case 'eta':
+        return 'Simulacro completo: la plantilla de la universidad decide los cursos y cuántas preguntas de cada uno.';
+      case 'eta_by_week':
+        return 'Como el simulacro completo, pero limitado a lo avanzado hasta la semana actual del temario.';
+      default:
+        return null;
+    }
+  });
   protected readonly showCourseMultiSelect = computed(() => this.selectedExamType()?.courseScope === 'selected');
 
   /**
@@ -350,6 +434,13 @@ export class ExamBuilderComponent implements OnInit {
   protected readonly canLoadTemplate = computed(() => !this.isManual() && this.loadTemplateBlockedReason() === null);
 
   ngOnInit(): void {
+    this.watchViewportWidth();
+    // Silent on failure: a missing count must leave the labels untouched, never
+    // claim "sin preguntas" for a grade that may well have thousands.
+    this.examsService.gradeLevelStock().subscribe({
+      next: (result) => this.gradeLevelStock.set(new Map(result.results.map((row) => [row.gradeLevel, row.available]))),
+      error: () => undefined,
+    });
     this.examsService.getExamTypes().subscribe({
       next: (types) => this.examTypes.set(types),
       error: () => this.templateError.set('No se pudieron cargar los tipos de examen.'),
@@ -471,7 +562,10 @@ export class ExamBuilderComponent implements OnInit {
   }
 
   protected onExamTypeChange(code: string | null): void {
-    this.selectedExamTypeCode.set(code ?? 'manual');
+    // Clearing the select goes back to "nothing chosen", not to `'manual'` —
+    // the two behave identically below but only one of them is a claim about
+    // what the teacher wants.
+    this.selectedExamTypeCode.set(code);
     this.selectedUniversityId.set(null);
     this.selectedTrackId.set(null);
     this.tracks.set([]);
@@ -815,6 +909,19 @@ export class ExamBuilderComponent implements OnInit {
     this.onlyRequested.update((only) => !only);
   }
 
+  /**
+   * Whether the content grid is worth rendering yet.
+   *
+   * Manual: as soon as there's a grade — the grid IS the tool. A guided type:
+   * only once the template actually produced rows. Picking "Examen tipo
+   * admisión" pre-warms the `pre` catalog (a fetch worth keeping), but painting
+   * 276 rows of the full syllabus under a three-field form that hasn't chosen a
+   * university yet is pure noise (audit 2026-08-15).
+   */
+  protected readonly showsGrid = computed(
+    () => this.selectedGradeLevel() !== null && (this.isManual() || this.store.requestedCells().length > 0),
+  );
+
   /** Rows grouped by course, for the "read like the tree" course subheading (design doc §5.1). */
   protected readonly groupedRows = computed<readonly RowGroup[]>(() => {
     const groups = groupRowsByCourse(this.store.rows());
@@ -851,8 +958,46 @@ export class ExamBuilderComponent implements OnInit {
    * starts EXPANDED (the grid is a fill-in matrix — hiding rows by default would
    * bury the work). Collapse is opt-in, to fold away courses the teacher isn't
    * touching. Mirrors the bank tree's `expand/collapse` affordance (commit 50dcff5).
+   *
+   * EXCEPT on a narrow screen, where that reasoning inverts — see
+   * `collapseAllOnNarrowScreen()`.
    */
   private readonly collapsedCourses = signal<ReadonlySet<string>>(new Set());
+
+  /**
+   * True on a phone-sized viewport. Queried as `max-width` (not `min-width`)
+   * on purpose: an environment without `matchMedia` — or jsdom's stub, which
+   * answers `matches: false` — then reads as "not narrow", i.e. the desktop
+   * behaviour this screen has always had. The listener keeps it live across a
+   * rotation or a window resize.
+   */
+  protected readonly isNarrowScreen = signal(false);
+
+  private watchViewportWidth(): void {
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+      return;
+    }
+    // 767px = one below Tailwind's `md` (768px), the same breakpoint the
+    // desktop-table/mobile-cards split in the template uses.
+    const query = window.matchMedia('(max-width: 767px)');
+    this.isNarrowScreen.set(query.matches);
+    query.addEventListener?.('change', (event) => this.isNarrowScreen.set(event.matches));
+  }
+
+  /**
+   * On a phone, "every course expanded" is what made the primary action
+   * unreachable: 276 rows stack into 114,314 px — 146 screens — before the
+   * footer (audit 2026-08-15). Collapsed-by-default turns that into a list of
+   * ~20 course headers the teacher opens on demand; the sticky footer keeps
+   * the action visible either way. Desktop keeps expanding everything: there
+   * the grid is inside a `max-h-[70vh]` scroller, so the rows cost the teacher
+   * nothing to reach past.
+   */
+  private collapseAllOnNarrowScreen(): void {
+    if (this.isNarrowScreen()) {
+      this.collapseAll();
+    }
+  }
 
   protected toggleCourse(courseId: string): void {
     this.collapsedCourses.update((current) => toggleInSet(current, courseId));
@@ -950,6 +1095,7 @@ export class ExamBuilderComponent implements OnInit {
             });
           }
         }
+        this.collapseAllOnNarrowScreen();
         this.loadStock(gradeLevel);
       },
       error: () => {
@@ -984,6 +1130,16 @@ export class ExamBuilderComponent implements OnInit {
         this.errorMessage.set('No se pudieron cargar las existencias. Inténtalo de nuevo.');
       },
     });
+  }
+
+  /**
+   * "Curso · Tema · Dificultad" for one cell — the accessible name of every
+   * control inside it (`GridCellContentComponent.cellLabel`). The grid conveys
+   * this by position only, which is precisely what a screen reader cannot see
+   * (audit 2026-08-15: 1,656 unnamed inputs).
+   */
+  protected cellLabel(courseName: string, row: ContentRow, difficulty: Difficulty): string {
+    return `${courseName} · ${row.topicName} · ${DIFFICULTY_LABELS[difficulty]}`;
   }
 
   protected cellKey(row: ContentRow, difficulty: Difficulty): CellKey {
@@ -1076,11 +1232,17 @@ export class ExamBuilderComponent implements OnInit {
    */
   protected goToAiGenerate(row?: ContentRow, difficulty?: Difficulty): void {
     const gradeLevel = this.selectedGradeLevel();
-    const queryParams = row
-      ? { courseId: row.courseId, topicId: row.topicId, difficulty, gradeLevel }
-      : gradeLevel
-        ? { gradeLevel }
-        : {};
+    // `count` = the cell's exact shortfall. The button says "Generar 3 con IA"
+    // and the generator used to open at its own default of 5, so the teacher
+    // had to re-derive a number this screen already knew (audit 2026-08-15).
+    const shortfall =
+      row && difficulty ? Math.max(1, this.requestedFor(row, difficulty) - this.stockFor(row, difficulty)) : null;
+    const queryParams =
+      row && shortfall !== null
+        ? { courseId: row.courseId, topicId: row.topicId, difficulty, gradeLevel, count: shortfall }
+        : gradeLevel
+          ? { gradeLevel }
+          : {};
     this.router.navigate(['/app/ai/generate'], { queryParams });
   }
 

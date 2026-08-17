@@ -23,6 +23,7 @@ import { CellStatus } from './exam-builder.store';
     <ui-input
       type="number"
       [name]="inputName()"
+      [ariaLabel]="'Preguntas de ' + cellLabel()"
       [value]="requestedStr()"
       (valueChange)="requestedChange.emit($event)"
     ></ui-input>
@@ -35,12 +36,29 @@ import { CellStatus } from './exam-builder.store';
         <lucide-icon name="triangle-alert" data-testid="stock-warning-icon" [size]="14"></lucide-icon
       ></ui-tag>
       <div data-testid="bridge-to-ai" class="mt-2 flex flex-col gap-1">
-        <ui-button data-testid="bridge-generate-ai" variant="ghost" (clicked)="generateAi.emit()">
+        <ui-button
+          data-testid="bridge-generate-ai"
+          variant="ghost"
+          [ariaLabel]="'Generar ' + (requested() - stock()) + ' con IA para ' + cellLabel()"
+          (clicked)="generateAi.emit()"
+        >
           <lucide-icon name="sparkles" [size]="16"></lucide-icon>
           Generar {{ requested() - stock() }} con IA
         </ui-button>
-        <ui-button data-testid="bridge-choose-bank" variant="ghost" (clicked)="chooseBank.emit()">Elegir del banco</ui-button>
-        <ui-button data-testid="bridge-lower-count" variant="ghost" (clicked)="lowerCount.emit()">Bajar la cantidad</ui-button>
+        <ui-button
+          data-testid="bridge-choose-bank"
+          variant="ghost"
+          [ariaLabel]="'Elegir del banco para ' + cellLabel()"
+          (clicked)="chooseBank.emit()"
+          >Elegir del banco</ui-button
+        >
+        <ui-button
+          data-testid="bridge-lower-count"
+          variant="ghost"
+          [ariaLabel]="'Bajar la cantidad de ' + cellLabel() + ' a ' + stock()"
+          (clicked)="lowerCount.emit()"
+          >Bajar la cantidad</ui-button
+        >
       </div>
     }
 
@@ -56,6 +74,14 @@ export class GridCellContentComponent {
   readonly status = input.required<CellStatus>();
   readonly stockOkClasses = input.required<string>();
   readonly previewIds = input.required<readonly string[]>();
+  /**
+   * Human name of this cell ("Curso · Tema · Dificultad"), used only as the
+   * accessible name of the controls inside it. Nothing renders it: the grid
+   * conveys the same information by position, which is exactly what a screen
+   * reader cannot see (audit 2026-08-15). It also disambiguates the three
+   * bridge buttons, which are byte-identical text across every short cell.
+   */
+  readonly cellLabel = input.required<string>();
 
   readonly requestedChange = output<string>();
   readonly generateAi = output<void>();

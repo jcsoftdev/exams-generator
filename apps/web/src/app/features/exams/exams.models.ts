@@ -170,6 +170,20 @@ export interface ExamDetail {
 }
 
 /**
+ * `GET /exams/stock/grades` — one row per grade level of the catalog, zeros
+ * included, so the builder can say which grades actually have questions
+ * behind them (audit 2026-08-15).
+ */
+export interface GradeLevelStockCell {
+  readonly gradeLevel: string;
+  readonly available: number;
+}
+
+export interface GradeLevelStockResult {
+  readonly results: readonly GradeLevelStockCell[];
+}
+
+/**
  * `POST /exams/stock/batch` (B1) request cell — mirrors `StockBatchCellDto`
  * in apps/api/src/modules/exams/exams.service.ts. `topicId`/`difficulty`
  * are optional at the API level, but the exam-builder screen always sends

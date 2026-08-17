@@ -76,6 +76,7 @@ function setup(overrides: {
   getUniversities?(): unknown;
   getUniversityTracks?(universityId: string): unknown;
   resolveBlueprint?(payload: unknown): unknown;
+  gradeLevelStock?(): unknown;
 } = {}) {
   const getCourses = vi.fn(overrides.getCourses ?? (() => of(COURSES)));
   const getTopicsForCourses = vi.fn(overrides.getTopicsForCourses ?? (() => of(TOPICS)));
@@ -120,6 +121,10 @@ function setup(overrides: {
     overrides.resolveBlueprint ??
       (() => of<ResolveBlueprintResult>({ blueprint: [], weekNumber: null, templateId: null })),
   );
+  // Default: the stock endpoint answers "nothing known" (empty catalog) so the
+  // Grado labels stay exactly as they were for every pre-existing test — the
+  // suffix is opt-in per test via `gradeLevelStock`.
+  const gradeLevelStock = vi.fn(overrides.gradeLevelStock ?? (() => of({ results: [] })));
   const navigate = vi.fn();
 
   TestBed.configureTestingModule({
@@ -128,7 +133,16 @@ function setup(overrides: {
       { provide: TaxonomyService, useValue: { getCourses, getTopicsForCourses } },
       {
         provide: ExamsService,
-        useValue: { stockBatch, previewExam, createExam, getExamTypes, getUniversities, getUniversityTracks, resolveBlueprint },
+        useValue: {
+          stockBatch,
+          previewExam,
+          createExam,
+          getExamTypes,
+          getUniversities,
+          getUniversityTracks,
+          resolveBlueprint,
+          gradeLevelStock,
+        },
       },
       { provide: ExamVersionsService, useValue: { generateVersions } },
       { provide: Router, useValue: { navigate } },
@@ -156,7 +170,12 @@ function setup(overrides: {
   };
 }
 
-/** Opens a `ui-select` identified by its `data-testid` and clicks the option whose label matches. */
+/**
+ * Opens a `ui-select` identified by its `data-testid` and clicks the option
+ * whose label matches. Matches by PREFIX: the Grado options carry an
+ * availability suffix ("5° secundaria · 12 preguntas", audit 2026-08-15), and
+ * every caller here names the grade, not its stock.
+ */
 function selectFromUiSelect(
   compiled: HTMLElement,
   fixture: { detectChanges: () => void },
@@ -170,7 +189,7 @@ function selectFromUiSelect(
   (container.querySelector('button[role="combobox"]') as HTMLButtonElement).click();
   fixture.detectChanges();
   const option = Array.from(container.querySelectorAll('[data-testid="select-option"]')).find(
-    (li) => li.textContent?.trim() === optionLabel,
+    (li) => li.textContent?.trim() === optionLabel || li.textContent?.trim().startsWith(`${optionLabel} ·`),
   ) as HTMLElement | undefined;
   if (!option) {
     throw new Error(`option "${optionLabel}" not found in ui-select "${testId}"`);
@@ -181,6 +200,16 @@ function selectFromUiSelect(
 
 function selectGradeLevel(compiled: HTMLElement, fixture: { detectChanges: () => void }, value: GradeLevel): void {
   selectFromUiSelect(compiled, fixture, 'grade-level-select', GRADE_LEVEL_LABELS[value]);
+}
+
+/** Opens the Grado select and returns its option labels verbatim (suffixes included). */
+function openAndReadGradeOptions(compiled: HTMLElement, fixture: { detectChanges: () => void }): string[] {
+  const container = compiled.querySelector('[data-testid="grade-level-select"]') as HTMLElement;
+  (container.querySelector('button[role="combobox"]') as HTMLButtonElement).click();
+  fixture.detectChanges();
+  return Array.from(container.querySelectorAll('[data-testid="select-option"]')).map(
+    (li) => li.textContent?.trim() ?? '',
+  );
 }
 
 function setCellCount(
@@ -462,8 +491,16 @@ describe('ExamBuilderComponent', () => {
       const cell = compiled.querySelector('[data-cell-key="c1:t1:medium"]')!;
       (cell.querySelector('[data-testid="bridge-generate-ai"] button') as HTMLButtonElement).click();
 
+      // `count` es el faltante exacto de la celda: el botón dice "Generar N con
+      // IA" y el generador abría con 5 por default (audit 2026-08-15).
       expect(navigate).toHaveBeenCalledWith(['/app/ai/generate'], {
-        queryParams: { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, gradeLevel: 'secundaria_1' },
+        queryParams: {
+          courseId: 'c1',
+          topicId: 't1',
+          difficulty: Difficulty.Medium,
+          gradeLevel: 'secundaria_1',
+          count: 4,
+        },
       });
     });
   });
@@ -652,26 +689,58 @@ describe('ExamBuilderComponent', () => {
     });
   });
 
+  /**
+   * EB-R7, revisado en el audit 2026-08-15: los dos layouts vivían SIEMPRE en el
+   * DOM (`hidden md:block` / `md:hidden`), o sea 1,656 inputs para 828 celdas
+   * reales y 13,136 nodos. El oculto no era tabulable ni lo leían los lectores
+   * (es `display:none`), pero sí lo paga el parse inicial y cada ciclo de change
+   * detection. Ahora solo se monta el layout del viewport actual.
+   */
   describe('responsive (EB-R7)', () => {
-    it('renders stacked per-topic cards for mobile (md:hidden) and the table for desktop (hidden md:block), preview after the cards on mobile', () => {
+    it('monta SOLO la tabla en desktop — nada de una segunda copia oculta', () => {
       const { compiled, fixture } = setup();
 
       selectGradeLevel(compiled, fixture, 'secundaria_1');
 
-      const mobile = compiled.querySelector('[data-testid="content-cards-mobile"]')!;
-      const desktop = compiled.querySelector('[data-testid="content-table-desktop"]')!;
-      expect(mobile.className).toContain('md:hidden');
-      expect(desktop.className).toContain('hidden');
-      expect(desktop.className).toContain('md:block');
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="content-cards-mobile"]')).toBeFalsy();
+    });
 
-      const card = mobile.querySelector('[data-testid="builder-card"]');
-      expect(card).toBeTruthy();
+    it('monta SOLO las tarjetas en móvil, con la vista previa después de ellas', () => {
+      vi.stubGlobal('matchMedia', (query: string) => ({
+        matches: query.includes('max-width'),
+        media: query,
+        onchange: null,
+        addListener: () => {},
+        removeListener: () => {},
+        addEventListener: () => {},
+        removeEventListener: () => {},
+        dispatchEvent: () => false,
+      }));
+      try {
+        const { compiled, fixture } = setup();
 
-      const cardsIndex = Array.from(mobile.children).findIndex((el) => el === card);
-      const previewPanel = mobile.querySelector('[data-testid="preview-panel"]');
-      expect(previewPanel).toBeTruthy();
-      const previewIndex = Array.from(mobile.children).indexOf(previewPanel as Element);
-      expect(previewIndex).toBeGreaterThan(cardsIndex);
+        selectGradeLevel(compiled, fixture, 'secundaria_1');
+        // Los cursos arrancan colapsados en móvil — abrimos el primero para
+        // poder mirar el orden de las tarjetas.
+        (compiled.querySelector('[data-testid="course-group-header"]') as HTMLButtonElement).click();
+        fixture.detectChanges();
+
+        const mobile = compiled.querySelector('[data-testid="content-cards-mobile"]')!;
+        expect(mobile).toBeTruthy();
+        expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeFalsy();
+
+        const card = mobile.querySelector('[data-testid="builder-card"]');
+        expect(card).toBeTruthy();
+
+        const cardsIndex = Array.from(mobile.children).findIndex((el) => el === card || el.contains(card!));
+        const previewPanel = mobile.querySelector('[data-testid="preview-panel"]');
+        expect(previewPanel).toBeTruthy();
+        const previewIndex = Array.from(mobile.children).indexOf(previewPanel as Element);
+        expect(previewIndex).toBeGreaterThan(cardsIndex);
+      } finally {
+        vi.unstubAllGlobals();
+      }
     });
   });
 
@@ -1072,8 +1141,185 @@ describe('ExamBuilderComponent', () => {
     });
   });
 
+  /**
+   * Audit 2026-08-15: "Manual" venía preseleccionado (y es `sortOrder: 0` en el
+   * catálogo), así que un docente novato aterrizaba sobre una matriz de 828
+   * celdas en blanco sin que nada le dijera que existe un camino guiado que
+   * arma el examen solo. Y los cuatro tipos se ofrecían sin una línea que
+   * explique en qué se diferencian.
+   *
+   * NO se cambió el default a un tipo guiado (que fue la recomendación inicial
+   * del audit): las plantillas solo existen para universidades
+   * preuniversitarias, así que preseleccionar "Examen tipo admisión" sería
+   * activamente incorrecto para un colegio de primaria — y dispararía
+   * `getUniversities` en cada carga. La elección ahora es EXPLÍCITA y explicada.
+   */
+  /**
+   * Audit 2026-08-15: el dropdown ofrecía los 12 grados del catálogo y 11
+   * terminaban en "No hay preguntas aprobadas para este grado todavía" — el
+   * banco sembrado es 100% `pre`. El docente descubría el callejón DESPUÉS de
+   * elegir. Ahora el conteo por grado (`GET /exams/stock/grades`) viene con la
+   * pantalla y la etiqueta lo dice antes.
+   */
+  describe('grado — decir cuáles tienen banco ANTES de elegir', () => {
+    it('anota cada grado con sus preguntas disponibles', () => {
+      const { compiled, fixture } = setup({
+        gradeLevelStock: () =>
+          of({
+            results: [
+              { gradeLevel: 'pre', available: 64218 },
+              { gradeLevel: 'secundaria_1', available: 12 },
+            ],
+          }),
+      });
+
+      const labels = openAndReadGradeOptions(compiled, fixture);
+      expect(labels).toContain(`${GRADE_LEVEL_LABELS['pre']} · 64218 preguntas`);
+      expect(labels).toContain(`${GRADE_LEVEL_LABELS['secundaria_1']} · 12 preguntas`);
+    });
+
+    it('marca los grados sin banco en vez de dejar que el docente los descubra por prueba y error', () => {
+      const { compiled, fixture } = setup({
+        gradeLevelStock: () => of({ results: [{ gradeLevel: 'pre', available: 5 }] }),
+      });
+
+      const labels = openAndReadGradeOptions(compiled, fixture);
+      expect(labels).toContain(`${GRADE_LEVEL_LABELS['primaria_1']} · sin preguntas`);
+    });
+
+    it('si el conteo falla, las etiquetas quedan como siempre — nunca miente diciendo "sin preguntas"', () => {
+      const { compiled, fixture } = setup({
+        gradeLevelStock: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+
+      const labels = openAndReadGradeOptions(compiled, fixture);
+      expect(labels).toContain(GRADE_LEVEL_LABELS['pre']);
+      expect(labels.some((label) => label.includes('sin preguntas'))).toBe(false);
+    });
+  });
+
+  /**
+   * Audit 2026-08-15: elegir un tipo no-manual disparaba el pre-warm del grado
+   * `pre` y pintaba las 276 filas del temario ENTERO debajo de un formulario de
+   * tres campos todavía vacío — puro ruido antes de que la plantilla exista.
+   * El pre-warm (la fetch) se queda; lo que espera es el render.
+   */
+  describe('plantilla — la grilla no aparece antes de que haya plantilla', () => {
+    it('esconde el temario mientras el tipo guiado no cargó nada', () => {
+      const { compiled, fixture } = setup({ getUniversityTracks: () => of(TRACKS) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="template-pending-hint"]')).toBeTruthy();
+    });
+
+    it('la muestra apenas la plantilla trae filas', () => {
+      const resolveBlueprint = vi.fn(() =>
+        of<ResolveBlueprintResult>({
+          blueprint: [{ courseId: 'c1', topicId: 't1', count: 9, difficulty: Difficulty.Hard }],
+          weekNumber: null,
+          templateId: 'tpl-1',
+        }),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="template-pending-hint"]')).toBeFalsy();
+    });
+
+    it('en manual la grilla sigue apareciendo con solo elegir el grado', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeTruthy();
+    });
+  });
+
+  describe('vocabulario y accesibilidad', () => {
+    /**
+     * Audit 2026-08-15: la etiqueta decía "Track" (jerga en inglés) mientras las
+     * opciones decían "Área I — …". Para UNI, que usa ciclos y no áreas,
+     * "Área" también sería incorrecto — así que la etiqueta se deriva.
+     */
+    it('llama "Área" al campo cuando la universidad usa áreas de admisión', () => {
+      const { compiled, fixture } = setup({
+        getUniversityTracks: () => of([{ id: 'trk1', code: 'II', name: 'Ingenierías', kind: 'area' as const }]),
+      });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      const label = compiled.querySelector('[data-testid="track-select"]')!.textContent ?? '';
+      expect(label).toContain('Área');
+      expect(label).not.toContain('Track');
+    });
+
+    it('lo llama "Ciclo" cuando son ciclos de preparación, no áreas', () => {
+      // `TRACKS` is UNI's `cycle_track` fixture; the default mock returns no
+      // tracks at all, which renders no field to name.
+      const { compiled, fixture } = setup({ getUniversityTracks: () => of(TRACKS) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      const label = compiled.querySelector('[data-testid="track-select"]')!.textContent ?? '';
+      expect(label).toContain('Ciclo');
+      expect(label).not.toContain('Track');
+    });
+
+    it('cada input de la grilla se anuncia con su curso, tema y dificultad', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:easy"]')!;
+      expect(input.getAttribute('aria-label')).toBe('Preguntas de Matemática · Álgebra · Fácil');
+    });
+  });
+
+  describe('tipo de examen — elección explicada, sin trampa por default', () => {
+    it('no preselecciona ningún tipo y no toca la red por adelantado', () => {
+      const { compiled, getUniversities } = setup();
+
+      const trigger = compiled.querySelector('[data-testid="exam-type-select"] [role="combobox"]')!;
+      expect(trigger.textContent).toMatch(/cómo quieres armarlo/i);
+      expect(getUniversities).not.toHaveBeenCalled();
+    });
+
+    it('mientras no se elige, invita al camino guiado en vez de dejar la pantalla muda', () => {
+      const { compiled } = setup();
+
+      const hint = compiled.querySelector('[data-testid="exam-type-hint"]')!;
+      expect(hint).toBeTruthy();
+      expect(hint.textContent).toMatch(/simulacro/i);
+    });
+
+    it('explica el tipo elegido — manual dice que lo armas tú, curso por curso', () => {
+      const { compiled, fixture } = setup();
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Manual');
+
+      const help = compiled.querySelector('[data-testid="exam-type-help"]')!;
+      expect(help.textContent).toMatch(/curso por curso/i);
+    });
+
+    it('explica un tipo guiado — dice que la plantilla lo arma por ti', () => {
+      const { compiled, fixture } = setup();
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+
+      const help = compiled.querySelector('[data-testid="exam-type-help"]')!;
+      expect(help.textContent).toMatch(/plantilla/i);
+    });
+  });
+
   describe('tipo de examen — manual default invariant (critical: zero behavior change from today)', () => {
-    it('defaults the exam type to manual and hides every template affordance, without ever calling getUniversities', () => {
+    it('hides every template affordance until a non-manual type is chosen, without ever calling getUniversities', () => {
       const { compiled, getUniversities } = setup();
 
       expect(compiled.querySelector('[data-testid="university-select"]')).toBeFalsy();
@@ -1159,9 +1405,12 @@ describe('ExamBuilderComponent', () => {
       const derived = compiled.querySelector('[data-testid="grade-level-derived"]');
       expect(derived).toBeTruthy();
       expect(derived!.textContent).toContain('Pre-admisión');
-      // The grid is ready without the user ever touching a grade selector.
+      // El catálogo se pre-calienta igual (la fetch sale), pero el temario ya no
+      // se PINTA hasta que la plantilla traiga filas — 276 filas debajo de un
+      // formulario vacío eran puro ruido (audit 2026-08-15).
       expect(getCourses).toHaveBeenCalledWith('pre');
-      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="template-pending-hint"]')).toBeTruthy();
     });
 
     it('overrides an already-selected different grade level to preuniversitario when switching to a non-manual exam type', () => {
@@ -1172,8 +1421,9 @@ describe('ExamBuilderComponent', () => {
 
       expect(compiled.querySelector('[data-testid="grade-level-select"]')).toBeFalsy();
       expect(compiled.querySelector('[data-testid="grade-level-derived"]')!.textContent).toContain('Pre-admisión');
-      // Old grade's rows were replaced, not duplicated alongside the new ones.
-      expect(compiled.querySelectorAll('[data-testid="builder-row"]').length).toBe(1);
+      // Las filas del grado viejo se reemplazaron, no se duplicaron — y con el
+      // tipo guiado el temario espera a la plantilla, así que no se pinta ninguna.
+      expect(compiled.querySelectorAll('[data-testid="builder-row"]').length).toBe(0);
     });
 
     it('does not rebuild or duplicate the grid when switching between two different non-manual exam types (already preuniversitario)', () => {
@@ -1182,20 +1432,74 @@ describe('ExamBuilderComponent', () => {
       selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
       selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
 
-      expect(compiled.querySelectorAll('[data-testid="builder-row"]').length).toBe(1);
+      // Ninguna fila pintada (el temario espera a la plantilla) y, sobre todo,
+      // ninguna duplicada: el grado ya era `pre`, así que el grid no se rearma.
+      expect(compiled.querySelectorAll('[data-testid="builder-row"]').length).toBe(0);
+      expect(compiled.querySelector('[data-testid="template-pending-hint"]')).toBeTruthy();
     });
 
     it('resets grade level back to null when switching back to manual — selector reappears, derived indicator and grid disappear (EB-T invariant)', () => {
       const { compiled, fixture } = setup();
 
       selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
-      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="template-pending-hint"]')).toBeTruthy();
 
       selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Manual');
 
       expect(compiled.querySelector('[data-testid="grade-level-select"]')).toBeTruthy();
       expect(compiled.querySelector('[data-testid="grade-level-derived"]')).toBeFalsy();
       expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeFalsy();
+    });
+  });
+
+  /**
+   * Audit 2026-08-15, medido en un viewport de 390×844: la columna de tarjetas
+   * mide 114,314 px contra un contenedor de 783 px — **146 pantallas** de
+   * scroll — y el footer con la acción principal era `position: static` en
+   * `offsetTop: 114,735`. En desktop la grilla vive en un `max-h-[70vh]` con el
+   * footer pegado abajo; en móvil el botón quedaba literalmente al final de
+   * todo.
+   */
+  describe('móvil — la acción principal se alcanza', () => {
+    it('deja el footer pegado abajo mientras se scrollea la grilla', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const footer = compiled.querySelector('footer')!;
+      expect(footer.className).toContain('sticky');
+      expect(footer.className).toContain('bottom-0');
+    });
+
+    it('en pantalla angosta los cursos arrancan COLAPSADOS — el temario no entierra el trabajo', () => {
+      vi.stubGlobal('matchMedia', (query: string) => ({
+        matches: query.includes('max-width'),
+        media: query,
+        onchange: null,
+        addListener: () => {},
+        removeListener: () => {},
+        addEventListener: () => {},
+        removeEventListener: () => {},
+        dispatchEvent: () => false,
+      }));
+      try {
+        const { compiled, fixture } = setup();
+
+        selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+        expect(compiled.querySelectorAll('[data-testid="course-group-header"]').length).toBeGreaterThan(0);
+        expect(compiled.querySelector('[data-testid="builder-row"]')).toBeFalsy();
+      } finally {
+        vi.unstubAllGlobals();
+      }
+    });
+
+    it('en pantalla ancha siguen arrancando EXPANDIDOS (la grilla es una matriz para llenar)', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      expect(compiled.querySelector('[data-testid="builder-row"]')).toBeTruthy();
     });
   });
 
