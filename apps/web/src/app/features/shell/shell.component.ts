@@ -14,7 +14,7 @@ import { EXAMS_ROLES } from '../exams/exams.roles';
 const PRINCIPAL_GROUP: NavGroup = {
   title: 'Principal',
   items: [
-    { label: 'Dashboard', route: '/app/dashboard', icon: 'layout-dashboard' },
+    { label: 'Panel', route: '/app/dashboard', icon: 'layout-dashboard' },
     { label: 'Banco de preguntas', route: '/app/bank', icon: 'book-open' },
     { label: 'Mis exámenes', route: '/app/exams', icon: 'file-text' },
   ],
@@ -60,7 +60,7 @@ export class ShellComponent {
 
   protected readonly mobileOpen = signal(false);
   protected readonly userMenuOpen = signal(false);
-  protected readonly schoolName = signal('Exams Generator');
+  protected readonly schoolName = signal('GeneraExamen');
   protected readonly themeMode = computed(() => this.themeService.mode());
 
   protected readonly navGroups = computed<NavGroup[]>(() => {

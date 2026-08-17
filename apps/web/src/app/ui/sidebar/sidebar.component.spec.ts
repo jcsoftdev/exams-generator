@@ -48,7 +48,7 @@ describe('SidebarComponent', () => {
 
     const logo = compiled.querySelector('[data-testid="sidebar-logo"]');
     expect(logo).toBeTruthy();
-    expect(logo?.textContent).toContain('Exams Generator');
+    expect(logo?.textContent).toContain('GeneraExamen');
   });
 
   it('renders the 3 nav groups (Principal/Inteligencia/Colegio)', async () => {

@@ -70,6 +70,57 @@ function fillForm(fixture: { componentInstance: unknown; detectChanges(): void }
 }
 
 describe('AiGenerateComponent', () => {
+  /**
+   * Audit 2026-08-15: el segmentado de dificultad marcaba la selección SOLO con
+   * color (`bg-tint-active`) — sin `role`, sin `aria-checked`. Invisible para un
+   * lector de pantalla y ambiguo para un daltónico.
+   */
+  /**
+   * Audit 2026-08-15: la celda del builder decía "Generar 2 con IA" y esta
+   * pantalla abría con CANTIDAD 5 — el docente tenía que volver a deducir un
+   * número que la pantalla anterior ya sabía.
+   */
+  describe('prefill de cantidad desde el builder', () => {
+    it('abre con la cantidad que pidió la celda', () => {
+      const { compiled } = setup({ queryParams: { gradeLevel: 'pre', count: '2' } });
+
+      expect(compiled.textContent).toContain('Generar 2 preguntas');
+    });
+
+    it('ignora un count fuera de rango y se queda con su propio default', () => {
+      const { compiled } = setup({ queryParams: { gradeLevel: 'pre', count: '0' } });
+
+      expect(compiled.textContent).toContain('Generar 5 preguntas');
+    });
+  });
+
+  describe('segmentado de Nivel — el estado no puede ser solo color', () => {
+    it('expone el grupo y el estado de cada opción', () => {
+      const { compiled } = setup({});
+
+      const group = compiled.querySelector('[role="radiogroup"]')!;
+      expect(group).toBeTruthy();
+      expect(group.getAttribute('aria-labelledby')).toBeTruthy();
+
+      const radios = compiled.querySelectorAll('[role="radio"]');
+      expect(radios.length).toBe(3);
+      expect([...radios].filter((r) => r.getAttribute('aria-checked') === 'true').length).toBeLessThanOrEqual(1);
+    });
+
+    it('mueve aria-checked al elegir, y añade una señal que no depende del color', () => {
+      const { compiled, fixture } = setup({});
+
+      const hard = compiled.querySelector<HTMLButtonElement>('[data-testid="difficulty-hard"]')!;
+      hard.click();
+      fixture.detectChanges();
+
+      expect(hard.getAttribute('aria-checked')).toBe('true');
+      expect(hard.textContent).toContain('•');
+      expect(compiled.querySelector('[data-testid="difficulty-easy"]')!.getAttribute('aria-checked')).toBe('false');
+      expect(compiled.querySelector('[data-testid="difficulty-easy"]')!.textContent).not.toContain('•');
+    });
+  });
+
   it('prefills grade, course, topic and difficulty from query params (exam-builder bridge)', () => {
     const { fixture, getCourses, getTopics } = setup({
       queryParams: { gradeLevel: 'secundaria_3', courseId: 'c1', topicId: 't1', difficulty: 'medium' },

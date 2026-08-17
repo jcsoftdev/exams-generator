@@ -204,8 +204,9 @@
 
   <ui-modal [open]="pendingGenerate()" title="Generar más formas" (openChange)="cancelGenerate()">
     <p data-testid="generate-confirm" class="text-sm text-n700">
-      Esto reemplazará las {{ versions().length }} forma(s) actuales — los PDFs ya generados dejan de estar
-      disponibles. ¿Seguro que quieres continuar?
+      Esto reemplazará
+      {{ versions().length === 1 ? 'la forma actual' : 'las ' + versions().length + ' formas actuales' }} — los PDFs ya
+      generados dejan de estar disponibles. ¿Seguro que quieres continuar?
     </p>
     <div actions class="flex justify-end gap-2">
       <ui-button variant="ghost" (clicked)="cancelGenerate()">Cancelar</ui-button>

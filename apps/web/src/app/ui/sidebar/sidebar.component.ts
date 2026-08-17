@@ -20,7 +20,7 @@ import { NavGroup } from '../ui.types';
         <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">
           E
         </span>
-        <span class="text-xs font-bold tracking-wide text-n900">Exams Generator</span>
+        <span class="text-xs font-bold tracking-wide text-n900">GeneraExamen</span>
       </div>
       @for (group of groups(); track group.title) {
         <div>

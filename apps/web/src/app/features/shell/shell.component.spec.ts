@@ -230,7 +230,9 @@ describe('ShellComponent', () => {
     expect(reviewLink?.querySelector('[data-testid="nav-item-badge"]')).toBeFalsy();
   });
 
-  it('lists "Dashboard" as the first item of the Principal group', () => {
+  // "Dashboard" era la única etiqueta en inglés de un nav 100% español (audit
+  // 2026-08-15); el título de la ruta ya decía "Panel".
+  it('lists "Panel" as the first item of the Principal group', () => {
     const { compiled } = setup(Role.Teacher);
 
     // NOTE: this file's Router mock stubs `serializeUrl: () => ''`, so
@@ -238,7 +240,7 @@ describe('ShellComponent', () => {
     // rendered label/order instead (same style as this file's other tests),
     // not on `getAttribute('href')`.
     const links = Array.from(compiled.querySelectorAll('a[data-testid="nav-item"]'));
-    expect(links[0]?.textContent).toContain('Dashboard');
+    expect(links[0]?.textContent).toContain('Panel');
   });
 
   it('renders a theme toggle button that calls ThemeService.toggle() on click', () => {

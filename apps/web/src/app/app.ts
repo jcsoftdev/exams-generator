@@ -9,7 +9,7 @@ import { ThemeService } from './core/theme/theme.service';
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('Exams Generator');
+  protected readonly title = signal('GeneraExamen');
 
   constructor() {
     /**

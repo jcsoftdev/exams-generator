@@ -91,6 +91,14 @@ export class AiGenerateComponent {
     if (difficulty && (Object.values(Difficulty) as string[]).includes(difficulty)) {
       this.difficulty.set(difficulty as Difficulty);
     }
+    // The builder's shortage cell knows exactly how many are missing — it says
+    // so on the button ("Generar 3 con IA") and now hands the number over
+    // instead of letting this screen fall back to its own default (audit
+    // 2026-08-15). Guarded: a hand-edited/garbage value keeps the default.
+    const count = Number(params.get('count'));
+    if (Number.isInteger(count) && count > 0 && count <= MAX_STEPPER_COUNT) {
+      this.count.set(count);
+    }
   }
 
   protected onGradeLevelChange(gradeLevel: string | null): void {

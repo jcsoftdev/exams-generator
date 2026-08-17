@@ -17,6 +17,7 @@ import { ChangeDetectionStrategy, Component, input, model } from '@angular/core'
       [attr.name]="name() || null"
       [attr.type]="type()"
       [attr.placeholder]="placeholder() || null"
+      [attr.aria-label]="label() ? null : ariaLabel() || null"
       [attr.aria-describedby]="error() ? errorId : null"
       [attr.aria-invalid]="error() ? 'true' : null"
       [disabled]="disabled()"
@@ -39,6 +40,13 @@ export class InputComponent {
   readonly error = input<string>();
   readonly disabled = input(false);
   readonly name = input<string>();
+  /**
+   * Invisible accessible name, for controls whose context is only visual — the
+   * builder grid's 1,656 cell inputs, where a visible `label` would print text
+   * inside every cell (audit 2026-08-15). Ignored when `label` is set, so a
+   * control never ends up double-named.
+   */
+  readonly ariaLabel = input<string>();
 
   protected readonly inputId = `ui-input-${InputComponent.instanceCounter++}`;
   protected readonly errorId = `${this.inputId}-error`;

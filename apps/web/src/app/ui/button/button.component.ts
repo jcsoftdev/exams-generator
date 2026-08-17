@@ -16,6 +16,7 @@ import { ButtonSize, ButtonVariant } from '../ui.types';
       [attr.type]="htmlType()"
       [class]="classes()"
       [disabled]="disabled() || loading()"
+      [attr.aria-label]="ariaLabel() || null"
       [attr.aria-disabled]="disabled() || loading() ? 'true' : null"
       (click)="onClick()"
     >
@@ -29,6 +30,13 @@ export class ButtonComponent {
   readonly htmlType = input<'button' | 'submit'>('button');
   readonly disabled = input(false);
   readonly loading = input(false);
+  /**
+   * Overrides the accessible name when the visible text isn't enough on its
+   * own — e.g. the builder grid's bridge actions, where "Elegir del banco"
+   * repeats verbatim in every short cell and only the position says which cell
+   * it belongs to (audit 2026-08-15).
+   */
+  readonly ariaLabel = input<string>();
 
   readonly clicked = output<void>();
 

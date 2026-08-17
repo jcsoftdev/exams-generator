@@ -30,11 +30,20 @@
     ></ui-select>
 
     <div>
-      <p class="mb-1 text-xs font-bold uppercase tracking-wide text-n600">Nivel</p>
-      <div class="flex overflow-hidden rounded-field border border-n300">
+      <p id="nivel-label" class="mb-1 text-xs font-bold uppercase tracking-wide text-n600">Nivel</p>
+      <!--
+        Audit 2026-08-15: el segmentado no tenía NINGÚN estado accesible — la
+        selección era solo color (`bg-tint-active`), invisible para un lector de
+        pantalla y ambigua para un daltónico. `role="radio"` + `aria-checked` da
+        el estado, y el punto `•` da una segunda señal que no depende del color.
+      -->
+      <div role="radiogroup" aria-labelledby="nivel-label" class="flex overflow-hidden rounded-field border border-n300">
         @for (opt of difficultyOptions; track opt.value) {
           <button
             type="button"
+            role="radio"
+            [attr.aria-checked]="difficulty() === opt.value"
+            [attr.data-testid]="'difficulty-' + opt.value"
             class="flex-1 border-r border-n100 py-1.5 text-xs font-semibold last:border-r-0"
             [class.bg-tint-active]="difficulty() === opt.value"
             [class.text-tint-text]="difficulty() === opt.value"
@@ -42,6 +51,9 @@
             [class.text-n600]="difficulty() !== opt.value"
             (click)="difficulty.set(opt.value)"
           >
+            @if (difficulty() === opt.value) {
+              <span aria-hidden="true">• </span>
+            }
             {{ opt.label }}
           </button>
         }
