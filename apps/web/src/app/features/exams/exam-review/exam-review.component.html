@@ -9,9 +9,25 @@
   </header>
   <p class="mb-5 text-sm text-n600">{{ introText() }}</p>
 
+  <!--
+    Errores de ACCIÓN (generar, reemplazar, confirmar): sin "Reintentar", porque
+    ese botón recarga el examen y no rehace lo que falló (audit 2026-08-15).
+  -->
   @if (generateError()) {
     <div class="mb-4">
       <ui-banner variant="error" [message]="generateError()!"></ui-banner>
+    </div>
+  }
+
+  @if (actionError()) {
+    <div class="mb-4">
+      <ui-banner data-testid="action-error" variant="error" [message]="actionError()!"></ui-banner>
+    </div>
+  }
+
+  @if (actionSuccess(); as success) {
+    <div class="mb-4">
+      <ui-banner data-testid="action-success" variant="success" [message]="success"></ui-banner>
     </div>
   }
 

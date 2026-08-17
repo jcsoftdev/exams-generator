@@ -289,6 +289,62 @@ describe('ExamReviewComponent', () => {
     });
   });
 
+  /**
+   * Audit 2026-08-15: el error de un reemplazo fallido se pintaba en el MISMO
+   * banner que el error de carga, que trae un botón "Reintentar" — y ese botón
+   * recarga el examen, no el reemplazo. El docente apretaba "Reintentar" y no
+   * pasaba nada relacionado con lo que acababa de fallar.
+   */
+  it('separates a failed action from a failed load — no misleading "Reintentar" on an action error', () => {
+    const { compiled, fixture } = setup({
+      replaceQuestion: () => throwError(() => new HttpErrorResponse({ status: 400, error: { message: 'ID inválido' } })),
+    });
+
+    compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.click();
+    fixture.detectChanges();
+
+    expect(compiled.textContent).toContain('ID inválido');
+    expect(compiled.querySelector('[data-testid="retry-button"]')).toBeFalsy();
+  });
+
+  it('keeps the retry button for a failed LOAD, where retrying is exactly the fix', () => {
+    const { compiled } = setup({
+      getExam: () => throwError(() => new HttpErrorResponse({ status: 500, error: {} })),
+    });
+
+    expect(compiled.querySelector('[data-testid="retry-button"]')).toBeTruthy();
+  });
+
+  /**
+   * Audit 2026-08-15: "Cambiar" funcionaba (`ee6c8ba7` → `255d7b9a`) sin ningún
+   * feedback — y como la fila solo mostraba uuids, el docente no percibía el
+   * cambio. Ahora la fila sí se lee, pero igual hace falta decir que pasó algo.
+   */
+  it('confirms out loud that a question was swapped', () => {
+    const { compiled, fixture, getExam } = setup({});
+    getExam.mockReturnValue(
+      of({ ...EXAM, questions: [{ ...EXAM.questions[0]!, id: 'q9' }, EXAM.questions[1]!] }),
+    );
+
+    compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.click();
+    fixture.detectChanges();
+
+    const notice = compiled.querySelector('[data-testid="action-success"]')!;
+    expect(notice).toBeTruthy();
+    expect(notice.textContent).toMatch(/cambiamos la pregunta 1/i);
+  });
+
+  it('clears the confirmation before the next action, so it never describes a stale swap', () => {
+    const { compiled, fixture } = setup({
+      replaceQuestion: () => throwError(() => new HttpErrorResponse({ status: 400, error: { message: 'nope' } })),
+    });
+
+    compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.click();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('[data-testid="action-success"]')).toBeFalsy();
+  });
+
   it('loads the exam by id from the route param and renders every selected question', () => {
     const { compiled, getExam } = setup({});
 

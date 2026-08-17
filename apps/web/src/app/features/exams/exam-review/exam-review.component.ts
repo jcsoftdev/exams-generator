@@ -113,7 +113,22 @@ export class ExamReviewComponent implements OnInit {
   protected readonly questions = signal<readonly ExamDetailQuestion[]>([]);
   protected readonly status = signal<ExamStatus>('draft');
   protected readonly loading = signal(false);
+  /** Load failures only — the ONE case where a "Reintentar" button is honest. */
   protected readonly errorMessage = signal<string | null>(null);
+  /**
+   * Failures of an action the teacher just took (reroll/replace). Separate from
+   * `errorMessage` because they shared a banner whose "Reintentar" reloads the
+   * exam — pressing it did nothing about the reemplazo that had just failed
+   * (audit 2026-08-15).
+   */
+  protected readonly actionError = signal<string | null>(null);
+  /**
+   * Transient "eso que hiciste, funcionó" line. A successful reroll changed one
+   * row silently — the teacher had no way to tell the click had done anything
+   * (audit 2026-08-15). Cleared at the start of every action so it can never
+   * describe a swap that isn't the last one.
+   */
+  protected readonly actionSuccess = signal<string | null>(null);
   protected readonly manualReplacementIds = signal<Record<string, string>>({});
 
   ngOnInit(): void {
@@ -163,10 +178,15 @@ export class ExamReviewComponent implements OnInit {
       return;
     }
 
-    this.errorMessage.set(null);
+    this.actionError.set(null);
+    this.actionSuccess.set(null);
+    // Captured BEFORE the reload: after it, the list holds a different question
+    // at this index and the position is what the teacher is looking at.
+    const position = this.questions().findIndex((question) => question.id === questionId) + 1;
 
     this.examsService.replaceQuestion(this.examId(), questionId, payload).subscribe({
       next: () => {
+        this.actionSuccess.set(`Cambiamos la pregunta ${position}.`);
         this.loadExam();
       },
       error: (error: HttpErrorResponse) => {
@@ -175,13 +195,13 @@ export class ExamReviewComponent implements OnInit {
         // teacher to retry the exact input that just failed (audit
         // 2026-08-15). `extractErrorMessage` already normalizes both 400 body
         // shapes this API produces and falls back to a generic line.
-        this.errorMessage.set(extractErrorMessage(error, 'No se pudo reemplazar la pregunta.'));
+        this.actionError.set(extractErrorMessage(error, 'No se pudo reemplazar la pregunta.'));
       },
     });
   }
 
   protected confirm(): void {
-    this.errorMessage.set(null);
+    this.actionError.set(null);
 
     this.examsService.confirmExam(this.examId()).subscribe({
       next: (result) => {
@@ -216,7 +236,7 @@ export class ExamReviewComponent implements OnInit {
   protected introText(): string {
     return this.isReady()
       ? 'Este examen ya está confirmado. Estas son las preguntas que quedaron.'
-      : 'Estas son las preguntas que sacamos de tu banco. Cámbialas si quieres y confirma cuando estés conforme.';
+      : 'Estas son las preguntas que sacamos de tu banco. Cámbialas si quieres y genera las formas cuando estés conforme.';
   }
 
   protected statusLabel(status: ExamStatus): string {
