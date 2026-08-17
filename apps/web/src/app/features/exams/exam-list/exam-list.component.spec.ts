@@ -3,7 +3,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router, convertToParamMap } from '@angular/router';
 import { LucideAngularModule, Ellipsis, Plus, Check, ChevronDown } from 'lucide-angular';
 import { ExamListComponent } from './exam-list.component';
 import { ExamsService } from '../exams.service';
@@ -31,22 +31,43 @@ function selectOption(container: HTMLElement, fixture: { detectChanges(): void }
   fixture.detectChanges();
 }
 
-function setup(over: { listImpl?: () => unknown; dupImpl?: () => unknown; delImpl?: () => unknown } = {}) {
+function setup(
+  over: {
+    listImpl?: () => unknown;
+    dupImpl?: () => unknown;
+    delImpl?: () => unknown;
+    renameImpl?: () => unknown;
+    queryParams?: Record<string, string>;
+  } = {},
+) {
   const listExams = vi.fn(over.listImpl ?? (() => of(RESULT)));
   const duplicateExam = vi.fn(over.dupImpl ?? (() => of({ id: 'e3', title: 'Copia de Examen X', status: 'draft' })));
   const deleteExam = vi.fn(over.delImpl ?? (() => of(void 0)));
+  const renameExam = vi.fn(over.renameImpl ?? (() => of({ id: 'e1', title: 'Simulacro de marzo' })));
   const navigate = vi.fn();
   TestBed.configureTestingModule({
     imports: [ExamListComponent],
     providers: [
       importProvidersFrom(LucideAngularModule.pick({ Ellipsis, Plus, Check, ChevronDown })),
-      { provide: ExamsService, useValue: { listExams, duplicateExam, deleteExam } },
+      { provide: ExamsService, useValue: { listExams, duplicateExam, deleteExam, renameExam } },
       { provide: Router, useValue: { navigate } },
+      {
+        provide: ActivatedRoute,
+        useValue: { snapshot: { queryParamMap: convertToParamMap(over.queryParams ?? {}) } },
+      },
     ],
   });
   const fixture = TestBed.createComponent(ExamListComponent);
   fixture.detectChanges();
-  return { fixture, compiled: fixture.nativeElement as HTMLElement, listExams, duplicateExam, deleteExam, navigate };
+  return {
+    fixture,
+    compiled: fixture.nativeElement as HTMLElement,
+    listExams,
+    duplicateExam,
+    deleteExam,
+    renameExam,
+    navigate,
+  };
 }
 
 describe('ExamListComponent', () => {
@@ -77,12 +98,27 @@ describe('ExamListComponent', () => {
     expect(navigate).toHaveBeenCalledWith(['/app/exams', 'e3']);
   });
 
-  it('deletes a draft directly (no confirmation) and reloads', () => {
+  /**
+   * Audit 2026-08-15: un borrador se borraba al primer click, sin modal, sin
+   * toast y sin deshacer (reproducido: 7 → 6 filas al instante). El "nothing to
+   * lose" original no aplica — un borrador puede llevar 80 preguntas armadas, y
+   * el disparador es un ítem de un menú chiquito.
+   */
+  it('asks for confirmation before deleting a DRAFT too, and says what is at stake', () => {
     const { compiled, fixture, deleteExam, listExams } = setup();
     (compiled.querySelectorAll('[data-testid="exam-menu"]')[1] as HTMLButtonElement).click(); // e2 draft
     fixture.detectChanges();
     listExams.mockClear();
+
     (compiled.querySelector('[data-testid="exam-delete"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(deleteExam).not.toHaveBeenCalled();
+    const confirm = compiled.querySelector('[data-testid="delete-confirm"]')!;
+    expect(confirm.textContent).toContain('Borrador Y');
+    expect(confirm.textContent).toMatch(/10 preguntas/);
+
+    (compiled.querySelector('[data-testid="delete-confirm-yes"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(deleteExam).toHaveBeenCalledWith('e2');
     expect(listExams).toHaveBeenCalledTimes(1);
@@ -99,6 +135,75 @@ describe('ExamListComponent', () => {
     (compiled.querySelector('[data-testid="delete-confirm-yes"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(deleteExam).toHaveBeenCalledWith('e1');
+  });
+
+  /**
+   * Audit 2026-08-15: un examen `ready` sin ninguna forma se mostraba como
+   * "Generado" — el docente lee "generado" y espera PDFs, abre, y no hay nada.
+   * El estado del examen y la existencia de PDFs son dos cosas distintas.
+   */
+  it('distinguishes a confirmed exam from one that actually has forms', () => {
+    const { compiled } = setup({
+      listImpl: () =>
+        of({
+          items: [
+            { ...RESULT.items[0], id: 'e-listo', status: 'ready', versionCount: 0 },
+            { ...RESULT.items[0], id: 'e-generado', status: 'ready', versionCount: 3 },
+          ],
+          total: 2,
+        }),
+    });
+
+    const rows = Array.from(compiled.querySelectorAll('[data-testid="exam-row"]'));
+    expect(rows[0].textContent).toContain('Listo');
+    expect(rows[0].textContent).not.toContain('Generado');
+    expect(rows[1].textContent).toContain('Generado');
+  });
+
+  /**
+   * Audit 2026-08-15: el título se autogeneraba y no había forma de cambiarlo,
+   * así que la lista acumulaba filas idénticas ("Examen Pre-admisión —
+   * 14/8/2026" ×3) y "Copia de Copia de …". `PATCH /exams/:id` es nuevo.
+   */
+  it('renames an exam from its menu and reloads the list', () => {
+    const { compiled, fixture, renameExam, listExams } = setup();
+
+    (compiled.querySelectorAll('[data-testid="exam-menu"]')[0] as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="exam-rename"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    const input = compiled.querySelector<HTMLInputElement>('[data-testid="rename-input"] input')!;
+    expect(input.value).toBe('Examen X'); // arranca con el nombre actual, no en blanco
+    input.value = 'Simulacro de marzo';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+
+    listExams.mockClear();
+    (compiled.querySelector('[data-testid="rename-confirm"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(renameExam).toHaveBeenCalledWith('e1', 'Simulacro de marzo');
+    expect(listExams).toHaveBeenCalledTimes(1);
+  });
+
+  it('refuses to save an empty name instead of replacing a real title with nothing', () => {
+    const { compiled, fixture, renameExam } = setup();
+
+    (compiled.querySelectorAll('[data-testid="exam-menu"]')[0] as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="exam-rename"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    const input = compiled.querySelector<HTMLInputElement>('[data-testid="rename-input"] input')!;
+    input.value = '   ';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+
+    expect(
+      (compiled.querySelector('[data-testid="rename-confirm"] button') as HTMLButtonElement).disabled,
+    ).toBe(true);
+    expect(renameExam).not.toHaveBeenCalled();
   });
 
   it('shows empty state when there are no exams', () => {
@@ -139,6 +244,30 @@ describe('ExamListComponent', () => {
       expect.objectContaining({ status: undefined, gradeLevel: undefined, search: undefined, page: 1 }),
     );
     expect(compiled.querySelectorAll('[data-testid="exam-row"]').length).toBeGreaterThan(0);
+  });
+
+  /**
+   * Audit 2026-08-15: los filtros no viajaban a la URL, así que recargar los
+   * perdía y no se podían compartir ni recuperar con Atrás.
+   */
+  it('reflects the active filters in the URL', () => {
+    const { compiled, fixture, navigate } = setup();
+
+    selectOption(compiled.querySelector('[data-testid="status-filter"]') as HTMLElement, fixture, 'Borrador');
+
+    expect(navigate).toHaveBeenCalledWith([], {
+      queryParams: { status: 'draft', gradeLevel: null, search: null, page: null },
+      replaceUrl: true,
+    });
+  });
+
+  it('restores the filters from the URL on load, so a reload or a shared link keeps them', () => {
+    const { compiled, listExams } = setup({ queryParams: { status: 'draft', gradeLevel: 'pre', search: 'simulacro' } });
+
+    expect(listExams).toHaveBeenCalledWith(
+      expect.objectContaining({ status: 'draft', gradeLevel: 'pre', search: 'simulacro' }),
+    );
+    expect((compiled.querySelector('[data-testid="search-filter"] input') as HTMLInputElement).value).toBe('simulacro');
   });
 
   it('shows an error state with retry', () => {

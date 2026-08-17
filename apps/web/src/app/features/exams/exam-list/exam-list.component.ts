@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
@@ -49,6 +49,7 @@ const STATUS_OPTIONS: readonly SelectOption<ExamStatus>[] = [
 export class ExamListComponent {
   private readonly examsService = inject(ExamsService);
   private readonly router = inject(Router);
+  private readonly route = inject(ActivatedRoute);
   private readonly destroyRef = inject(DestroyRef);
 
   protected readonly PAGE_SIZE = 50;
@@ -59,6 +60,10 @@ export class ExamListComponent {
   protected readonly errorMessage = signal<string | null>(null);
   protected readonly openMenuId = signal<string | null>(null);
   protected readonly pendingDelete = signal<ExamListItem | null>(null);
+  /** Exam being renamed, plus the draft of its new name (`PATCH /exams/:id`, audit 2026-08-15). */
+  protected readonly pendingRename = signal<ExamListItem | null>(null);
+  protected readonly renameTitle = signal('');
+  protected readonly canSaveRename = computed(() => this.renameTitle().trim().length > 0);
   protected readonly actionError = signal<string | null>(null);
 
   protected readonly statusOptions = STATUS_OPTIONS;
@@ -67,9 +72,15 @@ export class ExamListComponent {
     label: GRADE_LEVEL_LABELS[gradeLevel],
   }));
 
-  protected readonly status = signal<ExamStatus | null>(null);
-  protected readonly gradeLevel = signal<string | null>(null);
-  protected readonly search = signal('');
+  /**
+   * Filters are seeded FROM the URL and written back to it (audit 2026-08-15:
+   * they lived only in memory, so a reload lost them and a link never carried
+   * them). `replaceUrl` so filtering doesn't stack history entries — Atrás
+   * should leave the screen, not undo six keystrokes.
+   */
+  protected readonly status = signal<ExamStatus | null>(this.readStatusParam());
+  protected readonly gradeLevel = signal<string | null>(this.route.snapshot.queryParamMap.get('gradeLevel'));
+  protected readonly search = signal(this.route.snapshot.queryParamMap.get('search') ?? '');
 
   /**
    * True while any filter narrows the list. Drives WHICH empty state renders:
@@ -82,6 +93,24 @@ export class ExamListComponent {
   );
 
   private searchDebounceHandle: ReturnType<typeof setTimeout> | null = null;
+
+  private readStatusParam(): ExamStatus | null {
+    const raw = this.route.snapshot.queryParamMap.get('status');
+    return raw === 'draft' || raw === 'ready' ? raw : null;
+  }
+
+  /** `null` drops the key from the URL entirely — no `?status=&search=` noise. */
+  private syncUrl(): void {
+    this.router.navigate([], {
+      queryParams: {
+        status: this.status(),
+        gradeLevel: this.gradeLevel(),
+        search: this.search() || null,
+        page: this.page() > 1 ? this.page() : null,
+      },
+      replaceUrl: true,
+    });
+  }
 
   constructor() {
     this.load();
@@ -122,18 +151,21 @@ export class ExamListComponent {
 
   protected onPageChange(page: number): void {
     this.page.set(page);
+    this.syncUrl();
     this.load();
   }
 
   protected onStatusChange(value: ExamStatus | null): void {
     this.status.set(value || null);
     this.page.set(1);
+    this.syncUrl();
     this.load();
   }
 
   protected onGradeLevelChange(value: string | null): void {
     this.gradeLevel.set(value || null);
     this.page.set(1);
+    this.syncUrl();
     this.load();
   }
 
@@ -148,6 +180,7 @@ export class ExamListComponent {
     this.gradeLevel.set(null);
     this.search.set('');
     this.page.set(1);
+    this.syncUrl();
     this.load();
   }
 
@@ -159,6 +192,7 @@ export class ExamListComponent {
     }
     this.searchDebounceHandle = setTimeout(() => {
       this.searchDebounceHandle = null;
+      this.syncUrl();
       this.load();
     }, SEARCH_DEBOUNCE_MS);
   }
@@ -166,8 +200,17 @@ export class ExamListComponent {
   protected statusTag(status: string): TagVariant {
     return status === 'ready' ? 'easy' : 'medium';
   }
-  protected statusLabel(status: string): string {
-    return status === 'ready' ? 'Generado' : 'Borrador';
+  /**
+   * "Generado" was claimed for every `ready` exam, including ones with zero
+   * forms — and "generado" reads as "los PDFs están listos" (audit
+   * 2026-08-15). The exam's status and the existence of compiled forms are two
+   * different facts, so the label now uses both.
+   */
+  protected statusLabel(exam: ExamListItem): string {
+    if (exam.status !== 'ready') {
+      return 'Borrador';
+    }
+    return exam.versionCount > 0 ? 'Generado' : 'Listo';
   }
   protected gradeLabel(g: string): string {
     return GRADE_LEVEL_LABELS[g as GradeLevel] ?? g;
@@ -196,12 +239,44 @@ export class ExamListComponent {
     });
   }
 
-  protected requestDelete(exam: ExamListItem): void {
+  /**
+   * Every delete asks, drafts included. The original "drafts have nothing to
+   * lose" reasoning doesn't hold: a draft can carry 80 selected questions, and
+   * the trigger is one item in a small dropdown — one misclick used to delete
+   * it outright, with no undo (audit 2026-08-15).
+   */
+  protected requestRename(exam: ExamListItem): void {
     this.openMenuId.set(null);
-    if (exam.status === 'draft') {
-      this.performDelete(exam);
+    this.actionError.set(null);
+    // Seeded with the current title: renaming is almost always an edit of what
+    // is there, not typing a name from scratch.
+    this.renameTitle.set(exam.title);
+    this.pendingRename.set(exam);
+  }
+
+  protected onRenameTitleChange(value: string): void {
+    this.renameTitle.set(value);
+  }
+
+  protected cancelRename(): void {
+    this.pendingRename.set(null);
+  }
+
+  protected confirmRename(): void {
+    const exam = this.pendingRename();
+    if (!exam || !this.canSaveRename()) {
       return;
     }
+    const title = this.renameTitle().trim();
+    this.pendingRename.set(null);
+    this.examsService.renameExam(exam.id, title).subscribe({
+      next: () => this.load(),
+      error: () => this.actionError.set('No se pudo renombrar el examen. Inténtalo de nuevo.'),
+    });
+  }
+
+  protected requestDelete(exam: ExamListItem): void {
+    this.openMenuId.set(null);
     this.pendingDelete.set(exam);
   }
   protected confirmDelete(): void {
