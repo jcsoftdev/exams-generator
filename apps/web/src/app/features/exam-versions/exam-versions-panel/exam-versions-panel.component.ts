@@ -20,6 +20,7 @@ import {
 } from '../exam-versions.models';
 import { ExamsService } from '../../exams/exams.service';
 import { ExamDetail, ExamDetailQuestion, GRADE_LEVEL_LABELS, GradeLevel } from '../../exams/exams.models';
+import { examStatusLabel } from '../../exams/exam-status-label';
 
 /**
  * Screen-reader progress announcements (audit P2 — a11y), same milestone
@@ -215,13 +216,19 @@ export class ExamVersionsPanelComponent {
     return kind === 'exam' ? `${title} — Forma ${code}.pdf` : `${title} — Claves ${code}.pdf`;
   }
 
-  // Same status-tag/grade-label convention as ExamListComponent (kept as a
-  // local duplicate per that file's own convention — see exams.models.ts).
+  // Same status-tag convention as ExamListComponent.
   protected statusTag(status: string): TagVariant {
     return status === 'ready' ? 'easy' : 'medium';
   }
+  /**
+   * `versions()` is the count of forms that actually compiled — NOT the
+   * `versionCount` signal above, which is how many the teacher is asking for
+   * in the form. This screen used to say "Generado" for any `ready` exam,
+   * which is precisely the screen where that lie is most visible: the tag
+   * claimed PDFs while the list underneath said there were none.
+   */
   protected statusLabel(status: string): string {
-    return status === 'ready' ? 'Generado' : 'Borrador';
+    return examStatusLabel(status, this.versions().length);
   }
   protected gradeLabel(g: string): string {
     return GRADE_LEVEL_LABELS[g as GradeLevel] ?? g;

@@ -11,14 +11,18 @@ import { InputComponent } from '../../../ui/input/input.component';
 import { PaginationComponent } from '../../../ui/pagination/pagination.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { ExamsService } from '../exams.service';
+import { examStatusLabel } from '../exam-status-label';
 import { ExamListItem, ExamStatus, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../exams.models';
 
 /** Debounce delay (ms) for the título search box (spec §2.1) before re-fetching the list. */
 const SEARCH_DEBOUNCE_MS = 300;
 
+// The filter selects on STATUS, and `ready` alone does not mean the PDFs
+// exist — so it reads "Listo" here too. Labelling it "Generado" promised a
+// filter for "exams with forms", which is not what the query does.
 const STATUS_OPTIONS: readonly SelectOption<ExamStatus>[] = [
   { value: 'draft', label: 'Borrador' },
-  { value: 'ready', label: 'Generado' },
+  { value: 'ready', label: 'Listo' },
 ];
 
 /**
@@ -200,17 +204,8 @@ export class ExamListComponent {
   protected statusTag(status: string): TagVariant {
     return status === 'ready' ? 'easy' : 'medium';
   }
-  /**
-   * "Generado" was claimed for every `ready` exam, including ones with zero
-   * forms — and "generado" reads as "los PDFs están listos" (audit
-   * 2026-08-15). The exam's status and the existence of compiled forms are two
-   * different facts, so the label now uses both.
-   */
   protected statusLabel(exam: ExamListItem): string {
-    if (exam.status !== 'ready') {
-      return 'Borrador';
-    }
-    return exam.versionCount > 0 ? 'Generado' : 'Listo';
+    return examStatusLabel(exam.status, exam.versionCount);
   }
   protected gradeLabel(g: string): string {
     return GRADE_LEVEL_LABELS[g as GradeLevel] ?? g;

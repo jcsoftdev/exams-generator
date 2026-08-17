@@ -8,6 +8,7 @@ import { DonutChartComponent } from '../../ui/donut-chart/donut-chart.component'
 import { ButtonComponent } from '../../ui/button/button.component';
 import { DashboardService } from './dashboard.service';
 import { DashboardStats } from './dashboard.models';
+import { examStatusLabel as sharedExamStatusLabel } from '../exams/exam-status-label';
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   [Difficulty.Easy]: 'Fácil',
@@ -78,7 +79,13 @@ export class DashboardComponent {
     });
   }
 
+  /**
+   * The recent-exams list carries no form count, so a `ready` exam reads
+   * "Listo" here and only the exams screen can promote it to "Generado". It
+   * used to say "Lista" — a different word from the other two screens for the
+   * same state, and feminine for `examen` besides.
+   */
   protected examStatusLabel(status: 'draft' | 'ready'): string {
-    return status === 'ready' ? 'Lista' : 'Borrador';
+    return sharedExamStatusLabel(status, undefined);
   }
 }

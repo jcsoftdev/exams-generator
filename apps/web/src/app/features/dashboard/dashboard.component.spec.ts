@@ -52,7 +52,9 @@ describe('DashboardComponent', () => {
 
     const row = compiled.querySelector('[data-testid="dashboard-recent-exam"]');
     expect(row?.textContent).toContain('Examen de Álgebra');
-    expect(row?.textContent).toContain('Lista');
+    // "Listo", not "Lista": the same word the exams screen uses for the same
+    // state, and masculine to agree with `examen`.
+    expect(row?.textContent).toContain('Listo');
   });
 
   it('shows an error message when the stats request fails', () => {

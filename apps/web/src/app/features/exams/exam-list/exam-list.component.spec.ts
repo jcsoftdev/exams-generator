@@ -284,7 +284,7 @@ describe('ExamListComponent', () => {
     const { compiled, fixture, listExams } = setup();
     listExams.mockClear();
     const container = compiled.querySelector('[data-testid="status-filter"]') as HTMLElement;
-    selectOption(container, fixture, 'Generado');
+    selectOption(container, fixture, 'Listo');
     expect(listExams).toHaveBeenCalledWith(
       expect.objectContaining({ status: 'ready', page: 1, pageSize: 50 }),
     );
