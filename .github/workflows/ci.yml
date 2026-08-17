@@ -1,0 +1,311 @@
+# CI for exams-generator.
+#
+# WHY THIS EXISTS (docs/audit-2026-08-14.md): 18 apps/web tests were red for
+# an unknown length of time and nobody noticed, because nothing executed the
+# suite except a human remembering to. Two guardian specs were added in
+# earlier waves (a landing bank-count parity spec, an a11y guardian in
+# apps/landing) that are worthless unless something actually runs them on
+# every change. This workflow is that something.
+#
+# HONESTY NOTE (unverified until the first real push/PR run):
+# This file has never executed on GitHub Actions — the repo has no prior
+# `.github/` directory and nothing here can be committed by this agent
+# (see repo rules). What WAS verified locally, against real files, before
+# writing this:
+#   - every `pnpm --filter <pkg> <script>` / `jest --selectProjects ...`
+#     command below exists verbatim in the relevant package.json or
+#     apps/api/jest.config.js
+#   - every service image/tag/port/env default below is copied from
+#     infra/docker-compose.yml and infra/env.example, not invented
+#   - the app's own env resolvers (apps/api/src/db/env.ts,
+#     apps/api/src/modules/auth/env.ts, apps/api/src/modules/bank/
+#     storage-provider.ts, apps/api/src/common/queue.env.ts) already fall
+#     back to these exact same default host/port/credential values, which
+#     is why most service ports below are mapped to match those defaults
+#     instead of being passed as explicit env vars
+# What is NOT verified: whether GitHub-hosted runners behave identically to
+# local Docker Desktop for these services (they should — same images), and
+# whether `@angular/build:unit-test` truly defaults to single-run/non-watch
+# mode with no extra flags (assumed from Angular's documented CI-friendly
+# default; apps/web has no explicit `--watch=false` anywhere to confirm it).
+# Treat the first CI run as the actual test of this file, not this comment.
+
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # apps/landing/package.json engines: ">=22.12.0"; root package.json engines:
+  # ">=22.13"; infra/Dockerfile.api and Dockerfile.web both build FROM
+  # node:22-bookworm-slim. "22" resolves to the latest 22.x on the runner,
+  # which satisfies both constraints.
+  NODE_VERSION: "22"
+  # root package.json: "packageManager": "pnpm@11.9.0" — same version
+  # infra/Dockerfile.api pins via `corepack prepare pnpm@11.9.0 --activate`.
+  PNPM_VERSION: "11.9.0"
+
+jobs:
+  # ---------------------------------------------------------------------
+  # Node/pnpm-only suites: packages/shared, apps/web (Vitest via the
+  # Angular 22 `@angular/build:unit-test` builder), apps/landing
+  # (`node --test`). None of these touch a database or external service —
+  # confirmed by reading each package.json: shared's "test" script is a
+  # no-op echo, web's devDependencies are vitest + jsdom + vitest-canvas-mock
+  # (no browser/e2e deps), landing's is plain `node --test` over *.spec.ts.
+  # Run as a matrix, fail-fast: false, so one broken package's red test
+  # doesn't hide the state of the other two — that blind spot is exactly
+  # what let the 18 web failures go unnoticed.
+  # ---------------------------------------------------------------------
+  fast-tests:
+    name: test (${{ matrix.name }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: shared
+            filter: "@exams-generator/shared"
+          - name: web
+            filter: "@exams-generator/web"
+          - name: landing
+            filter: "@exams-generator/landing"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable pnpm via corepack
+        run: corepack enable && corepack prepare pnpm@${{ env.PNPM_VERSION }} --activate
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      # Full workspace install (not --filter-scoped): apps/web and
+      # apps/landing resolve @exams-generator/shared through
+      # tsconfig.base.json path mapping straight to packages/shared/src
+      # (verified — no `shared build` step is required for tests to see it),
+      # but pnpm still needs the workspace linked for its own dependency
+      # graph, and pnpm-workspace.yaml lists apps/* and packages/* together.
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run tests
+        run: pnpm --filter "${{ matrix.filter }}" test
+
+  # ---------------------------------------------------------------------
+  # apps/api — the hard part. jest.config.js defines three projects:
+  #   - non-e2e (parallel): unit specs AND repository specs that hit a
+  #     REAL Postgres directly (confirmed: bank.repository.spec.ts calls
+  #     `runMigrations()` in beforeAll — migrations run themselves, no
+  #     separate `db:migrate` CI step needed).
+  #   - db-serial (--runInBand): seed-idempotency.spec.ts, isolated because
+  #     it rewrites the whole global taxonomy other non-e2e specs read.
+  #   - e2e (--runInBand): boots the real AppModule + BullMQ, needs Redis,
+  #     MinIO, and the real `typst` binary.
+  #
+  # DECISION: this job runs non-e2e + db-serial on every PR/push (Postgres
+  # only — cheap, fast, deterministic). The e2e project is deliberately
+  # EXCLUDED from this job — see the `api-e2e-manual` job below for why and
+  # what running it would take. Excluding it here is a stated exclusion,
+  # not a silent one: this is the comment describing it.
+  #
+  # apps/api/package.json's own "test" script already encodes the correct
+  # ordering: `jest --selectProjects non-e2e && jest --selectProjects
+  # db-serial --runInBand && jest --selectProjects e2e --runInBand;
+  # status=$?; pnpm db:purge-test-taxonomy; exit $status`. The step below
+  # reproduces that exact chain minus the e2e leg, including the
+  # always-run taxonomy purge (db-serial's re-seed leaves rows behind).
+  # ---------------------------------------------------------------------
+  api-tests:
+    name: test (api — non-e2e + db-serial)
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        # infra/docker-compose.yml: image, default user/pass/db, and the
+        # 5439->5432 host port mapping (DB_PORT default) all copied verbatim.
+        image: postgres:17.2-bookworm
+        env:
+          POSTGRES_USER: exams
+          POSTGRES_PASSWORD: exams
+          POSTGRES_DB: exams_generator
+        ports:
+          - "5439:5432"
+        options: >-
+          --health-cmd "pg_isready -U exams -d exams_generator"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      # apps/api/src/db/env.ts resolveDatabaseUrl() falls back to exactly
+      # this value when DATABASE_URL is unset — setting it explicitly here
+      # is redundant with that fallback but kept for clarity/robustness
+      # (the fallback is documented as a dev/test convenience, not something
+      # CI should silently depend on).
+      DATABASE_URL: "postgres://exams:exams@localhost:5439/exams_generator"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable pnpm via corepack
+        run: corepack enable && corepack prepare pnpm@${{ env.PNPM_VERSION }} --activate
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # No `typst` install here: non-e2e and db-serial never need it.
+      # apps/api/src/modules/exams/adapters/pdf/typst-cli.adapter.golden.spec.ts
+      # (a non-e2e spec — its filename doesn't match `.e2e.spec.ts`) guards
+      # itself with `isTypstAvailableSync()` -> `describe.skip` when the
+      # binary is missing, by design (see that file's own header comment).
+      # It will show as "skipped", not "passed" or "failed", in this job.
+      #
+      # Same story for MinioStorageAdapter (also non-e2e, also self-guards
+      # via `describe.skip` when MinIO is unreachable) — no MinIO service
+      # is started in this job either, so that suite skips too.
+      - name: Run non-e2e + db-serial suites
+        working-directory: apps/api
+        run: |
+          pnpm exec jest --selectProjects non-e2e && pnpm exec jest --selectProjects db-serial --runInBand
+          status=$?
+          pnpm run db:purge-test-taxonomy
+          exit $status
+
+  # ---------------------------------------------------------------------
+  # apps/api e2e project — manual/workflow_dispatch ONLY, not part of the
+  # PR gate. Reasoning, spelled out rather than silently omitted:
+  #
+  #   1. Needs Redis + MinIO + the real `typst` binary, on top of Postgres.
+  #      Redis is a plain GitHub Actions `services:` entry (its default
+  #      image CMD is already `redis-server`; infra/docker-compose.yml adds
+  #      `--appendonly yes` for durability across container restarts, which
+  #      is irrelevant for a throwaway CI Redis and can't be passed through
+  #      the `services:` block anyway — GitHub Actions service containers
+  #      don't support a custom `command:`, only image/env/ports/options).
+  #   2. MinIO is the real blocker for a `services:` entry: infra/docker-
+  #      compose.yml runs `minio/minio:latest` with `command: server /data
+  #      --console-address ":9001"` — the image's default entrypoint refuses
+  #      to start with no args, and GitHub Actions gives no way to supply
+  #      that command to a `services:` container. This job works around it
+  #      with a plain `docker run` step instead of `services:` — untested
+  #      on GitHub's runners, called out explicitly rather than guessed at
+  #      silently.
+  #   3. The jest.config.js e2e project comments describe this as
+  #      historically the flakiest layer (BullMQ job-theft / stalled-job
+  #      races were real production bugs here, not test flakiness) — a
+  #      still-maturing e2e job gating every PR would train people to
+  #      ignore red CI, which is the exact failure this workflow exists to
+  #      prevent. It stays manual until it's proven stable.
+  #
+  # `typst` itself: installed here by copying infra/Dockerfile.api's exact
+  # install steps (same pinned TYPST_VERSION, same GitHub release asset,
+  # same target path) rather than guessing a version — this is the one path
+  # where CI legitimately needs the binary, since e2e specs are NOT
+  # describe.skip-guarded the way the non-e2e typst golden spec is.
+  # ---------------------------------------------------------------------
+  api-e2e-manual:
+    name: test (api — e2e, manual/unverified)
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17.2-bookworm
+        env:
+          POSTGRES_USER: exams
+          POSTGRES_PASSWORD: exams
+          POSTGRES_DB: exams_generator
+        ports:
+          - "5439:5432"
+        options: >-
+          --health-cmd "pg_isready -U exams -d exams_generator"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+      redis:
+        # infra/docker-compose.yml image/tag; 6390->6379 matches
+        # REDIS_HOST_PORT's default in infra/env.example, which is also
+        # what apps/api/src/common/queue.env.ts falls back to.
+        image: redis:7.4-bookworm
+        ports:
+          - "6390:6379"
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: "postgres://exams:exams@localhost:5439/exams_generator"
+      # REDIS_HOST/REDIS_PORT, MINIO_ENDPOINT/MINIO_PORT/MINIO_ROOT_USER/
+      # MINIO_ROOT_PASSWORD/MINIO_BUCKET, and JWT_SECRET are all left unset
+      # deliberately: apps/api/src/common/queue.env.ts, apps/api/src/modules/
+      # bank/storage-provider.ts, and apps/api/src/modules/auth/env.ts each
+      # fall back to localhost:6390, localhost:9030/minioadmin/minioadmin,
+      # and a dev secret respectively — the exact values this job's Redis
+      # port mapping and manual MinIO container below use. Setting them
+      # explicitly here would just be restating those fallbacks.
+      MINIO_BUCKET: exams-generator
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable pnpm via corepack
+        run: corepack enable && corepack prepare pnpm@${{ env.PNPM_VERSION }} --activate
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Copied verbatim from infra/Dockerfile.api's typst install stage —
+      # same pinned version, same release asset URL, same install path.
+      - name: Install typst CLI
+        run: |
+          TYPST_VERSION=0.15.1
+          curl -fsSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" \
+            -o /tmp/typst.tar.xz
+          tar -xJf /tmp/typst.tar.xz -C /tmp
+          sudo mv "/tmp/typst-x86_64-unknown-linux-musl/typst" /usr/local/bin/typst
+          sudo chmod +x /usr/local/bin/typst
+          rm -rf /tmp/typst*
+          typst --version
+
+      # Workaround for GitHub Actions `services:` not supporting a custom
+      # command (see job header comment) — infra/docker-compose.yml's exact
+      # image, command, and 9030->9000 port mapping (matches
+      # MINIO_API_PORT's default in infra/env.example, which is also what
+      # apps/api/src/modules/bank/storage-provider.ts falls back to).
+      - name: Start MinIO
+        run: |
+          docker run -d --name minio \
+            -p 9030:9000 -p 9003:9001 \
+            -e MINIO_ROOT_USER=minioadmin \
+            -e MINIO_ROOT_PASSWORD=minioadmin \
+            minio/minio:latest server /data --console-address ":9001"
+          for i in $(seq 1 20); do
+            curl -fsS http://localhost:9030/minio/health/ready && break
+            sleep 2
+          done
+
+      # This job runs the exact same three-phase chain as apps/api/package.json's
+      # own "test" script, unmodified — this is the only job that legitimately
+      # needs all three phases.
+      - name: Run full jest suite (non-e2e, db-serial, e2e)
+        working-directory: apps/api
+        run: pnpm test
