@@ -2,6 +2,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { Difficulty } from "@exams-generator/shared";
 import { and, isNotNull, isNull } from "drizzle-orm";
+import { CollectedEntry, flattenGradeScopedQuestions } from "./flatten-grade-scoped-questions";
 import { findPrivateUseGlyph } from "../modules/bank/domain/find-private-use-glyph";
 import { findUnescapedTypstMarkup } from "../modules/bank/domain/find-unescaped-typst-markup";
 import { prepareCollectedContent } from "../modules/bank/domain/prepare-collected-content";
@@ -10,23 +11,54 @@ import { isGradeLevel } from "../modules/exams/domain/value-objects/grade-level"
 import { db } from "./client";
 import { courses, questions, topics } from "./schema";
 
-const COLLECTED_DIR = join(__dirname, "data", "collected");
+const DATA_DIR = join(__dirname, "data");
+const COLLECTED_DIR = join(DATA_DIR, "collected");
+/**
+ * School-level questions live one directory up, as `escolar-<course>-<grade>.json`,
+ * in a grade-scoped shape rather than the flat one — see
+ * `flatten-grade-scoped-questions.ts`.
+ */
+const SCHOOL_FILE_PREFIX = "escolar-";
 const VALID_DIFFICULTIES = new Set<string>(Object.values(Difficulty));
-
-interface CollectedEntry {
-  readonly courseName: string;
-  readonly topicName: string;
-  readonly gradeLevel: string;
-  readonly difficulty: string;
-  readonly bodyTypst: string;
-  readonly alternatives: readonly string[];
-  readonly correctAnswer: string;
-  readonly sourceUrl: string;
-  readonly sourceName: string;
-}
 
 interface CollectedData {
   readonly entries: readonly CollectedEntry[];
+}
+
+/**
+ * Every question file this seeder consumes, already normalized to flat
+ * entries: the preuniversitario bank under `data/collected/`, plus the
+ * school-level files in `data/` that no seeder had ever read.
+ */
+function readAllEntries(): { entries: CollectedEntry[]; fileCount: number } {
+  const entries: CollectedEntry[] = [];
+  let fileCount = 0;
+
+  const collected = safeReaddir(COLLECTED_DIR).filter((name) => name.endsWith(".json"));
+  for (const name of collected) {
+    const data = JSON.parse(readFileSync(join(COLLECTED_DIR, name), "utf8")) as CollectedData;
+    entries.push(...(data.entries ?? []));
+    fileCount++;
+  }
+
+  const school = safeReaddir(DATA_DIR).filter(
+    (name) => name.startsWith(SCHOOL_FILE_PREFIX) && name.endsWith(".json"),
+  );
+  for (const name of school) {
+    const flattened = flattenGradeScopedQuestions(JSON.parse(readFileSync(join(DATA_DIR, name), "utf8")));
+    entries.push(...flattened);
+    fileCount++;
+  }
+
+  return { entries, fileCount };
+}
+
+function safeReaddir(dir: string): string[] {
+  try {
+    return readdirSync(dir);
+  } catch {
+    return [];
+  }
 }
 
 /**
@@ -47,13 +79,8 @@ interface CollectedData {
  * can't fail app boot.
  */
 export async function seedCollectedQuestions(createdBy: string): Promise<void> {
-  let files: string[];
-  try {
-    files = readdirSync(COLLECTED_DIR).filter((name) => name.endsWith(".json"));
-  } catch {
-    return;
-  }
-  if (files.length === 0) {
+  const { entries: allEntries, fileCount } = readAllEntries();
+  if (allEntries.length === 0) {
     return;
   }
 
@@ -126,11 +153,9 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
     }
   };
 
-  for (const file of files) {
-    const data = JSON.parse(readFileSync(join(COLLECTED_DIR, file), "utf8")) as CollectedData;
-
-    for (const entry of data.entries) {
-      const label = `${file}: ${entry.courseName} / ${entry.topicName} — ${entry.sourceName}`;
+  {
+    for (const entry of allEntries) {
+      const label = `${entry.gradeLevel}: ${entry.courseName} / ${entry.topicName} — ${entry.sourceName}`;
       try {
         const contentErrors = validateStructuredContent({
           bodyTypst: entry.bodyTypst,
@@ -231,6 +256,6 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
   await flush();
 
   console.log(
-    `[seed-collected-questions] ${ok} seeded, ${skipped} already existed, ${unprintable} unprintable, ${failed} failed (${files.length} files).`,
+    `[seed-collected-questions] ${ok} seeded, ${skipped} already existed, ${unprintable} unprintable, ${failed} failed (${fileCount} files).`,
   );
 }
