@@ -129,6 +129,14 @@ export class ExamReviewComponent implements OnInit {
    * describe a swap that isn't the last one.
    */
   protected readonly actionSuccess = signal<string | null>(null);
+  /**
+   * A replacement is in flight. Without it, two quick clicks on "Cambiar" sent
+   * two `POST .../replace` calls and the second answer overwrote the first —
+   * the teacher saw the question change twice for one click's worth of intent
+   * (audit 2026-08-15). Cleared on BOTH outcomes: a row stuck disabled after an
+   * error would be worse than the error itself.
+   */
+  protected readonly replacing = signal(false);
   protected readonly manualReplacementIds = signal<Record<string, string>>({});
 
   ngOnInit(): void {
@@ -174,9 +182,11 @@ export class ExamReviewComponent implements OnInit {
   }
 
   private replace(questionId: string, payload: { mode: 'reroll' } | { mode: 'manual'; replacementQuestionId: string }): void {
-    if (this.status() === 'ready') {
+    if (this.status() === 'ready' || this.replacing()) {
       return;
     }
+
+    this.replacing.set(true);
 
     this.actionError.set(null);
     this.actionSuccess.set(null);
@@ -186,10 +196,12 @@ export class ExamReviewComponent implements OnInit {
 
     this.examsService.replaceQuestion(this.examId(), questionId, payload).subscribe({
       next: () => {
+        this.replacing.set(false);
         this.actionSuccess.set(`Cambiamos la pregunta ${position}.`);
         this.loadExam();
       },
       error: (error: HttpErrorResponse) => {
+        this.replacing.set(false);
         // The API answers a bad/foreign replacement id with a 400 that SAYS
         // why. Swallowing it for a generic "inténtalo de nuevo" told the
         // teacher to retry the exact input that just failed (audit

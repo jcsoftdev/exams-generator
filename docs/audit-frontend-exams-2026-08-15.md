@@ -280,7 +280,10 @@ invisible, y que salirse de él castiga.
   **HECHO**: banner de éxito con la posición ("Cambiamos la pregunta 1."), capturada ANTES de
   recargar —después de la recarga esa posición ya tiene otra pregunta— y limpiada al empezar
   cualquier acción, para que nunca describa un cambio viejo. 2 tests.
-  Pendiente aparte: sigue sin estado de carga, así que un doble click son 2 reemplazos.
+  **HECHO también el doble click**: `replacing` bloquea la fila mientras el reemplazo está en
+  vuelo (dos clicks mandaban DOS `POST .../replace` y la segunda respuesta pisaba a la
+  primera). Se libera en los DOS desenlaces — una fila trabada tras un error sería peor que el
+  error. 3 tests.
 
 - [x] **Títulos indistinguibles y "Copia de Copia de"** (reproducido) — 3 filas llamadas
   exactamente `Examen Pre-admisión — 14/8/2026`, y duplicar dos veces produce
@@ -468,13 +471,23 @@ Se dejan escritos para que nadie los vuelva a auditar:
 
 ### Estado final
 
-**30 de 31 hallazgos cerrados.** Los dos que quedan abiertos, con su razón:
+**31 de 31 hallazgos cerrados.** Queda una sola cosa abierta, y es una decisión, no deuda:
 
 - **El campo "Cantidad total de preguntas" sigue siempre visible** con su párrafo largo aunque
-  solo aplique a plantillas tipo UNI. Decisión, no deuda: esconderlo tras un disclosure es un
-  cambio de diseño, no un arreglo, y el 400 del backend ya guía cuando hace falta.
-- **El reroll sigue sin estado de carga** — un doble click son 2 reemplazos. Chico, pero es
-  comportamiento nuevo (deshabilitar durante el request), no parte del hallazgo original.
+  solo aplique a plantillas tipo UNI. Esconderlo tras un disclosure es un cambio de diseño, no
+  un arreglo, y el 400 del backend ya guía cuando hace falta.
+
+### Verificación final (2026-08-17)
+
+| Suite | Resultado |
+|---|---|
+| API non-e2e | 852/852 (86 archivos) |
+| API **e2e** (Postgres + Redis + Typst reales) | **196/196** (24 archivos) |
+| Web | 767/767 (70 archivos) |
+
+La suite e2e se corrió al final a propósito: esta auditoría cambió contratos del backend
+(`courseName`/`topicName` en el detalle, dos endpoints nuevos) y los specs e2e son los únicos
+que ejercitan la API real de punta a punta.
 
 ### Estado de la suite (2026-08-15)
 

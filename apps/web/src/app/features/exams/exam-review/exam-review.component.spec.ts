@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRoute, Router, convertToParamMap } from '@angular/router';
 import { describe, it, expect, vi } from 'vitest';
-import { of, throwError } from 'rxjs';
+import { Subject, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Difficulty } from '@exams-generator/shared';
 import { ExamReviewComponent } from './exam-review.component';
@@ -343,6 +343,47 @@ describe('ExamReviewComponent', () => {
     fixture.detectChanges();
 
     expect(compiled.querySelector('[data-testid="action-success"]')).toBeFalsy();
+  });
+
+  /**
+   * Audit 2026-08-15 (último pendiente): `replace()` no tenía estado de carga,
+   * así que dos clicks seguidos en "Cambiar" mandaban DOS reemplazos y la
+   * segunda respuesta pisaba a la primera — el docente veía cambiar la pregunta
+   * dos veces sin haberlo pedido.
+   */
+  it('ignores a second click while a swap is still in flight', () => {
+    const pending = new Subject<{ examId: string; oldQuestionId: string; newQuestionId: string }>();
+    const { compiled, fixture, replaceQuestion } = setup({ replaceQuestion: () => pending });
+
+    const button = compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!;
+    button.click();
+    fixture.detectChanges();
+
+    expect(button.disabled).toBe(true);
+    button.click();
+    fixture.detectChanges();
+
+    expect(replaceQuestion).toHaveBeenCalledTimes(1);
+  });
+
+  it('re-enables the row once the swap resolves', () => {
+    const { compiled, fixture } = setup({});
+
+    compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.click();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.disabled).toBe(false);
+  });
+
+  it('re-enables it after a failed swap too — a dead row would be worse than the error', () => {
+    const { compiled, fixture } = setup({
+      replaceQuestion: () => throwError(() => new HttpErrorResponse({ status: 400, error: {} })),
+    });
+
+    compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.click();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.disabled).toBe(false);
   });
 
   it('loads the exam by id from the route param and renders every selected question', () => {
