@@ -711,13 +711,24 @@ describe("Bank module (e2e)", () => {
 
   /**
    * S6: `GET /bank/questions` gains OPTIONAL pagination. Without `page` it
-   * MUST keep returning the bare array (retro-compat release gate — web's
-   * `bank.service.ts` and `ai.service.ts` `listDrafts` both consume this
-   * endpoint today expecting a flat array). Only when `page` is present does
-   * the response switch to `{ items, total }`.
+   * MUST keep returning the bare array (retro-compat release gate for any
+   * caller that never adopted `page`/`pageSize` — a script, a curl, an old
+   * bookmark). Only when `page` is present does the response switch to
+   * `{ items, total }`.
+   *
+   * The SHAPE is retro-compat; the ROW COUNT is not (docs/audit-2026-08-14.md,
+   * "GET /bank/questions sin page sigue sin tope"): omitting `page` used to
+   * call the unpaginated repository overload with no LIMIT at all — the
+   * exact shape of the P0 that made `/app/bank` download 41MB. It's now
+   * capped at the same default window `BankController.DEFAULT_UNPAGED_WINDOW`
+   * uses (page 1, pageSize 100) — see `bank.controller.spec.ts` for the
+   * unit-level proof that omitting `page` calls the paginated overload with
+   * that exact window, not the true unpaginated one. (Not re-proven here
+   * e2e — same reasoning as the pageSize-upper-bound clamp two tests down:
+   * it would require seeding 100+ questions, which this suite avoids.)
    */
   describe("GET /bank/questions pagination (S6)", () => {
-    it("returns flat array without page param (legacy)", async () => {
+    it("returns flat array without page param (legacy), still capped to a bounded window under the hood", async () => {
       const res = await request(app.getHttpServer())
         .get("/bank/questions")
         .set("Authorization", `Bearer ${tenantAToken}`)
@@ -781,6 +792,76 @@ describe("Bank module (e2e)", () => {
 
       expect(res.body.items.length).toBe(1);
       expect(res.body.total).toBeGreaterThanOrEqual(2);
+    });
+  });
+
+  /**
+   * `GET /bank/questions/summary` — the per-topic counts the web bank tree
+   * loads INSTEAD of the whole question list. The route is declared before
+   * `@Get(":id")` in the controller; the first test below is the regression
+   * guard for that ordering (a mis-ordered route would make `summary` land
+   * in `getQuestionById` and 404).
+   */
+  describe("GET /bank/questions/summary — lazy tree skeleton", () => {
+    it("returns one {courseId, topicId, total} bucket per topic — never any question payload", async () => {
+      const created = await structuredRequest(tenantAToken)
+        .send({
+          courseId,
+          topicId,
+          difficulty: Difficulty.Medium,
+          gradeLevel: "primaria_4",
+          bodyTypst: "summary fixture question",
+          alternatives: ["a", "b"],
+          correctAnswer: "0",
+        })
+        .expect(201);
+      await trackCreatedQuestion(created.body.id);
+
+      const res = await request(app.getHttpServer())
+        .get("/bank/questions/summary")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+
+      expect(Array.isArray(res.body)).toBe(true);
+      const bucket = res.body.find((row: { topicId: string }) => row.topicId === topicId);
+      expect(bucket).toEqual({ courseId, topicId, total: expect.any(Number) });
+      expect(bucket.total).toBeGreaterThanOrEqual(1);
+      // The whole point: no `bodyTypst`/`alternatives`/`id` ever crosses the wire here.
+      expect(JSON.stringify(res.body)).not.toContain("summary fixture question");
+    });
+
+    it("applies the same filters as the list endpoint, so the tree counts match what expanding a topic returns", async () => {
+      const filtered = await request(app.getHttpServer())
+        .get("/bank/questions/summary?difficulty=medium&gradeLevel=primaria_4")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+
+      const listed = await request(app.getHttpServer())
+        .get(`/bank/questions?difficulty=medium&gradeLevel=primaria_4&topicId=${topicId}&page=1&pageSize=100`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+
+      const bucket = filtered.body.find((row: { topicId: string }) => row.topicId === topicId);
+      expect(bucket.total).toBe(listed.body.total);
+    });
+
+    it("NEVER counts another tenant's private questions", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/bank/questions/summary")
+        .set("Authorization", `Bearer ${tenantBToken}`)
+        .expect(200);
+
+      const listed = await request(app.getHttpServer())
+        .get(`/bank/questions?topicId=${topicId}&page=1&pageSize=100`)
+        .set("Authorization", `Bearer ${tenantBToken}`)
+        .expect(200);
+
+      const bucket = res.body.find((row: { topicId: string }) => row.topicId === topicId);
+      expect(bucket?.total ?? 0).toBe(listed.body.total);
+    });
+
+    it("401 without an Authorization header", async () => {
+      await request(app.getHttpServer()).get("/bank/questions/summary").expect(401);
     });
   });
 

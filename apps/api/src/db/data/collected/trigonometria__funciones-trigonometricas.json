@@ -85,7 +85,7 @@
     {
       "courseName": "Trigonometría",
       "topicName": "Funciones Trigonométricas",
-      "gradeLevel": "medium",
+      "gradeLevel": "pre",
       "difficulty": "medium",
       "bodyTypst": "En una ciudad la temperatura del día en grados centígrados está dada por T(t) = 10(ctg(πt/48) - ctg(πt/24)), donde t es el tiempo en horas, iniciando desde la medianoche. ¿A qué hora la temperatura será de 10 °C?",
       "alternatives": [

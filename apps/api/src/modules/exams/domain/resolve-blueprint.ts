@@ -39,6 +39,31 @@ export interface ResolveBlueprintOptions {
 }
 
 /**
+ * Result of {@link resolveBlueprint}. `usedCumulativeFallback` is exposed
+ * separately from `rows` so a caller (`exams.service.ts`) can tell the
+ * difference between "current_only honored the exact current week" and
+ * "current_only silently widened to cumulative because the syllabus doesn't
+ * reach that far" — the P0 fix (docs/audit-2026-08-14.md, 2026-08-14):
+ * "Rápido (semana actual)" used to return an empty exam once the
+ * calendar-computed week ran past the last week the syllabus has data for.
+ * Product decision: widen to "everything seen so far" instead of erroring or
+ * emitting nothing — but the teacher asked for "current week" and got
+ * something else, so the caller MUST surface that, not swallow it.
+ */
+export interface ResolveBlueprintOutcome {
+  readonly rows: BlueprintRow[];
+  /**
+   * True when `weekScope === 'current_only'` and at least one in-scope row
+   * had no syllabus entry at exactly `currentWeek` but DID have earlier
+   * entries, so it was widened to `weekNumber <= currentWeek` (the same rule
+   * `cumulative` already uses) instead of being silently dropped. Always
+   * `false` for `weekScope !== 'current_only'` — `cumulative` is the type's
+   * normal behavior, never a degraded fallback.
+   */
+  readonly usedCumulativeFallback: boolean;
+}
+
+/**
  * The single generic resolver behind every template-backed exam type
  * (`fastest`/`eta`/`eta_by_week` — `manual` never calls this). Reads
  * `course_scope`/`week_scope` off the exam type instead of branching per
@@ -50,11 +75,11 @@ export interface ResolveBlueprintOptions {
  * throughout the cycle; only WHICH topics it draws from narrows as fewer
  * weeks have been covered, so early weeks repeat topics more.
  */
-export function resolveBlueprint(options: ResolveBlueprintOptions): BlueprintRow[] {
+export function resolveBlueprint(options: ResolveBlueprintOptions): ResolveBlueprintOutcome {
   const { courseScope, weekScope, templateRows, syllabus } = options;
 
   if (courseScope === "none") {
-    return [];
+    return { rows: [], usedCumulativeFallback: false };
   }
 
   const filteredRows =
@@ -65,7 +90,7 @@ export function resolveBlueprint(options: ResolveBlueprintOptions): BlueprintRow
   const counts = resolveRowCounts(filteredRows, options.totalQuestionsOverride);
 
   if (weekScope === "none") {
-    return filteredRows
+    const rows = filteredRows
       .map((row, index) => ({
         courseId: row.courseId,
         topicId: row.topicId ?? undefined,
@@ -73,17 +98,38 @@ export function resolveBlueprint(options: ResolveBlueprintOptions): BlueprintRow
         difficulty: resolveDifficultyFromSourceLevel(row.sourceLevel),
       }))
       .filter((row) => row.count > 0);
+    return { rows, usedCumulativeFallback: false };
   }
 
   const currentWeek = options.currentWeek ?? 0;
   const result: BlueprintRow[] = [];
+  let usedCumulativeFallback = false;
 
   filteredRows.forEach((row, index) => {
-    const topicsInScope = syllabus
-      .filter((entry) => entry.courseId === row.courseId)
-      .filter((entry) =>
-        weekScope === "current_only" ? entry.weekNumber === currentWeek : entry.weekNumber <= currentWeek,
-      );
+    const courseSyllabus = syllabus.filter((entry) => entry.courseId === row.courseId);
+
+    let topicsInScope: readonly SyllabusEntry[];
+    if (weekScope === "current_only") {
+      const exactWeek = courseSyllabus.filter((entry) => entry.weekNumber === currentWeek);
+      if (exactWeek.length > 0) {
+        topicsInScope = exactWeek;
+      } else {
+        // The calendar-computed current week has no syllabus entry for this
+        // course. Widen to "everything seen so far" (same rule as
+        // `cumulative`) rather than fabricating nothing — but only when
+        // there IS earlier data to widen into; a course with zero syllabus
+        // at all (e.g. UNCP) still gets dropped, unchanged.
+        const upToCurrentWeek = courseSyllabus.filter((entry) => entry.weekNumber <= currentWeek);
+        if (upToCurrentWeek.length > 0) {
+          topicsInScope = upToCurrentWeek;
+          usedCumulativeFallback = true;
+        } else {
+          topicsInScope = [];
+        }
+      }
+    } else {
+      topicsInScope = courseSyllabus.filter((entry) => entry.weekNumber <= currentWeek);
+    }
 
     if (topicsInScope.length === 0) {
       return; // no syllabus data in scope for this course (e.g. UNCP has none) — drop it, don't fabricate a row
@@ -100,7 +146,7 @@ export function resolveBlueprint(options: ResolveBlueprintOptions): BlueprintRow
     });
   });
 
-  return result;
+  return { rows: result, usedCumulativeFallback };
 }
 
 /** Resolves each row's total count — direct `questionCount` when known, else an exact-sum share of `totalQuestionsOverride` by `weightPoints`. */

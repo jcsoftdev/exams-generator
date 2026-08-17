@@ -297,7 +297,9 @@ describe("ExamsService.getExamDetail", () => {
           position: 0,
           type: "image",
           courseId: "course-1",
+          courseName: "Aritmética",
           topicId: "topic-1",
+          topicName: "Teoría de conjuntos",
           difficulty: Difficulty.Easy,
           correctAnswer: "a",
           imageAssetId: "asset-1",
@@ -611,7 +613,13 @@ describe("ExamsService.resolveExamBlueprint", () => {
       tenantId: "tenant-1",
     });
 
-    expect(result).toEqual({ blueprint: [], weekNumber: null, templateId: null });
+    expect(result).toEqual({
+      blueprint: [],
+      weekNumber: null,
+      templateId: null,
+      usedCumulativeFallback: false,
+      effectiveWeekNumber: null,
+    });
     expect(repository.findCurrentTemplate).not.toHaveBeenCalled();
     expect(repository.findActiveCycle).not.toHaveBeenCalled();
   });
@@ -762,8 +770,12 @@ describe("ExamsService.resolveExamBlueprint", () => {
     const { service, repository } = buildDeps();
     repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "current_only" });
     repository.findCurrentTemplate.mockResolvedValue({ id: "template-9" });
-    repository.getTemplateRows.mockResolvedValue([]);
-    repository.getSyllabusForTemplate.mockResolvedValue([]);
+    repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", questionCount: 5 }]);
+    // Week 0 is always `<= currentWeek` regardless of "today", so the
+    // cumulative fallback always finds it — the blueprint stays non-empty no
+    // matter which real calendar week this test runs on (this test isn't
+    // about that behavior, just about the call-argument threading below).
+    repository.getSyllabusForTemplate.mockResolvedValue([{ courseId: "course-1", topicId: "topic-1", weekNumber: 0 }]);
     repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-01-01"), weekLengthDays: 7 });
 
     await service.resolveExamBlueprint({
@@ -828,5 +840,217 @@ describe("ExamsService.resolveExamBlueprint", () => {
     });
 
     expect(result.blueprint).toEqual([{ courseId: "course-1", count: 5, difficulty: undefined }]);
+  });
+
+  // --- P0 fix: "Rápido (semana actual)" produced a silent empty exam once
+  // the cycle's calendar-computed week ran past the last week the syllabus
+  // has real data for (docs/audit-2026-08-14.md — UNI's "Ciclo
+  // Preuniversitario" reaches week 23 while syllabus_week_maps only covers
+  // 0-20). Product decision: fall back to cumulative ("everything seen so
+  // far") and say so in the response — never a silent empty 200, and never a
+  // hard error just because the syllabus stopped early.
+  describe("current_only past the loaded syllabus (P0: was a silent empty exam)", () => {
+    it("falls back to cumulative and reports it via usedCumulativeFallback when currentWeek has no exact syllabus match but earlier weeks do", async () => {
+      const { service, repository } = buildDeps();
+      repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "current_only" });
+      repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+      repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", questionCount: 12 }]);
+      // Syllabus only covers weeks 0-2 — the real UNI shape covers 0-20, but
+      // the boundary behavior is identical either way.
+      repository.getSyllabusForTemplate.mockResolvedValue([
+        { courseId: "course-1", topicId: "topic-0", weekNumber: 0 },
+        { courseId: "course-1", topicId: "topic-1", weekNumber: 1 },
+        { courseId: "course-1", topicId: "topic-2", weekNumber: 2 },
+      ]);
+      repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-03-05"), weekLengthDays: 7 });
+
+      jest.useFakeTimers().setSystemTime(new Date("2026-08-14")); // ~week 23 — past the syllabus
+      try {
+        const result = await service.resolveExamBlueprint({
+          examTypeCode: "fastest",
+          universityId: "uni-1",
+          trackId: null,
+          tenantId: "tenant-1",
+        });
+
+        expect(result.weekNumber).toBeGreaterThan(2);
+        expect(result.blueprint).toHaveLength(3); // every topic the syllabus has, not empty
+        expect(result.blueprint.reduce((sum, row) => sum + row.count, 0)).toBe(12); // course total unchanged
+        expect(result.usedCumulativeFallback).toBe(true);
+        // The refinement (docs/audit-2026-08-14.md, same item): the exam must
+        // report the last week that actually HAS syllabus data (2), not the
+        // calendar week (23) nobody taught — `weekNumber` keeps the calendar
+        // snapshot (provenance contract, see ResolveExamBlueprintResult
+        // docstring) while `effectiveWeekNumber` names the truth.
+        expect(result.effectiveWeekNumber).toBe(2);
+      } finally {
+        jest.useRealTimers();
+      }
+    });
+
+    it("does NOT throw for courseScope='selected' with zero selectedCourseIds — the exam builder auto-fires this call before any course checkbox is ticked (found via live-app verification, not the test suite)", async () => {
+      const { service, repository } = buildDeps();
+      repository.findExamType.mockResolvedValue({ courseScope: "selected", weekScope: "current_only" });
+      repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+      repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", questionCount: 12 }]);
+      repository.getSyllabusForTemplate.mockResolvedValue([]);
+      repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-03-05"), weekLengthDays: 7 });
+
+      jest.useFakeTimers().setSystemTime(new Date("2026-08-14"));
+      try {
+        const result = await service.resolveExamBlueprint({
+          examTypeCode: "fastest",
+          universityId: "uni-1",
+          trackId: "track-1",
+          tenantId: "tenant-1",
+          // no selectedCourseIds at all — same shape the exam builder sends
+          // right after picking a track, before the user checks a course.
+        });
+
+        expect(result.blueprint).toEqual([]);
+        expect(result.usedCumulativeFallback).toBe(false);
+      } finally {
+        jest.useRealTimers();
+      }
+    });
+
+    it("throws BadRequestException instead of returning a silent empty blueprint when the syllabus has zero rows at all for this template", async () => {
+      const { service, repository } = buildDeps();
+      repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "current_only" });
+      repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+      repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", questionCount: 12 }]);
+      repository.getSyllabusForTemplate.mockResolvedValue([]); // nothing loaded — cumulative fallback has nothing to widen into either
+      repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-03-05"), weekLengthDays: 7 });
+
+      jest.useFakeTimers().setSystemTime(new Date("2026-08-14"));
+      try {
+        await expect(
+          service.resolveExamBlueprint({
+            examTypeCode: "fastest",
+            universityId: "uni-1",
+            trackId: null,
+            tenantId: "tenant-1",
+          }),
+        ).rejects.toBeInstanceOf(BadRequestException);
+      } finally {
+        jest.useRealTimers();
+      }
+    });
+  });
+
+  // --- Refinement on top of the P0 fix above (docs/audit-2026-08-14.md, same
+  // item): "Rápido (semana actual)" no longer goes empty once the calendar
+  // outruns the syllabus, but it still NAMED the wrong week — `weekNumber:
+  // 23` when nobody taught week 23. `effectiveWeekNumber` is the last week
+  // this template's syllabus actually has data for, derived per (university,
+  // track) from `getSyllabusForTemplate()` — never a global/hardcoded
+  // constant, so a track whose syllabus is still in range (UNCP) is
+  // untouched. `weekNumber` itself is UNCHANGED on purpose: it stays the
+  // calendar snapshot `computeCurrentWeek()` produces, because
+  // `ResolveExamBlueprintResult`'s own docstring says the frontend feeds it
+  // straight back into `POST /exams` as `weekNumber` provenance — and
+  // `exams.weekNumber` (schema) is documented as "a frozen snapshot of
+  // computeCurrentWeek() at generation time", not "the last taught week".
+  // Redefining `weekNumber` itself would silently corrupt that future
+  // provenance contract, so this adds a field instead of repurposing one.
+  describe("effective week (last week the syllabus actually has content for)", () => {
+    it("current_only WITHIN the loaded syllabus: no clamp, no fallback — weekNumber and effectiveWeekNumber both equal the calendar week (the untouched happy path, e.g. UNCP today)", async () => {
+      const { service, repository } = buildDeps();
+      repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "current_only" });
+      repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+      repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", questionCount: 9 }]);
+      repository.getSyllabusForTemplate.mockResolvedValue([
+        { courseId: "course-1", topicId: "topic-0", weekNumber: 0 },
+        { courseId: "course-1", topicId: "topic-3", weekNumber: 3 },
+        { courseId: "course-1", topicId: "topic-5", weekNumber: 5 },
+      ]);
+      repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-03-05"), weekLengthDays: 7 });
+
+      jest.useFakeTimers().setSystemTime(new Date("2026-03-05")); // week 0 -> then advance to exactly week 3 below
+      try {
+        jest.setSystemTime(new Date("2026-03-26")); // 3 weeks after startsOn -> week 3, an exact syllabus match
+        const result = await service.resolveExamBlueprint({
+          examTypeCode: "fastest",
+          universityId: "uni-1",
+          trackId: null,
+          tenantId: "tenant-1",
+        });
+
+        expect(result.weekNumber).toBe(3);
+        expect(result.effectiveWeekNumber).toBe(3);
+        expect(result.usedCumulativeFallback).toBe(false);
+        expect(result.blueprint).toEqual([{ courseId: "course-1", topicId: "topic-3", count: 9, difficulty: undefined }]);
+      } finally {
+        jest.useRealTimers();
+      }
+    });
+
+    it("cumulative/eta_by_week: effectiveWeekNumber clamps to the last syllabus week while the row set stays byte-identical past that point — proof the fix is reporting only, never content selection", async () => {
+      const { service, repository } = buildDeps();
+      repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "cumulative" });
+      repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+      repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", questionCount: 10 }]);
+      repository.getSyllabusForTemplate.mockResolvedValue([
+        { courseId: "course-1", topicId: "topic-0", weekNumber: 0 },
+        { courseId: "course-1", topicId: "topic-5", weekNumber: 5 },
+        { courseId: "course-1", topicId: "topic-10", weekNumber: 10 },
+        { courseId: "course-1", topicId: "topic-15", weekNumber: 15 },
+        { courseId: "course-1", topicId: "topic-20", weekNumber: 20 }, // last real content -> effective week
+      ]);
+      repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-03-05"), weekLengthDays: 7 });
+
+      const resolveAt = async (today: string) => {
+        jest.useFakeTimers().setSystemTime(new Date(today));
+        try {
+          return await service.resolveExamBlueprint({
+            examTypeCode: "eta_by_week",
+            universityId: "uni-1",
+            trackId: null,
+            tenantId: "tenant-1",
+          });
+        } finally {
+          jest.useRealTimers();
+        }
+      };
+
+      // startsOn 2026-03-05, 7-day weeks -> +140 days lands exactly on week 20.
+      const atMaxWeek = await resolveAt("2026-07-23");
+      // Three months further out — well past any taught content.
+      const farBeyond = await resolveAt("2026-11-05");
+
+      expect(atMaxWeek.weekNumber).toBe(20);
+      expect(farBeyond.weekNumber).toBeGreaterThan(20); // calendar snapshot keeps moving...
+      expect(atMaxWeek.effectiveWeekNumber).toBe(20);
+      expect(farBeyond.effectiveWeekNumber).toBe(20); // ...but the reported effective week does not.
+      // The set of rows resolved must be IDENTICAL — the refinement is pure
+      // reporting/communication, never a change to which content is selected.
+      expect(farBeyond.blueprint).toEqual(atMaxWeek.blueprint);
+    });
+
+    it("effectiveWeekNumber is null when the template's syllabus has zero rows at all (nothing dictated yet — honest 'unknown', not a fabricated calendar week)", async () => {
+      const { service, repository } = buildDeps();
+      repository.findExamType.mockResolvedValue({ courseScope: "selected", weekScope: "current_only" });
+      repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+      repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", questionCount: 12 }]);
+      repository.getSyllabusForTemplate.mockResolvedValue([]);
+      repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-03-05"), weekLengthDays: 7 });
+
+      jest.useFakeTimers().setSystemTime(new Date("2026-08-14"));
+      try {
+        const result = await service.resolveExamBlueprint({
+          examTypeCode: "fastest",
+          universityId: "uni-1",
+          trackId: "track-1",
+          tenantId: "tenant-1",
+          // no selectedCourseIds -> inScopeRows is [], so this is the
+          // harmless pre-course-pick auto-fire, not the 400 path.
+        });
+
+        expect(result.blueprint).toEqual([]);
+        expect(result.effectiveWeekNumber).toBeNull();
+      } finally {
+        jest.useRealTimers();
+      }
+    });
   });
 });

@@ -704,20 +704,32 @@ export const BANK_SAMPLE_COURSES: readonly SyllabusCourse[] = [
  * Global exam-type catalog (design doc §4 `exam_types`): the four default
  * exam types, data-driven by `course_scope` x `week_scope` — see
  * `exam-types.schema.ts` for why this is a seeded table, not an enum.
+ *
+ * `label` is DISPLAY-ONLY (the web select renders it verbatim, see
+ * `ExamBuilderComponent.examTypeOptions`) — `code` is the contract every
+ * domain rule (`resolveBlueprint`, `blueprint-selector.ts`) keys off and
+ * NEVER changes. Labels were raw English/jerga-interna leftovers
+ * ("Fastest"/"ETA"/"ETA por semana") until drizzle migration
+ * `0019_translate_exam_type_labels` translated them for existing rows —
+ * this `insert().onConflictDoNothing()` only ever fires for a brand-new DB,
+ * so it's kept in sync with that migration's final Spanish text. "ETA"
+ * ("Examen Tipo Admisión") is academia jerga interna — spelled out here so
+ * a teacher outside that world still understands the option (design doc
+ * `2026-07-21-exam-types-university-structure-design.md`).
  */
 const EXAM_TYPES = [
   { code: "manual", label: "Manual", courseScope: "none", weekScope: "none", sortOrder: 0 },
   {
     code: "fastest",
-    label: "Fastest",
+    label: "Rápido (semana actual)",
     courseScope: "selected",
     weekScope: "current_only",
     sortOrder: 1,
   },
-  { code: "eta", label: "ETA", courseScope: "all", weekScope: "none", sortOrder: 2 },
+  { code: "eta", label: "Examen tipo admisión", courseScope: "all", weekScope: "none", sortOrder: 2 },
   {
     code: "eta_by_week",
-    label: "ETA por semana",
+    label: "Examen tipo admisión por semana",
     courseScope: "all",
     weekScope: "cumulative",
     sortOrder: 3,

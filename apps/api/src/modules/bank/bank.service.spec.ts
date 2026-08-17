@@ -43,6 +43,7 @@ function buildDeps() {
     createStructuredQuestion: jest.fn().mockResolvedValue({ id: "question-2" }),
     findByBodyHash: jest.fn().mockResolvedValue(undefined),
     listQuestions: jest.fn().mockResolvedValue([] as QuestionListItem[]),
+    countByCourseAndTopic: jest.fn().mockResolvedValue([]),
     findQuestionById: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
     approveQuestion: jest.fn().mockResolvedValue(undefined as { id: string; status: string } | undefined),
     rejectQuestion: jest.fn().mockResolvedValue(false),
@@ -340,6 +341,35 @@ describe("BankService.listQuestions", () => {
     await service.listQuestions(STAFF_USER, {});
 
     expect(repository.listQuestions).toHaveBeenCalledWith(
+      expect.objectContaining({ currentTenantId: null }),
+    );
+  });
+});
+
+describe("BankService.countQuestionsByTopic", () => {
+  it("scopes the summary to the requester's own tenant, carrying the same filters listQuestions takes", async () => {
+    const { service, repository } = buildDeps();
+
+    await service.countQuestionsByTopic(TEACHER_USER, {
+      difficulty: Difficulty.Hard,
+      gradeLevel: "secundaria_1",
+    });
+
+    expect(repository.countByCourseAndTopic).toHaveBeenCalledWith(
+      expect.objectContaining({
+        currentTenantId: "tenant-1",
+        difficulty: Difficulty.Hard,
+        gradeLevel: "secundaria_1",
+      }),
+    );
+  });
+
+  it("scopes to tenantId=null for platform staff", async () => {
+    const { service, repository } = buildDeps();
+
+    await service.countQuestionsByTopic(STAFF_USER, {});
+
+    expect(repository.countByCourseAndTopic).toHaveBeenCalledWith(
       expect.objectContaining({ currentTenantId: null }),
     );
   });

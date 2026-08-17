@@ -40,7 +40,24 @@ import {
 /** Postgres regex that matches a UUID fragment — the signature of a test-factory course name. */
 const UUID_FRAGMENT = "[0-9a-f]{8}-[0-9a-f]{4}";
 
-/** Legacy demo courses folded into `Matemática` / `Comunicación` by the standard syllabus — dropped only when empty. */
+/**
+ * Names that were once demo-only courses folded into `Matemática` /
+ * `Comunicación` by the school syllabus — dropped ONLY when empty.
+ *
+ * READ THE "only when empty" PART BEFORE TOUCHING THIS LIST. These three names
+ * are no longer just legacy: under `stage: 'preuniversitario'` they are
+ * first-class courses of the preuni syllabus, and today they hold thousands of
+ * approved questions each (Álgebra ~2k, Razonamiento Matemático ~4.3k,
+ * Razonamiento Verbal ~5k). What keeps the purge from eating them is
+ * `courseIdsWithRealUsage` — they carry blueprint-template rows — plus the
+ * emptiness check, not this list.
+ *
+ * So the list is safe but no longer self-explanatory: it reads as "these are
+ * legacy junk" when the same names are now core taxonomy. Matching by NAME
+ * alone is the fragile part — it ignores `stage`, which is the column that
+ * actually separates the school-era course from the preuni one. If this ever
+ * needs to grow, scope it by `(stage, name)` instead.
+ */
 const LEGACY_EMPTY_COURSES = ["Álgebra", "Razonamiento Matemático", "Razonamiento Verbal"] as const;
 
 interface CourseRef {

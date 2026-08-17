@@ -95,6 +95,19 @@ export interface BankStatusDifficultyCount {
   readonly total: number;
 }
 
+/**
+ * One `{courseId, topicId, total}` bucket from `countByCourseAndTopic` —
+ * feeds the web bank tree's lazy skeleton (`GET /bank/questions/summary`).
+ * Deliberately carries NO question payload: the whole point is that the tree
+ * can render Curso -> Tema with real counts while a topic's leaves are only
+ * fetched when that topic is expanded.
+ */
+export interface BankTopicQuestionCount {
+  readonly courseId: string;
+  readonly topicId: string;
+  readonly total: number;
+}
+
 /** Persistence port for the bank module — implemented by `BankRepository`. */
 export interface BankRepositoryPort {
   createImageQuestion(record: CreateImageQuestionRecord): Promise<{ id: string }>;
@@ -104,6 +117,15 @@ export interface BankRepositoryPort {
     filter: QuestionListFilter,
     pagination: QuestionListPagination,
   ): Promise<{ items: QuestionListItem[]; total: number }>;
+  /**
+   * Per-topic question totals under the SAME visibility rule and the SAME
+   * filters `listQuestions` applies — so a bucket's `total` is exactly the
+   * number of rows a `listQuestions` call with `{...filter, topicId}` would
+   * return. That equality is load-bearing: the web tree renders these counts
+   * next to a topic and then fetches that topic's questions on expand, and a
+   * count that disagreed with the fetch would surface as a phantom "Ver más".
+   */
+  countByCourseAndTopic(filter: QuestionListFilter): Promise<BankTopicQuestionCount[]>;
   findQuestionById(id: string, currentTenantId: string | null): Promise<QuestionListItem | undefined>;
   /**
    * Scoped to the SAME `tenantId` the new row would be written to (not the

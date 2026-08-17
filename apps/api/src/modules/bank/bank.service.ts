@@ -13,7 +13,12 @@ import { PdfCompilerPort, TypstCompilationError } from "../exams/domain/ports/pd
 import { StoragePort } from "../exams/domain/ports/storage.port";
 import { QuestionStatus } from "../../db/schema/enums";
 import { PDF_COMPILER_PORT, STORAGE_PORT } from "./bank.constants";
-import { BankRepository, QuestionListItem, QuestionListPagination } from "./bank.repository";
+import {
+  BankRepository,
+  BankTopicQuestionCount,
+  QuestionListItem,
+  QuestionListPagination,
+} from "./bank.repository";
 import { assertStructuredQuestion } from "./domain/assert-structured-question";
 import { canManageQuestionTenant } from "./domain/can-manage-question-tenant";
 import { compilePreviewFromContent } from "./domain/compile-preview-from-content";
@@ -249,6 +254,31 @@ export class BankService {
       return this.repository.listQuestions(filters);
     }
     return this.repository.listQuestions(filters, pagination);
+  }
+
+  /**
+   * Per-topic question totals for the web bank tree's lazy skeleton — same
+   * tenant scoping and same filters `listQuestions` applies, so the tree can
+   * render Curso -> Tema with real counts WITHOUT downloading a single
+   * question row. Expanding a topic then fetches only that topic's page via
+   * the paginated `listQuestions`.
+   *
+   * This exists because `/app/bank` used to call the unpaginated
+   * `listQuestions` to build its tree, which on the seeded central bank
+   * meant shipping 64k rows to the browser on every load.
+   */
+  async countQuestionsByTopic(
+    user: AuthTokenPayload,
+    query: ListQuestionsQuery,
+  ): Promise<BankTopicQuestionCount[]> {
+    return this.repository.countByCourseAndTopic({
+      currentTenantId: user.tenantId,
+      courseId: query.courseId,
+      topicId: query.topicId,
+      difficulty: query.difficulty,
+      gradeLevel: query.gradeLevel,
+      status: query.status,
+    });
   }
 
   /**

@@ -230,6 +230,17 @@ export class ExamsRepository implements ExamsRepositoryPort {
    * (design doc plan 2, web-consumed). `createdAt DESC` is the fixed sort
    * (S1 has no sort param). `questionCount`/`versionCount` are correlated
    * scalar subqueries so the base row set isn't multiplied by joins.
+   *
+   * The subqueries alias their table (`eq`/`ev`) and qualify the OUTER row as
+   * `${exams}.id` deliberately. Interpolating a column object inside a `sql`
+   * template (`${examQuestions.examId}`, `${exams.id}`) renders it
+   * UNQUALIFIED — the predicate compiled to `where "exam_id" = "id"`, and
+   * since `exam_questions` has an `id` column of its own, both sides resolved
+   * inside the subquery: a self-comparison that is never true, so every row
+   * came back 0/0 (audit 2026-08-15). Only a TABLE object (`${examQuestions}`,
+   * `${exams}`) renders a usable name; column names are written literally
+   * against the alias. Covered by `listExams() — S1 list row counts` in
+   * `exams.repository.spec.ts`.
    */
   async listExams(tenantId: string, f: ExamListFilters): Promise<{ items: ExamListItem[]; total: number }> {
     const conditions = [eq(exams.tenantId, tenantId)];
@@ -247,8 +258,8 @@ export class ExamsRepository implements ExamsRepositoryPort {
         gradeLevel: exams.gradeLevel,
         status: exams.status,
         createdAt: exams.createdAt,
-        questionCount: sql<number>`(select count(*)::int from ${examQuestions} where ${examQuestions.examId} = ${exams.id})`,
-        versionCount: sql<number>`(select count(*)::int from ${examVersions} where ${examVersions.examId} = ${exams.id})`,
+        questionCount: sql<number>`(select count(*)::int from ${examQuestions} eq where eq.exam_id = ${exams}.id)`,
+        versionCount: sql<number>`(select count(*)::int from ${examVersions} ev where ev.exam_id = ${exams}.id)`,
       })
       .from(exams)
       .where(where)
@@ -589,7 +600,13 @@ export class ExamsRepository implements ExamsRepositoryPort {
         position: examQuestions.position,
         type: questions.type,
         courseId: topics.courseId,
+        // Names, not just ids: the review screen renders these directly (audit
+        // 2026-08-15 — it was showing raw uuids to teachers). `topics` was
+        // already joined for `courseId`; `courses` is one more join on a key
+        // this query already has.
+        courseName: courses.name,
         topicId: questions.topicId,
+        topicName: topics.name,
         difficulty: questions.difficulty,
         correctAnswer: questions.correctAnswer,
         imageAssetId: questions.imageAssetId,
@@ -600,6 +617,7 @@ export class ExamsRepository implements ExamsRepositoryPort {
       .from(examQuestions)
       .innerJoin(questions, eq(examQuestions.questionId, questions.id))
       .innerJoin(topics, eq(questions.topicId, topics.id))
+      .innerJoin(courses, eq(topics.courseId, courses.id))
       .where(eq(examQuestions.examId, examId))
       .orderBy(asc(examQuestions.position));
 
@@ -613,7 +631,9 @@ export class ExamsRepository implements ExamsRepositoryPort {
         position: row.position,
         type: row.type,
         courseId: row.courseId,
+        courseName: row.courseName,
         topicId: row.topicId,
+        topicName: row.topicName,
         difficulty: row.difficulty,
         correctAnswer: row.correctAnswer,
         imageAssetId: row.imageAssetId,

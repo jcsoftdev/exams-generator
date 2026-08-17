@@ -23,13 +23,20 @@ import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankService } from "./bank.service";
-import { QuestionListItem } from "./bank.repository";
+import { BankTopicQuestionCount, QuestionListItem } from "./bank.repository";
 import { clampPagination } from "../../common/pagination.util";
 
 // Question images only, never bulk data — 5MB is generous headroom for a
 // scanned/photographed exam question while keeping the in-memory multer
 // storage (`FileInterceptor` default) from being a memory-exhaustion vector.
 const MAX_IMAGE_UPLOAD_BYTES = 5 * 1024 * 1024;
+
+/**
+ * `GET /bank/questions` with no `page` query param — same cap as
+ * `clampPagination`'s upper bound (100), just applied even when the caller
+ * never asked for pagination at all. See `listQuestions`'s doc comment.
+ */
+const DEFAULT_UNPAGED_WINDOW = { page: 1, pageSize: 100 };
 
 interface CreateImageQuestionBody {
   readonly courseId?: string;
@@ -134,11 +141,21 @@ export class BankController {
   }
 
   /**
-   * S6: optional pagination, retro-compat. `page === undefined` returns the
-   * SAME flat array this endpoint always returned — web's `bank.service.ts`
-   * and `ai.service.ts`'s `listDrafts` both still decode a bare array.
-   * `?page=&pageSize=` switches to `{ items, total }`, clamped the same way
+   * S6: optional pagination, retro-compat SHAPE only — the response is
+   * still a bare array when `page` is omitted (existing callers of that
+   * form, e.g. a stray script/curl, keep decoding an array). `?page=&
+   * pageSize=` switches to `{ items, total }`, clamped the same way
    * `ExamsController.listExams` (T2) clamps its own page/pageSize.
+   *
+   * The ROW COUNT is no longer retro-compat, though (docs/audit-2026-08-14.md,
+   * "GET /bank/questions sin page sigue sin tope"): omitting `page` used to
+   * call the unpaginated repository overload and hand back every matching
+   * row — no LIMIT at all, the exact shape of the P0 that made `/app/bank`
+   * download 41MB. Both web callers that genuinely needed the full
+   * flat-array shape (`AiReviewQueueComponent`, `GenerationJobDetailComponent`)
+   * are now paginated for real (`AiService.listDraftsPaged`/`getDraftById`,
+   * see ai.service.ts) — `DEFAULT_UNPAGED_WINDOW` is pure insurance so no
+   * future caller can trigger an unbounded scan again, not a live requirement.
    */
   @Get()
   async listQuestions(
@@ -154,10 +171,39 @@ export class BankController {
     };
 
     if (query.page === undefined) {
-      return this.service.listQuestions(user, filters);
+      const { items } = await this.service.listQuestions(user, filters, DEFAULT_UNPAGED_WINDOW);
+      return items;
     }
 
     return this.service.listQuestions(user, filters, clampPagination(query.page, query.pageSize));
+  }
+
+  /**
+   * Per-topic question counts — the skeleton the web bank tree loads instead
+   * of the full question list. Same filters as `GET /bank/questions`, same
+   * tenant visibility, but the response carries only
+   * `{courseId, topicId, total}` rows: the tree renders Curso -> Tema with
+   * real counts, and a topic's questions are fetched (paginated) only when
+   * that topic is expanded. `/app/bank` used to build the same tree from the
+   * unpaginated list, which meant downloading the whole 64k-row central bank
+   * on every load.
+   *
+   * Declared BEFORE `@Get(":id")` — a static-looking route must be
+   * registered before the generic `:id` catch-all in the same file for
+   * Nest's route matching to prefer it (same reason as `:id/preview`).
+   */
+  @Get("summary")
+  async questionSummary(
+    @CurrentUser() user: AuthTokenPayload,
+    @Query() query: ListQuestionsQueryParams,
+  ): Promise<BankTopicQuestionCount[]> {
+    return this.service.countQuestionsByTopic(user, {
+      courseId: query.courseId,
+      topicId: query.topicId,
+      difficulty: query.difficulty as Difficulty | undefined,
+      gradeLevel: query.gradeLevel,
+      status: query.status as QuestionStatus | undefined,
+    });
   }
 
   /**

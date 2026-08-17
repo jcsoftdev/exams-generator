@@ -189,7 +189,11 @@ export interface ExamDetailQuestionRecord {
   readonly position: number;
   readonly type: QuestionType;
   readonly courseId: string;
+  /** Display name for `courseId` — the review screen used to render the raw uuid (audit 2026-08-15). */
+  readonly courseName: string;
   readonly topicId: string;
+  /** Display name for `topicId` — same reason as `courseName`. */
+  readonly topicName: string;
   readonly difficulty: Difficulty;
   readonly correctAnswer: string;
   readonly imageAssetId: string | null;

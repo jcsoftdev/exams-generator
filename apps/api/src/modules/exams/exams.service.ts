@@ -182,6 +182,36 @@ export interface ResolveExamBlueprintResult {
   readonly blueprint: readonly BlueprintRow[];
   readonly weekNumber: number | null;
   readonly templateId: string | null;
+  /**
+   * True when a `current_only` type (`fastest`) got widened to cumulative
+   * ("everything seen so far") because the calendar-computed current week
+   * has no syllabus data of its own — see `resolveBlueprint()`'s docstring
+   * (docs/audit-2026-08-14.md P0 fix, 2026-08-14). The frontend MUST surface
+   * this: the teacher asked for "current week" and received something else.
+   * Always `false` for `weekScope !== 'current_only'`.
+   */
+  readonly usedCumulativeFallback: boolean;
+  /**
+   * Refinement on top of the P0 fix above (docs/audit-2026-08-14.md, same
+   * item, 2026-08-14): the last `weekNumber` this (university, track)
+   * template's syllabus actually has content for — `Math.max` over
+   * `getSyllabusForTemplate()`, `null` when the syllabus has zero rows.
+   * Derived purely from the data, per template, never a global/hardcoded
+   * value, so a track whose syllabus is still in range (e.g. UNCP) reports
+   * the same number as `weekNumber`.
+   *
+   * This is a SEPARATE field from `weekNumber` on purpose — `weekNumber`
+   * keeps meaning exactly what the doc comment above and the `exams` schema
+   * say it means ("a frozen snapshot of `computeCurrentWeek()` at
+   * generation time", i.e. the CALENDAR week), because that is the
+   * provenance contract a future `POST /exams` caller relies on.
+   * `effectiveWeekNumber` is what the UI should show/say the exam covers:
+   * "hasta la semana N, la última con temario cargado" — the calendar week
+   * nobody taught yet (week 23 in the P0 example) is not a fact worth
+   * reporting to the teacher, but it must still be the number that gets
+   * persisted as `exams.weekNumber` if this exam is created.
+   */
+  readonly effectiveWeekNumber: number | null;
 }
 
 function requireTenant(user: AuthTokenPayload): string {
@@ -190,6 +220,7 @@ function requireTenant(user: AuthTokenPayload): string {
   }
   return user.tenantId;
 }
+
 
 /**
  * Orchestrates exam creation, automatic question selection, row-scoped
@@ -563,7 +594,7 @@ export class ExamsService {
     }
 
     if (examType.courseScope === "none") {
-      return { blueprint: [], weekNumber: null, templateId: null };
+      return { blueprint: [], weekNumber: null, templateId: null, usedCumulativeFallback: false, effectiveWeekNumber: null };
     }
 
     const template = await this.repository.findCurrentTemplate(input.universityId, input.trackId, input.tenantId);
@@ -615,7 +646,7 @@ export class ExamsService {
       }
     }
 
-    const blueprint = resolveBlueprint({
+    const { rows: blueprint, usedCumulativeFallback } = resolveBlueprint({
       courseScope: examType.courseScope as CourseScope,
       weekScope: examType.weekScope as WeekScope,
       templateRows,
@@ -625,6 +656,44 @@ export class ExamsService {
       totalQuestionsOverride: input.totalQuestionsOverride,
     });
 
-    return { blueprint, weekNumber, templateId: template.id };
+    // A week-scoped type (`fastest`/`eta_by_week`) resolving to ZERO rows is
+    // never a legitimate "empty exam" — it means this template/cycle has no
+    // usable syllabus for the courses in scope (nothing loaded at all, or a
+    // course with no syllabus whatsoever). `current_only` already widens to
+    // cumulative when possible (see `resolveBlueprint()`); if it's STILL
+    // empty after that, there is genuinely nothing to build from. Say so
+    // loudly instead of returning a silent 200 with `blueprint: []` — the P0
+    // bug this fixes (docs/audit-2026-08-14.md) was exactly this: a 200 that
+    // looked like success and left the grid at 0/1,656 cells with no
+    // explanation.
+    //
+    // Guarded by `inScopeRows.length > 0`: for `courseScope: 'selected'`
+    // (fastest), the exam-builder auto-fires this call the moment a
+    // track/university completes (`onTrackChange()`) — BEFORE the user has
+    // ticked any course checkbox. `inScopeRows` is legitimately `[]` then
+    // (nothing to filter courses against yet), and an empty blueprint is the
+    // correct, harmless answer, not an error — caught this via the live app,
+    // not the test suite (docs/audit-2026-08-14.md verification note).
+    if (examType.weekScope !== "none" && inScopeRows.length > 0 && blueprint.length === 0) {
+      throw new BadRequestException(
+        `No hay temario cargado para la semana ${weekNumber} de este ciclo — no se puede generar el examen. Carga el temario o elige otro tipo de examen.`,
+      );
+    }
+
+    // Refinement on top of the P0 fix (docs/audit-2026-08-14.md, same item):
+    // `weekNumber` is the calendar week, which can run past the last week
+    // anyone actually taught (the P0 example: week 23 with syllabus stopping
+    // at 20). `effectiveWeekNumber` is derived purely from `syllabus` — the
+    // same array already fetched above for this exact template — never a
+    // second query and never a global constant, so it's naturally scoped per
+    // (university, track) and leaves an in-range track (UNCP) untouched.
+    const syllabusWeeks = syllabus.map((entry) => entry.weekNumber);
+    const maxSyllabusWeek = syllabusWeeks.length > 0 ? Math.max(...syllabusWeeks) : null;
+    const effectiveWeekNumber =
+      examType.weekScope === "none" || maxSyllabusWeek === null
+        ? null
+        : Math.min(weekNumber ?? maxSyllabusWeek, maxSyllabusWeek);
+
+    return { blueprint, weekNumber, templateId: template.id, usedCumulativeFallback, effectiveWeekNumber };
   }
 }

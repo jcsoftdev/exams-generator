@@ -592,6 +592,44 @@ describe("ExamsRepository", () => {
       expect(detail?.questions[0]!.imageAssetId).toBeTruthy();
     });
 
+    /**
+     * Audit 2026-08-15: la pantalla de revisión pintaba `courseId`/`topicId`
+     * crudos porque el detalle solo devolvía ids — el docente veía
+     * "22131249-54e3-… · 7c389685-23d9-…" y tenía que decidir si cambiar esa
+     * pregunta. La consulta ya joinea `topics`; faltaban los nombres.
+     */
+    it("returns the course and topic NAMES alongside their ids", async () => {
+      const { courseId: freshCourseId, topicId: freshTopicId } = await createCourseAndTopic();
+      const questionId = await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        topicId: freshTopicId,
+      });
+
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Named detail exam",
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId: freshCourseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+      const [row] = await repository.getBlueprintRows(examId);
+      await repository.saveSelection(examId, [{ blueprintRowId: row!.id, questionId }]);
+
+      const [course] = await db.select().from(courses).where(eq(courses.id, freshCourseId));
+      const [topic] = await db.select().from(topics).where(eq(topics.id, freshTopicId));
+
+      const detail = await repository.getExamDetail(examId, tenantAId);
+
+      expect(detail?.questions[0]).toMatchObject({
+        courseId: freshCourseId,
+        courseName: course!.name,
+        topicId: freshTopicId,
+        topicName: topic!.name,
+      });
+    });
+
     it("returns bodyTypst/alternatives/figureCode (and a null imageAssetId) for a type='structured' selected question", async () => {
       const structuredId = await createStructuredQuestion({
         tenantId: tenantAId,
@@ -779,6 +817,103 @@ describe("ExamsRepository", () => {
       expect(remainingJobs).toHaveLength(0);
       const remainingExams = await db.select().from(exams).where(eq(exams.id, examId));
       expect(remainingExams).toHaveLength(0);
+    });
+  });
+
+  /**
+   * `listExams()` (S1) had NO test coverage, and shipped with both count
+   * columns silently returning 0 for every row: drizzle renders a bare
+   * `${table.column}` inside a `sql` template UNQUALIFIED, so the correlated
+   * predicate compiled to `where "exam_id" = "id"` — both resolved against
+   * the SUBQUERY's own table (`exam_questions` has an `id` column too), never
+   * against the outer `exams` row. The list screen therefore showed
+   * "0 preguntas · 0 formas" for exams that had questions and downloadable
+   * PDFs (audit 2026-08-15, hallazgo #1). These tests pin the counts to real
+   * rows so a future refactor can't quietly decorrelate them again.
+   */
+  describe("listExams() — S1 list row counts", () => {
+    async function createListedExam(params: { title: string; questionCount: number; versionCount: number }) {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: params.title,
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: params.questionCount }],
+      });
+      createdExamIds.push(examId);
+
+      const [blueprintRow] = await repository.getBlueprintRows(examId);
+      const questionIds: string[] = [];
+      for (let i = 0; i < params.questionCount; i += 1) {
+        questionIds.push(await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId }));
+      }
+      await repository.saveSelection(
+        examId,
+        questionIds.map((questionId) => ({ blueprintRowId: blueprintRow!.id, questionId })),
+      );
+
+      for (let i = 0; i < params.versionCount; i += 1) {
+        const code = String.fromCharCode(65 + i);
+        const pdfAsset = await repository.createAsset(
+          tenantAId,
+          `exams/${examId}/versions/${code}/exam.pdf`,
+          "application/pdf",
+        );
+        const answerAsset = await repository.createAsset(
+          tenantAId,
+          `exams/${examId}/versions/${code}/answer-key.pdf`,
+          "application/pdf",
+        );
+        await repository.saveVersion(examId, {
+          code,
+          questionOrder: questionIds,
+          answerKey: { 0: "a" },
+          pdfAssetId: pdfAsset.id,
+          answerSheetAssetId: answerAsset.id,
+        });
+      }
+
+      return examId;
+    }
+
+    it("reports each row's real questionCount and versionCount", async () => {
+      const examId = await createListedExam({ title: `List counts exam ${randomUUID()}`, questionCount: 3, versionCount: 2 });
+
+      const { items } = await repository.listExams(tenantAId, { page: 1, pageSize: 50 });
+      const row = items.find((item) => item.id === examId);
+
+      expect(row).toBeDefined();
+      expect(row!.questionCount).toBe(3);
+      expect(row!.versionCount).toBe(2);
+    });
+
+    it("reports 0/0 for an exam with no selection and no versions (the counts are real, not a constant)", async () => {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: `List counts empty exam ${randomUUID()}`,
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+
+      const { items } = await repository.listExams(tenantAId, { page: 1, pageSize: 50 });
+      const row = items.find((item) => item.id === examId);
+
+      expect(row!.questionCount).toBe(0);
+      expect(row!.versionCount).toBe(0);
+    });
+
+    it("counts per row — two exams in the same page never share each other's counts", async () => {
+      const bigId = await createListedExam({ title: `List counts big ${randomUUID()}`, questionCount: 4, versionCount: 1 });
+      const smallId = await createListedExam({ title: `List counts small ${randomUUID()}`, questionCount: 1, versionCount: 3 });
+
+      const { items } = await repository.listExams(tenantAId, { page: 1, pageSize: 50 });
+
+      const big = items.find((item) => item.id === bigId)!;
+      const small = items.find((item) => item.id === smallId)!;
+      expect([big.questionCount, big.versionCount]).toEqual([4, 1]);
+      expect([small.questionCount, small.versionCount]).toEqual([1, 3]);
     });
   });
 

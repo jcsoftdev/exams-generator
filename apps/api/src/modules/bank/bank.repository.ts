@@ -8,6 +8,7 @@ import { hashBodyTypst } from "./domain/hash-body-typst";
 import {
   BankRepositoryPort,
   BankStatusDifficultyCount,
+  BankTopicQuestionCount,
   CreateImageQuestionRecord,
   CreateStructuredQuestionRecord,
   QuestionListFilter,
@@ -16,12 +17,53 @@ import {
   UpdateStructuredQuestionRecord,
 } from "./domain/ports/bank-repository.port";
 
+/**
+ * The WHERE clause shared by `listQuestions` and `countByCourseAndTopic`.
+ * Extracted so the two can never drift: the tree's per-topic counts and the
+ * per-topic question fetch that fills them in MUST see the same rows (see
+ * `countByCourseAndTopic`'s doc).
+ *
+ * Visibility rule (design doc §3, MUST release gate): every query filters
+ * `tenant_id IS NULL OR tenant_id = :current` — a tenant NEVER sees another
+ * tenant's private questions. `currentTenantId: null` (platform staff)
+ * resolves to `tenant_id IS NULL` only, since there is no "current tenant"
+ * whose private rows staff should see by default.
+ *
+ * Assumes the caller joins `topics` (the `courseId` filter reads
+ * `topics.course_id` — `questions` has no course column).
+ */
+function buildQuestionListConditions(filter: QuestionListFilter): SQL[] {
+  const visibility: SQL = filter.currentTenantId
+    ? (or(isNull(questions.tenantId), eq(questions.tenantId, filter.currentTenantId)) as SQL)
+    : (isNull(questions.tenantId) as SQL);
+
+  const conditions: SQL[] = [visibility];
+  if (filter.courseId) {
+    conditions.push(eq(topics.courseId, filter.courseId) as SQL);
+  }
+  if (filter.topicId) {
+    conditions.push(eq(questions.topicId, filter.topicId) as SQL);
+  }
+  if (filter.difficulty) {
+    conditions.push(eq(questions.difficulty, filter.difficulty) as SQL);
+  }
+  if (filter.gradeLevel) {
+    conditions.push(eq(questions.gradeLevel, filter.gradeLevel) as SQL);
+  }
+  if (filter.status) {
+    conditions.push(eq(questions.status, filter.status) as SQL);
+  }
+
+  return conditions;
+}
+
 // Data-contract types moved to `domain/ports/bank-repository.port.ts` (owned
 // by the domain, not the adapter). Re-exported here so existing
 // `import { XRecord } from "./bank.repository"` sites keep resolving.
 export type {
   BankRepositoryPort,
   BankStatusDifficultyCount,
+  BankTopicQuestionCount,
   CreateImageQuestionRecord,
   CreateStructuredQuestionRecord,
   QuestionListFilter,
@@ -143,11 +185,9 @@ export class BankRepository implements BankRepositoryPort {
   }
 
   /**
-   * Visibility rule (design doc §3, MUST release gate): every query filters
-   * `tenant_id IS NULL OR tenant_id = :current` — a tenant NEVER sees
-   * another tenant's private questions. `currentTenantId: null` (platform
-   * staff) resolves to `tenant_id IS NULL` only, since there is no "current
-   * tenant" whose private rows staff should see by default.
+   * Visibility + filter rules live in `buildQuestionListConditions` (shared
+   * with `countByCourseAndTopic`) — see its doc for the tenant-isolation
+   * release gate.
    *
    * S6: `pagination` is opt-in and retro-compat is load-bearing — omitting it
    * returns the SAME flat array shape this always returned (existing web
@@ -165,28 +205,7 @@ export class BankRepository implements BankRepositoryPort {
     filter: QuestionListFilter,
     pagination?: QuestionListPagination,
   ): Promise<QuestionListItem[] | { items: QuestionListItem[]; total: number }> {
-    const visibility: SQL = filter.currentTenantId
-      ? (or(isNull(questions.tenantId), eq(questions.tenantId, filter.currentTenantId)) as SQL)
-      : (isNull(questions.tenantId) as SQL);
-
-    const conditions: SQL[] = [visibility];
-    if (filter.courseId) {
-      conditions.push(eq(topics.courseId, filter.courseId) as SQL);
-    }
-    if (filter.topicId) {
-      conditions.push(eq(questions.topicId, filter.topicId) as SQL);
-    }
-    if (filter.difficulty) {
-      conditions.push(eq(questions.difficulty, filter.difficulty) as SQL);
-    }
-    if (filter.gradeLevel) {
-      conditions.push(eq(questions.gradeLevel, filter.gradeLevel) as SQL);
-    }
-    if (filter.status) {
-      conditions.push(eq(questions.status, filter.status) as SQL);
-    }
-
-    const where = and(...conditions);
+    const where = and(...buildQuestionListConditions(filter));
     const selection = {
       id: questions.id,
       tenantId: questions.tenantId,
@@ -239,6 +258,34 @@ export class BankRepository implements BankRepositoryPort {
       .offset((pagination.page - 1) * pagination.pageSize);
 
     return { items, total };
+  }
+
+  /**
+   * Per-topic totals for the web bank tree's lazy skeleton
+   * (`GET /bank/questions/summary`). Same `innerJoin(topics)` and the SAME
+   * condition set `listQuestions` builds (shared via
+   * `buildQuestionListConditions`) — that's not cosmetic reuse, it's the
+   * invariant the UI leans on: a bucket's `total` must equal the row count
+   * `listQuestions({...filter, topicId})` would return, or the tree would
+   * show a count that the topic's own fetch never fills.
+   *
+   * `groupBy(topics.courseId, questions.topicId)` instead of pulling every
+   * row and counting client-side: this is the query that replaced shipping
+   * 64k question rows to the browser on every `/app/bank` load.
+   */
+  async countByCourseAndTopic(filter: QuestionListFilter): Promise<BankTopicQuestionCount[]> {
+    const rows = await this.db
+      .select({ courseId: topics.courseId, topicId: questions.topicId, total: count() })
+      .from(questions)
+      .innerJoin(topics, eq(questions.topicId, topics.id))
+      .where(and(...buildQuestionListConditions(filter)))
+      .groupBy(topics.courseId, questions.topicId);
+
+    return rows.map((row) => ({
+      courseId: row.courseId,
+      topicId: row.topicId,
+      total: Number(row.total),
+    }));
   }
 
   /**
