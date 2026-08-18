@@ -79,14 +79,46 @@ Endpoints que la web pide desde esas pantallas, con token de profesor:
       un `GET /users/me` nuevo, o meter el nombre en el token/respuesta de login — decisión de
       diseño, no un cambio de template. Queda escrito, sin implementar.
 
+## Hallazgo de la pasada visual
+
+- [ ] **"Mis exámenes" no son sus exámenes.** El nav y el `h1` dicen **"Mis exámenes"**, y la
+      lista trae **todos los exámenes del colegio**: `listExams()` filtra por `tenantId`, nunca
+      por `createdBy` (`apps/api/src/modules/exams/exams.repository.ts:247-252`), aunque la
+      columna `created_by` existe (`exams.schema.ts:39`). Medido: el profesor recién creado, que
+      no ha armado nada, abre el panel y ve **10 exámenes** que hizo el administrador — y el
+      controller es `@Roles(Teacher, SchoolAdmin)` a nivel de clase, así que además puede
+      renombrarlos, duplicarlos y **borrarlos**.
+
+      La propia app ya se contradice: el `<title>` de esa ruta dice **"Exámenes"**, el `h1` dice
+      **"Mis exámenes"**.
+
+      **No se tocó: es una decisión de producto, no un bug de una línea.** Hay dos lecturas y
+      dan trabajo distinto:
+      1. Los exámenes son del **colegio** (espacio compartido) → lo que miente es la etiqueta;
+         se renombra a "Exámenes" en el nav, el `h1` y los 3 specs de `shell.component.spec.ts`
+         que hoy fijan el string.
+      2. Los exámenes son **personales** → lo que miente es la consulta; hay que filtrar por
+         `createdBy`, decidir qué ve el `school_admin` (¿todo el colegio?) y qué pasa con los
+         exámenes ya creados.
+
+      Queda para que lo decidas.
+
 ---
 
 ## Pendiente de esta auditoría
 
-- [ ] **Pasada visual en vivo con el rol** (sidebar, panel, banco, armado de examen) — la
-      auditoría fue por API y por código. El navegador de Playwright estaba tomado por otra
-      sesión al correr esto, así que la mitad visual no se ejercitó. Queda un usuario de QA
-      sembrado en la base local para hacerla: `profe.qa@colegio-demo.test`.
+- [x] **Pasada visual en vivo con el rol** — hecha el 2026-08-18 con Playwright headless sobre
+      la app corriendo (1440×900), login real como `profe.qa@colegio-demo.test`. Resultado:
+      - El fix del nombre del colegio se ve: topbar dice **"Colegio Demo"** en las 6 pantallas
+        del rol (el fallback "GeneraExamen" solo aparece <300 ms mientras resuelve la fetch,
+        igual que para `school_admin`).
+      - Sidebar del profesor: Panel · Banco de preguntas · Mis exámenes · Generar con IA ·
+        Cola de revisión · Historial IA. Sin grupo Colegio ni Administración.
+      - `/app/settings` y `/app/admin/tenants` tecleadas a mano → **`/forbidden`** con
+        "No tienes acceso a esta página". El guard no depende del nav.
+      - **Cero errores de consola y cero requests ≥400** en todo el recorrido.
+      - Panel, banco, armado de examen, generar con IA, cola de revisión e historial cargan y
+        renderizan datos reales.
 
 ---
 
