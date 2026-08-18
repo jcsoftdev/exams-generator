@@ -60,8 +60,16 @@ export class TenantsController {
     return this.tenantsService.findAll(clamped.page, clamped.pageSize);
   }
 
+  /**
+   * Readable by every role that belongs to the tenant, `teacher` included —
+   * the app shell shows the school name as the topbar title for ANY signed-in
+   * user, so denying a teacher here made them see the product name instead of
+   * their own school (the shell swallows the error). `TenantGuard` still pins
+   * the row to the caller's own tenant, and the row carries nothing private
+   * (name, slug, city, logo, active). Writing stays admin-only below.
+   */
   @Get(":id")
-  @Roles(Role.PlatformAdmin, Role.SchoolAdmin)
+  @Roles(Role.PlatformAdmin, Role.SchoolAdmin, Role.Teacher)
   findOne(@Param("id") id: string) {
     return this.tenantsService.findById(id);
   }

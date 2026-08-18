@@ -22,6 +22,7 @@ describe("Tenants (e2e)", () => {
   let platformAdmin: UserFixture;
   let schoolAdminA: UserFixture;
   let schoolAdminB: UserFixture;
+  let teacherA: UserFixture;
   const createdTenantIds: string[] = [];
 
   beforeAll(async () => {
@@ -39,6 +40,7 @@ describe("Tenants (e2e)", () => {
     platformAdmin = await createUserFixture({ role: Role.PlatformAdmin, tenantId: null });
     schoolAdminA = await createUserFixture({ role: Role.SchoolAdmin, tenantId: tenantA.id });
     schoolAdminB = await createUserFixture({ role: Role.SchoolAdmin, tenantId: tenantB.id });
+    teacherA = await createUserFixture({ role: Role.Teacher, tenantId: tenantA.id });
   });
 
   afterAll(async () => {
@@ -48,6 +50,7 @@ describe("Tenants (e2e)", () => {
     await deleteUserFixture(platformAdmin.id);
     await deleteUserFixture(schoolAdminA.id);
     await deleteUserFixture(schoolAdminB.id);
+    await deleteUserFixture(teacherA.id);
     await deleteTenantFixture(tenantA.id);
     await deleteTenantFixture(tenantB.id);
     await app.close();
@@ -137,6 +140,29 @@ describe("Tenants (e2e)", () => {
       expect(res.status).toBe(403);
     });
 
+    // The app shell reads the school name for EVERY signed-in role (it is the
+    // topbar title). A teacher denied here does not see an error — the shell
+    // swallows it and falls back to the product name, so the teacher is told
+    // they are in "GeneraExamen" instead of their own school.
+    it("allows teacher to read their own tenant", async () => {
+      const token = await loginAs(teacherA);
+      const res = await request(app.getHttpServer())
+        .get(`/tenants/${tenantA.id}`)
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect(res.body.id).toBe(tenantA.id);
+    });
+
+    it("forbids teacher from reading another tenant", async () => {
+      const token = await loginAs(teacherA);
+      const res = await request(app.getHttpServer())
+        .get(`/tenants/${tenantB.id}`)
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(403);
+    });
+
     it("allows platform_admin (global) to read any tenant", async () => {
       const token = await loginAs(platformAdmin);
       const res = await request(app.getHttpServer())
@@ -158,6 +184,17 @@ describe("Tenants (e2e)", () => {
 
       expect(res.status).toBe(200);
       expect(res.body.name).toBe("Renamed by owner");
+    });
+
+    // Reading the school name is not permission to rename the school.
+    it("forbids teacher from updating their own tenant", async () => {
+      const token = await loginAs(teacherA);
+      const res = await request(app.getHttpServer())
+        .patch(`/tenants/${tenantA.id}`)
+        .set("Authorization", `Bearer ${token}`)
+        .send({ name: "Renamed by a teacher" });
+
+      expect(res.status).toBe(403);
     });
 
     it("forbids school_admin from updating another tenant", async () => {
