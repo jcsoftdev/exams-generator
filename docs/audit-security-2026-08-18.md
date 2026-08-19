@@ -157,9 +157,9 @@ magic-bytes en el upload, rechazan con 400 lo que no es PNG/JPEG/WEBP real, y gu
 en el read. Fixtures de test movidas a `src/test-support/image-fixtures.ts` (bytes con firma
 real). e2e: bank + alternative-images + replace-image + tenants con tests de rechazo 400.
 
-**Pendiente menor (Cost, no XSS):** `POST /ai/questions/extract` no valida contenido antes de
-mandar el buffer al modelo de visión — un no-imagen de 5MB gasta tokens de OpenRouter en vano.
-No persiste, así que no es vector XSS. Cablear `requireImageMime` ahí es la misma línea.
+`POST /ai/questions/extract` también valida ahora: `requireImageMime` sniffea antes de la
+llamada al modelo de visión, así un no-imagen (o un HTML de 5MB) se rechaza con 400 sin gastar
+tokens de OpenRouter. No persiste (no es vector XSS), pero el ahorro de costo lo justifica.
 
 ## No auditado todavía
 

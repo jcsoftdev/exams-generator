@@ -5,6 +5,7 @@ import { Test } from "@nestjs/testing";
 import { inArray } from "drizzle-orm";
 import request from "supertest";
 import { AppModule } from "../../app.module";
+import { fakePng } from "../../test-support/image-fixtures";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { tenants, users } from "../../db/schema";
@@ -78,7 +79,7 @@ describe("POST /ai/questions/extract (e2e)", () => {
 
   it("returns a validated, UNSAVED draft with correctAnswer converted from the generator's LETTER to an INDEX", async () => {
     const response = await extractRequest()
-      .attach("file", Buffer.from("fake-png-bytes"), { filename: "q.png", contentType: "image/png" })
+      .attach("file", fakePng(), { filename: "q.png", contentType: "image/png" })
       .expect(200);
 
     expect(response.body.bodyTypst).toBe("¿Cuánto es $2 + 2$? (extraída de imagen)");
@@ -91,10 +92,19 @@ describe("POST /ai/questions/extract (e2e)", () => {
     await extractRequest().expect(400);
   });
 
+  it("rejects with 400 a non-image file (spoofed content-type) before any vision call", async () => {
+    await extractRequest()
+      .attach("file", Buffer.from("<svg><script>alert(1)</script></svg>"), {
+        filename: "q.png",
+        contentType: "image/png",
+      })
+      .expect(400);
+  });
+
   it("rejects with 401 when no Authorization header is sent", async () => {
     await request(app.getHttpServer())
       .post("/ai/questions/extract")
-      .attach("file", Buffer.from("fake-png-bytes"), { filename: "q.png", contentType: "image/png" })
+      .attach("file", fakePng(), { filename: "q.png", contentType: "image/png" })
       .expect(401);
   });
 });

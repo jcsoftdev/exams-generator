@@ -1,4 +1,5 @@
 import { Inject, Injectable, UnprocessableEntityException } from "@nestjs/common";
+import { requireImageMime } from "../assets/image-mime";
 import { validateStructuredContent } from "../bank/domain/validate-structured-content";
 import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
@@ -30,9 +31,14 @@ export class ExtractQuestionService {
   constructor(@Inject(QUESTION_GENERATOR_PORT) private readonly generator: QuestionGeneratorPort) {}
 
   async extract(file: ExtractQuestionFile): Promise<GeneratedQuestion> {
+    // Sniff before spending a vision-model call: `file.mimetype` is the
+    // client's header, so a non-image (or a 5MB HTML blob) would otherwise be
+    // shipped to OpenRouter and billed for nothing. Use the sniffed mime, not
+    // the claimed one.
+    const mimeType = requireImageMime(file);
     const extracted = await this.generator.extractFromImage({
       image: file.buffer,
-      mimeType: file.mimetype,
+      mimeType,
     });
 
     // The generator returns a LETTER; convert to the 0-based INDEX bank

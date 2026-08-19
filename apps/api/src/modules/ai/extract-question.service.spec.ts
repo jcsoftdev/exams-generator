@@ -1,6 +1,7 @@
-import { UnprocessableEntityException } from "@nestjs/common";
+import { BadRequestException, UnprocessableEntityException } from "@nestjs/common";
 import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import { ExtractQuestionService } from "./extract-question.service";
+import { fakePng } from "../../test-support/image-fixtures";
 
 const EXTRACTED_QUESTION: GeneratedQuestion = {
   bodyTypst: "¿Cuánto es $2 + 2$?",
@@ -23,7 +24,7 @@ function buildDeps() {
 describe("ExtractQuestionService.extract", () => {
   it("returns the generator's validated, UNSAVED output with correctAnswer converted to an INDEX", async () => {
     const { service, generator } = buildDeps();
-    const file = { buffer: Buffer.from("fake-png-bytes"), mimetype: "image/png" };
+    const file = { buffer: fakePng(), mimetype: "image/png" };
 
     const result = await service.extract(file);
 
@@ -42,7 +43,7 @@ describe("ExtractQuestionService.extract", () => {
       alternatives: ["1", "2", "3", "4", "5"],
       correctAnswer: "b",
     });
-    const file = { buffer: Buffer.from("fake-png-bytes"), mimetype: "image/png" };
+    const file = { buffer: fakePng(), mimetype: "image/png" };
 
     const result = await service.extract(file);
 
@@ -57,8 +58,16 @@ describe("ExtractQuestionService.extract", () => {
       alternatives: ["4"] as unknown as GeneratedQuestion["alternatives"],
       correctAnswer: "a",
     });
-    const file = { buffer: Buffer.from("fake-png-bytes"), mimetype: "image/png" };
+    const file = { buffer: fakePng(), mimetype: "image/png" };
 
     await expect(service.extract(file)).rejects.toBeInstanceOf(UnprocessableEntityException);
+  });
+
+  it("rejects a non-image buffer with 400 WITHOUT spending a vision call", async () => {
+    const { service, generator } = buildDeps();
+    const file = { buffer: Buffer.from("<svg><script/></svg>"), mimetype: "image/png" };
+
+    await expect(service.extract(file)).rejects.toBeInstanceOf(BadRequestException);
+    expect(generator.extractFromImage).not.toHaveBeenCalled();
   });
 });
