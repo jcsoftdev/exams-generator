@@ -1,0 +1,84 @@
+# Auditoría de seguridad y privacidad (2026-08-18)
+
+Primera pasada sobre el módulo que nunca se corrió (el propio audit de producto lo advirtió:
+"que no reporte hallazgos NO significa que no los haya"). App multi-tenant con datos de
+menores. Todo lo de abajo está verificado contra la app corriendo o el código, no deducido.
+
+## 🔴 P0 — Secreto JWT forjable (ARREGLADO, `5ec9375`)
+
+`resolveJwtSecret()` caía a `"change-me-in-every-environment"` si `JWT_SECRET` no estaba, y ese
+default está en el repo público (`env.example`). **Reproducido**: firmé un token
+`platform_admin` con el default y `GET /tenants` respondió 200 — la lista de todos los
+colegios. El compose de prod guarda el valor con `${JWT_SECRET:?...}`, pero eso solo cubre el
+arranque por compose; un `node dist/main` suelto lo saltea. **Fix**: en producción un secreto
+ausente/débil/corto aborta el arranque en vez de firmar.
+
+## 🟠 P1 — id malformado → 500 (ARREGLADO, `78694d9`)
+
+`GET /exams/not-a-uuid` daba 500 (Postgres rechazando el cast a `uuid`); un UUID inexistente da
+404. No es SQLi (drizzle parametriza). `ParseUUIDPipe` en los 29 params uuid → 400 en el borde.
+
+## 🟡 HALLAZGO ABIERTO — Desactivar un usuario no corta su token vigente (decisión pendiente)
+
+**Verificado**: `JwtAuthGuard` solo valida firma + expiración; nunca consulta `active` en la DB.
+El login SÍ bloquea a un desactivado (`auth.service.ts:36`), así que un desactivado no obtiene
+un token NUEVO — pero el token que ya tenía sigue sirviendo hasta expirar (**TTL = 24h**, sin
+revocación).
+
+**Impacto**: moderado. Un docente despedido o una cuenta comprometida conserva acceso completo
+a SU tenant hasta 24h. Acotado por: login ya bloqueado, scope de tenant, y que requiere tener
+un token vigente en el momento de la desactivación.
+
+**Por qué no se arregló en esta pasada** (se intentó y se revirtió, a conciencia):
+El fix natural — que el guard revalide `active` en cada request — es un lookup por PK sub-ms,
+PERO:
+1. Es un cambio en el hot-path de CADA request autenticado (latencia + una dependencia de DB
+   nueva en el guard, que hoy es stateless a propósito).
+2. Al aplicarlo, 11 tests e2e rompieron: unos porque firmaban tokens de usuarios que nunca
+   insertan (`taxonomy.e2e` usa `sub: randomUUID()`) — justo el agujero que el fix cierra — y
+   otros (`bank.e2e`) que **pasan aislados pero fallan bajo `--maxWorkers=4`**: el lookup
+   por-request interactúa mal con el paralelismo recién habilitado.
+3. Arregla un hallazgo moderado, no un P0.
+
+Es una decisión de arquitectura con costo por request — **del dueño del producto, no del
+auditor**. Opciones, de menor a mayor cambio:
+- **Bajar el TTL** (24h → p.ej. 1h): acota la ventana sin tocar el hot-path. Cambio de una
+  constante (`token.service.ts` `TOKEN_TTL`). Trade: los docentes re-loguean más seguido.
+- **Guard revalida `active`** con un cache de TTL corto (p.ej. 60s en memoria/Redis): revocación
+  casi-inmediata sin un DB hit por request. Más código, requiere sembrar usuarios reales en los
+  ~11 e2e que hoy toman atajos.
+- **Lista de revocación / versión de token**: revocación exacta, el cambio más grande.
+
+Recomendación: bajar el TTL ya (barato, sin riesgo) y evaluar el cache si se quiere corte
+inmediato.
+
+## 🟡 HALLAZGO ABIERTO — Password temporal sin cambio obligatorio
+
+`resetPassword` (admin-only, tenant-scoped) genera una temporal fuerte (`randomBytes(9)`,
+72 bits) y la devuelve al admin. **Pero no hay flag de "cambiar en el próximo login"**: el
+docente puede quedarse con la temporal indefinidamente. `users.schema.ts` no tiene
+`must_change_password` ni `password_changed_at`. Fix: columna + chequeo en login que fuerce el
+cambio. Producto decide si vale la fricción.
+
+## ✅ Verificado y sano
+
+- **Aislamiento cross-tenant**: 54 e2e (`2988c76`), cada endpoint con id incluidos assets
+  (PDFs, hojas de claves), con control positivo. Verde.
+- **Fuerza bruta al login**: `@Throttle` 5/min, corta con 429 al 6º intento (medido).
+- **CORS**: regex anclado, dots escapados; `evil.com` y `evilcreaexamen.com` NO reciben ACAO,
+  un subdominio de tenant legítimo sí (medido). `credentials: false` (Bearer header, sin
+  cookies → sin CSRF).
+- **Helmet/HSTS/CSP/X-Content-Type-Options**: presentes en respuestas reales.
+- **Passwords en reposo**: bcrypt, 10 rounds, salt automático. El `passwordHash` nunca sale del
+  repositorio (se selecciona explícito para comparar, el DTO de usuario lo descarta).
+- **Passwords en logs**: pino no loguea body; `authorization` redactado. Verificado en un log
+  de login real: sin fuga.
+- **Errores 500**: `AllExceptionsFilter` devuelve `"Internal server error"` genérico, nunca el
+  stack (verificado con un body de 5.3mb y un cast de uuid fallido).
+
+## No auditado todavía
+
+- Retención de datos / borrado de PII de menores (¿qué pasa con las preguntas y exámenes de un
+  tenant borrado? ¿hay derecho al olvido?).
+- Rate-limiting de los endpoints de IA (costo — se cruza con el módulo Cost).
+- Contenido de los assets subidos (¿se valida que un "png" sea un png? ¿tamaño?).
