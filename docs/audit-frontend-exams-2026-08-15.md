@@ -512,3 +512,69 @@ la lista mostrando `Simulacro UNCP Área II — marzo · 80 preguntas · 3 forma
 
 Todo verificado además en la app corriendo con Playwright, no solo en tests — cada ítem `[x]`
 dice qué se comprobó en pantalla.
+
+---
+
+## Segunda pasada — plantillas y autocompletado (2026-08-18)
+
+Re-auditoría con Playwright pedida explícitamente: verificar que **las plantillas estén
+bien**, que el **autocompletado sea automático e inteligente**, y que **generar sea de simples
+clicks**. Cada plantilla se contrastó contra `exam_blueprint_templates` en la DB, no contra lo
+que la UI dice de sí misma.
+
+### Lo que estaba bien
+
+- **Resolución de plantilla, exacta.** UNCP Área II: las 16 filas de la DB caen en 11 filas de
+  UI (una por curso, 3 celdas) y suman 80 preguntas. El mapeo de NIVEL es correcto y
+  consistente: `P.B.→Fácil`, `P.I.→Media`, `P.A.→Difícil`. Aritmética `P.I.=2 / P.A.=6` sale
+  como `M:2 D:6`; RM `6/6/7`; Comunicación `M:5`.
+- **Autocarga real en 3 de los 4 flujos**: 6 clicks (tipo → universidad → área) dejan 80
+  preguntas puestas, sin tocar ningún botón.
+- **El aviso "inteligente" funciona.** Hoy es semana 15 del ciclo UNCP y el temario cargado
+  llega hasta la 13; la app lo detecta y lo dice con la semana exacta ("cubre hasta la semana
+  13… modo acumulativo"). Coincide con `max(week_number)` de la DB.
+- **Stock suficiente**: 16 de 16 celdas satisfacibles, botón habilitado, cero faltantes.
+
+### 🔴 P0 — Las plantillas se sumaban entre sí (arreglado, `ef9dff6`)
+
+Cargar UNCP Área II (80) y luego cambiar a UNI dando su total requerido de 100 dejaba
+**153 preguntas en 26 celdas**: las dos plantillas superpuestas. `setRequested` sobreescribe
+por celda, así que solo colapsaban las compartidas — de ahí 153 y no 180. Aritmética quedaba
+`M:8 D:6`: el 8 de UNI, el 6 de UNCP. El examen no correspondía a ninguna universidad, el
+botón de generar seguía habilitado, y nada lo advertía.
+
+Peor aún, un 404 (elegir un ciclo sin plantilla) dejaba las 80 preguntas de la universidad
+anterior listas para generar, debajo del mensaje de error.
+
+**Regla del fix**: el pedido pertenece a la selección actual de plantilla. Se limpia al cambiar
+tipo/universidad/ciclo **y** cuando el resolve falla.
+
+### 🟠 P1 — El autocompletado se cortaba justo donde más se necesita (arreglado, `ef9dff6`)
+
+UNI no publica preguntas por curso, así que la API responde 400 pidiendo el total. El docente
+lo escribía… y no pasaba nada: el campo solo guardaba el valor. Tenía que descubrir "Cargar
+plantilla", un botón que en los otros tres flujos nunca hace falta. Ahora re-resuelve solo
+(debounce 600 ms, porque el número se escribe dígito a dígito).
+
+### 🟡 P2 — Ruido del formulario (arreglado, `e2286f6`)
+
+- El botón decía "Cargar plantilla" para siempre pese a que todo autocarga. Ahora dice en qué
+  estado está: `Cargar plantilla` → `Volver a cargar` → `Reintentar`.
+- El selector de cursos de "Rápido" eran 42 checkboxes sin buscador, sin agrupar y sin "todos".
+  Ahora tiene filtro (en memoria, insensible a tildes: "quimica" encuentra "Química"),
+  `Todos`/`Ninguno`, contador "N de M elegidos" y alto máximo.
+
+### 🟡 Higiene de datos — basura de tests en el catálogo del docente
+
+19 de 60 cursos eran artefactos de suites e2e (`E2E Alt Images Course d13007ff-…`), visibles en
+el selector. **No es un bug del script**: `db:purge-test-taxonomy` los barre bien, pero solo
+corre al final de `pnpm test`, y correr `jest` directo (lo normal al iterar) lo saltea.
+Corrido a mano: 17 barridos, catálogo 60 → 43, cursos reales del stage 42 → 25.
+Los 2 restantes están protegidos por el guard de uso real (tienen exámenes e2e apuntándolos);
+el guard hace bien en ser conservador — no puede distinguir un examen de prueba de uno real.
+
+### Método
+
+El P0 no lo encuentra ninguna suite: cada flujo por separado funciona, y los tests montan el
+componente de cero. Solo aparece al **encadenar** dos plantillas en la misma sesión, que es
+exactamente lo que hace un docente comparando universidades.
