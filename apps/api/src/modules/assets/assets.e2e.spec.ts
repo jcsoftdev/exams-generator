@@ -163,4 +163,34 @@ describe("Assets module (e2e)", () => {
 
     await request(app.getHttpServer()).get(`/assets/${id}`).expect(401);
   });
+
+  it("GET /assets/:id — collapses a hostile stored mime to octet-stream with nosniff (no stored XSS)", async () => {
+    // A stored row whose mime was spoofed at upload time — the exact payload
+    // an attacker would use to get a script rendered inline in a same-tenant
+    // admin's tab.
+    const svg = Buffer.from("<svg xmlns='http://www.w3.org/2000/svg'><script>alert(1)</script></svg>");
+    const id = await createAsset(tenantAId, "image/svg+xml", svg);
+
+    const response = await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .expect(200);
+
+    expect(response.headers["content-type"]).toMatch(/^application\/octet-stream/);
+    expect(response.headers["x-content-type-options"]).toBe("nosniff");
+    // Bytes still round-trip — the object is retrievable, just never executable.
+    expect(Buffer.compare(response.body as Buffer, svg)).toBe(0);
+  });
+
+  it("GET /assets/:id — sets nosniff even on a legit image", async () => {
+    const id = await createAsset(tenantAId, "image/png", Buffer.from("real-png-ish"));
+
+    const response = await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .expect(200);
+
+    expect(response.headers["content-type"]).toMatch(/^image\/png/);
+    expect(response.headers["x-content-type-options"]).toBe("nosniff");
+  });
 });
