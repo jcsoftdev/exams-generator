@@ -9,6 +9,7 @@ import {
   NotFoundException,
 } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
+import { requireImageMime } from "../assets/image-mime";
 import { PdfCompilerPort, TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { StoragePort } from "../exams/domain/ports/storage.port";
 import { QuestionStatus } from "../../db/schema/enums";
@@ -160,8 +161,9 @@ export class BankService {
     }
 
     const file = dto.file as Express.Multer.File;
+    const mime = requireImageMime(file);
     const storageKey = `bank/questions/${randomUUID()}`;
-    await this.storage.put(storageKey, file.buffer, file.mimetype);
+    await this.storage.put(storageKey, file.buffer, mime);
 
     return this.repository.createImageQuestion({
       tenantId: user.tenantId,
@@ -171,7 +173,7 @@ export class BankService {
       gradeLevel: dto.gradeLevel as string,
       correctAnswer: dto.correctAnswer as string,
       createdBy: user.sub,
-      image: { storageKey, mime: file.mimetype },
+      image: { storageKey, mime },
     });
   }
 
@@ -582,12 +584,13 @@ export class BankService {
   ): Promise<{ id: string }> {
     await this.requireManageableQuestion(user, id);
 
+    const mime = requireImageMime(file);
     const storageKey = `bank/questions/${randomUUID()}`;
-    await this.storage.put(storageKey, file.buffer, file.mimetype);
+    await this.storage.put(storageKey, file.buffer, mime);
 
     const updatedId = await this.repository.replaceImageAsset(id, user.tenantId, {
       storageKey,
-      mime: file.mimetype,
+      mime,
     });
     if (!updatedId) {
       throw new NotFoundException(`Question not found: ${id}`);
@@ -625,9 +628,10 @@ export class BankService {
 
     const images: { storageKey: string; mime: string }[] = [];
     for (const file of files) {
+      const mime = requireImageMime(file);
       const storageKey = `bank/questions/${randomUUID()}`;
-      await this.storage.put(storageKey, file.buffer, file.mimetype);
-      images.push({ storageKey, mime: file.mimetype });
+      await this.storage.put(storageKey, file.buffer, mime);
+      images.push({ storageKey, mime });
     }
 
     const updatedId = await this.repository.setAlternativeImages(id, user.tenantId, images);

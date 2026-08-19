@@ -1,3 +1,5 @@
+import { BadRequestException } from "@nestjs/common";
+
 /**
  * The only image types this product stores and renders — mirrors the
  * `MIME_EXTENSIONS` table in `exam-generation.service.ts`. Anything outside
@@ -51,4 +53,20 @@ export function sniffImageMime(buffer: Buffer): SafeImageMime | null {
     return "image/webp";
   }
   return null;
+}
+
+/**
+ * Ingest guard for the upload paths: sniffs the buffer and returns the
+ * canonical MIME to store, or throws 400 if the bytes are not a real image.
+ * Callers persist THIS value, never `file.mimetype` — so the stored record is
+ * trustworthy end-to-end instead of only sanitized at read time.
+ */
+export function requireImageMime(file: { readonly buffer: Buffer }): SafeImageMime {
+  const mime = sniffImageMime(file.buffer);
+  if (!mime) {
+    throw new BadRequestException(
+      "Uploaded file is not a valid image (expected PNG, JPEG or WEBP).",
+    );
+  }
+  return mime;
 }

@@ -4,6 +4,7 @@ import { Test } from "@nestjs/testing";
 import request from "supertest";
 import { Role } from "@exams-generator/shared";
 import { AppModule } from "../../app.module";
+import { fakePng } from "../../test-support/image-fixtures";
 import {
   closeDbPool,
   createTenantFixture,
@@ -254,7 +255,7 @@ describe("Tenants (e2e)", () => {
       const res = await request(app.getHttpServer())
         .post(`/tenants/${tenantA.id}/logo`)
         .set("Authorization", `Bearer ${token}`)
-        .attach("file", Buffer.from("fake-png-bytes"), {
+        .attach("file", fakePng(), {
           filename: "logo.png",
           contentType: "image/png",
         });
@@ -263,13 +264,27 @@ describe("Tenants (e2e)", () => {
       expect(typeof res.body.logoAssetId).toBe("string");
     });
 
+    it("rejects a logo whose bytes are not a real image with 400", async () => {
+      const token = await loginAs(schoolAdminA);
+
+      const res = await request(app.getHttpServer())
+        .post(`/tenants/${tenantA.id}/logo`)
+        .set("Authorization", `Bearer ${token}`)
+        .attach("file", Buffer.from("<svg><script>alert(1)</script></svg>"), {
+          filename: "logo.png",
+          contentType: "image/png",
+        });
+
+      expect(res.status).toBe(400);
+    });
+
     it("forbids school_admin from uploading a logo for another tenant", async () => {
       const token = await loginAs(schoolAdminA);
 
       const res = await request(app.getHttpServer())
         .post(`/tenants/${tenantB.id}/logo`)
         .set("Authorization", `Bearer ${token}`)
-        .attach("file", Buffer.from("fake-png-bytes"), {
+        .attach("file", fakePng(), {
           filename: "logo.png",
           contentType: "image/png",
         });

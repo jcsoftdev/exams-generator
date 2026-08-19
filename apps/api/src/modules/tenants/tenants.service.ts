@@ -3,6 +3,7 @@ import { Inject, Injectable, NotFoundException } from "@nestjs/common";
 import { count, eq } from "drizzle-orm";
 import { db } from "../../db/client";
 import { assets, tenants } from "../../db/schema";
+import { requireImageMime } from "../assets/image-mime";
 import { STORAGE_PORT } from "../bank/bank.constants";
 import { StoragePort } from "../exams/domain/ports/storage.port";
 import { CreateTenantDto } from "./dto/create-tenant.dto";
@@ -67,12 +68,13 @@ export class TenantsService {
   async uploadLogo(id: string, file: UploadedLogoFile) {
     await this.findById(id);
 
+    const mime = requireImageMime(file);
     const storageKey = `tenants/${id}/logo/${randomUUID()}-${file.originalname}`;
-    await this.storage.put(storageKey, file.buffer, file.mimetype);
+    await this.storage.put(storageKey, file.buffer, mime);
 
     const [asset] = await db
       .insert(assets)
-      .values({ tenantId: id, storageKey, mime: file.mimetype })
+      .values({ tenantId: id, storageKey, mime })
       .returning();
 
     const [tenant] = await db

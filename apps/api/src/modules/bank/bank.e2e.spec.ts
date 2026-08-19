@@ -5,6 +5,7 @@ import { Test } from "@nestjs/testing";
 import { inArray } from "drizzle-orm";
 import request from "supertest";
 import { AppModule } from "../../app.module";
+import { fakePng } from "../../test-support/image-fixtures";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { assets, courses, questions, tenants, topics, users } from "../../db/schema";
@@ -280,7 +281,7 @@ describe("Bank module (e2e)", () => {
       .field("difficulty", Difficulty.Easy)
       .field("gradeLevel", "primaria_1")
       .field("correctAnswer", "b")
-      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .attach("image", fakePng(), "q.png")
       .expect(201);
 
     expect(response.body.id).toBeDefined();
@@ -293,6 +294,22 @@ describe("Bank module (e2e)", () => {
     expect(listForB.body.map((q: { id: string }) => q.id)).toContain(response.body.id);
   });
 
+  it("rejects an upload whose bytes are not a real image (spoofed content-type) with 400", async () => {
+    await uploadRequest(staffToken)
+      .field("courseId", courseId)
+      .field("topicId", topicId)
+      .field("difficulty", Difficulty.Easy)
+      .field("gradeLevel", "primaria_1")
+      .field("correctAnswer", "b")
+      // An SVG/script payload the client labels as image/png — the exact
+      // spoof the served-mime pin defends against, now refused at ingest.
+      .attach("image", Buffer.from("<svg><script>alert(1)</script></svg>"), {
+        filename: "q.png",
+        contentType: "image/png",
+      })
+      .expect(400);
+  });
+
   it("uploads a tenant-private question and it is NEVER visible to another tenant", async () => {
     const response = await uploadRequest(tenantAToken)
       .field("courseId", courseId)
@@ -300,7 +317,7 @@ describe("Bank module (e2e)", () => {
       .field("difficulty", Difficulty.Medium)
       .field("gradeLevel", "secundaria_1")
       .field("correctAnswer", "d")
-      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .attach("image", fakePng(), "q.png")
       .expect(201);
 
     await trackCreatedQuestion(response.body.id);
@@ -319,7 +336,7 @@ describe("Bank module (e2e)", () => {
       .field("difficulty", Difficulty.Medium)
       .field("gradeLevel", "secundaria_2")
       .field("correctAnswer", "c")
-      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .attach("image", fakePng(), "q.png")
       .expect(201);
 
     await trackCreatedQuestion(response.body.id);
@@ -340,7 +357,7 @@ describe("Bank module (e2e)", () => {
       .field("difficulty", Difficulty.Easy)
       .field("gradeLevel", "primaria_2")
       .field("correctAnswer", "b")
-      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .attach("image", fakePng(), "q.png")
       .expect(201);
     await trackCreatedQuestion(created.body.id);
 
@@ -356,7 +373,7 @@ describe("Bank module (e2e)", () => {
       .field("difficulty", Difficulty.Easy)
       .field("gradeLevel", "primaria_2")
       .field("correctAnswer", "b")
-      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .attach("image", fakePng(), "q.png")
       .expect(201);
     await trackCreatedQuestion(created.body.id);
 
@@ -374,7 +391,7 @@ describe("Bank module (e2e)", () => {
       .field("difficulty", Difficulty.Hard)
       .field("gradeLevel", "secundaria_4")
       .field("correctAnswer", "d")
-      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .attach("image", fakePng(), "q.png")
       .expect(201);
     await trackCreatedQuestion(created.body.id);
 
@@ -397,7 +414,7 @@ describe("Bank module (e2e)", () => {
       .field("difficulty", Difficulty.Hard)
       .field("gradeLevel", "secundaria_5")
       .field("correctAnswer", "e")
-      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .attach("image", fakePng(), "q.png")
       .expect(201);
     await trackCreatedQuestion(target.body.id);
 
@@ -407,7 +424,7 @@ describe("Bank module (e2e)", () => {
       .field("difficulty", Difficulty.Easy)
       .field("gradeLevel", "secundaria_5")
       .field("correctAnswer", "a")
-      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .attach("image", fakePng(), "q.png")
       .expect(201);
     await trackCreatedQuestion(nonMatching.body.id);
 
@@ -504,7 +521,7 @@ describe("Bank module (e2e)", () => {
     const response = await request(app.getHttpServer())
       .post("/bank/questions/image")
       .set("Authorization", `Bearer ${staffToken}`)
-      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .attach("image", fakePng(), "q.png")
       .expect(400);
 
     const bodyText = JSON.stringify(response.body);
@@ -535,7 +552,7 @@ describe("Bank module (e2e)", () => {
         .field("difficulty", Difficulty.Easy)
         .field("gradeLevel", "primaria_1")
         .field("correctAnswer", "a")
-        .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+        .attach("image", fakePng(), "q.png")
         .expect(403);
 
       await structuredRequest(tenantRoleNoTenantIdToken)
@@ -558,7 +575,7 @@ describe("Bank module (e2e)", () => {
         .field("difficulty", Difficulty.Easy)
         .field("gradeLevel", "primaria_1")
         .field("correctAnswer", "a")
-        .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+        .attach("image", fakePng(), "q.png")
         .expect(403);
 
       await structuredRequest(staffRoleWithTenantIdToken)
@@ -892,7 +909,7 @@ describe("Bank module (e2e)", () => {
         .field("difficulty", Difficulty.Easy)
         .field("gradeLevel", "primaria_1")
         .field("correctAnswer", "b")
-        .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+        .attach("image", fakePng(), "q.png")
         .expect(201);
       await trackCreatedQuestion(response.body.id);
       return response.body.id;

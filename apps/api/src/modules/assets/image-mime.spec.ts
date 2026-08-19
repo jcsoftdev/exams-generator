@@ -1,4 +1,5 @@
-import { SAFE_IMAGE_MIMES, isSafeImageMime, sniffImageMime } from "./image-mime";
+import { BadRequestException } from "@nestjs/common";
+import { SAFE_IMAGE_MIMES, isSafeImageMime, requireImageMime, sniffImageMime } from "./image-mime";
 
 const PNG = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0x00, 0x01]);
 const JPEG = Buffer.from([0xff, 0xd8, 0xff, 0xe0, 0x00, 0x10]);
@@ -49,5 +50,17 @@ describe("sniffImageMime", () => {
       0x52, 0x49, 0x46, 0x46, 0x24, 0x00, 0x00, 0x00, 0x57, 0x41, 0x56, 0x45, // ...WAVE
     ]);
     expect(sniffImageMime(wav)).toBeNull();
+  });
+});
+
+describe("requireImageMime", () => {
+  it("returns the sniffed canonical mime for a real image", () => {
+    expect(requireImageMime({ buffer: PNG })).toBe("image/png");
+  });
+
+  it("throws 400 for a non-image buffer regardless of its claimed type", () => {
+    expect(() => requireImageMime({ buffer: Buffer.from("<svg><script/></svg>") })).toThrow(
+      BadRequestException,
+    );
   });
 });

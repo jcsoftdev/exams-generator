@@ -7,6 +7,7 @@ import {
 } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
 import { TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
+import { fakePng } from "../../test-support/image-fixtures";
 import { BankRepository, QuestionListItem } from "./bank.repository";
 import { BankService } from "./bank.service";
 
@@ -33,7 +34,7 @@ const STAFF_ROLE_WITH_TENANT_ID_USER: AuthTokenPayload = {
 };
 
 const VALID_FILE = {
-  buffer: Buffer.from("fake-image-bytes"),
+  buffer: fakePng("fake-image-bytes"),
   mimetype: "image/png",
 } as Express.Multer.File;
 

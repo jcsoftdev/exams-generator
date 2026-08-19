@@ -5,6 +5,7 @@ import { Test } from "@nestjs/testing";
 import { asc, eq, inArray } from "drizzle-orm";
 import request from "supertest";
 import { AppModule } from "../../app.module";
+import { fakePng } from "../../test-support/image-fixtures";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import {
@@ -40,9 +41,9 @@ describe("Bank module — set structured question alternative images (e2e)", () 
 
   const createdQuestionIds: string[] = [];
 
-  const altPngA = Buffer.from("fake-alt-png-a");
-  const altPngB = Buffer.from("fake-alt-png-b");
-  const altPngC = Buffer.from("fake-alt-png-c");
+  const altPngA = fakePng("fake-alt-png-a");
+  const altPngB = fakePng("fake-alt-png-b");
+  const altPngC = fakePng("fake-alt-png-c");
 
   beforeAll(async () => {
     await runMigrations();
@@ -165,7 +166,7 @@ describe("Bank module — set structured question alternative images (e2e)", () 
       .field("difficulty", Difficulty.Easy)
       .field("gradeLevel", "primaria_1")
       .field("correctAnswer", "b")
-      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .attach("image", fakePng(), "q.png")
       .expect(201);
     const id = response.body.id as string;
     createdQuestionIds.push(id);

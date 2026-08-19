@@ -5,6 +5,7 @@ import { Test } from "@nestjs/testing";
 import { inArray } from "drizzle-orm";
 import request from "supertest";
 import { AppModule } from "../../app.module";
+import { fakePng } from "../../test-support/image-fixtures";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { assets, courses, questions, tenants, topics, users } from "../../db/schema";
@@ -35,8 +36,8 @@ describe("Bank module — replace image question's image (e2e)", () => {
   const createdQuestionIds: string[] = [];
   const createdAssetIds: string[] = [];
 
-  const pngBuffer = Buffer.from("fake-png-bytes");
-  const replacementPngBuffer = Buffer.from("fake-replacement-png-bytes");
+  const pngBuffer = fakePng();
+  const replacementPngBuffer = fakePng("fake-replacement-png-bytes");
 
   beforeAll(async () => {
     await runMigrations();

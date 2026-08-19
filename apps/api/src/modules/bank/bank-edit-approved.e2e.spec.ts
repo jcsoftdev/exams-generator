@@ -5,6 +5,7 @@ import { Test } from "@nestjs/testing";
 import { inArray } from "drizzle-orm";
 import request from "supertest";
 import { AppModule } from "../../app.module";
+import { fakePng } from "../../test-support/image-fixtures";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { assets, courses, questions, tenants, topics, users } from "../../db/schema";
@@ -149,7 +150,7 @@ describe("Bank module — edit approved questions + taxonomy (e2e)", () => {
       .field("difficulty", Difficulty.Easy)
       .field("gradeLevel", "primaria_1")
       .field("correctAnswer", "b")
-      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .attach("image", fakePng(), "q.png")
       .expect(201);
     const id = response.body.id as string;
     createdQuestionIds.push(id);

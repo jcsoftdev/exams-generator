@@ -150,10 +150,16 @@ está en el allowlist de imágenes (png/jpeg/webp), si no `application/octet-str
 `X-Content-Type-Options: nosniff` y disposición `inline`. Los bytes nunca pueden ejecutarse
 como script. `sniffImageMime()` (magic-bytes) también entra aquí, unit-tested.
 
-**Siguiente capa:** cablear `sniffImageMime()` en el ingest (bank ×3, tenant logo) para
-rechazar no-imágenes en el upload y guardar el mime sniffeado — que el registro de DB sea
-confiable, no solo el read. Diferido: rechaza los buffers falsos que usan ~20 specs de upload,
-quiere su propia pasada.
+Defensa en profundidad — ingest (`requireImageMime`): los 4 sitios de store (bank
+`createImageQuestion`/`replaceImage`/`setAlternativeImages`, tenant logo) ahora sniffean los
+magic-bytes en el upload, rechazan con 400 lo que no es PNG/JPEG/WEBP real, y guardan el mime
+**sniffeado** en DB (no el del cliente). El registro es confiable end-to-end, no solo saneado
+en el read. Fixtures de test movidas a `src/test-support/image-fixtures.ts` (bytes con firma
+real). e2e: bank + alternative-images + replace-image + tenants con tests de rechazo 400.
+
+**Pendiente menor (Cost, no XSS):** `POST /ai/questions/extract` no valida contenido antes de
+mandar el buffer al modelo de visión — un no-imagen de 5MB gasta tokens de OpenRouter en vano.
+No persiste, así que no es vector XSS. Cablear `requireImageMime` ahí es la misma línea.
 
 ## No auditado todavía
 
