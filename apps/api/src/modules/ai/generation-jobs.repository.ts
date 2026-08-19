@@ -91,6 +91,19 @@ function toRecord(row: typeof generationJobs.$inferSelect): GenerationJobRecord 
 
 /** All `generation_jobs` queries (design doc §3). Every method except `getByIdUnscoped()` (worker-only, no HTTP tenant context) takes/filters by `tenantId`. */
 export class GenerationJobsRepository {
+  /**
+   * How many of this tenant's jobs are still in flight (`pending`/`running`).
+   * Feeds the per-tenant active-job ceiling — each job is up to 10 OpenRouter
+   * calls, so an unbounded pile-up is an unbounded bill (audit 2026-08-18).
+   */
+  async countActiveByTenant(tenantId: string): Promise<number> {
+    const [{ value }] = await db
+      .select({ value: count() })
+      .from(generationJobs)
+      .where(and(eq(generationJobs.tenantId, tenantId), inArray(generationJobs.status, ["pending", "running"])));
+    return Number(value);
+  }
+
   async create(record: CreateGenerationJobRecord): Promise<GenerationJobRecord> {
     const [row] = await db.insert(generationJobs).values(record).returning();
     return toRecord(row!);

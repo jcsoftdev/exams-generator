@@ -3,7 +3,7 @@ import { BadRequestException, NotFoundException } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
 import { GenerationJobsRepository } from "./generation-jobs.repository";
-import { GenerationJobsService } from "./generation-jobs.service";
+import { GenerationJobsService, MAX_ACTIVE_JOBS_PER_TENANT } from "./generation-jobs.service";
 
 const TEACHER: AuthTokenPayload = { sub: "user-1", tenantId: "tenant-1", role: Role.Teacher };
 const STAFF: AuthTokenPayload = { sub: "staff-1", tenantId: null, role: Role.ContentEditor };
@@ -44,6 +44,7 @@ const JOB_RECORD = {
 function buildDeps() {
   const repository = {
     create: jest.fn().mockResolvedValue(JOB_RECORD),
+    countActiveByTenant: jest.fn().mockResolvedValue(0),
     getById: jest.fn().mockResolvedValue(JOB_RECORD),
     list: jest
       .fn()
@@ -84,6 +85,31 @@ describe("GenerationJobsService.create", () => {
     const { service } = buildDeps();
 
     await expect(service.create(STAFF, VALID_DTO)).rejects.toBeInstanceOf(BadRequestException);
+  });
+
+  /**
+   * Audit 2026-08-18 (Cost/Abuse): each job is up to 10 OpenRouter calls, and
+   * nothing capped how many an authenticated user could pile up — the global
+   * 100 req/min throttle plus worker concurrency:2 slows the SPEND RATE but not
+   * the total. A runaway account enqueues thousands of jobs, all billed. A
+   * per-tenant active-job ceiling bounds the queue depth.
+   */
+  it("rejects (429, no enqueue) when the tenant already has too many active jobs", async () => {
+    const { service, repository, queue } = buildDeps();
+    (repository.countActiveByTenant as jest.Mock).mockResolvedValue(MAX_ACTIVE_JOBS_PER_TENANT);
+
+    await expect(service.create(TEACHER, VALID_DTO)).rejects.toMatchObject({ status: 429 });
+    expect(repository.create).not.toHaveBeenCalled();
+    expect(queue.add).not.toHaveBeenCalled();
+  });
+
+  it("allows creation right below the ceiling", async () => {
+    const { service, repository, queue } = buildDeps();
+    (repository.countActiveByTenant as jest.Mock).mockResolvedValue(MAX_ACTIVE_JOBS_PER_TENANT - 1);
+
+    await service.create(TEACHER, VALID_DTO);
+    expect(repository.create).toHaveBeenCalled();
+    expect(queue.add).toHaveBeenCalled();
   });
 
   it("creates the row then enqueues a BullMQ job keyed by the row id", async () => {

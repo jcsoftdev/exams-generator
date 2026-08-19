@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
+import { BadRequestException, HttpException, HttpStatus, Injectable, NotFoundException } from "@nestjs/common";
 import { InjectQueue } from "@nestjs/bullmq";
 import { Difficulty } from "@exams-generator/shared";
 import { Queue } from "bullmq";
@@ -25,6 +25,17 @@ export interface CreateGenerationJobDto {
  * already runs — BEFORE ever touching the queue, so bad input still gets an
  * immediate 400/404 and nothing is enqueued.
  */
+/**
+ * Ceiling on a tenant's simultaneously in-flight (`pending`/`running`)
+ * generation jobs. Each job is up to `MAX_COUNT` (10) OpenRouter calls, and the
+ * only other brake is the global 100 req/min IP throttle plus the worker's
+ * `concurrency: 2` — both cap the SPEND RATE, neither caps the TOTAL. Without
+ * this, one authenticated account can enqueue thousands of jobs and they all
+ * bill (audit 2026-08-18). 20 is generous for a real teacher (a full exam's
+ * worth of generation in parallel) and a hard wall against a runaway.
+ */
+export const MAX_ACTIVE_JOBS_PER_TENANT = 20;
+
 @Injectable()
 export class GenerationJobsService {
   constructor(
@@ -39,6 +50,14 @@ export class GenerationJobsService {
     const validation = validateGenerateQuestionsInput(dto as GenerateQuestionsInput);
     if (!validation.ok) {
       throw new BadRequestException(validation.errors);
+    }
+
+    const active = await this.repository.countActiveByTenant(tenantId);
+    if (active >= MAX_ACTIVE_JOBS_PER_TENANT) {
+      throw new HttpException(
+        `This school already has ${active} question-generation jobs running. Wait for some to finish before starting more.`,
+        HttpStatus.TOO_MANY_REQUESTS,
+      );
     }
 
     const taxonomy = await this.bankRepository.findCourseAndTopicNames(
