@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Res, UseGuards } from "@nestjs/common";
+import { Controller, Get, Param, ParseUUIDPipe, Res, UseGuards } from "@nestjs/common";
 import { Response } from "express";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
@@ -20,7 +20,7 @@ export class AssetsController {
   @Get(":id")
   async getAsset(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("id") id: string,
+    @Param("id", ParseUUIDPipe) id: string,
     @Res() res: Response,
   ): Promise<void> {
     const asset = await this.service.getAssetContent(user, id);

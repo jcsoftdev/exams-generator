@@ -6,6 +6,7 @@ import {
   Get,
   HttpCode,
   Param,
+  ParseUUIDPipe,
   Patch,
   Post,
   Query,
@@ -70,19 +71,19 @@ export class TenantsController {
    */
   @Get(":id")
   @Roles(Role.PlatformAdmin, Role.SchoolAdmin, Role.Teacher)
-  findOne(@Param("id") id: string) {
+  findOne(@Param("id", ParseUUIDPipe) id: string) {
     return this.tenantsService.findById(id);
   }
 
   @Patch(":id")
   @Roles(Role.PlatformAdmin, Role.SchoolAdmin)
-  update(@Param("id") id: string, @Body() dto: UpdateTenantDto) {
+  update(@Param("id", ParseUUIDPipe) id: string, @Body() dto: UpdateTenantDto) {
     return this.tenantsService.update(id, dto);
   }
 
   @Delete(":id")
   @Roles(Role.PlatformAdmin)
-  async remove(@Param("id") id: string): Promise<{ deleted: true }> {
+  async remove(@Param("id", ParseUUIDPipe) id: string): Promise<{ deleted: true }> {
     await this.tenantsService.remove(id);
     return { deleted: true };
   }
@@ -91,7 +92,7 @@ export class TenantsController {
   @Roles(Role.PlatformAdmin, Role.SchoolAdmin)
   @UseInterceptors(FileInterceptor("file", { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
   @HttpCode(201)
-  uploadLogo(@Param("id") id: string, @UploadedFile() file: Express.Multer.File | undefined) {
+  uploadLogo(@Param("id", ParseUUIDPipe) id: string, @UploadedFile() file: Express.Multer.File | undefined) {
     if (!file) {
       throw new BadRequestException("file is required");
     }

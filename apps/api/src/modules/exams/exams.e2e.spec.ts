@@ -589,6 +589,27 @@ describe("Exams module (e2e)", () => {
         .set("Authorization", `Bearer ${staffToken}`)
         .expect(403);
     });
+
+    /**
+     * Audit 2026-08-18: a malformed :examId reached Postgres as a `uuid` cast,
+     * which threw and surfaced as 500 — a "not found" dressed up as a server
+     * error, and needless noise in the logs. Not SQL injection (drizzle
+     * parametrizes), but a param that can't be an id should be a 400 at the
+     * edge, never a query.
+     */
+    it("GET /exams/:examId — 400 (not 500) for a non-uuid id", async () => {
+      await request(app.getHttpServer())
+        .get("/exams/not-a-uuid")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(400);
+    });
+
+    it("GET /exams/:examId — still 404 for a well-formed but unknown id", async () => {
+      await request(app.getHttpServer())
+        .get("/exams/00000000-0000-0000-0000-000000000000")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(404);
+    });
   });
 
   describe("POST /exams/:examId/duplicate", () => {

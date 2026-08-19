@@ -7,6 +7,7 @@ import {
   HttpCode,
   HttpStatus,
   Param,
+  ParseUUIDPipe,
   Patch,
   Post,
   Query,
@@ -215,7 +216,7 @@ export class BankController {
   @Get(":id/preview")
   async preview(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("id") id: string,
+    @Param("id", ParseUUIDPipe) id: string,
     @Res() res: Response,
   ): Promise<void> {
     const pdf = await this.service.previewQuestion(user, id);
@@ -232,7 +233,7 @@ export class BankController {
   @Get(":id")
   async getQuestionById(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("id") id: string,
+    @Param("id", ParseUUIDPipe) id: string,
   ): Promise<QuestionListItem> {
     return this.service.getQuestionById(user, id);
   }
@@ -241,7 +242,7 @@ export class BankController {
   @Post(":id/approve")
   async approveQuestion(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("id") id: string,
+    @Param("id", ParseUUIDPipe) id: string,
   ): Promise<{ id: string }> {
     return this.service.approveQuestion(user, id);
   }
@@ -250,7 +251,7 @@ export class BankController {
   @Post(":id/reject")
   async rejectQuestion(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("id") id: string,
+    @Param("id", ParseUUIDPipe) id: string,
   ): Promise<{ id: string }> {
     return this.service.rejectQuestion(user, id);
   }
@@ -265,7 +266,7 @@ export class BankController {
   @Patch(":id")
   async editDraftQuestion(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("id") id: string,
+    @Param("id", ParseUUIDPipe) id: string,
     @Body() body: EditDraftQuestionBody,
   ): Promise<QuestionListItem> {
     return this.service.editQuestion(user, id, {
@@ -294,7 +295,7 @@ export class BankController {
   @UseInterceptors(FileInterceptor("file", { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
   async replaceImage(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("id") id: string,
+    @Param("id", ParseUUIDPipe) id: string,
     @UploadedFile() file: Express.Multer.File,
   ): Promise<{ id: string }> {
     return this.service.replaceImage(user, id, file);
@@ -314,7 +315,7 @@ export class BankController {
   @UseInterceptors(FilesInterceptor("images", 8, { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
   async setAlternativeImages(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("id") id: string,
+    @Param("id", ParseUUIDPipe) id: string,
     @UploadedFiles() files: Express.Multer.File[] | undefined,
   ): Promise<{ id: string }> {
     return this.service.setAlternativeImages(user, id, files ?? []);
@@ -324,7 +325,7 @@ export class BankController {
   @Patch(":id/archive")
   async archive(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("id") id: string,
+    @Param("id", ParseUUIDPipe) id: string,
   ): Promise<{ id: string; status: "archived" }> {
     return this.service.archiveQuestion(user, id);
   }
@@ -334,7 +335,7 @@ export class BankController {
   @HttpCode(HttpStatus.NO_CONTENT)
   async removeDraft(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("id") id: string,
+    @Param("id", ParseUUIDPipe) id: string,
   ): Promise<void> {
     await this.service.deleteDraftQuestion(user, id);
   }

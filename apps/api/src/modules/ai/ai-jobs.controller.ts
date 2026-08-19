@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post, Query, Res, UseGuards } from "@nestjs/common";
+import { Body, Controller, Get, HttpCode, HttpStatus, Param, ParseUUIDPipe, Post, Query, Res, UseGuards } from "@nestjs/common";
 import { Response } from "express";
 import { filter } from "rxjs";
 import { clampPagination } from "../../common/pagination.util";
@@ -42,13 +42,13 @@ export class AiJobsController {
   }
 
   @Get(":id")
-  async get(@CurrentUser() user: AuthTokenPayload, @Param("id") id: string) {
+  async get(@CurrentUser() user: AuthTokenPayload, @Param("id", ParseUUIDPipe) id: string) {
     return this.service.get(user, id);
   }
 
   /** `GET /ai/questions/jobs/:id/chain` — every attempt in `id`'s retry chain, oldest first. */
   @Get(":id/chain")
-  async chain(@CurrentUser() user: AuthTokenPayload, @Param("id") id: string) {
+  async chain(@CurrentUser() user: AuthTokenPayload, @Param("id", ParseUUIDPipe) id: string) {
     return { items: await this.service.getChain(user, id) };
   }
 
@@ -62,13 +62,24 @@ export class AiJobsController {
    * `GenerationJobsProcessor` calling `notify()` right after each DB
    * commit, never by polling on either side — until the job reaches a
    * terminal status, at which point the connection closes.
+   *
+   * ORDERING IS LOAD-BEARING — do NOT move the header block back above the
+   * lookup. `@Res()` takes this handler outside Nest's response handling, so
+   * `flushHeaders()` puts a `200 OK` on the wire irrevocably. When the lookup
+   * ran after it, an unknown or cross-tenant id lied with a 200 and then
+   * threw `NotFoundException` into `AllExceptionsFilter`, which crashed the
+   * whole process trying to write a 404 body onto a started response
+   * (`ERR_HTTP_HEADERS_SENT`, unhandled). Fetching the job FIRST keeps the
+   * not-found on Nest's normal path, so the caller gets a real 404.
    */
   @Get(":id/stream")
   async stream(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("id") id: string,
+    @Param("id", ParseUUIDPipe) id: string,
     @Res() res: Response,
   ): Promise<void> {
+    const current = await this.service.get(user, id);
+
     res.setHeader("Content-Type", "text/event-stream");
     res.setHeader("Cache-Control", "no-cache");
     res.setHeader("Connection", "keep-alive");
@@ -78,7 +89,6 @@ export class AiJobsController {
       res.write(`data: ${JSON.stringify(job)}\n\n`);
     };
 
-    const current = await this.service.get(user, id);
     writeJob(current);
     if (TERMINAL_STATUSES.includes(current.status)) {
       res.end();
@@ -98,7 +108,7 @@ export class AiJobsController {
 
   @Post(":id/cancel")
   @HttpCode(HttpStatus.OK)
-  async cancel(@CurrentUser() user: AuthTokenPayload, @Param("id") id: string) {
+  async cancel(@CurrentUser() user: AuthTokenPayload, @Param("id", ParseUUIDPipe) id: string) {
     return this.service.cancel(user, id);
   }
 }

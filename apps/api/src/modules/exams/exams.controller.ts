@@ -8,6 +8,7 @@ import {
   HttpCode,
   HttpStatus,
   Param,
+  ParseUUIDPipe,
   Patch,
   Post,
   Query,
@@ -221,29 +222,29 @@ export class ExamsController {
   @Patch(":examId")
   async renameExam(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("examId") examId: string,
+    @Param("examId", ParseUUIDPipe) examId: string,
     @Body() body: RenameExamBody,
   ): Promise<{ id: string; title: string }> {
     return this.examsService.renameExam(user, examId, body.title ?? "");
   }
 
   @Get(":examId")
-  async getExam(@CurrentUser() user: AuthTokenPayload, @Param("examId") examId: string): Promise<ExamDetailResult> {
+  async getExam(@CurrentUser() user: AuthTokenPayload, @Param("examId", ParseUUIDPipe) examId: string): Promise<ExamDetailResult> {
     return this.examsService.getExamDetail(user, examId);
   }
 
   /** `DELETE /exams/:examId` (S3) — cascading delete; no status restriction (confirmation is the frontend's job). */
   @Delete(":examId")
   @HttpCode(HttpStatus.NO_CONTENT)
-  async remove(@CurrentUser() user: AuthTokenPayload, @Param("examId") examId: string): Promise<void> {
+  async remove(@CurrentUser() user: AuthTokenPayload, @Param("examId", ParseUUIDPipe) examId: string): Promise<void> {
     await this.examsService.deleteExam(user, examId);
   }
 
   @Post(":examId/questions/:questionId/replace")
   async replaceQuestion(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("examId") examId: string,
-    @Param("questionId") questionId: string,
+    @Param("examId", ParseUUIDPipe) examId: string,
+    @Param("questionId", ParseUUIDPipe) questionId: string,
     @Body() body: ReplaceQuestionBody,
   ): Promise<ReplaceQuestionResult> {
     const dto: ReplaceQuestionDto =
@@ -255,7 +256,7 @@ export class ExamsController {
   }
 
   @Post(":examId/confirm")
-  async confirm(@CurrentUser() user: AuthTokenPayload, @Param("examId") examId: string): Promise<ConfirmExamResult> {
+  async confirm(@CurrentUser() user: AuthTokenPayload, @Param("examId", ParseUUIDPipe) examId: string): Promise<ConfirmExamResult> {
     return this.examsService.confirmExam(user, examId);
   }
 
@@ -263,7 +264,7 @@ export class ExamsController {
   @Post(":examId/duplicate")
   async duplicate(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("examId") examId: string,
+    @Param("examId", ParseUUIDPipe) examId: string,
   ): Promise<DuplicateExamResult> {
     return this.examsService.duplicateExam(user, examId);
   }
@@ -278,7 +279,7 @@ export class ExamsController {
   @Get(":examId/versions/zip")
   async downloadVersionsZip(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("examId") examId: string,
+    @Param("examId", ParseUUIDPipe) examId: string,
     @Res() res: Response,
   ): Promise<void> {
     const zip = await this.generationService.buildVersionsZip(user, examId);
@@ -291,7 +292,7 @@ export class ExamsController {
   @Get(":examId/versions")
   async getVersions(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("examId") examId: string,
+    @Param("examId", ParseUUIDPipe) examId: string,
   ): Promise<readonly ExamVersionSummary[]> {
     return this.examsService.listVersions(user, examId);
   }
@@ -308,7 +309,7 @@ export class ExamsController {
   @HttpCode(HttpStatus.ACCEPTED)
   async generateVersions(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("examId") examId: string,
+    @Param("examId", ParseUUIDPipe) examId: string,
     @Body() body: GenerateVersionsBody,
   ): Promise<ExamVersionJobRecord> {
     return this.versionJobsService.create(user, examId, body.versionCount ?? 1);
@@ -324,7 +325,7 @@ export class ExamsController {
   @Get(":examId/versions/jobs/latest")
   async latestVersionJob(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("examId") examId: string,
+    @Param("examId", ParseUUIDPipe) examId: string,
   ): Promise<ExamVersionJobRecord | null> {
     return this.versionJobsService.getLatestForExam(user, examId);
   }
@@ -332,7 +333,7 @@ export class ExamsController {
   @Get(":examId/versions/jobs/:jobId")
   async getVersionJob(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("jobId") jobId: string,
+    @Param("jobId", ParseUUIDPipe) jobId: string,
   ): Promise<ExamVersionJobRecord> {
     return this.versionJobsService.get(user, jobId);
   }
@@ -346,13 +347,25 @@ export class ExamsController {
    * then again on every `ExamVersionJobEventsService` notification for this
    * id — i.e. once per generated form — until the job is terminal, at which
    * point the connection closes.
+   *
+   * ORDERING IS LOAD-BEARING — do NOT move the header block back above the
+   * lookup. `@Res()` takes this handler outside Nest's response handling, so
+   * `flushHeaders()` puts a `200 OK` on the wire irrevocably. When the
+   * tenant-scoped lookup ran after it, an unknown or cross-tenant jobId lied
+   * with a 200 and then threw `NotFoundException` into
+   * `AllExceptionsFilter`, which crashed the whole process trying to write a
+   * 404 body onto a started response (`ERR_HTTP_HEADERS_SENT`, unhandled).
+   * Fetching the job FIRST keeps the not-found on Nest's normal path, so the
+   * caller gets a real 404.
    */
   @Get(":examId/versions/jobs/:jobId/stream")
   async streamVersionJob(
     @CurrentUser() user: AuthTokenPayload,
-    @Param("jobId") jobId: string,
+    @Param("jobId", ParseUUIDPipe) jobId: string,
     @Res() res: Response,
   ): Promise<void> {
+    const current = await this.versionJobsService.get(user, jobId);
+
     res.setHeader("Content-Type", "text/event-stream");
     res.setHeader("Cache-Control", "no-cache");
     res.setHeader("Connection", "keep-alive");
@@ -362,7 +375,6 @@ export class ExamsController {
       res.write(`data: ${JSON.stringify(job)}\n\n`);
     };
 
-    const current = await this.versionJobsService.get(user, jobId);
     writeJob(current);
     if (TERMINAL_JOB_STATUSES.includes(current.status)) {
       res.end();
