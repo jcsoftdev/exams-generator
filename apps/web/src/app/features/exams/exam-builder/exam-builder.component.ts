@@ -73,6 +73,18 @@ function defaultExamTitle(gradeLevel: GradeLevel): string {
 export const PREVIEW_DEBOUNCE_MS = 300;
 
 /**
+ * Quiet window before "Cantidad total de preguntas" re-resolves the template.
+ *
+ * Audit 2026-08-18: a UNI-style template (point weights, no per-course counts)
+ * answers 400 asking for a total. The teacher types it — and nothing happens,
+ * because the field only stored the value. They then have to find "Cargar
+ * plantilla", a button the other three flows never needed since they all
+ * auto-load. Longer than the preview's 300ms: this is a whole template resolve,
+ * and the number is typed digit by digit ("1", "10", "100").
+ */
+export const TEMPLATE_RELOAD_DEBOUNCE_MS = 600;
+
+/**
  * `sessionStorage` key holding the in-progress exam.
  *
  * `ExamBuilderStore` is component-scoped ON PURPOSE (DECISION FE-5: state
@@ -423,7 +435,11 @@ export class ExamBuilderComponent implements OnInit {
       return 'Selecciona una universidad para poder cargar la plantilla.';
     }
     if (this.tracks().length > 0 && this.selectedTrackId() === null) {
-      return 'Selecciona un track para poder cargar la plantilla.';
+      // Mismo sustantivo que la etiqueta del campo — decía "track" mientras el
+      // campo ya decía "Área"/"Ciclo" (audit 2026-08-18).
+      return this.trackFieldLabel() === 'Área'
+        ? 'Selecciona un área para poder cargar la plantilla.'
+        : 'Selecciona un ciclo para poder cargar la plantilla.';
     }
     if (this.showCourseMultiSelect() && this.selectedCourseIds().size === 0) {
       return 'Selecciona al menos un curso para poder cargar la plantilla.';
@@ -566,6 +582,7 @@ export class ExamBuilderComponent implements OnInit {
     // the two behave identically below but only one of them is a claim about
     // what the teacher wants.
     this.selectedExamTypeCode.set(code);
+    this.store.clearRequested();
     this.selectedUniversityId.set(null);
     this.selectedTrackId.set(null);
     this.tracks.set([]);
@@ -622,6 +639,12 @@ export class ExamBuilderComponent implements OnInit {
     this.selectedUniversityId.set(universityId);
     this.selectedTrackId.set(null);
     this.tracks.set([]);
+    // Whatever the previous university's template put in the grid stops being
+    // true the instant another university is chosen. Without this, the two
+    // blueprints interleaved into an exam that matched neither, with the
+    // generate button still enabled (audit 2026-08-18).
+    this.store.clearRequested();
+    this.templateError.set(null);
     if (!universityId) {
       return;
     }
@@ -653,6 +676,8 @@ export class ExamBuilderComponent implements OnInit {
 
   protected onTrackChange(trackId: string | null): void {
     this.selectedTrackId.set(trackId);
+    this.store.clearRequested();
+    this.templateError.set(null);
     // Clearing the track (trackId === null) leaves the selection
     // incomplete for a university that has tracks — only an actual
     // pick auto-loads.
@@ -674,7 +699,21 @@ export class ExamBuilderComponent implements OnInit {
 
   protected onTemplateTotalQuestionsChange(value: string): void {
     this.templateTotalQuestions.set(value);
+    // The whole point of the field is to unblock a template that asked for it,
+    // so supplying it re-resolves — the teacher shouldn't have to then hunt for
+    // a button (audit 2026-08-18). Debounced: the number arrives digit by digit.
+    if (this.totalQuestionsReloadHandle !== null) {
+      clearTimeout(this.totalQuestionsReloadHandle);
+    }
+    this.totalQuestionsReloadHandle = setTimeout(() => {
+      this.totalQuestionsReloadHandle = null;
+      if (this.canLoadTemplate()) {
+        this.loadTemplate();
+      }
+    }, TEMPLATE_RELOAD_DEBOUNCE_MS);
   }
+
+  private totalQuestionsReloadHandle: ReturnType<typeof setTimeout> | null = null;
 
   /**
    * `POST /exams/blueprint/resolve` (design doc §3.11) — on success, merges
@@ -727,6 +766,10 @@ export class ExamBuilderComponent implements OnInit {
           return;
         }
         this.loadingTemplate.set(false);
+        // A template that failed to resolve leaves NOTHING requested. It used
+        // to leave the previous university's 80 questions sitting there, ready
+        // to generate, under an error message (audit 2026-08-18).
+        this.store.clearRequested();
         this.templateError.set(
           error.status === 404
             ? 'No hay una plantilla configurada para esta universidad/track todavía.'

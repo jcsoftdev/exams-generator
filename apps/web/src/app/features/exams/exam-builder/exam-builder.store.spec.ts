@@ -3,6 +3,45 @@ import { Difficulty } from '@exams-generator/shared';
 import { ExamBuilderStore, buildCellKey } from './exam-builder.store';
 
 describe('ExamBuilderStore', () => {
+  /**
+   * Audit 2026-08-18: cargar una plantilla SUMABA sobre la anterior. Medido en
+   * la app: UNCP Área II (80 preguntas) y luego UNI (100) dejaban un examen de
+   * 153 preguntas en 26 celdas — una quimera que no corresponde a ninguna
+   * universidad, con el botón de generar habilitado y sin ningún aviso.
+   */
+  it('clearRequested() deja el pedido vacío sin tocar el stock ya cargado', () => {
+    const store = new ExamBuilderStore();
+    store.setStockResults([
+      { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 9 },
+    ]);
+    store.setRequested(buildCellKey('c1', 't1', Difficulty.Easy), 4);
+    expect(store.grandTotal()).toBe(4);
+
+    store.clearRequested();
+
+    expect(store.grandTotal()).toBe(0);
+    expect(store.requestedCells()).toHaveLength(0);
+    expect(store.stock().get(buildCellKey('c1', 't1', Difficulty.Easy))).toBe(9);
+  });
+
+  it('una plantilla nueva REEMPLAZA a la anterior, no se suma encima', () => {
+    const store = new ExamBuilderStore();
+    store.bulkLoadFromBlueprint([
+      { courseId: 'c1', courseName: 'Aritmética', count: 6, difficulty: Difficulty.Hard },
+      { courseId: 'c9', courseName: 'Ecología', count: 3, difficulty: Difficulty.Medium },
+    ]);
+    expect(store.grandTotal()).toBe(9);
+
+    // Otra universidad: comparte un curso, trae otro distinto.
+    store.clearRequested();
+    store.bulkLoadFromBlueprint([
+      { courseId: 'c1', courseName: 'Aritmética', count: 8, difficulty: Difficulty.Medium },
+    ]);
+
+    expect(store.grandTotal()).toBe(8);
+    expect(store.requestedCells()).toHaveLength(1);
+  });
+
   let store: ExamBuilderStore;
 
   beforeEach(() => {

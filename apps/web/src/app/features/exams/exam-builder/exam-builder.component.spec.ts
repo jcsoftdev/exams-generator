@@ -9,6 +9,7 @@ import {
   BUILDER_STATE_KEY,
   ExamBuilderComponent,
   PREVIEW_DEBOUNCE_MS,
+  TEMPLATE_RELOAD_DEBOUNCE_MS,
   toApiTopicId,
   toCreateExamBlueprintRow,
 } from './exam-builder.component';
@@ -24,6 +25,7 @@ import {
   ExamType,
   University,
   Track,
+  ResolveBlueprintPayload,
   ResolveBlueprintResult,
 } from '../exams.models';
 import { ExamVersionJob } from '../../exam-versions/exam-versions.models';
@@ -1503,6 +1505,95 @@ describe('ExamBuilderComponent', () => {
     });
   });
 
+  /**
+   * Audit 2026-08-18, medido en la app corriendo: cargar UNCP Área II (80
+   * preguntas) y luego cambiar a UNI (100) dejaba un examen de 153 preguntas en
+   * 26 celdas — las dos plantillas superpuestas, sin corresponder a ninguna
+   * universidad, con el botón de generar habilitado y sin ningún aviso.
+   */
+  describe('plantillas — una reemplaza a la otra, nunca se suman', () => {
+    function resolveCon(rows: { courseId: string; count: number; difficulty: Difficulty }[]) {
+      return () =>
+        of<ResolveBlueprintResult>({
+          // `topicId` para que caigan en la celda que el fixture de stock cubre
+          // (c1:t1) y el botón dependa del reemplazo, no de un faltante.
+          blueprint: rows.map((r) => ({ courseId: r.courseId, topicId: 't1', count: r.count, difficulty: r.difficulty })),
+          weekNumber: null,
+          templateId: 'tpl',
+        });
+    }
+
+    it('cambiar de universidad descarta lo que trajo la plantilla anterior', () => {
+      let call = 0;
+      const resolveBlueprint = vi.fn(() =>
+        call++ === 0
+          ? resolveCon([{ courseId: 'c1', count: 9, difficulty: Difficulty.Hard }])()
+          : resolveCon([{ courseId: 'c1', count: 4, difficulty: Difficulty.Medium }])(),
+      );
+      const { compiled, fixture } = setup({
+        resolveBlueprint,
+        getUniversityTracks: () => of([]),
+        getUniversities: () => of([...UNIVERSITIES, { id: 'u2', code: 'uncp', name: 'UNCP' }]),
+      });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      expect(compiled.querySelector('[data-testid="grand-total"]')!.textContent).toContain('9');
+
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNCP');
+
+      // 4, no 13: la segunda plantilla reemplaza, no se suma.
+      expect(compiled.querySelector('[data-testid="grand-total"]')!.textContent).toContain('4');
+    });
+
+    it('una plantilla que falla (404/400) no deja el examen anterior listo para generar', () => {
+      let call = 0;
+      const resolveBlueprint = vi.fn(() =>
+        call++ === 0
+          ? resolveCon([{ courseId: 'c1', count: 6, difficulty: Difficulty.Easy }])()
+          : throwError(() => new HttpErrorResponse({ status: 404 })),
+      );
+      const { compiled, fixture } = setup({
+        resolveBlueprint,
+        getUniversityTracks: () => of([]),
+        getUniversities: () => of([...UNIVERSITIES, { id: 'u2', code: 'uncp', name: 'UNCP' }]),
+      });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      expect(compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!.disabled).toBe(
+        false,
+      );
+
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNCP');
+
+      expect(compiled.querySelector('[data-testid="template-error"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="template-summary"]')).toBeFalsy();
+      const btn = compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button');
+      expect(btn === null || btn.disabled).toBe(true);
+    });
+
+    it('escribir la cantidad total re-resuelve la plantilla sola', () => {
+      const resolveBlueprint = vi.fn((_payload: ResolveBlueprintPayload) =>
+        resolveCon([{ courseId: 'c1', count: 5, difficulty: Difficulty.Medium }])(),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      resolveBlueprint.mockClear();
+
+      setTotalQuestionsOverride(compiled, fixture, '120');
+      expect(resolveBlueprint).not.toHaveBeenCalled(); // no en cada tecla
+
+      vi.advanceTimersByTime(TEMPLATE_RELOAD_DEBOUNCE_MS);
+      fixture.detectChanges();
+
+      expect(resolveBlueprint).toHaveBeenCalledTimes(1);
+      expect(resolveBlueprint.mock.calls[0][0]).toMatchObject({ totalQuestionsOverride: 120 });
+    });
+  });
+
   describe('tipo de examen — cargar plantilla', () => {
     it('calls resolveBlueprint with the current selections and merges the returned blueprint into the grid', () => {
       const resolveBlueprint = vi.fn(() =>
@@ -1860,7 +1951,7 @@ describe('ExamBuilderComponent', () => {
       expect(hint!.textContent).toMatch(/universidad/i);
     });
 
-    it('disables the button and shows a hint asking for a track once the university has tracks but none is chosen yet', () => {
+    it('disables the button and shows a hint naming the field (Área/Ciclo) once the university has tracks but none is chosen yet', () => {
       const { compiled, fixture } = setup({ getUniversityTracks: () => of(TRACKS) });
 
       selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
@@ -1871,7 +1962,7 @@ describe('ExamBuilderComponent', () => {
       expect(button.disabled).toBe(true);
       const hint = compiled.querySelector('[data-testid="load-template-hint"]');
       expect(hint).toBeTruthy();
-      expect(hint!.textContent).toMatch(/track/i);
+      expect(hint!.textContent).toMatch(/ciclo|área/i);
     });
 
     it('disables the button and shows a hint asking for at least one course for a "selected" course-scope type (fastest) once university is chosen', () => {

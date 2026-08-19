@@ -162,6 +162,21 @@ export class ExamBuilderStore {
     return requestedCount <= stockCount ? 'ok' : 'short';
   }
 
+  /**
+   * Drops every requested count, keeping rows/stock/preview intact.
+   *
+   * Audit 2026-08-18: loading a template ADDED to whatever was requested
+   * before. Switching university mid-flow (UNCP Área II = 80, then UNI = 100)
+   * produced a 153-question exam across 26 cells that matched NO template —
+   * `setRequested` overwrites per cell, so the two blueprints interleaved. The
+   * generate button stayed enabled and nothing said a word. Every change to the
+   * template selection now clears first: a template is a REPLACEMENT of the
+   * request, never an addition to it.
+   */
+  clearRequested(): void {
+    this.requested.set(new Map());
+  }
+
   setRequested(key: CellKey, count: number): void {
     this.requested.update((current) => {
       const next = new Map(current);
