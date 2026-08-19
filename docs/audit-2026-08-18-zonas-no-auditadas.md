@@ -138,7 +138,7 @@ documentado.
 
 ## Cola de revisión IA e Historial IA
 
-- [ ] **P1 — `approve()` y `confirmReject()` no tienen guard de doble click.**
+- [x] **P1 — `approve()` y `confirmReject()` no tienen guard de doble click.**
       `ai-review-queue.component.ts:491-516` dispara el POST sin ningún signal de "en vuelo".
       Son las **únicas** dos acciones mutantes de estas pantallas sin ese guard: `saveEdit()`
       chequea `editSaving()`, `reviseWithAi()` chequea `revising()`, y en la pantalla hermana
@@ -146,15 +146,38 @@ documentado.
       Lectura de código, confianza 90% — no se pudo reproducir en pantalla porque la API se cayó
       (por el P0 de arriba) antes de llegar a esa prueba.
 
-- [ ] **P1 — Editar un borrador y navegar pierde todo, sin aviso.** El formulario de edición
+      **HECHO**: signals `approving`/`rejectSubmitting`, con la misma forma
+      check-then-set que ya usaban `editSaving()`, `revising()` y el `replacing` de
+      `exam-review`, liberados en **los dos** desenlaces — una fila trabada tras un error es
+      peor que el error. `rejecting()` no servía como bandera: significa "el modal de
+      confirmación está abierto" y se vuelve `false` justo cuando arranca el request.
+      Verificado en vivo contando requests: 3 clicks rápidos en Aprobar → **un solo**
+      `POST /bank/questions/:id/approve`.
+
+- [x] **P1 — Editar un borrador y navegar pierde todo, sin aviso.** El formulario de edición
       (cuerpo Typst, alternativas, figura CeTZ, instrucción de IA) vive solo en signals del
       componente. `rg 'CanDeactivate|beforeunload'` sobre todo `apps/web/src`: **cero
       resultados**. Es el mismo bug que ya se cerró en el builder de exámenes con
       `sessionStorage`; la cola de revisión no recibió ese parche. Lectura de código, 95%.
 
-- [ ] **P2 — Empty state duplicado.** Con la cola vacía, la columna izquierda dice "No hay
+      **HECHO**, siguiendo el precedente del builder (`sessionStorage` + un solo `effect()` que
+      guarda, para que una mutación nueva no pueda olvidarse), más lo que el builder nunca tuvo
+      que responder:
+      - La cola edita **un borrador específico**, así que el payload lleva su `draftId` y solo
+        se restaura con coincidencia exacta. Un borrador aprobado desde otra pestaña
+        sencillamente no vuelve a coincidir y queda inerte hasta cerrar la pestaña.
+      - La restauración **se anuncia** (`ui-banner` con `role="status"`), no es callada: un
+        docente nunca debe confundir una edición recuperada con lo que el servidor tiene hoy.
+      - El `effect` es **solo de escritura, a propósito**. Limpiar cuando `editing()` es `false`
+        parecía equivalente y no lo era: también es `false` en el primer mount, antes de decidir
+        si hay algo que restaurar, así que el primer flush del propio effect borraba la entrada
+        que venía a proteger. La limpieza es explícita, en cancelar y en guardar.
+
+- [x] **P2 — Empty state duplicado.** Con la cola vacía, la columna izquierda dice "No hay
       borradores por revisar." y el panel derecho, al mismo tiempo, "La cola está vacía."
       (`ai-review-queue.component.html:147-149`). Ninguno miente; es ruido.
+      **HECHO**: se quitó el del panel derecho. De paso deja de afirmar que la cola está vacía
+      cuando lo que pasó en realidad fue que la carga falló. Web **801/801**.
 
 **Premisa vieja que resultó muerta**: el ítem que arrastraba `docs/audit-2026-08-14.md` sobre
 `listDrafts()` devolviendo el arreglo completo sin paginar **ya no aplica**. Ese método no
