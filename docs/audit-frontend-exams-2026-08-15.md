@@ -438,9 +438,9 @@ Se dejan escritos para que nadie los vuelva a auditar:
 
 - Generación IA real end-to-end (gasta cuota de OpenRouter y minutos) — solo se auditó el
   puente y el prefill.
-- Cola de revisión IA e Historial IA.
-- ~~Rol `teacher`~~ — auditado el 2026-08-18, ver [`docs/audit-teacher-role-2026-08-18.md`](./audit-teacher-role-2026-08-18.md) (queda pendiente ahí la pasada visual). Visibilidad cross-tenant sigue sin auditar.
-- Modo oscuro.
+- ~~Cola de revisión IA e Historial IA~~ — auditadas el 2026-08-18, ver [`docs/audit-2026-08-18-zonas-no-auditadas.md`](./audit-2026-08-18-zonas-no-auditadas.md).
+- ~~Rol `teacher`~~ — auditado el 2026-08-18, ver [`docs/audit-teacher-role-2026-08-18.md`](./audit-teacher-role-2026-08-18.md) (queda pendiente ahí la pasada visual). Visibilidad cross-tenant auditada el 2026-08-18: sin fugas, 54 tests de regresión — mismo doc.
+- ~~Modo oscuro~~ — auditado y arreglado el 2026-08-18, ver [`docs/audit-2026-08-18-zonas-no-auditadas.md`](./audit-2026-08-18-zonas-no-auditadas.md) (falta el viewport móvil).
 - Estados de red caída / API caída en el flujo de generación.
 - Banco de preguntas y landing (fuera de alcance de esta auditoría).
 
