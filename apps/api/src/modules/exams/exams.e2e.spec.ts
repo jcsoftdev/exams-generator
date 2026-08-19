@@ -65,6 +65,7 @@ describe("Exams module (e2e)", () => {
   let platformAdminToken: string;
 
   const createdTopicIds: string[] = [];
+  const createdCourseIds: string[] = [];
   const createdQuestionIds: string[] = [];
   const createdAssetIds: string[] = [];
   const createdExamIds: string[] = [];
@@ -195,7 +196,8 @@ describe("Exams module (e2e)", () => {
           }
         },
       ],
-      ["delete courses", () => db.delete(courses).where(inArray(courses.id, [courseId]))],
+      ["delete courses", () => (createdCourseIds.length > 0 ? db.delete(courses).where(inArray(courses.id, createdCourseIds)) : Promise.resolve()) as Promise<unknown>],
+      ["delete base course", () => db.delete(courses).where(inArray(courses.id, [courseId]))],
       ["close app", () => app.close()],
     ];
     for (const [label, step] of cleanupSteps) {
@@ -362,7 +364,25 @@ describe("Exams module (e2e)", () => {
     });
 
     it("central (tenantId=null) questions are visible to every tenant's exam pool", async () => {
-      const topicId = await createTopic();
+      // Dedicated course, not the shared file-level `courseId`. The pool the
+      // repository returns is keyed on course+grade (topic is filtered later in
+      // the selector), so a sibling suite's own central (tenant-null) question
+      // on the shared course+grade would leak into this pool and break the
+      // exact-match assertion below — which is exactly what surfaced once the
+      // e2e project stopped running --runInBand (audit 2026-08-18). A fresh
+      // course makes this test's pool provably its own.
+      const [ownCourse] = await db
+        .insert(courses)
+        .values({ name: `ExamsE2E CentralPool Course ${randomUUID()}` })
+        .returning({ id: courses.id });
+      const ownCourseId = ownCourse!.id;
+      createdCourseIds.push(ownCourseId);
+      const [ownTopic] = await db
+        .insert(topics)
+        .values({ courseId: ownCourseId, name: `ExamsE2E CentralPool Topic ${randomUUID()}` })
+        .returning({ id: topics.id });
+      const topicId = ownTopic!.id;
+      createdTopicIds.push(topicId);
       const gradeLevel = "primaria_1";
 
       const centralId = await createApprovedQuestion({
@@ -376,7 +396,7 @@ describe("Exams module (e2e)", () => {
         .send({
           title: "Central visible to A",
           gradeLevel,
-          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+          blueprint: [{ courseId: ownCourseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
         })
         .expect(201);
       createdExamIds.push(forA.body.id);
@@ -385,7 +405,7 @@ describe("Exams module (e2e)", () => {
         .send({
           title: "Central visible to B",
           gradeLevel,
-          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+          blueprint: [{ courseId: ownCourseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
         })
         .expect(201);
       createdExamIds.push(forB.body.id);
