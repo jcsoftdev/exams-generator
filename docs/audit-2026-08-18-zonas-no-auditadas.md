@@ -187,10 +187,45 @@ un commit anterior a esta sesión. No hay riesgo de truncado silencioso a 100 fi
 
 ---
 
+## Red caída y API caída
+
+Auditado el 2026-08-19 simulando las fallas **en el navegador** (interceptación de requests:
+abort, 500, 401, offline, y respuestas que nunca cierran), nunca tumbando la API real — otra
+sesión trabajaba contra ella.
+
+- [x] **P0 — Ningún stream SSE tenía timeout de cliente.** Un corte *limpio* dispara `error()`
+      y ya se manejaba; uno *silencioso* —paquetes perdidos sin FIN— no dispara nada: la barra
+      de progreso quedaba clavada para siempre, sin mensaje, sin salida salvo recargar a ciegas.
+
+      **HECHO**, con el intervalo derivado de lo que el servidor mismo impone, no elegido a
+      dedo: el stream de IA espera **360s** — el hueco legítimo máximo es
+      `MAX_COMPILE_ATTEMPTS`(2) × (`SSE_TIMEOUT_MS` 120s + `TYPST_TIMEOUT_MS` 30s) = 300s, pasado
+      el cual el servidor ya habría lanzado y cerrado; 360s es ese techo más margen. El stream de
+      formas espera **120s**: ese worker nunca llama al LLM, solo dos compilaciones Typst de 30s
+      sin reintento.
+
+      **Lo que dice al dispararse es el punto**: un stream cortado **no es un job fallido**. La
+      señal `connectionLost` está separada de las de fallo, el banner dice que la generación
+      puede seguir en curso, y el progreso conocido **no se resetea**. La recuperación resuelve
+      la duda con un `GET` del estado actual —ambos endpoints ya existían— y "Reconectar" reabre
+      el stream sin pasar por el camino de recarga total.
+
+- [x] **P1 — `exam-versions-panel` era la única pantalla sin "Reintentar"** en su estado de
+      error. Un fallo de carga obligaba a recargar la página entera. **HECHO**, con el mismo
+      patrón de las otras cinco.
+
+- [x] **P1 — Un 500 genérico metía inglés en una UI en español.** Nest envuelve todo error no
+      manejado en la misma forma que un 400 de validación, así que el pass-through renderizaba
+      `"Internal server error"` al docente. **HECHO**: solo pasan los `message` de 4xx — que son
+      los específicos (validación, stderr de Typst) que otros ítems de esta serie existen para
+      preservar. Web **820/820**.
+
+---
+
 ## Zonas que siguen sin auditar
 
-- Estados de red caída / API caída en el flujo de generación.
-- Viewport móvil (390×844) en modo oscuro — solo se probó desktop 1440×900.
+- Viewport móvil (390×844) — auditado el 2026-08-19; ver los tres P0 corregidos abajo. Falta
+  la cola de revisión con tarjetas reales (estaba vacía) y el detalle de un job en progreso.
 - Generación IA real end-to-end (gasta cuota de OpenRouter).
 - El detalle de una pregunta abierta en el banco, y la tabla real de `/app/admin/tenants`
   (requiere un `platform_admin` con contraseña utilizable; el sembrado no tiene una).
