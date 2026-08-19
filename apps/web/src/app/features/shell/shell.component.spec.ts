@@ -309,4 +309,130 @@ describe('ShellComponent', () => {
     button!.click();
     expect(toggleTheme).toHaveBeenCalledTimes(1);
   });
+
+  // P0 3 (2026-08-18 mobile audit): the drawer had no dialog semantics, never
+  // received focus, didn't trap Tab, and Escape did nothing — a keyboard user
+  // could Tab straight past it into `theme-toggle-button` behind the backdrop.
+  describe('mobile drawer accessibility (P0 — 2026-08-18 audit)', () => {
+    function openDrawer(fixture: ReturnType<typeof setup>['fixture'], compiled: HTMLElement): HTMLElement {
+      const menuButton = compiled.querySelector<HTMLElement>('[data-testid="topbar-menu-button"]')!;
+      menuButton.focus();
+      menuButton.click();
+      fixture.detectChanges();
+      return menuButton;
+    }
+
+    it('gives the drawer panel dialog semantics: role=dialog, aria-modal=true, a real aria-label', () => {
+      const { fixture, compiled } = setup(Role.Teacher);
+      document.body.appendChild(fixture.nativeElement);
+      try {
+        openDrawer(fixture, compiled);
+        const panel = compiled.querySelector<HTMLElement>('[data-testid="shell-mobile-drawer"] [role="dialog"]');
+
+        expect(panel).toBeTruthy();
+        expect(panel!.getAttribute('aria-modal')).toBe('true');
+        expect(panel!.getAttribute('aria-label')).toBeTruthy();
+      } finally {
+        fixture.nativeElement.remove();
+      }
+    });
+
+    it('moves focus into the drawer panel when it opens', async () => {
+      const { fixture, compiled } = setup(Role.Teacher);
+      document.body.appendChild(fixture.nativeElement);
+      try {
+        openDrawer(fixture, compiled);
+        const panel = compiled.querySelector<HTMLElement>('[data-testid="shell-mobile-drawer"] [role="dialog"]')!;
+
+        await vi.waitFor(() => expect(document.activeElement).toBe(panel));
+      } finally {
+        fixture.nativeElement.remove();
+      }
+    });
+
+    it('closes on Escape and returns focus to the button that opened it', async () => {
+      const { fixture, compiled } = setup(Role.Teacher);
+      document.body.appendChild(fixture.nativeElement);
+      try {
+        const menuButton = openDrawer(fixture, compiled);
+        const panel = compiled.querySelector<HTMLElement>('[data-testid="shell-mobile-drawer"] [role="dialog"]')!;
+        await vi.waitFor(() => expect(document.activeElement).toBe(panel));
+
+        panel.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+        fixture.detectChanges();
+
+        expect(compiled.querySelector('[data-testid="shell-mobile-drawer"]')).toBeFalsy();
+        await vi.waitFor(() => expect(document.activeElement).toBe(menuButton));
+      } finally {
+        fixture.nativeElement.remove();
+      }
+    });
+
+    it('traps Tab inside the drawer, wrapping from the last focusable element back to the first', async () => {
+      const { fixture, compiled } = setup(Role.Teacher);
+      document.body.appendChild(fixture.nativeElement);
+      try {
+        openDrawer(fixture, compiled);
+        const panel = compiled.querySelector<HTMLElement>('[data-testid="shell-mobile-drawer"] [role="dialog"]')!;
+        await vi.waitFor(() => expect(document.activeElement).toBe(panel));
+
+        const navLinks = Array.from(panel.querySelectorAll<HTMLElement>('a[data-testid="nav-item"]'));
+        expect(navLinks.length).toBeGreaterThan(0);
+        const first = navLinks[0]!;
+        const last = navLinks[navLinks.length - 1]!;
+
+        last.focus();
+        const event = new KeyboardEvent('keydown', { key: 'Tab', bubbles: true, cancelable: true });
+        last.dispatchEvent(event);
+        fixture.detectChanges();
+
+        expect(event.defaultPrevented).toBe(true);
+        expect(document.activeElement).toBe(first);
+      } finally {
+        fixture.nativeElement.remove();
+      }
+    });
+
+    it('traps Shift+Tab inside the drawer, wrapping from the first focusable element to the last', async () => {
+      const { fixture, compiled } = setup(Role.Teacher);
+      document.body.appendChild(fixture.nativeElement);
+      try {
+        openDrawer(fixture, compiled);
+        const panel = compiled.querySelector<HTMLElement>('[data-testid="shell-mobile-drawer"] [role="dialog"]')!;
+        await vi.waitFor(() => expect(document.activeElement).toBe(panel));
+
+        const navLinks = Array.from(panel.querySelectorAll<HTMLElement>('a[data-testid="nav-item"]'));
+        const first = navLinks[0]!;
+        const last = navLinks[navLinks.length - 1]!;
+
+        first.focus();
+        const event = new KeyboardEvent('keydown', { key: 'Tab', shiftKey: true, bubbles: true, cancelable: true });
+        first.dispatchEvent(event);
+        fixture.detectChanges();
+
+        expect(event.defaultPrevented).toBe(true);
+        expect(document.activeElement).toBe(last);
+      } finally {
+        fixture.nativeElement.remove();
+      }
+    });
+
+    it('marks the app content behind the drawer inert while open, and not inert once closed', () => {
+      const { fixture, compiled } = setup(Role.Teacher);
+      document.body.appendChild(fixture.nativeElement);
+      try {
+        const appColumn = compiled.querySelector<HTMLElement>('main')!.parentElement!;
+        expect(appColumn.hasAttribute('inert')).toBe(false);
+
+        openDrawer(fixture, compiled);
+        expect(appColumn.hasAttribute('inert')).toBe(true);
+
+        compiled.querySelector<HTMLElement>('[data-testid="shell-mobile-backdrop"]')!.click();
+        fixture.detectChanges();
+        expect(appColumn.hasAttribute('inert')).toBe(false);
+      } finally {
+        fixture.nativeElement.remove();
+      }
+    });
+  });
 });

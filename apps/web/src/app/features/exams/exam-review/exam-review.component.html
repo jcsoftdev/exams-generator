@@ -133,8 +133,16 @@
   </ul>
   }
 
+  <!--
+    `flex-wrap`: at 390px this footer needed 418px for its content (308px
+    available), so "Solo confirmar" landed 69px past the right edge with
+    NO visual hint — `document.documentElement.scrollWidth` stayed 390
+    because the overflow lived one level up, in the shell's `<main
+    class="overflow-auto">` (P0 2, audit 2026-08-18; same bug class + same
+    fix as exam-builder's sticky footer, audit 2026-08-15).
+  -->
   <footer
-    class="sticky bottom-0 mt-6 flex items-center justify-between gap-3 rounded-card border border-n200 bg-surface px-4 py-3"
+    class="sticky bottom-0 mt-6 flex flex-wrap items-center justify-between gap-3 rounded-card border border-n200 bg-surface px-4 py-3"
   >
     <span class="text-sm text-n600">{{ questions().length }} preguntas</span>
     <span class="flex items-center gap-2">

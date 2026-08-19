@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, ElementRef, inject, signal, viewChild } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { MeResponseDto, Role } from '@exams-generator/shared';
 import { LucideAngularModule } from 'lucide-angular';
@@ -54,6 +54,9 @@ const ADMIN_GROUP: NavGroup = {
   templateUrl: './shell.component.html',
 })
 export class ShellComponent {
+  private static readonly FOCUSABLE_SELECTOR =
+    'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
   private readonly authService = inject(AuthService);
   private readonly tenantSettings = inject(TenantSettingsService);
   private readonly router = inject(Router);
@@ -61,6 +64,27 @@ export class ShellComponent {
   private readonly themeService = inject(ThemeService);
 
   protected readonly mobileOpen = signal(false);
+  private readonly drawerPanel = viewChild<ElementRef<HTMLElement>>('drawerPanel');
+  private readonly appColumn = viewChild<ElementRef<HTMLElement>>('appColumn');
+  /**
+   * Element focused right before the drawer opened; restored on close.
+   * Mirrors `ui-modal`'s own focus trap (same reasoning, same shape) — see
+   * that component's doc comment. Unlike the modal, the shell DOES own a
+   * well-defined "rest of the page" (the app column next to the drawer),
+   * so it also gets `inert` while the drawer is open (P0 — 2026-08-18
+   * audit: Tab was reaching `theme-toggle-button` behind the backdrop).
+   *
+   * `inert` is toggled imperatively here — NOT via an `[attr.inert]`
+   * template binding — deliberately. A real browser refuses `.focus()` on
+   * an element that is still (or newly) inert; jsdom does not enforce
+   * that, which is why a template-binding version of this passed every
+   * unit test yet silently failed to restore focus in real Chrome — the
+   * `inert` attribute was cleared by Angular's own CD in the same tick
+   * but there is no ordering guarantee that it lands before this effect's
+   * `.focus()` call. Doing both from one place removes the race.
+   */
+  private drawerTrigger: HTMLElement | null = null;
+  private drawerWasOpen = false;
   protected readonly userMenuOpen = signal(false);
   protected readonly schoolName = signal('GeneraExamen');
   protected readonly themeMode = computed(() => this.themeService.mode());
@@ -123,6 +147,22 @@ export class ShellComponent {
       next: (user) => this.currentUser.set(user),
       error: () => {},
     });
+
+    effect(() => {
+      const isOpen = this.mobileOpen();
+      const appColumnEl = this.appColumn()?.nativeElement;
+      if (isOpen && !this.drawerWasOpen) {
+        this.drawerTrigger = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+        appColumnEl?.setAttribute('inert', '');
+        queueMicrotask(() => this.drawerPanel()?.nativeElement.focus());
+      } else if (!isOpen && this.drawerWasOpen) {
+        // Clear `inert` BEFORE focusing — see the field doc above.
+        appColumnEl?.removeAttribute('inert');
+        this.drawerTrigger?.focus();
+        this.drawerTrigger = null;
+      }
+      this.drawerWasOpen = isOpen;
+    });
   }
 
   protected toggleMobileMenu(): void {
@@ -131,6 +171,33 @@ export class ShellComponent {
 
   protected closeMobileMenu(): void {
     this.mobileOpen.set(false);
+  }
+
+  /** Keeps Tab/Shift+Tab cycling through the drawer's own focusable elements instead of leaking into the app column behind it. */
+  protected onDrawerTab(event: Event, backward: boolean): void {
+    const panelEl = this.drawerPanel()?.nativeElement;
+    if (!panelEl) {
+      return;
+    }
+
+    const focusable = Array.from(panelEl.querySelectorAll<HTMLElement>(ShellComponent.FOCUSABLE_SELECTOR));
+    if (focusable.length === 0) {
+      event.preventDefault();
+      panelEl.focus();
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const active = document.activeElement;
+
+    if (backward && active === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!backward && active === last) {
+      event.preventDefault();
+      first.focus();
+    }
   }
 
   protected toggleUserMenu(): void {

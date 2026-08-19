@@ -12,13 +12,23 @@
         class="absolute inset-0 block w-full border-0 bg-primary-900/40 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-300"
         (click)="closeMobileMenu()"
       ></button>
-      <div class="relative h-full w-60">
+      <div
+        #drawerPanel
+        class="relative h-full w-60"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menú de navegación"
+        tabindex="-1"
+        (keydown.escape)="closeMobileMenu()"
+        (keydown.tab)="onDrawerTab($event, false)"
+        (keydown.shift.tab)="onDrawerTab($event, true)"
+      >
         <ui-sidebar [groups]="navGroups()"></ui-sidebar>
       </div>
     </div>
   }
 
-  <div class="flex flex-1 flex-col overflow-hidden">
+  <div #appColumn class="flex flex-1 flex-col overflow-hidden">
     <ui-topbar [title]="schoolName()" (menuToggle)="toggleMobileMenu()">
       <div actions class="flex items-center gap-2">
         <button

@@ -61,14 +61,22 @@
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-[55%_45%]">
       <!-- Árbol Curso -> Tema -> preguntas -->
       <div class="flex flex-col gap-2">
-        <div class="flex items-end gap-2">
+        <!--
+          `flex-wrap`: at 390px the search input plus both action buttons
+          need ~330px more than the viewport has, so without wrapping the
+          input got squeezed to 26px wide — still focusable, just unusable
+          with a thumb (P0 1, audit 2026-08-18; same bug class + same fix
+          as exam-builder's sticky footer, audit 2026-08-15). `min-w-[9rem]`
+          keeps the input from being squeezed again once it's on its own row.
+        -->
+        <div class="flex flex-wrap items-end gap-2">
           <!--
             Placeholder states the search scope on purpose: the tree loads
             lazily per branch, so a collapsed topic's questions aren't in the
             browser and the filter can only honestly match curso/tema names.
             See `filterQuestionTree`.
           -->
-          <div data-testid="tree-search" class="flex-1">
+          <div data-testid="tree-search" class="min-w-[9rem] flex-1">
             <ui-input
               placeholder="Buscar por curso o tema…"
               [value]="filterQuery()"
