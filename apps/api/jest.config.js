@@ -17,6 +17,7 @@ module.exports = {
     {
       displayName: "non-e2e",
       preset: "ts-jest",
+      transform: { "^.+\\.ts$": ["ts-jest", { isolatedModules: true }] },
       testEnvironment: "node",
       rootDir: "src",
       testRegex: "(?<!\\.e2e)\\.spec\\.ts$",
@@ -42,6 +43,7 @@ module.exports = {
       // the invocation.)
       displayName: "db-serial",
       preset: "ts-jest",
+      transform: { "^.+\\.ts$": ["ts-jest", { isolatedModules: true }] },
       testEnvironment: "node",
       rootDir: "src",
       testRegex: "db/seed-idempotency\\.spec\\.ts$",
@@ -55,6 +57,7 @@ module.exports = {
     {
       displayName: "e2e",
       preset: "ts-jest",
+      transform: { "^.+\\.ts$": ["ts-jest", { isolatedModules: true }] },
       testEnvironment: "node",
       rootDir: "src",
       testRegex: "\\.e2e\\.spec\\.ts$",
