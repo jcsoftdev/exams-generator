@@ -116,9 +116,24 @@ ANTES de borrar). Y la SEMÁNTICA es decisión de producto: ¿hard-delete inmedi
    y un e2e que borre un tenant CON datos (user+exam+asset) y verifique 200 + que los datos de
    OTRO tenant sobreviven.
 
+## Auditado — Cost / Abuso de IA
+
+Cada job de generación son hasta 10 llamadas a OpenRouter (`MAX_COUNT`). El throttle global
+de 100 req/min por IP y la `concurrency: 2` del worker limitan la TASA de gasto, no el TOTAL:
+un script a 100 jobs/min encolaba miles de jobs y todos se procesaban y facturaban.
+
+Arreglado (`01fea2d`): `countActiveByTenant()` cuenta los jobs `pending`+`running` del tenant;
+`create()` rechaza con 429 al llegar a `MAX_ACTIVE_JOBS_PER_TENANT = 20`. Una sola query COUNT
+al crear el job, nada en hot path. Acota la PROFUNDIDAD de la cola (el pile-up en ráfaga), no
+el total de por vida — un abusador determinado aún completa jobs y encola más con el tiempo.
+El retry `attempts: 3` de BullMQ NO multiplica la factura: el processor reanuda desde
+`createdCount + failedCount`, así que un retry solo rehace la cola sin terminar.
+
+**Siguiente capa (decisión de producto/billing):** cuota diaria/mensual por tenant para acotar
+el total de por vida, no solo la ráfaga. Requiere una tabla de tracking de uso.
+
 ## No auditado todavía
 
 - Retención de datos / borrado de PII de menores (¿qué pasa con las preguntas y exámenes de un
   tenant borrado? ¿hay derecho al olvido?).
-- Rate-limiting de los endpoints de IA (costo — se cruza con el módulo Cost).
 - Contenido de los assets subidos (¿se valida que un "png" sea un png? ¿tamaño?).
