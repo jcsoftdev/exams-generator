@@ -447,6 +447,21 @@ export class ExamBuilderComponent implements OnInit {
     return null;
   });
 
+  /**
+   * What the "Cargar plantilla" button should say right now.
+   *
+   * Every flow auto-loads, so a permanent "Cargar plantilla" made the teacher
+   * wonder whether they had to press it (audit 2026-08-18). The control still
+   * earns its place — a resolve can fail on a network blip, and a reload is a
+   * legitimate "do it again" — but it should say which of those it is.
+   */
+  protected readonly loadTemplateLabel = computed(() => {
+    if (this.templateError()) {
+      return 'Reintentar';
+    }
+    return this.store.requestedCells().length > 0 ? 'Volver a cargar' : 'Cargar plantilla';
+  });
+
   protected readonly canLoadTemplate = computed(() => !this.isManual() && this.loadTemplateBlockedReason() === null);
 
   ngOnInit(): void {
@@ -684,6 +699,45 @@ export class ExamBuilderComponent implements OnInit {
     if (trackId) {
       this.loadTemplate();
     }
+  }
+
+  /**
+   * Free-text filter over the course checkboxes. `fastest` lists every course
+   * of the stage — 42 of them on the seeded catalog — with no way to find one
+   * (audit 2026-08-18). Accent-insensitive so "quimica" finds "Química": a
+   * teacher typing fast doesn't reach for the accent key.
+   */
+  protected readonly courseSearch = signal('');
+
+  private static normalize(value: string): string {
+    return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  }
+
+  protected readonly filteredTemplateCourses = computed(() => {
+    const needle = ExamBuilderComponent.normalize(this.courseSearch().trim());
+    const list = this.templateCourses();
+    if (!needle) {
+      return list;
+    }
+    return list.filter((course) => ExamBuilderComponent.normalize(course.name).includes(needle));
+  });
+
+  protected onCourseSearchChange(value: string): void {
+    this.courseSearch.set(value);
+  }
+
+  /** Marks everything the current filter shows — "todos" means "todos los que veo". */
+  protected selectAllCourses(): void {
+    const visible = this.filteredTemplateCourses().map((course) => course.id);
+    this.selectedCourseIds.update((current) => new Set([...current, ...visible]));
+    if (this.canLoadTemplate()) {
+      this.loadTemplate();
+    }
+  }
+
+  protected clearSelectedCourses(): void {
+    this.selectedCourseIds.set(new Set());
+    this.store.clearRequested();
   }
 
   protected isCourseSelected(courseId: string): boolean {

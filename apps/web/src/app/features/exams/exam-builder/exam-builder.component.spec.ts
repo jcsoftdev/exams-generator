@@ -1511,6 +1511,100 @@ describe('ExamBuilderComponent', () => {
    * 26 celdas — las dos plantillas superpuestas, sin corresponder a ninguna
    * universidad, con el botón de generar habilitado y sin ningún aviso.
    */
+  /**
+   * Audit 2026-08-18: los cuatro flujos autocargan, y sin embargo el botón
+   * seguía diciendo "Cargar plantilla" — el docente no sabe si tiene que
+   * apretarlo. Y el multiselect de "Rápido" son 42 checkboxes sin buscador,
+   * sin agrupar y sin "todos": una pared.
+   */
+  describe('ruido del formulario de plantilla', () => {
+    it('el botón dice en qué estado está, en vez de fingir que hace falta', () => {
+      const { compiled, fixture } = setup({
+        getUniversityTracks: () => of([]),
+        resolveBlueprint: () =>
+          of<ResolveBlueprintResult>({
+            blueprint: [{ courseId: 'c1', topicId: 't1', count: 4, difficulty: Difficulty.Easy }],
+            weekNumber: null,
+            templateId: 'tpl',
+          }),
+      });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      const antes = compiled.querySelector('[data-testid="load-template"]')!.textContent!;
+      expect(antes).toMatch(/cargar plantilla/i);
+
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      // Ya autocargó: el botón deja de pedir la acción y se ofrece como repetir.
+      expect(compiled.querySelector('[data-testid="load-template"]')!.textContent).toMatch(/volver a cargar/i);
+    });
+
+    it('tras un error el botón se ofrece como reintentar', () => {
+      const { compiled, fixture } = setup({
+        getUniversityTracks: () => of([]),
+        resolveBlueprint: () => throwError(() => new HttpErrorResponse({ status: 404 })),
+      });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      expect(compiled.querySelector('[data-testid="load-template"]')!.textContent).toMatch(/reintentar/i);
+    });
+
+    it('el multiselect de cursos filtra por texto', () => {
+      const { compiled, fixture } = setup({
+        getCourses: () =>
+          of([
+            { id: 'c1', name: 'Aritmética' },
+            { id: 'c2', name: 'Álgebra' },
+            { id: 'c3', name: 'Química' },
+          ]),
+      });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+      expect(compiled.querySelectorAll('[data-testid="course-multiselect"] input[type=checkbox]').length).toBe(3);
+
+      const buscador = compiled.querySelector<HTMLInputElement>('[data-testid="course-search"] input')!;
+      buscador.value = 'qu';
+      buscador.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+
+      const visibles = [...compiled.querySelectorAll('[data-testid="course-multiselect"] label')].map((l) =>
+        l.textContent!.trim(),
+      );
+      expect(visibles).toEqual(['Química']);
+    });
+
+    it('permite marcar y desmarcar todo de una, y dice cuántos van', () => {
+      const { compiled, fixture } = setup({
+        getCourses: () =>
+          of([
+            { id: 'c1', name: 'Aritmética' },
+            { id: 'c2', name: 'Álgebra' },
+          ]),
+      });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+
+      (compiled.querySelector('[data-testid="courses-select-all"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(
+        [...compiled.querySelectorAll<HTMLInputElement>('[data-testid="course-multiselect"] input')].every(
+          (i) => i.checked,
+        ),
+      ).toBe(true);
+      expect(compiled.querySelector('[data-testid="courses-count"]')!.textContent).toContain('2');
+
+      (compiled.querySelector('[data-testid="courses-clear"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(
+        [...compiled.querySelectorAll<HTMLInputElement>('[data-testid="course-multiselect"] input')].some(
+          (i) => i.checked,
+        ),
+      ).toBe(false);
+    });
+  });
+
   describe('plantillas — una reemplaza a la otra, nunca se suman', () => {
     function resolveCon(rows: { courseId: string; count: number; difficulty: Difficulty }[]) {
       return () =>

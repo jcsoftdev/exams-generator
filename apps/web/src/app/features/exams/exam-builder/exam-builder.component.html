@@ -49,10 +49,35 @@
         }
 
         @if (showCourseMultiSelect()) {
+          <!--
+            42 checkboxes sin buscador ni "todos" eran una pared (audit
+            2026-08-18). El filtro es sobre lo que ya está en memoria — no pega
+            a la red — y "Todos" marca lo que el filtro muestra.
+          -->
+          <div class="flex flex-wrap items-end gap-3">
+            <div class="min-w-[220px] flex-1" data-testid="course-search">
+              <ui-input
+                name="course-search"
+                label="Cursos"
+                placeholder="Busca un curso…"
+                [value]="courseSearch()"
+                (valueChange)="onCourseSearchChange($event)"
+              ></ui-input>
+            </div>
+            <span data-testid="courses-select-all">
+              <ui-button variant="ghost" (clicked)="selectAllCourses()">Todos</ui-button>
+            </span>
+            <span data-testid="courses-clear">
+              <ui-button variant="ghost" (clicked)="clearSelectedCourses()">Ninguno</ui-button>
+            </span>
+            <p data-testid="courses-count" class="pb-2 text-xs text-n600">
+              {{ selectedCourseIds().size }} de {{ templateCourses().length }} elegidos
+            </p>
+          </div>
+
           <div data-testid="course-multiselect" class="flex flex-col gap-2">
-            <span class="text-sm font-medium text-n700">Cursos</span>
-            <div class="flex flex-wrap gap-3">
-              @for (course of templateCourses(); track course.id) {
+            <div class="flex max-h-48 flex-wrap gap-3 overflow-y-auto">
+              @for (course of filteredTemplateCourses(); track course.id) {
                 <label class="flex items-center gap-2 text-sm text-n800">
                   <input
                     type="checkbox"
@@ -86,7 +111,8 @@
               [disabled]="!canLoadTemplate()"
               [loading]="loadingTemplate()"
               (clicked)="loadTemplate()"
-            >Cargar plantilla</ui-button>
+              >{{ loadTemplateLabel() }}</ui-button
+            >
           </div>
 
           @if (loadTemplateBlockedReason(); as blockedReason) {
@@ -288,7 +314,7 @@
           >
             <lucide-icon [name]="chevronFor(isCourseExpanded(group.courseId))" [size]="14" class="shrink-0"></lucide-icon>
             {{ group.courseName }}
-            <span class="text-n400">· {{ group.rows.length }}</span>
+            <span class="text-n500">· {{ group.rows.length }}</span>
           </button>
           @if (isCourseExpanded(group.courseId)) {
           @for (row of group.rows; track row.id) {
