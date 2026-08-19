@@ -2,8 +2,21 @@ import { randomUUID } from "node:crypto";
 import { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import request from "supertest";
-import { Role } from "@exams-generator/shared";
+import { Difficulty, Role } from "@exams-generator/shared";
 import { AppModule } from "../../app.module";
+import { db } from "../../db/client";
+import {
+  assets,
+  examQuestions,
+  examVersions,
+  exams,
+  questions,
+  tenants,
+  users,
+} from "../../db/schema";
+import { eq } from "drizzle-orm";
+import { STORAGE_PORT } from "../bank/bank.constants";
+import { StorageObjectNotFoundError, StoragePort } from "../exams/domain/ports/storage.port";
 import { fakePng } from "../../test-support/image-fixtures";
 import {
   closeDbPool,
@@ -11,7 +24,9 @@ import {
   createUserFixture,
   deleteTenantFixture,
   deleteUserFixture,
+  ensureGradeLevelsSeeded,
   ensureMigrated,
+  ensureTopicFixture,
   TenantFixture,
   UserFixture,
 } from "../../test-utils/db-fixtures";
@@ -24,6 +39,7 @@ describe("Tenants (e2e)", () => {
   let schoolAdminA: UserFixture;
   let schoolAdminB: UserFixture;
   let teacherA: UserFixture;
+  let storage: StoragePort;
   const createdTenantIds: string[] = [];
 
   beforeAll(async () => {
@@ -35,6 +51,7 @@ describe("Tenants (e2e)", () => {
 
     app = moduleRef.createNestApplication();
     await app.init();
+    storage = moduleRef.get(STORAGE_PORT);
 
     tenantA = await createTenantFixture();
     tenantB = await createTenantFixture();
@@ -245,6 +262,96 @@ describe("Tenants (e2e)", () => {
         .set("Authorization", `Bearer ${token}`);
 
       expect(res.status).toBe(200);
+    });
+
+    it("hard-deletes a school WITH data (user+asset+logo+question+exam+version) and purges its MinIO objects, leaving other tenants untouched", async () => {
+      const token = await loginAs(platformAdmin);
+      await ensureGradeLevelsSeeded();
+      const topic = await ensureTopicFixture();
+
+      const toDelete = await createTenantFixture();
+      const user = await createUserFixture({ role: Role.Teacher, tenantId: toDelete.id });
+
+      // A tenant-owned asset that is ALSO the tenant's logo (exercises the
+      // tenants.logo_asset_id -> assets self-edge) and a question's image
+      // (questions.image_asset_id -> assets), each with a real MinIO object.
+      const logoKey = `test/tenant-delete/${randomUUID()}`;
+      await storage.put(logoKey, fakePng(), "image/png");
+      const [logoAsset] = await db
+        .insert(assets)
+        .values({ tenantId: toDelete.id, storageKey: logoKey, mime: "image/png" })
+        .returning();
+      await db.update(tenants).set({ logoAssetId: logoAsset!.id }).where(eq(tenants.id, toDelete.id));
+
+      const pdfKey = `test/tenant-delete/${randomUUID()}`;
+      await storage.put(pdfKey, Buffer.from("%PDF-fake"), "application/pdf");
+      const [pdfAsset] = await db
+        .insert(assets)
+        .values({ tenantId: toDelete.id, storageKey: pdfKey, mime: "application/pdf" })
+        .returning();
+
+      const [question] = await db
+        .insert(questions)
+        .values({
+          tenantId: toDelete.id,
+          topicId: topic.id,
+          difficulty: Difficulty.Easy,
+          gradeLevel: "primaria_1",
+          correctAnswer: "b",
+          createdBy: user.id,
+          imageAssetId: logoAsset!.id,
+        })
+        .returning();
+
+      const [exam] = await db
+        .insert(exams)
+        .values({
+          tenantId: toDelete.id,
+          title: "Doomed exam",
+          gradeLevel: "primaria_1",
+          createdBy: user.id,
+        })
+        .returning();
+
+      const [version] = await db
+        .insert(examVersions)
+        .values({
+          examId: exam!.id,
+          code: "A",
+          questionOrder: [question!.id],
+          answerKey: { "1": "b" },
+          pdfAssetId: pdfAsset!.id,
+        })
+        .returning();
+
+      await db
+        .insert(examQuestions)
+        .values({ examId: exam!.id, questionId: question!.id, position: 1 });
+
+      // Sanity: a survivor tenant with its own user, untouched by the delete.
+      const survivorUserId = teacherA.id;
+
+      const res = await request(app.getHttpServer())
+        .delete(`/tenants/${toDelete.id}`)
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+
+      // Every owned row is gone.
+      expect(await db.select().from(tenants).where(eq(tenants.id, toDelete.id))).toHaveLength(0);
+      expect(await db.select().from(users).where(eq(users.id, user.id))).toHaveLength(0);
+      expect(await db.select().from(questions).where(eq(questions.id, question!.id))).toHaveLength(0);
+      expect(await db.select().from(exams).where(eq(exams.id, exam!.id))).toHaveLength(0);
+      expect(await db.select().from(examVersions).where(eq(examVersions.id, version!.id))).toHaveLength(0);
+      expect(await db.select().from(assets).where(eq(assets.tenantId, toDelete.id))).toHaveLength(0);
+
+      // MinIO objects purged.
+      await expect(storage.get(logoKey)).rejects.toBeInstanceOf(StorageObjectNotFoundError);
+      await expect(storage.get(pdfKey)).rejects.toBeInstanceOf(StorageObjectNotFoundError);
+
+      // The other tenant's data survives.
+      expect(await db.select().from(users).where(eq(users.id, survivorUserId))).toHaveLength(1);
+      expect(await db.select().from(tenants).where(eq(tenants.id, tenantA.id))).toHaveLength(1);
     });
   });
 

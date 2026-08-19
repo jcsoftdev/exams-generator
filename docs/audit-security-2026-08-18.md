@@ -79,7 +79,30 @@ cambio. Producto decide si vale la fricción.
 - **Errores 500**: `AllExceptionsFilter` devuelve `"Internal server error"` genérico, nunca el
   stack (verificado con un body de 5.3mb y un cast de uuid fallido).
 
-## 🔴 HALLAZGO ABIERTO — Borrar un colegio está roto, y no hay borrado real de datos
+## ✅ RESUELTO — Borrar un colegio ahora es un hard-delete real (cascada + purga MinIO)
+
+**Fix** (`tenants.service.ts` `remove()`): recoge los `storage_key` del tenant, borra los 15
+niveles de tablas hijas antes que el padre dentro de UNA transacción (orden FK-driven, no
+alfabético — `exam_questions` antes que `exam_blueprint_rows` por su `blueprint_row_id`; la
+self-edge `tenants.logo_asset_id → assets` se NULL-ea primero para poder borrar `assets` antes
+del tenant), y purga los objetos MinIO SOLO tras el commit (best-effort, no fatal). Semántica
+elegida: hard-delete inmediato (no hay PII de alumnos, riesgo legal bajo — decisión de producto).
+
+**e2e nuevo** (`tenants.e2e.spec.ts`): borra un colegio CON datos reales (user + asset + logo +
+question + exam + version + exam_questions), verifica 200, que TODAS las filas propias
+desaparecen, que los 2 objetos MinIO se purgan (`storage.get` → `StorageObjectNotFoundError`), y
+que el user/tenant de OTRO colegio sobreviven. El test viejo ("delete a tenant" sobre un tenant
+vacío) queda como caso mínimo.
+
+**No cubierto por el e2e** (mismo patrón de subquery, menor riesgo): `generation_jobs`,
+`cycles`, `exam_blueprint_templates`+rows, `syllabus_week_maps`, `exam_version_jobs`,
+`question_alternative_images` — se borran igual, scoped por tenant/parent.
+
+---
+
+<details><summary>Contexto original del hallazgo (histórico)</summary>
+
+### 🔴 HALLAZGO ABIERTO — Borrar un colegio está roto, y no hay borrado real de datos
 
 **Verificado en la DB de producción-local**: `DELETE /tenants/:id` (endpoint vivo,
 `platform_admin`) ejecuta `db.delete(tenants).where(id)` **pelado, sin cascada**. Las 8 tablas
@@ -115,6 +138,10 @@ ANTES de borrar). Y la SEMÁNTICA es decisión de producto: ¿hard-delete inmedi
    Ambas necesitan: recoger los `storage_key` del tenant ANTES, borrar, purgar MinIO después,
    y un e2e que borre un tenant CON datos (user+exam+asset) y verifique 200 + que los datos de
    OTRO tenant sobreviven.
+
+_Implementado con la opción 2 (transacción con deletes ordenados)._
+
+</details>
 
 ## Auditado — Cost / Abuso de IA
 
