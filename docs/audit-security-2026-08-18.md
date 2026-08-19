@@ -79,6 +79,43 @@ cambio. Producto decide si vale la fricción.
 - **Errores 500**: `AllExceptionsFilter` devuelve `"Internal server error"` genérico, nunca el
   stack (verificado con un body de 5.3mb y un cast de uuid fallido).
 
+## 🔴 HALLAZGO ABIERTO — Borrar un colegio está roto, y no hay borrado real de datos
+
+**Verificado en la DB de producción-local**: `DELETE /tenants/:id` (endpoint vivo,
+`platform_admin`) ejecuta `db.delete(tenants).where(id)` **pelado, sin cascada**. Las 8 tablas
+que referencian `tenants` (users, assets, questions, exams, generation_jobs,
+exam_blueprint_templates, cycles, exam_version_jobs) tienen FK **restrict** (`ON DELETE NO
+ACTION`). Reproducido: crear un tenant con UN user y borrarlo →
+`violates foreign key constraint "users_tenant_id_tenants_id_fk"`. En la app eso sale como
+**500**.
+
+**Falsa confianza del test**: el e2e "allows platform_admin to delete a tenant" pasa porque
+usa `createTenantFixture()` — un tenant VACÍO. El endpoint nunca se ejerció contra un colegio
+con datos. Verde ≠ funciona.
+
+**Doble impacto**:
+- **Funcional**: no se puede dar de baja un colegio que tenga cualquier dato.
+- **Privacidad / derecho al olvido**: no existe NINGUNA vía para borrar los datos de un colegio.
+  (Atenuante real: la app **no guarda PII de alumnos** — solo cuentas de docentes/admin
+  (email+name) y el nombre del colegio; los exámenes son documentos, los alumnos rinden en
+  papel. El riesgo legal es bajo, pero el borrado sigue sin existir.)
+
+**Por qué no se arregló acá**: el fix es una cascada destructiva sobre ~12 tablas (el grafo es
+profundo: exams→versions/questions/blueprint_rows, questions→alternative_images,
+templates→syllabus/rows…) MÁS purgar los objetos de MinIO del tenant (las filas de `assets` se
+van con la cascada, pero los objetos S3 quedan huérfanos si no se recogen sus `storage_key`
+ANTES de borrar). Y la SEMÁNTICA es decisión de producto: ¿hard-delete inmediato?
+¿soft-delete con período de gracia? ¿export obligatorio antes? Eso no lo decide el auditor.
+
+**Opciones de implementación** (cuando se decida la semántica):
+1. **FK `ON DELETE CASCADE`** vía migración: Postgres ordena el borrado. Menos código,
+   imposible equivocar el orden. Contra: la cascada queda "encendida" para siempre.
+2. **Transacción con deletes ordenados** en el service: explícito y auditable, sin cambio de
+   schema. Contra: hay que enumerar las ~12 tablas hijas en orden de FK y mantenerlo al día.
+   Ambas necesitan: recoger los `storage_key` del tenant ANTES, borrar, purgar MinIO después,
+   y un e2e que borre un tenant CON datos (user+exam+asset) y verifique 200 + que los datos de
+   OTRO tenant sobreviven.
+
 ## No auditado todavía
 
 - Retención de datos / borrado de PII de menores (¿qué pasa con las preguntas y exámenes de un
