@@ -68,20 +68,34 @@ Endpoints que la web pide desde esas pantallas, con token de profesor:
 
 ## P2
 
-- [ ] **El menú de usuario no dice quién eres.** `shell.component.html:37-60`: un ícono
+- [x] **El menú de usuario no dice quién eres.** `shell.component.html:37-60`: un ícono
       genérico de persona y un solo ítem, "Cerrar sesión". Ni nombre, ni email, ni rol, ni
       colegio. En un producto multi-rol y multi-colegio, donde el único indicio de en qué
       cuenta estás es el título del topbar, no hay forma de distinguir una sesión de profesor
       de una de administrador salvo por qué ítems faltan en el sidebar.
 
-      **No es un fix mecánico**: el JWT solo lleva `sub`, `role` y `tenantId`, y
-      `POST /auth/login` devuelve `accessToken` + `tenantSlug`. Mostrar nombre o email pide o
-      un `GET /users/me` nuevo, o meter el nombre en el token/respuesta de login — decisión de
-      diseño, no un cambio de template. Queda escrito, sin implementar.
+      **HECHO** — el menú ahora muestra nombre, email y un chip de rol, alimentados por un
+      `GET /auth/me` nuevo. Decisiones:
+      - **Endpoint nuevo, no engordar el JWT.** Un token no se refresca cuando el usuario cambia
+        de nombre; una fetch sí.
+      - **Vive en `AuthController`, no en `UsersController`.** Ese último es
+        `@Roles(SchoolAdmin)` a nivel de clase y saca el tenant del token con `requireTenant()`,
+        que lanza para el staff de plataforma sin tenant. Un `me` colgado ahí habría dado 403 a
+        todos los demás roles y roto a `platform_admin`/`content_editor`. "Quién soy" es
+        identidad, no gestión de usuarios del colegio.
+      - **Lee la fila por el `sub` del JWT**, nunca por un id que mande el cliente, y selecciona
+        columnas explícitas para que el hash de contraseña no pueda filtrarse.
+      - `name` es nullable en la base, así que la línea principal cae al email cuando no hay
+        nombre.
+      - El `roleLabel()` de dos roles que vivía dentro de `tenant-settings` pasó a un util
+        compartido con los cuatro roles; las dos pantallas usan el mismo mapeo.
+
+      API non-e2e **860/860**, API e2e **204/204**, web **777/777**. Verificado en la app
+      corriendo como profesor real: `Profesora QA · profe.qa@colegio-demo.test · Profesor`.
 
 ## Hallazgo de la pasada visual
 
-- [ ] **"Mis exámenes" no son sus exámenes.** El nav y el `h1` dicen **"Mis exámenes"**, y la
+- [x] **"Mis exámenes" no son sus exámenes.** El nav y el `h1` dicen **"Mis exámenes"**, y la
       lista trae **todos los exámenes del colegio**: `listExams()` filtra por `tenantId`, nunca
       por `createdBy` (`apps/api/src/modules/exams/exams.repository.ts:247-252`), aunque la
       columna `created_by` existe (`exams.schema.ts:39`). Medido: el profesor recién creado, que
@@ -101,7 +115,11 @@ Endpoints que la web pide desde esas pantallas, con token de profesor:
          `createdBy`, decidir qué ve el `school_admin` (¿todo el colegio?) y qué pasa con los
          exámenes ya creados.
 
-      Queda para que lo decidas.
+      **RESUELTO el 2026-08-18 por la lectura 1** (los exámenes son del colegio): se renombró la
+      etiqueta a "Exámenes" en el nav, el `h1`, los 3 specs y 4 comentarios/docstrings que la
+      nombraban. Los datos, la consulta y los guards quedaron intactos. Web **773/773** en ese
+      commit. Si la lectura correcta era la 2, se revierte en un commit y el trabajo real
+      (filtrar por `createdBy`) sigue pendiente.
 
 ---
 
