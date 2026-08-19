@@ -141,22 +141,22 @@ describe('ShellComponent', () => {
     expect(compiled.textContent).not.toContain('Configuración');
   });
 
-  it('labels the exams nav item "Mis exámenes"', () => {
+  it('labels the exams nav item "Exámenes"', () => {
     const { compiled } = setup(Role.Teacher);
 
-    expect(compiled.textContent).toContain('Mis exámenes');
+    expect(compiled.textContent).toContain('Exámenes');
   });
 
-  it('hides "Mis exámenes" for platform_admin — the backend exams controller 403s the role, so the nav must not lead to a dead 403 screen', () => {
+  it('hides "Exámenes" for platform_admin — the backend exams controller 403s the role, so the nav must not lead to a dead 403 screen', () => {
     const { compiled } = setup(Role.PlatformAdmin);
 
-    expect(compiled.textContent).not.toContain('Mis exámenes');
+    expect(compiled.textContent).not.toContain('Exámenes');
   });
 
-  it('hides "Mis exámenes" for content_editor (same backend 403)', () => {
+  it('hides "Exámenes" for content_editor (same backend 403)', () => {
     const { compiled } = setup(Role.ContentEditor);
 
-    expect(compiled.textContent).not.toContain('Mis exámenes');
+    expect(compiled.textContent).not.toContain('Exámenes');
   });
 
   it('shows "Colegios" (admin tenants screen) only for platform_admin', () => {

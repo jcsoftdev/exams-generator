@@ -16,7 +16,7 @@ const PRINCIPAL_GROUP: NavGroup = {
   items: [
     { label: 'Panel', route: '/app/dashboard', icon: 'layout-dashboard' },
     { label: 'Banco de preguntas', route: '/app/bank', icon: 'book-open' },
-    { label: 'Mis exámenes', route: '/app/exams', icon: 'file-text' },
+    { label: 'Exámenes', route: '/app/exams', icon: 'file-text' },
   ],
 };
 

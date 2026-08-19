@@ -26,7 +26,7 @@ const STATUS_OPTIONS: readonly SelectOption<ExamStatus>[] = [
 ];
 
 /**
- * "Mis exámenes" — historial index screen (Task F7). Replaces the F3 stub.
+ * "Exámenes" — historial index screen (Task F7). Replaces the F3 stub.
  * Mockup: option B-detalle in
  * .superpowers/brainstorm/13165-1784402344/content/historial-layout.html —
  * a clean row-card list; opening a `ready` exam goes to its versions detail

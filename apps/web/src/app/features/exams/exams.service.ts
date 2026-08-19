@@ -81,7 +81,7 @@ export class ExamsService {
     return this.http.post<PreviewExamResult>(`${environment.apiBaseUrl}/exams/preview`, payload);
   }
 
-  /** `GET /exams` (S1) — paginated exam history for the "Mis exámenes" screen. */
+  /** `GET /exams` (S1) — paginated exam history for the "Exámenes" screen. */
   listExams(filters: ExamListFilters): Observable<ExamListResult> {
     let params = new HttpParams();
     if (filters.status) params = params.set('status', filters.status);

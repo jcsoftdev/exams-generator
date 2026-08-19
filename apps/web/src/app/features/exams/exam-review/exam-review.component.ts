@@ -233,7 +233,7 @@ export class ExamReviewComponent implements OnInit {
    * Where the "Ver / generar formas" CTA goes once the exam is confirmed. The
    * success banner promised the teacher they could generate the versions and
    * the screen had no control at all to do it (audit 2026-08-15) — the only
-   * way out was guessing the path through "Mis exámenes". `navigate` rather
+   * way out was guessing the path through "Exámenes". `navigate` rather
    * than a `routerLink`, matching every other navigation in this feature.
    */
   protected goToVersions(): void {
