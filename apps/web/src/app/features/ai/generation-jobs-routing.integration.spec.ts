@@ -111,6 +111,7 @@ function setup() {
           currentRole: signal(null),
           currentTenantId: signal('t1'),
           logout: vi.fn(),
+          me: vi.fn(() => of({ id: 'u1', name: 'Test User', email: 'test@user.local', role: 'teacher', tenantId: 't1' })),
         },
       },
       {

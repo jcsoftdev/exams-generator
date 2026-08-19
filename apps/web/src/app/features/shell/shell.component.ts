@@ -1,11 +1,13 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { Role } from '@exams-generator/shared';
+import { MeResponseDto, Role } from '@exams-generator/shared';
 import { LucideAngularModule } from 'lucide-angular';
 import { SidebarComponent } from '../../ui/sidebar/sidebar.component';
 import { TopbarComponent } from '../../ui/topbar/topbar.component';
+import { TagComponent } from '../../ui/tag/tag.component';
 import { NavGroup } from '../../ui/ui.types';
 import { AuthService } from '../../core/auth/auth.service';
+import { roleLabel } from '../../core/auth/role-label.util';
 import { TenantSettingsService } from '../tenant-settings/tenant-settings.service';
 import { DraftCountService } from '../ai/draft-count.service';
 import { ThemeService } from '../../core/theme/theme.service';
@@ -47,7 +49,7 @@ const ADMIN_GROUP: NavGroup = {
 @Component({
   selector: 'app-shell',
   standalone: true,
-  imports: [RouterOutlet, SidebarComponent, TopbarComponent, LucideAngularModule],
+  imports: [RouterOutlet, SidebarComponent, TopbarComponent, TagComponent, LucideAngularModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './shell.component.html',
 })
@@ -62,6 +64,9 @@ export class ShellComponent {
   protected readonly userMenuOpen = signal(false);
   protected readonly schoolName = signal('GeneraExamen');
   protected readonly themeMode = computed(() => this.themeService.mode());
+  /** `null` until `GET /auth/me` resolves, or forever if it fails — the menu just falls back to no identity block (see constructor). */
+  protected readonly currentUser = signal<MeResponseDto | null>(null);
+  protected readonly currentUserRoleLabel = computed(() => roleLabel(this.currentUser()?.role ?? null));
 
   protected readonly navGroups = computed<NavGroup[]>(() => {
     const role = this.authService.currentRole();
@@ -109,6 +114,15 @@ export class ShellComponent {
     } else {
       this.schoolName.set('GeneraExamen');
     }
+
+    // Unlike `tenantSettings.getSettings()` above, `AuthService.me()` works
+    // for EVERY role (including tenant-less platform staff) — no precondition
+    // guard needed. Still swallows the error the same way: the identity
+    // block in the menu just doesn't render, "Cerrar sesión" always does.
+    this.authService.me().subscribe({
+      next: (user) => this.currentUser.set(user),
+      error: () => {},
+    });
   }
 
   protected toggleMobileMenu(): void {

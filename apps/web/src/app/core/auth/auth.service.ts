@@ -1,7 +1,7 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
-import { Role } from '@exams-generator/shared';
+import { MeResponseDto, Role } from '@exams-generator/shared';
 import { environment } from '../../../environments/environment';
 import { decodeJwtPayload } from './jwt.util';
 import {
@@ -71,6 +71,16 @@ export class AuthService {
   /** Public entry point for `/auth/callback` to store a token obtained via `exchangeCode()` — same storage path `login()` uses internally via `setToken`. */
   applyToken(token: string): void {
     this.setToken(token);
+  }
+
+  /**
+   * The signed-in user's OWN identity (name/email/role/tenantId) — the JWT
+   * itself only carries `sub`/`role`/`tenantId` (see `DecodedAccessToken`),
+   * not name/email, so callers that need those (the shell's user menu) hit
+   * `GET /auth/me` instead of decoding the token further.
+   */
+  me(): Observable<MeResponseDto> {
+    return this.http.get<MeResponseDto>(`${environment.apiBaseUrl}/auth/me`);
   }
 
   private setToken(token: string | null): void {

@@ -1,4 +1,4 @@
-import { BadRequestException, Body, Controller, HttpCode, Post, UnauthorizedException } from "@nestjs/common";
+import { BadRequestException, Body, Controller, Get, HttpCode, Post, UnauthorizedException, UseGuards } from "@nestjs/common";
 import { Throttle } from "@nestjs/throttler";
 import {
   ExchangeCodeRequestDto,
@@ -7,9 +7,12 @@ import {
   ExchangeTokenResponseDto,
   LoginRequestDto,
   LoginResponseDto,
+  MeResponseDto,
 } from "@exams-generator/shared";
+import { CurrentUser } from "./current-user.decorator";
+import { JwtAuthGuard } from "./jwt-auth.guard";
 import { AuthService } from "./auth.service";
-import { InvalidTokenError, TokenService } from "./token.service";
+import { AuthTokenPayload, InvalidTokenError, TokenService } from "./token.service";
 import { LoginExchangeService } from "./login-exchange.service";
 
 @Controller("auth")
@@ -74,5 +77,23 @@ export class AuthController {
       throw new UnauthorizedException("Invalid or expired code");
     }
     return { accessToken };
+  }
+
+  // Deliberately lives here, not on `UsersController`: that controller is
+  // `@Roles(Role.SchoolAdmin)` at the CLASS level and derives its tenant
+  // from the token via `requireTenant()`, which throws for tenant-less
+  // platform staff (`platform_admin`/`content_editor`). A "me" route bolted
+  // onto it would 403 every non-school-admin role and 500 for staff with a
+  // null `tenantId` — this is a "who am I" identity concern, not tenant
+  // user management, so it belongs next to `POST /auth/login` instead.
+  // `AuthController` has no class-level `@UseGuards`/`@Roles` (each route
+  // opts in individually), so this route only needs `JwtAuthGuard` — no
+  // `@Roles(...)` override needed, and every authenticated role reaches it.
+  @Get("me")
+  @UseGuards(JwtAuthGuard)
+  async me(@CurrentUser() user: AuthTokenPayload): Promise<MeResponseDto> {
+    // `user.sub` comes from the verified JWT, never from a client-supplied
+    // param — see `AuthService.me()`.
+    return this.authService.me(user.sub);
   }
 }

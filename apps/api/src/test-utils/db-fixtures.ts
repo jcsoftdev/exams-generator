@@ -42,6 +42,7 @@ export async function createTenantFixture(overrides?: Partial<TenantFixture>): P
 export interface UserFixture {
   id: string;
   email: string;
+  name: string | null;
   role: Role;
   tenantId: string | null;
   plainPassword: string;
@@ -51,6 +52,7 @@ export async function createUserFixture(params: {
   role: Role;
   tenantId: string | null;
   email?: string;
+  name?: string;
   password?: string;
 }): Promise<UserFixture> {
   const email = params.email ?? `${randomUUID()}@test.local`;
@@ -59,14 +61,14 @@ export async function createUserFixture(params: {
 
   const [user] = await db
     .insert(users)
-    .values({ email, passwordHash, role: params.role, tenantId: params.tenantId })
+    .values({ email, passwordHash, role: params.role, tenantId: params.tenantId, name: params.name ?? null })
     .returning();
 
   if (!user) {
     throw new Error("Fixture invariant violated: user insert returned no row");
   }
 
-  return { id: user.id, email: user.email, role: user.role, tenantId: user.tenantId, plainPassword };
+  return { id: user.id, email: user.email, name: user.name, role: user.role, tenantId: user.tenantId, plainPassword };
 }
 
 export async function deleteUserFixture(id: string): Promise<void> {

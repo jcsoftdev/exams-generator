@@ -12,6 +12,7 @@ import { TenantSettingsService } from './tenant-settings.service';
 import { TenantSettings } from './tenant-settings.models';
 import { UsersService } from '../users/users.service';
 import { TenantUser, UserRole } from '../users/users.models';
+import { roleLabel } from '../../core/auth/role-label.util';
 
 type Tab = 'data' | 'teachers';
 
@@ -205,8 +206,9 @@ export class TenantSettingsComponent {
     return letters.toUpperCase();
   }
 
+  /** Delegates to the shared `roleLabel` util (single source of truth — see its doc comment). */
   protected roleLabel(role: string): string {
-    return role === 'school_admin' ? 'Administrador' : 'Profesor';
+    return roleLabel(role);
   }
 
   protected toggleMenu(id: string): void {

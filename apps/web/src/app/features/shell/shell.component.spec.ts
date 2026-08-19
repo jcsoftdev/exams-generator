@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
-import { EMPTY, of } from 'rxjs';
+import { EMPTY, of, throwError } from 'rxjs';
 import { importProvidersFrom, signal } from '@angular/core';
 import { provideRouter, Router } from '@angular/router';
 import {
@@ -36,17 +36,34 @@ import {
   Sun,
   Moon,
 } from 'lucide-angular';
-import { Role } from '@exams-generator/shared';
+import { Role, MeResponseDto } from '@exams-generator/shared';
 import { ShellComponent } from './shell.component';
 import { AuthService } from '../../core/auth/auth.service';
 import { TenantSettingsService } from '../../features/tenant-settings/tenant-settings.service';
 import { DraftCountService } from '../ai/draft-count.service';
 import { ThemeService } from '../../core/theme/theme.service';
 
-function setup(role: Role | null, draftCount: number | null = 7, tenantId: string | null = 't1') {
+function setup(
+  role: Role | null,
+  draftCount: number | null = 7,
+  tenantId: string | null = 't1',
+  meOverride?: Partial<MeResponseDto> | 'error',
+) {
   const logout = vi.fn();
   const navigateByUrl = vi.fn();
   const toggleTheme = vi.fn();
+  const me = vi.fn(() =>
+    meOverride === 'error'
+      ? throwError(() => new Error('me failed'))
+      : of({
+          id: 'u1',
+          name: 'Ana Torres',
+          email: 'ana@test.local',
+          role: role ?? Role.Teacher,
+          tenantId,
+          ...meOverride,
+        } as MeResponseDto),
+  );
   TestBed.configureTestingModule({
     imports: [ShellComponent],
     providers: [
@@ -87,7 +104,7 @@ function setup(role: Role | null, draftCount: number | null = 7, tenantId: strin
           Moon,
         }),
       ),
-      { provide: AuthService, useValue: { currentRole: signal(role), currentTenantId: signal(tenantId), logout } },
+      { provide: AuthService, useValue: { currentRole: signal(role), currentTenantId: signal(tenantId), logout, me } },
       {
         provide: TenantSettingsService,
         useValue: {
@@ -113,7 +130,13 @@ function setup(role: Role | null, draftCount: number | null = 7, tenantId: strin
   });
   const fixture = TestBed.createComponent(ShellComponent);
   fixture.detectChanges();
-  return { fixture, compiled: fixture.nativeElement as HTMLElement, logout, navigateByUrl, toggleTheme };
+  return { fixture, compiled: fixture.nativeElement as HTMLElement, logout, navigateByUrl, toggleTheme, me };
+}
+
+/** Opens the user menu the same way a real click would, then flushes pending change detection. */
+function openUserMenu(fixture: ReturnType<typeof setup>['fixture'], compiled: HTMLElement): void {
+  compiled.querySelector<HTMLButtonElement>('[data-testid="user-menu-button"]')!.click();
+  fixture.detectChanges();
 }
 
 describe('ShellComponent', () => {
@@ -203,6 +226,40 @@ describe('ShellComponent', () => {
   it('shows the school name as the topbar title', () => {
     const { compiled } = setup(Role.Teacher);
     expect(compiled.textContent).toContain('San Marcos School');
+  });
+
+  it('shows the signed-in user\'s name, email and role label in the user menu', () => {
+    const { fixture, compiled } = setup(Role.Teacher);
+    openUserMenu(fixture, compiled);
+
+    expect(compiled.textContent).toContain('Ana Torres');
+    expect(compiled.textContent).toContain('ana@test.local');
+    expect(compiled.textContent).toContain('Profesor');
+  });
+
+  it('labels a platform_admin session "Administrador de plataforma" in the user menu', () => {
+    const { fixture, compiled } = setup(Role.PlatformAdmin, 7, null);
+    openUserMenu(fixture, compiled);
+
+    expect(compiled.textContent).toContain('Administrador de plataforma');
+  });
+
+  it('labels a content_editor session "Editor de contenido" in the user menu', () => {
+    const { fixture, compiled } = setup(Role.ContentEditor, 7, null);
+    openUserMenu(fixture, compiled);
+
+    expect(compiled.textContent).toContain('Editor de contenido');
+  });
+
+  it('does not crash and still shows "Cerrar sesión" when the identity fetch fails', () => {
+    let compiled!: HTMLElement;
+    let fixture!: ReturnType<typeof setup>['fixture'];
+    expect(() => {
+      ({ fixture, compiled } = setup(Role.Teacher, 7, 't1', 'error'));
+    }).not.toThrow();
+
+    openUserMenu(fixture, compiled);
+    expect(compiled.textContent).toContain('Cerrar sesión');
   });
 
   it('logs out and redirects to /login from the user menu', () => {

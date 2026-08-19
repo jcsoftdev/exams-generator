@@ -1,6 +1,6 @@
 import { Injectable, UnauthorizedException } from "@nestjs/common";
 import { eq } from "drizzle-orm";
-import { JwtPayload, LoginResponseDto } from "@exams-generator/shared";
+import { JwtPayload, LoginResponseDto, MeResponseDto } from "@exams-generator/shared";
 import { db } from "../../db/client";
 import { tenants, users } from "../../db/schema";
 import { comparePassword } from "./password.util";
@@ -46,6 +46,28 @@ export class AuthService {
     const accessToken = this.tokenService.sign(payload);
     const tenantSlug = await this.resolveTenantSlug(user.tenantId);
     return { accessToken, tenantSlug };
+  }
+
+  /**
+   * The caller's OWN identity, read from the JWT `sub` (never a
+   * client-supplied id — see `AuthController.me()`). Columns are selected
+   * explicitly rather than `select().from(users)` so `passwordHash` can
+   * never leak here even if the schema grows more sensitive columns later.
+   */
+  async me(userId: string): Promise<MeResponseDto> {
+    const [user] = await db
+      .select({ id: users.id, name: users.name, email: users.email, role: users.role, tenantId: users.tenantId })
+      .from(users)
+      .where(eq(users.id, userId));
+
+    if (!user) {
+      // The JWT verified fine but the row is gone (deleted account) — same
+      // 401 shape as "not logged in" rather than a 404, since anonymously
+      // probing user ids should never be distinguishable from a bad token.
+      throw new UnauthorizedException("User not found");
+    }
+
+    return user;
   }
 
   // `null` for platform staff (`platform_admin`/`content_editor` — global

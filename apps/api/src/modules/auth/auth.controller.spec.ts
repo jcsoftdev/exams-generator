@@ -1,5 +1,6 @@
 import { BadRequestException, UnauthorizedException } from "@nestjs/common";
 import { Test, TestingModule } from "@nestjs/testing";
+import { Role } from "@exams-generator/shared";
 import { AuthController } from "./auth.controller";
 import { AuthService } from "./auth.service";
 import { InvalidTokenError, TokenService } from "./token.service";
@@ -7,12 +8,13 @@ import { LoginExchangeService } from "./login-exchange.service";
 
 describe("AuthController", () => {
   let controller: AuthController;
-  const authService = { login: jest.fn() };
+  const authService = { login: jest.fn(), me: jest.fn() };
   const tokenService = { verify: jest.fn() };
   const loginExchangeService = { createCode: jest.fn(), redeemCode: jest.fn() };
 
   beforeEach(async () => {
     authService.login.mockReset();
+    authService.me.mockReset();
     tokenService.verify.mockReset();
     loginExchangeService.createCode.mockReset();
     loginExchangeService.redeemCode.mockReset();
@@ -96,6 +98,29 @@ describe("AuthController", () => {
       loginExchangeService.redeemCode.mockResolvedValue(null);
 
       await expect(controller.exchange({ code: "stale-code" })).rejects.toThrow(UnauthorizedException);
+    });
+  });
+
+  describe("me", () => {
+    it("delegates to AuthService.me with the JWT sub — never a client-supplied id", async () => {
+      authService.me.mockResolvedValue({
+        id: "u1",
+        name: "Ana",
+        email: "ana@test.local",
+        role: Role.Teacher,
+        tenantId: "t1",
+      });
+
+      const result = await controller.me({ sub: "u1", role: Role.Teacher, tenantId: "t1" });
+
+      expect(authService.me).toHaveBeenCalledWith("u1");
+      expect(result).toEqual({
+        id: "u1",
+        name: "Ana",
+        email: "ana@test.local",
+        role: Role.Teacher,
+        tenantId: "t1",
+      });
     });
   });
 });

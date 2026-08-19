@@ -21,6 +21,7 @@ describe("Auth (e2e)", () => {
   let tenantB: TenantFixture;
   let schoolAdminTenantA: UserFixture;
   let teacherTenantB: UserFixture;
+  let platformAdmin: UserFixture;
 
   beforeAll(async () => {
     await ensureMigrated();
@@ -35,13 +36,22 @@ describe("Auth (e2e)", () => {
 
     tenantA = await createTenantFixture();
     tenantB = await createTenantFixture();
-    schoolAdminTenantA = await createUserFixture({ role: Role.SchoolAdmin, tenantId: tenantA.id });
+    schoolAdminTenantA = await createUserFixture({
+      role: Role.SchoolAdmin,
+      tenantId: tenantA.id,
+      name: "Ana Torres",
+    });
     teacherTenantB = await createUserFixture({ role: Role.Teacher, tenantId: tenantB.id });
+    // `tenantId: null` — platform staff, the exact case that would 403/500
+    // if `me` were bolted onto `UsersController` instead (see the code
+    // comment on `AuthController.me()`).
+    platformAdmin = await createUserFixture({ role: Role.PlatformAdmin, tenantId: null, name: "Root" });
   });
 
   afterAll(async () => {
     await deleteUserFixture(schoolAdminTenantA.id);
     await deleteUserFixture(teacherTenantB.id);
+    await deleteUserFixture(platformAdmin.id);
     await deleteTenantFixture(tenantA.id);
     await deleteTenantFixture(tenantB.id);
     await app.close();
@@ -177,6 +187,53 @@ describe("Auth (e2e)", () => {
         .post("/auth/exchange")
         .send({ code: codeRes.body.code });
       expect(second.status).toBe(401);
+    });
+  });
+
+  describe("GET /auth/me", () => {
+    it("returns the caller's own identity, including name/email/role/tenantId", async () => {
+      const token = await loginAs(schoolAdminTenantA);
+      const res = await request(app.getHttpServer()).get("/auth/me").set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect(res.body).toEqual({
+        id: schoolAdminTenantA.id,
+        name: "Ana Torres",
+        email: schoolAdminTenantA.email,
+        role: Role.SchoolAdmin,
+        tenantId: tenantA.id,
+      });
+    });
+
+    // The exact scenario that would break if `me` lived on `UsersController`
+    // instead: `platform_admin` has no tenant, and `UsersController` is
+    // `@Roles(Role.SchoolAdmin)` at the class level.
+    it("works for platform_admin, whose tenantId is null", async () => {
+      const token = await loginAs(platformAdmin);
+      const res = await request(app.getHttpServer()).get("/auth/me").set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect(res.body.tenantId).toBeNull();
+      expect(res.body.role).toBe(Role.PlatformAdmin);
+    });
+
+    it("never returns the password hash", async () => {
+      const token = await loginAs(teacherTenantB);
+      const res = await request(app.getHttpServer()).get("/auth/me").set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect(res.body.passwordHash).toBeUndefined();
+      expect(Object.keys(res.body).sort()).toEqual(["email", "id", "name", "role", "tenantId"]);
+    });
+
+    it("returns 401 with no Authorization header", async () => {
+      const res = await request(app.getHttpServer()).get("/auth/me");
+      expect(res.status).toBe(401);
+    });
+
+    it("returns 401 for a garbage token", async () => {
+      const res = await request(app.getHttpServer()).get("/auth/me").set("Authorization", "Bearer garbage");
+      expect(res.status).toBe(401);
     });
   });
 });
