@@ -59,11 +59,23 @@
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Audit P2: no `color-scheme` was declared, so native controls (file-picker
+   dialog chrome, scrollbars, form-control default styling) followed the OS
+   preference instead of this app's own light/dark toggle. Mirrors the same
+   three-block structure as the color tokens above so it stays in sync with
+   them: light by default, dark under system preference (no explicit
+   choice), and each explicit `data-theme` wins over both. */
+:root {
+  color-scheme: light;
+}
+
 /* System-preference dark: only when the user has made no explicit choice
    (no [data-theme] attribute on <html>). Explicit choice always wins —
    see the :root[data-theme="..."] blocks below. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
+    color-scheme: dark;
+
     --color-primary-900: #072034;
     --color-primary-800: #1c3141;
     --color-primary-700: #2f4657;
@@ -108,6 +120,8 @@
    via document.documentElement.setAttribute('data-theme', 'dark'). Wins over
    the media query above regardless of OS preference. */
 :root[data-theme="dark"] {
+  color-scheme: dark;
+
   --color-primary-900: #072034;
   --color-primary-800: #1c3141;
   --color-primary-700: #2f4657;
@@ -152,6 +166,8 @@
    symmetric with the dark block above rather than relying on cascade order
    against the @theme-emitted declaration. */
 :root[data-theme="light"] {
+  color-scheme: light;
+
   --color-primary-900: #272f52;
   --color-primary-800: #333d6b;
   --color-primary-700: #3f4d85;

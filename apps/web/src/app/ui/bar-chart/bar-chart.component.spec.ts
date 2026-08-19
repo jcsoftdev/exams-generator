@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, afterEach } from 'vitest';
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 import { BarChartComponent, ChartDatum } from './bar-chart.component';
+import { ThemeService } from '../../core/theme/theme.service';
 
 @Component({
   standalone: true,
@@ -45,5 +46,30 @@ describe('BarChartComponent', () => {
     };
 
     expect(instance.chartData().datasets[0].data).toEqual([5, 3, 2]);
+  });
+
+  // Reproduces audit P0 #2: PALETTE used to be a module-level `const`
+  // resolved once at chunk load, so toggling ThemeService.mode() (no
+  // reload) never repainted the chart with the new theme's colors.
+  it('re-resolves bar colors from the CSS tokens when the theme mode changes, without a reload', () => {
+    const { fixture } = setup();
+    const barChartDebugEl = fixture.debugElement.children[0];
+    const instance = barChartDebugEl.componentInstance as unknown as {
+      chartData: () => { datasets: { backgroundColor: string[] }[] };
+    };
+
+    // Simulate what the dark-mode CSS block does to --color-easy-bg.
+    document.documentElement.style.setProperty('--color-easy-bg', '#123456');
+    const themeService = TestBed.inject(ThemeService);
+    themeService.toggle();
+    fixture.detectChanges();
+
+    expect(instance.chartData().datasets[0].backgroundColor[0]).toBe('#123456');
+  });
+
+  afterEach(() => {
+    document.documentElement.style.removeProperty('--color-easy-bg');
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.removeItem('theme');
   });
 });

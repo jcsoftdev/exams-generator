@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 import { ChartConfiguration, ChartData } from 'chart.js';
+import { ThemeService } from '../../core/theme/theme.service';
 
 export interface ChartDatum {
   readonly label: string;
@@ -21,12 +22,6 @@ function themeColor(cssVar: string, fallbackHex: string): string {
   return value || fallbackHex;
 }
 
-const PALETTE = [
-  themeColor('--color-easy-bg', '#dcfce7'),
-  themeColor('--color-medium-bg', '#fef3c7'),
-  themeColor('--color-hard-bg', '#fee2e2'),
-];
-
 /**
  * Thin `ng2-charts` wrapper (design doc §5): one bar per `data()` entry,
  * colored from the SAME easy/medium/hard tokens `ui/tag` already uses — no
@@ -43,17 +38,37 @@ const PALETTE = [
   `,
 })
 export class BarChartComponent {
+  private readonly themeService = inject(ThemeService);
+
   readonly data = input.required<readonly ChartDatum[]>();
 
-  protected readonly chartData = computed<ChartData<'bar'>>(() => ({
-    labels: this.data().map((d) => d.label),
-    datasets: [
-      {
-        data: this.data().map((d) => d.value),
-        backgroundColor: this.data().map((_, i) => PALETTE[i % PALETTE.length]),
-      },
-    ],
-  }));
+  /**
+   * Resolved at RENDER time, not module load (audit P0 #2). Reads
+   * `themeService.mode()` purely to establish a reactive dependency, so this
+   * recomputes — and `chartData` below re-renders the chart — the instant
+   * `ThemeService.toggle()` flips `data-theme`, no reload required.
+   */
+  protected readonly palette = computed<readonly string[]>(() => {
+    this.themeService.mode();
+    return [
+      themeColor('--color-easy-bg', '#dcfce7'),
+      themeColor('--color-medium-bg', '#fef3c7'),
+      themeColor('--color-hard-bg', '#fee2e2'),
+    ];
+  });
+
+  protected readonly chartData = computed<ChartData<'bar'>>(() => {
+    const palette = this.palette();
+    return {
+      labels: this.data().map((d) => d.label),
+      datasets: [
+        {
+          data: this.data().map((d) => d.value),
+          backgroundColor: this.data().map((_, i) => palette[i % palette.length]),
+        },
+      ],
+    };
+  });
 
   protected readonly options: ChartConfiguration<'bar'>['options'] = {
     responsive: true,

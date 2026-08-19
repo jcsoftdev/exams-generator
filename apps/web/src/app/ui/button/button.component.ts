@@ -52,7 +52,16 @@ export class ButtonComponent {
   };
   private static readonly VARIANT_CLASSES: Record<ButtonVariant, string> = {
     primary: 'bg-primary-500 hover:bg-primary-600 text-white',
-    ghost: 'bg-transparent text-primary-500 border border-primary-500 hover:bg-primary-50',
+    // Audit P1 #3: text-primary-500 was 3.08:1 in dark mode (surface bg) —
+    // below AA. `--color-tint-text` is this app's existing token for
+    // brand-colored text over surface/tint backgrounds (nav active state,
+    // chips — see ui/sidebar, ui/banner) and its LIGHT value is identical to
+    // primary-500's (#5a6acf), so light mode is pixel-for-pixel unchanged;
+    // its DARK value (#9db4cb) clears AA (7.58:1 on bg-surface). Reusing it
+    // here — rather than redefining --color-primary-500 in the dark block —
+    // avoids relighting the unrelated bg-primary-500 usages (solid button,
+    // progress fill, sidebar active state) that token also drives.
+    ghost: 'bg-transparent text-tint-text border border-tint-text hover:bg-primary-50',
     // Reuses the existing hard-text token (already the app's red accent —
     // see ui-tag's "hard" difficulty and the forbidden page's icon) rather
     // than introducing a parallel red ramp.

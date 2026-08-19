@@ -64,6 +64,23 @@ describe('ButtonComponent', () => {
     expect(button.className).not.toContain('bg-primary-500');
   });
 
+  // Audit P1 #3 regression guard: text-primary-500 was 3.08:1 against
+  // bg-surface in dark mode. --color-tint-text has an identical light-mode
+  // hex (#5a6acf) but a lighter, AA-passing dark-mode hex (#9db4cb) — see
+  // the contrast measurement in the PR description, not something jsdom can
+  // assert since styles.css isn't loaded in unit tests.
+  it('uses the tint-text token (not primary-500) for the ghost variant text/border', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('variant', 'ghost');
+    fixture.detectChanges();
+
+    const button = compiled.querySelector('button')!;
+    expect(button.className).toContain('text-tint-text');
+    expect(button.className).toContain('border-tint-text');
+    expect(button.className).not.toContain('text-primary-500');
+    expect(button.className).not.toContain('border-primary-500');
+  });
+
   it('renders the danger variant with a solid red fill, distinct from primary', () => {
     const { fixture, compiled } = setup();
     fixture.componentRef.setInput('variant', 'danger');
