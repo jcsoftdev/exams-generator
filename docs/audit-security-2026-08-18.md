@@ -132,8 +132,30 @@ El retry `attempts: 3` de BullMQ NO multiplica la factura: el processor reanuda 
 **Siguiente capa (decisión de producto/billing):** cuota diaria/mensual por tenant para acotar
 el total de por vida, no solo la ráfaga. Requiere una tabla de tracking de uso.
 
+## Auditado — Assets subidos (contenido + XSS)
+
+Tamaño: capado a 5MB (`MAX_IMAGE_UPLOAD_BYTES`) en los 3 endpoints de upload (bank, tenants
+logo, ai extract). Bien.
+
+Contenido: **stored XSS (Media-Alta)**. Los uploads guardaban `file.mimetype` tal cual —
+multer lo copia del header `Content-Type` del cliente, o sea es controlado por el atacante.
+`GET /assets/:id` devolvía ese mime e servía los bytes inline sin `nosniff`, así que un usuario
+del mismo tenant subía un `image/svg+xml`/`text/html` con `<script>` y se renderizaba en la
+pestaña de otro (p.ej. un admin) = robo de sesión teacher→admin. El JWT + tenant-scoping lo
+mantienen intra-tenant, no cross-tenant.
+
+Arreglado (`e4565c2`): serve-time es el único choke point — `StoragePort` no tiene presigned/
+public URL, todo (logos y question images) pasa por ese handler. Ahora emite el mime solo si
+está en el allowlist de imágenes (png/jpeg/webp), si no `application/octet-stream`, más
+`X-Content-Type-Options: nosniff` y disposición `inline`. Los bytes nunca pueden ejecutarse
+como script. `sniffImageMime()` (magic-bytes) también entra aquí, unit-tested.
+
+**Siguiente capa:** cablear `sniffImageMime()` en el ingest (bank ×3, tenant logo) para
+rechazar no-imágenes en el upload y guardar el mime sniffeado — que el registro de DB sea
+confiable, no solo el read. Diferido: rechaza los buffers falsos que usan ~20 specs de upload,
+quiere su propia pasada.
+
 ## No auditado todavía
 
 - Retención de datos / borrado de PII de menores (¿qué pasa con las preguntas y exámenes de un
   tenant borrado? ¿hay derecho al olvido?).
-- Contenido de los assets subidos (¿se valida que un "png" sea un png? ¿tamaño?).
