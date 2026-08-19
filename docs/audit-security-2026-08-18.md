@@ -18,7 +18,7 @@ ausente/débil/corto aborta el arranque en vez de firmar.
 `GET /exams/not-a-uuid` daba 500 (Postgres rechazando el cast a `uuid`); un UUID inexistente da
 404. No es SQLi (drizzle parametriza). `ParseUUIDPipe` en los 29 params uuid → 400 en el borde.
 
-## 🟡 HALLAZGO ABIERTO — Desactivar un usuario no corta su token vigente (decisión pendiente)
+## 🟡 MITIGADO — Desactivar un usuario no corta su token vigente
 
 **Verificado**: `JwtAuthGuard` solo valida firma + expiración; nunca consulta `active` en la DB.
 El login SÍ bloquea a un desactivado (`auth.service.ts:36`), así que un desactivado no obtiene
@@ -42,15 +42,18 @@ PERO:
 
 Es una decisión de arquitectura con costo por request — **del dueño del producto, no del
 auditor**. Opciones, de menor a mayor cambio:
-- **Bajar el TTL** (24h → p.ej. 1h): acota la ventana sin tocar el hot-path. Cambio de una
-  constante (`token.service.ts` `TOKEN_TTL`). Trade: los docentes re-loguean más seguido.
+- **Bajar el TTL** — ✅ HECHO (`token.service.ts` `TOKEN_TTL` 24h → **8h**, `<commit>`). Acota
+  la ventana a una jornada sin tocar el hot-path. El 401 redirige limpio a `/login?expired=1` y
+  el builder persiste el trabajo en curso, así que expirar a media sesión es recuperable. 8h y
+  no 1h para no expulsar al docente cada hora. Un test ancla el techo (`token.service.spec.ts`).
 - **Guard revalida `active`** con un cache de TTL corto (p.ej. 60s en memoria/Redis): revocación
   casi-inmediata sin un DB hit por request. Más código, requiere sembrar usuarios reales en los
   ~11 e2e que hoy toman atajos.
 - **Lista de revocación / versión de token**: revocación exacta, el cambio más grande.
 
-Recomendación: bajar el TTL ya (barato, sin riesgo) y evaluar el cache si se quiere corte
-inmediato.
+Estado: **ventana bajada de 24h a 8h** (hecho). Si se quiere corte inmediato (mismo minuto),
+queda el cache de `active` con TTL corto en el guard — más código y sembrar usuarios reales en
+los ~11 e2e que hoy toman atajos; decisión de producto por el costo por request.
 
 ## 🟡 HALLAZGO ABIERTO — Password temporal sin cambio obligatorio
 

@@ -20,7 +20,17 @@ export class InvalidTokenError extends Error {
   }
 }
 
-const TOKEN_TTL = "24h";
+/**
+ * Session length AND the revocation-window ceiling. There is no token
+ * revocation, so a deactivated or compromised account keeps access until its
+ * current token expires (login already refuses it a NEW one). 24h was too long
+ * a tail for a fired teacher; 8h cuts it to same-day without kicking a working
+ * teacher hourly. The 401 path redirects cleanly to /login?expired=1 and the
+ * exam builder persists in-progress work, so a mid-session expiry is
+ * recoverable. Relax only if real revocation (short-TTL active-check cache or a
+ * revocation list) lands first — see docs/audit-security-2026-08-18.md.
+ */
+const TOKEN_TTL = "8h";
 
 /**
  * Minimal JWT issue/verify service — the auth prerequisite for tenant
