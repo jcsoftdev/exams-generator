@@ -17,6 +17,15 @@ import { HttpErrorResponse } from '@angular/common/http';
  * wording this helper was written for; the exam-review screen passes its own
  * (audit 2026-08-15 — it was showing a generic "inténtalo de nuevo" even for
  * 400s that DID explain themselves).
+ *
+ * `error.status >= 500` always falls back too, even when the body DOES carry
+ * a `message` — Nest's default exception filter wraps every unhandled
+ * server error in the exact same shape as a validation 400
+ * (`{ statusCode, message, error }`), but that `message` is the generic,
+ * untranslated `"Internal server error"`, not an actionable explanation.
+ * Only a 4xx `message` is specific enough (validation errors, Typst compile
+ * stderr) to show the teacher verbatim — audit finding P1, "a generic 500
+ * leaks English into a Spanish UI".
  */
 export function extractErrorMessage(
   error: HttpErrorResponse,
@@ -28,7 +37,7 @@ export function extractErrorMessage(
     return body.join(', ');
   }
 
-  if (body && typeof body === 'object' && 'message' in body) {
+  if (body && typeof body === 'object' && 'message' in body && error.status < 500) {
     const message = (body as { message: unknown }).message;
     return Array.isArray(message) ? message.join(', ') : String(message);
   }

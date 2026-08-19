@@ -1,7 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { HttpDownloadProgressEvent, HttpEventType, provideHttpClient } from '@angular/common/http';
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { TimeoutError } from 'rxjs';
 import { Difficulty } from '@exams-generator/shared';
 import { AiService } from './ai.service';
 import { environment } from '../../../environments/environment';
@@ -123,6 +124,33 @@ describe('AiService', () => {
 
       expect(events).toEqual([{ type: 'done', result: { created: [{ id: 'q1' }], failed: [] } }]);
       expect(completed).toBe(true);
+    });
+
+    /**
+     * Audit finding P0: a SILENT drop (packets lost, no FIN/RST) fires
+     * neither `next()` nor `error()` on the underlying HttpClient stream —
+     * the caller would otherwise hang forever. `AI_STREAM_WATCHDOG_MS` is
+     * derived from server behaviour (see the constant's own doc comment in
+     * ai.service.ts): `MAX_COMPILE_ATTEMPTS` (2) × (OpenRouter's
+     * SSE_TIMEOUT_MS idle-stall abort, 120s + Typst's TYPST_TIMEOUT_MS, 30s)
+     * = 300s is the ceiling the SERVER itself enforces before it would have
+     * thrown and closed the connection; this watchdog sits comfortably above
+     * that so it can only fire on a connection that is truly silent.
+     */
+    it('errors with a TimeoutError (not silence) when no frame arrives within the watchdog window', () => {
+      vi.useFakeTimers();
+      try {
+        let capturedError: unknown;
+        service.generateQuestionStream(payload).subscribe({ error: (err) => (capturedError = err) });
+
+        httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/generate/stream`);
+
+        vi.advanceTimersByTime(360_000);
+
+        expect(capturedError).toBeInstanceOf(TimeoutError);
+      } finally {
+        vi.useRealTimers();
+      }
     });
   });
 
@@ -477,6 +505,47 @@ describe('AiService', () => {
       req.flush('data: {"id":"job-1","status":"completed","createdCount":3}\n\n');
 
       expect(completed).toBe(true);
+    });
+
+    it('errors with a TimeoutError when no frame arrives within the watchdog window (silent connection drop)', () => {
+      vi.useFakeTimers();
+      try {
+        let capturedError: unknown;
+        service.streamGenerationJob('job-1').subscribe({ error: (err) => (capturedError = err) });
+
+        httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/jobs/job-1/stream`);
+
+        vi.advanceTimersByTime(360_000);
+
+        expect(capturedError).toBeInstanceOf(TimeoutError);
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('does NOT fire the watchdog while frames keep arriving before the window elapses (no false positive on a legitimately slow item)', () => {
+      vi.useFakeTimers();
+      try {
+        let capturedError: unknown;
+        const jobs: unknown[] = [];
+        service.streamGenerationJob('job-1').subscribe({
+          next: (job) => jobs.push(job),
+          error: (err) => (capturedError = err),
+        });
+
+        const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/jobs/job-1/stream`);
+
+        // Just under the window, then a fresh frame resets the clock.
+        vi.advanceTimersByTime(359_999);
+        req.event(downloadProgressEvent('data: {"id":"job-1","status":"running","createdCount":1}\n\n'));
+        expect(capturedError).toBeUndefined();
+
+        vi.advanceTimersByTime(359_999);
+        expect(capturedError).toBeUndefined();
+        expect(jobs).toEqual([{ id: 'job-1', status: 'running', createdCount: 1 }]);
+      } finally {
+        vi.useRealTimers();
+      }
     });
   });
 });

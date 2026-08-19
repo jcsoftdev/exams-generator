@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
-import { BehaviorSubject, Observable, Subject, of, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, TimeoutError, of, throwError } from 'rxjs';
 import { ActivatedRoute, Router, convertToParamMap, ParamMap } from '@angular/router';
 import { GenerationJobDetailComponent } from './generation-job-detail.component';
 import { AiService } from '../ai.service';
@@ -69,11 +69,13 @@ function setup(
     previewImpl?: (id: string) => unknown;
     createImpl?: (...a: unknown[]) => unknown;
     chainImpl?: (id: string) => unknown;
+    getJobImpl?: (id: string) => unknown;
     paramMap$?: BehaviorSubject<ParamMap>;
   } = {},
 ) {
   const streamGenerationJob = vi.fn(over.streamImpl ?? ((_id: string) => of(RUNNING_JOB)));
   const cancelGenerationJob = vi.fn(over.cancelImpl ?? (() => of({ ...RUNNING_JOB, status: 'cancelled' as const })));
+  const getGenerationJob = vi.fn(over.getJobImpl ?? ((_id: string) => of(RUNNING_JOB)));
   const getDraft = vi.fn((_id: string) => of(DRAFT));
   // `DraftCountService` (providedIn: 'root') is injected transitively via
   // this component and calls `countDrafts()` once on construction — must be
@@ -97,6 +99,7 @@ function setup(
         useValue: {
           streamGenerationJob,
           cancelGenerationJob,
+          getGenerationJob,
           getDraft,
           countDrafts,
           previewDraft,
@@ -115,6 +118,7 @@ function setup(
     compiled: fixture.nativeElement as HTMLElement,
     streamGenerationJob,
     cancelGenerationJob,
+    getGenerationJob,
     getDraft,
     countDrafts,
     previewDraft,
@@ -224,6 +228,70 @@ describe('GenerationJobDetailComponent', () => {
       const region = compiled.querySelector('[data-testid="job-live-region"]')!;
       expect(region.textContent).toContain('falló');
       expect(region.textContent).not.toContain('Generando');
+    });
+  });
+
+  describe('watchdog / silent connection drop (audit P0)', () => {
+    it('shows a connection-lost banner (NOT the generic load error) and keeps the last-known progress on screen when the stream watchdog fires', () => {
+      const source$ = new Subject<GenerationJob>();
+      const { fixture, compiled } = setup({ streamImpl: () => source$.asObservable() });
+
+      source$.next(RUNNING_JOB);
+      fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="job-question"]')).toBeTruthy();
+
+      source$.error(new TimeoutError());
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="connection-lost-banner"]')).toBeTruthy();
+      // A dropped stream is NOT a failed job — the generic error state must stay hidden.
+      expect(compiled.querySelector('[data-testid="retry-button"]')).toBeFalsy();
+      // Last known progress is untouched — never thrown away or reset to zero.
+      expect(compiled.querySelector('[data-testid="job-question"]')).toBeTruthy();
+      expect(compiled.textContent).toContain('running');
+    });
+
+    it('settles the connection-lost state automatically once the recovery GET reports the job is terminal', () => {
+      const source$ = new Subject<GenerationJob>();
+      const { fixture, compiled, getGenerationJob } = setup({
+        streamImpl: () => source$.asObservable(),
+        getJobImpl: () => of({ ...RUNNING_JOB, status: 'completed' as const, createdCount: 3 }),
+      });
+
+      source$.next(RUNNING_JOB);
+      fixture.detectChanges();
+      source$.error(new TimeoutError());
+      fixture.detectChanges();
+
+      expect(getGenerationJob).toHaveBeenCalledWith('job-1');
+      expect(compiled.querySelector('[data-testid="connection-lost-banner"]')).toBeFalsy();
+      expect(compiled.textContent).toContain('completed');
+    });
+
+    it('keeps the connection-lost banner up when the settling GET says the job is still running, and reconnect() re-opens the stream', () => {
+      const source$ = new Subject<GenerationJob>();
+      // First call is the dropped connection under test; a `reconnect()`
+      // opens a genuinely NEW HTTP request (like the real HttpClient would),
+      // which here resolves cleanly instead of replaying the same error.
+      let calls = 0;
+      const { fixture, compiled, streamGenerationJob } = setup({
+        streamImpl: () => (calls++ === 0 ? source$.asObservable() : of(RUNNING_JOB)),
+        getJobImpl: () => of(RUNNING_JOB),
+      });
+
+      source$.next(RUNNING_JOB);
+      fixture.detectChanges();
+      source$.error(new TimeoutError());
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="connection-lost-banner"]')).toBeTruthy();
+      expect(streamGenerationJob).toHaveBeenCalledTimes(1);
+
+      (compiled.querySelector('[data-testid="reconnect-button"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(streamGenerationJob).toHaveBeenCalledTimes(2);
+      expect(compiled.querySelector('[data-testid="connection-lost-banner"]')).toBeFalsy();
     });
   });
 

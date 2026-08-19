@@ -12,7 +12,26 @@
     </div>
   }
 
-  @if (!job() && !loadError()) {
+  <!--
+    Watchdog fired (audit P0) — DELIBERATELY not `loadError`'s red/error
+    styling: the job itself may well still be running, only the connection
+    went silent. `warning`, not `error`, and "Reconectar" re-opens the
+    stream in place instead of reloading (which would drop the progress
+    already shown below).
+  -->
+  @if (connectionLost()) {
+    <div class="flex flex-col gap-2" data-testid="connection-lost-banner">
+      <ui-banner
+        variant="warning"
+        message="Se perdió la conexión con el servidor. La generación puede seguir en curso."
+      ></ui-banner>
+      <div data-testid="reconnect-button" class="self-start">
+        <ui-button variant="primary" (clicked)="reconnect()">Reconectar</ui-button>
+      </div>
+    </div>
+  }
+
+  @if (!job() && !loadError() && !connectionLost()) {
     <div data-testid="loading-indicator" class="flex flex-col gap-3">
       <div class="h-20 animate-pulse rounded-card bg-n100"></div>
       <div class="h-20 animate-pulse rounded-card bg-n100"></div>

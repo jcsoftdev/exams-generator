@@ -3,7 +3,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { DatePipe } from '@angular/common';
-import { forkJoin, of } from 'rxjs';
+import { Subscription, TimeoutError, forkJoin, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { ProgressComponent } from '../../../ui/progress/progress.component';
@@ -97,6 +97,14 @@ export class GenerationJobDetailComponent {
 
   protected readonly job = signal<GenerationJob | null>(null);
   protected readonly loadError = signal<string | null>(null);
+  /**
+   * Set when the stream's watchdog fires (audit P0 — `AiService`'s
+   * `AI_STREAM_WATCHDOG_MS`), DELIBERATELY separate from `loadError`: the
+   * worker on the other side may still be generating fine, only the SSE
+   * connection went silent. Never implies the job failed, and never clears
+   * `job`/`batchQuestions` — see `attachStream()`/`checkJobStatus()`.
+   */
+  protected readonly connectionLost = signal(false);
   /** Bumped by `reload()` to re-trigger the load effect below without a route change — the effect reads this alongside `jobId` so it's a tracked dependency. */
   private readonly reloadNonce = signal(0);
   protected readonly cancelling = signal(false);
@@ -131,6 +139,8 @@ export class GenerationJobDetailComponent {
   /** Every attempt in this job's chain EXCEPT the one currently on screen — the "historial de reintentos" list. Empty for a job that was never part of a retry. */
   protected readonly previousAttempts = computed(() => this.chain().filter((attempt) => attempt.id !== this.jobId()));
 
+  private streamSubscription: Subscription | null = null;
+
   constructor() {
     effect((onCleanup) => {
       const id = this.jobId();
@@ -146,22 +156,75 @@ export class GenerationJobDetailComponent {
       // `untracked()` keeps `jobId` as the ONLY reactive dependency.
       untracked(() => {
         this.resetForNewJob();
-        const subscription = this.aiService.streamGenerationJob(id).subscribe({
-          next: (job) => {
-            this.job.set(job);
-            this.loadError.set(null);
-            this.loadNewQuestions(job.createdQuestionIds);
-            this.updateAnnouncement(job);
-          },
-          error: () => this.loadError.set('No se pudo cargar el estado de la generación.'),
-        });
-        onCleanup(() => subscription.unsubscribe());
+        this.attachStream(id);
+        onCleanup(() => this.streamSubscription?.unsubscribe());
         // One-shot, unlike the stream above: past attempts are already
         // terminal and never change, so there's nothing to keep pushing.
         this.aiService.getGenerationJobChain(id).subscribe((res) => this.chain.set(res.items));
       });
     });
     this.destroyRef.onDestroy(() => this.revokeObjectUrls());
+  }
+
+  /**
+   * (Re-)subscribes to `streamGenerationJob(id)`. Split out of the
+   * constructor's effect so `reconnect()` can call it WITHOUT going through
+   * `resetForNewJob()` — a watchdog firing must never throw away progress
+   * already on screen.
+   */
+  private attachStream(id: string): void {
+    this.streamSubscription?.unsubscribe();
+    this.streamSubscription = this.aiService.streamGenerationJob(id).subscribe({
+      next: (job) => {
+        this.job.set(job);
+        this.loadError.set(null);
+        this.connectionLost.set(false);
+        this.loadNewQuestions(job.createdQuestionIds);
+        this.updateAnnouncement(job);
+      },
+      error: (err: unknown) => {
+        if (err instanceof TimeoutError) {
+          // The CONNECTION went silent — not the same claim as "the job
+          // failed" (audit P0). Whatever job/question state is already
+          // rendered stays exactly as it is; settle "is it still running?"
+          // with one cheap GET instead of guessing.
+          this.connectionLost.set(true);
+          this.checkJobStatus(id);
+        } else {
+          this.loadError.set('No se pudo cargar el estado de la generación.');
+        }
+      },
+    });
+  }
+
+  /**
+   * The watchdog's recovery step: a single `GET /ai/questions/jobs/:id`
+   * (already used elsewhere, e.g. retry navigation) — cheaper than
+   * re-opening the stream and answers "is it still running?" immediately.
+   * A terminal result closes out `connectionLost` exactly like a normal
+   * terminal frame would; a non-terminal result keeps the banner up so the
+   * teacher can choose to `reconnect()` for live updates again.
+   */
+  private checkJobStatus(id: string): void {
+    this.aiService.getGenerationJob(id).subscribe({
+      next: (job) => {
+        this.job.set(job);
+        this.loadNewQuestions(job.createdQuestionIds);
+        this.updateAnnouncement(job);
+        if (TERMINAL_STATUSES.includes(job.status)) {
+          this.connectionLost.set(false);
+        }
+      },
+      // The settling GET failed too (e.g. genuinely offline) — stay in the
+      // connection-lost state; `reconnect()` remains available.
+      error: () => undefined,
+    });
+  }
+
+  /** "Reconectar" — re-opens the live stream without resetting any state already on screen. */
+  protected reconnect(): void {
+    this.connectionLost.set(false);
+    this.attachStream(this.jobId());
   }
 
   protected reload(): void {
@@ -171,6 +234,7 @@ export class GenerationJobDetailComponent {
   private resetForNewJob(): void {
     this.job.set(null);
     this.loadError.set(null);
+    this.connectionLost.set(false);
     this.batchQuestions.set([]);
     this.previewUrls.set(new Map());
     this.previewFailedIds.set(new Set());

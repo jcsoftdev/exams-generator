@@ -1,9 +1,10 @@
 import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Subscription } from 'rxjs';
+import { Subscription, TimeoutError } from 'rxjs';
 import { LucideAngularModule, Folder, CopyPlus, ChevronDown, Plus, Check } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
+import { BannerComponent } from '../../../ui/banner/banner.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
@@ -55,6 +56,7 @@ const PROGRESS_QUARTILES = 4;
   // goes in `imports` this time (not just `.pick()`'s providers).
   imports: [
     ButtonComponent,
+    BannerComponent,
     EmptyStateComponent,
     TagComponent,
     SelectComponent,
@@ -115,6 +117,15 @@ export class ExamVersionsPanelComponent {
    */
   protected readonly versionJob = signal<ExamVersionJob | null>(null);
   private jobSubscription: Subscription | null = null;
+  /**
+   * Set when the version-job stream's watchdog fires (audit P0 —
+   * `ExamVersionsService`'s `VERSION_STREAM_WATCHDOG_MS`), DELIBERATELY
+   * separate from `jobFailedWithNothing`/`jobFailedPartially`: the worker may
+   * still be compiling forms fine, only the SSE connection went silent.
+   * Never implies the job failed, and never resets `versionJob` to zero —
+   * see `attachJobStream()`/`checkVersionJobStatus()`.
+   */
+  protected readonly connectionLost = signal(false);
   protected readonly jobAnnouncement = signal('');
   private hasAnnouncedJobStart = false;
   private lastAnnouncedJobMilestone = 0;
@@ -161,6 +172,11 @@ export class ExamVersionsPanelComponent {
       // already surfaces not-found/error states for this exam id.
       error: () => undefined,
     });
+  }
+
+  /** "Reintentar" on the generic error state (audit P1 — every other screen with an error state already had this). */
+  protected retry(): void {
+    this.load();
   }
 
   private load(): void {
@@ -310,26 +326,86 @@ export class ExamVersionsPanelComponent {
   private followJob(job: ExamVersionJob): void {
     this.generating.set(true);
     this.versionJob.set(job);
+    this.connectionLost.set(false);
     this.hasAnnouncedJobStart = false;
     this.lastAnnouncedJobMilestone = 0;
     this.updateJobAnnouncement(job);
+    this.attachJobStream(job.id);
+  }
+
+  /**
+   * (Re-)subscribes to `streamVersionJob(examId, jobId)`. Split out of
+   * `followJob()` so `reconnect()` can call it WITHOUT resetting
+   * `versionJob`/the announcement milestones — a watchdog firing must never
+   * throw away progress already on screen.
+   */
+  private attachJobStream(jobId: string): void {
     this.jobSubscription?.unsubscribe();
-    this.jobSubscription = this.examVersionsService.streamVersionJob(this.examId(), job.id).subscribe({
+    this.jobSubscription = this.examVersionsService.streamVersionJob(this.examId(), jobId).subscribe({
       next: (update) => {
         this.versionJob.set(update);
+        this.connectionLost.set(false);
         this.updateJobAnnouncement(update);
         if (update.status !== 'pending' && update.status !== 'running') {
           this.generating.set(false);
           this.load();
         }
       },
-      // The job itself may well be fine — only the progress channel died —
-      // so reload rather than declaring the generation failed.
-      error: () => {
-        this.generating.set(false);
-        this.load();
+      error: (err: unknown) => {
+        if (err instanceof TimeoutError) {
+          // The CONNECTION went silent — not the same claim as "the job
+          // failed" (audit P0). `versionJob`/`generating` stay exactly as
+          // they are; settle "is it still running?" with one cheap GET
+          // instead of guessing.
+          this.connectionLost.set(true);
+          this.checkVersionJobStatus(jobId);
+        } else {
+          // A genuine stream failure (not a watchdog timeout) — the job
+          // itself may well be fine, only the progress channel died — so
+          // reload rather than declaring the generation failed.
+          this.generating.set(false);
+          this.load();
+        }
       },
     });
+  }
+
+  /**
+   * The watchdog's recovery step: a single `GET .../versions/jobs/latest`
+   * (already used on load to re-attach to a running job) — cheaper than
+   * re-opening the stream and answers "is it still running?" immediately. A
+   * terminal result closes out `connectionLost` and refreshes the versions
+   * list exactly like a normal terminal frame would; a non-terminal result
+   * keeps the banner up so the teacher can `reconnect()` for live updates.
+   */
+  private checkVersionJobStatus(jobId: string): void {
+    this.examVersionsService.latestVersionJob(this.examId()).subscribe({
+      next: (job) => {
+        if (!job || job.id !== jobId) {
+          return;
+        }
+        this.versionJob.set(job);
+        this.updateJobAnnouncement(job);
+        if (job.status !== 'pending' && job.status !== 'running') {
+          this.connectionLost.set(false);
+          this.generating.set(false);
+          this.load();
+        }
+      },
+      // The settling GET failed too (e.g. genuinely offline) — stay in the
+      // connection-lost state; `reconnect()` remains available.
+      error: () => undefined,
+    });
+  }
+
+  /** "Reconectar" — re-opens the live stream without resetting any progress already on screen. */
+  protected reconnect(): void {
+    const job = this.versionJob();
+    if (!job) {
+      return;
+    }
+    this.connectionLost.set(false);
+    this.attachJobStream(job.id);
   }
 
   /** Fires the sr-only live-region text for start / quarter-milestones / terminal state — see `PROGRESS_QUARTILES`. */

@@ -1,6 +1,6 @@
 import { HttpClient, HttpDownloadProgressEvent, HttpEventType, HttpParams, HttpResponse } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable, map, timeout } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import {
   AiRevisedQuestion,
@@ -33,6 +33,32 @@ import { parseGenerateStreamFrames, parseGenerationJobStreamFrames } from './par
  * generation goes through durable jobs and single generation through the
  * stream endpoint.
  */
+
+/**
+ * Client-side watchdog (audit P0): neither `generateQuestionStream()` nor
+ * `streamGenerationJob()` has a server heartbeat to lean on —
+ * `GenerationJobEventsService` (apps/api) is a bare `Subject`, notified only
+ * on real writes, never on a timer — so a SILENT drop (packets lost, no
+ * FIN/RST) would otherwise hang the caller forever with no `error()` and no
+ * further `next()`.
+ *
+ * The interval is derived from the server's OWN worst-case gap between two
+ * frames, not guessed: `GenerationJobsProcessor.process()` notifies once per
+ * question, and `generateOneItem()` (generate-questions.service.ts) retries
+ * a failed compile up to `MAX_COMPILE_ATTEMPTS` (2) times, each attempt
+ * bounded by the OpenRouter adapter's own `SSE_TIMEOUT_MS` idle-stall abort
+ * (120s) plus the Typst compiler's `TYPST_TIMEOUT_MS` (30s) — 2 × (120s +
+ * 30s) = 300s is the ceiling the SERVER ITSELF enforces before it would
+ * have thrown and closed the connection on its own. `generateQuestionStream()`
+ * shares this constant even though its `delta` frames are normally far more
+ * frequent (one per OpenRouter chunk) — its worst legitimate gap is bounded
+ * by the same `SSE_TIMEOUT_MS`+typst arithmetic mid-retry, so the same
+ * ceiling applies. 360s gives ~20% margin over that 300s ceiling so this
+ * watchdog can only fire on a connection that is truly silent — never on a
+ * legitimately slow item.
+ */
+const AI_STREAM_WATCHDOG_MS = 360_000;
+
 @Injectable({ providedIn: 'root' })
 export class AiService {
   private readonly http = inject(HttpClient);
@@ -50,6 +76,12 @@ export class AiService {
    * turned into complete frames.
    */
   generateQuestionStream(payload: Omit<GenerateQuestionsPayload, 'count'>): Observable<GenerateQuestionStreamEvent> {
+    return this.rawGenerateQuestionStream(payload).pipe(timeout({ each: AI_STREAM_WATCHDOG_MS }));
+  }
+
+  private rawGenerateQuestionStream(
+    payload: Omit<GenerateQuestionsPayload, 'count'>,
+  ): Observable<GenerateQuestionStreamEvent> {
     return new Observable<GenerateQuestionStreamEvent>((subscriber) => {
       let processedLength = 0;
       let leftover = '';
@@ -214,6 +246,10 @@ export class AiService {
    * once the job reaches a terminal status.
    */
   streamGenerationJob(id: string): Observable<GenerationJob> {
+    return this.rawStreamGenerationJob(id).pipe(timeout({ each: AI_STREAM_WATCHDOG_MS }));
+  }
+
+  private rawStreamGenerationJob(id: string): Observable<GenerationJob> {
     return new Observable<GenerationJob>((subscriber) => {
       let processedLength = 0;
       let leftover = '';

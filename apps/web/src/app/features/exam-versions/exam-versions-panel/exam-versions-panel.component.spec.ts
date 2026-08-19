@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { Difficulty } from '@exams-generator/shared';
 import { ActivatedRoute, Router } from '@angular/router';
 import { describe, it, expect, vi } from 'vitest';
-import { Subject, of, throwError } from 'rxjs';
+import { Subject, TimeoutError, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ExamVersionsPanelComponent } from './exam-versions-panel.component';
 import { ExamVersionsService } from '../exam-versions.service';
@@ -285,6 +285,29 @@ describe('ExamVersionsPanelComponent', () => {
       expect(compiled.querySelector('[data-testid="error-state"]')).toBeTruthy();
       expect(compiled.querySelector('[data-testid="not-found-state"]')).toBeFalsy();
     });
+
+    /**
+     * Audit finding P1: every other screen with an error state (Panel de
+     * banco, Exámenes, Cola, Historial) offers "Reintentar" — this was the
+     * only one without it, leaving a page reload as the sole recourse.
+     */
+    it('offers a "Reintentar" button on the generic error state that reloads the versions list', () => {
+      let attempt = 0;
+      const { compiled, fixture, listVersions } = setup({
+        listVersionsImpl: () =>
+          attempt++ === 0 ? throwError(() => new HttpErrorResponse({ status: 500 })) : of(VERSIONS),
+      });
+
+      const retryButton = compiled.querySelector('[data-testid="retry-button"] button') as HTMLButtonElement;
+      expect(retryButton).toBeTruthy();
+
+      retryButton.click();
+      fixture.detectChanges();
+
+      expect(listVersions).toHaveBeenCalledTimes(2);
+      expect(compiled.querySelectorAll('[data-testid="version-row"]').length).toBe(3);
+      expect(compiled.querySelector('[data-testid="error-state"]')).toBeFalsy();
+    });
   });
 
   describe('header (F8)', () => {
@@ -495,6 +518,98 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
 
       (compiled.querySelector('[data-testid="retry-generate-job"]') as HTMLButtonElement).click();
       expect(generateVersions).toHaveBeenCalledTimes(2);
+    });
+
+    describe('watchdog / silent connection drop (audit P0)', () => {
+      it('shows a connection-lost banner (NOT a failed job) and keeps the last-known progress when the stream watchdog fires', () => {
+        const stream = new Subject<ExamVersionJob>();
+        // First call is the constructor's own reattach check (nothing in
+        // flight yet, matching every other test's default); the SECOND call
+        // is the watchdog's own settling GET, once generation is under way.
+        let latestCalls = 0;
+        const { compiled, fixture } = setup({
+          generateVersionsImpl: () => of(job({ versionCount: 3 })),
+          streamVersionJobImpl: () => stream.asObservable(),
+          latestVersionJobImpl: () =>
+            of(latestCalls++ === 0 ? null : job({ versionCount: 3, status: 'running', completedCount: 1 })),
+        });
+
+        openGeneratePanel(compiled, fixture);
+        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+        fixture.detectChanges();
+        (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+        fixture.detectChanges();
+
+        stream.next(job({ versionCount: 3, status: 'running', completedCount: 1 }));
+        fixture.detectChanges();
+        stream.error(new TimeoutError());
+        fixture.detectChanges();
+
+        expect(compiled.querySelector('[data-testid="connection-lost-banner"]')).toBeTruthy();
+        // A dropped stream must NOT be reported as a failed job.
+        expect(compiled.querySelector('[data-testid="generate-total-failure"]')).toBeFalsy();
+        expect(compiled.querySelector('[data-testid="generate-partial-failure"]')).toBeFalsy();
+        // Last known progress stays visible — not reset to zero.
+        expect(compiled.querySelector('[data-testid="generate-progress"]')?.textContent).toContain('1 de 3 formas');
+      });
+
+      it('settles the connection-lost state and reloads the versions list once the recovery GET reports the job is terminal', () => {
+        const stream = new Subject<ExamVersionJob>();
+        let latestCalls = 0;
+        const { compiled, fixture, listVersions } = setup({
+          generateVersionsImpl: () => of(job({ versionCount: 3 })),
+          streamVersionJobImpl: () => stream.asObservable(),
+          latestVersionJobImpl: () =>
+            of(latestCalls++ === 0 ? null : job({ versionCount: 3, status: 'completed', completedCount: 3 })),
+        });
+
+        openGeneratePanel(compiled, fixture);
+        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+        fixture.detectChanges();
+        (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+        fixture.detectChanges();
+        listVersions.mockClear();
+
+        stream.error(new TimeoutError());
+        fixture.detectChanges();
+
+        expect(compiled.querySelector('[data-testid="connection-lost-banner"]')).toBeFalsy();
+        expect(listVersions).toHaveBeenCalledTimes(1);
+      });
+
+      it('reconnect() re-opens the version-job stream without resetting progress already on screen', () => {
+        const stream = new Subject<ExamVersionJob>();
+        let streamCalls = 0;
+        let latestCalls = 0;
+        const { compiled, fixture, streamVersionJob } = setup({
+          generateVersionsImpl: () => of(job({ versionCount: 3 })),
+          streamVersionJobImpl: () =>
+            streamCalls++ === 0 ? stream.asObservable() : of(job({ versionCount: 3, status: 'running', completedCount: 1 })),
+          latestVersionJobImpl: () =>
+            of(latestCalls++ === 0 ? null : job({ versionCount: 3, status: 'running', completedCount: 1 })),
+        });
+
+        openGeneratePanel(compiled, fixture);
+        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+        fixture.detectChanges();
+        (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+        fixture.detectChanges();
+
+        stream.next(job({ versionCount: 3, status: 'running', completedCount: 1 }));
+        fixture.detectChanges();
+        stream.error(new TimeoutError());
+        fixture.detectChanges();
+
+        expect(compiled.querySelector('[data-testid="connection-lost-banner"]')).toBeTruthy();
+        expect(streamVersionJob).toHaveBeenCalledTimes(1);
+
+        (compiled.querySelector('[data-testid="reconnect-button"] button') as HTMLButtonElement).click();
+        fixture.detectChanges();
+
+        expect(streamVersionJob).toHaveBeenCalledTimes(2);
+        expect(compiled.querySelector('[data-testid="connection-lost-banner"]')).toBeFalsy();
+        expect(compiled.querySelector('[data-testid="generate-progress"]')?.textContent).toContain('1 de 3 formas');
+      });
     });
 
     it('re-attaches to a generation still running when the screen loads (e.g. started from the exam builder)', () => {

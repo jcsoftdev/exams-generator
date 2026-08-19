@@ -1,6 +1,6 @@
 import { HttpClient, HttpDownloadProgressEvent, HttpEventType, HttpResponse } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, timeout } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { parseExamVersionJobStreamFrames } from '../ai/parse-generate-stream-frames';
 import { ExamVersion, ExamVersionJob } from './exam-versions.models';
@@ -16,6 +16,23 @@ import { ExamVersion, ExamVersionJob } from './exam-versions.models';
  * `listVersions` (GET, B4), which stays the SINGLE SOURCE OF TRUTH for
  * download links (DECISION B4-A: stable tenant-scoped `/assets/:id` paths).
  */
+
+/**
+ * Client-side watchdog (audit P0) — same "no server heartbeat" situation as
+ * `AiService`'s streams (`ExamVersionJobEventsService` is a bare `Subject`,
+ * notified only on real writes). The window is smaller than the AI job's
+ * because this worker never calls an LLM: `ExamVersionJobsProcessor.process()`
+ * notifies once per form, and `generateOneVersion()`
+ * (exam-generation.service.ts) does exactly one `compileExam` + one
+ * `compileAnswerKey` per form with no retry loop, each bounded by Typst's own
+ * `TYPST_TIMEOUT_MS` (30s) — 2 × 30s = 60s is the ceiling the SERVER ITSELF
+ * enforces before it would have thrown and closed the connection. 120s gives
+ * 2x margin for storage/DB I/O around the compile calls, so this watchdog can
+ * only fire on a connection that is truly silent — never on a legitimately
+ * slow form.
+ */
+const VERSION_STREAM_WATCHDOG_MS = 120_000;
+
 @Injectable({ providedIn: 'root' })
 export class ExamVersionsService {
   private readonly http = inject(HttpClient);
@@ -48,6 +65,10 @@ export class ExamVersionsService {
    * the connection at a terminal status.
    */
   streamVersionJob(examId: string, jobId: string): Observable<ExamVersionJob> {
+    return this.rawStreamVersionJob(examId, jobId).pipe(timeout({ each: VERSION_STREAM_WATCHDOG_MS }));
+  }
+
+  private rawStreamVersionJob(examId: string, jobId: string): Observable<ExamVersionJob> {
     return new Observable<ExamVersionJob>((subscriber) => {
       let processedLength = 0;
       let leftover = '';

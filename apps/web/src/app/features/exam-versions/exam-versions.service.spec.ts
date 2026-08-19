@@ -1,7 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { HttpDownloadProgressEvent, HttpEventType, provideHttpClient } from '@angular/common/http';
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { TimeoutError } from 'rxjs';
 import { ExamVersionsService } from './exam-versions.service';
 import { environment } from '../../../environments/environment';
 import { ExamVersion, ExamVersionJob } from './exam-versions.models';
@@ -125,6 +126,61 @@ describe('ExamVersionsService', () => {
 
       expect(emitted).toEqual([]);
       req.flush('');
+    });
+
+    /**
+     * Audit finding P0: same silent-drop risk as `AiService`'s streams — no
+     * heartbeat exists (`ExamVersionJobEventsService` is a bare `Subject`).
+     * The watchdog window is smaller here because this worker never calls an
+     * LLM: `ExamVersionJobsProcessor.process()` notifies once per form, and
+     * `generateOneVersion()` (exam-generation.service.ts) does exactly one
+     * `compileExam` + one `compileAnswerKey`, each bounded by Typst's own
+     * `TYPST_TIMEOUT_MS` (30s) with no retry loop — 2 × 30s = 60s is the
+     * server's own worst-case gap. 120s gives 2x margin for storage/DB I/O.
+     */
+    it('errors with a TimeoutError when no frame arrives within the watchdog window (silent connection drop)', () => {
+      vi.useFakeTimers();
+      try {
+        let capturedError: unknown;
+        service.streamVersionJob('exam-1', 'job-1').subscribe({ error: (err) => (capturedError = err) });
+
+        httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/versions/jobs/job-1/stream`);
+
+        vi.advanceTimersByTime(120_000);
+
+        expect(capturedError).toBeInstanceOf(TimeoutError);
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('does NOT fire the watchdog while frames keep arriving before the window elapses (no false positive on a legitimately slow form)', () => {
+      vi.useFakeTimers();
+      try {
+        let capturedError: unknown;
+        const jobs: ExamVersionJob[] = [];
+        service.streamVersionJob('exam-1', 'job-1').subscribe({
+          next: (job) => jobs.push(job),
+          error: (err) => (capturedError = err),
+        });
+
+        const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/versions/jobs/job-1/stream`);
+
+        vi.advanceTimersByTime(119_999);
+        const running = { ...PENDING_JOB, status: 'running' as const, completedCount: 1 };
+        req.event({
+          type: HttpEventType.DownloadProgress,
+          loaded: 1,
+          partialText: `data: ${JSON.stringify(running)}\n\n`,
+        } as HttpDownloadProgressEvent);
+        expect(capturedError).toBeUndefined();
+
+        vi.advanceTimersByTime(119_999);
+        expect(capturedError).toBeUndefined();
+        expect(jobs).toEqual([running]);
+      } finally {
+        vi.useRealTimers();
+      }
     });
   });
 

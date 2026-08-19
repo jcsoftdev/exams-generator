@@ -46,4 +46,21 @@ describe('extractErrorMessage', () => {
 
     expect(extractErrorMessage(error)).toBe('No se pudo guardar la pregunta. Inténtalo de nuevo.');
   });
+
+  /**
+   * Audit finding P1: Nest's default exception filter wraps ANY unhandled
+   * 500 in `{ statusCode, message: "Internal server error", error }` — the
+   * exact same shape as a 400's actionable `message`, but this one is
+   * generic, untranslated, and tells the teacher nothing. Only a 4xx
+   * `message` is worth showing verbatim (validation errors, Typst compile
+   * stderr); a 5xx body's `message` must fall back to the Spanish wording.
+   */
+  it('falls back to the Spanish message on a 500, even when the body carries a generic Nest "message"', () => {
+    const error = new HttpErrorResponse({
+      status: 500,
+      error: { statusCode: 500, message: 'Internal server error', error: 'Internal Server Error' },
+    });
+
+    expect(extractErrorMessage(error)).toBe('No se pudo guardar la pregunta. Inténtalo de nuevo.');
+  });
 });

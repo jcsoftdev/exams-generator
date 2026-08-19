@@ -38,6 +38,25 @@
     <div data-testid="version-job-live-region" class="sr-only" aria-live="polite" role="status">{{ jobAnnouncement() }}</div>
   }
 
+  <!--
+    Watchdog fired (audit P0) — DELIBERATELY not the failed-job styling
+    below: the worker may well still be compiling forms, only the SSE
+    connection went silent. `warning`, not `error`, and "Reconectar"
+    re-opens the stream in place instead of reloading the page (which would
+    drop the progress already shown above).
+  -->
+  @if (connectionLost()) {
+    <div class="mb-4 flex flex-col gap-2" data-testid="connection-lost-banner">
+      <ui-banner
+        variant="warning"
+        message="Se perdió la conexión con el servidor. La generación puede seguir en curso."
+      ></ui-banner>
+      <div data-testid="reconnect-button" class="self-start">
+        <ui-button variant="primary" (clicked)="reconnect()">Reconectar</ui-button>
+      </div>
+    </div>
+  }
+
   <div class="mb-4 flex flex-col gap-3">
     <div class="flex items-center justify-between">
       <!--
@@ -133,6 +152,9 @@
   } @else if (errorMessage()) {
     <div data-testid="error-state" class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text">
       {{ errorMessage() }}
+      <div data-testid="retry-button" class="mt-2">
+        <ui-button variant="primary" (clicked)="retry()">Reintentar</ui-button>
+      </div>
     </div>
   } @else if (versions().length === 0) {
     <div data-testid="empty-versions">
