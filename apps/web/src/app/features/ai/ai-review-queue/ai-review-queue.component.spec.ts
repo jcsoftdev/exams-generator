@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { Subject, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { LucideAngularModule, Check, Pencil, X, Sparkles, ChevronDown } from 'lucide-angular';
 import { Difficulty } from '@exams-generator/shared';
-import { AiReviewQueueComponent } from './ai-review-queue.component';
+import { AiReviewQueueComponent, EDIT_STATE_KEY } from './ai-review-queue.component';
 import { AiService } from '../ai.service';
 import { DraftQuestion } from '../ai.models';
 import { DraftCountService } from '../draft-count.service';
@@ -49,6 +49,7 @@ function setup(
     listImpl?: (page: number, pageSize: number) => unknown;
     previewImpl?: (id: string) => unknown;
     approveImpl?: () => unknown;
+    rejectImpl?: () => unknown;
     getCoursesImpl?: () => unknown;
     getTopicsForCoursesImpl?: (courseIds: string[]) => unknown;
     updateQuestionImpl?: (id: string, patch: unknown) => unknown;
@@ -62,7 +63,7 @@ function setup(
     over.previewImpl ?? (() => of(new Blob(['%PDF'], { type: 'application/pdf' }))),
   );
   const approveQuestion = vi.fn(over.approveImpl ?? ((id: string) => of({ id })));
-  const rejectQuestion = vi.fn((id: string) => of({ id }));
+  const rejectQuestion = vi.fn(over.rejectImpl ?? ((id: string) => of({ id })));
   const reviseQuestion = vi.fn(
     over.reviseQuestionImpl ??
       ((_id: string) =>
@@ -108,6 +109,17 @@ function setup(
 }
 
 describe('AiReviewQueueComponent', () => {
+  // sessionStorage is a REAL browser global — jsdom does not reset it
+  // between tests. The edit-persistence effect (finding #2, audit
+  // 2026-08-18) now writes to it on every startEdit(), so a leftover
+  // `EDIT_STATE_KEY` entry from one test (e.g. one that clicks "Editar" and
+  // never cancels/saves) would otherwise "restore" onto the very next
+  // test's freshly-mounted component whenever it also auto-selects draft
+  // 'd1' — same reasoning as ExamBuilderComponent's spec clearing
+  // `BUILDER_STATE_KEY` for the same underlying reason.
+  beforeEach(() => sessionStorage.clear());
+  afterEach(() => sessionStorage.clear());
+
   it('lists drafts and auto-selects the first, compiling its preview', () => {
     const { compiled, previewDraft } = setup();
     expect(compiled.querySelectorAll('[data-testid="review-item"]').length).toBe(2);
@@ -599,5 +611,229 @@ describe('AiReviewQueueComponent', () => {
     expect(error?.textContent).toContain('No se pudo revisar');
     const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
     expect(enunciado.value).toBe('7. ¿Cuál organelo sintetiza proteínas?\na) Lisosoma b) Ribosoma');
+  });
+
+  /**
+   * Audit 2026-08-18 (cola de revisión IA), P1: `approve()`/`confirmReject()`
+   * were the ONLY two mutating actions on this screen with no in-flight
+   * guard — a double click sent two POSTs for the same draft. Same class of
+   * bug already fixed for `ExamReviewComponent.replace()` (`replacing`
+   * signal) — mirrored here with `approving`/`rejectSubmitting`.
+   */
+  describe('in-flight guards on approve/reject (audit P1)', () => {
+    it('ignores a second click on Aprobar while the first request is still in flight', () => {
+      const pending = new Subject<{ id: string }>();
+      const { compiled, fixture, approveQuestion } = setup({ approveImpl: () => pending });
+
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="approve"] button')!;
+      button.click();
+      fixture.detectChanges();
+
+      expect(button.disabled).toBe(true);
+      button.click();
+      fixture.detectChanges();
+
+      expect(approveQuestion).toHaveBeenCalledTimes(1);
+    });
+
+    it('re-enables Aprobar once the request resolves', () => {
+      const { compiled, fixture } = setup();
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="approve"] button')!;
+      button.click();
+      fixture.detectChanges();
+      expect(button.disabled).toBe(false);
+    });
+
+    it('re-enables Aprobar after a failed request too — a row stuck disabled after an error is worse than the error', () => {
+      const { compiled, fixture } = setup({
+        approveImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="approve"] button')!;
+      button.click();
+      fixture.detectChanges();
+      expect(button.disabled).toBe(false);
+      expect(compiled.textContent).toContain('No se pudo aprobar');
+    });
+
+    it('ignores a second click on the reject confirmation while the first request is still in flight', () => {
+      const pending = new Subject<{ id: string }>();
+      const { compiled, fixture, rejectQuestion } = setup({ rejectImpl: () => pending });
+
+      (compiled.querySelector('[data-testid="reject"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const confirmButton = compiled.querySelector<HTMLButtonElement>(
+        '[data-testid="reject-confirm-yes"] button',
+      )!;
+      confirmButton.click();
+      fixture.detectChanges();
+
+      expect(confirmButton.disabled).toBe(true);
+      confirmButton.click();
+      fixture.detectChanges();
+
+      expect(rejectQuestion).toHaveBeenCalledTimes(1);
+    });
+
+    it('re-enables the reject confirmation after a failed request', () => {
+      const { compiled, fixture } = setup({
+        rejectImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+      (compiled.querySelector('[data-testid="reject"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const confirmButton = compiled.querySelector<HTMLButtonElement>(
+        '[data-testid="reject-confirm-yes"] button',
+      )!;
+      confirmButton.click();
+      fixture.detectChanges();
+      expect(confirmButton.disabled).toBe(false);
+      expect(compiled.textContent).toContain('No se pudo rechazar');
+    });
+  });
+
+  /**
+   * Audit 2026-08-18 (cola de revisión IA), P1: the edit form lived only in
+   * component signals — navigating away lost it silently, same bug already
+   * fixed in `ExamBuilderComponent` via a versioned `sessionStorage` key and
+   * a single `effect()`. Mirrored here, but keyed to the SPECIFIC draft being
+   * edited (`EDIT_STATE_KEY`'s payload carries `draftId`) — restoring must
+   * never splice a stale edit onto a different draft.
+   */
+  describe('unsaved edits survive navigation (audit P1, sessionStorage precedent from exam-builder)', () => {
+    it('persists edits to sessionStorage keyed to the draft being edited', () => {
+      const { compiled, fixture } = setup();
+      (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+      enunciado.value = 'Cambio sin guardar';
+      enunciado.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+
+      const saved = JSON.parse(sessionStorage.getItem(EDIT_STATE_KEY)!);
+      expect(saved.draftId).toBe('d1');
+      expect(saved.body).toBe('Cambio sin guardar');
+    });
+
+    it('restores the unsaved edit — visibly announced — when the same draft is selected again after remounting the screen', () => {
+      sessionStorage.setItem(
+        EDIT_STATE_KEY,
+        JSON.stringify({
+          draftId: 'd1',
+          courseId: 'c1',
+          topicId: 't1',
+          difficulty: Difficulty.Medium,
+          gradeLevel: 'secundaria_3',
+          correctAnswer: '0',
+          body: 'Recuperado del sessionStorage',
+          alternatives: '4\n3',
+          figureCode: '',
+          aiInstruction: '',
+        }),
+      );
+
+      const { compiled } = setup();
+
+      expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
+      const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+      expect(enunciado.value).toBe('Recuperado del sessionStorage');
+      // Must be visibly announced — the teacher can't otherwise tell this
+      // apart from the server's current values.
+      expect(compiled.querySelector('[data-testid="edit-restored-notice"]')).toBeTruthy();
+    });
+
+    it('does NOT splice a persisted edit onto the wrong draft — only restores once the MATCHING draft is actually selected', () => {
+      sessionStorage.setItem(
+        EDIT_STATE_KEY,
+        JSON.stringify({
+          draftId: 'd2',
+          courseId: 'c1',
+          topicId: 't1',
+          difficulty: Difficulty.Easy,
+          gradeLevel: 'pre',
+          correctAnswer: '0',
+          body: 'Edición pendiente de d2',
+          alternatives: '4\n3',
+          figureCode: '',
+          aiInstruction: '',
+        }),
+      );
+
+      const { compiled, fixture } = setup();
+      // d1 auto-selects first — the persisted edit belongs to d2, so nothing
+      // should be spliced onto d1's panel.
+      expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
+
+      const secondItem = compiled.querySelectorAll('[data-testid="review-item"]')[1] as HTMLButtonElement;
+      secondItem.click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
+      const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+      expect(enunciado.value).toBe('Edición pendiente de d2');
+    });
+
+    it('never restores a persisted edit whose draft id is no longer in the queue (approved/rejected elsewhere)', () => {
+      sessionStorage.setItem(
+        EDIT_STATE_KEY,
+        JSON.stringify({
+          draftId: 'gone-elsewhere',
+          courseId: 'c1',
+          topicId: 't1',
+          difficulty: Difficulty.Easy,
+          gradeLevel: 'pre',
+          correctAnswer: '0',
+          body: 'huérfano',
+          alternatives: '4\n3',
+          figureCode: '',
+          aiInstruction: '',
+        }),
+      );
+      const { compiled } = setup();
+      expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
+      expect(compiled.textContent).not.toContain('huérfano');
+    });
+
+    it('clears the persisted edit once it is saved', () => {
+      const { compiled, fixture } = setup();
+      (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+      enunciado.value = 'Cambio sin guardar';
+      enunciado.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+      expect(sessionStorage.getItem(EDIT_STATE_KEY)).not.toBeNull();
+
+      (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(sessionStorage.getItem(EDIT_STATE_KEY)).toBeNull();
+    });
+
+    it('clears the persisted edit on cancel', () => {
+      const { compiled, fixture } = setup();
+      (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+      enunciado.value = 'Cambio sin guardar';
+      enunciado.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+      expect(sessionStorage.getItem(EDIT_STATE_KEY)).not.toBeNull();
+
+      (compiled.querySelector('[data-testid="edit-cancel"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(sessionStorage.getItem(EDIT_STATE_KEY)).toBeNull();
+    });
+  });
+
+  /**
+   * Audit 2026-08-18 (cola de revisión IA), P2: with the queue empty, the
+   * left column's `ui-empty-state` AND the right panel's "La cola está
+   * vacía." rendered at the same time — noise, not a lie. One survives.
+   */
+  it('shows only ONE empty state when the queue is empty — no duplicate message in the right panel', () => {
+    const { compiled } = setup({ listImpl: () => of({ items: [], total: 0 }) });
+    expect(compiled.querySelector('[data-testid="empty-queue"]')).toBeTruthy();
+    expect(compiled.textContent).not.toContain('La cola está vacía');
   });
 });

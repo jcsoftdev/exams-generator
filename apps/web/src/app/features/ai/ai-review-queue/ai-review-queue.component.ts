@@ -1,9 +1,10 @@
-import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
+import { Component, DestroyRef, computed, effect, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { map, switchMap } from 'rxjs';
 import { LucideAngularModule } from 'lucide-angular';
 import { Difficulty } from '@exams-generator/shared';
+import { BannerComponent } from '../../../ui/banner/banner.component';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
@@ -30,6 +31,36 @@ import { parseAlternativesList } from '../../bank/question-edit/parse-alternativ
 const PREVIEW_FRAGMENT = '#toolbar=0&navpanes=0&scrollbar=0';
 
 const ALTERNATIVE_LETTERS = ['a', 'b', 'c', 'd', 'e'];
+
+/**
+ * `sessionStorage` key for an in-progress edit of a draft (audit
+ * 2026-08-18, "editar y navegar pierde todo sin aviso"). Same precedent as
+ * `ExamBuilderComponent.BUILDER_STATE_KEY`: `sessionStorage` (not `local`)
+ * so it dies with the tab, and a versioned key so a shape change ignores an
+ * old payload instead of crashing on it.
+ *
+ * Unlike the builder (one exam draft per session), this screen can have many
+ * drafts in the queue — so the payload itself carries `draftId` and every
+ * restore is gated on an EXACT id match (see `tryRestoreEditDraft`). A
+ * single shared key (not one key per draft) is enough because only one edit
+ * can be open at a time; the `draftId` field is what "keys" the persisted
+ * state to a specific draft, not the storage key itself.
+ */
+export const EDIT_STATE_KEY = 'ai-review-queue-edit-v1';
+
+/** Everything needed to put the edit form back exactly where the teacher left it, for ONE specific draft. */
+interface PersistedEditState {
+  readonly draftId: string;
+  readonly courseId: string;
+  readonly topicId: string;
+  readonly difficulty: Difficulty | null;
+  readonly gradeLevel: string | null;
+  readonly correctAnswer: string;
+  readonly body: string;
+  readonly alternatives: string;
+  readonly figureCode: string;
+  readonly aiInstruction: string;
+}
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   [Difficulty.Easy]: 'Fácil',
@@ -79,6 +110,7 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
   selector: 'app-ai-review-queue',
   standalone: true,
   imports: [
+    BannerComponent,
     ButtonComponent,
     EmptyStateComponent,
     TagComponent,
@@ -138,6 +170,8 @@ export class AiReviewQueueComponent {
   protected readonly editBody = signal('');
   protected readonly editAlternatives = signal('');
   protected readonly editFigureCode = signal('');
+  /** True only right after `tryRestoreEditDraft` spliced a persisted edit back in — drives the visible "recuperamos tu edición" notice. Never true for a fresh `startEdit()`. */
+  protected readonly editRestored = signal(false);
 
   /** `topics()` (the full unscoped catalog) filtered live to the edit form's currently selected curso — no extra HTTP call on curso change (mirrors bank-list.component). */
   protected readonly editTopicOptions = computed<SelectOption<string>[]>(() =>
@@ -163,6 +197,16 @@ export class AiReviewQueueComponent {
   protected readonly previewFailed = signal(false);
   protected readonly rejecting = signal(false);
   protected readonly actionError = signal<string | null>(null);
+  /**
+   * In-flight guards for the mutating actions on this panel (audit
+   * 2026-08-18, P1). `rejecting` already means "confirmation modal is
+   * open" — it flips false the instant `confirmReject()` runs, so it can't
+   * also stand in for "the reject POST is in flight". Same
+   * check-then-set/always-reset-on-both-outcomes shape as `editSaving()`,
+   * `revising()`, and `ExamReviewComponent.replacing()`.
+   */
+  protected readonly approving = signal(false);
+  protected readonly rejectSubmitting = signal(false);
 
   private readonly objectUrls: string[] = [];
 
@@ -170,6 +214,24 @@ export class AiReviewQueueComponent {
     this.loadTaxonomy();
     this.load();
     this.destroyRef.onDestroy(() => this.objectUrls.forEach((u) => URL.revokeObjectURL(u)));
+
+    // One effect instead of a persist() call sprinkled over every edit-field
+    // setter (same reasoning as ExamBuilderComponent's persistence effect) —
+    // a newly added edit field can't forget to be saved. Every signal the
+    // snapshot needs is read here so all of them are tracked dependencies.
+    effect(() => {
+      this.editing();
+      this.editCourseId();
+      this.editTopicId();
+      this.editDifficulty();
+      this.editGradeLevel();
+      this.editCorrectAnswer();
+      this.editBody();
+      this.editAlternatives();
+      this.editFigureCode();
+      this.aiInstruction();
+      this.persistEditState();
+    });
   }
 
   /** Same id->name resolution pattern as `BankListComponent.fetchTaxonomy` — fetched independently of the drafts list so a slow taxonomy response never blocks the queue from rendering. */
@@ -332,6 +394,9 @@ export class AiReviewQueueComponent {
     this.editAlternatives.set((draft.alternatives ?? []).join('\n'));
     this.editFigureCode.set(draft.figureCode ?? '');
     this.resetAiRevise();
+    // A fresh edit seeded from the SERVER's current values is never a
+    // "restore" — only tryRestoreEditDraft() sets this true.
+    this.editRestored.set(false);
     this.editing.set(true);
   }
 
@@ -345,6 +410,12 @@ export class AiReviewQueueComponent {
     this.editing.set(false);
     this.editError.set(null);
     this.resetAiRevise();
+    this.clearPersistedEditState();
+  }
+
+  /** Explicit clear — see `persistEditState()`'s doc for why this can't be inferred from `editing()` alone. */
+  private clearPersistedEditState(): void {
+    sessionStorage.removeItem(EDIT_STATE_KEY);
   }
 
   /**
@@ -381,6 +452,7 @@ export class AiReviewQueueComponent {
       next: () => {
         this.editing.set(false);
         this.editSaving.set(false);
+        this.clearPersistedEditState();
         this.reloadAfterSave(draft.id);
       },
       error: (e: HttpErrorResponse) => {
@@ -453,6 +525,93 @@ export class AiReviewQueueComponent {
     this.selected.set(draft);
     this.actionError.set(null);
     this.compilePreview(draft.id);
+    this.tryRestoreEditDraft(draft);
+  }
+
+  /**
+   * Splices a persisted unsaved edit back onto the panel — but ONLY when it
+   * belongs to the draft that was just selected. Called for every selection,
+   * including the initial auto-select in `fetchPage()`, so a persisted edit
+   * for a draft further down the (possibly paginated) queue restores the
+   * moment the teacher clicks that row, not just on the first page load.
+   *
+   * Gated on an exact `draftId` match — see `EDIT_STATE_KEY`'s doc for why
+   * this is the "keying" mechanism instead of one storage key per draft. A
+   * draft approved/rejected in another tab can never be selected again (it
+   * left `status=draft` server-side, see `fetchPage`), so its persisted
+   * entry simply never matches again — it sits inert in `sessionStorage`
+   * until the tab closes, exactly like the exam builder's stale payloads.
+   */
+  private tryRestoreEditDraft(draft: DraftQuestion): void {
+    this.editRestored.set(false);
+    const state = this.readEditState();
+    if (!state || state.draftId !== draft.id) {
+      return;
+    }
+    this.editError.set(null);
+    this.editCourseId.set(state.courseId);
+    this.editTopicId.set(state.topicId);
+    this.editDifficulty.set(state.difficulty);
+    this.editGradeLevel.set(state.gradeLevel);
+    this.editCorrectAnswer.set(state.correctAnswer);
+    this.editBody.set(state.body);
+    this.editAlternatives.set(state.alternatives);
+    this.editFigureCode.set(state.figureCode);
+    this.aiInstruction.set(state.aiInstruction);
+    this.revising.set(false);
+    this.aiError.set(null);
+    this.editing.set(true);
+    // Visibly announced (role="status" banner in the template) — the
+    // teacher must never be shown edits indistinguishable from the server's
+    // current values.
+    this.editRestored.set(true);
+  }
+
+  private readEditState(): PersistedEditState | null {
+    const raw = sessionStorage.getItem(EDIT_STATE_KEY);
+    if (!raw) {
+      return null;
+    }
+    try {
+      return JSON.parse(raw) as PersistedEditState;
+    } catch {
+      // A corrupt/partial payload must never brick the screen — drop it and
+      // behave as if nothing had been saved.
+      sessionStorage.removeItem(EDIT_STATE_KEY);
+      return null;
+    }
+  }
+
+  /**
+   * Driven by the constructor's `effect()` — runs on every edit-field change
+   * AND on `editing()` flipping either way. Deliberately WRITE-ONLY: it must
+   * NEVER clear storage just because `editing()` is currently false, because
+   * that's ALSO true right after mount, before `tryRestoreEditDraft()` has
+   * had a chance to match a dormant entry against a draft the teacher
+   * hasn't clicked yet — an auto-clear-on-false here raced that restore and
+   * wiped the entry before it could ever be used. Clearing is instead an
+   * explicit action taken by `cancelEdit()` and `saveEdit()`'s success path
+   * (mirrors `ExamBuilderComponent.clearPersistedState()` being called
+   * explicitly at specific mutation points rather than inferred from state).
+   */
+  private persistEditState(): void {
+    const draft = this.selected();
+    if (!this.editing() || !draft) {
+      return;
+    }
+    const state: PersistedEditState = {
+      draftId: draft.id,
+      courseId: this.editCourseId(),
+      topicId: this.editTopicId(),
+      difficulty: this.editDifficulty(),
+      gradeLevel: this.editGradeLevel(),
+      correctAnswer: this.editCorrectAnswer(),
+      body: this.editBody(),
+      alternatives: this.editAlternatives(),
+      figureCode: this.editFigureCode(),
+      aiInstruction: this.aiInstruction(),
+    };
+    sessionStorage.setItem(EDIT_STATE_KEY, JSON.stringify(state));
   }
 
   private compilePreview(id: string): void {
@@ -490,11 +649,22 @@ export class AiReviewQueueComponent {
 
   protected approve(): void {
     const current = this.selected();
-    if (!current) return;
+    // approving() is the in-flight guard: without it a double click fired
+    // two `POST .../approve` for the same draft (audit 2026-08-18, P1).
+    if (!current || this.approving()) return;
+    this.approving.set(true);
     this.actionError.set(null);
     this.aiService.approveQuestion(current.id).subscribe({
-      next: () => this.advanceAfter(),
-      error: () => this.actionError.set('No se pudo aprobar. Inténtalo de nuevo.'),
+      next: () => {
+        this.approving.set(false);
+        this.advanceAfter();
+      },
+      error: () => {
+        // Released on BOTH outcomes — a row stuck disabled after an error
+        // is worse than the error itself.
+        this.approving.set(false);
+        this.actionError.set('No se pudo aprobar. Inténtalo de nuevo.');
+      },
     });
   }
 
@@ -506,12 +676,22 @@ export class AiReviewQueueComponent {
   }
   protected confirmReject(): void {
     const current = this.selected();
+    // rejectSubmitting() guards the POST itself — `rejecting()` only tracks
+    // whether the confirmation modal is open and flips false the instant
+    // this method runs, so it can't double as an in-flight flag too.
+    if (!current || this.rejectSubmitting()) return;
     this.rejecting.set(false);
-    if (!current) return;
+    this.rejectSubmitting.set(true);
     this.actionError.set(null);
     this.aiService.rejectQuestion(current.id).subscribe({
-      next: () => this.advanceAfter(),
-      error: () => this.actionError.set('No se pudo rechazar. Inténtalo de nuevo.'),
+      next: () => {
+        this.rejectSubmitting.set(false);
+        this.advanceAfter();
+      },
+      error: () => {
+        this.rejectSubmitting.set(false);
+        this.actionError.set('No se pudo rechazar. Inténtalo de nuevo.');
+      },
     });
   }
 }

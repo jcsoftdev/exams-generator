@@ -53,6 +53,14 @@
 
         @if (editing()) {
           <div data-testid="panel-edit-form" class="flex flex-col gap-3">
+            @if (editRestored()) {
+              <ui-banner
+                data-testid="edit-restored-notice"
+                role="status"
+                variant="info"
+                message="Recuperamos una edición sin guardar de este borrador. Revisa los cambios antes de guardar."
+              ></ui-banner>
+            }
             <app-question-taxonomy-fields
               [courseId]="editCourseId()"
               [topicId]="editTopicId()"
@@ -138,22 +146,24 @@
           </div>
 
           <div class="flex flex-wrap gap-2">
-            <div data-testid="approve"><ui-button variant="primary" (clicked)="approve()"><span class="flex items-center gap-1"><lucide-angular name="check" class="h-4 w-4"></lucide-angular>Aprobar</span></ui-button></div>
+            <div data-testid="approve"><ui-button variant="primary" [loading]="approving()" [disabled]="approving()" (clicked)="approve()"><span class="flex items-center gap-1"><lucide-angular name="check" class="h-4 w-4"></lucide-angular>Aprobar</span></ui-button></div>
             <div data-testid="edit"><ui-button variant="ghost" (clicked)="startEdit(d)"><span class="flex items-center gap-1"><lucide-angular name="pencil" class="h-4 w-4"></lucide-angular>Editar</span></ui-button></div>
             <div data-testid="reject"><ui-button variant="ghost" (clicked)="requestReject()"><span class="flex items-center gap-1 text-hard-text"><lucide-angular name="x" class="h-4 w-4"></lucide-angular>Rechazar</span></ui-button></div>
           </div>
         }
       </div>
-    } @else if (!loading()) {
-      <div class="rounded-card border border-dashed border-n200 p-8 text-center text-sm text-n500">La cola está vacía.</div>
     }
+    <!-- No "cola vacía" fallback here on purpose (audit P2): the left column's
+         ui-empty-state already announces an empty queue — a second message
+         on the right was noise, not a second fact. When nothing is selected
+         (empty queue, or a load error), the right column simply stays blank. -->
   </div>
 
   <ui-modal [open]="rejecting()" title="Rechazar borrador">
     <p class="text-sm text-n700">¿Seguro que quieres rechazar este borrador? No entrará al banco.</p>
     <div actions class="flex justify-end gap-2">
       <ui-button variant="ghost" (clicked)="cancelReject()">Cancelar</ui-button>
-      <div data-testid="reject-confirm-yes"><ui-button variant="danger" (clicked)="confirmReject()">Rechazar</ui-button></div>
+      <div data-testid="reject-confirm-yes"><ui-button variant="danger" [loading]="rejectSubmitting()" [disabled]="rejectSubmitting()" (clicked)="confirmReject()">Rechazar</ui-button></div>
     </div>
   </ui-modal>
 </div>
