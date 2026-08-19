@@ -1,3 +1,4 @@
+import { NotFoundException } from "@nestjs/common";
 import { AiJobsController } from "./ai-jobs.controller";
 import { GenerationJobEventsService } from "./generation-job-events.service";
 import { GenerationJobsService } from "./generation-jobs.service";
@@ -64,6 +65,26 @@ describe("AiJobsController - GET :id/stream", () => {
     expect(res.writes).toHaveLength(3);
     expect(res.writes[2]).toContain('"status":"completed"');
     expect(res.end).toHaveBeenCalledTimes(1);
+  });
+
+  /**
+   * Regression (P0): the lookup used to run AFTER `flushHeaders()`, so an
+   * unknown/cross-tenant id put a `200 OK` on the wire and then threw — and
+   * the global exception filter crashed the process trying to write a 404
+   * body onto an already-started response. Nothing may touch `res` before
+   * the job is known to exist.
+   */
+  it("rejects with the service error without touching the response when the job does not exist", async () => {
+    const { controller, service } = buildDeps();
+    service.get.mockRejectedValue(new NotFoundException("Generation job not found"));
+    const res = fakeResponse();
+
+    await expect(controller.stream(USER, "missing", res as never)).rejects.toBeInstanceOf(NotFoundException);
+
+    expect(res.setHeader).not.toHaveBeenCalled();
+    expect(res.flushHeaders).not.toHaveBeenCalled();
+    expect(res.write).not.toHaveBeenCalled();
+    expect(res.end).not.toHaveBeenCalled();
   });
 
   it("unsubscribes from job updates when the client closes the connection", async () => {

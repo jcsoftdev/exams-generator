@@ -23,6 +23,28 @@ export class AllExceptionsFilter implements ExceptionFilter {
     const request = ctx.getRequest<Request>();
     const requestId = (request as { id?: string }).id;
 
+    // SECOND LINE OF DEFENCE (P0). A handler that took `@Res()` and already
+    // flushed headers — the hand-rolled SSE routes — leaves nothing here to
+    // set: `response.status().json()` on a started response throws
+    // `ERR_HTTP_HEADERS_SENT`, and since this filter runs outside any
+    // try/catch of ours that rejection is UNHANDLED and takes the whole
+    // process down. One mis-ordered SSE route must cost one dropped
+    // connection, never the API. The status/body are already gone, so the
+    // only honest move left is to log it and kill the socket.
+    if (response.headersSent) {
+      this.logger.error(
+        { err: exception, requestId, path: request.url },
+        "Exception after response headers were sent — destroying the connection",
+      );
+      try {
+        response.destroy();
+      } catch {
+        // The socket may already be gone; nothing left to clean up, and
+        // throwing from a filter is exactly what this branch exists to stop.
+      }
+      return;
+    }
+
     if (exception instanceof HttpException) {
       const status = exception.getStatus();
       if (status >= HttpStatus.INTERNAL_SERVER_ERROR) {
