@@ -1,0 +1,704 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q01.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 1 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q02.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 2 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q03.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razonamiento Matemático Aplicado (Aritmética)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q04.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 4 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q05.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 5 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q06.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Estadística Descriptiva",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q07.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q08.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q09.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 9 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q10.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 10 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q11.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q12.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 12 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q13.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 13 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q14.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 14 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q15.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 15 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q16.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 16 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q17.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 17 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q18.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q19.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 19 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q20.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Proteínas y ácidos nucleicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q21.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de nutrición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q22.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 22 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q23.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 23 (clave A)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q24.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 24 (clave C)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Acentuación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q25.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q26.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 26 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Ortografía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q27.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 27 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q28.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 28 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q29.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 29 (clave E)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Categorías gramaticales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q30.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Géneros y especies literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q31.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 31 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Figuras literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q32.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 32 (clave A)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q33.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 33 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura española",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q34.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 34 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura española",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q35.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 35 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q36.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Ecosistemas y ecorregiones del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q37.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 37 (clave B)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía económica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q38.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 38 (clave B)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía física y relieve peruano",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q39.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 39 (clave C)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geomorfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q40.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 40 (clave E)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía económica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q41.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 41 (clave C)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Climas y biomas del mundo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q42.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 42 (clave E)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Nociones generales de economía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q43.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 43 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q44.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 44 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Integración económica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q45.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 45 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Distribución, consumo y pobreza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q46.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 46 (clave C)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Saneamiento ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q47.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q48.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 48 (clave B)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Civilizaciones antiguas de Oriente",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q49.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 49 (clave D)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "República del Perú (siglo XIX) y dependencia inglesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q50.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 50 (clave C)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Periodo de entreguerras y guerras mundiales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q51.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 51 (clave C)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Edad Moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q52.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 52 (clave B)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Poblamiento americano y culturas preincaicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q53.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 53 (clave B)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Revoluciones burguesas y Revolución Francesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q54.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 54 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q55.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 55 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q56.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 56 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q57.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 57 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q58.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 58 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q59.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 59 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q60.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 60 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q61.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 61 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q62.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 62 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q63.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 63 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Oraciones incompletas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q64.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 64 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q65.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 65 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Bases biológicas de la conducta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q66.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 66 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Identidad y patrimonio nacional",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q67.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 67 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado de Derecho y la Carta Magna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q68.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 68 (clave E)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "La convivencia social y la formación intercultural",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q69.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 69 (clave B)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Saneamiento ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-18-unac-2022-ii-image/scan-18-unac-2022-ii-q70.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/Exam-general-OK-2.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2022-II, Bloque II: Ciencias Empresariales, pregunta 70 (clave C)"
+    }
+  ]
+}

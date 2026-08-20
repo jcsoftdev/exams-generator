@@ -24,7 +24,57 @@ Reglas que se respetan igual, sin importar la licencia:
 | `lot-24-picuino-electricidad` | Test Picuino — bancos `es-electric-*` (circuito eléctrico, ley de Ohm, serie/paralelo, unidades y magnitudes) | `picuino/test` | https://github.com/picuino/test | «Creative Commons Attribution-ShareAlike 4.0» (cabecera de cada `.yaml`; `Copyright: 2021/2023 por Carlos Félix Pardo Martín`). El repo declara `cc-by-sa-4.0` y `Credits.md` confirma: *"El texto de los cuestionarios en los archivos .yaml (preguntas y opciones de respuesta) se distribuyen bajo licencia Creative Commons Attribution-ShareAlike 4.0"* | 230 (144 con figura) | 2026-08-20 |
 | `lot-25-bancostecno-circuitos` | Banco de preguntas de tecnoloxía — `bancoTecno_es.csv`, bloque «circuitos» | `procastino/bancosTecno` | https://github.com/procastino/bancosTecno | «Creative Commons Legal Code — CC0 1.0 Universal» (primeras líneas del archivo `LICENSE` del repo, dedicación al dominio público; GitHub reporta `cc0-1.0`) | 76 (66 con figura) | 2026-08-20 |
 | `lot-27-cepre-unmsm-2019-i` | *UNMSM Centro Preuniversitario — Boletines del Ciclo 2019-I*, semanas 1-18 (cursos de texto) | `gitbookarch/CepreSanMarcos` | https://github.com/gitbookarch/CepreSanMarcos | **El repo no tiene archivo `LICENSE`** y GitHub no le reconoce licencia; el `README.md` completo es una sola línea: «`# CepreSanMarcos`». La única declaración de derechos está impresa en la obra: el pie de **cada página** de cada boletín dice «**(Prohibida su reproducción y venta)**» (112 apariciones en el boletín de la semana 1). Los metadatos del PDF dan `Title: UNIVERSIDAD NACIONAL MAYOR DE SAN MARCOS`, `Author: Dangeldesign` | 466 (sin figuras) | 2026-08-20 |
-| `lot-26-unmsm-historia-mcq` | «Recopilación de preguntas de Historia de exámenes de admisión a la Universidad Nacional Mayor de San Marcos» (~1970–2020), 36 capítulos temáticos | `davidquicast/Corpus-Historia-Peru-ExamenAdmisionUNMSM-MultipleChoice` | https://github.com/davidquicast/Corpus-Historia-Peru-ExamenAdmisionUNMSM-MultipleChoice | El repo **no tiene archivo `LICENSE`** y GitHub no reporta licencia. Lo único que dice sobre licencia, citado literal: el front matter de `README.md` declara `license: apache-2.0`, y **cada registro** de `cuestionario.json` lleva `"license": "Desconocida"`. El mismo registro cita como origen `"source": "https://www.slideshare.net/slideshow/historia-del-per-recopilacin-ex-adm-unmsm/251464302"` | 439 (sin figura) | 2026-08-20 |
+| `lot-26-unmsm-historia-mcq` | «Recopilación de preguntas de Historia de exámenes de admisión a la Universidad Nacional Mayor de San Marcos» (~1970–2020), 36 capítulos temáticos | `davidquicast/Corpus-Historia-Peru-ExamenAdmisionUNMSM-MultipleChoice` | https://github.com/davidquicast/Corpus-Historia-Peru-ExamenAdmisionUNMSM-MultipleChoice | El repo **no tiene archivo `LICENSE`** y GitHub no reporta licencia. Lo único que dice sobre licencia, citado literal: el front matter de `README.md` declara `license: apache-2.0`, y **cada registro** de `cuestionario.json` lleva `"license": "Desconocida"`. El mismo registro cita como origen `"source": "https://www.slideshare.net/slideshow/historia-del-per-recopilacin-ex-adm-unmsm/251464302"` | 439 (2 con figura) | 2026-08-20 |
+| `book-4-qcm-exo7` | *QCM de mathématiques* — Exo7 / Unisciel / Université de Lille (L1), 25 capítulos en `questions-*/format-yaml/` + el QCM de probabilidades L2 de Julien Worms (`questions-worms.tex`) | `exo7math/qcm-exo7` | https://github.com/exo7math/qcm-exo7 | **El repo no tiene archivo `LICENSE`** y la GitHub API reporta `license=null`. La única declaración está en prosa, en el `README.md`, citada literal: «*Les documents sont diffusés sous la licence **Creative Commons -- BY-NC-SA -- 4.0 FR**.*» | 170 (1 con figura) | 2026-08-20 |
+
+| `book-5-jamb-myschool-lwp` | Preguntas pasadas de JAMB/UTME (Nigeria), scrapeadas de myschool.ng y publicadas como JSON por curso y año | `Emmanuelprime/LearnWithPrime` | https://github.com/Emmanuelprime/LearnWithPrime | **El repo no tiene archivo `LICENSE`**, GitHub reporta `license=null` y el `README.md` está vacío (0 bytes): no hay ninguna declaración de términos. El contenido es scrapeado de `myschool.ng`, un sitio comercial de terceros | 1259 (sin figuras) | 2026-08-20 |
+
+## `unverified-unac/` — lotes de la UNAC que NO se pueden sembrar
+
+Los exámenes escaneados de la Universidad Nacional del Callao se cosecharon bien (los recortes
+están limpios y las claves se verificaron resolviendo preguntas), pero la UNAC publica el mismo
+cuadernillo bajo varios nombres de archivo, y nombre, portada y cuerpo del PDF se contradicen
+entre sí. Eso rompe la procedencia, que es justo lo que hace falta para responder «de dónde salió
+esta pregunta».
+
+`tools/harvest/check_source_url.py` lo comprueba en vez de confiar: pasa OCR al recorte de una
+pregunta, saca una frase distintiva y la busca dentro del PDF que el lote declara como fuente.
+De los 12 lotes que superaron la verificación de clave, **7 tienen la procedencia probada y 5 no**.
+
+Aquí quedan, con el trabajo del recorte intacto y sin riesgo de que nadie los siembre:
+
+| Lote | Preguntas | Por qué no entra |
+| --- | --- | --- |
+| `scan-3-unac-2021-i` | 40 | Emparejamiento examen/clavijero falso (verificación de clave). |
+| `scan-10-unac-2022-i` | 70 | Emparejamiento falso. |
+| `scan-12-unac-2022-i` | 70 | Emparejamiento falso: 0 de 14 preguntas resolubles coincidían con la clave. |
+| `scan-21-unac-2022-ii` | 70 | Emparejamiento falso. |
+| `scan-1-unac-2021-i` | 69 | Claves correctas, pero su `sourceUrl` no contiene estas preguntas. |
+| `scan-4-unac-2021-1` | 35 | Claves correctas (20/20), pero **ninguno** de los dos PDFs candidatos contiene la pregunta 35. |
+| `scan-11-unac-2021-i` | 35 | Duplicado exacto de `scan-4` (35/35 claves iguales) y misma procedencia sin probar. |
+| `scan-8-unac-2021-ii` | 70 | Duplicado exacto de `scan-6` (70/70 claves iguales); su `sourceUrl` apunta a otro examen. |
+| `scan-20-unac-2022-ii` | 40 | Claves correctas, procedencia sin probar. |
+
+Para rescatar cualquiera de los cinco últimos basta con encontrar el PDF que de verdad los
+contiene entre los ~95 que publica la UNAC, y corregir su `sourceUrl`. El contenido ya está
+verificado.
+
+## Qué le falta a cada lote para poder sembrarse
+
+La licencia no es lo único que bloquea. Estado real, lote por lote:
+
+| Lote | Idioma | Nivel | Bloqueo para sembrar |
+| --- | --- | --- | --- |
+| `lot-24-picuino-electricidad` | Español | ESO (`easy`) | Solo la licencia. El contenido está listo. |
+| `lot-25-bancostecno-circuitos` | Español | ESO (`easy`) | Nada: CC0 es dominio público. Sembrable ya si se quiere material de circuitos por debajo de nivel UNI. |
+| `lot-26-unmsm-historia-mcq` | Español | Admisión UNMSM (`hard`) | Licencia sin declarar (el README dice `apache-2.0`, cada registro dice «Desconocida»). Contenido verificado pregunta a pregunta. |
+| `lot-27-cepre-unmsm-2019-i` | Español | Preuniversitario (`hard`) | **La obra prohíbe expresamente su reproducción** («Prohibida su reproducción y venta», en cada página). Necesita permiso escrito de la UNMSM, no solo que caduque una gestión. |
+| `book-4-qcm-exo7` | **Francés** | Universitario L1 | Dos cosas: la licencia es **BY-NC-SA**, que prohíbe el uso comercial de forma explícita, y las 170 preguntas están **sin traducir**. |
+| `book-5-jamb-myschool-lwp` | **Inglés** | JAMB/UTME (`hard`) | Tres: sin licencia de ningún tipo, **sin traducir**, y los importes van en nairas (`N225.00`), que hay que localizar o reescribir. |
+
+Traducir no es cosmético: una pregunta de examen en francés o en inglés no le sirve
+a un estudiante que rinde en castellano, y el enunciado traducido tiene que conservar
+la correspondencia con sus alternativas y con la clave impresa.
 
 ## Nota sobre estos dos lotes
 
@@ -206,6 +256,12 @@ cero y sin mirar cómo se construyó:
 
 #### Cuatro preguntas de `lot-26` que hay que quitar antes de sembrar
 
+> **OBSOLETO — resuelto el 2026-08-20.** Las cuatro ya están reparadas en el lote (ver
+> «Verificación adversarial» al final de este archivo): las listas I–IV de 13, 357, 427 y 428
+> se recuperaron **verbatim** de `files/data_clean/cuestionario.txt` del mismo repo, y la 65
+> ya lleva `imagePath`. El filtro «alternativas romanas sin lista I–IV en el cuerpo» hoy
+> devuelve **0 coincidencias** sobre las 439. Se conserva la tabla por trazabilidad.
+
 No se tocó el lote —queda a criterio de quien lo siembre—, pero están localizadas y son
 **defecto de la obra escaneada, no de la clave**:
 
@@ -314,3 +370,300 @@ OCR de origen. Se deja tal cual en vez de enmendarla a ojo.
 | Lote | Libro | Repo | URL | Licencia citada literalmente | Preguntas | Fecha |
 | --- | --- | --- | --- | --- | --- | --- |
 | `lot-26-unmsm-historia-mcq` (revisión 2026-08-20, **sin lote nuevo**) | «Solucionario de Historia del Perú» / EL CACHIMBO — recopilación de exámenes de admisión UNMSM ~1970-2020 | `davidquicast/Corpus-Historia-Peru-ExamenAdmisionUNMSM-MultipleChoice` | https://raw.githubusercontent.com/davidquicast/Corpus-Historia-Peru-ExamenAdmisionUNMSM-MultipleChoice/main/cuestionario.json | El repo **no tiene archivo `LICENSE`** (la API `/license` responde 404). El front matter de `README.md` declara `license: apache-2.0`; **cada uno de los 449 registros** de `cuestionario.json` declara `"license": "Desconocida"` junto a `"source": "https://www.slideshare.net/slideshow/historia-del-per-recopilacin-ex-adm-unmsm/251464302"` | 439 (2 con figura) | 2026-08-20 |
+
+
+## `book-4-qcm-exo7` — el QCM de Exo7, y por qué de 883 preguntas solo salen 170
+
+`exo7math/qcm-exo7` es el banco de QCM que Exo7, Unisciel y la Université de Lille usan en
+L1. No es material generado por IA: cada pregunta va firmada (`author: Arnaud Bodin, Abdellah
+Hanani, Mohamed Mzari`, `Barnabé Croizat, Christine Sacré`, `Julien Worms`) y enlaza al
+curso, al vídeo y a la hoja de ejercicios de Exo7 de los que sale.
+
+**Formato y clave.** 25 archivos YAML en `questions-*/format-yaml/`, un documento por
+pregunta. La clave viene publicada *dentro* de la pregunta: cada alternativa es un ítem con
+`value:` y una bandera `correct: True|False` explícita, más `explanations:`. No hay tabla de
+claves al final ni hace falta: no se dedujo ninguna respuesta. Los mismos contenidos existen
+también en LaTeX y en `latex-moodle`; se leyó el YAML por ser la fuente estructurada.
+
+**Conteo propio sobre los 25 YAML: 883 preguntas.** De ahí a 170 hay tres filtros, y los tres
+descartan en vez de adivinar:
+
+1. **644 son de respuesta múltiple** (dos, tres o cuatro `correct: True`). La tabla
+   `questions` guarda **un** `correct_answer` y `validate-structured-content.ts` lo valida
+   como índice único, así que una pregunta de respuesta múltiple no se puede representar sin
+   inventarle una clave. Se descartan enteras. Quedan **239 con exactamente una correcta** —
+   el mismo número que traía el descubrimiento.
+2. **8 capítulos no tienen tema canónico de nivel preuniversitario**: ecuaciones
+   diferenciales (×2), primitivas, integrales, desarrollos limitados, curvas paramétricas,
+   espacios vectoriales y aplicaciones lineales, más la sección «Variables continues» del QCM
+   de Worms. Meterlos a la fuerza en «Funciones» o «Matrices y Determinantes» envenenaría el
+   filtro por tema de todos los exámenes que se generen después, así que se quedan fuera.
+3. **El LaTeX se linealiza o se descarta.** El enunciado viene en LaTeX (`\(...\)`,
+   `\frac`, `\Rr`, `\vec`…) y la columna `body_typst` guarda texto que el seeder escapa
+   literal: dejar el LaTeX crudo imprimiría `\(d=3\)` en el examen. El conversor
+   (`latex_text.py`, en el scratchpad) pasa a Unicode legible — `\frac{a}{b}` → `(a)/(b)`,
+   `\sqrt{x}` → `√(x)`, `\Rr` → `ℝ`, `x^{p-1}` → `xᵖ⁻¹` — y **falla a propósito** ante
+   cualquier macro que no conozca o ante cualquier construcción cuyo sentido viva en dos
+   dimensiones (matrices, integrales, sumatorios, `array`, listas). 36 preguntas caen ahí y
+   se descartan: un enunciado mal linealizado es peor que uno ausente.
+
+Además se descartan 3 preguntas del QCM de Worms que se apoyan en una pregunta hermana
+(«la question précédente»), 3 con alternativas que quedan idénticas tras convertir, y 8 cuyo
+enunciado repite uno ya presente en el lote — son las del tipo «Quelles sont les assertions
+vraies ?», con todo el contenido en las alternativas: el seeder deduplica por hash del
+enunciado, así que esas 8 no llegarían a sembrarse igualmente y el recuento del lote sería
+mentira.
+
+**Dos cosas que hay que saber antes de sembrar esto:**
+
+- **Las preguntas están en francés.** No se tradujeron: traducir el enunciado obligaría a
+  reescribir la notación matemática y ahí es donde se corrompe. El texto es el de la obra,
+  verbatim. Un banco preuniversitario peruano en castellano tiene que decidir aparte si esto
+  le sirve tal cual o si pide traducción humana.
+- **Es material de L1 (primer año de universidad), no de academia preuniversitaria.** Los
+  capítulos que sí encajan —lógica, conjuntos, aritmética, complejos, polinomios, sucesiones,
+  geometría analítica, matrices, probabilidades— encajan de verdad; pero el nivel es el de
+  entrada a universidad francesa. Van todas con `difficulty: "hard"`.
+
+**Reparto por curso y tema canónico** (170 entradas):
+
+| Curso | Tema | N |
+| --- | --- | --- |
+| Álgebra | Lógica Proposicional y Teoría de Conjuntos | 56 |
+| Álgebra | Funciones | 26 |
+| Estadística y Probabilidades | Probabilidades | 20 |
+| Aritmética | Números Primos, MCD y MCM | 15 |
+| Trigonometría | Geometría Analítica: La Recta | 11 |
+| Álgebra | Progresiones y Límites de Sucesiones | 9 |
+| Álgebra | Números Complejos | 5 |
+| Álgebra | Polinomios | 5 |
+| Álgebra | Inecuaciones y Valor Absoluto | 5 |
+| Geometría | Geometría del Espacio (Poliedros) | 5 |
+| Álgebra | Matrices y Determinantes | 5 |
+| Aritmética | Divisibilidad | 4 |
+| Álgebra | Sistemas de Ecuaciones | 3 |
+| Álgebra | Teoría de Exponentes y Logaritmos | 1 |
+
+Dos asignaciones son un estiramiento y conviene revisarlas si alguien afina la taxonomía:
+«Géométrie dans l'espace» (planos, distancias, producto vectorial) va a **Geometría del
+Espacio (Poliedros)** porque es el único tema tridimensional del árbol, y el capítulo
+«Ensembles, applications» aporta preguntas de composición de funciones que viven bajo
+**Lógica Proposicional y Teoría de Conjuntos**.
+
+**Imágenes: una sola.** Este libro es un corpus de texto —no hay PDF escaneado que recortar,
+y los YAML no referencian ninguna figura. Las dos únicas figuras del repo (`\qimage`) están
+en el QCM de Worms: `img-proba-02` cae en «Variables continues», descartada; `img-proba-01`
+sí entra, en la pregunta 35 de «Variables discrètes» («¿cuál de estos es el grafo de la
+función de repartición?»), y se copió a
+`book-4-qcm-exo7-figures/img-proba-01.png`. Comprobado abriéndolo: contiene **solo los tres
+grafos candidatos**, sin enunciado ni alternativas, que es exactamente lo que las
+alternativas («Le premier / Le second / Le troisième») necesitan para tener sentido.
+
+**Cómo se numeran las preguntas en `sourceName`.** El número es el **ordinal del documento
+dentro del YAML de su capítulo** (o del `\begin{question}` dentro del `.tex`), no el
+`Question N` correlativo que imprime el PDF compilado: ese corre seguido a lo largo de todo
+el fascículo. Por eso «Géométrie du plan, pregunta 1» es la *Question 121* del
+`qcm-lille-1-correc.pdf`. En el QCM de Worms sí coinciden, porque su `.tex` es un solo
+fascículo. El capítulo va siempre en el `sourceName`, así que la referencia no es ambigua.
+
+**Claves verificadas contra la obra** (se abrió el documento YAML/LaTeX crudo y se comparó
+con lo cosechado; además se rasterizaron las páginas de los PDF `*-correc.pdf` que compila el
+propio repo, donde cada alternativa lleva impreso `[Vrai]` o `[Faux]`, y coinciden una a
+una):
+
+| Capítulo, pregunta | Marcado `correct: True` / `\good{}` en la fuente | Clave cosechada | ¿Coincide? |
+| --- | --- | --- | --- |
+| Arithmétique, 48 (Fermat) | alternativa 2ª, `\(x^p \equiv x \;[p]\)` | índice `1` (clave B) | sí |
+| Ensembles applications, 1 | alternativa 4ª, `\(A=\{1,-17\}\)` | índice `3` (clave D) | sí |
+| Géométrie du plan, 1 | alternativa 3ª, `\(d=5\)` | índice `2` (clave C) | sí |
+| Nombres complexes, 3 | alternativa 2ª, `\(z= \sqrt 2+i\sqrt 2\)` | índice `1` (clave B) | sí |
+| Worms · Variables discrètes, 34 | 3ª, `\good{Toutes les valeurs de $]0,1/2[$.}` | índice `2` (clave C) | sí |
+| Worms · Variables discrètes, 35 (figura) | 2ª, `\good{Le second.}` | índice `1` (clave B) | sí |
+
+Un último detalle del conversor, por si alguien lo reutiliza: las llaves **literales** de la
+notación de conjuntos (`\{1,2\}`) van aparcadas en dos codepoints privados durante toda la
+conversión y se restauran al final. Sin eso, el paso que quita las llaves de *agrupación* de
+LaTeX se llevaba también las de los conjuntos por delante y `{0,1,2}` se sembraba como
+`0,1,2` — 669 apariciones en el corpus.
+
+| Lote | Libro | Repo | URL | Licencia citada literalmente | Preguntas | Fecha |
+| --- | --- | --- | --- | --- | --- | --- |
+| `book-4-qcm-exo7` | *QCM de mathématiques* — Exo7 / Unisciel / Université de Lille (L1) | `exo7math/qcm-exo7` (commit `abbf5ca`) | https://github.com/exo7math/qcm-exo7 | Sin archivo `LICENSE`; GitHub API `license=null`. `README.md`, literal: «Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.» | 170 (1 con figura) | 2026-08-20 |
+
+## Verificación adversarial del 2026-08-20 sobre `lot-26-unmsm-historia-mcq`
+
+Revisión hecha intentando **refutar** el lote, no confirmarlo. Fuente de verdad: los archivos
+del propio repo `files/data_clean/cuestionario.txt` (enunciados con rótulo `A)`…`E)` impreso)
+y `files/data_clean/claves.txt` (tabla de claves del libro, 449 filas, 0 huecos). **No se usó
+`cuestionario.json` como referencia**: ese array `options` es justamente el que arrastra el
+bug de columnas ya documentado arriba.
+
+**Resultado: el lote sobrevive. 439 entradas, 0 bajas.**
+
+- **Claves: 439/439 correctas.** Para cada entrada se cruzó `correctAnswer` (índice 0-based)
+  contra el texto que lleva la letra que imprime `claves.txt`. Cero discrepancias. Se verificó
+  además que el índice `answer` de `cuestionario.json` coincide con la clave impresa en las 449.
+- **Alternativas: 439/439 idénticas y en el orden impreso** (leídas por rótulo, no por posición).
+- **Reordenamientos 154 y 447: confirmados correctos.** Se sospechó deducción de la respuesta;
+  no lo es. El libro imprime esas dos en columnas (`A) D) B) E) C)`) y el lote las devuelve al
+  orden alfabético impreso. Un barrido completo encontró **solo esas dos** con ese patrón.
+- **Textos añadidos a 9 enunciados: confirmados verbatim.** Las listas I–IV y las coletillas que
+  el lote tiene de más frente a `cuestionario.json` (13, 48, 80, 130, 178, 215, 357, 427, 428)
+  están palabra por palabra en `files/data_clean/cuestionario.txt`, erratas de OCR incluidas
+  («aldeas primigefías»). No hay texto inventado.
+- **Imágenes: 2/2 correctas.** Abiertas y comparadas con las originales extraídas de
+  `files/data_ocr/response.json`. `q065-vaso-ceremonial.png` = `img-4.jpeg` (kero wari,
+  pregunta 65); `q080-orfebreria-lambayeque.png` = `img-5.jpeg` (tumi de oro, pregunta 80).
+  Ambos recortes traen **solo la figura**: sin enunciado, sin alternativas, sin segunda pregunta.
+- **Taxonomía: 0 violaciones.** Los 10 `topicName` usados existen literales bajo `Historia` en
+  `canonical-taxonomy.json`. `gradeLevel: "pre"` y `difficulty: "hard"` en las 439.
+- **0 enunciados vacíos, 0 alternativas vacías, 439 entradas con exactamente 5 alternativas.**
+- **Origen: no es un banco sintético.** Es OCR de un impreso real (`cuestionario.pdf`, 62 MB)
+  con tabla de claves impresa y etiquetas de examen (`UNMSM 2019-II`, `SM 2018-II`).
+
+### Cuatro defectos encontrados y reparados
+
+| Pregunta | Defecto | Reparación |
+| --- | --- | --- |
+| 11 | El cuerpo cortaba en «…son la de procedencia» y **perdía los tres nombres** (Hrdlicka, Rivet, Mendes Correia) a los que apuntan las alternativas. Incontestable. | Cuerpo restaurado verbatim desde `cuestionario.txt`. |
+| 38 | Cortaba a media frase en «…al mando de». Faltaba «…, quien ordenó la destrucción de sus … para lograr sometería». | Restaurado; los dos `$\qquad$` del OCR se rinden como `______`. |
+| 187 | Faltaba **la pregunta misma**: «El pago en trabajo recibía el nombre de:». Incontestable. | Restaurado verbatim. |
+| 8 | La alternativa D llevaba pegado un rótulo corrupto: `"O) Groenlandia"`. | Normalizada a `"Groenlandia"`. La clave impresa (C, «La Antártida») no se toca. |
+
+Las tres restauraciones salen del mismo repo y del mismo archivo canónico; **ninguna respuesta
+fue deducida**.
+
+### Dos defectos de la obra que se dejan tal cual
+
+- **Pregunta 1**: el libro imprime dos alternativas byte a byte idénticas (`C)` y `D)` = «La
+  tradición oral española.»). Es defecto del impreso/OCR, se transcribe fiel. No afecta la
+  clave: A, «Los cronistas», es única.
+- **Pregunta 106**: el lote omite la etiqueta de examen `(2013-1)` que va al final del
+  enunciado. Es limpieza deliberada, no pérdida de contenido.
+
+### Pendiente menor, no bloqueante
+
+Varios `topicName` son **taxonómicamente válidos pero temáticamente flojos** —la pregunta 1,
+sobre la captura de Atahualpa, entra como «Prehistoria y comunidad primitiva» porque el
+capítulo del libro es «CONCEPTOS GENERALES DE HISTORIA». Sirve para sembrar; conviene afinar
+el mapa capítulo→tema si alguien revisa la taxonomía.
+
+---
+
+## scan-12-unac-2022-i-image → `unverified-unac/` (emparejamiento falso)
+
+Lote UNAC "Examen General de Admisión 2022-I, Bloque III" (70 preguntas-imagen,
+`Bloque-iii-2022-i.pdf`). Los recortes están bien; la **clave registrada no corresponde a este
+examen**. Verificación independiente resolviendo las preguntas a mano: **0 aciertos de 14**
+(el azar sobre 5 opciones daría ~20%).
+
+| Preg. | Resuelto | Registrado | Razón |
+|---|---|---|---|
+| 1 | A (5) | b | Último dígito del período de `ab/7938`, `ab` impar: (10^126−1)/3969 ≡ 1 mód 10 ⇒ dígito = 5·ab mód 10 = 5 |
+| 2 | E (60) | b | J:L = 5:4, L:A = 3:2 ⇒ J:L:A = 15:12:8; 140/35 = 4 ⇒ José = 60 |
+| 3 | B (7/12) | d | P(par) = 1/12, P(impar) = 3/12; primos 2,3,5 ⇒ 1/12+3/12+3/12 = 7/12 |
+| 4 | E (60) | b | 3/(x−3) > 1/3 ⇒ 3 < x < 12; suma 4+…+11 = 60 |
+| 5 | C (se octuplica) | e | A = k/B³, C = m/B²; C×4 ⇒ B/2 ⇒ A×8 |
+| 6 | A (18) | e | T = 0,4V; 0,5V − 0,7T = 33 ⇒ V = 150, T = 60; vendidos = 0,3·60 = 18 |
+| 7 | B (15120) | a | C·(1+0,08·10/12) = 14400 ⇒ C = 13500; 18 meses ⇒ 13500·1,12 = 15120 |
+| 8 | B | d | Elemento = un enfermo; variable = diagnóstico; cualitativa |
+| 10 | A (−3) | c | Num = a³+b³+2 = −3(1+ab(a+b)); Den = ab(a+b)+1 ⇒ M = −3 |
+| 19 | D (FVV) | c | I falsa (compartir electrones = enlace covalente); II y III verdaderas |
+| 21 | E (solo III) | a | Isótopos: mismo elemento, mismos protones, distinto número de masa |
+| 24 | B (NaHCO₃) | e | Bicarbonato de sodio |
+| 55 | D (10) | b | 2x+5y = 75, 5(x+y) = 105 ⇒ x+y = 21 ⇒ 3x = 30 ⇒ x = 10 |
+| 66 | B (Ejecutivo − Legislativo) | d | El Decreto Legislativo lo dicta el Ejecutivo por delegación del Congreso |
+
+El clavijero usado en la cosecha pertenece a otro bloque/año. **Ninguna clave fue deducida ni
+corregida**: el defecto es del emparejamiento examen↔clavijero, no de las preguntas. El recorte
+se conserva aquí; ningún seeder lee este directorio.
+
+## scan-3-unac-2021-i-image — emparejamiento falso (movido a `unverified-unac/`)
+
+El lote (40 preguntas-imagen, atribuidas al «Examen Especial de Admisión por Otras
+Modalidades 2021-I» de la UNAC, `examen-otras-modalidades-OK.pdf`) trae recortes limpios y
+legibles, pero la clave registrada NO corresponde a este examen: resolví 13 preguntas
+inequívocas y solo 1 coincidió (7.7 %, por debajo del 20 % que da el azar sobre 5 opciones).
+Evidencia: P2 (edades, relación 7:9 → 5:6) da 18 = C y el lote registra A; P3 (mes con 5
+sábados, 5 domingos y 5 lunes → mes de 31 días que empieza sábado, día 20 = jueves) da B y el
+lote registra E; P4 (subconjuntos de 6 cremas, 2^6) da 64 = B y el lote registra E; P5 (áreas
+DEC = ABDE → AE = 6/7) da C y el lote registra B; P10 (11 goles → 12 marcadores) da E y el
+lote registra B; P11 (pierde 1/3, luego 1/5, luego 3/4; queda 60) da 450 = D y el lote
+registra A; P12 (edad: x = 2a−2b → dentro de 2b años, 2a) da B y el lote registra D; P14
+(producto excede en 662 a la suma → enamorado 18, cifra de decenas 1) da C y el lote registra
+B; P17 (meses vividos − años = 467 → 42 años 5 meses en julio → nace en febrero) da D y el
+lote registra B; P20 (hexágono regular de sección del cubo, 27√3 → arista 6 → volumen 216) da
+E y el lote registra B; P39 («contaminación ambiental natural» → incendio forestal, E) y el
+lote registra B, que es una causa antropogénica; P40 (convivencia como principio ético, D) y
+el lote registra C («Es un fascista»), que no es clave de examen. Único acierto: P15
+(2/7 + 1/3 de la edad entero y > 38, edad < 65 → 63 = B), compatible con el azar.
+Conclusión: el clavijero usado pertenece a otro examen/bloque de la UNAC. Los recortes se
+conservan aquí, sin sembrar, por si aparece el clavijero correcto.
+
+## scan-10-unac-2022-i-image — emparejamiento falso (movido a `unverified-unac/`)
+
+El lote (70 preguntas-imagen, atribuidas al «Examen General de Admisión 2022-I, Bloque I:
+Ciencias e Ingenierías» de la UNAC, `Bloque-i-2022-i.pdf`) trae recortes limpios y legibles,
+pero la clave registrada NO corresponde a este examen: resolví 12 preguntas inequívocas y solo
+1 coincidió (8.3 %, por debajo del 20 % que da el azar sobre 5 opciones).
+Evidencia: P5 (entre 400 y 600, divisible por 49 y 35 → 490; muertos 150, heridos 322 → ilesos
+18) da E y el lote registra C; P6 (residuo mod 13 de `u1n5a5c` a partir del de `1u9n6a6c`;
+pesos 1,−3,−4,−1,3,4 → 8 − 16 ≡ 5) da D y el lote registra C; P7 (13!/6306300 = 2^8·3^3/7 →
+periodo de 1/7) da 6 = E y el lote registra D; P8 (S/ 5000 al 20 % capitalizable semestral, 18
+meses = 3 semestres al 10 % → 5000·1,1^3) da 6655 = D y el lote registra A; P31 (c = 1050 J /
+(0,525 kg · 10 °C)) da 200 J/kg°C = D y el lote registra B; P35 (a = bc²/d con a velocidad, b
+masa, d fuerza → c² = L²T⁻³) da B y el lote registra E; P39 (configuración de 18 electrones;
+la única especie que no la tiene es ₁₆S⁺² con 14) da D y el lote registra E; P40 (isótopos:
+J/X comparten Z = 15 y T/Z comparten Z = 38 → el sin par es ₁₆R) da E y el lote registra B;
+P42 (hidrácidos = H₂S, HCl, H₂Te, HI → II, IV, V y VI) da B y el lote registra A, que omite dos;
+P58 (30 t − 20 % = 24 000 kg; 14 400 · 1,25 = 18 000 → 18 000/24 000) da 0,75 = D y el lote
+registra B; P60 (mcd(168,108) = 12; solo el lado 2 cm agota el alambre en hexágonos completos:
+138 varillas = 23 hexágonos y 83 + 53 = 136 cortes → 159) da D y el lote registra C. Único
+acierto: P2 (aumento m %, descuento del 25 % del costo, ganancia 20 % del precio de venta →
+1 + m/100 = 1,5 → m = 50 = B), compatible con el azar.
+**Ninguna clave fue deducida ni corregida**: el defecto es del emparejamiento examen↔clavijero,
+no de las preguntas. Ojo: en los PDF de la UNAC el nombre de archivo, la portada y el cuerpo se
+contradicen entre sí, así que el clavijero usado bien puede pertenecer a otro bloque del mismo
+año. Los recortes se conservan aquí, sin sembrar; ningún seeder lee este directorio.
+
+## scan-21-unac-2022-ii-image — emparejamiento falso (movido a `unverified-unac/`)
+
+Lote de 70 preguntas-imagen recortadas de
+`https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-pre-22%C2%B7II-B.I.pdf`
+(Cuarto Examen 2022-II, Bloque I según el nombre de archivo). **Los recortes están bien; la
+clave registrada no corresponde a este examen.** Resolví 15 preguntas de respuesta inequívoca
+y solo 2 coincidieron (13,3 %, dentro del ruido del 20 % que da el azar sobre 5 opciones).
+
+Evidencia (correcta → registrada):
+- P1: 63!/65! = 1/4160 = 1/(2⁶·5·13); parte no periódica = 6 cifras, periodo = ord₁₃(10) = 6 →
+  suma 12 = **C**, el lote registra B.
+- P2: `bac` = 9̊ obliga a a+b+c ≡ 0 mod 9 y la única opción múltiplo de 9 es 18; se realiza con
+  693/396/963 → **C**, el lote registra E.
+- P3: 48·30·8 = 11520 → 4m y 32·1,25·12·10 = 4800 → 3n ⟹ m/n = 9/5 = **E**, el lote registra C.
+- P4: 9000 − 8·9·9·9 = 9000 − 5832 = 3168 = **B**, el lote registra A.
+- P5: Σhi = 15/k = 1 → k = 15; la clase [1100;1400⟩ tiene fi = 9k = 135 = **B**, el lote
+  registra E.
+- P6: X√Z/(P²V³) = 3 ⟹ a = 120, b = 3 → a+b = 123 = **E**, coincide (único acierto junto a P43).
+- P28: (7π/ab)rad = 1260/ab grados ⟹ N² − N − 1260 = 0 → ab = 36; 36° = π/5 = **B**, el lote
+  registra C.
+- P29: S₁/S₂ = (π/180)/(π/200) = 10/9 = **C**, el lote registra E.
+- P39: I y III verdaderas, II falsa (el protón es positivo) → **D**, el lote registra E.
+- P40: catión de Fe(OH)₃ es Fe³⁺ y el oxianión de HNO₃ es NO₃⁻ → Fe(NO₃)₃ = **E**, el lote
+  registra D.
+- P41: Ti²⁺ = [Ar]3d² (I ok), Ti neutro tiene 2 electrones desapareados → paramagnético (II
+  falsa), radio atómico > radio del catión (III ok) → **C**, el lote registra A.
+- P42: n = PV/RT = 0,82·50/(0,082·300) = 1,67 mol = **B**, el lote registra A.
+- P43: N se oxida (−3 → +5), H₂SO₄ es el agente **oxidante** (II falsa) y al balancear
+  3NH₃ + 4H₂SO₄ → 4S + 3HNO₃ + 7H₂O el agua lleva 7 → I y III = **C**, coincide (segundo y
+  último acierto).
+- P57: en 30 años la suma será 84 ⟹ hoy suman 24; el hijo es recién nacido (0) → madre 24 =
+  **B**, el lote registra E.
+- P60: v₂(v₂−2) = 224 → v₂ = 16, v₁ = 14 km/h = **B**, el lote registra D.
+
+Los dos aciertos (P6, P43) no forman patrón: no hay desplazamiento constante entre la clave
+correcta y la registrada, así que no es un corrimiento de índices reparable — es otro clavijero.
+**Ninguna clave fue deducida ni corregida**: el defecto es del emparejamiento examen↔clavijero,
+no de las preguntas. Como en los demás lotes de la UNAC, el nombre de archivo, la portada y el
+cuerpo del PDF se contradicen entre sí, así que el clavijero usado bien puede pertenecer a otro
+bloque del mismo año. Los recortes se conservan aquí, sin sembrar; ningún seeder lee este
+directorio.

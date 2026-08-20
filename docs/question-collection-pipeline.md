@@ -92,15 +92,27 @@ Para exámenes publicados como PDF con solucionario, el recorte manual ya no hac
 | `crop_pdf_figures.py <pdf> --anchor "<frase>" --out f.png` | Recorta **solo** la figura (banda entre el último renglón del enunciado y las alternativas). |
 | `crop_pdf_figures.py <pdf> --mode numbered --section-anchor <"2.1"\|"FÍSICA"> --question N --out q.png --dpi 300` | Recorta la pregunta completa (enunciado + alternativas) como un PNG. |
 | `classify_topics.py` | Sugiere curso/tema canónico a partir del vocabulario del enunciado. Es sugerencia: se revisa antes de sembrar. |
+| `validate_lots.py <taxonomy.json> <dir>...` | Revisa un directorio de lotes contra todo lo que exige el seeder: taxonomía byte a byte, respuesta dentro del rango, imágenes que existan, procedencia presente, colisiones de hash y PNGs huérfanos. Correr SIEMPRE antes de sembrar. |
+| `check_source_url.py <lots-dir> [lote...]` | Prueba que el `sourceUrl` del lote contenga de verdad sus preguntas: OCR del recorte, frase distintiva, y búsqueda dentro del PDF declarado. |
 | `build_lot.py --parsed p.json --pdf x.pdf --lot <slug> --data-dir <data> --source-url <url> --exam-label "<...>" [--all-images] [--dry-run]` | Escribe `<slug>.json`, `<slug>-image.json` y sus directorios de PNGs. |
 
 Cuándo usar `--all-images`: cuando `pdftotext` transcribe mal los símbolos del PDF
 (fórmulas rotas, `µ` que sale como `P`, radicales perdidos). Un PNG horneado vale más que
 un texto en el que no se puede confiar.
 
-Verificación obligatoria antes de sembrar un lote: abrir varios PNGs con `Read` (ninguno
-debe traer una segunda pregunta ni quedar cortado) y comprobar 3 claves contra la solución
-publicada en la fuente.
+Verificación obligatoria antes de sembrar un lote:
+
+1. `validate_lots.py` en verde.
+2. Abrir varios PNGs con `Read`: ninguno debe traer una segunda pregunta ni quedar cortado.
+3. **Resolver preguntas y contrastar la clave.** Es el único test que detecta un emparejamiento
+   falso entre examen y clavijero. Comparar portadas NO basta: la UNAC publica cuadernillos donde
+   el nombre del archivo, la portada y el cuerpo dicen tres bloques distintos. Sobre 5
+   alternativas, el azar acierta ~20%: por debajo del 90% de aciertos, el lote se descarta.
+4. `check_source_url.py` para probar la procedencia. De 12 lotes de la UNAC con la clave ya
+   verificada, 5 declaraban un `sourceUrl` que no contiene sus propias preguntas.
+5. Comparar las secuencias de claves entre lotes: dos lotes con la misma secuencia son el mismo
+   examen cosechado dos veces. Así aparecieron dos pares duplicados que la deduplicación por
+   `source_name` no habría atrapado, porque sus etiquetas de procedencia diferían.
 
 ## Licencias: qué fuente sí y cuál no
 

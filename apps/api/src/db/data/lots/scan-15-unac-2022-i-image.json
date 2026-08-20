@@ -1,0 +1,704 @@
+{
+ "entries": [
+  {
+   "courseName": "Aritmética",
+   "topicName": "Teoría de Conjuntos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-15-unac-2022-i-image/q01.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 1 (clave D)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Estadística Descriptiva",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-15-unac-2022-i-image/q02.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 2 (clave D)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Combinatoria y Probabilidad",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-15-unac-2022-i-image/q03.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 3 (clave B)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Números Primos, MCD y MCM",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-15-unac-2022-i-image/q04.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 4 (clave B)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Sistemas de Numeración",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q05.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 5 (clave C)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Razones y Proporciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-15-unac-2022-i-image/q06.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 6 (clave B)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Interés y Descuento",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q07.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 7 (clave C)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Combinatoria y Probabilidad",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q08.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 8 (clave C)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Funciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-15-unac-2022-i-image/q09.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 9 (clave A)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Productos Notables",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-15-unac-2022-i-image/q10.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 10 (clave B)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Sistemas de Ecuaciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q11.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 11 (clave E)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Programación Lineal",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-15-unac-2022-i-image/q12.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 12 (clave A)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Trabajo, energía y potencia",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q13.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 13 (clave E)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Gravitación universal",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q14.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 14 (clave C)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Hidrostática",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q15.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 15 (clave E)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Oscilaciones y ondas mecánicas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q16.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 16 (clave C)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Estados de la materia",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-15-unac-2022-i-image/q17.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 17 (clave A)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Soluciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-15-unac-2022-i-image/q18.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 18 (clave B)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Química del carbono",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q19.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 19 (clave C)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Estequiometría y reacciones químicas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q20.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 20 (clave C)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Composición química de los seres vivos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-15-unac-2022-i-image/q21.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 21 (clave A)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Citología",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q22.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 22 (clave E)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Coordinación nerviosa",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-15-unac-2022-i-image/q23.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 23 (clave D)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Función de nutrición",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-15-unac-2022-i-image/q24.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 24 (clave D)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "Uso de grafías",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q25.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 25 (clave C)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "La comunicación",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-15-unac-2022-i-image/q26.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 26 (clave D)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "Categorías gramaticales",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-15-unac-2022-i-image/q27.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 27 (clave B)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "Acentuación",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-15-unac-2022-i-image/q28.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 28 (clave B)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "Sintaxis",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q29.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 29 (clave E)"
+  },
+  {
+   "courseName": "Comunicación",
+   "topicName": "Lingüística",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-15-unac-2022-i-image/q30.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 30 (clave D)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura peruana",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-15-unac-2022-i-image/q31.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 31 (clave A)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura universal",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q32.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 32 (clave E)"
+  },
+  {
+   "courseName": "Comunicación",
+   "topicName": "Comprensión y producción textual",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q33.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 33 (clave C)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura peruana",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q34.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 34 (clave C)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura peruana",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q35.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 35 (clave C)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura española",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q36.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 36 (clave C)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Hidrografía del Perú",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-15-unac-2022-i-image/q37.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 37 (clave B)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Población del Perú",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q38.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 38 (clave E)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Áreas naturales protegidas del Perú",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q39.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 39 (clave C)"
+  },
+  {
+   "courseName": "Ecología",
+   "topicName": "Contaminación ambiental",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q40.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 40 (clave C)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Geografía económica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q41.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 41 (clave C)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Geomorfología",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-15-unac-2022-i-image/q42.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 42 (clave B)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Sector externo",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q43.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 43 (clave E)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Nociones generales de economía",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q44.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 44 (clave E)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Doctrinas y sistemas económicos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q45.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 45 (clave E)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Producción I",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-15-unac-2022-i-image/q46.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 46 (clave A)"
+  },
+  {
+   "courseName": "Educación Cívica",
+   "topicName": "El Perú en el mundo globalizado",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q47.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 47 (clave E)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Sistema financiero I",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-15-unac-2022-i-image/q48.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 48 (clave B)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "El Tahuantinsuyo",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-15-unac-2022-i-image/q49.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 49 (clave A)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "Perú contemporáneo: retorno a la democracia (1980-2000)",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-15-unac-2022-i-image/q50.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 50 (clave B)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "Independencia del Perú y emancipación americana",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-15-unac-2022-i-image/q51.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 51 (clave D)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "Poblamiento americano y culturas preincaicas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q52.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 52 (clave C)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "Civilizaciones antiguas de Oriente",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q53.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 53 (clave C)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "Edad Media y el feudalismo europeo",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q54.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 54 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Lógico",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q55.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 55 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Analítico",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q56.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 56 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Planteo de Ecuaciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-15-unac-2022-i-image/q57.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 57 (clave D)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Lógico",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q58.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 58 (clave C)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Áreas de Regiones Planas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q59.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 59 (clave E)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Ángulos y Sistemas de Medición Angular",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-15-unac-2022-i-image/q60.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 60 (clave A)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Comprensión de lectura",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-15-unac-2022-i-image/q61.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 61 (clave D)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Comprensión de lectura",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-15-unac-2022-i-image/q62.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 62 (clave A)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Comprensión de lectura",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q63.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 63 (clave E)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Comprensión de lectura",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q64.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 64 (clave E)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Oraciones incompletas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q65.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 65 (clave E)"
+  },
+  {
+   "courseName": "Psicología",
+   "topicName": "Personalidad",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-15-unac-2022-i-image/q66.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 66 (clave E)"
+  },
+  {
+   "courseName": "Educación Cívica",
+   "topicName": "Conflicto y violencia",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q67.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 67 (clave C)"
+  },
+  {
+   "courseName": "Filosofía",
+   "topicName": "Ética",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q68.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 68 (clave C)"
+  },
+  {
+   "courseName": "Educación Cívica",
+   "topicName": "La convivencia social y la formación intercultural",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-15-unac-2022-i-image/q69.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 69 (clave C)"
+  },
+  {
+   "courseName": "Psicología",
+   "topicName": "Motivación y emoción",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-15-unac-2022-i-image/q70.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-PRE-II.pdf",
+   "sourceName": "Universidad Nacional del Callao — Centro Preuniversitario, Cuarto Examen 2022-I, Bloque II: Ciencias Empresariales, pregunta 70 (clave D)"
+  }
+ ]
+}

@@ -245,22 +245,6 @@
       "topicName": "Divisibilidad",
       "gradeLevel": "pre",
       "difficulty": "hard",
-      "bodyTypst": "Quelles sont les affirmations vraies ?",
-      "alternatives": [
-        "456 789 ≡ 0 [2]",
-        "43 210 ≡ 0 [5]",
-        "23 769 ≡ 3 [9]",
-        "10 326 ≡ 8 [10]"
-      ],
-      "correctAnswer": "1",
-      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
-      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 41 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
-    },
-    {
-      "courseName": "Aritmética",
-      "topicName": "Divisibilidad",
-      "gradeLevel": "pre",
-      "difficulty": "hard",
       "bodyTypst": "Parmi les nombres n ci-dessous, lequel vérifie à la fois n ≡ 5 [14] et n ≡ 1 [8] ?",
       "alternatives": [
         "n=47",
@@ -303,22 +287,6 @@
       "correctAnswer": "1",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
       "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 48 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
-    },
-    {
-      "courseName": "Aritmética",
-      "topicName": "Divisibilidad",
-      "gradeLevel": "pre",
-      "difficulty": "hard",
-      "bodyTypst": "Quelles sont les affirmations vraies ?",
-      "alternatives": [
-        "2⁸ ≡ 2 [8]",
-        "3¹² ≡ 3 [13]",
-        "18⁷ ≡ 1 [19]",
-        "4¹⁶ ≡ 1 [17]"
-      ],
-      "correctAnswer": "3",
-      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
-      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 49 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
     },
     {
       "courseName": "Aritmética",
@@ -917,22 +885,6 @@
       "topicName": "Lógica Proposicional y Teoría de Conjuntos",
       "gradeLevel": "pre",
       "difficulty": "hard",
-      "bodyTypst": "Quelles sont les assertions vraies ?",
-      "alternatives": [
-        "La négation de \" P ⇒ Q \" est \"non( Q ) ou P \"",
-        "La réciproque de \" P ⇒ Q \" est \" Q ⇒ P \"",
-        "La contraposée de \" P ⇒ Q \" est \"non( P ) ⇒ non( Q )\"",
-        "L'assertion \" P ⇒ Q \" est équivalente à \"non( P ) ou non( Q )\""
-      ],
-      "correctAnswer": "1",
-      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
-      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 29 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
-    },
-    {
-      "courseName": "Álgebra",
-      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
-      "gradeLevel": "pre",
-      "difficulty": "hard",
       "bodyTypst": "Soit A={x∈ ℝ| (x+8)²=9²} . Sous quelle forme peut-on encore écrire l'ensemble A ?",
       "alternatives": [
         "A={1}",
@@ -1381,22 +1333,6 @@
       "topicName": "Polinomios",
       "gradeLevel": "pre",
       "difficulty": "hard",
-      "bodyTypst": "Quelles sont les affirmations vraies ?",
-      "alternatives": [
-        "2X²+3X+1 est irréductible sur ℚ .",
-        "2X²-3X+2 est irréductible sur ℝ .",
-        "2X²-X+3 est irréductible sur ℂ .",
-        "X³+X²+X+4 est irréductible sur ℝ ."
-      ],
-      "correctAnswer": "1",
-      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-polynomes.yaml",
-      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Polynômes -- Fractions rationnelles, pregunta 20 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
-    },
-    {
-      "courseName": "Álgebra",
-      "topicName": "Polinomios",
-      "gradeLevel": "pre",
-      "difficulty": "hard",
       "bodyTypst": "Soit P(X) = X⁶ + 4 X⁵ + X⁴ - 10 X³ - 4 X² + 8 X .",
       "alternatives": [
         "-1 est une racine double.",
@@ -1407,22 +1343,6 @@
       "correctAnswer": "2",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-polynomes.yaml",
       "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Polynômes -- Fractions rationnelles, pregunta 22 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
-    },
-    {
-      "courseName": "Álgebra",
-      "topicName": "Polinomios",
-      "gradeLevel": "pre",
-      "difficulty": "hard",
-      "bodyTypst": "Quelles sont les affirmations vraies ?",
-      "alternatives": [
-        "Les éléments simples sur ℂ sont de la forme (a)/(X-α) , a,α ∈ ℂ .",
-        "Les éléments simples sur ℂ sont de la forme (a)/((X-α)ᵏ) , a,α ∈ ℝ , k∈ℕ^* .",
-        "Les éléments simples sur ℝ peuvent être de la forme (a)/((X-α)ᵏ) , a,α ∈ ℝ .",
-        "Les éléments simples sur ℝ peuvent être de la forme (aX+b)/(X-α) , a,b,α ∈ ℝ ."
-      ],
-      "correctAnswer": "2",
-      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-polynomes.yaml",
-      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Polynômes -- Fractions rationnelles, pregunta 25 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
     },
     {
       "courseName": "Álgebra",
@@ -1493,22 +1413,6 @@
       "topicName": "Inecuaciones y Valor Absoluto",
       "gradeLevel": "pre",
       "difficulty": "hard",
-      "bodyTypst": "Quelles sont les assertions vraies ?",
-      "alternatives": [
-        "max (x,y) = (x+y-|x|-|y|)/(2)",
-        "max (x,y) = (x+y-|x+y|)/(2)",
-        "max (x,y) = (|x+y|-x-y)/(2)",
-        "max (x,y) = (x+y + |x-y|)/(2)"
-      ],
-      "correctAnswer": "3",
-      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
-      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 16 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
-    },
-    {
-      "courseName": "Álgebra",
-      "topicName": "Inecuaciones y Valor Absoluto",
-      "gradeLevel": "pre",
-      "difficulty": "hard",
       "bodyTypst": "On définit la partie fractionnaire d'un réel x , par F(x) = x -E(x) .",
       "alternatives": [
         "F(x) = 0 ⇔ 0 ≤ x <1",
@@ -1519,38 +1423,6 @@
       "correctAnswer": "3",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
       "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 18 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
-    },
-    {
-      "courseName": "Álgebra",
-      "topicName": "Inecuaciones y Valor Absoluto",
-      "gradeLevel": "pre",
-      "difficulty": "hard",
-      "bodyTypst": "Quelles sont les assertions vraies ?",
-      "alternatives": [
-        "x ∈ ]5;7[ ⇔ |x-6|<1",
-        "x ∈ ]5;7[ ⇔ |x-1|<6",
-        "x ∈ [0,999 ; 1,001] ⇔ |x+1|<0,001",
-        "x ∈ [0,999 ; 1,001] ⇔ |x+1|≤ 0,001"
-      ],
-      "correctAnswer": "0",
-      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
-      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 19 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
-    },
-    {
-      "courseName": "Álgebra",
-      "topicName": "Inecuaciones y Valor Absoluto",
-      "gradeLevel": "pre",
-      "difficulty": "hard",
-      "bodyTypst": "Quelles sont les assertions vraies ?",
-      "alternatives": [
-        "[3,7] ∪ [8,10] = [3,10]",
-        "[-3,5] ∩ [2,7] = [-3,7]",
-        "[a,b[∪ ]a,b] = ]a,b[",
-        "[a,b[∩ ]a,b] = ]a,b["
-      ],
-      "correctAnswer": "3",
-      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
-      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 20 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
     },
     {
       "courseName": "Álgebra",
@@ -1573,7 +1445,7 @@
       "topicName": "Progresiones y Límites de Sucesiones",
       "gradeLevel": "pre",
       "difficulty": "hard",
-      "bodyTypst": "Soit (uₙ) une suite réelle et ℓ ∈ ℝ . Comment traduire lim _(n→ +∞)uₙ=ℓ ?",
+      "bodyTypst": "Soit (uₙ) une suite réelle et ℓ ∈ ℝ . Comment traduire lim_(n→ +∞)uₙ=ℓ ?",
       "alternatives": [
         "∀ ε >0, ∀ n∈ ℕ, |uₙ-ℓ|<ε",
         "∀ ε >0, ∃ n∈ ℕ, |uₙ-ℓ|<ε",
@@ -1589,7 +1461,7 @@
       "topicName": "Progresiones y Límites de Sucesiones",
       "gradeLevel": "pre",
       "difficulty": "hard",
-      "bodyTypst": "Soit (uₙ) une suite réelle. Comment traduire lim _(n→ +∞)uₙ=+∞ ?",
+      "bodyTypst": "Soit (uₙ) une suite réelle. Comment traduire lim_(n→ +∞)uₙ=+∞ ?",
       "alternatives": [
         "∀ A>0, ∀ n∈ ℕ, uₙ>A",
         "∀ A>0, ∃ n∈ ℕ, uₙ>A",
@@ -1607,10 +1479,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit uₙ=(n²+1)/(2n²-1) et vₙ=(2n+1)/(n²-1) . Quelles sont les bonnes réponses ?",
       "alternatives": [
-        "lim _(n→ +∞)uₙ=(1)/(2) et lim _(n→ +∞)vₙ=0",
-        "lim _(n→ +∞)uₙ=2 et lim _(n→ +∞)vₙ=0",
-        "lim _(n→ +∞)uₙ=(1)/(2) et lim _(n→ +∞)vₙ=2",
-        "lim _(n→ +∞)uₙ=2 et lim _(n→ +∞)vₙ=+∞"
+        "lim_(n→ +∞)uₙ=(1)/(2) et lim_(n→ +∞)vₙ=0",
+        "lim_(n→ +∞)uₙ=2 et lim_(n→ +∞)vₙ=0",
+        "lim_(n→ +∞)uₙ=(1)/(2) et lim_(n→ +∞)vₙ=2",
+        "lim_(n→ +∞)uₙ=2 et lim_(n→ +∞)vₙ=+∞"
       ],
       "correctAnswer": "0",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
@@ -1623,10 +1495,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit uₙ=√(n+1)-√(n) et vₙ= cos ((n²+1)/(n²-1)π ) . Quelles sont les bonnes réponses ?",
       "alternatives": [
-        "lim _(n→ +∞)uₙ=1 et lim _(n→ +∞)vₙ=-1",
-        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=-1",
-        "lim _(n→ +∞)uₙ=1 et lim _(n→ +∞)vₙ=1",
-        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ n'existe pas"
+        "lim_(n→ +∞)uₙ=1 et lim_(n→ +∞)vₙ=-1",
+        "lim_(n→ +∞)uₙ=0 et lim_(n→ +∞)vₙ=-1",
+        "lim_(n→ +∞)uₙ=1 et lim_(n→ +∞)vₙ=1",
+        "lim_(n→ +∞)uₙ=0 et lim_(n→ +∞)vₙ n'existe pas"
       ],
       "correctAnswer": "1",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
@@ -1639,10 +1511,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit uₙ=3ⁿ-2ⁿ et vₙ=3ⁿ-(-3)ⁿ . Quelles sont les bonnes réponses ?",
       "alternatives": [
-        "lim _(n→ +∞)uₙ=+∞ et lim _(n→ +∞)vₙ=+∞",
-        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=0",
-        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=-∞",
-        "lim _(n→ +∞)uₙ=+∞ et lim _(n→ +∞)vₙ n'existe pas"
+        "lim_(n→ +∞)uₙ=+∞ et lim_(n→ +∞)vₙ=+∞",
+        "lim_(n→ +∞)uₙ=0 et lim_(n→ +∞)vₙ=0",
+        "lim_(n→ +∞)uₙ=0 et lim_(n→ +∞)vₙ=-∞",
+        "lim_(n→ +∞)uₙ=+∞ et lim_(n→ +∞)vₙ n'existe pas"
       ],
       "correctAnswer": "3",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
@@ -1655,10 +1527,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit uₙ=n ln (1+(1)/(n) ) et vₙ= (1+(1)/(n) )ⁿ . Quelles sont les bonnes réponses ?",
       "alternatives": [
-        "lim _(n→ +∞)uₙ=+∞ et lim _(n→ +∞)vₙ=1",
-        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=1",
-        "lim _(n→ +∞)uₙ=1 et lim _(n→ +∞)vₙ=1",
-        "lim _(n→ +∞)uₙ=1 et lim _(n→ +∞)vₙ=e"
+        "lim_(n→ +∞)uₙ=+∞ et lim_(n→ +∞)vₙ=1",
+        "lim_(n→ +∞)uₙ=0 et lim_(n→ +∞)vₙ=1",
+        "lim_(n→ +∞)uₙ=1 et lim_(n→ +∞)vₙ=1",
+        "lim_(n→ +∞)uₙ=1 et lim_(n→ +∞)vₙ=e"
       ],
       "correctAnswer": "3",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
@@ -1671,10 +1543,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit uₙ=( cos n)/(2n+1) et vₙ=(2n+ cos n)/(2n+1) . Quelles sont les bonnes réponses ?",
       "alternatives": [
-        "lim _(n→ +∞)uₙ et lim _(n→ +∞)vₙ n'existent pas",
-        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=+∞",
-        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=1",
-        "lim _(n→ +∞)uₙ=1 et lim _(n→ +∞)vₙ=1"
+        "lim_(n→ +∞)uₙ et lim_(n→ +∞)vₙ n'existent pas",
+        "lim_(n→ +∞)uₙ=0 et lim_(n→ +∞)vₙ=+∞",
+        "lim_(n→ +∞)uₙ=0 et lim_(n→ +∞)vₙ=1",
+        "lim_(n→ +∞)uₙ=1 et lim_(n→ +∞)vₙ=1"
       ],
       "correctAnswer": "2",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
@@ -1687,10 +1559,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit uₙ=(2ⁿ⁺¹-3ⁿ⁺¹)/(2ⁿ+3ⁿ) et vₙ=(n2²ⁿ-3ⁿ)/(n2²ⁿ+3ⁿ) . Quelles sont les bonnes réponses ?",
       "alternatives": [
-        "lim _(n→ +∞)uₙ=-3 et lim _(n→ +∞)vₙ=1",
-        "lim _(n→ +∞)uₙ=+∞ et lim _(n→ +∞)vₙ=+ ∞",
-        "lim _(n→ +∞)uₙ=-3 et lim _(n→ +∞)vₙ=+∞",
-        "lim _(n→ +∞)uₙ=-∞ et lim _(n→ +∞)vₙ=1"
+        "lim_(n→ +∞)uₙ=-3 et lim_(n→ +∞)vₙ=1",
+        "lim_(n→ +∞)uₙ=+∞ et lim_(n→ +∞)vₙ=+ ∞",
+        "lim_(n→ +∞)uₙ=-3 et lim_(n→ +∞)vₙ=+∞",
+        "lim_(n→ +∞)uₙ=-∞ et lim_(n→ +∞)vₙ=1"
       ],
       "correctAnswer": "0",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
@@ -1705,7 +1577,7 @@
       "alternatives": [
         "(uₙ) est majorée.",
         "(uₙ) est divergente.",
-        "(uₙ) est convergente et lim _(n→ +∞)uₙ≥ 0 .",
+        "(uₙ) est convergente et lim_(n→ +∞)uₙ≥ 0 .",
         "uₙ=0 pour tout n≥ 1 ."
       ],
       "correctAnswer": "1",
@@ -1719,10 +1591,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit f(x)= (1)/(x+1)+ (3x)/((x+1)(x²-x+1)) . Quelles sont les assertions vraies ?",
       "alternatives": [
-        "lim _(x→ -1⁺) f(x)=+∞",
-        "lim _(x→ -1⁻) f(x)=-∞",
-        "lim _(x→ -1) f(x)=0",
-        "lim _(x→ -1) f(x)=-2"
+        "lim_(x→ -1⁺) f(x)=+∞",
+        "lim_(x→ -1⁻) f(x)=-∞",
+        "lim_(x→ -1) f(x)=0",
+        "lim_(x→ -1) f(x)=-2"
       ],
       "correctAnswer": "2",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
@@ -1735,9 +1607,9 @@
       "difficulty": "hard",
       "bodyTypst": "Soit f(x)= √(x²+x+1)+x . Quelles sont les assertions vraies ?",
       "alternatives": [
-        "lim _(x→ -∞) f(x)=+∞",
-        "lim _(x→ -∞) f(x)=-∞",
-        "lim _(x→ -∞) f(x)=-(1)/(2)",
+        "lim_(x→ -∞) f(x)=+∞",
+        "lim_(x→ -∞) f(x)=-∞",
+        "lim_(x→ -∞) f(x)=-(1)/(2)",
         "f n'admet pas de limite en -∞ ."
       ],
       "correctAnswer": "2",
@@ -1751,10 +1623,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit f(x)= x-(|x|)/(x) . Quelles sont les assertions vraies ?",
       "alternatives": [
-        "lim _(x→ 0) f(x)=0",
-        "lim _(x→ +∞) f(x)=0",
+        "lim_(x→ 0) f(x)=0",
+        "lim_(x→ +∞) f(x)=0",
         "f n'admet pas de limite en 0 .",
-        "lim _(x→ -∞) f(x)=+∞"
+        "lim_(x→ -∞) f(x)=+∞"
       ],
       "correctAnswer": "2",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
@@ -1767,10 +1639,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit f(x)= ( ln (1+x))/(x) . Quelles sont les assertions vraies ?",
       "alternatives": [
-        "lim _(x→ 0) f(x)=0",
-        "lim _(x→ 0) f(x)=+∞",
+        "lim_(x→ 0) f(x)=0",
+        "lim_(x→ 0) f(x)=+∞",
         "f n'admet pas de limite en 0 .",
-        "lim _(x→ 0) f(x)=1"
+        "lim_(x→ 0) f(x)=1"
       ],
       "correctAnswer": "3",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
@@ -1784,9 +1656,9 @@
       "bodyTypst": "Soit f(x)= ( sin x)/(x) . Quelles sont les assertions vraies ?",
       "alternatives": [
         "f n'admet pas de limite en 0 .",
-        "lim _(x→ 0) f(x)=1",
-        "lim _(x→ 0) f(x)=0",
-        "lim _(x→ 0) f(x)=+∞"
+        "lim_(x→ 0) f(x)=1",
+        "lim_(x→ 0) f(x)=0",
+        "lim_(x→ 0) f(x)=+∞"
       ],
       "correctAnswer": "1",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
@@ -1800,9 +1672,9 @@
       "bodyTypst": "Soit f(x)= ( sin (3x))/( sin (4x)) . Quelles sont les assertions vraies ?",
       "alternatives": [
         "f n'admet pas de limite en 0",
-        "lim _(x→ 0) f(x)=(3)/(4)",
-        "lim _(x→ 0) f(x)= (4)/(3)",
-        "lim _(x→ 0) f(x)=0"
+        "lim_(x→ 0) f(x)=(3)/(4)",
+        "lim_(x→ 0) f(x)= (4)/(3)",
+        "lim_(x→ 0) f(x)=0"
       ],
       "correctAnswer": "1",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
@@ -1816,9 +1688,9 @@
       "bodyTypst": "Soit f(x)= ( cos x-1)/(x²) . Quelles sont les assertions vraies ?",
       "alternatives": [
         "f n'admet pas de limite en 0 .",
-        "lim _(x→ 0) f(x)=+∞",
-        "lim _(x→ 0) f(x)=-(1)/(2)",
-        "lim _(x→ 0) f(x)=(1)/(2)"
+        "lim_(x→ 0) f(x)=+∞",
+        "lim_(x→ 0) f(x)=-(1)/(2)",
+        "lim_(x→ 0) f(x)=(1)/(2)"
       ],
       "correctAnswer": "2",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
@@ -1831,10 +1703,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit f(x)= xE((1)/(x)) , où E désigne la partie entière. Quelles sont les assertions vraies ?",
       "alternatives": [
-        "lim _(x→ 0) f(x)=0",
-        "lim _(x→ 0) f(x)=+∞",
+        "lim_(x→ 0) f(x)=0",
+        "lim_(x→ 0) f(x)=+∞",
         "f n'admet pas de limite en 0 .",
-        "lim _(x→ 0) f(x)=1"
+        "lim_(x→ 0) f(x)=1"
       ],
       "correctAnswer": "3",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
@@ -1847,10 +1719,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit f une fonction définie sur ]0,1[ par : f(x)=1 , si x ∈ ℝ ∖ ℚ et f(x)=(1)/(m), si x= (n)/(m), où n, m ∈ ℕ^* tels que (n)/(m) soit une fraction irréductible. Quelles sont les assertions vraies ?",
       "alternatives": [
-        "lim _(x→ 1⁻) f(x)=0",
+        "lim_(x→ 1⁻) f(x)=0",
         "f n'admet pas de limite en 1⁻ .",
-        "lim _(x→ 1⁻) f(x)=1",
-        "lim _(x→ 1⁻) f(x)=+∞"
+        "lim_(x→ 1⁻) f(x)=1",
+        "lim_(x→ 1⁻) f(x)=+∞"
       ],
       "correctAnswer": "1",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
@@ -1863,10 +1735,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit f(x)= (√(x+1)-1)/(racine 3-ieme de (x+1)-1) . Quelles sont les assertions vraies ?",
       "alternatives": [
-        "lim _(x→ 0) f(x)=0",
-        "lim _(x→ 0) f(x)=(3)/(2)",
+        "lim_(x→ 0) f(x)=0",
+        "lim_(x→ 0) f(x)=(3)/(2)",
         "f n'admet pas de limite en 0 .",
-        "lim _(x→ 0) f(x)=+∞"
+        "lim_(x→ 0) f(x)=+∞"
       ],
       "correctAnswer": "1",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
@@ -1895,10 +1767,10 @@
       "difficulty": "hard",
       "bodyTypst": "Soit f(x)=((2x)ˣ)/(x⁽²ˣ⁾) . Quelles sont les assertions vraies ?",
       "alternatives": [
-        "lim _(x→ +∞) f(x)=+∞",
-        "lim _(x→ +∞ ) f(x)=0",
+        "lim_(x→ +∞) f(x)=+∞",
+        "lim_(x→ +∞ ) f(x)=0",
         "f n'admet pas de limite en +∞ .",
-        "lim _(x→ +∞) f(x)=1"
+        "lim_(x→ +∞) f(x)=1"
       ],
       "correctAnswer": "1",
       "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
