@@ -81,7 +81,46 @@ Poblar el banco con preguntas reales de exámenes publicados. Cada corrida produ
   alias). Ante duda, consultar la tabla `topics` directamente antes de inventar un nombre.
 - `difficulty`: `easy` | `medium` | `hard`.
 
-## Recorte de imágenes (herramientas)
+## Pipeline automatizado para PDFs con clave (`tools/harvest/`)
+
+Para exámenes publicados como PDF con solucionario, el recorte manual ya no hace falta:
+
+| Herramienta | Qué hace |
+| --- | --- |
+| `pdf_lines.py` | Texto del PDF en orden de lectura; detecta páginas a dos columnas y emite la columna izquierda completa antes de la derecha. |
+| `parse_uni_solucionario.py <pdf> [--columns] --out p.json` | Enunciados + clave por pregunta. Entiende dos layouts: secciones `x.y Título` y capítulos que abren el curso con un título EN MAYÚSCULAS. |
+| `crop_pdf_figures.py <pdf> --anchor "<frase>" --out f.png` | Recorta **solo** la figura (banda entre el último renglón del enunciado y las alternativas). |
+| `crop_pdf_figures.py <pdf> --mode numbered --section-anchor <"2.1"\|"FÍSICA"> --question N --out q.png --dpi 300` | Recorta la pregunta completa (enunciado + alternativas) como un PNG. |
+| `classify_topics.py` | Sugiere curso/tema canónico a partir del vocabulario del enunciado. Es sugerencia: se revisa antes de sembrar. |
+| `build_lot.py --parsed p.json --pdf x.pdf --lot <slug> --data-dir <data> --source-url <url> --exam-label "<...>" [--all-images] [--dry-run]` | Escribe `<slug>.json`, `<slug>-image.json` y sus directorios de PNGs. |
+
+Cuándo usar `--all-images`: cuando `pdftotext` transcribe mal los símbolos del PDF
+(fórmulas rotas, `µ` que sale como `P`, radicales perdidos). Un PNG horneado vale más que
+un texto en el que no se puede confiar.
+
+Verificación obligatoria antes de sembrar un lote: abrir varios PNGs con `Read` (ninguno
+debe traer una segunda pregunta ni quedar cortado) y comprobar 3 claves contra la solución
+publicada en la fuente.
+
+## Licencias: qué fuente sí y cuál no
+
+Antes de cosechar, revisar el aviso de derechos del PDF:
+
+```bash
+pdftotext -layout fuente.pdf - | grep -ci "derechos reservados\|prohibida .*reproducci"
+```
+
+- **Sí**: UNI `solucionario2019.pdf`, `solucionario20192.pdf`, `solucionario2020.pdf`,
+  `solucionario2021.pdf` y el simulacro IEN 2023 (`admision.uni.edu.pe`, sin aviso de
+  derechos; el sitio sirve un certificado TLS vencido, usar `curl -k`), UNCP vía Academia
+  Ingeniería, cuadernillos MINEDU.
+- **No**: los solucionarios UNI 2013–2018, que sí llevan "Derechos reservados. Prohibida la
+  reproducción"; y **DEMRE (Chile)**, cuyos folletos PAES/PSU dicen "Derechos reservados.
+  Prohibida su reproducción total o parcial" — quedan fuera aunque el clavijero sea público.
+- **No**: bancos de preguntas de GitHub generados con IA (revisados: uno traía la clave
+  contradiciendo su propia explicación) y repos con licencia no comercial.
+
+## Recorte de imágenes (a mano, para fuentes HTML o escaneadas)
 
 1. Descargar el PDF/página fuente (`curl`).
 2. Rasterizar la página: `pdftoppm -png -r 200 fuente.pdf pagina` (o screenshot con Playwright
