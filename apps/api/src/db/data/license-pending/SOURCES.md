@@ -177,6 +177,50 @@ libro maquetado a dos o tres columnas tiene este fallo latente.
 No se escribió un segundo lote del mismo libro: se detectó a tiempo que
 `lot-26-unmsm-historia-mcq` ya cubría estas 439 preguntas y habría duplicado el banco.
 
+### Tercer intento sobre el mismo libro (`book-2-*`) — tampoco se escribió
+
+El 2026-08-20 se volvió a pedir la extracción de este libro, ahora con el slug
+`book-2-unmsm-historia`. **No se escribió ningún lote.** `lot-26-unmsm-historia-mcq` ya trae
+las mismas 439 preguntas, con el mismo `sourceUrl`
+(`…/blob/main/cuestionario.json`), el mismo mapa de capítulos a la taxonomía y las mismas 10
+exclusiones (49, 66, 108, 147, 179, 287, 296, 325, 419, 438). Un `book-2-*` habría sido una
+copia byte a byte del banco dentro de este mismo directorio. Es el mismo desenlace que el
+`book-0-*` de `picuino/test`: **este libro está agotado, no volver a cosecharlo.**
+
+Lo que sí aportó el intento fue una **re-verificación independiente de `lot-26`**, hecha desde
+cero y sin mirar cómo se construyó:
+
+- La tabla de claves se leyó **del PDF escaneado, no del `.txt`**: es la página 91 del libro
+  (página 90 del PDF), rasterizada a 200 dpi y abierta a ojo. Las 449 filas impresas coinciden
+  con `files/data_clean/claves.txt`; comprobadas fila a fila las diez columnas de cabecera
+  (1 A, 46 E, 91 D, 136 A, 181 D, 226 D, 271 C, 316 A, 361 B, 406 D) y la última fila completa
+  (45 D, 90 C, 135 E, 180 B, 225 B, 270 C, 315 A, 360 B, 405 C, 449 D).
+- El reparseo independiente de la tabla da **449 claves, 0 discrepancias** contra el índice
+  `answer` de `cuestionario.json`, 0 fuera de rango, 0 sin clave.
+- La comprobación que de verdad importa —la del bug de las tres columnas— también se rehízo:
+  se cruzó el **rótulo impreso** (`A)`…`E)` de `files/data_clean/cuestionario.txt`) con la
+  tabla de claves y con el texto que `lot-26` marca como correcto. **438 de 438 verificables
+  coinciden, 0 discrepancias.** La única no verificable es la 8, cuyo texto del libro no rinde
+  las cinco alternativas rotuladas (el OCR dejó `O) Groenlandia` con la letra corrompida); su
+  clave impresa es C y el lote marca «La Antártida», que es la hipótesis de Méndez Correa.
+
+#### Cuatro preguntas de `lot-26` que hay que quitar antes de sembrar
+
+No se tocó el lote —queda a criterio de quien lo siembre—, pero están localizadas y son
+**defecto de la obra escaneada, no de la clave**:
+
+| Pregunta | Capítulo | Problema |
+| --- | --- | --- |
+| 13 | POBLAMIENTO DE AMÉRICA | Las alternativas son `I y IV`, `I y III`… pero el OCR **nunca capturó la lista de enunciados I–IV**. Incontestable. |
+| 357 | GUERRA CON CHILE | Pide «la secuencia correcta»; alternativas `II, I, III, IV`… y **la lista I–IV no está en el cuerpo**. Incontestable. |
+| 427 | OCHENIO DE MANUEL A. ODRÍA | Igual: alternativas `II y IV`, `II y III`… **sin la lista I–IV**. Incontestable. |
+| 65 | HORIZONTE MEDIO: TIAHUANACO | «Observe y analice la imagen representada en este vaso ceremonial…» — **depende de una figura que el lote no adjunta** (entra como pregunta de texto, sin `imagePath`). |
+
+Es exactamente el mismo criterio con el que ya se descartaron las diez de 4 y 2 alternativas:
+la obra no rinde la pregunta completa, así que se quita en vez de rellenarla. El filtro que las
+detecta es «dos o más alternativas que son solo números romanos y ningún `I.`/`II.` en el
+cuerpo», más las menciones a imagen/caricatura/gráfico. Bien sembradas serían 435, no 439.
+
 ## `lot-27-cepre-unmsm-2019-i` — boletines oficiales del CEPRE-UNMSM
 
 `gitbookarch/CepreSanMarcos` archiva los boletines semanales del Centro Preuniversitario de

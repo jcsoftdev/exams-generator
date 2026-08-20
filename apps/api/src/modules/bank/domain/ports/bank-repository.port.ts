@@ -149,6 +149,14 @@ export interface BankRepositoryPort {
    * exact bank (central, or one tenant's own) being written into.
    */
   findByBodyHash(tenantId: string | null, bodyHash: string): Promise<{ id: string } | undefined>;
+
+  /**
+   * Duplicate check for `type = 'image'` questions, which have no `bodyTypst`
+   * and so no `body_hash` to collide on. Their identity is the provenance
+   * string the seeder writes (exam, subject, question number), which is what
+   * makes re-running a seeding run idempotent.
+   */
+  findBySourceName(tenantId: string | null, sourceName: string): Promise<{ id: string } | undefined>;
   findCourseAndTopicNames(
     courseId: string,
     topicId: string,

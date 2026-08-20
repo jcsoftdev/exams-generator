@@ -55,6 +55,9 @@ async function main(): Promise<void> {
   const token = new TokenService().sign({ sub: adminRow.id, tenantId: null, role: Role.PlatformAdmin });
 
   let failures = 0;
+  // A 409 means the question is already in this bank (matched on its provenance
+  // string) — a re-run of a partially finished seeding, not a failure.
+  let skipped = 0;
 
   for (const entry of data.entries) {
     const label = `${entry.courseName} / ${entry.topicName} — ${entry.sourceName}`;
@@ -95,6 +98,11 @@ async function main(): Promise<void> {
         headers: { Authorization: `Bearer ${token}` },
         body: form,
       });
+      if (response.status === 409) {
+        skipped++;
+        console.log(`SKIP ${label} (already exists)`);
+        continue;
+      }
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${await response.text()}`);
       }
@@ -107,7 +115,11 @@ async function main(): Promise<void> {
     }
   }
 
-  console.log(`\n${data.entries.length - failures}/${data.entries.length} image questions seeded successfully.`);
+  const seeded = data.entries.length - failures - skipped;
+  console.log(
+    `\n${seeded}/${data.entries.length} image questions seeded successfully` +
+      (skipped > 0 ? ` (${skipped} already present)` : "") + ".",
+  );
   await pool.end();
   process.exitCode = failures > 0 ? 1 : 0;
 }

@@ -178,6 +178,16 @@ export class BankService {
       }
     }
 
+    // An image question carries no statement, so `body_hash` cannot catch a
+    // re-seed; its provenance string is the only identity it has. Checked
+    // BEFORE the upload so a retry does not also litter the object store.
+    if (dto.sourceName) {
+      const duplicate = await this.repository.findBySourceName(user.tenantId, dto.sourceName);
+      if (duplicate) {
+        throw new ConflictException(`Question already exists (id: ${duplicate.id})`);
+      }
+    }
+
     const file = dto.file as Express.Multer.File;
     const mime = requireImageMime(file);
     const storageKey = `bank/questions/${randomUUID()}`;

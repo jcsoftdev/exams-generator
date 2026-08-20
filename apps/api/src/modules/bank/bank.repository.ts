@@ -186,6 +186,21 @@ export class BankRepository implements BankRepositoryPort {
     return row;
   }
 
+  /** Same bank-scoped rule as `findByBodyHash`, for questions that are only an image. */
+  async findBySourceName(
+    tenantId: string | null,
+    sourceName: string,
+  ): Promise<{ id: string } | undefined> {
+    const tenantMatch = tenantId === null ? isNull(questions.tenantId) : eq(questions.tenantId, tenantId);
+
+    const [row] = await this.db
+      .select({ id: questions.id })
+      .from(questions)
+      .where(and(tenantMatch, eq(questions.sourceName, sourceName)));
+
+    return row;
+  }
+
   /**
    * Visibility + filter rules live in `buildQuestionListConditions` (shared
    * with `countByCourseAndTopic`) — see its doc for the tenant-isolation

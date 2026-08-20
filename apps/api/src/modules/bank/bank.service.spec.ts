@@ -44,6 +44,7 @@ function buildDeps() {
     createImageQuestion: jest.fn().mockResolvedValue({ id: "question-1" }),
     createStructuredQuestion: jest.fn().mockResolvedValue({ id: "question-2" }),
     findByBodyHash: jest.fn().mockResolvedValue(undefined),
+    findBySourceName: jest.fn().mockResolvedValue(undefined),
     listQuestions: jest.fn().mockResolvedValue([] as QuestionListItem[]),
     countByCourseAndTopic: jest.fn().mockResolvedValue([]),
     findQuestionById: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
@@ -95,6 +96,30 @@ describe("BankService.createImageQuestion", () => {
       }),
     );
     expect(result).toEqual({ id: "question-1" });
+  });
+
+  it("refuses an image question whose source name is already in the bank", async () => {
+    // An image question has no statement, so body_hash cannot catch a re-seed.
+    // Without this, every retry of a rate-limited seeding run duplicates the
+    // whole batch — which is exactly how 451 duplicates got in.
+    const { service, repository } = buildDeps();
+    (repository.findBySourceName as jest.Mock).mockResolvedValueOnce({ id: "question-9" });
+
+    await expect(
+      service.createImageQuestion(STAFF_USER, {
+        courseId: "course-1",
+        topicId: "topic-1",
+        subtopicId: undefined,
+        difficulty: Difficulty.Hard,
+        gradeLevel: "pre",
+        correctAnswer: "b",
+        file: { buffer: fakePng(), mimetype: "image/png" } as Express.Multer.File,
+        sourceUrl: "https://example.test/examen.pdf",
+        sourceName: "UNCP 2021-I, Geometría, pregunta 1 (clave B)",
+      }),
+    ).rejects.toBeInstanceOf(ConflictException);
+
+    expect(repository.createImageQuestion).not.toHaveBeenCalled();
   });
 
   it("keeps the provenance of an image question, which has no statement to trace it by", async () => {
