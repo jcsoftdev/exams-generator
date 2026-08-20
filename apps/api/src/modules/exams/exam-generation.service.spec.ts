@@ -96,9 +96,18 @@ function buildDeps() {
 
   const pdfCompiler = new FakePdfCompiler();
 
-  const service = new ExamVersionGenerationService(repository, storage, pdfCompiler, () => createSeededRng(7));
+  // Only `error` is exercised; the service takes the nestjs-pino Logger.
+  const logger = { error: jest.fn() } as unknown as import("nestjs-pino").Logger;
 
-  return { service, repository, storage, pdfCompiler };
+  const service = new ExamVersionGenerationService(
+    repository,
+    storage,
+    pdfCompiler,
+    () => createSeededRng(7),
+    logger,
+  );
+
+  return { service, repository, storage, pdfCompiler, logger };
 }
 
 describe("ExamVersionGenerationService.generateVersions", () => {
@@ -393,6 +402,32 @@ describe("ExamVersionGenerationService.generateVersions", () => {
       await service.generateVersions(TEACHER, "exam-1", 1);
 
       expect(repository.archiveQuestion).toHaveBeenCalledWith("q2");
+    });
+
+    /**
+     * Audit 2026-08-20 (L1): this was the one error path logged via bare
+     * `console.error`, invisible to the structured pino stream — no queryable
+     * examId/questionId fields. The original compile error must still win
+     * (recovery is best-effort), but the recovery failure has to land in the
+     * injected logger.
+     */
+    it("logs a swap-recovery failure through the structured logger and still surfaces the ORIGINAL compile error", async () => {
+      const { service, repository, pdfCompiler, logger } = buildDeps();
+      wireSwappableBank(repository);
+      repository.archiveQuestion = jest.fn().mockRejectedValue(new Error("db down"));
+      repository.getExamForGeneration.mockResolvedValue(READY_EXAM);
+      jest
+        .spyOn(pdfCompiler, "compileExam")
+        .mockRejectedValue(new TypstCompilationError("typst compile failed", "q2", "stderr contents"));
+
+      const promise = service.generateVersions(TEACHER, "exam-1", 1);
+
+      await expect(promise).rejects.toBeInstanceOf(ExamPdfGenerationError);
+      await expect(promise).rejects.toMatchObject({ questionId: "q2" });
+      expect(logger.error).toHaveBeenCalledWith(
+        expect.objectContaining({ examId: "exam-1", questionId: "q2", err: "db down" }),
+        expect.stringContaining("could not swap"),
+      );
     });
 
     it("still fails loudly when the blueprint row has no healthy question left to swap in", async () => {

@@ -9,6 +9,7 @@ import {
   NotFoundException,
   Optional,
 } from "@nestjs/common";
+import { Logger } from "nestjs-pino";
 import { AuthTokenPayload } from "../auth/token.service";
 import { SelectedQuestion, Version, buildVersions } from "./domain/version-shuffler";
 import { pickReplacementQuestion } from "./domain/pick-replacement-question";
@@ -93,6 +94,11 @@ export class ExamVersionGenerationService {
     @Inject(STORAGE_PORT) private readonly storage: StoragePort,
     @Inject(PDF_COMPILER_PORT) private readonly pdfCompiler: PdfCompilerPort,
     @Optional() rngFactory?: () => Rng,
+    // Audit 2026-08-20 (L1): the swap-recovery error used bare console.error,
+    // outside the structured pino stream. @Optional because a handful of unit
+    // specs construct this service manually; under Nest DI the global
+    // LoggerModule always provides it.
+    @Optional() private readonly logger?: Logger,
   ) {
     this.rngFactory = rngFactory ?? (() => createSeededRng(Date.now() ^ (Math.random() * 2 ** 31)));
   }
@@ -226,11 +232,17 @@ export class ExamVersionGenerationService {
       // "question X does not compile" — that names the actual problem, and
       // is what the UI shows the teacher. Swallowing it in favour of a
       // failure from the recovery attempt would lose that.
-      console.error(
-        `[exam-generation] could not swap uncompilable question ${brokenQuestionId} on exam ${exam.id}: ${
-          error instanceof Error ? error.message : String(error)
-        }`,
-      );
+      const err = error instanceof Error ? error.message : String(error);
+      if (this.logger) {
+        this.logger.error(
+          { examId: exam.id, questionId: brokenQuestionId, err },
+          "could not swap uncompilable question — surfacing the original compile error",
+        );
+      } else {
+        console.error(
+          `[exam-generation] could not swap uncompilable question ${brokenQuestionId} on exam ${exam.id}: ${err}`,
+        );
+      }
       return false;
     }
   }

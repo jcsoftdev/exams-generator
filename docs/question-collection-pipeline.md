@@ -131,6 +131,22 @@ pdftotext -layout fuente.pdf - | grep -ci "derechos reservados\|prohibida .*repr
    alternativas, sin bordes de página.
 5. Nombrar `<curso>-<nn>-<descriptor>.png`, guardar en el directorio hermano del JSON.
 
+## Dónde viven los lotes y cómo llegan a producción
+
+- `apps/api/src/db/data/collected/` — corpus web original (~64k preguntas de texto). Lo
+  siembra `seed-collected-questions.ts` en cada arranque.
+- `apps/api/src/db/data/lots/` — lotes cosechados de exámenes oficiales, con sus PNGs
+  hermanos. Los siembra `seed-lot-questions.ts` en cada arranque: **sube cada imagen al
+  object store antes de escribir la fila**, para que ninguna pregunta apunte a un asset
+  que no existe.
+- `apps/api/src/db/data/license-pending/` — material con licencia en trámite. **Ningún
+  seeder lo lee**; se siembra a mano cuando la licencia llega (ver `SOURCES.md` ahí).
+
+Deduplicación al resembrar: las estructuradas por `body_hash`, que ahora incluye la
+huella de la figura — un banco de circuitos repite el mismo enunciado sobre doce dibujos
+distintos, y sin eso el índice único se quedaba con uno solo. Las de imagen, por
+`source_name`, que el cosechador llena con examen, curso y número de pregunta.
+
 ## Ejecución del seed
 
 Prerequisitos: Postgres/Redis/MinIO arriba, API corriendo en `localhost:3012`

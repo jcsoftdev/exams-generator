@@ -9,6 +9,7 @@ import { db, pool } from "./client";
 import { archiveUnprintableQuestions } from "../scripts/archive-unprintable-questions";
 import { escapeCollectedTypst } from "../scripts/escape-collected-typst";
 import { seedCollectedQuestions } from "./seed-collected-questions";
+import { seedLotQuestions } from "./seed-lot-questions";
 import {
   courses,
   cycles,
@@ -1315,6 +1316,11 @@ export async function seed(): Promise<void> {
   const [bankSampleAdmin] = await db.select({ id: users.id }).from(users).where(eq(users.email, BANK_SAMPLE_ADMIN.email));
   if (bankSampleAdmin) {
     await seedCollectedQuestions(bankSampleAdmin.id);
+    // The harvested exam lots come after the collected corpus, and separately:
+    // they carry images (a cropped figure, or a whole question baked into a
+    // PNG), so seeding them means uploading to the object store, not just
+    // inserting rows — see `seed-lot-questions.ts`.
+    await seedLotQuestions(bankSampleAdmin.id);
     // Backfills the Typst escaping onto rows seeded BEFORE the seeder started
     // escaping at ingest. Runs on every boot, like the seeder itself: it is
     // idempotent, and after the first pass its per-entry statement matches
