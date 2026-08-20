@@ -28,6 +28,9 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from pdf_lines import document_lines  # noqa: E402
+
 SECTION_RE = re.compile(r"^\s{0,12}(\d)\.(\d)\.\s{2,}([A-ZÁÉÍÓÚÑ][^\d]{2,30}?)\s*$")
 QUESTION_RE = re.compile(r"^\s{0,5}(\d{1,3})\.\s+(\S.*)$")
 ALT_RE = re.compile(r"^\s{0,8}([A-E])\)\s?(.*)$")
@@ -51,7 +54,10 @@ def is_noise(line: str) -> bool:
     return any(rx.search(line) for rx in NOISE_RES)
 
 
-def pdf_to_text(pdf: Path) -> list[str]:
+def pdf_to_text(pdf: Path, columns: bool = False) -> list[str]:
+    """PDF text as lines. `columns=True` reads two-column pages in reading order."""
+    if columns:
+        return document_lines(pdf)
     out = subprocess.run(
         ["pdftotext", "-layout", str(pdf), "-"],
         capture_output=True,
@@ -182,10 +188,76 @@ def parse_answers(block: list[str]) -> dict[int, str]:
     return answers
 
 
-def parse(pdf: Path) -> dict:
-    lines = pdf_to_text(pdf)
+# Older processes (2019, 2020) drop the `1.1 Aritmética` numbering on the
+# enunciado side and open each course with a bare uppercase heading instead,
+# while the solution side keeps `5.1. Matemáticas`. Pair them by course name.
+CHAPTERED_COURSES = [
+    ("MATEMÁTICA", "Matemáticas"),
+    ("MATEMÁTICAS", "Matemáticas"),
+    ("FÍSICA", "Física"),
+    ("QUÍMICA", "Química"),
+    ("ARITMÉTICA", "Aritmética"),
+    ("ÁLGEBRA", "Álgebra"),
+    ("GEOMETRÍA", "Geometría"),
+    ("TRIGONOMETRÍA", "Trigonometría"),
+]
+
+
+def split_chaptered(lines: list[str]) -> list[dict]:
+    """Sections for the layout that names courses in caps, without `x.y` numbers."""
+    out: list[dict] = []
+    for heading, solution_title in CHAPTERED_COURSES:
+        start = next((i for i, l in enumerate(lines) if l.strip() == heading), None)
+        if start is None:
+            continue
+        sol = next(
+            (
+                i
+                for i, l in enumerate(lines)
+                if l.strip() == solution_title
+                and i > 0
+                and re.match(r"^\s*[456]\.\d\.\s*$", lines[i - 1])
+            ),
+            None,
+        )
+        if sol is None:
+            continue
+        out.append({"title": solution_title, "start": start, "solution": sol})
+    out.sort(key=lambda s: s["start"])
+    for i, sec in enumerate(out):
+        sec["end"] = out[i + 1]["start"] if i + 1 < len(out) else min(
+            s["solution"] for s in out
+        )
+        sec["solution_end"] = len(lines)
+    for i, sec in enumerate(sorted(out, key=lambda s: s["solution"])):
+        later = [s["solution"] for s in out if s["solution"] > sec["solution"]]
+        sec["solution_end"] = min(later) if later else len(lines)
+    return out
+
+
+def parse_chaptered(pdf: Path, lines: list[str]) -> dict:
+    sections = split_chaptered(lines)
+    out_sections = []
+    for sec in sections:
+        questions = parse_questions(lines[sec["start"] + 1 : sec["end"]])
+        answers = parse_answers(lines[sec["solution"] + 1 : sec["solution_end"]])
+        for q in questions:
+            q["answer"] = answers.get(q["n"])
+            q["hasFigureGap"] = q.pop("_gap", 0) >= 3 or len(q["alternatives"]) < 4
+        out_sections.append(
+            {"section": sec["title"], "title": sec["title"],
+             "solutionSection": sec["title"], "questions": questions}
+        )
+    return {"source": pdf.name, "sections": out_sections}
+
+
+def parse(pdf: Path, columns: bool = False) -> dict:
+    lines = pdf_to_text(pdf, columns=columns)
     sections = split_sections(lines)
     if not sections:
+        chaptered = parse_chaptered(pdf, lines)
+        if chaptered["sections"]:
+            return chaptered
         raise SystemExit(f"no sections found in {pdf.name}")
 
     # Sections 1.x/2.x/3.x hold enunciados; 4.x/5.x/6.x hold the matching solutions,
@@ -219,9 +291,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("pdf", type=Path)
     ap.add_argument("--out", type=Path)
+    ap.add_argument("--columns", action="store_true",
+                    help="read two-column pages in reading order (2019/2020 layouts)")
     args = ap.parse_args()
 
-    data = parse(args.pdf)
+    data = parse(args.pdf, columns=args.columns)
     text = json.dumps(data, ensure_ascii=False, indent=2)
     if args.out:
         args.out.write_text(text, encoding="utf8")

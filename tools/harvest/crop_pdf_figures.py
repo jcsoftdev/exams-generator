@@ -27,10 +27,11 @@ import argparse
 import re
 import subprocess
 import sys
-import xml.etree.ElementTree as ET
 from pathlib import Path
 
-NS = {"x": "http://www.w3.org/1999/xhtml"}
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from pdf_lines import pages as bbox_pages  # noqa: E402
+
 ALT_RE = re.compile(r"^[A-E]\)$")
 # Running header / footer text that must never bound or enter a crop.
 FURNITURE_RE = re.compile(
@@ -39,35 +40,33 @@ FURNITURE_RE = re.compile(
 )
 
 
-def bbox_pages(pdf: Path) -> list[dict]:
-    """Every page as {width, height, lines:[{xmin,ymin,xmax,ymax,text}]}."""
-    xml = subprocess.run(
-        ["pdftotext", "-bbox-layout", str(pdf), "-"],
-        capture_output=True, text=True, check=True,
-    ).stdout
-    root = ET.fromstring(xml)
-    pages = []
-    for page in root.iter(f"{{{NS['x']}}}page"):
-        lines = []
-        for line in page.iter(f"{{{NS['x']}}}line"):
-            words = [w.text or "" for w in line.iter(f"{{{NS['x']}}}word")]
-            lines.append(
-                {
-                    "xmin": float(line.get("xMin")),
-                    "ymin": float(line.get("yMin")),
-                    "xmax": float(line.get("xMax")),
-                    "ymax": float(line.get("yMax")),
-                    "text": " ".join(words).strip(),
-                }
-            )
-        # `pdftotext -bbox-layout` emits lines in flow order, which for a page
-        # holding several questions is NOT top-to-bottom. Every anchor search here
-        # is geometric, so sort the page into reading order first.
-        lines.sort(key=lambda l: (round(l["ymin"], 1), l["xmin"]))
-        pages.append(
-            {"width": float(page.get("width")), "height": float(page.get("height")), "lines": lines}
-        )
-    return pages
+def column_view(page: dict, anchor_line: dict) -> dict:
+    """The page restricted to the column the anchor sits in.
+
+    On a two-column page the y-sorted line list alternates between columns, so
+    every "what comes after this line" walk has to happen inside one column.
+    """
+    mid = page["width"] / 2
+    crossing = sum(1 for l in page["lines"] if l["xmin"] < mid - 20 and l["xmax"] > mid + 20)
+    if len(page["lines"]) < 12 or crossing > len(page["lines"]) * 0.12:
+        return page
+    left_side = anchor_line["xmin"] < mid
+    kept = [l for l in page["lines"] if (l["xmin"] < mid) == left_side]
+    return {**page, "lines": kept}
+
+
+def column_right(page: dict, left: float) -> float:
+    """Right edge of the column that starts at `left`.
+
+    On a two-column page, mirroring the left margin across the full page would
+    drag the neighbouring column into the crop, so stop at the gutter instead.
+    """
+    mid = page["width"] / 2
+    crossing = sum(1 for l in page["lines"] if l["xmin"] < mid - 20 and l["xmax"] > mid + 20)
+    two_column = len(page["lines"]) >= 12 and crossing <= len(page["lines"]) * 0.12
+    if two_column:
+        return (mid - 4) if left < mid else (page["width"] - 20)
+    return page["width"] - max(0.0, left - 6)
 
 
 def find_band(pages: list[dict], anchor: str) -> tuple[int, float, float, float, float]:
@@ -76,10 +75,13 @@ def find_band(pages: list[dict], anchor: str) -> tuple[int, float, float, float,
     `anchor` is a distinctive phrase from the question's statement.
     """
     needle = " ".join(anchor.split()).lower()
-    for pidx, page in enumerate(pages):
-        for lidx, line in enumerate(page["lines"]):
-            if needle not in " ".join(line["text"].split()).lower():
+    for pidx, full_page in enumerate(pages):
+        for anchor_line in full_page["lines"]:
+            if needle not in " ".join(anchor_line["text"].split()).lower():
                 continue
+            page = column_view(full_page, anchor_line)
+            lidx = page["lines"].index(anchor_line)
+            line = anchor_line
             # Walk forward to the first alternative line — that closes the band.
             alt_idx = None
             for j in range(lidx + 1, min(lidx + 40, len(page["lines"]))):
@@ -134,7 +136,7 @@ def find_band(pages: list[dict], anchor: str) -> tuple[int, float, float, float,
             if bottom - top < 20:
                 continue  # no room for a figure — the question is text-only
             left = min([l["xmin"] for l in page["lines"][lidx:alt_idx]] + [margin])
-            return pidx, top, bottom, left, page["width"] - left
+            return pidx, top, bottom, left, column_right(page, left)
     raise SystemExit(f"anchor not found (or no figure band): {anchor!r}")
 
 
@@ -147,33 +149,45 @@ def find_numbered(pages: list[dict], section_anchor: str, number: int) -> list[t
     """
     needle = " ".join(section_anchor.split()).lower()
     started = False
-    for pidx, page in enumerate(pages):
-        for lidx, line in enumerate(page["lines"]):
-            flat = " ".join(line["text"].split())
+    for pidx, full_page in enumerate(pages):
+        for anchor_line in list(full_page["lines"]):
+            flat = " ".join(anchor_line["text"].split())
             if not started:
                 # The table of contents repeats every heading — its rows carry a dot
                 # leader, so they are easy to reject. A heading like "2.1. Aritmética"
                 # can also land as two bbox lines, so a bare "2.1." opens the section.
-                if "..." in flat:
-                    continue
+                if "..." in flat or re.search(r"\.( \.){3,}", flat):
+                    continue  # a table-of-contents row, with either dot leader style
                 if re.fullmatch(r"\d\.\d", needle):
                     started = bool(re.match(rf"^{re.escape(needle)}\.(\s|$)", flat))
+                elif section_anchor.isupper():
+                    # An all-caps course heading stands alone on its line; requiring an
+                    # exact match keeps "Física y Química" in a contents row from opening it.
+                    started = flat == section_anchor
                 else:
                     started = needle in flat.lower()
                 continue
             if not re.match(rf"^{number}\.\s+\S", flat):
                 continue
+            page = column_view(full_page, anchor_line)
+            lidx = page["lines"].index(anchor_line)
+            line = anchor_line
             # The question ends where the next number, or the next section, starts —
             # possibly only after a page break, so collect one segment per page.
             segments: list[tuple[int, float, float, float, float]] = []
             start_line = lidx
             for seg_page_idx in range(pidx, min(pidx + 3, len(pages))):
-                seg_page = pages[seg_page_idx]
+                seg_page = page if seg_page_idx == pidx else column_view(
+                    pages[seg_page_idx], anchor_line)
                 end_y = seg_page["height"]
                 closed = False
                 for j in range(start_line + (1 if seg_page_idx == pidx else 0), len(seg_page["lines"])):
                     nxt = " ".join(seg_page["lines"][j]["text"].split())
-                    if (re.match(rf"^{number + 1}\.\s+\S", nxt)
+                    # Any following numbered line inside this column ends the
+                    # question — the next one is not always `number + 1`, since a
+                    # two-column page interleaves the two halves of the exam.
+                    numbered = re.match(r"^(\d{1,3})\.\s+\S", nxt)
+                    if ((numbered and int(numbered.group(1)) != number)
                             or re.match(r"^\d\.\d\.(\s|$)", nxt)
                             or nxt.startswith(("Enunciados de la", "Solución de la"))):
                         end_y = seg_page["lines"][j]["ymin"]
@@ -191,7 +205,7 @@ def find_numbered(pages: list[dict], section_anchor: str, number: int) -> list[t
                 seg_bottom = (end_y - 8) if closed else (max(l["ymax"] for l in body) + 4)
                 seg_left = min(l["xmin"] for l in body)
                 segments.append((seg_page_idx, seg_top, seg_bottom,
-                                 seg_left, seg_page["width"] - max(0.0, seg_left - 6)))
+                                 seg_left, column_right(seg_page, seg_left)))
                 if closed:
                     break
                 start_line = 0
@@ -271,6 +285,8 @@ def main() -> None:
     ap.add_argument("--out", type=Path)
     ap.add_argument("--dpi", type=int, default=200)
     ap.add_argument("--pad", type=float, default=6.0, help="horizontal padding, in points")
+    ap.add_argument("--pad-bottom", type=float, default=0.0,
+                    help="extra points below the band, for figures that overlap the alternatives")
     ap.add_argument("--mode", choices=("figure", "whole", "numbered"), default="figure",
                     help="'figure' crops only the drawing; 'whole' bakes statement + alternatives")
     ap.add_argument("--list-only", action="store_true")
@@ -307,6 +323,7 @@ def main() -> None:
             raise SystemExit(f"--mode {args.mode} needs --anchor")
         locate = find_whole if args.mode == "whole" else find_band
         pidx, top, bottom, left, right = locate(pages, args.anchor)
+        bottom += args.pad_bottom
     print(f"page {pidx + 1}: y {top:.1f}..{bottom:.1f}  x {left:.1f}..{right:.1f}", file=sys.stderr)
     if args.list_only or not args.out:
         return

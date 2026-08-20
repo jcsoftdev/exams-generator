@@ -1,0 +1,174 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2020-1-image/arit-2020-mat-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "uni-2020-1-image/arit-2020-mat-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2020-1-image/alg-2020-mat-11.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "uni-2020-1-image/alg-2020-mat-12.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 12 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2020-1-image/alg-2020-mat-14.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 14 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2020-1-image/alg-2020-mat-19.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 19 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2020-1-image/alg-2020-mat-20.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 20 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2020-1-image/geo-2020-mat-24.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 24 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "uni-2020-1-image/geo-2020-mat-27.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 27 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2020-1-image/geo-2020-mat-28.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 28 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2020-1-image/trig-2020-mat-33.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2020-1-image/trig-2020-mat-34.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "uni-2020-1-image/trig-2020-mat-36.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 36 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2020-1-image/trig-2020-mat-37.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 37 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2020-1-image/fis-2020-fis-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Física, pregunta 1 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2020-1-image/fis-2020-fis-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Física, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2020-1-image/fis-2020-fis-14.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Física, pregunta 14 (clave B)"
+    }
+  ]
+}
