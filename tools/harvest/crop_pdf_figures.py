@@ -167,7 +167,9 @@ def find_numbered(pages: list[dict], section_anchor: str, number: int) -> list[t
                 else:
                     started = needle in flat.lower()
                 continue
-            if not re.match(rf"^{number}\.\s+\S", flat):
+            # Some processes print question numbers zero-padded ("01."), so a bare
+            # `^1\.` walks straight past the enunciados into the solutions.
+            if not re.match(rf"^0*{number}\.\s+\S", flat):
                 continue
             page = column_view(full_page, anchor_line)
             lidx = page["lines"].index(anchor_line)
@@ -186,7 +188,7 @@ def find_numbered(pages: list[dict], section_anchor: str, number: int) -> list[t
                     # Any following numbered line inside this column ends the
                     # question — the next one is not always `number + 1`, since a
                     # two-column page interleaves the two halves of the exam.
-                    numbered = re.match(r"^(\d{1,3})\.\s+\S", nxt)
+                    numbered = re.match(r"^0*(\d{1,3})\.\s+\S", nxt)
                     if ((numbered and int(numbered.group(1)) != number)
                             or re.match(r"^\d\.\d\.(\s|$)", nxt)
                             or nxt.startswith(("Enunciados de la", "Solución de la"))):

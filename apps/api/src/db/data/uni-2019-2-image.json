@@ -1,0 +1,614 @@
+{
+  "entries": [
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2019-2-image/arit-uni-2019-2-mat-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 2 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/arit-uni-2019-2-mat-04.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-06.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-07.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 7 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/arit-uni-2019-2-mat-08.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 8 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-09.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 9 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-10.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-11.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 11 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-12.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "uni-2019-2-image/geo-uni-2019-2-mat-13.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 13 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-14.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/arit-uni-2019-2-mat-15.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 15 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-16.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 16 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-17.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 17 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-18.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-19.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 19 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/arit-uni-2019-2-mat-20.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/alg-uni-2019-2-mat-21.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/geo-uni-2019-2-mat-22.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Matemáticas, pregunta 22 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 1 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-04.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 5 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-06.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 6 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-07.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 7 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-08.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-09.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 9 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-10.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 10 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-11.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-12.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 12 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-13.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 13 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-14.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-15.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 15 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-16.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-17.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-18.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-19.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 19 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "uni-2019-2-image/fis-uni-2019-2-fis-20.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Física, pregunta 20 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-21.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 21 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-22.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 22 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-23.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-24.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 24 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-25.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-26.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 26 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-27.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-28.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 28 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-29.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 29 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-30.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Unidades químicas de masa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-31.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 31 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-33.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Unidades químicas de masa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-34.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 34 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-35.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 35 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-36.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 36 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-37.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-38.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 38 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-39.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 39 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "uni-2019-2-image/quim-uni-2019-2-qui-40.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-2, Química, pregunta 40 (clave C)"
+    }
+  ]
+}
