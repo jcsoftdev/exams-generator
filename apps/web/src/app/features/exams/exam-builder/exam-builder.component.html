@@ -213,6 +213,18 @@
           </span>
         </div>
       }
+      <!-- Audit 2026-08-20 (M8): the per-course rounding may not hit the requested total exactly — say so instead of letting the teacher believe they got what they typed. -->
+      @if (templateDistributionShortfall(); as shortfall) {
+        <p
+          data-testid="template-distribution-note"
+          class="rounded-card border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-n800"
+        >
+          La plantilla repartió <strong>{{ shortfall.distributed }}</strong> preguntas de las
+          <strong>{{ shortfall.requested }}</strong> que pediste — el reparto entre cursos no da un
+          número exacto. Ajusta cualquier celda a mano si necesitas exactamente
+          {{ shortfall.requested }}.
+        </p>
+      }
 
       <!-- Expand/collapse controls — fold away courses the teacher isn't filling (design doc §5.1 "árbol") -->
       <div data-testid="tree-controls" class="flex items-center gap-2">

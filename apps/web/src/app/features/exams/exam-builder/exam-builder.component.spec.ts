@@ -1686,6 +1686,57 @@ describe('ExamBuilderComponent', () => {
       expect(resolveBlueprint).toHaveBeenCalledTimes(1);
       expect(resolveBlueprint.mock.calls[0][0]).toMatchObject({ totalQuestionsOverride: 120 });
     });
+
+    /**
+     * Audit 2026-08-20 (M8), reproducido en vivo: pedir 30 preguntas repartió
+     * 29 ("29 preguntas pedidas en 29 celdas") sin explicación — el docente
+     * cree que pidió 30. El redondeo del reparto entre cursos es legítimo;
+     * callárselo no.
+     */
+    it('avisa cuando la plantilla reparte menos preguntas de las pedidas', () => {
+      const resolveBlueprint = vi.fn((_payload: ResolveBlueprintPayload) =>
+        resolveCon([{ courseId: 'c1', count: 29, difficulty: Difficulty.Medium }])(),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      setTotalQuestionsOverride(compiled, fixture, '30');
+      vi.advanceTimersByTime(TEMPLATE_RELOAD_DEBOUNCE_MS);
+      fixture.detectChanges();
+
+      const note = compiled.querySelector('[data-testid="template-distribution-note"]');
+      expect(note).toBeTruthy();
+      expect(note!.textContent).toContain('29');
+      expect(note!.textContent).toContain('30');
+    });
+
+    it('no muestra la nota de reparto cuando la plantilla reparte exactamente lo pedido', () => {
+      const resolveBlueprint = vi.fn((_payload: ResolveBlueprintPayload) =>
+        resolveCon([{ courseId: 'c1', count: 30, difficulty: Difficulty.Medium }])(),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      setTotalQuestionsOverride(compiled, fixture, '30');
+      vi.advanceTimersByTime(TEMPLATE_RELOAD_DEBOUNCE_MS);
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="template-distribution-note"]')).toBeFalsy();
+    });
+
+    it('no muestra la nota de reparto cuando no se pidió una cantidad total', () => {
+      const resolveBlueprint = vi.fn((_payload: ResolveBlueprintPayload) =>
+        resolveCon([{ courseId: 'c1', count: 29, difficulty: Difficulty.Medium }])(),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      expect(compiled.querySelector('[data-testid="template-distribution-note"]')).toBeFalsy();
+    });
   });
 
   describe('tipo de examen — cargar plantilla', () => {

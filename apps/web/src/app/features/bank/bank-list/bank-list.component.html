@@ -172,9 +172,9 @@
                               <div class="min-w-0 flex-1">
                                 @if (questionSnippet(q); as snippet) {
                                   <p data-testid="question-snippet" class="truncate text-sm font-medium text-n900">{{ snippet }}</p>
-                                  <p class="truncate text-xs text-n500">Clave: {{ q.correctAnswer }}</p>
+                                  <p class="truncate text-xs text-n500">Clave: {{ correctAnswerLabel(q.correctAnswer) }}</p>
                                 } @else {
-                                  <p class="truncate text-sm font-medium text-n900">Clave: {{ q.correctAnswer }}</p>
+                                  <p class="truncate text-sm font-medium text-n900">Clave: {{ correctAnswerLabel(q.correctAnswer) }}</p>
                                 }
                               </div>
                               <ui-tag [variant]="tagVariantFor(q.difficulty)">{{ difficultyLabel(q.difficulty) }}</ui-tag>
@@ -386,8 +386,8 @@
                 }
               </div>
               <dl class="mb-4 space-y-1 text-sm text-n700">
-                <div class="flex gap-2"><dt class="text-n500">Clave:</dt><dd>{{ q.correctAnswer }}</dd></div>
-                <div class="flex gap-2"><dt class="text-n500">Grado:</dt><dd>{{ q.gradeLevel }}</dd></div>
+                <div class="flex gap-2"><dt class="text-n500">Clave:</dt><dd>{{ correctAnswerLabel(q.correctAnswer) }}</dd></div>
+                <div class="flex gap-2"><dt class="text-n500">Grado:</dt><dd>{{ gradeLevelLabel(q.gradeLevel) }}</dd></div>
                 <div class="flex gap-2"><dt class="text-n500">Usada en:</dt><dd>{{ q.usedInExamCount ?? 0 }} exámenes</dd></div>
               </dl>
 

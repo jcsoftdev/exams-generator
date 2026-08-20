@@ -18,7 +18,11 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${DB_USER:-exams}
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-exams}
+      # No dev fallback in PRODUCTION (audit 2026-08-20 H4): the old
+      # `:-exams` default meant a missing Dokploy env var silently booted
+      # prod with the password published in this repo — on a Docker network
+      # shared with unrelated projects. Same `:?` pattern as JWT_SECRET.
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD must be set}
       POSTGRES_DB: ${DB_NAME:-exams_generator}
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -29,12 +33,18 @@ services:
       retries: 10
 
   exams-minio:
-    image: minio/minio:latest
+    # Pinned (audit 2026-08-20 M11): `latest` let any pull change the MinIO
+    # version under prod's feet. This tag is the exact release the local
+    # `minio/minio:latest` resolved to on 2026-08-20 — proven against the
+    # existing data volume. Bump deliberately.
+    image: minio/minio:${MINIO_VERSION:-RELEASE.2025-09-07T16-13-09Z}
     restart: unless-stopped
     command: server /data --console-address ":9001"
     environment:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
-      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
+      # Same reasoning as DB_PASSWORD above — `minioadmin` is the single
+      # best-known default credential in existence.
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:?MINIO_ROOT_PASSWORD must be set}
     volumes:
       - minio_data:/data
     healthcheck:
@@ -46,11 +56,17 @@ services:
   exams-redis:
     image: redis:7.4-bookworm
     restart: unless-stopped
-    command: redis-server --appendonly yes
+    # `--requirepass` (audit 2026-08-20 H4): this container sits on the
+    # shared dokploy-network — the header comment above documents actual
+    # cross-project name resolution on that network, so an unauthenticated
+    # Redis here is readable/writable by any co-hosted project.
+    command: ["sh", "-c", "exec redis-server --appendonly yes --requirepass \"$$REDIS_PASSWORD\""]
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD:?REDIS_PASSWORD must be set}
     volumes:
       - redis_data:/data
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
+      test: ["CMD-SHELL", "redis-cli --no-auth-warning -a \"$$REDIS_PASSWORD\" ping | grep -q PONG"]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -81,6 +97,9 @@ services:
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
       REDIS_HOST: exams-redis
       REDIS_PORT: 6379
+      # Consumed by resolveRedisConnection() (common/queue.env.ts) for every
+      # Redis client: BullMQ, /health ping, login-exchange.
+      REDIS_PASSWORD: ${REDIS_PASSWORD:?REDIS_PASSWORD must be set}
       JWT_SECRET: ${JWT_SECRET:?JWT_SECRET must be set}
       AI_MODEL: ${AI_MODEL}
       AI_VISION_MODEL: ${AI_VISION_MODEL}

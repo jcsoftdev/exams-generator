@@ -1,0 +1,2849 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "456 est divisible par 3 .",
+        "754 est divisible par 4 .",
+        "5552 est divisible par 5 .",
+        "987 est divisible par 9 ."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 3 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quel est le reste r dans la division euclidienne de 145 par 13 ?",
+      "alternatives": [
+        "r=0",
+        "r=2",
+        "r=7",
+        "r=-11"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 4 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit a=bq+r la division euclidienne de a par b . Quelle condition définit le reste r ?",
+      "alternatives": [
+        "0 ≤ r < a",
+        "0 ≤ r < b",
+        "0 ≤ r ≤ q",
+        "0 ≤ r < q"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 5 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère a,b et n des entiers tels que a | n et b | n . Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "a+b | n",
+        "a × b | n",
+        "a+b | n²",
+        "a × b | n²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 11 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient a,b,c des entiers tels que a | bc . Dans le lemme de Gauss, quelle est la condition pour pouvoir conclure que a|c ?",
+      "alternatives": [
+        "pgcd (a,b)=1",
+        "pgcd (a,c)=1",
+        "pgcd (b,c)=1",
+        "a , b et c sont des nombres premiers."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 16 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient deux entiers positifs a,b , on calcule le pgcd de a et b par l'algorithme d'Euclide. La première étape est d'écrire la division euclidienne de a par b : a=bq+r . Quelle est la second étape ?",
+      "alternatives": [
+        "La division de a par r .",
+        "La division de b par r .",
+        "La division de q par r .",
+        "Cela dépend des valeurs de a et b ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 18 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient deux entiers positifs a,b et d= pgcd (a,b) . Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "Il existe u,v∈ℤ uniques tels que au+bv=d .",
+        "Il existe u,v∈ℤ tels que au+bv=d .",
+        "Il existe u,v∈ℕ uniques tels que au+bv=d .",
+        "Il existe u,v∈ℕ tels que au+bv=d ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 19 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pour a=453 et b=201 , l'algorithme d'Euclide (étendu) fournit des coefficients de Bézout u et v tels que au+bv= pgcd (a,b) avec :",
+      "alternatives": [
+        "u=4 , v=-9 , pgcd (a,b)=1 .",
+        "u=-12 , v=27 , pgcd (a,b) = 51 .",
+        "u=1 , v=-2 , pgcd (a,b)=51",
+        "u=4 , v=-9 , pgcd (a,b)=3 ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 20 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Les entiers suivants sont-ils des nombres premiers ?",
+      "alternatives": [
+        "161",
+        "169",
+        "171",
+        "179"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 29 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient p un nombre premier et a,b des entiers avec p | ab . Par application du lemme d'Euclide, quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "p divise a et p divise b .",
+        "p divise a ou p divise b .",
+        "p divise a ou p divise b , mais pas les deux en même temps.",
+        "p ne divise ni a , ni b ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 31 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit n un entier tel que n²-1 est un multiple de 11 . Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "11 divise n-1 .",
+        "11 divise n+1 .",
+        "( 11 divise n-1 ) ou ( 11 divise n+1 ).",
+        "( 11 divise n-1 ) et ( 11 divise n+1 )."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 32 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "À l'aide d'une calculatrice, quelle est l'écriture de la décomposition en produit de facteurs premiers de N = 111 111 ?",
+      "alternatives": [
+        "N = 11 × 10 101 .",
+        "N = 3 × 11 × 3367 .",
+        "N = 7 × 33 × 481 .",
+        "N = 3 × 7 × 11 × 13 × 3713 ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 33 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Les entiers suivants ont été factorisés correctement. Quelles sont les écritures qui sont des décompositions en facteurs premiers ?",
+      "alternatives": [
+        "3 025 = 1³ × 5² × 11²",
+        "1 836 = 2² × 3 × 3² × 17",
+        "1 444 716 = 2² × 7³ × 9² × 13",
+        "13 915 = 5 × 11² × 23"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 36 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient a = 5³ × 11² × 13⁵ × 19 et b = 5⁵ × 7⁴ × 11 × 19 Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "pgcd (a,b) = 5³ × 7⁴ × 11 × 13⁵ × 19",
+        "pgcd (a,b) = 5 × 11 × 19",
+        "ppcm (a,b) = 5⁵ × 7⁴ × 11² × 13⁵ × 19",
+        "ppcm (a,b) = 5⁵ × 11² × 19"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 37 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit a = 79 475 = 5² × 11 × 17² . Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "pgcd (a,75) = 3 × 5²",
+        "pgcd (a,75) = 5²",
+        "ppcm (a,75) = 3 × 11 × 17²",
+        "75 | a"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 38 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "456 789 ≡ 0 [2]",
+        "43 210 ≡ 0 [5]",
+        "23 769 ≡ 3 [9]",
+        "10 326 ≡ 8 [10]"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 41 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Parmi les nombres n ci-dessous, lequel vérifie à la fois n ≡ 5 [14] et n ≡ 1 [8] ?",
+      "alternatives": [
+        "n=47",
+        "n=57",
+        "n=89",
+        "n=103"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 43 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit n un entier premier avec 3 . On peut alors affirmer :",
+      "alternatives": [
+        "2n ≡ 1 [3]",
+        "2n ≡ -1 [3]",
+        "n² ≡ 1 [3]",
+        "n² ≡ -1 [3]"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 46 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit p un nombre premier et x un entier. Quel(s) énoncé(s) du petit théorème de Fermat sont corrects ?",
+      "alternatives": [
+        "xᵖ ≡ p [x]",
+        "xᵖ ≡ x [p]",
+        "Si p ne divise pas x , alors xᵖ⁻¹ ≡ 0 [x]",
+        "Si p ne divise pas x , alors xᵖ⁻¹ ≡ 0 [p]"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 48 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "2⁸ ≡ 2 [8]",
+        "3¹² ≡ 3 [13]",
+        "18⁷ ≡ 1 [19]",
+        "4¹⁶ ≡ 1 [17]"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 49 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quel est le chiffre des unités de 7¹⁰⁰ ?",
+      "alternatives": [
+        "1",
+        "3",
+        "5",
+        "9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-arithmetique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Arithmétique, pregunta 52 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère l'assertion \" non(P) et Q \". Quand est-ce que cette assertion est vraie ?",
+      "alternatives": [
+        "Si P vraie et Q vraie.",
+        "Si P vraie et Q fausse.",
+        "Si P fausse et Q vraie.",
+        "Si P fausse et Q fausse."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 6 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En 1761, le mathématicien suisse Lambert, ami d'Euler, démontre l'implication I : \" x ∈ ℚ ⇒ tan (x) ∉ ℚ \". Il remarque ensuite que 1 = tan ((π)/(4)) . Qu'en conclut-il ?",
+      "alternatives": [
+        "D'après I , tan ((π)/(4)) ∉ ℚ .",
+        "D'après la contraposée de I , tan ((π)/(4)) ∉ ℚ .",
+        "D'après la contraposée de I , (π)/(4) ∈ ℚ .",
+        "D'après la contraposée de I , (π)/(4) ∉ ℚ ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 16 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quels sont les ensembles qui contiennent l'intervalle [0,2] ?",
+      "alternatives": [
+        "[-3,3] ∩ ]-1,5]",
+        "ℝ ∖ ]1,3[",
+        "]0,1[ ∪ ]1,2]",
+        "{0,1,2}"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 19 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit la fonction réelle définie par f(x) = 2x . Soit x∈ℝ . On a :",
+      "alternatives": [
+        "(f ∘ f) (x) = 4x²",
+        "(f ∘ f) (x) = 4x",
+        "(f ∘ f) ∘ f (x) = 6x",
+        "(f ∘ f ∘ f) (x) = 8x³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 24 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient les ensembles A = [1,3] et B= { 0 , 1 , 2 , 3 } . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "B ⊂ A",
+        "A ⊂ B",
+        "A ∖ B = ]1,3[",
+        "A ∩ B = { 1,2,3 }"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 25 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Les fonctions suivantes sont-elles définies sur l'ensemble associé ?",
+      "alternatives": [
+        "x ↦ ln (|x-3|) sur ℝ",
+        "x ↦ √(1-x²) sur [-1,1]",
+        "x ↦ (1)/(x²-4) sur ℝ ∖ { 2 }",
+        "x ↦ (1)/( sin (π x)) sur ℝ^*"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 27 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient f,g,h des fonctions définies par f(x) = x²-3x g(x) = 2x+1 h(x) = (x)/(x-1). Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "(f ∘ g)(x) =4x²-2x+4",
+        "(g ∘ f)(x) = 2x²+5",
+        "(h ∘ f)(x) = ((x)/(x-1) )² - (3x)/(x-1)",
+        "(g ∘ h)(x) = (3x-1)/(x-1)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 28 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient les fonctions réelle définies par f(x) = 3x+2 et g(x) = ax + b . Pour quelle(s) valeur(s) des réels a et b a-t-on g ∘ f (x) = 6x + 7 ?",
+      "alternatives": [
+        "a=1 et b=3",
+        "a=1 et b=5",
+        "a=2 et b=3",
+        "a=2 et b=5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 33 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Les fonctions f et g définies par les expressions suivantes sont-elles bijections réciproques l'une de l'autre ? (On ne se préoccupera pas des ensembles de départ et d'arrivée.)",
+      "alternatives": [
+        "f(x) = exp (2x) et g(x) = ln ((1)/(2)x)",
+        "f(x) = cos (x-1) et g(x) = sin (x+1)",
+        "f(x) = (1)/(1+x) et g(x) = (1-x)/(x)",
+        "f(x)= √(2x+1) et g(x) = (1)/(2)x²-1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 35 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit la fonction réelle définie par f(x) = x² - x - 2 . Pour quelle fonction u a-t-on f ∘ u (x) = 9(x²+x) ?",
+      "alternatives": [
+        "u(x) = 9x",
+        "u(x) = 3x+2",
+        "u(x) = -3x",
+        "u(x) = 9x+2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 39 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pour montrer que √(2) est un nombre irrationnel une preuve classique utilise :",
+      "alternatives": [
+        "Un raisonnement par contraposition.",
+        "Un raisonnement par disjonction.",
+        "Un raisonnement par l'absurde.",
+        "Un raisonnement par récurrence."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 40 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pour montrer que pour tout x∈ℝ et tout n∈ℕ on a (1+x)ⁿ ≥ 1+nx , quelle est la démarche la plus adaptée ?",
+      "alternatives": [
+        "On fixe x , on fait une récurrence sur n .",
+        "On fixe n , on fait une récurrence sur x .",
+        "Par l'absurde on suppose (1+x)ⁿ < 1+nx .",
+        "Par disjonction des cas n pair/ n impair."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 41 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On voudrait montrer que pour tout n∈ℕ^* on a 2ⁿ⁻¹ ≤ nⁿ . Quel type de raisonnement vous parait adapté ?",
+      "alternatives": [
+        "Un raisonnement par contraposition.",
+        "Un raisonnement par disjonction : n pair/ n impair.",
+        "Un raisonnement par l'absurde.",
+        "Un raisonnement par récurrence."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 42 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit x un réel. On définit une suite par u₀=x et, pour tout entier n∈ ℕ , uₙ₊₁=xuₙ .",
+      "alternatives": [
+        "On montre par récurrence sur n que uₙ=xⁿ pour tout entier n .",
+        "On montre par récurrence sur x que uₙ=xⁿ pour tout entier n .",
+        "On montre par récurrence sur n que uₙ=xⁿ⁺¹ pour tout entier n .",
+        "On montre par récurrence sur x que uₙ=xⁿ⁺¹ pour tout entier n ."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 43 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On commence une démonstration par l'absurde avec la rédaction suivante : \"Supposons que log ₁₀(3) ∈ ℚ . Alors on peut écrire log ₁₀(3) = (p)/(q) avec ...\". Que cherche-t-on à démontrer ?",
+      "alternatives": [
+        "log ₁₀(3) ∈ ℚ",
+        "log ₁₀(3) ∉ ℚ",
+        "log ₁₀(3) ∈ ℝ",
+        "log ₁₀(3) ∉ ℝ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 44 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On souhaite prouver par récurrence, pour tout n≥0 , une proposition Pₙ . Après avoir prouvé P₀ , quelle rédaction du démarrage de l'étape d'hérédité convient ?",
+      "alternatives": [
+        "Soit n≥0 . Je prouve P₁ .",
+        "Soit n≥0 . Je suppose Pₙ vraie et je montre Pₙ₊₁ .",
+        "Soit n≥0 . Je suppose Pₙ vraie pour tout n et je montre Pₙ₊₁ .",
+        "Soit n≥0 . Je suppose Pₙ₊₁ vraie et je montre Pₙ ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 45 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pour montrer que √(3) est un nombre irrationnel, je commence une démonstration par l'absurde en écrivant :",
+      "alternatives": [
+        "Je suppose √(3)∈ℚ et je cherche une contradiction.",
+        "Je suppose √(3)∉ℚ et je cherche une contradiction.",
+        "Je suppose √(3)∉ℝ et je cherche une contradiction.",
+        "Je suppose que √(3) n'existe pas et je cherche une contradiction."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 46 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quel type de raisonnement est adapté pour montrer qu'il existe une infinité de nombres premiers ?",
+      "alternatives": [
+        "Au cas par cas : on étudie n=2 , n=3 , n=5 ,...",
+        "Par récurrence sur n parcourant l'ensemble des nombres premiers.",
+        "Par l'absurde en supposant qu'il n'existe qu'un nombre fini de nombres premiers.",
+        "C'est une propriété que l'on ne sait pas démontrer."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 47 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pour montrer que les solutions réelles de l'équation | x+1| =2 sont 1 et -3 , on peut utiliser :",
+      "alternatives": [
+        "Un raisonnement par contraposition.",
+        "Un raisonnement par disjonction des cas.",
+        "Un raisonnement par l'absurde.",
+        "Un raisonnement par récurrence."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 48 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient a et b deux nombres réels. On considère la proposition suivante : \"si a+b est irrationnel, alors a est irrationnel ou b est irrationnel\". Comment puis-je montrer cette affirmation par contraposée ?",
+      "alternatives": [
+        "Je prends deux rationnels a et b et je montre que a+b est rationnel.",
+        "Je prends deux irrationnels a et b et je montre que a+b est irrationnel.",
+        "Je prends un irrationnel et j'essaie de l'écrire sous la forme a+b avec a et b irrationnels.",
+        "Je prends deux rationnels a et b et je montre que a+b est irrationnel."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 49 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Téo et Théa jouent à un jeu de société. Téo est proche de la victoire ; il doit lancer un dé et Théa remarque avec raison que : \"si Téo fait 4, alors il gagne le jeu\". Quelles sont les affirmations certaines ?",
+      "alternatives": [
+        "Si Téo fait 3, alors il n'aura pas gagné.",
+        "Si Téo gagne, c'est qu'il a fait 4.",
+        "Si Téo ne gagne pas, c'est qu'il n'a pas fait 4.",
+        "Si Téo gagne fait 5, il perd."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 50 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pour montrer une implication P ⇒ Q par contraposition :",
+      "alternatives": [
+        "Je suppose P et je montre Q .",
+        "Je suppose Q et je montre P .",
+        "Je suppose non(P) et je montre non(Q) .",
+        "Je suppose non(Q) et je montre non(P) ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 52 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pour montrer que 4ⁿ > 20n pour des entiers n naturles suffisamment grands je fais une preuve par récurrence. Je peux commencer l'initialisation avec :",
+      "alternatives": [
+        "n=0",
+        "n=1",
+        "n=2",
+        "n=3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 54 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit n≥2 un entier. Que pensez-vous du raisonnement par récurrence suivant : on note Pₙ la propriété \" n points distincts quelconques dans le plan sont toujours alignés\". Initialisation : pour n=2 , la propriété est vraie. En effet, deux points distincts du plan sont toujours alignés. Hérédité : soit n un entier naturel quelconque supérieur ou égal à deux. Supposons la propriété Pₙ vraie. Soient n+1 points quelconques du plan, A₁ , A₂ ,…, Aₙ , Aₙ₊₁ , tous distincts. D'après l'hypothèse de récurrence, les n points A₁ , A₂ ,…, Aₙ sont alignés. Ils le sont donc sur la droite (A₂Aₙ) . De même, les n points A₂ , …, Aₙ , Aₙ₊₁ sont alignés. Ils le sont donc également sur la droite (A₂Aₙ) . On en déduit donc que les n+1 points sont tous sur la droite (A₂Aₙ) , donc ils sont alignés. La propriété Pₙ₊₁ est donc vraie, d'où la propriété est héréditaire. En conclusion, on a montré par récurrence que Pₙ est vraie pour tout entier n≥ 2 : n points distincts du plan sont toujours alignés.",
+      "alternatives": [
+        "Le raisonnement par récurrence est juste donc le résultat est juste.",
+        "Le raisonnement par récurrence est juste mais le résultat est faux.",
+        "Il y a une erreur dans l'étape d'hérédité.",
+        "Il y a une erreur dans l'étape d'initialisation."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-hilisit/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique, ensembles et raisonnements, pregunta 56 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "La négation de \" ∀ x > 0 ln (x) ≤ x \" est \" ∃ x ≤ 0 ln (x) ≤ x \".",
+        "La négation de \" ∃ x > 0 ln (x²) ≠ x \" est \" ∀ x > 0 ln (x²) = x \".",
+        "La négation de \" ∀ x ≥ 0 exp (x) ≥ x \" est \" ∃ x ≥ 0 exp (x) ≤ x \".",
+        "La négation de \" ∃ x > 0 exp (x) > x \" est \" ∀ x > 0 exp (x) < x \"."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 6 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "À quoi est équivalent P ⇒ Q ?",
+      "alternatives": [
+        "non( P ) ou non( Q )",
+        "non( P ) et non( Q )",
+        "non( P ) ou Q",
+        "P et non( Q )"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 10 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "À quoi est équivalent P ⟸ Q ?",
+      "alternatives": [
+        "non( Q ) ou P",
+        "non( Q ) et P",
+        "non( P ) ou Q",
+        "non( P ) et Q"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 15 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f : ]0,+∞[ → ]0,+∞[ une fonction. Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "La négation de \" ∀ x > 0 ∃ y > 0 y ≠ f(x) \" est \" ∃ x > 0 ∃ y > 0 y = f(x) \".",
+        "La négation de \" ∃ x > 0 ∀ y > 0 y × f(x)>0 \" est \" ∀ x > 0 ∃ y > 0 y × f(x) < 0 \".",
+        "La négation de \" ∀ x,x' > 0 x ≠ x' ⇒ f(x) ≠ f(x') \" est \" ∃ x,x' > 0 x = x' et f(x) = f(x') \".",
+        "La négation de \" ∀ x,x' > 0 f(x) = f(x') ⇒ x = x' \" est \" ∃ x,x' > 0 x ≠ x' et f(x) = f(x') \"."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 18 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Je veux montrer que (n(n+1))/(2) est un entier, quelque soit n∈ℕ . Quelles sont les démarches possibles ?",
+      "alternatives": [
+        "Montrer que la fonction x ↦ x(x+1) est paire.",
+        "Séparer le cas n pair, du cas n impair.",
+        "Par l'absurde, supposer que (n(n+1))/(2) est un réel, puis chercher une contradiction.",
+        "Le résultat est faux, je cherche un contre-exemple."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 19 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Je veux montrer par récurrence l'assertion Hₙ : 2ⁿ > 2n+1 , pour tout entier n assez grand. Quelle étape d'initialisation est valable ?",
+      "alternatives": [
+        "Je commence à n=0 .",
+        "Je commence à n=1 .",
+        "Je commence à n=2 .",
+        "Je commence à n=3 ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 20 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Je veux montrer par récurrence l'assertion Hₙ : 2ⁿ > 2n+1 , pour tout entier n assez grand. Pour l'étape d'hérédité je suppose Hₙ vraie, quelle(s) inégalité(s) dois-je maintenant démontrer ?",
+      "alternatives": [
+        "2ⁿ⁺¹ > 2n+3",
+        "2ⁿ > 2n+1",
+        "2ⁿ > 2(n+1)+1",
+        "2ⁿ+1 > 2(n+1)+1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 21 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Chercher un contre-exemple à une assertion du type \" ∀ x ∈ E l'assertion P(x) est vraie\" revient à prouver l'assertion :",
+      "alternatives": [
+        "∃! x ∈ E l'assertion P(x) est fausse.",
+        "∃ x ∈ E l'assertion P(x) est fausse.",
+        "∀ x ∉ E l'assertion P(x) est fausse.",
+        "∀ x ∈ E l'assertion P(x) est fausse."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 22 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "J'effectue le raisonnement suivant avec deux fonctions f,g : ℝ → ℝ . ∀ x ∈ ℝ f(x) × g(x) = 0 ⇒ ∀ x ∈ ℝ (f(x) = 0 ou g(x) = 0 ) ⇒ (∀ x ∈ ℝ f(x) = 0 ) ou (∀ x ∈ ℝ g(x) = 0 )",
+      "alternatives": [
+        "Ce raisonnement est valide.",
+        "Ce raisonnement est faux car la première implication est fausse.",
+        "Ce raisonnement est faux car la seconde implication est fausse.",
+        "Ce raisonnement est faux car la première et la seconde implication sont fausses."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 23 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Je souhaite montrer par récurrence une certaine assertion Hₙ , pour tout entier n≥0 . Quels sont les débuts valables pour la rédaction de l'étape d'hérédité ?",
+      "alternatives": [
+        "Je suppose Hₙ vraie pour tout n≥0 , et je montre que Hₙ₊₁ est vraie.",
+        "Je suppose Hₙ₋₁ vraie pour tout n≥1 , et je montre que Hₙ est vraie.",
+        "Je fixe n≥0 , je suppose Hₙ vraie, et je montre que Hₙ₊₁ est vraie.",
+        "Je fixe n≥0 et je montre que Hₙ₊₁ est vraie."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 24 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Je veux montrer que eˣ > x pour tout x réel avec x ≥ 1 . L'initialisation est vraie pour x=1 , car e¹ = 2,718… >1 . Pour l'hérédité, je suppose eˣ>x et je calcule : eˣ⁺¹ = eˣ × e > x × e ≥ x × 2 ≥ x + 1. Je conclus par le principe de récurrence. Pour quelles raisons cette preuve n'est pas valide ?",
+      "alternatives": [
+        "Car il faudrait commencer l'initialisation à x=0 .",
+        "Car x est un réel.",
+        "Car l'inégalité eˣ > x est fausse pour x≤0 .",
+        "Car la suite d'inégalités est fausse."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 25 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Le raisonnement par contraposée est basé sur le fait que \" P ⇒ Q \" est équivalent à:",
+      "alternatives": [
+        "\"non( P ) ⇒ non( Q )\".",
+        "\"non( Q ) ⇒ non( P )\".",
+        "\"non( P ) ou Q \".",
+        "\" P ou non( Q )\"."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 27 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "La négation de \" P ⇒ Q \" est \"non( Q ) ou P \"",
+        "La réciproque de \" P ⇒ Q \" est \" Q ⇒ P \"",
+        "La contraposée de \" P ⇒ Q \" est \"non( P ) ⇒ non( Q )\"",
+        "L'assertion \" P ⇒ Q \" est équivalente à \"non( P ) ou non( Q )\""
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-logique.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Logique -- Raisonnement, pregunta 29 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A={x∈ ℝ| (x+8)²=9²} . Sous quelle forme peut-on encore écrire l'ensemble A ?",
+      "alternatives": [
+        "A={1}",
+        "A=∅",
+        "A={-17}",
+        "A={1,-17}"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 1 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit E={a,b,c} . Quelle écriture est correcte ?",
+      "alternatives": [
+        "{a}∈ E",
+        "a⊂ E",
+        "a∈ E",
+        "{a,b}∈ E"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 2 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A={1,2} , B= {{1},{2} } et C= {{1},{1,2} } . Cochez la bonne réponse :",
+      "alternatives": [
+        "A=B",
+        "A⊂ B",
+        "A∈ C",
+        "A⊂ C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 3 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A=[1,3] et B=[2,4] . Quelle est l'intersection de A et B ?",
+      "alternatives": [
+        "A∩ B=∅",
+        "A∩ B=[2,3]",
+        "A∩ B=[1,4]",
+        "A∩ B=A"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 4 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A=[-1,3] et B=[0,4] . Cochez la bonne réponse :",
+      "alternatives": [
+        "A∪ B=∅",
+        "A∪ B=[0,3]",
+        "A∪ B=[-1,0]",
+        "A∪ B=[-1,4]"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 5 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A={a,b,c} et B={1,2} . Cochez la bonne réponse :",
+      "alternatives": [
+        "{a,1}∈ A × B",
+        "{(a,1)}∈ A × B",
+        "(a,1)∈ A × B",
+        "{a,1}⊂ A × B"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 6 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère l'application f:{1,2,3,4}→ {1,2,3,4} définie par f(1)=2, f(2)=3, f(3)=4, f(4)=2. Quelle est la bonne réponse ?",
+      "alternatives": [
+        "f⁻¹({2})={1}",
+        "f⁻¹({2})={3}",
+        "f⁻¹({2})={4}",
+        "f⁻¹({2})={1,4}"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 9 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère l'application f:ℕ→ ℕ définie par ∀ n∈ ℕ, f(n)=n+1. Quelle est la bonne réponse ?",
+      "alternatives": [
+        "f est surjective et non injective.",
+        "f est injective et non surjective.",
+        "f est bijective.",
+        "f n'est ni injective ni surjective."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 10 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A et B deux ensembles. L'écriture A⊊ B signifie que A est inclus dans B et que A≠ B . On suppose que A∩ B=A∪ B . Que peut-on dire de A et B ?",
+      "alternatives": [
+        "A⊊ B",
+        "B⊊ A",
+        "A≠ B",
+        "A=B"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 11 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient A,B deux parties d'un ensemble E . On note Ā le complémentaire de A dans E . Quelle est la bonne réponse ?",
+      "alternatives": [
+        "A∪ B̄=Ā∪ B̄",
+        "A∪ B̄=Ā∩ B̄",
+        "A∪ B̄=A∩ B",
+        "A∪ B̄=Ā∪ B"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 13 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère l'application f:ℝ→ ℝ définie par ∀ x∈ ℝ, f(x)=x²+1. Quelle est la bonne réponse ?",
+      "alternatives": [
+        "f(ℝ)=ℝ",
+        "f(ℝ)=[0,+∞ [",
+        "f(ℝ)=]1,+∞ [",
+        "f(ℝ)=[1,+∞ ["
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 16 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère l'application f:ℝ∖{2}→ ℝ∖ {1} définie par ∀ x∈ ℝ∖{2}, f(x)=(x+1)/(x-2). Quelle est la bonne réponse ?",
+      "alternatives": [
+        "f n'est pas bijective.",
+        "f est bijective et f⁻¹(x)=(x-2)/(x+1) .",
+        "f est bijective et f⁻¹(x)=(2x+1)/(x-1) .",
+        "f est bijective et f⁻¹(x)=(-x+1)/(-x-2) ."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 20 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A={(x,y)∈ ℝ²| 2x-y=1} et B={(t+1,2t+1)| t∈ ℝ} . Que peut-on dire de A et B ?",
+      "alternatives": [
+        "A⊊ B",
+        "B⊊ A",
+        "A≠ B",
+        "A=B"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 21 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient E et F deux ensembles non vides et f une application de E dans F . Soit A un sous-ensemble de E . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "A=f⁻¹(f(A))",
+        "A⊂ f⁻¹(f(A))",
+        "f⁻¹(f(A))⊂ A",
+        "f⁻¹(f(A))=E∖ A"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 23 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient E et F deux ensembles non vides et f une application de E dans F . Soit B un sous-ensemble de F . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "B=f(f⁻¹(B))",
+        "B⊂ f(f⁻¹(B))",
+        "f(f⁻¹(B))⊂ B",
+        "f(f⁻¹(B))=F∖ B"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 24 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit E un ensemble et A⊂ E avec A≠ E . Comment choisir X⊂ E de sorte que A∩ X=A et A∪ X=E ?",
+      "alternatives": [
+        "X=A",
+        "X=E",
+        "X=∅",
+        "X n'existe pas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 25 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit E un ensemble et A⊂ E avec A≠ E . On note Ā le complémentaire de A dans E . Comment choisir X⊂ E de sorte que A∩ X=∅ et A∪ X=E ?",
+      "alternatives": [
+        "X=A",
+        "X=E",
+        "X=∅",
+        "X=Ā"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 26 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit E un ensemble à n éléments et a∈ E . On note Pₐ(E) l'ensemble des parties de E qui contiennent a . Quel est le cardinal de Pₐ(E) ?",
+      "alternatives": [
+        "Card(Pₐ(E))=n-1",
+        "Card(Pₐ(E))=n",
+        "Card(Pₐ(E))=2ⁿ⁻¹",
+        "Card(Pₐ(E))=2ⁿ"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 27 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit E un ensemble à n éléments et A⊂ E une partie à p < n éléments. On note H(E) l'ensemble des parties de E qui contiennent un et un seul élément de A . Quel est le cardinal de H(E) ?",
+      "alternatives": [
+        "Card(H(E))=p2ⁿ⁻ᵖ",
+        "Card(H(E))=p",
+        "Card(H(E))=p2ᵖ",
+        "Card(H(E))=p2ⁿ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 29 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f:[-1,1]→ [-1,1] l'application définie par ∀ x∈ [-1,1], f(x)=(2x)/(1+x²). Quelle sont les bonnes réponses ?",
+      "alternatives": [
+        "f est injective mais non surjective.",
+        "f est surjective mais non injective.",
+        "f n'est ni injective ni surjective.",
+        "f est bijective et f⁻¹(x)=(x)/(1+√(1-x²)) ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-ensembles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Ensembles, applications, pregunta 30 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit z un nombre complexe de module 2 et d'argument (π)/(4) . L'écriture algébrique de z est :",
+      "alternatives": [
+        "z= √(2)-i√(2)",
+        "z= √(2)+i√(2)",
+        "z= 2+2i",
+        "z= 2-2i"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-nombres-complexes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Nombres complexes, pregunta 3 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit θ ∈ ℝ . e^(iθ)∈ ℝ si et seulement si :",
+      "alternatives": [
+        "θ =0",
+        "θ =2π",
+        "θ = 2kπ , k ∈ ℤ",
+        "θ =kπ , k ∈ ℤ"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-nombres-complexes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Nombres complexes, pregunta 4 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit z₁ et z₂ deux nombres complexes. Alors, |z₁+z₂|² + |z₁-z₂|² est égal à :",
+      "alternatives": [
+        "|z₁|²+|z₂|²",
+        "|z₁|²-|z₂|²",
+        "2|z₁|² +2|z₂|²",
+        "2|z₁|² -2|z₂|²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-nombres-complexes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Nombres complexes, pregunta 9 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère l'équation (E) : (z²+1)²+z²=0, z∈ ℂ . L'ensemble des solutions de (E) est :",
+      "alternatives": [
+        "{ ± (1+√(5))/(2)i , ± (1-√(5))/(2)i}",
+        "{± (1+√(5))/(2) , ± (1-√(5))/(2)}",
+        "{± (1+√(3))/(2)i , ± (1-√(3))/(2)i}",
+        "{± (1+√(3))/(2) , ± (1-√(3))/(2)}"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-nombres-complexes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Nombres complexes, pregunta 25 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit E l'ensemble des points M d'affixe z tels que M et les points A et B d'affixe i et iz respectivement soient alignés. Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "E est la droite passant par les points d'affixe i et -1+i respectivement.",
+        "E est le cercle de rayon (1)/(√(2)) et de centre le point d'affixe (1)/(2)(1+i) .",
+        "E est le cercle de rayon (1)/(2) et de centre le point d'affixe 1+i .",
+        "E est la droite passant par les points d'affixe -i et 1-i respectivement."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-nombres-complexes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Nombres complexes, pregunta 30 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit P(X) = X³-3X²+2 et Q(X) = X³-X+1 . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "Le polynôme P(X) × Q(X) est de degré 9 .",
+        "Le coefficient du monôme X² dans le produit P(X) × Q(X) est 3 .",
+        "Le polynôme P(X) + Q(X) est de degré 3 .",
+        "Le polynôme P(X) - Q(X) est de degré 3 ."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-polynomes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Polynômes -- Fractions rationnelles, pregunta 2 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient A(X) = 2 X⁴ + 3 X³ - 8 X² - 2 X + 1 et B(X) = X²+3X+1 . Soit A = BQ+R la division euclidienne de A par B .",
+      "alternatives": [
+        "Le coefficient du monôme X² de Q est 1 .",
+        "Le coefficient du monôme X de Q est 3 .",
+        "Le coefficient du monôme X de R est 2 .",
+        "Le coefficient constant de R est 2 ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-polynomes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Polynômes -- Fractions rationnelles, pregunta 11 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit P ∈ ℝ[X] un polynôme de degré 8 . Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "P admet exactement 8 racines réelles (comptées avec multiplicité).",
+        "P admet au moins une racine réelle.",
+        "P admet au plus 8 racines réelles (comptées avec multiplicité).",
+        "P admet au moins 8 racines réelles (comptées avec multiplicité)."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-polynomes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Polynômes -- Fractions rationnelles, pregunta 18 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "2X²+3X+1 est irréductible sur ℚ .",
+        "2X²-3X+2 est irréductible sur ℝ .",
+        "2X²-X+3 est irréductible sur ℂ .",
+        "X³+X²+X+4 est irréductible sur ℝ ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-polynomes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Polynômes -- Fractions rationnelles, pregunta 20 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit P(X) = X⁶ + 4 X⁵ + X⁴ - 10 X³ - 4 X² + 8 X .",
+      "alternatives": [
+        "-1 est une racine double.",
+        "0 est une racine double.",
+        "1 est une racine double.",
+        "-2 est une racine double."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-polynomes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Polynômes -- Fractions rationnelles, pregunta 22 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "Les éléments simples sur ℂ sont de la forme (a)/(X-α) , a,α ∈ ℂ .",
+        "Les éléments simples sur ℂ sont de la forme (a)/((X-α)ᵏ) , a,α ∈ ℝ , k∈ℕ^* .",
+        "Les éléments simples sur ℝ peuvent être de la forme (a)/((X-α)ᵏ) , a,α ∈ ℝ .",
+        "Les éléments simples sur ℝ peuvent être de la forme (aX+b)/(X-α) , a,b,α ∈ ℝ ."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-polynomes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Polynômes -- Fractions rationnelles, pregunta 25 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit F(X) = (X-1)/(X(X²+1)²) . On écrit F(X) = (a)/(X) + (bX+c)/(X²+1) + (dX+e)/((X²+1)²). Quelles sont les affirmations vraies ?",
+      "alternatives": [
+        "a=-1",
+        "d=0 et e=0",
+        "b=0 et c=0",
+        "b=0 et d=0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-polynomes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Polynômes -- Fractions rationnelles, pregunta 30 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Je veux montrer que log 13 , est un nombre irrationnel. On rappelle que log 13 est le réel tel que 10^( log 13) = 13 . Quelle démarche puis-je adopter ?",
+      "alternatives": [
+        "Par division je calcule l'écriture décimale de log 13 et je montre qu'elle est périodique.",
+        "Je prouve par récurrence que log n est irrationnel pour n≥2 .",
+        "Je suppose par l'absurde que log 13 = (p)/(q) , avec p,q ∈ ℕ^* et je cherche une contradiction après avoir écrit 13^q = 10ᵖ .",
+        "Il est faux que log 3 soit un nombre irrationnel."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 6 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Notation : E(x) désigne la partie entière du réel x . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "E(7,9) = 8",
+        "E(-3,33) = -4",
+        "E((5)/(3)) = 5",
+        "E(x)=0 ⇒ x=0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 9 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pour x∈ ℝ , on définit G(x) = E(10x) .",
+      "alternatives": [
+        "G((2)/(3)) = 66",
+        "∀ x>0 G(x) ≥ 1",
+        "G(x)=10 ⇔ x ∈{10,11,12,…,19}",
+        "G(x)=G(y) ⇒ |x-y| ≤ (1)/(10)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 13 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "max (x,y) = (x+y-|x|-|y|)/(2)",
+        "max (x,y) = (x+y-|x+y|)/(2)",
+        "max (x,y) = (|x+y|-x-y)/(2)",
+        "max (x,y) = (x+y + |x-y|)/(2)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 16 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On définit la partie fractionnaire d'un réel x , par F(x) = x -E(x) .",
+      "alternatives": [
+        "F(x) = 0 ⇔ 0 ≤ x <1",
+        "Si 7 ≤ x <8 alors F(x) = 7 .",
+        "Si x=-0,2 alors F(x) = -0,2 .",
+        "Si F(x)=F(y) alors x-y ∈ ℤ ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 18 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "x ∈ ]5;7[ ⇔ |x-6|<1",
+        "x ∈ ]5;7[ ⇔ |x-1|<6",
+        "x ∈ [0,999 ; 1,001] ⇔ |x+1|<0,001",
+        "x ∈ [0,999 ; 1,001] ⇔ |x+1|≤ 0,001"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 19 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "[3,7] ∪ [8,10] = [3,10]",
+        "[-3,5] ∩ [2,7] = [-3,7]",
+        "[a,b[∪ ]a,b] = ]a,b[",
+        "[a,b[∩ ]a,b] = ]a,b["
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 20 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pour n≥ 1 on définit l'intervalle Iₙ = [0,(1)/(n)] . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "Pour tout n≥ 1 , Iₙ ⊂ Iₙ₊₁ .",
+        "Si x ∈ Iₙ pour tout n≥1 , alors x=0 .",
+        "L'union de tous les Iₙ (pour n parcourant ℕ^* ) est [0,+∞[ .",
+        "Pour n < m alors Iₙ ∩ Iₙ₊₁ ∩ … ∩ Iₘ = Iₙ ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-reels.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Réels, pregunta 24 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit (uₙ) une suite réelle et ℓ ∈ ℝ . Comment traduire lim _(n→ +∞)uₙ=ℓ ?",
+      "alternatives": [
+        "∀ ε >0, ∀ n∈ ℕ, |uₙ-ℓ|<ε",
+        "∀ ε >0, ∃ n∈ ℕ, |uₙ-ℓ|<ε",
+        "∀ ε >0, ∃ n₀∈ ℕ, ∀ n∈ ℕ, n>n₀⇒ |uₙ-ℓ|<ε",
+        "∃ ε >0, ∃ n₀∈ ℕ, ∀ n∈ ℕ, n>n₀⇒ |uₙ-ℓ|<ε"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Suites réelles, pregunta 1 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit (uₙ) une suite réelle. Comment traduire lim _(n→ +∞)uₙ=+∞ ?",
+      "alternatives": [
+        "∀ A>0, ∀ n∈ ℕ, uₙ>A",
+        "∀ A>0, ∃ n∈ ℕ, uₙ>A",
+        "∃ A>0, ∃ n₀∈ ℕ, ∀ n∈ ℕ, n>n₀⇒ uₙ>A",
+        "∀ A>0, ∃ n₀∈ ℕ, ∀ n∈ ℕ, n>n₀⇒ uₙ>A"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Suites réelles, pregunta 2 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit uₙ=(n²+1)/(2n²-1) et vₙ=(2n+1)/(n²-1) . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "lim _(n→ +∞)uₙ=(1)/(2) et lim _(n→ +∞)vₙ=0",
+        "lim _(n→ +∞)uₙ=2 et lim _(n→ +∞)vₙ=0",
+        "lim _(n→ +∞)uₙ=(1)/(2) et lim _(n→ +∞)vₙ=2",
+        "lim _(n→ +∞)uₙ=2 et lim _(n→ +∞)vₙ=+∞"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Suites réelles, pregunta 3 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit uₙ=√(n+1)-√(n) et vₙ= cos ((n²+1)/(n²-1)π ) . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "lim _(n→ +∞)uₙ=1 et lim _(n→ +∞)vₙ=-1",
+        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=-1",
+        "lim _(n→ +∞)uₙ=1 et lim _(n→ +∞)vₙ=1",
+        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ n'existe pas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Suites réelles, pregunta 4 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit uₙ=3ⁿ-2ⁿ et vₙ=3ⁿ-(-3)ⁿ . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "lim _(n→ +∞)uₙ=+∞ et lim _(n→ +∞)vₙ=+∞",
+        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=0",
+        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=-∞",
+        "lim _(n→ +∞)uₙ=+∞ et lim _(n→ +∞)vₙ n'existe pas"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Suites réelles, pregunta 5 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit uₙ=n ln (1+(1)/(n) ) et vₙ= (1+(1)/(n) )ⁿ . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "lim _(n→ +∞)uₙ=+∞ et lim _(n→ +∞)vₙ=1",
+        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=1",
+        "lim _(n→ +∞)uₙ=1 et lim _(n→ +∞)vₙ=1",
+        "lim _(n→ +∞)uₙ=1 et lim _(n→ +∞)vₙ=e"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Suites réelles, pregunta 6 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit uₙ=( cos n)/(2n+1) et vₙ=(2n+ cos n)/(2n+1) . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "lim _(n→ +∞)uₙ et lim _(n→ +∞)vₙ n'existent pas",
+        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=+∞",
+        "lim _(n→ +∞)uₙ=0 et lim _(n→ +∞)vₙ=1",
+        "lim _(n→ +∞)uₙ=1 et lim _(n→ +∞)vₙ=1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Suites réelles, pregunta 7 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit uₙ=(2ⁿ⁺¹-3ⁿ⁺¹)/(2ⁿ+3ⁿ) et vₙ=(n2²ⁿ-3ⁿ)/(n2²ⁿ+3ⁿ) . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "lim _(n→ +∞)uₙ=-3 et lim _(n→ +∞)vₙ=1",
+        "lim _(n→ +∞)uₙ=+∞ et lim _(n→ +∞)vₙ=+ ∞",
+        "lim _(n→ +∞)uₙ=-3 et lim _(n→ +∞)vₙ=+∞",
+        "lim _(n→ +∞)uₙ=-∞ et lim _(n→ +∞)vₙ=1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Suites réelles, pregunta 11 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit (uₙ) une suite croissante. On suppose que uₙ+(1)/(n+1)≤ uₙ₊₁ pour tout n≥ 0 . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "(uₙ) est majorée.",
+        "(uₙ) est divergente.",
+        "(uₙ) est convergente et lim _(n→ +∞)uₙ≥ 0 .",
+        "uₙ=0 pour tout n≥ 1 ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-suites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Suites réelles, pregunta 29 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)= (1)/(x+1)+ (3x)/((x+1)(x²-x+1)) . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "lim _(x→ -1⁺) f(x)=+∞",
+        "lim _(x→ -1⁻) f(x)=-∞",
+        "lim _(x→ -1) f(x)=0",
+        "lim _(x→ -1) f(x)=-2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 3 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)= √(x²+x+1)+x . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "lim _(x→ -∞) f(x)=+∞",
+        "lim _(x→ -∞) f(x)=-∞",
+        "lim _(x→ -∞) f(x)=-(1)/(2)",
+        "f n'admet pas de limite en -∞ ."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 5 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)= x-(|x|)/(x) . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "lim _(x→ 0) f(x)=0",
+        "lim _(x→ +∞) f(x)=0",
+        "f n'admet pas de limite en 0 .",
+        "lim _(x→ -∞) f(x)=+∞"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 14 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)= ( ln (1+x))/(x) . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "lim _(x→ 0) f(x)=0",
+        "lim _(x→ 0) f(x)=+∞",
+        "f n'admet pas de limite en 0 .",
+        "lim _(x→ 0) f(x)=1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 17 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)= ( sin x)/(x) . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "f n'admet pas de limite en 0 .",
+        "lim _(x→ 0) f(x)=1",
+        "lim _(x→ 0) f(x)=0",
+        "lim _(x→ 0) f(x)=+∞"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 18 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)= ( sin (3x))/( sin (4x)) . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "f n'admet pas de limite en 0",
+        "lim _(x→ 0) f(x)=(3)/(4)",
+        "lim _(x→ 0) f(x)= (4)/(3)",
+        "lim _(x→ 0) f(x)=0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 19 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)= ( cos x-1)/(x²) . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "f n'admet pas de limite en 0 .",
+        "lim _(x→ 0) f(x)=+∞",
+        "lim _(x→ 0) f(x)=-(1)/(2)",
+        "lim _(x→ 0) f(x)=(1)/(2)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 20 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)= xE((1)/(x)) , où E désigne la partie entière. Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "lim _(x→ 0) f(x)=0",
+        "lim _(x→ 0) f(x)=+∞",
+        "f n'admet pas de limite en 0 .",
+        "lim _(x→ 0) f(x)=1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 21 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f une fonction définie sur ]0,1[ par : f(x)=1 , si x ∈ ℝ ∖ ℚ et f(x)=(1)/(m), si x= (n)/(m), où n, m ∈ ℕ^* tels que (n)/(m) soit une fraction irréductible. Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "lim _(x→ 1⁻) f(x)=0",
+        "f n'admet pas de limite en 1⁻ .",
+        "lim _(x→ 1⁻) f(x)=1",
+        "lim _(x→ 1⁻) f(x)=+∞"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 24 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)= (√(x+1)-1)/(racine 3-ieme de (x+1)-1) . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "lim _(x→ 0) f(x)=0",
+        "lim _(x→ 0) f(x)=(3)/(2)",
+        "f n'admet pas de limite en 0 .",
+        "lim _(x→ 0) f(x)=+∞"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 26 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)=√(x³+2x²+3)-ax√(x+b), a,b ∈ ℝ . f admet une limite finie en +∞ si et seulement si :",
+      "alternatives": [
+        "a>0 et b>0",
+        "a=1 et b>0",
+        "a=1 et b=2",
+        "a=1 et b=0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 28 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)=((2x)ˣ)/(x⁽²ˣ⁾) . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "lim _(x→ +∞) f(x)=+∞",
+        "lim _(x→ +∞ ) f(x)=0",
+        "f n'admet pas de limite en +∞ .",
+        "lim _(x→ +∞) f(x)=1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-limites.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Limites des fonctions réelles, pregunta 30 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quels arguments sont valides pour justifier que la fonction x ↦ sin (x) n'est pas une fonction croissante sur ℝ ?",
+      "alternatives": [
+        "sin (π) = sin (0) et pourtant π ≠ 0 .",
+        "sin ((π)/(2)) > sin (0) et pourtant 0 < (π)/(2) .",
+        "sin ((3π)/(4)) > sin (π) et pourtant (3π)/(4) < π .",
+        "On a | sin x| ≤ |x| pour tout x∈ℝ ."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-continuite.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Continuité, pregunta 1 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Quelles sont les assertions vraies concernant le domaine de définition des fonctions suivantes ? (Rappel : le domaine de définition de f est le plus grand ensemble D_f ⊂ ℝ sur lequel f est définie.)",
+      "alternatives": [
+        "Le domaine de définition de exp ((1)/(x²+1)) est ℝ .",
+        "Le domaine de définition de √(x²-1) est [1,+∞[ .",
+        "Le domaine de définition de (1)/(√((x-1)(x-3))) est ]1,3[ .",
+        "Le domaine de définition de ln (x³-8) est [2,+∞[ ."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-continuite.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Continuité, pregunta 3 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f : ℝ → ℝ . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "∀ M > 0 ∃ x ∈ ℝ f(x) ≤ M implique f majorée.",
+        "∀ x ∈ ℝ ∃ M > 0 f(x) ≥ M implique f majorée.",
+        "∃ M > 0 ∀ x ∈ ℝ f(x) ≤ M implique f majorée.",
+        "∃ M > 0 ∃ x ∈ ℝ f(x) ≥ M implique f majorée."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-continuite.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Continuité, pregunta 5 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f : ℝ → ℝ une fonction à valeurs strictement positives. Quels arguments sont valables pour montrer que f est croissante ?",
+      "alternatives": [
+        "Pour tout x∈ℝ , on a f(x+1) ≥ f(x) .",
+        "Pour tout x∈ℝ , on a (f(x+1))/(f(x)) ≥ 1 .",
+        "Pour tout x∈ℝ , il existe h>0 tel que f(x+h) ≥ f(x) .",
+        "Pour tout x∈ℝ , pour tout h>0 , on a (f(x+h))/(f(x)) ≥ 1 ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-continuite.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Continuité, pregunta 8 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soient f,g : ℝ → ℝ . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "Si f est bornée et g majorée alors f-g est bornée.",
+        "Si f bornée et g majorée alors f-g est minorée.",
+        "Si f et g sont minorées, alors f × g est minorée.",
+        "Si f et g sont minorées, alors |f × g| est bornée."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-continuite.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Continuité, pregunta 9 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En posant f(0)=0 , quelles fonctions deviennent continues sur ℝ ?",
+      "alternatives": [
+        "f(x) = (1)/(x)",
+        "f(x) = ( sin (x))/(x)",
+        "f(x) = x ln ( |x|)",
+        "f(x) = e^(1/x)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-continuite.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Continuité, pregunta 16 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f : [a,b] → ℝ une fonction continue (avec a < b ). Quelles assertions sont une conséquence du théorème des valeurs intermédiaires ?",
+      "alternatives": [
+        "Si f(a) · f(b) > 0 alors f s'annule sur [a,b] .",
+        "Si f(a) < k < f(b) alors f(x)-k s'annule sur [a,b] .",
+        "Pour I ⊂ ℝ , si f(I) est un intervalle alors I est un intervalle.",
+        "Si c ∈ ]a,b[ alors f(c) ∈ ]f(a),f(b)[ ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-continuite.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Continuité, pregunta 21 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f : [0,1] → ℝ une fonction continue avec f(0)<0 et f(1)>0 . Par dichotomie on construit deux suites (aₙ) et (bₙ) , avec a₀ = 0 et b₀ = 1 . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "Si f((1)/(2))>0 alors a₁ = (1)/(2) et b₁ = (1)/(2) .",
+        "f s'annule sur [aₙ,bₙ] (quel que soit n≥0 ).",
+        "(aₙ) et (bₙ) sont des suites croissantes.",
+        "aₙ → 0 ou bₙ → 0 ."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-continuite.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Continuité, pregunta 22 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f : [a,b] → ℝ une fonction continue (avec a < b ). Quelles assertions sont vraies ?",
+      "alternatives": [
+        "Si f(a) · f(b) < 0 et f croissante alors f s'annule une unique fois sur [a,b] .",
+        "Si f(a) · f(b) < 0 et f n'est pas strictement monotone alors f s'annule au moins deux fois sur [a,b] .",
+        "Si f(a) · f(b) < 0 alors f s'annule un nombre fini de fois sur [a,b] .",
+        "Si f(a) · f(b) < 0 et f strictement décroissante, alors f s'annule une unique fois sur [a,b] ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-continuite.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Continuité, pregunta 23 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f : [a,b] → ℝ continue. Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "f admet un maximum sur ]a,b[ .",
+        "f admet un maximum en a ou en b .",
+        "f est bornée sur ]a,b[ .",
+        "f admet un maximum ou un minimum sur [a,b] mais pas les deux."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-continuite.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Continuité, pregunta 25 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Etant donné que f(3)=1 et f'(3)=5 . Une équation de la tangente à C_f au point (3,1) est :",
+      "alternatives": [
+        "y=1(x-3)+5=x+2",
+        "y=1(x-3)-5=x-8",
+        "y=5(x-3)-1=5x-16",
+        "y=5(x-3)+1=5x-14"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-derivees.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Dérivabilité des fonctions réelles, pregunta 2 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)=x²-e^(x²-1) . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "f admet un minimum local en 0 .",
+        "f admet un maximum local en 0 .",
+        "f admet un point d'inflexion en 0 .",
+        "la tangente à C_f en 0 est une droite verticale."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-derivees.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Dérivabilité des fonctions réelles, pregunta 8 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)=(x²+1)/(x+1) . Quel est l'ensemble S des points x₀ où la tangente à C_f est parallèle à la droite d'équation y=x ?",
+      "alternatives": [
+        "S={-1}",
+        "S={0}",
+        "S={0,1}",
+        "S=∅"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-derivees.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Dérivabilité des fonctions réelles, pregunta 17 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit f(x)=(x+3)/(x+2) . Quel est l'ensemble S des points x₀ où la tangente à C_f est perpendiculaire à la droite d'équation y=x ?",
+      "alternatives": [
+        "S={-2}",
+        "S={-3}",
+        "S={-1,-3}",
+        "S=∅"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-derivees.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Dérivabilité des fonctions réelles, pregunta 18 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit (E) l'inéquation : ln |1+x|- ln |2x+1| ≤ ln 2 . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "Le domaine de définition de (E) est ]-(1)/(2), +∞[ .",
+        "L'ensemble des solutions de (E) est : ]-1,-(3)/(5)] ∪ ]-(1)/(3), + ∞[ .",
+        "L'ensemble des solutions de (E) est ]-∞, -1[ ∪ ]-1,-(3)/(5)] .",
+        "L'ensemble des solutions de (E) est : ]-∞, -1[ ∪ ]-1,-(3)/(5)] ∪ [-(1)/(3), + ∞[ ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-fonctions-usuelles.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Fonctions usuelles, pregunta 13 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère les points A(3,0) et B(0,4) . Quelle est la distance d entre A et B ?",
+      "alternatives": [
+        "d=3",
+        "d=4",
+        "d=5",
+        "d=3+4=7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-plane.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie du plan, pregunta 1 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère les points A(1,1) , B(-1,1) et C(1,-1) . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "Les vecteurs AB→ et AC→ sont égaux.",
+        "AB→=-AC→",
+        "Les vecteurs AB→ et AC→ sont colinéaires.",
+        "Les vecteurs AB→ et AC→ sont orthogonaux."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-plane.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie du plan, pregunta 3 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dans un repère orthonormé direct, on considère le point A de coordonnées polaires r=2 et θ =(π)/(6) . Quelles sont les coordonnées cartésiennes (x,y) de A ?",
+      "alternatives": [
+        "x=2 et y=2",
+        "x=√(3) et y=1",
+        "x=1 et y=√(3)",
+        "x=1 et y=1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-plane.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie du plan, pregunta 4 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dans un repère orthonormé direct, on considère le point A(1,1) . Quelles sont les coordonnées polaires (r,θ) de A ?",
+      "alternatives": [
+        "r=1 et θ =1",
+        "r=2 et θ =0",
+        "r=√(2) et θ =(π)/(4)+2kπ , k∈ ℤ",
+        "r=√(2) et θ =0+2kπ , k∈ ℤ"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-plane.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie du plan, pregunta 5 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère les points A(0,1) , B(2,3) et C(1,1) . Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "Les droites (AB) et (OC) sont confondues.",
+        "Les droites (AB) et (OC) sont perpendiculaires.",
+        "Les droites (AB) et (OC) sont parallèles.",
+        "Les droites (AB) et (OC) sont sécantes."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-plane.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie du plan, pregunta 6 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dans le plan muni d'un repère orthonormé direct (O,i→,j→) , on considère les vecteurs u→= (1,1 ) et v→= (1,√(3) ) . Quel est la mesure α ∈ [0,2π[ de l'angle orienté entre u→ et v→ ?",
+      "alternatives": [
+        "α =(π)/(4)",
+        "α =(π)/(3)",
+        "α =(π)/(12)",
+        "α =(7π)/(12)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-plane.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie du plan, pregunta 11 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dans le plan muni d'une base orthonormée (i→,j→) , on considère deux vecteurs u→ et v→ . On suppose que ‖u→‖=3 , ‖v→‖=3 et que l'angle entre ces deux vecteurs est (π)/(3) . Quelle est la norme de u→+v→ ?",
+      "alternatives": [
+        "‖u→+v→‖=6",
+        "‖u→+v→‖=3",
+        "‖u→+v→‖=3√(3)",
+        "‖u→+v→‖=9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-plane.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie du plan, pregunta 14 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dans le plan rapporté à un repère orthonormé, on considère les points A(1,2) , B(2,1) et C(-2,1) . Quelle est la distance d du point C à la droite (AB) ?",
+      "alternatives": [
+        "d=√(2)",
+        "d=3",
+        "d=2√(2)",
+        "d=√(10)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-plane.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie du plan, pregunta 18 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dans le plan muni d'un repère orthonormé direct (O,i→,j→) , on considère les vecteurs u→= ((1)/(2),a ) et v→= (-(√(3))/(2),b ) . Comment choisir les réels a et b pour que (u→,v→) soit une base orthonormée directe ?",
+      "alternatives": [
+        "a=(√(3))/(2) et b=(1)/(2)",
+        "a=(√(3))/(2) et b=-(1)/(2)",
+        "a=-(√(3))/(2) et b=(1)/(2)",
+        "a=-(√(3))/(2) et b=-(1)/(2)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-plane.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie du plan, pregunta 21 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit D la droite définie par l'équation cartésienne : x-2y=4 . Quelles sont les coordonnées (a,b) du projeté orthogonal H(a,b) du point M(1,1) sur D ?",
+      "alternatives": [
+        "(a,b)=(4,0)",
+        "(a,b)=(2,-1)",
+        "(a,b)=(6,1)",
+        "(a,b)=(1,1)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-plane.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie du plan, pregunta 23 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère trois points A , B et C du plan tels que (AB) : x-2y+3=0 et (AC) : 2x-y-3=0. Quelles sont les bonnes réponses ?",
+      "alternatives": [
+        "Les points A , B et C sont alignés.",
+        "Le point B appartient à (AC) .",
+        "Le point C appartient à (AB) .",
+        "Les coordonnées de A sont A(3,3) ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-plane.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie du plan, pregunta 24 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A(1,1,1), B(0,1,1) et C(1,0,1) trois points. Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "A , B et C sont alignés.",
+        "A,B et C forment un triangle d'aire (1)/(3) .",
+        "A,B et C forment un triangle d'aire (1)/(2) .",
+        "Les vecteurs AB→ et AC→ sont colinéaires."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-espace.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie dans l'espace, pregunta 2 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A(1,1,1) et P le plan d'équation cartésienne : x+y+z+1=0 . La distance de A à P est :",
+      "alternatives": [
+        "(1)/(√(3))",
+        "(2)/(√(3))",
+        "√(3)",
+        "(4)/(√(3))"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-espace.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie dans l'espace, pregunta 21 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A(-1,1,0) et P le plan passant par B(1,0,1) et dirigé par les vecteurs u→(1,1,1) et v→(1,0,-1) . La distance de A à P est :",
+      "alternatives": [
+        "(1)/(√(6))",
+        "(5)/(√(6))",
+        "√(6)",
+        "(4)/(√(6))"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-espace.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie dans l'espace, pregunta 22 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit D la droite passant par le point A(1,-1,0) et dirigée par le vecteur u→(1,1,-1) . Soit M(1,-1,3) un point et H le projeté orthogonal de M sur D . Les coordonnées de H sont :",
+      "alternatives": [
+        "H(0,1,1)",
+        "H(1,2,1)",
+        "H(0,-2,1)",
+        "H(1,-2,1)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-espace.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie dans l'espace, pregunta 25 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit P₁ : z+3=0 et P₂ : 2x+y+2z-1=0 des plans et π un plan bissecteur de P₁ et P₂ , c'est-à-dire : M ∈ π si et seulement si M est à la même distance de P₁ et de P₂ . Une équation cartésienne de π est :",
+      "alternatives": [
+        "2x+y-z-10=0 ou 2x+y+5z+8=0",
+        "x+y-z-1=0 ou x+y+z+1=0",
+        "2x+y+z+8=0 ou 2x-y+5z+7=0",
+        "x+y-z-4=0 ou x+y+3z-8=0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-1/format-yaml/questions-geometrie-espace.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Géométrie dans l'espace, pregunta 28 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A,B et C des matrices d'ordre n≥ 1 . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "AB=0 ⇒ A=0 ou B=0",
+        "A(BC) =(AC)B",
+        "A(B+C)=AC+AB",
+        "(A+B)²=A²+2AB+B²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-2/format-yaml/questions-matrices.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Calcul matriciel, pregunta 7 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère Mₙ(ℝ) l'ensemble des matrices carrées d'ordre n à coefficients réels et A et B deux matrices non nulles telles que AB=0 . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "A=0 ou B=0",
+        "A est inversible",
+        "B est inversible",
+        "A n'est pas inversible"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-2/format-yaml/questions-matrices.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Calcul matriciel, pregunta 30 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère Mₙ(ℝ) l'ensemble des matrices carrées d'ordre n à coefficients réels et A , B et C trois matrices non nulles deux à deux distinctes telles que AB=AC . Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "B=C",
+        "A=0",
+        "A n'est pas inversible",
+        "Le rang de A est n"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-2/format-yaml/questions-matrices.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Calcul matriciel, pregunta 31 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A une matrice à coefficients réels, à 3 lignes et 4 colonnes. Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "A est la matrice d'une application linéaire de ℝ³ dans ℝ⁴ dans des bases de ℝ³ et ℝ⁴",
+        "A est la matrice d'une application linéaire de ℝ⁴ dans ℝ³ dans des bases de ℝ⁴ et ℝ³",
+        "A est la matrice d'une application linéaire de noyau nul",
+        "A est la matrice d'une application linéaire bijective"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-2/format-yaml/questions-matrice-application.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Applications linéaires et matrices, pregunta 22 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit A une matrice à coefficients réels, à 4 lignes et 3 colonnes. Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "A est la matrice d'une application linéaire de ℝ³ dans ℝ⁴ dans des bases de ℝ³ et ℝ⁴",
+        "A est la matrice d'une application linéaire de ℝ⁴ dans ℝ³ dans des bases de de ℝ³ et ℝ⁴",
+        "A est la matrice d'une application linéaire de rang 4",
+        "A est la matrice d'une application linéaire bijective"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-2/format-yaml/questions-matrice-application.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Applications linéaires et matrices, pregunta 23 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit (S) un système à 3 équations linéaires et 3 inconnues et (S_H) le système homogène associé. Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "(S_H) admet une infinité de solutions.",
+        "(S) admet une unique solution.",
+        "Si X₁ et X₂ sont des solutions de (S) , alors X₁-X₂ est une solution de (S_H) .",
+        "(S) admet une infinité de solutions si et seulement si les équations de (S) sont celles de 3 plans confondus."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-2/format-yaml/questions-systemes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Systèmes d'équations linéaires, pregunta 20 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit P un polynôme à coefficients réels de degré ≤ 3 vérifiant les conditions : P(1)=1, P(0)=1, P(-1)=-1 et P'(1)= 3. Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "Un tel polynôme P n'existe pas.",
+        "Il existe une infinité de polynômes P vérifiant ces conditions.",
+        "Il existe un unique polynôme P vérifiant ces conditions.",
+        "Si P est un polynôme qui vérifie ces conditions, alors P(2)=2 ."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-2/format-yaml/questions-systemes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Systèmes d'équations linéaires, pregunta 23 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit P un polynôme à coefficients réels de degré ≤ 11 vérifiant les conditions : P(1)=1!, P'(1)=2!, P''(1)=3!, … , P⁽¹⁰⁾(1)= 11!. Quelles sont les assertions vraies ?",
+      "alternatives": [
+        "Un tel polynôme P n'existe pas",
+        "Il existe une infnité de polynômes P vérifiant ces conditions",
+        "Il existe un unique polynôme P vérifiant ces conditions",
+        "Si P est un polynôme qui vérifie ces conditions, alors P(X)=1+2(X-1)+ 3(X-1)²+ … + 11(X-1)¹⁰ + 12(X-1)¹¹"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-lille-2/format-yaml/questions-systemes.yaml",
+      "sourceName": "QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Systèmes d'équations linéaires, pregunta 26 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit E une expérience aléatoire et Ω l'univers qui lui a été associé. Soient A et B deux événements de probabilités respectives 0.5 et 0.6 . Supposons maintenant que P(A∪ B)=4/5 . A et B sont-ils indépendants ?",
+      "alternatives": [
+        "Oui.",
+        "Non.",
+        "On ne peut pas se prononcer car on ne dispose pas de P(A∩ B) .",
+        "On ne peut pas se prononcer car on ne dispose pas de détails sur l'expérience, sur Ω , A et B ."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Probabilités, événements, pregunta 2 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On suppose que 2000 personnes ont envoyé un SMS dans le cadre d'un mini-jeu télé qui consistait à répondre à une question (particulièrement idiote) à 2 choix. On suppose que la société qui gère ce \"jeu-SMS\" sélectionne 30 SMS au hasard parmi les 2000. Dans cette question et les suivantes, on note Ω l'ensemble de tous les sous-ensembles de 30 SMS (distincts). Combien d'éléments Ω contient-il ?",
+      "alternatives": [
+        "C₂₀₀₀³⁰",
+        "A₂₀₀₀³⁰",
+        "1971",
+        "2000!/30!"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Probabilités, événements, pregunta 10 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On suppose que 2000 personnes ont envoyé un SMS dans le cadre d'un mini-jeu télé qui consistait à répondre à une question (particulièrement idiote) à 2 choix. On suppose que la société qui gère ce \"jeu-SMS\" sélectionne 30 SMS au hasard parmi les 2000. A-t-on équiprobabilité dans cette situation ?",
+      "alternatives": [
+        "Oui.",
+        "Non."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Probabilités, événements, pregunta 11 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On suppose que 2000 personnes ont envoyé un SMS dans le cadre d'un mini-jeu télé qui consistait à répondre à une question (particulièrement idiote) à 2 choix. On suppose que la société qui gère ce \"jeu-SMS\" sélectionne 30 SMS au hasard parmi les 2000. On considère maintenant que vous faites partie des personnes qui ont envoyé un SMS. Quelle est la probabilité que vous soyez sélectionné(e) ?",
+      "alternatives": [
+        "1.5%",
+        "0.03%",
+        "0.15%",
+        "Environ 1.2% ."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Probabilités, événements, pregunta 12 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit n un entier non nul et k un entier compris entre 1 et n . On considère un tableau contenant n cases vides. Quel est le nombre de façons différentes de noircir k de ces cases ?",
+      "alternatives": [
+        "k",
+        "n-k",
+        "1-n",
+        "Aucune des réponses précédentes."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Probabilités, événements, pregunta 19 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit n un entier non nul et k un entier compris entre 1 et n . On lance n fois une pièce équilibrée. Quelle est la probabilité d'obtenir exactement k piles ?",
+      "alternatives": [
+        "Cₙᵏ pⁿ(1-p)ⁿ⁻ᵏ",
+        "(k!)/(n!(n-k)!)(1/2)ᵏ(1/2)ⁿ⁻ᵏ",
+        "n!/(2ⁿ k!(n-k)!)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Probabilités, événements, pregunta 20 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère que dans une équipe de basket, chacun des 12 joueurs a 1 chance sur 4 d'être absent au moins une fois durant le mois de juin. On suppose que l'absence ou la présence d'un joueur n'a pas d'impact sur les chances qu'a un autre joueur de se retrouver absent. On s'intéresse au nombre N de joueurs absents durant le mois de juin. Quelle est la probabilité que N vaille 3 ?",
+      "alternatives": [
+        "Elle vaut (1/4)³≃ 1.56% .",
+        "On ne peut pas savoir, car on ne connaît pas la loi de N .",
+        "Aucune des réponses précédentes."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 21 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère que dans une équipe de basket, chacun des 12 joueurs a 1 chance sur 4 d'être absent au moins une fois durant le mois de juin. On suppose que l'absence ou la présence d'un joueur n'a pas d'impact sur les chances qu'a un autre joueur de se retrouver absent. On s'intéresse au nombre N de joueurs absents durant le mois de juin. Les familles d'événements ( {N=0} , {N=1} , … , {N=12} ) et ( {N≤ 0} , {N≤ 1} , … , {N≤ 12} ) constituent-elles des partitions de l'univers Ω associé à cette expérience ?",
+      "alternatives": [
+        "Oui pour la première, non pour la seconde.",
+        "Non pour la première, oui pour la seconde.",
+        "Non pour les deux familles.",
+        "On ne peut pas le savoir car on ne connaît pas l'univers Ω en question."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 23 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère que dans une équipe de basket, chacun des 12 joueurs a 1 chance sur 4 d'être absent au moins une fois durant le mois de juin. On suppose que l'absence ou la présence d'un joueur n'a pas d'impact sur les chances qu'a un autre joueur de se retrouver absent. On s'intéresse au nombre N de joueurs absents durant le mois de juin. Que valent l'espérance et le premier quartile de N ?",
+      "alternatives": [
+        "Ils valent respectivement 3 et 1 .",
+        "Ils valent respectivement 3 et 2 .",
+        "Ils valent respectivement 4 et 1 .",
+        "On ne peut toujours pas le dire car on ne connaît toujours pas la loi de N !"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 24 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère qu'une personne un peu éméchée accepte de lancer une pièce de monnaie équilibrée jusqu'à faire pile, mais en donnant 10 euros à son voisin de table à chaque fois qu'elle fait face. Quelle est la loi du nombre N de fois que cette personne fait face (avant de finir par faire pile) ?",
+      "alternatives": [
+        "C'est une loi binomiale de paramètres 10 et 1/2 .",
+        "C'est une loi binomiale négative de paramètres 10 et 1/2 .",
+        "C'est une loi géométrique sur ℕ de paramètre 1/2 .",
+        "C'est une loi géométrique sur ℕ^* de paramètre 1/2 .",
+        "C'est une loi de Poisson de paramètre 1/2 ."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 25 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère qu'une personne un peu éméchée accepte de lancer une pièce de monnaie équilibrée jusqu'à faire pile, mais en donnant 10 euros à son voisin de table à chaque fois qu'elle fait face. Que valent E(N) , Var(N) , E(N²) ?",
+      "alternatives": [
+        "E(N)=1 , Var(N)=2 , E(N²)=3 .",
+        "E(N)=1 , Var(N)=2 , E(N²)=1 .",
+        "E(N)=2 , Var(N)=2 , E(N²)=6 .",
+        "E(N)=2 , Var(N)=2 , mais le calcul de E(N²) est trop compliqué.",
+        "Aucune des réponses ci-dessus."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 26 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère qu'une personne un peu éméchée accepte de lancer une pièce de monnaie équilibrée jusqu'à faire pile, mais en donnant 10 euros à son voisin de table à chaque fois qu'elle fait face. Que valent P(N≥ 2) et la médiane de N ?",
+      "alternatives": [
+        "P(N≥ 2)=1/2 et la médiane de N vaut 1 .",
+        "P(N≥ 2)=1/4 et la médiane de N vaut 0 .",
+        "P(N≥ 2)=3/4 et la médiane de N vaut 1 .",
+        "Aucune des réponses ci-dessus."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 27 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère qu'une personne un peu éméchée accepte de lancer une pièce de monnaie équilibrée jusqu'à faire pile, mais en donnant 10 euros à son voisin de table à chaque fois qu'elle fait face. Quel est le montant moyen que ce joueur devra donner à son voisin de table ?",
+      "alternatives": [
+        "5 euros.",
+        "10 euros.",
+        "20 euros.",
+        "Aucune des réponses ci-dessus."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 28 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère la variable aléatoire X égale au résultat de la somme de 2 dés à 6 faces équilibrés. Quelle est la loi de X ?",
+      "alternatives": [
+        "X suit la loi uniforme sur {1,2,…,12} .",
+        "X suit la loi uniforme sur {2,3,…,12} .",
+        "X suit la loi binomiale de paramètres 12 et 1/6 .",
+        "Aucune des réponses ci-dessus."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 29 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère la variable aléatoire X égale au résultat de la somme de 2 dés à 6 faces équilibrés. Que valent l'espérance et la médiane de X ?",
+      "alternatives": [
+        "L'espérance de X vaut 6.5 et la médiane vaut 7 .",
+        "Elles valent toutes les deux 7.",
+        "Elles valent d'autres valeurs que celles proposées ci-dessus."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 30 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "On considère la variable aléatoire X égale au résultat de la somme de 2 dés à 6 faces équilibrés. Que valent P(X≥ 4) et la variance de X ?",
+      "alternatives": [
+        "P(X≥ 4)=3/4 et Var(X)=329/6 .",
+        "P(X≥ 4)=1/4 et Var(X)=35/6 .",
+        "P(X≥ 4)=14/36 et Var(X)=35/6 .",
+        "P(X≥ 4)=11/12 et Var(X)≃ 5.8 ."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 31 (clave D) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit X une variable aléatoire à valeurs dans {0,1,2} et de loi donnée par P(X=0)=P(X=2)=a et P(X=1)=1-2a où a est une constante réelle. Quelles valeurs la constante a a-t-elle le droit de prendre ?",
+      "alternatives": [
+        "Toutes les valeurs de ]0,1[ car P(X=0)+P(X=1)+P(X=2)=1 .",
+        "Seulement la valeur a=1/4 .",
+        "Toutes les valeurs de ]0,1/2[ .",
+        "Une autre réponse que les précédentes."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 34 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit X une variable aléatoire à valeurs dans {0,1,2} et de loi donnée par P(X=0)=P(X=2)=a et P(X=1)=1-2a où a est une constante réelle. Quel est le graphe de la fonction de répartition de X parmi les graphes suivants ?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Le premier.",
+        "Le second.",
+        "Le troisième."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 35 (clave B) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]",
+      "imagePath": "book-4-qcm-exo7-figures/img-proba-01.png"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit X une variable aléatoire à valeurs dans {0,1,2} et de loi donnée par P(X=0)=P(X=2)=a et P(X=1)=1-2a où a est une constante réelle. Que valent l'espérance et la variance de X ?",
+      "alternatives": [
+        "E(X)=1 et Var(X)=1+2a .",
+        "E(X)=2a et Var(X)=4a² .",
+        "E(X)=1 et Var(X)=2a ."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 36 (clave C) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Soit X une variable aléatoire à valeurs dans {0,1,2} et de loi donnée par P(X=0)=P(X=2)=a et P(X=1)=1-2a où a est une constante réelle. On pose Y=4-2X . Sans déterminer la loi de Y , peut-on calculer l'espérance et l'écart-type de Y ?",
+      "alternatives": [
+        "Oui, ils valent respectivement 2 et √(8a) .",
+        "Oui, ils valent respectivement 2 et √(4(1-a)) .",
+        "Oui, ils valent respectivement 4(1-a) et 4a .",
+        "Oui, mais aucune des propositions précédentes n'est correcte.",
+        "Non, il nous faut nécessairement la loi pour calculer ces caractéristiques de Y ."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/exo7math/qcm-exo7/blob/master/questions-probabilites-worms/questions-worms.tex",
+      "sourceName": "QCM de probabilités L2 par Julien Worms, in QCM de mathématiques — Exo7 / Unisciel / Université de Lille (L1) — Variables discrètes, pregunta 37 (clave A) [github.com/exo7math/qcm-exo7; licencia citada literalmente: README.md: \"Les documents sont diffusés sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.\" | el repo no tiene archivo LICENSE y la GitHub API reporta license=null]"
+    }
+  ]
+}

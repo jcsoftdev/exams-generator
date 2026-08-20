@@ -262,3 +262,55 @@ Los 19 ciclos restantes (2010-I … 2018-II) son el mismo formato y el mismo pie
 A ~466 preguntas de texto por ciclo, el repo rinde del orden de **9 000 preguntas de texto**
 más las de ciencias exactas por la ruta de imagen. Es, con diferencia, la mayor fuente
 preuniversitaria peruana encontrada en GitHub.
+
+## Re-cosecha del 2026-08-20 sobre `davidquicast/Corpus-Historia-Peru-…` — no se escribió lote nuevo
+
+Se volvió a pedir la extracción de este mismo libro («Solucionario de Historia del Perú —
+EL CACHIMBO», recopilación UNMSM ~1970-2020) con destino a un lote `book-1-*`. **No se
+escribió**: `lot-26-unmsm-historia-mcq` ya cubre las 439 preguntas utilizables y un segundo
+lote habría duplicado el banco. En su lugar se reverificó el lote existente desde cero y se
+le corrigieron tres defectos reales.
+
+Reverificación independiente (no se dio por buena la nota anterior):
+
+- `files/data_clean/claves.txt` reparseada: **449/449 claves presentes**, ninguna ausente.
+- Cruce clave impresa ↔ índice `answer` de `cuestionario.json`: **0 discrepancias en 449**.
+- Cruce clave impresa ↔ alternativa marcada en el lote, leyendo las alternativas **por
+  rótulo** (`A)`…`E)`) en `files/data_clean/cuestionario.txt`: **438/439 coinciden**; la
+  restante (pregunta 8) no es verificable porque el texto solo rinde cuatro rótulos.
+- Las 10 preguntas descartadas (49, 66, 108, 147, 179, 287, 296, 325, 419, 438) se
+  comprobaron una a una: el libro imprime cuatro alternativas en nueve de ellas y dos en la
+  66. El descarte era correcto.
+
+Correcciones aplicadas al lote:
+
+1. **9 enunciados venían truncados en origen.** `cuestionario.json` cortó el enunciado en la
+   primera frase y perdió las listas de ítems romanos y las frases finales. Cuatro de ellas
+   (13, 357, 427, 428) son del tipo «identifique la secuencia / establezca relaciones» y sin
+   la lista de ítems **no se pueden responder**. Enunciados restaurados desde el texto
+   impreso del propio libro (`cuestionario.txt`, tramo entre el número y el primer `A)`):
+   preguntas **13, 48, 80, 130, 178, 215, 357, 427, 428**.
+2. **2 preguntas dependen de una figura que el lote no traía** (quedaban como texto
+   irresoluble). Recortadas del escaneo original `files/data_ocr/cuestionario.pdf` a 200 dpi
+   y adjuntas como `imagePath`:
+   - pregunta **65** (vaso ceremonial, HORIZONTE MEDIO: TIAHUANACO, pág. 7) →
+     `lot-26-unmsm-historia-mcq-figures/q065-vaso-ceremonial.png`
+   - pregunta **80** (orfebrería Lambayeque, pág. 9) →
+     `lot-26-unmsm-historia-mcq-figures/q080-orfebreria-lambayeque.png`
+
+   Ambos recortes contienen **solo la figura** —sin enunciado ni alternativas— comprobado
+   abriendo los PNG. Las claves de ambas (B y C) salen de la tabla del libro y coinciden con
+   el rótulo impreso en el escaneo.
+
+Detalle del escaneo, por si alguien lo vuelve a tocar: **`cuestionario.pdf` NO tiene capa de
+texto** (91 páginas, 2048×2908 pt, `pdftotext` devuelve 3 bytes). La capa de texto que sí
+existe es la del OCR ya hecho por el repo (`files/data_clean/cuestionario.txt`). Para
+localizar preguntas en el PDF hay que rasterizar a **200 dpi como mínimo**: a 100 dpi
+tesseract falla en silencio en la mayoría de páginas. El libro está maquetado a dos columnas.
+
+Queda sin corregir, y a la vista: la pregunta 13 imprime «aldeas primige**f**ías», errata del
+OCR de origen. Se deja tal cual en vez de enmendarla a ojo.
+
+| Lote | Libro | Repo | URL | Licencia citada literalmente | Preguntas | Fecha |
+| --- | --- | --- | --- | --- | --- | --- |
+| `lot-26-unmsm-historia-mcq` (revisión 2026-08-20, **sin lote nuevo**) | «Solucionario de Historia del Perú» / EL CACHIMBO — recopilación de exámenes de admisión UNMSM ~1970-2020 | `davidquicast/Corpus-Historia-Peru-ExamenAdmisionUNMSM-MultipleChoice` | https://raw.githubusercontent.com/davidquicast/Corpus-Historia-Peru-ExamenAdmisionUNMSM-MultipleChoice/main/cuestionario.json | El repo **no tiene archivo `LICENSE`** (la API `/license` responde 404). El front matter de `README.md` declara `license: apache-2.0`; **cada uno de los 449 registros** de `cuestionario.json` declara `"license": "Desconocida"` junto a `"source": "https://www.slideshare.net/slideshow/historia-del-per-recopilacin-ex-adm-unmsm/251464302"` | 439 (2 con figura) | 2026-08-20 |

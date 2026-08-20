@@ -334,6 +334,17 @@ export class ExamBuilderComponent implements OnInit {
    * where "acumulativo" stops, not just that it happened.
    */
   protected readonly templateFallbackWeek = signal<number | null>(null);
+  /**
+   * Audit 2026-08-20 (M8): the resolver's per-course rounding can distribute
+   * fewer (or more) questions than the "Cantidad total" the teacher typed —
+   * live repro: asked 30, got "29 preguntas pedidas" with zero explanation.
+   * Non-null only when an explicit total was requested AND the distributed
+   * sum differs from it.
+   */
+  protected readonly templateDistributionShortfall = signal<{
+    requested: number;
+    distributed: number;
+  } | null>(null);
   /** Raw text of the optional "Cantidad total de preguntas" field — only needed when a university (e.g. UNI) publishes point totals but no per-course question count (`totalQuestionsOverride`). */
   protected readonly templateTotalQuestions = signal<string>('');
   /**
@@ -792,6 +803,7 @@ export class ExamBuilderComponent implements OnInit {
     this.templateError.set(null);
     this.templateCumulativeFallback.set(false);
     this.templateFallbackWeek.set(null);
+    this.templateDistributionShortfall.set(null);
 
     const trackId = this.selectedTrackId();
     const totalQuestionsRaw = this.templateTotalQuestions().trim();
@@ -813,6 +825,13 @@ export class ExamBuilderComponent implements OnInit {
         this.loadingTemplate.set(false);
         this.templateCumulativeFallback.set(result.usedCumulativeFallback ?? false);
         this.templateFallbackWeek.set(result.effectiveWeekNumber ?? null);
+        const requested = totalQuestionsRaw ? Number(totalQuestionsRaw) : null;
+        const distributed = result.blueprint.reduce((sum, row) => sum + row.count, 0);
+        this.templateDistributionShortfall.set(
+          requested !== null && Number.isFinite(requested) && distributed !== requested
+            ? { requested, distributed }
+            : null,
+        );
         this.mergeResolvedBlueprint(result.blueprint);
       },
       error: (error: HttpErrorResponse) => {

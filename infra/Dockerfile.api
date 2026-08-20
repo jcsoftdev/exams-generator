@@ -24,7 +24,10 @@ FROM base AS deps
 COPY pnpm-workspace.yaml package.json pnpm-lock.yaml* ./
 COPY apps/api/package.json apps/api/package.json
 COPY packages/shared/package.json packages/shared/package.json
-RUN pnpm install --frozen-lockfile --filter "@exams-generator/api..." || pnpm install --filter "@exams-generator/api..."
+# No `|| pnpm install` fallback (audit 2026-08-20 H5): the fallback turned a
+# lockfile out of sync with package.json into a silently non-reproducible
+# "green" build. A desynced lockfile must fail the build.
+RUN pnpm install --frozen-lockfile --filter "@exams-generator/api..."
 
 FROM deps AS build
 COPY . .
@@ -38,6 +41,11 @@ RUN pnpm --filter @exams-generator/api deploy --prod --legacy /app/deploy
 FROM base AS runtime
 ENV NODE_ENV=production
 COPY --from=build /app/deploy ./
+
+# Non-root (audit 2026-08-20 H5). The `node` user ships with the base image;
+# the app only ever writes to os.tmpdir() (exam-generation temp dirs), which
+# is world-writable, so read-only /app is fine.
+USER node
 
 EXPOSE 3000
 CMD ["node", "dist/main.js"]

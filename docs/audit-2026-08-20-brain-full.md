@@ -94,7 +94,7 @@ release workflow).
       **Fix barato**: check de `active` (+ existencia) en el guard con cache corto (p. ej.
       Redis 60s), o TTL corto + refresh.
 
-- [ ] **H4 — Compose de producción con fallbacks de credenciales públicas y Redis sin auth en
+- [~] **H4 — Compose de producción con fallbacks de credenciales públicas y Redis sin auth en
       red compartida.** `docker-compose.dokploy.yml:21-22,37-38,80-81`:
       `${DB_PASSWORD:-exams}`, `${MINIO_ROOT_PASSWORD:-minioadmin}` — si la var no está seteada
       en Dokploy, prod arranca con credenciales publicadas en este repo. `exams-redis` corre
@@ -103,8 +103,17 @@ release workflow).
       alcanzan estos servicios por red. Infrastructure.
       **Fix**: `:?must be set` (como ya hace JWT_SECRET) para DB/MinIO; `requirepass` en Redis;
       red interna propia para infra, solo api/web en la red compartida.
+      **HECHO (2026-08-20, parcial)**: `DB_PASSWORD`/`MINIO_ROOT_PASSWORD`/`REDIS_PASSWORD`
+      ahora `:?must be set` en `docker-compose.dokploy.yml`; `exams-redis` con `--requirepass`
+      y healthcheck autenticado; `resolveRedisConnection()` (`common/queue.env.ts`) soporta
+      `REDIS_PASSWORD` — omite la key cuando está vacía, dev local sigue sin auth — con spec
+      nueva (`queue.env.spec.ts`); parity guard verde (el parser de
+      `parse-compose-api-environment.ts` ahora tolera comentarios en el bloque `environment`,
+      con spec). **Pendiente**: red interna propia para infra. **Deploy nota**: setear
+      `REDIS_PASSWORD` (y passwords reales de DB/MinIO) en Dokploy ANTES del próximo deploy —
+      el compose ahora se niega a arrancar sin ellos.
 
-- [ ] **H5 — Imágenes Docker corren como root y el build puede des-congelar el lockfile en
+- [~] **H5 — Imágenes Docker corren como root y el build puede des-congelar el lockfile en
       silencio.** Ningún `USER` en `Dockerfile.api`/`Dockerfile.web`/(`Dockerfile.landing`);
       no existe `.dockerignore` (context `..` + `COPY . .` arrastra `.git`, `node_modules`
       locales y un `.env` raíz si existe, a la build stage);
@@ -112,6 +121,10 @@ release workflow).
       `Dockerfile.web:14`) convierte un lockfile desincronizado en un build "verde" no
       reproducible. DevOps.
       **Fix**: `USER node`, `.dockerignore` raíz, quitar el `|| pnpm install`.
+      **HECHO (2026-08-20, parcial)**: `.dockerignore` raíz creado; `USER node` en el runtime
+      de `Dockerfile.api`; `|| pnpm install` eliminado de los tres Dockerfiles. **Pendiente**:
+      los runtimes nginx de web/landing siguen como root (cambiarlos implica
+      `nginx-unprivileged` + puerto ≠ 80 — cambio aparte, no quick win).
 
 - [ ] **H6 — Llamadas LLM sin techo de gasto: sin `max_tokens`, input sin truncar, sin
       circuit-breaker.** `openrouter-request-builder.ts` no manda `max_tokens` (factura lo que
@@ -125,7 +138,9 @@ release workflow).
 
 ### Medium
 
-- [ ] **M1 — La clave se muestra como índice crudo al docente.** En vivo: preguntas
+- [x] **M1 — La clave se muestra como índice crudo al docente.** **HECHO (2026-08-20)**:
+      `question-display.util.ts` (`correctAnswerLabel`) convierte índice numérico a letra en
+      lista y detalle del banco; letras de imagen pasan intactas; spec propia. En vivo: preguntas
       estructuradas muestran "Clave: 0…4" (índice 0-based de storage) y las de imagen "Clave:
       d" (letra). "Clave: 0" parece un bug para cualquier profesor. La conversión
       índice↔letra existe (`correct-answer-index-to-letter.ts`) — la lista/detalle del banco
@@ -162,7 +177,9 @@ release workflow).
       header dice "unverified". Exclusión honesta y documentada — pero el riesgo real (BullMQ
       races) queda sin gate. Testing/DevOps.
 
-- [ ] **M8 — Pedí 30 preguntas, la plantilla repartió 29, la UI no lo dice.** En vivo: spinner
+- [x] **M8** *(HECHO 2026-08-20: nota `template-distribution-note` en el builder cuando el
+      reparto difiere del total pedido; 3 specs nuevas en exam-builder.component.spec.ts)* —
+      **Pedí 30 preguntas, la plantilla repartió 29, la UI no lo decía.** En vivo: spinner
       "Cantidad total = 30" → "29 preguntas pedidas en 29 celdas", sin mensaje del porqué
       (resto de la división entre cursos). El docente cree que pidió 30. Functional.
 
@@ -177,7 +194,10 @@ release workflow).
       de tenant completo ya existe (commit 237e14f), logs redactan `authorization`, fixtures
       usan dominios `.test`. Privacy.
 
-- [ ] **M11 — `minio/minio:latest` flotante en ambos composes.** Un `pull` cualquiera puede
+- [x] **M11** *(HECHO 2026-08-20: pineado a `RELEASE.2025-09-07T16-13-09Z` — la versión exacta
+      que `latest` resolvía localmente, probada contra el volumen de datos existente —
+      overrideable vía `MINIO_VERSION`; checksum de typst sigue pendiente)* —
+      **`minio/minio:latest` flotante en ambos composes.** Un `pull` cualquiera puede
       cambiar la versión de MinIO bajo los pies de prod. Postgres/Redis sí están pineados.
       DevOps. (Bonus: typst se descarga de GitHub sin verificación de checksum,
       `Dockerfile.api:9-13`.)
@@ -189,14 +209,18 @@ release workflow).
 
 ### Low / Info
 
-- [ ] **L1** — `console.error` en `exam-generation.service.ts:229` en vez del Logger pino:
+- [x] **L1** *(HECHO 2026-08-20: Logger pino `@Optional` inyectado, error estructurado con
+      examId/questionId/err; spec nueva del camino de fallo de recovery)* —
+      `console.error` en `exam-generation.service.ts:229` en vez del Logger pino:
       ese error de swap queda fuera del stream estructurado (sin reqId/jobId queryables).
 - [~] **L2** — Higiene git: 60 archivos de datos de lotes (`apps/api/src/db/data/lot-*`)
       llevan días untracked — un `git clean` o un disco muerto los pierde. (Los `.pyc` que el
       snapshot inicial mostraba como trackeados ya no están en HEAD — `tools/harvest/.gitignore`
       los cubre; se agregó regla `__pycache__/` también al `.gitignore` raíz, 2026-08-20.)
       Falta decidir: commitear los lotes o respaldarlos.
-- [ ] **L3** — Detalle de pregunta muestra "Grado: pre" (código crudo) en vez de la etiqueta.
+- [x] **L3** *(HECHO 2026-08-20: `gradeLevelLabel` en `question-display.util.ts`, aplicado al
+      detalle del banco)* — Detalle de pregunta mostraba "Grado: pre" (código crudo) en vez de
+      la etiqueta.
 - [ ] **L4** — Sin formatter configurado (no prettier/biome); solo ESLint. La consistencia de
       estilo hoy es disciplina manual.
 - [ ] **L5** — `packages/shared` `"test": "echo …"` no-op, pero el matrix de CI lo corre como

@@ -38,6 +38,7 @@ import {
   GRADE_LEVEL_LABELS,
   UpdateQuestionPayload,
 } from '../bank.models';
+import { correctAnswerLabel, gradeLevelLabel } from '../question-display.util';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
@@ -231,6 +232,10 @@ export class BankListComponent {
 
   protected readonly difficulties = Object.values(Difficulty);
   protected readonly difficultyLabels = DIFFICULTY_LABELS;
+  /** Audit 2026-08-20 (M1/L3): storage conventions (0-based index, raw grade code) never reach the teacher's eyes. */
+  protected readonly correctAnswerLabel = correctAnswerLabel;
+  protected readonly gradeLevelLabel = gradeLevelLabel;
+
   protected readonly gradeLevelOptions = GRADE_LEVELS.map((gradeLevel) => ({
     value: gradeLevel,
     label: GRADE_LEVEL_LABELS[gradeLevel],

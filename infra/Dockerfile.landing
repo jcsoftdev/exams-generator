@@ -8,7 +8,8 @@ WORKDIR /app
 FROM base AS deps
 COPY pnpm-workspace.yaml package.json pnpm-lock.yaml* ./
 COPY apps/landing/package.json apps/landing/package.json
-RUN pnpm install --frozen-lockfile --filter "@exams-generator/landing..." || pnpm install --filter "@exams-generator/landing..."
+# No `|| pnpm install` fallback — see Dockerfile.api (audit 2026-08-20 H5).
+RUN pnpm install --frozen-lockfile --filter "@exams-generator/landing..."
 
 FROM deps AS build
 COPY . .

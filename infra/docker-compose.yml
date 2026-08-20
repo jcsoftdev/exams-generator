@@ -17,7 +17,10 @@ services:
       retries: 10
 
   minio:
-    image: minio/minio:latest
+    # Pinned (audit 2026-08-20 M11) — same tag `latest` resolved to locally
+    # on 2026-08-20, so existing minio_data volumes keep working. Bump
+    # deliberately, together with infra/docker-compose.dokploy.yml.
+    image: minio/minio:${MINIO_VERSION:-RELEASE.2025-09-07T16-13-09Z}
     restart: unless-stopped
     command: server /data --console-address ":9001"
     environment:
@@ -68,6 +71,10 @@ services:
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
       REDIS_HOST: redis
       REDIS_PORT: 6379
+      # Empty in local dev (compose redis runs without auth; an empty value
+      # makes resolveRedisConnection skip AUTH). Key kept here for parity
+      # with docker-compose.dokploy.yml — see compose-api-environment-parity.spec.ts.
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-}
       JWT_SECRET: ${JWT_SECRET:?JWT_SECRET must be set}
       AI_MODEL: ${AI_MODEL}
       AI_VISION_MODEL: ${AI_VISION_MODEL}

@@ -1,0 +1,24 @@
+# Audit 2026-08-20 (H5): the three Dockerfiles build with context `..` (repo
+# root) and `COPY . .` — without this file the context shipped `.git`, every
+# host `node_modules` (mac-arm binaries overlaying the image's linux ones),
+# and any root-level `.env` straight into the build stage.
+#
+# Keep in mind what the builds DO need from the context: `apps/`, `packages/`,
+# `infra/nginx/*.conf`, `pnpm-workspace.yaml`, `pnpm-lock.yaml`, root
+# `package.json`, tsconfig files, and `apps/api/src/db/data` + `apps/api/drizzle`.
+
+.git
+**/node_modules
+**/dist
+**/.angular
+**/coverage
+.env
+.env.*
+docs
+tools
+.claude
+.github
+.playwright-mcp
+__pycache__
+*.pyc
+*.log

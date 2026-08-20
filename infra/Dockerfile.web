@@ -9,7 +9,8 @@ FROM base AS deps
 COPY pnpm-workspace.yaml package.json pnpm-lock.yaml* ./
 COPY apps/web/package.json apps/web/package.json
 COPY packages/shared/package.json packages/shared/package.json
-RUN pnpm install --frozen-lockfile --filter "@exams-generator/web..." || pnpm install --filter "@exams-generator/web..."
+# No `|| pnpm install` fallback — see Dockerfile.api (audit 2026-08-20 H5).
+RUN pnpm install --frozen-lockfile --filter "@exams-generator/web..."
 
 FROM deps AS build
 COPY . .

@@ -47,3 +47,7 @@ minio-data/
 # Playwright MCP session artifacts + ad-hoc smoke screenshots (root-level)
 .playwright-mcp/
 /*.png
+
+# Python (tools/harvest)
+__pycache__/
+*.pyc
