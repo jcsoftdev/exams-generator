@@ -10,6 +10,7 @@ import { TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { fakePng } from "../../test-support/image-fixtures";
 import { BankRepository, QuestionListItem } from "./bank.repository";
 import { BankService } from "./bank.service";
+import { hashBodyTypst } from "./domain/hash-body-typst";
 
 const STAFF_USER: AuthTokenPayload = { sub: "staff-1", tenantId: null, role: Role.ContentEditor };
 const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1", role: Role.Teacher };
@@ -261,6 +262,46 @@ describe("BankService.createStructuredQuestion", () => {
       }),
     );
     expect(result).toEqual({ id: "question-2" });
+  });
+
+  it("hashes the figure alongside the statement so two drawings of one wording both fit", async () => {
+    // A circuits or geometry set repeats one wording across many drawings
+    // ("¿A qué componente corresponde el símbolo de la figura?"). The unique
+    // index is on the hash, so the fingerprint is what keeps the second one
+    // from being rejected as a duplicate of the first.
+    const { service, repository } = buildDeps();
+    const figureA = "a".repeat(64);
+    const figureB = "b".repeat(64);
+
+    await service.createStructuredQuestion(TEACHER_USER, { ...VALID_DTO, figureFingerprint: figureA });
+    await service.createStructuredQuestion(TEACHER_USER, { ...VALID_DTO, figureFingerprint: figureB });
+
+    const [firstCall, secondCall] = (
+      repository.createStructuredQuestion as jest.Mock
+    ).mock.calls;
+    expect(firstCall[0].bodyHash).not.toBe(secondCall[0].bodyHash);
+    expect(firstCall[0].bodyHash).toBe(hashBodyTypst(VALID_DTO.bodyTypst, figureA));
+  });
+
+  it("keeps the figure-less hash unchanged, so the questions already stored still dedupe", async () => {
+    const { service, repository } = buildDeps();
+
+    await service.createStructuredQuestion(TEACHER_USER, VALID_DTO);
+
+    const [call] = (repository.createStructuredQuestion as jest.Mock).mock.calls;
+    expect(call[0].bodyHash).toBe(hashBodyTypst(VALID_DTO.bodyTypst));
+  });
+
+  it("rejects a figure fingerprint that is not a sha256 hex digest", async () => {
+    const { service, repository } = buildDeps();
+
+    await expect(
+      service.createStructuredQuestion(TEACHER_USER, {
+        ...VALID_DTO,
+        figureFingerprint: "not-a-hash",
+      }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.createStructuredQuestion).not.toHaveBeenCalled();
   });
 
   it("persists tenantId=null when the requester is platform staff", async () => {

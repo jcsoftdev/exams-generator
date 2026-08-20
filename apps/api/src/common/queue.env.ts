@@ -1,6 +1,14 @@
 export interface RedisConnectionConfig {
   readonly host: string;
   readonly port: number;
+  /**
+   * Only present when `REDIS_PASSWORD` is set (audit 2026-08-20 H4: the
+   * Dokploy host shares one Docker network across projects, so prod Redis
+   * runs with `--requirepass`). Absent — not `undefined` — otherwise: ioredis
+   * sends an AUTH command whenever the key exists, and a passwordless local
+   * Redis rejects that handshake.
+   */
+  readonly password?: string;
 }
 
 /**
@@ -12,9 +20,11 @@ export interface RedisConnectionConfig {
  * HOST-mapped port (6390) for bare local dev outside Docker.
  */
 export function resolveRedisConnection(): RedisConnectionConfig {
+  const password = process.env.REDIS_PASSWORD;
   return {
     host: process.env.REDIS_HOST ?? "localhost",
     port: Number(process.env.REDIS_PORT ?? 6390),
+    ...(password ? { password } : {}),
   };
 }
 

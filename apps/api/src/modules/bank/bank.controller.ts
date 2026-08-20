@@ -58,6 +58,8 @@ interface CreateStructuredQuestionBody {
   readonly alternatives?: readonly string[];
   readonly correctAnswer?: string;
   readonly figureCode?: string;
+  /** sha256 (hex) of the complement image attached right after creation. */
+  readonly figureFingerprint?: string;
 }
 
 /**
@@ -138,6 +140,7 @@ export class BankController {
       alternatives: body.alternatives,
       correctAnswer: body.correctAnswer,
       figureCode: body.figureCode,
+      figureFingerprint: body.figureFingerprint,
     });
   }
 

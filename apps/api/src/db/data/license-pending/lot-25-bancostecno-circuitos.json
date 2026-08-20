@@ -1,0 +1,1286 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál de ellas NO corresponde a un circuito eléctrico?",
+      "alternatives": [
+        "Se produce siempre que hay una corriente eléctrica.",
+        "Siempre tiene que haber un elemento que suministre energía eléctrica.",
+        "Siempre habrá alguna transformación de energía.",
+        "Siempre produce calor."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 62 [CC0 1.0 Universal]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuáles son los tipos de elementos que puedo encontrar en un circuito eléctrico?",
+      "alternatives": [
+        "Generadores, conductores, aparatos eléctricos y elementos de control",
+        "Generadores, cables, interruptores y conmutadores",
+        "Pilas, cables, resistencias y interruptores",
+        "Generadores, conductores, receptores y elementos de control"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 63 [CC0 1.0 Universal]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si juntamos dos pilas de 1,5V de este modo... ¿cuál será el voltaje total?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1,5V",
+        "0,75V",
+        "3V",
+        "1,33V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 64 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-064.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo se llaman los elementos de un circuito que suministran los electrones?",
+      "alternatives": [
+        "Elementos de control",
+        "Receptores",
+        "Conductores",
+        "Generadores"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 66 [CC0 1.0 Universal]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo se llaman los elementos de un circuito que transforman la electricidad en otro tipo de energía?",
+      "alternatives": [
+        "Receptores",
+        "Elementos de control",
+        "Transformadores",
+        "Generadores"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 67 [CC0 1.0 Universal]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo se llaman los elementos de un circuito que permiten el paso de la corriente entre un componente y otro?",
+      "alternatives": [
+        "Receptores",
+        "Conductores",
+        "Generadores",
+        "Elementos de control"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 68 [CC0 1.0 Universal]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo se llaman los elementos de un circuito que nos permiten hacer que la corriente circule por donde nosotros queremos?",
+      "alternatives": [
+        "Generadores",
+        "Conductores",
+        "Receptores",
+        "Elementos de control"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 69 [CC0 1.0 Universal]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál no es un generador?",
+      "alternatives": [
+        "Batería",
+        "Toma de red",
+        "Pila",
+        "Motor"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 70 [CC0 1.0 Universal]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál consideramos un conductor?",
+      "alternatives": [
+        "Aluminio",
+        "Cable",
+        "Interruptor",
+        "Pulsador"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 71 [CC0 1.0 Universal]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál no sería un receptor?",
+      "alternatives": [
+        "Resistencia",
+        "Pila",
+        "Lámpara",
+        "Motor"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 72 [CC0 1.0 Universal]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál no es un elemento de control?",
+      "alternatives": [
+        "Interruptor",
+        "Cable",
+        "Conmutador",
+        "Pulsador"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 73 [CC0 1.0 Universal]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Batería",
+        "Motor",
+        "Generador de corriente alterna",
+        "Toma de tierra"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 74 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-074.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Generador de corriente alterna",
+        "Batería o pila",
+        "Lámpara",
+        "Motor eléctrico"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 75 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-075.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "interruptor",
+        "conmutador",
+        "pulsador",
+        "pila"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 76 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-076.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "botón",
+        "interruptor",
+        "conmutador",
+        "pulsador"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 77 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-077.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "fusible",
+        "conmutador",
+        "interruptor",
+        "pulsador"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 78 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-078.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "pila",
+        "resistencia",
+        "lámpara",
+        "interruptor"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 79 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-079.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "interruptor",
+        "lámpara",
+        "resistencia",
+        "pila"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 80 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-080.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Altavoz",
+        "LED",
+        "lámpara",
+        "Motor"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 81 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-081.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Motor",
+        "Patrulla X",
+        "LED",
+        "Lámpara"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 82 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-082.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Generador Alterna",
+        "altavoz",
+        "zoador",
+        "motor"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 83 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-083.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "zumbador",
+        "Generador de continua",
+        "generador alterna",
+        "altavoz"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 84 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-084.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "zumbador",
+        "motor",
+        "watímetro",
+        "lámpara"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 85 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-085.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué componente se corresponde el símbolo de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "antena",
+        "receptor",
+        "pila",
+        "tierra"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 86 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-086.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo están conectadas las resistencias de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Serie",
+        "Línea",
+        "Mixto",
+        "Paralelo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 87 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-087.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo están conectadas las resistencias de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "lateral",
+        "Paralelo",
+        "Serie",
+        "mixto"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 88 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-088.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo están conectadas las resistencias de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Mixto",
+        "Serie",
+        "Paralelo",
+        "compuesto"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 89 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-089.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el voltaje total de las pilas?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2/3V",
+        "8V",
+        "2V",
+        "6V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 90 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-090.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el voltaje total de las pilas?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "6V",
+        "2V",
+        "2/3V",
+        "8V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 91 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-091.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "7Ω",
+        "12Ω",
+        "8/6Ω",
+        "6/8Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 92 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-092.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "18Ω",
+        "3/6Ω",
+        "2Ω",
+        "0,5Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 93 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-093.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "8/3Ω",
+        "3/8Ω",
+        "4/5Ω",
+        "5/4Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 94 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-094.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2Ω",
+        "3Ω",
+        "0,5Ω",
+        "9Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 95 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-095.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "6Ω",
+        "4Ω",
+        "5Ω",
+        "8Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 96 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-096.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "13Ω",
+        "4,5Ω",
+        "3Ω",
+        "6Ω"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 97 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-097.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1,2Ω",
+        "5Ω",
+        "5Ω",
+        "20Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 98 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-098.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué diferencias de funcionamento habrá entre el circuito 1 y 2?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Ninguna",
+        "Los dos leds encienden al presionar el interruptor, pero el 1 un instante antes",
+        "En el circuito 2, el led enciende aunque no cerremos el interruptor",
+        "Los dos leds encienden al presionar el interruptor, pero el 2 un instante antes"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 99 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-099.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa, para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La intensidad total del circuito será la suma de la intensidad por -a- y la intensidad por - b-",
+        "Si desconecto la resistencia -a-, seguirá pasando corriente por la - b-",
+        "La intensidad que pasa por las dos resistencias es la misma",
+        "Las dos resistencias están sometidas al mismo voltaje"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 102 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-102.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Que será cierto para la intensidad que pasa por la resistencia -a-?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Pasará la mitad de intensidad que por la resistencia -b-",
+        "Pasará la misma intensidad que por la resistencia -b-",
+        "Por ella pasará la mitad de la intensidad total do circuíto",
+        "Pasará el doble de intensidad que por la resistencia -b-"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 103 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-103.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Por cuál resistencia pasará más intensidad?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Por la -b-",
+        "Por la -c-",
+        "Por todas pasará la misma",
+        "Por la -a-"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 104 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-104.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Que pasará en este circuíto si conecto la resistencia -c- ?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La intensidad total disminuirá respecto a cuando había dos",
+        "El voltaje al que están sometidas a las resistencias disminuirá respecto a cuando había dos",
+        "La intensidad total aumentará respecto a cuando había dos",
+        "El voltaje al que están sometidas las resistencias aumentará respecto a cuando había dos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 105 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-105.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa, para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Si cerramos los dos interruptores, pasará corriente por la resistencia",
+        "Si cerramos uno y otro interruptor, pasará corriente por la resistencia",
+        "Si cerramos uno u otro interruptor, pasará corriente por la resistencia",
+        "Solo pasará corriente por la resistencia si cerramos todos los interruptores"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 106 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-106.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Para qué podrías emplear el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Un ventilador que se enciende desde dos puntos distintos",
+        "Una alarma que se enciende desde cualquiera de los dos interruptores",
+        "Un taladro que puede ser accionado con un interruptor o con otro",
+        "Una motosierra que actúa solo cuando presiono dos interruptores"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 107 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-107.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa, para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Si cerramos uno u otro interruptor, pasará corriente por la resistencia",
+        "La corriente pasa siempre que haya por lo menos un interruptor cerrado",
+        "La corriente pasará solo cuando cerremos los dos interruptores",
+        "Para que pase la corriente, podemos cerrar cualquiera de los dos interruptores"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 108 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-108.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa, para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El led -a- está cortocircuitado",
+        "El led -a- encenderá",
+        "La intensidad no pasará por el led -a- porque tiene un camino alternativo sin resistencia",
+        "El led - b- encenderá"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 109 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-109.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es verdadera para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Si cierro cualquiera de los dos interruptores, pasará corriente",
+        "Se cierro el interruptor 2 pasará corriente por la resistencia",
+        "Si cierro el interruptor 1 pasará corriente por la resistencia",
+        "Solo pasará corriente por la resistencia con 1 y 2 cerrados"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 110 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-110.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuándo pasará corriente por la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Si cerramos 1 y 2",
+        "Solo si 2 está cerrado y 1 abierto",
+        "Cerrando el 2 o el 1",
+        "Cerrando el 2, independientemente de cómo esté 1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 111 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-111.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo están conectadas las resistencias en la breadboard?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1 en paralelo, 2 en serie",
+        "Las dos en paralelo",
+        "Las dos en serie",
+        "1 en serie, 2 en paralelo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 112 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-112.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo están conectadas las resistencias en la breadboard?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1 en serie, 2 en paralelo",
+        "Las dos en serie",
+        "1 en paralelo, 2 en serie",
+        "Las dos en paralelo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 113 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-113.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Por qué resistencias pasará corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Por 1 y 2",
+        "Por ninguna",
+        "Por 2 y 3",
+        "Por todas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 114 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-114.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué montajes se corresponden con el esquema?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2",
+        "3",
+        "ninguno",
+        "1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 115 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-115.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Con los dos interruptores presionados, encienden todos los leds",
+        "Con el interruptor 1 abierto, no encenderá nada",
+        "Puedo encender - c- sin encender -a- y - b-",
+        "El interruptor 1 enciende -a- y - b-"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 116 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-116.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuándo encenderá el led verde?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Si tengo presionados los dos pulsadores",
+        "Si presiono el pulsador de la derecha",
+        "En ningún caso",
+        "Si presiono el pulsador de la izquierda"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 117 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-117.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El led rojo enciende cuando presiono el pulsador de la derecha",
+        "Para encender el led verde tengo que haber presionado el pulsador de la izquierda",
+        "Puedo encender el led verde sin que encienda el led rojo",
+        "Para encender el led verde tengo que haber presionado el pulsador de la derecha"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 118 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-118.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A qué esquema se corresponde el circuito de la breadboard?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Al rosa",
+        "Al verde",
+        "Al naranja",
+        "Al azul"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 119 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-119.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Cuál será cierta, para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El led encenderá si únicamente está cerrado -a-",
+        "El led encenderá cuando presione los dos interruptores",
+        "El led no encenderá cuando -b- esté abierto",
+        "El led encenderá al presionar -a-, esté como esté - b-"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 120 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-120.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué leds encenderán?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El 2,3,4 y 6",
+        "El 1 y el 5",
+        "Ninguno",
+        "El 3 y el 4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 121 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-121.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué leds encenderán?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Todos",
+        "El 1 y el 3",
+        "Ninguno",
+        "El 1, 3, 4 y 6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 122 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-122.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué leds encenderán?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Ninguno",
+        "El 2 y el 3",
+        "El 3",
+        "Todos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 123 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-123.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué leds encenderán?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El 1, 3 y 4",
+        "Ninguno",
+        "Todos",
+        "El 4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 124 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-124.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Quiero que el led encienda cuando presiono el pulsador. ¿Hay algún fallo?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "No hay fallos, va a encender",
+        "La resistencia no está conectada al led",
+        "El led está puesto del revés",
+        "Los cables no están en los terminales correctos del pulsador"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 125 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-125.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Quiero que el led encienda solo cuando presiono los dos pulsadores. ¿Hay algún fallo?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El cable verde no conecta los terminales correctos de los interruptores",
+        "La resistencia no está conectada en el terminal correcto del pulsador",
+        "Ninguno",
+        "El led encenderá cuando presione cualquiera de los interruptores"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 126 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-126.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué cable tengo que quitar para que el led encienda desde cualquiera de los dos pulsadores?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El verde",
+        "El naranja",
+        "El azul",
+        "El amarillo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 127 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-127.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Por qué circuito circulará más corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Por el 4",
+        "Por el 3",
+        "Por el 1",
+        "Por el 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 128 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-128.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Por qué circuito circulará más corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Por el 3",
+        "Por el 4",
+        "Por el 1",
+        "Por el 2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 129 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-129.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Por qué circuito circulará más corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Por el 1",
+        "Por el 2",
+        "Por el 4",
+        "Por el 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 130 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-130.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Por qué circuito circulará más corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Por el 3",
+        "Por el 2",
+        "Por el 4",
+        "Por el 1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 131 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-131.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Por qué circuito circulará más corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Por el 3",
+        "Por el 4",
+        "Por el 2",
+        "Por el 1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 132 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-132.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Partimos del circuito negro. ¿Qué pasará cuando conectemos la resistencia en verde?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La intensidad total del circuito no variará",
+        "La intensidad total del circuito aumentará",
+        "El voltaje al que está sometida -a- disminuirá",
+        "La intensidad total del circuito disminuirá"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 133 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-133.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Partimos del circuito negro. Qué pasará cuando conectemos la resistencia en verde?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El voltaje de -a- será la mitad que antes",
+        "La intensidad total del circuito no variará",
+        "Por -b- pasará la misma intensidad que por -a-",
+        "La resistencia equivalente en el circuito será de 4Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 134 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-134.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Partimos del circuito negro. Si conectamos la parte en verde, cuál será falsa?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La intensidad que pasa por -a- no variará",
+        "La intensidad total disminuirá",
+        "Por -b- pasará una intensidad igual a la que pasa por -a-",
+        "El voltaje de -b- será el mismo que el de -a-"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 135 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-135.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El led encenderá si presiono el pulsador derecho",
+        "El led encenderá cuando presione el interruptor izquierdo",
+        "El led no encenderá nunca",
+        "Si tengo presionados los dos interruptores, el led encenderá"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 138 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-138.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuáles leds encenderán cuando presione el pulsador?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El azul y el verde",
+        "El azul y el rojo",
+        "El rojo",
+        "El verde y el rojo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 139 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-139.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es cierta para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "No podré encender el led verde si no presiono el interruptor de la derecha",
+        "El verde está siempre encendido, aunque no presione ningún pulsador",
+        "Cada interruptor enciende un led",
+        "Si presiono el pulsador de la derecha, encienden los dos leds"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 140 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-140.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuándo encenderá el led -b-?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Con 1 cerrado, 2 abierto y 3 cerrado",
+        "Con 1 cerrado, 2 cerrado y 3 abierto",
+        "Con 1 cerrado, 2 abierto y 3 abierto",
+        "Siempre que esté cerrado el interruptor 1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 141 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-141.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Puedo encender solo el led -a-?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Sí, presionando 1 y 3",
+        "Sí,presionando 1 y 2",
+        "No",
+        "Sí, presionando 1, 2 y 3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/procastino/bancosTecno",
+      "sourceName": "procastino/bancosTecno — bancoTecno_es.csv, bloque «circuitos», fila 142 [CC0 1.0 Universal]",
+      "imagePath": "lot-25-bancostecno-circuitos-figures/fis-lot-25-bancostecno-circuitos-142.png"
+    }
+  ]
+}

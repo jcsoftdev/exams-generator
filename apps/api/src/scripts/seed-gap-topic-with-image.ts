@@ -1,4 +1,5 @@
 import "reflect-metadata";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { and, eq, inArray } from "drizzle-orm";
@@ -78,6 +79,14 @@ async function main(): Promise<void> {
         throw new Error(`Topic '${entry.topicName}' not found in course '${entry.courseName}'`);
       }
 
+      // The image is attached in a second call, but the bank hashes the figure
+      // together with the statement — a circuits set repeats one wording across
+      // many drawings — so the fingerprint has to travel with the creation.
+      const imageBytes = entry.imagePath ? readFileSync(resolve(dataDir, entry.imagePath)) : undefined;
+      const figureFingerprint = imageBytes
+        ? createHash("sha256").update(imageBytes).digest("hex")
+        : undefined;
+
       const createResponse = await fetch(`${API_BASE_URL}/bank/questions/structured`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
@@ -89,6 +98,7 @@ async function main(): Promise<void> {
           bodyTypst: entry.bodyTypst,
           alternatives: entry.alternatives,
           correctAnswer: entry.correctAnswer,
+          figureFingerprint,
         }),
       });
       if (createResponse.status === 409) {
@@ -101,12 +111,11 @@ async function main(): Promise<void> {
       }
       const { id } = (await createResponse.json()) as { id: string };
 
-      if (!entry.imagePath) {
+      if (!imageBytes) {
         console.log(`OK   ${label} (question ${id})`);
         continue;
       }
 
-      const imageBytes = readFileSync(resolve(dataDir, entry.imagePath));
       const form = new FormData();
       form.set("file", new Blob([imageBytes], { type: "image/png" }), "complement.png");
 

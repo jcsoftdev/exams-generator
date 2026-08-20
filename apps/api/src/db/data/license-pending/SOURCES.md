@@ -21,3 +21,126 @@ Reglas que se respetan igual, sin importar la licencia:
 
 | Lote | Libro | Repo | URL | Licencia (citada) | Preguntas | Extraído |
 | --- | --- | --- | --- | --- | --- | --- |
+| `lot-24-picuino-electricidad` | Test Picuino — bancos `es-electric-*` (circuito eléctrico, ley de Ohm, serie/paralelo, unidades y magnitudes) | `picuino/test` | https://github.com/picuino/test | «Creative Commons Attribution-ShareAlike 4.0» (cabecera de cada `.yaml`; `Copyright: 2021/2023 por Carlos Félix Pardo Martín`). El repo declara `cc-by-sa-4.0` y `Credits.md` confirma: *"El texto de los cuestionarios en los archivos .yaml (preguntas y opciones de respuesta) se distribuyen bajo licencia Creative Commons Attribution-ShareAlike 4.0"* | 230 (144 con figura) | 2026-08-20 |
+| `lot-25-bancostecno-circuitos` | Banco de preguntas de tecnoloxía — `bancoTecno_es.csv`, bloque «circuitos» | `procastino/bancosTecno` | https://github.com/procastino/bancosTecno | «Creative Commons Legal Code — CC0 1.0 Universal» (primeras líneas del archivo `LICENSE` del repo, dedicación al dominio público; GitHub reporta `cc0-1.0`) | 76 (66 con figura) | 2026-08-20 |
+| `lot-26-unmsm-historia-mcq` | «Recopilación de preguntas de Historia de exámenes de admisión a la Universidad Nacional Mayor de San Marcos» (~1970–2020), 36 capítulos temáticos | `davidquicast/Corpus-Historia-Peru-ExamenAdmisionUNMSM-MultipleChoice` | https://github.com/davidquicast/Corpus-Historia-Peru-ExamenAdmisionUNMSM-MultipleChoice | El repo **no tiene archivo `LICENSE`** y GitHub no reporta licencia. Lo único que dice sobre licencia, citado literal: el front matter de `README.md` declara `license: apache-2.0`, y **cada registro** de `cuestionario.json` lleva `"license": "Desconocida"`. El mismo registro cita como origen `"source": "https://www.slideshare.net/slideshow/historia-del-per-recopilacin-ex-adm-unmsm/251464302"` | 439 (sin figura) | 2026-08-20 |
+
+## Nota sobre estos dos lotes
+
+**No están esperando la licencia en trámite.** Son los únicos candidatos que aparecieron con
+licencia abierta ya concedida, así que su bloqueo es distinto y hay que decidirlo aparte:
+
+- `lot-25` es **CC0**: dominio público, sin obligaciones. Se puede mover a `collected/` cuando se
+  quiera.
+- `lot-24` es **CC BY-SA 4.0**: exige (a) atribuir a Carlos Félix Pardo Martín y (b) *share-alike*.
+  La cláusula share-alike es la que hay que mirar antes de sembrar: obliga a redistribuir las obras
+  derivadas bajo la misma licencia. Conviene que lo revise quien lleve el tema legal, porque afecta
+  a cómo se publica el banco, no solo a este lote.
+
+Ambos vienen del currículo de Tecnología de la ESO española, no de un examen de admisión peruano.
+Por eso van etiquetados `difficulty: "easy"` y no `"hard"`: son ejercicios de circuitos de
+secundaria, correctos y con figura limpia, pero por debajo del nivel UNI/UNCP. Sirven para dar
+volumen al tramo fácil de Electrodinámica, no para simular un examen de admisión.
+
+La clave de ambos es **posicional y está documentada en la propia obra** (la primera alternativa es
+la correcta). Verificado, no deducido: **648/651** en `picuino` contra su propia exportación Moodle
+(`fraction="100"`), y **120/120** en `bancosTecno` sobre los pares *inequívocos* (una fila del CSV y
+una sola pregunta del XML con el mismo juego de opciones); otros 12 pares se descartan por ambiguos
+—mismo enunciado y mismas opciones, distinta figura— en vez de contarlos como coincidencia. Al
+construir el lote las alternativas se barajan con semilla fija por pregunta para que la respuesta no
+caiga siempre en el índice 0; la clave viaja con su opción (round-trip 306/306).
+
+### Revisión del 2026-08-20 sobre `lot-25` (+2 preguntas, 74 → 76)
+
+Al reprocesar el CSV aparecieron 5 filas del bloque «circuitos» que el primer barrido había
+descartado. Revisadas una a una:
+
+- **Recuperadas (2).** Filas 64 y 142: la ruta de la figura que trae el CSV lleva espacios sueltos
+  (`images/duasPilasSerie. png`, `images/3 ledParal4IntAcenden.png`) y el normalizador anterior solo
+  quitaba el espacio *inmediatamente anterior* a la extensión, así que no resolvía ninguno de los dos
+  casos. Los ficheros existen en el repo; ahora se resuelven probando la ruta tal cual, luego sin el
+  espacio previo a la extensión y por último sin espacios. Ambas figuras verificadas a ojo.
+- **Descartadas por figura ausente (2).** Filas 100 y 101 apuntan a `images/2receptoresSerie.png` y
+  `images/2resisSerie.png`, que **no existen** en el repo. Las dos preguntas son «¿Cuál es falsa,
+  para el circuito de la figura?»: sin la figura no se pueden responder.
+- **Descartada por defecto de la obra (1).** Fila 65 pide la resistencia equivalente de «dos
+  resistencias de 4Ω» en paralelo y publica como clave 2Ω (correcto para 4‖4), pero la figura que
+  referencia (`images/2ResisParalelo.png`) dibuja una de 2Ω y otra de 4Ω: **la figura contradice al
+  enunciado y a la clave**. El repo sí contiene el dibujo que corresponde
+  (`circuits_2ResisParalelo44.png`, el que usa `bancoTecno_gal.csv` fila 109), pero sustituirlo sería
+  reparar la obra en vez de reproducirla, así que la fila se descarta y queda anotada en el script.
+
+Comprobado además que las otras figuras numéricas del lote sí concuerdan con su clave: los nombres
+de fichero codifican los valores (`3ResisSerie223` → 7Ω, `3ResisParalelo666` → 2Ω,
+`3ResisParalelo422` → 4/5Ω, `2ResisParalelo36` → 2Ω, `3ResisMixto436` → 6Ω…). La fila 65 era la
+única del grupo con un nombre genérico y sin valores, y la única inconsistente.
+
+Detalle de la comprobación de `picuino` (re-verificada el 2026-08-20, barrido completo de los 18
+bancos `es-electric-*`, no una muestra): cada pregunta del `.yaml` se empareja con su pregunta del
+XML por la terna *enunciado + juego de opciones + bytes de la figura*. La figura es imprescindible
+en el emparejamiento: en `series-parallel-identify` las 40 preguntas comparten enunciado y opciones
+literales y solo se distinguen por el dibujo, así que emparejar solo por texto deja 65 preguntas
+ambiguas en el conjunto. Con la figura incluida: **648 confirmadas, 0 discrepancias, 0 ambiguas**;
+las 3 restantes son preguntas de `es-electric-digital.yaml` que aún no están en el XML exportado
+(banco no sembrado, así que no afectan a ningún lote). De las 230 de `lot-24`, las 230 quedan
+confirmadas una a una, y sus 144 figuras son copias byte a byte de los PNG del repo.
+
+### `picuino/test` ya está agotado — no volver a cosecharlo
+
+El 2026-08-20 se pidió una segunda extracción del mismo libro con el slug `book-0-*`. **No se
+escribió**: habría duplicado las mismas 230 preguntas y los mismos 144 PNG dentro de este mismo
+directorio. Los 18 bancos `es-electric-*` suman 651 preguntas; `lot-24` ya se llevó las 230 útiles
+(8 ficheros: `circuits`, `circuits-2`, `ohms-law`, `ohms-law-2`, `series-parallel-calc`,
+`series-parallel-calc-2`, `series-parallel-identify`, `units-magnitudes`).
+
+Las 421 restantes se dejaron fuera a propósito, por contenido y no por licencia: `color-code-1/2`
+(168) son consultas de la tabla de colores de resistencias, `components-name` (35) y
+`components-type` (34) piden nombrar el símbolo de un componente, `breadboard` (13) es cableado de
+protoboard y `digital` (32) son puertas lógicas — nada de eso existe en el temario preuniversitario
+y solo encajaría en `Electrodinámica` a la fuerza. `introduction` (35) es historia de la
+electricidad (Tales, el ámbar, la lámpara del XIX) y `energy-4/5/6` (104) son preguntas
+cualitativas de cultura energética, sin cálculo. Si algún día se quieren, la clave de las 421 ya
+está verificada por el mismo barrido; lo que falta es la decisión de temario, no la comprobación.
+
+## `lot-26-unmsm-historia-mcq` — el único libro de la cosecha de olimpiadas que encajó
+
+Es el único hallazgo de la búsqueda de «libros de problemas de nivel olimpiada/ingreso» que llega
+con las tres cosas a la vez: **opción múltiple de cinco alternativas**, **clave publicada por la
+propia obra** y **castellano de examen de admisión peruano**. Los demás candidatos (Irodov,
+Bukhovtsev, Krotov, Tiwari, olimpiadas iberoamericanas de física, fisicoquímica olímpica hondureña)
+son de respuesta abierta: traen la respuesta al final, pero no hay alternativas que copiar, así que
+no caben en el contrato `alternatives[5]` sin inventárselas. Quedan documentados como descartados,
+no como pendientes.
+
+**La clave está verificada contra la tabla de claves del propio libro, no deducida.** El repo
+publica esa tabla aparte en `files/data_clean/claves.txt`, con la forma
+`| 1 | A | 46 | E | 91 | D | …` — número de pregunta y letra impresa. Se reparseó esa tabla y se
+comparó con el índice 0-based que trae `cuestionario.json`: **449/449 coinciden, 0 discrepancias,
+0 preguntas sin clave**. El script está en el scratchpad de la sesión
+(`books/unmsm/build_unmsm_lot.py`); la comprobación se hizo antes de construir el lote.
+
+**No es contenido generado por IA**, y se comprobó en vez de suponerlo. El pipeline del repo usa
+Mistral OCR para *transcribir* un PDF real (`files/data_ocr/cuestionario.pdf`, 62 MB, el
+solucionario escaneado), y tanto los enunciados como las claves salen de ese escaneo — el texto
+intermedio queda visible en `files/data_clean/cuestionario.txt` con el formato original
+`50. …  A) … B) … C) … D) … E)`. La IA transcribe, no responde: la señal de alarma habitual (la
+clave contradice su propia explicación) no aplica porque aquí no hay explicación generada, solo la
+letra que la tabla imprime.
+
+Se dejaron fuera **10 de las 449** por defecto de la obra escaneada: nueve imprimen 4 alternativas
+y una imprime 2 (preguntas 49, 66, 108, 147, 179, 287, 296, 325, 419, 438). Se descartan en vez de
+rellenarlas.
+
+Dos preguntas conservan un distractor repetido tal como está impreso (la 1, por ejemplo, repite
+«La tradición oral española.» en C y D). Se comprobó que **en ningún caso el texto repetido es el de
+la alternativa correcta**, así que la clave sigue siendo inequívoca. Se reproduce el defecto en vez
+de corregirlo.
+
+Mapa de los 36 capítulos del libro a la taxonomía canónica: los capítulos de horizontes y culturas
+preincas (Chavín, Paracas, Nazca, Moche, Tiahuanaco, Wari, Chimú, Chancas, y también Mayas/Aztecas)
+caen en «Poblamiento americano y culturas preincaicas»; invasión, resistencia, guerras civiles y los
+dos de virreinato en «Conquista y Virreinato del Perú»; reformas borbónicas, precursores y las dos
+corrientes libertadoras en «Independencia del Perú y emancipación americana»; del primer militarismo
+a la República Aristocrática, pasando por la Guerra con Chile, en «República del Perú (siglo XIX) y
+dependencia inglesa». El script valida contra `canonical-taxonomy.json` y aborta si algún nombre no
+existe literalmente.

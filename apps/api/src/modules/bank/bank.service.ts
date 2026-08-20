@@ -57,6 +57,9 @@ export interface CreateImageQuestionDto {
   readonly file: Express.Multer.File | undefined;
 }
 
+/** A sha256 digest as the API accepts it: 64 lowercase hex characters. */
+const SHA256_HEX = /^[0-9a-f]{64}$/;
+
 export interface CreateStructuredQuestionDto {
   readonly courseId: string | undefined;
   readonly topicId: string | undefined;
@@ -66,6 +69,15 @@ export interface CreateStructuredQuestionDto {
   readonly alternatives: readonly string[] | undefined;
   readonly correctAnswer: string | undefined;
   readonly figureCode: string | undefined;
+  /**
+   * sha256 (hex) of the complement image this question will carry, sent by the
+   * client BEFORE the image itself, which arrives in the follow-up
+   * `POST /bank/questions/:id/image` call. It only feeds the content hash: two
+   * questions whose statements are word-for-word identical are different
+   * questions when their figures differ, and without this the unique index
+   * would reject all but the first.
+   */
+  readonly figureFingerprint?: string | undefined;
 }
 
 /**
@@ -206,7 +218,11 @@ export class BankService {
       throw new BadRequestException(validation.errors);
     }
 
-    const bodyHash = hashBodyTypst(dto.bodyTypst as string);
+    if (dto.figureFingerprint !== undefined && !SHA256_HEX.test(dto.figureFingerprint)) {
+      throw new BadRequestException(["figureFingerprint must be a sha256 hex digest"]);
+    }
+
+    const bodyHash = hashBodyTypst(dto.bodyTypst as string, dto.figureFingerprint);
     const duplicate = await this.repository.findByBodyHash(user.tenantId, bodyHash);
     if (duplicate) {
       throw new ConflictException(`Question already exists (id: ${duplicate.id})`);

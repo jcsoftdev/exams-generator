@@ -1,0 +1,3828 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál de ellas es falsa en un circuito eléctrico?",
+      "alternatives": [
+        "Siempre tiene que haber un generador.",
+        "Siempre tiene que haber un receptor.",
+        "Siempre habrá una corriente eléctrica.",
+        "Siempre habrá cables."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 1 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuáles son los tipos de elementos que puedo encontrar en un circuito eléctrico?",
+      "alternatives": [
+        "Pilas, cables, resistencias e interruptores.",
+        "Generadores, conductores, aparatos eléctricos y elementos de control.",
+        "Generadores, conductores, receptores y elementos de control.",
+        "Generadores, cables, interruptores y conmutadores."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 2 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo se llaman los elementos de un circuito que impulsan los electrones?",
+      "alternatives": [
+        "Elementos de control.",
+        "Generadores.",
+        "Conductores.",
+        "Receptores."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 3 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo se llaman los elementos de un circuito que transforman la electricidad en otro tipo de energía útil?",
+      "alternatives": [
+        "Receptores.",
+        "Transformadores.",
+        "Generadores.",
+        "Elementos de control."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 4 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo se llaman los elementos de un circuito por los que circula la corriente entre un componente y otro?",
+      "alternatives": [
+        "Conductores.",
+        "Generadores.",
+        "Elementos de control.",
+        "Receptores."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 5 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo se llaman los elementos de un circuito que nos permiten hacer que la corriente circule por donde nosotros queremos?",
+      "alternatives": [
+        "Elementos de control.",
+        "Conductores.",
+        "Receptores.",
+        "Generadores."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 6 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál no es un generador?",
+      "alternatives": [
+        "Resistencia.",
+        "Panel solar fotovoltaico.",
+        "Batería.",
+        "Pila."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 7 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál consideramos un conductor?",
+      "alternatives": [
+        "Pulsador.",
+        "Pila.",
+        "Cable.",
+        "Interruptor."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 8 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál no es un receptor?",
+      "alternatives": [
+        "Lámpara.",
+        "Motor.",
+        "Pila.",
+        "Resistencia."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 9 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál no es un elemento de control?",
+      "alternatives": [
+        "Conmutador.",
+        "Interruptor.",
+        "Pulsador.",
+        "Cable."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 10 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un circuito eléctrico es un conjunto de componentes que ...",
+      "alternatives": [
+        "difunden y controlan el paso de la electricidad para producir efectos útiles.",
+        "generan y controlan el paso de la electricidad para producir efectos útiles.",
+        "propagan y controlan el paso de la electricidad para producir efectos útiles.",
+        "controlan el paso de la electricidad para producir efectos útiles."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 11 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los circuitos están formados por cuatro tipos de componentes ...",
+      "alternatives": [
+        "Receptores, conductores, generadores y elementos de control.",
+        "Regeneradores, conductores, receptores y elementos de control.",
+        "Generadores, receptores, conductores y elementos de descontrol.",
+        "Conductores, receptores y elementos de control."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 12 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué son los generadores?",
+      "alternatives": [
+        "Componentes encargados de transportar corriente eléctrica.",
+        "Componentes encargados de generar corriente eléctrica.",
+        "Componentes encargados de transformar la corriente eléctrica en un efecto útil.",
+        "Componentes encargados de controlar el paso de la corriente eléctrica."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 13 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué son los conductores?",
+      "alternatives": [
+        "Componentes encargados de generar corriente eléctrica.",
+        "Componentes encargados de transportar corriente eléctrica.",
+        "Componentes encargados de transformar la corriente eléctrica en un efecto útil.",
+        "Componentes encargados de controlar el paso de la corriente eléctrica."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 14 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué son los receptores?",
+      "alternatives": [
+        "Componentes encargados de transformar la corriente eléctrica en un efecto útil.",
+        "Componentes encargados de controlar el paso de la corriente eléctrica.",
+        "Componentes encargados de generar corriente eléctrica.",
+        "Componentes encargados de transportar corriente eléctrica."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 15 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué son los elementos de control?",
+      "alternatives": [
+        "Componentes encargados de transformar la corriente eléctrica en un efecto útil.",
+        "Componentes encargados de generar corriente eléctrica.",
+        "Componentes encargados de permitir o no permitir el paso de la corriente eléctrica.",
+        "Componentes encargados de transportar corriente eléctrica."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 16 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un ejemplo de generadores son ...",
+      "alternatives": [
+        "Los cables, barras y uniones de cobre, de aluminio, de oro o de estaño.",
+        "Los interruptores, pulsadores, fusibles, interruptores automáticos, diferenciales.",
+        "Las pilas y baterías, las dinamos de las bicicletas, los alternadores de los automóviles o las placas solares.",
+        "Las bombillas, ventiladores, horno microondas, frigorífico, televisor."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 17 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un ejemplo de conductores son ...",
+      "alternatives": [
+        "Las bombillas, ventiladores, horno microondas, frigorífico, televisor.",
+        "Los interruptores, pulsadores, fusibles, interruptores automáticos, diferenciales.",
+        "Las pilas y baterías, las dinamos de las bicicletas, los alternadores de los automóviles o las placas solares.",
+        "Los cables, barras y uniones de cobre, de aluminio, de oro o de estaño."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 18 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un ejemplo de receptores son ...",
+      "alternatives": [
+        "Las bombillas, ventiladores, horno microondas, frigorífico, televisor.",
+        "Los cables, barras y uniones de cobre, de aluminio, de oro o de estaño.",
+        "Los interruptores, pulsadores, fusibles, interruptores automáticos, diferenciales.",
+        "Las pilas y baterías, las dinamos de las bicicletas, los alternadores de los automóviles o las placas solares."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 19 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un ejemplo de elementos de control son ...",
+      "alternatives": [
+        "Los cables, barras y uniones de cobre, de aluminio, de oro o de estaño.",
+        "Las bombillas, ventiladores, horno microondas, frigorífico, televisor.",
+        "Los interruptores, pulsadores, fusibles, interruptores automáticos, diferenciales.",
+        "Las pilas y baterías, las dinamos de las bicicletas, los alternadores de los automóviles o las placas solares."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 20 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El cobre se utiliza como conductor en ...",
+      "alternatives": [
+        "El recubrimiento de los contactos eléctricos para evitar la oxidación y mejorar la conducción.",
+        "La soldadura de componentes electrónicos, por tener una temperatura de fusión mucho más baja que otros metales.",
+        "Los cables de alta tensión por tener mejor resistencia mecánica, a la oxidación y ser baratos.",
+        "El interior de los edificios y en los cables flexibles de los aparatos eléctricos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 21 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El aluminio y el acero se utilizan como conductores en ...",
+      "alternatives": [
+        "El recubrimiento de los contactos eléctricos para evitar la oxidación y mejorar la conducción.",
+        "La soldadura de componentes electrónicos, por tener una temperatura de fusión mucho más baja que otros metales.",
+        "El interior de los edificios y en los cables flexibles de los aparatos eléctricos.",
+        "Los cables de alta tensión por tener mejor resistencia mecánica, a la oxidación y ser baratos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 22 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El oro y el níquel se utilizan como conductores en ...",
+      "alternatives": [
+        "El recubrimiento de los contactos eléctricos para evitar la oxidación y mejorar la conducción.",
+        "Los cables de alta tensión por tener mejor resistencia mecánica, a la oxidación y ser baratos.",
+        "El interior de los edificios y en los cables flexibles de los aparatos eléctricos.",
+        "La soldadura de componentes electrónicos, por tener una temperatura de fusión mucho más baja que otros metales."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 23 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El estaño, plomo y plata se utilizan como conductores en ...",
+      "alternatives": [
+        "El recubrimiento de los contactos eléctricos para evitar la oxidación y mejorar la conducción.",
+        "El interior de los edificios y en los cables flexibles de los aparatos eléctricos.",
+        "La soldadura de componentes electrónicos, por tener una temperatura de fusión mucho más baja que otros metales.",
+        "Los cables de alta tensión por tener mejor resistencia mecánica, a la oxidación y ser baratos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 24 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un interruptor o un pulsador es un elemento de control de ...",
+      "alternatives": [
+        "Protección manual.",
+        "Accionamiento automático.",
+        "Accionamiento manual.",
+        "Protección eléctrica."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 25 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un fusible es un elemento de control de ...",
+      "alternatives": [
+        "Accionamiento automático.",
+        "Protección eléctrica.",
+        "Protección manual.",
+        "Accionamiento manual."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 26 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un diferencial es un elemento de control de ...",
+      "alternatives": [
+        "Accionamiento automático.",
+        "Protección eléctrica.",
+        "Accionamiento manual.",
+        "Protección manual."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 27 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un interruptor automático es un elemento de control de ...",
+      "alternatives": [
+        "Accionamiento manual.",
+        "Protección eléctrica.",
+        "Accionamiento a distancia.",
+        "Protección manual."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 28 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una puerta de apertura automática tiene un elemento de control de ...",
+      "alternatives": [
+        "Protección eléctrica.",
+        "Accionamiento manual.",
+        "Accionamiento automático.",
+        "Protección manual."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 29 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una luz que se apaga de forma automática tiene un elemento de control de ...",
+      "alternatives": [
+        "Accionamiento automático.",
+        "Protección manual.",
+        "Protección eléctrica.",
+        "Accionamiento manual."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 30 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Podemos encontrar pulsadores en ...",
+      "alternatives": [
+        "Un calentador eléctrico.",
+        "Un timbre de puerta.",
+        "Una regleta de conexiones eléctricas.",
+        "La luz de una habitación."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 31 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Podemos encontrar interruptores en ...",
+      "alternatives": [
+        "La luz de una habitación.",
+        "Una batidora de mano de cocina.",
+        "Un taladro eléctrico.",
+        "Un timbre de puerta."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — El circuito eléctrico (es-electric-circuits.yaml), pregunta 32 [Creative Commons Attribution-ShareAlike 4.0, 2023 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo están conectadas las resistencias de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Mixto",
+        "Paralelo",
+        "Línea",
+        "Serie"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 1 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-01.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo están conectadas las resistencias de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Paralelo",
+        "Lateral",
+        "Mixto",
+        "Serie"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 2 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-02.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo están conectadas las resistencias de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Paralelo",
+        "Compuesto",
+        "Mixto",
+        "Serie"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 3 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-03.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué diferencias de funcionamiento habrá entre el circuito 1 y 2?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Ninguna",
+        "En el circuito 2, el led enciende aunque no cerremos el interruptor",
+        "Los dos ledes encienden al presionar el interruptor, pero el 2 un instante antes",
+        "Los dos ledes encienden al presionar el interruptor, pero el 1 un instante antes"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 4 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-04.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa, para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La bombilla L1 se encenderá un instante antes que la L2",
+        "Si la bombilla L1 se quema, la bombilla L2 no podrá encender",
+        "La intensidad que circula por las dos bombillas es la misma",
+        "Las dos bombillas se encenderán al presionar el interruptor"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 5 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-05.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa, para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Si cerramos los dos interruptores, pasará corriente por la resistencia",
+        "Si cerramos uno y otro interruptor, pasará corriente por la resistencia",
+        "Si cerramos uno u otro interruptor, pasará corriente por la resistencia",
+        "Solo pasará corriente por la resistencia si cerramos todos los interruptores"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 6 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-06.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Para qué podrías emplear el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Una alarma que se enciende desde cualquiera de los dos interruptores",
+        "Un ventilador que se enciende desde dos puntos distintos",
+        "Un taladro que puede ser accionado con un interruptor o con otro",
+        "Una motosierra que actúa solo cuando presiono dos interruptores"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 7 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-07.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa, para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Si cerramos uno u otro interruptor, pasará corriente por la resistencia",
+        "Para que pase la corriente, podemos cerrar cualquiera de los dos interruptores",
+        "La corriente pasará solo cuando cerremos los dos interruptores",
+        "La corriente pasa siempre que haya por lo menos un interruptor cerrado"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 8 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-08.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa, para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La bombilla L1 está cortocircuitada",
+        "La bombilla L1 se encenderá",
+        "La intensidad no pasará por la bombilla L1 porque tiene un camino alternativo sin resistencia",
+        "La bombilla L2 se encenderá"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 9 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-09.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es verdadera para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Si cierro el interruptor S1 pasará corriente por la resistencia",
+        "Si cierro cualquiera de los dos interruptores, pasará corriente",
+        "Solo pasará corriente por la resistencia con S1 y S2 cerrados",
+        "Se cierro el interruptor S2 pasará corriente por la resistencia"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 10 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-10.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuándo pasará corriente por la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Cerrando el interruptor S2 o el S1",
+        "Si cerramos los interruptores S1 y S2",
+        "Solo si el interruptor S2 está cerrado y S1 abierto",
+        "Cerrando el interruptor S2, independientemente de cómo esté S1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 11 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-11.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El interruptor S1 enciende L2 y L3",
+        "Con el interruptor S1 abierto, no se encenderá nada",
+        "Con los dos interruptores presionados, encienden todas las bombillas",
+        "Puedo encender L1 sin encender L2 y L3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 12 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-12.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Para el circuito de la figura ¿Qué será cierto?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El led se encenderá al presionar S1, esté como esté S2",
+        "El led se encenderá si únicamente está cerrado S1",
+        "El led se encenderá cuando presione los dos interruptores",
+        "El led no se encenderá cuando S2 esté abierto"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 13 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-13.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué ledes se encenderán?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El D2, D3, D4 y D6",
+        "El D1 y el D5",
+        "El D3 y el D4",
+        "Ninguno"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 14 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-14.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué ledes se encenderán?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El D1 y el D3",
+        "Ninguno",
+        "Todos",
+        "El D1, D3, D4 y D6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 15 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-15.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué bombillas se encenderán?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La L3",
+        "Ninguna",
+        "La L2 y la L3",
+        "Todas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 16 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-16.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué ledes se encenderán?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Todos",
+        "El D4",
+        "Ninguno",
+        "El D1, D3 y D4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 17 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-17.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuándo se encenderá la bombilla L2?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Siempre que esté cerrado el interruptor S1",
+        "Con S1 cerrado, S2 abierto y S3 abierto",
+        "Con S1 cerrado, S2 cerrado y S3 abierto",
+        "Con S1 cerrado, S2 abierto y S3 cerrado"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 18 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-18.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Puedo encender solo la bombilla L1?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Sí, presionando S1 y S2",
+        "Sí, presionando S1 y S3",
+        "No",
+        "Sí, presionando S1, S2 y S3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Circuitos eléctricos (es-electric-circuits-2.yaml), pregunta 19 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--circuits-2-19.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué mide la energía con la que se impulsan los electrones?",
+      "alternatives": [
+        "La intensidad de corriente",
+        "La resistencia eléctrica",
+        "La tensión eléctrica",
+        "La potencia eléctrica"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 1 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué mide la cantidad de electrones que circulan por segundo?",
+      "alternatives": [
+        "La resistencia eléctrica",
+        "La tensión eléctrica",
+        "La potencia eléctrica",
+        "La intensidad de corriente"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 2 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué mide la oposición al paso de la corriente eléctrica?",
+      "alternatives": [
+        "La intensidad de corriente",
+        "La resistencia eléctrica",
+        "La potencia eléctrica",
+        "La tensión eléctrica"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 3 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué magnitud está midiendo un valor de 10V?",
+      "alternatives": [
+        "Tensión eléctrica",
+        "Resistencia eléctrica",
+        "Potencia eléctrica",
+        "Intensidad de corriente"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 4 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué magnitud está midiendo un valor de 10A?",
+      "alternatives": [
+        "Resistencia eléctrica",
+        "Potencia eléctrica",
+        "Tensión eléctrica",
+        "Intensidad de corriente"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 5 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué magnitud está midiendo un valor de 10Ω?",
+      "alternatives": [
+        "Intensidad de corriente",
+        "Potencia eléctrica",
+        "Tensión eléctrica",
+        "Resistencia eléctrica"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 6 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué unidad se utiliza para medir tensión eléctrica?",
+      "alternatives": [
+        "Ohmios",
+        "Amperios",
+        "Voltios",
+        "Vatios"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 7 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué unidad se utiliza para medir intensidad de corriente?",
+      "alternatives": [
+        "Ohmios",
+        "Amperios",
+        "Vatios",
+        "Voltios"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 8 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué unidad se utiliza para medir resistencia eléctrica?",
+      "alternatives": [
+        "Voltios",
+        "Vatios",
+        "Amperios",
+        "Ohmios"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 9 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Según la ley de Ohm la intensidad de corriente es directamente proporcional a ...",
+      "alternatives": [
+        "La resistencia eléctrica",
+        "La tensión eléctrica",
+        "La potencia eléctrica",
+        "La distancia"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 10 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Según la ley de Ohm la intensidad de corriente es inversamente proporcional a ...",
+      "alternatives": [
+        "La resistencia eléctrica",
+        "La energía eléctrica",
+        "La tensión eléctrica",
+        "La potencia eléctrica"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 11 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Según la ley de Ohm la tensión eléctrica es directamente proporcional a ...",
+      "alternatives": [
+        "La intensidad de corriente por la resistencia",
+        "La capacidad eléctrica",
+        "La distancia",
+        "La potencia eléctrica"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 12 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "De las siguientes fórmulas de la ley de Ohm ¿cuál es incorrecta?",
+      "alternatives": [
+        "R = V / I",
+        "I = V · R",
+        "V = I · R",
+        "I = V / R"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 13 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "De las siguientes fórmulas de la ley de Ohm ¿cuál es incorrecta?",
+      "alternatives": [
+        "R = V · I",
+        "V = I · R",
+        "I = V / R",
+        "R = V / I"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 14 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "De las siguientes fórmulas de la ley de Ohm ¿cuál es incorrecta?",
+      "alternatives": [
+        "V = I · R",
+        "I = V / R",
+        "I = R / V",
+        "R = V / I"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 15 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "De las siguientes fórmulas de la ley de Ohm ¿cuál es incorrecta?",
+      "alternatives": [
+        "R = V / I",
+        "I = V / R",
+        "V = I · R",
+        "R = I / V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 16 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "De las siguientes fórmulas de la ley de Ohm ¿cuál es correcta?",
+      "alternatives": [
+        "R = V · I",
+        "R = I / V",
+        "V = I · R",
+        "I = V · R"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 17 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "De las siguientes fórmulas de la ley de Ohm ¿cuál es correcta?",
+      "alternatives": [
+        "R = V · I",
+        "I = R / V",
+        "R = I / V",
+        "I = V / R"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 18 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un circuito sustituyes la resistencia por otra de mayor valor. Si la tensión es fija, ¿Qué ocurrirá en el circuito?",
+      "alternatives": [
+        "La intensidad que pasa por la resistencia será menor",
+        "La intensidad que pasa por la resistencia será mayor",
+        "La intensidad que pasa por la resistencia no se verá afectada",
+        "La cantidad de electrones que van a pasar por la resistencia cada unidad de tiempo aumentará"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 19 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un circuito sustituyes la resistencia por otra de menor valor. Si la tensión es fija, ¿Qué ocurrirá en el circuito?",
+      "alternatives": [
+        "La cantidad de electrones que van a pasar por la resistencia cada unidad de tiempo disminuirá",
+        "La intensidad que pasa por la resistencia será menor",
+        "La intensidad que pasa por la resistencia será mayor",
+        "La intensidad que pasa por la resistencia no se verá afectada"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 20 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un circuito la corriente aumenta al doble. Si la resistencia no ha cambiado ¿Qué ha ocurrido en el circuito?",
+      "alternatives": [
+        "No se puede saber sin conocer el voltaje al que está conectado el circuito",
+        "La tensión de la batería ha disminuido a la mitad",
+        "La cantidad de electrones que pasan por el circuito está reduciéndose por algún motivo",
+        "La tensión de la batería ha aumentado el doble"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 21 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un circuito la corriente disminuye a la mitad. Si la resistencia no ha cambiado ¿Qué ha ocurrido en el circuito?",
+      "alternatives": [
+        "La tensión de la batería ha disminuido a la mitad",
+        "No se puede saber sin conocer el voltaje al que está conectado el circuito",
+        "La cantidad de electrones que pasan por el circuito está aumentando por algún motivo",
+        "La tensión de la batería ha aumentado el doble"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Fundamentos (es-electric-ohms-law.yaml), pregunta 22 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "0.33A",
+        "12A",
+        "2Ω",
+        "3A"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 1 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-01.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "9V",
+        "0.3A",
+        "270A",
+        "3.3A"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 2 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-02.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "60V",
+        "15V",
+        "0.06V",
+        "2A"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 3 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-03.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "60Ω",
+        "6V",
+        "0.6Ω",
+        "16Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 4 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-04.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "27Ω",
+        "3Ω",
+        "0.33Ω",
+        "3A"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 5 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-05.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "8Ω",
+        "2.6V",
+        "0.38V",
+        "24V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 6 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-06.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "120Ω",
+        "10A",
+        "0.1A",
+        "1440A"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 7 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-07.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1.5A",
+        "0.66A",
+        "15V",
+        "150A"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 8 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-08.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1.5V",
+        "0.006V",
+        "150V",
+        "0.1A"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 9 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-09.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "24Ω",
+        "6Ω",
+        "12V",
+        "0.04Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 10 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-10.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "0.45Ω",
+        "15Ω",
+        "500Ω",
+        "0.03A"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 11 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-11.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "100Ω",
+        "20V",
+        "500V",
+        "0.002V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 12 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-12.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2A",
+        "162A",
+        "0.5A",
+        "9Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 13 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-13.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2400A",
+        "24V",
+        "0.24A",
+        "4.16A"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 14 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-14.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "0.05A",
+        "1200V",
+        "3V",
+        "8V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 15 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-15.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "18V",
+        "9Ω",
+        "36Ω",
+        "0.11Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 16 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-16.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "96Ω",
+        "0.16Ω",
+        "4A",
+        "6Ω"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 17 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-17.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "20V",
+        "5V",
+        "10Ω",
+        "0.05V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 18 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-18.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "24mA",
+        "1.5mA",
+        "666mA",
+        "15mA"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 19 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-19.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "0.6mA",
+        "1666mA",
+        "0.06mA",
+        "135mA"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 20 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-20.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "0.04V",
+        "25V",
+        "100000V",
+        "100V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 21 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-21.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3kΩ",
+        "33Ω",
+        "30kΩ",
+        "1.2kΩ"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 22 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-22.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1.5Ω",
+        "1.5kΩ",
+        "15kΩ",
+        "0.666kΩ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 23 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-23.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "0.6V",
+        "60000V",
+        "60V",
+        "1666V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 24 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-24.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "0.5mA",
+        "0.2mA",
+        "2mA",
+        "5mA"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 25 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-25.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3A",
+        "75mA",
+        "3mA",
+        "0.333mA"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 26 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-26.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3mV",
+        "75V",
+        "30V",
+        "3V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 27 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-27.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3kΩ",
+        "4.8kΩ",
+        "30kΩ",
+        "33kΩ"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 28 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-28.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "300kΩ",
+        "30kΩ",
+        "3kΩ",
+        "0.75kΩ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 29 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-29.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3.6V",
+        "360V",
+        "36V",
+        "400V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 30 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-30.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "0.333mA",
+        "3mA",
+        "108mA",
+        "0.3mA"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 31 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-31.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la intensidad de corriente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "4.8mA",
+        "1200mA",
+        "2.08mA",
+        "0.48mA"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 32 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-32.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "320V",
+        "0.003V",
+        "20V",
+        "2V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 33 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-33.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "0.166kΩ",
+        "6kΩ",
+        "60kΩ",
+        "54kΩ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 34 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-34.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la resistencia?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3kΩ",
+        "30kΩ",
+        "0.333kΩ",
+        "192kΩ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 35 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-35.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué valor tiene la tensión de la pila?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "0.026V",
+        "37.5V",
+        "6000V",
+        "6V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Ley de Ohm. Cálculos (es-electric-ohms-law-2.yaml), pregunta 36 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--ohms-law-2-36.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si juntamos dos pilas de 1,5V de este modo... ¿Cuál será el voltaje total?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1,5V",
+        "3V",
+        "0V",
+        "0,75V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 1 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-01.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si juntamos dos resistencias de 4Ω de este modo ¿Cuál será su resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2Ω",
+        "8Ω",
+        "3Ω",
+        "4Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 2 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-02.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el voltaje total de las pilas?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "6V",
+        "8V",
+        "2/3V",
+        "2V"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 3 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-03.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el voltaje total de las pilas?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "8V",
+        "2V",
+        "2/3V",
+        "6V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 4 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-04.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "7Ω",
+        "6/8Ω",
+        "8/6Ω",
+        "12Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 5 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-05.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "18Ω",
+        "0,5Ω",
+        "3/6Ω",
+        "2Ω"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 6 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-06.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "4/5Ω",
+        "8/3Ω",
+        "3/8Ω",
+        "5/4Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 7 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-07.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2Ω",
+        "9Ω",
+        "0,5Ω",
+        "3Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 8 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-08.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "8Ω",
+        "4Ω",
+        "5Ω",
+        "6Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 9 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-09.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3Ω",
+        "4,5Ω",
+        "13Ω",
+        "6Ω"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 10 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-10.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál será el valor de la resistencia equivalente?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "20 Ω",
+        "10Ω",
+        "5Ω",
+        "1,2Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 11 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-11.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es verdadera, para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Por las dos resistencias pasará siempre la misma intensidad",
+        "Las dos resistencias están sometidas al mismo voltaje",
+        "Si desconecto la resistencia R2 no pasará corriente por el circuito",
+        "Si desconecto la resistencia R1 no pasará corriente por el circuito"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 12 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-12.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es falsa, para el circuito de la figura?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La intensidad total del circuito será la suma de la intensidad por R1 y la intensidad por R2",
+        "La intensidad que pasa por las dos resistencias es la misma",
+        "Si desconecto la resistencia R1, seguirá pasando corriente por la R2",
+        "Las dos resistencias están sometidas al mismo voltaje"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 13 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-13.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué será cierto para la intensidad que pasa por la resistencia R1?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Pasará la misma intensidad que por la resistencia R2",
+        "Por ella pasará la mitad de la intensidad total del circuito",
+        "Pasará la mitad de intensidad que por la resistencia R2",
+        "Pasará el doble de intensidad que por la resistencia R2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 14 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-14.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Por cuál de las tres resistencias pasará más intensidad?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Por la R3",
+        "Por la R1",
+        "Por todas pasará la misma",
+        "Por la R2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 15 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-15.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué pasará en este circuito si conecto la resistencia R1?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "El voltaje al que están sometidas a las resistencias disminuirá respecto a cuando había dos",
+        "La intensidad total aumentará respecto a cuando había dos resistencias",
+        "El voltaje al que están sometidas las resistencias aumentará respecto a cuando había dos",
+        "La intensidad total disminuirá respecto a cuando había dos resistencias"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 16 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-16.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué pasará cuando conectemos la resistencia R2?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La intensidad total del circuito disminuirá",
+        "La intensidad total del circuito aumentará",
+        "La intensidad total del circuito no variará",
+        "El voltaje al que está sometida R1 disminuirá"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 17 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-17.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué pasará cuando conectemos el interruptor S1?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La resistencia equivalente en el circuito será de 4Ω",
+        "El voltaje de R1 será la mitad que antes",
+        "La intensidad total del circuito no variará",
+        "Por R2 pasará la misma intensidad que por R1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 18 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-18.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si conectamos S1, ¿cuál será falsa?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "La intensidad que pasa por R1 no variará",
+        "El voltaje de R1 será el mismo que el de R2",
+        "La intensidad total disminuirá",
+        "Por R1 pasará una intensidad igual a la que pasa por R2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular serie, paralelo, mixto (es-electric-series-parallel-calc.yaml), pregunta 19 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez, con modificaciones de Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-19.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1Ω",
+        "3Ω",
+        "2Ω",
+        "0.5Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 1 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-01.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3.3Ω",
+        "10Ω",
+        "15Ω",
+        "5Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 2 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-02.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "4KΩ",
+        "3KΩ",
+        "8KΩ",
+        "8Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 3 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-03.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1200Ω",
+        "201Ω",
+        "200Ω",
+        "800Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 4 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-04.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2KΩ",
+        "3KΩ",
+        "2000Ω",
+        "1002Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 5 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-05.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1000Ω",
+        "500Ω",
+        "501Ω",
+        "1500Ω"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 6 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-06.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2Ω",
+        "1Ω",
+        "0Ω",
+        "4Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 7 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-07.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "9Ω",
+        "2Ω",
+        "3Ω",
+        "6Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 8 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-08.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "4Ω",
+        "25Ω",
+        "15Ω",
+        "3Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 9 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-09.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3KΩ",
+        "48KΩ",
+        "9Ω",
+        "9KΩ"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 10 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-10.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "15Ω",
+        "240Ω",
+        "50Ω",
+        "250Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 11 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-11.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1500Ω",
+        "200Ω",
+        "1.5KΩ",
+        "1.19KΩ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 12 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-12.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "19Ω",
+        "6Ω",
+        "5Ω",
+        "7Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 13 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-13.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "180Ω",
+        "200Ω",
+        "280Ω",
+        "580Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 14 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-14.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "800Ω",
+        "200.8Ω",
+        "1000Ω",
+        "5200Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 15 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-15.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "3Ω",
+        "36Ω",
+        "2Ω",
+        "12Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 16 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-16.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "60Ω",
+        "90Ω",
+        "20Ω",
+        "15Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 17 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-17.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "600Ω",
+        "1500Ω",
+        "900Ω",
+        "2500Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 18 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-18.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "6Ω",
+        "5Ω",
+        "4Ω",
+        "12Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 19 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-19.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2kΩ",
+        "1000Ω",
+        "1.2kΩ",
+        "800Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 20 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-20.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1002Ω",
+        "1500Ω",
+        "2kΩ",
+        "3kΩ"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 21 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-21.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "22Ω",
+        "3Ω",
+        "16Ω",
+        "2Ω"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 22 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-22.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "520Ω",
+        "100Ω",
+        "20Ω",
+        "25Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 23 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-23.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "5.5kΩ",
+        "1504Ω",
+        "500Ω",
+        "600Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 24 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-24.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "72Ω",
+        "2Ω",
+        "10Ω",
+        "8Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 25 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-25.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "140Ω",
+        "200Ω",
+        "40Ω",
+        "100Ω"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 26 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-26.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "100Ω",
+        "1200Ω",
+        "300Ω",
+        "200Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 27 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-27.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "60Ω",
+        "8Ω",
+        "12Ω",
+        "6Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 28 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-28.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "75Ω",
+        "84Ω",
+        "60Ω",
+        "120Ω"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 29 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-29.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula la resistencia equivalente del siguiente circuito\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "2kΩ",
+        "3kΩ",
+        "1kΩ",
+        "1.2kΩ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Calcular resistencia equivalente (es-electric-series-parallel-calc-2.yaml), pregunta 30 [Creative Commons Attribution-ShareAlike 4.0, 2022 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-calc-2-30.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en la pila",
+        "En serie",
+        "En paralelo",
+        "Tiene un cortocircuito en una bombilla"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 1 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-01.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en la pila",
+        "Tiene un cortocircuito en una bombilla",
+        "En paralelo",
+        "En serie"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 2 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-02.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En serie",
+        "Tiene un cortocircuito en la pila",
+        "En paralelo",
+        "Tiene un cortocircuito en una bombilla"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 3 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-03.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En paralelo",
+        "En serie",
+        "Tiene un cortocircuito en una bombilla",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 4 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-04.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "Tiene un cortocircuito en la pila",
+        "En paralelo",
+        "En serie"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 5 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-05.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En serie",
+        "En paralelo",
+        "Tiene un cortocircuito en la pila",
+        "Tiene un cortocircuito en una bombilla"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 6 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-06.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "Tiene un cortocircuito en la pila",
+        "En serie",
+        "En paralelo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 7 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-07.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En serie",
+        "Tiene un cortocircuito en una bombilla",
+        "Tiene un cortocircuito en la pila",
+        "En paralelo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 8 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-08.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "En paralelo",
+        "En serie",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 9 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-09.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en la pila",
+        "En serie",
+        "En paralelo",
+        "Tiene un cortocircuito en una bombilla"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 10 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-10.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En serie",
+        "Tiene un cortocircuito en la pila",
+        "En paralelo",
+        "Tiene un cortocircuito en una bombilla"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 11 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-11.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "Tiene un cortocircuito en la pila",
+        "En paralelo",
+        "En serie"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 12 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-12.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en la pila",
+        "Tiene un cortocircuito en una bombilla",
+        "En paralelo",
+        "En serie"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 13 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-13.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "En serie",
+        "Tiene un cortocircuito en la pila",
+        "En paralelo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 14 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-14.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "En paralelo",
+        "En serie",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 15 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-15.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "Tiene un cortocircuito en la pila",
+        "En serie",
+        "En paralelo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 16 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-16.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En paralelo",
+        "Tiene un cortocircuito en la pila",
+        "Tiene un cortocircuito en una bombilla",
+        "En serie"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 17 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-17.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En serie",
+        "Tiene un cortocircuito en una bombilla",
+        "En paralelo",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 18 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-18.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en la pila",
+        "Tiene un cortocircuito en una bombilla",
+        "En serie",
+        "En paralelo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 19 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-19.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en la pila",
+        "En paralelo",
+        "Tiene un cortocircuito en una bombilla",
+        "En serie"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 20 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-20.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En paralelo",
+        "En serie",
+        "Tiene un cortocircuito en la pila",
+        "Tiene un cortocircuito en una bombilla"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 21 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-21.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "En serie",
+        "Tiene un cortocircuito en la pila",
+        "En paralelo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 22 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-22.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en la pila",
+        "En paralelo",
+        "Tiene un cortocircuito en una bombilla",
+        "En serie"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 23 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-23.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "En paralelo",
+        "Tiene un cortocircuito en la pila",
+        "En serie"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 24 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-24.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "Tiene un cortocircuito en la pila",
+        "En serie",
+        "En paralelo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 25 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-25.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En paralelo",
+        "En serie",
+        "Tiene un cortocircuito en una bombilla",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 26 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-26.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "En serie",
+        "En paralelo",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 27 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-27.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en la pila",
+        "En paralelo",
+        "En serie",
+        "Tiene un cortocircuito en una bombilla"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 28 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-28.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "En serie",
+        "Tiene un cortocircuito en la pila",
+        "En paralelo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 29 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-29.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "En serie",
+        "En paralelo",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 30 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-30.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En paralelo",
+        "Tiene un cortocircuito en una bombilla",
+        "En serie",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 31 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-31.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En paralelo",
+        "Tiene un cortocircuito en una bombilla",
+        "Tiene un cortocircuito en la pila",
+        "En serie"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 32 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-32.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En serie",
+        "Tiene un cortocircuito en una bombilla",
+        "En paralelo",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 33 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-33.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "En paralelo",
+        "En serie",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 34 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-34.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en una bombilla",
+        "En serie",
+        "En paralelo",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 35 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-35.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En paralelo",
+        "Tiene un cortocircuito en la pila",
+        "Tiene un cortocircuito en una bombilla",
+        "En serie"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 36 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-36.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En paralelo",
+        "Tiene un cortocircuito en la pila",
+        "Tiene un cortocircuito en una bombilla",
+        "En serie"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 37 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-37.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "En serie",
+        "Tiene un cortocircuito en una bombilla",
+        "En paralelo",
+        "Tiene un cortocircuito en la pila"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 38 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-38.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en la pila",
+        "Tiene un cortocircuito en una bombilla",
+        "En paralelo",
+        "En serie"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 39 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-39.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo está conectado el siguiente circuito?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "Tiene un cortocircuito en la pila",
+        "Tiene un cortocircuito en una bombilla",
+        "En paralelo",
+        "En serie"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Identificar serie, paralelo, cortocircuito (es-electric-series-parallel-identify.yaml), pregunta 40 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Carlos Félix Pardo Martín]",
+      "imagePath": "lot-24-picuino-electricidad-figures/fis-lot-24-picuino-electricidad--series-parallel-identify-40.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es la unidad de carga eléctrica?",
+      "alternatives": [
+        "El Amperio (A)",
+        "El Joule (J)",
+        "El Vatio (W)",
+        "El Coulomb (C)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 1 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es la unidad de Voltaje (V)?",
+      "alternatives": [
+        "El Amperio (A)",
+        "El Voltio (V)",
+        "El Ohmio (Ω)",
+        "El Vatio (W)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 2 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es la unidad de Intensidad de corriente (I)?",
+      "alternatives": [
+        "El Amperio (A)",
+        "El Ohmio (Ω)",
+        "El Vatio (W)",
+        "El Voltio (V)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 3 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es la unidad de Resistencia (R)?",
+      "alternatives": [
+        "El Ohmio (Ω)",
+        "El Vatio (W)",
+        "El Voltio (V)",
+        "El Amperio (A)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 4 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es la unidad de Potencia (P)?",
+      "alternatives": [
+        "El Voltio (V)",
+        "El Ohmio (Ω)",
+        "El Vatio (W)",
+        "El Amperio (A)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 5 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es la unidad de Energía eléctrica (E)?",
+      "alternatives": [
+        "El Ohmio (Ω)",
+        "El Amperio (A)",
+        "El kilovatio hora (kWh)",
+        "El Voltio (V)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 6 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué miden los Amperios (A)?",
+      "alternatives": [
+        "Intensidad de corriente (I)",
+        "Potencia (P)",
+        "Voltaje (V)",
+        "Resistencia (R)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 7 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué miden los Voltios (V)?",
+      "alternatives": [
+        "Voltaje (V)",
+        "Potencia (P)",
+        "Resistencia (R)",
+        "Intensidad de corriente (I)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 8 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué miden los Ohmios (Ω)?",
+      "alternatives": [
+        "Potencia (P)",
+        "Resistencia (R)",
+        "Voltaje (V)",
+        "Intensidad de corriente (I)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 9 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué miden los Vatios (W)?",
+      "alternatives": [
+        "Resistencia (R)",
+        "Intensidad de corriente (I)",
+        "Potencia (P)",
+        "Voltaje (V)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 10 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué miden los kilovatios hora (kWh)?",
+      "alternatives": [
+        "Energía eléctrica (E)",
+        "Voltaje (V)",
+        "Potencia (P)",
+        "Resistencia (R)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 11 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué miden los Coulomb (C)?",
+      "alternatives": [
+        "Voltaje (V)",
+        "Carga eléctrica (Q)",
+        "Intensidad de corriente (I)",
+        "Resistencia (R)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 12 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿A cuánto equivale un Coulomb (C)?",
+      "alternatives": [
+        "6,2 x 10^12 electrones",
+        "6,2 x 10^6 electrones",
+        "6,2 x 10^3 electrones",
+        "6,2 x 10^18 electrones"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 13 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Sí por un circuito pasan 5.000.000 electrones en 1 segundo, ¿qué intensidad estará pasando?",
+      "alternatives": [
+        "Pocos amperios",
+        "Un amperio",
+        "Muchísimos amperios",
+        "Mucho menos de un amperio"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 14 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si por un circuito pasa un amperio ¿Cuántos electrones estarán circulando por él?",
+      "alternatives": [
+        "Trillones cada segundo",
+        "Millones cada segundo",
+        "Billones cada segundo",
+        "Miles cada segundo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 15 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué frase estaría bien expresada?",
+      "alternatives": [
+        "Por favor, mide la resistencia que pasa por ese cable",
+        "Por favor, mide la potencia que pasa por ese cable",
+        "Por favor, mide el voltaje que pasa por ese cable",
+        "Por favor, mide la intensidad que pasa por ese cable"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 16 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué frase estaría bien expresada?",
+      "alternatives": [
+        "Por favor, mide la potencia que hay entre esas dos bornas",
+        "Por favor, mide el voltaje que hay entre esas dos bornas",
+        "Por favor, mide la energía que hay entre esas dos bornas",
+        "Por favor, mide la intensidad que hay entre esas dos bornas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 17 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué es la Intensidad de una corriente?",
+      "alternatives": [
+        "La energía de esa corriente",
+        "La cantidad de electrones que pasan por un punto en un tiempo determinado",
+        "La oposición que presenta un material a ser atravesado por los electrones",
+        "La energía producida por los electrones al atravesar un componente determinado"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 18 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué es la Resistencia de un elemento?",
+      "alternatives": [
+        "La energía que pierde al ser atravesado por una corriente",
+        "La facilidad con la que la corriente lo atraviesa",
+        "La cantidad de calor que genera al ser atravesado por la corriente eléctrica",
+        "La oposición que presenta a ser atravesado por la corriente eléctrica"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 19 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué nos indica el Voltaje de un generador?",
+      "alternatives": [
+        "La energía que proporciona por unidad de tiempo",
+        "La oposición que tiene a que lo atraviese la corriente",
+        "La energía que proporciona por unidad de carga",
+        "La cantidad de electrones que pasan por unidad de tiempo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 20 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué nos indica el Voltaje de una pila?",
+      "alternatives": [
+        "La energía que proporciona cada unidad de carga",
+        "La cantidad de electrones por segundo que salen de la pila",
+        "La cantidad de electrones que hay almacenados en esa pila",
+        "La potencia eléctrica que desarrolla esa pila"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 21 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos ohmios son 13 kΩ?",
+      "alternatives": [
+        "13 Ω",
+        "13000 Ω",
+        "1300 Ω",
+        "130 Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 22 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos ohmios son 2,2 kΩ?",
+      "alternatives": [
+        "220 Ω",
+        "22000 Ω",
+        "2200 Ω",
+        "220000 Ω"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 23 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos ohmios son 47 kΩ?",
+      "alternatives": [
+        "47000 Ω",
+        "470 Ω",
+        "4700 Ω",
+        "4,7 Ω"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 24 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos ohmios son 0,33 kΩ?",
+      "alternatives": [
+        "33000 Ω",
+        "330 Ω",
+        "3300 Ω",
+        "33 Ω"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 25 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos kΩ son 4700 Ω?",
+      "alternatives": [
+        "0,47 kΩ",
+        "47 kΩ",
+        "4,7 kΩ",
+        "470 kΩ"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 26 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos kΩ son 100.000 Ω?",
+      "alternatives": [
+        "10 kΩ",
+        "100 kΩ",
+        "1 kΩ",
+        "1000 kΩ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 27 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos kΩ son 680 Ω?",
+      "alternatives": [
+        "0,68 kΩ",
+        "0,068 kΩ",
+        "6,8 kΩ",
+        "0,0068 kΩ"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 28 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos microfaradios tendrá un faradio?",
+      "alternatives": [
+        "1E-06 uF",
+        "1 000 000 uF",
+        "1000 uF",
+        "10 000 000 uF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 29 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos faradios es un microfaradio?",
+      "alternatives": [
+        "1E-07 F",
+        "0,1 F",
+        "1E-06 F",
+        "1 000 000 F"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 30 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos microfaradios son 0,01 F?",
+      "alternatives": [
+        "1 000 000 uF",
+        "100 000 uF",
+        "10 000 uF",
+        "1 000 uF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 31 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos faradios son 220 µF?",
+      "alternatives": [
+        "0,002 2 F",
+        "0,22 F",
+        "0,000 22 F",
+        "0,022 F"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://github.com/picuino/test",
+      "sourceName": "picuino/test — Unidades y magnitudes (es-electric-units-magnitudes.yaml), pregunta 32 [Creative Commons Attribution-ShareAlike 4.0, 2021 por Tucho Méndez y Carlos Félix Pardo Martín]"
+    }
+  ]
+}
