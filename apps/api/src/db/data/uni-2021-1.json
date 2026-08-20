@@ -1,0 +1,745 @@
+{
+  "entries": [
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si LIMA + COVID = WUHAN + SARS, entonces PANDEMIA = ¿?",
+      "alternatives": [
+        "6",
+        "8",
+        "9",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Razonamiento Matemático, pregunta 1 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Desde que asumió el mando del país, nuestro presidente se acuesta muy tarde pero no sabe cuán tarde. Su esposa tiene un reloj extraño de forma circular que le regalaron unos expertos de la UNI un 28 de diciembre. Este extraño reloj está dividido en ocho partes iguales. Cada “nueva hora” (NH) equivale a “40 nuevos minutos” (NM); y cada “nuevo minuto”(NM) equivale a “40 nuevos segundos”(NS). Si el Dr. Francisco Sagasti, un día le pregunta por la hora en que se está acostando y su esposa responde que son las 2NH12NM, ¿a qué hora realmente está durmiendo nuestro presidente?",
+      "alternatives": [
+        "3H 18M",
+        "3H 20M",
+        "3H 25M",
+        "3H 27M",
+        "2H 28M"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Razonamiento Matemático, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente pregunta se muestra un conjunto de nueve números que se relacionan entre ellos de una cierta forma. Establecer la forma en que se relacionan los números del primer conjunto de tal modo que pueda hallar la cifra que va en la caja vacía del segundo conjunto\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Razonamiento Matemático, pregunta 4 (clave A)",
+      "imagePath": "uni-2021-1-figures/rm-11-04.png"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Establecer si el número x está entre 0 y 1. Hechos: I. Se cumple x2 < x. II. x es positivo.",
+      "alternatives": [
+        "I por si solo es suficiente para resolver el problema",
+        "II por si solo es suficiente para resolver el problema",
+        "Se necesita usar tanto I y II para resolver el problema",
+        "Cada hecho en forma independiente puede resolver el problema",
+        "Aparte de I y II se necesita información adicional para resolver el problema"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Razonamiento Matemático, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura mostrada cada uno de los símbolos tiene un determinado valor. La suma de los valores de los símbolos en cada fila esta dado a la derecha. Establecer el valor de ◆.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Razonamiento Matemático, pregunta 6 (clave A)",
+      "imagePath": "uni-2021-1-figures/rm-11-06.png"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si se define el operador mediante la tabla siguiente: Hallar el valor de (5Δ7)Δ(6Δ4)\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Razonamiento Matemático, pregunta 11 (clave D)",
+      "imagePath": "uni-2021-1-figures/rm-11-11.png"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El gráfico de la derecha muestra la distribución de 500 alumnos en cuanto a su curso favorito (votaron por un solo curso). Dadas las siguientes proposiciones I. La cantidad total de alumnos que eligieron a Matemáticas y Física como su curso favorito es 300. II. Los que prefirieron Artes es la octava parte de los que eligieron los otros cursos. III. El total de alumnos que prefirieron Ciencias es igual a la suma de los que prefirieron Arte sumado a los que prefirieron Física. Señale la alternativa que presenta la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F):\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "VVF",
+        "VFF",
+        "FVV",
+        "FFV",
+        "VFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Razonamiento Matemático, pregunta 12 (clave E)",
+      "imagePath": "uni-2021-1-figures/est-11-12.png"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Uso de grafías",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿De las siguientes frases, cuál es la que está correctamente escrita?",
+      "alternatives": [
+        "El mes de Abril de este año tiene cinco Viernes uno de los cuales es el Viernes Santo",
+        "El mes de Abril de este año tiene cinco Viernes uno de los cuales e el Viernes santo",
+        "El mes de abril de este año tiene cinco viernes uno de los cuales es el Viernes Santo",
+        "El mes de abril de este año tiene cinco viernes uno de los cuales es el viernes Santo",
+        "El mes de Abril de este año tiene cinco Viernes uno de los cuales es el viernes Santo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Humanidades, pregunta 26 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Julio Ramón Ribeyro es considerado el mejor escritor de cuentos del Perú; en la siguiente lista diga usted cuáles son cuentos de su autoría: I. La primera nevada II. De color modesto III. Canto de sirena IV. Guitarra de Palisandro V. Alienación",
+      "alternatives": [
+        "I, II y IV",
+        "II, IV y V",
+        "I, II y V",
+        "II, III y V",
+        "Sólo V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Humanidades, pregunta 27 (clave C)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Poblamiento americano y culturas preincaicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las siguientes culturas andinas peruanas 1. Paracas 2. Chimú 3. Chavín 4. Huari 5. Nazca Ordenar cronológicamente dichas culturas de la más a la menos antigua",
+      "alternatives": [
+        "2,1, 3,4, 5",
+        "3,1, 5,4, 2",
+        "1,3, 2,5, 4",
+        "5,2, 1,3, 4",
+        "4,3, 2,4, 5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Humanidades, pregunta 28 (clave B)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Áreas naturales protegidas del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Santuario que conserva el complejo arqueológico de la cultura Sicán Señale la alternativa correcta",
+      "alternatives": [
+        "Manglares de Tumbes",
+        "Bosques de Pomác",
+        "Cerros de Amotape",
+        "Cerros de Amotape",
+        "Pampas de Ayacucho"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Humanidades, pregunta 29 (clave B)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Proceso económico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Etapa del proceso económico ligada a la transformación de recursos en bienes de consumo",
+      "alternatives": [
+        "Producción",
+        "Circulación",
+        "Distribución",
+        "Consumo",
+        "Inversión"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Humanidades, pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Personalidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Atribuir de manera inconsciente a otros las virtudes o defectos propios que uno no reconoce en sí mismo, es un mecanismo de defensa. Identifique a cuál de las siguientes denominaciones corresponde",
+      "alternatives": [
+        "Represión",
+        "Proyección",
+        "Negación",
+        "Racionalización",
+        "Sublimación"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Humanidades, pregunta 31 (clave B)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la oración que no es una proposición",
+      "alternatives": [
+        "Ojalá, ahora no llueva como antes.",
+        "¡Vivan nuestros hermanos del campo!",
+        "Quizás, te vuelva a ver en la ciudad.",
+        "El operario removió los escombros.",
+        "¿Cuándo volverán las golondrinas?"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Humanidades, pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "What salutation would you use to impress an educated person, a person you already know?",
+      "alternatives": [
+        "Hi! How are you",
+        "Good to see you",
+        "Nice to meet you",
+        "How do you do",
+        "I’m pleased to meet you"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Humanidades, pregunta 33 (clave A)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Participación ciudadana en el sistema democrático",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En las elecciones Generales del 11 de abril se elegirán, además del Presidente y sus vicepresi- dentes:",
+      "alternatives": [
+        "125 congresistas y 5 congresistas andinos",
+        "130 congresistas y 10 parlamentarios andinos.",
+        "130 congresistas y 5 parlamentarios andinos",
+        "130 diputados y 5 senadores del parlamento andino",
+        "125 congresistas y 5 parlamentarios andinos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Humanidades, pregunta 34 (clave C)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Perú contemporáneo: retorno a la democracia (1980-2000)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cuáles han sido los 3 últimos Presidentes del Perú, elegidos, que han antecedido a Francisco Sagasti.",
+      "alternatives": [
+        "Manuel Merino – Martín Vizcarra – Pedro Pablo Kuczynski.",
+        "Martín Vizcarra – Pedro Pablo Kuczynski - Ollanta Humala.",
+        "Pedro Pablo Kuczynski - Ollanta Humala – Martín Vizcarra.",
+        "Manuel Merino – Martín Vizcarra – Ollanta Humala.",
+        "Pedro Pablo Kuczynski-Ollanta Humala – Alan García Pérez."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Humanidades, pregunta 35 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un capital de $ 2 000 000 se deposita a una tasa nominal anual del 18 %. Si el dinero se capitaliza bimestralmente, ¿al cabo de cuántos meses se obtiene un monto de $ 2 185 454?",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Aritmética, pregunta 1 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F) I. En el campo de los números reales todo polinomio p siempre es posible factorizar en polinomios de grado uno. II. Sí p y q son polinomios con raíces reales, entonces h(x) = p(x) − q(x) es un polinomio con raíces reales. III. (x + 1) e un factor de ambos polinomios p(x) = 3x8 − 2x4 + x y q(x) = 2x3 − 3x − 2",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FVV",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Álgebra, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Desde 4 vértices consecutivos de un polígono regular se trazan 81 diagonales en total. Calcule la medida del ángulo central de dicho polígono.",
+      "alternatives": [
+        "12",
+        "15",
+        "18",
+        "24",
+        "30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Geometría, pregunta 11 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una torre de antena se desea sujetar con alambres tensados de los cuales se muestra cuatro de ellos en la figura. Determine la medida del ángulo interior ABC, si BD y BM trisecan al ángulo B, y las longi- tudes AD = 2n u, DM = 1n u y MC = 3n u (A, D, M, C son colineales)\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "45°",
+        "60°",
+        "120°",
+        "135°",
+        "145°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Geometría, pregunta 12 (clave D)",
+      "imagePath": "uni-2021-1-figures/geo-23-12.png"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura mostrada AB es diámetro de la semicircunferencia, AO = OB = 10cm y O es punto de tangencia. Entonces, la longitud (en cm) de la circunferencia menor es:\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "4π",
+        "5π",
+        "6π",
+        "7π",
+        "8π"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Geometría, pregunta 13 (clave B)",
+      "imagePath": "uni-2021-1-figures/geo-23-13.png"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura se muestra un plano P conteniendo un ángulo de 60°. Se considera un punto “Q\" fuera del plano, de modo que la distancia al punto O es de 25 m y las distancias hacia los lados del ángulo miden 20 y 7 m. Calcule la distancia del punto “Q” al plano P . √ √ √ √ √\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "35",
+        "37",
+        "39",
+        "41",
+        "43"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Geometría, pregunta 14 (clave B)",
+      "imagePath": "uni-2021-1-figures/geo-23-14.png"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La longitud de la sombra de un árbol mide 16 metros. Se sabe que los rayos del sol forman un ángulo de 30° con la horizontal, entonces determine aproximadamente (en metros) la altura del árbol.",
+      "alternatives": [
+        "9,2",
+        "9,4",
+        "9,5",
+        "9,7",
+        "9,9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Trigonometría, pregunta 16 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se lanza un cuerpo verticalmente hacia arriba con una rapidez inicial de 4 m/s desde una altura de 10 m. Calcule aproximadamente en m, la altura en donde su rapidez es el doble de la rapidez inicial.",
+      "alternatives": [
+        "4,55",
+        "5,55",
+        "6,55",
+        "7,55",
+        "8,55"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Física, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos deportistas corren sobre una pista circular con rapidez constante de v1 = 8 m/s y v2 = 6 m/s respectivamente. Si parten del mismo punto en sentido opuesto demoran 8 s en cruzarse. Calcule aproximadamente en m, el radio de la pista circular.",
+      "alternatives": [
+        "11,8",
+        "13,8",
+        "15,8",
+        "17,8",
+        "19,8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Física, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La masa puntual de un péndulo al ser golpeada en una dirección horizontal adecuada, se mueve en una trayectoria circular horizontal. Este péndulo se llama péndulo circular. Calcule aproximadamente en s, el período T (tiempo para una revolución completa en la trayectoria circular) del péndulo circular si su longitud es l=0,4 m y el radio de la órbita es r=0,3 m. g = 9,81 m/s²\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "0,27",
+        "0,57",
+        "1,27",
+        "1,57",
+        "1,77"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Física, pregunta 4 (clave C)",
+      "imagePath": "uni-2021-1-figures/fis-31-04.png"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule aproximadamente en N, el peso aparente de 100 g de aluminio que está sumergido en el agua. Densidad del aluminio 2 698,4 kg/m³ Densidad del agua 1 000 kg/m³ g=9,81 m/s²",
+      "alternatives": [
+        "0,51",
+        "0,61",
+        "0,71",
+        "0,81",
+        "0,91"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Física, pregunta 5 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un hospital se observa que un termómetro mal calibrado indica 102°C en el punto de ebullición del agua y que la única temperatura para al cual el termómetro indica un valor correcto es 36°C. Calcule aproximadamente en °C, la temperatura que marca el termómetro mal calibrado en el punto de congelación del agua.",
+      "alternatives": [
+        "-2,1",
+        "-1,1",
+        "-0,1",
+        "1,1",
+        "2,1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Física, pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule aproximadamente en Ω, la resistencia de una radio que tiene una potencia de 10 W cuando se le conecta a una batería de 4,5 V.",
+      "alternatives": [
+        "0,025",
+        "1,025",
+        "2,025",
+        "3,025",
+        "4,025"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Física, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una onda electromagnética plana que se propaga en el vacío tiene una frecuencia de 101,1 MHz. Calcule aproximadamente en m, la longitud de onda. Velocidad de la luz en el vacío 3 × 10⁸m/s",
+      "alternatives": [
+        "1,97",
+        "2,97",
+        "3,97",
+        "4,97",
+        "5,97"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Física, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un laboratorio de química se encuentra un balón con ozono (O3) a una temperatura de 270,45°C. Después, todo el ozono se convierte en oxigeno (O2) manteniendo la presión constante. Calcule en °C, la temperatura final.",
+      "alternatives": [
+        "29,3",
+        "49,3",
+        "69,3",
+        "89,3",
+        "109,3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Física, pregunta 9 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un objeto se coloca a una distancia de 20 cm de un espejo cóncavo. La distancia entre el objeto y la imagen es de 5 cm. Calcule aproximadamente en cm, el radio de curvatura del espejo.",
+      "alternatives": [
+        "11,1",
+        "13,1",
+        "15,1",
+        "17,1",
+        "19,1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Física, pregunta 10 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es el ácido correctamente nombrado?",
+      "alternatives": [
+        "HClO2 : Ácido hipocloroso",
+        "H2SO3 : Ácido Sulfúrico",
+        "H2S(ac) : Ácido Sulfhídrico",
+        "H3PO4 : Ácido Fosforoso",
+        "HNO2 : Ácido Nítrico"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Química, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente tabla se muestra a cinco líquidos : X, Y, Z, R y S con diferentes valores de temperatura (°C) y presiones de vapor saturadas de líquidos (mmHg). Indique la sustancia que tiene la menor temperatura de ebullición normal.\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "X",
+        "Y",
+        "Z",
+        "R",
+        "S"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Química, pregunta 12 (clave E)",
+      "imagePath": "uni-2021-1-figures/quim-32-12.png"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De acuerdo a la nomenclatura IUPAC, señale a ¿cuál de los siguientes nombres le corresponde la estructura mostrada?\n\n(Ver la figura adjunta.)",
+      "alternatives": [
+        "1,2-ciclohexanodiol",
+        "1,2-bencenodiol",
+        "1,2-ciclohexanol",
+        "1,2-alcohol hexano",
+        "Ciclohexano"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Química, pregunta 13 (clave A)",
+      "imagePath": "uni-2021-1-figures/quim-32-13.png"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al contar con un pequeño volumen de cierta muestra líquida se optó por determinar su densidad mediante un método sencillo, para lo cual se obtuvo la masa de un vaso vacío y seco de 12,074 gramos. El volumen del líquido llenado en el vaso fue de 5,6 mL y la masa total obtenida, de 17,632 gramos ¿Cuál fue la densidad en kg/m³ del líquido?",
+      "alternatives": [
+        "8,8 × 10²",
+        "9,9 × 10²",
+        "1,2 × 10³",
+        "2,09 × 10³",
+        "3,06 × 10³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Química, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos valores teóricos de energía de ionización podría tener el elemento químico sodio (Z=11)?",
+      "alternatives": [
+        "1",
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Química, pregunta 15 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La fuerza electromotriz en una celda galvánica es independiente de:",
+      "alternatives": [
+        "Naturaleza de los electrodos",
+        "Concentración de los cationes",
+        "Concentración de los aniones",
+        "Temperatura del sistema",
+        "Volumen de los electrolitos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Química, pregunta 16 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La laguna de Cushuno (La Libertad) posee plantas acuáticas, peces y aves; recientemente se ha descubierto que relaves mineros han contaminado las aguas de la laguna. Con respecto a ello, indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F): I. En la laguna encontramos componentes bióticos y abióticos. II. Las relaciones entre los seres vivos y su entorno (laguna) es estudiada por la ecología. III. Los relaves mineros provocan la ruptura del equilibrio ecológico.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFF",
+        "FFF",
+        "VFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Química, pregunta 17 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto al plasma podemos afirmar correctamente que: I. Se forma por ionización de los átomos. II. Puede presentarse en la materia expulsada por los cohetes. III. Se presenta en ciertas descargas eléctricas.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "I, II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Química, pregunta 18 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una mezcla combustible de 4L, formada por los gases CH4 y C2H6, es quemada completamente utilizando 25L de O2(g) puro. Después de la reacción, se enfría el sistema hasta la temperatura ambiente obteniéndose agua líquida y 20,5L de una mezcla gaseosa de CO 2 y de O2 que no reaccionó. Determine el porcentaje molar de CH4 en la mezcla combustible.",
+      "alternatives": [
+        "25",
+        "50",
+        "75",
+        "80",
+        "95"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Química, pregunta 19 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Ácidos, bases y sales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique cuál de las siguientes sustancias genera H+ al ser disuelto en agua.",
+      "alternatives": [
+        "CaO(s)",
+        "NH3(l)",
+        "SO3(g)",
+        "Na(s)",
+        "Cl2(g)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Química, pregunta 20 (clave C)"
+    }
+  ]
+}
