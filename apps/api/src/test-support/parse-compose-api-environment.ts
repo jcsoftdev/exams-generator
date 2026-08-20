@@ -16,6 +16,8 @@ export function parseComposeApiEnvironmentKeys(composeYaml: string): string[] {
 
   const keys: string[] = [];
   for (const line of lines.slice(environmentIndex + 1)) {
+    // Comments are legitimate inside an environment block — skip, don't stop.
+    if (/^ {6}#/.test(line)) continue;
     const match = /^ {6}([A-Z_][A-Z0-9_]*):/.exec(line);
     if (!match) break;
     keys.push(match[1]!);

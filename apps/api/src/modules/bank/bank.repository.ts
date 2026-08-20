@@ -118,6 +118,8 @@ export class BankRepository implements BankRepositoryPort {
           status: "approved",
           imageAssetId: asset.id,
           correctAnswer: record.correctAnswer,
+          sourceUrl: record.sourceUrl,
+          sourceName: record.sourceName,
           createdBy: record.createdBy,
         })
         .returning({ id: questions.id });

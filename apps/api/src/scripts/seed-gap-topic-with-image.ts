@@ -99,6 +99,11 @@ async function main(): Promise<void> {
           alternatives: entry.alternatives,
           correctAnswer: entry.correctAnswer,
           figureFingerprint,
+          // Provenance was parsed out of the lot file and then dropped on the
+          // floor; without it the bank cannot answer "pull everything that came
+          // from this source", which is what a licence change asks for.
+          sourceUrl: entry.sourceUrl,
+          sourceName: entry.sourceName,
         }),
       });
       if (createResponse.status === 409) {

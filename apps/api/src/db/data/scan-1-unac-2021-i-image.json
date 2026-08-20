@@ -1,0 +1,694 @@
+{
+ "entries": [
+  {
+   "courseName": "Aritmética",
+   "topicName": "Razones y Proporciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q01.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 1 (clave C)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q02.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 2 (clave A)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Teoría de Conjuntos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q03.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 3 (clave E)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Divisibilidad",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q04.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 4 (clave D)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Números Primos, MCD y MCM",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q05.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 5 (clave C)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Números Primos, MCD y MCM",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q06.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 6 (clave B)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Estadística Descriptiva",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q07.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 7 (clave A)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Progresiones y Límites de Sucesiones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q08.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 8 (clave C)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Teoría de Exponentes y Logaritmos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q10.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 10 (clave D)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Productos Notables",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q11.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 11 (clave E)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Productos Notables",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q12.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 12 (clave E)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Trabajo, energía y potencia",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q13.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 13 (clave B)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q14.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 14 (clave E)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Gravitación universal",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q15.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 15 (clave B)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Hidrostática",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q16.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 16 (clave D)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Estequiometría y reacciones químicas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q17.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 17 (clave B)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Soluciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q18.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 18 (clave B)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Estequiometría y reacciones químicas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q19.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 19 (clave E)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q20.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 20 (clave D)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Función de nutrición",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q21.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 21 (clave B)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Coordinación nerviosa",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q22.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 22 (clave B)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Fisiología celular",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q23.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 23 (clave C)"
+  },
+  {
+   "courseName": "Ecología",
+   "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q24.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 24 (clave D)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "Categorías gramaticales",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q25.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 25 (clave D)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "La comunicación",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q26.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 26 (clave B)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "Categorías gramaticales",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q27.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 27 (clave B)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "La comunicación",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q28.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 28 (clave B)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "Acentuación",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q29.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 29 (clave D)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "Uso de grafías",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q30.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 30 (clave C)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura universal",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q31.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 31 (clave E)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura universal",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q32.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 32 (clave D)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura española",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q33.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 33 (clave E)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura hispanoamericana",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q34.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 34 (clave A)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura peruana",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q35.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 35 (clave E)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura peruana",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q36.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 36 (clave A)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Ecosistemas y ecorregiones del Perú",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q37.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 37 (clave C)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Geografía física y relieve peruano",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q38.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 38 (clave E)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Geomorfología",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q39.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 39 (clave A)"
+  },
+  {
+   "courseName": "Ecología",
+   "topicName": "Flujo de materia y energía / recursos naturales",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q40.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 40 (clave B)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Áreas naturales protegidas del Perú",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q41.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 41 (clave C)"
+  },
+  {
+   "courseName": "Ecología",
+   "topicName": "Contaminación ambiental",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q42.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 42 (clave C)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Integración económica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q43.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 43 (clave D)"
+  },
+  {
+   "courseName": "Ecología",
+   "topicName": "Contaminación ambiental",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q44.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 44 (clave E)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Sector externo",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q45.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 45 (clave C)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Precio",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q46.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 46 (clave C)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Circulación y mercado",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q47.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 47 (clave C)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Circulación y mercado",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q48.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 48 (clave E)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "Edad Media y el feudalismo europeo",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q49.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 49 (clave E)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "Edad Moderna",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q50.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 50 (clave D)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "Independencia del Perú y emancipación americana",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q51.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 51 (clave D)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "República del Perú (siglo XIX) y dependencia inglesa",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q52.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 52 (clave B)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "Perú contemporáneo: retorno a la democracia (1980-2000)",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q53.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 53 (clave D)"
+  },
+  {
+   "courseName": "Historia",
+   "topicName": "Poblamiento americano y culturas preincaicas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q54.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 54 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Lógico",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q55.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 55 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Lógico",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q56.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 56 (clave B)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Inductivo-Deductivo",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q57.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 57 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Planteo de Ecuaciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q58.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 58 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Planteo de Ecuaciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q59.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 59 (clave B)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Lógico",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q60.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 60 (clave D)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Comprensión de lectura",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q61.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 61 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Comprensión de lectura",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q62.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 62 (clave D)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Comprensión de lectura",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q63.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 63 (clave D)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Comprensión de lectura",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q64.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 64 (clave E)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Conectores lógicos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q65.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 65 (clave E)"
+  },
+  {
+   "courseName": "Filosofía",
+   "topicName": "Ética social y problemas contemporáneos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q66.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 66 (clave B)"
+  },
+  {
+   "courseName": "Educación Cívica",
+   "topicName": "La convivencia social y la formación intercultural",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q67.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 67 (clave E)"
+  },
+  {
+   "courseName": "Educación Cívica",
+   "topicName": "La convivencia social y la formación intercultural",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q68.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 68 (clave C)"
+  },
+  {
+   "courseName": "Educación Cívica",
+   "topicName": "Identidad y patrimonio nacional",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q69.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 69 (clave B)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Doctrinas y sistemas económicos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-1-unac-2021-i-image/scan-1-unac-2021-i-q70.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-general-BII-1-1.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-I, Bloque II: Ciencias Empresariales, pregunta 70 (clave E)"
+  }
+ ]
+}

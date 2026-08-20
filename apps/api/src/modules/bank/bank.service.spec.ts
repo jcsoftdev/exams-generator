@@ -97,6 +97,29 @@ describe("BankService.createImageQuestion", () => {
     expect(result).toEqual({ id: "question-1" });
   });
 
+  it("keeps the provenance of an image question, which has no statement to trace it by", async () => {
+    const { service, repository } = buildDeps();
+
+    await service.createImageQuestion(STAFF_USER, {
+      courseId: "course-1",
+      topicId: "topic-1",
+      subtopicId: undefined,
+      difficulty: Difficulty.Hard,
+      gradeLevel: "pre",
+      correctAnswer: "b",
+      file: { buffer: fakePng(), mimetype: "image/png" } as Express.Multer.File,
+      sourceUrl: "https://admision.uni.edu.pe/solucionario2019.pdf",
+      sourceName: "UNI — Admisión 2019-1, Geometría, pregunta 12 (clave B)",
+    });
+
+    expect(repository.createImageQuestion).toHaveBeenCalledWith(
+      expect.objectContaining({
+        sourceUrl: "https://admision.uni.edu.pe/solucionario2019.pdf",
+        sourceName: "UNI — Admisión 2019-1, Geometría, pregunta 12 (clave B)",
+      }),
+    );
+  });
+
   it("persists tenantId=null when the requester is platform staff", async () => {
     const { service, repository } = buildDeps();
 
@@ -302,6 +325,26 @@ describe("BankService.createStructuredQuestion", () => {
       }),
     ).rejects.toBeInstanceOf(BadRequestException);
     expect(repository.createStructuredQuestion).not.toHaveBeenCalled();
+  });
+
+  it("keeps the provenance the seeder sends, so a licence change stays a query", async () => {
+    // questions.source_url exists to answer "pull every question from host X"
+    // without re-deriving it from the seed files; dropping it on the way in
+    // makes that impossible for anything created over HTTP.
+    const { service, repository } = buildDeps();
+
+    await service.createStructuredQuestion(STAFF_USER, {
+      ...VALID_DTO,
+      sourceUrl: "https://admision.uni.edu.pe/solucionario2021.pdf",
+      sourceName: "UNI — Admisión 2021-1, Física, pregunta 7 (clave C)",
+    });
+
+    expect(repository.createStructuredQuestion).toHaveBeenCalledWith(
+      expect.objectContaining({
+        sourceUrl: "https://admision.uni.edu.pe/solucionario2021.pdf",
+        sourceName: "UNI — Admisión 2021-1, Física, pregunta 7 (clave C)",
+      }),
+    );
   });
 
   it("persists tenantId=null when the requester is platform staff", async () => {

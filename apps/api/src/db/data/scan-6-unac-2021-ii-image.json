@@ -1,0 +1,704 @@
+{
+ "entries": [
+  {
+   "courseName": "Aritmética",
+   "topicName": "Teoría de Conjuntos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q01.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 1 (clave E)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Regla de Tres y Porcentajes",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q02.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 2 (clave B)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Divisibilidad",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q03.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 3 (clave C)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Números Racionales",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q04.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 4 (clave B)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Interés y Descuento",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q05.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 5 (clave E)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Combinatoria y Probabilidad",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q06.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 6 (clave C)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Estadística Descriptiva",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q07.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 7 (clave A)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Promedios y Mezclas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q08.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 8 (clave A)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Regla de Tres y Porcentajes",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q09.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 9 (clave A)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Factorización",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q10.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 10 (clave B)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Teoría de Ecuaciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q11.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 11 (clave B)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Fracciones y Radicación Algebraica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q12.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 12 (clave B)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "División Algebraica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q13.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 13 (clave E)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Inecuaciones y Valor Absoluto",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q14.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 14 (clave D)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Sistemas de Ecuaciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q15.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 15 (clave C)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Progresiones y Límites de Sucesiones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q16.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 16 (clave E)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Funciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q17.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 17 (clave B)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Segmentos y Ángulos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q18.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 18 (clave C)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Congruencia y Semejanza",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q19.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 19 (clave C)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Triángulos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q20.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 20 (clave E)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Triángulos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q21.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 21 (clave E)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Circunferencia",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q22.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 22 (clave C)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Áreas de Regiones Planas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q23.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 23 (clave B)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Áreas de Regiones Planas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q24.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 24 (clave C)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Ángulos y Sistemas de Medición Angular",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q25.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 25 (clave B)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q26.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 26 (clave B)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Identidades Trigonométricas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q27.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 27 (clave D)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Ángulos y Sistemas de Medición Angular",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q28.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 28 (clave C)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Identidades Trigonométricas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q29.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 29 (clave C)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q30.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 30 (clave C)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Análisis dimensional y vectorial",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q31.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 31 (clave E)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Estática",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q32.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 32 (clave E)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Trabajo, energía y potencia",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q33.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 33 (clave D)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Hidrostática",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q34.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 34 (clave B)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q35.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 35 (clave D)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Óptica geométrica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q36.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 36 (clave D)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Física moderna",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q37.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 37 (clave C)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Estructura atómica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q38.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 38 (clave C)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Unidades químicas de masa",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q39.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 39 (clave C)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Nomenclatura inorgánica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q40.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 40 (clave B)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Unidades químicas de masa",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q41.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 41 (clave D)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Soluciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q42.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 42 (clave C)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Estequiometría y reacciones químicas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q43.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 43 (clave C)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Fisiología celular",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q44.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 44 (clave B)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Citología",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q45.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 45 (clave E)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Función de respiración y excreción",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q46.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 46 (clave E)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Función de nutrición",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q47.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 47 (clave B)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "La comunicación",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q48.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 48 (clave D)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "Signos de puntuación",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q49.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 49 (clave B)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Figuras literarias",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q50.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 50 (clave D)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura peruana",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q51.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 51 (clave D)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Geografía física y relieve peruano",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q52.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 52 (clave D)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Ecosistemas y ecorregiones del Perú",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q53.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 53 (clave B)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Circulación y mercado",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q54.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 54 (clave B)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Producción I",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q55.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 55 (clave D)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Lógico",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q56.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 56 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Analítico",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q57.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 57 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Inductivo-Deductivo",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q58.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 58 (clave E)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Inductivo-Deductivo",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q59.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 59 (clave A)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Conteo de Figuras",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q60.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 60 (clave E)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Comprensión de lectura",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q61.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 61 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Plan de redacción",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q62.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 62 (clave B)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Analogías verbales",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q63.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 63 (clave B)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Eliminación de oraciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q64.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 64 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Oraciones incompletas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q65.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 65 (clave B)"
+  },
+  {
+   "courseName": "Psicología",
+   "topicName": "Sensación y percepción",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q66.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 66 (clave A)"
+  },
+  {
+   "courseName": "Psicología",
+   "topicName": "Psicología social",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q67.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 67 (clave C)"
+  },
+  {
+   "courseName": "Psicología",
+   "topicName": "Pensamiento, lenguaje y creencias",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q68.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 68 (clave E)"
+  },
+  {
+   "courseName": "Filosofía",
+   "topicName": "Ética social y problemas contemporáneos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q69.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 69 (clave D)"
+  },
+  {
+   "courseName": "Filosofía",
+   "topicName": "Axiología: los valores y la experiencia valorativa",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-6-unac-2021-ii-image/scan-6-unac-2021-ii-q70.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/EXAMEN-GENERAL-I.pdf",
+   "sourceName": "Universidad Nacional del Callao (UNAC) — Examen General de Admisión 2021-II, Bloque I: Ciencias e Ingenierías, pregunta 70 (clave E)"
+  }
+ ]
+}

@@ -17,6 +17,14 @@ export interface CreateImageQuestionRecord {
   readonly difficulty: Difficulty;
   readonly gradeLevel: string;
   readonly correctAnswer: string;
+  /**
+   * Where this question came from, for the questions the seeders ingest from
+   * published exams. NULL for anything authored in the app. Stored so that
+   * "pull every question from this source" stays a query when its licensing
+   * changes — see `questions.schema.ts`.
+   */
+  readonly sourceUrl?: string;
+  readonly sourceName?: string;
   readonly createdBy: string;
   readonly image: {
     readonly storageKey: string;
@@ -37,6 +45,14 @@ export interface CreateStructuredQuestionRecord {
   readonly alternatives: readonly string[];
   readonly correctAnswer: string;
   readonly figureCode: string | undefined;
+  /**
+   * Where this question came from, for the questions the seeders ingest from
+   * published exams. NULL for anything authored in the app. Stored so that
+   * "pull every question from this source" stays a query when its licensing
+   * changes — see `questions.schema.ts`.
+   */
+  readonly sourceUrl?: string;
+  readonly sourceName?: string;
   readonly createdBy: string;
   /**
    * Defaults to `'approved'` (manual creation is curated by definition).

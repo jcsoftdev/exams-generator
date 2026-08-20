@@ -47,6 +47,9 @@ interface CreateImageQuestionBody {
   readonly difficulty?: string;
   readonly gradeLevel?: string;
   readonly correctAnswer?: string;
+  /** Provenance of a seeded question: exact document URL and a readable label. */
+  readonly sourceUrl?: string;
+  readonly sourceName?: string;
 }
 
 interface CreateStructuredQuestionBody {
@@ -60,6 +63,9 @@ interface CreateStructuredQuestionBody {
   readonly figureCode?: string;
   /** sha256 (hex) of the complement image attached right after creation. */
   readonly figureFingerprint?: string;
+  /** Provenance of a seeded question: exact document URL and a readable label. */
+  readonly sourceUrl?: string;
+  readonly sourceName?: string;
 }
 
 /**
@@ -123,6 +129,8 @@ export class BankController {
       gradeLevel: body.gradeLevel,
       correctAnswer: body.correctAnswer,
       file,
+      sourceUrl: body.sourceUrl,
+      sourceName: body.sourceName,
     });
   }
 
@@ -141,6 +149,8 @@ export class BankController {
       correctAnswer: body.correctAnswer,
       figureCode: body.figureCode,
       figureFingerprint: body.figureFingerprint,
+      sourceUrl: body.sourceUrl,
+      sourceName: body.sourceName,
     });
   }
 

@@ -1,0 +1,704 @@
+{
+ "entries": [
+  {
+   "courseName": "Aritmética",
+   "topicName": "Teoría de Conjuntos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-10-unac-2022-i-image/q01.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 1 (clave A)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Regla de Tres y Porcentajes",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q02.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 2 (clave B)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Progresiones y Límites de Sucesiones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q03.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 3 (clave D)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q04.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 4 (clave D)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Números Racionales",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q05.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 5 (clave C)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Divisibilidad",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q06.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 6 (clave C)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Números Racionales",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q07.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 7 (clave D)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Interés y Descuento",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-10-unac-2022-i-image/q08.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 8 (clave A)"
+  },
+  {
+   "courseName": "Estadística y Probabilidades",
+   "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q09.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 9 (clave D)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Progresiones y Límites de Sucesiones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q10.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 10 (clave E)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Funciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q11.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 11 (clave B)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Fracciones y Radicación Algebraica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q12.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 12 (clave E)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Programación Lineal",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q13.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 13 (clave B)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Teoría de Exponentes y Logaritmos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q14.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 14 (clave B)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Polinomios",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q15.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 15 (clave B)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Fracciones y Radicación Algebraica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q16.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 16 (clave D)"
+  },
+  {
+   "courseName": "Álgebra",
+   "topicName": "Factorización",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q17.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 17 (clave B)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Triángulos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q18.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 18 (clave B)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Áreas de Regiones Planas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q19.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 19 (clave C)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Circunferencia",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q20.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 20 (clave B)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Áreas de Regiones Planas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q21.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 21 (clave C)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Proporcionalidad y Relaciones Métricas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q22.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 22 (clave D)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Polígonos y Cuadriláteros",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q23.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 23 (clave C)"
+  },
+  {
+   "courseName": "Geometría",
+   "topicName": "Áreas de Regiones Planas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q24.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 24 (clave E)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Geometría Analítica: Cónicas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q25.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 25 (clave C)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Identidades Trigonométricas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q26.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 26 (clave C)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q27.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 27 (clave E)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Geometría Analítica: La Recta",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q28.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 28 (clave E)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Funciones Trigonométricas Inversas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q29.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 29 (clave D)"
+  },
+  {
+   "courseName": "Trigonometría",
+   "topicName": "Identidades Trigonométricas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q30.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 30 (clave D)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q31.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 31 (clave B)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Cinemática",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q32.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 32 (clave D)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Dinámica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q33.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 33 (clave B)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Termodinámica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q34.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 34 (clave C)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Análisis dimensional y vectorial",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q35.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 35 (clave D)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Dinámica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-10-unac-2022-i-image/q36.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 36 (clave A)"
+  },
+  {
+   "courseName": "Física",
+   "topicName": "Cinemática",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q37.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 37 (clave D)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Estequiometría y reacciones químicas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q38.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 38 (clave B)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Estructura atómica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q39.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 39 (clave E)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Estructura atómica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q40.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 40 (clave B)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Soluciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q41.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 41 (clave E)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Nomenclatura inorgánica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-10-unac-2022-i-image/q42.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 42 (clave A)"
+  },
+  {
+   "courseName": "Química",
+   "topicName": "Estructura atómica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q43.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 43 (clave B)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Fundamentos de la biología",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q44.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 44 (clave C)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Composición química de los seres vivos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q45.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 45 (clave C)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Coordinación nerviosa",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q46.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 46 (clave E)"
+  },
+  {
+   "courseName": "Biología",
+   "topicName": "Función de nutrición",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q47.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 47 (clave C)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "La comunicación",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q48.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 48 (clave B)"
+  },
+  {
+   "courseName": "Lenguaje",
+   "topicName": "Uso de grafías",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q49.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 49 (clave C)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Literatura peruana",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q50.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 50 (clave C)"
+  },
+  {
+   "courseName": "Literatura",
+   "topicName": "Géneros y especies literarias",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q51.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 51 (clave D)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Áreas naturales protegidas del Perú",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q52.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 52 (clave E)"
+  },
+  {
+   "courseName": "Geografía",
+   "topicName": "Geografía económica",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q53.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 53 (clave B)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Nociones generales de economía",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q54.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 54 (clave C)"
+  },
+  {
+   "courseName": "Economía",
+   "topicName": "Circulación y mercado",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q55.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 55 (clave B)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Planteo de Ecuaciones",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q56.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 56 (clave E)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Conteo de Figuras",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q57.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 57 (clave E)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Problemas con Fracciones y Porcentajes",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "b",
+   "imagePath": "scan-10-unac-2022-i-image/q58.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 58 (clave B)"
+  },
+  {
+   "courseName": "Razonamiento Matemático",
+   "topicName": "Razonamiento Analítico",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q59.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 59 (clave E)"
+  },
+  {
+   "courseName": "Aritmética",
+   "topicName": "Números Primos, MCD y MCM",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q60.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 60 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Comprensión de lectura",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q61.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 61 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Plan de redacción",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q62.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 62 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Analogías verbales",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q63.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 63 (clave D)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Oraciones incompletas",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q64.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 64 (clave C)"
+  },
+  {
+   "courseName": "Razonamiento Verbal",
+   "topicName": "Conectores lógicos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q65.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 65 (clave C)"
+  },
+  {
+   "courseName": "Psicología",
+   "topicName": "El desarrollo humano y la adolescencia",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "a",
+   "imagePath": "scan-10-unac-2022-i-image/q66.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 66 (clave A)"
+  },
+  {
+   "courseName": "Psicología",
+   "topicName": "El desarrollo humano y la adolescencia",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q67.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 67 (clave D)"
+  },
+  {
+   "courseName": "Filosofía",
+   "topicName": "Ética",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "c",
+   "imagePath": "scan-10-unac-2022-i-image/q68.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 68 (clave C)"
+  },
+  {
+   "courseName": "Educación Cívica",
+   "topicName": "Los derechos humanos",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "d",
+   "imagePath": "scan-10-unac-2022-i-image/q69.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 69 (clave D)"
+  },
+  {
+   "courseName": "Psicología",
+   "topicName": "Psicología social",
+   "gradeLevel": "pre",
+   "difficulty": "hard",
+   "correctAnswer": "e",
+   "imagePath": "scan-10-unac-2022-i-image/q70.png",
+   "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-i-2022-i.pdf",
+   "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque I: Ciencias e Ingenierías, pregunta 70 (clave E)"
+  }
+ ]
+}

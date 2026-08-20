@@ -1,0 +1,404 @@
+{
+  "entries": [
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q01.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q02.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-9-unac-2021-ii-image/q03.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-9-unac-2021-ii-image/q04.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 4 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-9-unac-2021-ii-image/q05.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 5 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-9-unac-2021-ii-image/q06.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 6 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-9-unac-2021-ii-image/q07.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 7 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-9-unac-2021-ii-image/q08.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-9-unac-2021-ii-image/q09.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 9 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-9-unac-2021-ii-image/q10.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 10 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q11.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q12.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-9-unac-2021-ii-image/q13.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 13 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-9-unac-2021-ii-image/q14.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q15.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 15 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-9-unac-2021-ii-image/q16.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-9-unac-2021-ii-image/q17.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 17 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-9-unac-2021-ii-image/q18.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q19.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 19 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-9-unac-2021-ii-image/q20.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 20 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q21.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-9-unac-2021-ii-image/q22.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 22 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-9-unac-2021-ii-image/q23.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q24.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q25.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 25 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q26.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 26 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-9-unac-2021-ii-image/q27.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 27 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Oraciones incompletas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-9-unac-2021-ii-image/q28.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 28 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Series verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-9-unac-2021-ii-image/q29.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 29 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-9-unac-2021-ii-image/q30.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 30 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Motivación y emoción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q31.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 31 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-9-unac-2021-ii-image/q32.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 32 (clave E)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Participación ciudadana en el sistema democrático",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-9-unac-2021-ii-image/q33.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 33 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q34.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 34 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Pensamiento, lenguaje y creencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-9-unac-2021-ii-image/q35.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 35 (clave A)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Axiología: los valores y la experiencia valorativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-9-unac-2021-ii-image/q36.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 36 (clave E)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Filosofía política",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-9-unac-2021-ii-image/q37.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 37 (clave B)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Contaminación ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-9-unac-2021-ii-image/q38.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 38 (clave B)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Los derechos humanos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-9-unac-2021-ii-image/q39.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 39 (clave D)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Axiología: los valores y la experiencia valorativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-9-unac-2021-ii-image/q40.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2026/03/examen-otras-modalidades-OK-II.pdf",
+      "sourceName": "Universidad Nacional del Callao (UNAC) — Examen Especial de Admisión por Otras Modalidades 2021-II, pregunta 40 (clave B)"
+    }
+  ]
+}

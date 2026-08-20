@@ -1,0 +1,704 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q01.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 1 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q02.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 2 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q03.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q04.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q05.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 5 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Regla de Tres y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q06.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-12-unac-2022-i-image/q07.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 7 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Estadística Descriptiva",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q08.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 8 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q09.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 9 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q10.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 10 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q11.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 11 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-12-unac-2022-i-image/q12.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q13.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 13 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q14.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q15.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 15 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q16.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 16 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q17.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q18.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 18 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q19.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 19 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-12-unac-2022-i-image/q20.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 20 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-12-unac-2022-i-image/q21.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 21 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q22.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 22 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q23.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q24.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 24 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q25.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Ácidos, bases y sales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q26.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 26 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q27.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 27 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación química",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q28.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 28 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Microbiología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q29.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fundamentos de la biología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q30.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fisiología celular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q31.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 31 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fisiología celular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q32.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal I",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q33.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q34.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Composición química de los seres vivos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q35.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 35 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de nutrición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q36.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 36 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de reproducción, salud y enfermedad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q37.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 37 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Citología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q38.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 38 (clave D)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q39.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 39 (clave B)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q40.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 40 (clave C)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q41.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 41 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q42.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 42 (clave C)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q43.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 43 (clave C)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Signos de puntuación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q44.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 44 (clave C)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Categorías gramaticales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q45.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 45 (clave E)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Géneros y especies literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q46.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 46 (clave E)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q47.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 47 (clave D)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q48.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 48 (clave D)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Áreas naturales protegidas del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q49.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 49 (clave E)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Producción I",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q50.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 50 (clave B)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Producción II",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q51.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 51 (clave B)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Poblamiento americano y culturas preincaicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-12-unac-2022-i-image/q52.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 52 (clave A)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "República del Perú (siglo XIX) y dependencia inglesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q53.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 53 (clave D)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Guerra Fría",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q54.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 54 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q55.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 55 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q56.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 56 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q57.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 57 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "scan-12-unac-2022-i-image/q58.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 58 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q59.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 59 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q60.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 60 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q61.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 61 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "scan-12-unac-2022-i-image/q62.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 62 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "scan-12-unac-2022-i-image/q63.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 63 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Oraciones incompletas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q64.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 64 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Series verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q65.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 65 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado peruano I",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q66.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 66 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Psicología social",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q67.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 67 (clave B)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Ética",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q68.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 68 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Inteligencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "scan-12-unac-2022-i-image/q69.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 69 (clave B)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado de Derecho y la Carta Magna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "scan-12-unac-2022-i-image/q70.png",
+      "sourceUrl": "https://admision.unac.edu.pe/wp-content/uploads/2023/08/Bloque-iii-2022-i.pdf",
+      "sourceName": "Universidad Nacional del Callao — Examen General de Admisión 2022-I, Bloque III: Ciencias de la Salud, pregunta 70 (clave D)"
+    }
+  ]
+}

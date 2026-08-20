@@ -83,6 +83,11 @@ async function main(): Promise<void> {
       form.set("difficulty", entry.difficulty);
       form.set("gradeLevel", entry.gradeLevel);
       form.set("correctAnswer", entry.correctAnswer);
+      // An image question has no statement, so its provenance string is the ONLY
+      // handle the bank has on where it came from — and the only key a re-seed
+      // can dedupe it by.
+      form.set("sourceUrl", entry.sourceUrl);
+      form.set("sourceName", entry.sourceName);
       form.set("image", new Blob([imageBytes], { type: "image/png" }), "question.png");
 
       const response = await fetch(`${API_BASE_URL}/bank/questions/image`, {

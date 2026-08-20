@@ -55,6 +55,9 @@ export interface CreateImageQuestionDto {
   readonly gradeLevel: string | undefined;
   readonly correctAnswer: string | undefined;
   readonly file: Express.Multer.File | undefined;
+  /** Provenance, filled by the seeders that ingest published exams. */
+  readonly sourceUrl?: string | undefined;
+  readonly sourceName?: string | undefined;
 }
 
 /** A sha256 digest as the API accepts it: 64 lowercase hex characters. */
@@ -78,6 +81,9 @@ export interface CreateStructuredQuestionDto {
    * would reject all but the first.
    */
   readonly figureFingerprint?: string | undefined;
+  /** Provenance, filled by the seeders that ingest published exams. */
+  readonly sourceUrl?: string | undefined;
+  readonly sourceName?: string | undefined;
 }
 
 /**
@@ -184,6 +190,8 @@ export class BankService {
       difficulty: dto.difficulty as Difficulty,
       gradeLevel: dto.gradeLevel as string,
       correctAnswer: dto.correctAnswer as string,
+      sourceUrl: dto.sourceUrl,
+      sourceName: dto.sourceName,
       createdBy: user.sub,
       image: { storageKey, mime },
     });
@@ -238,6 +246,8 @@ export class BankService {
       alternatives: dto.alternatives as readonly string[],
       correctAnswer: dto.correctAnswer as string,
       figureCode: dto.figureCode,
+      sourceUrl: dto.sourceUrl,
+      sourceName: dto.sourceName,
       createdBy: user.sub,
     });
   }
