@@ -1,0 +1,154 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/arit-lot-17-uncp-2021-1-area3-01.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 01 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/alg-lot-17-uncp-2021-1-area3-02.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 02 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/arit-lot-17-uncp-2021-1-area3-03.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 03 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/alg-lot-17-uncp-2021-1-area3-05.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 05 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/alg-lot-17-uncp-2021-1-area3-06.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 06 (clave E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Posición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/estad-lot-17-uncp-2021-1-area3-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/com-lot-17-uncp-2021-1-area3-12.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Morfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/com-lot-17-uncp-2021-1-area3-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 13 (clave A)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura española",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/lit-lot-17-uncp-2021-1-area3-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 15 (clave D)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Áreas naturales protegidas del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/geog-lot-17-uncp-2021-1-area3-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 22 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Referencias textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/rv-lot-17-uncp-2021-1-area3-32.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 32 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/rm-lot-17-uncp-2021-1-area3-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 44 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/rm-lot-17-uncp-2021-1-area3-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 45 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/rm-lot-17-uncp-2021-1-area3-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 46 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-17-uncp-2021-1-area3-image/rm-lot-17-uncp-2021-1-area3-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 49 (clave D)"
+    }
+  ]
+}

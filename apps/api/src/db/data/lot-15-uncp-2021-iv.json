@@ -1,0 +1,531 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: abbcb es un cubo perfecto, divisible por 12. Calcular: a + b + c",
+      "alternatives": [
+        "15",
+        "13",
+        "17",
+        "14",
+        "16"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Aritmética, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Potenciación y Radicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle la raíz cuadrada de 100 números consecutivos ninguno de ellos es cuadrado perfecto y se obtiene como raíz común 51. ¿Cuánto puede sumar como mínimo todos los rsiduos obtenidos?",
+      "alternatives": [
+        "5050",
+        "5500",
+        "5000",
+        "5005",
+        "5001"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Aritmética, pregunta 2 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A, B y C se reunieron para formar un negocio contribuyendo con 2400; 3600 y 300 soles respectivamente, al liquidar el negocio obtuvieron una utilidad total de 4500 soles, ¿cuánto le correspondió a B?",
+      "alternatives": [
+        "1700",
+        "2000",
+        "1800",
+        "1600",
+        "1900"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Aritmética, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: f(x + 1) = f(x) + 2x Además: f(1) = 3 Halla f(30)",
+      "alternatives": [
+        "573",
+        "933",
+        "721",
+        "873",
+        "603"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Álgebra, pregunta 50 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Analiza sintácticamente la siguiente oración: Recogí mi ropa de la lavandería.",
+      "alternatives": [
+        "NV + OD + OI",
+        "NV + MD + MI",
+        "NV + OD + CL",
+        "NV + OD + MI",
+        "NV + MI + MD"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Lenguaje, pregunta 9 (clave C)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el número de oraciones en el siguiente texto. Clorinda Matto de Turner nació en el Cusco cuando publicó su novela Ave sin nido en 1889causó escándalos y encendidas protestas el título de la novela se refiere a dos enamorados de origen indígena.",
+      "alternatives": [
+        "5",
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Lenguaje, pregunta 11 (clave B)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica al poeta peruano, autor del siguiente verso. XXXII 999 calorías Rumbb… Trrraprrr mach…chaz Supentínica u del bizcochero engirafada al tímpano. Quién como los hielos. Pero no. Quién como lo que va ni más ni menos (…)",
+      "alternatives": [
+        "José María Eguren",
+        "Carlos Oquendo Amat",
+        "César Vallejo Mendoza",
+        "José Santos Chocano",
+        "Jorge Luis Borges"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Literatura, pregunta 10 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada las siguientes características: Es el poema del hombre que aspira, lucha, yerra, peca y al fin es absuelto. Ese hombre que al final de su vida siente que no sabe nada. En este drama se unen realidad y símbolo. Verdad utopía, magia y ciencia. El autor es Johann Wolfgang Von Goethe. Identifica la obra literaria.",
+      "alternatives": [
+        "Hamlet",
+        "Las cuitas del joven Werther",
+        "Metamorfosis de las plantas",
+        "Prometeo",
+        "Fausto"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Literatura, pregunta 12 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los síndromes con su cariotipo I. Klinefelter a. 45, X0 II. Turner b. 47, XX, +18 III. Edwars c. C, 47, XXY",
+      "alternatives": [
+        "Ia, IIb, IIIc",
+        "Ic, IIa, IIIb",
+        "Ib, IIc, IIIa",
+        "Ic, IIb, IIIa",
+        "Ib, IIa, IIIc"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Biología, pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Citología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señala las estructuras de la célula procariota relacionadas con la síntesis de proteínas. 1. Cápsula 2. Pared celular 3. Flagelo 4. Membrana celular 5. Citoplasma 6. Ribosoma",
+      "alternatives": [
+        "4 y 6",
+        "2,3 y 4",
+        "5 y 6",
+        "4 y 5",
+        "3,4 y 5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Biología, pregunta 19 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación química",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona las hormonas con su acción respectiva. I. Oxitocina a. Regula los ítmos biológicos II. Prolactina b. Estimula la explusión de leche hacia los conductos III. Melatonina c. Estimula la producciuón de leche IV. Epinefrina d. Incrementa el ritmo cardíaco y la presión arterial",
+      "alternatives": [
+        "Ia-IIb-IIIc-IVd",
+        "Ic-IIb-IIIa-IVd",
+        "Ib-IIc-IIId-IVa",
+        "Ic-IIb-IIId-IVa",
+        "Ib-IIc-IIIa-IVd"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Biología, pregunta 20 (clave E)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Saneamiento ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el proceso de reciclaje que consiste en la descomposición de ciertos productos mediante el calentamiento en ausencia de oxígeno, lo que origina compuestos que se vuelven a utilizar en la industria.",
+      "alternatives": [
+        "Conversión",
+        "Revulcanizado",
+        "Destilación",
+        "Fermentaciòn",
+        "Recuperación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Ecología, pregunta 24 (clave A)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Saneamiento ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica los procedimientos adecuados para el tratamiento de los residuos sólidos asimilables A. Compostaje B. Depósito des seguridad C. Pirolisis D. Vermicultura E. Reciclaje",
+      "alternatives": [
+        "B, C y D",
+        "A, C y E",
+        "A, C y D",
+        "B, D y E",
+        "C,D y E"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Ecología, pregunta 25 (clave C)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Contaminación ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la técnica que mide la alteración de las propiedades físicas, químicas y biológicas del ambiente, causado por cualquier forma de materia o energía resultante de las actividades humanas que afectan directa o indirectamente a la salud del ser humano, a sus actividades económicas, a la biodiversidad y a las condiciones ambientales",
+      "alternatives": [
+        "Estándar de calidad ambiental",
+        "Impacto ambiental",
+        "Monitoreo ambiental",
+        "Programa de adecuación ambiental",
+        "Límite máximo permisible"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Ecología, pregunta 26 (clave C)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Participación ciudadana en el sistema democrático",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Infiere la verdad (V) o falsedad (F) de las proposiciones relacionadas con los resultados de las elecciones del 11 de abril. I. Para que un partido Político cuente con congresistas en el Congreso de la República, es necesario que alcance la valla electoral del 5 %. II. El partido Morado no perderá inscripción porque colocó 3 congresistas. III. Martin Vizcarra fue el candidato a congreso más votado a nivel nacional. IV. El partido aprista perderá inscripción por no haber participado en el proceso electoral de 2021.",
+      "alternatives": [
+        "FVVF",
+        "FFVV",
+        "VVFF",
+        "VFVV",
+        "FVFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Educación Cívica, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "El desarrollo humano y la adolescencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona los estadios en la construcción de la identidad, según el psicólogo James Marcia, con sus características. I. Identidad difusa II. Identidad hipotecada III. Identidad moratoria IV. Identidad lograda a. Valores, metas y creencias no difieren de lo que esperan sus padres. b. Predomina el desinterés y la apatía. c. Se establece un compromiso con ciertas ideas, creencias y valores. d. Proceso de prueba de distintas formas de ser sin compromiso.",
+      "alternatives": [
+        "Ia – IId – IIIb – IVc",
+        "Ib – IId – IIIa – IVc",
+        "Ic – IId – IIIa – IVb",
+        "Ia – IIc – IIIb – IVd",
+        "Ib – IIa – IIId – IVc"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Psicología, pregunta 28 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Vínculo familiar",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica las palabras y completa la expresión: Es fundamental que las familias brinden a sus miembros…, compartiendo decisiones y responsabilidades, así como... a sus opiniones, ideas, espacios íntimos y derechos.",
+      "alternatives": [
+        "compañerismo – respeto",
+        "comunicación – apoyo",
+        "confianza – acompañamiento",
+        "acompañamiento – confianza",
+        "comunicación – autoestima"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Psicología, pregunta 29 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Definición, métodos e historia de la psicología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona las técnicas de investigación en psicología con su ejemplo: I. Observación naturalista II. Estudio de casos III. Encuestas a. El 56% de las personas adultas piensan que los anuncios televisivos los induce a comprar cosas que no necesita. b. Se observa cómo dirige su clase un profesor c. El estudio de Freud sobre el \"pequeño Hans\". El \"pequeño\" sufría de un miedo terrible a los caballos, Freud concluyó que se derivaba del temor a su padre y del deseo sexual por su madre",
+      "alternatives": [
+        "Ic – IIb – IIIa",
+        "Ia – IIb – IIIc",
+        "Ia – IIc – IIIb",
+        "Ic – IIa – IIIb",
+        "Ib – IIc – IIIa"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Psicología, pregunta 30 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "El desarrollo humano y la adolescencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Infiere la verdad (V) o falsedad (F) respecto al desarrollo cognitivo de la segunda infancia (3 – 6 años). Según Piaget: I. El egocentrismo y el animismo serán algunos de sus características más representativas. II. Predomino de la fantasía y la imaginación. III. El lenguaje funciona como regulador de su comportamiento. IV. Establece su primer vínculo afectivo, generalmente con la madre.",
+      "alternatives": [
+        "FVFV",
+        "VVFF",
+        "VVVV",
+        "FVVV",
+        "VVVF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Psicología, pregunta 31 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Definición, métodos e historia de la psicología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona las escuelas psicológicas con sus fundadores I. El Estructuralismo a. John Dewey II. El Funcionalismo b. Wilhem Wundt III. El Conductismo c. Jhon Watson",
+      "alternatives": [
+        "Ic – IIa – IIIb",
+        "Ib – IIc – IIIa",
+        "Ib – IIa – IIIc",
+        "Ia – IIc – IIIb",
+        "Ia – IIb – IIIc"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Psicología, pregunta 32 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Personalidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Infiera la verdad (V) o falsedad (F) de las proposiciones relacionas con la autoestima I. La autoestima te permite relacionarte con los demás muy difícilmente II. La autoestima eclipsa la confianza en ti mismo III. Disfrutar de ti y de los demás es favorecido por la autoestima.",
+      "alternatives": [
+        "FVV",
+        "FFV",
+        "VVF",
+        "VFF",
+        "FVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Psicología, pregunta 33 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Decídete, .......... estudias Medicina ............ Derecho, .............. las dos carrera son incompatibles.",
+      "alternatives": [
+        "o – ni – luego",
+        "si – o – ya que",
+        "ni – ni – por lo tanto",
+        "ni – ni – porque",
+        "o – o – pues"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Verbal, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO El conocimiento de primera mano es la base esencial de la vida intelectual. En gran medida, el aprendizaje libresco transmite información de segunda y, como tal, jamás puede llegar a alcanzar la importancia de la práctica inmediata. Lo que el mundo de los doctos tiende a ofrecer, es un retazo de información de segunda mano. Esta segunda mano característica del mundo de los doctos es el secreto de su mediocridad. Es dócil, porque los hechos nunca les asustaron. ¿Qué ofrece el mundo de los doctos?",
+      "alternatives": [
+        "Porciones de conocimiento de segunda mano",
+        "Porciones de conocimiento de primera mano",
+        "Conocimientos de segunda mano",
+        "Conocimientos de primera mano",
+        "Conocimiento esenciales"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Verbal, pregunta 35 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PLAN DE REDACCIÓN INGRESO A LA UNIVERSIDAD I. Entonces regresé \"corriendo\" a casa con el corazón a punto de estallar de alegría, recuerdo inclusive que alguien me saludó y respondí casi sin percatarme. II. Busqué en la relación adherida a la pared el número del aula donde había postulado y lo ubiqué con nerviosismo premonitorio. III. Mi nombre estaba al lado de unos asteriscos seguidos por una frase que, ya nunca podré olvidar: ingresó. IV. ¡Papá, mamá! ¡Ingresé! Pero ellos no estaban, entonces esperé con ansiedad; cuando llegaron les dije lo que había logrado y llenos de orgullo me abrazaron y como niño lloré emocionado. V. Al día siguiente salí raudo tras aquella información que cambiaría radical y afortunadamente el rumbo de mi vida.",
+      "alternatives": [
+        "II – I – V – IV – III",
+        "V – II – III – I – IV",
+        "II – I – IV – V – III",
+        "V – II – III – IV – I",
+        "III – I – IV – II – V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Verbal, pregunta 36 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "ORACIÓN ELIMINADA (I) El sudoku es pasatiempo de origen japonés popularizado en la década del 80. (II) Su objetivo es rellenar celdas vacías horizontal y verticalmente con números del 1 al 9 sin repetirlas. (III) Es común, en la actualidad, encontrarlos en la sección de amenidades de los diarios. (IV) Cabe señalar que algunas celdas ya llevan un determinado número que no puede cambiarse. (V) Es una actividad lúdica que ayuda a desarrollar la relación espacial, el sentido numérico y el razonamiento lógico.",
+      "alternatives": [
+        "I",
+        "IV",
+        "III",
+        "V",
+        "II"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Verbal, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO Los misioneros visitaron a un cacique que tenía prestigio de muy sabio. El cacique, un gordo quieto y callado, escuchó sin pestañar la propaganda religiosa que le leyeron en lengua de los indios. Cuando la lectura terminó, los misioneros se quedaron esperando. El cacique se tomó su tiempo. Después, opinó: -Eso rasca. Y rasca mucho, y rasca muy bien. Y sentenció: Pero rasca donde no pica. Del texto se colige:",
+      "alternatives": [
+        "Al cacique le convencieron los argumentos de lo descrito.",
+        "El idioma fue el vehículo para convencer al cacique",
+        "Al cacique le parece interesante, pero no necesario lo descrito",
+        "Los misioneros no se dejaron entender por usar otro idioma",
+        "Los misioneros convencieron al cacique de optar por su religión"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Verbal, pregunta 38 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PLAN DE REDACCIÓN PRIMER TRATAMIENTO ANTIRRÁBICO I. Joseph Meister era un muchacho que había sido mordido días antes por un perro rabioso. II. El doctor Pasteur había probado su \"remedio\" en animales, pero no dejaría de intentarlo con un muchacho cuya fiebre desbordaba. III. Así, Joseph Meister se convirtió en la primera persona en recibir el tratamiento antirrábico que le salvó la vida. IV. Su madre había oído de un médico que \"curaba\" a los animales contagiados de este mal, así que fue a buscarlo. V. Murió durante la ocupación nazi a Paris, cuando se suicidó tras negarse a profanar la cripta de Pasteur.",
+      "alternatives": [
+        "II – I – IV – V – III",
+        "I – II – IV – III – V",
+        "III – I – IV – II – V",
+        "I – IV – II – III – V",
+        "III – IV – V – II – I"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Verbal, pregunta 39 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Future: will / going to",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto: Emi can play a violin really well. Her parents’ anniversary is going to be next weekend. She is broke, so she … her violin for them as a present. It’s going to be a big surprise.",
+      "alternatives": [
+        "going to play",
+        "playing",
+        "will play",
+        "played",
+        "is going to lay"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Inglés, pregunta 42 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Julio compró para sus trabajadores cierta cantidad de protectores (cascos), de igual calidad y precio, por un monto de 240 soles. Sin embargo, al averiguar en otra tienda por el mismo producto, se da con la sorpresa que por el mismo monto habría recibido tres protectores más, con lo que cada protector le hubiese costado 4 soles menos. ¿Cuantos protectores compro Julio?",
+      "alternatives": [
+        "12",
+        "10",
+        "14",
+        "11",
+        "13"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Matemático, pregunta 43 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Patricia, Mariela, Beatriz y Jazmín tienen profesiones diferentes: Arquitecto, socióloga, contadora y profesora. Se van de vacaciones a diferentes lugares: Huaraz, Trujillo, Cuzco y Puno. Patricia trajo un recuerdo de las islas de los Uros, siendo Mariela la Arquitecto admiró la belleza del lanzón monolítico. Beatriz no es socióloga y Jazmín cumplió se deseó de conocer Cuzco. La profesora no conoce Trujillo. ¿Quién fue a Trujillo y cuál es su profesión?",
+      "alternatives": [
+        "Jazmín – socióloga",
+        "Beatriz – contadora",
+        "Jazmín – contadora",
+        "Beatriz – profesora",
+        "Jazmín – arquitecto"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Matemático, pregunta 45 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si un número \"N\" se disminuye en 20%, ¿en qué tanto por ciento de lo que queda debe aumentar lo que queda para volver a obtener el número original?",
+      "alternatives": [
+        "15 %",
+        "10 %",
+        "25 %",
+        "30 %",
+        "20%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Matemático, pregunta 47 (clave C)"
+    }
+  ]
+}

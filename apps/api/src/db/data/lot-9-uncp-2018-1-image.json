@@ -1,0 +1,584 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-9-uncp-2018-1-image/arit-lot-9-uncp-2018-1-01.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/arit-lot-9-uncp-2018-1-02.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/arit-lot-9-uncp-2018-1-03.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 3 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-9-uncp-2018-1-image/arit-lot-9-uncp-2018-1-04.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-9-uncp-2018-1-image/arit-lot-9-uncp-2018-1-05.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 5 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/arit-lot-9-uncp-2018-1-06.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-9-uncp-2018-1-image/alg-lot-9-uncp-2018-1-07.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 7 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-9-uncp-2018-1-image/alg-lot-9-uncp-2018-1-08.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/alg-lot-9-uncp-2018-1-09.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 9 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-9-uncp-2018-1-image/alg-lot-9-uncp-2018-1-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-9-uncp-2018-1-image/alg-lot-9-uncp-2018-1-11.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/alg-lot-9-uncp-2018-1-12.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Álgebra, pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/geo-lot-9-uncp-2018-1-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geometría, pregunta 13 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-9-uncp-2018-1-image/geo-lot-9-uncp-2018-1-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geometría, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/geo-lot-9-uncp-2018-1-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geometría, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-9-uncp-2018-1-image/geo-lot-9-uncp-2018-1-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geometría, pregunta 16 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-9-uncp-2018-1-image/geo-lot-9-uncp-2018-1-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geometría, pregunta 17 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-9-uncp-2018-1-image/trig-lot-9-uncp-2018-1-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Trigonometría, pregunta 18 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-9-uncp-2018-1-image/trig-lot-9-uncp-2018-1-20.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Trigonometría, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/trig-lot-9-uncp-2018-1-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Trigonometría, pregunta 21 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: La Recta",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-9-uncp-2018-1-image/trig-lot-9-uncp-2018-1-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Trigonometría, pregunta 22 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/estad-lot-9-uncp-2018-1-23.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Estadística y Probabilidades, pregunta 23 (clave A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/estad-lot-9-uncp-2018-1-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Estadística y Probabilidades, pregunta 24 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-9-uncp-2018-1-image/arit-lot-9-uncp-2018-1-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Aritmética, pregunta 25 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/estad-lot-9-uncp-2018-1-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Estadística y Probabilidades, pregunta 26 (clave A)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-9-uncp-2018-1-image/lit-lot-9-uncp-2018-1-30.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Literatura, pregunta 30 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/fis-lot-9-uncp-2018-1-32.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Física, pregunta 32 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-9-uncp-2018-1-image/fis-lot-9-uncp-2018-1-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Física, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/fis-lot-9-uncp-2018-1-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Física, pregunta 34 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-9-uncp-2018-1-image/fis-lot-9-uncp-2018-1-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Física, pregunta 35 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/fis-lot-9-uncp-2018-1-36.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Física, pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/quim-lot-9-uncp-2018-1-37.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Química, pregunta 37 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/quim-lot-9-uncp-2018-1-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Química, pregunta 38 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/quim-lot-9-uncp-2018-1-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Química, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/quim-lot-9-uncp-2018-1-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Química, pregunta 40 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-9-uncp-2018-1-image/quim-lot-9-uncp-2018-1-41.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Química, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Contaminación ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-9-uncp-2018-1-image/ecol-lot-9-uncp-2018-1-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Ecología, pregunta 45 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Personalidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-9-uncp-2018-1-image/psic-lot-9-uncp-2018-1-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Psicología, pregunta 49 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Textos argumentativos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-9-uncp-2018-1-image/rv-lot-9-uncp-2018-1-51.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Verbal, pregunta 51 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-9-uncp-2018-1-image/rv-lot-9-uncp-2018-1-52.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Verbal, pregunta 52 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-9-uncp-2018-1-image/rv-lot-9-uncp-2018-1-56.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Verbal, pregunta 56 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Simple past tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/ing-lot-9-uncp-2018-1-58.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Inglés, pregunta 58 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-63.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 63 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-64.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 64 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-65.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 65 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-66.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 66 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-67.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 67 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-68.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 68 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-69.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 69 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-71.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 71 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-72.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 72 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-73.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 73 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-74.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 74 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-75.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 75 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-76.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 76 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-77.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 77 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-78.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 78 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-9-uncp-2018-1-image/rm-lot-9-uncp-2018-1-80.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Matemático, pregunta 80 (clave C)"
+    }
+  ]
+}

@@ -1,0 +1,718 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Juan Carlos, trabajador de una empresa industrial, estima que su compensación por tiempo de servicios será de 11 000 soles; la banca privada A le ofrece 7% de interés anual y la otra banca B, le oferta 6% de interés anual. ¿Cuánto es la diferencia entre ambos intereses (en soles)?",
+      "alternatives": [
+        "140",
+        "100",
+        "120",
+        "95",
+        "110"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 1 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para la fiesta de cachimbo del 2018-I en una facultad de la UNCP, se mezcló 40 litros de refresco de 10 soles el litro con 60 litros de otro refresco de 12 soles el litro. ¿Cuánto fue el precio del refresco mezclado (en soles por litro)?",
+      "alternatives": [
+        "14,2",
+        "13,2",
+        "10,2",
+        "11,2",
+        "12,2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una empresa existen 3 niveles de cargo; ellos son directivos, empleados y obreros. El sueldo mensual del empleado es 3/5 del directivo; el salario mensual del obrero es 4/5 del empleado. ¿Cuánto es el sueldo mensual del directivo (en soles), si el salario del obrero es 1 200 soles por mes?",
+      "alternatives": [
+        "2 100",
+        "2 000",
+        "2 500",
+        "2 400",
+        "2 700"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La medalla que ganó Gabriel en un concurso tiene un peso de 20 g y es de 18 quilates. ¿Cuántos gramos de cobre tiene su medalla?",
+      "alternatives": [
+        "6",
+        "3",
+        "4",
+        "5",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Esteban, trabajador de una empresa minera, durante el año 2017 ahorró 10 000 soles; dicho monto decide depositar en una entidad financiera, que le ofrece un interés compuesto de 6% anual durante 2 años. ¿Cuántos son los intereses (en soles) obtenidos en el primer año y segundo año, respectivamente?",
+      "alternatives": [
+        "600; 646",
+        "620; 636",
+        "600; 636",
+        "600; 656",
+        "620; 646"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 5 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cecilia, una vendedora de abarrotes muy hábil, mezcla tres clases de pallares de 15; 20 y 25 soles el kilogramo en cantidades que están en la relación de 1; 2 y 7 respectivamente. Si se sabe que al realizar la venta se obtuvo una ganancia del 10% del precio de la mezcla, calcula el precio de venta por unidad de mezcla.",
+      "alternatives": [
+        "S/. 22,3",
+        "S/. 24,3",
+        "S/. 25,3",
+        "S/. 27,3",
+        "S/. 29,3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 6 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La suma de los cuadrados de dos números es igual a 25, y la suma de sus logaritmos en base 10 es igual a 2. ¿Cuánto es la suma de estos números?",
+      "alternatives": [
+        "12",
+        "7",
+        "14",
+        "15",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 9 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pepe dispone de mil soles y gasta los tres quintos de lo que no gasta. ¿Cuánto no gastó Pepito?",
+      "alternatives": [
+        "S/. 575",
+        "S/. 375",
+        "S/. 625",
+        "S/. 475",
+        "S/. 775"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 10 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Katia desea transformar a producto la expresión Sen10° + Sen8° Identifica la expresión final hallada por ella.",
+      "alternatives": [
+        "2Sen9°Cos4°",
+        "2Sen9°Cos1°",
+        "2Sen12°Cos1°",
+        "2Sen9°Cos2°",
+        "2Sen8°Cos1°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Jeremias lanza dos dados normales. ¿Cuál es la probabilidad de que en los dos dados resulte números de puntos pares?.",
+      "alternatives": [
+        "1/5",
+        "1/4",
+        "1/3",
+        "1/6",
+        "2/3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un estante se quieren colocar 3 libros de matemática y 2 libros de biología. ¿De cuántas maneras se colocarán los libros, si los libros de la misma especialidad permanecen juntos?",
+      "alternatives": [
+        "22",
+        "20",
+        "26",
+        "24",
+        "28"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Regla de Tres y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un restaurante, 120 personas degustaron un almuerzo; 15% comió pachamanca, 20% trucha, 25% cuy, 30% carnero y el resto pollo. Determine la cantidad que degustó pollo",
+      "alternatives": [
+        "24",
+        "30",
+        "18",
+        "36",
+        "12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una bolsa, Carmen tiene tres bolas blancas (B), dos azules (A)y una negra (N). Si Carmen extrae dos bolas sin devolución, ¿Cuál es la probabilidad de que la primera bola sea negra y la segunda azul?",
+      "alternatives": [
+        "2/15",
+        "1/30",
+        "3/15",
+        "1/15",
+        "7/30"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 26 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la alternativa que presenta error de concordancia. I. Nosotros cantamos toda la noche. II. El perro mordió al anciano. III. Los gatos arañó a la niña. IV. El vecino y su esposa estaban molestos. V. Aquella mujer hermosa baila en el cabaret.",
+      "alternatives": [
+        "I",
+        "IV",
+        "II",
+        "III",
+        "V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 29 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Textos narrativos y descriptivos / expresión escrita",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Reconoce la clase de texto: Esbelto, magro, musculoso, y austero, su afilada cabeza roja era la de un hidalgo altísimo, caballero.",
+      "alternatives": [
+        "Descriptivo",
+        "Instructivo",
+        "Discontinuo",
+        "Argumentativo",
+        "Periodístico"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica a la poeta de la región Junín que es autora de la obra “Mujer de Sudamérica” integrante del grupo Poético “Para contar o Morir”.",
+      "alternatives": [
+        "Flor de María Ayala Leonardi",
+        "Rosa Iñigo Rojas",
+        "Carolina Ocampo Abásolo",
+        "Elsa Herrera Ortiz",
+        "Zoila Gonzales Sanabria"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 31 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto al modelo de Max Planck, señala la verdad (V) o falsedad (F) de las siguientes proposiciones: I. Los osciladores atómicos de un radiador, emiten y absorben energía en valores discretos. II. La radiación electromagnética está cuantizada. III. La mínima energía emitida por un radiador es hf, donde f es la frecuencia de oscilación y h la constante de Planck.",
+      "alternatives": [
+        "VVV",
+        "FVV",
+        "VVF",
+        "VFV",
+        "FFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Climas y biomas del mundo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es el componente climático que permite delimitar la zona tropical, templada y polar de la tierra?",
+      "alternatives": [
+        "Relieve",
+        "Latitud",
+        "Radiación Solar",
+        "Altitud",
+        "Nubosidad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 42 (clave B)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Reino Monera, Protista y Fungi",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿A qué división taxonómica pertenecen los hongos comestibles conocidos como champiñones?.",
+      "alternatives": [
+        "Ascomicetos",
+        "Ficomicetos",
+        "Deuteromicetos",
+        "Mixomicetos",
+        "Basidiomicetos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 43 (clave E)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La \"siembra y cosecha del agua\", entre otras prácticas, consiste en: I. Realizar prácticas de conservación de suelos. II. Sembrar el agua. III. Conservar la cobertura vegetal. IV. Incrementar las reservas de los acuíferos. V. Cultivar el agua.",
+      "alternatives": [
+        "I, III y IV",
+        "I, II y III",
+        "II y V",
+        "II, III y IV",
+        "III, IV y V"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 44 (clave A)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Participación ciudadana en el sistema democrático",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la verdad (V) o falsedad (F) de las siguientes proposiciones relacionadas con la demanda de rendición de cuentas. I. La finalidad es generar una cultura de transparencia en la gestión. II. El ciudadano tiene el derecho de interpelar a las autoridades respecto a la ejecución presupuestal. III. El pliego interpelatorio debe ser respondido por la autoridad dentro de los 120 días calendarios.",
+      "alternatives": [
+        "FVF",
+        "FFV",
+        "VVF",
+        "VFV",
+        "VVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 46 (clave C)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "La convivencia social y la formación intercultural",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determinar la verdad (V) o falsedad (F) de las siguientes proposiciones sobre la convivencia democrática. I. La convivencia democrática es producto de la armonía social. II. Es fruto de la justicia y la igualdad. III. La convivencia democrática es una tarea que corresponde al Estado y sus autoridades.",
+      "alternatives": [
+        "FVF",
+        "VVF",
+        "FFV",
+        "VFV",
+        "VVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 47 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Cultura de prevención y vida saludable",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto: La baja autoestima y la inseguridad afectiva son factores de riesgo de tipo...",
+      "alternatives": [
+        "Ético",
+        "Familiar",
+        "Personal",
+        "Social",
+        "Cultural"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 48 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En las relaciones sociales amicales, los varones se sienten varoniles y las mujeres femeninas. ¿Qué identidad predomina en ellos?",
+      "alternatives": [
+        "Personal",
+        "Familiar",
+        "Cultural",
+        "Escolar",
+        "Sexual"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 49 (clave E)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Axiología: los valores y la experiencia valorativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Por la prostitución como pago de los placeres sexuales. ¿Qué valor se obtiene?",
+      "alternatives": [
+        "Valor divino",
+        "Valor reproductora",
+        "Valor moral",
+        "Valor económico",
+        "Valor publicista"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 50 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "ORACIÓN ELIMINADA (I) La identidad surge a partir del contacto con otras comunidades. (II) Por medio de la comparación, una comunidad en particular define y defiende sus propias características. (III) Las naciones son comunidades imaginadas según su identidad. (IV) La identidad se manifiesta y se trasmite a través de elementos diversos como la lengua, los mitos y diversas actitudes hacia la vida. (V) Asimismo, otorga a la comunidad una sensación de permanencia en el tiempo y en el espacio.",
+      "alternatives": [
+        "I",
+        "IV",
+        "III",
+        "II",
+        "V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 51 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PLAN DE REDACCIÓN Importancia de la historia I. La historia es la disciplina que estudia y narra cronológicamente los acontecimientos pasados. II. Alguna vez nos preguntamos ¿quién es el que estudia los sucesos sociales, políticos, económicos y culturales? ¿quiénes juntaron todos los manuscritos? III. Aprender la historia es interpretar la realidad desde los orígenes de nuestra existencia. IV. Éstas y otras preguntas tienen su respuesta en la historia.",
+      "alternatives": [
+        "II - IV - I - III",
+        "III - IV - I - II",
+        "I - III - IV - II",
+        "IV - III - I - II",
+        "II - I - IV - III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 57 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Simple past tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el diálogo: A. Where ____ you yesterday? B. ¡At home!",
+      "alternatives": [
+        "was",
+        "did",
+        "are",
+        "do",
+        "were"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 58 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Simple past tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto: My brother ____ French last year. Did your sister ____ German?",
+      "alternatives": [
+        "studies - did - studies",
+        "study - did - study",
+        "studied - does - studied",
+        "studied - did - study",
+        "study - did - studies"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 60 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Future: will / going to",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el diálogo: A. When _____ you ____ start school? B. ¡Next month!",
+      "alternatives": [
+        "do / doing",
+        "do / going to",
+        "are / going to",
+        "are / going",
+        "are / go"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 61 (clave C)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la pregunta: Has your brother ever ____ Korean food?",
+      "alternatives": [
+        "eat",
+        "ate",
+        "eated",
+        "eating",
+        "eaten"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 62 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La profesora Katty de matemática pide a sus estudiantes, hallar el término general en la sigueinte sucesión: 5; 8; 11; 14; 17; ... (tn) ¿Cuál es la respuesta correcta de sus estudiantes?",
+      "alternatives": [
+        "2n + 3",
+        "3n + 2",
+        "2n - 3",
+        "3n - 2",
+        "2n - 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 64 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El hijo del Emperador Japonés, asumirá el trono cuando cumpla (en años) su edad definida por: 3 * 4; si se cumple que, a * b = 2a + 3b. ¿A qué edad asumirá el trono?",
+      "alternatives": [
+        "25",
+        "33",
+        "20",
+        "18",
+        "24"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 66 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Del almacén de una fábrica de aceite, se saca las 2/3 partes menos 80 litros de uno de los depósitos, luego se saca los 2/5 del resto y por último se saca los 168 litros restantes. ¿Cuál es la capacidad del depósito?",
+      "alternatives": [
+        "560 L",
+        "540 L",
+        "520 L",
+        "600 L",
+        "580 L"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 69 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La edad que tendrá Paola dentro de cierto número de años y la edad que tenía hace ese mismo número de años suman 42 años. Hace cuántos años Paola tenía el triple de la edad que tenía hace 15 años.",
+      "alternatives": [
+        "1",
+        "3",
+        "5",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 70 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una puesta, perdí 1/5 de mi dinero y presté 1/8 de lo que me quedaba. ¿Cuánto me queda si inicialmente disponía la suma de 100 soles?",
+      "alternatives": [
+        "S/. 70",
+        "S/. 60",
+        "S/. 30",
+        "S/. 40",
+        "S/. 20"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 71 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Nelly y Valeria son amigas, que quieren juntar su dinero para comprar un regalo a su profesora. Nelly tiene tres veces más de lo que tiene Valeria. Si Nelly le da S/. 24 a Valeria, entonces tendrían la misma cantidad. ¿Cuánto tienen entre Nelly y Valeria?",
+      "alternatives": [
+        "S/. 100",
+        "S/. 60",
+        "S/. 90",
+        "S/. 80",
+        "S/. 50"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 72 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Seis amigas están reunidas y sentadas alrededor de una mesa elíptica. • Se sabe que Lucha no está sentada al lado de Enriqueta ni de Julia • Paty está sentada junto a Enriqueta, a su derecha. • Felícita está sentada entre Paty y Lucha. ¿Quién está sentada a la izquierda de Enriqueta?",
+      "alternatives": [
+        "Lucha",
+        "Paty",
+        "Gaby",
+        "Julia",
+        "Felicia"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 74 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El precio de etiqueta de una camisa que le gusta a Omar es S/. 120. Al momento del pago le hacen dos descuentos sucesivos de 25 y 20 por ciento. ¿A cuánto lo compró finalmente?",
+      "alternatives": [
+        "S/. 76",
+        "S/. 72",
+        "S/. 80",
+        "S/. 70",
+        "S/. 74"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 75 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene una fracción equivalente a 4/7, cuya suma de términos es igual a 55. Calcula la diferencia de ambos términos.",
+      "alternatives": [
+        "35",
+        "10",
+        "15",
+        "20",
+        "18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 76 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si a un terreno se le agrega el a% al largo y al ancho se le disminuye en a%, el área disminuye 4%. Halla el valor de \"a\"",
+      "alternatives": [
+        "5",
+        "40",
+        "30",
+        "10",
+        "20"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 78 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un grupo de estudiantes de la Facultad de Ciencias Forestales se dedica a reforestar cierta provincia de la Región Junín. Ellos, el primer día plantan 1 árbol, el segundo día 2, el tercer día 4, el cuarto día 8 y así sucesivamente. Si continúan con esa lógica. ¿cuántos árboles plantarán en total al cabo de 6 días?",
+      "alternatives": [
+        "55",
+        "30",
+        "60",
+        "63",
+        "32"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=16",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-II (Área II), pregunta 79 (clave E)"
+    }
+  ]
+}

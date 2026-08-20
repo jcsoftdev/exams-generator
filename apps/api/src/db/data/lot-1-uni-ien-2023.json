@@ -1,0 +1,412 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una proporción geométrica continua la suma de los extremos es 10, la suma de los términos medios es 8. Halle el valor absoluto de la diferencia del 2do. consecuente con el 1er. antecedente.",
+      "alternatives": [
+        "6",
+        "5",
+        "4",
+        "3",
+        "2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Aritmética, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un resorte de longitud natural igual a 28 cm se estira lentamente hasta que su longitud final sea 29 cm, realizándose un trabajo de 0,1 J. ¿Cuál debió ser el estiramiento, en cm, para que el trabajo realizado sea 2,5 J?",
+      "alternatives": [
+        "5",
+        "2",
+        "4",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Física, pregunta 2 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La biotecnología hace uso de organismos, sistemas y procesos biológicos con fines prácticos o comerciales. Respecto a la biotecnología, señale la verdad(V) o falsedad(F) de las siguientes proposiciones: I. Una de sus aplicaciones incluye el desarrollo de nuevos medicamentos. II. Involucra también la explotación de procesos biológicos con fines industriales. III. Se utiliza en la elaboración de vino y cerveza.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFV",
+        "FVV",
+        "FFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Química, pregunta 7 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un campeonato de fútbol participan 8 equipos. En la fase inicial, juegan todos contra todos. Acerca de uno de los equipos, al que denominaremos A, se sabe lo siguiente, de su participación en esta fase inicial: 1. Obtuvo en total 7 puntos. 2. No ha perdido ningún partido. Entonces, podemos decir:",
+      "alternatives": [
+        "No ganó ningún partido.",
+        "Ganó 1 partido.",
+        "Ganó 2 partidos.",
+        "Ganó 3 partidos.",
+        "Ganó 4 partidos."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 7 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se desea conocer si la nota de de Pedro en un examen es mayor que la de María. I. La nota de Pedro es mayor que la de Ana. II. La nota de Ana no es tan alta como la de María. Escoger la mejor respuesta:",
+      "alternatives": [
+        "I por si solo es suficiente para resolver el problema.",
+        "II por si solo es suficiente para resolver el problema.",
+        "Se necesita usar tanto I como II para resolver el problema.",
+        "Cada hecho en forma independiente puede resolver el problema.",
+        "Aparte de I y II, se necesita información adicional para resolver el problema."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuánto le falta a la mitad de 2/3 para ser igual al cociente de 4/5 entre 2/3?",
+      "alternatives": [
+        "1/5",
+        "1/2",
+        "13/15",
+        "12/11",
+        "7/9"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 9 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Definiciones: género próximo y diferencia específica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que se ajusta a la siguiente definición. ________________:Indisponer o enemistar a una persona con otra u otras.",
+      "alternatives": [
+        "Aturdir",
+        "Malcriar",
+        "Desechar",
+        "Malquistar",
+        "Apartarse"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Precise la opción que mantiene una relación análoga con el par base escrito en mayúscula: EVALUAR : CALCULAR",
+      "alternatives": [
+        "Confundir : Equivocar",
+        "Galardonar : Premiar",
+        "Chirriar : Desafinar",
+        "Abrumar : Fatigar",
+        "Tasar : Medir"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la opción que mantiene una relación concordante con el par base escrito en mayúscula. MATEMÁTICO: CALCULADORA::",
+      "alternatives": [
+        "Psicólogo: mente",
+        "Niño: celular",
+        "Intelectual :gafas",
+        "Chef : receta",
+        "Plano: arquitecto"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que mantiene una relación análoga con el par base escrito en mayúscula. EMPATÍA : TOLERANCIA::",
+      "alternatives": [
+        "sol: desolación",
+        "devaluación: inflación",
+        "humedad:sequía",
+        "resiliencia: estrés",
+        "conocimiento: investigación"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la alternativa que, al insertarse en los espacios en blanco, dé sentido lógico y preciso a la oración. La alopecia es un problema que, ________ lo que muchos piensan, puede afectar tanto a hombres como a mujeres y, _______, merma de manera notable la calidad de vida.",
+      "alternatives": [
+        "aunque – por ejemplo",
+        "a pesar de – además",
+        "pese a que – pues",
+        "si bien – por lo tanto",
+        "debido a – también"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señale la alternativa que no es pertinente o es redundante con el contenido global del texto. I. La obesidad es una epidemia, y la obesidad infantil, el gran problema de salud pública del siglo XXI. II. Esta realidad involucra a Tacna, al ser el segundo departamento a nivel nacional con sobrepeso y obesidad infantil (40,2%). III. De acuerdo al informe del INS, en esta región, la etiología estaría relacionada a ciertos factores asociados con la madre. IV. La edad materna, el índice de masa corporal (IMC) pregestacional, ganancia de peso gestacional, paridad, y comorbilidades como preeclampsia y diabetes son indicadores a tomar en cuenta. V. Asimismo, la mayoría de los niños con sobrepeso y obesidad siguen una dieta hipercalórica, en la que hay un exceso de alimentos ricos en grasas y azúcares.",
+      "alternatives": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 9 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PLAN DE REDACCIÓN Elija la alternativa que mantiene la secuencia correcta que deben seguir los enunciados para que la estructura del texto sea adecuada. ISSA, EL AUSTRALOPITHECUS QUE CAMINABA COMO HUMANO Y TREPABA COMO SIMIO I. Se trataba del segundo individuo de Australopithecus sediba jamás encontrado, una especie descrita en 2010, pero descubierta dos años antes en el mismo sitio. II. Ahora, los restos fósiles de la espalda baja de Issa revelan que el Australopithecus sediba y el resto de primeros homínidos utilizaban tanto sus extremidades superiores para trepar como las inferiores para caminar erguidos. III. En 2010, los análisis confirmaron que los restos tenían una edad de aproximadamente dos millones de años. IV. Los primeros restos de Issa, un Australopithecus sediba, fueron descubiertos en 2015 durante una excavación en el yacimiento de Malapa. V. Malapa forma parte del complejo Cuna de la Humanidad, ubicado a 40 kilómetros al noreste de Johannesburgo, Sudáfrica.",
+      "alternatives": [
+        "IV–V–I–III–II",
+        "V–II–IV–I–IIII",
+        "V–III–IV–I–II",
+        "IV–V–III–I–II",
+        "IV–III–I–II–V"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "INCLUSIÓN DE ENUNCIADO Elija la alternativa que, al insertarse en el espacio, complete mejor la información global del texto. I. Una investigación reciente de la Universidad de Lausana, en Suiza, asegura que la relación de los seres humanos con la cannabis data de hace 12 mil años. II. El estudio, publicado en Science Advances, se enfocó en el arista genómico de la cannabis. III. Según el Doctor en Ciencias Luca Fumagalli del Departamento de Ecología y Evolución de la UNIL, la domesticación de la marihuana está íntimamente ligada a su uso textil y medicinal. IV. ____________________________. V. A partir de las fibras y semillas oleaginosas, los seres humanos del Neolítico utilizaron la planta para tratar malestares neurálgicos, dada sus propiedades analgésicas.",
+      "alternatives": [
+        "La industria textil ha supuesto desde antaño la producción masiva de ciertas herramientas útiles para realizar cultivos a gran escala y",
+        "Las medicinas derivadas de alucinógenos como la marihuana dependen de un proceso industrial que aún se encuentra en ciernes,",
+        "La domesticación de la marihuana fue un proceso paulatino que involucró esfuerzos textiles y desarrollo del conocimiento médico",
+        "Las fibras textiles pueden reciclarse de una manera apropiada de tal forma que sirvan para evitar el desequilibro medioambiental al",
+        "La domesticación de plantas es un proceso que ha permitido que muchas especies tóxicas, imposibles de ser consumidas,"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija el orden correcto que deben seguir los enunciados para que el texto resulte coherente y cohesivo. I. En el campo de las matemáticas puras, se anticipó a muchos de los descubrimientos de la ciencia moderna, como el cálculo integral. II. Esta establece que en cualquier palanca se cumple que el producto de la potencia P por la distancia de su brazo Bp es equivalente al producto de la resistencia Rp por la longitud de su brazo. III. En mecánica, Arquímedes definió la ley de la palanca y se le reconoce como el inventor de la polea compuesta. IV. De la vida de Arquímedes se conoce muy poco, pero sus aportes en las matemáticas y en la mecánica son interesantes. V. En particular, halló el centro de gravedad de un paralelogramo, un triángulo y un trapecio y de un segmento de parábola.",
+      "alternatives": [
+        "IV-I-V-III-II",
+        "I-IV-III-II-V",
+        "III-II-IV-I-V",
+        "II-III-IV-I-V",
+        "IV-V-I-III-II"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "texto 1. Una crisis financiera es una crisis de sobreendeudamiento. Puede originarse en las familias, empresas o gobierno. Hagamos una analogía con una familia. Si en un mes gasta por encima de sus ingresos, es porque usó sus ahorros o se endeudó. Pero si se terminan sus ahorros y mantiene el mismo nivel de gasto, entonces solo le quedará pedir más préstamos y llegará un momento en que los bancos no querrán prestarle, por su alto nivel de deuda en comparación con sus ingresos. Entonces, al no poder pagar, la familia entrará en una “crisis financiera. Lo mismo pasó en Estados Unidos (2008) y Europa (2010), y ahora está a punto de pasar en China. Evergrande, la segunda inmobiliaria más importante de China, ha anunciado que tiene una deuda de 300.000 millones de dólares y que no tiene suficiente liquidez, es decir, dinero en efectivo para pagarla. Esta empresa debe a diferentes bancos chinos, pero también a empresas proveedoras y a inversores privados, tanto de China como de otros países. Es compatible afirmar respecto a la “economía familiar” que:",
+      "alternatives": [
+        "los gastos mensuales son de acuerdo a los ahorros o préstamos.",
+        "la deuda con los bancos puede ser refinanciadas mensualmente.",
+        "el nivel de gasto mensual debe estar acorde con sus ingresos.",
+        "los endeudamientos familiares se reflejan en la economía mundial.",
+        "se puede vivir por encima de las posibilidades con los préstamos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 13 (clave C)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Uso de grafías",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las siguientes oraciones: I. Esta vez revelaremos el secreto aunque nos amenacen con tomar represalias contra nosotros. II. Es muy importante cultivar la humildad y ser consientes de nuestras propias limitaciones. III. En el marco de las actuales conferencias sobre el cambio climático, un expositor sugirió grabar con altos impuestos el consumo de carbón. ¿Cuáles son ortográficamente correctas?",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Humanidades, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Nociones generales de economía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Marque la alternativa correcta sobre cuál es el fin de la Economía.",
+      "alternatives": [
+        "Fin teórico",
+        "Fin positivo",
+        "Fin descriptivo",
+        "Fin productor",
+        "Fin de pago"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Humanidades, pregunta 2 (clave A)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "El Tahuantinsuyo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique la alternativa que completa el enunciado de manera correcta. Uno de los aportes a las técnicas en ingeniería constructiva por parte del conocimiento heredado de nuestros ancestros peruanos es________________________________.",
+      "alternatives": [
+        "las terapias con plantas nativas",
+        "el estudio de los pisos ecológicos en Moray",
+        "el uso de alucinógenos",
+        "la andenería, los drenajes y riego",
+        "su organización social para el trabajo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Humanidades, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Grecia y Roma: culturas clásicas de Occidente",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dados los siguientes acontecimientos ocurridos entre los años 246 a. C. y 146 a. C., entre las dos principales potencias de la época, Roma y Cartago, que fueron definitivos en la lucha por la supremacía en el mar mediterráneo, ordénelos cronológicamente del más antiguo al menos antiguo: 1. Saqueo e incendio de Cartago. 2. Roma conquista las ciudades de la Magna Grecia. 3. Los fenicios fundan Cartago.",
+      "alternatives": [
+        "2, 1, 3",
+        "3, 1, 2",
+        "1, 3, 2",
+        "2, 3, 1",
+        "3, 2, 1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Humanidades, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Conditionals (zero, first, second, third)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete the sentence with the most appropiate words. If I _______ as an assistant in the Science Laboratory, I could ______ more money.",
+      "alternatives": [
+        "worked – earn",
+        "work – earned",
+        "working – earning",
+        "job – much",
+        "have been worked – earn"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Humanidades, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete the text using the correct form of the verbs. Pedro Sánchez _______ and _______ in Cuzco. But he _______ in Arequipa for six years.",
+      "alternatives": [
+        "was born -- grew up – has lived",
+        "grew up – went – live",
+        "grow up – went – has lived",
+        "grew – go – live",
+        "was born – go – live"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Humanidades, pregunta 6 (clave A)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Seguridad y bienestar nacional",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El 23 de Noviembre se publica en \"El Peruano\" la declaración de alerta sanitaria en todo el territorio nacional, ante la presencia de la influenza aviar H5N1, por un periodo (en días) de:",
+      "alternatives": [
+        "30",
+        "60",
+        "90",
+        "150",
+        "180"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Humanidades, pregunta 7 (clave E)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Perú en el mundo globalizado",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El domingo 19 de Noviembre llegó al Perú el Grupo de Alto Nivel del Consejo Permanente de la OEA (Organización de Estados Americanos), para analizar la situación política en el Perú. El Secretario General de la OEA actualmente es:",
+      "alternatives": [
+        "Donald Trump",
+        "Luis Almagro",
+        "Diego de Almagro",
+        "Joe Biden",
+        "Barack Obama"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Humanidades, pregunta 8 (clave B)"
+    }
+  ]
+}

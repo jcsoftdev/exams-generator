@@ -1,0 +1,565 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Julia va al mercado con 1 890 soles. Con los 3/7 de su dinero compra una chompa. Con los 4/9 del resto, una pelota. Con los 3/5 del nuevo resto, un juguete y con 2/3 del último una corbata. ¿Con cuánto dinero quedó luego de realizar las compras?",
+      "alternatives": [
+        "S/. 80",
+        "S/. 48",
+        "S/. 60",
+        "S/. 75",
+        "S/. 70"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 04 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un octágono regular, la medida del ángulo central y el ángulo interior miden, respectivamente:",
+      "alternatives": [
+        "45°; 120°",
+        "45°; 135°",
+        "45°; 145°",
+        "35°; 120°",
+        "30°; 135°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 07 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina le verdad (V) o falsedad (F) de las siguientes afirmaciones: I. La deviación estándar es la raíz cuadrada positiva de la varianza. II. La varianza es una medida de tendencia central. III. El rango o amplitud es una medida de localización.",
+      "alternatives": [
+        "FVF",
+        "FVV",
+        "FFF",
+        "VFV",
+        "VFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 09 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Morfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el siguiente texto: La oración es la unidad mínina con sentido completo y termina en un punto. Identifica el número de sustantivos que hay en el texto.",
+      "alternatives": [
+        "Cuatro",
+        "Tres",
+        "Cinco",
+        "Siete",
+        "Seis"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 11 (clave A)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Signos de puntuación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el tipo de coma utilizada en el siguiente texto. Delia, no te vayas.",
+      "alternatives": [
+        "Aposición",
+        "Hiperbática",
+        "Vocativa",
+        "Elíptica",
+        "Explicativa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Morfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el número de sustantivo que hay en el texto Paco yunque miró al profesor, que escriba en la pizarra. ¿Quién era el maestro?. ¿Por qué era tan serio?",
+      "alternatives": [
+        "Cinco",
+        "Seis",
+        "Tres",
+        "Cuatro",
+        "Dos"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 16 (clave D)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el nivel ecológico que estudia y trata las grandes regiones climáticas del mundo.",
+      "alternatives": [
+        "Biósfera",
+        "Población",
+        "Bioma",
+        "Ecotono",
+        "Ecósfera"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 17 (clave C)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el área natural protegida que es de uso directo.",
+      "alternatives": [
+        "Santuario Nacional Pampa Hermosa",
+        "Parque Nacional de Huascarán",
+        "Santuario Nacional Ampay",
+        "Reserva Nacional de Paracas",
+        "Parque Nacional Otishi"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 18 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Organismos constitucionales autónomos I",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Quién ejerce la rendición de cuentas horizontal?",
+      "alternatives": [
+        "El Tribunal Constitucional",
+        "La Contraloría General de la República",
+        "El Congreso de la República",
+        "La ciudadanía",
+        "La Fiscalía de la Nación"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 19 (clave B)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Los derechos humanos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica las palabras y completa la expresión relacionada con los derechos fundamentales de la persona. Toda persona tiene derecho … y …",
+      "alternatives": [
+        "a la educación / al trabajo",
+        "a la seguridad social /una pensión",
+        "al matrimonio / la salud",
+        "al trabajo / la sindicalización",
+        "a la vida / su identidad"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 20 (clave E)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía física y relieve peruano",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿En qué departamento se ubican los valles de Ocoña, Camaná y Majes?",
+      "alternatives": [
+        "La Libertad",
+        "Ica",
+        "Arequipa",
+        "Lambayeque",
+        "Piura"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Doctrinas y sistemas económicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la expresión: La teoría de la …… fue el principal aporte de la doctrina económica socialista.",
+      "alternatives": [
+        "utilidad",
+        "plusvalía",
+        "demanda",
+        "oferta",
+        "exportación"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Nociones generales de economía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el tema de estudio de la microeconomía.",
+      "alternatives": [
+        "Los costos de producción",
+        "El producto bruto interno",
+        "La demanda agregada",
+        "El desempleo",
+        "La inflación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 24 (clave A)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Producción I",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona los fines de la empresa con su respectivo componente. I. Fin económico a. Maximizar ganancias II. Fin mercantil b. Generar riquezas III. Fin lucrativo c. Producir para el mercado",
+      "alternatives": [
+        "Ia – IIb – IIIc",
+        "Ia – IIc – IIIb",
+        "Ib – IIa – IIIc",
+        "Ic – IIb – IIIa",
+        "Ib – IIc – IIIa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 25 (clave D)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Producción II",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona los sectores productivos con su respectiva actividad económica. I. Sector primario a. Las telecomunicaciones II. Sector secundario b. La construcción III. Sector terciario c. La extracción de hidrocarburos",
+      "alternatives": [
+        "Ib – IIa – IIIc",
+        "Ic – IIa – IIIb",
+        "Ic – IIb – IIIa",
+        "Ia – IIc – IIIb",
+        "Ib – IIc – IIIa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 26 (clave C)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Ética",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el elemento de la personalidad moral, cuando el comportamiento debe ser coherente con sus creencias y formas de razonamiento.",
+      "alternatives": [
+        "La conducta",
+        "El razonamiento",
+        "El carácter",
+        "Los valores",
+        "La emoción"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 27 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Vínculo familiar",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona las formas de comunicación de la pareja con su manifestación I. Asertiva a. Dice lo que piensa y siente. II. Pasiva b. Critica y humilla a los demás. III. Agresiva c. No dice exactamente lo que desea.",
+      "alternatives": [
+        "Ib – IIc – IIIa",
+        "Ib – IIa – IIIc",
+        "Ic – IIa – IIIb",
+        "Ia – IIb – IIIc",
+        "Ia – IIc – IIIb"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 28 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Motivación y emoción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona las capacidades, para la identificación y manejo de las emociones, con su característica. I. Autoconciencia II. Automotivación III. Autorregulación emocional a. Capacidad de controlar nuestras propias emociones o impulsos. b. Capacidad de reconocer y entenderse a uno mismo. c. Capacidad de estar en continua búsqueda y logro de objetivos.",
+      "alternatives": [
+        "Ib – IIc – IIIa",
+        "Ib – IIa – IIIc",
+        "Ia – IIb – IIIc",
+        "Ic – IIa – IIIb",
+        "Ia – IIc – IIIb"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 29 (clave A)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Gnoseología y epistemología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cuando decimos que la causa de la pobreza es la mala distribución de la riqueza. ¿A qué función básica de la ciencia se hace referencia?",
+      "alternatives": [
+        "Descriptiva",
+        "Aplicativa",
+        "Predictiva",
+        "Explicativa",
+        "Especulativa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 30 (clave D)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Axiología: los valores y la experiencia valorativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona los valores éticos y su definición: I. La dignidad II. La igualdad III. La solidaridad a. Es el valor que exige asumir el compromiso de participar colectivamente en la solución de problemas que son comunes. b. Exige considerar al hombre semejante a los demás seres humanos, independientemente de su condición económica, social, física y mental. c. Exige considerar al hombre independiente de su condición, como valioso por sí mismo, y por tanto no como objeto sino como un fin de sí mismo.",
+      "alternatives": [
+        "Ia – IIc – IIIb",
+        "Ic – IIb – IIIa",
+        "Ic – IIa – IIIb",
+        "Ia – IIb – IIIc",
+        "Ib – IIc – IIIa"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 31 (clave B)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el (los) enunciado(s) que presente(n) una falacia en el argumento: I. El jabón líquido \"Ternura y amor\" es el que más se ha vendido en la pandemia, entonces debe ser el mejor del mercado. II. El matrimonio en el cual uno trabaja y el otro se dedica a la casa nunca funciona, lo sé porque lo vi en el caso de mis padres. III. Los odontólogos se llenan los bolsillos de dinero porque, a todos nos gustan los caramelos y chocolates.",
+      "alternatives": [
+        "I – II – III",
+        "II – III",
+        "I – II",
+        "I – III",
+        "III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 33 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Lee el siguiente texto:\n\nLa piratería no tiene control en el país. Cerca del 89% de libros que se compran son piratas, perjudicando a toda la industria editorial: autores, editores, correctores de estilo, diseñadores, etc. Principalmente la población los compra porque son más baratos y creen que se ahorran algo, además que estos facinerosos logran distribuir los ejemplares de los textos con mayor cobertura y rapidez, incluso en algunos casos ya negocian versiones preliminares o en corrección.\n\n¿Cuál es el argumento principal por el que se compran productos piratas?",
+      "alternatives": [
+        "La actualidad de textos",
+        "La cantidad de ofertas",
+        "La mejor distribución",
+        "El menor precio",
+        "La diversidad temática"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 34 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Reconoce la expresión que cumple la función de catáfora en el siguiente ejemplo: La Tierra realiza dos clases de movimientos: el de rotación y de traslación.",
+      "alternatives": [
+        "el de rotación y traslación",
+        "realiza",
+        "dos clases de movimientos",
+        "movimientos",
+        "La Tierra"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 35 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Lee el siguiente texto:\n\nEl hogar es la primera y la más importante escuela del carácter. Allí es donde todo ser humano recibe su mejor educación moral, o la peor; porque allí es donde se penetra los principios de conducta que le forman y que cesan sólo con su vida.\n\n¿Cuál es la idea nuclear del texto?",
+      "alternatives": [
+        "El hogar es la primera y más importante escuela del carácter.",
+        "En el hogar se recibe la mejor educación moral.",
+        "Educación moral es educación en el hogar.",
+        "El carácter necesita de una educación moral que provenga de la familia",
+        "En el hogar se puede recibir una pésima educación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 37 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Lee el siguiente texto:\n\nLos investigadores ponen de manifiesto que, a pesar de la evolución, el ser humano no está tan lejos de sus primos los monos. El comportamiento, capacidad de aprendizaje y formas de comunicación son aspectos muy comunes entre ambas especies. Al comparar la capacidad de aprendizaje de un niño y un chimpancé recién nacidos, los científicos descubrieron que el mono aprende más rápido que el bebé. Sin embargo, este proceso se detiene cuando el animal alcanza los 3 años, edad en la que se estanca el proceso, mientras que el niño puede hacerlo durante el resto de su vida.\n\nSe colige del texto:",
+      "alternatives": [
+        "Las formas de comunicación son totalmente diferentes entre el hombre y el mono.",
+        "El hombre aprende toda su vida; el mono, sus primeros años.",
+        "La evolución ha separado abismalmente al hombre del mono.",
+        "El hombre interactúa socialmente, el mono prefiere la soledad.",
+        "La capacidad de aprendizaje en la infancia es la misma, entre un niño y un chimpancé."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 38 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elija la pregunta correctamente formulada de acuerdo al texto: Oprah Winfrey is a famous American TV start. She is one of the richest woman in America. She gives a lot money to charity.",
+      "alternatives": [
+        "How much money does she earns every year?",
+        "How much did she earned every year?",
+        "How much money she earns every year?",
+        "How much money does she earn every year?",
+        "How much earns every year?"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 39 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Comparatives and superlatives",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la pregunta: What … month of the year in Huancayo?",
+      "alternatives": [
+        "Is the wettest",
+        "Is the wetter",
+        "Is wettest",
+        "Is wet",
+        "Wet"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 40 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Comparatives and superlatives",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto: My father … my mother, but she … him.",
+      "alternatives": [
+        "taller than – thinner than",
+        "taller – thinner",
+        "is taller than – is thinner than",
+        "is taller – is thinner",
+        "is tall than – is thin than"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 41 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Regla de Tres y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el lado de un cuadrado aumenta en 20%, ¿en cuánto aumentará su área?",
+      "alternatives": [
+        "42 %",
+        "48 %",
+        "45 %",
+        "44 %",
+        "40 %"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 42 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es el número, que aumentado en 6 unidades, produce un resultado igual al que se obtiene dividiéndole entre 2/5?",
+      "alternatives": [
+        "7",
+        "4",
+        "10",
+        "8",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 43 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que el anteayer del ayer del mañana de hace 5 días es sábado, ¿Qué día será el mañana del inmediato ayer del anterior al anterior del subsiguiente día al pasado mañana del día de hoy?",
+      "alternatives": [
+        "Martes",
+        "Domingo",
+        "Lunes",
+        "Sábado",
+        "Jueves"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se reparten 130 soles entre 3 personas de modo que la segunda reciba 20 soles más que la primera y 15 soles menos que la tercera. ¿Cuánto recibe la tercera persona?",
+      "alternatives": [
+        "60 soles",
+        "50 soles",
+        "30 soles",
+        "45 soles",
+        "25 soles"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 48 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una caja hay 12 esferas azules, 10 esferas rojas, 8 esferas negras y 6 esferas amarillas. ¿Cuántas debemos extraer como mínimo para obtener con seguridad 3 esferas de cada color?",
+      "alternatives": [
+        "25",
+        "32",
+        "33",
+        "29",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 50 (clave C)"
+    }
+  ]
+}

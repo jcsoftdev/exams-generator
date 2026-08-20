@@ -1,0 +1,504 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/arit-uncp-2021-01.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Aritmética, pregunta 1 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/arit-uncp-2021-02.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Aritmética, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/arit-uncp-2021-03.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Aritmética, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/arit-uncp-2021-04.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Aritmética, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/alg-uncp-2021-05.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Álgebra, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/alg-uncp-2021-06.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Álgebra, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/alg-uncp-2021-07.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Álgebra, pregunta 7 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/alg-uncp-2021-08.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Álgebra, pregunta 8 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/geo-uncp-2021-09.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Geometría, pregunta 9 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/geo-uncp-2021-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Geometría, pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/geo-uncp-2021-11.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Geometría, pregunta 11 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/trig-uncp-2021-12.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Trigonometría, pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/trig-uncp-2021-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Trigonometría, pregunta 13 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/trig-uncp-2021-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Trigonometría, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/estad-uncp-2021-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Estadística y Probabilidades, pregunta 15 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/estad-uncp-2021-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Estadística y Probabilidades, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/estad-uncp-2021-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Estadística y Probabilidades, pregunta 17 (clave A)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/leng-uncp-2021-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Lenguaje, pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/leng-uncp-2021-19.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Lenguaje, pregunta 19 (clave B)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/lit-uncp-2021-20.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Literatura, pregunta 20 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/leng-uncp-2021-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Lenguaje, pregunta 21 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/fis-uncp-2021-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Física, pregunta 22 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/fis-uncp-2021-23.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Física, pregunta 23 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/fis-uncp-2021-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Física, pregunta 24 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/quim-uncp-2021-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Química, pregunta 25 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/fis-uncp-2021-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Física, pregunta 26 (clave A)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/eco-uncp-2021-27.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Ecología, pregunta 27 (clave E)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/eco-uncp-2021-28.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Ecología, pregunta 28 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Participación ciudadana en el sistema democrático",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/civ-uncp-2021-29.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Educación Cívica, pregunta 29 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Personalidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/psi-uncp-2021-30.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Psicología, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rv-uncp-2021-31.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Verbal, pregunta 31 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rv-uncp-2021-32.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Verbal, pregunta 32 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/com-uncp-2021-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Comunicación, pregunta 33 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rv-uncp-2021-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Verbal, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Marcadores textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rv-uncp-2021-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Verbal, pregunta 35 (clave C)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Verb to be (present) / greetings & wh-questions",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/ing-uncp-2021-36.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Inglés, pregunta 36 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Simple present tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/ing-uncp-2021-37.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Inglés, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Comparatives and superlatives",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/ing-uncp-2021-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Inglés, pregunta 38 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 39 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-41.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-42.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 42 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-43.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 43 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 44 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 45 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 46 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-47.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 47 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-48.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 48 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 49 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-16-academia-ingenieria-uncp-2021-image/rm-uncp-2021-50.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=27",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-II (Área II), Razonamiento Matemático, pregunta 50 (clave E)"
+    }
+  ]
+}

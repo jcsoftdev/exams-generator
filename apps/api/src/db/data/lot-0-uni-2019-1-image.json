@@ -1,0 +1,1734 @@
+{
+  "entries": [
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 1 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-04.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 5 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-06.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-07.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 7 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-08.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 8 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-09.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 9 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-10.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-11.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-12.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-13.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 13 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-14.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-15.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 15 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-16.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-17.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 17 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-18.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-19.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 19 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-20.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-21.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-22.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 22 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-23.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-24.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 24 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-25.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 25 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-26.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 26 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-27.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-28.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 28 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-29.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 29 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-30.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-31.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 31 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-32.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 32 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-33.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 33 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-34.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 34 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rm-lot-0-uni-2019-1-raz-35.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Matemático, pregunta 35 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Definiciones: género próximo y diferencia específica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-36.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 36 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Analogías verbales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-37.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-38.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 38 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-39.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 39 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-40.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-41.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-42.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 42 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-43.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 43 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-44.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 44 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-45.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 45 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-46.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 46 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-47.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 47 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-48.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 48 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-49.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 49 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-50.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 50 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-51.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 51 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-52.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 52 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-53.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 53 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Eliminación de oraciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-54.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 54 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-55.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 55 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-56.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 56 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-57.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 57 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-58.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 58 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-59.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 59 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-60.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 60 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-61.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 61 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-62.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 62 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-63.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 63 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-64.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 64 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-65.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 65 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-66.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 66 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-67.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 67 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/rv-lot-0-uni-2019-1-raz-68.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Razonamiento Verbal, pregunta 68 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/leng-lot-0-uni-2019-1-len-76.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Lenguaje, pregunta 76 (clave A)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/leng-lot-0-uni-2019-1-len-77.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Lenguaje, pregunta 77 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Categorías gramaticales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/leng-lot-0-uni-2019-1-len-78.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Lenguaje, pregunta 78 (clave E)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Movimientos y vanguardias literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/lit-lot-0-uni-2019-1-lit-79.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Literatura, pregunta 79 (clave E)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/lit-lot-0-uni-2019-1-lit-80.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Literatura, pregunta 80 (clave E)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Conquista y Virreinato del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/hist-lot-0-uni-2019-1-his-81.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Historia, pregunta 81 (clave A)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "República del Perú (siglo XIX) y dependencia inglesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/hist-lot-0-uni-2019-1-his-82.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Historia, pregunta 82 (clave E)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "República del Perú (siglo XIX) y dependencia inglesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/hist-lot-0-uni-2019-1-his-83.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Historia, pregunta 83 (clave D)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Revoluciones burguesas y Revolución Francesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/hist-lot-0-uni-2019-1-his-84.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Historia, pregunta 84 (clave E)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "República del Perú (siglo XIX) y dependencia inglesa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/hist-lot-0-uni-2019-1-his-85.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Historia, pregunta 85 (clave B)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Ecosistemas y ecorregiones del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/geog-lot-0-uni-2019-1-geo-86.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geografía, pregunta 86 (clave A)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía física y relieve peruano",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/geog-lot-0-uni-2019-1-geo-87.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geografía, pregunta 87 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/econ-lot-0-uni-2019-1-eco-88.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Economía, pregunta 88 (clave D)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/econ-lot-0-uni-2019-1-eco-89.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Economía, pregunta 89 (clave A)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Sector externo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/econ-lot-0-uni-2019-1-eco-100.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Economía, pregunta 100 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/ing-lot-0-uni-2019-1-ing-90.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Inglés, pregunta 90 (clave C)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/ing-lot-0-uni-2019-1-ing-91.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Inglés, pregunta 91 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/ing-lot-0-uni-2019-1-ing-92.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Inglés, pregunta 92 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Modal verbs",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/ing-lot-0-uni-2019-1-ing-93.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Inglés, pregunta 93 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Psicología social",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/psic-lot-0-uni-2019-1-psi-94.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Psicología, pregunta 94 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Definición, métodos e historia de la psicología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/psic-lot-0-uni-2019-1-psi-97.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Psicología, pregunta 97 (clave E)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Ética",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/filo-lot-0-uni-2019-1-fil-95.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Filosofía, pregunta 95 (clave C)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/filo-lot-0-uni-2019-1-fil-96.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Filosofía, pregunta 96 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado de Derecho y la Carta Magna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/civ-lot-0-uni-2019-1-edu-98.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Educación Cívica, pregunta 98 (clave B)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado de Derecho y la Carta Magna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/civ-lot-0-uni-2019-1-edu-99.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Educación Cívica, pregunta 99 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/geo-lot-0-uni-2019-1-geo-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Segmentos y Ángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/geo-lot-0-uni-2019-1-geo-21.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 21 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/geo-lot-0-uni-2019-1-geo-22.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 22 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/geo-lot-0-uni-2019-1-geo-23.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/geo-lot-0-uni-2019-1-geo-25.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 25 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/geo-lot-0-uni-2019-1-geo-26.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 26 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/geo-lot-0-uni-2019-1-geo-27.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 27 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/geo-lot-0-uni-2019-1-geo-29.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/geo-lot-0-uni-2019-1-geo-31.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 31 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/geo-lot-0-uni-2019-1-geo-32.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/geo-lot-0-uni-2019-1-geo-39.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Geometría, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-04.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Matemática, pregunta 4 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 5 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-06.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-07.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-08.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-09.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 9 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-10.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-11.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-12.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 12 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-13.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 13 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-14.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 14 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-15.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 15 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-16.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 16 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-17.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 17 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-18.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 18 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-20.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-24.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 24 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-28.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 28 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-30.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 30 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Polinomios",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-33.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-36.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-37.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 37 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-38.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 38 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/alg-lot-0-uni-2019-1-alg-40.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Álgebra, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/arit-lot-0-uni-2019-1-ari-19.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Aritmética, pregunta 19 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/trig-lot-0-uni-2019-1-tri-34.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Trigonometría, pregunta 34 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/trig-lot-0-uni-2019-1-tri-35.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Trigonometría, pregunta 35 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 2 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-04.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 5 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-06.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-07.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-08.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 8 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-09.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 9 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-10.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 10 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-11.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 11 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-12.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-13.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 13 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-14.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-15.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-16.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 16 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-17.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Óptica geométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-18.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-19.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 19 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/fis-lot-0-uni-2019-1-fis-20.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Física, pregunta 20 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-21.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-22.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 22 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-23.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-24.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-25.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 25 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-26.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 26 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-27.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 27 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-28.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 28 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Unidades químicas de masa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-29.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-30.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-31.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 31 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-32.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-33.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 33 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-34.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 34 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-35.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 35 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-36.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 36 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Unidades químicas de masa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-37.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 37 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-38.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 38 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-39.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química aplicada: nanotecnología y materiales modernos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-0-uni-2019-1-image/quim-lot-0-uni-2019-1-qui-40.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+      "sourceName": "UNI — Examen de Admisión 2019-1, Química, pregunta 40 (clave E)"
+    }
+  ]
+}

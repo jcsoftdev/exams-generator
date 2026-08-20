@@ -1,0 +1,344 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/arit-lot-1-uni-ien-2023-ari-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Aritmética, pregunta 2 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Potenciación y Radicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-1-uni-ien-2023-image/arit-lot-1-uni-ien-2023-ari-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Aritmética, pregunta 3 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/alg-lot-1-uni-ien-2023-alg-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Álgebra, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-1-uni-ien-2023-image/alg-lot-1-uni-ien-2023-alg-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Álgebra, pregunta 2 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/alg-lot-1-uni-ien-2023-alg-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Álgebra, pregunta 3 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/alg-lot-1-uni-ien-2023-alg-04.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Álgebra, pregunta 4 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/geo-lot-1-uni-ien-2023-geo-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Geometría, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/geo-lot-1-uni-ien-2023-geo-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Geometría, pregunta 2 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/geo-lot-1-uni-ien-2023-geo-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Geometría, pregunta 3 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/trig-lot-1-uni-ien-2023-tri-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Trigonometría, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-1-uni-ien-2023-image/trig-lot-1-uni-ien-2023-tri-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Trigonometría, pregunta 2 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/trig-lot-1-uni-ien-2023-tri-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Trigonometría, pregunta 3 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-1-uni-ien-2023-image/fis-lot-1-uni-ien-2023-fis-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Física, pregunta 3 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/fis-lot-1-uni-ien-2023-fis-04.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Física, pregunta 4 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/fis-lot-1-uni-ien-2023-fis-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Física, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-1-uni-ien-2023-image/fis-lot-1-uni-ien-2023-fis-06.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Física, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/fis-lot-1-uni-ien-2023-fis-07.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Física, pregunta 7 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Materia y energía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-1-uni-ien-2023-image/quim-lot-1-uni-ien-2023-qui-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Química, pregunta 1 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-1-uni-ien-2023-image/quim-lot-1-uni-ien-2023-qui-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Química, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-1-uni-ien-2023-image/quim-lot-1-uni-ien-2023-qui-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Química, pregunta 3 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/quim-lot-1-uni-ien-2023-qui-04.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Química, pregunta 4 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Ácidos, bases y sales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-1-uni-ien-2023-image/quim-lot-1-uni-ien-2023-qui-06.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Química, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/rm-lot-1-uni-ien-2023-raz-01.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 1 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-1-uni-ien-2023-image/rm-lot-1-uni-ien-2023-raz-02.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-1-uni-ien-2023-image/rm-lot-1-uni-ien-2023-raz-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 3 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-1-uni-ien-2023-image/rm-lot-1-uni-ien-2023-raz-04.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/rm-lot-1-uni-ien-2023-raz-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-1-uni-ien-2023-image/rm-lot-1-uni-ien-2023-raz-06.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/rm-lot-1-uni-ien-2023-raz-10.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-1-uni-ien-2023-image/rm-lot-1-uni-ien-2023-raz-11.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-1-uni-ien-2023-image/rm-lot-1-uni-ien-2023-raz-12.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Matemático, pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-1-uni-ien-2023-image/rv-lot-1-uni-ien-2023-raz-05.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-1-uni-ien-2023-image/rv-lot-1-uni-ien-2023-raz-06.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-1-uni-ien-2023-image/rv-lot-1-uni-ien-2023-raz-07.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/12/solucionario-simulacro-ien-2023.pdf",
+      "sourceName": "UNI — Simulacro Ingreso Escolar Nacional (IEN) 2023, Razonamiento Verbal, pregunta 7 (clave B)"
+    }
+  ]
+}

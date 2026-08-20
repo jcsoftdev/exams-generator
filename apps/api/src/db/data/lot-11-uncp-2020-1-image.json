@@ -1,0 +1,474 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/arit-lot-11-uncp-2020-1-ari-01.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-11-uncp-2020-1-image/arit-lot-11-uncp-2020-1-ari-02.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 2 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-11-uncp-2020-1-image/arit-lot-11-uncp-2020-1-ari-03.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 3 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/arit-lot-11-uncp-2020-1-ari-04.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-11-uncp-2020-1-image/alg-lot-11-uncp-2020-1-alg-05.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-11-uncp-2020-1-image/alg-lot-11-uncp-2020-1-alg-06.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 6 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/alg-lot-11-uncp-2020-1-alg-07.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 7 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/alg-lot-11-uncp-2020-1-alg-08.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 8 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-11-uncp-2020-1-image/geo-lot-11-uncp-2020-1-geo-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/geo-lot-11-uncp-2020-1-geo-11.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/trig-lot-11-uncp-2020-1-tri-12.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/trig-lot-11-uncp-2020-1-tri-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 13 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Ecuaciones e Inecuaciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-11-uncp-2020-1-image/trig-lot-11-uncp-2020-1-tri-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-11-uncp-2020-1-image/est-lot-11-uncp-2020-1-est-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 15 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-11-uncp-2020-1-image/est-lot-11-uncp-2020-1-est-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 16 (clave E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/est-lot-11-uncp-2020-1-est-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Acentuación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-11-uncp-2020-1-image/com-lot-11-uncp-2020-1-com-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/com-lot-11-uncp-2020-1-com-19.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 19 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Morfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/com-lot-11-uncp-2020-1-com-20.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 20 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-11-uncp-2020-1-image/com-lot-11-uncp-2020-1-com-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-11-uncp-2020-1-image/fis-lot-11-uncp-2020-1-fis-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 22 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/fis-lot-11-uncp-2020-1-fis-23.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 23 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/fis-lot-11-uncp-2020-1-fis-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-11-uncp-2020-1-image/quim-lot-11-uncp-2020-1-qui-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 25 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/quim-lot-11-uncp-2020-1-qui-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 26 (clave D)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/eco-lot-11-uncp-2020-1-eco-27.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-11-uncp-2020-1-image/eco-lot-11-uncp-2020-1-eco-28.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 28 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-11-uncp-2020-1-image/com-lot-11-uncp-2020-1-com-29.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Cultura de prevención y vida saludable",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-11-uncp-2020-1-image/psi-lot-11-uncp-2020-1-psi-30.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 30 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Referencias textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-11-uncp-2020-1-image/rv-lot-11-uncp-2020-1-raz-31.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 31 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-11-uncp-2020-1-image/rv-lot-11-uncp-2020-1-raz-32.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 32 (clave C)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-11-uncp-2020-1-image/com-lot-11-uncp-2020-1-com-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 33 (clave B)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-11-uncp-2020-1-image/fil-lot-11-uncp-2020-1-fil-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-11-uncp-2020-1-image/com-lot-11-uncp-2020-1-com-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 35 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-11-uncp-2020-1-image/ing-lot-11-uncp-2020-1-ing-36.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 36 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-11-uncp-2020-1-image/ing-lot-11-uncp-2020-1-ing-37.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 37 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Countable and uncountable nouns",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-11-uncp-2020-1-image/ing-lot-11-uncp-2020-1-ing-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 38 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/rm-lot-11-uncp-2020-1-raz-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 39 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-11-uncp-2020-1-image/rm-lot-11-uncp-2020-1-raz-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/rm-lot-11-uncp-2020-1-raz-41.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-11-uncp-2020-1-image/rm-lot-11-uncp-2020-1-raz-42.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 42 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-11-uncp-2020-1-image/rm-lot-11-uncp-2020-1-raz-43.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 43 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-11-uncp-2020-1-image/rm-lot-11-uncp-2020-1-raz-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 44 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/rm-lot-11-uncp-2020-1-raz-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 45 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-11-uncp-2020-1-image/rm-lot-11-uncp-2020-1-raz-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 46 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-11-uncp-2020-1-image/rm-lot-11-uncp-2020-1-raz-47.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 47 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-11-uncp-2020-1-image/rm-lot-11-uncp-2020-1-raz-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=21",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2020-I, pregunta 49 (clave C)"
+    }
+  ]
+}

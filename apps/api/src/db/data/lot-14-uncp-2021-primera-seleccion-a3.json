@@ -1,0 +1,616 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla el residuo que se obtiene al efectuar 74 x 236 entre 7",
+      "alternatives": [
+        "8",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Aritmética, pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Del dinero que tenía gasté los 3/5 y me sobran S/. 20. ¿Cuánto dinero tenía?",
+      "alternatives": [
+        "S/. 40",
+        "S/. 35",
+        "S/. 28",
+        "S/. 50",
+        "S/. 45"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Aritmética, pregunta 2 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la cantidad de números primos que hay en: 19 ; 23 ; 29 ; 31 ; 37 ; 41 ; 43 ; 47 ; 54 ; 57",
+      "alternatives": [
+        "9",
+        "6",
+        "8",
+        "4",
+        "7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Aritmética, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "15 obreros han hecho la mitad de su trabajo en 20 días. En ese momento, abandonaron el trabajo 9 obreros. ¿Cuántos días tardarán en terminar el trabajo los obreros que quedan?",
+      "alternatives": [
+        "35",
+        "25",
+        "45",
+        "30",
+        "40"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Aritmética, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Adriana hecha en un depósito 12 litros de agua y 9 litros de leche, si se extrae 14 litros de mezcla, ¿Cuántos litros de agua queda en el depósito?",
+      "alternatives": [
+        "4litros",
+        "6litros",
+        "5litros",
+        "3litros",
+        "7 litros"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Aritmética, pregunta 48 (clave A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Ángel, Bernardo, Camilo, Diógenes y Ernesto, obtuvieron las siguiente nota: 13; 12; 11 ; 13; 14 respectivamente. ¿Cuál es la menor nota del 50% que obtuvieron mayores notas?",
+      "alternatives": [
+        "13",
+        "11",
+        "14",
+        "12",
+        "13,5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Estadística y Probabilidades, pregunta 9 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) con respecto a la evolución de la lengua española: I. Los romanos colonizadores impulsaron el latín en España. II. El latín tiene dos modalidades el latín culto y el latín vulgar. III. El latín culto influyo en la formación de las lenguas romanas. IV. El latín culto era hablado por políticos e intelectuales, el latín vulgar, por soldados, comerciales y trabajadores. V. Las lenguas romanas son: el italiano, el francés, el castellano, el romano.",
+      "alternatives": [
+        "VVFVV",
+        "FFVVV",
+        "VVFFV",
+        "VVVFF",
+        "VFVFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Comunicación, pregunta 11 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el tipo de código utilizado en el siguiente ejemplo comunicado: Dos sordomudos se encuentran en una universidad y se ponen a conversar sobre sus vacaciones.",
+      "alternatives": [
+        "Proxémico",
+        "Kinésico",
+        "Simbólico",
+        "Señal",
+        "Lingüístico"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Comunicación, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura española",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Rima XXIII \"Por una mirada, un mundo; por una sonrisa, un cielo; por un beso…¡ya no sé qué te diera por un beso!\" (Gustavo Adolfo Bécquer) De la lectura, se puede inferir que el poeta anhela:",
+      "alternatives": [
+        "La compasión de su amada.",
+        "Impactar con sus ofrecimientos.",
+        "Cultivar un amor ilimitado y eterno.",
+        "Llamar la atención de la mujer.",
+        "Impresionar a su amada"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Literatura, pregunta 13 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el texto: Por mí se va a la ciudad doliente por mí el abismo del torrente fiero por mí a vivir con la perdida gente La justicia a mi autor movió severo me hicieron el poder que todo alcanza (..) Identifica la obra literaria medieval al que corresponde el texto:",
+      "alternatives": [
+        "La Eneida",
+        "La divina comedia",
+        "Antígona",
+        "Odisea",
+        "Edipo Rey"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Literatura, pregunta 15 (clave B)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura española",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señala la obra poética más importante del vate Rafael Alberti, quien pertenece a la Generación del 27 de la literatura española: I. La casada infiel II. Marinero en tierra III. La voz a ti debida IV. Perfil del aire V. Cantico",
+      "alternatives": [
+        "IV",
+        "I",
+        "II",
+        "V",
+        "III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Literatura, pregunta 16 (clave C)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el texto que no presenta problemas de concordancia gramatical.",
+      "alternatives": [
+        "Los ancianos inteligentes perdieron su trabajo.",
+        "A mi hija le vistieron, ayer.",
+        "A Cecilia la saludaron todas sus amistades.",
+        "Haguemos justicia con nuestras manos.",
+        "Tu hermana y tío partió para España."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Lenguaje, pregunta 14 (clave A)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al observar un gallinazo (x) posado sobre un árbol (y), identifica la categoría trófica de x e y respectivamente.",
+      "alternatives": [
+        "Consumidor de 2do orden – Consumidor de 3er orden.",
+        "Productor – Consumidor de 2do orden.",
+        "Productor – Consumidor de 3er orden.",
+        "Consumidor de 3er orden – productor",
+        "Consumidor de 1er orden – Consumidor de 2do orden."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Ecología, pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Ecología, universo, sistema solar y Tierra",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto a los astros que se encuentran en el sistema solar, relaciona: I. Cometas a. Se encuentran entre Marte y Júpiter II. Asteroides b. Se le conoce como estrellas fugaces III. Meteoritos c. Poseen cabellera y cola",
+      "alternatives": [
+        "Ia – IIc – IIIb",
+        "Ic – IIa – IIIb",
+        "Ic – IIb – IIIa",
+        "Ib – IIc – IIIa",
+        "Ib – IIa – IIIc"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Ecología, pregunta 18 (clave E)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Los derechos humanos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el derecho fundamental que se asiste a Luis, quien se declara ser una persona agnóstica.",
+      "alternatives": [
+        "Libertad cultural",
+        "Libertad individual",
+        "Libertad de asociación",
+        "Libertad de estilo de vida",
+        "Libertad de conciencia"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Educación Cívica, pregunta 19 (clave E)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía física y relieve peruano",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿A qué valle interandino hace referencia el texto? Es uno de los más pródigos del Perú en materia agroecológica, su producción está dirigida con un 80% al mercado de Lima y es el más extenso del Perú.",
+      "alternatives": [
+        "Tayacaja",
+        "Huarpa",
+        "Mantaro",
+        "Ambo",
+        "Otuzco"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Geografía, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Doctrinas y sistemas económicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona las doctrinas económicas con su respectivo aporte a la ciencia económica: I. Socialista a. Teoría de la demanda efectiva II. Neoclásica b. Teoría de la plusvalía III. Keynesiana c. Teoría subjetiva del valor",
+      "alternatives": [
+        "Ia – IIc – IIIb",
+        "Ib – IIa – IIIc",
+        "Ic – IIb – IIIa",
+        "Ic – IIa – IIIb",
+        "Ib – IIc – IIIa"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Economía, pregunta 23 (clave E)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Actividades macroeconómicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los métodos para determinar el Producto Bruto Interno del país. I. Método del gasto a. Consumo intermedio II. Método del ingreso b. Remuneraciones III. Método del valor agregado c. Exportaciones",
+      "alternatives": [
+        "Ia – IIb – IIIc",
+        "Ic – IIa – IIIb",
+        "Ib – IIa – IIIc",
+        "Ia – IIc – IIIb",
+        "Ic – IIb – IIIa"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Economía, pregunta 24 (clave E)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Sector externo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones relacionadas al comercio internacional: I. Michael Porter es el creador de la teoría de las ventajas competitivas. II. Las exportaciones se clasifican en tradicionales y extranjeras. III. Las importaciones se refieren a la venta de bienes al resto del mundo.",
+      "alternatives": [
+        "VFF",
+        "VVV",
+        "VFV",
+        "FFF",
+        "FFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Economía, pregunta 25 (clave A)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Actividades macroeconómicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto: Considerando el sistema tributario peruano, los tributos que son administrados por los gobiernos locales, son el impuesto… y el impuesto …",
+      "alternatives": [
+        "selectivo al consumo – a la renta.",
+        "general a las ventas – a las apuestas.",
+        "a la renta – general a las ventas.",
+        "a la renta – a los juegos.",
+        "predial – de alcabala."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Economía, pregunta 26 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Personalidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Es el conjunto de ideas y creencias que tenemos sobre nosotros mismos, aspectos de nuestra personalidad, capacidades, aptitudes, etc. ¿A qué concepto hace referencia la definición?",
+      "alternatives": [
+        "Autoconcepto",
+        "Empatía",
+        "Automotivación",
+        "Autoconciencia",
+        "Autoestima"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Psicología, pregunta 27 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el valor ético con la variedad de la sexualidad cuando se debe cumplir con una promesa o acuerdo voluntario que se establece con una persona.",
+      "alternatives": [
+        "Honestidad",
+        "Compromiso",
+        "Responsabilidad",
+        "Libertad",
+        "Respeto"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Psicología, pregunta 28 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el área de los objetivos de la planificación familiar que permite evitar embarazos no deseados, aborto y abandono.",
+      "alternatives": [
+        "Salud",
+        "Control demográfico",
+        "Preventivo",
+        "Educación",
+        "Derechos humanos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Psicología, pregunta 29 (clave C)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Antropología filosófica: el ser humano y el sentido de la vida",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "identifica la interrogante que es estudiada por la antropología filosófica.",
+      "alternatives": [
+        "¿Qué es la ciencia?",
+        "¿Qué es el conocimiento?",
+        "¿Qué es el hombre?",
+        "¿Qué es la verdad?",
+        "¿Qué es la belleza?"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Filosofía, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Ética",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La teoría ética que sostiene que el bien en toda persona es la felicidad, se denomina:",
+      "alternatives": [
+        "Formalismo",
+        "Eudemonismo",
+        "Creacionismo",
+        "Simbolismo",
+        "Intuicionismo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Filosofía, pregunta 31 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Referencias textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué referente textual se ejemplifica en el siguiente enunciado? George Washington logró materializar la Independencia norteamericana gracias a sus aliados, él contó con el apoyo de Francia y España en la decisiva batalla de Yorktown en 1781.",
+      "alternatives": [
+        "Sustitución léxica",
+        "Anáfora",
+        "Catáfora",
+        "Elipsis",
+        "Deixis"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Razonamiento Verbal, pregunta 32 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las trabajadoras abejas recolectan sin cesar el néctar de las flores y los transforman en miel. Luego nosotros, simples humanos, la consumimos sin más esfuerzo que el de abrir el envase que contiene este delicioso producto. Uno de los tantos beneficios de la miel de abeja es su valor energético, ya que funciona como combustible para nuestro cuerpo y esta recomendad para aquellas personas con desgaste físico o intelectual, debido a su contenido de fósforo. El azúcar de la miel pasa de inmediato al torrente sanguíneo y está científicamente comprobado que es fuente de energía. La rápida absorción de la miel por nuestro organismo se debe a que es un alimento pre digerido por las abejas. Normalmente, nosotros digerimos carbohidratos, proteínas y grasas, y, en la digestión, los transformamos en moléculas pequeñas. La miel ya está en forma de monosacárido y, por eso, tiene un resultado inmediato, efecto muy útil para los deportistas. Aunque parezca contradictorio, la miel también ayuda a conciliar el sueño y es recomendada en casos de insomnio. Asimismo, al ser un alimento rico en minerales, combate la artritis. Este producto es útil para tratar afecciones respiratorias (funciona como jarabe para la tos) y estomacales (puede ser usado como laxante en pequeñas cantidades, ya que suaviza las mucosas del estómago y de los intestinos). Además, sirve para calmar las úlceras. \"El Comercio\" (adaptación) Del texto, se deduce como tema central.",
+      "alternatives": [
+        "El valor energético del néctar por las abejas",
+        "La recolección del néctar por las abejas",
+        "La absorción de la miel por el organismo humano",
+        "Los beneficios del azúcar en los procesos de digestión",
+        "La miel de abeja es dulce en los labios"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Razonamiento Verbal, pregunta 33 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la época de los incas, la música tenía objetivos diversos. Música y danzas estaban bastante extendidas en todos los sectores sociales y en cualquier tipo de actividades. En la corte, el inca y la coya tenían sus músicos y danzantes. Lo mismo ocurría en los acllahuasis, donde las taki aclla se dedicaban a tal ejercicio. Incluso, cuando el jefe supremo iba de paseo, hacía el camino con músicos y bailarines. Si bien todas las clases sociales gustaban del baile, ello no quiere decir que se mezclaran para divertirse. En conjunto, música, canto y danza recibían el nombre genérico de taki, palabra que estrictamente significaba \"canto\". En el taki se conjugaban ritmo, literatura y plasticidad corporal. Había infinidad de danzas: prácticamente cada actividad humana tenía dedicada una, en cuyas figuras y gestos se simbolizan las escenas más importantes e impactantes de la agricultura, la ganadería, el pastoreo, la guerra. El matrimonio, los funerales. En sus danzas y cantos, los pobladores andinos escenificaban y relataban sus hechos históricos y legendarios. En ambas situaciones, se guardaba un hondo sentido religioso (por ejemplo, las danzas del Huacón y Mama Rayguana). Waldema Espinoza (1990) Determina el título mas apropiado para el texto.",
+      "alternatives": [
+        "música, canto y danza en el incanato",
+        "las actividades en tiempos de los incas",
+        "la escenificación de hechos legendarios en el incanato",
+        "el baile en las clases sociales durante el incanato",
+        "los acllahuasis y los taki acllas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Razonamiento Verbal, pregunta 34 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la época de los incas, la música tenía objetivos diversos. Música y danzas estaban bastante extendidas en todos los sectores sociales y en cualquier tipo de actividades. En la corte, el inca y la coya tenían sus músicos y danzantes. Lo mismo ocurría en los acllahuasis, donde las taki aclla se dedicaban a tal ejercicio. Incluso, cuando el jefe supremo iba de paseo, hacía el camino con músicos y bailarines. Si bien todas las clases sociales gustaban del baile, ello no quiere decir que se mezclaran para divertirse. En conjunto, música, canto y danza recibían el nombre genérico de taki, palabra que estrictamente significaba \"canto\". En el taki se conjugaban ritmo, literatura y plasticidad corporal. Había infinidad de danzas: prácticamente cada actividad humana tenía dedicada una, en cuyas figuras y gestos se simbolizan las escenas más importantes e impactantes de la agricultura, la ganadería, el pastoreo, la guerra. El matrimonio, los funerales. En sus danzas y cantos, los pobladores andinos escenificaban y relataban sus hechos históricos y legendarios. En ambas situaciones, se guardaba un hondo sentido religioso (por ejemplo, las danzas del Huacón y Mama Rayguana). Waldema Espinoza (1990) Del texto leído, se deduce que:",
+      "alternatives": [
+        "El mundo se simboliza mediante infinidad de danzas",
+        "Los incas eran grandes músicos y cantantes",
+        "La población andina es bastante religiosa",
+        "El arte está presente en toda actividad humana",
+        "La actividad agrícola - ganadera era la razón de ser de los incas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Razonamiento Verbal, pregunta 35 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la época de los incas, la música tenía objetivos diversos. Música y danzas estaban bastante extendidas en todos los sectores sociales y en cualquier tipo de actividades. En la corte, el inca y la coya tenían sus músicos y danzantes. Lo mismo ocurría en los acllahuasis, donde las taki aclla se dedicaban a tal ejercicio. Incluso, cuando el jefe supremo iba de paseo, hacía el camino con músicos y bailarines. Si bien todas las clases sociales gustaban del baile, ello no quiere decir que se mezclaran para divertirse. En conjunto, música, canto y danza recibían el nombre genérico de taki, palabra que estrictamente significaba \"canto\". En el taki se conjugaban ritmo, literatura y plasticidad corporal. Había infinidad de danzas: prácticamente cada actividad humana tenía dedicada una, en cuyas figuras y gestos se simbolizan las escenas más importantes e impactantes de la agricultura, la ganadería, el pastoreo, la guerra. El matrimonio, los funerales. En sus danzas y cantos, los pobladores andinos escenificaban y relataban sus hechos históricos y legendarios. En ambas situaciones, se guardaba un hondo sentido religioso (por ejemplo, las danzas del Huacón y Mama Rayguana). Waldema Espinoza (1990) Si negáramos lo planteado por el autor respecto del canto, entonces…",
+      "alternatives": [
+        "La simbolización de los hechos no existiría",
+        "La danza sería el género de mayor uso",
+        "Las diversas actividades de la vida humana no tendrían gestos simbólicos",
+        "No habría el sentido religioso del arte en general",
+        "Perdería su unidad de expresión y sentido diverso."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Razonamiento Verbal, pregunta 36 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Oraciones incompletas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un mundo globalizado donde la competencia es feroz, las empresas de … utilizan medios complejos y precios de investigación de … para saber qué … en los avisos publicitarios.",
+      "alternatives": [
+        "Promoción - públicos - dirigir",
+        "Comunicación - comercio - ofrecer",
+        "Marketing - mercado - decir",
+        "Publicidad - masas - vender",
+        "Propaganda - estrategias - atraer"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Razonamiento Verbal, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El filósofo francés Albert Camus pensaba que la vida humana era sin sentido, era como la vida de Sísifo, quien había sido castigado por los dioses a subir una piedra hasta la cima de una montaña para luego, volver a hacerlo eternamente, pero, también pensaba que era nuestra responsabilidad darle un sentido. Del texto, se deduce:",
+      "alternatives": [
+        "Sísifo fue un hombre perverso y soberbio por eso fue castigado",
+        "La vida es y será una vida sin sentido siempre.",
+        "Camus no tenía esperanza en la especie humana.",
+        "Camus cree que cada uno puede darle sentido a su vida",
+        "Los dioses castigan a los hombres que no tienen sentido."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Razonamiento Verbal, pregunta 38 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Singular and plural nouns",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona las palabras con sus respectivos plurales: I. Fish A. Babies II. Tomato B. Babys III. Baby C. Fishes D. Fish E. Tomatos F. Tomatoes",
+      "alternatives": [
+        "ID – IIF – IIIA",
+        "IC – IIF – IIIB",
+        "ID – IIF – IIIB",
+        "ID – IIE – IIIA",
+        "IC – IIE – IIIB"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Inglés, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Juan Carlos le dice a su papá, falta transcurrir del día tanto como la tercera parte del tiempo que transcurrió hasta hace 4 horas ¿qué hora es?",
+      "alternatives": [
+        "16h",
+        "18h",
+        "17h",
+        "19h",
+        "15h"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Razonamiento Matemático, pregunta 45 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En cierto examen hay 40 problemas de matemática de los cuales, Daniel resuelve 24 ¿qué tanto por ciento de los problemas le falta resolver a Daniel?",
+      "alternatives": [
+        "35%",
+        "20%",
+        "30%",
+        "10%",
+        "40%"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Razonamiento Matemático, pregunta 46 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos personas poseen 80 soles, la mitad de lo que tiene la primera persona equivale a un tercio de lo que tiene la segunda, ¿cuánto tiene la primera persona?",
+      "alternatives": [
+        "38 soles",
+        "30 soles",
+        "36 soles",
+        "35 soles",
+        "32 soles"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=24",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área III, Razonamiento Matemático, pregunta 50 (clave E)"
+    }
+  ]
+}

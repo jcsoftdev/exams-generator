@@ -1,0 +1,310 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si a/b se divide por su inversa, da por resultado 289/361. Determina la suma de los términos de dicha fracción.",
+      "alternatives": [
+        "38",
+        "39",
+        "37",
+        "35",
+        "36"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Aritmética, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Manuel observa que el número de alumnos de su salón es menor de 240 y mayor que 100; asimismo nota, que los 2/7 del total usan anteojos y los 5/13 son alumnos que llevan ciencias básicas. Determina el número total de alumnos de su salón.",
+      "alternatives": [
+        "172",
+        "162",
+        "192",
+        "182",
+        "91"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Aritmética, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tres comerciantes desean transportar el mismo número de sacos de maíz a ciudades que quedan a diferente distancia; el primero a 50 km, el segundo a 65 km y el último a 75 km. Con este objetivo alquilan un camión pagando entre los tres 266 soles. ¿Cuántos soles más paga el tercer comerciante que el primero?",
+      "alternatives": [
+        "45",
+        "25",
+        "40",
+        "30",
+        "35"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Aritmética, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Rosa vierte en un recipiente, 15 litros de agua y 12 litros de vino, extrae 9 litros del contenido y añade al recipiente 6 litros de agua. Calcula cuántos litros de vino debe añadir para que la relación agua y vino sea la inversa de lo que había inicialmente.",
+      "alternatives": [
+        "14",
+        "15",
+        "12",
+        "13",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Aritmética, pregunta 5 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Divisibilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es el menor tiempo (en años) de fundación de una ciudad si es múltiplo de 42, tal que la suma de su tercera parte y séptima parte da como resultado un cuadrado perfecto?",
+      "alternatives": [
+        "220",
+        "210",
+        "225",
+        "215",
+        "205"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Aritmética, pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Fiorella ingresa a un parque de diversiones, la entrada le cuesta S/ 5 y el ingreso a cada juego cuesta S/ 3, teniendo en cuenta que x representa el número de entradas que Fiorella compra. ¿Cuál es la función que representa el costo total que debe pagar en el parque de diversiones?",
+      "alternatives": [
+        "F(x) = 5x + 3",
+        "F(x) = 3x + 5",
+        "F(x) = 8x",
+        "F(x) = 5x – 3",
+        "F(x) = 3x – 5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Álgebra, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Enrique lanza dos dados, luego se interesa por la suma de los resultados del lanzamiento de los dados. Enrique toma mayor interés de los resultados en los que se obtiene siete. Determine la cantidad de elementos del grupo de resultados que le interesa más a Enrique.",
+      "alternatives": [
+        "6",
+        "7",
+        "5",
+        "8",
+        "10"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Estadística y Probabilidades, pregunta 23 (clave A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Ronald lanza dos monedas y al analizar los resultados se pregunta: ¿cuántos sucesos elementales se obtendría?.Halla la cantidad de sucesos elementales que obtiene Ronald.",
+      "alternatives": [
+        "2",
+        "5",
+        "4",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Estadística y Probabilidades, pregunta 25 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un salón de 30 alumnos, 18 aprobaron matemática y 16 aprobaron inglés, pero 6 no han aprobado ninguno de los dos cursos. Si elegimos al azar a un alumno de ese salón, ¿cuál es la probalidad de que haya aprobado inglés y matemática?",
+      "alternatives": [
+        "0,66",
+        "0,6",
+        "0,3",
+        "0,31",
+        "0,33"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Estadística y Probabilidades, pregunta 26 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la Facultad de Ingeniería Civil donde laboran 10 docentes , se sabe que la suma total de sus edades es 390 años. ¿Cuál era la suma de dichas edades hace 5 años?",
+      "alternatives": [
+        "180",
+        "320",
+        "440",
+        "350",
+        "340"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 66 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El exceso del triple de un número \"x\" sobre 55 equivale al exceso de 233 sobre el mismo número.¿Cuál de las expresiones representa mejor la situación?",
+      "alternatives": [
+        "55 – 3x = 233 – x",
+        "55 – x = 233 – 3x",
+        "3x – 55 = 233 – x",
+        "3x – 55 = x – 233",
+        "x – 55 = 3x – 233"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 67 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la billetera de Rolando hay 20 billetes que hace un total de S/ 680. Si una parte son billetes de S/10 y la otra billetes de S/50. ¿Cuántos billetes de S/50 tiene Rolando?",
+      "alternatives": [
+        "11",
+        "8",
+        "9",
+        "12",
+        "13"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 68 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cierto día caluroso, de un vaso lleno con chicha bebo la sexta parte; luego bebo 1/4 de lo que quedaba. ¿Qué fracción falta beber para terminarla?",
+      "alternatives": [
+        "5/8",
+        "3/4",
+        "5/4",
+        "3/8",
+        "5/6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 71 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Marisol nació el año 19aa y en el año 200a (0=cero) cumplió 30 años.¿En qué año cumplirá 40 años?",
+      "alternatives": [
+        "2025",
+        "2015",
+        "2017",
+        "2014",
+        "2019"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 73 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Juan dice: ‘‘Cuando transcurran a partir de hoy tantos años que pasaron desde que nací hasta hace 30 años, tendré el quíntuplo de la edad que tenía en ese entonces’’. ¿Qué edad tendrá Juan dentro de ‘‘m’’ años?",
+      "alternatives": [
+        "20 + m",
+        "40 + m",
+        "40",
+        "80 – m",
+        "65 – m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 74 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Yesi se percata que en su cartera existe 74 billetes, de S/10 y S/20, sabiendo que Yesi tiene un total de S/1000.¿Cuántos billetes de S/ 20 tiene Yesi?.",
+      "alternatives": [
+        "25",
+        "48",
+        "51",
+        "40",
+        "26"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 77 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Roberto reparte cierta cantidad de dinero entre sus dos hijas de la siguiente manera; Nataly recibe el 25% de S/60 y Karina el 10% de S/120. ¿Qué porcentaje representa lo que recibe Karina con respecto a lo que recibe Nataly?",
+      "alternatives": [
+        "90%",
+        "70%",
+        "75%",
+        "80%",
+        "85%"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 78 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Edson le dice a Carla que el reloj de la oficina marca las 8 horas con 24 min y le pregunta, ¿cuál será el mayor ángulo que forman las manecillas del reloj?",
+      "alternatives": [
+        "252°",
+        "260°",
+        "235°",
+        "200°",
+        "302°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=14",
+      "sourceName": "UNCP — Examen de Admisión Primera Selección 2018 UNCP (Área II), Razonamiento Matemático, pregunta 79 (clave A)"
+    }
+  ]
+}

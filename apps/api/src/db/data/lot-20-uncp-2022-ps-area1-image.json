@@ -1,0 +1,484 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/arit-lot-20-uncp-2022-ps-area1-ari-01.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Aritmética, pregunta 1 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/arit-lot-20-uncp-2022-ps-area1-ari-02.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Aritmética, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/arit-lot-20-uncp-2022-ps-area1-ari-03.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Aritmética, pregunta 3 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/arit-lot-20-uncp-2022-ps-area1-ari-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Aritmética, pregunta 33 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Regla de Tres y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/arit-lot-20-uncp-2022-ps-area1-ari-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Aritmética, pregunta 35 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/alg-lot-20-uncp-2022-ps-area1-alg-04.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Álgebra, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/alg-lot-20-uncp-2022-ps-area1-alg-05.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Álgebra, pregunta 5 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/alg-lot-20-uncp-2022-ps-area1-alg-06.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Álgebra, pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/est-lot-20-uncp-2022-ps-area1-est-08.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Estadística y Probabilidades, pregunta 8 (clave C)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/com-lot-20-uncp-2022-ps-area1-com-09.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Comunicación, pregunta 9 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Semántica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/com-lot-20-uncp-2022-ps-area1-com-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Comunicación, pregunta 44 (clave C)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Semántica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/com-lot-20-uncp-2022-ps-area1-com-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Comunicación, pregunta 45 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/com-lot-20-uncp-2022-ps-area1-com-47.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Comunicación, pregunta 47 (clave D)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/lit-lot-20-uncp-2022-ps-area1-lit-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Literatura, pregunta 10 (clave E)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/lit-lot-20-uncp-2022-ps-area1-lit-12.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Literatura, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/len-lot-20-uncp-2022-ps-area1-len-11.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Lenguaje, pregunta 11 (clave B)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/len-lot-20-uncp-2022-ps-area1-len-43.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Lenguaje, pregunta 43 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/fis-lot-20-uncp-2022-ps-area1-fis-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Física, pregunta 13 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/fis-lot-20-uncp-2022-ps-area1-fis-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Física, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/quim-lot-20-uncp-2022-ps-area1-qui-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Química, pregunta 16 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/quim-lot-20-uncp-2022-ps-area1-qui-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Química, pregunta 17 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/quim-lot-20-uncp-2022-ps-area1-qui-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Química, pregunta 18 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/quim-lot-20-uncp-2022-ps-area1-qui-19.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Química, pregunta 19 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/quim-lot-20-uncp-2022-ps-area1-qui-27.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Química, pregunta 27 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Citología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/bio-lot-20-uncp-2022-ps-area1-bio-20.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fisiología celular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/bio-lot-20-uncp-2022-ps-area1-bio-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de respiración y excreción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/bio-lot-20-uncp-2022-ps-area1-bio-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 22 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Proteínas y ácidos nucleicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/bio-lot-20-uncp-2022-ps-area1-bio-23.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fisiología celular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/bio-lot-20-uncp-2022-ps-area1-bio-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de reproducción, salud y enfermedad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/bio-lot-20-uncp-2022-ps-area1-bio-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/bio-lot-20-uncp-2022-ps-area1-bio-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Biología, pregunta 26 (clave D)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía astronómica y coordenadas geográficas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/geog-lot-20-uncp-2022-ps-area1-geo-28.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Geografía, pregunta 28 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/psi-lot-20-uncp-2022-ps-area1-psi-29.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Psicología, pregunta 29 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/psi-lot-20-uncp-2022-ps-area1-psi-30.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Psicología, pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Motivación y emoción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/psi-lot-20-uncp-2022-ps-area1-psi-31.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Psicología, pregunta 31 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/psi-lot-20-uncp-2022-ps-area1-psi-32.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Psicología, pregunta 32 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/rm-lot-20-uncp-2022-ps-area1-raz-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 34 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/rm-lot-20-uncp-2022-ps-area1-raz-36.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/rm-lot-20-uncp-2022-ps-area1-raz-37.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 37 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/rm-lot-20-uncp-2022-ps-area1-raz-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 38 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/rm-lot-20-uncp-2022-ps-area1-raz-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/rm-lot-20-uncp-2022-ps-area1-raz-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 40 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/rm-lot-20-uncp-2022-ps-area1-raz-41.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Matemático, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/rv-lot-20-uncp-2022-ps-area1-raz-42.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Verbal, pregunta 42 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/rv-lot-20-uncp-2022-ps-area1-raz-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Razonamiento Verbal, pregunta 46 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/ing-lot-20-uncp-2022-ps-area1-ing-48.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Inglés, pregunta 48 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/ing-lot-20-uncp-2022-ps-area1-ing-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Inglés, pregunta 49 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present continuous",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-20-uncp-2022-ps-area1-image/ing-lot-20-uncp-2022-ps-area1-ing-50.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=33",
+      "sourceName": "UNCP — Examen de Admisión 2022 Primera Selección, Área I, Inglés, pregunta 50 (clave B)"
+    }
+  ]
+}

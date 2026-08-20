@@ -1,0 +1,494 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/arit-lot-19-uncp-2022-i-a3-01.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 1 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/arit-lot-19-uncp-2022-i-a3-02.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 2 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Promedios y Mezclas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/arit-lot-19-uncp-2022-i-a3-04.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 4 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Sistemas de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/alg-lot-19-uncp-2022-i-a3-05.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 5 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/alg-lot-19-uncp-2022-i-a3-06.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 6 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/alg-lot-19-uncp-2022-i-a3-07.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 7 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/alg-lot-19-uncp-2022-i-a3-08.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/alg-lot-19-uncp-2022-i-a3-09.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 9 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/estad-lot-19-uncp-2022-i-a3-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 10 (clave A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/estad-lot-19-uncp-2022-i-a3-11.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 11 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/estad-lot-19-uncp-2022-i-a3-12.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 12 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/estad-lot-19-uncp-2022-i-a3-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 13 (clave E)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Movimientos y vanguardias literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/lit-lot-19-uncp-2022-i-a3-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 14 (clave A)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Figuras literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/lit-lot-19-uncp-2022-i-a3-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/com-lot-19-uncp-2022-i-a3-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/com-lot-19-uncp-2022-i-a3-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 17 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Contaminación ambiental y ecología aplicada",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/quim-lot-19-uncp-2022-i-a3-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 18 (clave E)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geomorfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/geo-lot-19-uncp-2022-i-a3-19.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 19 (clave A)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geopolítica y geografía mundial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/geo-lot-19-uncp-2022-i-a3-20.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Poblamiento americano y culturas preincaicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/hist-lot-19-uncp-2022-i-a3-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Cartografía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/geo-lot-19-uncp-2022-i-a3-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 22 (clave D)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geopolítica y geografía mundial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/geo-lot-19-uncp-2022-i-a3-23.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Motivación y emoción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/psi-lot-19-uncp-2022-i-a3-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Sistema financiero I",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/eco-lot-19-uncp-2022-i-a3-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 25 (clave B)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Distribución, consumo y pobreza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/eco-lot-19-uncp-2022-i-a3-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 26 (clave D)"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Proceso económico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/eco-lot-19-uncp-2022-i-a3-27.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Psicología social",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/psi-lot-19-uncp-2022-i-a3-28.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 28 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/psi-lot-19-uncp-2022-i-a3-29.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 29 (clave E)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Reconociendo el ordenamiento jurídico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/civ-lot-19-uncp-2022-i-a3-30.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 30 (clave A)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "La convivencia social y la formación intercultural",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/civ-lot-19-uncp-2022-i-a3-31.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 31 (clave C)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "El Estado de Derecho y la Carta Magna",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/civ-lot-19-uncp-2022-i-a3-32.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rm-lot-19-uncp-2022-i-a3-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 33 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rm-lot-19-uncp-2022-i-a3-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 34 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rm-lot-19-uncp-2022-i-a3-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 35 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rm-lot-19-uncp-2022-i-a3-36.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 36 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rm-lot-19-uncp-2022-i-a3-37.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 37 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rm-lot-19-uncp-2022-i-a3-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 38 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rm-lot-19-uncp-2022-i-a3-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 39 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rm-lot-19-uncp-2022-i-a3-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rv-lot-19-uncp-2022-i-a3-41.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 41 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rv-lot-19-uncp-2022-i-a3-42.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 42 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/com-lot-19-uncp-2022-i-a3-43.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 43 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/com-lot-19-uncp-2022-i-a3-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 44 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Textos periodísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rv-lot-19-uncp-2022-i-a3-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 45 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Semántica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/com-lot-19-uncp-2022-i-a3-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 46 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/rv-lot-19-uncp-2022-i-a3-47.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Future: will / going to",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/ing-lot-19-uncp-2022-i-a3-48.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 48 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Verb to be (present) / greetings & wh-questions",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/ing-lot-19-uncp-2022-i-a3-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 49 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-19-uncp-2022-i-a3-image/ing-lot-19-uncp-2022-i-a3-50.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=32",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Primera Selección, Área III, pregunta 50 (clave E)"
+    }
+  ]
+}

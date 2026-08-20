@@ -1,0 +1,310 @@
+{
+  "entries": [
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la veracidad (V) o la falsedad (F) respecto de Franz Kafka: I. Nació en Praga y es de origen judío. II. Fue representante del Expresionismo. III. Escribió una obra teatral titulada El proceso. IV. Gregorio Samsa es un personaje de su obra El Castillo.",
+      "alternatives": [
+        "VFVF",
+        "FVFV",
+        "FFFV",
+        "VVFF",
+        "FFVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Literatura, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura hispanoamericana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Reconoce el título de la novela latinoamericana, donde uno de los protagonistas se llama Efraín, quien se enamora de su prima epilép- tica. El amor y la muerte son sus temas ejes. El escenario es el Valle del Cauca.",
+      "alternatives": [
+        "Kassandra",
+        "Amalia",
+        "María",
+        "Facundo",
+        "Salomé"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Literatura, pregunta 28 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura peruana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿A qué obra de José María Arguedas pertenece el siguiente fragmen- to narrativo? [...] ¡Zumbayllu! En el mes de mayo trajo Ántero el primer zumbayllu al Colegio. Los alumnos pequeños lo rodearon. – ¡Vamos al patio, Ántero! – ¡Al patio, hermanos! ¡Hermanitos! Palacios corrió entre los primeros. Saltaron el terraplén y subieron al campo de polvo. Iban gritando: – ¡Zumbayllu, zumbayllu! Yo los seguí ansiosamente. [...]",
+      "alternatives": [
+        "Los ríos profundos",
+        "Yawar fiesta",
+        "Todas las sangres",
+        "El zorro de arriba y el zorro de abajo",
+        "Diamantes y pedernales"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Literatura, pregunta 29 (clave A)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Climas y biomas del mundo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Con referencia a las regiones climáticas y biomas, correlaciona: Región climática Bioma I. Templada a. Sabana II. Fría b. Taiga III. Tropical c. Tundra",
+      "alternatives": [
+        "Ib – IIa – IIIc",
+        "Ia – IIc – IIIb",
+        "Ic – IIb – IIIa",
+        "Ia – IIb – IIIc",
+        "Ib – IIc – IIIa"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geografía, pregunta 42 (clave E)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Geografía astronómica y coordenadas geográficas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la denominación de las constelaciones que son visibles desde el Valle del Mantaro y que incluyen a la Cruz del Sur.",
+      "alternatives": [
+        "Boreales",
+        "Zodiacales",
+        "Australes",
+        "Ecuatoriales",
+        "Septentrionales"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Geografía, pregunta 43 (clave C)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina los criterios de verdad (V) o falsedad (F) de las siguientes proposiciones referente a los biomas: I. La sabana tropical es un bioma que tiene una vegetación con predominio de herbáceas, arbustos y árboles dispersos. II. El ecotono es una región transicional entre dos biomas. III. La sabana de palmeras es un bioma que tiene una vegetación con predominancia de herbáceas, arbustos y palmeras dispersas.",
+      "alternatives": [
+        "VFF",
+        "FFV",
+        "VFV",
+        "FVF",
+        "VVF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Ecología, pregunta 44 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un periodista de un medio de comunicación nacional afirma que se debe tener en cuenta diferentes interpretaciones y puntos de vista al observar la realidad nacional que nos rodea. ¿A qué principios de la información refiere la afirmación del periodista?",
+      "alternatives": [
+        "Subjetividad",
+        "Objetividad",
+        "Veracidad",
+        "Naturalidad",
+        "Pluralidad"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Comunicación, pregunta 46 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los principios de la información con sus respectivos significados: I. Objetividad II. Veracidad III. Pluralidad a. Transmisión de la verdad de los hechos b. Tener en cuenta diferentes interpretaciones y puntos de vista. c. Presentación de la información de forma imparcial.",
+      "alternatives": [
+        "Ib – IIa – IIIc",
+        "Ic – IIa – IIIb",
+        "Ic – IIb – IIIa",
+        "Ia – IIc – IIIb",
+        "Ia – IIb – IIIc"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Comunicación, pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Axiología: los valores y la experiencia valorativa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona el tipo de valor con sus características: I. Personales II. Convencionales III. Éticos a. Respecto a la vida, honestidad, justicia, etc. b. Expresan gustos y preferencias individuales. c. Se cumplen con norman sociales y sus constumbres",
+      "alternatives": [
+        "Ia – IIc – IIIb",
+        "Ic – IIb – IIIa",
+        "Ib – IIa – IIIc",
+        "Ia – IIb – IIIc",
+        "Ib – IIc – IIIa"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Filosofía, pregunta 48 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Vínculo familiar",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el subsistema familiar donde los niños aprenden a negociar con sus padres.",
+      "alternatives": [
+        "Parental",
+        "Grupal",
+        "Fraternal",
+        "Conyugal",
+        "Marital"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Psicología, pregunta 50 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Jean Pierre llegó temprano a clases pero olvidó su tarea, además no trajo los chocolates que prometió, por eso no ingresó al aula. La palabras subrayadas en el texto son conectores de:",
+      "alternatives": [
+        "Contraste – causa – consecuencia",
+        "Contraste – adición – causa",
+        "Adición – contraste – causa",
+        "Contraste – adición– consecuencia",
+        "Causa – adición – contraste"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Verbal, pregunta 53 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Término excluido",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TÉRMINO EXCLUIDO Signo linguístico",
+      "alternatives": [
+        "Arbitrariedad",
+        "Inmutabilidad",
+        "Significatividad",
+        "Linealidad",
+        "Mutabilidad"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Verbal, pregunta 54 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "TEXTO CHAT Un chat es un sistema que permite la comunicación simultánea, en tiempo real, entre dos o más personas a través de internet. Esto supone que las personas conectadas a un chat ven las opiniones del resto de los participantes automáticamente y pueden responder de la misma manera. Para acceder a un chat sólo es necesario estar conectado a internet y conectarse a uno de los servidores que ofrecen este servicio. Dentro de un chat suelen existir diversos canales, que son zonas de charla dedicadas a un tema específico. Así podemos encontrar canales de medicina, de música, de aventura, etc. Hoy se ha extendido el uso de la palabra chat, que es inglesa y significa \"charlar\". Si creamos el supuesto de que la internet no existe, entonces:",
+      "alternatives": [
+        "No nos enteraríamos de lo que ocurre en el mundo.",
+        "Solo nos comunicaríamos por medio oral y escrito.",
+        "Estaríamos incomunicados.",
+        "La comunicación sería limitada y tergiversada.",
+        "La carta sería el medio de comunicación eficaz."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Verbal, pregunta 55 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Relaciones léxico-semánticas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sebastián es un joven que trata con mucha deferencia a las personas, especialmente a los adultos mayores, a diferencia de Jonathan que es un muchacho que tiene prejucios sociales y éstos a su vez causan perjucios a la institución donde labora. Las palabras subrayadas son:",
+      "alternatives": [
+        "Sinónimos",
+        "Homónimos",
+        "Antónimos",
+        "Homófonos",
+        "Parónimos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Razonamiento Verbal, pregunta 57 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Future: will / going to",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto: Listen to the teacher or you _____ understand the lesson",
+      "alternatives": [
+        "aren't",
+        "won't",
+        "will",
+        "doesn't",
+        "isn't"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Inglés, pregunta 59 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Singular and plural nouns",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto: In my living room ___ a D.V.D. player and in my bedroom___3 pictures.",
+      "alternatives": [
+        "there are/ there is",
+        "are there / is there",
+        "is there/ are there",
+        "there is/ there are",
+        "there is/ there is"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Inglés, pregunta 60 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Simple present tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De acuerdo al texto: Peter works in a bank, in his free time he goes to the gym twice a week. Elige la pregunta correctamente formulada.",
+      "alternatives": [
+        "How often does he go to the gym?",
+        "when he go to the gym?",
+        "where is Peter work?",
+        "where go does Peter?",
+        "what do Peter in his free time?"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Inglés, pregunta 61 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el texto: Lucy an her sister _____ to music when their father______",
+      "alternatives": [
+        "were listening – arrive.",
+        "were listening – arrived.",
+        "listens – arrived",
+        "was listening – arrived",
+        "listen – arrives"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=15",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2018-I, Inglés, pregunta 62 (clave B)"
+    }
+  ]
+}

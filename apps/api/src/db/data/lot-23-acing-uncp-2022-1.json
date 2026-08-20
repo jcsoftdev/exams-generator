@@ -1,0 +1,463 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tres socios aportan 1000, 1500 y 2000 soles respectivamente para la formación de una empresa. Al cabo de cierto tiempo, obtienen un beneficio de 4500 soles. ¿Cuánto ganó el que aportó menor capital?",
+      "alternatives": [
+        "1000 soles",
+        "1250 soles",
+        "900 soles",
+        "1200 soles",
+        "500 soles"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Aritmética, pregunta 1 (clave A) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el complemento aritmético (CA) de un numeral capicúa de cuatro cifras es 771, indica la cifra de decenas del capicúa.",
+      "alternatives": [
+        "3",
+        "1",
+        "2",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Aritmética, pregunta 3 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla el valor nominal de una letra que vence el 23 de abril y descontada el 24 de marzo al 4% del mismo año, se disminuye en 30 soles.",
+      "alternatives": [
+        "10000 soles",
+        "7000 soles",
+        "6600 soles",
+        "9000 soles",
+        "8000 soles"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Aritmética, pregunta 4 (clave D) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Funciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que: P(x + 3) = 2x + 1 y P(Q(x)) = 2X + 3 Calcula: Q(P(1))",
+      "alternatives": [
+        "4",
+        "3",
+        "1",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Álgebra, pregunta 6 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Análisis Combinatorio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿De cuántas maneras se puede conformar un equipo de tres jugadores si se cuenta con ocho personas?",
+      "alternatives": [
+        "64",
+        "50",
+        "38",
+        "56",
+        "42"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Estadística y Probabilidades, pregunta 11 (clave D) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica los elementos del predicado en la siguiente oración: Mi amigo compró flores para su esposa.",
+      "alternatives": [
+        "Núcleo – Circunstancial – Circunstancial",
+        "Núcleo – Objeto directo – Objeto indirecto",
+        "Núcleo – Objeto directo – Objeto directo",
+        "Núcleo – Objeto indirecto – Objeto directo",
+        "Núcleo – Objeto indirecto – Circunstancial"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Comunicación, pregunta 14 (clave B) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el siguiente caso: Mi amiga Miriam durante su examen oral, expresó lo siguiente: – Ayer me encontré un hermoso reloj, redondo, de color dorado, automático, con piedras saworovsky. Identifica el tipo de género discursivo que utiliza Miriam en su elocuencia.",
+      "alternatives": [
+        "Científico",
+        "Descriptivo",
+        "Argumentativo",
+        "Expositivo",
+        "Instructivo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Comunicación, pregunta 16 (clave B) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el siguiente ejemplo: La docente se dirige a los estudiantes con un volumen y tono de voz elevado para pedirles que hagan silencio. Identifica los elementos de códigos que evidencia la docente.",
+      "alternatives": [
+        "Kinésicos",
+        "Lingüísticos",
+        "Prosodia",
+        "Paralingüísticos",
+        "Proxémica"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Comunicación, pregunta 17 (clave D) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Semántica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina qué fenómeno semántico se produce en el siguiente ejemplo: No me gusta la caza, prefiero quedarme en casa.",
+      "alternatives": [
+        "Homografía",
+        "Homonimia",
+        "Sinonimia",
+        "Homofonía",
+        "Paronimia"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Comunicación, pregunta 42 (clave D) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura española",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la obra literaria de Lope de Vega, que revive hechos de una multitud enardecida que cobró con sus propias manos la justicia postergada.",
+      "alternatives": [
+        "El caballero de Olmedo",
+        "La dama boba",
+        "Fuenteovejuna",
+        "El perro de hortelano",
+        "El castigo sin venganza"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Literatura, pregunta 15 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Perú: el Oncenio de Leguía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de la verdad (V) o falsedad (F) respecto al Oncenio de Leguía: I. Instauró un régimen autoritario al que llamó Patria Nueva. II. Respetó estrictamente la Constitución de 1920. III. Celebró el centenario de la independencia del Perú con la construcción de edificios. IV. Creó el Banco de Reserva 1922.",
+      "alternatives": [
+        "VFVF",
+        "VFVV",
+        "FVFV",
+        "V V V V",
+        "VVVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Historia, pregunta 20 (clave B) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Historia",
+      "topicName": "Edad Media y el feudalismo europeo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los estamentos y el rol social que les corresponde en la sociedad feudal. I. Nobles II. Eclesiásticos III. Pueblo llano a. Su misión era trabajar y pagar impuestos. b. Se dedicaban a rezar por la salvación de las almas. c. Les correspondía combatir para proteger al resto de la sociedad.",
+      "alternatives": [
+        "Ib – IIc – IIIa",
+        "Ia – IIb – IIIc",
+        "Ia – IIc – IIIb",
+        "Ic – IIa – IIIb",
+        "Ic – IIb – IIIa"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Historia, pregunta 21 (clave E) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Nociones generales de economía",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la verdad (V) o falsedad (F) de las proposiciones relacionadas a las funciones que cumple el Estado en materia económica. I. Regula las actividades económicas. II. Asegura el suministro de bienes y servicios públicos III. Cobra tributos con equidad a las personas",
+      "alternatives": [
+        "V V V",
+        "FVV",
+        "VVF",
+        "FVF",
+        "VFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Economía, pregunta 24 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Proceso económico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la expresión: Los profesores se encuentran trabajando en el sector…, mientras que los albañiles lo hacen en el sector…",
+      "alternatives": [
+        "primario – secundario",
+        "primario – terciario",
+        "secundario – terciario",
+        "terciario – primario",
+        "terciario – secundario"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Economía, pregunta 25 (clave E) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Actividades macroeconómicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la expresión: La tasa de inflación en el Perú se mide a través del… y lo realiza el…",
+      "alternatives": [
+        "IPC – BCRP.",
+        "IPE – BCRP.",
+        "IV – BN.",
+        "IPC – INEI.",
+        "IVM – BN."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Economía, pregunta 26 (clave D) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Sistema financiero I",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine la verdad (V) o falsedad (F) respecto a las operaciones bancarias activas. I. Sobregiro bancario II. Leasing financiero III. Crédito en cuenta corriente",
+      "alternatives": [
+        "FVV",
+        "VVF",
+        "VVV",
+        "VFV",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Economía, pregunta 27 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "La convivencia social y la formación intercultural",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "José fue rechazado por una joven estudiante al expresarle que \"no me junto con majtas\", en alusión a su origen huancavelicano y quechuahablante. ¿ Qué tipo de discriminación sufrió José?",
+      "alternatives": [
+        "Religiosa",
+        "Sexual",
+        "Racial",
+        "Económica",
+        "Étnica"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Educación Cívica, pregunta 28 (clave E) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Identidad y patrimonio nacional",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Uno de los elementos que contribuye a la identidad juvenil es la música; sin embargo, sufren variaciones e invenciones. ¿Actualmente, como se denomina a la combinación de diferentes géneros musicales, por ejemplo el rock con el huayno?",
+      "alternatives": [
+        "Música segregación",
+        "Música clásica",
+        "Música fusión",
+        "Música folclórica",
+        "Música postmoderna"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Educación Cívica, pregunta 29 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Identidad y patrimonio nacional",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica las palabras y completa la expresión: Nuestra vida no puede entenderse sin … , todos los días ponemos en práctica … culturales casi sin darnos cuenta.",
+      "alternatives": [
+        "danzas – bailes",
+        "tradiciones – aspectos",
+        "cultura – tradiciones",
+        "lectura – conocimientos",
+        "estudios – conocimientos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Educación Cívica, pregunta 31 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "La convivencia social y la formación intercultural",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Prioriza y ordena de forma ascendente los pasos del proceso de construcción de las normas de convivencia: I. Las normas de convivencia deben ser evaluadas. II. Las normas de convivencia deben ser vistas como beneficio personal y colectivo. III. Las normas deben regular situaciones para la convivencia. IV. Las normas de convivencia tienen que ser elaboradas por los propios usuarios.",
+      "alternatives": [
+        "IV – III – II – I",
+        "II – III – IV – I",
+        "IV – II – III – I",
+        "II – IV – III – I",
+        "III – II – IV – I"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Educación Cívica, pregunta 32 (clave B) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un comerciante vende mascarillas; el primer día vende la mitad, el segundo día vende la tercera parte del resto y el tercer día vende la quinta parte del nuevo resto. Si al final le quedan 120 mascarillas, ¿cuántas mascarillas vendió el segundo día?",
+      "alternatives": [
+        "68",
+        "75",
+        "95",
+        "80",
+        "70"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Matemático, pregunta 34 (clave B) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántas filas tendrá el arreglo triangular, formado por 120 monedas?",
+      "alternatives": [
+        "14",
+        "20",
+        "16",
+        "15",
+        "18"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Matemático, pregunta 37 (clave D) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un congreso virtual asistieron 60 varones y 90 mujeres. En un determinado momento se retiraron un grupo de mujeres, por lo que el porcentaje de varones aumentó en 20 %. ¿Cuántas mujeres se retiraron?",
+      "alternatives": [
+        "42",
+        "60",
+        "30",
+        "38",
+        "50"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Matemático, pregunta 39 (clave E) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Referencias textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlacione el referente textual con su respectivo ejemplo: I. Sustitución léxica por sinonimia II. Catáfora lexical III. Catáfora pronominal IV. Anáfora a. Walberto nació en Huancavelica, él viaja allá frecuentemente. b. Ella siempre llega para su cumpleaños, la nieta nunca se pierde esta celebración. c. Arturo trajo todo: el limón el ron y la gaseosa. d. Su profesor lo acompaño siempre a las reuniones sociales, su maestro nunca lo abandonó.",
+      "alternatives": [
+        "Ia – IIb – IIIc – Ivd",
+        "Id – IIc – IIIb – IVa",
+        "Ib – IIc – IIId – IVa",
+        "Ic – IId – IIIa – IVb",
+        "Id – IIa – IIIb – IVc"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Verbal, pregunta 41 (clave B) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Término excluido",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Excluya la alternativa que no guarda relación con la palabra: INDIGENISTAS.",
+      "alternatives": [
+        "E. Vargas Vicuña",
+        "J. M. Arguedas",
+        "Ricardo Palma",
+        "E. López Albújar",
+        "Manuel Scorza"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Verbal, pregunta 45 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el término a que se hace referencia. ¿......? Afecta la estructura superficial del texto. Las partes deben estar formalmente conectadas por mecanismos lingüísticos para la unidad estructural y significativa.",
+      "alternatives": [
+        "Variación o estilo",
+        "Corrección o gramática",
+        "Cohesión",
+        "Coherencia",
+        "Adecuación"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Razonamiento Verbal, pregunta 47 (clave C) — Academia Ingeniería"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Comparatives and superlatives",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la pregunta: … Paolo Guerrero … Jefferson Farfan? Yes, he is.",
+      "alternatives": [
+        "Is – older",
+        "Are – older than",
+        "Is – old than",
+        "Is – older than",
+        "Are – old than"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=36",
+      "sourceName": "Examen de Admisión UNCP 2022-I (Área III y V), Inglés, pregunta 48 (clave D) — Academia Ingeniería"
+    }
+  ]
+}

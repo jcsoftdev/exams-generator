@@ -1,0 +1,429 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos personas tienen concedidas pensiones en razón directa a la raíz cuadrada de los años de servicio. El tiempo de servicio de la primera excede a la segunda en 4,25 años y las pensiones están en relación de 9 a 8. ¿Cuánto tiempo de servicio tiene la segunda persona?",
+      "alternatives": [
+        "16",
+        "20",
+        "24",
+        "8",
+        "32"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Matemática, pregunta 2 (clave A)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Potenciación y Radicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el menor número positivo por el cual hay que multiplicar a 216 000 para obtener un número que sea cuadrado y cubo perfecto a la vez.",
+      "alternatives": [
+        "3 075",
+        "3 275",
+        "2 925",
+        "3 375",
+        "3 125"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Matemática, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Posición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El dinero, en soles, obtenido por el servicio que hicieron en un día 14 taxistas escogidos al azar fueron: 56; 71; 52; 66; 78; 31; 39; 50; 47; 72; 34; 61; 46 y 52. ¿Sobre qué cantidad se encuentra el 30% de los taxistas con mayores ingresos?",
+      "alternatives": [
+        "S/. 61,50",
+        "S/. 63,50",
+        "S/. 64,50",
+        "S/. 63,00",
+        "S/. 65,00"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Matemática, pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto a las recargas de celular de los trabajadores de tres agencias de turismo A, B, C, durante un mes, se tiene: En A, el gasto promedio es S/. 16,8 y la desviación estándar es S/. 2,4. En B, el gasto promedio es S/. 16,8 y la desviación estándar es S/. 2,1. En C, el gasto promedio es S/. 15,6 y la desviación estándar es S/. 2,6. Ordena de menor a mayor las agencias de turismo de acuerdo a su variabilidad en los gastos por recarga de celulares.",
+      "alternatives": [
+        "A-C-B",
+        "C-B-A",
+        "B-A-C",
+        "B-C-A",
+        "A-B-C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Matemática, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura hispanoamericana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Poema Yo soy aquel que ayer no más decía el verso azul y la canción profana, en cuya noche un ruiseñor había que era alondra de luz por la mañana El dueño fui de mi jardín de sueño, lleno de rosas y de cisnes vagos; el dueño de las tórtolas, el dueño de góndolas y tiras en los lagos; y muy siglo diez y ocho, y muy antiguo y muy moderno, audaz, cosmopolita con Hugo fuerte y con Verlaine ambiguo, y una sed de ilusiones infinitas. El poema es parte de:",
+      "alternatives": [
+        "Minúsculas de Manuel González Prada",
+        "Versos sencillos de José Martí",
+        "Canto de vida y esperanza de Rubén Darío",
+        "Obra lítica de Enrique Gonzáles Martínez",
+        "Alma América de José Santos Chocano"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Comunicación, pregunta 9 (clave C)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la alternativa que presenta error de concordancia I. María y Raúl están obesos. II. Aquel jazmín y rosa estaban lozanas. III. Compré un televisor e impresora importados. IV. En la playa hay jovencitas bellas. V. Capturó un colorido guacamayo y tucán delicado.",
+      "alternatives": [
+        "IV",
+        "I",
+        "II",
+        "III",
+        "V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Comunicación, pregunta 10 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de verdad (V) o falsedad (F) de los enunciados relativos a \"LA ODISEA\" I. Los amigos de Ulises pierden la memoria al haber comido unos frutos misteriosos. II. Llega Ulises disfrazado de mendigo, nadie lo reconoce, excepto su fiel perro Zeus. III. Los cíclopes eran gigantes horribles con un solo ojo en la frente.",
+      "alternatives": [
+        "FFF",
+        "FVF",
+        "VFV",
+        "VVV",
+        "VVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Comunicación, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Proteínas y ácidos nucleicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Partiendo de la secuencia de bases nitrogenadas del ADN: G-C-A- C-T-G-A-A-G, ¿cuál será la secuencia complementaria en el ARNm?",
+      "alternatives": [
+        "GCTCUCTTC",
+        "CGUGACUUC",
+        "CGUGACAUG",
+        "GCTCUCATC",
+        "CGUCACAUC"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 18 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona las técnicas del ADN recombinante con el objetivo correspondiente I. Hibridación II. Clonación III. Reacción en cadena de la polimerasa a. Obtener gran número de copias de un fragmento de ADN particular. b. Generar una molécula, célula u organismo combinado con material genético procedente de un organismo diferente. c. Generación de copias idénticas de un organismo, célula o molécula, de forma asexual",
+      "alternatives": [
+        "Ic - IIa - IIIb",
+        "Ib - IIc - IIIa",
+        "Ia - IIb - IIIc",
+        "Ib - IIa - IIIc",
+        "Ic - IIb - IIIa"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de reproducción, salud y enfermedad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona los tipos de reproducción vegetativa con su organismo representativo. I. Fragmentación a. Levaduras II. Gemación b. Protozoos III. Estrobilación c. Algas IV. Esporulación d. Medusas",
+      "alternatives": [
+        "Ic - IIa - IIId - IVb",
+        "Ib - IIc - IIId - IVa",
+        "Ib - IId - IIIa - IVc",
+        "Ia - IIb - IIIc - IVd",
+        "Id - IIc - IIIb - IVa"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 22 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona las clases de inmunoglobulinas con su respectiva función. I. Ig G a. Produce lísis II. Ig A b. Protege contra bacterias III. Ig M c. Participa en reacciones alérgicas IV. Ig E d. Disminuye el estrés",
+      "alternatives": [
+        "Ia - IIb - IIIc - IVd",
+        "Id - IIc - IIIb - IVa",
+        "Ib - IId - IIIa - IVc",
+        "Ib - IIc - IIId - IVa",
+        "Ic - IIa - IIId - IVb"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Asocia las relaciones heterotípicas con su simbología: RELACIÓN HETEROTÍPICA SIMBOLOGÍA I. Sinequía a. +/0 II. Amensalismo b. 0/0 III. Inquilinismo c. 0/-",
+      "alternatives": [
+        "Ic - IIa - IIIb",
+        "Ia - IIc - IIIb",
+        "Ib - IIa - IIIc",
+        "Ib - IIc - IIIa",
+        "Ic - IIb - IIIa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Ciencia, Tecnología y Ambiente, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "La convivencia social y la formación intercultural",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine el valor de la verdad (v) o falsedad (f) de las siguientes expresiones relacionadas con nuestras prácticas culturales: I. Nuestra necesidad es beber II. Nuestra forma de vestir III. Nuestra necesidad de tener sexo IV. Nuestra forma de aseo V. Nuestra forma de relacionarnos con nuestra familia",
+      "alternatives": [
+        "VFVFV",
+        "FVFVV",
+        "FVFVF",
+        "VFVFF",
+        "VVVFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Formación Ciudadana y Cívica, pregunta 27 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Psicología social",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de la verada (v) o falsedad (f) de las proposiciones relacionadas a los estilos de comportamiento ante situaciones conflictivas: I. El competitivo quieren que las cosas se hagan a su modo sin preocuparse por el otro. II. El evasivo huye del conflicto y no lo enfrenta, tampoco satisface los intereses el otro. III. El colaborador busca satisfacer los intereses de ambos a través de alternativas que potencian a las dos partes.",
+      "alternatives": [
+        "FVV",
+        "VVF",
+        "VVV",
+        "FVF",
+        "FFV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Persona, Familia y Relaciones Humanas, pregunta 28 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "El desarrollo humano y la adolescencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la edad en meses del infante que dice más de 1000 palabras, 80% son inintiligibles, y su dominio de la gramática se aproxima al del habla informal de un adulto.",
+      "alternatives": [
+        "22",
+        "24",
+        "48",
+        "36",
+        "30"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Persona, Familia y Relaciones Humanas, pregunta 29 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa la expresión: Los ovarios, al ser estimulados por las gonadotropinas, producen las hormonas sexuales……..y………….",
+      "alternatives": [
+        "Estrógeno - testosterona",
+        "Estrógeno - somatotropina",
+        "cortisol - tirotropina",
+        "Estrógeno- progesterona",
+        "Cortisol - oxitocina"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Persona, Familia y Relaciones Humanas, pregunta 31 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Definición, métodos e historia de la psicología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de la verdad (v) o falsedad (f) de las proposiciones en relación a la clasificación de los procesos psicológicos: I. Lo cognitivo permite conocer la realidad interna o externa II. Las disposiciones afectivas se manifiestan bajo la forma de gestos emocionales III. El conativo - volitivo hace referencia a la motivación y voluntad de hacer las cosas",
+      "alternatives": [
+        "VFV",
+        "FFV",
+        "FVV",
+        "VVV",
+        "VVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Persona, Familia y Relaciones Humanas, pregunta 32 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlaciona los enfoques educativos de la sexualidad con sus característica: I. Patológica II. Científica III. Moralista IV. Mecanicista a. Limita el acto sexual sólo al ámbito de la procreación b. Considera que la sexualidad forma parte de la personalidad en sus tres dimensiones c. Reduce la sexualidad al reconocimiento de las fases y características de la fisiología del coito d. Enfatiza el análisis de las formas de prevenir enfermedades",
+      "alternatives": [
+        "Ib - IId - IIIa - IVc",
+        "Id - Iib - IIIa - Ivc",
+        "Id - Iia - IIIb - IVc",
+        "Ia - Iib - IIIc - Ivd",
+        "Ia - Iic - IIId - Ivd"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Persona, Familia y Relaciones Humanas, pregunta 33 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PLAN DE REDACCIÓN La pintura y la fotografía I. Se trata en ambos casos, de manifestaciones artísticas visuales cuyos autores deben componer una imagen partiendo de la realidad y con originalidad. II. Al igual que los pintores, los fotógrafos construyen una imagen utilizando sus propios instrumentos técnicos. III. La pintura y la fotografía son compatibles en términos de composición artística. IV. Concluyendo, ambas partes buscan producir un determinado efecto visual y la plenitud de la experiencia estética.",
+      "alternatives": [
+        "III - I - II - IV",
+        "III - IV - II - I",
+        "III - II - I - IV",
+        "IV - III - I - II",
+        "I - III - IV - II"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Comunicativa, pregunta 34 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Oraciones incompletas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "ORACIÓN INCOMPLETA A pesar de que la Constitución Política del Perú señala en su artículo 2 que \"Toda persona tiene derecho a la … ante la Ley. Nadie debe ser discriminado por motivo de origen, raza, sexo, idioma, religión, condición económica o de cualquier otra …\", no es raro que adolescentes afrodescendientes, como Angie Ramiro Pongo sufra de … en su colegio.",
+      "alternatives": [
+        "religión – resolución – penitencia",
+        "igualdad – índole – discriminación",
+        "tranquilidad – manera – castigo",
+        "seguridad – motivación – maltrato",
+        "vida – disposición – sanción"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Comunicativa, pregunta 35 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Marcadores textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona los marcadores textuales con su ejemplo: I. Relacionante ( ) Viajaremos a Satipo con el objetivo de conocer la biodiversidad natural. II. Ordenador ( ) Debes de utilizar las estrategias de estudio para rendir el examen; es decir, concentrarte. III. Operador ( ) Todo postulante, en primer lugar, debe leer minuciosamente las instrucciones del examen. IV.Reformulador ( ) La vida es una sucesión de experiencias. Según Cencia es el cúmulo de amistades que entablamos.",
+      "alternatives": [
+        "I - IV - II - III",
+        "IV - I - II - III",
+        "III - IV - II - I",
+        "II - IV - I - III",
+        "I - III - II - IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Comunicativa, pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Comparatives and superlatives",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De acuerdo al texto, elija la afirmación incorrecta. Richard weighs eighty kilos and Manuel weighs ten kilos less. My aunt weighs sixty kilos.",
+      "alternatives": [
+        "Manuel is thinner tan Richard.",
+        "Richard and my aunt have the same weight.",
+        "Richard is fatter tan Manuel.",
+        "My aunt is the slimmest of the group.",
+        "My aunt isn’t as heavy as Manuel."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Comunicativa - Inglés, pregunta 40 (clave B)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Lea el texto y elija la afirmación incorrecta: Emi Sato is from Japan, and she’s fourteen years old. When she was a child she played with musical toys. She took violin lessons at a music school and she can play it really well. She belongs to her school orchestra. (Adaptado de Saslow & Ascher, 2015, p. 26)",
+      "alternatives": [
+        "Emi is a teenager.",
+        "She loves music.",
+        "She could play a violin when she was a child.",
+        "She is a member of an orchesta.",
+        "She learned how to play a violin."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Comunicativa - Inglés, pregunta 41 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un panadero vende sus tortas de la siguiente manera: un tercio del total que tenía más cuatro a 50 soles cada una; luego los tres quintos de los que quedaba a 40 soles cada una, y finalmente la mitad de lo que quedaba más cuatro a 30 soles cada una; con la que se le acaban las tortas. ¿Cuántos soles recaudó?",
+      "alternatives": [
+        "1 523",
+        "1 522",
+        "1 520",
+        "1 521",
+        "1 518"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Lógico Matemática, pregunta 45 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Julián le pregunta a su amigo, ¿qué hora es?, sabiendo que la mitad del tiempo que falta trascurrir para que sean las 20 h, es igual a la tercera parte del tiempo transcurrido a partir de las 2h, más la sexta parte del tiempo que falta transcurrir para que sean las 20 h.",
+      "alternatives": [
+        "12 h 20 min",
+        "10 h",
+        "9 h 40 min",
+        "14 h 36 min",
+        "11 h"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=29",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-II (Área I), Aptitud Lógico Matemática, pregunta 46 (clave E)"
+    }
+  ]
+}

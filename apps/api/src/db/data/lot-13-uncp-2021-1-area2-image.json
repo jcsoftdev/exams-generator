@@ -1,0 +1,494 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/arit-lot-13-uncp-2021-1-area2-01.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Aritmética, pregunta 1 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Potenciación y Radicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/arit-lot-13-uncp-2021-1-area2-02.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Aritmética, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/arit-lot-13-uncp-2021-1-area2-03.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Aritmética, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Magnitudes Proporcionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/arit-lot-13-uncp-2021-1-area2-04.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Aritmética, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/alg-lot-13-uncp-2021-1-area2-05.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Álgebra, pregunta 5 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "División Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/alg-lot-13-uncp-2021-1-area2-06.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Álgebra, pregunta 6 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/alg-lot-13-uncp-2021-1-area2-07.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Álgebra, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/alg-lot-13-uncp-2021-1-area2-08.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Álgebra, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/geo-lot-13-uncp-2021-1-area2-09.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Geometría, pregunta 9 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/geo-lot-13-uncp-2021-1-area2-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Geometría, pregunta 10 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/geo-lot-13-uncp-2021-1-area2-11.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Geometría, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/trig-lot-13-uncp-2021-1-area2-12.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Trigonometría, pregunta 12 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/trig-lot-13-uncp-2021-1-area2-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Trigonometría, pregunta 13 (clave A)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/trig-lot-13-uncp-2021-1-area2-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Trigonometría, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/estad-lot-13-uncp-2021-1-area2-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Estadística y Probabilidades, pregunta 15 (clave E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/estad-lot-13-uncp-2021-1-area2-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Estadística y Probabilidades, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/estad-lot-13-uncp-2021-1-area2-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Estadística y Probabilidades, pregunta 17 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura universal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/lit-lot-13-uncp-2021-1-area2-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Literatura, pregunta 18 (clave D)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura hispanoamericana",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/lit-lot-13-uncp-2021-1-area2-19.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Literatura, pregunta 19 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Sintaxis",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/leng-lot-13-uncp-2021-1-area2-20.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Lenguaje, pregunta 20 (clave C)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Movimientos y vanguardias literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/lit-lot-13-uncp-2021-1-area2-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Literatura, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/fis-lot-13-uncp-2021-1-area2-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Física, pregunta 22 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/fis-lot-13-uncp-2021-1-area2-23.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Física, pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/fis-lot-13-uncp-2021-1-area2-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Física, pregunta 24 (clave E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/quim-lot-13-uncp-2021-1-area2-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Química, pregunta 25 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/quim-lot-13-uncp-2021-1-area2-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Química, pregunta 26 (clave B)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/eco-lot-13-uncp-2021-1-area2-27.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Ecología, pregunta 27 (clave C)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Ecología, universo, sistema solar y Tierra",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/eco-lot-13-uncp-2021-1-area2-28.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Ecología, pregunta 28 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Cultura de prevención y vida saludable",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/psi-lot-13-uncp-2021-1-area2-29.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Psicología, pregunta 29 (clave B)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "El desarrollo humano y la adolescencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/psi-lot-13-uncp-2021-1-area2-30.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Psicología, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/com-lot-13-uncp-2021-1-area2-31.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Comunicación, pregunta 31 (clave A)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Semántica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/com-lot-13-uncp-2021-1-area2-32.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Comunicación, pregunta 32 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rv-lot-13-uncp-2021-1-area2-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Verbal, pregunta 33 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Referencias textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rv-lot-13-uncp-2021-1-area2-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Verbal, pregunta 34 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Comprensión de lectura",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rv-lot-13-uncp-2021-1-area2-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Verbal, pregunta 35 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Comparatives and superlatives",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/ing-lot-13-uncp-2021-1-area2-37.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Inglés, pregunta 37 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Simple past tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/ing-lot-13-uncp-2021-1-area2-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Inglés, pregunta 38 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 39 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 40 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-41.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 41 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-42.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 42 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-43.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 43 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 44 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 45 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 46 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-47.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 47 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-48.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 48 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 49 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-13-uncp-2021-1-area2-image/rm-lot-13-uncp-2021-1-area2-50.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=23",
+      "sourceName": "UNCP — Admisión UNCP Primera Selección 2021, Área II, Razonamiento Matemático, pregunta 50 (clave E)"
+    }
+  ]
+}

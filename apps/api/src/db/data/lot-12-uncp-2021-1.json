@@ -1,0 +1,378 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una serie de tres razones geométricas continuas equivalentes, el primer antecedente es al último consecuente como 27 es a 1. Si la suma de los antecedentes es 78, calcule el primer consecuente.",
+      "alternatives": [
+        "21",
+        "24",
+        "18",
+        "12",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Aritmética, pregunta 1 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula: AxB, si se tiene que: MCM (4A; 2B) = 480 MCD (10A; 5B) = 60",
+      "alternatives": [
+        "360",
+        "2880",
+        "720",
+        "144",
+        "1440"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Aritmética, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Potenciación y Radicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al extraer la raíz cuadrada de un número se observó que los residuos por defecto y por exceso están en la relación de 3 a 4, además el producto de sus respectivas raíces es 992. Calcula el radicando.",
+      "alternatives": [
+        "908",
+        "978",
+        "968",
+        "988",
+        "928"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Aritmética, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señala qué función del lenguaje se pone de manifiesto en la expresión: \"Ovidio es el poeta romano que escribió El arte de amar\".",
+      "alternatives": [
+        "Representativa",
+        "Expresiva",
+        "Apelativa",
+        "Fática",
+        "Metalingüística"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Lenguaje, pregunta 9 (clave A)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Morfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el morfema que indica el número, persona, tiempo y modo en la siguiente palabra: participa",
+      "alternatives": [
+        "–a",
+        "Part–",
+        "Parti–",
+        "–ipa",
+        "Particip–"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Lenguaje, pregunta 11 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "No es una propiedad química del carbono:",
+      "alternatives": [
+        "La abundancia",
+        "Formar enlaces con O, H y N",
+        "Formar cadenas estables",
+        "Tetravalencia",
+        "Formar enlaces dobles y triples"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Química, pregunta 19 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona y completa: El genotipo es a conjunto de genes de un individuo, entonces el fenotipo es a ……",
+      "alternatives": [
+        "Expresión de un alelo",
+        "Homocigoto",
+        "Alelo dominante",
+        "Variante de un gen",
+        "Expresión del genotipo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Biología, pregunta 18 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Microbiología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al crear una vacuna, los virus se suelen destruir o debilitar para su uso sin peligro biológico; por lo tanto, después de esta acción se puede decir que los virus fueron:",
+      "alternatives": [
+        "Exfoliadas",
+        "Inactivados",
+        "Asesinados",
+        "Muertos",
+        "Incubados"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Biología, pregunta 20 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de reproducción, salud y enfermedad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Discrimina cuál de los siguientes métodos funcionarían mejor frente a una enfermedad de transmisión sexual (ETS):",
+      "alternatives": [
+        "Practicar la monogamia",
+        "Ligadura de trompas",
+        "Vasectomía",
+        "Uso del preservativo",
+        "Método del ritmo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Biología, pregunta 21 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Microbiología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica los organismos que solo se pueden observar a través del microscopio: I. Protozoarios II. Bacterias III. Ameba IV. Tardígrado",
+      "alternatives": [
+        "I – II – IV",
+        "I – II – III",
+        "II – III – IV",
+        "II – IV",
+        "I – II – III – IV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Biología, pregunta 22 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Citología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es el organelo celular que es el principal protagonista en el proceso de apoptosis (muerte celular programada)?",
+      "alternatives": [
+        "Vacuola",
+        "Mitocondrias",
+        "Centriolo",
+        "Tilacoides",
+        "Lisosomas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Biología, pregunta 23 (clave B)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Contaminación ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Considerando las siguientes formas de contaminación química: A = Crónica B = De efectos perjudiciales muy marcados Determina la verdad (V) o falsedad (F) de los siguientes enunciados: – Los efectos de A generalmente son por un tiempo prolongado y no se puede precisar su origen definido en un tiempo corto. – B sucede en caso de sustancias tóxicas con dosis elevada del contaminante, produciendo efectos agudos en un tiempo corto. – B generalmente da lugar a mutaciones.",
+      "alternatives": [
+        "FFV",
+        "FVF",
+        "VFV",
+        "VVF",
+        "VFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Ecología, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Saneamiento ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto al tratamiento de aguas servidas, relaciona: I. Tratamiento terciario a. Sedimentación II. Tratamiento primario b. Lodos activados III. Tratamiento secundario c. Cloración",
+      "alternatives": [
+        "Ic – IIb – IIIa",
+        "Ia – IIb – IIIc",
+        "Ia – IIc – IIIb",
+        "Ib – IIc – IIIa",
+        "Ic – IIa – IIIb"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Ecología, pregunta 25 (clave E)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Asocia las siguientes relaciones interespecíficas: I. Depredación a. (0/0) II. Competencia b. (+/–) III. Tolerancia c. (–/–)",
+      "alternatives": [
+        "Ia – IIc– IIIb",
+        "Ib – IIc – IIIa",
+        "Ib – IIa – IIIc",
+        "Ic – IIb – IIIa",
+        "Ic – IIa – IIIb"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Ecología, pregunta 26 (clave B)"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Participación ciudadana en el sistema democrático",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Ordena los pasos que requiere el constructo de la participación ciudadana orientada a la solución de problemas de la sociedad: I. Investigar las causas. II. Buscar el bienestar de la población. III. Organizarse de manera responsable. IV. Identificar los problemas locales. V. Proponer alternativas de solución.",
+      "alternatives": [
+        "IV – III – V – II – I",
+        "IV – III – I – V – II",
+        "IV – I – II – III – V",
+        "III – IV – I – V – II",
+        "III – II – I – V – IV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Educación Cívica, pregunta 27 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Definición, métodos e historia de la psicología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones en relación a las ramas de la Psicología: I. La Psicología Evolutiva estudia e investiga las leyes que rigen el desarrollo psicológico humano. II. La Psicología Educativa investiga y desarrolla formas de optimizar los procesos de enseñanza aprendizaje. III. Los psicólogos clínicos realizan psicoterapia familiar e individual.",
+      "alternatives": [
+        "V V V",
+        "VVF",
+        "VFV",
+        "FVF",
+        "FFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Psicología, pregunta 31 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PLAN DE REDACCIÓN Los pies negros I. Uno de sus principales líderes fue el jefe Crowfoot, quien buscó la integración de las tribus. II. Es una confederación de pueblos amerindios originarios de las llanuras de Canadá. III. Las principales tribus que la integraron, fueron los Siksika, los Blood y los Piegan. IV. Guiados por su jefe, se dedicaban a la caza de búfalos mientras se desplazaban tras de ellos. V. No participaron en grandes conflictos, siendo diezmados por la viruela y la adicción al whisky.",
+      "alternatives": [
+        "II – III – I – IV – V",
+        "II – III – V – IV – I",
+        "III – II – I – IV – V",
+        "IV – II – III – V – I",
+        "I – II – III – V – IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Verbal, pregunta 36 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el número de elipsis utilizado en el siguiente texto: Manuel Scorza (1928 – 1983) nació en Lima. Fue hombre de grandes preocupaciones sociales. Se inició en la poesía; sin embargo, es conocido principalmente por su obra narrativa. Más tarde, en la década del 70, publicó una serie de novelas que narraban las luchas campesinas.",
+      "alternatives": [
+        "4",
+        "2",
+        "5",
+        "1",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Verbal, pregunta 37 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Sinónimos y antónimos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Elige el antónimo más apropiado del término subrayado en el siguiente enunciado: El pésimo poeta peruano, César Vallejo, murió en París.",
+      "alternatives": [
+        "Excelso",
+        "Eximio",
+        "Notable",
+        "Períndito",
+        "afamado"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Verbal, pregunta 38 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Yo tengo el doble de la edad que tú tenías cuando yo tenía la edad que tú tienes, pero cuando tú tengas la edad que yo tengo la suma de nuestras edades será 54. ¿Cuál es la suma de nuestras edades actuales?",
+      "alternatives": [
+        "40",
+        "46",
+        "42",
+        "44",
+        "48"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Matemático, pregunta 43 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el domicilio de Pedrito, un caño llena un recipiente en 3 horas y otro lo vacía en 4 horas, después de una hora de estar funcionando el primer caño se abre el desagüe, ¿en qué tiempo se llena el recipiente?",
+      "alternatives": [
+        "9 horas",
+        "6 horas",
+        "8 horas",
+        "7 horas",
+        "5 horas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Matemático, pregunta 45 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una empresa de automóviles vende dos camionetas en 69 300 soles cada uno. En una de ellas gana 10% y en la otra pierde 10%. Determina cuánto gana o pierde en la venta total.",
+      "alternatives": [
+        "Gana 1 400 soles",
+        "Pierde 1 400 soles",
+        "Gana 1 200 soles",
+        "No gana, ni pierde",
+        "Pierde 1 200 soles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=22",
+      "sourceName": "UNCP — Examen de Admisión UNCP Primera Selección 2021 (Área I), Razonamiento Matemático, pregunta 50 (clave B)"
+    }
+  ]
+}

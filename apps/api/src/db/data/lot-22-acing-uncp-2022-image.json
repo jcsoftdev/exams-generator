@@ -1,0 +1,504 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-22-acing-uncp-2022-image/arit-lot-22-acing-uncp-2022-01.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Aritmética, pregunta 1 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Razones y Proporciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/arit-lot-22-acing-uncp-2022-02.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Aritmética, pregunta 2 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/arit-lot-22-acing-uncp-2022-03.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Aritmética, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/alg-lot-22-acing-uncp-2022-04.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Álgebra, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-22-acing-uncp-2022-image/arit-lot-22-acing-uncp-2022-05.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Aritmética, pregunta 5 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-22-acing-uncp-2022-image/alg-lot-22-acing-uncp-2022-06.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Álgebra, pregunta 6 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Dispersión",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-22-acing-uncp-2022-image/est-lot-22-acing-uncp-2022-07.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Estadística y Probabilidades, pregunta 7 (clave D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Posición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-22-acing-uncp-2022-image/est-lot-22-acing-uncp-2022-08.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Estadística y Probabilidades, pregunta 8 (clave B)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Uso de grafías",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-22-acing-uncp-2022-image/len-lot-22-acing-uncp-2022-09.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Lenguaje, pregunta 9 (clave A)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura española",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-22-acing-uncp-2022-image/lit-lot-22-acing-uncp-2022-10.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Literatura, pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Movimientos y vanguardias literarias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-22-acing-uncp-2022-image/lit-lot-22-acing-uncp-2022-11.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Literatura, pregunta 11 (clave D)"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-22-acing-uncp-2022-image/len-lot-22-acing-uncp-2022-12.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Lenguaje, pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Composición química de los seres vivos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-22-acing-uncp-2022-image/bio-lot-22-acing-uncp-2022-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 13 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de reproducción, salud y enfermedad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/bio-lot-22-acing-uncp-2022-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fisiología celular",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-22-acing-uncp-2022-image/bio-lot-22-acing-uncp-2022-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 15 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-22-acing-uncp-2022-image/bio-lot-22-acing-uncp-2022-16.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 16 (clave D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/bio-lot-22-acing-uncp-2022-17.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 17 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de respiración y excreción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-22-acing-uncp-2022-image/bio-lot-22-acing-uncp-2022-18.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 18 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de nutrición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/bio-lot-22-acing-uncp-2022-19.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Biología, pregunta 19 (clave E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/fis-lot-22-acing-uncp-2022-20.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Física, pregunta 20 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/quim-lot-22-acing-uncp-2022-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Química, pregunta 21 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Tabla periódica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-22-acing-uncp-2022-image/quim-lot-22-acing-uncp-2022-22.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Química, pregunta 22 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/quim-lot-22-acing-uncp-2022-23.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Química, pregunta 23 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-22-acing-uncp-2022-image/fis-lot-22-acing-uncp-2022-24.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Física, pregunta 24 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-22-acing-uncp-2022-image/fis-lot-22-acing-uncp-2022-25.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Física, pregunta 25 (clave B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-22-acing-uncp-2022-image/fis-lot-22-acing-uncp-2022-26.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Física, pregunta 26 (clave A)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Contaminación ambiental",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/eco-lot-22-acing-uncp-2022-27.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Ecología, pregunta 27 (clave E)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-22-acing-uncp-2022-image/eco-lot-22-acing-uncp-2022-28.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Ecología, pregunta 28 (clave A)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Psicología social",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/psi-lot-22-acing-uncp-2022-29.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Psicología, pregunta 29 (clave E)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Definición, métodos e historia de la psicología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/psi-lot-22-acing-uncp-2022-30.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Psicología, pregunta 30 (clave C)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Sexualidad y salud sexual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-22-acing-uncp-2022-image/psi-lot-22-acing-uncp-2022-31.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Psicología, pregunta 31 (clave D)"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Definición, métodos e historia de la psicología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/psi-lot-22-acing-uncp-2022-32.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Psicología, pregunta 32 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/rm-lot-22-acing-uncp-2022-33.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 33 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Inductivo-Deductivo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/rm-lot-22-acing-uncp-2022-34.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 34 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-22-acing-uncp-2022-image/rm-lot-22-acing-uncp-2022-35.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 35 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/rm-lot-22-acing-uncp-2022-36.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 36 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/rm-lot-22-acing-uncp-2022-37.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 37 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Planteo de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-22-acing-uncp-2022-image/rm-lot-22-acing-uncp-2022-38.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 38 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/rm-lot-22-acing-uncp-2022-39.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 39 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Analítico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/rm-lot-22-acing-uncp-2022-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 40 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-22-acing-uncp-2022-image/rm-lot-22-acing-uncp-2022-41.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Matemático, pregunta 41 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "La comunicación",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "b",
+      "imagePath": "lot-22-acing-uncp-2022-image/com-lot-22-acing-uncp-2022-42.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Comunicación, pregunta 42 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/com-lot-22-acing-uncp-2022-43.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Comunicación, pregunta 43 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Conectores lógicos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/rv-lot-22-acing-uncp-2022-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Verbal, pregunta 44 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Marcadores textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "d",
+      "imagePath": "lot-22-acing-uncp-2022-image/rv-lot-22-acing-uncp-2022-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Verbal, pregunta 45 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Plan de redacción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/rv-lot-22-acing-uncp-2022-46.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Razonamiento Verbal, pregunta 46 (clave E)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Comprensión y producción textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/com-lot-22-acing-uncp-2022-47.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Comunicación, pregunta 47 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Conditionals (zero, first, second, third)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "a",
+      "imagePath": "lot-22-acing-uncp-2022-image/ing-lot-22-acing-uncp-2022-48.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Inglés, pregunta 48 (clave A)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present perfect tense",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "e",
+      "imagePath": "lot-22-acing-uncp-2022-image/ing-lot-22-acing-uncp-2022-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Inglés, pregunta 49 (clave E)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Past continuous",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "correctAnswer": "c",
+      "imagePath": "lot-22-acing-uncp-2022-image/ing-lot-22-acing-uncp-2022-50.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=35",
+      "sourceName": "Academia Ingeniería — Admisión UNCP 2022 Área I y IV, Inglés, pregunta 50 (clave C)"
+    }
+  ]
+}
