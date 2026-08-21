@@ -16,6 +16,7 @@
     "db:seed": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/db/seed.ts",
     "db:seed:bank-sample": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/seed-bank-sample.ts",
     "db:purge-test-taxonomy": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/purge-test-taxonomy.ts",
+    "db:refile-round-solids": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/refile-round-solid-questions.ts",
     "db:strip-solution-tails": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/strip-seeded-solution-tails.ts",
     "db:normalize-collected-content": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/normalize-collected-content.ts",
     "db:archive-unprintable-questions": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/archive-unprintable-questions.ts"

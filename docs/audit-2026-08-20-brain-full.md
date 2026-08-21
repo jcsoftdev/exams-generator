@@ -339,10 +339,36 @@ release workflow).
       DevOps. (Bonus: typst se descarga de GitHub sin verificación de checksum,
       `Dockerfile.api:9-13`.)
 
-- [ ] **M12 — Taxonomía con clasificación ruidosa.** En vivo bajo Geometría→Triángulos:
+- [~] **M12 — Taxonomía con clasificación ruidosa.** En vivo bajo Geometría→Triángulos:
       identidades trigonométricas ("senA+4senB…", "CtgB+CtgC") y un problema de cono
       (variación porcentual de volumen). El blueprint por tema selecciona esto como
       "Triángulos". Escala no determinada. Data quality.
+      **MEDIDO Y PARCIALMENTE CORREGIDO (2026-08-21)**. La medición corrige el propio
+      hallazgo:
+      - **Las trigonométricas NO están mal archivadas.** Se leyeron las 25 de 317 preguntas de
+        Triángulos que mencionan sen/cos/tg: todas son problemas DE triángulos que usan
+        trigonometría como herramienta ("Si el perímetro del triángulo ABC es 24 y el
+        circunradio mide 5, halla SenA+SenB+SenC"). Un profesor que pide preguntas de
+        triángulos recibe preguntas de triángulos. Mover eso a Trigonometría empeoraría el
+        banco, no lo arreglaría.
+      - **Los sólidos sí.** 3 de 317 en Triángulos y 1 en Circunferencia son problemas de
+        volumen de cono/cilindro: ahí el profesor pide triángulos y recibe un cono. Movidas a
+        Cuerpos Redondos con `scripts/refile-round-solid-questions.ts`
+        (`pnpm db:refile-round-solids`), sobre la regla de dominio `isRoundSolidQuestion` —
+        que exige el sólido **y** la medida (volumen / área lateral). Sin esa segunda
+        condición la regla se traga un problema de tiro parabólico ("dos esferas caen de una
+        mesa… calcula la altura"), que es física disfrazada de esfera: se dejó donde estaba, y
+        hay una spec que lo fija.
+      - El movimiento conserva curso y grado — solo cambia el tema — y si el curso no tiene
+        `cuerpos-redondos` a ese grado, la pregunta se reporta y no se fuerza a ningún lado.
+      **Lo que queda abierto, y por qué**: la única pregunta que la medición dejó marcada como
+      realmente mal ubicada es la de tiro parabólico bajo Segmentos y Ángulos — está en el
+      CURSO equivocado (Física, no Geometría), y mover de curso pide criterio por pregunta.
+      Certificar la clasificación de las 65 387 preguntas no es un barrido por palabras clave:
+      es un proyecto de re-clasificación semántica aparte. Lo que este ítem sí deja es la
+      escala real de la muestra que el audit señaló — ~1% de ruido duro, no el 10% que la
+      lectura por palabras sugiere.
+      Verificado: 973 non-e2e + 276 e2e.
 
 ### Low / Info
 
