@@ -35,11 +35,27 @@ export interface OpenRouterJsonSchema {
 export interface OpenRouterRequestBody {
   readonly model: string;
   readonly messages: readonly OpenRouterMessage[];
+  readonly max_tokens: number;
   readonly response_format: {
     readonly type: "json_schema";
     readonly json_schema: OpenRouterJsonSchema;
   };
 }
+
+/**
+ * Hard ceiling on what one call may bill (audit 2026-08-20, H6). Without it the
+ * provider charges whatever the model decides to write, and the default model
+ * being free-tier today is a mitigation, not a control — `AI_BASE_URL` already
+ * points at paid providers (DeepSeek is documented in `infra/env.example`).
+ *
+ * Sized ABOVE what a good answer needs, not at it: the response is one question
+ * plus five alternatives plus an optional CeTZ figure, comfortably under a
+ * thousand tokens, and a figure-heavy one still fits. A tighter cap would clip
+ * valid JSON mid-object, which fails schema validation and buys a retry — a
+ * correctness bug traded for a cost one. This is a wall against a runaway, not
+ * a budget squeeze.
+ */
+export const MAX_COMPLETION_TOKENS = 3000;
 
 export interface BuildOpenRouterRequestOptions {
   /**
@@ -261,6 +277,7 @@ export function buildOpenRouterRequestBody(
       { role: "system", content: SYSTEM_PROMPT },
       { role: "user", content: userPromptLines.join("\n") },
     ],
+    max_tokens: MAX_COMPLETION_TOKENS,
     response_format: {
       type: "json_schema",
       json_schema: RESPONSE_JSON_SCHEMA,
@@ -326,6 +343,7 @@ export function buildOpenRouterReviseRequestBody(
       { role: "system", content: REVISE_SYSTEM_PROMPT },
       { role: "user", content: userPromptLines.join("\n") },
     ],
+    max_tokens: MAX_COMPLETION_TOKENS,
     response_format: {
       type: "json_schema",
       json_schema: RESPONSE_JSON_SCHEMA,
@@ -417,6 +435,7 @@ export function buildOpenRouterExtractRequestBody(
         ],
       },
     ],
+    max_tokens: MAX_COMPLETION_TOKENS,
     response_format: {
       type: "json_schema",
       json_schema: EXTRACT_RESPONSE_JSON_SCHEMA,

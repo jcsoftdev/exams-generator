@@ -8,6 +8,7 @@ import {
   buildOpenRouterExtractRequestBody,
   buildOpenRouterReviseRequestBody,
   buildOpenRouterRequestBody,
+  MAX_COMPLETION_TOKENS,
   OpenRouterRequestBody,
 } from "./openrouter-request-builder";
 
@@ -339,5 +340,26 @@ describe("buildOpenRouterExtractRequestBody", () => {
 
     const systemMessage = body.messages.find((m) => m.role === "system");
     expect(systemMessage!.content as string).toContain("@preview/mitex:0.2.7");
+  });
+});
+
+describe("spend ceiling", () => {
+  it("caps the completion of every request kind", () => {
+    // Audit 2026-08-20 H6: without max_tokens the bill is whatever the model
+    // decides to write. Free-tier today, but AI_BASE_URL already supports paid
+    // providers.
+    expect(buildOpenRouterRequestBody("m", INPUT).max_tokens).toBe(MAX_COMPLETION_TOKENS);
+    expect(buildOpenRouterReviseRequestBody("m", REVISE_INPUT).max_tokens).toBe(MAX_COMPLETION_TOKENS);
+    expect(
+      buildOpenRouterExtractRequestBody("m", {
+        image: Buffer.from("fake-png-bytes"),
+        mimeType: "image/png",
+      }).max_tokens,
+    ).toBe(MAX_COMPLETION_TOKENS);
+  });
+
+  it("leaves room for a question with a CeTZ figure, so the cap never truncates a good answer", () => {
+    // A ceiling that clips valid JSON would trade a cost bug for a correctness one.
+    expect(MAX_COMPLETION_TOKENS).toBeGreaterThanOrEqual(2000);
   });
 });

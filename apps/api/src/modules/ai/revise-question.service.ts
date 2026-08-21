@@ -44,6 +44,17 @@ import { correctAnswerLetterToIndex } from "./domain/correct-answer-letter-to-in
  * Either failure surfaces as 422 (Unprocessable Entity) — the AI produced
  * content, it just isn't usable content.
  */
+/**
+ * Ceiling on the free-text instruction a teacher sends with a revision (audit
+ * 2026-08-20, H6). It is pasted straight into the prompt, and until now the
+ * only limit was the 5mb request body — an accidental paste of a whole
+ * document would have been billed as input tokens.
+ *
+ * 2 000 characters is far more than a real instruction ("hazla más difícil",
+ * "cambia el contexto a uno agrícola") and still bounds the prompt.
+ */
+export const MAX_INSTRUCTION_CHARS = 2000;
+
 @Injectable()
 export class ReviseQuestionService {
   constructor(
@@ -55,6 +66,11 @@ export class ReviseQuestionService {
   async revise(user: AuthTokenPayload, id: string, instruction: string): Promise<GeneratedQuestion> {
     if (!instruction || instruction.trim() === "") {
       throw new BadRequestException("instruction must not be blank");
+    }
+    if (instruction.length > MAX_INSTRUCTION_CHARS) {
+      throw new BadRequestException(
+        `instruction must be at most ${MAX_INSTRUCTION_CHARS} characters (received ${instruction.length})`,
+      );
     }
 
     const question = await this.bankRepository.findQuestionById(id, user.tenantId);

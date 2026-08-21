@@ -217,7 +217,7 @@ release workflow).
       los runtimes nginx de web/landing siguen como root (cambiarlos implica
       `nginx-unprivileged` + puerto ≠ 80 — cambio aparte, no quick win).
 
-- [ ] **H6 — Llamadas LLM sin techo de gasto: sin `max_tokens`, input sin truncar, sin
+- [x] **H6 — Llamadas LLM sin techo de gasto: sin `max_tokens`, input sin truncar, sin
       circuit-breaker.** `openrouter-request-builder.ts` no manda `max_tokens` (factura lo que
       el modelo decida); la `instruction` de revise llega sin límite de longitud
       (`revise-question.service.ts:55-57` solo exige no-blank; el único tope es el body de
@@ -226,6 +226,22 @@ release workflow).
       en `infra/env.example`). Cost + AI. Severidad condicionada: High al mover a modelo pagado.
       **Fix**: `max_tokens` explícito, cap de longitud en instruction (p. ej. 2 000 chars),
       contador de uso por tenant (ya existe `generation_jobs` para colgarlo).
+      **HECHO (2026-08-21)**:
+      - `MAX_COMPLETION_TOKENS = 3000` en los tres bodies (generate / revise / extract). Está
+        deliberadamente POR ENCIMA de lo que necesita una respuesta buena, no al ras: la
+        respuesta es una pregunta + 5 alternativas + una figura CeTZ opcional, bastante por
+        debajo de mil tokens. Un tope apretado cortaría el JSON a mitad de objeto, fallaría la
+        validación de schema y compraría un reintento — cambiar un bug de costo por uno de
+        correctitud. Es un muro contra la fuga, no un ajuste de presupuesto.
+      - `MAX_INSTRUCTION_CHARS = 2000` en `ReviseQuestionService`, validado ANTES de leer la
+        pregunta o llamar al modelo. El único tope que había era el body de 5mb, y esa cadena
+        se pega tal cual en el prompt.
+      - **El contador por tenant NO se hizo, y hay una razón**: el freno que faltaba ya existe
+        desde el audit del 2026-08-18 — `MAX_ACTIVE_JOBS_PER_TENANT = 20` corta el total de
+        jobs en vuelo por colegio, que es lo que permitía encolar miles. Un contador de consumo
+        es reporte (cuánto gastó cada colegio), no control, y pide esquema y pantalla propios.
+        Queda como ítem de producto aparte, no como agujero de gasto.
+      Verificado: 986 non-e2e + 276 e2e.
 
 - [x] **H8 — 73 enunciados del banco central cargan su propia solución.** Encontrado al medir
       H2 (2026-08-21): `body_typst` de 73 preguntas contiene el solucionario de la fuente. Tres

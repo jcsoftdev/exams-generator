@@ -4,7 +4,7 @@ import { AuthTokenPayload } from "../auth/token.service";
 import { TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { BankRepository, QuestionListItem } from "../bank/bank.repository";
 import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
-import { ReviseQuestionService } from "./revise-question.service";
+import { MAX_INSTRUCTION_CHARS, ReviseQuestionService } from "./revise-question.service";
 
 const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1", role: Role.Teacher };
 
@@ -100,6 +100,26 @@ describe("ReviseQuestionService.revise", () => {
     );
     expect(bankRepository.findQuestionById).not.toHaveBeenCalled();
     expect(generator.reviseQuestion).not.toHaveBeenCalled();
+  });
+
+  it("refuses an instruction longer than the cap, before spending a token on it", async () => {
+    // Audit 2026-08-20 H6: the only ceiling on this string was the 5mb body
+    // limit, and it is pasted straight into the prompt.
+    const { service, bankRepository, generator } = buildDeps();
+
+    await expect(
+      service.revise(TEACHER_USER, "q1", "a".repeat(MAX_INSTRUCTION_CHARS + 1)),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(bankRepository.findQuestionById).not.toHaveBeenCalled();
+    expect(generator.reviseQuestion).not.toHaveBeenCalled();
+  });
+
+  it("accepts an instruction exactly at the cap", async () => {
+    const { service, generator } = buildDeps();
+
+    await service.revise(TEACHER_USER, "q1", "a".repeat(MAX_INSTRUCTION_CHARS));
+
+    expect(generator.reviseQuestion).toHaveBeenCalled();
   });
 
   it("throws NotFoundException when the question doesn't exist or isn't visible to the requester", async () => {
