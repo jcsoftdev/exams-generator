@@ -455,8 +455,20 @@ release workflow).
       la etiqueta.
 - [ ] **L4** — Sin formatter configurado (no prettier/biome); solo ESLint. La consistencia de
       estilo hoy es disciplina manual.
-- [ ] **L5** — `packages/shared` `"test": "echo …"` no-op, pero el matrix de CI lo corre como
+- [x] **L5** — `packages/shared` `"test": "echo …"` no-op, pero el matrix de CI lo corre como
       si fuera una suite — verde decorativo.
+      **HECHO (2026-08-21)**: primero se miró QUÉ hay en el paquete antes de decidir. Los
+      `dto/*.ts` son interfaces puras — cero representación en runtime, nada que un test pueda
+      ejercitar que `tsc` no cubra ya. Pero `role.enum.ts` y `difficulty.enum.ts` sí son código
+      real: un `enum` de TS compila a un objeto JS cuyos valores string son contrato de wire y
+      de base de datos (`JwtPayload.role`, columnas `role`/`difficulty`). O sea había algo que
+      testear de verdad, y sacarlo del matrix habría sido deshonesto en la otra dirección.
+      Ahora `"test": "jest"` (mismo stack jest + ts-jest que la API, sin meter un segundo
+      framework) sobre specs que fijan cada miembro y cada valor. **Comprobado que muerde**:
+      renombrar `Teacher = "teacher"` a `"instructor"` deja el suite en 1 fallo / 8 pases; si
+      no fallara sería el mismo verde decorativo con otro disfraz. El comentario del `ci.yml`
+      que decía "shared's test script is a no-op echo" también se corrigió — dejarlo habría
+      sido documentación mintiendo sobre su propio pipeline.
 - [x] **L6** — `bypassSecurityTrustResourceUrl(url + PREVIEW_FRAGMENT)` duplicado en
       `ai-review-queue.component.ts:627` y `generation-job-detail.component.ts:322` — misma
       regla en dos sitios (son blob URLs propios, no hay riesgo XSS; es dedup).

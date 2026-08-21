@@ -61,9 +61,10 @@ jobs:
   # Node/pnpm-only suites: packages/shared, apps/web (Vitest via the
   # Angular 22 `@angular/build:unit-test` builder), apps/landing
   # (`node --test`). None of these touch a database or external service —
-  # confirmed by reading each package.json: shared's "test" script is a
-  # no-op echo, web's devDependencies are vitest + jsdom + vitest-canvas-mock
-  # (no browser/e2e deps), landing's is plain `node --test` over *.spec.ts.
+  # confirmed by reading each package.json: shared's "test" script runs jest
+  # over its enum specs (ts-jest, no DB/HTTP), web's devDependencies are
+  # vitest + jsdom + vitest-canvas-mock (no browser/e2e deps), landing's is
+  # plain `node --test` over *.spec.ts.
   # Run as a matrix, fail-fast: false, so one broken package's red test
   # doesn't hide the state of the other two — that blind spot is exactly
   # what let the 18 web failures go unnoticed.
