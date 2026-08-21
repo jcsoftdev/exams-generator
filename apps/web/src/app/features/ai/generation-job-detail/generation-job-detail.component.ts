@@ -14,11 +14,10 @@ import { TagVariant } from '../../../ui/ui.types';
 import { AiService } from '../ai.service';
 import { DraftCountService } from '../draft-count.service';
 import { DraftQuestion, GenerationJob } from '../ai.models';
+import { toPdfPreviewUrl } from '../pdf-preview-url';
 
 const ALTERNATIVE_LETTERS = ['a', 'b', 'c', 'd', 'e'];
 const TERMINAL_STATUSES: readonly GenerationJob['status'][] = ['completed', 'failed', 'cancelled'];
-/** Chrome-less PDF viewer fragment (same idiom as `AiReviewQueueComponent`) — hides the native toolbar/thumbnails/scrollbar so it reads as a printed "paper", not a browser PDF viewer. */
-const PREVIEW_FRAGMENT = '#toolbar=0&navpanes=0&scrollbar=0';
 
 /** Same status → tag/label mapping as `GenerationHistoryComponent` — duplicated locally rather than exported/shared, matching this feature's existing convention of small local copies over cross-component coupling. */
 const STATUS_TAG: Record<GenerationJob['status'], TagVariant> = {
@@ -319,7 +318,7 @@ export class GenerationJobDetailComponent {
       next: (blob) => {
         const url = URL.createObjectURL(blob);
         this.objectUrls.push(url);
-        const safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url + PREVIEW_FRAGMENT);
+        const safeUrl = toPdfPreviewUrl(this.sanitizer, url);
         this.previewUrls.update((prev) => new Map(prev).set(id, safeUrl));
       },
       error: () => {

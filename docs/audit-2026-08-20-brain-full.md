@@ -457,9 +457,16 @@ release workflow).
       estilo hoy es disciplina manual.
 - [ ] **L5** — `packages/shared` `"test": "echo …"` no-op, pero el matrix de CI lo corre como
       si fuera una suite — verde decorativo.
-- [ ] **L6** — `bypassSecurityTrustResourceUrl(url + PREVIEW_FRAGMENT)` duplicado en
+- [x] **L6** — `bypassSecurityTrustResourceUrl(url + PREVIEW_FRAGMENT)` duplicado en
       `ai-review-queue.component.ts:627` y `generation-job-detail.component.ts:322` — misma
       regla en dos sitios (son blob URLs propios, no hay riesgo XSS; es dedup).
+      **HECHO (2026-08-21)**: verificado primero que fuera duplicación REAL y no dos cosas
+      parecidas — mismo fragmento, mismo sanitizer, misma construcción de la URL; lo único
+      distinto es qué hace cada componente con el resultado, que es aguas abajo. Extraído a
+      `features/ai/pdf-preview-url.ts` (`toPdfPreviewUrl`, spec propia), siguiendo la
+      convención de la carpeta (funciones puras chicas con spec al lado, como
+      `extract-error-message.ts`). La razón por la que el bypass es seguro ahora vive en un
+      solo sitio. Web 842 → 844.
 - [x] **L7** — Nombres "Copia de Copia de Copia de Copia de …" — el duplicado no incrementa
       (`(2)`, `(3)`) y el dashboard se llena de títulos idénticos.
       **HECHO (2026-08-21)**: `duplicateTitle()` (`modules/exams/domain/duplicate-title.ts`,

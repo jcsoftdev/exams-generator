@@ -18,6 +18,7 @@ import { AiService } from '../ai.service';
 import { extractErrorMessage } from '../extract-error-message';
 import { DraftQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../ai.models';
 import { DraftCountService } from '../draft-count.service';
+import { toPdfPreviewUrl } from '../pdf-preview-url';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { BankService } from '../../bank/bank.service';
@@ -26,9 +27,6 @@ import { QuestionTaxonomyFieldsComponent } from '../../bank/question-edit/questi
 import { QuestionContentFieldsComponent } from '../../bank/question-edit/question-content-fields.component';
 import { AiReviseBoxComponent } from '../../bank/question-edit/ai-revise-box.component';
 import { parseAlternativesList } from '../../bank/question-edit/parse-alternatives.util';
-
-/** Chrome-less PDF viewer fragment (S7 preview) — hides the native toolbar/thumbnails/scrollbar so it reads as a printed "paper", not a browser PDF viewer. */
-const PREVIEW_FRAGMENT = '#toolbar=0&navpanes=0&scrollbar=0';
 
 const ALTERNATIVE_LETTERS = ['a', 'b', 'c', 'd', 'e'];
 
@@ -623,9 +621,7 @@ export class AiReviewQueueComponent {
         this.previewLoading.set(false);
         const url = URL.createObjectURL(blob);
         this.objectUrls.push(url);
-        this.previewUrl.set(
-          this.sanitizer.bypassSecurityTrustResourceUrl(url + PREVIEW_FRAGMENT),
-        );
+        this.previewUrl.set(toPdfPreviewUrl(this.sanitizer, url));
       },
       error: () => {
         this.previewLoading.set(false);
