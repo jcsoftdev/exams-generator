@@ -6,6 +6,7 @@ import { GRADE_LEVELS } from "../modules/exams/domain/value-objects/grade-level"
 import type { GradeLevel, Stage } from "../modules/exams/domain/value-objects/grade-level";
 import { hashPassword } from "../modules/auth/password.util";
 import { db, pool } from "./client";
+import { archiveNonSpanishQuestions } from "../scripts/archive-non-spanish-questions";
 import { archiveUnprintableQuestions } from "../scripts/archive-unprintable-questions";
 import { escapeCollectedTypst } from "../scripts/escape-collected-typst";
 import { seedCollectedQuestions } from "./seed-collected-questions";
@@ -1334,6 +1335,13 @@ export async function seed(): Promise<void> {
     const { archived } = await archiveUnprintableQuestions();
     if (archived > 0) {
       console.log(`[seed] archived ${archived} questions carrying unprintable glyphs.`);
+    }
+    // Same idea, different defect: a handful of web-sourced rows are English or
+    // French statements filed under a Spanish course, and the app shows exams to
+    // students sitting them in Spanish. English-teaching courses are exempt.
+    const { archived: foreign } = await archiveNonSpanishQuestions();
+    if (foreign > 0) {
+      console.log(`[seed] archived ${foreign} questions whose statement is not in Spanish.`);
     }
   }
 }

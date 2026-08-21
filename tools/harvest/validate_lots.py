@@ -20,6 +20,7 @@ from __future__ import annotations
 import hashlib
 import json
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -27,6 +28,15 @@ GRADE_LEVELS = {"pre"} | {f"primaria_{n}" for n in range(1, 7)} | {
     f"secundaria_{n}" for n in range(1, 6)
 }
 DIFFICULTIES = {"easy", "medium", "hard"}
+# The app shows exams to students sitting them in Spanish, so a statement left in
+# the source's language is unusable — except in an English-teaching course, where
+# an English statement is the question itself.
+FOREIGN_MARKERS = (" the ", " which ", " of the ", " is the ", " are ", " what is ",
+                   " find the ", " following ", " if the ", " quelle ", " quelles ",
+                   " est ", " sont ", " dans ", " soit ", " les ", " avec ", " pour ")
+SPANISH_MARKERS = (" el ", " la ", " los ", " las ", " de ", " que ", " en ", " un ",
+                   " una ", " halle", " calcule", " determine", " cual", " si ",
+                   " senale", " siguiente", " es ", " del ", " se ")
 LETTERS = "abcde"
 
 
@@ -47,6 +57,19 @@ def content_hash(body: str, image: Path | None) -> str:
     return hashlib.sha256(statement.encode()).hexdigest()
 
 
+def reads_as_spanish(text: str) -> bool:
+    haystack = " " + " ".join(fold_spaces(text).split()) + " "
+    foreign = sum(1 for m in FOREIGN_MARKERS if m in haystack)
+    if foreign < 2:
+        return True
+    return foreign <= sum(1 for m in SPANISH_MARKERS if m in haystack)
+
+
+def fold_spaces(text: str) -> str:
+    stripped = unicodedata.normalize("NFD", text.lower())
+    return "".join(c for c in stripped if unicodedata.category(c) != "Mn")
+
+
 def check_entry(entry: dict, lot_dir: Path, valid: set[tuple[str, str]]) -> list[str]:
     problems: list[str] = []
     course, topic = entry.get("courseName"), entry.get("topicName")
@@ -65,6 +88,8 @@ def check_entry(entry: dict, lot_dir: Path, valid: set[tuple[str, str]]) -> list
 
     body = (entry.get("bodyTypst") or "").strip()
     answer = entry.get("correctAnswer")
+    if body and "ingl" not in fold_spaces(course or "") and not reads_as_spanish(body):
+        problems.append("language: the statement does not read as Spanish")
     if body:
         alternatives = entry.get("alternatives") or []
         if len(alternatives) < 2:

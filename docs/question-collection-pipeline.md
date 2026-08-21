@@ -114,6 +114,27 @@ Verificación obligatoria antes de sembrar un lote:
    examen cosechado dos veces. Así aparecieron dos pares duplicados que la deduplicación por
    `source_name` no habría atrapado, porque sus etiquetas de procedencia diferían.
 
+## Regla de idioma: el banco se muestra en español
+
+La app arma exámenes para estudiantes que rinden en castellano, así que un enunciado en inglés
+o francés no les sirve. **Única excepción**: los cursos de inglés, donde el enunciado en inglés
+ES la pregunta (`Inglés`, `Inglés como Lengua Extranjera`).
+
+- Antes de sembrar: `validate_lots.py` marca cada entrada cuyo enunciado no lee como español,
+  fuera de esos cursos. Así se evitó sembrar por error los originales en francés e inglés que
+  conviven con sus traducciones `-es` en `license-pending/`.
+- Después de sembrar: `archive-non-spanish-questions.ts` corre en cada arranque junto al
+  archivado de glifos impresentables, y saca del pool lo que se haya colado. Encontró 5 filas
+  entre 66 876: ejercicios de gramática inglesa que un blog había archivado bajo Razonamiento
+  Verbal, Filosofía y Economía, más un problema de cronometría publicado traducido al inglés.
+- Se archivan en vez de re-clasificarse: tres irían a Inglés pero bajo qué tema y qué grado es
+  una suposición, y el de cronometría no pertenece a ningún curso de inglés.
+
+La heurística mira palabras funcionales cortas (`the`, `which`, `les`, `soit`), que es lo que
+de verdad separa los idiomas; los sustantivos técnicos viajan entre ellos. Hace falta que
+aparezcan dos o más marcas extranjeras Y que superen a las españolas, para que un préstamo
+suelto («software») no archive una pregunta buena.
+
 ## Licencias: qué fuente sí y cuál no
 
 Antes de cosechar, revisar el aviso de derechos del PDF:
