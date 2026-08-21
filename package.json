@@ -12,6 +12,7 @@
     "dev:down": "docker compose -f infra/docker-compose.yml stop postgres minio redis",
     "db:setup": "pnpm --filter @exams-generator/api db:migrate && pnpm --filter @exams-generator/api db:seed",
     "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
     "test": "turbo run test",
     "smoke:domains": "node infra/smoke-test-domains.mjs",
     "lint": "turbo run lint",

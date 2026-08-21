@@ -344,11 +344,42 @@ release workflow).
       la etiqueta de un mismo curso cambiara al cambiar de filtro, y una etiqueta inestable
       confunde más que un sufijo de más.
 
-- [ ] **M4 — Contrato API↔web duplicado a mano sin guard.** `packages/shared` solo cubre auth
+- [~] **M4 — Contrato API↔web duplicado a mano sin guard.** `packages/shared` solo cubre auth
       (5 DTOs + 2 enums); las 10 features de web re-declaran cada shape de respuesta en
       `*.models.ts` (p. ej. `ExamVersionJob` en `exam-versions.models.ts:28` vs
       `ExamVersionJobRecord` en `exam-version-jobs.repository.ts:21`). Sin OpenAPI, sin test
       de equivalencia, sin check de CI — el drift solo aparece en runtime. Contract Drift.
+      **EL GUARD, HECHO (2026-08-21); LA MIGRACIÓN DE CONTRATOS, EMPEZADA.**
+      Lo primero fue descubrir por qué "no hay check": **ningún runner chequea tipos**. jest
+      corre ts-jest con `isolatedModules` y vitest transpila con esbuild — los dos ejecutan
+      felices código que no compila. Por eso no alcanzaba con mover tipos a `shared`: sin un
+      typecheck real, dos declaraciones idénticas siguen sin estar atadas por nada.
+      - `pnpm typecheck` nuevo: tarea de turbo (`dependsOn: ["^build"]`, así `shared` se
+        construye antes de que la API resuelva sus tipos) + script por paquete, y un job
+        `typecheck` en `ci.yml`.
+      - **Encontró dos bugs reales en el primer intento**: `bank.repository.ts` tenía
+        `sourceName` DUPLICADO en dos object literals (TS1117) — una clave pisando a la otra,
+        delante de las narices de 993 tests que nunca la vieron. Arreglado.
+      - `apps/web/tsconfig.typecheck.json`: el mapeo de paths resuelve `@exams-generator/shared`
+        al FUENTE, que vive fuera de `apps/web`, y con el `rootDir` que TS infiere eso es un
+        TS6059 antes de reportar un solo problema real. Se ensancha a la raíz del repo; es
+        seguro porque solo corre con `--noEmit`, y apuntar al fuente y no al `.d.ts` compilado
+        es justamente el punto: `dist` puede estar viejo.
+      - Primer contrato migrado: `ExamVersionJob` + `EXAM_VERSION_JOB_STATUSES` viven ahora en
+        `packages/shared/src/dto/exam-version-job.dto.ts`. El web lo re-exporta desde su
+        `exam-versions.models.ts` (los otros 6 archivos no cambian: conservan su vocabulario
+        local con UNA sola declaración detrás). El `ExamVersionJobRecord` de la API sigue más
+        ancho a propósito — `tenantId`, `createdBy` y timestamps son almacenamiento, no
+        contrato.
+      - `exam-version-job-contract.spec.ts` (API) compara la lista de estados compartida contra
+        el enum de la base: `shared` no puede importar el schema de la API, así que las dos
+        listas están tan alineadas como ese test las mantenga.
+      **Comprobado que muerde**: renombrar `completedCount` en el tipo compartido tumba
+      `pnpm typecheck` con errores en el web. Antes de esto, el mismo rename pasaba los 993
+      tests de la API y los 844 del web sin una queja.
+      **Queda**: migrar el resto de los contratos (bank, exams, ai, tenants, users, dashboard)
+      al mismo patrón. El guard ya está puesto, así que cada uno que se mueva queda protegido
+      desde ese momento.
 
 - [ ] **M5 — Estado in-process bloquea una segunda instancia del API.**
       `ExamVersionJobEventsService` / `GenerationJobEventsService` son Subjects in-memory (el

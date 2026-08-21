@@ -5,3 +5,4 @@ export * from "./dto/login-response.dto";
 export * from "./dto/login-exchange.dto";
 export * from "./dto/jwt-payload.dto";
 export * from "./dto/me-response.dto";
+export * from "./dto/exam-version-job.dto";

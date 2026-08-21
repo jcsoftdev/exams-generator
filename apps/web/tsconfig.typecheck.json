@@ -1,0 +1,17 @@
+/* Type-check only (`pnpm typecheck`) — never used to emit. */
+{
+  "extends": "./tsconfig.spec.json",
+  "compilerOptions": {
+    /*
+     * The workspace path mapping resolves `@exams-generator/shared` to the
+     * package's SOURCE, which lives outside apps/web. With the rootDir TS
+     * infers from `include` (src/**), that is a TS6059 error before a single
+     * real problem is reported. Widening it to the repo root is safe here
+     * because this config only ever runs with --noEmit, and pointing at the
+     * source rather than the built .d.ts is the point: the guard exists to
+     * catch a shared type drifting from what the web expects, and dist can be
+     * stale (audit 2026-08-20, M4).
+     */
+    "rootDir": "../.."
+  }
+}

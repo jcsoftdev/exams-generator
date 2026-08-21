@@ -106,6 +106,39 @@ jobs:
         run: pnpm --filter "${{ matrix.filter }}" test
 
   # ---------------------------------------------------------------------
+  # Type-check every package. Neither test runner checks types: jest runs
+  # ts-jest with `isolatedModules` and vitest transpiles through esbuild, so
+  # both happily execute code that does not compile. Without this job a
+  # renamed field in packages/shared, or any other cross-package drift, is
+  # invisible until runtime (audit 2026-08-20, M4) — and adding it
+  # immediately surfaced two duplicate object keys in bank.repository.ts that
+  # every suite had been running past.
+  #
+  # `turbo run typecheck` declares `dependsOn: ["^build"]`, so shared is built
+  # before apps/api resolves its types. One job, not a matrix: these are fast
+  # and a single red mark is enough to block the PR.
+  # ---------------------------------------------------------------------
+  typecheck:
+    name: typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable pnpm via corepack
+        run: corepack enable && corepack prepare pnpm@${{ env.PNPM_VERSION }} --activate
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Type-check every package
+        run: pnpm typecheck
+
+  # ---------------------------------------------------------------------
   # apps/api — the hard part. jest.config.js defines three projects:
   #   - non-e2e (parallel): unit specs AND repository specs that hit a
   #     REAL Postgres directly (confirmed: bank.repository.spec.ts calls

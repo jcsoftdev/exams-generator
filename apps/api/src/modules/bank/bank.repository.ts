@@ -238,7 +238,6 @@ export class BankRepository implements BankRepositoryPort {
       bodyTypst: questions.bodyTypst,
       alternatives: questions.alternatives,
       figureCode: questions.figureCode,
-      sourceName: questions.sourceName,
       // An image question has no statement; its provenance string is the only
       // thing a list row can show about it beyond the answer letter.
       sourceName: questions.sourceName,
@@ -626,7 +625,6 @@ export class BankRepository implements BankRepositoryPort {
       bodyTypst: questions.bodyTypst,
       alternatives: questions.alternatives,
       figureCode: questions.figureCode,
-      sourceName: questions.sourceName,
       // An image question has no statement; its provenance string is the only
       // thing a list row can show about it beyond the answer letter.
       sourceName: questions.sourceName,

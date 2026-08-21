@@ -10,30 +10,19 @@
 export const VERSION_COUNT_OPTIONS: readonly number[] = [2, 3, 4, 5];
 export const DEFAULT_VERSION_COUNT = 2;
 
-/** Lifecycle of an `exam_version_jobs` row — same vocabulary as the AI generation jobs. */
-export type ExamVersionJobStatus = 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';
-
 /**
- * Mirrors the `exam_version_jobs` row returned by `POST
- * /exams/:examId/versions` (202) and `GET .../versions/jobs/:jobId`.
+ * The job's lifecycle and wire shape come from `@exams-generator/shared`, which
+ * the API compiles against too — re-exported here so this feature keeps its own
+ * vocabulary while there is only ONE declaration of the contract. They used to
+ * be declared separately on each side, with nothing to catch a rename crossing
+ * the wire (audit 2026-08-20, M4).
  *
- * PDF compilation runs in a BullMQ worker, so the POST no longer returns the
- * generated forms — it returns this job, whose `completedCount` climbs to
- * `versionCount` as each form is persisted. A `failed` job with
- * `completedCount > 0` is a PARTIAL result, not a total loss: those forms
- * exist and are downloadable, which is exactly what the versions screen has
- * to say out loud (audit P1 — the UI used to report a blanket failure while
- * PDFs sat in storage).
+ * A `failed` job with `completedCount > 0` is a PARTIAL result, not a total
+ * loss: those forms exist and are downloadable, which is exactly what the
+ * versions screen has to say out loud (audit P1 — the UI used to report a
+ * blanket failure while PDFs sat in storage).
  */
-export interface ExamVersionJob {
-  readonly id: string;
-  readonly examId: string;
-  readonly versionCount: number;
-  readonly status: ExamVersionJobStatus;
-  readonly completedCount: number;
-  readonly failedReason: string | null;
-  readonly failedQuestionId: string | null;
-}
+export type { ExamVersionJob, ExamVersionJobStatus } from '@exams-generator/shared';
 
 /**
  * Mirrors the `GET /exams/:examId/versions` (B4) response row — DECISION
