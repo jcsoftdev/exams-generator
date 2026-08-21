@@ -59,6 +59,33 @@ Para rescatar cualquiera de los cinco últimos basta con encontrar el PDF que de
 contiene entre los ~95 que publica la UNAC, y corregir su `sourceUrl`. El contenido ya está
 verificado.
 
+## Traducciones al español (2026-08-20)
+
+Los dos lotes que no venían en castellano ya están traducidos. **Sembrar la versión `-es`, no
+el original**: el original se conserva solo para poder auditar la traducción contra su fuente.
+
+| Original (no sembrar) | Versión a sembrar | Preguntas |
+| --- | --- | --- |
+| `book-4-qcm-exo7.json` (francés) | `book-4-qcm-exo7-es.json` | 170 |
+| `book-5-jamb-myschool-lwp.json` (inglés) | `book-5-jamb-myschool-lwp-es.json` | 1259 |
+
+Qué se conservó intacto, comprobado con `tools/harvest/check_translation.py` sobre las 1429:
+`correctAnswer`, el orden y el número de alternativas, la taxonomía, `sourceUrl`, todos los
+números y todos los tramos de matemática `$...$`. Cero enunciados idénticos al original, que es
+la señal de una tanda que se saltó. Cada `sourceName` lleva el sufijo `[traducción al español]`.
+
+Los importes en naira **no se convirtieron**: la aritmética de la pregunta depende de esas cifras
+y su respuesta ya está fijada por la clave impresa. Solo se les puso el símbolo correcto y la coma
+decimal del castellano (`N225.00` → `₦225,00`).
+
+Dos cosas quedaron señaladas y sin tocar, a propósito:
+
+- El separador decimal fuera de la moneda es mixto (123 con punto, 82 con coma). Homogenizarlo a
+  ciegas corrompería notación que no es decimal: hidratos como `CuSO4.5H2O`, iniciales como
+  `J.J. Thomson`. Necesita una pasada con reglas por curso.
+- Los defectos del impreso original se tradujeron fielmente en vez de arreglarse: un distractor mal
+  redactado en la fuente sigue mal redactado en español.
+
 ## Qué le falta a cada lote para poder sembrarse
 
 La licencia no es lo único que bloquea. Estado real, lote por lote:
@@ -69,8 +96,8 @@ La licencia no es lo único que bloquea. Estado real, lote por lote:
 | `lot-25-bancostecno-circuitos` | Español | ESO (`easy`) | Nada: CC0 es dominio público. Sembrable ya si se quiere material de circuitos por debajo de nivel UNI. |
 | `lot-26-unmsm-historia-mcq` | Español | Admisión UNMSM (`hard`) | Licencia sin declarar (el README dice `apache-2.0`, cada registro dice «Desconocida»). Contenido verificado pregunta a pregunta. |
 | `lot-27-cepre-unmsm-2019-i` | Español | Preuniversitario (`hard`) | **La obra prohíbe expresamente su reproducción** («Prohibida su reproducción y venta», en cada página). Necesita permiso escrito de la UNMSM, no solo que caduque una gestión. |
-| `book-4-qcm-exo7` | **Francés** | Universitario L1 | Dos cosas: la licencia es **BY-NC-SA**, que prohíbe el uso comercial de forma explícita, y las 170 preguntas están **sin traducir**. |
-| `book-5-jamb-myschool-lwp` | **Inglés** | JAMB/UTME (`hard`) | Tres: sin licencia de ningún tipo, **sin traducir**, y los importes van en nairas (`N225.00`), que hay que localizar o reescribir. |
+| `book-4-qcm-exo7-es` | Español (traducido del francés) | Universitario L1 | Solo la licencia: **BY-NC-SA** prohíbe el uso comercial de forma explícita. La traducción ya está hecha y verificada. |
+| `book-5-jamb-myschool-lwp-es` | Español (traducido del inglés) | JAMB/UTME (`hard`) | Solo la licencia: el repo no declara ninguna y el contenido está scrapeado de un sitio comercial de terceros. Traducción hecha y verificada; los importes siguen en naira, a propósito. |
 
 Traducir no es cosmético: una pregunta de examen en francés o en inglés no le sirve
 a un estudiante que rinde en castellano, y el enunciado traducido tiene que conservar
