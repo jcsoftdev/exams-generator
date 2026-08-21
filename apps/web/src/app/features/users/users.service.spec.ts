@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, beforeEach } from 'vitest';
 import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
+import { Role } from '@exams-generator/shared';
 import { UsersService } from './users.service';
 
 describe('UsersService', () => {
@@ -24,7 +25,7 @@ describe('UsersService', () => {
   });
 
   it('create POSTs /users with email, name and role', () => {
-    service.create({ email: 'a@b.pe', name: 'Ana Beltrán', role: 'teacher' }).subscribe();
+    service.create({ email: 'a@b.pe', name: 'Ana Beltrán', role: Role.Teacher }).subscribe();
     const req = httpMock.expectOne('/api/users');
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual({ email: 'a@b.pe', name: 'Ana Beltrán', role: 'teacher' });

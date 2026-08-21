@@ -1,10 +1,17 @@
 import { BadRequestException, ConflictException, ForbiddenException, Injectable, NotFoundException } from "@nestjs/common";
 import { randomBytes } from "node:crypto";
-import { Role } from "@exams-generator/shared";
+import {
+  CREATABLE_USER_ROLES,
+  CreatableUserRole,
+  CreateUserResult,
+  PagedTenantUsers,
+  ResetPasswordResult,
+  SetActiveResult,
+} from "@exams-generator/shared";
 import { AccountStatusService } from "../auth/account-status.service";
 import { hashPassword } from "../auth/password.util";
 import { AuthTokenPayload } from "../auth/token.service";
-import { PagedTenantUsers, UsersRepository } from "./users.repository";
+import { UsersRepository } from "./users.repository";
 
 function requireTenant(user: AuthTokenPayload): string {
   if (!user.tenantId) throw new ForbiddenException("Only tenant admins can manage users");
@@ -27,8 +34,13 @@ export class UsersService {
     return this.repository.listByTenant(requireTenant(user), page, pageSize);
   }
 
-  async create(user: AuthTokenPayload, email: string, name: string, role: "teacher" | "school_admin") {
-    if (role !== Role.Teacher && role !== Role.SchoolAdmin) {
+  async create(user: AuthTokenPayload, email: string, name: string, role: CreatableUserRole): Promise<CreateUserResult> {
+    // `body.role` is never validated by a class-validator DTO before it
+    // reaches here (this codebase has none for this route) — the TS param
+    // type is a compile-time contract, not a runtime guarantee, so this
+    // check against the SAME `CREATABLE_USER_ROLES` shared with
+    // `CreatableUserRole` still has to run against the actual value.
+    if (!(CREATABLE_USER_ROLES as readonly string[]).includes(role)) {
       throw new BadRequestException("role must be teacher or school_admin");
     }
     if (typeof name !== "string" || name.trim().length === 0) {
@@ -48,7 +60,7 @@ export class UsersService {
     return { id, email, name: name.trim(), role, temporaryPassword };
   }
 
-  async setActive(user: AuthTokenPayload, targetId: string, active: boolean) {
+  async setActive(user: AuthTokenPayload, targetId: string, active: boolean): Promise<SetActiveResult> {
     const tenantId = requireTenant(user);
     if (targetId === user.sub && !active) {
       throw new ConflictException("You cannot deactivate your own account");
@@ -63,7 +75,7 @@ export class UsersService {
     return { id: targetId, active };
   }
 
-  async resetPassword(user: AuthTokenPayload, targetId: string) {
+  async resetPassword(user: AuthTokenPayload, targetId: string): Promise<ResetPasswordResult> {
     const tenantId = requireTenant(user);
     const target = await this.repository.findByIdInTenant(targetId, tenantId);
     if (!target) throw new NotFoundException(`User not found: ${targetId}`);

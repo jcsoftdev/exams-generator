@@ -1,6 +1,7 @@
 import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { LucideAngularModule } from 'lucide-angular';
+import { Role } from '@exams-generator/shared';
 import { ButtonComponent } from '../../ui/button/button.component';
 import { InputComponent } from '../../ui/input/input.component';
 import { SelectComponent } from '../../ui/select/select.component';
@@ -78,15 +79,15 @@ export class TenantSettingsComponent {
   protected readonly addOpen = signal(false);
   protected readonly newName = signal('');
   protected readonly newEmail = signal('');
-  protected readonly newRole = signal<UserRole>('teacher');
+  protected readonly newRole = signal<UserRole>(Role.Teacher);
   protected readonly tempPassword = signal<string | null>(null);
   protected readonly usersActionError = signal<string | null>(null);
   protected readonly pendingReset = signal<TenantUser | null>(null);
   protected readonly pendingDeactivate = signal<TenantUser | null>(null);
 
-  protected readonly roleOptions = [
-    { value: 'teacher' as UserRole, label: 'Profesor' },
-    { value: 'school_admin' as UserRole, label: 'Administrador' },
+  protected readonly roleOptions: readonly { value: UserRole; label: string }[] = [
+    { value: Role.Teacher, label: 'Profesor' },
+    { value: Role.SchoolAdmin, label: 'Administrador' },
   ];
   protected readonly activeCount = computed(() => this.teachers().filter((t) => t.active).length);
   protected readonly activeCountLabel = computed(() => {
@@ -218,7 +219,7 @@ export class TenantSettingsComponent {
   protected openAdd(): void {
     this.newName.set('');
     this.newEmail.set('');
-    this.newRole.set('teacher');
+    this.newRole.set(Role.Teacher);
     this.tempPassword.set(null);
     this.usersActionError.set(null);
     this.addOpen.set(true);

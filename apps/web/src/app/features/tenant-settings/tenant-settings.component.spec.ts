@@ -4,6 +4,7 @@ import { Observable, Subject, map, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { LucideAngularModule, Ellipsis, Plus, School, Check, ChevronDown } from 'lucide-angular';
+import { Role } from '@exams-generator/shared';
 import { TenantSettingsComponent } from './tenant-settings.component';
 import { TenantSettingsService } from './tenant-settings.service';
 import { TenantSettings } from './tenant-settings.models';
@@ -17,7 +18,7 @@ function user(o: Partial<TenantUser> & { id: string }): TenantUser {
     id: o.id,
     email: o.email ?? 'p@col.pe',
     name: o.name ?? 'Profesor Prueba',
-    role: o.role ?? 'teacher',
+    role: o.role ?? Role.Teacher,
     active: o.active ?? true,
     createdAt: '2026-07-18T00:00:00Z',
   };
@@ -212,7 +213,7 @@ describe('TenantSettingsComponent — tabs', () => {
 
   it('renders the role chip with the primary-100/tint-text token pair (not the ai/easy tag variants)', () => {
     const { compiled, fixture } = setup({
-      usersImpl: () => of([user({ id: 'u1', role: 'school_admin' })]),
+      usersImpl: () => of([user({ id: 'u1', role: Role.SchoolAdmin })]),
     });
     (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
     fixture.detectChanges();

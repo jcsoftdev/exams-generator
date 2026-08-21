@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { Difficulty } from "@exams-generator/shared";
+import { Difficulty, DashboardStats as SharedDashboardStats } from "@exams-generator/shared";
 import { EXAM_STATUSES, ExamStatus, QUESTION_STATUSES, QuestionStatus } from "../../db/schema/enums";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
@@ -7,19 +7,18 @@ import { ExamsRepository } from "../exams/exams.repository";
 
 const RECENT_EXAMS_LIMIT = 5;
 
-export interface DashboardStats {
-  readonly bank: {
-    readonly total: number;
-    readonly byDifficulty: Record<Difficulty, number>;
-    readonly byStatus: Record<QuestionStatus, number>;
-  };
-  readonly exams: {
-    readonly total: number;
-    readonly byStatus: Record<ExamStatus, number>;
-    readonly recent: ReadonlyArray<{ id: string; title: string; status: ExamStatus; createdAt: string }>;
-  };
-  readonly aiDrafts: { readonly pending: number };
-}
+/**
+ * Aliased from `@exams-generator/shared` rather than redeclared: it used to
+ * be declared again here and a third time on the web (`dashboard.models.ts`),
+ * with nothing tying a field renamed on the wire to a compile failure on the
+ * client (audit 2026-08-21, M4b). `ExamStatus`/`QuestionStatus` above stay
+ * imported from the DB schema's own enums — they drive `zeroedByExamStatus`/
+ * `zeroedByQuestionStatus`'s iteration — and are pinned against the shared
+ * DTO's identical unions by `exam-contract.spec.ts` and
+ * `bank-question-contract.spec.ts` respectively, same as every other module
+ * that returns a shared DTO.
+ */
+export type DashboardStats = SharedDashboardStats;
 
 function zeroedByDifficulty(): Record<Difficulty, number> {
   return { [Difficulty.Easy]: 0, [Difficulty.Medium]: 0, [Difficulty.Hard]: 0 };

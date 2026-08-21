@@ -9,3 +9,7 @@ export * from "./dto/exam-version-job.dto";
 export * from "./domain/grade-level";
 export * from "./dto/exam.dto";
 export * from "./dto/bank-question.dto";
+export * from "./dto/dashboard.dto";
+export * from "./dto/tenant.dto";
+export * from "./dto/user.dto";
+export * from "./dto/ai.dto";

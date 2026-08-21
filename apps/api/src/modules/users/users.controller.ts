@@ -1,5 +1,5 @@
 import { Body, Controller, Get, HttpCode, Param, ParseUUIDPipe, Patch, Post, Query, UseGuards } from "@nestjs/common";
-import { Role } from "@exams-generator/shared";
+import { CreateUserPayload, Role } from "@exams-generator/shared";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { Roles } from "../auth/roles.decorator";
@@ -21,10 +21,7 @@ export class UsersController {
   }
 
   @Post()
-  create(
-    @CurrentUser() user: AuthTokenPayload,
-    @Body() body: { email: string; name: string; role: "teacher" | "school_admin" },
-  ) {
+  create(@CurrentUser() user: AuthTokenPayload, @Body() body: CreateUserPayload) {
     return this.service.create(user, body.email, body.name, body.role);
   }
 

@@ -15,7 +15,7 @@ import {
   UseInterceptors,
 } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
-import { Role } from "@exams-generator/shared";
+import { DeleteTenantResult, Role } from "@exams-generator/shared";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { Roles } from "../auth/roles.decorator";
 import { RolesGuard } from "../auth/roles.guard";
@@ -83,7 +83,7 @@ export class TenantsController {
 
   @Delete(":id")
   @Roles(Role.PlatformAdmin)
-  async remove(@Param("id", ParseUUIDPipe) id: string): Promise<{ deleted: true }> {
+  async remove(@Param("id", ParseUUIDPipe) id: string): Promise<DeleteTenantResult> {
     await this.tenantsService.remove(id);
     return { deleted: true };
   }

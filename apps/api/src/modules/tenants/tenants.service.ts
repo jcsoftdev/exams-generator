@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { Inject, Injectable, NotFoundException } from "@nestjs/common";
+import type { Tenant, TenantListResult } from "@exams-generator/shared";
 import { count, eq, inArray } from "drizzle-orm";
 import { db } from "../../db/client";
 import {
@@ -42,12 +43,12 @@ export interface UploadedLogoFile {
 export class TenantsService {
   constructor(@Inject(STORAGE_PORT) private readonly storage: StoragePort) {}
 
-  async create(dto: CreateTenantDto) {
+  async create(dto: CreateTenantDto): Promise<Tenant> {
     const [tenant] = await db.insert(tenants).values({ name: dto.name, slug: dto.slug }).returning();
     return tenant;
   }
 
-  async findAll(page: number, pageSize: number): Promise<{ items: (typeof tenants.$inferSelect)[]; total: number }> {
+  async findAll(page: number, pageSize: number): Promise<TenantListResult> {
     const [{ value: total }] = await db.select({ value: count() }).from(tenants);
     const items = await db
       .select()
@@ -57,7 +58,7 @@ export class TenantsService {
     return { items, total };
   }
 
-  async findById(id: string) {
+  async findById(id: string): Promise<Tenant> {
     const [tenant] = await db.select().from(tenants).where(eq(tenants.id, id));
     if (!tenant) {
       throw new NotFoundException(`Tenant not found: ${id}`);
@@ -70,7 +71,7 @@ export class TenantsService {
     return !!tenant;
   }
 
-  async update(id: string, dto: UpdateTenantDto) {
+  async update(id: string, dto: UpdateTenantDto): Promise<Tenant> {
     await this.findById(id);
     const [tenant] = await db.update(tenants).set(dto).where(eq(tenants.id, id)).returning();
     return tenant;
@@ -158,7 +159,7 @@ export class TenantsService {
     }
   }
 
-  async uploadLogo(id: string, file: UploadedLogoFile) {
+  async uploadLogo(id: string, file: UploadedLogoFile): Promise<Tenant> {
     await this.findById(id);
 
     const mime = requireImageMime(file);

@@ -1,21 +1,14 @@
+import type { PagedTenantUsers, Role } from "@exams-generator/shared";
 import { and, count, eq } from "drizzle-orm";
 import { db } from "../../db/client";
 import { users } from "../../db/schema";
 
-export interface TenantUser {
-  readonly id: string;
-  readonly email: string;
-  readonly name: string | null;
-  readonly role: string;
-  readonly active: boolean;
-  readonly createdAt: string;
-}
-
-export interface PagedTenantUsers {
-  readonly items: readonly TenantUser[];
-  readonly total: number;
-}
-
+/**
+ * `TenantUser`/`PagedTenantUsers` used to be declared here a second time
+ * (`role` typed as a bare `string`, drifting from the `roleEnum` Postgres
+ * column) on top of the web's own copy — now both come from
+ * `@exams-generator/shared` (audit 2026-08-21, M4b).
+ */
 export class UsersRepository {
   async listByTenant(tenantId: string, page: number, pageSize: number): Promise<PagedTenantUsers> {
     const [{ value: total }] = await db.select({ value: count() }).from(users).where(eq(users.tenantId, tenantId));
@@ -56,7 +49,7 @@ export class UsersRepository {
     return row;
   }
 
-  async create(tenantId: string, email: string, name: string, role: string, passwordHash: string): Promise<{ id: string }> {
+  async create(tenantId: string, email: string, name: string, role: Role, passwordHash: string): Promise<{ id: string }> {
     const [row] = await db
       .insert(users)
       .values({ tenantId, email, name, passwordHash, role: role as never })

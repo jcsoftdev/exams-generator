@@ -2,6 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
+import { DeleteTenantResult } from '@exams-generator/shared';
 import { AdminTenant, CreateTenantPayload, PagedAdminTenants, UpdateTenantPayload } from './admin-tenants.models';
 
 /** Client for the `platform_admin`-only `/tenants` CRUD endpoints. */
@@ -22,7 +23,7 @@ export class AdminTenantsService {
     return this.http.patch<AdminTenant>(`${environment.apiBaseUrl}/tenants/${id}`, payload);
   }
 
-  remove(id: string): Observable<{ deleted: true }> {
-    return this.http.delete<{ deleted: true }>(`${environment.apiBaseUrl}/tenants/${id}`);
+  remove(id: string): Observable<DeleteTenantResult> {
+    return this.http.delete<DeleteTenantResult>(`${environment.apiBaseUrl}/tenants/${id}`);
   }
 }

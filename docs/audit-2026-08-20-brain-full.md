@@ -409,8 +409,35 @@ release workflow).
         clampeados y obligatorios, el web opcionales antes de clampear). No es una forma de
         wire.
       **Y salió un hallazgo funcional que nadie había visto — ver M13.**
-      **Queda**: ai, tenants, users, dashboard, y los dos campos (`aiGenerated`, `figureCode`)
-      que la API manda y el web nunca declaró.
+      **Cuarta tanda (2026-08-21) — CERRADO**: ai, tenants, users y dashboard, tres agentes en
+      paralelo. Otra vez, comparar valió más que mover:
+      - **`role` era `string` a secas en LOS DOS lados** (`TenantUser` del web y el del
+        repositorio de la API), teniendo el enum `Role` compartido desde siempre. Ahora es
+        `Role` — el enum COMPLETO, no el subconjunto creable, porque la tabla guarda
+        `platform_admin` (lo siembra `db/seed.ts`) y `listByTenant` no filtra por rol:
+        estrecharlo haría que un tenant con una fila así mintiera sobre su propia lista.
+      - `UserRole` era una unión escrita a mano en el web y **la misma unión literal inline**
+        en el `@Body()` del controlador. Ahora `CREATABLE_USER_ROLES`, y la validación en
+        runtime de `UsersService.create` valida contra esa lista en vez de una cadena de `!==`.
+      - **`temporaryPassword` se mantuvo SOLO en `CreateUserResult` y `ResetPasswordResult`.**
+        Es un secreto de un solo uso; meterlo como opcional en `TenantUser` habría dejado la
+        puerta abierta a que una respuesta futura lo filtre.
+      - El web declaraba `figureCode?: string | null` para la IA, pero la API nunca manda
+        `null` — omite el campo. Verificado: no hay un solo `=== null` en ninguna punta.
+      - `bank.byStatus` viaja al web y **nadie lo renderiza**: se queda porque la API deriva
+        `aiDrafts.pending` de esa misma consulta agrupada, y sacarlo costaría una segunda
+        consulta al banco por un número. Documentado, no borrado — es dato de más en el cable,
+        el inverso de M13 y mucho menos grave.
+      **El guard cazó una suposición, no solo un rename**: un agente intentó estrechar
+      `AiRevisedQuestion.alternatives` a una tupla de 5 (el validador de OpenRouter rechaza
+      cualquier otra cosa) y `pnpm typecheck` le mostró que los fixtures de la feature *bank*
+      construyen ese tipo con 2 elementos. Revirtió y lo documentó.
+      **Pendiente menor**: `generation_jobs` y `exam_version_jobs` usan el MISMO enum de
+      Postgres, y shared tiene dos uniones idénticas declaradas por separado
+      (`GenerationJobStatus` y `ExamVersionJobStatus`), cada una fijada contra la misma fuente
+      desde specs distintas. Consolidarlas es candidato futuro, no deuda urgente.
+      Verificado con el árbol quieto: **1003 non-e2e + 276 e2e** (API), **849** (web),
+      **42** (shared), `pnpm typecheck` limpio.
 
 - [ ] **M5 — Estado in-process bloquea una segunda instancia del API.**
       `ExamVersionJobEventsService` / `GenerationJobEventsService` son Subjects in-memory (el

@@ -15,6 +15,7 @@ import {
 } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { Throttle } from "@nestjs/throttler";
+import { AiRevisedQuestion } from "@exams-generator/shared";
 import { AccountThrottlerGuard, AI_PER_ACCOUNT_THROTTLE } from "../../common/account-throttler.guard";
 import { Response } from "express";
 import { CurrentUser } from "../auth/current-user.decorator";
@@ -22,12 +23,7 @@ import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
 import { ExtractQuestionService } from "./extract-question.service";
 import { GenerateQuestionsService, GenerateQuestionStreamEvent } from "./generate-questions.service";
-import {
-  AiGenerationError,
-  AiInvalidResponseError,
-  AiRateLimitError,
-  GeneratedQuestion,
-} from "./domain/ports/question-generator.port";
+import { AiGenerationError, AiInvalidResponseError, AiRateLimitError } from "./domain/ports/question-generator.port";
 import { ReviseQuestionService } from "./revise-question.service";
 
 interface GenerateQuestionsBody {
@@ -147,7 +143,7 @@ export class AiController {
     @CurrentUser() user: AuthTokenPayload,
     @Param("id") id: string,
     @Body() body: ReviseQuestionBody,
-  ): Promise<GeneratedQuestion> {
+  ): Promise<AiRevisedQuestion> {
     try {
       return await this.reviseService.revise(user, id, body.instruction ?? "");
     } catch (error) {
@@ -165,7 +161,7 @@ export class AiController {
   @Post("extract")
   @HttpCode(200)
   @UseInterceptors(FileInterceptor("file", { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
-  async extract(@UploadedFile() file: Express.Multer.File): Promise<GeneratedQuestion> {
+  async extract(@UploadedFile() file: Express.Multer.File): Promise<AiRevisedQuestion> {
     if (!file) {
       throw new BadRequestException("file is required");
     }
