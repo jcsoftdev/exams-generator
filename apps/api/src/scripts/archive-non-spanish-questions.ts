@@ -17,10 +17,19 @@ import { readsAsSpanish } from "../modules/bank/domain/reads-as-spanish";
  * English. Five rows out of 65k — small, and exactly the kind of thing nobody
  * finds by reading.
  *
- * Archiving rather than re-filing is deliberate: three of them would belong to
- * Inglés, but under which topic and grade is a guess, and the fourth is a maths
- * problem that belongs in no English course at all. Archiving takes them out of
- * the pool without inventing a classification.
+ * This is the LAST line, not the fix. The fix is upstream and comes in two
+ * shapes, depending on what the question is:
+ *
+ * - The question's subject is English (a grammar or vocabulary exercise, a
+ *   reading comprehension over an English passage): it belongs to the Inglés
+ *   course, where an English statement is the point. Re-file it.
+ * - The question is a Spanish exam question that someone published translated:
+ *   translate it back. `tools/harvest/check_translation.py` is what keeps a
+ *   translation from moving the key.
+ *
+ * `fix-non-spanish-questions.ts` did exactly that for the five rows this found,
+ * so this archiver should now find nothing. When it does fire, the row it names
+ * is a work item — re-file it or translate it — not something to leave archived.
  *
  * Idempotent: an already-archived row is skipped by `status <> 'archived'`.
  */
@@ -49,8 +58,9 @@ export async function archiveNonSpanishQuestions(): Promise<{ archived: number; 
 
     await db.update(questions).set({ status: "archived" }).where(eq(questions.id, row.id));
     archived++;
-    console.log(
-      `[archive-non-spanish] ${row.course}: ${(row.bodyTypst ?? "").replace(/\s+/g, " ").slice(0, 70)}` +
+    console.warn(
+      `[archive-non-spanish] ARCHIVED ${row.id} (${row.course}) — translate it or re-file it under ` +
+        `Inglés, then re-approve: ${(row.bodyTypst ?? "").replace(/\s+/g, " ").slice(0, 70)}` +
         ` — ${row.sourceName ?? "(sin fuente)"}`,
     );
   }

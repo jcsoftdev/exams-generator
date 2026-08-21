@@ -120,15 +120,30 @@ La app arma exámenes para estudiantes que rinden en castellano, así que un enu
 o francés no les sirve. **Única excepción**: los cursos de inglés, donde el enunciado en inglés
 ES la pregunta (`Inglés`, `Inglés como Lengua Extranjera`).
 
+**El arreglo es traducir o re-clasificar, no esconder.** Un enunciado en otro idioma tiene dos
+salidas según lo que la pregunta evalúe:
+
+- **Su materia ES el inglés** (ejercicio de gramática, vocabulario, comprensión de un texto en
+  inglés): va al curso de Inglés, donde el enunciado en inglés es justamente el punto.
+  Traducirlo lo destruiría — «Complete the text with prepositions» no tiene versión española
+  cuya respuesta siga siendo `on - in - at`.
+- **Es una pregunta española que alguien publicó traducida**: se traduce de vuelta. Con
+  `check_translation.py` para que la traducción no mueva la clave.
+
+Eso se hizo con las 5 que había en el banco (`fix-non-spanish-questions.ts`): 4 ejercicios de
+inglés que un blog había archivado bajo Razonamiento Verbal, Filosofía y Economía pasaron al
+curso de Inglés, y un problema de cronometría publicado en inglés se tradujo al castellano. De
+paso, uno de ellos traía la clave filtrada dentro de una alternativa («…applauded. Key : … Rpta
+. A»), que regalaba la respuesta; se recortó.
+
+Los dos controles que quedan puestos:
+
 - Antes de sembrar: `validate_lots.py` marca cada entrada cuyo enunciado no lee como español,
-  fuera de esos cursos. Así se evitó sembrar por error los originales en francés e inglés que
-  conviven con sus traducciones `-es` en `license-pending/`.
-- Después de sembrar: `archive-non-spanish-questions.ts` corre en cada arranque junto al
-  archivado de glifos impresentables, y saca del pool lo que se haya colado. Encontró 5 filas
-  entre 66 876: ejercicios de gramática inglesa que un blog había archivado bajo Razonamiento
-  Verbal, Filosofía y Economía, más un problema de cronometría publicado traducido al inglés.
-- Se archivan en vez de re-clasificarse: tres irían a Inglés pero bajo qué tema y qué grado es
-  una suposición, y el de cronometría no pertenece a ningún curso de inglés.
+  fuera de los cursos de inglés. Así se evita sembrar por error los originales en francés e
+  inglés que conviven con sus traducciones `-es` en `license-pending/`.
+- Después de sembrar: `archive-non-spanish-questions.ts` corre en cada arranque. Es la **última**
+  línea, no el arreglo: lo que archive es un pendiente — traducirlo o re-clasificarlo — y lo dice
+  en el log con el id.
 
 La heurística mira palabras funcionales cortas (`the`, `which`, `les`, `soit`), que es lo que
 de verdad separa los idiomas; los sustantivos técnicos viajan entre ellos. Hace falta que
