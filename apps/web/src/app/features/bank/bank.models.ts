@@ -1,4 +1,5 @@
 import { Difficulty } from '@exams-generator/shared';
+import type { BankQuestionDto } from '@exams-generator/shared';
 
 /**
  * The catalog and its labels are re-exported, not re-declared: the codes are a
@@ -12,50 +13,35 @@ export type { GradeLevel } from '@exams-generator/shared';
 export { GRADE_LEVEL_LABELS } from '../taxonomy/grade-level-labels';
 
 /**
- * Mirrors `QuestionListItem` from apps/api/src/modules/bank/bank.repository.ts.
- *
+ * The wire shape of `GET /bank/questions` (and its paginated/single-question
+ * siblings) comes from `@exams-generator/shared`, which the API compiles
+ * against too — re-exported here so this feature keeps its own vocabulary
+ * while there is only ONE declaration of the contract. It used to be
+ * `QuestionListItem` on the API's `bank.repository.ts` and `BankQuestion`
+ * here, redeclared field-by-field with nothing to catch a rename crossing the
+ * wire (audit 2026-08-21, M4b). See `BankQuestionDto`'s own doc for the real
+ * drift that comparison turned up (a wrongly-optional `status`/`type`, and an
+ * imprecise `alternatives: unknown` on the API side).
+ */
+export type { QuestionStatus, BankQuestionDto } from '@exams-generator/shared';
+
+export type QuestionOrigin = 'school' | 'ai' | 'central';
+
+/**
  * `GET /bank/questions` returns the bare `imageAssetId` (the asset row's
  * UUID), not a URL or mime type/dimensions. `GET /assets/:id` serves the
  * actual bytes — see `BankService.buildImageAssetUrl`/`fetchQuestionImage`.
+ *
+ * `origin` and `usedInExamCount` are NOT part of the shared wire contract:
+ * the repository never selects either, so neither one actually crosses the
+ * wire yet — see GAP backend #3 in the plan
+ * (`docs/superpowers/plans/2026-07-18-screens-frontend.md`) re: `origin`
+ * deriving from `tenantId === null` (never truly `'ai'` yet). They stay
+ * web-local, optional fields ahead of that backend work landing.
  */
-export type QuestionStatus = 'draft' | 'approved' | 'archived';
-export type QuestionOrigin = 'school' | 'ai' | 'central';
-
-export interface BankQuestion {
-  readonly id: string;
-  readonly tenantId: string | null;
-  readonly courseId: string;
-  readonly topicId: string;
-  readonly difficulty: Difficulty;
-  readonly gradeLevel: string;
-  readonly correctAnswer: string;
-  readonly imageAssetId: string | null;
-  /**
-   * Optional (retro-compat): the unpaginated `GET /bank/questions` legacy
-   * shape doesn't send these. Populated by the paginated Task 5 flow — see
-   * GAP backend #3 in the plan (`docs/superpowers/plans/2026-07-18-screens-frontend.md`)
-   * re: `origin` deriving from `tenantId === null` (never truly `'ai'` yet).
-   */
-  readonly status?: QuestionStatus;
-  readonly type?: 'image' | 'structured';
+export interface BankQuestion extends BankQuestionDto {
   readonly origin?: QuestionOrigin;
   readonly usedInExamCount?: number;
-  /**
-   * Structured (`type: 'structured'`) questions carry their statement +
-   * options directly on the row (`image` questions leave these `null`).
-   * `GET /bank/questions` returns them (see `QuestionListItem` in
-   * apps/api/src/modules/bank/bank.repository.ts) — the bank UI renders them
-   * so text questions aren't shown as blank cards.
-   */
-  readonly bodyTypst?: string | null;
-  readonly alternatives?: readonly string[] | null;
-  /**
-   * Where a seeded question came from ("UNCP — Admisión 2021-I, Álgebra,
-   * pregunta 4"). Load-bearing in the list: an `image` question has no
-   * statement, so without this its row can only show its answer letter, and a
-   * topic full of them reads as a wall of identical rows.
-   */
-  readonly sourceName?: string | null;
 }
 
 /**

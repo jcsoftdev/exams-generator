@@ -1,4 +1,12 @@
 import { Difficulty } from '@exams-generator/shared';
+import type {
+  ExamDetail,
+  ExamDetailQuestion,
+  ExamListItem,
+  ExamListResult,
+  ExamStatus,
+  QuestionType,
+} from '@exams-generator/shared';
 
 /**
  * Grade levels, stages and the mapping between them are re-exported from
@@ -11,7 +19,16 @@ export { GRADE_LEVELS, STAGES, stageForGrade } from '@exams-generator/shared';
 export type { GradeLevel, Stage } from '@exams-generator/shared';
 export { GRADE_LEVEL_LABELS, STAGE_LABELS } from '../taxonomy/grade-level-labels';
 
-export type ExamStatus = 'draft' | 'ready';
+/**
+ * The exam status union, the `GET /exams` list row and its paginated
+ * response, and the `GET /exams/:examId` detail (header + questions, plus
+ * the question-type union) all come from `@exams-generator/shared`, which
+ * the API compiles against too — re-exported here so this feature keeps its
+ * own local imports. They used to be declared a second time on each side,
+ * with nothing tying a field renamed on the wire to a compile failure on
+ * the client (audit 2026-08-21, M4b).
+ */
+export type { ExamStatus, QuestionType, ExamListItem, ExamListResult, ExamDetailQuestion, ExamDetail };
 
 /**
  * GAP: the backend already exposes `GET /courses` and `GET /topics` via
@@ -74,42 +91,6 @@ export interface ReplaceQuestionResult {
 export interface ConfirmExamResult {
   readonly id: string;
   readonly status: ExamStatus;
-}
-
-export type QuestionType = 'image' | 'structured';
-
-/**
- * One selected question as returned by `GET /exams/:examId` (mirrors
- * `ExamDetailQuestionRecord` in apps/api/src/modules/exams/exams.repository.ts).
- * `type='image'` questions carry `imageAssetId` (`bodyTypst`/`alternatives`/
- * `figureCode` are `null`); `type='structured'` questions carry
- * `bodyTypst`/`alternatives`/`figureCode` instead (`imageAssetId` is `null`).
- */
-export interface ExamDetailQuestion {
-  readonly id: string;
-  readonly position: number;
-  readonly type: QuestionType;
-  readonly courseId: string;
-  /** Display name for `courseId` — the review screen renders this, never the uuid (audit 2026-08-15). */
-  readonly courseName: string;
-  readonly topicId: string;
-  /** Display name for `topicId` — same reason as `courseName`. */
-  readonly topicName: string;
-  readonly difficulty: Difficulty;
-  readonly correctAnswer: string;
-  readonly imageAssetId: string | null;
-  readonly bodyTypst: string | null;
-  readonly alternatives: readonly string[] | null;
-  readonly figureCode: string | null;
-}
-
-/** `GET /exams/:examId` response — the exam header plus its full selection, ordered by position. */
-export interface ExamDetail {
-  readonly id: string;
-  readonly title: string;
-  readonly gradeLevel: string;
-  readonly status: ExamStatus;
-  readonly questions: readonly ExamDetailQuestion[];
 }
 
 /**
@@ -192,23 +173,6 @@ export interface ExamListFilters {
   readonly search?: string;
   readonly page?: number;
   readonly pageSize?: number;
-}
-
-/** One row in the `GET /exams` (S1) response `items` array. */
-export interface ExamListItem {
-  readonly id: string;
-  readonly title: string;
-  readonly gradeLevel: string;
-  readonly status: ExamStatus;
-  readonly questionCount: number;
-  readonly versionCount: number;
-  readonly createdAt: string;
-}
-
-/** `GET /exams` (S1) response. */
-export interface ExamListResult {
-  readonly items: readonly ExamListItem[];
-  readonly total: number;
 }
 
 /** `POST /exams/:id/duplicate` (S2) response — the new draft copy. */

@@ -390,9 +390,27 @@ release workflow).
         (`features/taxonomy/grade-level-labels.ts`) — tres copias son tres oportunidades de que
         "4° secundaria" se vuelva "4to secundaria" en una sola pantalla.
       - `STAGE_LABELS` se borró de la API: copy en español que ningún código del servidor leía.
-      **Queda**: los contratos de respuesta por feature (bank, exams, ai, tenants, users,
-      dashboard). El guard ya está puesto, así que cada uno que se mueva queda protegido desde
-      ese momento.
+      **Tercera tanda (2026-08-21)**: contratos de respuesta de **exams** y **bank**, en
+      paralelo. Mover el tipo fue lo de menos; lo que valió fue lo que apareció al comparar
+      campo por campo:
+      - `ExamListItem` de la API tenía `status: string` a secas — nada impedía que esa copia se
+        alejara de los estados válidos. Ahora es `ExamStatus`.
+      - En bank, `status` y `type` estaban OPCIONALES del lado web con un comentario que
+        culpaba a "la forma legacy del GET sin paginar". Se leyó el repositorio: las dos
+        sobrecargas seleccionan exactamente el mismo set de columnas, así que ninguno de los
+        dos falta nunca. El comentario describía un problema que no existía. Ahora son
+        obligatorios.
+      - `alternatives` es `unknown` en la API (jsonb sin `$type` de Drizzle) y
+        `readonly string[] | null` en el web. Lo que de verdad cruza el cable es lo segundo —
+        cada lectura en `bank.service.ts` castea a `readonly string[]` y cada escritura guarda
+        un array de strings. El contrato dice lo que se manda; el tipo de la API se queda
+        `unknown` porque es la descripción honesta de lo que garantiza la columna.
+      - `ExamListFilters` NO se movió: los dos lados difieren por diseño (la API los tiene
+        clampeados y obligatorios, el web opcionales antes de clampear). No es una forma de
+        wire.
+      **Y salió un hallazgo funcional que nadie había visto — ver M13.**
+      **Queda**: ai, tenants, users, dashboard, y los dos campos (`aiGenerated`, `figureCode`)
+      que la API manda y el web nunca declaró.
 
 - [ ] **M5 — Estado in-process bloquea una segunda instancia del API.**
       `ExamVersionJobEventsService` / `GenerationJobEventsService` son Subjects in-memory (el
@@ -482,6 +500,19 @@ release workflow).
       escala real de la muestra que el audit señaló — ~1% de ruido duro, no el 10% que la
       lectura por palabras sugiere.
       Verificado: 973 non-e2e + 276 e2e.
+
+- [ ] **M13 — La advertencia de "pregunta usada en N exámenes" no puede aparecer nunca.**
+      Encontrado al compartir el contrato de bank (2026-08-21, M4b). El web muestra
+      "Usada en: {{ q.usedInExamCount ?? 0 }} exámenes" y condiciona un aviso a
+      `(question.usedInExamCount ?? 0) > 0` antes de editar una pregunta aprobada — pero
+      **`usedInExamCount` no lo selecciona ningún query de `bank.repository.ts`**, así que
+      siempre llega `undefined` y el `?? 0` lo vuelve 0. El detalle dice siempre "0 exámenes" y
+      el aviso de que hay PDFs ya generados no se muestra jamás. Mismo caso para `origin`: la
+      rama `@else if (q.origin === 'ai')` del template es inalcanzable (el read-only sí
+      sobrevive porque cae en `tenantId === null`).
+      Confianza 100% — verificado leyendo las dos puntas. El arreglo es del lado API: contar
+      `exam_questions` por pregunta y exponerlo, o quitar de la UI lo que no se puede sostener.
+      Functional.
 
 ### Low / Info
 

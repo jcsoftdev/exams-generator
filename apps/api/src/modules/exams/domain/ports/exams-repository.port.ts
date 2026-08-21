@@ -1,4 +1,9 @@
-import { Difficulty } from "@exams-generator/shared";
+import {
+  Difficulty,
+  ExamDetail as SharedExamDetail,
+  ExamDetailQuestion as SharedExamDetailQuestion,
+  ExamListItem as SharedExamListItem,
+} from "@exams-generator/shared";
 import { ExamStatus, QuestionType } from "../../../../db/schema/enums";
 import { SyllabusEntry, TemplateRow } from "../resolve-blueprint";
 
@@ -84,16 +89,18 @@ export interface ExamListFilters {
   readonly pageSize: number;
 }
 
-/** `GET /exams` (S1) list row — `questionCount`/`versionCount` are correlated subquery counts, not joins (avoids row fan-out). */
-export interface ExamListItem {
-  readonly id: string;
-  readonly title: string;
-  readonly gradeLevel: string;
-  readonly status: string;
-  readonly questionCount: number;
-  readonly versionCount: number;
-  readonly createdAt: string;
-}
+/**
+ * `GET /exams` (S1) list row — `questionCount`/`versionCount` are correlated
+ * subquery counts, not joins (avoids row fan-out).
+ *
+ * Aliased from `@exams-generator/shared` rather than redeclared: it used to
+ * be a second, looser copy here (`status` typed as a bare `string`, not
+ * `ExamStatus`), with nothing tying a rename on the wire to a compile
+ * failure on the client (audit 2026-08-21, M4b). The API keeps its own
+ * vocabulary at the call sites; the declaration itself now lives in exactly
+ * one place.
+ */
+export type ExamListItem = SharedExamListItem;
 
 export interface BlueprintRowRecord {
   readonly id: string;
@@ -193,32 +200,17 @@ export interface ExamForGenerationRecord {
  * duality as `SelectedQuestionForGeneration` above, but exposes
  * `imageAssetId` (not `imageStorageKey`) — the review screen only needs an
  * asset reference, never the raw storage key.
+ *
+ * Aliased from `@exams-generator/shared` — it used to be declared again,
+ * field-for-field, as `ExamDetailQuestion` in the web's `exams.models.ts`
+ * (audit 2026-08-21, M4b). Unlike `ExamVersionJobRecord`, this record
+ * carries no storage-only field on top of the wire shape, so there is
+ * nothing for the API's copy to be wider about — it IS the contract.
  */
-export interface ExamDetailQuestionRecord {
-  readonly id: string;
-  readonly position: number;
-  readonly type: QuestionType;
-  readonly courseId: string;
-  /** Display name for `courseId` — the review screen used to render the raw uuid (audit 2026-08-15). */
-  readonly courseName: string;
-  readonly topicId: string;
-  /** Display name for `topicId` — same reason as `courseName`. */
-  readonly topicName: string;
-  readonly difficulty: Difficulty;
-  readonly correctAnswer: string;
-  readonly imageAssetId: string | null;
-  readonly bodyTypst: string | null;
-  readonly alternatives: readonly string[] | null;
-  readonly figureCode: string | null;
-}
+export type ExamDetailQuestionRecord = SharedExamDetailQuestion;
 
-export interface ExamDetailRecord {
-  readonly id: string;
-  readonly title: string;
-  readonly gradeLevel: string;
-  readonly status: ExamStatus;
-  readonly questions: readonly ExamDetailQuestionRecord[];
-}
+/** `GET /exams/:examId` response — see `ExamDetailQuestionRecord` above for why this is an alias, not a second declaration. */
+export type ExamDetailRecord = SharedExamDetail;
 
 /** One cell in a `countStock()` batch — same criteria shape as `Candidate`/`BlueprintRow`, minus `count` (B1). */
 export interface StockCellFilter {

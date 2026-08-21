@@ -203,6 +203,11 @@ describe('BankService', () => {
         gradeLevel: 'pre',
         correctAnswer: 'a',
         imageAssetId: null,
+        status: 'approved',
+        type: 'image',
+        bodyTypst: null,
+        alternatives: null,
+        sourceName: null,
       };
       let result: BankQuestion | undefined;
 

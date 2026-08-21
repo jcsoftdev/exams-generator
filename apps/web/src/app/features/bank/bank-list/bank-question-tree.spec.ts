@@ -15,6 +15,9 @@ function q(o: Partial<BankQuestion> & { id: string; courseId: string; topicId: s
     imageAssetId: o.imageAssetId ?? null,
     status: o.status ?? 'approved',
     type: o.type ?? 'image',
+    bodyTypst: o.bodyTypst ?? null,
+    alternatives: o.alternatives ?? null,
+    sourceName: o.sourceName ?? null,
     origin: o.origin ?? 'school',
     usedInExamCount: o.usedInExamCount ?? 0,
   };

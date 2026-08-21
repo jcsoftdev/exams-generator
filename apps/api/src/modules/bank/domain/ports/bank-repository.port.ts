@@ -71,6 +71,25 @@ export interface UpdateStructuredQuestionRecord {
   readonly figureCode: string | undefined;
 }
 
+/**
+ * One row of `GET /bank/questions` and its single-question siblings.
+ *
+ * The wire contract this crosses the HTTP boundary as is `BankQuestionDto`
+ * (`@exams-generator/shared`), pinned against this type by
+ * `bank-question-contract.spec.ts` — see that file, and the DTO's own doc,
+ * for the differences found comparing this to the web's old separately
+ * declared `BankQuestion` (audit 2026-08-21, M4b):
+ *
+ * - `aiGenerated` and `figureCode` DO cross the wire (selected unconditionally,
+ *   returned unmodified) but aren't part of the shared DTO — the web's type
+ *   never declared them, so this stays wider on purpose, same shape as
+ *   `ExamVersionJobRecord` carrying storage-only fields `ExamVersionJob` omits.
+ * - `alternatives` stays `unknown` here: it's a raw jsonb column with no
+ *   Drizzle `$type`, so `unknown` is the honest static type of what Drizzle
+ *   hands back. The DTO narrows it to `readonly string[] | null`, which is
+ *   what every write path actually stores and every read path already casts
+ *   it to (see `bank.service.ts`).
+ */
 export interface QuestionListItem {
   readonly id: string;
   readonly tenantId: string | null;
