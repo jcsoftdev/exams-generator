@@ -669,6 +669,26 @@ describe("Exams module (e2e)", () => {
       expect(detail.body.questions.length).toBeGreaterThan(0);
     });
 
+    it("numbers repeated copies instead of stacking 'Copia de' prefixes", async () => {
+      // Audit 2026-08-20 L7: four uses as a template produced
+      // "Copia de Copia de Copia de Copia de <title>".
+      const second = await request(app.getHttpServer())
+        .post(`/exams/${examId}/duplicate`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(201);
+      createdExamIds.push(second.body.id);
+      expect(second.body.title).toBe(`Copia de ${originalTitle} (2)`);
+
+      // Duplicating the COPY is still a copy of the same exam, not a copy of a copy.
+      const third = await request(app.getHttpServer())
+        .post(`/exams/${second.body.id}/duplicate`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(201);
+      createdExamIds.push(third.body.id);
+      expect(third.body.title).toBe(`Copia de ${originalTitle} (3)`);
+      expect(third.body.title).not.toContain("Copia de Copia");
+    });
+
     it("404 on cross-tenant duplicate", async () => {
       await request(app.getHttpServer())
         .post(`/exams/${examId}/duplicate`)

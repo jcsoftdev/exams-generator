@@ -20,6 +20,7 @@ import {
   tenants,
   topics,
 } from "../../db/schema";
+import { duplicateTitle } from "./domain/duplicate-title";
 import { SyllabusEntry, TemplateRow } from "./domain/resolve-blueprint";
 import {
   ActiveCycleRecord,
@@ -144,7 +145,8 @@ export class ExamsRepository implements ExamsRepositoryPort {
 
   /**
    * `POST /exams/:examId/duplicate` (S2) — "usar de plantilla": clones the
-   * exam row (title `"Copia de <original>"`, always `draft`, never
+   * exam row (title from `duplicateTitle` — `"Copia de X"`, then
+   * `"Copia de X (2)"`; never `"Copia de Copia de X"`), always `draft`, never
    * versions), its blueprint rows, and its current selection in ONE
    * transaction. `blueprintRowId` on the copied `exam_questions` rows is
    * remapped through `rowIdMap` (old row id -> new row id) so the copy's
@@ -164,11 +166,26 @@ export class ExamsRepository implements ExamsRepositoryPort {
         .where(and(eq(exams.id, examId), eq(exams.tenantId, tenantId)));
       if (!original) return undefined;
 
+      // Titles already taken in this tenant that could collide with the copy's.
+      // Fetched inside the transaction, but NOT a uniqueness guarantee: there is
+      // no unique index on (tenant_id, title) and none is wanted — a teacher may
+      // legitimately name two exams the same. Two duplications racing can land
+      // on the same number, which is a cosmetic tie, not a broken row.
+      const title = duplicateTitle(
+        original.title,
+        (
+          await tx
+            .select({ title: exams.title })
+            .from(exams)
+            .where(eq(exams.tenantId, tenantId))
+        ).map((row) => row.title),
+      );
+
       const [copy] = await tx
         .insert(exams)
         .values({
           tenantId,
-          title: `Copia de ${original.title}`,
+          title,
           gradeLevel: original.gradeLevel,
           status: "draft",
           createdBy,

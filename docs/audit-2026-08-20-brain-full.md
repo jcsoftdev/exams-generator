@@ -365,8 +365,21 @@ release workflow).
 - [ ] **L6** — `bypassSecurityTrustResourceUrl(url + PREVIEW_FRAGMENT)` duplicado en
       `ai-review-queue.component.ts:627` y `generation-job-detail.component.ts:322` — misma
       regla en dos sitios (son blob URLs propios, no hay riesgo XSS; es dedup).
-- [ ] **L7** — Nombres "Copia de Copia de Copia de Copia de …" — el duplicado no incrementa
+- [x] **L7** — Nombres "Copia de Copia de Copia de Copia de …" — el duplicado no incrementa
       (`(2)`, `(3)`) y el dashboard se llena de títulos idénticos.
+      **HECHO (2026-08-21)**: `duplicateTitle()` (`modules/exams/domain/duplicate-title.ts`,
+      spec propia) decide el título y `duplicateExam` lo usa: "Copia de X", luego
+      "Copia de X (2)", "(3)". Duplicar una COPIA da otra copia del mismo examen, no una copia
+      de segunda generación — que es como lo piensa cualquiera. Ocupa el primer número libre,
+      así que borrar la (2) la reutiliza en vez de saltar a la (4).
+      **Lo que casi se cuela**: la primera versión recortaba cualquier `(n)` final, y con eso
+      "Simulacro (2024)" perdía el año. Nada distingue nuestro "(2)" del "(2024)" del docente,
+      así que la regla se inclina a conservar lo que él escribió: solo se recorta un número de
+      **1 a 3 dígitos** y **solo** de un título que ya empieza con "Copia de".
+      Los títulos tomados se leen dentro de la transacción, pero NO es garantía de unicidad:
+      no hay índice único en `(tenant_id, title)` ni se quiere — un docente puede querer dos
+      exámenes con el mismo nombre. Dos duplicaciones en carrera pueden empatar de número; es
+      un empate cosmético, no una fila rota.
 - [ ] **Info** — Sin LICENSE en el repo (todo `private: true` — decisión válida; los datos
       cosechados sí tienen política en `docs/question-collection-pipeline.md`).
 
