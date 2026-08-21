@@ -372,10 +372,27 @@ release workflow).
       "Cantidad total = 30" → "29 preguntas pedidas en 29 celdas", sin mensaje del porqué
       (resto de la división entre cursos). El docente cree que pidió 30. Functional.
 
-- [ ] **M9 — Rate limit de IA solo por IP global (100/min), nada por cuenta.** Los endpoints
+- [x] **M9 — Rate limit de IA solo por IP global (100/min), nada por cuenta.** Los endpoints
       caros (`/ai/questions/generate`, `/ai/extract`) comparten el default; un colegio entero
       detrás de un NAT comparte la misma cubeta y un solo usuario puede agotarla (o
       inflar el gasto LLM si H6 no se ataca). Abuse.
+      **HECHO (2026-08-21)**: `AccountThrottlerGuard` (`common/account-throttler.guard.ts`)
+      cuenta por CUENTA, no por IP, y se aplica a `AiController` y `AiJobsController` con
+      `AI_PER_ACCOUNT_THROTTLE` (30/min). La IP es la unidad equivocada para un colegio: la
+      sala de profesores comparte un NAT, así que la cubeta por IP castiga a los colegas del
+      que se pasa, mientras que quien de verdad abusa se cambia de IP con el dato del celular.
+      La cuenta es lo que gasta la plata en esas rutas, así que es lo que se cuenta.
+      - **El orden de los guards ES el arreglo**: `@UseGuards(JwtAuthGuard,
+        AccountThrottlerGuard)`. Al revés, `request.user` no existe todavía y el guard degrada
+        en silencio a limitar por IP. Y no lo detectaría ninguna prueba de comportamiento,
+        porque el `skipIf: NODE_ENV === "test"` del `ThrottlerModule` apaga el throttler entero
+        bajo tests — por eso hay una spec que verifica el ORDEN de los guards por metadata en
+        los dos controladores, además de la del tracker.
+      - Si alguna vez corriera sin autenticar, cae a `super.getTracker` (la IP): una
+        configuración mala cuesta el límite fino, no todo el límite.
+      - 30/min está muy por encima de lo que hace un profesor a mano (generar, leer, revisar) y
+        muy por debajo de lo que hace un script.
+      Verificado: 989 non-e2e + 276 e2e.
 
 - [ ] **M10 — Privacidad: sin export ni retención de datos personales.** `users.email/name`
       sin política de retención; "Desactivar" conserva el registro para siempre; no hay

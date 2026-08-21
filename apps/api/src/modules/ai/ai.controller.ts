@@ -14,6 +14,8 @@ import {
   UseInterceptors,
 } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
+import { Throttle } from "@nestjs/throttler";
+import { AccountThrottlerGuard, AI_PER_ACCOUNT_THROTTLE } from "../../common/account-throttler.guard";
 import { Response } from "express";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
@@ -67,7 +69,11 @@ function mapAiProviderError(error: unknown): never {
 const MAX_IMAGE_UPLOAD_BYTES = 5 * 1024 * 1024;
 
 @Controller("ai/questions")
-@UseGuards(JwtAuthGuard)
+// Order matters: `AccountThrottlerGuard` reads `request.user`, which only
+// exists after `JwtAuthGuard` has verified the token. Guards run in the order
+// they are listed (audit 2026-08-20, M9).
+@UseGuards(JwtAuthGuard, AccountThrottlerGuard)
+@Throttle(AI_PER_ACCOUNT_THROTTLE)
 export class AiController {
   constructor(
     private readonly service: GenerateQuestionsService,

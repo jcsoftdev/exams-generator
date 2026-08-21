@@ -3,6 +3,8 @@ import { Response } from "express";
 import { filter } from "rxjs";
 import { clampPagination } from "../../common/pagination.util";
 import { CurrentUser } from "../auth/current-user.decorator";
+import { Throttle } from "@nestjs/throttler";
+import { AccountThrottlerGuard, AI_PER_ACCOUNT_THROTTLE } from "../../common/account-throttler.guard";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
 import { GenerationJobEventsService } from "./generation-job-events.service";
@@ -18,7 +20,11 @@ const TERMINAL_STATUSES: readonly string[] = ["completed", "failed", "cancelled"
  * role restriction).
  */
 @Controller("ai/questions/jobs")
-@UseGuards(JwtAuthGuard)
+// Same account-keyed limit as `AiController` — enqueuing a job is the most
+// expensive thing an account can do here. Guard order matters; see
+// `account-throttler.guard.ts`.
+@UseGuards(JwtAuthGuard, AccountThrottlerGuard)
+@Throttle(AI_PER_ACCOUNT_THROTTLE)
 export class AiJobsController {
   constructor(
     private readonly service: GenerationJobsService,
