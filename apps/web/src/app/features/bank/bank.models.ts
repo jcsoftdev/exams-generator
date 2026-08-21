@@ -1,47 +1,15 @@
 import { Difficulty } from '@exams-generator/shared';
 
 /**
- * LOCAL grade-level catalog for apps/web's bank feature.
- *
- * Mirrors the fixed backend catalog defined in
- * apps/api/src/modules/exams/domain/value-objects/grade-level.ts (1ro-6to
- * primaria, 1ro-5to secundaria, pre). That file is NOT exported from
- * @exams-generator/shared yet — its own comment flags it should be promoted
- * "if/when the bank module needs the same catalog", which is exactly this
- * feature. Kept as a local duplicate (same pattern as auth.models.ts) until
- * that promotion happens; replace this with a shared import once it does.
+ * The catalog and its labels are re-exported, not re-declared: the codes are a
+ * contract shared with the API (`@exams-generator/shared`) and the Spanish
+ * labels live once in the taxonomy feature. This file used to hold its own copy
+ * of both, with a comment promising to promote them "if/when the bank module
+ * needs the same catalog" — it did (audit 2026-08-20, M4).
  */
-export const GRADE_LEVELS = [
-  'primaria_1',
-  'primaria_2',
-  'primaria_3',
-  'primaria_4',
-  'primaria_5',
-  'primaria_6',
-  'secundaria_1',
-  'secundaria_2',
-  'secundaria_3',
-  'secundaria_4',
-  'secundaria_5',
-  'pre',
-] as const;
-
-export type GradeLevel = (typeof GRADE_LEVELS)[number];
-
-export const GRADE_LEVEL_LABELS: Record<GradeLevel, string> = {
-  primaria_1: '1° primaria',
-  primaria_2: '2° primaria',
-  primaria_3: '3° primaria',
-  primaria_4: '4° primaria',
-  primaria_5: '5° primaria',
-  primaria_6: '6° primaria',
-  secundaria_1: '1° secundaria',
-  secundaria_2: '2° secundaria',
-  secundaria_3: '3° secundaria',
-  secundaria_4: '4° secundaria',
-  secundaria_5: '5° secundaria',
-  pre: 'Pre-admisión',
-};
+export { GRADE_LEVELS } from '@exams-generator/shared';
+export type { GradeLevel } from '@exams-generator/shared';
+export { GRADE_LEVEL_LABELS } from '../taxonomy/grade-level-labels';
 
 /**
  * Mirrors `QuestionListItem` from apps/api/src/modules/bank/bank.repository.ts.

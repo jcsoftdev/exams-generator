@@ -1,72 +1,15 @@
 import { Difficulty } from '@exams-generator/shared';
 
 /**
- * LOCAL grade-level catalog for apps/web's exams feature.
- *
- * Intentional duplicate of `GRADE_LEVELS`/`GRADE_LEVEL_LABELS` in
- * apps/web/src/app/features/bank/bank.models.ts (same "kept as a local
- * duplicate" pattern that file already uses, itself borrowed from
- * auth.models.ts). Both mirror the backend's fixed catalog at
- * apps/api/src/modules/exams/domain/value-objects/grade-level.ts. Kept
- * local instead of importing from the bank feature to avoid cross-feature
- * coupling between lanes; replace every copy with a shared import once that
- * catalog is promoted to `@exams-generator/shared`.
+ * Grade levels, stages and the mapping between them are re-exported from
+ * `@exams-generator/shared`: they are a contract the API compiles against too,
+ * and they had been written out separately here, in bank.models.ts and in
+ * ai.models.ts (audit 2026-08-20, M4). The Spanish labels are UI copy and live
+ * once in the taxonomy feature.
  */
-export const GRADE_LEVELS = [
-  'primaria_1',
-  'primaria_2',
-  'primaria_3',
-  'primaria_4',
-  'primaria_5',
-  'primaria_6',
-  'secundaria_1',
-  'secundaria_2',
-  'secundaria_3',
-  'secundaria_4',
-  'secundaria_5',
-  'pre',
-] as const;
-
-export type GradeLevel = (typeof GRADE_LEVELS)[number];
-
-export const GRADE_LEVEL_LABELS: Record<GradeLevel, string> = {
-  primaria_1: '1° primaria',
-  primaria_2: '2° primaria',
-  primaria_3: '3° primaria',
-  primaria_4: '4° primaria',
-  primaria_5: '5° primaria',
-  primaria_6: '6° primaria',
-  secundaria_1: '1° secundaria',
-  secundaria_2: '2° secundaria',
-  secundaria_3: '3° secundaria',
-  secundaria_4: '4° secundaria',
-  secundaria_5: '5° secundaria',
-  pre: 'Pre-admisión',
-};
-
-/**
- * Educational stage — mirrors the backend's `Stage` catalog at
- * apps/api/src/modules/exams/domain/value-objects/grade-level.ts. Courses
- * belong to exactly one stage; the exam builder filters the catalog by the
- * stage derived from the selected grade level.
- */
-export const STAGES = ['escuela', 'colegio', 'preuniversitario'] as const;
-
-export type Stage = (typeof STAGES)[number];
-
-export const STAGE_LABELS: Record<Stage, string> = {
-  escuela: 'Escuela (Primaria)',
-  colegio: 'Colegio (Secundaria)',
-  preuniversitario: 'Preuniversitario',
-};
-
-/** Maps a grade level to its educational stage — the axis the course catalog is divided by. */
-export function stageForGrade(grade: GradeLevel): Stage {
-  if (grade === 'pre') {
-    return 'preuniversitario';
-  }
-  return grade.startsWith('secundaria_') ? 'colegio' : 'escuela';
-}
+export { GRADE_LEVELS, STAGES, stageForGrade } from '@exams-generator/shared';
+export type { GradeLevel, Stage } from '@exams-generator/shared';
+export { GRADE_LEVEL_LABELS, STAGE_LABELS } from '../taxonomy/grade-level-labels';
 
 export type ExamStatus = 'draft' | 'ready';
 

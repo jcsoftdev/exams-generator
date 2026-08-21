@@ -1,47 +1,14 @@
 import { Difficulty } from '@exams-generator/shared';
 
 /**
- * LOCAL grade-level catalog for apps/web's ai feature.
- *
- * Duplicated from `features/bank/bank.models.ts` (same fixed backend
- * catalog, see that file's comment for the full rationale). Kept as a
- * local copy — same convention the bank feature already follows for
- * auth.models.ts — rather than cross-importing another feature folder or
- * editing `packages/shared` (integrator-owned, see
- * docs/superpowers/PARALLEL-TODO.md Reglas de coordinación). Promote to
- * `@exams-generator/shared` once a third feature needs it.
+ * Re-exported, not re-declared. This file's own comment said to promote the
+ * catalog "once a third feature needs it" — bank, ai and exams all did, so the
+ * codes moved to `@exams-generator/shared` (where the API compiles against them
+ * too) and the Spanish labels to the taxonomy feature (audit 2026-08-20, M4).
  */
-export const GRADE_LEVELS = [
-  'primaria_1',
-  'primaria_2',
-  'primaria_3',
-  'primaria_4',
-  'primaria_5',
-  'primaria_6',
-  'secundaria_1',
-  'secundaria_2',
-  'secundaria_3',
-  'secundaria_4',
-  'secundaria_5',
-  'pre',
-] as const;
-
-export type GradeLevel = (typeof GRADE_LEVELS)[number];
-
-export const GRADE_LEVEL_LABELS: Record<GradeLevel, string> = {
-  primaria_1: '1° primaria',
-  primaria_2: '2° primaria',
-  primaria_3: '3° primaria',
-  primaria_4: '4° primaria',
-  primaria_5: '5° primaria',
-  primaria_6: '6° primaria',
-  secundaria_1: '1° secundaria',
-  secundaria_2: '2° secundaria',
-  secundaria_3: '3° secundaria',
-  secundaria_4: '4° secundaria',
-  secundaria_5: '5° secundaria',
-  pre: 'Pre-admisión',
-};
+export { GRADE_LEVELS } from '@exams-generator/shared';
+export type { GradeLevel } from '@exams-generator/shared';
+export { GRADE_LEVEL_LABELS } from '../taxonomy/grade-level-labels';
 
 /**
  * `POST /ai/questions/generate` request body (design doc §5.2). Course and

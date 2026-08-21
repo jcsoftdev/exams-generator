@@ -377,9 +377,22 @@ release workflow).
       **Comprobado que muerde**: renombrar `completedCount` en el tipo compartido tumba
       `pnpm typecheck` con errores en el web. Antes de esto, el mismo rename pasaba los 993
       tests de la API y los 844 del web sin una queja.
-      **Queda**: migrar el resto de los contratos (bank, exams, ai, tenants, users, dashboard)
-      al mismo patrón. El guard ya está puesto, así que cada uno que se mueva queda protegido
-      desde ese momento.
+      **Segunda tanda (2026-08-21)**: promovido el catálogo de grados, que estaba declarado
+      **cuatro veces** — el dominio de exams en la API y los modelos de bank, ai y exams en el
+      web. Los dos originales llevaban un comentario prometiendo promoverlo "si/cuando el
+      módulo de banco necesite el mismo catálogo"; lo necesitaba desde hacía tres copias, y el
+      de `ai.models.ts` decía "cuando una tercera feature lo necesite" — eran tres.
+      `GRADE_LEVELS`, `GradeLevel`, `isGradeLevel`, `STAGES`, `Stage`, `isStage` y
+      `stageForGrade` viven ahora en `packages/shared/src/domain/grade-level.ts` con spec
+      propia; los cuatro archivos re-exportan.
+      - **Las etiquetas NO se movieron a shared**: "1° primaria" es copy de UI en español que
+        solo el web renderiza. Pero pasaron de tres copias a una
+        (`features/taxonomy/grade-level-labels.ts`) — tres copias son tres oportunidades de que
+        "4° secundaria" se vuelva "4to secundaria" en una sola pantalla.
+      - `STAGE_LABELS` se borró de la API: copy en español que ningún código del servidor leía.
+      **Queda**: los contratos de respuesta por feature (bank, exams, ai, tenants, users,
+      dashboard). El guard ya está puesto, así que cada uno que se mueva queda protegido desde
+      ese momento.
 
 - [ ] **M5 — Estado in-process bloquea una segunda instancia del API.**
       `ExamVersionJobEventsService` / `GenerationJobEventsService` son Subjects in-memory (el
