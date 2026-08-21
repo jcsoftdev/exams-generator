@@ -92,6 +92,14 @@ describe("TaxonomyRepository", () => {
       expect(result.find((c) => c.id === courseAId)?.name).toBe(`Course A ${suffix}`);
     });
 
+    it("carries each course's stage, the only thing telling two same-named courses apart", async () => {
+      // Audit 2026-08-20 M2: "Comunicación" appears three times in the bank tree.
+      const result = await repository.findAllCourses();
+
+      expect(result.find((c) => c.id === courseAId)?.stage).toBe("colegio");
+      expect(result.find((c) => c.id === courseBId)?.stage).toBe("preuniversitario");
+    });
+
     it("filters courses by stage", async () => {
       const result = await repository.findAllCourses("colegio");
       const ids = result.map((c) => c.id);

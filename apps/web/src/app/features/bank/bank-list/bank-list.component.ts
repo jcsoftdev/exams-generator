@@ -40,6 +40,7 @@ import {
 } from '../bank.models';
 import { correctAnswerLabel, gradeLevelLabel } from '../question-display.util';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { courseLabels } from '../../taxonomy/course-label';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { extractErrorMessage } from '../../ai/extract-error-message';
@@ -317,7 +318,10 @@ export class BankListComponent {
   protected readonly extracting = signal(false);
 
   protected readonly courseOptions = computed<SelectOption<string>[]>(() =>
-    this.courses().map((course) => ({ value: course.id, label: course.name })),
+    this.courses().map((course) => ({
+      value: course.id,
+      label: this.courseNames().get(course.id) ?? course.name,
+    })),
   );
   /** `topics()` (the full unscoped catalog) filtered live to the edit form's currently selected curso — no extra HTTP call on curso change. */
   protected readonly editTopicOptions = computed<SelectOption<string>[]>(() =>
@@ -488,7 +492,9 @@ export class BankListComponent {
       switchMap((courses) =>
         this.taxonomyService.getTopicsForCourses(courses.map((course) => course.id)).pipe(
           map((topics) => ({
-            courseNames: new Map(courses.map((course) => [course.id, course.name])),
+            // Labels, not raw names: same-named courses from different stages
+            // are indistinguishable otherwise (audit 2026-08-20, M2).
+            courseNames: courseLabels(courses),
             topicNames: new Map(topics.map((topic) => [topic.id, topic.name])),
             courses,
             topics,

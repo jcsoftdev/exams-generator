@@ -30,7 +30,7 @@ import {
 } from '../exams.models';
 import { ExamVersionJob } from '../../exam-versions/exam-versions.models';
 
-const COURSES: Course[] = [{ id: 'c1', name: 'Matemática' }];
+const COURSES: Course[] = [{ id: 'c1', name: 'Matemática', stage: 'preuniversitario' }];
 const TOPICS: Topic[] = [{ id: 't1', name: 'Álgebra', courseId: 'c1' }];
 
 const FULL_STOCK: StockBatchResult = {
@@ -825,8 +825,8 @@ describe('ExamBuilderComponent', () => {
   describe('course grouping', () => {
     it('fetches topics for every course via a single batched getTopicsForCourses call, not one per course', () => {
       const courses: Course[] = [
-        { id: 'c1', name: 'Matemática' },
-        { id: 'c2', name: 'Comunicación' },
+        { id: 'c1', name: 'Matemática', stage: 'preuniversitario' },
+        { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
       ];
       const topicsByCourse: Record<string, Topic[]> = {
         c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1' }],
@@ -845,8 +845,8 @@ describe('ExamBuilderComponent', () => {
 
     it('renders a course subheading row before each course\'s topics when the grid spans multiple courses', () => {
       const courses: Course[] = [
-        { id: 'c1', name: 'Matemática' },
-        { id: 'c2', name: 'Comunicación' },
+        { id: 'c1', name: 'Matemática', stage: 'preuniversitario' },
+        { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
       ];
       const topicsByCourse: Record<string, Topic[]> = {
         c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1' }],
@@ -879,8 +879,8 @@ describe('ExamBuilderComponent', () => {
 
     it('collapses a course when its header is clicked, hiding that course rows only', () => {
       const courses: Course[] = [
-        { id: 'c1', name: 'Matemática' },
-        { id: 'c2', name: 'Comunicación' },
+        { id: 'c1', name: 'Matemática', stage: 'preuniversitario' },
+        { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
       ];
       const topicsByCourse: Record<string, Topic[]> = {
         c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1' }],
@@ -955,8 +955,8 @@ describe('ExamBuilderComponent', () => {
       // separate `course-group-header`s sharing one `courseId`, which
       // duplicates the `@for`'s `track group.courseId` key (NG0955).
       const courses: Course[] = [
-        { id: 'c1', name: 'Matemática' },
-        { id: 'c2', name: 'Comunicación' },
+        { id: 'c1', name: 'Matemática', stage: 'preuniversitario' },
+        { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
       ];
       const topicsByCourse: Record<string, Topic[]> = {
         c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1' }],
@@ -1555,9 +1555,9 @@ describe('ExamBuilderComponent', () => {
       const { compiled, fixture } = setup({
         getCourses: () =>
           of([
-            { id: 'c1', name: 'Aritmética' },
-            { id: 'c2', name: 'Álgebra' },
-            { id: 'c3', name: 'Química' },
+            { id: 'c1', name: 'Aritmética', stage: 'preuniversitario' },
+            { id: 'c2', name: 'Álgebra', stage: 'preuniversitario' },
+            { id: 'c3', name: 'Química', stage: 'preuniversitario' },
           ]),
       });
 
@@ -1579,8 +1579,8 @@ describe('ExamBuilderComponent', () => {
       const { compiled, fixture } = setup({
         getCourses: () =>
           of([
-            { id: 'c1', name: 'Aritmética' },
-            { id: 'c2', name: 'Álgebra' },
+            { id: 'c1', name: 'Aritmética', stage: 'preuniversitario' },
+            { id: 'c2', name: 'Álgebra', stage: 'preuniversitario' },
           ]),
       });
 
@@ -2051,8 +2051,8 @@ describe('ExamBuilderComponent', () => {
 
     it('leaves a course\'s previously-loaded rows in the grid when its checkbox is unchecked afterward (additive merge is accepted behavior — see design doc §4)', () => {
       const courses: Course[] = [
-        { id: 'c1', name: 'Matemática' },
-        { id: 'c2', name: 'Comunicación' },
+        { id: 'c1', name: 'Matemática', stage: 'preuniversitario' },
+        { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
       ];
       const resolveBlueprint = vi.fn((payload: { selectedCourseIds?: string[] }) => {
         const ids = payload.selectedCourseIds ?? [];
@@ -2269,7 +2269,7 @@ describe('ExamBuilderComponent', () => {
 
     it('resolves the real course name from templateCourses (not the raw UUID) for a whole-course row merged right after the exam type auto-selects preuniversitario', () => {
       const getCourses = vi.fn((gradeLevel?: string) =>
-        gradeLevel === 'pre' ? of<Course[]>([{ id: 'course-uuid-1', name: 'Aritmética' }]) : of(COURSES),
+        gradeLevel === 'pre' ? of<Course[]>([{ id: 'course-uuid-1', name: 'Aritmética', stage: 'preuniversitario' }]) : of(COURSES),
       );
       const resolveBlueprint = vi.fn(() =>
         of<ResolveBlueprintResult>({

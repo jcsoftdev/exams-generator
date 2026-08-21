@@ -252,10 +252,25 @@ release workflow).
       índice↔letra existe (`correct-answer-index-to-letter.ts`) — la lista/detalle del banco
       no la usa. Consistency/Functional.
 
-- [ ] **M2 — Cursos duplicados sin desambiguar en el árbol del banco.** En vivo: "Comunicación"
+- [x] **M2 — Cursos duplicados sin desambiguar en el árbol del banco.** En vivo: "Comunicación"
       ×3 (99/1514/26), "Arte y Cultura" ×2, "Educación Física" ×2, "Matemática" ×2, etc. Son
       scopes de nivel distintos pero la UI no muestra el nivel — imposible saber cuál abrir
       con filtro "Todos". Product.
+      **HECHO (2026-08-21)**: `GET /courses` ahora manda `stage` (la unicidad de un curso es
+      `(stage, name)`, así que el nivel es literalmente lo único que separa a los homónimos), y
+      el web lo usa vía `courseLabels()` (`features/taxonomy/course-label.ts`, spec propia) en
+      el árbol del banco y en el filtro de curso: "Comunicación · Colegio" /
+      "Comunicación · Preuniversitario".
+      - **Solo se etiqueta lo que se repite.** Poner el nivel a los 45 cursos ensuciaría el
+        caso común para arreglar el raro; los nombres únicos siguen desnudos.
+      - Comparación normalizada (trim + minúsculas), así que "Arte y Cultura" y
+        "arte y cultura " cuentan como el mismo nombre y ambos se desambiguan.
+      - Un `stage` que el front no conozca se imprime crudo en vez de omitirse: una distinción
+        que no sabemos nombrar sigue siendo una distinción que el lector necesita. Por eso
+        `Course.stage` es `string` y no la unión `Stage`.
+      - Etiqueta corta ("Colegio") y no `STAGE_LABELS` ("Colegio (Secundaria)"): aquí es un
+        sufijo sobre un nombre que ya es largo.
+      Verificado: 957 non-e2e + 275 e2e (API) y 839 tests de web, todo verde.
 
 - [ ] **M3 — Móvil 390px: tarjetas de examen ilegibles.** Screenshot: título truncado a "Co…"
       (2 chars + ellipsis) y la meta ("4° secundaria · 8 preguntas · 0 formas") envuelta en

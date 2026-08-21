@@ -21,6 +21,13 @@ const excludesTestTopicName = sql`${topics.name} !~ ${TEST_TAXONOMY_NAME_PATTERN
 export interface CourseListItem {
   readonly id: string;
   readonly name: string;
+  /**
+   * Escuela | colegio | preuniversitario. Shipped because course NAMES repeat
+   * across stages by design — uniqueness is `(stage, name)` — so "Comunicación"
+   * legitimately exists three times and the stage is the only thing that tells
+   * the three apart in a catalog listing (audit 2026-08-20, M2).
+   */
+  readonly stage: string;
 }
 
 export interface TopicListItem {
@@ -64,7 +71,7 @@ export class TaxonomyRepository {
    */
   async findAllCourses(stage?: Stage): Promise<CourseListItem[]> {
     return db
-      .select({ id: courses.id, name: courses.name })
+      .select({ id: courses.id, name: courses.name, stage: courses.stage })
       .from(courses)
       .where(and(excludesTestCourseName, ...(stage ? [eq(courses.stage, stage)] : [])));
   }

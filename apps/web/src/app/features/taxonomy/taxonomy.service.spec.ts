@@ -32,7 +32,7 @@ describe('TaxonomyService', () => {
     });
 
     it('resolves with the list of courses returned by the API', () => {
-      const courses: Course[] = [{ id: 'course-1', name: 'Aritmética' }];
+      const courses: Course[] = [{ id: 'course-1', name: 'Aritmética', stage: 'preuniversitario' }];
       let result: Course[] | undefined;
 
       service.getCourses().subscribe((response) => (result = response));

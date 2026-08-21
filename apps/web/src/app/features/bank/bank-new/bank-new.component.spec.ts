@@ -13,8 +13,8 @@ import { AiService } from '../../ai/ai.service';
 import { AiRevisedQuestion } from '../../ai/ai.models';
 
 const COURSES: Course[] = [
-  { id: 'c1', name: 'Matemática' },
-  { id: 'c2', name: 'Comunicación' },
+  { id: 'c1', name: 'Matemática', stage: 'preuniversitario' },
+  { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
 ];
 const TOPICS_C1: Topic[] = [{ id: 't1', name: 'Álgebra', courseId: 'c1' }];
 const TOPICS_C2: Topic[] = [{ id: 't2', name: 'Comprensión lectora', courseId: 'c2' }];

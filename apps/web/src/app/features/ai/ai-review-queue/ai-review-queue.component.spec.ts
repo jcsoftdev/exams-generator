@@ -41,7 +41,7 @@ const DRAFTS = [
   draft({ id: 'd2', courseId: 'c1', topicId: 't1' }),
 ];
 
-const COURSES: Course[] = [{ id: 'c1', name: 'Biología' }];
+const COURSES: Course[] = [{ id: 'c1', name: 'Biología', stage: 'preuniversitario' }];
 const TOPICS_C1: Topic[] = [{ id: 't1', name: 'Célula', courseId: 'c1' }];
 
 function setup(

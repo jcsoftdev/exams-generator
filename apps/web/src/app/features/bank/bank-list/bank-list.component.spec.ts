@@ -50,8 +50,8 @@ function makeQuestion(o: Partial<BankQuestion> & { id: string }): BankQuestion {
 }
 
 const COURSES: Course[] = [
-  { id: 'c1', name: 'Aritmética' },
-  { id: 'c2', name: 'Álgebra' },
+  { id: 'c1', name: 'Aritmética', stage: 'preuniversitario' },
+  { id: 'c2', name: 'Álgebra', stage: 'preuniversitario' },
 ];
 const TOPICS_C1: Topic[] = [
   { id: 't1', name: 'Fracciones', courseId: 'c1' },
@@ -249,6 +249,25 @@ describe('BankListComponent', () => {
       expect(compiled.textContent).not.toMatch(/\bc1\b/);
       expect(compiled.textContent).not.toMatch(/\bc2\b/);
       expect(compiled.textContent).not.toMatch(/\bt1\b/);
+    });
+
+    it('tells two same-named courses apart by their stage, and leaves unique names bare', () => {
+      // Audit 2026-08-20 M2: "Comunicación" ×3 in the tree, no way to know which to open.
+      const courses: Course[] = [
+        { id: 'c1', name: 'Comunicación', stage: 'colegio' },
+        { id: 'c2', name: 'Comunicación', stage: 'preuniversitario' },
+      ];
+      const { compiled } = setup({ getCoursesImpl: () => of(courses) });
+
+      expect(courseHeader(compiled, 'c1').textContent).toMatch(/Comunicación · Colegio/);
+      expect(courseHeader(compiled, 'c2').textContent).toMatch(/Comunicación · Preuniversitario/);
+    });
+
+    it('leaves a course name alone when nothing else shares it', () => {
+      const { compiled } = setup();
+
+      expect(courseHeader(compiled, 'c1').textContent).not.toMatch(/·/);
+      expect(courseHeader(compiled, 'c1').textContent).toMatch(/Aritmética/);
     });
 
     it('renders ALL courses collapsed by default — no topics or leaves visible until a course is expanded (avoids the initial wall)', () => {

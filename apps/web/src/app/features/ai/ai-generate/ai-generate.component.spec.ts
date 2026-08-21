@@ -10,7 +10,7 @@ import { GenerationJob } from '../ai.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 
-const COURSES: Course[] = [{ id: 'c1', name: 'Biología' }];
+const COURSES: Course[] = [{ id: 'c1', name: 'Biología', stage: 'preuniversitario' }];
 const TOPICS: Topic[] = [{ id: 't1', name: 'La célula', courseId: 'c1' }];
 
 const CREATED_JOB: GenerationJob = {
