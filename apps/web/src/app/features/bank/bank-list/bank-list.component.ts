@@ -661,7 +661,15 @@ export class BankListComponent {
    */
   protected questionSnippet(question: BankQuestion): string | null {
     const text = typstToPlainText(question.bodyTypst ?? '');
-    return text ? truncateTypst(text, 70) : null;
+    if (text) {
+      return truncateTypst(text, 70);
+    }
+    // An image question has no statement, so the row would say only "Clave: c".
+    // Its provenance names the exam and the question number, which is what
+    // tells one of ~1500 harvested image questions from the next. The trailing
+    // "(clave E)" the harvest writes is dropped: the row prints the key already.
+    const source = (question.sourceName ?? '').replace(/\s*\(clave\s+[a-eA-E]\)\s*$/, '').trim();
+    return source ? truncateTypst(source, 70) : null;
   }
 
   /** Alternatives of a structured question, lettered a/b/c…, with the `correctAnswer` one flagged. Empty for image questions. */

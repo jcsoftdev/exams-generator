@@ -81,6 +81,13 @@ export interface BankQuestion {
    */
   readonly bodyTypst?: string | null;
   readonly alternatives?: readonly string[] | null;
+  /**
+   * Where a seeded question came from ("UNCP — Admisión 2021-I, Álgebra,
+   * pregunta 4"). Load-bearing in the list: an `image` question has no
+   * statement, so without this its row can only show its answer letter, and a
+   * topic full of them reads as a wall of identical rows.
+   */
+  readonly sourceName?: string | null;
 }
 
 /**

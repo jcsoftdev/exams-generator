@@ -389,6 +389,12 @@
                 <div class="flex gap-2"><dt class="text-n500">Clave:</dt><dd>{{ correctAnswerLabel(q.correctAnswer) }}</dd></div>
                 <div class="flex gap-2"><dt class="text-n500">Grado:</dt><dd>{{ gradeLevelLabel(q.gradeLevel) }}</dd></div>
                 <div class="flex gap-2"><dt class="text-n500">Usada en:</dt><dd>{{ q.usedInExamCount ?? 0 }} exámenes</dd></div>
+                @if (q.sourceName) {
+                  <div data-testid="panel-source" class="flex gap-2">
+                    <dt class="shrink-0 text-n500">Fuente:</dt>
+                    <dd class="min-w-0 break-words">{{ q.sourceName }}</dd>
+                  </div>
+                }
               </dl>
 
               @if (actionError()) {

@@ -86,6 +86,8 @@ export interface QuestionListItem {
   readonly bodyTypst: string | null;
   readonly alternatives: unknown;
   readonly figureCode: string | null;
+  /** Provenance, when the question came from a seeded source. */
+  readonly sourceName: string | null;
 }
 
 export interface QuestionListFilter {

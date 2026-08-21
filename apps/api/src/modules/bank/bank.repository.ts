@@ -238,6 +238,10 @@ export class BankRepository implements BankRepositoryPort {
       bodyTypst: questions.bodyTypst,
       alternatives: questions.alternatives,
       figureCode: questions.figureCode,
+      sourceName: questions.sourceName,
+      // An image question has no statement; its provenance string is the only
+      // thing a list row can show about it beyond the answer letter.
+      sourceName: questions.sourceName,
     };
 
     // Newest first, with `id` breaking ties. Both halves are load-bearing.
@@ -336,6 +340,7 @@ export class BankRepository implements BankRepositoryPort {
         bodyTypst: questions.bodyTypst,
         alternatives: questions.alternatives,
         figureCode: questions.figureCode,
+        sourceName: questions.sourceName,
       })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
@@ -452,6 +457,7 @@ export class BankRepository implements BankRepositoryPort {
         bodyTypst: questions.bodyTypst,
         alternatives: questions.alternatives,
         figureCode: questions.figureCode,
+        sourceName: questions.sourceName,
       });
 
     if (!row) {
@@ -535,6 +541,7 @@ export class BankRepository implements BankRepositoryPort {
         bodyTypst: questions.bodyTypst,
         alternatives: questions.alternatives,
         figureCode: questions.figureCode,
+        sourceName: questions.sourceName,
       };
 
       const [row] = await tx
@@ -619,6 +626,10 @@ export class BankRepository implements BankRepositoryPort {
       bodyTypst: questions.bodyTypst,
       alternatives: questions.alternatives,
       figureCode: questions.figureCode,
+      sourceName: questions.sourceName,
+      // An image question has no statement; its provenance string is the only
+      // thing a list row can show about it beyond the answer letter.
+      sourceName: questions.sourceName,
     };
 
     // Nothing to change: still verify the row exists+is visible (so the caller

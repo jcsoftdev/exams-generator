@@ -128,6 +128,7 @@ describe("BankRepository", () => {
     topicId?: string;
     difficulty?: Difficulty;
     gradeLevel?: string;
+    sourceName?: string;
   }): Promise<string> {
     const { id } = await repository.createImageQuestion({
       tenantId: params.tenantId,
@@ -136,6 +137,7 @@ describe("BankRepository", () => {
       gradeLevel: params.gradeLevel ?? "primaria_1",
       correctAnswer: "a",
       createdBy: params.createdBy,
+      sourceName: params.sourceName,
       image: { storageKey: `test/${randomUUID()}`, mime: "image/png" },
     });
     createdQuestionIds.push(id);
@@ -247,6 +249,21 @@ describe("BankRepository", () => {
     expect(listed?.type).toBe("image");
     expect(listed?.bodyTypst).toBeNull();
     expect(listed?.alternatives).toBeNull();
+  });
+
+  it("listQuestions() surfaces sourceName, the only label an image question has", async () => {
+    // An image question has no statement, so a bank list that only knows
+    // bodyTypst can say nothing about it beyond its answer letter. Provenance
+    // ("UNCP 2021-I, Álgebra, pregunta 4") is what makes the row readable.
+    const id = await createQuestion({
+      tenantId: null,
+      createdBy: centralUserId,
+      sourceName: "UNCP — Examen de Admisión 2021-I, Álgebra, pregunta 4 (clave E)",
+    });
+
+    const list = await repository.listQuestions({ currentTenantId: null });
+    const listed = list.find((q) => q.id === id);
+    expect(listed?.sourceName).toBe("UNCP — Examen de Admisión 2021-I, Álgebra, pregunta 4 (clave E)");
   });
 
   describe("listQuestions() visibility", () => {

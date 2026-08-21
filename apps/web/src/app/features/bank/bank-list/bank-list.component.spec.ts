@@ -45,6 +45,7 @@ function makeQuestion(o: Partial<BankQuestion> & { id: string }): BankQuestion {
     usedInExamCount: o.usedInExamCount ?? 0,
     bodyTypst: o.bodyTypst ?? null,
     alternatives: o.alternatives ?? null,
+    sourceName: o.sourceName ?? null,
   };
 }
 
@@ -456,6 +457,74 @@ describe('BankListComponent', () => {
 
       const snippet = compiled.querySelector('[data-testid="question-snippet"]');
       expect(snippet?.textContent).toContain('¿Cuál es el resultado de 2 + 3 × 4?');
+    });
+
+    it('labels an image question with where it came from, since it has no statement', () => {
+      // The bank now holds ~1500 whole-question images harvested from published
+      // exams. Without their provenance every one of those rows reads "Clave: c"
+      // and the teacher cannot tell them apart.
+      const image = makeQuestion({
+        id: 'qi',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'image',
+        bodyTypst: null,
+        alternatives: null,
+        sourceName: 'UNCP — Examen de Admisión 2021-I, Álgebra, pregunta 4 (clave E)',
+      });
+      const { compiled, fixture } = setup({ listImpl: () => of([image]) });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      const snippet = compiled.querySelector('[data-testid="question-snippet"]');
+      expect(snippet?.textContent).toContain('UNCP — Examen de Admisión 2021-I, Álgebra, pregunta 4');
+    });
+
+    it('shows the source of a seeded question in the detail panel', () => {
+      // The central bank mixes licensing channels, so "where is this from" has
+      // to be answerable from the UI, not only from the database.
+      const image = makeQuestion({
+        id: 'qi3',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'image',
+        bodyTypst: null,
+        alternatives: null,
+        tenantId: null,
+        sourceName: 'UNI — Examen de Admisión 2019-1, Física, pregunta 7 (clave C)',
+      });
+      // The panel renders the detail fetch, not the list row.
+      const { compiled, fixture } = setup({
+        listImpl: () => of([image]),
+        getQuestionImpl: () => of(image),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const source = compiled.querySelector('[data-testid="panel-source"]');
+      expect(source?.textContent).toContain('UNI — Examen de Admisión 2019-1, Física, pregunta 7');
+    });
+
+    it('does not repeat the answer key inside the provenance label', () => {
+      // The row already prints "Clave: e" underneath; the "(clave E)" tail the
+      // harvest writes into sourceName would say it twice.
+      const image = makeQuestion({
+        id: 'qi2',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'image',
+        bodyTypst: null,
+        alternatives: null,
+        sourceName: 'UNI — Examen de Admisión 2019-1, Física, pregunta 7 (clave C)',
+      });
+      const { compiled, fixture } = setup({ listImpl: () => of([image]) });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      const snippet = compiled.querySelector('[data-testid="question-snippet"]');
+      expect(snippet?.textContent).not.toContain('(clave C)');
     });
   });
 
