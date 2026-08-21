@@ -3,7 +3,7 @@ import { Difficulty, Role } from "@exams-generator/shared";
 import { inArray } from "drizzle-orm";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
-import { assets, courses, questions, tenants, topics, users } from "../../db/schema";
+import { assets, courses, examQuestions, exams, questions, tenants, topics, users } from "../../db/schema";
 import { QuestionStatus } from "../../db/schema/enums";
 import { BankRepository } from "./bank.repository";
 import { hashBodyTypst } from "./domain/hash-body-typst";
@@ -297,6 +297,54 @@ describe("BankRepository", () => {
       expect(forTenantB.map((q) => q.id)).toContain(privateId);
       expect(forTenantA.map((q) => q.id)).not.toContain(privateId);
       expect(forStaff.map((q) => q.id)).not.toContain(privateId);
+    });
+  });
+
+  describe("usedInExamCount — how many exams already contain the question", () => {
+    // Audit 2026-08-21, M13: the bank UI reads this to warn a teacher before
+    // editing a question whose PDFs are already out. Nothing ever selected it,
+    // so the warning could not fire and the detail always read "0 exámenes".
+    const createdExamIds: string[] = [];
+
+    async function putInExam(questionId: string, position: number): Promise<void> {
+      const [exam] = await db
+        .insert(exams)
+        .values({
+          tenantId: tenantAId,
+          title: `Bank usage exam ${randomUUID()}`,
+          gradeLevel: "primaria_1",
+          createdBy: tenantAUserId,
+        })
+        .returning({ id: exams.id });
+      createdExamIds.push(exam!.id);
+      await db.insert(examQuestions).values({ examId: exam!.id, questionId, position });
+    }
+
+    afterAll(async () => {
+      if (createdExamIds.length > 0) {
+        await db.delete(examQuestions).where(inArray(examQuestions.examId, createdExamIds));
+        await db.delete(exams).where(inArray(exams.id, createdExamIds));
+      }
+    });
+
+    it("counts every exam the question is in", async () => {
+      const questionId = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId });
+      await putInExam(questionId, 1);
+      await putInExam(questionId, 1);
+
+      const listed = await repository.listQuestions({ currentTenantId: tenantAId });
+      const byId = await repository.findQuestionById(questionId, tenantAId);
+
+      expect(listed.find((q) => q.id === questionId)?.usedInExamCount).toBe(2);
+      expect(byId?.usedInExamCount).toBe(2);
+    });
+
+    it("is 0 for a question no exam uses — not undefined, which the UI reads as 0 either way and cannot distinguish", async () => {
+      const questionId = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId });
+
+      const listed = await repository.listQuestions({ currentTenantId: tenantAId });
+
+      expect(listed.find((q) => q.id === questionId)?.usedInExamCount).toBe(0);
     });
   });
 

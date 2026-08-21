@@ -207,7 +207,10 @@ describe('BankService', () => {
         type: 'image',
         bodyTypst: null,
         alternatives: null,
+        figureCode: null,
         sourceName: null,
+        aiGenerated: false,
+        usedInExamCount: 0,
       };
       let result: BankQuestion | undefined;
 

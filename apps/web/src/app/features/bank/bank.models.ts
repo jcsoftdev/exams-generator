@@ -32,16 +32,28 @@ export type QuestionOrigin = 'school' | 'ai' | 'central';
  * UUID), not a URL or mime type/dimensions. `GET /assets/:id` serves the
  * actual bytes — see `BankService.buildImageAssetUrl`/`fetchQuestionImage`.
  *
- * `origin` and `usedInExamCount` are NOT part of the shared wire contract:
- * the repository never selects either, so neither one actually crosses the
- * wire yet — see GAP backend #3 in the plan
- * (`docs/superpowers/plans/2026-07-18-screens-frontend.md`) re: `origin`
- * deriving from `tenantId === null` (never truly `'ai'` yet). They stay
- * web-local, optional fields ahead of that backend work landing.
+ * Nothing local is added on top of the wire contract any more. `origin` and
+ * `usedInExamCount` used to be optional fields here that the API never sent:
+ * `usedInExamCount` is now really counted and part of the contract, and
+ * `origin` is derived below rather than transmitted (audit 2026-08-21, M13).
  */
-export interface BankQuestion extends BankQuestionDto {
-  readonly origin?: QuestionOrigin;
-  readonly usedInExamCount?: number;
+export type BankQuestion = BankQuestionDto;
+
+/**
+ * Where a question came from, computed from the two fields that actually
+ * decide it.
+ *
+ * A question with no tenant belongs to the central bank; one a tenant owns is
+ * theirs, authored either by a teacher or by the AI. Deriving beats shipping a
+ * fourth field that has to be kept consistent with the other two — and the
+ * previous version of this, an optional `origin` the server never sent, meant
+ * the "IA" tag in the bank list could never render.
+ */
+export function questionOrigin(question: BankQuestion): QuestionOrigin {
+  if (question.tenantId === null) {
+    return 'central';
+  }
+  return question.aiGenerated ? 'ai' : 'school';
 }
 
 /**

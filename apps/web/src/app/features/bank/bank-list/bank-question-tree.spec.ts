@@ -6,7 +6,9 @@ import { BankQuestion, BankTopicCount } from '../bank.models';
 function q(o: Partial<BankQuestion> & { id: string; courseId: string; topicId: string }): BankQuestion {
   return {
     id: o.id,
-    tenantId: o.tenantId ?? 't1',
+    // `??` would turn an explicit null back into 't1', and null IS the value
+    // that means "central bank" — the distinction this fixture exists to make.
+    tenantId: o.tenantId === undefined ? 't1' : o.tenantId,
     courseId: o.courseId,
     topicId: o.topicId,
     difficulty: o.difficulty ?? Difficulty.Easy,
@@ -18,7 +20,8 @@ function q(o: Partial<BankQuestion> & { id: string; courseId: string; topicId: s
     bodyTypst: o.bodyTypst ?? null,
     alternatives: o.alternatives ?? null,
     sourceName: o.sourceName ?? null,
-    origin: o.origin ?? 'school',
+    figureCode: o.figureCode ?? null,
+    aiGenerated: o.aiGenerated ?? false,
     usedInExamCount: o.usedInExamCount ?? 0,
   };
 }

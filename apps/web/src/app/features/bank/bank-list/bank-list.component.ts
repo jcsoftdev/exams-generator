@@ -37,6 +37,8 @@ import {
   GRADE_LEVELS,
   GRADE_LEVEL_LABELS,
   UpdateQuestionPayload,
+  questionOrigin,
+  QuestionOrigin,
 } from '../bank.models';
 import { correctAnswerLabel, gradeLevelLabel } from '../question-display.util';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
@@ -699,7 +701,16 @@ export class BankListComponent {
   }
 
   protected isCentral(question: BankQuestion): boolean {
-    return question.origin === 'central' || question.tenantId === null;
+    return questionOrigin(question) === 'central';
+  }
+
+  /**
+   * Exposed for the template's "IA" / "Colegio" chip. It used to read a
+   * `q.origin` field the API never sent, so the AI branch could not render
+   * (audit 2026-08-21, M13).
+   */
+  protected originOf(question: BankQuestion): QuestionOrigin {
+    return questionOrigin(question);
   }
 
   protected canArchive(question: BankQuestion): boolean {

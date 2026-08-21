@@ -32,7 +32,9 @@ import { AiRevisedQuestion } from '../../ai/ai.models';
 function makeQuestion(o: Partial<BankQuestion> & { id: string }): BankQuestion {
   return {
     id: o.id,
-    tenantId: o.tenantId ?? 't1',
+    // `??` would turn an explicit null back into 't1', and null IS the value
+    // that means "central bank" — the distinction this fixture exists to make.
+    tenantId: o.tenantId === undefined ? 't1' : o.tenantId,
     courseId: o.courseId ?? 'c1',
     topicId: o.topicId ?? 't1',
     difficulty: o.difficulty ?? Difficulty.Easy,
@@ -41,11 +43,12 @@ function makeQuestion(o: Partial<BankQuestion> & { id: string }): BankQuestion {
     imageAssetId: o.imageAssetId ?? null,
     status: o.status ?? 'approved',
     type: o.type ?? 'image',
-    origin: o.origin ?? 'school',
     usedInExamCount: o.usedInExamCount ?? 0,
     bodyTypst: o.bodyTypst ?? null,
     alternatives: o.alternatives ?? null,
     sourceName: o.sourceName ?? null,
+    figureCode: o.figureCode ?? null,
+    aiGenerated: o.aiGenerated ?? false,
   };
 }
 
@@ -661,7 +664,7 @@ describe('BankListComponent', () => {
 
     it('renders central-bank questions read-only (lock note, no actions)', () => {
       const { compiled, fixture } = setup({
-        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: null, origin: 'central' })),
+        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: null })),
       });
       expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
@@ -838,6 +841,22 @@ describe('BankListComponent', () => {
       const warning = compiled.querySelector('[data-testid="edit-warning"]');
       expect(warning).toBeTruthy();
       expect(warning?.textContent).toMatch(/2 exámenes/);
+    });
+
+    it('tags an AI-authored question of this school with the IA chip', () => {
+      // The template branch behind this was dead: it compared `q.origin`, a
+      // field nothing ever sent (audit 2026-08-21, M13). Origin is derived now.
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: 't1', aiGenerated: true })),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      const panel = compiled.querySelector('[data-testid="panel-edit"]')?.closest('div');
+      expect(compiled.textContent).toContain('IA');
+      expect(panel).toBeTruthy();
     });
 
     it('cancelling edit mode discards changes and restores the read-only panel', () => {

@@ -1,8 +1,16 @@
 import { Inject, Injectable } from "@nestjs/common";
 import { Difficulty } from "@exams-generator/shared";
-import { and, count, desc, eq, isNull, or, SQL } from "drizzle-orm";
+import { and, count, desc, eq, isNull, or, sql, SQL } from "drizzle-orm";
 import { Database, DRIZZLE_DB } from "../../db/client";
-import { assets, courses, questionAlternativeImages, questions, subtopics, topics } from "../../db/schema";
+import {
+  assets,
+  courses,
+  examQuestions,
+  questionAlternativeImages,
+  questions,
+  subtopics,
+  topics,
+} from "../../db/schema";
 import { QuestionStatus } from "../../db/schema/enums";
 import { hashBodyTypst } from "./domain/hash-body-typst";
 import {
@@ -79,6 +87,24 @@ export type {
  * constructor (`DRIZZLE_DB`) instead of importing the singleton, so a test
  * can bind a fake database.
  */
+/**
+ * How many exams already contain this question.
+ *
+ * A correlated count rather than a join so the row itself is never duplicated,
+ * and cheap because `exam_questions_question_id_idx` covers exactly this
+ * lookup. `exam_questions` is unique on `(exam_id, question_id)`, so counting
+ * rows IS counting exams.
+ *
+ * Every read path selects it because the bank UI depends on it in two places:
+ * the detail line ("Usada en: N exámenes") and the warning shown before
+ * editing an approved question whose PDFs are already out. Neither worked —
+ * nothing selected the field, `?? 0` turned the missing value into a zero, and
+ * the warning could never fire (audit 2026-08-21, M13).
+ */
+const usedInExamCount = sql<number>`(
+  SELECT COUNT(*)::int FROM ${examQuestions} WHERE ${examQuestions.questionId} = ${questions.id}
+)`;
+
 @Injectable()
 export class BankRepository implements BankRepositoryPort {
   constructor(@Inject(DRIZZLE_DB) private readonly db: Database) {}
@@ -241,6 +267,7 @@ export class BankRepository implements BankRepositoryPort {
       // An image question has no statement; its provenance string is the only
       // thing a list row can show about it beyond the answer letter.
       sourceName: questions.sourceName,
+      usedInExamCount,
     };
 
     // Newest first, with `id` breaking ties. Both halves are load-bearing.
@@ -340,6 +367,7 @@ export class BankRepository implements BankRepositoryPort {
         alternatives: questions.alternatives,
         figureCode: questions.figureCode,
         sourceName: questions.sourceName,
+        usedInExamCount,
       })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
@@ -457,6 +485,7 @@ export class BankRepository implements BankRepositoryPort {
         alternatives: questions.alternatives,
         figureCode: questions.figureCode,
         sourceName: questions.sourceName,
+        usedInExamCount,
       });
 
     if (!row) {
@@ -541,6 +570,7 @@ export class BankRepository implements BankRepositoryPort {
         alternatives: questions.alternatives,
         figureCode: questions.figureCode,
         sourceName: questions.sourceName,
+        usedInExamCount,
       };
 
       const [row] = await tx
@@ -628,6 +658,7 @@ export class BankRepository implements BankRepositoryPort {
       // An image question has no statement; its provenance string is the only
       // thing a list row can show about it beyond the answer letter.
       sourceName: questions.sourceName,
+      usedInExamCount,
     };
 
     // Nothing to change: still verify the row exists+is visible (so the caller

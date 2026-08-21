@@ -40,18 +40,19 @@ export type QuestionStatus = (typeof QUESTION_STATUSES)[number];
  *   `unknown`. `QuestionListItem` keeps the looser storage type on purpose
  *   (seeing `unknown` there is the honest description of what the jsonb
  *   column guarantees); this DTO narrows it to what is actually sent.
- * - `QuestionListItem` also carries `aiGenerated` and `figureCode`, which DO
- *   cross the wire (the repository selects them unconditionally, the
- *   controller returns the row unmodified) but neither is part of this DTO:
- *   the web's `BankQuestion` never declared them, so nothing on the client
- *   reads them today. That is a real gap the API's type staying WIDER than
- *   this contract now makes visible instead of hiding it inside two
- *   independently-drifting declarations — promoting them here is follow-up
- *   work, not this fix.
- * - `origin` and `usedInExamCount` exist only on the web's `BankQuestion`.
- *   Neither is selected by the repository, so neither ever actually crosses
- *   the wire yet (see the comment on `BankQuestion` in the web's
- *   `bank.models.ts`) — they stay web-local, not part of this contract.
+ * - `aiGenerated` and `figureCode` always crossed the wire (the repository
+ *   selects them unconditionally and the controller returns the row
+ *   unmodified) but the web had never declared them. They are part of the
+ *   contract now: `aiGenerated` is what lets the client tell an AI-authored
+ *   question from a school-authored one.
+ * - `usedInExamCount` is the opposite case: the web declared it and NOTHING
+ *   ever sent it, so the "used in N exams" warning could not fire (audit
+ *   2026-08-21, M13). The repository now counts it on every read path.
+ * - `origin` stays out on purpose. It is DERIVED, not stored — central when
+ *   the question has no tenant, ai when it was AI-authored, school otherwise
+ *   — and a derived field on the wire is a second thing to keep in sync with
+ *   the two fields it is computed from. The web computes it (`questionOrigin`
+ *   in `bank.models.ts`).
  */
 export interface BankQuestionDto {
   readonly id: string;
@@ -66,5 +67,9 @@ export interface BankQuestionDto {
   readonly imageAssetId: string | null;
   readonly bodyTypst: string | null;
   readonly alternatives: readonly string[] | null;
+  readonly figureCode: string | null;
   readonly sourceName: string | null;
+  readonly aiGenerated: boolean;
+  /** Exams that already contain this question — 0, never absent. */
+  readonly usedInExamCount: number;
 }

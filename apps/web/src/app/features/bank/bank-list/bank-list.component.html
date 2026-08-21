@@ -321,7 +321,7 @@
                     data-testid="edit-warning"
                     class="rounded-field border border-warn-text/20 bg-warn-bg px-3 py-2 text-sm text-warn-text"
                   >
-                    Esta pregunta se usa en {{ q.usedInExamCount ?? 0 }} exámenes. Los PDFs ya generados no se
+                    Esta pregunta se usa en {{ q.usedInExamCount }} exámenes. Los PDFs ya generados no se
                     actualizan automáticamente; regéneralos si hace falta.
                   </div>
                 }
@@ -379,7 +379,7 @@
                     <lucide-angular name="lock" class="h-3 w-3"></lucide-angular>
                     Banco central
                   </span>
-                } @else if (q.origin === 'ai') {
+                } @else if (originOf(q) === 'ai') {
                   <ui-tag variant="ai">IA</ui-tag>
                 } @else {
                   <span class="rounded-full bg-tint-active px-2 py-0.5 text-xs text-tint-text">Colegio</span>
@@ -388,7 +388,7 @@
               <dl class="mb-4 space-y-1 text-sm text-n700">
                 <div class="flex gap-2"><dt class="text-n500">Clave:</dt><dd>{{ correctAnswerLabel(q.correctAnswer) }}</dd></div>
                 <div class="flex gap-2"><dt class="text-n500">Grado:</dt><dd>{{ gradeLevelLabel(q.gradeLevel) }}</dd></div>
-                <div class="flex gap-2"><dt class="text-n500">Usada en:</dt><dd>{{ q.usedInExamCount ?? 0 }} exámenes</dd></div>
+                <div class="flex gap-2"><dt class="text-n500">Usada en:</dt><dd>{{ q.usedInExamCount }} exámenes</dd></div>
                 @if (q.sourceName) {
                   <div data-testid="panel-source" class="flex gap-2">
                     <dt class="shrink-0 text-n500">Fuente:</dt>

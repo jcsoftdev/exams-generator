@@ -513,6 +513,29 @@ release workflow).
       Confianza 100% — verificado leyendo las dos puntas. El arreglo es del lado API: contar
       `exam_questions` por pregunta y exponerlo, o quitar de la UI lo que no se puede sostener.
       Functional.
+      **HECHO (2026-08-21)**: se eligió contarlo, porque el aviso protege algo real (hay PDFs
+      impresos con esa pregunta).
+      - `usedInExamCount` es ahora un subquery correlacionado en **las cuatro** rutas de
+        lectura que devuelven `QuestionListItem` (lista, por id, y las dos de update) — no dos,
+        que fue el primer intento y lo destapó el test del detalle. Barato: `exam_questions`
+        tiene índice por `question_id` y es único en `(exam_id, question_id)`, así que contar
+        filas ES contar exámenes.
+      - `aiGenerated` y `figureCode` entraron al contrato compartido: siempre cruzaron el cable
+        y el web simplemente nunca los declaró.
+      - **`origin` NO se transmite: se deriva.** Sin tenant → central; con tenant y
+        `aiGenerated` → ia; si no → colegio. Un campo derivado en el cable es una cosa más que
+        mantener sincronizada con las dos de las que se calcula. `questionOrigin()` en
+        `bank.models.ts`, con spec propia, y la rama "IA" del template por fin puede renderizar.
+      **Lo más incómodo de este hallazgo**: ya existía un test que decía
+      "shows a used-in-exams warning… already used in exams" y pasaba — porque el fixture ponía
+      `usedInExamCount: 2` a mano. El componente siempre funcionó; lo que nadie verificaba era
+      que el dato llegara. Por eso el arreglo trae un test del REPOSITORIO, que es donde se
+      rompía.
+      Y al quitar el `origin` de los fixtures salió otro defecto propio de los tests:
+      `tenantId: o.tenantId ?? 't1'` convertía un `null` explícito de vuelta en `'t1'`, o sea
+      el fixture no podía expresar "banco central"; el `origin: 'central'` que lo acompañaba
+      tapaba el problema. Corregido a una comparación con `undefined`.
+      Verificado: 999 non-e2e + 276 e2e (API), 849 (web), typecheck limpio.
 
 ### Low / Info
 
