@@ -37,7 +37,7 @@ const LINE_START_ENUM = /^(\s*)(\d+)\./;
  *     as "3 4 (n) + 1 5 (n)" — a wrong exam, with no error anywhere.
  *
  * So collected content is escaped at INGEST (see `seed-collected-questions.ts`
- * and `scripts/escape-collected-typst.ts`), never at render time: escaping
+ * and `scripts/normalize-collected-content.ts`), never at render time: escaping
  * in the template would equally destroy the legitimate `$...$` math and CeTZ
  * figures that AI-authored questions rely on.
  */

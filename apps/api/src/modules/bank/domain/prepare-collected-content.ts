@@ -1,5 +1,6 @@
 import { escapeTypstText } from "./escape-typst-text";
 import { hashBodyTypst } from "./hash-body-typst";
+import { stripSolutionTail } from "./strip-solution-tail";
 
 export interface RawCollectedContent {
   readonly bodyTypst: string;
@@ -27,12 +28,18 @@ export interface PreparedCollectedContent {
  * already in the bank were hashed before escaping existed, so the next boot
  * would miss all of them and insert the entire bank a second time. The raw
  * statement is the stable identity of a scraped question; how we render it
- * is not.
+ * is not. Stripping runs AFTER the hash for the same reason.
+ *
+ * Alternatives also go through `stripSolutionTail`: the scrapes routinely
+ * glued the source page's answer key onto the last option, which printed the
+ * answer on the student's exam (audit 2026-08-20, H2). The statement is left
+ * alone — some scraped bodies embed their own solution mid-sentence, which no
+ * tail cut can fix and a blind one would truncate.
  */
 export function prepareCollectedContent(raw: RawCollectedContent): PreparedCollectedContent {
   return {
     bodyTypst: escapeTypstText(raw.bodyTypst),
-    alternatives: raw.alternatives.map((alternative) => escapeTypstText(alternative)),
+    alternatives: raw.alternatives.map((alternative) => escapeTypstText(stripSolutionTail(alternative))),
     bodyHash: hashBodyTypst(raw.bodyTypst),
   };
 }

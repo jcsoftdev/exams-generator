@@ -1,4 +1,5 @@
 import { hashBodyTypst } from "../modules/bank/domain/hash-body-typst";
+import { stripSolutionTail } from "../modules/bank/domain/strip-solution-tail";
 
 /**
  * One question as the harvest pipeline writes it into `db/data/lots/*.json`
@@ -91,7 +92,18 @@ export function planLotSeed(input: PlanLotSeedInput): LotSeedPlan {
     // Added before the write, not after: two entries of the same batch sharing a
     // statement would otherwise both pass and collide on the unique index.
     seenHashes.add(bodyHash);
-    toInsert.push({ ...entry, type: "structured", bodyHash });
+    // The crop-and-OCR pass sometimes carries the booklet's footer into the
+    // last alternative — "15 2da. Prueba Examen de Admisión 2020-1" — which
+    // then prints on the student's paper (audit 2026-08-20, H2). Stripped
+    // AFTER hashing so the dedup key stays keyed to the harvested statement.
+    toInsert.push({
+      ...entry,
+      type: "structured",
+      bodyHash,
+      ...(entry.alternatives
+        ? { alternatives: entry.alternatives.map((alternative) => stripSolutionTail(alternative)) }
+        : {}),
+    });
   }
 
   return { toInsert, skipped, invalid };

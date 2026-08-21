@@ -29,6 +29,28 @@ describe("prepareCollectedContent", () => {
     expect(prepared.bodyHash).not.toBe(hashBodyTypst(prepared.bodyTypst));
   });
 
+  it("strips the answer key a scrape glued onto an alternative", () => {
+    const prepared = prepareCollectedContent({
+      bodyTypst: "¿Quién gobernó el Perú en 1956?",
+      alternatives: ["Agustín Gamarra", 'Manuel Prado y Ugarteche. Rpta.: "A" Ver respuesta correcta'],
+    });
+
+    expect(prepared.alternatives).toEqual(["Agustín Gamarra", "Manuel Prado y Ugarteche."]);
+  });
+
+  it("keeps the hash keyed off the raw statement even when an alternative was stripped", () => {
+    // The hash is the collected seeder's only dedup key; cleaning an option
+    // must never repin it, or the next boot re-inserts the whole bank.
+    const raw = "¿Quién gobernó el Perú en 1956?";
+
+    const prepared = prepareCollectedContent({
+      bodyTypst: raw,
+      alternatives: ['Manuel Prado y Ugarteche. Rpta.: "A"'],
+    });
+
+    expect(prepared.bodyHash).toBe(hashBodyTypst(raw));
+  });
+
   it("leaves content with no markup characters byte-identical", () => {
     const prepared = prepareCollectedContent({
       bodyTypst: "¿Cuántos aprobaron dos exámenes?",

@@ -8,7 +8,8 @@ import { hashPassword } from "../modules/auth/password.util";
 import { db, pool } from "./client";
 import { archiveNonSpanishQuestions } from "../scripts/archive-non-spanish-questions";
 import { archiveUnprintableQuestions } from "../scripts/archive-unprintable-questions";
-import { escapeCollectedTypst } from "../scripts/escape-collected-typst";
+import { normalizeCollectedContent } from "../scripts/normalize-collected-content";
+import { stripSeededSolutionTails } from "../scripts/strip-seeded-solution-tails";
 import { seedCollectedQuestions } from "./seed-collected-questions";
 import { seedLotQuestions } from "./seed-lot-questions";
 import {
@@ -1322,13 +1323,22 @@ export async function seed(): Promise<void> {
     // PNG), so seeding them means uploading to the object store, not just
     // inserting rows — see `seed-lot-questions.ts`.
     await seedLotQuestions(bankSampleAdmin.id);
-    // Backfills the Typst escaping onto rows seeded BEFORE the seeder started
-    // escaping at ingest. Runs on every boot, like the seeder itself: it is
-    // idempotent, and after the first pass its per-entry statement matches
-    // nothing, so steady-state cost is a lookup rather than a write.
-    const { updated } = await escapeCollectedTypst();
+    // Re-derives stored content from the JSON sources for rows seeded BEFORE
+    // the ingest rules existed — Typst escaping, and the solution tails the
+    // scrapes glued onto alternatives. Runs on every boot, like the seeder
+    // itself: it is idempotent, and after the first pass its per-entry
+    // statement matches nothing, so steady-state cost is a lookup, not a write.
+    const { updated } = await normalizeCollectedContent();
     if (updated > 0) {
-      console.log(`[seed] escaped Typst markup on ${updated} previously seeded questions.`);
+      console.log(`[seed] normalized content on ${updated} previously seeded questions.`);
+    }
+    // Both ingest paths strip solution tails now, but neither rewrites what is
+    // already stored: the collected corpus is re-derived above, the harvested
+    // lots are never rewritten once seeded, and a few rows predate both. This
+    // works off the stored value so it reaches all three, and is idempotent.
+    const { updated: stripped } = await stripSeededSolutionTails();
+    if (stripped > 0) {
+      console.log(`[seed] cut a pasted answer key or solucionario off ${stripped} questions' alternatives.`);
     }
     // Same shape as the backfill above: the seeder refuses these at ingest
     // now, so this only catches rows that predate that check.

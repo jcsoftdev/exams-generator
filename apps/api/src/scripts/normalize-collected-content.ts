@@ -17,8 +17,9 @@ interface CollectedData {
 }
 
 /**
- * Backfills the Typst escaping that `seed-collected-questions.ts` now applies
- * at ingest onto the web-scraped rows seeded BEFORE it existed.
+ * Backfills onto already-seeded web-scraped rows whatever
+ * `prepareCollectedContent` does at ingest today — Typst escaping first, and
+ * since audit 2026-08-20 H2 the stripping of solution tails as well.
  *
  * Those rows stored raw scraped prose in `body_typst`/`alternatives`, which
  * `typst-template.ts` embeds verbatim — measured against the real binary,
@@ -37,7 +38,7 @@ interface CollectedData {
  * markup — `$x^2$`, CeTZ figures — and escaping them would destroy exactly
  * the content the escape is meant to protect.
  */
-export async function escapeCollectedTypst(): Promise<{ updated: number; checked: number }> {
+export async function normalizeCollectedContent(): Promise<{ updated: number; checked: number }> {
   const files = readdirSync(COLLECTED_DIR).filter((name) => name.endsWith(".json"));
 
   let updated = 0;
@@ -52,9 +53,10 @@ export async function escapeCollectedTypst(): Promise<{ updated: number; checked
         alternatives: entry.alternatives,
       });
 
-      // Nothing to rewrite when the scrape held no markup characters at all
-      // — the overwhelming majority of the bank. Skipping them keeps this a
-      // few thousand UPDATEs instead of sixty-four thousand no-op writes.
+      // Nothing to rewrite when the scrape held neither markup characters nor
+      // a solution tail — the overwhelming majority of the bank. Skipping them
+      // keeps this a few thousand UPDATEs instead of sixty-four thousand
+      // no-op writes.
       const unchanged =
         content.bodyTypst === entry.bodyTypst &&
         content.alternatives.every((alternative, index) => alternative === entry.alternatives[index]);
@@ -90,12 +92,12 @@ export async function escapeCollectedTypst(): Promise<{ updated: number; checked
 }
 
 if (require.main === module) {
-  escapeCollectedTypst()
+  normalizeCollectedContent()
     .then(({ updated, checked }) => {
-      console.log(`[escape-collected-typst] ${updated} rows escaped of ${checked} entries needing escaping.`);
+      console.log(`[normalize-collected-content] rewrote ${updated} rows of ${checked} entries needing a rewrite.`);
     })
     .catch((error: unknown) => {
-      console.error("[escape-collected-typst] failed:", error);
+      console.error("[normalize-collected-content] failed:", error);
       process.exitCode = 1;
     })
     .finally(() => pool.end());

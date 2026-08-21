@@ -37,6 +37,33 @@ describe("planLotSeed", () => {
     expect(plan.skipped).toBe(0);
   });
 
+  it("strips the booklet footer the crop left on an alternative", () => {
+    const plan = planLotSeed({
+      entries: [
+        {
+          ...STRUCTURED,
+          alternatives: ["12", "15 2da. Prueba Examen de Admisión 2020-1"],
+        },
+      ],
+      existingBodyHashes: new Set(),
+      existingSourceNames: new Set(),
+      figureFingerprints: new Map(),
+    });
+
+    expect(plan.toInsert[0]!.alternatives).toEqual(["12", "15"]);
+  });
+
+  it("hashes the statement as harvested, unaffected by stripping an alternative", () => {
+    const plan = planLotSeed({
+      entries: [{ ...STRUCTURED, alternatives: ["12", '15 Rpta. "B"'] }],
+      existingBodyHashes: new Set(),
+      existingSourceNames: new Set(),
+      figureFingerprints: new Map(),
+    });
+
+    expect(plan.toInsert[0]!.bodyHash).toBe(hashBodyTypst(STRUCTURED.bodyTypst));
+  });
+
   it("skips a statement already stored under the same hash", () => {
     const plan = planLotSeed({
       entries: [STRUCTURED],

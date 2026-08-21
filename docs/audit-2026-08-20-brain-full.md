@@ -101,13 +101,51 @@ release workflow).
         para poder marcarse.
       Verificado: 935 tests non-e2e + 273 e2e, 100% verde.
 
-- [ ] **H2 — Basura de harvest impresa en alternativas del banco central.** Reproducido en vivo
+- [x] **H2 — Basura de harvest impresa en alternativas del banco central.** Reproducido en vivo
       (Geometría → Triángulos): alternativa `e) 15 2da. Prueba Examen de Admisión 2020-1` — el
       pie de página de la fuente quedó pegado al valor. Eso se imprime tal cual en el examen
       del alumno. Escala no determinada (una pasada visual halló 1 de ~50 visibles; el banco
       tiene 65 354). Functional/Data quality. Confianza 95% en la instancia, escala por medir.
       **Fix**: sweep SQL por patrones (`Prueba|Examen de Admisión|20\d\d-[12]` al final de
       alternatives) + regla de limpieza en el pipeline de harvest + spec de lint de contenido.
+      **HECHO (2026-08-21)**. Escala medida antes de tocar nada: **120 preguntas de 65 387**
+      (0,18%) con basura en alternativas. Y lo grave no era el pie de página sino lo que la
+      medición destapó: la forma más común es la ÚLTIMA alternativa terminando en
+      `Rpta.: "C"` — la clave impresa en el examen del alumno. Origen: scrapes de blogspot
+      (`banco-preguntas`, `razonamiento-verbal1`, `matematicasn`), no los lotes PDF, salvo 4
+      filas UNI 2020-1 que sí traían el pie del cuadernillo.
+      - `strip-solution-tail.ts` (dominio, spec propia): corta desde el primer ancla —
+        `Rpta`, `Clave:`, `CLAVES-RESPUESTAS`, `Key :`, `Solucionario`, `SOLUCIÓN:`,
+        `Resolución <1-2 dígitos>`, `Respuesta <A-E>`, "Ver respuesta correcta", "Lee la
+        explicación breve", y el pie `2da. Prueba`. Cada ancla exige más que la palabra suelta
+        porque las palabras sueltas son español normal: "una tecla de clave numérica" y
+        "Resolución 1080" (documento, no paso de solucionario) sobreviven, verificado con
+        casos reales de la DB. Si el corte dejaría vacío, devuelve el original: una opción en
+        blanco en un examen impreso es peor que una cola visible.
+      - **Dos caminos de ingesta**, para que no vuelva: `prepareCollectedContent` (scrapes) y
+        `planLotSeed` (lotes cosechados). En ambos el strip corre DESPUÉS del hash — el
+        `body_hash` es la única llave de dedup del seeder y repinnarla haría que el próximo
+        boot reinsertara el banco entero.
+      - **Un paso en sitio** (`strip-seeded-solution-tails.ts`, corre en el boot junto a los
+        otros backfills): ninguna de las dos ingestas reescribe lo ya guardado — el corpus
+        collected sí se re-deriva, los lotes NO (dedupean por hash con figura y nunca se
+        reescriben) y un par de filas son anteriores a ambos caminos. Trabaja sobre el valor
+        almacenado, así que alcanza los tres, y es idempotente por construcción (su salida ya
+        no contiene ancla). Alcance `tenant_id IS NULL`: si un profesor escribió "Rpta." en su
+        propia pregunta, no es nuestro para reescribir.
+      - `escape-collected-typst.ts` pasó a llamarse `normalize-collected-content.ts`: ya no
+        solo escapa Typst, y el nombre mentía.
+      - Resultado en la DB local: **120 → 3**, y las 3 son falsos positivos del barrido, no
+        basura: "Nadie sabe cómo aprobó el examen de admisión 2026-I" (contenido real),
+        "Aplicación de la Resolución 1080" (documento real) y una etiqueta de procedencia
+        `(CEPRE SAN MARCOS 2017-I)` pegada al final de una alternativa — una sola fila,
+        cosmética, no se le construyó regla propia por no arriesgar recortes en preguntas que
+        hablen de universidades.
+      **Hallazgo nuevo al medir, NO incluido en este fix**: 73 enunciados (`body_typst`)
+      cargan su propia solución. Hay tres formas distintas y ninguna se arregla cortando la
+      cola: bloques `Texto: A) … E) … SOLUCIÓN: …` con las alternativas dentro del enunciado,
+      la palabra "Solucionario" inyectada A MITAD de frase ("en sus Solucionario cerebros"), y
+      colas de solucionario tras el enunciado. Ver ítem H8 abajo.
 
 - [ ] **H3 — "Desactivar profesor" no revoca la sesión: el JWT sigue válido hasta 8h.**
       `jwt-auth.guard.ts:45-52` solo verifica firma; `TOKEN_TTL = "8h"`
@@ -158,6 +196,21 @@ release workflow).
       en `infra/env.example`). Cost + AI. Severidad condicionada: High al mover a modelo pagado.
       **Fix**: `max_tokens` explícito, cap de longitud en instruction (p. ej. 2 000 chars),
       contador de uso por tenant (ya existe `generation_jobs` para colgarlo).
+
+- [ ] **H8 — 73 enunciados del banco central cargan su propia solución.** Encontrado al medir
+      H2 (2026-08-21): `body_typst` de 73 preguntas contiene el solucionario de la fuente. Tres
+      formas, ninguna arreglable con el corte de cola de H2:
+      - Bloques completos: `GUERRA / Texto: A) palabra B) frase … SOLUCIÓN: Se denomina texto
+        al enunciado…` — las alternativas Y la explicación viven dentro del enunciado, así que
+        el alumno lee la respuesta en el propio texto de la pregunta.
+      - Palabra inyectada a mitad de frase: "…casi nunca llegan a morir de un ataque al
+        corazón, pero en sus **Solucionario** cerebros queda el rechazo…". Un corte por ancla
+        truncaría la pregunta a la mitad.
+      - Cola de solucionario después de un enunciado por lo demás sano.
+      Cortar a ciegas destruye enunciados buenos, y el barrido por regex tiene falsos positivos
+      reales en este campo ("Resolución 217 – A" de la Asamblea General). Necesita clasificar
+      las tres formas por separado y decidir por forma: recortar, re-extraer del scrape, o
+      archivar. Data quality. Confianza 100% en la existencia, 73 filas exactas medidas.
 
 ### Medium
 
