@@ -176,12 +176,14 @@ release workflow).
       - Tests nuevos: spec propia del servicio (activo / inexistente / desactivado tras vencer
         el cache / invalidación), caso del guard, y dos e2e — desactivar revoca el token que el
         profesor ya tenía en la mano, y un token de un usuario borrado da 401.
-      **Verificación parcial, por causa ajena**: 952 non-e2e verdes (solo falla
-      `minio-storage.adapter.spec`) y 13 de 26 suites e2e verdes — incluidas todas las de auth
-      (`auth`, `users`, `taxonomy`, `dashboard`). Las otras 13 fallan con
-      `S3Error: Storage backend has reached its minimum free drive threshold`: el MinIO local
-      se quedó sin espacio a mitad de sesión. Reproducido con el árbol limpio (`git stash`), o
-      sea es del entorno, no del cambio.
+      Verificado: **956 non-e2e + 275 e2e, 100% verde**.
+      **Nota de entorno**: a mitad de la sesión 13 suites e2e y `minio-storage.adapter.spec`
+      empezaron a fallar con `S3Error: Storage backend has reached its minimum free drive
+      threshold`, reproducible con el árbol limpio. No era del código: el disco de la VM de
+      Docker estaba al 100% (60G de 63G) y `infra_minio_data` solo pesa 227 MB — los que
+      ocupaban eran ajenos al proyecto (`voto-informado-ai_ollama_data` 20.48 GB sin
+      contenedor, imágenes y build cache). `docker builder prune` liberó 5.06 GB y todo volvió
+      a verde, sin tocar ningún volumen.
 
 - [~] **H4 — Compose de producción con fallbacks de credenciales públicas y Redis sin auth en
       red compartida.** `docker-compose.dokploy.yml:21-22,37-38,80-81`:
