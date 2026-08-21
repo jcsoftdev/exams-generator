@@ -1,6 +1,7 @@
 import { BadRequestException, ConflictException, ForbiddenException, Injectable, NotFoundException } from "@nestjs/common";
 import { randomBytes } from "node:crypto";
 import { Role } from "@exams-generator/shared";
+import { AccountStatusService } from "../auth/account-status.service";
 import { hashPassword } from "../auth/password.util";
 import { AuthTokenPayload } from "../auth/token.service";
 import { PagedTenantUsers, UsersRepository } from "./users.repository";
@@ -17,7 +18,10 @@ function generateTemporaryPassword(): string {
 
 @Injectable()
 export class UsersService {
-  constructor(private readonly repository: UsersRepository) {}
+  constructor(
+    private readonly repository: UsersRepository,
+    private readonly accountStatus: AccountStatusService,
+  ) {}
 
   async list(user: AuthTokenPayload, page: number, pageSize: number): Promise<PagedTenantUsers> {
     return this.repository.listByTenant(requireTenant(user), page, pageSize);
@@ -52,6 +56,10 @@ export class UsersService {
     const target = await this.repository.findByIdInTenant(targetId, tenantId);
     if (!target) throw new NotFoundException(`User not found: ${targetId}`);
     await this.repository.setActive(targetId, tenantId, active);
+    // Without this the guard would keep serving its cached "yes" for up to a
+    // minute, and an admin who just clicked "Desactivar" reads that as the
+    // button having done nothing.
+    this.accountStatus.invalidate(targetId);
     return { id: targetId, active };
   }
 

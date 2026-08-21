@@ -1,6 +1,7 @@
 import { BadRequestException, UnauthorizedException } from "@nestjs/common";
 import { Test, TestingModule } from "@nestjs/testing";
 import { Role } from "@exams-generator/shared";
+import { AccountStatusService } from "./account-status.service";
 import { AuthController } from "./auth.controller";
 import { AuthService } from "./auth.service";
 import { InvalidTokenError, TokenService } from "./token.service";
@@ -25,6 +26,9 @@ describe("AuthController", () => {
         { provide: AuthService, useValue: authService },
         { provide: TokenService, useValue: tokenService },
         { provide: LoginExchangeService, useValue: loginExchangeService },
+        // `JwtAuthGuard` on `GET /auth/me` asks it whether the account is still
+        // usable; this spec exercises the controller, not that rule.
+        { provide: AccountStatusService, useValue: { isUsable: () => Promise.resolve(true), invalidate: () => {} } },
       ],
     }).compile();
 

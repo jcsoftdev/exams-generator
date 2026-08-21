@@ -147,13 +147,41 @@ release workflow).
       la palabra "Solucionario" inyectada A MITAD de frase ("en sus Solucionario cerebros"), y
       colas de solucionario tras el enunciado. Ver ítem H8 abajo.
 
-- [ ] **H3 — "Desactivar profesor" no revoca la sesión: el JWT sigue válido hasta 8h.**
+- [x] **H3 — "Desactivar profesor" no revoca la sesión: el JWT sigue válido hasta 8h.**
       `jwt-auth.guard.ts:45-52` solo verifica firma; `TOKEN_TTL = "8h"`
       (`token.service.ts:33`); no hay blacklist ni check de `users.active` por request (solo
       en login). Un profesor desactivado sigue operando el resto del día. La UI vende
       desactivación inmediata. Security/AuthN.
       **Fix barato**: check de `active` (+ existencia) en el guard con cache corto (p. ej.
       Redis 60s), o TTL corto + refresh.
+      **HECHO (2026-08-21)**: `AccountStatusService` (auth) + `JwtAuthGuard` ahora async. Una
+      firma válida ya no alcanza: el guard pregunta por la cuenta detrás del token en cada
+      request, y devuelve 401 si está desactivada **o si la fila ya no existe** (las dos
+      responden igual a propósito — quien tenga el token de una cuenta borrada no aprende
+      cuál de las dos era).
+      - **Cache en memoria, no Redis** (el audit sugería Redis 60s). El espacio de claves se
+        limita a ids que vienen dentro de tokens con firma válida, así que no se puede inundar;
+        con varias instancias cada una guarda su propia respuesta, a lo sumo 60s vieja — la
+        misma garantía, no una peor. Y una caída de Redis no se lleva puesta la autenticación.
+        Costo: ~1 lectura por usuario por minuto, no una por request.
+      - **`ACCOUNT_STATUS_TTL_MS = 60s` ES la ventana de revocación**, y `TOKEN_TTL` dejó de
+        serlo: su docstring decía "no hay revocación de tokens" y ya no es cierto. Lo que las
+        8h siguen acotando es un token ROBADO de una cuenta que sigue activa — eso nada lo
+        re-chequea.
+      - **`setActive` invalida la entrada**, así que la desactivación pega al instante en esa
+        instancia: esperar el TTL sería correcto pero un admin que acaba de tocar "Desactivar"
+        lo lee como que el botón no hizo nada.
+      - `taxonomy.e2e.spec.ts` firmaba un token para un `sub` inventado; ahora crea un usuario
+        real. Era el único spec del repo que lo hacía — los demás ya usaban ids reales.
+      - Tests nuevos: spec propia del servicio (activo / inexistente / desactivado tras vencer
+        el cache / invalidación), caso del guard, y dos e2e — desactivar revoca el token que el
+        profesor ya tenía en la mano, y un token de un usuario borrado da 401.
+      **Verificación parcial, por causa ajena**: 952 non-e2e verdes (solo falla
+      `minio-storage.adapter.spec`) y 13 de 26 suites e2e verdes — incluidas todas las de auth
+      (`auth`, `users`, `taxonomy`, `dashboard`). Las otras 13 fallan con
+      `S3Error: Storage backend has reached its minimum free drive threshold`: el MinIO local
+      se quedó sin espacio a mitad de sesión. Reproducido con el árbol limpio (`git stash`), o
+      sea es del entorno, no del cambio.
 
 - [~] **H4 — Compose de producción con fallbacks de credenciales públicas y Redis sin auth en
       red compartida.** `docker-compose.dokploy.yml:21-22,37-38,80-81`:

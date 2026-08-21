@@ -234,6 +234,55 @@ describe("Users module (e2e)", () => {
       .expect(200);
   });
 
+  it("deactivation revokes the token the teacher is already holding", async () => {
+    // Audit 2026-08-20 H3: before this, only login was refused — the session
+    // already in the teacher's browser kept working for the rest of the 8h TTL.
+    const teacherToken = tokenService.sign({
+      sub: createdTeacherId,
+      tenantId: tenantAId,
+      role: Role.Teacher,
+    });
+    await request(app.getHttpServer())
+      .get("/courses")
+      .set("Authorization", `Bearer ${teacherToken}`)
+      .expect(200);
+
+    await request(app.getHttpServer())
+      .patch(`/users/${createdTeacherId}`)
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .send({ active: false })
+      .expect(200);
+
+    // No waiting out the cache: the deactivation drops the cached answer.
+    await request(app.getHttpServer())
+      .get("/courses")
+      .set("Authorization", `Bearer ${teacherToken}`)
+      .expect(401);
+
+    await request(app.getHttpServer())
+      .patch(`/users/${createdTeacherId}`)
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .send({ active: true })
+      .expect(200);
+    await request(app.getHttpServer())
+      .get("/courses")
+      .set("Authorization", `Bearer ${teacherToken}`)
+      .expect(200);
+  });
+
+  it("refuses a signature-valid token whose user row no longer exists", async () => {
+    const ghostToken = tokenService.sign({
+      sub: randomUUID(),
+      tenantId: tenantAId,
+      role: Role.Teacher,
+    });
+
+    await request(app.getHttpServer())
+      .get("/courses")
+      .set("Authorization", `Bearer ${ghostToken}`)
+      .expect(401);
+  });
+
   it("cannot deactivate self", async () => {
     await request(app.getHttpServer())
       .patch(`/users/${schoolAdminAId}`)

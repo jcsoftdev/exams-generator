@@ -8,6 +8,7 @@ import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { courses, examTypes, topics, tracks, universities } from "../../db/schema";
+import { createUserFixture, deleteUserFixture } from "../../test-utils/db-fixtures";
 import { TokenService } from "../auth/token.service";
 
 /**
@@ -25,6 +26,7 @@ describe("Taxonomy endpoints (e2e)", () => {
   let courseBId: string;
   let topicAId: string;
   let topicBId: string;
+  let readerId: string;
   let testFactoryCourseId: string;
   /**
    * Dash-free on purpose: `GET /courses` now hides any course whose name
@@ -42,7 +44,11 @@ describe("Taxonomy endpoints (e2e)", () => {
     await app.init();
     tokenService = moduleRef.get(TokenService);
 
-    token = tokenService.sign({ sub: randomUUID(), tenantId: null, role: Role.Teacher });
+    // A real user row, not a fabricated id: the guard now refuses a token whose
+    // account does not exist (audit 2026-08-20, H3).
+    const reader = await createUserFixture({ tenantId: null, role: Role.ContentEditor });
+    readerId = reader.id;
+    token = tokenService.sign({ sub: readerId, tenantId: null, role: Role.Teacher });
 
     const [courseA] = await db
       .insert(courses)
@@ -85,6 +91,7 @@ describe("Taxonomy endpoints (e2e)", () => {
             .delete(courses)
             .where(inArray(courses.id, [courseAId, courseBId, testFactoryCourseId])),
       ],
+      ["delete reader user", () => deleteUserFixture(readerId)],
       ["close app", () => app.close()],
     ];
     for (const [label, step] of cleanupSteps) {
