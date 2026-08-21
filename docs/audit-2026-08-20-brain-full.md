@@ -227,7 +227,7 @@ release workflow).
       **Fix**: `max_tokens` explícito, cap de longitud en instruction (p. ej. 2 000 chars),
       contador de uso por tenant (ya existe `generation_jobs` para colgarlo).
 
-- [ ] **H8 — 73 enunciados del banco central cargan su propia solución.** Encontrado al medir
+- [x] **H8 — 73 enunciados del banco central cargan su propia solución.** Encontrado al medir
       H2 (2026-08-21): `body_typst` de 73 preguntas contiene el solucionario de la fuente. Tres
       formas, ninguna arreglable con el corte de cola de H2:
       - Bloques completos: `GUERRA / Texto: A) palabra B) frase … SOLUCIÓN: Se denomina texto
@@ -241,6 +241,42 @@ release workflow).
       reales en este campo ("Resolución 217 – A" de la Asamblea General). Necesita clasificar
       las tres formas por separado y decidir por forma: recortar, re-extraer del scrape, o
       archivar. Data quality. Confianza 100% en la existencia, 73 filas exactas medidas.
+      **HECHO (2026-08-21)**. Al clasificarlas apareció lo que el conteo escondía: **67 de
+      las 76** son la MISMA falla, y no es una cola de solucionario sino el bloque del
+      ejercicio ANTERIOR sangrando al siguiente. El scrape de una página de términos excluidos
+      dejó enunciados así:
+      `FÚTBOL / Texto: / A) palabra B) frase C) inferencia D) oración E) párrafo / SOLUCIÓN: … Rpta. C`
+      — mientras las alternativas REALES de esa pregunta (arquero, zaguero, delantero,
+      futbolista, portero) estaban intactas en su columna. O sea la pregunta estaba bien; solo
+      había que cortar lo ajeno. Ahora el enunciado es "FÚTBOL" y la pregunta funciona.
+      `stripStatementPollution` (dominio, spec propia) hace tres cosas distintas porque son
+      tres fallas distintas, y ninguna es la de H2 — por eso NO se reusó `stripSolutionTail`:
+      - **Bloque ajeno**: corta desde `Texto:` solo cuando lo sigue el bloque `A) palabra`. Un
+        texto de comprensión lectora que empiece con "Texto:" sobrevive.
+      - **Palabra inyectada a mitad de frase** ("en sus **Solucionario** cerebros", "haustorios
+        **Solucionario** , raíces"): se borra la palabra, no se corta la frase. Se reconoce por
+        el contexto en minúscula a ambos lados.
+      - **Cola al final**: solo se recorta un marcador que esté al FINAL. A mitad de frase
+        cortar truncaría la pregunta, que es exactamente el caso anterior.
+      Va en `prepareCollectedContent`, no en un script suelto: el backfill del boot re-deriva
+      el corpus collected desde los JSON, así que una limpieza en sitio se desharía sola en el
+      siguiente arranque. Hash sobre el enunciado CRUDO, como el escapado.
+      Resultado: **76 → 6**, y de esas 6, **3 son falsos positivos del barrido** que las reglas
+      dejaron en paz con razón ("la Resolución 217 – A de la Asamblea General", "el pacto
+      colectivo 2014 y la resolución 477", "COHIPÓNIMOS … Método de resolución").
+      **Las 3 restantes quedan abiertas, y no por pereza**: no tienen enunciado que rescatar.
+      Una es literalmente `RESOLUCIÓN : INDECISIÓN` y las otras dos son analogías cuyo par base
+      se perdió en el scrape (`… el par base escrito en mayúscula. RESOLUCIÓN : NORMA::`).
+      Recortar deja la pregunta vacía y adivinar el par base sería inventar contenido; el
+      camino real es re-extraerlas de la fuente. Ver ítem H9.
+
+- [ ] **H9 — 3 preguntas sin enunciado recuperable.** Separadas de H8 (2026-08-21) porque no
+      se arreglan cortando: el scrape nunca capturó el enunciado. Una es
+      `RESOLUCIÓN : INDECISIÓN` a secas; las otras dos son analogías cuyo par base se truncó
+      (`Seleccione la opción que mantiene una relación concordante con el par base escrito en
+      mayúscula. RESOLUCIÓN : NORMA::`). Las tres son inrespondibles hoy. Adivinar el par base
+      sería inventar contenido, así que la salida es re-extraerlas de su `source_url` o
+      archivarlas — decisión de producto, no mecánica. Data quality.
 
 ### Medium
 

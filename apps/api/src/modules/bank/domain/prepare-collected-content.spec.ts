@@ -51,6 +51,25 @@ describe("prepareCollectedContent", () => {
     expect(prepared.bodyHash).toBe(hashBodyTypst(raw));
   });
 
+  it("cuts the previous exercise's block off a scraped statement", () => {
+    const prepared = prepareCollectedContent({
+      bodyTypst: "FÚTBOL\n\nTexto:\nA) palabra\nB) frase\nSOLUCIÓN: Se denomina texto… Rpta. C",
+      alternatives: ["arquero", "futbolista"],
+    });
+
+    expect(prepared.bodyTypst).toBe("FÚTBOL");
+  });
+
+  it("keeps hashing the RAW statement even when the stored one was cleaned", () => {
+    // Same reason as the escaping: the hash is the dedup key, and repinning it
+    // would re-insert the whole bank on the next boot.
+    const raw = "FÚTBOL\n\nTexto:\nA) palabra\nSOLUCIÓN: … Rpta. C";
+
+    const prepared = prepareCollectedContent({ bodyTypst: raw, alternatives: ["arquero"] });
+
+    expect(prepared.bodyHash).toBe(hashBodyTypst(raw));
+  });
+
   it("leaves content with no markup characters byte-identical", () => {
     const prepared = prepareCollectedContent({
       bodyTypst: "¿Cuántos aprobaron dos exámenes?",

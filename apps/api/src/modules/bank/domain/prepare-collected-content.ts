@@ -1,6 +1,7 @@
 import { escapeTypstText } from "./escape-typst-text";
 import { hashBodyTypst } from "./hash-body-typst";
 import { stripSolutionTail } from "./strip-solution-tail";
+import { stripStatementPollution } from "./strip-statement-pollution";
 
 export interface RawCollectedContent {
   readonly bodyTypst: string;
@@ -30,15 +31,16 @@ export interface PreparedCollectedContent {
  * statement is the stable identity of a scraped question; how we render it
  * is not. Stripping runs AFTER the hash for the same reason.
  *
- * Alternatives also go through `stripSolutionTail`: the scrapes routinely
- * glued the source page's answer key onto the last option, which printed the
- * answer on the student's exam (audit 2026-08-20, H2). The statement is left
- * alone — some scraped bodies embed their own solution mid-sentence, which no
- * tail cut can fix and a blind one would truncate.
+ * Alternatives go through `stripSolutionTail` and the statement through
+ * `stripStatementPollution`: the scrapes glued the source page's answer key
+ * onto the last option (audit 2026-08-20, H2) and, in the statement, a whole
+ * foreign exercise block or a word dropped mid-sentence (H8). The two use
+ * different rules because they fail differently — see
+ * `strip-statement-pollution.ts`.
  */
 export function prepareCollectedContent(raw: RawCollectedContent): PreparedCollectedContent {
   return {
-    bodyTypst: escapeTypstText(raw.bodyTypst),
+    bodyTypst: escapeTypstText(stripStatementPollution(raw.bodyTypst)),
     alternatives: raw.alternatives.map((alternative) => escapeTypstText(stripSolutionTail(alternative))),
     bodyHash: hashBodyTypst(raw.bodyTypst),
   };
