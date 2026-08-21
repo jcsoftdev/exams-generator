@@ -272,9 +272,25 @@ release workflow).
         sufijo sobre un nombre que ya es largo.
       Verificado: 957 non-e2e + 275 e2e (API) y 839 tests de web, todo verde.
 
-- [ ] **M3 — Móvil 390px: tarjetas de examen ilegibles.** Screenshot: título truncado a "Co…"
+- [x] **M3 — Móvil 390px: tarjetas de examen ilegibles.** Screenshot: título truncado a "Co…"
       (2 chars + ellipsis) y la meta ("4° secundaria · 8 preguntas · 0 formas") envuelta en
       columna de una palabra. Todas las tarjetas se ven iguales. Frontend/Responsive.
+      **HECHO (2026-08-21)**: la tarjeta se apila por debajo de `md` — título y meta en su
+      propia línea, y tag + acciones agrupadas debajo (`[data-testid="exam-row-actions"]`).
+      La causa era que las acciones y el tag comparten fila con el título: no encogen, así que
+      se llevaban el ancho y al título le quedaban ~30px. Se usa `md` (768px), el mismo
+      breakpoint del drawer del shell, no un `sm` nuevo.
+      **Verificado en vivo con Playwright a 390×844** (no solo por clases): el título mide
+      **317px** de ancho y se lee completo, la meta entra en una sola línea, y las acciones
+      caben en su fila. A 1280px la tarjeta sigue siendo una sola fila (título 684px, acciones
+      a la derecha) — sin regresión de escritorio.
+      De paso, en la misma pasada se confirmó **M2** en vivo: el árbol del banco muestra
+      "Comunicación · Colegio 99", "· Escuela 26" y "· Preuniversitario 1559", y los nombres
+      únicos siguen desnudos. **Matiz descubierto ahí**: un curso cuyo homónimo existe en el
+      catálogo pero no tiene preguntas igual lleva sufijo (p. ej. "Ciencia y Tecnología ·
+      Colegio", que aparece solo). Es deliberado: desambiguar solo entre lo visible haría que
+      la etiqueta de un mismo curso cambiara al cambiar de filtro, y una etiqueta inestable
+      confunde más que un sufijo de más.
 
 - [ ] **M4 — Contrato API↔web duplicado a mano sin guard.** `packages/shared` solo cubre auth
       (5 DTOs + 2 enums); las 10 features de web re-declaran cada shape de respuesta en

@@ -77,6 +77,39 @@ describe('ExamListComponent', () => {
     expect(compiled.querySelectorAll('[data-testid="tag"]').length).toBe(2);
   });
 
+  it('stacks the card below md so the title keeps the full width', () => {
+    // Audit 2026-08-20 M3: at 390px the actions ate the row and the title
+    // truncated to "Co…", so every card looked the same. md (768px) is the
+    // app's mobile breakpoint — same one the shell drawer uses.
+    const { compiled } = setup();
+    const row = compiled.querySelector('[data-testid="exam-row"]') as HTMLElement;
+
+    const classes = row.className.split(/\s+/);
+    expect(classes).toContain('flex-col');
+    expect(classes).toContain('md:flex-row');
+    // Centring only from md up: stacked, the tag must not sit centred under the title.
+    expect(classes).not.toContain('items-center');
+    expect(classes).toContain('md:items-center');
+  });
+
+  it('keeps tag and actions together in their own group', () => {
+    const { compiled } = setup();
+    const actions = compiled.querySelector('[data-testid="exam-row-actions"]') as HTMLElement;
+
+    expect(actions).not.toBeNull();
+    expect(actions.querySelector('[data-testid="tag"]')).not.toBeNull();
+    expect(actions.querySelector('[data-testid="exam-menu"]')).not.toBeNull();
+  });
+
+  it('lets the meta line wrap as words, not one word per line', () => {
+    const { compiled } = setup();
+    const meta = compiled.querySelector('[data-testid="exam-meta"]') as HTMLElement;
+
+    expect(meta).not.toBeNull();
+    expect(meta.textContent).toMatch(/preguntas/);
+    expect(meta.className).not.toContain('truncate');
+  });
+
   it('opens the versions detail for a ready exam', () => {
     const { compiled, navigate } = setup();
     (compiled.querySelectorAll('[data-testid="exam-open"] button')[0] as HTMLButtonElement).click();

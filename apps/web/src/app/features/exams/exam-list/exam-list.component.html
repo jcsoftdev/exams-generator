@@ -63,11 +63,19 @@
   } @else {
     <div class="flex flex-col gap-2">
       @for (exam of exams(); track exam.id) {
-        <div data-testid="exam-row" class="flex items-center gap-3 rounded-card border border-n200 bg-surface p-3">
+        <!--
+          Below md the card STACKS: title on its own line, then tag + actions.
+          Side by side at 390px the actions took the width they needed and the
+          title collapsed to "Co…", so every card looked identical (audit
+          2026-08-20, M3). md (768px) is the same breakpoint the shell drawer
+          switches at.
+        -->
+        <div data-testid="exam-row" class="flex flex-col gap-2 rounded-card border border-n200 bg-surface p-3 md:flex-row md:items-center md:gap-3">
           <div class="min-w-0 flex-1">
             <p class="truncate font-medium text-n900">{{ exam.title }}</p>
-            <p class="text-xs text-n500">{{ gradeLabel(exam.gradeLevel) }} · {{ exam.questionCount }} preguntas · {{ exam.versionCount }} formas</p>
+            <p data-testid="exam-meta" class="text-xs text-n500">{{ gradeLabel(exam.gradeLevel) }} · {{ exam.questionCount }} preguntas · {{ exam.versionCount }} formas</p>
           </div>
+          <div data-testid="exam-row-actions" class="flex items-center gap-2 md:gap-3">
           <ui-tag [variant]="statusTag(exam.status)">{{ statusLabel(exam) }}</ui-tag>
           @if (exam.status === 'ready') {
             <div data-testid="exam-open"><ui-button variant="ghost" (clicked)="open(exam)">Abrir ›</ui-button></div>
@@ -85,6 +93,7 @@
                 <div data-testid="exam-delete"><ui-button variant="ghost" (clicked)="requestDelete(exam)"><span class="text-hard-text">Eliminar</span></ui-button></div>
               </div>
             }
+          </div>
           </div>
         </div>
       }
