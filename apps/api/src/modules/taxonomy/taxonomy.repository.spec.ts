@@ -18,7 +18,17 @@ describe("TaxonomyRepository", () => {
   let courseBId: string;
   let topicAId: string;
   let topicBId: string;
-  const suffix = randomUUID();
+  let testFactoryCourseId: string;
+  let testFactoryTopicId: string;
+  /**
+   * Dash-free on purpose: the repository now hides any course/topic whose name
+   * carries a UUID fragment (`TEST_TAXONOMY_NAME_PATTERN`), so a fixture that
+   * has to be VISIBLE cannot be named like a test-factory row. Still unique
+   * per run, and still deleted by id in `afterAll`.
+   */
+  const suffix = randomUUID().replace(/-/g, "");
+  /** The opposite fixture — named exactly the way a test factory names one, so the guard must hide it. */
+  const testFactorySuffix = randomUUID();
 
   beforeAll(async () => {
     await runMigrations();
@@ -46,11 +56,29 @@ describe("TaxonomyRepository", () => {
       .values({ courseId: courseBId, name: `Topic B ${suffix}`, gradeLevel: "pre" })
       .returning({ id: topics.id });
     topicBId = topicB!.id;
+
+    const [testFactoryCourse] = await db
+      .insert(courses)
+      .values({ name: `Test Course ${testFactorySuffix}`, stage: "colegio" })
+      .returning({ id: courses.id });
+    testFactoryCourseId = testFactoryCourse!.id;
+
+    const [testFactoryTopic] = await db
+      .insert(topics)
+      .values({
+        courseId: testFactoryCourseId,
+        name: `Test Topic ${testFactorySuffix}`,
+        gradeLevel: "secundaria_1",
+      })
+      .returning({ id: topics.id });
+    testFactoryTopicId = testFactoryTopic!.id;
   });
 
   afterAll(async () => {
-    await db.delete(topics).where(inArray(topics.id, [topicAId, topicBId]));
-    await db.delete(courses).where(inArray(courses.id, [courseAId, courseBId]));
+    await db.delete(topics).where(inArray(topics.id, [topicAId, topicBId, testFactoryTopicId]));
+    await db
+      .delete(courses)
+      .where(inArray(courses.id, [courseAId, courseBId, testFactoryCourseId]));
     await pool.end();
   });
 
@@ -70,6 +98,15 @@ describe("TaxonomyRepository", () => {
 
       expect(ids).toContain(courseAId);
       expect(ids).not.toContain(courseBId);
+    });
+
+    it("hides test-factory courses from the product catalog", async () => {
+      // Audit 2026-08-20 H1: e2e leftovers reached a real teacher's exam builder.
+      const unfiltered = await repository.findAllCourses();
+      expect(unfiltered.map((c) => c.id)).not.toContain(testFactoryCourseId);
+
+      const byStage = await repository.findAllCourses("colegio");
+      expect(byStage.map((c) => c.id)).not.toContain(testFactoryCourseId);
     });
   });
 
@@ -98,6 +135,15 @@ describe("TaxonomyRepository", () => {
       const byPre = await repository.findTopics(courseAId, "pre");
       expect(byPre).toHaveLength(0);
     });
+
+    it("hides topics that belong to a test-factory course", async () => {
+      const unfiltered = await repository.findTopics();
+      expect(unfiltered.map((t) => t.id)).not.toContain(testFactoryTopicId);
+
+      // Even asked for by id — a stale bookmark or a cached client must not resurrect it.
+      const byCourse = await repository.findTopics(testFactoryCourseId);
+      expect(byCourse).toEqual([]);
+    });
   });
 
   describe("findTopicsByCourseIds", () => {
@@ -120,6 +166,12 @@ describe("TaxonomyRepository", () => {
     it("returns an empty array without querying the DB when courseIds is empty", async () => {
       const result = await repository.findTopicsByCourseIds([]);
       expect(result).toEqual([]);
+    });
+
+    it("drops test-factory courses from a batch without dropping the real ones", async () => {
+      const result = await repository.findTopicsByCourseIds([courseAId, testFactoryCourseId]);
+
+      expect(result.map((t) => t.id)).toEqual([topicAId]);
     });
   });
 

@@ -25,7 +25,14 @@ describe("Taxonomy endpoints (e2e)", () => {
   let courseBId: string;
   let topicAId: string;
   let topicBId: string;
-  const suffix = randomUUID();
+  let testFactoryCourseId: string;
+  /**
+   * Dash-free on purpose: `GET /courses` now hides any course whose name
+   * carries a UUID fragment (audit 2026-08-20, H1), so a fixture that has to
+   * be VISIBLE cannot be named the way a test factory names one. Unique per
+   * run all the same, and deleted by id in `afterAll`.
+   */
+  const suffix = randomUUID().replace(/-/g, "");
 
   beforeAll(async () => {
     await runMigrations();
@@ -60,12 +67,24 @@ describe("Taxonomy endpoints (e2e)", () => {
       .values({ courseId: courseBId, name: `E2E Topic B ${suffix}` })
       .returning({ id: topics.id });
     topicBId = topicB!.id;
+
+    const [testFactoryCourse] = await db
+      .insert(courses)
+      .values({ name: `Test Course ${randomUUID()}` })
+      .returning({ id: courses.id });
+    testFactoryCourseId = testFactoryCourse!.id;
   });
 
   afterAll(async () => {
     const cleanupSteps: Array<[string, () => Promise<unknown>]> = [
       ["delete topics", () => db.delete(topics).where(inArray(topics.id, [topicAId, topicBId]))],
-      ["delete courses", () => db.delete(courses).where(inArray(courses.id, [courseAId, courseBId]))],
+      [
+        "delete courses",
+        () =>
+          db
+            .delete(courses)
+            .where(inArray(courses.id, [courseAId, courseBId, testFactoryCourseId])),
+      ],
       ["close app", () => app.close()],
     ];
     for (const [label, step] of cleanupSteps) {
@@ -94,6 +113,17 @@ describe("Taxonomy endpoints (e2e)", () => {
       const ids = (res.body as Array<{ id: string; name: string }>).map((c) => c.id);
       expect(ids).toContain(courseAId);
       expect(ids).toContain(courseBId);
+    });
+
+    it("never serves a test-factory course to the exam builder", async () => {
+      // Audit 2026-08-20 H1 — e2e leftovers reached a real teacher's course grid.
+      const res = await request(app.getHttpServer())
+        .get("/courses")
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      const ids = (res.body as Array<{ id: string }>).map((c) => c.id);
+      expect(ids).not.toContain(testFactoryCourseId);
     });
   });
 

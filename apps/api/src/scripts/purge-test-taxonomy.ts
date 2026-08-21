@@ -10,6 +10,7 @@ import {
   syllabusWeekMaps,
   topics,
 } from "../db/schema";
+import { TEST_TAXONOMY_NAME_PATTERN } from "../db/test-taxonomy-name";
 
 /**
  * One-off (but idempotent + re-runnable) cleanup of taxonomy pollution.
@@ -29,6 +30,11 @@ import {
  *     (`Álgebra`, `Razonamiento Matemático`, `Razonamiento Verbal`) — kept only
  *     while they carry no real data.
  *
+ * NOTE: this is cleanup AFTER the fact. The read guard in
+ * `TaxonomyRepository` keys off the same `TEST_TAXONOMY_NAME_PATTERN`, so junk
+ * left by an interrupted run is invisible to product listings even before this
+ * script runs (audit 2026-08-20, H1).
+ *
  * SAFETY: a course is only skipped if one of its questions was actually used
  * in a real exam (`exam_questions`), it has an `exam_blueprint_rows` or
  * `exam_blueprint_template_rows` entry, or it's mapped into an actual
@@ -36,9 +42,6 @@ import {
  * just test-factory noise. Deletes run inside a single transaction so a
  * guard trip rolls back the whole run.
  */
-
-/** Postgres regex that matches a UUID fragment — the signature of a test-factory course name. */
-const UUID_FRAGMENT = "[0-9a-f]{8}-[0-9a-f]{4}";
 
 /**
  * Names that were once demo-only courses folded into `Matemática` /
@@ -129,7 +132,7 @@ export async function purgeTestTaxonomy(): Promise<void> {
     const junk = await tx
       .select({ id: courses.id, name: courses.name })
       .from(courses)
-      .where(sql`${courses.name} ~ ${UUID_FRAGMENT}`);
+      .where(sql`${courses.name} ~ ${TEST_TAXONOMY_NAME_PATTERN}`);
 
     // 2. Legacy empty demo courses superseded by the standard syllabus.
     const legacy = await tx

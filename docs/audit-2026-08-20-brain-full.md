@@ -69,7 +69,7 @@ release workflow).
 
 ### High
 
-- [ ] **H1 — Datos de test contaminan la UI de producción del generador.** Reproducido en vivo:
+- [x] **H1 — Datos de test contaminan la UI de producción del generador.** Reproducido en vivo:
       `/app/exams/new` lista "Test Course 81b7883e-…" y dos "ExamsRepo Course …" — y los dos
       últimos vienen **chequeados por defecto** ("25 de 26 elegidos"), o sea entran al examen
       de un docente real que no los deschequee. Origen: specs e2e siembran taxonomía global y
@@ -77,6 +77,29 @@ release workflow).
       de test los ancla para siempre. Testing (aislamiento) + Product.
       **Fix**: marcar taxonomía de test con prefijo/flag y filtrarla de todo listado de
       producto, o purga que también borre exámenes de test que la anclan.
+      **HECHO (2026-08-21)**: guard de lectura en `TaxonomyRepository` —
+      `findAllCourses`/`findTopics`/`findTopicsByCourseIds` excluyen cualquier curso o tema
+      cuyo nombre lleve la firma de fábrica de tests (`TEST_TAXONOMY_NAME_PATTERN`,
+      `apps/api/src/db/test-taxonomy-name.ts`, con spec propia). Decisiones:
+      - **Filtro por nombre, no columna `is_test`**: una columna solo protege lo que un fixture
+        futuro se acuerde de marcar, y además necesitaría un backfill que usaría… este mismo
+        regex. El patrón atrapa hoy mismo la basura ya sembrada, sin migración.
+      - **Es guard de lectura, no reemplazo de la purga**: `purge-test-taxonomy.ts` ahora
+        importa la misma constante en vez de duplicarla. La purga sigue siendo la que borra;
+        esto es lo que impide que la basura se vea mientras tanto. Importa porque los 4 cursos
+        de test que quedan en la DB local (`Test Course 81b7883e-…`, los dos
+        `ExamsRepo Course …` que el audit vio en vivo) están anclados por exámenes de test y la
+        purga los conserva a propósito — ahora son invisibles igual.
+      - **También filtra por el nombre del tema**, no solo el del curso: un spec que cuelgue su
+        tema de un curso real se colaría si no.
+      - Los fixtures de `taxonomy.repository.spec.ts` / `taxonomy.e2e.spec.ts` que deben ser
+        VISIBLES pasaron a un sufijo sin guiones (siguen únicos, siguen borrados por id), y cada
+        archivo ganó un fixture nombrado como fábrica de tests que verifica la exclusión.
+      - Cero preguntas cuelgan de esos cursos, así que el árbol del banco no estaba afectado
+        (verificado en la DB local). El "25 de 26 elegidos" del reporte era el botón "Todos":
+        no hay preselección automática en el builder — con el filtro esos cursos ya ni aparecen
+        para poder marcarse.
+      Verificado: 935 tests non-e2e + 273 e2e, 100% verde.
 
 - [ ] **H2 — Basura de harvest impresa en alternativas del banco central.** Reproducido en vivo
       (Geometría → Triángulos): alternativa `e) 15 2da. Prueba Examen de Admisión 2020-1` — el

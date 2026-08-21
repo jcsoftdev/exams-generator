@@ -1,7 +1,22 @@
-import { and, asc, eq, inArray } from "drizzle-orm";
+import { and, asc, eq, inArray, sql } from "drizzle-orm";
 import { db } from "../../db/client";
 import { courses, examTypes, topics, tracks, universities } from "../../db/schema";
+import { TEST_TAXONOMY_NAME_PATTERN } from "../../db/test-taxonomy-name";
 import type { Stage } from "../exams/domain/value-objects/grade-level";
+
+/**
+ * Keeps test-factory rows out of every product-facing catalog read (audit
+ * 2026-08-20, H1). `courses`/`topics` are GLOBAL — no `tenant_id` — so an
+ * interrupted spec run leaves its fixtures visible to real teachers in the
+ * exam builder until someone runs `db:purge-test-taxonomy`. This is the read
+ * guard that makes the purge cleanup rather than the only defence; both key
+ * off the same signature (`TEST_TAXONOMY_NAME_PATTERN`).
+ *
+ * Applied to the topic's own name as well as its course's: a spec that hangs
+ * its fixture topic off a real course would otherwise slip through.
+ */
+const excludesTestCourseName = sql`${courses.name} !~ ${TEST_TAXONOMY_NAME_PATTERN}`;
+const excludesTestTopicName = sql`${topics.name} !~ ${TEST_TAXONOMY_NAME_PATTERN}`;
 
 export interface CourseListItem {
   readonly id: string;
@@ -42,15 +57,16 @@ export interface ExamTypeListItem {
  * needs a swappable implementation.
  */
 export class TaxonomyRepository {
-  /** Filters by educational `stage` when provided; otherwise returns every course. */
+  /**
+   * Filters by educational `stage` when provided; otherwise returns every
+   * course. Test-factory rows are never returned — see
+   * `excludesTestCourseName`.
+   */
   async findAllCourses(stage?: Stage): Promise<CourseListItem[]> {
-    const query = db.select({ id: courses.id, name: courses.name }).from(courses);
-
-    if (stage) {
-      return query.where(eq(courses.stage, stage));
-    }
-
-    return query;
+    return db
+      .select({ id: courses.id, name: courses.name })
+      .from(courses)
+      .where(and(excludesTestCourseName, ...(stage ? [eq(courses.stage, stage)] : [])));
   }
 
   /**
@@ -59,20 +75,18 @@ export class TaxonomyRepository {
    * is only returned for the grade(s) it was seeded for.
    */
   async findTopics(courseId?: string, gradeLevel?: string): Promise<TopicListItem[]> {
-    const query = db
+    return db
       .select({ id: topics.id, name: topics.name, courseId: topics.courseId })
-      .from(topics);
-
-    const conditions = [
-      ...(courseId ? [eq(topics.courseId, courseId)] : []),
-      ...(gradeLevel ? [eq(topics.gradeLevel, gradeLevel)] : []),
-    ];
-
-    if (conditions.length > 0) {
-      return query.where(and(...conditions));
-    }
-
-    return query;
+      .from(topics)
+      .innerJoin(courses, eq(topics.courseId, courses.id))
+      .where(
+        and(
+          excludesTestCourseName,
+          excludesTestTopicName,
+          ...(courseId ? [eq(topics.courseId, courseId)] : []),
+          ...(gradeLevel ? [eq(topics.gradeLevel, gradeLevel)] : []),
+        ),
+      );
   }
 
   /**
@@ -89,16 +103,18 @@ export class TaxonomyRepository {
       return [];
     }
 
-    const query = db
+    return db
       .select({ id: topics.id, name: topics.name, courseId: topics.courseId })
-      .from(topics);
-
-    const conditions = [
-      inArray(topics.courseId, courseIds),
-      ...(gradeLevel ? [eq(topics.gradeLevel, gradeLevel)] : []),
-    ];
-
-    return query.where(and(...conditions));
+      .from(topics)
+      .innerJoin(courses, eq(topics.courseId, courses.id))
+      .where(
+        and(
+          excludesTestCourseName,
+          excludesTestTopicName,
+          inArray(topics.courseId, courseIds),
+          ...(gradeLevel ? [eq(topics.gradeLevel, gradeLevel)] : []),
+        ),
+      );
   }
 
   /** Every university in the global catalog, ordered by name. */
