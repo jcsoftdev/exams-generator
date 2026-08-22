@@ -251,7 +251,9 @@ export class ExamBuilderStore {
       const topicId = row.topicId ?? WHOLE_COURSE_TOPIC_ID;
       const topicName = row.topicId ? (row.topicName ?? row.topicId) : WHOLE_COURSE_TOPIC_NAME;
 
-      const alreadyPresent = this.rows().some((existing) => existing.courseId === row.courseId && existing.topicId === topicId);
+      const alreadyPresent = this.rows().some(
+        (existing) => existing.courseId === row.courseId && existing.topicId === topicId,
+      );
       if (!alreadyPresent) {
         this.addRow({
           id: `${row.courseId}:${topicId}`,

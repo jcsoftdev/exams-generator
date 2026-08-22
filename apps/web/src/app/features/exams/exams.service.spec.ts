@@ -40,7 +40,9 @@ describe('ExamsService', () => {
         .createExam({
           title: 'Admisión 2026',
           gradeLevel: 'secundaria_5',
-          blueprint: [{ courseId: 'course-1', topicId: 'topic-1', difficulty: Difficulty.Easy, count: 5 }],
+          blueprint: [
+            { courseId: 'course-1', topicId: 'topic-1', difficulty: Difficulty.Easy, count: 5 },
+          ],
         })
         .subscribe();
 
@@ -49,13 +51,19 @@ describe('ExamsService', () => {
       expect(req.request.body).toEqual({
         title: 'Admisión 2026',
         gradeLevel: 'secundaria_5',
-        blueprint: [{ courseId: 'course-1', topicId: 'topic-1', difficulty: Difficulty.Easy, count: 5 }],
+        blueprint: [
+          { courseId: 'course-1', topicId: 'topic-1', difficulty: Difficulty.Easy, count: 5 },
+        ],
       });
       req.flush({ id: 'exam-1', status: 'draft', selectedQuestionIds: ['q1'] });
     });
 
     it('resolves with the created exam and its selected question ids', () => {
-      const result: CreateExamResult = { id: 'exam-1', status: 'draft', selectedQuestionIds: ['q1', 'q2'] };
+      const result: CreateExamResult = {
+        id: 'exam-1',
+        status: 'draft',
+        selectedQuestionIds: ['q1', 'q2'],
+      };
       let response: CreateExamResult | undefined;
 
       service
@@ -79,7 +87,9 @@ describe('ExamsService', () => {
     });
 
     it('POSTs {mode: "manual", replacementQuestionId} to the replace endpoint', () => {
-      service.replaceQuestion('exam-1', 'q1', { mode: 'manual', replacementQuestionId: 'q9' }).subscribe();
+      service
+        .replaceQuestion('exam-1', 'q1', { mode: 'manual', replacementQuestionId: 'q9' })
+        .subscribe();
 
       const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/questions/q1/replace`);
       expect(req.request.body).toEqual({ mode: 'manual', replacementQuestionId: 'q9' });
@@ -87,14 +97,20 @@ describe('ExamsService', () => {
     });
 
     it('resolves with the replacement result', () => {
-      const result: ReplaceQuestionResult = { examId: 'exam-1', oldQuestionId: 'q1', newQuestionId: 'q2' };
+      const result: ReplaceQuestionResult = {
+        examId: 'exam-1',
+        oldQuestionId: 'q1',
+        newQuestionId: 'q2',
+      };
       let response: ReplaceQuestionResult | undefined;
 
       service
         .replaceQuestion('exam-1', 'q1', { mode: 'reroll' })
         .subscribe((r: ReplaceQuestionResult) => (response = r));
 
-      httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/questions/q1/replace`).flush(result);
+      httpMock
+        .expectOne(`${environment.apiBaseUrl}/exams/exam-1/questions/q1/replace`)
+        .flush(result);
 
       expect(response).toEqual(result);
     });
@@ -179,7 +195,9 @@ describe('ExamsService', () => {
         gradeLevel: 'secundaria_1',
         cells: [{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy }],
       });
-      req.flush({ results: [{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 }] });
+      req.flush({
+        results: [{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 }],
+      });
     });
 
     it('resolves with the order-matched availability results', () => {
@@ -215,7 +233,13 @@ describe('ExamsService', () => {
       });
       req.flush({
         selections: [
-          { rowIndex: 0, courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, questionIds: ['q1', 'q2'] },
+          {
+            rowIndex: 0,
+            courseId: 'c1',
+            topicId: 't1',
+            difficulty: Difficulty.Easy,
+            questionIds: ['q1', 'q2'],
+          },
         ],
         shortages: [],
       });
@@ -224,7 +248,13 @@ describe('ExamsService', () => {
     it('resolves with selections + shortages (no exact-id assertion — selection is random per B2-R5)', () => {
       const result: PreviewExamResult = {
         selections: [
-          { rowIndex: 0, courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, questionIds: ['q1'] },
+          {
+            rowIndex: 0,
+            courseId: 'c1',
+            topicId: 't1',
+            difficulty: Difficulty.Easy,
+            questionIds: ['q1'],
+          },
         ],
         shortages: [{ rowIndex: 1, courseId: 'c2', requested: 10, available: 4 }],
       };

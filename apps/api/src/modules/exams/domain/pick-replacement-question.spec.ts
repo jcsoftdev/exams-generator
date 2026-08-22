@@ -13,7 +13,10 @@ const ROW: BlueprintRowRecord = {
   count: 3,
 };
 
-function candidate(id: string, overrides: Partial<QuestionPoolCandidateRecord> = {}): QuestionPoolCandidateRecord {
+function candidate(
+  id: string,
+  overrides: Partial<QuestionPoolCandidateRecord> = {},
+): QuestionPoolCandidateRecord {
   return {
     id,
     courseId: "course-1",
@@ -41,9 +44,16 @@ describe("matchesRowCriteria", () => {
   });
 
   it("ignores topic and difficulty when the row does not constrain them", () => {
-    const looseRow: BlueprintRowRecord = { id: "row-2", courseId: "course-1", courseName: "Aritmética", count: 1 };
+    const looseRow: BlueprintRowRecord = {
+      id: "row-2",
+      courseId: "course-1",
+      courseName: "Aritmética",
+      count: 1,
+    };
 
-    expect(matchesRowCriteria(candidate("q1", { topicId: "topic-9", difficulty: Difficulty.Hard }), looseRow)).toBe(true);
+    expect(
+      matchesRowCriteria(candidate("q1", { topicId: "topic-9", difficulty: Difficulty.Hard }), looseRow),
+    ).toBe(true);
   });
 });
 

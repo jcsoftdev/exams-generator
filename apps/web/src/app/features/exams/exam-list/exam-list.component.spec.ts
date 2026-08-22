@@ -11,14 +11,28 @@ import { ExamListItem, ExamListResult, GRADE_LEVEL_LABELS } from '../exams.model
 
 function item(o: Partial<ExamListItem> & { id: string }): ExamListItem {
   return {
-    id: o.id, title: o.title ?? 'Examen X', gradeLevel: o.gradeLevel ?? 'pre',
-    status: o.status ?? 'ready', questionCount: o.questionCount ?? 10,
-    versionCount: o.versionCount ?? 2, createdAt: o.createdAt ?? '2026-07-18T00:00:00.000Z',
+    id: o.id,
+    title: o.title ?? 'Examen X',
+    gradeLevel: o.gradeLevel ?? 'pre',
+    status: o.status ?? 'ready',
+    questionCount: o.questionCount ?? 10,
+    versionCount: o.versionCount ?? 2,
+    createdAt: o.createdAt ?? '2026-07-18T00:00:00.000Z',
   };
 }
-const RESULT: ExamListResult = { items: [item({ id: 'e1', status: 'ready' }), item({ id: 'e2', status: 'draft', title: 'Borrador Y' })], total: 2 };
+const RESULT: ExamListResult = {
+  items: [
+    item({ id: 'e1', status: 'ready' }),
+    item({ id: 'e2', status: 'draft', title: 'Borrador Y' }),
+  ],
+  total: 2,
+};
 
-function selectOption(container: HTMLElement, fixture: { detectChanges(): void }, label: string): void {
+function selectOption(
+  container: HTMLElement,
+  fixture: { detectChanges(): void },
+  label: string,
+): void {
   (container.querySelector('button[role="combobox"]') as HTMLButtonElement).click();
   fixture.detectChanges();
   const option = Array.from(container.querySelectorAll('[data-testid="select-option"]')).find(
@@ -41,9 +55,13 @@ function setup(
   } = {},
 ) {
   const listExams = vi.fn(over.listImpl ?? (() => of(RESULT)));
-  const duplicateExam = vi.fn(over.dupImpl ?? (() => of({ id: 'e3', title: 'Copia de Examen X', status: 'draft' })));
+  const duplicateExam = vi.fn(
+    over.dupImpl ?? (() => of({ id: 'e3', title: 'Copia de Examen X', status: 'draft' })),
+  );
   const deleteExam = vi.fn(over.delImpl ?? (() => of(void 0)));
-  const renameExam = vi.fn(over.renameImpl ?? (() => of({ id: 'e1', title: 'Simulacro de marzo' })));
+  const renameExam = vi.fn(
+    over.renameImpl ?? (() => of({ id: 'e1', title: 'Simulacro de marzo' })),
+  );
   const navigate = vi.fn();
   TestBed.configureTestingModule({
     imports: [ExamListComponent],
@@ -151,7 +169,9 @@ describe('ExamListComponent', () => {
     expect(confirm.textContent).toContain('Borrador Y');
     expect(confirm.textContent).toMatch(/10 preguntas/);
 
-    (compiled.querySelector('[data-testid="delete-confirm-yes"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="delete-confirm-yes"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
     expect(deleteExam).toHaveBeenCalledWith('e2');
     expect(listExams).toHaveBeenCalledTimes(1);
@@ -165,7 +185,9 @@ describe('ExamListComponent', () => {
     fixture.detectChanges();
     expect(deleteExam).not.toHaveBeenCalled(); // abre modal, aún no borra
     expect(compiled.querySelector('[data-testid="delete-confirm"]')).toBeTruthy();
-    (compiled.querySelector('[data-testid="delete-confirm-yes"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="delete-confirm-yes"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
     expect(deleteExam).toHaveBeenCalledWith('e1');
   });
@@ -234,7 +256,8 @@ describe('ExamListComponent', () => {
     fixture.detectChanges();
 
     expect(
-      (compiled.querySelector('[data-testid="rename-confirm"] button') as HTMLButtonElement).disabled,
+      (compiled.querySelector('[data-testid="rename-confirm"] button') as HTMLButtonElement)
+        .disabled,
     ).toBe(true);
     expect(renameExam).not.toHaveBeenCalled();
   });
@@ -266,7 +289,11 @@ describe('ExamListComponent', () => {
     const { compiled, fixture, listExams } = setup();
 
     listExams.mockReturnValue(of({ items: [], total: 0 }));
-    selectOption(compiled.querySelector('[data-testid="status-filter"]') as HTMLElement, fixture, 'Borrador');
+    selectOption(
+      compiled.querySelector('[data-testid="status-filter"]') as HTMLElement,
+      fixture,
+      'Borrador',
+    );
     listExams.mockClear();
     listExams.mockReturnValue(of(RESULT));
 
@@ -274,7 +301,12 @@ describe('ExamListComponent', () => {
     fixture.detectChanges();
 
     expect(listExams).toHaveBeenCalledWith(
-      expect.objectContaining({ status: undefined, gradeLevel: undefined, search: undefined, page: 1 }),
+      expect.objectContaining({
+        status: undefined,
+        gradeLevel: undefined,
+        search: undefined,
+        page: 1,
+      }),
     );
     expect(compiled.querySelectorAll('[data-testid="exam-row"]').length).toBeGreaterThan(0);
   });
@@ -286,7 +318,11 @@ describe('ExamListComponent', () => {
   it('reflects the active filters in the URL', () => {
     const { compiled, fixture, navigate } = setup();
 
-    selectOption(compiled.querySelector('[data-testid="status-filter"]') as HTMLElement, fixture, 'Borrador');
+    selectOption(
+      compiled.querySelector('[data-testid="status-filter"]') as HTMLElement,
+      fixture,
+      'Borrador',
+    );
 
     expect(navigate).toHaveBeenCalledWith([], {
       queryParams: { status: 'draft', gradeLevel: null, search: null, page: null },
@@ -295,16 +331,22 @@ describe('ExamListComponent', () => {
   });
 
   it('restores the filters from the URL on load, so a reload or a shared link keeps them', () => {
-    const { compiled, listExams } = setup({ queryParams: { status: 'draft', gradeLevel: 'pre', search: 'simulacro' } });
+    const { compiled, listExams } = setup({
+      queryParams: { status: 'draft', gradeLevel: 'pre', search: 'simulacro' },
+    });
 
     expect(listExams).toHaveBeenCalledWith(
       expect.objectContaining({ status: 'draft', gradeLevel: 'pre', search: 'simulacro' }),
     );
-    expect((compiled.querySelector('[data-testid="search-filter"] input') as HTMLInputElement).value).toBe('simulacro');
+    expect(
+      (compiled.querySelector('[data-testid="search-filter"] input') as HTMLInputElement).value,
+    ).toBe('simulacro');
   });
 
   it('shows an error state with retry', () => {
-    const { compiled, fixture, listExams } = setup({ listImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })) });
+    const { compiled, fixture, listExams } = setup({
+      listImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+    });
     expect(compiled.querySelector('[data-testid="error-state"]')).toBeTruthy();
     listExams.mockClear();
     listExams.mockReturnValue(of(RESULT));
@@ -338,7 +380,9 @@ describe('ExamListComponent', () => {
     try {
       const { compiled, fixture, listExams } = setup();
       listExams.mockClear();
-      const input = compiled.querySelector<HTMLInputElement>('[data-testid="search-filter"] input')!;
+      const input = compiled.querySelector<HTMLInputElement>(
+        '[data-testid="search-filter"] input',
+      )!;
       input.value = 'bimestral';
       input.dispatchEvent(new Event('input'));
       fixture.detectChanges();

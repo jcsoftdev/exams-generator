@@ -116,7 +116,10 @@ export class ExamsController {
   ) {}
 
   @Post()
-  async create(@CurrentUser() user: AuthTokenPayload, @Body() body: CreateExamBody): Promise<CreateExamResult> {
+  async create(
+    @CurrentUser() user: AuthTokenPayload,
+    @Body() body: CreateExamBody,
+  ): Promise<CreateExamResult> {
     try {
       return await this.examsService.createExam(user, body as CreateExamDto);
     } catch (error) {
@@ -156,7 +159,10 @@ export class ExamsController {
   /** `POST /exams/preview` (B2) — same body shape as `POST /exams` minus `title`; pure read, no persistence (200 not 201). */
   @Post("preview")
   @HttpCode(HttpStatus.OK)
-  async preview(@CurrentUser() user: AuthTokenPayload, @Body() body: CreateExamBody): Promise<PreviewExamResult> {
+  async preview(
+    @CurrentUser() user: AuthTokenPayload,
+    @Body() body: CreateExamBody,
+  ): Promise<PreviewExamResult> {
     return this.examsService.previewExam(user, body as PreviewExamDto);
   }
 
@@ -229,14 +235,20 @@ export class ExamsController {
   }
 
   @Get(":examId")
-  async getExam(@CurrentUser() user: AuthTokenPayload, @Param("examId", ParseUUIDPipe) examId: string): Promise<ExamDetailResult> {
+  async getExam(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("examId", ParseUUIDPipe) examId: string,
+  ): Promise<ExamDetailResult> {
     return this.examsService.getExamDetail(user, examId);
   }
 
   /** `DELETE /exams/:examId` (S3) — cascading delete; no status restriction (confirmation is the frontend's job). */
   @Delete(":examId")
   @HttpCode(HttpStatus.NO_CONTENT)
-  async remove(@CurrentUser() user: AuthTokenPayload, @Param("examId", ParseUUIDPipe) examId: string): Promise<void> {
+  async remove(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("examId", ParseUUIDPipe) examId: string,
+  ): Promise<void> {
     await this.examsService.deleteExam(user, examId);
   }
 
@@ -256,7 +268,10 @@ export class ExamsController {
   }
 
   @Post(":examId/confirm")
-  async confirm(@CurrentUser() user: AuthTokenPayload, @Param("examId", ParseUUIDPipe) examId: string): Promise<ConfirmExamResult> {
+  async confirm(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("examId", ParseUUIDPipe) examId: string,
+  ): Promise<ConfirmExamResult> {
     return this.examsService.confirmExam(user, examId);
   }
 

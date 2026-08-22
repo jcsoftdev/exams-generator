@@ -37,18 +37,22 @@ Poblar el banco con preguntas reales de exámenes publicados. Cada corrida produ
 ### A. Structured + imagen complemento — `seed-gap-topic-with-image.ts`
 
 ```json
-{ "entries": [ {
-  "courseName": "Matemática",
-  "topicName": "Gráficos, tablas, estadística y probabilidad",
-  "gradeLevel": "primaria_4",
-  "difficulty": "easy",
-  "bodyTypst": "Enunciado transcrito (puede referirse a la imagen: 'ver gráfico').",
-  "alternatives": ["15 libros.", "9 libros.", "5 libros.", "3 libros."],
-  "correctAnswer": "0",
-  "imagePath": "mi-lote-figures/mat-00.png",
-  "sourceUrl": "http://...",
-  "sourceName": "MINEDU - Cuadernillo modelo Matemática 4to primaria"
-} ] }
+{
+  "entries": [
+    {
+      "courseName": "Matemática",
+      "topicName": "Gráficos, tablas, estadística y probabilidad",
+      "gradeLevel": "primaria_4",
+      "difficulty": "easy",
+      "bodyTypst": "Enunciado transcrito (puede referirse a la imagen: 'ver gráfico').",
+      "alternatives": ["15 libros.", "9 libros.", "5 libros.", "3 libros."],
+      "correctAnswer": "0",
+      "imagePath": "mi-lote-figures/mat-00.png",
+      "sourceUrl": "http://...",
+      "sourceName": "MINEDU - Cuadernillo modelo Matemática 4to primaria"
+    }
+  ]
+}
 ```
 
 - `correctAnswer` es **índice 0-based** (string) sobre `alternatives`.
@@ -58,13 +62,20 @@ Poblar el banco con preguntas reales de exámenes publicados. Cada corrida produ
 ### B. Pregunta-imagen completa — `seed-image-question.ts`
 
 ```json
-{ "entries": [ {
-  "courseName": "Matemática", "topicName": "Figuras y cuerpos geométricos",
-  "gradeLevel": "primaria_4", "difficulty": "medium",
-  "correctAnswer": "c",
-  "imagePath": "mi-lote-image/mat-06.png",
-  "sourceUrl": "http://...", "sourceName": "..."
-} ] }
+{
+  "entries": [
+    {
+      "courseName": "Matemática",
+      "topicName": "Figuras y cuerpos geométricos",
+      "gradeLevel": "primaria_4",
+      "difficulty": "medium",
+      "correctAnswer": "c",
+      "imagePath": "mi-lote-image/mat-06.png",
+      "sourceUrl": "http://...",
+      "sourceName": "..."
+    }
+  ]
+}
 ```
 
 - `correctAnswer` es **letra minúscula a-e** que matchea las alternativas impresas en la imagen
@@ -85,16 +96,16 @@ Poblar el banco con preguntas reales de exámenes publicados. Cada corrida produ
 
 Para exámenes publicados como PDF con solucionario, el recorte manual ya no hace falta:
 
-| Herramienta | Qué hace |
-| --- | --- |
-| `pdf_lines.py` | Texto del PDF en orden de lectura; detecta páginas a dos columnas y emite la columna izquierda completa antes de la derecha. |
-| `parse_uni_solucionario.py <pdf> [--columns] --out p.json` | Enunciados + clave por pregunta. Entiende dos layouts: secciones `x.y Título` y capítulos que abren el curso con un título EN MAYÚSCULAS. |
-| `crop_pdf_figures.py <pdf> --anchor "<frase>" --out f.png` | Recorta **solo** la figura (banda entre el último renglón del enunciado y las alternativas). |
-| `crop_pdf_figures.py <pdf> --mode numbered --section-anchor <"2.1"\|"FÍSICA"> --question N --out q.png --dpi 300` | Recorta la pregunta completa (enunciado + alternativas) como un PNG. |
-| `classify_topics.py` | Sugiere curso/tema canónico a partir del vocabulario del enunciado. Es sugerencia: se revisa antes de sembrar. |
-| `validate_lots.py <taxonomy.json> <dir>...` | Revisa un directorio de lotes contra todo lo que exige el seeder: taxonomía byte a byte, respuesta dentro del rango, imágenes que existan, procedencia presente, colisiones de hash y PNGs huérfanos. Correr SIEMPRE antes de sembrar. |
-| `check_source_url.py <lots-dir> [lote...]` | Prueba que el `sourceUrl` del lote contenga de verdad sus preguntas: OCR del recorte, frase distintiva, y búsqueda dentro del PDF declarado. |
-| `build_lot.py --parsed p.json --pdf x.pdf --lot <slug> --data-dir <data> --source-url <url> --exam-label "<...>" [--all-images] [--dry-run]` | Escribe `<slug>.json`, `<slug>-image.json` y sus directorios de PNGs. |
+| Herramienta                                                                                                                                  | Qué hace                                                                                                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pdf_lines.py`                                                                                                                               | Texto del PDF en orden de lectura; detecta páginas a dos columnas y emite la columna izquierda completa antes de la derecha.                                                                                                           |
+| `parse_uni_solucionario.py <pdf> [--columns] --out p.json`                                                                                   | Enunciados + clave por pregunta. Entiende dos layouts: secciones `x.y Título` y capítulos que abren el curso con un título EN MAYÚSCULAS.                                                                                              |
+| `crop_pdf_figures.py <pdf> --anchor "<frase>" --out f.png`                                                                                   | Recorta **solo** la figura (banda entre el último renglón del enunciado y las alternativas).                                                                                                                                           |
+| `crop_pdf_figures.py <pdf> --mode numbered --section-anchor <"2.1"\|"FÍSICA"> --question N --out q.png --dpi 300`                            | Recorta la pregunta completa (enunciado + alternativas) como un PNG.                                                                                                                                                                   |
+| `classify_topics.py`                                                                                                                         | Sugiere curso/tema canónico a partir del vocabulario del enunciado. Es sugerencia: se revisa antes de sembrar.                                                                                                                         |
+| `validate_lots.py <taxonomy.json> <dir>...`                                                                                                  | Revisa un directorio de lotes contra todo lo que exige el seeder: taxonomía byte a byte, respuesta dentro del rango, imágenes que existan, procedencia presente, colisiones de hash y PNGs huérfanos. Correr SIEMPRE antes de sembrar. |
+| `check_source_url.py <lots-dir> [lote...]`                                                                                                   | Prueba que el `sourceUrl` del lote contenga de verdad sus preguntas: OCR del recorte, frase distintiva, y búsqueda dentro del PDF declarado.                                                                                           |
+| `build_lot.py --parsed p.json --pdf x.pdf --lot <slug> --data-dir <data> --source-url <url> --exam-label "<...>" [--all-images] [--dry-run]` | Escribe `<slug>.json`, `<slug>-image.json` y sus directorios de PNGs.                                                                                                                                                                  |
 
 Cuándo usar `--all-images`: cuando `pdftotext` transcribe mal los símbolos del PDF
 (fórmulas rotas, `µ` que sale como `P`, radicales perdidos). Un PNG horneado vale más que

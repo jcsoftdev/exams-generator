@@ -49,22 +49,22 @@ Endpoints que la web pide desde esas pantallas, con token de profesor:
       simplemente ve el nombre del producto en vez del de su colegio, en todas las pantallas.
 
       Es el mismo patrón que el P0 ya cerrado de esta serie ("decirle al profesor lo mismo del
-      examen en cada pantalla"): la UI no miente a propósito, se queda callada.
+          examen en cada pantalla"): la UI no miente a propósito, se queda callada.
 
-      **HECHO** (`apps/api/src/modules/tenants/tenants.controller.ts`): `GET /tenants/:id` ahora
-      acepta también `Role.Teacher`. Decisiones:
-      - **Solo la lectura.** `PATCH`, `DELETE` y `POST /:id/logo` siguen sin el rol: leer el
-        nombre del colegio no es permiso para renombrarlo.
-      - **No hace falta más guard.** `TenantGuard` ya fija la fila al tenant del token, así que
-        un profesor solo puede leer el suyo — se agregó el test que lo prueba (403 contra otro).
-      - **La fila no lleva nada privado**: `id`, `name`, `slug`, `city`, `logoAssetId`, `active`.
-      - **Sin cambio en el front**: el shell ya hacía la llamada para todos los roles; lo que
-        fallaba era el permiso.
+          **HECHO** (`apps/api/src/modules/tenants/tenants.controller.ts`): `GET /tenants/:id` ahora
+          acepta también `Role.Teacher`. Decisiones:
+          - **Solo la lectura.** `PATCH`, `DELETE` y `POST /:id/logo` siguen sin el rol: leer el
+            nombre del colegio no es permiso para renombrarlo.
+          - **No hace falta más guard.** `TenantGuard` ya fija la fila al tenant del token, así que
+            un profesor solo puede leer el suyo — se agregó el test que lo prueba (403 contra otro).
+          - **La fila no lleva nada privado**: `id`, `name`, `slug`, `city`, `logoAssetId`, `active`.
+          - **Sin cambio en el front**: el shell ya hacía la llamada para todos los roles; lo que
+            fallaba era el permiso.
 
-      3 tests nuevos en `tenants.e2e.spec.ts` (lee el suyo → 200, lee otro → 403, `PATCH` del
-      suyo → 403). Rojo antes, verde después. Suite `tenants` e2e **17/17**, API non-e2e
-      **859/859**. Verificado contra la API corriendo con token de profesor real:
-      `{"name":"Colegio Demo", …}` con **HTTP 200**.
+          3 tests nuevos en `tenants.e2e.spec.ts` (lee el suyo → 200, lee otro → 403, `PATCH` del
+          suyo → 403). Rojo antes, verde después. Suite `tenants` e2e **17/17**, API non-e2e
+          **859/859**. Verificado contra la API corriendo con token de profesor real:
+          `{"name":"Colegio Demo", …}` con **HTTP 200**.
 
 ## P2
 
@@ -75,23 +75,23 @@ Endpoints que la web pide desde esas pantallas, con token de profesor:
       de una de administrador salvo por qué ítems faltan en el sidebar.
 
       **HECHO** — el menú ahora muestra nombre, email y un chip de rol, alimentados por un
-      `GET /auth/me` nuevo. Decisiones:
-      - **Endpoint nuevo, no engordar el JWT.** Un token no se refresca cuando el usuario cambia
-        de nombre; una fetch sí.
-      - **Vive en `AuthController`, no en `UsersController`.** Ese último es
-        `@Roles(SchoolAdmin)` a nivel de clase y saca el tenant del token con `requireTenant()`,
-        que lanza para el staff de plataforma sin tenant. Un `me` colgado ahí habría dado 403 a
-        todos los demás roles y roto a `platform_admin`/`content_editor`. "Quién soy" es
-        identidad, no gestión de usuarios del colegio.
-      - **Lee la fila por el `sub` del JWT**, nunca por un id que mande el cliente, y selecciona
-        columnas explícitas para que el hash de contraseña no pueda filtrarse.
-      - `name` es nullable en la base, así que la línea principal cae al email cuando no hay
-        nombre.
-      - El `roleLabel()` de dos roles que vivía dentro de `tenant-settings` pasó a un util
-        compartido con los cuatro roles; las dos pantallas usan el mismo mapeo.
+          `GET /auth/me` nuevo. Decisiones:
+          - **Endpoint nuevo, no engordar el JWT.** Un token no se refresca cuando el usuario cambia
+            de nombre; una fetch sí.
+          - **Vive en `AuthController`, no en `UsersController`.** Ese último es
+            `@Roles(SchoolAdmin)` a nivel de clase y saca el tenant del token con `requireTenant()`,
+            que lanza para el staff de plataforma sin tenant. Un `me` colgado ahí habría dado 403 a
+            todos los demás roles y roto a `platform_admin`/`content_editor`. "Quién soy" es
+            identidad, no gestión de usuarios del colegio.
+          - **Lee la fila por el `sub` del JWT**, nunca por un id que mande el cliente, y selecciona
+            columnas explícitas para que el hash de contraseña no pueda filtrarse.
+          - `name` es nullable en la base, así que la línea principal cae al email cuando no hay
+            nombre.
+          - El `roleLabel()` de dos roles que vivía dentro de `tenant-settings` pasó a un util
+            compartido con los cuatro roles; las dos pantallas usan el mismo mapeo.
 
-      API non-e2e **860/860**, API e2e **204/204**, web **777/777**. Verificado en la app
-      corriendo como profesor real: `Profesora QA · profe.qa@colegio-demo.test · Profesor`.
+          API non-e2e **860/860**, API e2e **204/204**, web **777/777**. Verificado en la app
+          corriendo como profesor real: `Profesora QA · profe.qa@colegio-demo.test · Profesor`.
 
 ## Hallazgo de la pasada visual
 
@@ -104,39 +104,34 @@ Endpoints que la web pide desde esas pantallas, con token de profesor:
       renombrarlos, duplicarlos y **borrarlos**.
 
       La propia app ya se contradice: el `<title>` de esa ruta dice **"Exámenes"**, el `h1` dice
-      **"Mis exámenes"**.
+          **"Mis exámenes"**.
 
-      **No se tocó: es una decisión de producto, no un bug de una línea.** Hay dos lecturas y
-      dan trabajo distinto:
-      1. Los exámenes son del **colegio** (espacio compartido) → lo que miente es la etiqueta;
-         se renombra a "Exámenes" en el nav, el `h1` y los 3 specs de `shell.component.spec.ts`
-         que hoy fijan el string.
-      2. Los exámenes son **personales** → lo que miente es la consulta; hay que filtrar por
-         `createdBy`, decidir qué ve el `school_admin` (¿todo el colegio?) y qué pasa con los
-         exámenes ya creados.
+          **No se tocó: es una decisión de producto, no un bug de una línea.** Hay dos lecturas y
+          dan trabajo distinto:
+          1. Los exámenes son del **colegio** (espacio compartido) → lo que miente es la etiqueta;
+             se renombra a "Exámenes" en el nav, el `h1` y los 3 specs de `shell.component.spec.ts`
+             que hoy fijan el string.
+          2. Los exámenes son **personales** → lo que miente es la consulta; hay que filtrar por
+             `createdBy`, decidir qué ve el `school_admin` (¿todo el colegio?) y qué pasa con los
+             exámenes ya creados.
 
-      **RESUELTO el 2026-08-18 por la lectura 1** (los exámenes son del colegio): se renombró la
-      etiqueta a "Exámenes" en el nav, el `h1`, los 3 specs y 4 comentarios/docstrings que la
-      nombraban. Los datos, la consulta y los guards quedaron intactos. Web **773/773** en ese
-      commit. Si la lectura correcta era la 2, se revierte en un commit y el trabajo real
-      (filtrar por `createdBy`) sigue pendiente.
+          **RESUELTO el 2026-08-18 por la lectura 1** (los exámenes son del colegio): se renombró la
+          etiqueta a "Exámenes" en el nav, el `h1`, los 3 specs y 4 comentarios/docstrings que la
+          nombraban. Los datos, la consulta y los guards quedaron intactos. Web **773/773** en ese
+          commit. Si la lectura correcta era la 2, se revierte en un commit y el trabajo real
+          (filtrar por `createdBy`) sigue pendiente.
 
 ---
 
 ## Pendiente de esta auditoría
 
 - [x] **Pasada visual en vivo con el rol** — hecha el 2026-08-18 con Playwright headless sobre
-      la app corriendo (1440×900), login real como `profe.qa@colegio-demo.test`. Resultado:
-      - El fix del nombre del colegio se ve: topbar dice **"Colegio Demo"** en las 6 pantallas
-        del rol (el fallback "GeneraExamen" solo aparece <300 ms mientras resuelve la fetch,
-        igual que para `school_admin`).
-      - Sidebar del profesor: Panel · Banco de preguntas · Mis exámenes · Generar con IA ·
-        Cola de revisión · Historial IA. Sin grupo Colegio ni Administración.
-      - `/app/settings` y `/app/admin/tenants` tecleadas a mano → **`/forbidden`** con
-        "No tienes acceso a esta página". El guard no depende del nav.
-      - **Cero errores de consola y cero requests ≥400** en todo el recorrido.
-      - Panel, banco, armado de examen, generar con IA, cola de revisión e historial cargan y
-        renderizan datos reales.
+      la app corriendo (1440×900), login real como `profe.qa@colegio-demo.test`. Resultado: - El fix del nombre del colegio se ve: topbar dice **"Colegio Demo"** en las 6 pantallas
+      del rol (el fallback "GeneraExamen" solo aparece <300 ms mientras resuelve la fetch,
+      igual que para `school_admin`). - Sidebar del profesor: Panel · Banco de preguntas · Mis exámenes · Generar con IA ·
+      Cola de revisión · Historial IA. Sin grupo Colegio ni Administración. - `/app/settings` y `/app/admin/tenants` tecleadas a mano → **`/forbidden`** con
+      "No tienes acceso a esta página". El guard no depende del nav. - **Cero errores de consola y cero requests ≥400** en todo el recorrido. - Panel, banco, armado de examen, generar con IA, cola de revisión e historial cargan y
+      renderizan datos reales.
 
 ---
 

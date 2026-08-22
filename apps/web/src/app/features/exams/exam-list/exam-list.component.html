@@ -4,7 +4,10 @@
     <ui-button variant="primary" (clicked)="newExam()">+ Nuevo examen</ui-button>
   </div>
 
-  <div class="flex flex-wrap items-end gap-3 rounded-card border border-n200 bg-surface p-3" data-testid="exam-filters">
+  <div
+    class="flex flex-wrap items-end gap-3 rounded-card border border-n200 bg-surface p-3"
+    data-testid="exam-filters"
+  >
     <div class="w-40" data-testid="status-filter">
       <ui-select
         label="Estado"
@@ -34,17 +37,26 @@
   </div>
 
   @if (actionError()) {
-    <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ actionError() }}</p>
+    <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">
+      {{ actionError() }}
+    </p>
   }
 
   @if (loading()) {
     <div data-testid="loading-indicator" class="grid gap-2">
-      @for (i of [1,2,3]; track i) { <div class="h-16 animate-pulse rounded-card bg-n100"></div> }
+      @for (i of [1, 2, 3]; track i) {
+        <div class="h-16 animate-pulse rounded-card bg-n100"></div>
+      }
     </div>
   } @else if (errorMessage()) {
-    <div data-testid="error-state" class="rounded-card border border-n200 bg-surface p-8 text-center">
+    <div
+      data-testid="error-state"
+      class="rounded-card border border-n200 bg-surface p-8 text-center"
+    >
       <p class="text-n700">{{ errorMessage() }}</p>
-      <div data-testid="retry-button" class="mt-3 inline-block"><ui-button variant="primary" (clicked)="retry()">Reintentar</ui-button></div>
+      <div data-testid="retry-button" class="mt-3 inline-block">
+        <ui-button variant="primary" (clicked)="retry()">Reintentar</ui-button>
+      </div>
     </div>
   } @else if (exams().length === 0 && hasActiveFilters()) {
     <div data-testid="empty-filtered">
@@ -70,40 +82,79 @@
           2026-08-20, M3). md (768px) is the same breakpoint the shell drawer
           switches at.
         -->
-        <div data-testid="exam-row" class="flex flex-col gap-2 rounded-card border border-n200 bg-surface p-3 md:flex-row md:items-center md:gap-3">
+        <div
+          data-testid="exam-row"
+          class="flex flex-col gap-2 rounded-card border border-n200 bg-surface p-3 md:flex-row md:items-center md:gap-3"
+        >
           <div class="min-w-0 flex-1">
             <p class="truncate font-medium text-n900">{{ exam.title }}</p>
-            <p data-testid="exam-meta" class="text-xs text-n500">{{ gradeLabel(exam.gradeLevel) }} · {{ exam.questionCount }} preguntas · {{ exam.versionCount }} formas</p>
+            <p data-testid="exam-meta" class="text-xs text-n500">
+              {{ gradeLabel(exam.gradeLevel) }} · {{ exam.questionCount }} preguntas ·
+              {{ exam.versionCount }} formas
+            </p>
           </div>
           <div data-testid="exam-row-actions" class="flex items-center gap-2 md:gap-3">
-          <ui-tag [variant]="statusTag(exam.status)">{{ statusLabel(exam) }}</ui-tag>
-          @if (exam.status === 'ready') {
-            <div data-testid="exam-open"><ui-button variant="ghost" (clicked)="open(exam)">Abrir ›</ui-button></div>
-          } @else {
-            <div data-testid="exam-continue"><ui-button variant="ghost" (clicked)="continueDraft(exam)">Seguir armando ›</ui-button></div>
-          }
-          <div class="relative">
-            <button type="button" data-testid="exam-menu" class="rounded-field p-2 text-n500 hover:bg-n50" (click)="toggleMenu(exam.id)" aria-label="Más acciones">
-              <lucide-angular name="ellipsis" class="h-4 w-4"></lucide-angular>
-            </button>
-            @if (openMenuId() === exam.id) {
-              <div class="absolute right-0 z-40 mt-1 w-52 rounded-card border border-n200 bg-surface py-1 shadow-lg">
-                <div data-testid="exam-rename"><ui-button variant="ghost" (clicked)="requestRename(exam)">Renombrar</ui-button></div>
-                <div data-testid="exam-duplicate"><ui-button variant="ghost" (clicked)="duplicate(exam)">Usar de plantilla</ui-button></div>
-                <div data-testid="exam-delete"><ui-button variant="ghost" (clicked)="requestDelete(exam)"><span class="text-hard-text">Eliminar</span></ui-button></div>
+            <ui-tag [variant]="statusTag(exam.status)">{{ statusLabel(exam) }}</ui-tag>
+            @if (exam.status === 'ready') {
+              <div data-testid="exam-open">
+                <ui-button variant="ghost" (clicked)="open(exam)">Abrir ›</ui-button>
+              </div>
+            } @else {
+              <div data-testid="exam-continue">
+                <ui-button variant="ghost" (clicked)="continueDraft(exam)"
+                  >Seguir armando ›</ui-button
+                >
               </div>
             }
-          </div>
+            <div class="relative">
+              <button
+                type="button"
+                data-testid="exam-menu"
+                class="rounded-field p-2 text-n500 hover:bg-n50"
+                (click)="toggleMenu(exam.id)"
+                aria-label="Más acciones"
+              >
+                <lucide-angular name="ellipsis" class="h-4 w-4"></lucide-angular>
+              </button>
+              @if (openMenuId() === exam.id) {
+                <div
+                  class="absolute right-0 z-40 mt-1 w-52 rounded-card border border-n200 bg-surface py-1 shadow-lg"
+                >
+                  <div data-testid="exam-rename">
+                    <ui-button variant="ghost" (clicked)="requestRename(exam)">Renombrar</ui-button>
+                  </div>
+                  <div data-testid="exam-duplicate">
+                    <ui-button variant="ghost" (clicked)="duplicate(exam)"
+                      >Usar de plantilla</ui-button
+                    >
+                  </div>
+                  <div data-testid="exam-delete">
+                    <ui-button variant="ghost" (clicked)="requestDelete(exam)"
+                      ><span class="text-hard-text">Eliminar</span></ui-button
+                    >
+                  </div>
+                </div>
+              }
+            </div>
           </div>
         </div>
       }
     </div>
     <div class="mt-4">
-      <ui-pagination [page]="page()" [pageSize]="PAGE_SIZE" [total]="total()" (pageChange)="onPageChange($event)"></ui-pagination>
+      <ui-pagination
+        [page]="page()"
+        [pageSize]="PAGE_SIZE"
+        [total]="total()"
+        (pageChange)="onPageChange($event)"
+      ></ui-pagination>
     </div>
   }
 
-  <ui-modal [open]="pendingRename() !== null" title="Renombrar examen" (openChange)="cancelRename()">
+  <ui-modal
+    [open]="pendingRename() !== null"
+    title="Renombrar examen"
+    (openChange)="cancelRename()"
+  >
     <div data-testid="rename-input">
       <ui-input
         label="Nombre del examen"
@@ -114,7 +165,9 @@
     <div actions class="flex justify-end gap-2">
       <ui-button variant="ghost" (clicked)="cancelRename()">Cancelar</ui-button>
       <div data-testid="rename-confirm">
-        <ui-button variant="primary" [disabled]="!canSaveRename()" (clicked)="confirmRename()">Guardar</ui-button>
+        <ui-button variant="primary" [disabled]="!canSaveRename()" (clicked)="confirmRename()"
+          >Guardar</ui-button
+        >
       </div>
     </div>
   </ui-modal>
@@ -130,7 +183,9 @@
     </p>
     <div actions class="flex justify-end gap-2">
       <ui-button variant="ghost" (clicked)="cancelDelete()">Cancelar</ui-button>
-      <div data-testid="delete-confirm-yes"><ui-button variant="danger" (clicked)="confirmDelete()">Eliminar</ui-button></div>
+      <div data-testid="delete-confirm-yes">
+        <ui-button variant="danger" (clicked)="confirmDelete()">Eliminar</ui-button>
+      </div>
     </div>
   </ui-modal>
 </div>

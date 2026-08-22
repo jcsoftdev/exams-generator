@@ -7,7 +7,17 @@ import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
-import { assets, courses, examBlueprintRows, examQuestions, exams, questions, tenants, topics, users } from "../../db/schema";
+import {
+  assets,
+  courses,
+  examBlueprintRows,
+  examQuestions,
+  exams,
+  questions,
+  tenants,
+  topics,
+  users,
+} from "../../db/schema";
 import { TokenService } from "../auth/token.service";
 
 /** `POST /exams/preview` (B2) e2e — spec §A.2 acceptance scenarios. */
@@ -191,10 +201,30 @@ describe("POST /exams/preview (e2e)", () => {
   it("scenario 2: a shortage row -> requested/available in shortages and questionIds has exactly the available ids", async () => {
     const topicId = await createTopic();
     const gradeLevel = "secundaria_1";
-    const q1 = await createApprovedQuestion({ tenantId: tenantAId, createdBy: tenantATeacherId, topicId, gradeLevel });
-    const q2 = await createApprovedQuestion({ tenantId: tenantAId, createdBy: tenantATeacherId, topicId, gradeLevel });
-    const q3 = await createApprovedQuestion({ tenantId: tenantAId, createdBy: tenantATeacherId, topicId, gradeLevel });
-    const q4 = await createApprovedQuestion({ tenantId: tenantAId, createdBy: tenantATeacherId, topicId, gradeLevel });
+    const q1 = await createApprovedQuestion({
+      tenantId: tenantAId,
+      createdBy: tenantATeacherId,
+      topicId,
+      gradeLevel,
+    });
+    const q2 = await createApprovedQuestion({
+      tenantId: tenantAId,
+      createdBy: tenantATeacherId,
+      topicId,
+      gradeLevel,
+    });
+    const q3 = await createApprovedQuestion({
+      tenantId: tenantAId,
+      createdBy: tenantATeacherId,
+      topicId,
+      gradeLevel,
+    });
+    const q4 = await createApprovedQuestion({
+      tenantId: tenantAId,
+      createdBy: tenantATeacherId,
+      topicId,
+      gradeLevel,
+    });
 
     const response = await previewRequest(tenantAToken)
       .send({ gradeLevel, blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 10 }] })
@@ -215,7 +245,9 @@ describe("POST /exams/preview (e2e)", () => {
     const body = { gradeLevel, blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 5 }] };
 
     const previewResponse = await previewRequest(tenantAToken).send(body).expect(200);
-    const createResponse = await createExamRequest(tenantAToken).send({ ...body, title: "Parity check" }).expect(422);
+    const createResponse = await createExamRequest(tenantAToken)
+      .send({ ...body, title: "Parity check" })
+      .expect(422);
     createdExamIds.push(createResponse.body.examId);
 
     expect(previewResponse.body.shortages[0]).toMatchObject({ requested: 5, available: 2 });
@@ -267,7 +299,11 @@ describe("POST /exams/preview (e2e)", () => {
   });
 
   it("scenario 6: teacher-shaped token with null tenantId -> 403 (defensive guard)", async () => {
-    const contentEditorToken = tokenService.sign({ sub: staffUserId, tenantId: null, role: Role.ContentEditor });
+    const contentEditorToken = tokenService.sign({
+      sub: staffUserId,
+      tenantId: null,
+      role: Role.ContentEditor,
+    });
 
     await previewRequest(contentEditorToken)
       .send({ gradeLevel: "primaria_1", blueprint: [{ courseId, count: 1 }] })

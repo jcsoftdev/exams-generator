@@ -59,12 +59,18 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
 
     const suffix = randomUUID();
 
-    const [course] = await db.insert(courses).values({ name: `VersionsHistoryE2E Course ${suffix}` }).returning({ id: courses.id });
+    const [course] = await db
+      .insert(courses)
+      .values({ name: `VersionsHistoryE2E Course ${suffix}` })
+      .returning({ id: courses.id });
     courseId = course!.id;
 
     const [tenantA] = await db
       .insert(tenants)
-      .values({ name: `VersionsHistoryE2E Tenant A ${suffix}`, slug: `versions-history-e2e-tenant-a-${suffix}` })
+      .values({
+        name: `VersionsHistoryE2E Tenant A ${suffix}`,
+        slug: `versions-history-e2e-tenant-a-${suffix}`,
+      })
       .returning({ id: tenants.id });
     tenantAId = tenantA!.id;
 
@@ -81,7 +87,10 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
 
     const [tenantB] = await db
       .insert(tenants)
-      .values({ name: `VersionsHistoryE2E Tenant B ${suffix}`, slug: `versions-history-e2e-tenant-b-${suffix}` })
+      .values({
+        name: `VersionsHistoryE2E Tenant B ${suffix}`,
+        slug: `versions-history-e2e-tenant-b-${suffix}`,
+      })
       .returning({ id: tenants.id });
     tenantBId = tenantB!.id;
 
@@ -179,7 +188,9 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
   }
 
   function getVersionsRequest(token: string, examId: string) {
-    return request(app.getHttpServer()).get(`/exams/${examId}/versions`).set("Authorization", `Bearer ${token}`);
+    return request(app.getHttpServer())
+      .get(`/exams/${examId}/versions`)
+      .set("Authorization", `Bearer ${token}`);
   }
 
   it("scenario 1: an exam with 3 generated versions -> 3 entries with matching codes + non-empty urls", async () => {
@@ -196,7 +207,11 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
     const createResponse = await request(app.getHttpServer())
       .post("/exams")
       .set("Authorization", `Bearer ${tenantAToken}`)
-      .send({ title: "History exam", gradeLevel, blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }] })
+      .send({
+        title: "History exam",
+        gradeLevel,
+        blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+      })
       .expect(201);
     const examId = createResponse.body.id;
     createdExamIds.push(examId);
@@ -232,7 +247,11 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
     const createResponse = await request(app.getHttpServer())
       .post("/exams")
       .set("Authorization", `Bearer ${tenantAToken}`)
-      .send({ title: "Cross-tenant exam", gradeLevel, blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }] })
+      .send({
+        title: "Cross-tenant exam",
+        gradeLevel,
+        blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+      })
       .expect(201);
     const examId = createResponse.body.id;
     createdExamIds.push(examId);
@@ -253,7 +272,11 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
     const createResponse = await request(app.getHttpServer())
       .post("/exams")
       .set("Authorization", `Bearer ${tenantAToken}`)
-      .send({ title: "Zero versions exam", gradeLevel, blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }] })
+      .send({
+        title: "Zero versions exam",
+        gradeLevel,
+        blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+      })
       .expect(201);
     const examId = createResponse.body.id;
     createdExamIds.push(examId);
@@ -276,7 +299,11 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
       const createResponse = await request(app.getHttpServer())
         .post("/exams")
         .set("Authorization", `Bearer ${tenantAToken}`)
-        .send({ title: "Zip exam", gradeLevel, blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }] })
+        .send({
+          title: "Zip exam",
+          gradeLevel,
+          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+        })
         .expect(201);
       const examId = createResponse.body.id;
       createdExamIds.push(examId);

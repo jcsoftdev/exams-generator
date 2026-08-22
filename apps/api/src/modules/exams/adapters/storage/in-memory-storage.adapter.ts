@@ -1,7 +1,4 @@
-import {
-  StoragePort,
-  StorageObjectNotFoundError,
-} from "../../domain/ports/storage.port";
+import { StoragePort, StorageObjectNotFoundError } from "../../domain/ports/storage.port";
 
 /**
  * In-process fake for `StoragePort`. Satisfies the exact same contract test

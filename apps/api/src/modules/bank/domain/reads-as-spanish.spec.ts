@@ -11,7 +11,9 @@ describe("readsAsSpanish", () => {
 
   it("rejects an English statement", () => {
     expect(
-      readsAsSpanish("Complete the text with prepositions of time and place. Are you busy on tuesday evening?"),
+      readsAsSpanish(
+        "Complete the text with prepositions of time and place. Are you busy on tuesday evening?",
+      ),
     ).toBe(false);
   });
 
@@ -33,14 +35,16 @@ describe("readsAsSpanish", () => {
     // Chemistry and computing statements borrow English nouns; one loanword is
     // not a foreign statement.
     expect(
-      readsAsSpanish("Señale la alternativa que define correctamente el término software en el contexto dado."),
+      readsAsSpanish(
+        "Señale la alternativa que define correctamente el término software en el contexto dado.",
+      ),
     ).toBe(true);
   });
 
   it("keeps a Spanish statement about English grammar", () => {
-    expect(
-      readsAsSpanish("¿Cuál es la traducción correcta de la palabra the en la siguiente oración?"),
-    ).toBe(true);
+    expect(readsAsSpanish("¿Cuál es la traducción correcta de la palabra the en la siguiente oración?")).toBe(
+      true,
+    );
   });
 
   it("treats an empty or symbol-only statement as Spanish, since there is nothing to judge", () => {

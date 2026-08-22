@@ -13,7 +13,8 @@ export interface StockBatchInput {
   readonly cells: readonly StockBatchCellInput[] | undefined;
 }
 
-export type StockBatchValidation = { readonly ok: true } | { readonly ok: false; readonly errors: readonly string[] };
+export type StockBatchValidation =
+  { readonly ok: true } | { readonly ok: false; readonly errors: readonly string[] };
 
 const VALID_DIFFICULTIES = new Set<string>(Object.values(Difficulty));
 

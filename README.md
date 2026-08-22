@@ -17,12 +17,12 @@ Full design (data model, roles, flows) lives in
 
 pnpm monorepo (Turborepo), Node >= 22.13.
 
-| Workspace         | Stack        | What it does                                                                                                                    |
-| ----------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| `apps/api`        | NestJS       | REST API, hexagonal architecture — auth, tenants, question bank, AI question generation, exam building/versioning, Typst→PDF rendering, MinIO storage. |
-| `apps/web`        | Angular 22   | Teacher/admin SPA — bank browser, AI question generation, exam builder, exam versions.                                          |
-| `apps/landing`    | Astro 7      | Public marketing site (static).                                                                                                  |
-| `packages/shared` | TypeScript   | Shared types/DTOs/contracts consumed by `apps/api` and `apps/web`.                                                               |
+| Workspace         | Stack      | What it does                                                                                                                                           |
+| ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `apps/api`        | NestJS     | REST API, hexagonal architecture — auth, tenants, question bank, AI question generation, exam building/versioning, Typst→PDF rendering, MinIO storage. |
+| `apps/web`        | Angular 22 | Teacher/admin SPA — bank browser, AI question generation, exam builder, exam versions.                                                                 |
+| `apps/landing`    | Astro 7    | Public marketing site (static).                                                                                                                        |
+| `packages/shared` | TypeScript | Shared types/DTOs/contracts consumed by `apps/api` and `apps/web`.                                                                                     |
 
 ## Prerequisites
 
@@ -61,12 +61,12 @@ Then open `http://localhost:4201` and log in with the seeded demo account:
 
 ## Other useful root scripts
 
-| Script         | What it does                                          |
-| -------------- | ------------------------------------------------------ |
-| `pnpm test`    | Run every workspace's test suite (turbo)                |
-| `pnpm lint`    | Lint every workspace (turbo)                            |
-| `pnpm dev:down`| Stop the local infra containers                         |
-| `pnpm build`   | Build every workspace (turbo)                            |
+| Script          | What it does                             |
+| --------------- | ---------------------------------------- |
+| `pnpm test`     | Run every workspace's test suite (turbo) |
+| `pnpm lint`     | Lint every workspace (turbo)             |
+| `pnpm dev:down` | Stop the local infra containers          |
+| `pnpm build`    | Build every workspace (turbo)            |
 
 ## Deployment
 

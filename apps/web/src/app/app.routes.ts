@@ -16,7 +16,11 @@ export const routes: Routes = [
   // them would only add a network round-trip for no bundle-size benefit, so
   // they stay statically imported.
   { path: 'login', component: LoginComponent, title: `Iniciar sesión${TITLE_SUFFIX}` },
-  { path: 'auth/callback', component: AuthCallbackComponent, title: `Iniciando sesión${TITLE_SUFFIX}` },
+  {
+    path: 'auth/callback',
+    component: AuthCallbackComponent,
+    title: `Iniciando sesión${TITLE_SUFFIX}`,
+  },
   { path: 'forbidden', component: ForbiddenComponent, title: `Sin acceso${TITLE_SUFFIX}` },
   {
     path: 'app',
@@ -32,17 +36,20 @@ export const routes: Routes = [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
       {
         path: 'dashboard',
-        loadComponent: () => import('./features/dashboard/dashboard.component').then((m) => m.DashboardComponent),
+        loadComponent: () =>
+          import('./features/dashboard/dashboard.component').then((m) => m.DashboardComponent),
         title: `Panel${TITLE_SUFFIX}`,
       },
       {
         path: 'bank',
-        loadComponent: () => import('./features/bank/bank-list/bank-list.component').then((m) => m.BankListComponent),
+        loadComponent: () =>
+          import('./features/bank/bank-list/bank-list.component').then((m) => m.BankListComponent),
         title: `Banco de preguntas${TITLE_SUFFIX}`,
       },
       {
         path: 'bank/new',
-        loadComponent: () => import('./features/bank/bank-new/bank-new.component').then((m) => m.BankNewComponent),
+        loadComponent: () =>
+          import('./features/bank/bank-new/bank-new.component').then((m) => m.BankNewComponent),
         title: `Nueva pregunta${TITLE_SUFFIX}`,
       },
       // The backend exams controller is @Roles(Teacher, SchoolAdmin) — any
@@ -50,21 +57,26 @@ export const routes: Routes = [
       // navigation (to /forbidden) and the shell hides the nav item.
       {
         path: 'exams',
-        loadComponent: () => import('./features/exams/exam-list/exam-list.component').then((m) => m.ExamListComponent),
+        loadComponent: () =>
+          import('./features/exams/exam-list/exam-list.component').then((m) => m.ExamListComponent),
         canActivate: [roleGuard(...EXAMS_ROLES)],
         title: `Exámenes${TITLE_SUFFIX}`,
       },
       {
         path: 'exams/new',
         loadComponent: () =>
-          import('./features/exams/exam-builder/exam-builder.component').then((m) => m.ExamBuilderComponent),
+          import('./features/exams/exam-builder/exam-builder.component').then(
+            (m) => m.ExamBuilderComponent,
+          ),
         canActivate: [roleGuard(...EXAMS_ROLES)],
         title: `Nuevo examen${TITLE_SUFFIX}`,
       },
       {
         path: 'exams/:examId',
         loadComponent: () =>
-          import('./features/exams/exam-review/exam-review.component').then((m) => m.ExamReviewComponent),
+          import('./features/exams/exam-review/exam-review.component').then(
+            (m) => m.ExamReviewComponent,
+          ),
         canActivate: [roleGuard(...EXAMS_ROLES)],
         title: `Revisar examen${TITLE_SUFFIX}`,
       },
@@ -79,7 +91,10 @@ export const routes: Routes = [
       },
       {
         path: 'ai/generate',
-        loadComponent: () => import('./features/ai/ai-generate/ai-generate.component').then((m) => m.AiGenerateComponent),
+        loadComponent: () =>
+          import('./features/ai/ai-generate/ai-generate.component').then(
+            (m) => m.AiGenerateComponent,
+          ),
         title: `Generar con IA${TITLE_SUFFIX}`,
       },
       {
@@ -101,20 +116,26 @@ export const routes: Routes = [
       {
         path: 'ai/review',
         loadComponent: () =>
-          import('./features/ai/ai-review-queue/ai-review-queue.component').then((m) => m.AiReviewQueueComponent),
+          import('./features/ai/ai-review-queue/ai-review-queue.component').then(
+            (m) => m.AiReviewQueueComponent,
+          ),
         title: `Revisión de borradores${TITLE_SUFFIX}`,
       },
       {
         path: 'settings',
         loadComponent: () =>
-          import('./features/tenant-settings/tenant-settings.component').then((m) => m.TenantSettingsComponent),
+          import('./features/tenant-settings/tenant-settings.component').then(
+            (m) => m.TenantSettingsComponent,
+          ),
         canActivate: [roleGuard(Role.SchoolAdmin)],
         title: `Configuración${TITLE_SUFFIX}`,
       },
       {
         path: 'admin/tenants',
         loadComponent: () =>
-          import('./features/admin-tenants/admin-tenants.component').then((m) => m.AdminTenantsComponent),
+          import('./features/admin-tenants/admin-tenants.component').then(
+            (m) => m.AdminTenantsComponent,
+          ),
         canActivate: [roleGuard(Role.PlatformAdmin)],
         title: `Colegios${TITLE_SUFFIX}`,
       },

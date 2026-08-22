@@ -34,6 +34,9 @@ export class UsersService {
   }
 
   resetPassword(id: string): Observable<ResetPasswordResult> {
-    return this.http.post<ResetPasswordResult>(`${environment.apiBaseUrl}/users/${id}/reset-password`, {});
+    return this.http.post<ResetPasswordResult>(
+      `${environment.apiBaseUrl}/users/${id}/reset-password`,
+      {},
+    );
   }
 }

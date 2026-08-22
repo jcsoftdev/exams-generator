@@ -34,7 +34,13 @@ function themeColor(cssVar: string, fallbackHex: string): string {
   imports: [BaseChartDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <canvas data-testid="bar-chart" baseChart [data]="chartData()" [options]="options" [type]="'bar'"></canvas>
+    <canvas
+      data-testid="bar-chart"
+      baseChart
+      [data]="chartData()"
+      [options]="options"
+      [type]="'bar'"
+    ></canvas>
   `,
 })
 export class BarChartComponent {

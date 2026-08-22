@@ -64,9 +64,7 @@ export function sniffImageMime(buffer: Buffer): SafeImageMime | null {
 export function requireImageMime(file: { readonly buffer: Buffer }): SafeImageMime {
   const mime = sniffImageMime(file.buffer);
   if (!mime) {
-    throw new BadRequestException(
-      "Uploaded file is not a valid image (expected PNG, JPEG or WEBP).",
-    );
+    throw new BadRequestException("Uploaded file is not a valid image (expected PNG, JPEG or WEBP).");
   }
   return mime;
 }

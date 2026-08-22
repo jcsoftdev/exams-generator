@@ -166,9 +166,7 @@ export class BankRepository implements BankRepositoryPort {
    * straight to `status = 'approved'` (no draft state here; the AI-generated
    * draft flow is a separate lane).
    */
-  async createStructuredQuestion(
-    record: CreateStructuredQuestionRecord,
-  ): Promise<{ id: string }> {
+  async createStructuredQuestion(record: CreateStructuredQuestionRecord): Promise<{ id: string }> {
     const [question] = await this.db
       .insert(questions)
       .values({
@@ -213,10 +211,7 @@ export class BankRepository implements BankRepositoryPort {
   }
 
   /** Same bank-scoped rule as `findByBodyHash`, for questions that are only an image. */
-  async findBySourceName(
-    tenantId: string | null,
-    sourceName: string,
-  ): Promise<{ id: string } | undefined> {
+  async findBySourceName(tenantId: string | null, sourceName: string): Promise<{ id: string } | undefined> {
     const tenantMatch = tenantId === null ? isNull(questions.tenantId) : eq(questions.tenantId, tenantId);
 
     const [row] = await this.db
@@ -342,10 +337,7 @@ export class BankRepository implements BankRepositoryPort {
    * tenant resolves to `undefined` exactly like a non-existent id. Callers
    * (the service) turn that into a 404, never leaking whether the id exists.
    */
-  async findQuestionById(
-    id: string,
-    currentTenantId: string | null,
-  ): Promise<QuestionListItem | undefined> {
+  async findQuestionById(id: string, currentTenantId: string | null): Promise<QuestionListItem | undefined> {
     const visibility: SQL = currentTenantId
       ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
       : (isNull(questions.tenantId) as SQL);
@@ -635,7 +627,12 @@ export class BankRepository implements BankRepositoryPort {
       ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
       : (isNull(questions.tenantId) as SQL);
 
-    const set: Partial<{ correctAnswer: string; topicId: string; difficulty: Difficulty; gradeLevel: string }> = {};
+    const set: Partial<{
+      correctAnswer: string;
+      topicId: string;
+      difficulty: Difficulty;
+      gradeLevel: string;
+    }> = {};
     if (patch.correctAnswer !== undefined) set.correctAnswer = patch.correctAnswer;
     if (patch.topicId !== undefined) set.topicId = patch.topicId;
     if (patch.difficulty !== undefined) set.difficulty = patch.difficulty as Difficulty;

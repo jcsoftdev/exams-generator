@@ -33,16 +33,15 @@ describe("mapCompileErrorToQuestionId", () => {
       '#image("/fixtures/q2.png", width: 100%)',
     ].join("\n");
     // The image() call for q1 is on line 4 (1-based).
-    const stderr = [
-      "error: file not found (searched at /fixtures/missing.png)",
-      "  ┌─ input.typ:4:8",
-    ].join("\n");
+    const stderr = ["error: file not found (searched at /fixtures/missing.png)", "  ┌─ input.typ:4:8"].join(
+      "\n",
+    );
 
     expect(mapCompileErrorToQuestionId(typstSource, stderr)).toBe("q1");
   });
 
   it("returns undefined when stderr has no traceable input.typ line reference", () => {
-    const typstSource = "// q:q1\n#image(\"/fixtures/q1.png\")";
+    const typstSource = '// q:q1\n#image("/fixtures/q1.png")';
     const stderr = "error: something went wrong (no location info)";
 
     expect(mapCompileErrorToQuestionId(typstSource, stderr)).toBeUndefined();

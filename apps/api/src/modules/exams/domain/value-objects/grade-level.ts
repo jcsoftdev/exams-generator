@@ -9,11 +9,5 @@
  * `STAGE_LABELS` used to live here too and is gone: "Colegio (Secundaria)" is
  * Spanish UI copy, and nothing on the server ever read it.
  */
-export {
-  GRADE_LEVELS,
-  STAGES,
-  isGradeLevel,
-  isStage,
-  stageForGrade,
-} from "@exams-generator/shared";
+export { GRADE_LEVELS, STAGES, isGradeLevel, isStage, stageForGrade } from "@exams-generator/shared";
 export type { GradeLevel, Stage } from "@exams-generator/shared";

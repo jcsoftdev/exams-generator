@@ -7,13 +7,7 @@
  * compares them, so a status added to one and not the other fails a suite
  * instead of surfacing as a status the UI has no label for.
  */
-export const EXAM_VERSION_JOB_STATUSES = [
-  "pending",
-  "running",
-  "completed",
-  "failed",
-  "cancelled",
-] as const;
+export const EXAM_VERSION_JOB_STATUSES = ["pending", "running", "completed", "failed", "cancelled"] as const;
 
 export type ExamVersionJobStatus = (typeof EXAM_VERSION_JOB_STATUSES)[number];
 

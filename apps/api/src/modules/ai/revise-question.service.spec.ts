@@ -95,9 +95,7 @@ describe("ReviseQuestionService.revise", () => {
   it("throws BadRequestException when the instruction is blank", async () => {
     const { service, bankRepository, generator } = buildDeps();
 
-    await expect(service.revise(TEACHER_USER, "q1", "   ")).rejects.toBeInstanceOf(
-      BadRequestException,
-    );
+    await expect(service.revise(TEACHER_USER, "q1", "   ")).rejects.toBeInstanceOf(BadRequestException);
     expect(bankRepository.findQuestionById).not.toHaveBeenCalled();
     expect(generator.reviseQuestion).not.toHaveBeenCalled();
   });

@@ -111,7 +111,9 @@ describe("Bank module — set structured question alternative images (e2e)", () 
         .select({ assetId: questionAlternativeImages.assetId })
         .from(questionAlternativeImages)
         .where(inArray(questionAlternativeImages.questionId, createdQuestionIds));
-      await db.delete(questionAlternativeImages).where(inArray(questionAlternativeImages.questionId, createdQuestionIds));
+      await db
+        .delete(questionAlternativeImages)
+        .where(inArray(questionAlternativeImages.questionId, createdQuestionIds));
       const assetIds = altImageRows.map((row) => row.assetId);
       if (assetIds.length > 0) {
         await db.delete(assets).where(inArray(assets.id, assetIds));
@@ -226,9 +228,7 @@ describe("Bank module — set structured question alternative images (e2e)", () 
   it("rejects an `image`-type question — alternative images only apply to structured questions", async () => {
     const id = await createImageQuestion(tenantAToken);
 
-    await setAlternativeImagesRequest(tenantAToken, id)
-      .attach("images", altPngA, "alt-a.png")
-      .expect(400);
+    await setAlternativeImagesRequest(tenantAToken, id).attach("images", altPngA, "alt-a.png").expect(400);
   });
 
   it("404 when setting alternative images on another tenant's question", async () => {

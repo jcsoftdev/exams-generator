@@ -45,39 +45,29 @@ describe("validateCreateStructuredQuestionInput", () => {
   });
 
   it("rejects when difficulty is missing or not a valid Difficulty value", () => {
-    expect(
-      validateCreateStructuredQuestionInput({ ...VALID_INPUT, difficulty: undefined }).ok,
-    ).toBe(false);
-    expect(
-      validateCreateStructuredQuestionInput({ ...VALID_INPUT, difficulty: "impossible" }).ok,
-    ).toBe(false);
+    expect(validateCreateStructuredQuestionInput({ ...VALID_INPUT, difficulty: undefined }).ok).toBe(false);
+    expect(validateCreateStructuredQuestionInput({ ...VALID_INPUT, difficulty: "impossible" }).ok).toBe(
+      false,
+    );
   });
 
   it("rejects when gradeLevel is missing or outside the seeded catalog", () => {
-    expect(
-      validateCreateStructuredQuestionInput({ ...VALID_INPUT, gradeLevel: undefined }).ok,
-    ).toBe(false);
-    expect(
-      validateCreateStructuredQuestionInput({ ...VALID_INPUT, gradeLevel: "universidad_1" }).ok,
-    ).toBe(false);
+    expect(validateCreateStructuredQuestionInput({ ...VALID_INPUT, gradeLevel: undefined }).ok).toBe(false);
+    expect(validateCreateStructuredQuestionInput({ ...VALID_INPUT, gradeLevel: "universidad_1" }).ok).toBe(
+      false,
+    );
   });
 
   it("rejects when bodyTypst is missing or blank", () => {
-    expect(
-      validateCreateStructuredQuestionInput({ ...VALID_INPUT, bodyTypst: undefined }).ok,
-    ).toBe(false);
-    expect(
-      validateCreateStructuredQuestionInput({ ...VALID_INPUT, bodyTypst: "   " }).ok,
-    ).toBe(false);
+    expect(validateCreateStructuredQuestionInput({ ...VALID_INPUT, bodyTypst: undefined }).ok).toBe(false);
+    expect(validateCreateStructuredQuestionInput({ ...VALID_INPUT, bodyTypst: "   " }).ok).toBe(false);
   });
 
   it("rejects when alternatives is missing or has fewer than 2 entries", () => {
-    expect(
-      validateCreateStructuredQuestionInput({ ...VALID_INPUT, alternatives: undefined }).ok,
-    ).toBe(false);
-    expect(
-      validateCreateStructuredQuestionInput({ ...VALID_INPUT, alternatives: ["only-one"] }).ok,
-    ).toBe(false);
+    expect(validateCreateStructuredQuestionInput({ ...VALID_INPUT, alternatives: undefined }).ok).toBe(false);
+    expect(validateCreateStructuredQuestionInput({ ...VALID_INPUT, alternatives: ["only-one"] }).ok).toBe(
+      false,
+    );
   });
 
   it("rejects when any alternative is blank", () => {
@@ -105,12 +95,10 @@ describe("validateCreateStructuredQuestionInput", () => {
   });
 
   it("rejects when correctAnswer is not a valid 0-based index into alternatives", () => {
-    expect(
-      validateCreateStructuredQuestionInput({ ...VALID_INPUT, correctAnswer: "not-a-number" }).ok,
-    ).toBe(false);
-    expect(
-      validateCreateStructuredQuestionInput({ ...VALID_INPUT, correctAnswer: "-1" }).ok,
-    ).toBe(false);
+    expect(validateCreateStructuredQuestionInput({ ...VALID_INPUT, correctAnswer: "not-a-number" }).ok).toBe(
+      false,
+    );
+    expect(validateCreateStructuredQuestionInput({ ...VALID_INPUT, correctAnswer: "-1" }).ok).toBe(false);
     expect(
       // VALID_INPUT.alternatives has 5 entries (indexes 0-4)
       validateCreateStructuredQuestionInput({ ...VALID_INPUT, correctAnswer: "5" }).ok,

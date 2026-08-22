@@ -68,7 +68,14 @@ export async function createUserFixture(params: {
     throw new Error("Fixture invariant violated: user insert returned no row");
   }
 
-  return { id: user.id, email: user.email, name: user.name, role: user.role, tenantId: user.tenantId, plainPassword };
+  return {
+    id: user.id,
+    email: user.email,
+    name: user.name,
+    role: user.role,
+    tenantId: user.tenantId,
+    plainPassword,
+  };
 }
 
 export async function deleteUserFixture(id: string): Promise<void> {

@@ -30,18 +30,18 @@ describe("validateStructuredContent", () => {
   });
 
   it("rejects when any alternative is blank", () => {
-    expect(
-      validateStructuredContent({ ...VALID_INPUT, alternatives: ["1", "  ", "3"] }),
-    ).toEqual(expect.arrayContaining([expect.stringContaining("alternatives")]));
+    expect(validateStructuredContent({ ...VALID_INPUT, alternatives: ["1", "  ", "3"] })).toEqual(
+      expect.arrayContaining([expect.stringContaining("alternatives")]),
+    );
   });
 
   it("rejects when correctAnswer is missing or not a valid 0-based index", () => {
     expect(validateStructuredContent({ ...VALID_INPUT, correctAnswer: undefined })).toEqual(
       expect.arrayContaining([expect.stringContaining("correctAnswer")]),
     );
-    expect(
-      validateStructuredContent({ ...VALID_INPUT, correctAnswer: "not-a-number" }),
-    ).toEqual(expect.arrayContaining([expect.stringContaining("correctAnswer")]));
+    expect(validateStructuredContent({ ...VALID_INPUT, correctAnswer: "not-a-number" })).toEqual(
+      expect.arrayContaining([expect.stringContaining("correctAnswer")]),
+    );
     expect(validateStructuredContent({ ...VALID_INPUT, correctAnswer: "-1" })).toEqual(
       expect.arrayContaining([expect.stringContaining("correctAnswer")]),
     );

@@ -28,7 +28,14 @@ export { GRADE_LEVEL_LABELS, STAGE_LABELS } from '../taxonomy/grade-level-labels
  * with nothing tying a field renamed on the wire to a compile failure on
  * the client (audit 2026-08-21, M4b).
  */
-export type { ExamStatus, QuestionType, ExamListItem, ExamListResult, ExamDetailQuestion, ExamDetail };
+export type {
+  ExamStatus,
+  QuestionType,
+  ExamListItem,
+  ExamListResult,
+  ExamDetailQuestion,
+  ExamDetail,
+};
 
 /**
  * GAP: the backend already exposes `GET /courses` and `GET /topics` via
@@ -79,8 +86,7 @@ export interface InsufficientStockErrorBody {
 }
 
 export type ReplaceQuestionPayload =
-  | { readonly mode: 'reroll' }
-  | { readonly mode: 'manual'; readonly replacementQuestionId: string };
+  { readonly mode: 'reroll' } | { readonly mode: 'manual'; readonly replacementQuestionId: string };
 
 export interface ReplaceQuestionResult {
   readonly examId: string;

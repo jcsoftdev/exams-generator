@@ -26,33 +26,37 @@ import { users } from "./users.schema";
  * (design doc §3.3), unlike `cycles`' own current-week, which is always
  * derived live.
  */
-export const exams = pgTable("exams", {
-  id: uuid("id").primaryKey().defaultRandom(),
-  tenantId: uuid("tenant_id")
-    .notNull()
-    .references(() => tenants.id),
-  title: text("title").notNull(),
-  gradeLevel: text("grade_level")
-    .notNull()
-    .references(() => gradeLevels.code),
-  status: examStatusEnum("status").notNull().default("draft"),
-  createdBy: uuid("created_by")
-    .notNull()
-    .references(() => users.id),
-  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-  examType: text("exam_type")
-    .notNull()
-    .default("manual")
-    .references(() => examTypes.code),
-  universityId: uuid("university_id").references(() => universities.id),
-  trackId: uuid("track_id").references(() => tracks.id),
-  cycleId: uuid("cycle_id").references(() => cycles.id),
-  weekNumber: integer("week_number"),
-  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
-}, (table) => ({
-  tenantCreatedIdx: index("exams_tenant_created_idx").on(table.tenantId, table.createdAt),
-  tenantStatusIdx: index("exams_tenant_status_idx").on(table.tenantId, table.status),
-}));
+export const exams = pgTable(
+  "exams",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    tenantId: uuid("tenant_id")
+      .notNull()
+      .references(() => tenants.id),
+    title: text("title").notNull(),
+    gradeLevel: text("grade_level")
+      .notNull()
+      .references(() => gradeLevels.code),
+    status: examStatusEnum("status").notNull().default("draft"),
+    createdBy: uuid("created_by")
+      .notNull()
+      .references(() => users.id),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    examType: text("exam_type")
+      .notNull()
+      .default("manual")
+      .references(() => examTypes.code),
+    universityId: uuid("university_id").references(() => universities.id),
+    trackId: uuid("track_id").references(() => tracks.id),
+    cycleId: uuid("cycle_id").references(() => cycles.id),
+    weekNumber: integer("week_number"),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => ({
+    tenantCreatedIdx: index("exams_tenant_created_idx").on(table.tenantId, table.createdAt),
+    tenantStatusIdx: index("exams_tenant_status_idx").on(table.tenantId, table.status),
+  }),
+);
 
 /**
  * One blueprint row: "N questions of {course, topic?, difficulty?}".
@@ -63,20 +67,24 @@ export const exams = pgTable("exams", {
  * different counts, and each is filled independently without reusing a
  * question across rows (domain-level rule, not a DB constraint).
  */
-export const examBlueprintRows = pgTable("exam_blueprint_rows", {
-  id: uuid("id").primaryKey().defaultRandom(),
-  examId: uuid("exam_id")
-    .notNull()
-    .references(() => exams.id),
-  courseId: uuid("course_id")
-    .notNull()
-    .references(() => courses.id),
-  topicId: uuid("topic_id").references(() => topics.id),
-  difficulty: difficultyEnum("difficulty"),
-  count: integer("count").notNull(),
-}, (table) => ({
-  examIdIdx: index("exam_blueprint_rows_exam_id_idx").on(table.examId),
-}));
+export const examBlueprintRows = pgTable(
+  "exam_blueprint_rows",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    examId: uuid("exam_id")
+      .notNull()
+      .references(() => exams.id),
+    courseId: uuid("course_id")
+      .notNull()
+      .references(() => courses.id),
+    topicId: uuid("topic_id").references(() => topics.id),
+    difficulty: difficultyEnum("difficulty"),
+    count: integer("count").notNull(),
+  },
+  (table) => ({
+    examIdIdx: index("exam_blueprint_rows_exam_id_idx").on(table.examId),
+  }),
+);
 
 /**
  * Final ordered question selection for an exam (shared across versions).
@@ -109,10 +117,7 @@ export const examQuestions = pgTable(
       table.examId,
       table.questionId,
     ),
-    examIdPositionIdx: uniqueIndex("exam_questions_exam_id_position_idx").on(
-      table.examId,
-      table.position,
-    ),
+    examIdPositionIdx: uniqueIndex("exam_questions_exam_id_position_idx").on(table.examId, table.position),
     questionIdIdx: index("exam_questions_question_id_idx").on(table.questionId),
   }),
 );
@@ -141,8 +146,6 @@ export const examVersions = pgTable(
   (table) => ({
     examIdCodeIdx: uniqueIndex("exam_versions_exam_id_code_idx").on(table.examId, table.code),
     pdfAssetIdIdx: index("exam_versions_pdf_asset_id_idx").on(table.pdfAssetId),
-    answerSheetAssetIdIdx: index("exam_versions_answer_sheet_asset_id_idx").on(
-      table.answerSheetAssetId,
-    ),
+    answerSheetAssetIdIdx: index("exam_versions_answer_sheet_asset_id_idx").on(table.answerSheetAssetId),
   }),
 );

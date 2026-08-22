@@ -52,7 +52,10 @@ describe("flattenGradeScopedQuestions", () => {
     const entries = flattenGradeScopedQuestions({
       courseName: "Arte",
       gradeLevel: "primaria_1",
-      topics: [{ name: "Vacío", questions: [] }, { name: "Con contenido", questions: [QUESTION] }],
+      topics: [
+        { name: "Vacío", questions: [] },
+        { name: "Con contenido", questions: [QUESTION] },
+      ],
     });
 
     expect(entries.map((entry) => entry.topicName)).toEqual(["Con contenido"]);
@@ -67,8 +70,8 @@ describe("flattenGradeScopedQuestions", () => {
   });
 
   it("tolerates a topic with no questions key at all", () => {
-    expect(flattenGradeScopedQuestions({ courseName: "C", gradeLevel: "primaria_1", topics: [{ name: "T" }] })).toEqual(
-      [],
-    );
+    expect(
+      flattenGradeScopedQuestions({ courseName: "C", gradeLevel: "primaria_1", topics: [{ name: "T" }] }),
+    ).toEqual([]);
   });
 });

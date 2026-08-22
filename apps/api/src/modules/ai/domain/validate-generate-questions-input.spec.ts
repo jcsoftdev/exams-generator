@@ -37,21 +37,13 @@ describe("validateGenerateQuestionsInput", () => {
   });
 
   it("rejects when difficulty is missing or invalid", () => {
-    expect(validateGenerateQuestionsInput({ ...VALID_INPUT, difficulty: undefined }).ok).toBe(
-      false,
-    );
-    expect(
-      validateGenerateQuestionsInput({ ...VALID_INPUT, difficulty: "impossible" }).ok,
-    ).toBe(false);
+    expect(validateGenerateQuestionsInput({ ...VALID_INPUT, difficulty: undefined }).ok).toBe(false);
+    expect(validateGenerateQuestionsInput({ ...VALID_INPUT, difficulty: "impossible" }).ok).toBe(false);
   });
 
   it("rejects when gradeLevel is missing or outside the seeded catalog", () => {
-    expect(validateGenerateQuestionsInput({ ...VALID_INPUT, gradeLevel: undefined }).ok).toBe(
-      false,
-    );
-    expect(
-      validateGenerateQuestionsInput({ ...VALID_INPUT, gradeLevel: "universidad_1" }).ok,
-    ).toBe(false);
+    expect(validateGenerateQuestionsInput({ ...VALID_INPUT, gradeLevel: undefined }).ok).toBe(false);
+    expect(validateGenerateQuestionsInput({ ...VALID_INPUT, gradeLevel: "universidad_1" }).ok).toBe(false);
   });
 
   it("rejects when count is missing, not an integer, or out of the [1, 10] range", () => {

@@ -13,7 +13,10 @@ import { questions } from "../db/schema";
 async function main(): Promise<void> {
   const central = and(isNull(questions.tenantId));
 
-  const [total] = await db.select({ n: sql<number>`count(*)::int` }).from(questions).where(central);
+  const [total] = await db
+    .select({ n: sql<number>`count(*)::int` })
+    .from(questions)
+    .where(central);
   const [images] = await db
     .select({ n: sql<number>`count(*)::int` })
     .from(questions)

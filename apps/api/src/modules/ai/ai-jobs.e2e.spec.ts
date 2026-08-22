@@ -84,7 +84,12 @@ describeIfTypst("AI generation jobs (e2e)", () => {
     tenantAId = tenantA!.id;
     const [teacherA] = await db
       .insert(users)
-      .values({ tenantId: tenantAId, email: `jobs-e2e-a-${suffix}@exams-generator.test`, passwordHash: "x", role: Role.Teacher })
+      .values({
+        tenantId: tenantAId,
+        email: `jobs-e2e-a-${suffix}@exams-generator.test`,
+        passwordHash: "x",
+        role: Role.Teacher,
+      })
       .returning({ id: users.id });
     teacherAId = teacherA!.id;
 
@@ -95,7 +100,12 @@ describeIfTypst("AI generation jobs (e2e)", () => {
     tenantBId = tenantB!.id;
     const [teacherB] = await db
       .insert(users)
-      .values({ tenantId: tenantBId, email: `jobs-e2e-b-${suffix}@exams-generator.test`, passwordHash: "x", role: Role.Teacher })
+      .values({
+        tenantId: tenantBId,
+        email: `jobs-e2e-b-${suffix}@exams-generator.test`,
+        passwordHash: "x",
+        role: Role.Teacher,
+      })
       .returning({ id: users.id });
     teacherBId = teacherB!.id;
 
@@ -121,7 +131,14 @@ describeIfTypst("AI generation jobs (e2e)", () => {
   });
 
   function validBody() {
-    return { courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 2, withFigure: false };
+    return {
+      courseId,
+      topicId,
+      difficulty: Difficulty.Easy,
+      gradeLevel: "primaria_1",
+      count: 2,
+      withFigure: false,
+    };
   }
 
   async function waitForTerminal(token: string, jobId: string): Promise<Record<string, unknown>> {
@@ -150,7 +167,7 @@ describeIfTypst("AI generation jobs (e2e)", () => {
 
     const final = await waitForTerminal(tokenA, created.body.id);
     expect(final.status).toBe("completed");
-    expect((final.createdQuestionIds as string[])).toHaveLength(2);
+    expect(final.createdQuestionIds as string[]).toHaveLength(2);
     createdQuestionIds.push(...(final.createdQuestionIds as string[]));
   });
 
@@ -219,7 +236,7 @@ describeIfTypst("AI generation jobs (e2e)", () => {
 
     const final = await waitForTerminal(tokenA, created.body.id);
     expect(final.status).toBe("cancelled");
-    expect((final.createdCount as number)).toBeLessThan(10);
+    expect(final.createdCount as number).toBeLessThan(10);
     createdQuestionIds.push(...(final.createdQuestionIds as string[]));
   });
 

@@ -48,15 +48,29 @@ function setup(
       { provide: AiService, useValue: { createGenerationJob } },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
       { provide: Router, useValue: { navigate } },
-      { provide: ActivatedRoute, useValue: { snapshot: { queryParamMap: convertToParamMap(over.queryParams ?? {}) } } },
+      {
+        provide: ActivatedRoute,
+        useValue: { snapshot: { queryParamMap: convertToParamMap(over.queryParams ?? {}) } },
+      },
     ],
   });
   const fixture = TestBed.createComponent(AiGenerateComponent);
   fixture.detectChanges();
-  return { fixture, compiled: fixture.nativeElement as HTMLElement, createGenerationJob, navigate, getCourses, getTopics };
+  return {
+    fixture,
+    compiled: fixture.nativeElement as HTMLElement,
+    createGenerationJob,
+    navigate,
+    getCourses,
+    getTopics,
+  };
 }
 
-function set(fixture: { componentInstance: unknown; detectChanges(): void }, prop: string, v: unknown) {
+function set(
+  fixture: { componentInstance: unknown; detectChanges(): void },
+  prop: string,
+  v: unknown,
+) {
   (fixture.componentInstance as Record<string, { set(x: unknown): void }>)[prop].set(v);
   fixture.detectChanges();
 }
@@ -104,7 +118,9 @@ describe('AiGenerateComponent', () => {
 
       const radios = compiled.querySelectorAll('[role="radio"]');
       expect(radios.length).toBe(3);
-      expect([...radios].filter((r) => r.getAttribute('aria-checked') === 'true').length).toBeLessThanOrEqual(1);
+      expect(
+        [...radios].filter((r) => r.getAttribute('aria-checked') === 'true').length,
+      ).toBeLessThanOrEqual(1);
     });
 
     it('mueve aria-checked al elegir, y añade una señal que no depende del color', () => {
@@ -116,14 +132,23 @@ describe('AiGenerateComponent', () => {
 
       expect(hard.getAttribute('aria-checked')).toBe('true');
       expect(hard.textContent).toContain('•');
-      expect(compiled.querySelector('[data-testid="difficulty-easy"]')!.getAttribute('aria-checked')).toBe('false');
-      expect(compiled.querySelector('[data-testid="difficulty-easy"]')!.textContent).not.toContain('•');
+      expect(
+        compiled.querySelector('[data-testid="difficulty-easy"]')!.getAttribute('aria-checked'),
+      ).toBe('false');
+      expect(compiled.querySelector('[data-testid="difficulty-easy"]')!.textContent).not.toContain(
+        '•',
+      );
     });
   });
 
   it('prefills grade, course, topic and difficulty from query params (exam-builder bridge)', () => {
     const { fixture, getCourses, getTopics } = setup({
-      queryParams: { gradeLevel: 'secundaria_3', courseId: 'c1', topicId: 't1', difficulty: 'medium' },
+      queryParams: {
+        gradeLevel: 'secundaria_3',
+        courseId: 'c1',
+        topicId: 't1',
+        difficulty: 'medium',
+      },
     });
     const ci = fixture.componentInstance as unknown as {
       gradeLevel(): string | null;
@@ -186,7 +211,9 @@ describe('AiGenerateComponent', () => {
     fixture.detectChanges();
 
     expect(compiled.textContent).toMatch(/no se pudo iniciar la generación/i);
-    const button = compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement;
+    const button = compiled.querySelector(
+      '[data-testid="generate-button"] button',
+    ) as HTMLButtonElement;
     expect(button.disabled).toBe(false);
   });
 });

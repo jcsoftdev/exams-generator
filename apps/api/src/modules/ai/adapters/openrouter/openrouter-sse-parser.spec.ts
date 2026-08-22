@@ -13,7 +13,9 @@ describe("parseOpenRouterSseBuffer", () => {
   });
 
   it("keeps an incomplete trailing frame in remainder instead of dropping it", () => {
-    const { events, remainder } = parseOpenRouterSseBuffer(`${chunk("Hola")}\n\n${chunk("Mun").slice(0, 10)}`);
+    const { events, remainder } = parseOpenRouterSseBuffer(
+      `${chunk("Hola")}\n\n${chunk("Mun").slice(0, 10)}`,
+    );
 
     expect(events).toEqual([{ type: "delta", text: "Hola" }]);
     expect(remainder).toBe(chunk("Mun").slice(0, 10));
@@ -28,10 +30,7 @@ describe("parseOpenRouterSseBuffer", () => {
   it("emits a done event for the [DONE] sentinel and stops before it", () => {
     const { events } = parseOpenRouterSseBuffer(`${chunk("Hola")}\n\ndata: [DONE]\n\n`);
 
-    expect(events).toEqual([
-      { type: "delta", text: "Hola" },
-      { type: "done" },
-    ]);
+    expect(events).toEqual([{ type: "delta", text: "Hola" }, { type: "done" }]);
   });
 
   it("emits an error event when a chunk's finish_reason is 'error'", () => {
@@ -39,9 +38,7 @@ describe("parseOpenRouterSseBuffer", () => {
 
     const { events } = parseOpenRouterSseBuffer(errorFrame);
 
-    expect(events).toEqual([
-      { type: "error", message: "OpenRouter stream reported finish_reason=error" },
-    ]);
+    expect(events).toEqual([{ type: "error", message: "OpenRouter stream reported finish_reason=error" }]);
   });
 
   it("skips a malformed data line instead of throwing", () => {

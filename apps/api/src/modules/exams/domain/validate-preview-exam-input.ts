@@ -7,8 +7,7 @@ export interface PreviewExamInput {
 }
 
 export type PreviewExamValidation =
-  | { readonly ok: true }
-  | { readonly ok: false; readonly errors: readonly string[] };
+  { readonly ok: true } | { readonly ok: false; readonly errors: readonly string[] };
 
 /**
  * Validates `POST /exams/preview` (B2-R4): reuses `validateCreateExamInput`'s

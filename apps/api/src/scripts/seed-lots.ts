@@ -19,7 +19,9 @@ async function main(): Promise<void> {
     .from(users)
     .where(eq(users.email, BANK_SAMPLE_ADMIN_EMAIL));
   if (!admin) {
-    throw new Error(`seed user '${BANK_SAMPLE_ADMIN_EMAIL}' not found — run 'pnpm --filter api db:seed' first`);
+    throw new Error(
+      `seed user '${BANK_SAMPLE_ADMIN_EMAIL}' not found — run 'pnpm --filter api db:seed' first`,
+    );
   }
 
   await seedLotQuestions(admin.id);

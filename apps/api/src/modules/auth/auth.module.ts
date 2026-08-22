@@ -37,7 +37,8 @@ import { TokenService } from "./token.service";
     LoginExchangeService,
     {
       provide: LOGIN_EXCHANGE_REDIS_CLIENT,
-      useFactory: () => new Redis({ ...resolveRedisConnection(), lazyConnect: true, maxRetriesPerRequest: 1 }),
+      useFactory: () =>
+        new Redis({ ...resolveRedisConnection(), lazyConnect: true, maxRetriesPerRequest: 1 }),
     },
   ],
   exports: [TokenService, AccountStatusService, JwtAuthGuard, RolesGuard, TenantGuard],

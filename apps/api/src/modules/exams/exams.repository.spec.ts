@@ -358,26 +358,48 @@ describe("ExamsRepository", () => {
 
     it("counts central + own-tenant approved questions matching a cell, order-matched to input", async () => {
       const cell = await createCourseAndTopic();
-      await createQuestion({ tenantId: null, createdBy: staffUserId, gradeLevel, topicId: cell.topicId, difficulty: Difficulty.Easy });
-      await createQuestion({ tenantId: null, createdBy: staffUserId, gradeLevel, topicId: cell.topicId, difficulty: Difficulty.Easy });
-      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel, topicId: cell.topicId, difficulty: Difficulty.Easy });
+      await createQuestion({
+        tenantId: null,
+        createdBy: staffUserId,
+        gradeLevel,
+        topicId: cell.topicId,
+        difficulty: Difficulty.Easy,
+      });
+      await createQuestion({
+        tenantId: null,
+        createdBy: staffUserId,
+        gradeLevel,
+        topicId: cell.topicId,
+        difficulty: Difficulty.Easy,
+      });
+      await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel,
+        topicId: cell.topicId,
+        difficulty: Difficulty.Easy,
+      });
 
-      const counts = await repository.countStock(
-        { tenantId: tenantAId, gradeLevel },
-        [{ courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Easy }],
-      );
+      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel }, [
+        { courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Easy },
+      ]);
 
       expect(counts).toEqual([3]);
     });
 
     it("returns 0 for a cell whose difficulty has no matching questions", async () => {
       const cell = await createCourseAndTopic();
-      await createQuestion({ tenantId: null, createdBy: staffUserId, gradeLevel, topicId: cell.topicId, difficulty: Difficulty.Easy });
+      await createQuestion({
+        tenantId: null,
+        createdBy: staffUserId,
+        gradeLevel,
+        topicId: cell.topicId,
+        difficulty: Difficulty.Easy,
+      });
 
-      const counts = await repository.countStock(
-        { tenantId: tenantAId, gradeLevel },
-        [{ courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Hard }],
-      );
+      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel }, [
+        { courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Hard },
+      ]);
 
       expect(counts).toEqual([0]);
     });
@@ -385,9 +407,27 @@ describe("ExamsRepository", () => {
     it("counts 5 independent cells, order-matched, each isolated by its own criteria", async () => {
       const cellA = await createCourseAndTopic();
       const cellB = await createCourseAndTopic();
-      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel, topicId: cellA.topicId, difficulty: Difficulty.Easy });
-      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel, topicId: cellA.topicId, difficulty: Difficulty.Medium });
-      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel, topicId: cellA.topicId, difficulty: Difficulty.Medium });
+      await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel,
+        topicId: cellA.topicId,
+        difficulty: Difficulty.Easy,
+      });
+      await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel,
+        topicId: cellA.topicId,
+        difficulty: Difficulty.Medium,
+      });
+      await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel,
+        topicId: cellA.topicId,
+        difficulty: Difficulty.Medium,
+      });
       await createQuestion({
         tenantId: tenantAId,
         createdBy: tenantAUserId,
@@ -409,8 +449,19 @@ describe("ExamsRepository", () => {
 
     it("excludes draft/rejected and cross-tenant questions from the count", async () => {
       const cell = await createCourseAndTopic();
-      await createQuestion({ tenantId: null, createdBy: staffUserId, gradeLevel, topicId: cell.topicId, status: "draft" });
-      await createQuestion({ tenantId: tenantBId, createdBy: tenantBUserId, gradeLevel, topicId: cell.topicId });
+      await createQuestion({
+        tenantId: null,
+        createdBy: staffUserId,
+        gradeLevel,
+        topicId: cell.topicId,
+        status: "draft",
+      });
+      await createQuestion({
+        tenantId: tenantBId,
+        createdBy: tenantBUserId,
+        gradeLevel,
+        topicId: cell.topicId,
+      });
       await createQuestion({ tenantId: null, createdBy: staffUserId, gradeLevel, topicId: cell.topicId });
 
       const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel }, [
@@ -434,9 +485,21 @@ describe("ExamsRepository", () => {
   describe("selection + replace + confirm lifecycle", () => {
     it("saveSelection()/getSelectedQuestionIds()/findExamQuestion()/replaceQuestion()/confirmExam() end-to-end", async () => {
       const rowCourseId = courseId;
-      const q1 = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel: "primaria_3" });
-      const q2 = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel: "primaria_3" });
-      const q3 = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel: "primaria_3" });
+      const q1 = await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel: "primaria_3",
+      });
+      const q2 = await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel: "primaria_3",
+      });
+      const q3 = await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel: "primaria_3",
+      });
 
       const { id: examId } = await repository.createExam({
         tenantId: tenantAId,
@@ -478,8 +541,16 @@ describe("ExamsRepository", () => {
 
   describe("getExamForGeneration()", () => {
     it("returns title, tenant, and selected questions with correctAnswer + image storage key, ordered by position", async () => {
-      const q1 = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel: "primaria_4" });
-      const q2 = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel: "primaria_4" });
+      const q1 = await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel: "primaria_4",
+      });
+      const q2 = await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel: "primaria_4",
+      });
 
       const { id: examId } = await repository.createExam({
         tenantId: tenantAId,
@@ -556,8 +627,16 @@ describe("ExamsRepository", () => {
 
   describe("getExamDetail()", () => {
     it("returns the exam header + selected questions (image type) ordered by position, tenant-scoped", async () => {
-      const q1 = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel: "primaria_2" });
-      const q2 = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel: "primaria_2" });
+      const q1 = await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel: "primaria_2",
+      });
+      const q2 = await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel: "primaria_2",
+      });
 
       const { id: examId } = await repository.createExam({
         tenantId: tenantAId,
@@ -702,7 +781,11 @@ describe("ExamsRepository", () => {
       });
       createdExamIds.push(examId);
 
-      const pdfAsset = await repository.createAsset(tenantAId, `exams/${examId}/versions/A/exam.pdf`, "application/pdf");
+      const pdfAsset = await repository.createAsset(
+        tenantAId,
+        `exams/${examId}/versions/A/exam.pdf`,
+        "application/pdf",
+      );
       const answerAsset = await repository.createAsset(
         tenantAId,
         `exams/${examId}/versions/A/answer-key.pdf`,
@@ -718,7 +801,10 @@ describe("ExamsRepository", () => {
         answerSheetAssetId: answerAsset.id,
       });
 
-      const [versionRow] = await db.select().from(examVersions).where(inArray(examVersions.examId, [examId]));
+      const [versionRow] = await db
+        .select()
+        .from(examVersions)
+        .where(inArray(examVersions.examId, [examId]));
       expect(versionRow?.code).toBe("A");
       expect(versionRow?.pdfAssetId).toBe(pdfAsset.id);
       expect(versionRow?.answerSheetAssetId).toBe(answerAsset.id);
@@ -726,7 +812,11 @@ describe("ExamsRepository", () => {
   });
 
   describe("clearVersions() — B4 idempotent regeneration", () => {
-    async function createExamWithOneVersion(): Promise<{ examId: string; pdfAssetId: string; answerAssetId: string }> {
+    async function createExamWithOneVersion(): Promise<{
+      examId: string;
+      pdfAssetId: string;
+      answerAssetId: string;
+    }> {
       const { id: examId } = await repository.createExam({
         tenantId: tenantAId,
         title: "Clear-versions exam",
@@ -736,7 +826,11 @@ describe("ExamsRepository", () => {
       });
       createdExamIds.push(examId);
 
-      const pdfAsset = await repository.createAsset(tenantAId, `exams/${examId}/versions/A/exam.pdf`, "application/pdf");
+      const pdfAsset = await repository.createAsset(
+        tenantAId,
+        `exams/${examId}/versions/A/exam.pdf`,
+        "application/pdf",
+      );
       const answerAsset = await repository.createAsset(
         tenantAId,
         `exams/${examId}/versions/A/answer-key.pdf`,
@@ -766,7 +860,10 @@ describe("ExamsRepository", () => {
       const remainingVersions = await db.select().from(examVersions).where(eq(examVersions.examId, examId));
       expect(remainingVersions).toHaveLength(0);
 
-      const remainingAssets = await db.select().from(assets).where(inArray(assets.id, [pdfAssetId, answerAssetId]));
+      const remainingAssets = await db
+        .select()
+        .from(assets)
+        .where(inArray(assets.id, [pdfAssetId, answerAssetId]));
       expect(remainingAssets).toHaveLength(0);
     });
 
@@ -877,7 +974,11 @@ describe("ExamsRepository", () => {
     }
 
     it("reports each row's real questionCount and versionCount", async () => {
-      const examId = await createListedExam({ title: `List counts exam ${randomUUID()}`, questionCount: 3, versionCount: 2 });
+      const examId = await createListedExam({
+        title: `List counts exam ${randomUUID()}`,
+        questionCount: 3,
+        versionCount: 2,
+      });
 
       const { items } = await repository.listExams(tenantAId, { page: 1, pageSize: 50 });
       const row = items.find((item) => item.id === examId);
@@ -905,8 +1006,16 @@ describe("ExamsRepository", () => {
     });
 
     it("counts per row — two exams in the same page never share each other's counts", async () => {
-      const bigId = await createListedExam({ title: `List counts big ${randomUUID()}`, questionCount: 4, versionCount: 1 });
-      const smallId = await createListedExam({ title: `List counts small ${randomUUID()}`, questionCount: 1, versionCount: 3 });
+      const bigId = await createListedExam({
+        title: `List counts big ${randomUUID()}`,
+        questionCount: 4,
+        versionCount: 1,
+      });
+      const smallId = await createListedExam({
+        title: `List counts small ${randomUUID()}`,
+        questionCount: 1,
+        versionCount: 3,
+      });
 
       const { items } = await repository.listExams(tenantAId, { page: 1, pageSize: 50 });
 
@@ -1050,7 +1159,11 @@ describe("ExamsRepository", () => {
 
       // Insert codes out of order (C, then A, then B) to prove the ORDER BY, not insertion order, drives the result.
       for (const code of ["C", "A", "B"]) {
-        const pdfAsset = await repository.createAsset(tenantAId, `exams/${examId}/versions/${code}/exam.pdf`, "application/pdf");
+        const pdfAsset = await repository.createAsset(
+          tenantAId,
+          `exams/${examId}/versions/${code}/exam.pdf`,
+          "application/pdf",
+        );
         const answerAsset = await repository.createAsset(
           tenantAId,
           `exams/${examId}/versions/${code}/answer-key.pdf`,
@@ -1242,7 +1355,12 @@ describe("ExamsRepository", () => {
 
       const [track] = await db
         .insert(tracks)
-        .values({ universityId, code: `track-${suffix}`, name: `Resolver Test Track ${suffix}`, kind: "area" })
+        .values({
+          universityId,
+          code: `track-${suffix}`,
+          name: `Resolver Test Track ${suffix}`,
+          kind: "area",
+        })
         .returning({ id: tracks.id });
       trackId = track!.id;
       createdTrackIds.push(trackId);
@@ -1281,7 +1399,13 @@ describe("ExamsRepository", () => {
 
       const [trackLessTemplate] = await db
         .insert(examBlueprintTemplates)
-        .values({ universityId, trackId: null, tenantId: null, cycleLabel: "2026-II (no track)", isCurrent: true })
+        .values({
+          universityId,
+          trackId: null,
+          tenantId: null,
+          cycleLabel: "2026-II (no track)",
+          isCurrent: true,
+        })
         .returning({ id: examBlueprintTemplates.id });
       trackLessTemplateId = trackLessTemplate!.id;
       createdTemplateIds.push(trackLessTemplateId);
@@ -1291,7 +1415,9 @@ describe("ExamsRepository", () => {
         { templateId: globalTemplateId, courseId: otherCourseId, weightPoints: "600", examSection: "E2" },
       ]);
 
-      await db.insert(syllabusWeekMaps).values([{ templateId: globalTemplateId, courseId, topicId, weekNumber: 3 }]);
+      await db
+        .insert(syllabusWeekMaps)
+        .values([{ templateId: globalTemplateId, courseId, topicId, weekNumber: 3 }]);
     });
 
     afterAll(async () => {

@@ -108,14 +108,7 @@ const RESPONSE_JSON_SCHEMA: OpenRouterJsonSchema = {
           "Número entero de pasos de razonamiento necesarios para resolver la pregunta (sustituir datos en una fórmula directa = 1). Debe reflejar la pregunta REAL — el sistema lo valida contra la dificultad pedida.",
       },
     },
-    required: [
-      "bodyTypst",
-      "alternatives",
-      "correctAnswer",
-      "figureCode",
-      "conceptsUsed",
-      "solutionSteps",
-    ],
+    required: ["bodyTypst", "alternatives", "correctAnswer", "figureCode", "conceptsUsed", "solutionSteps"],
   },
 };
 
@@ -354,7 +347,7 @@ export function buildOpenRouterReviseRequestBody(
 const EXTRACT_SYSTEM_PROMPT = [
   "Eres un asistente que extrae preguntas tipo examen de admisión desde fotos de material impreso o manuscrito peruano.",
   "Lee la imagen y transcribe la pregunta que contiene: enunciado, alternativas y, si es identificable, la alternativa correcta.",
-  "Además, sugiere el curso (ej. \"Aritmética\", \"Comunicación\", \"Historia del Perú\") y el tema/subtema específico que la pregunta evalúa, SOLO si puedes inferirlos con confianza del contenido de la imagen — si no estás seguro, responde null en ese campo en vez de adivinar.",
+  'Además, sugiere el curso (ej. "Aritmética", "Comunicación", "Historia del Perú") y el tema/subtema específico que la pregunta evalúa, SOLO si puedes inferirlos con confianza del contenido de la imagen — si no estás seguro, responde null en ese campo en vez de adivinar.',
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
   TYPST_MATH_RULES,
   MITEX_RULES,
@@ -383,11 +376,13 @@ const EXTRACT_RESPONSE_JSON_SCHEMA: OpenRouterJsonSchema = {
       ...RESPONSE_JSON_SCHEMA.schema.properties,
       suggestedCourse: {
         type: ["string", "null"],
-        description: "Nombre del curso al que pertenece la pregunta, o null si no se puede inferir con confianza.",
+        description:
+          "Nombre del curso al que pertenece la pregunta, o null si no se puede inferir con confianza.",
       },
       suggestedTopic: {
         type: ["string", "null"],
-        description: "Nombre del tema/subtema específico que evalúa la pregunta, o null si no se puede inferir con confianza.",
+        description:
+          "Nombre del tema/subtema específico que evalúa la pregunta, o null si no se puede inferir con confianza.",
       },
     },
     required: [...RESPONSE_JSON_SCHEMA.schema.required, "suggestedCourse", "suggestedTopic"],

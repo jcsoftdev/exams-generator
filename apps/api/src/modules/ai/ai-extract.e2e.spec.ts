@@ -72,9 +72,7 @@ describe("POST /ai/questions/extract (e2e)", () => {
   });
 
   function extractRequest() {
-    return request(app.getHttpServer())
-      .post("/ai/questions/extract")
-      .set("Authorization", `Bearer ${token}`);
+    return request(app.getHttpServer()).post("/ai/questions/extract").set("Authorization", `Bearer ${token}`);
   }
 
   it("returns a validated, UNSAVED draft with correctAnswer converted from the generator's LETTER to an INDEX", async () => {

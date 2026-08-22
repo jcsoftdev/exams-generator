@@ -1,4 +1,9 @@
-import { HttpClient, HttpDownloadProgressEvent, HttpEventType, HttpResponse } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpDownloadProgressEvent,
+  HttpEventType,
+  HttpResponse,
+} from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, timeout } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -65,7 +70,9 @@ export class ExamVersionsService {
    * the connection at a terminal status.
    */
   streamVersionJob(examId: string, jobId: string): Observable<ExamVersionJob> {
-    return this.rawStreamVersionJob(examId, jobId).pipe(timeout({ each: VERSION_STREAM_WATCHDOG_MS }));
+    return this.rawStreamVersionJob(examId, jobId).pipe(
+      timeout({ each: VERSION_STREAM_WATCHDOG_MS }),
+    );
   }
 
   private rawStreamVersionJob(examId: string, jobId: string): Observable<ExamVersionJob> {

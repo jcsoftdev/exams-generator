@@ -17,8 +17,7 @@ export function runStoragePortContract(
 ): void {
   const createKey =
     options.createKey ??
-    ((suffix: string) =>
-      `contract-test/${suffix}-${Date.now()}-${Math.random().toString(36).slice(2)}`);
+    ((suffix: string) => `contract-test/${suffix}-${Date.now()}-${Math.random().toString(36).slice(2)}`);
 
   describe(`StoragePort contract: ${label}`, () => {
     it("put() stores a buffer and returns a non-empty URL", async () => {
@@ -47,9 +46,7 @@ export function runStoragePortContract(
       const adapter = createAdapter();
       const key = createKey("missing");
 
-      await expect(adapter.get(key)).rejects.toBeInstanceOf(
-        StorageObjectNotFoundError,
-      );
+      await expect(adapter.get(key)).rejects.toBeInstanceOf(StorageObjectNotFoundError);
     });
 
     it("delete() removes the object so a subsequent get() throws not-found", async () => {
@@ -59,9 +56,7 @@ export function runStoragePortContract(
 
       await adapter.delete(key);
 
-      await expect(adapter.get(key)).rejects.toBeInstanceOf(
-        StorageObjectNotFoundError,
-      );
+      await expect(adapter.get(key)).rejects.toBeInstanceOf(StorageObjectNotFoundError);
     });
 
     it("put() on an existing key overwrites its content", async () => {

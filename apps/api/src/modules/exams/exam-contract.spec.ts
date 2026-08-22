@@ -1,5 +1,8 @@
 import { EXAM_STATUSES, QUESTION_TYPES } from "@exams-generator/shared";
-import { EXAM_STATUSES as DB_EXAM_STATUSES, QUESTION_TYPES as DB_QUESTION_TYPES } from "../../db/schema/enums";
+import {
+  EXAM_STATUSES as DB_EXAM_STATUSES,
+  QUESTION_TYPES as DB_QUESTION_TYPES,
+} from "../../db/schema/enums";
 
 /**
  * Guards the one seam `packages/shared` cannot type-check on its own: the

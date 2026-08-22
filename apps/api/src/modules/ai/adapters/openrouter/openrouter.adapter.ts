@@ -18,10 +18,7 @@ import {
 import { assessGeneratedQuestionPlausibility } from "./openrouter-content-plausibility-validator";
 import { assertDifficultyMatchesSelfReport } from "./openrouter-difficulty-gate";
 import { parseGeneratedQuestionContent } from "./openrouter-response-parser";
-import {
-  QuestionSelfReport,
-  validateGeneratedQuestionShape,
-} from "./openrouter-response-validator";
+import { QuestionSelfReport, validateGeneratedQuestionShape } from "./openrouter-response-validator";
 import { parseOpenRouterSseBuffer } from "./openrouter-sse-parser";
 
 const OPENROUTER_CHAT_COMPLETIONS_URL = "https://openrouter.ai/api/v1/chat/completions";
@@ -100,9 +97,7 @@ export const fetchSseHttpClient: SseHttpClient = async (url, init) => {
  * from a stalled OpenRouter stream (the initial `fetchSseHttpClient` timeout
  * above only covers connection setup, not a stream that goes silent mid-way).
  */
-async function* withIdleTimeout(
-  body: AsyncIterable<Uint8Array>,
-): AsyncIterable<Uint8Array> {
+async function* withIdleTimeout(body: AsyncIterable<Uint8Array>): AsyncIterable<Uint8Array> {
   const iterator = body[Symbol.asyncIterator]();
   try {
     while (true) {

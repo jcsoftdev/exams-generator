@@ -49,9 +49,7 @@ describe("TypstCliAdapter", () => {
     await expect(adapter.compileExam(EXAM_INPUT)).rejects.toMatchObject({
       questionId: "q2",
     });
-    await expect(adapter.compileExam(EXAM_INPUT)).rejects.toBeInstanceOf(
-      TypstCompilationError,
-    );
+    await expect(adapter.compileExam(EXAM_INPUT)).rejects.toBeInstanceOf(TypstCompilationError);
   });
 
   it("compileAnswerKey() returns the PDF bytes written by the runner when it succeeds", async () => {

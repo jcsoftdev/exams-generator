@@ -25,6 +25,7 @@
 ## File Structure
 
 **Backend (`apps/api/src/modules`):**
+
 - `bank/bank.service.ts` — new `requireManageableQuestion` guard (draft+approved, block archived/central); `editQuestion` accepts taxonomy; `replaceImage`.
 - `bank/bank.repository.ts` — `updateQuestionTaxonomy`, `replaceImageAsset`.
 - `bank/bank.controller.ts` — extend `PATCH :id` body; add `POST :id/image`.
@@ -36,6 +37,7 @@
 - `ai/ai.controller.ts` — add `POST :id/revise`, `POST extract`.
 
 **Frontend (`apps/web/src/app/features`):**
+
 - `bank/bank.models.ts` — `UpdateQuestionPayload`, `RevisedQuestion`, `ExtractedQuestion`.
 - `bank/bank.service.ts` — `updateQuestion`, `replaceQuestionImage`.
 - `ai/ai.service.ts` — `reviseQuestion`, `extractQuestionFromImage`.
@@ -46,6 +48,7 @@
 ## Task 1: Backend — allow editing approved questions + taxonomy
 
 **Files:**
+
 - Modify: `apps/api/src/modules/bank/bank.service.ts` (guard `requireVisibleDraft:242`, `editDraftQuestion`)
 - Create: `apps/api/src/modules/bank/domain/validate-question-taxonomy.ts`
 - Modify: `apps/api/src/modules/bank/bank.repository.ts`
@@ -53,11 +56,13 @@
 - Test: `apps/api/src/modules/bank/domain/validate-question-taxonomy.spec.ts`, `apps/api/src/modules/bank/bank-edit-approved.e2e.spec.ts`
 
 **Interfaces:**
+
 - Produces: `validateQuestionTaxonomy(patch): { ok: true } | { ok: false; errors: string[] }`; `BankService.editQuestion(user, id, patch)` where `patch` adds optional `courseId`, `topicId`, `difficulty`, `gradeLevel`; `PATCH /bank/questions/:id` accepts those fields and works on `status='approved'` (not archived/central).
 
 - [ ] **Step 1: Failing taxonomy-validator test**
 
 Create `apps/api/src/modules/bank/domain/validate-question-taxonomy.spec.ts`:
+
 ```ts
 import { validateQuestionTaxonomy } from "./validate-question-taxonomy";
 
@@ -74,7 +79,14 @@ describe("validateQuestionTaxonomy", () => {
     expect(r.ok).toBe(false);
   });
   it("accepts valid fields", () => {
-    expect(validateQuestionTaxonomy({ courseId: "c1", topicId: "t1", difficulty: "easy", gradeLevel: "pre" })).toEqual({ ok: true });
+    expect(
+      validateQuestionTaxonomy({
+        courseId: "c1",
+        topicId: "t1",
+        difficulty: "easy",
+        gradeLevel: "pre",
+      }),
+    ).toEqual({ ok: true });
   });
 });
 ```
@@ -87,6 +99,7 @@ Expected: FAIL — module not found.
 - [ ] **Step 3: Implement the validator**
 
 Create `apps/api/src/modules/bank/domain/validate-question-taxonomy.ts`:
+
 ```ts
 import { Difficulty } from "@exams-generator/shared";
 
@@ -97,7 +110,8 @@ export interface QuestionTaxonomyPatch {
   readonly gradeLevel?: string;
 }
 
-export type TaxonomyValidation = { readonly ok: true } | { readonly ok: false; readonly errors: readonly string[] };
+export type TaxonomyValidation =
+  { readonly ok: true } | { readonly ok: false; readonly errors: readonly string[] };
 
 const DIFFICULTIES = new Set<string>(Object.values(Difficulty));
 
@@ -124,6 +138,7 @@ Expected: PASS.
 - [ ] **Step 5: Add a manageable-question guard + taxonomy edit to the service**
 
 In `bank.service.ts`, add a guard next to `requireVisibleDraft` (do NOT change `requireVisibleDraft` — approve/reject still need draft-only):
+
 ```ts
 /**
  * Edit precondition (broader than requireVisibleDraft): a question the caller
@@ -142,11 +157,13 @@ private async requireManageableQuestion(user: AuthTokenPayload, id: string): Pro
   return question;
 }
 ```
+
 Then repoint the edit method (currently `editDraftQuestion`, which calls `requireVisibleDraft`) to `requireManageableQuestion`, and extend it to also apply taxonomy. Rename it `editQuestion(user, id, patch)` where `patch` includes the existing structured fields PLUS `courseId?/topicId?/difficulty?/gradeLevel?`. After the existing structured-content validation + Typst compile, validate taxonomy via `validateQuestionTaxonomy(patch)` (400 on failure) and call `repository.updateQuestionTaxonomy(id, user.tenantId, {courseId,topicId,difficulty,gradeLevel})` for the provided fields. Keep the preview-cache invalidation.
 
 - [ ] **Step 6: Add the repository taxonomy update**
 
 In `bank.repository.ts` add:
+
 ```ts
 async updateQuestionTaxonomy(
   id: string,
@@ -162,6 +179,7 @@ async updateQuestionTaxonomy(
   await db.update(questions).set(set).where(and(eq(questions.id, id), tenantVisibility(tenantId)));
 }
 ```
+
 (Follow the tenant predicate helper already used in this file for question writes; match its exact name.)
 
 - [ ] **Step 7: Extend the controller PATCH body**
@@ -171,6 +189,7 @@ In `bank.controller.ts`, extend `EditDraftQuestionBody` to add `courseId?`, `top
 - [ ] **Step 8: Failing e2e — edit an approved question + taxonomy**
 
 Create `apps/api/src/modules/bank/bank-edit-approved.e2e.spec.ts` (mirror the harness in `bank.e2e.spec.ts`: bootstrap `AppModule`, seed a course/topic/tenant/teacher, sign a token). Assert:
+
 - `PATCH /bank/questions/:id` on an OWN `approved` structured question with `{ bodyTypst: "Nuevo enunciado $2+2$", difficulty: "hard" }` → 200; a follow-up `GET /bank/questions/:id` reflects both changes.
 - Same PATCH cross-tenant → 404.
 - PATCH on an `archived` question → 409.
@@ -192,15 +211,18 @@ git commit -m "feat(api): edit approved questions + taxonomy via PATCH /bank/que
 ## Task 2: Backend — replace an image question's image
 
 **Files:**
+
 - Modify: `apps/api/src/modules/bank/bank.service.ts`, `bank.repository.ts`, `bank.controller.ts`
 - Test: `apps/api/src/modules/bank/bank-replace-image.e2e.spec.ts`
 
 **Interfaces:**
+
 - Produces: `POST /bank/questions/:id/image` (multipart `file`) → `{ id: string }`; only `type='image'`, manageable (draft+approved, own). Swaps `imageAssetId` to a new asset.
 
 - [ ] **Step 1: Failing e2e**
 
 Create `apps/api/src/modules/bank/bank-replace-image.e2e.spec.ts`. Seed an OWN image question. Assert:
+
 - `POST /bank/questions/:id/image` with `.attach("file", pngBuffer, {filename,contentType})` → 201 `{ id }`; `GET /bank/questions/:id` shows a DIFFERENT `imageAssetId`.
 - Same on a `structured` question → 400.
 - Cross-tenant → 404.
@@ -213,6 +235,7 @@ Expected: FAIL — route 404.
 - [ ] **Step 3: Service method**
 
 In `bank.service.ts` add (mirror `createImageQuestion`'s storage.put + asset insert):
+
 ```ts
 async replaceImage(user: AuthTokenPayload, id: string, file: UploadedImageFile): Promise<{ id: string }> {
   const question = await this.requireManageableQuestion(user, id);
@@ -225,6 +248,7 @@ async replaceImage(user: AuthTokenPayload, id: string, file: UploadedImageFile):
   return { id };
 }
 ```
+
 (Use the SAME `UploadedImageFile`/storage-port types `createImageQuestion` uses. `replaceImageAsset` inserts a new asset row + points the question's `imageAssetId` at it, in one transaction.)
 
 - [ ] **Step 4: Repository method**
@@ -234,6 +258,7 @@ In `bank.repository.ts` add `replaceImageAsset(id, tenantId, {storageKey, mime})
 - [ ] **Step 5: Controller route**
 
 In `bank.controller.ts`:
+
 ```ts
 @Post(":id/image")
 @HttpCode(201)
@@ -260,17 +285,22 @@ git commit -m "feat(api): POST /bank/questions/:id/image to swap an image questi
 ## Task 3: Backend — extend QuestionGeneratorPort (revise + extract) with fakes
 
 **Files:**
+
 - Modify: `apps/api/src/modules/ai/domain/ports/question-generator.port.ts`
 - Modify: `apps/api/src/modules/ai/adapters/in-memory-question-generator.adapter.ts`, `lazy-question-generator.adapter.ts`
 - Test: `apps/api/src/modules/ai/adapters/in-memory-question-generator.adapter.spec.ts` (extend if exists, else create)
 
 **Interfaces:**
+
 - Produces on `QuestionGeneratorPort`:
+
 ```ts
 reviseQuestion(input: ReviseQuestionInput): Promise<GeneratedQuestion>;
 extractFromImage(input: ExtractQuestionInput): Promise<GeneratedQuestion>;
 ```
+
 with:
+
 ```ts
 export interface ReviseQuestionInput {
   readonly current: { bodyTypst: string; alternatives: readonly string[]; correctAnswer: string };
@@ -286,10 +316,11 @@ export interface ExtractQuestionInput {
 - [ ] **Step 1: Failing fake-adapter test**
 
 In the in-memory adapter spec, add:
+
 ```ts
 it("reviseQuestion returns a valid GeneratedQuestion echoing the instruction", async () => {
   const out = await adapter.reviseQuestion({
-    current: { bodyTypst: "2+2", alternatives: ["4","5","6","7","8"], correctAnswer: "a" },
+    current: { bodyTypst: "2+2", alternatives: ["4", "5", "6", "7", "8"], correctAnswer: "a" },
     instruction: "hazla más difícil",
     difficulty: Difficulty.Hard,
   });
@@ -333,17 +364,20 @@ git commit -m "feat(api): add reviseQuestion + extractFromImage to QuestionGener
 ## Task 4: Backend — POST /ai/questions/:id/revise
 
 **Files:**
+
 - Create: `apps/api/src/modules/ai/revise-question.service.ts`
 - Modify: `apps/api/src/modules/ai/ai.controller.ts`, `ai/ai.module.ts`
 - Test: `apps/api/src/modules/ai/revise-question.service.spec.ts`, `apps/api/src/modules/ai/ai-revise.e2e.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `QuestionGeneratorPort.reviseQuestion`, `BankRepository.findQuestionById`, `PdfCompilerPort` (validation), `validateStructuredContent`.
 - Produces: `POST /ai/questions/:id/revise` body `{ instruction: string }` → `{ bodyTypst, alternatives, correctAnswer }` (unsaved). 404 missing/cross-tenant; 400 blank instruction; 422 AI output fails validation/compile.
 
 - [ ] **Step 1: Failing service unit test**
 
 Create `revise-question.service.spec.ts` with a fake repo (returns a structured question), a fake generator (returns a `GeneratedQuestion`), and a fake `PdfCompilerPort` (compiles OK). Assert:
+
 - `revise(user, "q1", { instruction: "más difícil" })` resolves to the generator's output shape, and does NOT call any repo write.
 - blank instruction → `BadRequestException`.
 - generator output that fails `validateStructuredContent` (e.g. 2 alternatives) → `UnprocessableEntityException`.
@@ -357,6 +391,7 @@ Expected: FAIL — module missing.
 - [ ] **Step 3: Implement the service**
 
 Create `revise-question.service.ts`:
+
 ```ts
 @Injectable()
 export class ReviseQuestionService {
@@ -366,18 +401,31 @@ export class ReviseQuestionService {
     private readonly bankRepository: BankRepository,
   ) {}
 
-  async revise(user: AuthTokenPayload, id: string, instruction: string): Promise<GeneratedQuestion> {
+  async revise(
+    user: AuthTokenPayload,
+    id: string,
+    instruction: string,
+  ): Promise<GeneratedQuestion> {
     if (!instruction || instruction.trim() === "") {
       throw new BadRequestException("instruction must not be blank");
     }
     const q = await this.bankRepository.findQuestionById(id, user.tenantId);
     if (!q) throw new NotFoundException(`Question not found: ${id}`);
     const revised = await this.generator.reviseQuestion({
-      current: { bodyTypst: q.bodyTypst ?? "", alternatives: (q.alternatives as string[]) ?? [], correctAnswer: q.correctAnswer },
+      current: {
+        bodyTypst: q.bodyTypst ?? "",
+        alternatives: (q.alternatives as string[]) ?? [],
+        correctAnswer: q.correctAnswer,
+      },
       instruction,
       difficulty: q.difficulty,
     });
-    const errors = validateStructuredContent({ bodyTypst: revised.bodyTypst, alternatives: revised.alternatives, correctAnswer: revised.correctAnswer, figureCode: revised.figureCode });
+    const errors = validateStructuredContent({
+      bodyTypst: revised.bodyTypst,
+      alternatives: revised.alternatives,
+      correctAnswer: revised.correctAnswer,
+      figureCode: revised.figureCode,
+    });
     if (errors.length > 0) {
       throw new UnprocessableEntityException({ message: "AI produced invalid content", errors });
     }
@@ -390,12 +438,14 @@ export class ReviseQuestionService {
     try {
       await this.pdfCompiler.compilePreviewFromContent(q.bodyTypst, q.alternatives, q.figureCode);
     } catch (e) {
-      if (e instanceof TypstCompilationError) throw new UnprocessableEntityException("AI produced content that does not compile");
+      if (e instanceof TypstCompilationError)
+        throw new UnprocessableEntityException("AI produced content that does not compile");
       throw e;
     }
   }
 }
 ```
+
 **Prerequisite for this step:** `bank.service.previewQuestion` (`bank.service.ts:295`) currently builds the single-question Typst preview input INLINE before calling the compiler. Extract that builder into a shared helper `compilePreviewFromContent(bodyTypst, alternatives, figureCode)` (co-locate it with `PdfCompilerPort`, or a `bank/domain` module the ai module can import) and call it from BOTH `previewQuestion` and here, so manual edits and AI revisions are validated identically. Read `previewQuestion` first to copy its exact input shape.
 
 - [ ] **Step 4: Run unit green**
@@ -406,6 +456,7 @@ Expected: PASS.
 - [ ] **Step 5: Controller route + module wiring**
 
 In `ai.controller.ts`:
+
 ```ts
 @Post("questions/:id/revise")
 @HttpCode(200)
@@ -413,11 +464,13 @@ async revise(@CurrentUser() user: AuthTokenPayload, @Param("id") id: string, @Bo
   return this.reviseService.revise(user, id, body.instruction ?? "");
 }
 ```
+
 Register `ReviseQuestionService` in `ai.module.ts` providers (it needs `BankRepository` — import `BankModule` or provide the repo, matching how `GenerateQuestionsService` already accesses it).
 
 - [ ] **Step 6: Failing + green e2e**
 
 Create `ai-revise.e2e.spec.ts` (AppModule uses the in-memory generator in test). Seed an OWN structured question. Assert:
+
 - `POST /ai/questions/:id/revise { instruction: "más difícil" }` → 200 with `{ bodyTypst, alternatives, correctAnswer }`; a follow-up `GET /bank/questions/:id` is UNCHANGED (not persisted).
 - blank instruction → 400. Cross-tenant → 404.
 
@@ -436,11 +489,13 @@ git commit -m "feat(api): POST /ai/questions/:id/revise (AI edit, validated, nev
 ## Task 5: Backend — POST /ai/questions/extract (OCR)
 
 **Files:**
+
 - Create: `apps/api/src/modules/ai/extract-question.service.ts`
 - Modify: `apps/api/src/modules/ai/ai.controller.ts`, `ai/ai.module.ts`
 - Test: `apps/api/src/modules/ai/extract-question.service.spec.ts`, `apps/api/src/modules/ai/ai-extract.e2e.spec.ts`
 
 **Interfaces:**
+
 - Produces: `POST /ai/questions/extract` (multipart `file`) → `{ bodyTypst, alternatives, correctAnswer }` (unsaved). 400 no file; 422 invalid AI output.
 
 - [ ] **Step 1: Failing service unit test**
@@ -459,9 +514,18 @@ Expected: FAIL — module missing.
 export class ExtractQuestionService {
   constructor(@Inject(QUESTION_GENERATOR_PORT) private readonly generator: QuestionGeneratorPort) {}
   async extract(file: { buffer: Buffer; mimetype: string }): Promise<GeneratedQuestion> {
-    const out = await this.generator.extractFromImage({ image: file.buffer, mimeType: file.mimetype });
-    const errors = validateStructuredContent({ bodyTypst: out.bodyTypst, alternatives: out.alternatives, correctAnswer: out.correctAnswer, figureCode: out.figureCode });
-    if (errors.length > 0) throw new UnprocessableEntityException({ message: "AI produced invalid content", errors });
+    const out = await this.generator.extractFromImage({
+      image: file.buffer,
+      mimeType: file.mimetype,
+    });
+    const errors = validateStructuredContent({
+      bodyTypst: out.bodyTypst,
+      alternatives: out.alternatives,
+      correctAnswer: out.correctAnswer,
+      figureCode: out.figureCode,
+    });
+    if (errors.length > 0)
+      throw new UnprocessableEntityException({ message: "AI produced invalid content", errors });
     return out;
   }
 }
@@ -483,6 +547,7 @@ async extract(@UploadedFile() file: Express.Multer.File) {
   return this.extractService.extract({ buffer: file.buffer, mimetype: file.mimetype });
 }
 ```
+
 Register `ExtractQuestionService` in `ai.module.ts`.
 
 - [ ] **Step 6: e2e green**
@@ -503,10 +568,12 @@ git commit -m "feat(api): POST /ai/questions/extract (OCR image -> structured fi
 ## Task 6: Backend — OpenRouter adapter real impl (revise + extract)
 
 **Files:**
+
 - Modify: `apps/api/src/modules/ai/adapters/openrouter/openrouter.adapter.ts` (+ `openrouter-request-builder.ts`, `openrouter-response-parser.ts`)
 - Test: extend `apps/api/src/modules/ai/adapters/openrouter/*.spec.ts`
 
 **Interfaces:**
+
 - Consumes: same OpenRouter chat-completions plumbing `generate()` already uses.
 - Produces: real `reviseQuestion`/`extractFromImage` on the OpenRouter adapter, parsing the same JSON `{ bodyTypst, alternatives, correctAnswer, figureCode? }` shape.
 
@@ -534,11 +601,14 @@ git commit -m "feat(api): OpenRouter reviseQuestion + extractFromImage"
 ## Task 7: Frontend — services + models
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/bank/bank.models.ts`, `bank/bank.service.ts` (+ `.spec.ts`)
 - Modify: `apps/web/src/app/features/ai/ai.service.ts`, `ai/ai.models.ts` (+ `ai.service.spec.ts`)
 
 **Interfaces:**
+
 - Produces:
+
 ```ts
 // bank.models.ts
 export interface UpdateQuestionPayload {
@@ -582,9 +652,11 @@ git commit -m "feat(web): bank/ai service methods for edit, image-swap, AI revis
 ## Task 8: Frontend — inline edit mode in the detail panel
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/bank/bank-list/bank-list.component.ts` + `.html` (+ `.spec.ts`)
 
 **Interfaces:**
+
 - Consumes: `BankService.updateQuestion`, `replaceQuestionImage`; existing `selected()`, `imageUrl()`, taxonomy option lists.
 - Produces: panel `editing` signal; `startEdit()`, `cancelEdit()`, `saveEdit()`; edit form with `data-testid`: `panel-edit-form`, `edit-warning`, `edit-save`, `edit-cancel`.
 
@@ -612,9 +684,11 @@ git commit -m "feat(web): inline edit mode in bank detail panel (structured + im
 ## Task 9: Frontend — AI instruction box (revise)
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/bank/bank-list/bank-list.component.ts` + `.html` (+ `.spec.ts`)
 
 **Interfaces:**
+
 - Consumes: `AiService.reviseQuestion`.
 - Produces: in edit mode, `data-testid`: `ai-instruction` (input), `ai-revise` (button), `ai-error`. On success, populates the edit form signals.
 
@@ -638,9 +712,11 @@ git commit -m "feat(web): AI instruction box to revise a question inline"
 ## Task 10: Frontend — OCR extract from image
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/bank/bank-list/bank-list.component.ts` + `.html` (+ `.spec.ts`)
 
 **Interfaces:**
+
 - Consumes: `AiService.extractQuestionFromImage`.
 - Produces: `data-testid`: `ocr-upload` (file input), `ocr-run` (button). On success, fills the structured edit form.
 

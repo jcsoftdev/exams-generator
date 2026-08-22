@@ -141,7 +141,9 @@ describe('AiService', () => {
       vi.useFakeTimers();
       try {
         let capturedError: unknown;
-        service.generateQuestionStream(payload).subscribe({ error: (err) => (capturedError = err) });
+        service
+          .generateQuestionStream(payload)
+          .subscribe({ error: (err) => (capturedError = err) });
 
         httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/generate/stream`);
 
@@ -238,7 +240,7 @@ describe('AiService', () => {
       req.flush({ items: [], total: 0 });
     });
 
-    it('resolves with the paginated envelope\'s total, not items.length', () => {
+    it("resolves with the paginated envelope's total, not items.length", () => {
       let result: number | undefined;
       service.countDrafts().subscribe((total) => (result = total));
 
@@ -323,9 +325,7 @@ describe('AiService', () => {
       };
       let result: AiRevisedQuestion | undefined;
 
-      service
-        .reviseQuestion('q1', 'más difícil')
-        .subscribe((response) => (result = response));
+      service.reviseQuestion('q1', 'más difícil').subscribe((response) => (result = response));
 
       const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/q1/revise`);
       expect(req.request.method).toBe('POST');
@@ -346,9 +346,7 @@ describe('AiService', () => {
       };
       let result: AiRevisedQuestion | undefined;
 
-      service
-        .extractQuestionFromImage(image)
-        .subscribe((response) => (result = response));
+      service.extractQuestionFromImage(image).subscribe((response) => (result = response));
 
       const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/extract`);
       expect(req.request.method).toBe('POST');
@@ -487,7 +485,8 @@ describe('AiService', () => {
       req.event(downloadProgressEvent(firstFrame));
       expect(jobs).toEqual([{ id: 'job-1', status: 'running', createdCount: 1 }]);
 
-      const secondFrame = firstFrame + 'data: {"id":"job-1","status":"completed","createdCount":3}\n\n';
+      const secondFrame =
+        firstFrame + 'data: {"id":"job-1","status":"completed","createdCount":3}\n\n';
       req.event(downloadProgressEvent(secondFrame));
       expect(jobs).toEqual([
         { id: 'job-1', status: 'running', createdCount: 1 },
@@ -537,7 +536,9 @@ describe('AiService', () => {
 
         // Just under the window, then a fresh frame resets the clock.
         vi.advanceTimersByTime(359_999);
-        req.event(downloadProgressEvent('data: {"id":"job-1","status":"running","createdCount":1}\n\n'));
+        req.event(
+          downloadProgressEvent('data: {"id":"job-1","status":"running","createdCount":1}\n\n'),
+        );
         expect(capturedError).toBeUndefined();
 
         vi.advanceTimersByTime(359_999);

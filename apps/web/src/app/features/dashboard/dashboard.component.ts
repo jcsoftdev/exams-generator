@@ -27,7 +27,14 @@ const ERROR_MESSAGE = 'No se pudieron cargar las estadísticas. Inténtalo de nu
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CardComponent, BarChartComponent, DonutChartComponent, RouterLink, DatePipe, ButtonComponent],
+  imports: [
+    CardComponent,
+    BarChartComponent,
+    DonutChartComponent,
+    RouterLink,
+    DatePipe,
+    ButtonComponent,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './dashboard.component.html',
 })

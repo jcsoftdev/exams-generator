@@ -1,9 +1,5 @@
 import { createSeededRng } from "./ports/random.port";
-import {
-  buildVersions,
-  SelectedQuestion,
-  SelectedStructuredQuestion,
-} from "./version-shuffler";
+import { buildVersions, SelectedQuestion, SelectedStructuredQuestion } from "./version-shuffler";
 
 describe("buildVersions", () => {
   it("builds a version per requested count, coded A, B, C... sequentially", () => {
@@ -29,15 +25,11 @@ describe("buildVersions", () => {
 
     const versions = buildVersions(selected, 2, createSeededRng(42));
 
-    const correctAnswerByQuestionId = new Map(
-      selected.map((q) => [q.questionId, q.correctAnswer]),
-    );
+    const correctAnswerByQuestionId = new Map(selected.map((q) => [q.questionId, q.correctAnswer]));
 
     for (const version of versions) {
       version.questionOrder.forEach((questionId, position) => {
-        expect(version.answerKey[position]).toBe(
-          correctAnswerByQuestionId.get(questionId),
-        );
+        expect(version.answerKey[position]).toBe(correctAnswerByQuestionId.get(questionId));
       });
     }
   });
@@ -121,9 +113,7 @@ describe("buildVersions", () => {
 
     const shuffled = version.shuffledAlternatives["q1"];
     expect(shuffled).toBeDefined();
-    expect([...shuffled].sort()).toEqual(
-      [...structuredQuestion.alternatives].sort(),
-    ); // same content, position(s) may differ
+    expect([...shuffled].sort()).toEqual([...structuredQuestion.alternatives].sort()); // same content, position(s) may differ
 
     const letter = version.answerKey[0];
     const newIndex = letter.charCodeAt(0) - "A".charCodeAt(0);
@@ -161,9 +151,7 @@ describe("buildVersions", () => {
     );
     shuffledAlternatives.forEach((alternative, newPosition) => {
       const originalIndex = originalIndexByAlternative.get(alternative)!;
-      expect(shuffledImages![newPosition]).toEqual(
-        structuredQuestion.alternativeImages![originalIndex],
-      );
+      expect(shuffledImages![newPosition]).toEqual(structuredQuestion.alternativeImages![originalIndex]);
     });
   });
 
@@ -207,16 +195,11 @@ describe("buildVersions", () => {
     for (let scenario = 0; scenario < 200; scenario++) {
       const questionCount = 1 + Math.floor(scenarioRng() * 8); // 1..8
       const versionCount = 1 + Math.floor(scenarioRng() * 5); // 1..5
-      const selected: SelectedQuestion[] = Array.from(
-        { length: questionCount },
-        (_, i) => ({
-          questionId: `q${scenario}-${i}`,
-          correctAnswer: letters[Math.floor(scenarioRng() * letters.length)],
-        }),
-      );
-      const correctAnswerByQuestionId = new Map(
-        selected.map((q) => [q.questionId, q.correctAnswer]),
-      );
+      const selected: SelectedQuestion[] = Array.from({ length: questionCount }, (_, i) => ({
+        questionId: `q${scenario}-${i}`,
+        correctAnswer: letters[Math.floor(scenarioRng() * letters.length)],
+      }));
+      const correctAnswerByQuestionId = new Map(selected.map((q) => [q.questionId, q.correctAnswer]));
       const inputIds = selected.map((q) => q.questionId).sort();
 
       const versions = buildVersions(selected, versionCount, createSeededRng(scenario));
@@ -229,9 +212,7 @@ describe("buildVersions", () => {
         expect(new Set(version.questionOrder).size).toBe(questionCount);
 
         version.questionOrder.forEach((questionId, position) => {
-          expect(version.answerKey[position]).toBe(
-            correctAnswerByQuestionId.get(questionId),
-          );
+          expect(version.answerKey[position]).toBe(correctAnswerByQuestionId.get(questionId));
         });
       });
     }
@@ -239,13 +220,7 @@ describe("buildVersions", () => {
 
   it("RELEASE GATE property: for any seed and any mix of image/structured questions, after shuffling questions AND structured alternatives, answer_key always identifies the alternative whose CONTENT was originally correct (only its position may change)", () => {
     const scenarioRng = createSeededRng(4242);
-    const alternativePool = [
-      "alt-alpha",
-      "alt-beta",
-      "alt-gamma",
-      "alt-delta",
-      "alt-epsilon",
-    ];
+    const alternativePool = ["alt-alpha", "alt-beta", "alt-gamma", "alt-delta", "alt-epsilon"];
     const imageLetters = ["A", "B", "C", "D"];
 
     for (let scenario = 0; scenario < 200; scenario++) {
@@ -254,38 +229,33 @@ describe("buildVersions", () => {
       // scenario % 3 sweeps: all-image, all-structured, and a mix.
       const mode = scenario % 3;
 
-      const selected: SelectedQuestion[] = Array.from(
-        { length: questionCount },
-        (_, i) => {
-          const questionId = `q${scenario}-${i}`;
-          const isStructured =
-            mode === 1 || (mode === 2 && scenarioRng() < 0.5);
+      const selected: SelectedQuestion[] = Array.from({ length: questionCount }, (_, i) => {
+        const questionId = `q${scenario}-${i}`;
+        const isStructured = mode === 1 || (mode === 2 && scenarioRng() < 0.5);
 
-          if (!isStructured) {
-            return {
-              type: "image" as const,
-              questionId,
-              correctAnswer:
-                imageLetters[Math.floor(scenarioRng() * imageLetters.length)],
-            };
-          }
-
-          const altCount = 2 + Math.floor(scenarioRng() * 3); // 2..4
-          const alternatives = Array.from(
-            { length: altCount },
-            (_, altIndex) => `${alternativePool[altIndex % alternativePool.length]}-${questionId}-${altIndex}`,
-          );
-          const correctIndex = Math.floor(scenarioRng() * altCount);
-
-          const structured: SelectedStructuredQuestion = {
-            type: "structured",
+        if (!isStructured) {
+          return {
+            type: "image" as const,
             questionId,
-            alternatives,
-            correctAnswer: String(correctIndex),
+            correctAnswer: imageLetters[Math.floor(scenarioRng() * imageLetters.length)],
           };
-          return structured;
-        },
-      );
+        }
+
+        const altCount = 2 + Math.floor(scenarioRng() * 3); // 2..4
+        const alternatives = Array.from(
+          { length: altCount },
+          (_, altIndex) => `${alternativePool[altIndex % alternativePool.length]}-${questionId}-${altIndex}`,
+        );
+        const correctIndex = Math.floor(scenarioRng() * altCount);
+
+        const structured: SelectedStructuredQuestion = {
+          type: "structured",
+          questionId,
+          alternatives,
+          correctAnswer: String(correctIndex),
+        };
+        return structured;
+      });
 
       const originalCorrectContentByQuestionId = new Map(
         selected.map((q) => {
@@ -306,17 +276,13 @@ describe("buildVersions", () => {
           expect(position).toBeGreaterThanOrEqual(0);
 
           const answerLetter = version.answerKey[position];
-          const originalCorrectContent = originalCorrectContentByQuestionId.get(
-            question.questionId,
-          );
+          const originalCorrectContent = originalCorrectContentByQuestionId.get(question.questionId);
 
           if (question.type === "structured") {
             const shuffled = version.shuffledAlternatives[question.questionId];
             expect(shuffled).toBeDefined();
             // Content preserved (multiset equality), only order may change.
-            expect([...shuffled].sort()).toEqual(
-              [...question.alternatives].sort(),
-            );
+            expect([...shuffled].sort()).toEqual([...question.alternatives].sort());
 
             const newIndex = answerLetter.charCodeAt(0) - "A".charCodeAt(0);
             expect(shuffled[newIndex]).toBe(originalCorrectContent);

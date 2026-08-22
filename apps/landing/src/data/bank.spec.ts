@@ -26,9 +26,7 @@ import { bank, courses } from "./bank.ts";
  *     enough that a 60x drift cannot hide.
  */
 
-const COLLECTED_DIR = fileURLToPath(
-  new URL("../../../api/src/db/data/collected/", import.meta.url),
-);
+const COLLECTED_DIR = fileURLToPath(new URL("../../../api/src/db/data/collected/", import.meta.url));
 
 interface CollectedFile {
   readonly entries: readonly unknown[];

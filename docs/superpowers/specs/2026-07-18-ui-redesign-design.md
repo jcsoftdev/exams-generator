@@ -17,41 +17,46 @@ El web actual tiene el wiring funcional completo (formularios, servicios, guards
 ## 3. Identidad visual (fijada)
 
 ### 3.1 Marca — "Pizarra profunda"
+
 Generada por algoritmo OKLCH (rampa perceptualmente uniforme, hue base ~246°, chroma bajo). Estructura "profesional" = **ancla oscura** (sidebar) + lienzo blanco + color controlado (solo acción principal + nav activo).
 
-| Token | Hex | Uso |
-|---|---|---|
-| primary-900 (ancla) | `#072034` | Sidebar, títulos fuertes |
-| primary-800 | `#1c3141` | |
-| primary-700 | `#2f4657` | |
-| primary-600 | `#3f596f` | Botón hover |
-| primary-500 (acción) | `#516f8a` | Botón primario, acentos |
-| primary-400 | `#7392ae` | |
-| primary-300 | `#9db4cb` | |
-| primary-200 | `#c3d3e2` | |
-| primary-100 | `#e2ebf3` | |
-| tint activo | `#deedfb` | Fondo nav activo, chips |
-| tint texto | `#3b5872` | Texto sobre tint |
-| primary-50 | `#f3f6fa` | |
+| Token                | Hex       | Uso                      |
+| -------------------- | --------- | ------------------------ |
+| primary-900 (ancla)  | `#072034` | Sidebar, títulos fuertes |
+| primary-800          | `#1c3141` |                          |
+| primary-700          | `#2f4657` |                          |
+| primary-600          | `#3f596f` | Botón hover              |
+| primary-500 (acción) | `#516f8a` | Botón primario, acentos  |
+| primary-400          | `#7392ae` |                          |
+| primary-300          | `#9db4cb` |                          |
+| primary-200          | `#c3d3e2` |                          |
+| primary-100          | `#e2ebf3` |                          |
+| tint activo          | `#deedfb` | Fondo nav activo, chips  |
+| tint texto           | `#3b5872` | Texto sobre tint         |
+| primary-50           | `#f3f6fa` |                          |
 
 Neutrales: `#f7f8f9 #eceef1 #dde0e4 #c3c8ce #a4abb3 #868d96 #6a717a #4e545c #363b41 #20242a`.
 
 Semánticos (tags/estados): éxito/fácil `#dcfce7`/`#166534`; media `#fef3c7`/`#92620a`; difícil/error `#fee2e2`/`#9f1239`; IA `#f3e8ff`/`#6b21a8`; warning stock `#fff8f1`/`#9a3412`.
 
 ### 3.2 Tipografía
+
 **Plus Jakarta Sans** (Google Fonts) — UI + headings, mismo tipo. Pesos 400/500/600/700/800. Self-host para producción (no depender de CDN externo).
 
 ### 3.3 Reglas duras
+
 - **Sin gradientes** — rellenos sólidos siempre.
 - Radios 8–12px, densidad media.
 - Color con moderación: el neutro/blanco domina, el primario aparece poco.
 
 ### 3.4 Tech
+
 **Tailwind CSS + design tokens propios + componentes a mano** (no Angular Material / no PrimeNG). Tokens mapean la tabla de arriba a variables Tailwind. Componentes primitivos: botón (primary/ghost), input, select, card, tabla, tag/chip, modal, empty-state, sidebar, topbar, banner/alert, progress. Todo standalone components (Angular actual), atomic + container/presentational.
 
 ## 4. Arquitectura de la app (navegación)
 
 Shell con **sidebar oscuro** (`#072034`) + topbar + router-outlet. Sidebar agrupado:
+
 - **Principal**: Banco de preguntas · Exámenes · Versiones y PDF
 - **Inteligencia**: Generar con IA · Cola de revisión
 - **Colegio**: Configuración (logo, datos) — visible según rol
@@ -65,6 +70,7 @@ Arquitectura elegida: **una sola pantalla "tabla + preview vivo"** (blueprint-fi
 **Terminología de colegio (cero jerga):** nunca "blueprint". Se llama **"Contenido del examen"**. Nivel = fácil/media/difícil. Filas = "pedidos".
 
 ### 5.1 Estructura de la pantalla
+
 1. **Ribbon de pasos** "1 Arma · 2 Revisa · 3 Genera" (orienta sin gatear) + toggle "Modo guiado" + tip descartable ("No mostrar").
 2. **Datos del examen**: título editable, grado (dropdown), colegio, "logo en PDF automático".
 3. **Contenido del examen (Tabla B)**: filas = curso·tema, columnas = fácil/media/difícil, celda = nº que quieres. **Debajo de cada celda: stock del banco** ("de 18", rojo "solo 2 ✕"). Convierte el error 422 reactivo en restricción visible ANTES de comprometer. "+ Agregar tema". Totales por nivel.
@@ -74,6 +80,7 @@ Arquitectura elegida: **una sola pantalla "tabla + preview vivo"** (blueprint-fi
 7. **Empty state** (banco vacío): CTA "Subir preguntas" / "✨ Generar con IA".
 
 ### 5.2 Paso 3 — Versiones
+
 "¿Cuántas formas?" (2/3/4/5), toggle "barajar también las alternativas (a/b/c/d)", cada Forma A/B/C con "Examen (PDF)" + "Hoja de claves", botón "Descargar todo (ZIP)". Branding/logo del colegio se aplica a todas las versiones (se configura una vez).
 
 ## 6. Flujos hermanos (reusan los patrones aprobados)
@@ -88,6 +95,7 @@ Arquitectura elegida: **una sola pantalla "tabla + preview vivo"** (blueprint-fi
 ## 7. Responsive
 
 Desktop = sidebar fijo + layout de 2 columnas. Mobile:
+
 - Sidebar → drawer / bottom-nav.
 - Tabla de contenido → se colapsa a una tarjeta por tema (fácil/media/difícil apiladas).
 - Preview de preguntas → debajo de la tabla (una columna), no en paralelo.
@@ -104,21 +112,25 @@ Auditado contra `main`. Todo lo demás que la UI necesita YA existe y calza (ver
 ### 9.1 Bloqueantes (implementar antes/junto con la UI)
 
 **B1 · Stock por celda** — sin esto no hay "de 18 / solo 2" en vivo.
+
 ```
 POST /exams/stock/batch     (batch preferido: la tabla tiene N filas; 1 GET por tecla es derroche)
 Body:  { gradeLevel, cells: [{ courseId, topicId?, difficulty? }] }
 Resp:  { results: [{ courseId, topicId?, difficulty?, available: number }] }
 Auth:  JwtAuthGuard + RolesGuard @Roles(Teacher, SchoolAdmin); tenant de user.tenantId; 400 si gradeLevel inválido; 403 si tenantId null
 ```
+
 Slot: nuevo `ExamsRepository.countStock()` reusando el query de `getQuestionPool` (`exams.repository.ts:247-266`) con `courseId/topicId/difficulty` en el WHERE + `COUNT(*)`. **Read fino, fácil** — la lógica de visibilidad/approved/gradeLevel ya existe verbatim.
 
 **B2 · Preview de selección sin persistir** — para el preview vivo agrupado.
+
 ```
 POST /exams/preview
 Body:  { gradeLevel, blueprint: [{courseId, topicId?, difficulty?, count}] }   // = CreateExamDto sin title
 Resp:  { selections: [{ rowIndex, courseId, topicId?, difficulty?, questionIds: string[] }], shortages: ShortageDetail[] }
 Auth:  igual que POST /exams; SIN escrituras a DB
 ```
+
 Slot: nuevo `ExamsService.previewExam()` reusando `getQuestionPool` + `blueprint-selector.select()` (el tercio medio de `createExam`, `exams.service.ts:152-186`) sin `createExam`/`saveSelection`. **Wiring nuevo ligero.**
 ⚠ **Decisión de diseño**: la selección es aleatoria; llamadas repetidas re-rollean. Para que las preguntas no "salten" mientras el profe edita otra fila → el cliente cachea la respuesta por fila, o se pasa un `seed`. Preferencia: **cache en cliente por fila** (no persistir hasta generar).
 
@@ -126,11 +138,13 @@ Slot: nuevo `ExamsService.previewExam()` reusando `getQuestionPool` + `blueprint
 Opción recomendada (mínima): **auto-confirmar al generar**. En `exam-generation.service.ts:95-101`, si `status==='draft'` llamar inline a la lógica de `confirmExam` en vez de tirar 409, luego generar. Reusa lógica existente, sin reglas nuevas. `replace` sigue bloqueado correctamente (post-generación ya es `ready`). Descartado: quitar el gate del todo (dejaría PDFs viejos stale sin flag de invalidación).
 
 **B4 · GET historial de versiones** — hoy `POST /versions` regenera a ciegas; las versiones SÍ se persisten en `exam_versions` pero no hay endpoint de lectura.
+
 ```
 GET /exams/:examId/versions
 Resp:  [{ code, pdfUrl, answerSheetUrl }]   // reconstruido desde exam_versions + assets
 Auth:  igual que ExamsController; 404 si no existe/otro tenant
 ```
+
 Slot: nuevo `ExamsRepository.getVersions(examId, tenantId)` join `exam_versions`→`assets`. **Read fino** pero necesita reconstruir URL desde `storageKey` (hoy no se persiste la URL, solo asset ids) — revisar si `StoragePort` tiene `getUrl(key)`.
 ⚠ **Bug latente detectado**: `POST /versions` dos veces choca con el índice único `(examId, code)` en el insert (`exams.repository.ts:461-470`) — no está manejado. Al tocar esto, hacer la generación **idempotente** (borrar/reemplazar versiones previas del examen antes de regenerar).
 

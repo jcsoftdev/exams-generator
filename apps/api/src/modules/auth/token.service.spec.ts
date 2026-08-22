@@ -66,11 +66,9 @@ describe("TokenService", () => {
   });
 
   it("verify() throws InvalidTokenError for an expired token", () => {
-    const expired = jwt.sign(
-      { sub: "user-1", tenantId: null, role: Role.Teacher },
-      "test-secret",
-      { expiresIn: -1 },
-    );
+    const expired = jwt.sign({ sub: "user-1", tenantId: null, role: Role.Teacher }, "test-secret", {
+      expiresIn: -1,
+    });
 
     expect(() => service.verify(expired)).toThrow(InvalidTokenError);
   });

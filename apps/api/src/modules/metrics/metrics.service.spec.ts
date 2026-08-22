@@ -58,7 +58,9 @@ describe("MetricsService", () => {
     const text = await metricsText(service);
 
     // The route TEMPLATE, never the raw path — one series per endpoint, not per id.
-    expect(text).toMatch(/http_request_duration_seconds_count\{method="GET",route="\/exams\/:examId",status_code="200"\} 1/);
+    expect(text).toMatch(
+      /http_request_duration_seconds_count\{method="GET",route="\/exams\/:examId",status_code="200"\} 1/,
+    );
   });
 
   it("keeps process metrics, so a leak or a blocked event loop is visible", async () => {

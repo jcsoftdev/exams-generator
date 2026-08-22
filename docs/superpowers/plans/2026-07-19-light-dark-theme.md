@@ -4,7 +4,7 @@
 
 **Goal:** Ship a real light/dark theme toggle where light mode (new Figma indigo ramp) becomes the app's default and dark mode (the app's original navy ramp, plus newly-designed dark neutrals/semantic tags) is available via a topbar button, an explicit user choice, or the OS preference.
 
-**Architecture:** Tailwind v4's `@theme` block in `apps/web/src/styles.css` continues to generate the same utility class names (`bg-primary-900`, `text-n600`, etc.) it always has — only the underlying CSS custom-property *values* change per mode, via a `@media (prefers-color-scheme: dark)` block (system preference, no explicit choice) and two `:root[data-theme="light"|"dark"]` attribute-selector overrides (explicit choice, always wins). A new `ThemeService` (`providedIn: 'root'`, signal-based) owns reading/writing that `data-theme` attribute and `localStorage`; it is injected once in the root `App` component (so the attribute is applied before any route — including `/login` — renders) and again in `ShellComponent` to wire the new topbar toggle button.
+**Architecture:** Tailwind v4's `@theme` block in `apps/web/src/styles.css` continues to generate the same utility class names (`bg-primary-900`, `text-n600`, etc.) it always has — only the underlying CSS custom-property _values_ change per mode, via a `@media (prefers-color-scheme: dark)` block (system preference, no explicit choice) and two `:root[data-theme="light"|"dark"]` attribute-selector overrides (explicit choice, always wins). A new `ThemeService` (`providedIn: 'root'`, signal-based) owns reading/writing that `data-theme` attribute and `localStorage`; it is injected once in the root `App` component (so the attribute is applied before any route — including `/login` — renders) and again in `ShellComponent` to wire the new topbar toggle button.
 
 **Tech Stack:** Angular v22 (standalone components, signals), Tailwind v4 CSS-first `@theme`, `lucide-angular` (`Sun`/`Moon` icons), Vitest under `@angular/build:unit-test`.
 
@@ -36,10 +36,12 @@
 ### Task 1: `styles.css` token restructure (light default + dark override)
 
 **Files:**
+
 - Modify: `apps/web/src/styles.css` (full file — see current content below)
 - Test: none (pure CSS, no unit-testable logic) — verification is the full suite passing (no CSS-only change should break any TS/component test) plus a manual visual check deferred to after Task 3, once the toggle button exists to actually flip `data-theme` in the browser.
 
 **Interfaces:**
+
 - Consumes: nothing from earlier tasks (first task in the sequence).
 - Produces: the same Tailwind utility class names the app already uses (`bg-primary-900`, `text-n600`, `bg-easy-bg`, `text-easy-text`, `bg-tint-activo`, `text-tint-texto`, `bg-paper-bg`, `border-paper-border`, `rounded-field`, `rounded-card`, `font-sans`, etc.) whose custom-property values now differ between an unset `:root` (light default), `@media (prefers-color-scheme: dark)` on an unset `:root` (system dark), `:root[data-theme="dark"]`, and `:root[data-theme="light"]`. Task 2's `ThemeService` produces the `data-theme` attribute value that selects between the last two; Task 3's toggle button is the only UI that changes it.
 
@@ -319,12 +321,14 @@ git commit -m "feat(web): restructure theme tokens for light-default + dark over
 ### Task 2: `ThemeService`
 
 **Files:**
+
 - Create: `apps/web/src/app/core/theme/theme.service.ts`
 - Create: `apps/web/src/app/core/theme/theme.service.spec.ts`
 - Modify: `apps/web/src/test-setup.ts` (add a `matchMedia` stub — jsdom doesn't implement it, and `ThemeService`'s constructor calls it)
 - Modify: `apps/web/src/app/app.ts` (inject `ThemeService` for its constructor side effect)
 
 **Interfaces:**
+
 - Consumes: the `data-theme` attribute/CSS override mechanism Task 1 established (this task is the code that sets that attribute; it does not import anything from `styles.css`).
 - Produces: `export type ThemeMode = 'light' | 'dark';` and `ThemeService` (`@Injectable({ providedIn: 'root' })`) with `readonly mode: Signal<ThemeMode>` and `toggle(): void`. Task 3 imports `ThemeService` from `../../core/theme/theme.service` and calls `themeService.mode()` / `themeService.toggle()`.
 
@@ -347,7 +351,7 @@ Append to the end of `apps/web/src/test-setup.ts` (leave the existing `ResizeObs
  * `vi.stubGlobal('matchMedia', ...)` to exercise the dark-preference branch,
  * then restores this default afterwards with `vi.unstubAllGlobals()`.
  */
-if (typeof globalThis.matchMedia === 'undefined') {
+if (typeof globalThis.matchMedia === "undefined") {
   globalThis.matchMedia = ((query: string) => ({
     matches: false,
     media: query,
@@ -364,15 +368,15 @@ if (typeof globalThis.matchMedia === 'undefined') {
 - [ ] **Step 2: Write the failing tests — `apps/web/src/app/core/theme/theme.service.spec.ts`**
 
 ```ts
-import { TestBed } from '@angular/core/testing';
-import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { ThemeService } from './theme.service';
+import { TestBed } from "@angular/core/testing";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
+import { ThemeService } from "./theme.service";
 
-const THEME_STORAGE_KEY = 'theme';
+const THEME_STORAGE_KEY = "theme";
 
 function stubMatchMedia(matches: boolean): void {
   vi.stubGlobal(
-    'matchMedia',
+    "matchMedia",
     vi.fn().mockImplementation((query: string) => ({
       matches,
       media: query,
@@ -386,77 +390,77 @@ function stubMatchMedia(matches: boolean): void {
   );
 }
 
-describe('ThemeService', () => {
+describe("ThemeService", () => {
   beforeEach(() => {
     localStorage.clear();
-    document.documentElement.removeAttribute('data-theme');
+    document.documentElement.removeAttribute("data-theme");
   });
 
   afterEach(() => {
     vi.unstubAllGlobals();
     localStorage.clear();
-    document.documentElement.removeAttribute('data-theme');
+    document.documentElement.removeAttribute("data-theme");
   });
 
   it('resolves a stored "dark" preference on construction and applies it to the DOM', () => {
-    localStorage.setItem(THEME_STORAGE_KEY, 'dark');
+    localStorage.setItem(THEME_STORAGE_KEY, "dark");
     stubMatchMedia(false); // system prefers light — the stored value must still win
 
     TestBed.configureTestingModule({});
     const service = TestBed.inject(ThemeService);
 
-    expect(service.mode()).toBe('dark');
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
+    expect(service.mode()).toBe("dark");
+    expect(document.documentElement.getAttribute("data-theme")).toBe("dark");
   });
 
   it('resolves a stored "light" preference on construction and applies it to the DOM', () => {
-    localStorage.setItem(THEME_STORAGE_KEY, 'light');
+    localStorage.setItem(THEME_STORAGE_KEY, "light");
     stubMatchMedia(true); // system prefers dark — the stored value must still win
 
     TestBed.configureTestingModule({});
     const service = TestBed.inject(ThemeService);
 
-    expect(service.mode()).toBe('light');
-    expect(document.documentElement.getAttribute('data-theme')).toBe('light');
+    expect(service.mode()).toBe("light");
+    expect(document.documentElement.getAttribute("data-theme")).toBe("light");
   });
 
-  it('falls back to the system preference via matchMedia when nothing is stored', () => {
+  it("falls back to the system preference via matchMedia when nothing is stored", () => {
     stubMatchMedia(true); // system prefers dark
 
     TestBed.configureTestingModule({});
     const service = TestBed.inject(ThemeService);
 
-    expect(service.mode()).toBe('dark');
+    expect(service.mode()).toBe("dark");
     // No explicit choice yet — the CSS media query handles it; the service
     // must NOT set the attribute itself in this branch (design doc §2).
-    expect(document.documentElement.getAttribute('data-theme')).toBeNull();
+    expect(document.documentElement.getAttribute("data-theme")).toBeNull();
   });
 
-  it('falls back to light when the system has no dark preference and nothing is stored', () => {
+  it("falls back to light when the system has no dark preference and nothing is stored", () => {
     stubMatchMedia(false);
 
     TestBed.configureTestingModule({});
     const service = TestBed.inject(ThemeService);
 
-    expect(service.mode()).toBe('light');
-    expect(document.documentElement.getAttribute('data-theme')).toBeNull();
+    expect(service.mode()).toBe("light");
+    expect(document.documentElement.getAttribute("data-theme")).toBeNull();
   });
 
-  it('toggle() flips the signal, sets the DOM attribute, and persists to localStorage', () => {
+  it("toggle() flips the signal, sets the DOM attribute, and persists to localStorage", () => {
     stubMatchMedia(false); // resolves to 'light' initially
 
     TestBed.configureTestingModule({});
     const service = TestBed.inject(ThemeService);
-    expect(service.mode()).toBe('light');
+    expect(service.mode()).toBe("light");
 
     service.toggle();
 
-    expect(service.mode()).toBe('dark');
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
-    expect(localStorage.getItem(THEME_STORAGE_KEY)).toBe('dark');
+    expect(service.mode()).toBe("dark");
+    expect(document.documentElement.getAttribute("data-theme")).toBe("dark");
+    expect(localStorage.getItem(THEME_STORAGE_KEY)).toBe("dark");
   });
 
-  it('toggle() back to light updates the DOM attribute and localStorage again', () => {
+  it("toggle() back to light updates the DOM attribute and localStorage again", () => {
     stubMatchMedia(false);
     TestBed.configureTestingModule({});
     const service = TestBed.inject(ThemeService);
@@ -464,9 +468,9 @@ describe('ThemeService', () => {
     service.toggle(); // light -> dark
     service.toggle(); // dark -> light
 
-    expect(service.mode()).toBe('light');
-    expect(document.documentElement.getAttribute('data-theme')).toBe('light');
-    expect(localStorage.getItem(THEME_STORAGE_KEY)).toBe('light');
+    expect(service.mode()).toBe("light");
+    expect(document.documentElement.getAttribute("data-theme")).toBe("light");
+    expect(localStorage.getItem(THEME_STORAGE_KEY)).toBe("light");
   });
 });
 ```
@@ -479,12 +483,12 @@ Expected: FAIL — `theme.service.spec.ts` errors with "Cannot find module './th
 - [ ] **Step 4: Write the minimal implementation — `apps/web/src/app/core/theme/theme.service.ts`**
 
 ```ts
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal } from "@angular/core";
 
-export type ThemeMode = 'light' | 'dark';
+export type ThemeMode = "light" | "dark";
 
 /** Matches the design doc's mechanism example (§2) verbatim. */
-const THEME_STORAGE_KEY = 'theme';
+const THEME_STORAGE_KEY = "theme";
 
 /**
  * Owns the light/dark theme: resolves the initial mode (stored explicit
@@ -500,7 +504,7 @@ const THEME_STORAGE_KEY = 'theme';
  * rendered for that route). Injected again in `ShellComponent` to back the
  * toggle button.
  */
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class ThemeService {
   private readonly initialStoredMode = this.readStoredMode();
 
@@ -508,24 +512,24 @@ export class ThemeService {
 
   constructor() {
     if (this.initialStoredMode !== null) {
-      document.documentElement.setAttribute('data-theme', this.initialStoredMode);
+      document.documentElement.setAttribute("data-theme", this.initialStoredMode);
     }
   }
 
   toggle(): void {
-    const next: ThemeMode = this.mode() === 'dark' ? 'light' : 'dark';
+    const next: ThemeMode = this.mode() === "dark" ? "light" : "dark";
     this.mode.set(next);
-    document.documentElement.setAttribute('data-theme', next);
+    document.documentElement.setAttribute("data-theme", next);
     localStorage.setItem(THEME_STORAGE_KEY, next);
   }
 
   private resolveSystemMode(): ThemeMode {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
 
   private readStoredMode(): ThemeMode | null {
     const value = localStorage.getItem(THEME_STORAGE_KEY);
-    return value === 'light' || value === 'dark' ? value : null;
+    return value === "light" || value === "dark" ? value : null;
   }
 }
 ```
@@ -540,18 +544,18 @@ Expected: PASS — all 6 `theme.service.spec.ts` tests pass, and every pre-exist
 Modify `apps/web/src/app/app.ts` (current full content: a signal-only component with no injected services):
 
 ```ts
-import { Component, inject, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ThemeService } from './core/theme/theme.service';
+import { Component, inject, signal } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
+import { ThemeService } from "./core/theme/theme.service";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss',
+  templateUrl: "./app.html",
+  styleUrl: "./app.scss",
 })
 export class App {
-  protected readonly title = signal('Exams Generator');
+  protected readonly title = signal("Exams Generator");
 
   /**
    * Injected for its constructor side effect only (see ThemeService's own
@@ -586,12 +590,14 @@ git commit -m "feat(web): add ThemeService with light/dark persistence and syste
 ### Task 3: Topbar theme toggle button
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/shell/shell.component.ts`
 - Modify: `apps/web/src/app/features/shell/shell.component.html`
 - Modify: `apps/web/src/app/features/shell/shell.component.spec.ts`
 - Modify: `apps/web/src/app/app.config.ts`
 
 **Interfaces:**
+
 - Consumes: `ThemeService` (`../../core/theme/theme.service`) — `readonly mode: Signal<ThemeMode>` and `toggle(): void` — from Task 2.
 - Produces: a `[data-testid="theme-toggle-button"]` button in the shell topbar's `[actions]` slot. No later task depends on this.
 
@@ -633,13 +639,13 @@ import {
   Settings,
   Sun,
   Moon,
-} from 'lucide-angular';
+} from "lucide-angular";
 ```
 
 Add the `ThemeService` import next to the other service imports:
 
 ```ts
-import { ThemeService } from '../../core/theme/theme.service';
+import { ThemeService } from "../../core/theme/theme.service";
 ```
 
 Extend `setup()` to fake `ThemeService` (mirroring the existing `DraftCountService` fake) and register `Sun`/`Moon` in the pick, and return the `toggleTheme` spy:
@@ -654,7 +660,10 @@ function setup(role: Role | null, draftCount: number | null = 7) {
     providers: [
       provideRouter([]),
       { provide: DraftCountService, useValue: { count: signal(draftCount) } },
-      { provide: ThemeService, useValue: { mode: signal<'light' | 'dark'>('light'), toggle: toggleTheme } },
+      {
+        provide: ThemeService,
+        useValue: { mode: signal<"light" | "dark">("light"), toggle: toggleTheme },
+      },
       importProvidersFrom(
         LucideAngularModule.pick({
           Menu,
@@ -692,7 +701,7 @@ function setup(role: Role | null, draftCount: number | null = 7) {
       {
         provide: TenantSettingsService,
         useValue: {
-          getSettings: () => of({ id: 't1', name: 'San Marcos School', logoAssetId: null }),
+          getSettings: () => of({ id: "t1", name: "San Marcos School", logoAssetId: null }),
         },
       },
       {
@@ -700,7 +709,7 @@ function setup(role: Role | null, draftCount: number | null = 7) {
         useValue: {
           navigateByUrl,
           createUrlTree: () => ({}),
-          serializeUrl: () => '',
+          serializeUrl: () => "",
           routerState: { root: {} },
           events: EMPTY,
         },
@@ -709,22 +718,28 @@ function setup(role: Role | null, draftCount: number | null = 7) {
   });
   const fixture = TestBed.createComponent(ShellComponent);
   fixture.detectChanges();
-  return { fixture, compiled: fixture.nativeElement as HTMLElement, logout, navigateByUrl, toggleTheme };
+  return {
+    fixture,
+    compiled: fixture.nativeElement as HTMLElement,
+    logout,
+    navigateByUrl,
+    toggleTheme,
+  };
 }
 ```
 
 Add the new test to the `describe('ShellComponent', ...)` block:
 
 ```ts
-  it('renders a theme toggle button that calls ThemeService.toggle() on click', () => {
-    const { compiled, toggleTheme } = setup(Role.Teacher);
+it("renders a theme toggle button that calls ThemeService.toggle() on click", () => {
+  const { compiled, toggleTheme } = setup(Role.Teacher);
 
-    const button = compiled.querySelector<HTMLButtonElement>('[data-testid="theme-toggle-button"]');
-    expect(button).toBeTruthy();
+  const button = compiled.querySelector<HTMLButtonElement>('[data-testid="theme-toggle-button"]');
+  expect(button).toBeTruthy();
 
-    button!.click();
-    expect(toggleTheme).toHaveBeenCalledTimes(1);
-  });
+  button!.click();
+  expect(toggleTheme).toHaveBeenCalledTimes(1);
+});
 ```
 
 - [ ] **Step 2: Run the full test suite to verify the new test fails**
@@ -737,7 +752,7 @@ Expected: FAIL — `[data-testid="theme-toggle-button"]` is not found (the butto
 Add the `ThemeService` import next to the other service imports:
 
 ```ts
-import { ThemeService } from '../../core/theme/theme.service';
+import { ThemeService } from "../../core/theme/theme.service";
 ```
 
 Add the injected service, a `themeMode` computed, and a `toggleTheme()` method — mirroring this file's existing `navGroups` computed and `toggleMobileMenu`/`toggleUserMenu` method conventions:
@@ -762,28 +777,28 @@ Add the injected service, a `themeMode` computed, and a `toggleTheme()` method �
 Add the toggle button immediately before the existing `notifications-button`, inside the `<div actions class="flex items-center gap-2">` wrapper:
 
 ```html
-        <button
-          type="button"
-          data-testid="theme-toggle-button"
-          class="relative flex h-8 w-8 items-center justify-center rounded-full text-n600 hover:bg-n100"
-          [attr.aria-label]="themeMode() === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
-          (click)="toggleTheme()"
-        >
-          @if (themeMode() === 'dark') {
-            <lucide-angular name="sun" class="h-5 w-5"></lucide-angular>
-          } @else {
-            <lucide-angular name="moon" class="h-5 w-5"></lucide-angular>
-          }
-        </button>
-        <button
-          type="button"
-          data-testid="notifications-button"
-          class="relative flex h-8 w-8 items-center justify-center rounded-full text-n600 hover:bg-n100"
-          aria-label="Notificaciones"
-        >
-          <lucide-angular name="bell" class="h-5 w-5"></lucide-angular>
-          <span class="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-hard-text"></span>
-        </button>
+<button
+  type="button"
+  data-testid="theme-toggle-button"
+  class="relative flex h-8 w-8 items-center justify-center rounded-full text-n600 hover:bg-n100"
+  [attr.aria-label]="themeMode() === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
+  (click)="toggleTheme()"
+>
+  @if (themeMode() === 'dark') {
+  <lucide-angular name="sun" class="h-5 w-5"></lucide-angular>
+  } @else {
+  <lucide-angular name="moon" class="h-5 w-5"></lucide-angular>
+  }
+</button>
+<button
+  type="button"
+  data-testid="notifications-button"
+  class="relative flex h-8 w-8 items-center justify-center rounded-full text-n600 hover:bg-n100"
+  aria-label="Notificaciones"
+>
+  <lucide-angular name="bell" class="h-5 w-5"></lucide-angular>
+  <span class="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-hard-text"></span>
+</button>
 ```
 
 - [ ] **Step 5: Register `Sun`/`Moon` for the real bootstrapped app — modify `apps/web/src/app/app.config.ts`**
@@ -791,11 +806,36 @@ Add the toggle button immediately before the existing `notifications-button`, in
 ```ts
 import {
   LucideAngularModule,
-  Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School,
-  LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus, Bell,
-  LayoutDashboard, BookOpen, FileText, Inbox, Settings,
-  Sun, Moon,
-} from 'lucide-angular';
+  Menu,
+  X,
+  Sparkles,
+  Lock,
+  Download,
+  Ellipsis,
+  Check,
+  TriangleAlert,
+  Search,
+  School,
+  LogOut,
+  User,
+  Users,
+  Trash2,
+  Pencil,
+  Archive,
+  ChevronLeft,
+  ChevronRight,
+  ChevronDown,
+  Plus,
+  Minus,
+  Bell,
+  LayoutDashboard,
+  BookOpen,
+  FileText,
+  Inbox,
+  Settings,
+  Sun,
+  Moon,
+} from "lucide-angular";
 ```
 
 ```ts
@@ -817,6 +857,7 @@ Expected: PASS — the new `theme toggle button` test passes, and every pre-exis
 - [ ] **Step 7: Manual visual verification (per design doc §5 — no automated visual regression test exists)**
 
 Serve the app (`cd apps/web && pnpm exec ng serve`), open it in a browser, and:
+
 1. Confirm the topbar shows a moon icon in light mode (the default) next to the bell icon.
 2. Click it — confirm the whole app (sidebar, topbar, cards, tags) switches to dark colors matching the design doc's dark table, the icon becomes a sun, and no console errors appear.
 3. Click it again — confirm it returns to light mode with no console errors.

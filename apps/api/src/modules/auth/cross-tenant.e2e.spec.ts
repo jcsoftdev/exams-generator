@@ -222,7 +222,13 @@ describe("Cross-tenant visibility (e2e)", () => {
 
     const [blueprintRow] = await db
       .insert(examBlueprintRows)
-      .values({ examId: examBId, courseId: topic.courseId, topicId: topic.id, difficulty: Difficulty.Easy, count: 1 })
+      .values({
+        examId: examBId,
+        courseId: topic.courseId,
+        topicId: topic.id,
+        difficulty: Difficulty.Easy,
+        count: 1,
+      })
       .returning({ id: examBlueprintRows.id });
     examBQuestionRowId = blueprintRow!.id;
 
@@ -272,12 +278,23 @@ describe("Cross-tenant visibility (e2e)", () => {
 
     const [blueprintRowA] = await db
       .insert(examBlueprintRows)
-      .values({ examId: examAId, courseId: topic.courseId, topicId: topic.id, difficulty: Difficulty.Easy, count: 1 })
+      .values({
+        examId: examAId,
+        courseId: topic.courseId,
+        topicId: topic.id,
+        difficulty: Difficulty.Easy,
+        count: 1,
+      })
       .returning({ id: examBlueprintRows.id });
 
     await db
       .insert(examQuestions)
-      .values({ examId: examAId, questionId: centralQuestionId, blueprintRowId: blueprintRowA!.id, position: 1 });
+      .values({
+        examId: examAId,
+        questionId: centralQuestionId,
+        blueprintRowId: blueprintRowA!.id,
+        position: 1,
+      });
 
     const [generationJob] = await db
       .insert(generationJobs)
@@ -628,7 +645,9 @@ describe("Cross-tenant visibility (e2e)", () => {
 
       expect(res.status).toBe(200);
       const rows = res.body as ReadonlyArray<{ topicId: string; total: number }>;
-      const total = rows.filter((row) => row.topicId === topic.id).reduce((sum, row) => sum + Number(row.total), 0);
+      const total = rows
+        .filter((row) => row.topicId === topic.id)
+        .reduce((sum, row) => sum + Number(row.total), 0);
       // Only the central question is visible to tenant A on this topic —
       // B's two private rows must not be counted.
       expect(total).toBe(1);
@@ -684,7 +703,10 @@ describe("Cross-tenant visibility (e2e)", () => {
 
       expectDenied(res.status);
 
-      const rows = await db.select({ id: questions.id }).from(questions).where(eq(questions.id, draftQuestionBId));
+      const rows = await db
+        .select({ id: questions.id })
+        .from(questions)
+        .where(eq(questions.id, draftQuestionBId));
       expect(rows).toHaveLength(1);
     });
 
@@ -695,7 +717,10 @@ describe("Cross-tenant visibility (e2e)", () => {
 
       expectDenied(res.status);
 
-      const rows = await db.select({ id: questions.id }).from(questions).where(eq(questions.id, draftQuestionBId));
+      const rows = await db
+        .select({ id: questions.id })
+        .from(questions)
+        .where(eq(questions.id, draftQuestionBId));
       expect(rows).toHaveLength(1);
     });
 

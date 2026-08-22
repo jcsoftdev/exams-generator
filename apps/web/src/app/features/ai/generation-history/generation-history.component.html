@@ -2,7 +2,9 @@
   <h1 class="text-lg font-extrabold tracking-tight text-n900">Historial de generación IA</h1>
 
   @if (errorMessage()) {
-    <div class="rounded-card border border-hard-text/20 bg-hard-bg px-4 py-3 text-sm text-hard-text">
+    <div
+      class="rounded-card border border-hard-text/20 bg-hard-bg px-4 py-3 text-sm text-hard-text"
+    >
       {{ errorMessage() }}
       <button type="button" class="ml-2 font-bold underline" (click)="retry()">Reintentar</button>
     </div>
@@ -37,14 +39,18 @@
     >
       <ui-tag [variant]="statusTag(job.status)">{{ statusLabel(job.status) }}</ui-tag>
       <div class="flex-1 text-sm text-n800">
-        <div data-testid="job-title" class="font-bold">{{ job.topicName }} · {{ job.courseName }}</div>
+        <div data-testid="job-title" class="font-bold">
+          {{ job.topicName }} · {{ job.courseName }}
+        </div>
         <div class="text-n600">
           {{ job.createdCount }}/{{ job.count }} preguntas
           @if (job.failedCount > 0) {
             <span class="text-n500"> · {{ job.failedCount }} fallidas</span>
           }
           @if (job.attemptCount > 1) {
-            <span data-testid="attempt-count" class="text-n500"> · {{ job.attemptCount }} intentos</span>
+            <span data-testid="attempt-count" class="text-n500">
+              · {{ job.attemptCount }} intentos</span
+            >
           }
         </div>
       </div>
@@ -52,5 +58,10 @@
     </button>
   }
 
-  <ui-pagination [page]="page()" [pageSize]="PAGE_SIZE" [total]="total()" (pageChange)="onPageChange($event)"></ui-pagination>
+  <ui-pagination
+    [page]="page()"
+    [pageSize]="PAGE_SIZE"
+    [total]="total()"
+    (pageChange)="onPageChange($event)"
+  ></ui-pagination>
 </div>

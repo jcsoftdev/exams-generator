@@ -77,7 +77,10 @@ export async function normalizeCollectedContent(): Promise<{ updated: number; ch
             eq(questions.bodyHash, content.bodyHash),
             or(
               ne(questions.bodyTypst, content.bodyTypst),
-              ne(sql`${questions.alternatives}::text`, sql`${JSON.stringify(content.alternatives)}::jsonb::text`),
+              ne(
+                sql`${questions.alternatives}::text`,
+                sql`${JSON.stringify(content.alternatives)}::jsonb::text`,
+              ),
             ),
           ),
         )
@@ -94,7 +97,9 @@ export async function normalizeCollectedContent(): Promise<{ updated: number; ch
 if (require.main === module) {
   normalizeCollectedContent()
     .then(({ updated, checked }) => {
-      console.log(`[normalize-collected-content] rewrote ${updated} rows of ${checked} entries needing a rewrite.`);
+      console.log(
+        `[normalize-collected-content] rewrote ${updated} rows of ${checked} entries needing a rewrite.`,
+      );
     })
     .catch((error: unknown) => {
       console.error("[normalize-collected-content] failed:", error);

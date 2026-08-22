@@ -36,9 +36,14 @@ async function main(): Promise<void> {
   const dataDir = resolve(dataPath, "..");
   const data = JSON.parse(readFileSync(dataPath, "utf8")) as ReplaceData;
 
-  const [adminRow] = await db.select({ id: users.id }).from(users).where(eq(users.email, BANK_SAMPLE_ADMIN_EMAIL));
+  const [adminRow] = await db
+    .select({ id: users.id })
+    .from(users)
+    .where(eq(users.email, BANK_SAMPLE_ADMIN_EMAIL));
   if (!adminRow) {
-    throw new Error(`Platform-staff seed user '${BANK_SAMPLE_ADMIN_EMAIL}' not found — run 'pnpm --filter api db:seed' first.`);
+    throw new Error(
+      `Platform-staff seed user '${BANK_SAMPLE_ADMIN_EMAIL}' not found — run 'pnpm --filter api db:seed' first.`,
+    );
   }
   const token = new TokenService().sign({ sub: adminRow.id, tenantId: null, role: Role.PlatformAdmin });
 

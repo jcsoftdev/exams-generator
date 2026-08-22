@@ -109,9 +109,7 @@ export class BankService {
   }
 
   /** Task 6: creates a `structured` question (JSON body, no file upload). */
-  createStructuredQuestion(
-    payload: CreateStructuredQuestionPayload,
-  ): Observable<{ id: string }> {
+  createStructuredQuestion(payload: CreateStructuredQuestionPayload): Observable<{ id: string }> {
     return this.http.post<{ id: string }>(
       `${environment.apiBaseUrl}/bank/questions/structured`,
       payload,
@@ -123,10 +121,7 @@ export class BankService {
    * `UpdateQuestionPayload` — no `courseId`, move courses via `topicId`.
    */
   updateQuestion(id: string, patch: UpdateQuestionPayload): Observable<BankQuestion> {
-    return this.http.patch<BankQuestion>(
-      `${environment.apiBaseUrl}/bank/questions/${id}`,
-      patch,
-    );
+    return this.http.patch<BankQuestion>(`${environment.apiBaseUrl}/bank/questions/${id}`, patch);
   }
 
   /**

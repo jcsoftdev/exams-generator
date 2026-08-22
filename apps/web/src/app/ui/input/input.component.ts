@@ -26,7 +26,9 @@ import { ChangeDetectionStrategy, Component, input, model } from '@angular/core'
       class="w-full rounded-field border border-n300 bg-surface px-3 py-2 text-sm text-n900 disabled:cursor-not-allowed disabled:bg-n100"
     />
     @if (error()) {
-      <p [id]="errorId" data-testid="input-error" class="mt-1 text-sm text-hard-text">{{ error() }}</p>
+      <p [id]="errorId" data-testid="input-error" class="mt-1 text-sm text-hard-text">
+        {{ error() }}
+      </p>
     }
   `,
 })

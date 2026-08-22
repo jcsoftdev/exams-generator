@@ -82,9 +82,7 @@ export class TaxonomyController {
    * expected response for a university with no track concept — not an error.
    */
   @Get("universities/:universityId/tracks")
-  async listTracksForUniversity(
-    @Param("universityId") universityId: string,
-  ): Promise<TrackListItem[]> {
+  async listTracksForUniversity(@Param("universityId") universityId: string): Promise<TrackListItem[]> {
     return this.service.listTracksForUniversity(universityId);
   }
 

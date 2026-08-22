@@ -33,7 +33,9 @@ const MAX_STEPPER_COUNT = 10;
   imports: [ButtonComponent, SelectComponent, BannerComponent, LucideAngularModule],
   // `ui-select` (Grado/Curso/Tema) needs Check + ChevronDown — this
   // component-level `.pick()` shadows the root `app.config.ts` registration.
-  providers: [LucideAngularModule.pick({ Sparkles, Plus, Minus, Check, ChevronDown }).providers ?? []],
+  providers: [
+    LucideAngularModule.pick({ Sparkles, Plus, Minus, Check, ChevronDown }).providers ?? [],
+  ],
   templateUrl: './ai-generate.component.html',
 })
 export class AiGenerateComponent {
@@ -44,10 +46,12 @@ export class AiGenerateComponent {
 
   protected readonly maxStepperCount = MAX_STEPPER_COUNT;
 
-  protected readonly difficultyOptions: SelectOption<Difficulty>[] = Object.values(Difficulty).map((d) => ({
-    value: d,
-    label: DIFFICULTY_LABELS[d],
-  }));
+  protected readonly difficultyOptions: SelectOption<Difficulty>[] = Object.values(Difficulty).map(
+    (d) => ({
+      value: d,
+      label: DIFFICULTY_LABELS[d],
+    }),
+  );
   protected readonly gradeLevelOptions: SelectOption<string>[] = GRADE_LEVELS.map((g) => ({
     value: g,
     label: GRADE_LEVEL_LABELS[g],
@@ -136,7 +140,13 @@ export class AiGenerateComponent {
   }
 
   protected valid(): boolean {
-    return !!this.courseId() && !!this.topicId() && !!this.difficulty() && !!this.gradeLevel() && this.count() > 0;
+    return (
+      !!this.courseId() &&
+      !!this.topicId() &&
+      !!this.difficulty() &&
+      !!this.gradeLevel() &&
+      this.count() > 0
+    );
   }
 
   protected generate(): void {

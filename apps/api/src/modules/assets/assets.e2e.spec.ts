@@ -111,7 +111,10 @@ describe("Assets module (e2e)", () => {
     await storage.put(key, bytes, mime);
     createdKeys.push(key);
 
-    const [row] = await db.insert(assets).values({ tenantId, storageKey: key, mime }).returning({ id: assets.id });
+    const [row] = await db
+      .insert(assets)
+      .values({ tenantId, storageKey: key, mime })
+      .returning({ id: assets.id });
     createdAssetIds.push(row!.id);
     return row!.id;
   }

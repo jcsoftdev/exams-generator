@@ -29,13 +29,20 @@ export interface RowGroup {
  * first in the grouped output.
  */
 export function groupRowsByCourse(rows: readonly ContentRow[]): readonly RowGroup[] {
-  const groupsByCourseId = new Map<string, { courseId: string; courseName: string; rows: ContentRow[] }>();
+  const groupsByCourseId = new Map<
+    string,
+    { courseId: string; courseName: string; rows: ContentRow[] }
+  >();
   for (const row of rows) {
     const existing = groupsByCourseId.get(row.courseId);
     if (existing) {
       existing.rows.push(row);
     } else {
-      groupsByCourseId.set(row.courseId, { courseId: row.courseId, courseName: row.courseName, rows: [row] });
+      groupsByCourseId.set(row.courseId, {
+        courseId: row.courseId,
+        courseName: row.courseName,
+        rows: [row],
+      });
     }
   }
   return Array.from(groupsByCourseId.values());

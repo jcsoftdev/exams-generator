@@ -69,7 +69,11 @@ export class LoginComponent {
         // is no other origin to hand off TO — localStorage is already the right
         // one — and redirecting would send the developer (plus a live one-time
         // code) straight to production.
-        if (isTenantScopedHost(hostname) && response.tenantSlug && response.tenantSlug !== currentSlug) {
+        if (
+          isTenantScopedHost(hostname) &&
+          response.tenantSlug &&
+          response.tenantSlug !== currentSlug
+        ) {
           // Wrong subdomain for this account (e.g. an old bookmark, or the
           // tenant was renamed) — localStorage doesn't cross origins, so
           // hand the session off via a one-time code instead of just

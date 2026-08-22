@@ -100,7 +100,9 @@ export class GenerationJobsRepository {
     const [{ value }] = await db
       .select({ value: count() })
       .from(generationJobs)
-      .where(and(eq(generationJobs.tenantId, tenantId), inArray(generationJobs.status, ["pending", "running"])));
+      .where(
+        and(eq(generationJobs.tenantId, tenantId), inArray(generationJobs.status, ["pending", "running"])),
+      );
     return Number(value);
   }
 

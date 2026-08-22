@@ -11,8 +11,7 @@ export interface GenerateQuestionsInput {
 }
 
 export type GenerateQuestionsValidation =
-  | { readonly ok: true }
-  | { readonly ok: false; readonly errors: readonly string[] };
+  { readonly ok: true } | { readonly ok: false; readonly errors: readonly string[] };
 
 const VALID_DIFFICULTIES = new Set<string>(Object.values(Difficulty));
 const MAX_COUNT = 10;
@@ -23,9 +22,7 @@ const MAX_COUNT = 10;
  * provider's free-tier rate limit (`AiRateLimitError`) and generate an
  * unreviewable pile of drafts in one call.
  */
-export function validateGenerateQuestionsInput(
-  input: GenerateQuestionsInput,
-): GenerateQuestionsValidation {
+export function validateGenerateQuestionsInput(input: GenerateQuestionsInput): GenerateQuestionsValidation {
   const errors: string[] = [];
 
   if (!input.courseId) {

@@ -166,7 +166,10 @@ describe("Exams module (e2e)", () => {
       [
         "null out tenant logo FK",
         () =>
-          db.update(tenants).set({ logoAssetId: null }).where(inArray(tenants.id, [tenantAId, tenantBId])),
+          db
+            .update(tenants)
+            .set({ logoAssetId: null })
+            .where(inArray(tenants.id, [tenantAId, tenantBId])),
       ],
       // Also sweep by tenantId: `generateVersions()` creates its own PDF/
       // answer-key asset rows (repository.createAsset) whose ids aren't
@@ -196,7 +199,13 @@ describe("Exams module (e2e)", () => {
           }
         },
       ],
-      ["delete courses", () => (createdCourseIds.length > 0 ? db.delete(courses).where(inArray(courses.id, createdCourseIds)) : Promise.resolve()) as Promise<unknown>],
+      [
+        "delete courses",
+        () =>
+          (createdCourseIds.length > 0
+            ? db.delete(courses).where(inArray(courses.id, createdCourseIds))
+            : Promise.resolve()) as Promise<unknown>,
+      ],
       ["delete base course", () => db.delete(courses).where(inArray(courses.id, [courseId]))],
       ["close app", () => app.close()],
     ];
@@ -284,15 +293,11 @@ describe("Exams module (e2e)", () => {
   }
 
   function getExamRequest(token: string, examId: string) {
-    return request(app.getHttpServer())
-      .get(`/exams/${examId}`)
-      .set("Authorization", `Bearer ${token}`);
+    return request(app.getHttpServer()).get(`/exams/${examId}`).set("Authorization", `Bearer ${token}`);
   }
 
   function deleteRequest(token: string, examId: string) {
-    return request(app.getHttpServer())
-      .delete(`/exams/${examId}`)
-      .set("Authorization", `Bearer ${token}`);
+    return request(app.getHttpServer()).delete(`/exams/${examId}`).set("Authorization", `Bearer ${token}`);
   }
 
   describe("POST /exams — blueprint selection never draws from another tenant's private pool", () => {

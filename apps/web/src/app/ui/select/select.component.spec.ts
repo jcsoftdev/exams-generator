@@ -116,7 +116,11 @@ describe('SelectComponent', () => {
     openViaClick(compiled, fixture);
 
     const opts = options(compiled);
-    expect(opts.map((o) => o.textContent?.trim())).toEqual(['Elige un curso', 'Curso A', 'Curso B']);
+    expect(opts.map((o) => o.textContent?.trim())).toEqual([
+      'Elige un curso',
+      'Curso A',
+      'Curso B',
+    ]);
   });
 
   it('clicking an option sets value and closes the panel', () => {
@@ -274,7 +278,9 @@ describe('SelectComponent', () => {
     expect(trigger(compiled).className).toContain('disabled:cursor-not-allowed');
     expect(trigger(compiled).className).toContain('disabled:bg-n100');
 
-    trigger(compiled).dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true }));
+    trigger(compiled).dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true }),
+    );
     fixture.detectChanges();
 
     expect(compiled.querySelector('[role="listbox"]')).toBeFalsy();

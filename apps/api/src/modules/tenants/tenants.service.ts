@@ -106,10 +106,7 @@ export class TenantsService {
       .select({ id: examBlueprintTemplates.id })
       .from(examBlueprintTemplates)
       .where(eq(examBlueprintTemplates.tenantId, id));
-    const tenantQuestions = db
-      .select({ id: questions.id })
-      .from(questions)
-      .where(eq(questions.tenantId, id));
+    const tenantQuestions = db.select({ id: questions.id }).from(questions).where(eq(questions.tenantId, id));
 
     const storageKeys = (
       await db.select({ key: assets.storageKey }).from(assets).where(eq(assets.tenantId, id))
@@ -166,10 +163,7 @@ export class TenantsService {
     const storageKey = `tenants/${id}/logo/${randomUUID()}-${file.originalname}`;
     await this.storage.put(storageKey, file.buffer, mime);
 
-    const [asset] = await db
-      .insert(assets)
-      .values({ tenantId: id, storageKey, mime })
-      .returning();
+    const [asset] = await db.insert(assets).values({ tenantId: id, storageKey, mime }).returning();
 
     const [tenant] = await db
       .update(tenants)

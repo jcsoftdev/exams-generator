@@ -24,38 +24,38 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done
       respuesta ya empezada: `ERR_HTTP_HEADERS_SENT`, sin capturar, proceso abajo.
 
       **Reproducido en vivo antes de tocar nada** (no deducido):
-      ```
-      health 200                                        ← antes
-      GET /ai/questions/jobs/0000…0000/stream → 200 OK   ← miente: el job no existe
-      health 000                                        ← 2 segundos después: conexión rechazada
-      ```
-      No es "esta pantalla falla": es el colegio entero sin API hasta que alguien la reinicie a
-      mano, y el docente que lo gatilla ni se entera — su pantalla solo se queda cargando. Basta
-      un bookmark viejo o un id mal tipeado en `/app/ai/jobs/:id`.
+          ```
+          health 200                                        ← antes
+          GET /ai/questions/jobs/0000…0000/stream → 200 OK   ← miente: el job no existe
+          health 000                                        ← 2 segundos después: conexión rechazada
+          ```
+          No es "esta pantalla falla": es el colegio entero sin API hasta que alguien la reinicie a
+          mano, y el docente que lo gatilla ni se entera — su pantalla solo se queda cargando. Basta
+          un bookmark viejo o un id mal tipeado en `/app/ai/jobs/:id`.
 
-      **HECHO**, dos rutas, no una — eran copia byte a byte:
-      - `GET /ai/questions/jobs/:id/stream` (`ai-jobs.controller.ts`)
-      - `GET /exams/:examId/versions/jobs/:jobId/stream` (`exams.controller.ts`)
+          **HECHO**, dos rutas, no una — eran copia byte a byte:
+          - `GET /ai/questions/jobs/:id/stream` (`ai-jobs.controller.ts`)
+          - `GET /exams/:examId/versions/jobs/:jobId/stream` (`exams.controller.ts`)
 
-      La búsqueda del job subió por encima del bloque de headers, así que el `NotFoundException`
-      vuelve a viajar por el camino normal de Nest y el cliente recibe un 404 de verdad. Los dos
-      llevan un comentario **`ORDERING IS LOAD-BEARING`**: sin él, el próximo que pase "ordena"
-      el bloque de headers de vuelta arriba y revive el P0.
+          La búsqueda del job subió por encima del bloque de headers, así que el `NotFoundException`
+          vuelve a viajar por el camino normal de Nest y el cliente recibe un 404 de verdad. Los dos
+          llevan un comentario **`ORDERING IS LOAD-BEARING`**: sin él, el próximo que pase "ordena"
+          el bloque de headers de vuelta arriba y revive el P0.
 
-      **La tercera ruta SSE se dejó intacta a propósito.** `AiController.generateStream()` es
-      segura por estructura, no por casualidad: todo lo que corre después del flush vive dentro
-      de un `new Observable(...)` cuyo cuerpo async está íntegramente en try/catch, y reporta
-      cualquier fallo como evento `done`, sin lanzar. Agregarle un chequeo redundante habría
-      sido ruido.
+          **La tercera ruta SSE se dejó intacta a propósito.** `AiController.generateStream()` es
+          segura por estructura, no por casualidad: todo lo que corre después del flush vive dentro
+          de un `new Observable(...)` cuyo cuerpo async está íntegramente en try/catch, y reporta
+          cualquier fallo como evento `done`, sin lanzar. Agregarle un chequeo redundante habría
+          sido ruido.
 
-      **Segunda línea de defensa** (`common/all-exceptions.filter.ts`): el filtro ahora chequea
-      `response.headersSent` antes que nada — loguea y destruye el socket, nunca `res.json()`.
-      Una ruta SSE mal ordenada en el futuro cuesta **una conexión caída, no el proceso**. Las
-      dos ramas existentes quedaron byte a byte iguales: ningún `HttpException` cambió de forma.
+          **Segunda línea de defensa** (`common/all-exceptions.filter.ts`): el filtro ahora chequea
+          `response.headersSent` antes que nada — loguea y destruye el socket, nunca `res.json()`.
+          Una ruta SSE mal ordenada en el futuro cuesta **una conexión caída, no el proceso**. Las
+          dos ramas existentes quedaron byte a byte iguales: ningún `HttpException` cambió de forma.
 
-      Verificado en vivo tras el fix: `404` en la ruta, `200` en `/health`. 16 tests nuevos
-      (6 e2e que cubren ambas rutas + cross-tenant + controles positivos, 6 del filtro —3 de
-      ellos fijando el comportamiento normal preexistente—, y los de los dos controllers).
+          Verificado en vivo tras el fix: `404` en la ruta, `200` en `/health`. 16 tests nuevos
+          (6 e2e que cubren ambas rutas + cross-tenant + controles positivos, 6 del filtro —3 de
+          ellos fijando el comportamiento normal preexistente—, y los de los dos controllers).
 
 ---
 
@@ -74,6 +74,7 @@ malformados ni con valores de arreglo.
 
 Quedó como **`apps/api/src/modules/auth/cross-tenant.e2e.spec.ts`, 54 tests**. Dos decisiones
 que valen para quien lo lea después:
+
 - Cada bloque abre con un **control positivo**, para que un 404 verde no pueda ser un id mal
   tipeado que "pasa" por accidente.
 - Las preguntas del **banco central** se afirman en **200 a propósito**: son compartidas por
@@ -121,8 +122,8 @@ respalde. Vale saberlo antes de agregar una ruta nueva con id.
       se quitó la opacidad (2.15:1 → 9.08:1).
 
       **Efecto colateral declarado**: los links del Panel sí cambian de tono en modo claro
-      (`#4a5aa8` → `#5a6acf`, 6.33:1 → 4.78:1). Sigue pasando AA, pero es un cambio visible en
-      claro — se revierte solo ese si molesta.
+          (`#4a5aa8` → `#5a6acf`, 6.33:1 → 4.78:1). Sigue pasando AA, pero es un cambio visible en
+          claro — se revierte solo ese si molesta.
 
 - [x] **P2 — Sin `color-scheme` declarado.** Los controles nativos del navegador (el file picker
       de Configuración, scrollbars) seguían la preferencia del **sistema operativo**, no el
@@ -147,12 +148,12 @@ documentado.
       (por el P0 de arriba) antes de llegar a esa prueba.
 
       **HECHO**: signals `approving`/`rejectSubmitting`, con la misma forma
-      check-then-set que ya usaban `editSaving()`, `revising()` y el `replacing` de
-      `exam-review`, liberados en **los dos** desenlaces — una fila trabada tras un error es
-      peor que el error. `rejecting()` no servía como bandera: significa "el modal de
-      confirmación está abierto" y se vuelve `false` justo cuando arranca el request.
-      Verificado en vivo contando requests: 3 clicks rápidos en Aprobar → **un solo**
-      `POST /bank/questions/:id/approve`.
+          check-then-set que ya usaban `editSaving()`, `revising()` y el `replacing` de
+          `exam-review`, liberados en **los dos** desenlaces — una fila trabada tras un error es
+          peor que el error. `rejecting()` no servía como bandera: significa "el modal de
+          confirmación está abierto" y se vuelve `false` justo cuando arranca el request.
+          Verificado en vivo contando requests: 3 clicks rápidos en Aprobar → **un solo**
+          `POST /bank/questions/:id/approve`.
 
 - [x] **P1 — Editar un borrador y navegar pierde todo, sin aviso.** El formulario de edición
       (cuerpo Typst, alternativas, figura CeTZ, instrucción de IA) vive solo en signals del
@@ -161,17 +162,17 @@ documentado.
       `sessionStorage`; la cola de revisión no recibió ese parche. Lectura de código, 95%.
 
       **HECHO**, siguiendo el precedente del builder (`sessionStorage` + un solo `effect()` que
-      guarda, para que una mutación nueva no pueda olvidarse), más lo que el builder nunca tuvo
-      que responder:
-      - La cola edita **un borrador específico**, así que el payload lleva su `draftId` y solo
-        se restaura con coincidencia exacta. Un borrador aprobado desde otra pestaña
-        sencillamente no vuelve a coincidir y queda inerte hasta cerrar la pestaña.
-      - La restauración **se anuncia** (`ui-banner` con `role="status"`), no es callada: un
-        docente nunca debe confundir una edición recuperada con lo que el servidor tiene hoy.
-      - El `effect` es **solo de escritura, a propósito**. Limpiar cuando `editing()` es `false`
-        parecía equivalente y no lo era: también es `false` en el primer mount, antes de decidir
-        si hay algo que restaurar, así que el primer flush del propio effect borraba la entrada
-        que venía a proteger. La limpieza es explícita, en cancelar y en guardar.
+          guarda, para que una mutación nueva no pueda olvidarse), más lo que el builder nunca tuvo
+          que responder:
+          - La cola edita **un borrador específico**, así que el payload lleva su `draftId` y solo
+            se restaura con coincidencia exacta. Un borrador aprobado desde otra pestaña
+            sencillamente no vuelve a coincidir y queda inerte hasta cerrar la pestaña.
+          - La restauración **se anuncia** (`ui-banner` con `role="status"`), no es callada: un
+            docente nunca debe confundir una edición recuperada con lo que el servidor tiene hoy.
+          - El `effect` es **solo de escritura, a propósito**. Limpiar cuando `editing()` es `false`
+            parecía equivalente y no lo era: también es `false` en el primer mount, antes de decidir
+            si hay algo que restaurar, así que el primer flush del propio effect borraba la entrada
+            que venía a proteger. La limpieza es explícita, en cancelar y en guardar.
 
 - [x] **P2 — Empty state duplicado.** Con la cola vacía, la columna izquierda dice "No hay
       borradores por revisar." y el panel derecho, al mismo tiempo, "La cola está vacía."
@@ -193,22 +194,22 @@ Auditado el 2026-08-19 simulando las fallas **en el navegador** (interceptación
 abort, 500, 401, offline, y respuestas que nunca cierran), nunca tumbando la API real — otra
 sesión trabajaba contra ella.
 
-- [x] **P0 — Ningún stream SSE tenía timeout de cliente.** Un corte *limpio* dispara `error()`
-      y ya se manejaba; uno *silencioso* —paquetes perdidos sin FIN— no dispara nada: la barra
+- [x] **P0 — Ningún stream SSE tenía timeout de cliente.** Un corte _limpio_ dispara `error()`
+      y ya se manejaba; uno _silencioso_ —paquetes perdidos sin FIN— no dispara nada: la barra
       de progreso quedaba clavada para siempre, sin mensaje, sin salida salvo recargar a ciegas.
 
       **HECHO**, con el intervalo derivado de lo que el servidor mismo impone, no elegido a
-      dedo: el stream de IA espera **360s** — el hueco legítimo máximo es
-      `MAX_COMPILE_ATTEMPTS`(2) × (`SSE_TIMEOUT_MS` 120s + `TYPST_TIMEOUT_MS` 30s) = 300s, pasado
-      el cual el servidor ya habría lanzado y cerrado; 360s es ese techo más margen. El stream de
-      formas espera **120s**: ese worker nunca llama al LLM, solo dos compilaciones Typst de 30s
-      sin reintento.
+          dedo: el stream de IA espera **360s** — el hueco legítimo máximo es
+          `MAX_COMPILE_ATTEMPTS`(2) × (`SSE_TIMEOUT_MS` 120s + `TYPST_TIMEOUT_MS` 30s) = 300s, pasado
+          el cual el servidor ya habría lanzado y cerrado; 360s es ese techo más margen. El stream de
+          formas espera **120s**: ese worker nunca llama al LLM, solo dos compilaciones Typst de 30s
+          sin reintento.
 
-      **Lo que dice al dispararse es el punto**: un stream cortado **no es un job fallido**. La
-      señal `connectionLost` está separada de las de fallo, el banner dice que la generación
-      puede seguir en curso, y el progreso conocido **no se resetea**. La recuperación resuelve
-      la duda con un `GET` del estado actual —ambos endpoints ya existían— y "Reconectar" reabre
-      el stream sin pasar por el camino de recarga total.
+          **Lo que dice al dispararse es el punto**: un stream cortado **no es un job fallido**. La
+          señal `connectionLost` está separada de las de fallo, el banner dice que la generación
+          puede seguir en curso, y el progreso conocido **no se resetea**. La recuperación resuelve
+          la duda con un `GET` del estado actual —ambos endpoints ya existían— y "Reconectar" reabre
+          el stream sin pasar por el camino de recarga total.
 
 - [x] **P1 — `exam-versions-panel` era la única pantalla sin "Reintentar"** en su estado de
       error. Un fallo de carga obligaba a recargar la página entera. **HECHO**, con el mismo

@@ -35,7 +35,9 @@ function parseSseFrames<T>(buffer: string): ParsedStreamFrames<T> {
   return { events, remainder };
 }
 
-export function parseGenerateStreamFrames(buffer: string): ParsedStreamFrames<GenerateQuestionStreamEvent> {
+export function parseGenerateStreamFrames(
+  buffer: string,
+): ParsedStreamFrames<GenerateQuestionStreamEvent> {
   return parseSseFrames<GenerateQuestionStreamEvent>(buffer);
 }
 
@@ -44,6 +46,8 @@ export function parseGenerationJobStreamFrames(buffer: string): ParsedStreamFram
 }
 
 /** `ExamsController`'s version-job progress stream writes the same frame shape (`ExamVersionsService.streamVersionJob`). */
-export function parseExamVersionJobStreamFrames(buffer: string): ParsedStreamFrames<ExamVersionJob> {
+export function parseExamVersionJobStreamFrames(
+  buffer: string,
+): ParsedStreamFrames<ExamVersionJob> {
   return parseSseFrames<ExamVersionJob>(buffer);
 }

@@ -17,6 +17,7 @@ New `apps/api/src/modules/dashboard/` module, mirroring the shape of `apps/api/s
 - `dashboard-stats.service.ts` — calls into `BankRepository` and `ExamsRepository` (new methods below), assembles the response.
 
 Response shape:
+
 ```ts
 interface DashboardStats {
   bank: {
@@ -34,6 +35,7 @@ interface DashboardStats {
 ```
 
 New repository methods, following the grouped-aggregate style already used in `exams.repository.ts:431` (`countStock`):
+
 - `BankRepository.countByDifficultyAndStatus(tenantId)` — one `select({ difficulty, status, total: count() }).groupBy(difficulty, status)` query, tenant-scoped like `listQuestions`.
 - `ExamsRepository.countByStatus(tenantId)` — same grouped-count pattern over `exams`, mirrors `listExams`'s `count()` usage (`exams.repository.ts:335`).
 - `ExamsRepository.listRecent(tenantId, limit)` — reuses `listExams`'s query builder with `orderBy(desc(exams.createdAt))` and no filters.
@@ -57,6 +59,7 @@ No new components. No route changes to existing pages — this only touches the 
 - `apps/web/src/app/features/dashboard/dashboard.models.ts` — the `DashboardStats` interface (mirrors backend shape; shared via `@exams-generator/shared` only if the type is genuinely reused elsewhere — otherwise kept local, per YAGNI).
 
 Cards (each a `ui-card`):
+
 1. **Banco de preguntas** — total + bar chart (byDifficulty).
 2. **Exámenes** — total + donut chart (byStatus) + `recent` list (title, status tag, date).
 3. **Cola de revisión IA** — stat tile (`aiDrafts.pending`), links to `/app/ai/review`.
@@ -64,6 +67,7 @@ Cards (each a `ui-card`):
 ## 5. Charts
 
 Add `chart.js` + `ng2-charts` (confirmed absent from `package.json`/lockfile today). Two new thin wrapper components, following the existing `ui/*` primitive pattern (standalone, inline template, signal inputs):
+
 - `apps/web/src/app/ui/bar-chart/bar-chart.component.ts` — wraps `ng2-charts`' `BaseChartDirective`, `data = input.required<{label: string; value: number}[]>()`.
 - `apps/web/src/app/ui/donut-chart/donut-chart.component.ts` — same shape, doughnut type.
 
@@ -77,5 +81,5 @@ Both read colors from the existing `@theme` tokens (resolved via `getComputedSty
 ## 7. Out of scope
 
 - Any change to `@theme` color tokens.
-- Restyling page *content* beyond the shell chrome (bank list, exam builder, etc. keep their current internal layout — only the surrounding sidebar/topbar changes).
+- Restyling page _content_ beyond the shell chrome (bank list, exam builder, etc. keep their current internal layout — only the surrounding sidebar/topbar changes).
 - Literal recreation of Figma's food-domain content (revenue in IDR, "Most Ordered Food", ratings) — replaced by domain-appropriate equivalents per §4.

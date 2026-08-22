@@ -20,7 +20,12 @@ import {
   VERSION_COUNT_OPTIONS,
 } from '../exam-versions.models';
 import { ExamsService } from '../../exams/exams.service';
-import { ExamDetail, ExamDetailQuestion, GRADE_LEVEL_LABELS, GradeLevel } from '../../exams/exams.models';
+import {
+  ExamDetail,
+  ExamDetailQuestion,
+  GRADE_LEVEL_LABELS,
+  GradeLevel,
+} from '../../exams/exams.models';
 import { examStatusLabel } from '../../exams/exam-status-label';
 
 /**
@@ -66,7 +71,9 @@ const PROGRESS_QUARTILES = 4;
   ],
   // `ui-select` ("¿Cuántas formas?") needs Check too — this component-level
   // `.pick()` shadows the root `app.config.ts` registration for its subtree.
-  providers: [LucideAngularModule.pick({ Folder, CopyPlus, ChevronDown, Plus, Check }).providers ?? []],
+  providers: [
+    LucideAngularModule.pick({ Folder, CopyPlus, ChevronDown, Plus, Check }).providers ?? [],
+  ],
   templateUrl: './exam-versions-panel.component.html',
 })
 export class ExamVersionsPanelComponent {
@@ -98,10 +105,11 @@ export class ExamVersionsPanelComponent {
   protected readonly contentOpen = signal(false);
 
   // "Generar más formas" inline regeneration (design doc §2.3/5.2).
-  protected readonly versionCountOptions: readonly SelectOption<number>[] = VERSION_COUNT_OPTIONS.map((n) => ({
-    value: n,
-    label: String(n),
-  }));
+  protected readonly versionCountOptions: readonly SelectOption<number>[] =
+    VERSION_COUNT_OPTIONS.map((n) => ({
+      value: n,
+      label: String(n),
+    }));
   protected readonly showGenerateForm = signal(false);
   protected readonly versionCount = signal(DEFAULT_VERSION_COUNT);
   protected readonly generating = signal(false);
@@ -341,33 +349,35 @@ export class ExamVersionsPanelComponent {
    */
   private attachJobStream(jobId: string): void {
     this.jobSubscription?.unsubscribe();
-    this.jobSubscription = this.examVersionsService.streamVersionJob(this.examId(), jobId).subscribe({
-      next: (update) => {
-        this.versionJob.set(update);
-        this.connectionLost.set(false);
-        this.updateJobAnnouncement(update);
-        if (update.status !== 'pending' && update.status !== 'running') {
-          this.generating.set(false);
-          this.load();
-        }
-      },
-      error: (err: unknown) => {
-        if (err instanceof TimeoutError) {
-          // The CONNECTION went silent — not the same claim as "the job
-          // failed" (audit P0). `versionJob`/`generating` stay exactly as
-          // they are; settle "is it still running?" with one cheap GET
-          // instead of guessing.
-          this.connectionLost.set(true);
-          this.checkVersionJobStatus(jobId);
-        } else {
-          // A genuine stream failure (not a watchdog timeout) — the job
-          // itself may well be fine, only the progress channel died — so
-          // reload rather than declaring the generation failed.
-          this.generating.set(false);
-          this.load();
-        }
-      },
-    });
+    this.jobSubscription = this.examVersionsService
+      .streamVersionJob(this.examId(), jobId)
+      .subscribe({
+        next: (update) => {
+          this.versionJob.set(update);
+          this.connectionLost.set(false);
+          this.updateJobAnnouncement(update);
+          if (update.status !== 'pending' && update.status !== 'running') {
+            this.generating.set(false);
+            this.load();
+          }
+        },
+        error: (err: unknown) => {
+          if (err instanceof TimeoutError) {
+            // The CONNECTION went silent — not the same claim as "the job
+            // failed" (audit P0). `versionJob`/`generating` stay exactly as
+            // they are; settle "is it still running?" with one cheap GET
+            // instead of guessing.
+            this.connectionLost.set(true);
+            this.checkVersionJobStatus(jobId);
+          } else {
+            // A genuine stream failure (not a watchdog timeout) — the job
+            // itself may well be fine, only the progress channel died — so
+            // reload rather than declaring the generation failed.
+            this.generating.set(false);
+            this.load();
+          }
+        },
+      });
   }
 
   /**
@@ -419,11 +429,16 @@ export class ExamVersionsPanelComponent {
       return;
     }
     if (job.status === 'completed') {
-      this.jobAnnouncement.set(`Generación completada: ${job.completedCount} de ${job.versionCount} formas.`);
+      this.jobAnnouncement.set(
+        `Generación completada: ${job.completedCount} de ${job.versionCount} formas.`,
+      );
       return;
     }
 
-    const milestone = job.versionCount > 0 ? Math.floor((job.completedCount / job.versionCount) * PROGRESS_QUARTILES) : 0;
+    const milestone =
+      job.versionCount > 0
+        ? Math.floor((job.completedCount / job.versionCount) * PROGRESS_QUARTILES)
+        : 0;
 
     if (!this.hasAnnouncedJobStart) {
       this.hasAnnouncedJobStart = true;

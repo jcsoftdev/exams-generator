@@ -191,7 +191,9 @@ class ClickHandlerVisitor extends TmplAstRecursiveVisitor {
     const hasClick = element.outputs.some((o) => o.name === 'click');
     const isNativeInteractive = NATIVE_INTERACTIVE_TAGS.has(tag);
     const isCustomComponent = tag.includes('-');
-    const staticRole = element.attributes.find((a) => a.name.toLowerCase() === 'role')?.value.toLowerCase();
+    const staticRole = element.attributes
+      .find((a) => a.name.toLowerCase() === 'role')
+      ?.value.toLowerCase();
     const isAriaOption = staticRole === 'option';
 
     if (hasClick && !isNativeInteractive && !isCustomComponent && !isAriaOption) {
@@ -240,7 +242,9 @@ describe('a11y guardian: (click) handlers must be keyboard-reachable', () => {
         preserveWhitespaces: true,
       });
       if (parsed.errors && parsed.errors.length > 0) {
-        parseFailures.push(`${templateSource.relativePath}: ${parsed.errors.map((e) => e.toString()).join('; ')}`);
+        parseFailures.push(
+          `${templateSource.relativePath}: ${parsed.errors.map((e) => e.toString()).join('; ')}`,
+        );
         continue;
       }
       const visitor = new ClickHandlerVisitor(templateSource.relativePath, templateSource.baseLine);

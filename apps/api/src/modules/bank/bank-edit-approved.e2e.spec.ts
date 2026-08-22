@@ -118,9 +118,7 @@ describe("Bank module — edit approved questions + taxonomy (e2e)", () => {
   }
 
   function getByIdRequest(token: string, id: string) {
-    return request(app.getHttpServer())
-      .get(`/bank/questions/${id}`)
-      .set("Authorization", `Bearer ${token}`);
+    return request(app.getHttpServer()).get(`/bank/questions/${id}`).set("Authorization", `Bearer ${token}`);
   }
 
   async function createApprovedQuestion(token: string, bodyTypst?: string): Promise<string> {

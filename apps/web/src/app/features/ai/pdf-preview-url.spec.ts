@@ -26,8 +26,12 @@ describe('toPdfPreviewUrl', () => {
   });
 
   it('delegates to the sanitizer instance passed in rather than a global one', () => {
-    const sanitizerA = { bypassSecurityTrustResourceUrl: vi.fn(() => 'A') } as unknown as DomSanitizer;
-    const sanitizerB = { bypassSecurityTrustResourceUrl: vi.fn(() => 'B') } as unknown as DomSanitizer;
+    const sanitizerA = {
+      bypassSecurityTrustResourceUrl: vi.fn(() => 'A'),
+    } as unknown as DomSanitizer;
+    const sanitizerB = {
+      bypassSecurityTrustResourceUrl: vi.fn(() => 'B'),
+    } as unknown as DomSanitizer;
 
     toPdfPreviewUrl(sanitizerA, 'blob:x');
 

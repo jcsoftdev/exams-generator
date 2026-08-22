@@ -22,17 +22,14 @@ interface LotEntry {
 
 async function main(): Promise<void> {
   const dataDir = resolve(process.cwd(), process.argv[2] ?? "src/db/data");
-  const files = readdirSync(dataDir).filter(
-    (name) => name.startsWith("lot-") && name.endsWith(".json"),
-  );
+  const files = readdirSync(dataDir).filter((name) => name.startsWith("lot-") && name.endsWith(".json"));
 
   let totalExpected = 0;
   let totalMissing = 0;
 
   for (const name of files.sort()) {
-    const entries = (
-      JSON.parse(readFileSync(join(dataDir, name), "utf8")) as { entries: LotEntry[] }
-    ).entries;
+    const entries = (JSON.parse(readFileSync(join(dataDir, name), "utf8")) as { entries: LotEntry[] })
+      .entries;
     if (entries.length === 0) continue;
 
     const wanted = entries.map((entry) => entry.sourceName);

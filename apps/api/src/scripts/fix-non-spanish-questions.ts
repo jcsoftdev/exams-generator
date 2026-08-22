@@ -56,7 +56,10 @@ async function englishTopicId(): Promise<string> {
     .from(topics)
     .where(
       and(
-        inArray(topics.courseId, englishCourses.map((row) => row.id)),
+        inArray(
+          topics.courseId,
+          englishCourses.map((row) => row.id),
+        ),
         eq(topics.name, "Aptitud comunicativa (inglés)"),
       ),
     );
@@ -83,7 +86,10 @@ async function main(): Promise<void> {
   if (leaked) {
     const alternatives = (leaked.alternatives ?? []) as string[];
     const cleaned = alternatives.map((alternative) =>
-      alternative.replace(/\s*Key\s*:.*$/is, "").replace(/\s*Rpta\s*\..*$/is, "").trim(),
+      alternative
+        .replace(/\s*Key\s*:.*$/is, "")
+        .replace(/\s*Rpta\s*\..*$/is, "")
+        .trim(),
     );
     if (cleaned.join("|") !== alternatives.join("|")) {
       await db.update(questions).set({ alternatives: cleaned }).where(eq(questions.id, LEAKED_KEY_ID));

@@ -24,12 +24,16 @@ describe("assessGeneratedQuestionPlausibility", () => {
 
   it("does not flag non-sequential numeric alternatives (real computed distractors)", () => {
     const question = { ...PLAUSIBLE_QUESTION, alternatives: ["1/4", "3/4", "1/2", "1", "2"] as const };
-    expect(() => assessGeneratedQuestionPlausibility(question, { ...INPUT, withFigure: false })).not.toThrow();
+    expect(() =>
+      assessGeneratedQuestionPlausibility(question, { ...INPUT, withFigure: false }),
+    ).not.toThrow();
   });
 
   it("does not flag a numeric run with a step other than 1", () => {
     const question = { ...PLAUSIBLE_QUESTION, alternatives: ["2", "4", "6", "8", "10"] as const };
-    expect(() => assessGeneratedQuestionPlausibility(question, { ...INPUT, withFigure: false })).not.toThrow();
+    expect(() =>
+      assessGeneratedQuestionPlausibility(question, { ...INPUT, withFigure: false }),
+    ).not.toThrow();
   });
 
   it("throws when alternatives are a bare ascending consecutive-integer placeholder (1,2,3,4,5)", () => {
@@ -55,7 +59,9 @@ describe("assessGeneratedQuestionPlausibility", () => {
 
   it("does not require figureCode when withFigure was not requested", () => {
     const question = { ...PLAUSIBLE_QUESTION, figureCode: undefined };
-    expect(() => assessGeneratedQuestionPlausibility(question, { ...INPUT, withFigure: false })).not.toThrow();
+    expect(() =>
+      assessGeneratedQuestionPlausibility(question, { ...INPUT, withFigure: false }),
+    ).not.toThrow();
   });
 
   it("reports both failures together when alternatives are a placeholder AND the figure is missing", () => {

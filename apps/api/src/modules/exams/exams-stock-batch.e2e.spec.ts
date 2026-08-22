@@ -179,7 +179,13 @@ describe("POST /exams/stock/batch (e2e)", () => {
       });
     }
     for (let i = 0; i < 2; i++) {
-      await createApprovedQuestion({ tenantId: null, createdBy: staffUserId, topicId, gradeLevel, difficulty: Difficulty.Easy });
+      await createApprovedQuestion({
+        tenantId: null,
+        createdBy: staffUserId,
+        topicId,
+        gradeLevel,
+        difficulty: Difficulty.Easy,
+      });
     }
 
     const response = await stockBatchRequest(tenantAToken)
@@ -195,9 +201,27 @@ describe("POST /exams/stock/batch (e2e)", () => {
     const topicId = await createTopic();
     const gradeLevel = "primaria_1";
 
-    await createApprovedQuestion({ tenantId: tenantAId, createdBy: tenantATeacherId, topicId, gradeLevel, difficulty: Difficulty.Easy });
-    await createApprovedQuestion({ tenantId: tenantAId, createdBy: tenantATeacherId, topicId, gradeLevel, difficulty: Difficulty.Medium });
-    await createApprovedQuestion({ tenantId: tenantAId, createdBy: tenantATeacherId, topicId, gradeLevel, difficulty: Difficulty.Medium });
+    await createApprovedQuestion({
+      tenantId: tenantAId,
+      createdBy: tenantATeacherId,
+      topicId,
+      gradeLevel,
+      difficulty: Difficulty.Easy,
+    });
+    await createApprovedQuestion({
+      tenantId: tenantAId,
+      createdBy: tenantATeacherId,
+      topicId,
+      gradeLevel,
+      difficulty: Difficulty.Medium,
+    });
+    await createApprovedQuestion({
+      tenantId: tenantAId,
+      createdBy: tenantATeacherId,
+      topicId,
+      gradeLevel,
+      difficulty: Difficulty.Medium,
+    });
 
     const cells = [
       { courseId, topicId, difficulty: Difficulty.Easy },

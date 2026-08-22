@@ -158,7 +158,10 @@ describeIfTypst("AI-generated structured question -> approved -> exam version (e
       // The draft is now created via the real `/ai/questions/jobs` flow, which
       // persists a `generation_jobs` row FK-referencing `users` (`created_by`)
       // — clear it before `users`, same fix as `ai-jobs.e2e.spec.ts` (Task 4).
-      ["delete generation jobs", () => db.delete(generationJobs).where(eq(generationJobs.tenantId, tenantId))],
+      [
+        "delete generation jobs",
+        () => db.delete(generationJobs).where(eq(generationJobs.tenantId, tenantId)),
+      ],
       ["delete users", () => db.delete(users).where(inArray(users.id, [teacherId]))],
       ["delete tenants", () => db.delete(tenants).where(inArray(tenants.id, [tenantId]))],
       ["delete topics", () => db.delete(topics).where(inArray(topics.id, [topicId]))],

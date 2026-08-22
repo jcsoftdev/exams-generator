@@ -38,7 +38,12 @@ describe('TenantSettingsService', () => {
     });
 
     it('resolves with the tenant settings returned by the API', () => {
-      const settings: TenantSettings = { id: 'tenant-1', name: 'Colegio X', city: 'Arequipa', logoAssetId: 'asset-1' };
+      const settings: TenantSettings = {
+        id: 'tenant-1',
+        name: 'Colegio X',
+        city: 'Arequipa',
+        logoAssetId: 'asset-1',
+      };
       let result: TenantSettings | undefined;
 
       service.getSettings().subscribe((response) => (result = response));
@@ -71,16 +76,31 @@ describe('TenantSettingsService', () => {
       const patchReq = httpMock.expectOne(`${environment.apiBaseUrl}/tenants/tenant-1`);
       expect(patchReq.request.method).toBe('PATCH');
       expect(patchReq.request.body).toEqual({ name: 'Colegio Nuevo', city: 'Arequipa' });
-      patchReq.flush({ id: 'tenant-1', name: 'Colegio Nuevo', city: 'Arequipa', logoAssetId: null });
+      patchReq.flush({
+        id: 'tenant-1',
+        name: 'Colegio Nuevo',
+        city: 'Arequipa',
+        logoAssetId: null,
+      });
 
       const logoReq = httpMock.expectOne(`${environment.apiBaseUrl}/tenants/tenant-1/logo`);
       expect(logoReq.request.method).toBe('POST');
       expect(logoReq.request.body).toBeInstanceOf(FormData);
       const body = logoReq.request.body as FormData;
       expect(body.get('file')).toBe(logo);
-      logoReq.flush({ id: 'tenant-1', name: 'Colegio Nuevo', city: 'Arequipa', logoAssetId: 'asset-2' });
+      logoReq.flush({
+        id: 'tenant-1',
+        name: 'Colegio Nuevo',
+        city: 'Arequipa',
+        logoAssetId: 'asset-2',
+      });
 
-      expect(result).toEqual({ id: 'tenant-1', name: 'Colegio Nuevo', city: 'Arequipa', logoAssetId: 'asset-2' });
+      expect(result).toEqual({
+        id: 'tenant-1',
+        name: 'Colegio Nuevo',
+        city: 'Arequipa',
+        logoAssetId: 'asset-2',
+      });
     });
   });
 

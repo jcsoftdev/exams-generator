@@ -14,7 +14,11 @@ function row(o: Partial<ContentRow> & { id: string; courseId: string }): Content
 
 describe('groupRowsByCourse', () => {
   it('groups rows by courseId, preserving first-seen order', () => {
-    const rows = [row({ id: 'r1', courseId: 'c1' }), row({ id: 'r2', courseId: 'c2' }), row({ id: 'r3', courseId: 'c1' })];
+    const rows = [
+      row({ id: 'r1', courseId: 'c1' }),
+      row({ id: 'r2', courseId: 'c2' }),
+      row({ id: 'r3', courseId: 'c1' }),
+    ];
 
     const groups = groupRowsByCourse(rows);
 

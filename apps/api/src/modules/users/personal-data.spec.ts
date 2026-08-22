@@ -24,10 +24,7 @@ function buildService(over: Partial<Record<string, unknown>> = {}) {
     ...over,
   };
   const accountStatus = { isUsable: jest.fn(), invalidate: jest.fn() };
-  const service = new UsersService(
-    repository as never,
-    accountStatus as never,
-  );
+  const service = new UsersService(repository as never, accountStatus as never);
   return { service, repository, accountStatus };
 }
 

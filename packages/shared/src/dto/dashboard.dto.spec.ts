@@ -12,7 +12,9 @@ import { DashboardStats } from "./dashboard.dto";
  */
 describe("DashboardStats", () => {
   it("accepts a bank.byStatus record covering every QuestionStatus", () => {
-    const byStatus = Object.fromEntries(QUESTION_STATUSES.map((status) => [status, 0])) as DashboardStats["bank"]["byStatus"];
+    const byStatus = Object.fromEntries(
+      QUESTION_STATUSES.map((status) => [status, 0]),
+    ) as DashboardStats["bank"]["byStatus"];
 
     const stats: DashboardStats = {
       bank: {
@@ -28,10 +30,16 @@ describe("DashboardStats", () => {
   });
 
   it("accepts an exams.byStatus record covering every ExamStatus, and a recent row typed by it", () => {
-    const byStatus = Object.fromEntries(EXAM_STATUSES.map((status) => [status, 0])) as DashboardStats["exams"]["byStatus"];
+    const byStatus = Object.fromEntries(
+      EXAM_STATUSES.map((status) => [status, 0]),
+    ) as DashboardStats["exams"]["byStatus"];
 
     const stats: DashboardStats = {
-      bank: { total: 0, byDifficulty: { [Difficulty.Easy]: 0, [Difficulty.Medium]: 0, [Difficulty.Hard]: 0 }, byStatus: { draft: 0, approved: 0, archived: 0 } },
+      bank: {
+        total: 0,
+        byDifficulty: { [Difficulty.Easy]: 0, [Difficulty.Medium]: 0, [Difficulty.Hard]: 0 },
+        byStatus: { draft: 0, approved: 0, archived: 0 },
+      },
       exams: {
         total: 1,
         byStatus,

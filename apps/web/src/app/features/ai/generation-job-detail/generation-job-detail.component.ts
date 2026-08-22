@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, computed, effect, inject, signal, untracked } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  DestroyRef,
+  computed,
+  effect,
+  inject,
+  signal,
+  untracked,
+} from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -76,7 +85,14 @@ const PROGRESS_QUARTILES = 4;
 @Component({
   selector: 'app-generation-job-detail',
   standalone: true,
-  imports: [ButtonComponent, ProgressComponent, BannerComponent, TagComponent, MathTextComponent, DatePipe],
+  imports: [
+    ButtonComponent,
+    ProgressComponent,
+    BannerComponent,
+    TagComponent,
+    MathTextComponent,
+    DatePipe,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './generation-job-detail.component.html',
 })
@@ -136,7 +152,9 @@ export class GenerationJobDetailComponent {
   });
   protected readonly canRetry = computed(() => this.isTerminal() && this.retryCount() > 0);
   /** Every attempt in this job's chain EXCEPT the one currently on screen — the "historial de reintentos" list. Empty for a job that was never part of a retry. */
-  protected readonly previousAttempts = computed(() => this.chain().filter((attempt) => attempt.id !== this.jobId()));
+  protected readonly previousAttempts = computed(() =>
+    this.chain().filter((attempt) => attempt.id !== this.jobId()),
+  );
 
   private streamSubscription: Subscription | null = null;
 
@@ -254,7 +272,9 @@ export class GenerationJobDetailComponent {
   private updateAnnouncement(job: GenerationJob): void {
     if (TERMINAL_STATUSES.includes(job.status)) {
       if (job.status === 'completed') {
-        this.progressAnnouncement.set(`Generación completada: ${job.createdCount} de ${job.count} preguntas creadas.`);
+        this.progressAnnouncement.set(
+          `Generación completada: ${job.createdCount} de ${job.count} preguntas creadas.`,
+        );
       } else if (job.status === 'failed') {
         this.progressAnnouncement.set('La generación falló.');
       } else {

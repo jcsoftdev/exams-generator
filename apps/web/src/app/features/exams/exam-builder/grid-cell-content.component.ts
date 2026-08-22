@@ -33,7 +33,11 @@ import { CellStatus } from './exam-builder.store';
     } @else {
       <ui-tag data-testid="stock-warning" variant="warning-stock"
         >solo {{ stock() }}
-        <lucide-icon name="triangle-alert" data-testid="stock-warning-icon" [size]="14"></lucide-icon
+        <lucide-icon
+          name="triangle-alert"
+          data-testid="stock-warning-icon"
+          [size]="14"
+        ></lucide-icon
       ></ui-tag>
       <div data-testid="bridge-to-ai" class="mt-2 flex flex-col gap-1">
         <ui-button
@@ -62,7 +66,9 @@ import { CellStatus } from './exam-builder.store';
       </div>
     }
 
-    <div data-testid="preview-ids" [attr.data-cell-key]="cellKey()" class="mt-1 text-xs text-n500">{{ previewIds().join(',') }}</div>
+    <div data-testid="preview-ids" [attr.data-cell-key]="cellKey()" class="mt-1 text-xs text-n500">
+      {{ previewIds().join(',') }}
+    </div>
   `,
 })
 export class GridCellContentComponent {

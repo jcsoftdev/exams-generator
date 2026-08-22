@@ -120,7 +120,11 @@ describe("ExamVersionGenerationService.generateVersions", () => {
 
   it("rejects a draft exam with ZERO selected questions with 409, and does NOT call confirmExam (B3-R2)", async () => {
     const { service, repository } = buildDeps();
-    repository.getExamForGeneration.mockResolvedValue({ ...READY_EXAM, status: "draft", selectedQuestions: [] });
+    repository.getExamForGeneration.mockResolvedValue({
+      ...READY_EXAM,
+      status: "draft",
+      selectedQuestions: [],
+    });
 
     await expect(service.generateVersions(TEACHER, "exam-1", 2)).rejects.toBeInstanceOf(ConflictException);
     expect(repository.confirmExam).not.toHaveBeenCalled();
@@ -340,14 +344,18 @@ describe("ExamVersionGenerationService.generateVersions", () => {
      */
     function wireSwappableBank(repository: jest.Mocked<ExamsRepository>) {
       repository.createAsset.mockResolvedValue({ id: "asset-id" });
-      repository.findExamQuestion = jest.fn().mockResolvedValue({ questionId: "q2", blueprintRowId: "row-1" });
+      repository.findExamQuestion = jest
+        .fn()
+        .mockResolvedValue({ questionId: "q2", blueprintRowId: "row-1" });
       repository.getExamById = jest.fn().mockResolvedValue({ id: "exam-1", gradeLevel: "pre" });
       repository.getBlueprintRows = jest
         .fn()
         .mockResolvedValue([{ id: "row-1", courseId: "course-1", courseName: "Aritmética", count: 2 }]);
       repository.getQuestionPool = jest
         .fn()
-        .mockResolvedValue([{ id: "q9", courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Medium }]);
+        .mockResolvedValue([
+          { id: "q9", courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Medium },
+        ]);
       repository.getSelectedQuestionIds = jest.fn().mockResolvedValue(["q1", "q2"]);
       repository.replaceQuestion = jest.fn().mockResolvedValue(undefined);
       repository.archiveQuestion = jest.fn().mockResolvedValue(undefined);
@@ -369,12 +377,10 @@ describe("ExamVersionGenerationService.generateVersions", () => {
       const { service, repository, storage, pdfCompiler } = buildDeps();
       void storage.put("bank/questions/q9", Buffer.from("fake-png-9"), "image/png");
       wireSwappableBank(repository);
-      repository.getExamForGeneration
-        .mockResolvedValueOnce(READY_EXAM)
-        .mockResolvedValue({
-          ...READY_EXAM,
-          selectedQuestions: [READY_EXAM.selectedQuestions[0]!, HEALTHY_REPLACEMENT],
-        });
+      repository.getExamForGeneration.mockResolvedValueOnce(READY_EXAM).mockResolvedValue({
+        ...READY_EXAM,
+        selectedQuestions: [READY_EXAM.selectedQuestions[0]!, HEALTHY_REPLACEMENT],
+      });
       jest
         .spyOn(pdfCompiler, "compileExam")
         .mockRejectedValueOnce(new TypstCompilationError("typst compile failed", "q2", "stderr contents"));
@@ -389,12 +395,10 @@ describe("ExamVersionGenerationService.generateVersions", () => {
       const { service, repository, storage, pdfCompiler } = buildDeps();
       void storage.put("bank/questions/q9", Buffer.from("fake-png-9"), "image/png");
       wireSwappableBank(repository);
-      repository.getExamForGeneration
-        .mockResolvedValueOnce(READY_EXAM)
-        .mockResolvedValue({
-          ...READY_EXAM,
-          selectedQuestions: [READY_EXAM.selectedQuestions[0]!, HEALTHY_REPLACEMENT],
-        });
+      repository.getExamForGeneration.mockResolvedValueOnce(READY_EXAM).mockResolvedValue({
+        ...READY_EXAM,
+        selectedQuestions: [READY_EXAM.selectedQuestions[0]!, HEALTHY_REPLACEMENT],
+      });
       jest
         .spyOn(pdfCompiler, "compileExam")
         .mockRejectedValueOnce(new TypstCompilationError("typst compile failed", "q2", "stderr contents"));
@@ -462,7 +466,9 @@ describe("ExamVersionGenerationService.generateVersions", () => {
         .spyOn(pdfCompiler, "compileExam")
         .mockRejectedValue(new TypstCompilationError("typst compile failed", "q2", "stderr contents"));
 
-      await expect(service.generateVersions(TEACHER, "exam-1", 1)).rejects.toBeInstanceOf(ExamPdfGenerationError);
+      await expect(service.generateVersions(TEACHER, "exam-1", 1)).rejects.toBeInstanceOf(
+        ExamPdfGenerationError,
+      );
       expect(compileExam.mock.calls.length).toBeLessThanOrEqual(5);
     });
   });
@@ -486,9 +492,16 @@ describe("ExamVersionGenerationService.generateVersions", () => {
       const { service, repository, storage } = buildDeps();
       repository.getExamForGeneration.mockResolvedValue(READY_EXAM);
       repository.createAsset.mockResolvedValue({ id: "asset-id" });
-      repository.clearVersions.mockResolvedValue(["exams/exam-1/versions/A/exam.pdf", "exams/exam-1/versions/A/answer-key.pdf"]);
+      repository.clearVersions.mockResolvedValue([
+        "exams/exam-1/versions/A/exam.pdf",
+        "exams/exam-1/versions/A/answer-key.pdf",
+      ]);
       await storage.put("exams/exam-1/versions/A/exam.pdf", Buffer.from("old-pdf"), "application/pdf");
-      await storage.put("exams/exam-1/versions/A/answer-key.pdf", Buffer.from("old-answer"), "application/pdf");
+      await storage.put(
+        "exams/exam-1/versions/A/answer-key.pdf",
+        Buffer.from("old-answer"),
+        "application/pdf",
+      );
       const deleteSpy = jest.spyOn(storage, "delete");
 
       await service.generateVersions(TEACHER, "exam-1", 2);

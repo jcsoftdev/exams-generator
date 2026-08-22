@@ -93,7 +93,10 @@ interface SelectListItem<T> {
             >
               <span [class.text-n400]="item.isPlaceholder">{{ item.label }}</span>
               @if (isSelected(item)) {
-                <lucide-angular name="check" class="h-4 w-4 shrink-0 text-primary-500"></lucide-angular>
+                <lucide-angular
+                  name="check"
+                  class="h-4 w-4 shrink-0 text-primary-500"
+                ></lucide-angular>
               }
             </li>
           }
@@ -145,7 +148,9 @@ export class SelectComponent<T = string> {
     return this.options().find((option) => option.value === current) ?? null;
   });
 
-  protected readonly triggerLabel = computed(() => this.selectedOption()?.label ?? this.placeholder() ?? '');
+  protected readonly triggerLabel = computed(
+    () => this.selectedOption()?.label ?? this.placeholder() ?? '',
+  );
 
   protected optionId(index: number): string {
     return `${this.instanceId}-option-${index}`;

@@ -170,12 +170,7 @@ describe("Bank module (e2e)", () => {
           db
             .delete(users)
             .where(
-              inArray(users.id, [
-                staffUserId,
-                tenantATeacherId,
-                tenantASchoolAdminId,
-                tenantBTeacherId,
-              ]),
+              inArray(users.id, [staffUserId, tenantATeacherId, tenantASchoolAdminId, tenantBTeacherId]),
             ),
       ],
       ["delete tenants", () => db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]))],
@@ -206,9 +201,7 @@ describe("Bank module (e2e)", () => {
   }
 
   function uploadRequest(token: string) {
-    return request(app.getHttpServer())
-      .post("/bank/questions/image")
-      .set("Authorization", `Bearer ${token}`);
+    return request(app.getHttpServer()).post("/bank/questions/image").set("Authorization", `Bearer ${token}`);
   }
 
   function structuredRequest(token: string) {
@@ -218,15 +211,11 @@ describe("Bank module (e2e)", () => {
   }
 
   function listRequest(token: string) {
-    return request(app.getHttpServer())
-      .get("/bank/questions")
-      .set("Authorization", `Bearer ${token}`);
+    return request(app.getHttpServer()).get("/bank/questions").set("Authorization", `Bearer ${token}`);
   }
 
   function getByIdRequest(token: string, id: string) {
-    return request(app.getHttpServer())
-      .get(`/bank/questions/${id}`)
-      .set("Authorization", `Bearer ${token}`);
+    return request(app.getHttpServer()).get(`/bank/questions/${id}`).set("Authorization", `Bearer ${token}`);
   }
 
   function approveRequest(token: string, id: string) {

@@ -202,9 +202,17 @@ describe("GenerationJobsRepository", () => {
     it("list() collapses a multi-attempt chain to only its latest (leaf) job, with attemptCount = chain length", async () => {
       const original = await repository.create(baseInput());
       await repository.setStatus(original.id, "failed");
-      const retry1 = await repository.create({ ...baseInput(), retriedFromJobId: original.id, rootJobId: original.id });
+      const retry1 = await repository.create({
+        ...baseInput(),
+        retriedFromJobId: original.id,
+        rootJobId: original.id,
+      });
       await repository.setStatus(retry1.id, "failed");
-      const retry2 = await repository.create({ ...baseInput(), retriedFromJobId: retry1.id, rootJobId: original.id });
+      const retry2 = await repository.create({
+        ...baseInput(),
+        retriedFromJobId: retry1.id,
+        rootJobId: original.id,
+      });
 
       const { items } = await repository.list(tenantId, 1, 50);
 
@@ -226,9 +234,17 @@ describe("GenerationJobsRepository", () => {
     it("listChain() returns every attempt in the chain, oldest first, given any job in the chain", async () => {
       const original = await repository.create(baseInput());
       await repository.setStatus(original.id, "failed");
-      const retry1 = await repository.create({ ...baseInput(), retriedFromJobId: original.id, rootJobId: original.id });
+      const retry1 = await repository.create({
+        ...baseInput(),
+        retriedFromJobId: original.id,
+        rootJobId: original.id,
+      });
       await repository.setStatus(retry1.id, "failed");
-      const retry2 = await repository.create({ ...baseInput(), retriedFromJobId: retry1.id, rootJobId: original.id });
+      const retry2 = await repository.create({
+        ...baseInput(),
+        retriedFromJobId: retry1.id,
+        rootJobId: original.id,
+      });
 
       const chain = await repository.listChain(tenantId, original.id);
 

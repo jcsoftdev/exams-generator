@@ -7,10 +7,16 @@ function build(overrides: { dbOk?: boolean; redisOk?: boolean; storageOk?: boole
     execute: overrides.dbOk === false ? () => Promise.reject(new Error("db down")) : () => Promise.resolve(),
   } as unknown as Database;
   const storage = {
-    ping: overrides.storageOk === false ? () => Promise.reject(new Error("storage down")) : () => Promise.resolve(),
+    ping:
+      overrides.storageOk === false
+        ? () => Promise.reject(new Error("storage down"))
+        : () => Promise.resolve(),
   } as unknown as StoragePort;
   const redis = {
-    ping: overrides.redisOk === false ? () => Promise.reject(new Error("redis down")) : () => Promise.resolve("PONG"),
+    ping:
+      overrides.redisOk === false
+        ? () => Promise.reject(new Error("redis down"))
+        : () => Promise.resolve("PONG"),
   } as never;
   return new HealthService(db, storage, redis);
 }

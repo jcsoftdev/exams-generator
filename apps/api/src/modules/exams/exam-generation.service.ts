@@ -46,7 +46,11 @@ export interface GeneratedVersionResult {
  * row-specific error instead of an opaque 500.
  */
 export class ExamPdfGenerationError extends Error {
-  constructor(readonly examId: string, readonly questionId: string | undefined, message: string) {
+  constructor(
+    readonly examId: string,
+    readonly questionId: string | undefined,
+    message: string,
+  ) {
     super(message);
     this.name = "ExamPdfGenerationError";
   }
@@ -449,7 +453,13 @@ export class ExamVersionGenerationService {
       versionLabel,
       tenantLogoAbsolutePath: logoPath,
       questions: version.questionOrder.map((questionId) =>
-        this.buildPdfQuestion(questionId, questionById, imagePathByQuestionId, altImagePathsByQuestionId, version),
+        this.buildPdfQuestion(
+          questionId,
+          questionById,
+          imagePathByQuestionId,
+          altImagePathsByQuestionId,
+          version,
+        ),
       ),
     };
 

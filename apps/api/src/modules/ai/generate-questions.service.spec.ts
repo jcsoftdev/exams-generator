@@ -40,9 +40,7 @@ function buildDeps() {
       .fn()
       .mockResolvedValue({ courseName: "Matemática", topicName: "Fracciones" }),
     findByBodyHash: jest.fn().mockResolvedValue(undefined),
-    createStructuredQuestion: jest
-      .fn()
-      .mockImplementation(async () => ({ id: `question-${Math.random()}` })),
+    createStructuredQuestion: jest.fn().mockImplementation(async () => ({ id: `question-${Math.random()}` })),
   } as unknown as jest.Mocked<BankRepository>;
 
   const service = new GenerateQuestionsService(generator, pdfCompiler, bankRepository);
@@ -166,9 +164,7 @@ describe("GenerateQuestionsService.generateQuestions", () => {
   it("does NOT save a question whose Typst preview keeps failing to compile after exhausting all retry attempts", async () => {
     const { service, generator, pdfCompiler, bankRepository } = buildDeps();
     const compileError = new TypstCompilationError("typst compile failed", undefined, "syntax error");
-    pdfCompiler.compileExam
-      .mockRejectedValueOnce(compileError)
-      .mockRejectedValueOnce(compileError);
+    pdfCompiler.compileExam.mockRejectedValueOnce(compileError).mockRejectedValueOnce(compileError);
 
     const result = await service.generateQuestions(TEACHER_USER, { ...VALID_DTO, count: 2 });
 

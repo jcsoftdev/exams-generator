@@ -10,4 +10,10 @@
  * tying a field renamed on the wire to a compile failure on the client
  * (audit 2026-08-21, M4b).
  */
-export type { CreateTenantPayload, DeleteTenantResult, Tenant as AdminTenant, TenantListResult as PagedAdminTenants, UpdateTenantPayload } from '@exams-generator/shared';
+export type {
+  CreateTenantPayload,
+  DeleteTenantResult,
+  Tenant as AdminTenant,
+  TenantListResult as PagedAdminTenants,
+  UpdateTenantPayload,
+} from '@exams-generator/shared';

@@ -1,12 +1,25 @@
-import { BadRequestException, HttpException, HttpStatus, Injectable, NotFoundException } from "@nestjs/common";
+import {
+  BadRequestException,
+  HttpException,
+  HttpStatus,
+  Injectable,
+  NotFoundException,
+} from "@nestjs/common";
 import { InjectQueue } from "@nestjs/bullmq";
 import { Difficulty } from "@exams-generator/shared";
 import { Queue } from "bullmq";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
-import { GenerateQuestionsInput, validateGenerateQuestionsInput } from "./domain/validate-generate-questions-input";
+import {
+  GenerateQuestionsInput,
+  validateGenerateQuestionsInput,
+} from "./domain/validate-generate-questions-input";
 import { GenerationJobData } from "./generation-jobs.processor";
-import { GenerationJobListRecord, GenerationJobRecord, GenerationJobsRepository } from "./generation-jobs.repository";
+import {
+  GenerationJobListRecord,
+  GenerationJobRecord,
+  GenerationJobsRepository,
+} from "./generation-jobs.repository";
 
 export interface CreateGenerationJobDto {
   readonly courseId?: string;

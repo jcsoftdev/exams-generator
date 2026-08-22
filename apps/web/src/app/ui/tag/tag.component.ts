@@ -10,14 +10,13 @@ import { TagVariant } from '../ui.types';
   selector: 'ui-tag',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
-    <span data-testid="tag" [class]="classes()"><ng-content></ng-content></span>
-  `,
+  template: ` <span data-testid="tag" [class]="classes()"><ng-content></ng-content></span> `,
 })
 export class TagComponent {
   readonly variant = input.required<TagVariant>();
 
-  private static readonly BASE = 'inline-flex items-center rounded-field px-2 py-0.5 text-xs font-medium';
+  private static readonly BASE =
+    'inline-flex items-center rounded-field px-2 py-0.5 text-xs font-medium';
   private static readonly VARIANT_CLASSES: Record<TagVariant, string> = {
     easy: 'bg-easy-bg text-easy-text',
     medium: 'bg-medium-bg text-medium-text',

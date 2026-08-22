@@ -35,6 +35,7 @@ Antes de este cambio, el único punto de entrada a `loadTemplate()` era el botó
 ## 5. Testing
 
 Nuevos casos en el describe `'tipo de examen — cargar plantilla'` (`exam-builder.component.spec.ts`):
+
 - Auto-load sin click al elegir universidad sin tracks (`getUniversityTracks: () => of([])`).
 - Auto-load sin click al elegir un track (`getUniversityTracks: () => of(TRACKS)` + seleccionar track).
 - Auto-load sin click al marcar un checkbox de curso (exam type `courseScope: 'selected'`, ej. "Fastest").

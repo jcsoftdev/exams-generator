@@ -38,7 +38,9 @@
 ## WAVE A — cerrar el backend del MVP (4 carriles en paralelo)
 
 ### Lane A1 — `exams` capa HTTP (EL HUECO CENTRAL)
+
 Dominio + adapters ya existen; falta ensamblar.
+
 - [x] `exams.module.ts` + application layer (use cases)
 - [x] CreateExam (título + gradeLevel) → endpoint
 - [x] DefineBlueprint (filas curso/tema?/dificultad?/count) → endpoint
@@ -50,19 +52,23 @@ Dominio + adapters ya existen; falta ensamblar.
 - ⚠️ COLISIÓN: `app.module.ts` (registrar ExamsModule) → vía integrador
 
 ### Lane A2 — módulo `tenants` (NO EXISTE)
+
 - [x] `tenants.module.ts` + service + repository + controller
 - [x] CRUD tenant + SetTenantLogo (usa StoragePort)
 - [x] Tests + e2e
 - ⚠️ COLISIÓN: `app.module.ts` (registrar TenantsModule)
 
 ### Lane A3 — completar `auth`
+
 Hay token service + jwt guard; falta el resto.
+
 - [x] Endpoint login (emite JWT con role + tenant_id)
 - [x] RolesGuard + TenantGuard backend
 - [x] Tests: login OK/inválido, guard rechaza rol/tenant equivocado
 - ⚠️ COLISIÓN: `app.module.ts`
 
 ### Lane A4 — seed-bank import (trabajo en curso, rama seed-bank-sample)
+
 - [x] Finalizar parser + import de `bank-questions/{biologia,COMUNICACION}` (nombre `1d.PNG` → Q1 resp. D)
 - [x] Registrar como preguntas-imagen en banco central (tenant_id NULL) + asset por imagen
 - [x] Test parser + idempotencia
@@ -73,6 +79,7 @@ Hay token service + jwt guard; falta el resto.
 ## WAVE B — orquestación, gate de seguridad y primeras UIs
 
 ### Lane B1 — orquestación de PDF (depende de A1)
+
 - [x] Use case GenerateVersions: examen → VersionShuffler → por versión compilar exam.typ + answer-sheet.typ → subir a MinIO → URLs
 - [x] Endpoint POST /exams/:id/versions (K versiones, códigos A/B/C)
 - [x] Header con logo tenant + nombre + título + código forma
@@ -80,12 +87,14 @@ Hay token service + jwt guard; falta el resto.
 - [x] e2e: K versiones, orden barajado, answer_key correcto, PDFs descargables
 
 ### Lane B2 — [GATE] tenant-isolation e2e (depende de A1, A2; bank ya está) — SEGURIDAD
+
 - [x] e2e: tenant A NUNCA ve privadas de tenant B (list, selección, por ID directo)
 - [x] e2e: tenant A no puede fetch/replace preguntas de examen de B (authorization)
 - [x] Banco central (tenant_id NULL) visible a todos
 - [x] **Bloquea merge de cualquier feature multi-tenant hasta verde**
 
 ### Lane B3 — web banco (bank API ya existe → arranca ya, paralelo a Wave A)
+
 - [x] Componente lista + filtros (curso/tema/dificultad/grado)
 - [x] Form subida de pregunta-imagen + clave + taxonomía
 - [x] Tests de componente
@@ -95,10 +104,12 @@ Hay token service + jwt guard; falta el resto.
 ## WAVE C — flujos web restantes (dependen de su backend)
 
 ### Lane C1 — web armado de examen (depende de A1)
+
 - [x] Blueprint builder (agregar/quitar filas, validación)
 - [x] Pantalla de revisión + reemplazo de pregunta
 
 ### Lane C2 — web versiones/descarga (depende de B1)
+
 - [x] Panel de versiones + links de descarga de PDFs y hojas de clave
 
 ---
@@ -108,6 +119,7 @@ Hay token service + jwt guard; falta el resto.
 Puede arrancar el diseño en paralelo a Wave A/B, pero integra al final.
 
 ### Lane D1 — módulo `ai` + puerto (independiente)
+
 - [x] `QuestionGeneratorPort` + `OpenRouterAdapter` (structured output, modelo por env `AI_MODEL`, ver ref web-research `openrouter/free-models`)
 - [x] Genera JSON validado: enunciado (Typst), alternativas, clave, código figura CeTZ opcional
 - [x] Reintento 1x si JSON inválido; nunca guarda sin validar schema
@@ -115,23 +127,27 @@ Puede arrancar el diseño en paralelo a Wave A/B, pero integra al final.
 - [x] Tests con respuestas mockeadas (válida, inválida, 429)
 
 ### Lane D2 — tipo `structured` (schema + banco) ⚠️ COLISIÓN schema
+
 - [x] Extender `questions`: `body_typst`, `alternatives jsonb`, `figure_code`, `type` incluye 'structured'
 - [x] Migración (vía integrador)
 - [x] Bank soporta crear/listar structured
 - [x] Render Typst de structured en el PDF (mismo estilo que imágenes)
 
 ### Lane D3 — workflow draft→revisión→approve (depende de D1)
+
 - [x] Preguntas IA entran como `draft`
 - [x] Humano revisa/corrige/aprueba → `approved`
 - [x] Vista previa Typst compila ANTES de guardar (bloquea marcado inválido)
 - [x] **IA nunca publica directo al banco**
 
 ### Lane D4 — barajar alternativas de structured (depende de D2)
+
 - [x] Extender VersionShuffler: structured SÍ baraja alternativas (imagen NO)
 - [x] Recalcular answer_key tras permutar alternativas
 - [x] Property test: clave correcta tras barajar preguntas Y alternativas
 
 ### Lane D5 — web IA (depende de D1, D3)
+
 - [x] Form generación por tema (curso/tema/dificultad/grado/cantidad/con-figura)
 - [x] Editor structured con vista previa Typst
 - [x] Cola de revisión de borradores

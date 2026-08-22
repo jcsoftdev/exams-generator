@@ -17,7 +17,9 @@ import { NavGroup } from '../ui.types';
   template: `
     <nav class="flex h-full flex-col gap-6 bg-n100 p-5 text-n900">
       <div class="flex items-center gap-2 px-2" data-testid="sidebar-logo">
-        <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">
+        <span
+          class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white"
+        >
           E
         </span>
         <span class="text-xs font-bold tracking-wide text-n900">GeneraExamen</span>

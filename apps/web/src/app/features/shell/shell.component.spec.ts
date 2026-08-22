@@ -69,7 +69,10 @@ function setup(
     providers: [
       provideRouter([]),
       { provide: DraftCountService, useValue: { count: signal(draftCount) } },
-      { provide: ThemeService, useValue: { mode: signal<'light' | 'dark'>('light'), toggle: toggleTheme } },
+      {
+        provide: ThemeService,
+        useValue: { mode: signal<'light' | 'dark'>('light'), toggle: toggleTheme },
+      },
       importProvidersFrom(
         LucideAngularModule.pick({
           Menu,
@@ -104,7 +107,10 @@ function setup(
           Moon,
         }),
       ),
-      { provide: AuthService, useValue: { currentRole: signal(role), currentTenantId: signal(tenantId), logout, me } },
+      {
+        provide: AuthService,
+        useValue: { currentRole: signal(role), currentTenantId: signal(tenantId), logout, me },
+      },
       {
         provide: TenantSettingsService,
         useValue: {
@@ -130,7 +136,14 @@ function setup(
   });
   const fixture = TestBed.createComponent(ShellComponent);
   fixture.detectChanges();
-  return { fixture, compiled: fixture.nativeElement as HTMLElement, logout, navigateByUrl, toggleTheme, me };
+  return {
+    fixture,
+    compiled: fixture.nativeElement as HTMLElement,
+    logout,
+    navigateByUrl,
+    toggleTheme,
+    me,
+  };
 }
 
 /** Opens the user menu the same way a real click would, then flushes pending change detection. */
@@ -228,7 +241,7 @@ describe('ShellComponent', () => {
     expect(compiled.textContent).toContain('San Marcos School');
   });
 
-  it('shows the signed-in user\'s name, email and role label in the user menu', () => {
+  it("shows the signed-in user's name, email and role label in the user menu", () => {
     const { fixture, compiled } = setup(Role.Teacher);
     openUserMenu(fixture, compiled);
 
@@ -276,7 +289,9 @@ describe('ShellComponent', () => {
 
     const links = Array.from(compiled.querySelectorAll('a[data-testid="nav-item"]'));
     const reviewLink = links.find((l) => l.textContent?.includes('Cola de revisión'));
-    expect(reviewLink?.querySelector('[data-testid="nav-item-badge"]')?.textContent?.trim()).toBe('7');
+    expect(reviewLink?.querySelector('[data-testid="nav-item-badge"]')?.textContent?.trim()).toBe(
+      '7',
+    );
   });
 
   it('omits the badge while the pending-drafts count has not loaded yet', () => {
@@ -314,7 +329,10 @@ describe('ShellComponent', () => {
   // received focus, didn't trap Tab, and Escape did nothing — a keyboard user
   // could Tab straight past it into `theme-toggle-button` behind the backdrop.
   describe('mobile drawer accessibility (P0 — 2026-08-18 audit)', () => {
-    function openDrawer(fixture: ReturnType<typeof setup>['fixture'], compiled: HTMLElement): HTMLElement {
+    function openDrawer(
+      fixture: ReturnType<typeof setup>['fixture'],
+      compiled: HTMLElement,
+    ): HTMLElement {
       const menuButton = compiled.querySelector<HTMLElement>('[data-testid="topbar-menu-button"]')!;
       menuButton.focus();
       menuButton.click();
@@ -327,7 +345,9 @@ describe('ShellComponent', () => {
       document.body.appendChild(fixture.nativeElement);
       try {
         openDrawer(fixture, compiled);
-        const panel = compiled.querySelector<HTMLElement>('[data-testid="shell-mobile-drawer"] [role="dialog"]');
+        const panel = compiled.querySelector<HTMLElement>(
+          '[data-testid="shell-mobile-drawer"] [role="dialog"]',
+        );
 
         expect(panel).toBeTruthy();
         expect(panel!.getAttribute('aria-modal')).toBe('true');
@@ -342,7 +362,9 @@ describe('ShellComponent', () => {
       document.body.appendChild(fixture.nativeElement);
       try {
         openDrawer(fixture, compiled);
-        const panel = compiled.querySelector<HTMLElement>('[data-testid="shell-mobile-drawer"] [role="dialog"]')!;
+        const panel = compiled.querySelector<HTMLElement>(
+          '[data-testid="shell-mobile-drawer"] [role="dialog"]',
+        )!;
 
         await vi.waitFor(() => expect(document.activeElement).toBe(panel));
       } finally {
@@ -355,7 +377,9 @@ describe('ShellComponent', () => {
       document.body.appendChild(fixture.nativeElement);
       try {
         const menuButton = openDrawer(fixture, compiled);
-        const panel = compiled.querySelector<HTMLElement>('[data-testid="shell-mobile-drawer"] [role="dialog"]')!;
+        const panel = compiled.querySelector<HTMLElement>(
+          '[data-testid="shell-mobile-drawer"] [role="dialog"]',
+        )!;
         await vi.waitFor(() => expect(document.activeElement).toBe(panel));
 
         panel.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
@@ -373,10 +397,14 @@ describe('ShellComponent', () => {
       document.body.appendChild(fixture.nativeElement);
       try {
         openDrawer(fixture, compiled);
-        const panel = compiled.querySelector<HTMLElement>('[data-testid="shell-mobile-drawer"] [role="dialog"]')!;
+        const panel = compiled.querySelector<HTMLElement>(
+          '[data-testid="shell-mobile-drawer"] [role="dialog"]',
+        )!;
         await vi.waitFor(() => expect(document.activeElement).toBe(panel));
 
-        const navLinks = Array.from(panel.querySelectorAll<HTMLElement>('a[data-testid="nav-item"]'));
+        const navLinks = Array.from(
+          panel.querySelectorAll<HTMLElement>('a[data-testid="nav-item"]'),
+        );
         expect(navLinks.length).toBeGreaterThan(0);
         const first = navLinks[0]!;
         const last = navLinks[navLinks.length - 1]!;
@@ -398,15 +426,24 @@ describe('ShellComponent', () => {
       document.body.appendChild(fixture.nativeElement);
       try {
         openDrawer(fixture, compiled);
-        const panel = compiled.querySelector<HTMLElement>('[data-testid="shell-mobile-drawer"] [role="dialog"]')!;
+        const panel = compiled.querySelector<HTMLElement>(
+          '[data-testid="shell-mobile-drawer"] [role="dialog"]',
+        )!;
         await vi.waitFor(() => expect(document.activeElement).toBe(panel));
 
-        const navLinks = Array.from(panel.querySelectorAll<HTMLElement>('a[data-testid="nav-item"]'));
+        const navLinks = Array.from(
+          panel.querySelectorAll<HTMLElement>('a[data-testid="nav-item"]'),
+        );
         const first = navLinks[0]!;
         const last = navLinks[navLinks.length - 1]!;
 
         first.focus();
-        const event = new KeyboardEvent('keydown', { key: 'Tab', shiftKey: true, bubbles: true, cancelable: true });
+        const event = new KeyboardEvent('keydown', {
+          key: 'Tab',
+          shiftKey: true,
+          bubbles: true,
+          cancelable: true,
+        });
         first.dispatchEvent(event);
         fixture.detectChanges();
 

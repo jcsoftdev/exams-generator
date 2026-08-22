@@ -28,7 +28,10 @@ describe("AuthController", () => {
         { provide: LoginExchangeService, useValue: loginExchangeService },
         // `JwtAuthGuard` on `GET /auth/me` asks it whether the account is still
         // usable; this spec exercises the controller, not that rule.
-        { provide: AccountStatusService, useValue: { isUsable: () => Promise.resolve(true), invalidate: () => {} } },
+        {
+          provide: AccountStatusService,
+          useValue: { isUsable: () => Promise.resolve(true), invalidate: () => {} },
+        },
       ],
     }).compile();
 
@@ -78,7 +81,9 @@ describe("AuthController", () => {
         throw new InvalidTokenError();
       });
 
-      await expect(controller.exchangeCode({ accessToken: "garbage" })).rejects.toThrow(UnauthorizedException);
+      await expect(controller.exchangeCode({ accessToken: "garbage" })).rejects.toThrow(
+        UnauthorizedException,
+      );
       expect(loginExchangeService.createCode).not.toHaveBeenCalled();
     });
   });

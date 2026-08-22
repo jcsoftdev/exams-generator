@@ -1,18 +1,10 @@
 import { Difficulty } from "@exams-generator/shared";
 import { createSeededRng } from "./ports/random.port";
-import {
-  BlueprintRow,
-  Candidate,
-  select,
-  selectPreview,
-  SelectionResult,
-} from "./blueprint-selector";
+import { BlueprintRow, Candidate, select, selectPreview, SelectionResult } from "./blueprint-selector";
 
 describe("select", () => {
   it("fills a single row with `count` distinct matching candidates", () => {
-    const rows: BlueprintRow[] = [
-      { courseId: "aritmetica", difficulty: Difficulty.Easy, count: 2 },
-    ];
+    const rows: BlueprintRow[] = [{ courseId: "aritmetica", difficulty: Difficulty.Easy, count: 2 }];
     const pool: Candidate[] = [
       { id: "q1", courseId: "aritmetica", difficulty: Difficulty.Easy },
       { id: "q2", courseId: "aritmetica", difficulty: Difficulty.Easy },
@@ -73,9 +65,7 @@ describe("select", () => {
   });
 
   it("reports a shortage naming the exact failing row with requested vs available counts", () => {
-    const rows: BlueprintRow[] = [
-      { courseId: "aritmetica", difficulty: Difficulty.Easy, count: 5 },
-    ];
+    const rows: BlueprintRow[] = [{ courseId: "aritmetica", difficulty: Difficulty.Easy, count: 5 }];
     const pool: Candidate[] = [
       { id: "q1", courseId: "aritmetica", difficulty: Difficulty.Easy },
       { id: "q2", courseId: "aritmetica", difficulty: Difficulty.Easy },
@@ -132,14 +122,9 @@ describe("select", () => {
       const rowCount = 1 + Math.floor(scenarioRng() * 3);
       const rows: BlueprintRow[] = Array.from({ length: rowCount }, () => ({
         courseId: courses[Math.floor(scenarioRng() * courses.length)],
-        topicId:
-          scenarioRng() < 0.5
-            ? topics[Math.floor(scenarioRng() * (topics.length - 1))]
-            : undefined,
+        topicId: scenarioRng() < 0.5 ? topics[Math.floor(scenarioRng() * (topics.length - 1))] : undefined,
         difficulty:
-          scenarioRng() < 0.5
-            ? difficulties[Math.floor(scenarioRng() * difficulties.length)]
-            : undefined,
+          scenarioRng() < 0.5 ? difficulties[Math.floor(scenarioRng() * difficulties.length)] : undefined,
         count: 1 + Math.floor(scenarioRng() * 3),
       }));
 
@@ -151,9 +136,7 @@ describe("select", () => {
         (row.difficulty === undefined || candidate.difficulty === row.difficulty);
 
       if (result.ok) {
-        expect(result.questionIds).toHaveLength(
-          rows.reduce((sum, row) => sum + row.count, 0),
-        );
+        expect(result.questionIds).toHaveLength(rows.reduce((sum, row) => sum + row.count, 0));
         expect(new Set(result.questionIds).size).toBe(result.questionIds.length);
         for (const id of result.questionIds) {
           const candidate = pool.find((c) => c.id === id);

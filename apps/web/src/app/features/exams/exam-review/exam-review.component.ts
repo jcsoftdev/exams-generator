@@ -11,7 +11,10 @@ import { ButtonComponent } from '../../../ui/button/button.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { extractErrorMessage } from '../../ai/extract-error-message';
 import { ExamVersionsService } from '../../exam-versions/exam-versions.service';
-import { DEFAULT_VERSION_COUNT, VERSION_COUNT_OPTIONS } from '../../exam-versions/exam-versions.models';
+import {
+  DEFAULT_VERSION_COUNT,
+  VERSION_COUNT_OPTIONS,
+} from '../../exam-versions/exam-versions.models';
 import { ExamsService } from '../exams.service';
 import { ExamDetailQuestion, ExamStatus } from '../exams.models';
 
@@ -46,7 +49,9 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
     ButtonComponent,
   ],
   // `ChevronDown` is for the nested `ui-select` (Formas), not this template itself.
-  providers: [LucideAngularModule.pick({ Shuffle, Check, Lock, ArrowRight, ChevronDown }).providers ?? []],
+  providers: [
+    LucideAngularModule.pick({ Shuffle, Check, Lock, ArrowRight, ChevronDown }).providers ?? [],
+  ],
   templateUrl: './exam-review.component.html',
 })
 export class ExamReviewComponent implements OnInit {
@@ -66,10 +71,11 @@ export class ExamReviewComponent implements OnInit {
    * moment before the compile, so it's the right place to change your mind.
    */
   protected readonly versionCount = signal(this.readFormasParam());
-  protected readonly versionCountOptions: readonly SelectOption<number>[] = VERSION_COUNT_OPTIONS.map((count) => ({
-    value: count,
-    label: String(count),
-  }));
+  protected readonly versionCountOptions: readonly SelectOption<number>[] =
+    VERSION_COUNT_OPTIONS.map((count) => ({
+      value: count,
+      label: String(count),
+    }));
 
   private readFormasParam(): number {
     const raw = Number(this.route.snapshot.queryParamMap.get('formas'));
@@ -105,7 +111,9 @@ export class ExamReviewComponent implements OnInit {
       },
       error: (error: HttpErrorResponse) => {
         this.generating.set(false);
-        this.generateError.set(extractErrorMessage(error, 'No se pudo generar el examen. Inténtalo de nuevo.'));
+        this.generateError.set(
+          extractErrorMessage(error, 'No se pudo generar el examen. Inténtalo de nuevo.'),
+        );
       },
     });
   }
@@ -181,7 +189,10 @@ export class ExamReviewComponent implements OnInit {
     this.replace(questionId, { mode: 'manual', replacementQuestionId });
   }
 
-  private replace(questionId: string, payload: { mode: 'reroll' } | { mode: 'manual'; replacementQuestionId: string }): void {
+  private replace(
+    questionId: string,
+    payload: { mode: 'reroll' } | { mode: 'manual'; replacementQuestionId: string },
+  ): void {
     if (this.status() === 'ready' || this.replacing()) {
       return;
     }

@@ -48,7 +48,10 @@ function setup(
   TestBed.configureTestingModule({
     imports: [BankNewComponent],
     providers: [
-      { provide: BankService, useValue: { uploadImageQuestion, createStructuredQuestion, replaceQuestionImage } },
+      {
+        provide: BankService,
+        useValue: { uploadImageQuestion, createStructuredQuestion, replaceQuestionImage },
+      },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
       { provide: AiService, useValue: { extractQuestionFromImage } },
       { provide: Router, useValue: { navigate } },
@@ -69,7 +72,11 @@ function setup(
   };
 }
 
-function set(fixture: { componentInstance: unknown; detectChanges(): void }, prop: string, value: unknown) {
+function set(
+  fixture: { componentInstance: unknown; detectChanges(): void },
+  prop: string,
+  value: unknown,
+) {
   (fixture.componentInstance as Record<string, { set(v: unknown): void }>)[prop].set(value);
   fixture.detectChanges();
 }
@@ -83,12 +90,16 @@ function openAndReadOptionLabels(
   const container = compiled.querySelector(`[data-testid="${testid}"]`) as HTMLElement;
   (container.querySelector('button[role="combobox"]') as HTMLButtonElement).click();
   fixture.detectChanges();
-  return Array.from(container.querySelectorAll('[data-testid="select-option"]')).map((o) => o.textContent?.trim());
+  return Array.from(container.querySelectorAll('[data-testid="select-option"]')).map((o) =>
+    o.textContent?.trim(),
+  );
 }
 
 /** The trigger button for the `ui-select` scoped under `testid` — mirrors the old `<select>` element for disabled checks. */
 function selectTrigger(compiled: HTMLElement, testid: string): HTMLButtonElement {
-  return compiled.querySelector(`[data-testid="${testid}"] button[role="combobox"]`) as HTMLButtonElement;
+  return compiled.querySelector(
+    `[data-testid="${testid}"] button[role="combobox"]`,
+  ) as HTMLButtonElement;
 }
 
 /**
@@ -96,7 +107,10 @@ function selectTrigger(compiled: HTMLElement, testid: string): HTMLButtonElement
  * component instance — the DISABLED trigger can't be opened via click, so this is the
  * equivalent of reading a disabled native `<select>`'s (still-present) `<option>` list.
  */
-function selectOptionsOf(fixture: { debugElement: { query(pred: unknown): { componentInstance: unknown } | null } }, testid: string): readonly SelectOption<unknown>[] {
+function selectOptionsOf(
+  fixture: { debugElement: { query(pred: unknown): { componentInstance: unknown } | null } },
+  testid: string,
+): readonly SelectOption<unknown>[] {
   const debugEl = fixture.debugElement.query(By.css(`[data-testid="${testid}"] ui-select`));
   const instance = debugEl!.componentInstance as SelectComponent<unknown>;
   return instance.options();
@@ -155,7 +169,9 @@ describe('BankNewComponent', () => {
     set(fixture, 'sBody', '¿Cuánto es 2+2?');
     set(fixture, 'sAlternatives', '4\n3\n5\n6');
     set(fixture, 'sCorrectAnswer', 'a');
-    (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+    ).click();
     expect(createStructuredQuestion).toHaveBeenCalledWith({
       courseId: 'c1',
       topicId: 't1',
@@ -183,7 +199,9 @@ describe('BankNewComponent', () => {
     set(fixture, 'sAlternatives', 'a\nb');
     set(fixture, 'sCorrectAnswer', 'a');
     const file = pickStructuredImage(fixture, compiled);
-    (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+    ).click();
 
     expect(replaceQuestionImage).toHaveBeenCalledWith('str-q', file);
     expect(navigate).toHaveBeenCalledWith(['/app/bank']);
@@ -203,7 +221,9 @@ describe('BankNewComponent', () => {
     set(fixture, 'sAlternatives', 'a\nb');
     set(fixture, 'sCorrectAnswer', 'a');
     pickStructuredImage(fixture, compiled);
-    (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
 
     expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
@@ -217,7 +237,9 @@ describe('BankNewComponent', () => {
     const { fixture, compiled, createStructuredQuestion, replaceQuestionImage, navigate } = setup({
       replaceImageImpl: () => {
         attempt++;
-        return attempt === 1 ? throwError(() => new HttpErrorResponse({ status: 500 })) : of({ id: 'str-q' });
+        return attempt === 1
+          ? throwError(() => new HttpErrorResponse({ status: 500 }))
+          : of({ id: 'str-q' });
       },
     });
     (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
@@ -232,14 +254,18 @@ describe('BankNewComponent', () => {
     pickStructuredImage(fixture, compiled);
 
     // First submit: question is created, image attach fails.
-    (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
     expect(createStructuredQuestion).toHaveBeenCalledTimes(1);
     expect(replaceQuestionImage).toHaveBeenCalledTimes(1);
     expect(navigate).not.toHaveBeenCalled();
 
     // Retry: must NOT call createStructuredQuestion again, only retry the image attach.
-    (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
     expect(createStructuredQuestion).toHaveBeenCalledTimes(1);
     expect(replaceQuestionImage).toHaveBeenCalledTimes(2);
@@ -260,7 +286,9 @@ describe('BankNewComponent', () => {
     set(fixture, 'sBody', 'x');
     set(fixture, 'sAlternatives', 'a\nb');
     set(fixture, 'sCorrectAnswer', 'a');
-    (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
     expect(compiled.querySelector('[data-testid="save-error"]')).toBeTruthy();
     expect(navigate).not.toHaveBeenCalled();
@@ -324,13 +352,17 @@ describe('BankNewComponent', () => {
       set(fixture, 'sGradeLevel', 'pre');
       set(fixture, 'sCourseId', 'c1');
       fixture.detectChanges();
-      expect((fixture.componentInstance as unknown as { sCourseId: () => string }).sCourseId()).toBe('c1');
+      expect(
+        (fixture.componentInstance as unknown as { sCourseId: () => string }).sCourseId(),
+      ).toBe('c1');
 
       set(fixture, 'sGradeLevel', 'esc');
       fixture.detectChanges();
 
       expect(getCourses).toHaveBeenNthCalledWith(2, 'esc');
-      expect((fixture.componentInstance as unknown as { sCourseId: () => string }).sCourseId()).toBe('');
+      expect(
+        (fixture.componentInstance as unknown as { sCourseId: () => string }).sCourseId(),
+      ).toBe('');
     });
 
     it('reloads topics and resets the selected topic when the course changes (structured tab)', () => {
@@ -344,13 +376,17 @@ describe('BankNewComponent', () => {
       set(fixture, 'sTopicId', 't1');
       fixture.detectChanges();
       expect(getTopics).toHaveBeenCalledWith('c1', 'pre');
-      expect((fixture.componentInstance as unknown as { sTopicId: () => string }).sTopicId()).toBe('t1');
+      expect((fixture.componentInstance as unknown as { sTopicId: () => string }).sTopicId()).toBe(
+        't1',
+      );
 
       set(fixture, 'sCourseId', 'c2');
       fixture.detectChanges();
 
       expect(getTopics).toHaveBeenCalledWith('c2', 'pre');
-      expect((fixture.componentInstance as unknown as { sTopicId: () => string }).sTopicId()).toBe('');
+      expect((fixture.componentInstance as unknown as { sTopicId: () => string }).sTopicId()).toBe(
+        '',
+      );
       const optionLabels = openAndReadOptionLabels(compiled, fixture, 'structured-topic-select');
       expect(optionLabels).toContain('Comprensión lectora');
     });
@@ -367,7 +403,9 @@ describe('BankNewComponent', () => {
       set(fixture, 'sBody', 'x');
       set(fixture, 'sAlternatives', 'a\nb');
       set(fixture, 'sCorrectAnswer', 'a');
-      (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
       expect(createStructuredQuestion).toHaveBeenCalledWith(
         expect.objectContaining({ courseId: 'c1', topicId: 't1' }),
       );
@@ -388,9 +426,7 @@ describe('BankNewComponent', () => {
     it('shows the chosen filename and a thumbnail preview after picking an image, plus a "Cambiar" affordance', () => {
       const { fixture, compiled } = setup();
       const file = new File(['fake'], 'enunciado.png', { type: 'image/png' });
-      const createObjectURLSpy = vi
-        .spyOn(URL, 'createObjectURL')
-        .mockReturnValue('blob:fake-url');
+      const createObjectURLSpy = vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
       vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
 
       const nativeFileInput = compiled.querySelector(
@@ -401,9 +437,9 @@ describe('BankNewComponent', () => {
       fixture.detectChanges();
 
       expect(createObjectURLSpy).toHaveBeenCalledWith(file);
-      expect(compiled.querySelector('[data-testid="image-upload-filename"]')?.textContent).toContain(
-        'enunciado.png',
-      );
+      expect(
+        compiled.querySelector('[data-testid="image-upload-filename"]')?.textContent,
+      ).toContain('enunciado.png');
       expect(compiled.querySelector('[data-testid="image-upload-preview"]')).toBeTruthy();
       expect(compiled.querySelector('[data-testid="image-upload-change"]')).toBeTruthy();
     });
@@ -414,9 +450,13 @@ describe('BankNewComponent', () => {
       const { fixture, compiled } = setup();
       (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
       fixture.detectChanges();
-      const structuredPanel = compiled.querySelector('[data-testid="tab-structured-panel"]') as HTMLElement;
+      const structuredPanel = compiled.querySelector(
+        '[data-testid="tab-structured-panel"]',
+      ) as HTMLElement;
       expect(structuredPanel.querySelector('[data-testid="structured-image-upload"]')).toBeTruthy();
-      const nativeFileInput = structuredPanel.querySelector('input[type="file"]') as HTMLInputElement;
+      const nativeFileInput = structuredPanel.querySelector(
+        'input[type="file"]',
+      ) as HTMLInputElement;
       expect(nativeFileInput).toBeTruthy();
       expect(nativeFileInput.classList.contains('sr-only')).toBe(true);
     });
@@ -430,10 +470,12 @@ describe('BankNewComponent', () => {
 
       pickStructuredImage(fixture, compiled);
 
-      expect(compiled.querySelector('[data-testid="structured-image-upload-filename"]')?.textContent).toContain(
-        'grafico.png',
-      );
-      expect(compiled.querySelector('[data-testid="structured-image-upload-preview"]')).toBeTruthy();
+      expect(
+        compiled.querySelector('[data-testid="structured-image-upload-filename"]')?.textContent,
+      ).toContain('grafico.png');
+      expect(
+        compiled.querySelector('[data-testid="structured-image-upload-preview"]'),
+      ).toBeTruthy();
       expect(compiled.querySelector('[data-testid="structured-image-upload-change"]')).toBeTruthy();
     });
 
@@ -451,7 +493,8 @@ describe('BankNewComponent', () => {
 
       expect(compiled.querySelector('[data-testid="structured-validation"]')).toBeFalsy();
       expect(
-        (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).disabled,
+        (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement)
+          .disabled,
       ).toBe(false);
     });
   });
@@ -568,7 +611,8 @@ describe('BankNewComponent', () => {
 
     it('on error: sets extractError, stays on the photo tab, and resets extracting()', () => {
       const { fixture, compiled } = setup({
-        extractQuestionFromImageImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+        extractQuestionFromImageImpl: () =>
+          throwError(() => new HttpErrorResponse({ status: 500 })),
       });
       fillPhotoTaxonomy(fixture);
       pickImage(fixture, compiled);
@@ -581,7 +625,9 @@ describe('BankNewComponent', () => {
         tab: () => string;
         extracting: () => boolean;
       };
-      expect(instance.extractError()).toBe('No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.');
+      expect(instance.extractError()).toBe(
+        'No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.',
+      );
       expect(instance.tab()).toBe('photo');
       expect(instance.extracting()).toBe(false);
     });
@@ -620,7 +666,9 @@ describe('BankNewComponent', () => {
   describe('extract-with-ai button (photo tab)', () => {
     it('is disabled until photo taxonomy + image are complete, then enabled', () => {
       const { fixture, compiled } = setup();
-      const button = compiled.querySelector('[data-testid="extract-with-ai"] button') as HTMLButtonElement;
+      const button = compiled.querySelector(
+        '[data-testid="extract-with-ai"] button',
+      ) as HTMLButtonElement;
       expect(button.disabled).toBe(true);
 
       fillPhotoTaxonomy(fixture);
@@ -634,7 +682,9 @@ describe('BankNewComponent', () => {
       fillPhotoTaxonomy(fixture);
       pickImage(fixture, compiled);
 
-      (compiled.querySelector('[data-testid="extract-with-ai"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="extract-with-ai"] button') as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="tab-structured-panel"]')).toBeTruthy();
@@ -646,12 +696,15 @@ describe('BankNewComponent', () => {
 
     it('shows extract-error inline on failure, without leaving the photo tab', () => {
       const { fixture, compiled } = setup({
-        extractQuestionFromImageImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+        extractQuestionFromImageImpl: () =>
+          throwError(() => new HttpErrorResponse({ status: 500 })),
       });
       fillPhotoTaxonomy(fixture);
       pickImage(fixture, compiled);
 
-      (compiled.querySelector('[data-testid="extract-with-ai"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="extract-with-ai"] button') as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="extract-error"]')).toBeTruthy();

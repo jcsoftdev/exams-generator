@@ -3,7 +3,13 @@ import { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
 import request from "supertest";
 import { AppModule } from "../../app.module";
-import { closeDbPool, createTenantFixture, deleteTenantFixture, ensureMigrated, TenantFixture } from "../../test-utils/db-fixtures";
+import {
+  closeDbPool,
+  createTenantFixture,
+  deleteTenantFixture,
+  ensureMigrated,
+  TenantFixture,
+} from "../../test-utils/db-fixtures";
 
 describe("Tenant lookup (e2e)", () => {
   let app: INestApplication;

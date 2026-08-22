@@ -30,7 +30,14 @@ describe('AdminTenantsService', () => {
     const req = httpMock.expectOne('/api/tenants');
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual({ name: 'Colegio Nuevo', slug: 'colegio-nuevo' });
-    req.flush({ id: 't1', name: 'Colegio Nuevo', slug: 'colegio-nuevo', city: null, logoAssetId: null, active: true });
+    req.flush({
+      id: 't1',
+      name: 'Colegio Nuevo',
+      slug: 'colegio-nuevo',
+      city: null,
+      logoAssetId: null,
+      active: true,
+    });
   });
 
   it('update PATCHes /tenants/:id', () => {
@@ -38,7 +45,14 @@ describe('AdminTenantsService', () => {
     const req = httpMock.expectOne('/api/tenants/t1');
     expect(req.request.method).toBe('PATCH');
     expect(req.request.body).toEqual({ active: false });
-    req.flush({ id: 't1', name: 'Colegio', slug: 'colegio', city: null, logoAssetId: null, active: false });
+    req.flush({
+      id: 't1',
+      name: 'Colegio',
+      slug: 'colegio',
+      city: null,
+      logoAssetId: null,
+      active: false,
+    });
   });
 
   it('remove DELETEs /tenants/:id', () => {

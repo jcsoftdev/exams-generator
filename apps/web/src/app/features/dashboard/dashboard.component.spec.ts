@@ -17,7 +17,14 @@ const STATS: DashboardStats = {
   exams: {
     total: 3,
     byStatus: { draft: 1, ready: 2 },
-    recent: [{ id: 'exam-1', title: 'Examen de Álgebra', status: 'ready', createdAt: '2026-07-01T00:00:00.000Z' }],
+    recent: [
+      {
+        id: 'exam-1',
+        title: 'Examen de Álgebra',
+        status: 'ready',
+        createdAt: '2026-07-01T00:00:00.000Z',
+      },
+    ],
   },
   aiDrafts: { pending: 2 },
 };
@@ -42,8 +49,12 @@ describe('DashboardComponent', () => {
     const { compiled, getStats } = setup();
 
     expect(getStats).toHaveBeenCalledTimes(1);
-    expect(compiled.querySelector('[data-testid="dashboard-card-bank"]')?.textContent).toContain('12');
-    expect(compiled.querySelector('[data-testid="dashboard-card-exams"]')?.textContent).toContain('3');
+    expect(compiled.querySelector('[data-testid="dashboard-card-bank"]')?.textContent).toContain(
+      '12',
+    );
+    expect(compiled.querySelector('[data-testid="dashboard-card-exams"]')?.textContent).toContain(
+      '3',
+    );
     expect(compiled.querySelector('[data-testid="dashboard-card-ai"]')?.textContent).toContain('2');
   });
 
@@ -83,7 +94,9 @@ describe('DashboardComponent', () => {
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="dashboard-loading"]')).toBeFalsy();
-      expect(compiled.querySelector('[data-testid="dashboard-card-bank"]')?.textContent).toContain('12');
+      expect(compiled.querySelector('[data-testid="dashboard-card-bank"]')?.textContent).toContain(
+        '12',
+      );
     });
   });
 });

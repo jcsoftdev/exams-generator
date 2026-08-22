@@ -1,4 +1,10 @@
-import { HttpClient, HttpDownloadProgressEvent, HttpEventType, HttpParams, HttpResponse } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpDownloadProgressEvent,
+  HttpEventType,
+  HttpParams,
+  HttpResponse,
+} from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, map, timeout } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -14,7 +20,10 @@ import {
   GenerationJobChainResult,
   GenerationJobListResult,
 } from './ai.models';
-import { parseGenerateStreamFrames, parseGenerationJobStreamFrames } from './parse-generate-stream-frames';
+import {
+  parseGenerateStreamFrames,
+  parseGenerationJobStreamFrames,
+} from './parse-generate-stream-frames';
 
 /**
  * Angular client for the Fase 2 AI generation + draft review workflow
@@ -75,7 +84,9 @@ export class AiService {
    * bytes) — `processedLength` tracks how much of it has already been
    * turned into complete frames.
    */
-  generateQuestionStream(payload: Omit<GenerateQuestionsPayload, 'count'>): Observable<GenerateQuestionStreamEvent> {
+  generateQuestionStream(
+    payload: Omit<GenerateQuestionsPayload, 'count'>,
+  ): Observable<GenerateQuestionStreamEvent> {
     return this.rawGenerateQuestionStream(payload).pipe(timeout({ each: AI_STREAM_WATCHDOG_MS }));
   }
 
@@ -228,7 +239,9 @@ export class AiService {
 
   listGenerationJobs(page = 1, pageSize = 20): Observable<GenerationJobListResult> {
     const params = new HttpParams().set('page', page).set('pageSize', pageSize);
-    return this.http.get<GenerationJobListResult>(`${environment.apiBaseUrl}/ai/questions/jobs`, { params });
+    return this.http.get<GenerationJobListResult>(`${environment.apiBaseUrl}/ai/questions/jobs`, {
+      params,
+    });
   }
 
   getGenerationJob(id: string): Observable<GenerationJob> {
@@ -287,11 +300,16 @@ export class AiService {
   }
 
   cancelGenerationJob(id: string): Observable<GenerationJob> {
-    return this.http.post<GenerationJob>(`${environment.apiBaseUrl}/ai/questions/jobs/${id}/cancel`, {});
+    return this.http.post<GenerationJob>(
+      `${environment.apiBaseUrl}/ai/questions/jobs/${id}/cancel`,
+      {},
+    );
   }
 
   /** `GET /ai/questions/jobs/:id/chain` — every attempt in `id`'s retry chain, oldest first ("historial de reintentos"). */
   getGenerationJobChain(id: string): Observable<GenerationJobChainResult> {
-    return this.http.get<GenerationJobChainResult>(`${environment.apiBaseUrl}/ai/questions/jobs/${id}/chain`);
+    return this.http.get<GenerationJobChainResult>(
+      `${environment.apiBaseUrl}/ai/questions/jobs/${id}/chain`,
+    );
   }
 }

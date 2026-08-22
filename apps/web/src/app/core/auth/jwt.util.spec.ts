@@ -16,9 +16,7 @@ describe('decodeJwtPayload', () => {
   it('decodes a base64url-encoded JWT payload segment', () => {
     const token = buildFakeJwt({ sub: 'user-1', role: 'teacher', tenantId: 'tenant-1' });
 
-    const payload = decodeJwtPayload<{ sub: string; role: string; tenantId: string | null }>(
-      token,
-    );
+    const payload = decodeJwtPayload<{ sub: string; role: string; tenantId: string | null }>(token);
 
     expect(payload).toEqual({ sub: 'user-1', role: 'teacher', tenantId: 'tenant-1' });
   });
@@ -26,9 +24,7 @@ describe('decodeJwtPayload', () => {
   it('handles a null tenantId (platform-level roles)', () => {
     const token = buildFakeJwt({ sub: 'user-2', role: 'platform_admin', tenantId: null });
 
-    const payload = decodeJwtPayload<{ sub: string; role: string; tenantId: string | null }>(
-      token,
-    );
+    const payload = decodeJwtPayload<{ sub: string; role: string; tenantId: string | null }>(token);
 
     expect(payload?.tenantId).toBeNull();
   });

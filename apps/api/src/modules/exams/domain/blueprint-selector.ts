@@ -30,9 +30,7 @@ export interface RowShortage {
   readonly available: number;
 }
 
-export type SelectionResult =
-  | { ok: true; questionIds: string[] }
-  | { ok: false; shortages: RowShortage[] };
+export type SelectionResult = { ok: true; questionIds: string[] } | { ok: false; shortages: RowShortage[] };
 
 /**
  * Selects distinct questions from `pool` to satisfy every row in `rows`.
@@ -47,19 +45,13 @@ export type SelectionResult =
  * - If any row is short, the whole selection fails (`ok: false`) with the
  *   full list of shortages. Otherwise `ok: true` with every selected id.
  */
-export function select(
-  rows: readonly BlueprintRow[],
-  pool: readonly Candidate[],
-  rng: Rng,
-): SelectionResult {
+export function select(rows: readonly BlueprintRow[], pool: readonly Candidate[], rng: Rng): SelectionResult {
   const used = new Set<string>();
   const shortages: RowShortage[] = [];
   const selectedIdsByRow: string[][] = [];
 
   for (const row of rows) {
-    const matching = pool.filter(
-      (candidate) => matchesRow(candidate, row) && !used.has(candidate.id),
-    );
+    const matching = pool.filter((candidate) => matchesRow(candidate, row) && !used.has(candidate.id));
 
     if (matching.length < row.count) {
       shortages.push({ row, available: matching.length });

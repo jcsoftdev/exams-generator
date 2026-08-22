@@ -71,14 +71,20 @@ describe("UsersRepository", () => {
     it("does not affect a user in a different tenant", async () => {
       await repository.setActive(userBId, tenantAId, false);
 
-      const [row] = await db.select({ active: users.active }).from(users).where(inArray(users.id, [userBId]));
+      const [row] = await db
+        .select({ active: users.active })
+        .from(users)
+        .where(inArray(users.id, [userBId]));
       expect(row!.active).toBe(true);
     });
 
     it("updates the user when the tenant matches", async () => {
       await repository.setActive(userAId, tenantAId, false);
 
-      const [row] = await db.select({ active: users.active }).from(users).where(inArray(users.id, [userAId]));
+      const [row] = await db
+        .select({ active: users.active })
+        .from(users)
+        .where(inArray(users.id, [userAId]));
       expect(row!.active).toBe(false);
     });
   });

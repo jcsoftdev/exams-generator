@@ -58,7 +58,10 @@ export default async function globalSetup(): Promise<void> {
     // Redis must not abort the WHOLE run — the e2e suites that do need it
     // will fail on their own with their own (clearer) connection errors.
     // eslint-disable-next-line no-console
-    console.warn(`[jest-global-setup] could not clean stale bull-test-* keys (Redis unreachable at ${host}:${port}):`, error);
+    console.warn(
+      `[jest-global-setup] could not clean stale bull-test-* keys (Redis unreachable at ${host}:${port}):`,
+      error,
+    );
   } finally {
     redis.disconnect();
   }

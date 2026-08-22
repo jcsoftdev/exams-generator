@@ -64,7 +64,14 @@ const TOPICS_C2: Topic[] = [{ id: 't3', name: 'Ecuaciones', courseId: 'c2' }];
 
 const QUESTIONS: BankQuestion[] = [
   makeQuestion({ id: 'q1', courseId: 'c1', topicId: 't1', imageAssetId: 'asset-1' }),
-  makeQuestion({ id: 'q2', courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, type: 'structured', imageAssetId: null }),
+  makeQuestion({
+    id: 'q2',
+    courseId: 'c1',
+    topicId: 't1',
+    difficulty: Difficulty.Medium,
+    type: 'structured',
+    imageAssetId: null,
+  }),
   makeQuestion({ id: 'q3', courseId: 'c1', topicId: 't2', difficulty: Difficulty.Hard }),
   makeQuestion({ id: 'q4', courseId: 'c2', topicId: 't3' }),
 ];
@@ -119,18 +126,23 @@ function setup(
       ),
   );
   const getQuestion = vi.fn(over.getQuestionImpl ?? ((id: string) => of(makeQuestion({ id }))));
-  const archiveQuestion = vi.fn(over.archiveImpl ?? ((id: string) => of({ id, status: 'archived' })));
+  const archiveQuestion = vi.fn(
+    over.archiveImpl ?? ((id: string) => of({ id, status: 'archived' })),
+  );
   const deleteQuestion = vi.fn(over.deleteImpl ?? (() => of(void 0)));
   const updateQuestion = vi.fn(
     over.updateQuestionImpl ?? ((id: string, _patch: unknown) => of(makeQuestion({ id }))),
   );
   const replaceQuestionImage = vi.fn((id: string, _file: File) => of({ id }));
   const buildImageAssetUrl = vi.fn((id: string) => `http://api.test/assets/${id}`);
-  const fetchQuestionImage = vi.fn((id: string) => of(new Blob([`b-${id}`], { type: 'image/png' })));
+  const fetchQuestionImage = vi.fn((id: string) =>
+    of(new Blob([`b-${id}`], { type: 'image/png' })),
+  );
   const getCourses = vi.fn(over.getCoursesImpl ?? (() => of(COURSES)));
   const getTopicsForCourses = vi.fn(
     over.getTopicsForCoursesImpl ??
-      ((courseIds: string[]) => of([...TOPICS_C1, ...TOPICS_C2].filter((t) => courseIds.includes(t.courseId)))),
+      ((courseIds: string[]) =>
+        of([...TOPICS_C1, ...TOPICS_C2].filter((t) => courseIds.includes(t.courseId)))),
   );
   const reviseQuestion = vi.fn(
     over.reviseQuestionImpl ??
@@ -217,26 +229,38 @@ function setup(
 }
 
 function courseHeader(compiled: HTMLElement, courseId: string): HTMLElement {
-  return compiled.querySelector(`[data-testid="course-header"][data-course-id="${courseId}"]`) as HTMLElement;
+  return compiled.querySelector(
+    `[data-testid="course-header"][data-course-id="${courseId}"]`,
+  ) as HTMLElement;
 }
 
 function topicHeader(compiled: HTMLElement, topicId: string): HTMLElement {
-  return compiled.querySelector(`[data-testid="topic-header"][data-topic-id="${topicId}"]`) as HTMLElement;
+  return compiled.querySelector(
+    `[data-testid="topic-header"][data-topic-id="${topicId}"]`,
+  ) as HTMLElement;
 }
 
-function expandCourse(compiled: HTMLElement, fixture: { detectChanges(): void }, courseId: string): void {
+function expandCourse(
+  compiled: HTMLElement,
+  fixture: { detectChanges(): void },
+  courseId: string,
+): void {
   courseHeader(compiled, courseId).click();
   fixture.detectChanges();
 }
 
-function expandTopic(compiled: HTMLElement, fixture: { detectChanges(): void }, topicId: string): void {
+function expandTopic(
+  compiled: HTMLElement,
+  fixture: { detectChanges(): void },
+  topicId: string,
+): void {
   topicHeader(compiled, topicId).click();
   fixture.detectChanges();
 }
 
 describe('BankListComponent', () => {
   describe('tree structure', () => {
-    it('fetches every course\'s topics via a single batched getTopicsForCourses call, not one per course', () => {
+    it("fetches every course's topics via a single batched getTopicsForCourses call, not one per course", () => {
       const { getTopicsForCourses } = setup();
       expect(getTopicsForCourses).toHaveBeenCalledTimes(1);
       expect(getTopicsForCourses).toHaveBeenCalledWith(['c1', 'c2']);
@@ -354,7 +378,7 @@ describe('BankListComponent', () => {
       expect(courseHeader(compiled, 'c1').textContent).toMatch(/3/);
     });
 
-    it('shows a topic\'s real total on its header while it is still collapsed (count comes from the summary)', () => {
+    it("shows a topic's real total on its header while it is still collapsed (count comes from the summary)", () => {
       const { compiled, fixture, listQuestionsPaged } = setup();
       expandCourse(compiled, fixture, 'c1');
 
@@ -409,7 +433,9 @@ describe('BankListComponent', () => {
       expandTopic(compiled, fixture, 't1');
       expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
 
-      const loadMore = compiled.querySelector('[data-testid="topic-load-more"]') as HTMLButtonElement;
+      const loadMore = compiled.querySelector(
+        '[data-testid="topic-load-more"]',
+      ) as HTMLButtonElement;
       expect(loadMore.textContent).toMatch(/1/);
       loadMore.click();
       fixture.detectChanges();
@@ -425,7 +451,9 @@ describe('BankListComponent', () => {
 
     it('a failed topic page shows an inline retry inside that branch, leaving the rest of the tree intact', () => {
       const { compiled, fixture, listQuestionsPaged } = setup();
-      listQuestionsPaged.mockReturnValueOnce(throwError(() => new HttpErrorResponse({ status: 500 })));
+      listQuestionsPaged.mockReturnValueOnce(
+        throwError(() => new HttpErrorResponse({ status: 500 })),
+      );
 
       expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
@@ -499,7 +527,9 @@ describe('BankListComponent', () => {
       expandTopic(compiled, fixture, 't1');
 
       const snippet = compiled.querySelector('[data-testid="question-snippet"]');
-      expect(snippet?.textContent).toContain('UNCP — Examen de Admisión 2021-I, Álgebra, pregunta 4');
+      expect(snippet?.textContent).toContain(
+        'UNCP — Examen de Admisión 2021-I, Álgebra, pregunta 4',
+      );
     });
 
     it('shows the source of a seeded question in the detail panel', () => {
@@ -699,7 +729,9 @@ describe('BankListComponent', () => {
 
       const alts = compiled.querySelector('[data-testid="panel-alternatives"]');
       expect(alts?.textContent).toContain('150 km');
-      const correctRow = Array.from(alts!.querySelectorAll('li')).find((li) => li.textContent?.includes('150 km'));
+      const correctRow = Array.from(alts!.querySelectorAll('li')).find((li) =>
+        li.textContent?.includes('150 km'),
+      );
       expect(correctRow?.className).toContain('bg-easy-bg');
     });
 
@@ -723,9 +755,13 @@ describe('BankListComponent', () => {
       fixture.detectChanges();
 
       const alts = compiled.querySelector('[data-testid="panel-alternatives"]');
-      const correctRow = Array.from(alts!.querySelectorAll('li')).find((li) => li.textContent?.includes('150 km'));
+      const correctRow = Array.from(alts!.querySelectorAll('li')).find((li) =>
+        li.textContent?.includes('150 km'),
+      );
       expect(correctRow?.className).toContain('bg-easy-bg');
-      const wrongRow = Array.from(alts!.querySelectorAll('li')).find((li) => li.textContent?.includes('120 km'));
+      const wrongRow = Array.from(alts!.querySelectorAll('li')).find((li) =>
+        li.textContent?.includes('120 km'),
+      );
       expect(wrongRow?.className).not.toContain('bg-easy-bg');
     });
 
@@ -794,7 +830,10 @@ describe('BankListComponent', () => {
       (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
 
-      expect(updateQuestion).toHaveBeenCalledWith('q1', expect.objectContaining({ correctAnswer: '0' }));
+      expect(updateQuestion).toHaveBeenCalledWith(
+        'q1',
+        expect.objectContaining({ correctAnswer: '0' }),
+      );
     });
 
     it('surfaces the server-side Typst compile error instead of a generic message — the teacher needs to know WHAT failed in their markup', () => {
@@ -876,7 +915,9 @@ describe('BankListComponent', () => {
       (compiled.querySelector('[data-testid="edit-cancel"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
       expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
-      expect(compiled.querySelector('[data-testid="panel-enunciado"]')?.textContent).toContain('Original');
+      expect(compiled.querySelector('[data-testid="panel-enunciado"]')?.textContent).toContain(
+        'Original',
+      );
     });
 
     it('revises with AI: fills the edit form from the mocked response without auto-saving', () => {
@@ -914,9 +955,7 @@ describe('BankListComponent', () => {
       expect(reviseQuestion).toHaveBeenCalledWith('q1', 'más difícil');
 
       const form = compiled.querySelector('[data-testid="panel-edit-form"]');
-      const textarea = form!.querySelector(
-        '[data-testid="edit-enunciado"]',
-      ) as HTMLTextAreaElement;
+      const textarea = form!.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
       expect(textarea.value).toBe('Enunciado revisado por IA');
       const alternatives = form!.querySelector(
         '[data-testid="edit-alternatives"]',
@@ -925,8 +964,9 @@ describe('BankListComponent', () => {
       // correctAnswer '1' is ALREADY a 0-based index (AiRevisedQuestion's format = the edit form's
       // canonical format) — populated directly, no letter conversion.
       expect(
-        (fixture.componentInstance as unknown as { editCorrectAnswer: { (): string } })
-          .editCorrectAnswer(),
+        (
+          fixture.componentInstance as unknown as { editCorrectAnswer: { (): string } }
+        ).editCorrectAnswer(),
       ).toBe('1');
 
       // AI revise never auto-saves — the teacher still has to click Guardar.
@@ -935,7 +975,10 @@ describe('BankListComponent', () => {
       // Clicking Guardar afterward sends the AI's index straight through — no per-save conversion.
       (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
-      expect(updateQuestion).toHaveBeenCalledWith('q1', expect.objectContaining({ correctAnswer: '1' }));
+      expect(updateQuestion).toHaveBeenCalledWith(
+        'q1',
+        expect.objectContaining({ correctAnswer: '1' }),
+      );
     });
 
     it('shows ai-error when reviseQuestion fails, without touching the edit form', () => {
@@ -974,9 +1017,7 @@ describe('BankListComponent', () => {
 
       expect(compiled.querySelector('[data-testid="ai-error"]')).toBeTruthy();
       const form = compiled.querySelector('[data-testid="panel-edit-form"]');
-      const textarea = form!.querySelector(
-        '[data-testid="edit-enunciado"]',
-      ) as HTMLTextAreaElement;
+      const textarea = form!.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
       expect(textarea.value).toBe('Enunciado original');
     });
 
@@ -1014,9 +1055,7 @@ describe('BankListComponent', () => {
       expect(extractQuestionFromImage).toHaveBeenCalledWith(file);
 
       const form = compiled.querySelector('[data-testid="panel-edit-form"]');
-      const textarea = form!.querySelector(
-        '[data-testid="edit-enunciado"]',
-      ) as HTMLTextAreaElement;
+      const textarea = form!.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
       expect(textarea.value).toBe('Enunciado desde imagen');
       const alternatives = form!.querySelector(
         '[data-testid="edit-alternatives"]',
@@ -1024,8 +1063,9 @@ describe('BankListComponent', () => {
       expect(alternatives.value).toBe('Alt A extraída\nAlt B extraída');
       // correctAnswer '1' is ALREADY a 0-based index — populated directly, no letter conversion.
       expect(
-        (fixture.componentInstance as unknown as { editCorrectAnswer: { (): string } })
-          .editCorrectAnswer(),
+        (
+          fixture.componentInstance as unknown as { editCorrectAnswer: { (): string } }
+        ).editCorrectAnswer(),
       ).toBe('1');
 
       // OCR extraction never auto-saves — the teacher still has to click Guardar.
@@ -1044,7 +1084,8 @@ describe('BankListComponent', () => {
               alternatives: ['Uno', 'Dos'],
             }),
           ),
-        extractQuestionFromImageImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+        extractQuestionFromImageImpl: () =>
+          throwError(() => new HttpErrorResponse({ status: 500 })),
       });
       expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
@@ -1067,9 +1108,7 @@ describe('BankListComponent', () => {
 
       expect(compiled.querySelector('[data-testid="ai-error"]')).toBeTruthy();
       const form = compiled.querySelector('[data-testid="panel-edit-form"]');
-      const textarea = form!.querySelector(
-        '[data-testid="edit-enunciado"]',
-      ) as HTMLTextAreaElement;
+      const textarea = form!.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
       expect(textarea.value).toBe('Enunciado original');
     });
 
@@ -1118,7 +1157,15 @@ describe('BankListComponent', () => {
     it('does not save when the topic is empty (curso changed but tema not re-picked)', () => {
       const { compiled, fixture, updateQuestion } = setup({
         getQuestionImpl: (id) =>
-          of(makeQuestion({ id, type: 'structured', imageAssetId: null, bodyTypst: 'Original', alternatives: ['Uno', 'Dos'] })),
+          of(
+            makeQuestion({
+              id,
+              type: 'structured',
+              imageAssetId: null,
+              bodyTypst: 'Original',
+              alternatives: ['Uno', 'Dos'],
+            }),
+          ),
       });
       expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
@@ -1129,10 +1176,14 @@ describe('BankListComponent', () => {
       fixture.detectChanges();
 
       // Changing curso resets tema to '' — the user must re-pick it before saving.
-      (fixture.componentInstance as unknown as { onEditCourseChange(v: string | null): void }).onEditCourseChange('c2');
+      (
+        fixture.componentInstance as unknown as { onEditCourseChange(v: string | null): void }
+      ).onEditCourseChange('c2');
       fixture.detectChanges();
 
-      const saveButton = compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement;
+      const saveButton = compiled.querySelector(
+        '[data-testid="edit-save"] button',
+      ) as HTMLButtonElement;
       expect(saveButton.disabled).toBe(true);
 
       saveButton.click();
@@ -1150,7 +1201,9 @@ describe('BankListComponent', () => {
       (compiled.querySelector('[data-testid="panel-archive"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
       expect(archiveQuestion).not.toHaveBeenCalled();
-      (compiled.querySelector('[data-testid="archive-confirm-yes"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="archive-confirm-yes"] button') as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
       expect(archiveQuestion).toHaveBeenCalledWith('q1');
       expect(getQuestionCounts).toHaveBeenCalledTimes(1);
@@ -1161,9 +1214,9 @@ describe('BankListComponent', () => {
     it('re-fetches the summary with the selected nivel (difficulty) filter on Buscar', () => {
       const { fixture, getQuestionCounts } = setup();
       getQuestionCounts.mockClear();
-      (fixture.componentInstance as unknown as { difficulty: { set(v: Difficulty): void } }).difficulty.set(
-        Difficulty.Hard,
-      );
+      (
+        fixture.componentInstance as unknown as { difficulty: { set(v: Difficulty): void } }
+      ).difficulty.set(Difficulty.Hard);
       (fixture.componentInstance as unknown as { search(): void }).search();
       fixture.detectChanges();
       expect(getQuestionCounts).toHaveBeenCalledWith(
@@ -1215,9 +1268,9 @@ describe('BankListComponent', () => {
     it('shows "sin resultados" when filters match none but bank is non-empty', () => {
       const listImpl = vi.fn().mockReturnValueOnce(of(QUESTIONS)).mockReturnValueOnce(of([]));
       const { compiled, fixture } = setup({ listImpl });
-      (fixture.componentInstance as unknown as { difficulty: { set(v: Difficulty): void } }).difficulty.set(
-        Difficulty.Hard,
-      );
+      (
+        fixture.componentInstance as unknown as { difficulty: { set(v: Difficulty): void } }
+      ).difficulty.set(Difficulty.Hard);
       (fixture.componentInstance as unknown as { search(): void }).search();
       fixture.detectChanges();
       expect(compiled.querySelector('[data-testid="empty-no-results"]')).toBeTruthy();

@@ -162,16 +162,18 @@ export class TenantSettingsComponent {
     this.saveSuccess.set(false);
     this.saving.set(true);
     const logo = this.selectedLogo();
-    this.tenantSettingsService.updateSettings({ name: this.name(), city: this.city(), ...(logo ? { logo } : {}) }).subscribe({
-      next: () => {
-        this.saving.set(false);
-        this.saveSuccess.set(true);
-      },
-      error: (_e: HttpErrorResponse) => {
-        this.saving.set(false);
-        this.saveError.set('No se pudo guardar la configuración. Inténtalo de nuevo.');
-      },
-    });
+    this.tenantSettingsService
+      .updateSettings({ name: this.name(), city: this.city(), ...(logo ? { logo } : {}) })
+      .subscribe({
+        next: () => {
+          this.saving.set(false);
+          this.saveSuccess.set(true);
+        },
+        error: (_e: HttpErrorResponse) => {
+          this.saving.set(false);
+          this.saveError.set('No se pudo guardar la configuración. Inténtalo de nuevo.');
+        },
+      });
   }
 
   private loadTeachers(): void {
@@ -244,13 +246,18 @@ export class TenantSettingsComponent {
       return;
     }
     this.usersActionError.set(null);
-    this.usersService.create({ email: this.newEmail(), name: this.newName().trim(), role: this.newRole() }).subscribe({
-      next: (res) => {
-        this.tempPassword.set(res.temporaryPassword);
-        this.loadTeachers();
-      },
-      error: () => this.usersActionError.set('No se pudo agregar el profesor (¿correo ya usado?). Inténtalo de nuevo.'),
-    });
+    this.usersService
+      .create({ email: this.newEmail(), name: this.newName().trim(), role: this.newRole() })
+      .subscribe({
+        next: (res) => {
+          this.tempPassword.set(res.temporaryPassword);
+          this.loadTeachers();
+        },
+        error: () =>
+          this.usersActionError.set(
+            'No se pudo agregar el profesor (¿correo ya usado?). Inténtalo de nuevo.',
+          ),
+      });
   }
 
   /** Reactivating isn't destructive — only deactivating goes through the confirm modal. */
@@ -279,7 +286,8 @@ export class TenantSettingsComponent {
     this.usersActionError.set(null);
     this.usersService.setActive(u.id, active).subscribe({
       next: () => this.loadTeachers(),
-      error: () => this.usersActionError.set('No se pudo actualizar el estado. Inténtalo de nuevo.'),
+      error: () =>
+        this.usersActionError.set('No se pudo actualizar el estado. Inténtalo de nuevo.'),
     });
   }
 
@@ -299,7 +307,8 @@ export class TenantSettingsComponent {
     this.usersActionError.set(null);
     this.usersService.resetPassword(u.id).subscribe({
       next: (res) => this.tempPassword.set(res.temporaryPassword),
-      error: () => this.usersActionError.set('No se pudo restablecer la contraseña. Inténtalo de nuevo.'),
+      error: () =>
+        this.usersActionError.set('No se pudo restablecer la contraseña. Inténtalo de nuevo.'),
     });
   }
 }

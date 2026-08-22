@@ -23,7 +23,9 @@ export class TenantSettingsService {
   private readonly authService = inject(AuthService);
 
   getSettings(): Observable<TenantSettings> {
-    return this.http.get<TenantSettings>(`${environment.apiBaseUrl}/tenants/${this.requireTenantId()}`);
+    return this.http.get<TenantSettings>(
+      `${environment.apiBaseUrl}/tenants/${this.requireTenantId()}`,
+    );
   }
 
   updateSettings(payload: UpdateTenantSettingsPayload): Observable<TenantSettings> {
@@ -34,13 +36,20 @@ export class TenantSettingsService {
         name: payload.name,
         city: payload.city,
       })
-      .pipe(switchMap((tenant) => (payload.logo ? this.uploadLogo(tenantId, payload.logo) : of(tenant))));
+      .pipe(
+        switchMap((tenant) =>
+          payload.logo ? this.uploadLogo(tenantId, payload.logo) : of(tenant),
+        ),
+      );
   }
 
   private uploadLogo(tenantId: string, logo: File): Observable<TenantSettings> {
     const formData = new FormData();
     formData.set('file', logo);
-    return this.http.post<TenantSettings>(`${environment.apiBaseUrl}/tenants/${tenantId}/logo`, formData);
+    return this.http.post<TenantSettings>(
+      `${environment.apiBaseUrl}/tenants/${tenantId}/logo`,
+      formData,
+    );
   }
 
   /**
@@ -51,7 +60,9 @@ export class TenantSettingsService {
    * logo that's already on the tenant, not just one just picked locally.
    */
   fetchLogo(logoAssetId: string): Observable<Blob> {
-    return this.http.get(`${environment.apiBaseUrl}/assets/${logoAssetId}`, { responseType: 'blob' });
+    return this.http.get(`${environment.apiBaseUrl}/assets/${logoAssetId}`, {
+      responseType: 'blob',
+    });
   }
 
   private requireTenantId(): string {

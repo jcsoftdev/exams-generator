@@ -89,7 +89,9 @@ describe("TaxonomyService", () => {
   describe("listUniversities", () => {
     it("delegates to TaxonomyRepository.findAllUniversities", async () => {
       const { service, repository } = buildDeps();
-      const universities: UniversityListItem[] = [{ id: "uni-1", code: "uni", name: "Universidad Nacional de Ingeniería" }];
+      const universities: UniversityListItem[] = [
+        { id: "uni-1", code: "uni", name: "Universidad Nacional de Ingeniería" },
+      ];
       repository.findAllUniversities.mockResolvedValue(universities);
 
       const result = await service.listUniversities();
@@ -102,7 +104,9 @@ describe("TaxonomyService", () => {
   describe("listTracksForUniversity", () => {
     it("delegates to TaxonomyRepository.findTracksByUniversity with the given universityId", async () => {
       const { service, repository } = buildDeps();
-      const tracks: TrackListItem[] = [{ id: "track-1", code: "basico", name: "Ciclo Básico", kind: "cycle_track" }];
+      const tracks: TrackListItem[] = [
+        { id: "track-1", code: "basico", name: "Ciclo Básico", kind: "cycle_track" },
+      ];
       repository.findTracksByUniversity.mockResolvedValue(tracks);
 
       const result = await service.listTracksForUniversity("uni-1");

@@ -17,7 +17,10 @@ export class MetricsController {
   constructor(private readonly metrics: MetricsService) {}
 
   @Get()
-  async scrape(@Headers("authorization") authorization: string | undefined, @Res() res: Response): Promise<void> {
+  async scrape(
+    @Headers("authorization") authorization: string | undefined,
+    @Res() res: Response,
+  ): Promise<void> {
     const expected = resolveMetricsToken();
 
     if (expected === undefined && metricsRequireToken()) {

@@ -13,7 +13,9 @@ import { ChangeDetectionStrategy, Component, computed, input, output } from '@an
   template: `
     @if (total() > pageSize()) {
       <div class="flex items-center justify-between gap-3 text-sm text-n600">
-        <span data-testid="pagination-summary">{{ rangeStart() }}–{{ rangeEnd() }} de {{ total() }}</span>
+        <span data-testid="pagination-summary"
+          >{{ rangeStart() }}–{{ rangeEnd() }} de {{ total() }}</span
+        >
         <div class="flex items-center gap-2">
           <button
             type="button"
@@ -24,7 +26,9 @@ import { ChangeDetectionStrategy, Component, computed, input, output } from '@an
           >
             Anterior
           </button>
-          <span data-testid="pagination-current" class="font-medium text-n800">{{ page() }} / {{ totalPages() }}</span>
+          <span data-testid="pagination-current" class="font-medium text-n800"
+            >{{ page() }} / {{ totalPages() }}</span
+          >
           <button
             type="button"
             data-testid="pagination-next"
@@ -46,7 +50,13 @@ export class PaginationComponent {
 
   readonly pageChange = output<number>();
 
-  protected readonly totalPages = computed(() => Math.max(1, Math.ceil(this.total() / this.pageSize())));
-  protected readonly rangeStart = computed(() => (this.total() === 0 ? 0 : (this.page() - 1) * this.pageSize() + 1));
-  protected readonly rangeEnd = computed(() => Math.min(this.page() * this.pageSize(), this.total()));
+  protected readonly totalPages = computed(() =>
+    Math.max(1, Math.ceil(this.total() / this.pageSize())),
+  );
+  protected readonly rangeStart = computed(() =>
+    this.total() === 0 ? 0 : (this.page() - 1) * this.pageSize() + 1,
+  );
+  protected readonly rangeEnd = computed(() =>
+    Math.min(this.page() * this.pageSize(), this.total()),
+  );
 }

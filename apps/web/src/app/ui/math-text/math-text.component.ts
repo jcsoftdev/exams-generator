@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, Component, ElementRef, effect, inject, input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  effect,
+  inject,
+  input,
+} from '@angular/core';
 import { parseTypst } from '../../shared/typst/typst-to-latex';
 
 /**

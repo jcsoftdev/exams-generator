@@ -1,7 +1,11 @@
 import { Role } from "@exams-generator/shared";
 import { Job } from "bullmq";
 import { Logger } from "nestjs-pino";
-import { ExamPdfGenerationError, ExamVersionGenerationService, GeneratedVersionResult } from "./exam-generation.service";
+import {
+  ExamPdfGenerationError,
+  ExamVersionGenerationService,
+  GeneratedVersionResult,
+} from "./exam-generation.service";
 import { ExamVersionJobEventsService } from "./exam-version-job-events.service";
 import { ExamVersionJobsProcessor } from "./exam-version-jobs.processor";
 import { ExamVersionJobsRepository } from "./exam-version-jobs.repository";
@@ -51,7 +55,9 @@ function job(jobId: string): Job<{ jobId: string }> {
 }
 
 function failedJob(jobId: string, attemptsMade: number, attempts: number): Job<{ jobId: string }> {
-  return { data: { jobId }, attemptsMade, opts: { attempts }, failedReason: "boom" } as Job<{ jobId: string }>;
+  return { data: { jobId }, attemptsMade, opts: { attempts }, failedReason: "boom" } as Job<{
+    jobId: string;
+  }>;
 }
 
 describe("ExamVersionJobsProcessor.process", () => {

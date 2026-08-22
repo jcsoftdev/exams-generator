@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, computed, inject, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  DestroyRef,
+  computed,
+  inject,
+  signal,
+} from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
@@ -12,7 +19,13 @@ import { PaginationComponent } from '../../../ui/pagination/pagination.component
 import { TagVariant } from '../../../ui/ui.types';
 import { ExamsService } from '../exams.service';
 import { examStatusLabel } from '../exam-status-label';
-import { ExamListItem, ExamStatus, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../exams.models';
+import {
+  ExamListItem,
+  ExamStatus,
+  GRADE_LEVELS,
+  GRADE_LEVEL_LABELS,
+  GradeLevel,
+} from '../exams.models';
 
 /** Debounce delay (ms) for the título search box (spec §2.1) before re-fetching the list. */
 const SEARCH_DEBOUNCE_MS = 300;
@@ -71,10 +84,12 @@ export class ExamListComponent {
   protected readonly actionError = signal<string | null>(null);
 
   protected readonly statusOptions = STATUS_OPTIONS;
-  protected readonly gradeLevelOptions: readonly SelectOption<string>[] = GRADE_LEVELS.map((gradeLevel) => ({
-    value: gradeLevel,
-    label: GRADE_LEVEL_LABELS[gradeLevel],
-  }));
+  protected readonly gradeLevelOptions: readonly SelectOption<string>[] = GRADE_LEVELS.map(
+    (gradeLevel) => ({
+      value: gradeLevel,
+      label: GRADE_LEVEL_LABELS[gradeLevel],
+    }),
+  );
 
   /**
    * Filters are seeded FROM the URL and written back to it (audit 2026-08-15:
@@ -83,7 +98,9 @@ export class ExamListComponent {
    * should leave the screen, not undo six keystrokes.
    */
   protected readonly status = signal<ExamStatus | null>(this.readStatusParam());
-  protected readonly gradeLevel = signal<string | null>(this.route.snapshot.queryParamMap.get('gradeLevel'));
+  protected readonly gradeLevel = signal<string | null>(
+    this.route.snapshot.queryParamMap.get('gradeLevel'),
+  );
   protected readonly search = signal(this.route.snapshot.queryParamMap.get('search') ?? '');
 
   /**

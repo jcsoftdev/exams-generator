@@ -20,6 +20,7 @@
 ### Task 1: Fix typst version drift (prerequisite)
 
 **Files:**
+
 - Modify: `infra/Dockerfile.api:6`
 - Modify: `apps/api/src/modules/exams/adapters/pdf/typst-cli.adapter.golden.spec.ts:16`
 
@@ -28,10 +29,13 @@
 - [ ] **Step 1: Bump the Dockerfile pin**
 
 In `infra/Dockerfile.api`, change line 6 from:
+
 ```dockerfile
 ARG TYPST_VERSION=0.12.0
 ```
+
 to:
+
 ```dockerfile
 ARG TYPST_VERSION=0.15.1
 ```
@@ -39,12 +43,14 @@ ARG TYPST_VERSION=0.15.1
 - [ ] **Step 2: Fix the stale golden-spec comment**
 
 In `apps/api/src/modules/exams/adapters/pdf/typst-cli.adapter.golden.spec.ts`, the doc comment (around line 16) currently reads:
+
 ```typescript
  * Guarded with `describe.skip` (not a fake pass) when the `typst` binary
  * isn't installed — see infra/Dockerfile.api for the pinned version this
  * project expects (0.12.0 at time of writing).
  */
 ```
+
 Change `(0.12.0 at time of writing)` to `(0.15.1 at time of writing)`.
 
 - [ ] **Step 3: Verify no other stale references**
@@ -64,10 +70,12 @@ GIT_COMMIT_SKILL=1 git commit -m "fix(infra): bump pinned typst version to 0.15.
 ### Task 2: Add `MITEX_RULES` prompt block and wire into all 3 system prompts
 
 **Files:**
+
 - Modify: `apps/api/src/modules/ai/adapters/openrouter/openrouter-request-builder.ts`
 - Test: `apps/api/src/modules/ai/adapters/openrouter/openrouter-request-builder.spec.ts`
 
 **Interfaces:**
+
 - Consumes: nothing new — `MITEX_RULES` is a plain `string` constant, same shape as `CETZ_RULES` (line 126) and `ALTERNATIVES_RULES` (line 155).
 - Produces: `MITEX_RULES: string`, appended into `SYSTEM_PROMPT` (line 175), `REVISE_SYSTEM_PROMPT` (line 227), `EXTRACT_SYSTEM_PROMPT` (line 289) — same join pattern already used for `CETZ_RULES`.
 
@@ -76,36 +84,36 @@ GIT_COMMIT_SKILL=1 git commit -m "fix(infra): bump pinned typst version to 0.15.
 Add to `openrouter-request-builder.spec.ts`, right after the existing `"pins the CeTZ package version..."` test in the `buildOpenRouterRequestBody` describe block (after line 125):
 
 ```typescript
-  it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
-    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
+  const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
 
-    const promptText = promptTextOf(body);
-    expect(promptText).toContain("@preview/mitex:0.2.7");
-    expect(promptText).toContain("#mi(");
-    expect(promptText).toContain("#mitex(");
-  });
+  const promptText = promptTextOf(body);
+  expect(promptText).toContain("@preview/mitex:0.2.7");
+  expect(promptText).toContain("#mi(");
+  expect(promptText).toContain("#mitex(");
+});
 ```
 
 Add to the `buildOpenRouterReviseRequestBody` describe block, right after its `"pins the CeTZ package version..."` test (after line 210):
 
 ```typescript
-  it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
-    const body = buildOpenRouterReviseRequestBody("some/free-model:free", REVISE_INPUT);
+it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
+  const body = buildOpenRouterReviseRequestBody("some/free-model:free", REVISE_INPUT);
 
-    const promptText = promptTextOf(body);
-    expect(promptText).toContain("@preview/mitex:0.2.7");
-  });
+  const promptText = promptTextOf(body);
+  expect(promptText).toContain("@preview/mitex:0.2.7");
+});
 ```
 
 Add to the `buildOpenRouterExtractRequestBody` describe block, right after its `"pins the CeTZ package version..."` test (after line 269):
 
 ```typescript
-  it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
-    const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
+it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
+  const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
 
-    const systemMessage = body.messages.find((m) => m.role === "system");
-    expect(systemMessage!.content as string).toContain("@preview/mitex:0.2.7");
-  });
+  const systemMessage = body.messages.find((m) => m.role === "system");
+  expect(systemMessage!.content as string).toContain("@preview/mitex:0.2.7");
+});
 ```
 
 - [ ] **Step 2: Run tests to verify they fail**
@@ -177,10 +185,13 @@ const EXTRACT_SYSTEM_PROMPT = [
 ```
 
 Also adjust the last sentence of `TYPST_MATH_RULES` (line 99) — currently:
+
 ```typescript
   "PROHIBIDO cualquier comando con barra invertida (\\frac, \\sqrt, \\times, \\left, \\right...) — Typst no los compila.",
 ```
+
 Change to:
+
 ```typescript
   "PROHIBIDO cualquier comando con barra invertida (\\frac, \\sqrt, \\times, \\left, \\right...) SUELTO dentro de $...$ — Typst no lo compila así. Si necesitas esos comandos, usa LaTeX vía mitex (ver regla siguiente).",
 ```
@@ -204,10 +215,12 @@ GIT_COMMIT_SKILL=1 git commit -m "feat(ai): let the question generator write LaT
 **CORRECTION (post-implementation):** this task's original premise was wrong. `findLatexCommandInMath` did NOT already exist — there was no runtime enforcement of `TYPST_MATH_RULES` at all, only the prompt instruction plus the compile-retry safety net. Task 3 ended up needing a real implementation, not just a regression test. Committed as `379a069` (`feat(ai): detect raw LaTeX in math mode while allowing mitex-wrapped expressions`), separate from the test commit `f4d87a3` below. The function's actual behavior (scoped to `$...$` only) still matches this task's intent — the deviation is "who wrote it and when," not "what it does."
 
 **Files:**
+
 - Test: `apps/api/src/modules/ai/adapters/openrouter/openrouter-response-validator.spec.ts`
 - Modify: `apps/api/src/modules/ai/adapters/openrouter/openrouter-response-validator.ts` (NOT originally planned — see correction above)
 
 **Interfaces:**
+
 - Consumes: `validateGeneratedQuestionShape` (existing, `openrouter-response-validator.ts`).
 - Produces: `findLatexCommandInMath(bodyTypst: string): string | undefined` (new, private to the module) — scans only `$...$` segments for a bare `\command`, so `#mi("...")`/`#mitex(...)` content (outside `$...$`) is correctly ignored.
 
@@ -216,15 +229,14 @@ GIT_COMMIT_SKILL=1 git commit -m "feat(ai): let the question generator write LaT
 Add to `openrouter-response-validator.spec.ts`, after the `"accepts a lone backslash outside math mode..."` test (end of file, before the closing `});`):
 
 ```typescript
-  it("accepts LaTeX wrapped in #mi(), even though it contains backslash commands", () => {
-    const result = validateGeneratedQuestionShape({
-      ...VALID,
-      bodyTypst:
-        'El área es #mi("\\frac{1}{2} \\cdot b \\cdot h") — con $b$ y $h$ en cm.',
-    });
-
-    expect(result.bodyTypst).toContain('#mi("\\frac{1}{2}');
+it("accepts LaTeX wrapped in #mi(), even though it contains backslash commands", () => {
+  const result = validateGeneratedQuestionShape({
+    ...VALID,
+    bodyTypst: 'El área es #mi("\\frac{1}{2} \\cdot b \\cdot h") — con $b$ y $h$ en cm.',
   });
+
+  expect(result.bodyTypst).toContain('#mi("\\frac{1}{2}');
+});
 ```
 
 - [ ] **Step 2: Run test to verify it passes (no implementation change expected)**
@@ -244,9 +256,11 @@ GIT_COMMIT_SKILL=1 git commit -m "test(ai): prove the LaTeX-in-math validator ig
 ### Task 4: Golden compile test — mitex actually compiles against the real binary
 
 **Files:**
+
 - Modify: `apps/api/src/modules/exams/adapters/pdf/typst-cli.adapter.golden.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `TypstCliAdapter.compileExam` (existing, `typst-cli.adapter.ts`), `ExamPdfDocumentInput`/`ExamPdfQuestion` (existing types, `pdf-compiler.port.ts`) — a `structured` question with `bodyTypst` containing a `#mi()` call and its own inline `#import`, same shape a real AI-generated question would have per Task 2's prompt rule.
 - Produces: nothing new — this is the one test in the whole plan that proves the feature actually works end-to-end against the real `typst` binary + real `@preview/mitex:0.2.7` package fetch.
 
@@ -255,26 +269,26 @@ GIT_COMMIT_SKILL=1 git commit -m "test(ai): prove the LaTeX-in-math validator ig
 Add to `typst-cli.adapter.golden.spec.ts`, after the `"compiles a mixed image + structured exam..."` test (find its closing `});` and add right after):
 
 ```typescript
-  it("compiles a structured question using LaTeX math via mitex into a valid PDF", async () => {
-    const adapter = new TypstCliAdapter();
+it("compiles a structured question using LaTeX math via mitex into a valid PDF", async () => {
+  const adapter = new TypstCliAdapter();
 
-    const pdf = await adapter.compileExam({
-      title: "Simulacro San Marcos",
-      versionLabel: "Version A",
-      questions: [
-        {
-          id: "q-mitex",
-          type: "structured",
-          bodyTypst:
-            '#import "@preview/mitex:0.2.7": mi Si $angle.b = 70$ grados, halla #mi("\\frac{1}{2} \\cdot 70^\\circ").',
-          alternatives: ["35", "70", "140", "17.5", "N.A."],
-          figureCode: null,
-        },
-      ],
-    });
-
-    expect(pdf.subarray(0, 5).toString("ascii")).toBe("%PDF-");
+  const pdf = await adapter.compileExam({
+    title: "Simulacro San Marcos",
+    versionLabel: "Version A",
+    questions: [
+      {
+        id: "q-mitex",
+        type: "structured",
+        bodyTypst:
+          '#import "@preview/mitex:0.2.7": mi Si $angle.b = 70$ grados, halla #mi("\\frac{1}{2} \\cdot 70^\\circ").',
+        alternatives: ["35", "70", "140", "17.5", "N.A."],
+        figureCode: null,
+      },
+    ],
   });
+
+  expect(pdf.subarray(0, 5).toString("ascii")).toBe("%PDF-");
+});
 ```
 
 - [ ] **Step 2: Run test to verify it fails first (sanity check the harness), then implement**

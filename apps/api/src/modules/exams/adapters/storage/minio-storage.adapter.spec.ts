@@ -33,8 +33,5 @@ function isMinioReachableSync(): boolean {
 const describeIfReachable = isMinioReachableSync() ? describe : describe.skip;
 
 describeIfReachable("MinioStorageAdapter (real MinIO)", () => {
-  runStoragePortContract(
-    "MinioStorageAdapter",
-    () => new MinioStorageAdapter(MINIO_CONFIG),
-  );
+  runStoragePortContract("MinioStorageAdapter", () => new MinioStorageAdapter(MINIO_CONFIG));
 });

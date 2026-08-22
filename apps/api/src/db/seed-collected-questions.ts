@@ -176,7 +176,9 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
         if (!courseIds || courseIds.length === 0) {
           throw new Error(`course not found: ${entry.courseName}`);
         }
-        const topicId = courseIds.map((courseId) => topicIdByKey.get(`${courseId}|${entry.topicName}|${entry.gradeLevel}`)).find(Boolean);
+        const topicId = courseIds
+          .map((courseId) => topicIdByKey.get(`${courseId}|${entry.topicName}|${entry.gradeLevel}`))
+          .find(Boolean);
         if (!topicId) {
           throw new Error(`topic not found: ${entry.topicName} (${entry.gradeLevel}) in ${entry.courseName}`);
         }
@@ -248,7 +250,9 @@ export async function seedCollectedQuestions(createdBy: string): Promise<void> {
         }
       } catch (error) {
         failed++;
-        console.error(`[seed-collected-questions] FAIL ${label}: ${error instanceof Error ? error.message : String(error)}`);
+        console.error(
+          `[seed-collected-questions] FAIL ${label}: ${error instanceof Error ? error.message : String(error)}`,
+        );
       }
     }
   }

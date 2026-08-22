@@ -40,7 +40,9 @@
 
   @if (job(); as j) {
     <!-- Screen-reader-only milestone announcements — see updateAnnouncement() (audit P2 — a11y). -->
-    <div data-testid="job-live-region" class="sr-only" aria-live="polite" role="status">{{ progressAnnouncement() }}</div>
+    <div data-testid="job-live-region" class="sr-only" aria-live="polite" role="status">
+      {{ progressAnnouncement() }}
+    </div>
 
     <div class="flex items-center gap-3 rounded-card border border-n200 bg-surface p-4">
       <div class="text-2xl font-extrabold text-n900">
@@ -60,14 +62,24 @@
       }
       @if (!isTerminal()) {
         <div data-testid="cancel-job">
-          <ui-button variant="ghost" [loading]="cancelling()" [disabled]="cancelling()" (clicked)="cancel()">
+          <ui-button
+            variant="ghost"
+            [loading]="cancelling()"
+            [disabled]="cancelling()"
+            (clicked)="cancel()"
+          >
             Cancelar
           </ui-button>
         </div>
       }
       @if (canRetry()) {
         <div data-testid="retry-job">
-          <ui-button variant="ghost" [loading]="retrying()" [disabled]="retrying()" (clicked)="retry()">
+          <ui-button
+            variant="ghost"
+            [loading]="retrying()"
+            [disabled]="retrying()"
+            (clicked)="retry()"
+          >
             Reintentar
           </ui-button>
         </div>
@@ -75,7 +87,10 @@
     </div>
 
     @if (previousAttempts().length > 0) {
-      <div data-testid="retry-history" class="flex flex-col gap-1 rounded-card border border-n200 bg-surface p-3">
+      <div
+        data-testid="retry-history"
+        class="flex flex-col gap-1 rounded-card border border-n200 bg-surface p-3"
+      >
         <span class="text-xs font-bold text-n700">Historial de reintentos</span>
         <!--
           Deliberately a raw <button>, not `ui-button`: these are clickable
@@ -103,7 +118,9 @@
     @for (q of batchQuestions(); track q.id; let i = $index) {
       <div data-testid="job-question" class="rounded-card border border-n200 bg-surface p-3">
         <div class="mb-1.5 flex items-center gap-2">
-          <span class="flex h-5 w-5 items-center justify-center rounded-field bg-ai-bg text-xs font-extrabold text-ai-text">
+          <span
+            class="flex h-5 w-5 items-center justify-center rounded-field bg-ai-bg text-xs font-extrabold text-ai-text"
+          >
             {{ i + 1 }}
           </span>
           <ui-tag variant="ai">Borrador IA</ui-tag>
@@ -111,7 +128,10 @@
         </div>
 
         @if (previewUrls().has(q.id)) {
-          <div data-testid="paper-preview" class="rounded-card border border-paper-border bg-paper-bg p-2 shadow-inner">
+          <div
+            data-testid="paper-preview"
+            class="rounded-card border border-paper-border bg-paper-bg p-2 shadow-inner"
+          >
             <iframe
               data-testid="preview-frame"
               [src]="previewUrls().get(q.id)!"
@@ -121,15 +141,23 @@
           </div>
         } @else if (previewFailedIds().has(q.id)) {
           <div data-testid="preview-fallback" class="rounded-card bg-n100 p-3 text-sm text-n700">
-            <p class="mb-2 text-xs text-warn-text">No se pudo generar la vista de impresión; mostramos el contenido.</p>
-            <p class="text-sm leading-snug text-n900"><ui-math-text [value]="q.bodyTypst ?? ''"></ui-math-text></p>
+            <p class="mb-2 text-xs text-warn-text">
+              No se pudo generar la vista de impresión; mostramos el contenido.
+            </p>
+            <p class="text-sm leading-snug text-n900">
+              <ui-math-text [value]="q.bodyTypst ?? ''"></ui-math-text>
+            </p>
             @if (q.alternatives) {
               <div class="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-n600">
                 @for (alt of q.alternatives; track $index; let altIndex = $index) {
                   @if (isCorrect(q, altIndex)) {
-                    <span class="font-bold text-easy-text">{{ letterAt(altIndex) }}) <ui-math-text [value]="alt"></ui-math-text> ✓</span>
+                    <span class="font-bold text-easy-text"
+                      >{{ letterAt(altIndex) }}) <ui-math-text [value]="alt"></ui-math-text> ✓</span
+                    >
                   } @else {
-                    <span>{{ letterAt(altIndex) }}) <ui-math-text [value]="alt"></ui-math-text></span>
+                    <span
+                      >{{ letterAt(altIndex) }}) <ui-math-text [value]="alt"></ui-math-text
+                    ></span>
                   }
                 }
               </div>
@@ -143,7 +171,9 @@
 
     @if (isTerminal() && j.createdCount > 0) {
       <div data-testid="go-review" class="flex justify-end">
-        <ui-button (clicked)="goToReview()">Revisar los {{ j.createdCount }} en la cola →</ui-button>
+        <ui-button (clicked)="goToReview()"
+          >Revisar los {{ j.createdCount }} en la cola →</ui-button
+        >
       </div>
     }
   }

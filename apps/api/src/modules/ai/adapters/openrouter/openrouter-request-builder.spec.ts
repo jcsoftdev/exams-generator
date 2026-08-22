@@ -60,9 +60,7 @@ describe("buildOpenRouterRequestBody", () => {
     expect(Object.keys(schema.properties)).toEqual(
       expect.arrayContaining(["bodyTypst", "alternatives", "correctAnswer", "figureCode"]),
     );
-    expect(schema.required).toEqual(
-      expect.arrayContaining(["bodyTypst", "alternatives", "correctAnswer"]),
-    );
+    expect(schema.required).toEqual(expect.arrayContaining(["bodyTypst", "alternatives", "correctAnswer"]));
   });
 
   it("requires the model to self-report conceptsUsed and solutionSteps in the schema", () => {
@@ -72,12 +70,8 @@ describe("buildOpenRouterRequestBody", () => {
       properties: Record<string, unknown>;
       required: string[];
     };
-    expect(Object.keys(schema.properties)).toEqual(
-      expect.arrayContaining(["conceptsUsed", "solutionSteps"]),
-    );
-    expect(schema.required).toEqual(
-      expect.arrayContaining(["conceptsUsed", "solutionSteps"]),
-    );
+    expect(Object.keys(schema.properties)).toEqual(expect.arrayContaining(["conceptsUsed", "solutionSteps"]));
+    expect(schema.required).toEqual(expect.arrayContaining(["conceptsUsed", "solutionSteps"]));
   });
 
   it("warns the model that its self-reported structure is validated against the requested difficulty", () => {
@@ -178,7 +172,7 @@ describe("buildOpenRouterRequestBody", () => {
     const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
 
     const promptText = promptTextOf(body);
-    expect(promptText).toContain('NUNCA envuelvas el valor en un objeto');
+    expect(promptText).toContain("NUNCA envuelvas el valor en un objeto");
     expect(promptText).toContain('"texto": "5/2√7", "letra": "A"');
   });
 
@@ -309,9 +303,7 @@ describe("buildOpenRouterExtractRequestBody", () => {
 
     const imagePart = parts.find((p) => p.type === "image_url");
     expect(imagePart).toBeDefined();
-    expect(imagePart!.image_url!.url).toBe(
-      `data:${MIME_TYPE};base64,${IMAGE.toString("base64")}`,
-    );
+    expect(imagePart!.image_url!.url).toBe(`data:${MIME_TYPE};base64,${IMAGE.toString("base64")}`);
 
     const textPart = parts.find((p) => p.type === "text");
     expect(textPart).toBeDefined();

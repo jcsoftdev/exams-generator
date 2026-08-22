@@ -28,6 +28,7 @@
 ## File Structure
 
 **Backend (`apps/api/src/modules`):**
+
 - `bank/bank.repository.ts` — new `countByDifficultyAndStatus(tenantId)`.
 - `bank/bank.repository.spec.ts` — new describe block (real-DB integration test, same convention as the rest of the file).
 - `exams/exams.repository.ts` — new `countByStatus(tenantId)`, `listRecent(tenantId, limit)`.
@@ -39,6 +40,7 @@
 - `app.module.ts` — register `DashboardModule`.
 
 **Frontend (`apps/web/src/app`):**
+
 - `app.config.ts` — add `provideCharts(withDefaultRegisterables())`.
 - `ui/bar-chart/bar-chart.component.ts` (+ spec) — new.
 - `ui/donut-chart/donut-chart.component.ts` (+ spec) — new.
@@ -55,10 +57,12 @@
 ### Task 1: Backend — `BankRepository.countByDifficultyAndStatus`
 
 **Files:**
+
 - Modify: `apps/api/src/modules/bank/bank.repository.ts` (append after `deleteQuestion`, class ends at line 573)
 - Modify: `apps/api/src/modules/bank/bank.repository.spec.ts` (append a new `describe` block; reuses `tenantAId`, `tenantAUserId`, `tenantBId`, `tenantBUserId`, `centralUserId`, `topicId`, `createQuestion`, `createdQuestionIds` already defined in the file)
 
 **Interfaces:**
+
 - Produces: `BankStatusDifficultyCount { difficulty: Difficulty; status: QuestionStatus; total: number }` and `BankRepository.countByDifficultyAndStatus(tenantId: string | null): Promise<BankStatusDifficultyCount[]>` — Task 3's `DashboardStatsService` consumes this exact shape.
 
 - [ ] **Step 1: Write the failing repository test**
@@ -66,94 +70,106 @@
 Append to `apps/api/src/modules/bank/bank.repository.spec.ts` (before the final closing `});` of the outer `describe("BankRepository", ...)`):
 
 ```ts
-  describe("countByDifficultyAndStatus() — dashboard aggregate", () => {
-    // Every assertion below is DELTA-based (before/after the same query),
-    // never a raw total — this file runs against a SHARED dev Postgres, so
-    // other spec files' central (tenantId=null) rows are always present and
-    // would make an absolute-count assertion flaky.
+describe("countByDifficultyAndStatus() — dashboard aggregate", () => {
+  // Every assertion below is DELTA-based (before/after the same query),
+  // never a raw total — this file runs against a SHARED dev Postgres, so
+  // other spec files' central (tenantId=null) rows are always present and
+  // would make an absolute-count assertion flaky.
 
-    it("includes a newly created own-tenant question in the caller's aggregate", async () => {
-      const before = await repository.countByDifficultyAndStatus(tenantAId);
-      const beforeTotal =
-        before.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
+  it("includes a newly created own-tenant question in the caller's aggregate", async () => {
+    const before = await repository.countByDifficultyAndStatus(tenantAId);
+    const beforeTotal =
+      before.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
 
-      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, difficulty: Difficulty.Hard });
-
-      const after = await repository.countByDifficultyAndStatus(tenantAId);
-      const afterTotal =
-        after.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
-
-      expect(afterTotal).toBe(beforeTotal + 1);
+    await createQuestion({
+      tenantId: tenantAId,
+      createdBy: tenantAUserId,
+      difficulty: Difficulty.Hard,
     });
 
-    it("includes a newly created central question in every tenant's aggregate", async () => {
-      const before = await repository.countByDifficultyAndStatus(tenantAId);
-      const beforeTotal =
-        before.find((g) => g.difficulty === Difficulty.Easy && g.status === "approved")?.total ?? 0;
+    const after = await repository.countByDifficultyAndStatus(tenantAId);
+    const afterTotal =
+      after.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
 
-      await createQuestion({ tenantId: null, createdBy: centralUserId, difficulty: Difficulty.Easy });
-
-      const after = await repository.countByDifficultyAndStatus(tenantAId);
-      const afterTotal =
-        after.find((g) => g.difficulty === Difficulty.Easy && g.status === "approved")?.total ?? 0;
-
-      expect(afterTotal).toBe(beforeTotal + 1);
-    });
-
-    it("excludes another tenant's private question from the caller's aggregate", async () => {
-      const before = await repository.countByDifficultyAndStatus(tenantAId);
-      const beforeTotal =
-        before.find((g) => g.difficulty === Difficulty.Medium && g.status === "approved")?.total ?? 0;
-
-      await createQuestion({ tenantId: tenantBId, createdBy: tenantBUserId, difficulty: Difficulty.Medium });
-
-      const after = await repository.countByDifficultyAndStatus(tenantAId);
-      const afterTotal =
-        after.find((g) => g.difficulty === Difficulty.Medium && g.status === "approved")?.total ?? 0;
-
-      expect(afterTotal).toBe(beforeTotal);
-    });
-
-    it("groups by status independently of difficulty (a draft never counts as approved)", async () => {
-      const before = await repository.countByDifficultyAndStatus(tenantAId);
-      const beforeDraft =
-        before.find((g) => g.difficulty === Difficulty.Medium && g.status === "draft")?.total ?? 0;
-
-      const draft = await repository.createStructuredQuestion({
-        tenantId: tenantAId,
-        topicId,
-        difficulty: Difficulty.Medium,
-        gradeLevel: "primaria_1",
-        bodyTypst: "$x + 1 = 2$",
-        alternatives: ["1", "2"],
-        correctAnswer: "0",
-        figureCode: undefined,
-        createdBy: tenantAUserId,
-        status: "draft",
-      });
-      createdQuestionIds.push(draft.id);
-
-      const after = await repository.countByDifficultyAndStatus(tenantAId);
-      const afterDraft =
-        after.find((g) => g.difficulty === Difficulty.Medium && g.status === "draft")?.total ?? 0;
-
-      expect(afterDraft).toBe(beforeDraft + 1);
-    });
-
-    it("scopes to central-only (tenant_id IS NULL) when tenantId is null (platform staff) — a tenant-private question never leaks in", async () => {
-      const before = await repository.countByDifficultyAndStatus(null);
-      const beforeTotal =
-        before.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
-
-      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, difficulty: Difficulty.Hard });
-
-      const after = await repository.countByDifficultyAndStatus(null);
-      const afterTotal =
-        after.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
-
-      expect(afterTotal).toBe(beforeTotal);
-    });
+    expect(afterTotal).toBe(beforeTotal + 1);
   });
+
+  it("includes a newly created central question in every tenant's aggregate", async () => {
+    const before = await repository.countByDifficultyAndStatus(tenantAId);
+    const beforeTotal =
+      before.find((g) => g.difficulty === Difficulty.Easy && g.status === "approved")?.total ?? 0;
+
+    await createQuestion({ tenantId: null, createdBy: centralUserId, difficulty: Difficulty.Easy });
+
+    const after = await repository.countByDifficultyAndStatus(tenantAId);
+    const afterTotal =
+      after.find((g) => g.difficulty === Difficulty.Easy && g.status === "approved")?.total ?? 0;
+
+    expect(afterTotal).toBe(beforeTotal + 1);
+  });
+
+  it("excludes another tenant's private question from the caller's aggregate", async () => {
+    const before = await repository.countByDifficultyAndStatus(tenantAId);
+    const beforeTotal =
+      before.find((g) => g.difficulty === Difficulty.Medium && g.status === "approved")?.total ?? 0;
+
+    await createQuestion({
+      tenantId: tenantBId,
+      createdBy: tenantBUserId,
+      difficulty: Difficulty.Medium,
+    });
+
+    const after = await repository.countByDifficultyAndStatus(tenantAId);
+    const afterTotal =
+      after.find((g) => g.difficulty === Difficulty.Medium && g.status === "approved")?.total ?? 0;
+
+    expect(afterTotal).toBe(beforeTotal);
+  });
+
+  it("groups by status independently of difficulty (a draft never counts as approved)", async () => {
+    const before = await repository.countByDifficultyAndStatus(tenantAId);
+    const beforeDraft =
+      before.find((g) => g.difficulty === Difficulty.Medium && g.status === "draft")?.total ?? 0;
+
+    const draft = await repository.createStructuredQuestion({
+      tenantId: tenantAId,
+      topicId,
+      difficulty: Difficulty.Medium,
+      gradeLevel: "primaria_1",
+      bodyTypst: "$x + 1 = 2$",
+      alternatives: ["1", "2"],
+      correctAnswer: "0",
+      figureCode: undefined,
+      createdBy: tenantAUserId,
+      status: "draft",
+    });
+    createdQuestionIds.push(draft.id);
+
+    const after = await repository.countByDifficultyAndStatus(tenantAId);
+    const afterDraft =
+      after.find((g) => g.difficulty === Difficulty.Medium && g.status === "draft")?.total ?? 0;
+
+    expect(afterDraft).toBe(beforeDraft + 1);
+  });
+
+  it("scopes to central-only (tenant_id IS NULL) when tenantId is null (platform staff) — a tenant-private question never leaks in", async () => {
+    const before = await repository.countByDifficultyAndStatus(null);
+    const beforeTotal =
+      before.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
+
+    await createQuestion({
+      tenantId: tenantAId,
+      createdBy: tenantAUserId,
+      difficulty: Difficulty.Hard,
+    });
+
+    const after = await repository.countByDifficultyAndStatus(null);
+    const afterTotal =
+      after.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
+
+    expect(afterTotal).toBe(beforeTotal);
+  });
+});
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -216,11 +232,13 @@ git commit -m "feat(api): add BankRepository.countByDifficultyAndStatus for dash
 ### Task 2: Backend — `ExamsRepository.countByStatus` + `listRecent`, export `ExamsRepository`
 
 **Files:**
+
 - Modify: `apps/api/src/modules/exams/exams.repository.ts` (append after `listExams`, around line 364)
 - Modify: `apps/api/src/modules/exams/exams.repository.spec.ts` (append a new `describe` block with its own dedicated tenant fixture — this file's other describe blocks already reuse the outer `tenantAId`/`tenantBId` across many tests, so a fresh, dedicated tenant is the only way to get exact, non-flaky counts)
 - Modify: `apps/api/src/modules/exams/exams.module.ts` (add `exports: [ExamsRepository]`)
 
 **Interfaces:**
+
 - Produces: `ExamStatusCount { status: ExamStatus; total: number }`, `RecentExamRecord { id: string; title: string; status: ExamStatus; createdAt: string }`, `ExamsRepository.countByStatus(tenantId: string): Promise<ExamStatusCount[]>`, `ExamsRepository.listRecent(tenantId: string, limit: number): Promise<RecentExamRecord[]>` — Task 3 consumes both exactly.
 - Produces: `ExamsModule` now exports `ExamsRepository` (previously module-private) — Task 3's `DashboardModule` depends on this.
 
@@ -229,108 +247,108 @@ git commit -m "feat(api): add BankRepository.countByDifficultyAndStatus for dash
 Append to `apps/api/src/modules/exams/exams.repository.spec.ts` (before the final closing `});` of the outer `describe("ExamsRepository", ...)`):
 
 ```ts
-  describe("countByStatus() / listRecent() — dashboard aggregate", () => {
-    let dashboardTenantId: string;
-    let dashboardTeacherId: string;
-    const dashboardExamIds: string[] = [];
+describe("countByStatus() / listRecent() — dashboard aggregate", () => {
+  let dashboardTenantId: string;
+  let dashboardTeacherId: string;
+  const dashboardExamIds: string[] = [];
 
-    beforeAll(async () => {
-      const suffix = randomUUID();
-      const [tenant] = await db
-        .insert(tenants)
-        .values({ name: `Dashboard Agg Tenant ${suffix}`, slug: `dashboard-agg-${suffix}` })
-        .returning({ id: tenants.id });
-      dashboardTenantId = tenant!.id;
+  beforeAll(async () => {
+    const suffix = randomUUID();
+    const [tenant] = await db
+      .insert(tenants)
+      .values({ name: `Dashboard Agg Tenant ${suffix}`, slug: `dashboard-agg-${suffix}` })
+      .returning({ id: tenants.id });
+    dashboardTenantId = tenant!.id;
 
-      const [teacher] = await db
-        .insert(users)
-        .values({
-          tenantId: dashboardTenantId,
-          email: `dashboard-agg-teacher-${suffix}@exams-generator.test`,
-          passwordHash: "test-hash",
-          role: Role.Teacher,
-        })
-        .returning({ id: users.id });
-      dashboardTeacherId = teacher!.id;
-    });
-
-    afterAll(async () => {
-      for (const examId of dashboardExamIds) {
-        await repository.deleteExam(examId, dashboardTenantId);
-      }
-      await db.delete(users).where(eq(users.id, dashboardTeacherId));
-      await db.delete(tenants).where(eq(tenants.id, dashboardTenantId));
-    });
-
-    it("groups the tenant's exams by status", async () => {
-      const draft = await repository.createExam({
+    const [teacher] = await db
+      .insert(users)
+      .values({
         tenantId: dashboardTenantId,
-        title: "Draft Exam",
-        gradeLevel: "primaria_1",
-        createdBy: dashboardTeacherId,
-        blueprint: [{ courseId, count: 1 }],
-      });
-      dashboardExamIds.push(draft.id);
-
-      const ready = await repository.createExam({
-        tenantId: dashboardTenantId,
-        title: "Ready Exam",
-        gradeLevel: "primaria_1",
-        createdBy: dashboardTeacherId,
-        blueprint: [{ courseId, count: 1 }],
-      });
-      dashboardExamIds.push(ready.id);
-      await repository.confirmExam(ready.id);
-
-      const groups = await repository.countByStatus(dashboardTenantId);
-
-      expect(groups).toEqual(
-        expect.arrayContaining([
-          { status: "draft", total: 1 },
-          { status: "ready", total: 1 },
-        ]),
-      );
-    });
-
-    it("scopes strictly to the given tenant — a new exam in tenant B never affects tenant A's (or dashboardTenant's) aggregate", async () => {
-      const before = await repository.countByStatus(dashboardTenantId);
-      const beforeReady = before.find((g) => g.status === "ready")?.total ?? 0;
-
-      const tenantBExam = await repository.createExam({
-        tenantId: tenantBId,
-        title: "Tenant B Exam (isolation check)",
-        gradeLevel: "primaria_1",
-        createdBy: tenantBUserId,
-        blueprint: [{ courseId, count: 1 }],
-      });
-      // Pushed to the FILE-LEVEL `createdExamIds` (declared near the top of
-      // this file, swept by the outer `afterAll`) — NOT `dashboardExamIds`,
-      // since this exam belongs to `tenantBId`, and this block's own
-      // `afterAll` only cleans up via `deleteExam(id, dashboardTenantId)`.
-      createdExamIds.push(tenantBExam.id);
-      await repository.confirmExam(tenantBExam.id);
-
-      const after = await repository.countByStatus(dashboardTenantId);
-      const afterReady = after.find((g) => g.status === "ready")?.total ?? 0;
-
-      expect(afterReady).toBe(beforeReady);
-    });
-
-    it("listRecent() returns the tenant's exams ordered by createdAt desc, capped at limit", async () => {
-      const recent = await repository.listRecent(dashboardTenantId, 1);
-
-      expect(recent).toHaveLength(1);
-      expect(recent[0]!.title).toBe("Ready Exam"); // created after "Draft Exam" -> newest first
-    });
-
-    it("listRecent() returns every exam (up to limit) with id/title/status/createdAt as an ISO string", async () => {
-      const recent = await repository.listRecent(dashboardTenantId, 10);
-
-      expect(recent).toHaveLength(2);
-      expect(recent.map((r) => r.title).sort()).toEqual(["Draft Exam", "Ready Exam"]);
-      expect(typeof recent[0]!.createdAt).toBe("string");
-    });
+        email: `dashboard-agg-teacher-${suffix}@exams-generator.test`,
+        passwordHash: "test-hash",
+        role: Role.Teacher,
+      })
+      .returning({ id: users.id });
+    dashboardTeacherId = teacher!.id;
   });
+
+  afterAll(async () => {
+    for (const examId of dashboardExamIds) {
+      await repository.deleteExam(examId, dashboardTenantId);
+    }
+    await db.delete(users).where(eq(users.id, dashboardTeacherId));
+    await db.delete(tenants).where(eq(tenants.id, dashboardTenantId));
+  });
+
+  it("groups the tenant's exams by status", async () => {
+    const draft = await repository.createExam({
+      tenantId: dashboardTenantId,
+      title: "Draft Exam",
+      gradeLevel: "primaria_1",
+      createdBy: dashboardTeacherId,
+      blueprint: [{ courseId, count: 1 }],
+    });
+    dashboardExamIds.push(draft.id);
+
+    const ready = await repository.createExam({
+      tenantId: dashboardTenantId,
+      title: "Ready Exam",
+      gradeLevel: "primaria_1",
+      createdBy: dashboardTeacherId,
+      blueprint: [{ courseId, count: 1 }],
+    });
+    dashboardExamIds.push(ready.id);
+    await repository.confirmExam(ready.id);
+
+    const groups = await repository.countByStatus(dashboardTenantId);
+
+    expect(groups).toEqual(
+      expect.arrayContaining([
+        { status: "draft", total: 1 },
+        { status: "ready", total: 1 },
+      ]),
+    );
+  });
+
+  it("scopes strictly to the given tenant — a new exam in tenant B never affects tenant A's (or dashboardTenant's) aggregate", async () => {
+    const before = await repository.countByStatus(dashboardTenantId);
+    const beforeReady = before.find((g) => g.status === "ready")?.total ?? 0;
+
+    const tenantBExam = await repository.createExam({
+      tenantId: tenantBId,
+      title: "Tenant B Exam (isolation check)",
+      gradeLevel: "primaria_1",
+      createdBy: tenantBUserId,
+      blueprint: [{ courseId, count: 1 }],
+    });
+    // Pushed to the FILE-LEVEL `createdExamIds` (declared near the top of
+    // this file, swept by the outer `afterAll`) — NOT `dashboardExamIds`,
+    // since this exam belongs to `tenantBId`, and this block's own
+    // `afterAll` only cleans up via `deleteExam(id, dashboardTenantId)`.
+    createdExamIds.push(tenantBExam.id);
+    await repository.confirmExam(tenantBExam.id);
+
+    const after = await repository.countByStatus(dashboardTenantId);
+    const afterReady = after.find((g) => g.status === "ready")?.total ?? 0;
+
+    expect(afterReady).toBe(beforeReady);
+  });
+
+  it("listRecent() returns the tenant's exams ordered by createdAt desc, capped at limit", async () => {
+    const recent = await repository.listRecent(dashboardTenantId, 1);
+
+    expect(recent).toHaveLength(1);
+    expect(recent[0]!.title).toBe("Ready Exam"); // created after "Draft Exam" -> newest first
+  });
+
+  it("listRecent() returns every exam (up to limit) with id/title/status/createdAt as an ISO string", async () => {
+    const recent = await repository.listRecent(dashboardTenantId, 10);
+
+    expect(recent).toHaveLength(2);
+    expect(recent.map((r) => r.title).sort()).toEqual(["Draft Exam", "Ready Exam"]);
+    expect(typeof recent[0]!.createdAt).toBe("string");
+  });
+});
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -419,6 +437,7 @@ git commit -m "feat(api): add ExamsRepository.countByStatus/listRecent and expor
 ### Task 3: Backend — `dashboard` module (controller + service)
 
 **Files:**
+
 - Create: `apps/api/src/modules/dashboard/dashboard-stats.service.ts`
 - Create: `apps/api/src/modules/dashboard/dashboard.controller.ts`
 - Create: `apps/api/src/modules/dashboard/dashboard.module.ts`
@@ -426,6 +445,7 @@ git commit -m "feat(api): add ExamsRepository.countByStatus/listRecent and expor
 - Modify: `apps/api/src/app.module.ts` (register `DashboardModule`)
 
 **Interfaces:**
+
 - Consumes: `BankRepository.countByDifficultyAndStatus` (Task 1), `ExamsRepository.countByStatus`/`listRecent` (Task 2), `AuthTokenPayload` from `apps/api/src/modules/auth/token.service.ts`.
 - Produces: `DashboardStats` interface (`bank: { total, byDifficulty: Record<Difficulty, number>, byStatus: Record<QuestionStatus, number> }`, `exams: { total, byStatus: Record<ExamStatus, number>, recent: Array<{id,title,status,createdAt}> }`, `aiDrafts: { pending }`) and `GET /dashboard/stats` — Task 4 (e2e) and the frontend `dashboard.models.ts` (Task 7) mirror this exact shape.
 
@@ -440,7 +460,11 @@ import { BankRepository } from "../bank/bank.repository";
 import { ExamsRepository } from "../exams/exams.repository";
 import { DashboardStatsService } from "./dashboard-stats.service";
 
-const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1", role: Role.Teacher };
+const TEACHER_USER: AuthTokenPayload = {
+  sub: "teacher-1",
+  tenantId: "tenant-1",
+  role: Role.Teacher,
+};
 const STAFF_USER: AuthTokenPayload = { sub: "staff-1", tenantId: null, role: Role.ContentEditor };
 
 function buildDeps() {
@@ -499,7 +523,12 @@ describe("DashboardStatsService.getStats", () => {
       { status: "ready", total: 2 },
     ]);
     examsRepository.listRecent.mockResolvedValue([
-      { id: "exam-1", title: "Examen de Álgebra", status: "ready", createdAt: "2026-07-01T00:00:00.000Z" },
+      {
+        id: "exam-1",
+        title: "Examen de Álgebra",
+        status: "ready",
+        createdAt: "2026-07-01T00:00:00.000Z",
+      },
     ]);
 
     const result = await service.getStats(TEACHER_USER);
@@ -507,7 +536,12 @@ describe("DashboardStatsService.getStats", () => {
     expect(result.exams.total).toBe(3);
     expect(result.exams.byStatus).toEqual({ draft: 1, ready: 2 });
     expect(result.exams.recent).toEqual([
-      { id: "exam-1", title: "Examen de Álgebra", status: "ready", createdAt: "2026-07-01T00:00:00.000Z" },
+      {
+        id: "exam-1",
+        title: "Examen de Álgebra",
+        status: "ready",
+        createdAt: "2026-07-01T00:00:00.000Z",
+      },
     ]);
     expect(examsRepository.listRecent).toHaveBeenCalledWith("tenant-1", 5);
   });
@@ -536,7 +570,12 @@ Create `apps/api/src/modules/dashboard/dashboard-stats.service.ts`:
 ```ts
 import { Injectable } from "@nestjs/common";
 import { Difficulty } from "@exams-generator/shared";
-import { EXAM_STATUSES, ExamStatus, QUESTION_STATUSES, QuestionStatus } from "../../db/schema/enums";
+import {
+  EXAM_STATUSES,
+  ExamStatus,
+  QUESTION_STATUSES,
+  QuestionStatus,
+} from "../../db/schema/enums";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
 import { ExamsRepository } from "../exams/exams.repository";
@@ -552,7 +591,12 @@ export interface DashboardStats {
   readonly exams: {
     readonly total: number;
     readonly byStatus: Record<ExamStatus, number>;
-    readonly recent: ReadonlyArray<{ id: string; title: string; status: ExamStatus; createdAt: string }>;
+    readonly recent: ReadonlyArray<{
+      id: string;
+      title: string;
+      status: ExamStatus;
+      createdAt: string;
+    }>;
   };
   readonly aiDrafts: { readonly pending: number };
 }
@@ -719,9 +763,11 @@ git commit -m "feat(api): add dashboard module with GET /dashboard/stats"
 ### Task 4: Backend — e2e test for `GET /dashboard/stats`
 
 **Files:**
+
 - Create: `apps/api/src/modules/dashboard/dashboard.e2e.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `DashboardModule` (Task 3), `BankRepository`/`ExamsRepository` (Tasks 1-2, injected via `Test.createTestingModule`), `TokenService` (existing).
 
 - [ ] **Step 1: Write the failing e2e test**
@@ -943,6 +989,7 @@ git commit -m "test(api): add e2e coverage for GET /dashboard/stats"
 ### Task 5: Frontend — install `chart.js`/`ng2-charts`, canvas-mock test infra, `ui/bar-chart`
 
 **Files:**
+
 - Modify: `apps/web/package.json` (add `chart.js`, `ng2-charts`, `vitest-canvas-mock`)
 - Modify: `apps/web/src/app/app.config.ts` (register `provideCharts(withDefaultRegisterables())`)
 - Create: `apps/web/src/test-setup.ts`
@@ -951,6 +998,7 @@ git commit -m "test(api): add e2e coverage for GET /dashboard/stats"
 - Create: `apps/web/src/app/ui/bar-chart/bar-chart.component.spec.ts`
 
 **Interfaces:**
+
 - Produces: `ChartDatum { label: string; value: number }`, `BarChartComponent` with `data = input.required<readonly ChartDatum[]>()`, selector `ui-bar-chart` — Task 8's `DashboardComponent` consumes this.
 
 - [ ] **Step 0 (prerequisite, not TDD-driven): install dependencies and wire test infra**
@@ -966,7 +1014,7 @@ pnpm add -D vitest-canvas-mock@^1.1.4
 Create `apps/web/src/test-setup.ts`:
 
 ```ts
-import 'vitest-canvas-mock';
+import "vitest-canvas-mock";
 ```
 
 Modify `apps/web/angular.json`'s `test` architect target to wire it in:
@@ -987,11 +1035,11 @@ This step exists so Step 2's failure is attributable ONLY to the missing `BarCha
 Create `apps/web/src/app/ui/bar-chart/bar-chart.component.spec.ts`:
 
 ```ts
-import { Component } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
-import { describe, it, expect } from 'vitest';
-import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
-import { BarChartComponent, ChartDatum } from './bar-chart.component';
+import { Component } from "@angular/core";
+import { TestBed } from "@angular/core/testing";
+import { describe, it, expect } from "vitest";
+import { provideCharts, withDefaultRegisterables } from "ng2-charts";
+import { BarChartComponent, ChartDatum } from "./bar-chart.component";
 
 @Component({
   standalone: true,
@@ -1000,9 +1048,9 @@ import { BarChartComponent, ChartDatum } from './bar-chart.component';
 })
 class HostComponent {
   data: ChartDatum[] = [
-    { label: 'Fácil', value: 5 },
-    { label: 'Media', value: 3 },
-    { label: 'Difícil', value: 2 },
+    { label: "Fácil", value: 5 },
+    { label: "Media", value: 3 },
+    { label: "Difícil", value: 2 },
   ];
 }
 
@@ -1016,17 +1064,17 @@ function setup() {
   return { fixture, compiled: fixture.nativeElement as HTMLElement };
 }
 
-describe('BarChartComponent', () => {
-  it('renders a canvas without throwing when given data', () => {
+describe("BarChartComponent", () => {
+  it("renders a canvas without throwing when given data", () => {
     expect(() => setup()).not.toThrow();
   });
 
-  it('renders exactly one canvas element', () => {
+  it("renders exactly one canvas element", () => {
     const { compiled } = setup();
     expect(compiled.querySelectorAll('[data-testid="bar-chart"]').length).toBe(1);
   });
 
-  it('builds one dataset value per input entry', () => {
+  it("builds one dataset value per input entry", () => {
     const { fixture } = setup();
     const barChartDebugEl = fixture.debugElement.children[0];
     const instance = barChartDebugEl.componentInstance as unknown as {
@@ -1048,18 +1096,41 @@ Expected: FAIL — `Cannot find module './bar-chart.component'`.
 In `apps/web/src/app/app.config.ts`, register chart providers:
 
 ```ts
-import { ApplicationConfig, importProvidersFrom, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
-import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
+import {
+  ApplicationConfig,
+  importProvidersFrom,
+  provideBrowserGlobalErrorListeners,
+} from "@angular/core";
+import { provideRouter } from "@angular/router";
+import { provideHttpClient, withInterceptors } from "@angular/common/http";
+import { provideCharts, withDefaultRegisterables } from "ng2-charts";
 import {
   LucideAngularModule,
-  Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School,
-  LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus,
-} from 'lucide-angular';
-import { routes } from './app.routes';
-import { authInterceptor } from './core/auth/auth.interceptor';
-import { authErrorInterceptor } from './core/auth/auth-error.interceptor';
+  Menu,
+  X,
+  Sparkles,
+  Lock,
+  Download,
+  Ellipsis,
+  Check,
+  TriangleAlert,
+  Search,
+  School,
+  LogOut,
+  User,
+  Users,
+  Trash2,
+  Pencil,
+  Archive,
+  ChevronLeft,
+  ChevronRight,
+  ChevronDown,
+  Plus,
+  Minus,
+} from "lucide-angular";
+import { routes } from "./app.routes";
+import { authInterceptor } from "./core/auth/auth.interceptor";
+import { authErrorInterceptor } from "./core/auth/auth-error.interceptor";
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -1069,8 +1140,27 @@ export const appConfig: ApplicationConfig = {
     provideCharts(withDefaultRegisterables()),
     importProvidersFrom(
       LucideAngularModule.pick({
-        Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School,
-        LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus,
+        Menu,
+        X,
+        Sparkles,
+        Lock,
+        Download,
+        Ellipsis,
+        Check,
+        TriangleAlert,
+        Search,
+        School,
+        LogOut,
+        User,
+        Users,
+        Trash2,
+        Pencil,
+        Archive,
+        ChevronLeft,
+        ChevronRight,
+        ChevronDown,
+        Plus,
+        Minus,
       }),
     ),
   ],
@@ -1080,9 +1170,9 @@ export const appConfig: ApplicationConfig = {
 Create `apps/web/src/app/ui/bar-chart/bar-chart.component.ts`:
 
 ```ts
-import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import { BaseChartDirective } from 'ng2-charts';
-import { ChartConfiguration, ChartData } from 'chart.js';
+import { ChangeDetectionStrategy, Component, computed, input } from "@angular/core";
+import { BaseChartDirective } from "ng2-charts";
+import { ChartConfiguration, ChartData } from "chart.js";
 
 export interface ChartDatum {
   readonly label: string;
@@ -1096,7 +1186,7 @@ export interface ChartDatum {
  * introduces a new color (DECISION: no new `@theme` tokens, design doc §5).
  */
 function themeColor(cssVar: string, fallbackHex: string): string {
-  if (typeof document === 'undefined') {
+  if (typeof document === "undefined") {
     return fallbackHex;
   }
   const value = getComputedStyle(document.documentElement).getPropertyValue(cssVar).trim();
@@ -1104,9 +1194,9 @@ function themeColor(cssVar: string, fallbackHex: string): string {
 }
 
 const PALETTE = [
-  themeColor('--color-easy-bg', '#dcfce7'),
-  themeColor('--color-medium-bg', '#fef3c7'),
-  themeColor('--color-hard-bg', '#fee2e2'),
+  themeColor("--color-easy-bg", "#dcfce7"),
+  themeColor("--color-medium-bg", "#fef3c7"),
+  themeColor("--color-hard-bg", "#fee2e2"),
 ];
 
 /**
@@ -1116,18 +1206,24 @@ const PALETTE = [
  * registered (app-wide in `app.config.ts`; per-spec in tests).
  */
 @Component({
-  selector: 'ui-bar-chart',
+  selector: "ui-bar-chart",
   standalone: true,
   imports: [BaseChartDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <canvas data-testid="bar-chart" baseChart [data]="chartData()" [options]="options" [type]="'bar'"></canvas>
+    <canvas
+      data-testid="bar-chart"
+      baseChart
+      [data]="chartData()"
+      [options]="options"
+      [type]="'bar'"
+    ></canvas>
   `,
 })
 export class BarChartComponent {
   readonly data = input.required<readonly ChartDatum[]>();
 
-  protected readonly chartData = computed<ChartData<'bar'>>(() => ({
+  protected readonly chartData = computed<ChartData<"bar">>(() => ({
     labels: this.data().map((d) => d.label),
     datasets: [
       {
@@ -1137,7 +1233,7 @@ export class BarChartComponent {
     ],
   }));
 
-  protected readonly options: ChartConfiguration<'bar'>['options'] = {
+  protected readonly options: ChartConfiguration<"bar">["options"] = {
     responsive: true,
     plugins: { legend: { display: false } },
   };
@@ -1161,10 +1257,12 @@ git commit -m "feat(web): install chart.js/ng2-charts and add ui-bar-chart wrapp
 ### Task 6: Frontend — `ui/donut-chart`
 
 **Files:**
+
 - Create: `apps/web/src/app/ui/donut-chart/donut-chart.component.ts`
 - Create: `apps/web/src/app/ui/donut-chart/donut-chart.component.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `ChartDatum` (Task 5).
 - Produces: `DonutChartComponent` with `data = input.required<readonly ChartDatum[]>()`, selector `ui-donut-chart` — Task 8 consumes this.
 
@@ -1173,12 +1271,12 @@ git commit -m "feat(web): install chart.js/ng2-charts and add ui-bar-chart wrapp
 Create `apps/web/src/app/ui/donut-chart/donut-chart.component.spec.ts`:
 
 ```ts
-import { Component } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
-import { describe, it, expect } from 'vitest';
-import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
-import { DonutChartComponent } from './donut-chart.component';
-import { ChartDatum } from '../bar-chart/bar-chart.component';
+import { Component } from "@angular/core";
+import { TestBed } from "@angular/core/testing";
+import { describe, it, expect } from "vitest";
+import { provideCharts, withDefaultRegisterables } from "ng2-charts";
+import { DonutChartComponent } from "./donut-chart.component";
+import { ChartDatum } from "../bar-chart/bar-chart.component";
 
 @Component({
   standalone: true,
@@ -1187,8 +1285,8 @@ import { ChartDatum } from '../bar-chart/bar-chart.component';
 })
 class HostComponent {
   data: ChartDatum[] = [
-    { label: 'Borrador', value: 1 },
-    { label: 'Lista', value: 2 },
+    { label: "Borrador", value: 1 },
+    { label: "Lista", value: 2 },
   ];
 }
 
@@ -1202,17 +1300,17 @@ function setup() {
   return { fixture, compiled: fixture.nativeElement as HTMLElement };
 }
 
-describe('DonutChartComponent', () => {
-  it('renders a canvas without throwing when given data', () => {
+describe("DonutChartComponent", () => {
+  it("renders a canvas without throwing when given data", () => {
     expect(() => setup()).not.toThrow();
   });
 
-  it('renders exactly one canvas element', () => {
+  it("renders exactly one canvas element", () => {
     const { compiled } = setup();
     expect(compiled.querySelectorAll('[data-testid="donut-chart"]').length).toBe(1);
   });
 
-  it('builds one dataset value per input entry', () => {
+  it("builds one dataset value per input entry", () => {
     const { fixture } = setup();
     const donutChartDebugEl = fixture.debugElement.children[0];
     const instance = donutChartDebugEl.componentInstance as unknown as {
@@ -1234,27 +1332,30 @@ Expected: FAIL — `Cannot find module './donut-chart.component'`.
 Create `apps/web/src/app/ui/donut-chart/donut-chart.component.ts`:
 
 ```ts
-import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import { BaseChartDirective } from 'ng2-charts';
-import { ChartConfiguration, ChartData } from 'chart.js';
-import { ChartDatum } from '../bar-chart/bar-chart.component';
+import { ChangeDetectionStrategy, Component, computed, input } from "@angular/core";
+import { BaseChartDirective } from "ng2-charts";
+import { ChartConfiguration, ChartData } from "chart.js";
+import { ChartDatum } from "../bar-chart/bar-chart.component";
 
 function themeColor(cssVar: string, fallbackHex: string): string {
-  if (typeof document === 'undefined') {
+  if (typeof document === "undefined") {
     return fallbackHex;
   }
   const value = getComputedStyle(document.documentElement).getPropertyValue(cssVar).trim();
   return value || fallbackHex;
 }
 
-const PALETTE = [themeColor('--color-tint-activo', '#deedfb'), themeColor('--color-n300', '#c3c8ce')];
+const PALETTE = [
+  themeColor("--color-tint-activo", "#deedfb"),
+  themeColor("--color-n300", "#c3c8ce"),
+];
 
 /**
  * Thin `ng2-charts` wrapper (design doc §5), doughnut variant — same shape
  * as `BarChartComponent` (`ChartDatum` input, existing-token palette only).
  */
 @Component({
-  selector: 'ui-donut-chart',
+  selector: "ui-donut-chart",
   standalone: true,
   imports: [BaseChartDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -1271,7 +1372,7 @@ const PALETTE = [themeColor('--color-tint-activo', '#deedfb'), themeColor('--col
 export class DonutChartComponent {
   readonly data = input.required<readonly ChartDatum[]>();
 
-  protected readonly chartData = computed<ChartData<'doughnut'>>(() => ({
+  protected readonly chartData = computed<ChartData<"doughnut">>(() => ({
     labels: this.data().map((d) => d.label),
     datasets: [
       {
@@ -1281,9 +1382,9 @@ export class DonutChartComponent {
     ],
   }));
 
-  protected readonly options: ChartConfiguration<'doughnut'>['options'] = {
+  protected readonly options: ChartConfiguration<"doughnut">["options"] = {
     responsive: true,
-    plugins: { legend: { position: 'bottom' } },
+    plugins: { legend: { position: "bottom" } },
   };
 }
 ```
@@ -1305,11 +1406,13 @@ git commit -m "feat(web): add ui-donut-chart wrapper component"
 ### Task 7: Frontend — `dashboard.models.ts` + `dashboard.service.ts`
 
 **Files:**
+
 - Create: `apps/web/src/app/features/dashboard/dashboard.models.ts`
 - Create: `apps/web/src/app/features/dashboard/dashboard.service.ts`
 - Create: `apps/web/src/app/features/dashboard/dashboard.service.spec.ts`
 
 **Interfaces:**
+
 - Produces: `DashboardStats` (exact shape mirrors Task 3's backend `DashboardStats`: `bank.total`, `bank.byDifficulty: Record<Difficulty, number>`, `bank.byStatus: Record<'draft'|'approved'|'archived', number>`, `exams.total`, `exams.byStatus: Record<'draft'|'ready', number>`, `exams.recent: {id,title,status,createdAt}[]`, `aiDrafts.pending`), `DashboardService.getStats(): Observable<DashboardStats>` — Task 8 consumes both.
 
 - [ ] **Step 1: Write the failing service test**
@@ -1317,14 +1420,14 @@ git commit -m "feat(web): add ui-donut-chart wrapper component"
 Create `apps/web/src/app/features/dashboard/dashboard.service.spec.ts`:
 
 ```ts
-import { TestBed } from '@angular/core/testing';
-import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
-import { provideHttpClient } from '@angular/common/http';
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { Difficulty } from '@exams-generator/shared';
-import { DashboardService } from './dashboard.service';
-import { environment } from '../../../environments/environment';
-import { DashboardStats } from './dashboard.models';
+import { TestBed } from "@angular/core/testing";
+import { HttpTestingController, provideHttpClientTesting } from "@angular/common/http/testing";
+import { provideHttpClient } from "@angular/common/http";
+import { describe, it, expect, beforeEach, afterEach } from "vitest";
+import { Difficulty } from "@exams-generator/shared";
+import { DashboardService } from "./dashboard.service";
+import { environment } from "../../../environments/environment";
+import { DashboardStats } from "./dashboard.models";
 
 const STATS: DashboardStats = {
   bank: {
@@ -1335,12 +1438,14 @@ const STATS: DashboardStats = {
   exams: {
     total: 2,
     byStatus: { draft: 1, ready: 1 },
-    recent: [{ id: 'exam-1', title: 'Examen 1', status: 'ready', createdAt: '2026-07-01T00:00:00.000Z' }],
+    recent: [
+      { id: "exam-1", title: "Examen 1", status: "ready", createdAt: "2026-07-01T00:00:00.000Z" },
+    ],
   },
   aiDrafts: { pending: 1 },
 };
 
-describe('DashboardService', () => {
+describe("DashboardService", () => {
   let service: DashboardService;
   let httpMock: HttpTestingController;
 
@@ -1356,12 +1461,12 @@ describe('DashboardService', () => {
     httpMock.verify();
   });
 
-  it('GETs /dashboard/stats and returns the parsed response', () => {
+  it("GETs /dashboard/stats and returns the parsed response", () => {
     let result: DashboardStats | undefined;
     service.getStats().subscribe((stats) => (result = stats));
 
     const req = httpMock.expectOne(`${environment.apiBaseUrl}/dashboard/stats`);
-    expect(req.request.method).toBe('GET');
+    expect(req.request.method).toBe("GET");
     req.flush(STATS);
 
     expect(result).toEqual(STATS);
@@ -1379,13 +1484,13 @@ Expected: FAIL — `Cannot find module './dashboard.service'`.
 Create `apps/web/src/app/features/dashboard/dashboard.models.ts`:
 
 ```ts
-import { Difficulty } from '@exams-generator/shared';
+import { Difficulty } from "@exams-generator/shared";
 
 /** Bank question lifecycle status (mirrors the API's `QUESTION_STATUSES` — `apps/api/src/db/schema/enums.ts`). */
-export type BankQuestionStatus = 'draft' | 'approved' | 'archived';
+export type BankQuestionStatus = "draft" | "approved" | "archived";
 
 /** Exam lifecycle status (mirrors the API's `EXAM_STATUSES` — `apps/api/src/db/schema/enums.ts`). */
-export type DashboardExamStatus = 'draft' | 'ready';
+export type DashboardExamStatus = "draft" | "ready";
 
 export interface DashboardRecentExam {
   readonly id: string;
@@ -1413,18 +1518,18 @@ export interface DashboardStats {
 Create `apps/web/src/app/features/dashboard/dashboard.service.ts`:
 
 ```ts
-import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
-import { environment } from '../../../environments/environment';
-import { DashboardStats } from './dashboard.models';
+import { HttpClient } from "@angular/common/http";
+import { Injectable, inject } from "@angular/core";
+import { Observable } from "rxjs";
+import { environment } from "../../../environments/environment";
+import { DashboardStats } from "./dashboard.models";
 
 /**
  * Angular client for `GET /dashboard/stats` (design doc §4) — mirrors
  * `BankService`'s shape: `inject(HttpClient)`, one method per endpoint. The
  * bearer JWT is attached automatically by `authInterceptor`.
  */
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class DashboardService {
   private readonly http = inject(HttpClient);
 
@@ -1451,11 +1556,13 @@ git commit -m "feat(web): add DashboardService and DashboardStats model"
 ### Task 8: Frontend — `dashboard.component.ts` + `.html`
 
 **Files:**
+
 - Create: `apps/web/src/app/features/dashboard/dashboard.component.ts`
 - Create: `apps/web/src/app/features/dashboard/dashboard.component.html`
 - Create: `apps/web/src/app/features/dashboard/dashboard.component.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `DashboardService`/`DashboardStats` (Task 7), `BarChartComponent`/`ChartDatum` (Task 5), `DonutChartComponent` (Task 6), `CardComponent` (existing `ui/card`).
 - Produces: `DashboardComponent` (selector `app-dashboard`) — Task 9's route wiring consumes this.
 
@@ -1464,15 +1571,15 @@ git commit -m "feat(web): add DashboardService and DashboardStats model"
 Create `apps/web/src/app/features/dashboard/dashboard.component.spec.ts`:
 
 ```ts
-import { TestBed } from '@angular/core/testing';
-import { describe, it, expect, vi } from 'vitest';
-import { of, throwError } from 'rxjs';
-import { provideRouter } from '@angular/router';
-import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
-import { DashboardComponent } from './dashboard.component';
-import { DashboardService } from './dashboard.service';
-import { DashboardStats } from './dashboard.models';
-import { Difficulty } from '@exams-generator/shared';
+import { TestBed } from "@angular/core/testing";
+import { describe, it, expect, vi } from "vitest";
+import { of, throwError } from "rxjs";
+import { provideRouter } from "@angular/router";
+import { provideCharts, withDefaultRegisterables } from "ng2-charts";
+import { DashboardComponent } from "./dashboard.component";
+import { DashboardService } from "./dashboard.service";
+import { DashboardStats } from "./dashboard.models";
+import { Difficulty } from "@exams-generator/shared";
 
 const STATS: DashboardStats = {
   bank: {
@@ -1483,7 +1590,14 @@ const STATS: DashboardStats = {
   exams: {
     total: 3,
     byStatus: { draft: 1, ready: 2 },
-    recent: [{ id: 'exam-1', title: 'Examen de Álgebra', status: 'ready', createdAt: '2026-07-01T00:00:00.000Z' }],
+    recent: [
+      {
+        id: "exam-1",
+        title: "Examen de Álgebra",
+        status: "ready",
+        createdAt: "2026-07-01T00:00:00.000Z",
+      },
+    ],
   },
   aiDrafts: { pending: 2 },
 };
@@ -1503,35 +1617,39 @@ function setup(getStatsImpl: (...args: unknown[]) => unknown = () => of(STATS)) 
   return { fixture, compiled: fixture.nativeElement as HTMLElement, getStats };
 }
 
-describe('DashboardComponent', () => {
-  it('fetches stats on init and renders the bank/exams/ai cards', () => {
+describe("DashboardComponent", () => {
+  it("fetches stats on init and renders the bank/exams/ai cards", () => {
     const { compiled, getStats } = setup();
 
     expect(getStats).toHaveBeenCalledTimes(1);
-    expect(compiled.querySelector('[data-testid="dashboard-card-bank"]')?.textContent).toContain('12');
-    expect(compiled.querySelector('[data-testid="dashboard-card-exams"]')?.textContent).toContain('3');
-    expect(compiled.querySelector('[data-testid="dashboard-card-ai"]')?.textContent).toContain('2');
+    expect(compiled.querySelector('[data-testid="dashboard-card-bank"]')?.textContent).toContain(
+      "12",
+    );
+    expect(compiled.querySelector('[data-testid="dashboard-card-exams"]')?.textContent).toContain(
+      "3",
+    );
+    expect(compiled.querySelector('[data-testid="dashboard-card-ai"]')?.textContent).toContain("2");
   });
 
-  it('renders the recent exams list with a status tag', () => {
+  it("renders the recent exams list with a status tag", () => {
     const { compiled } = setup();
 
     const row = compiled.querySelector('[data-testid="dashboard-recent-exam"]');
-    expect(row?.textContent).toContain('Examen de Álgebra');
-    expect(row?.textContent).toContain('Lista');
+    expect(row?.textContent).toContain("Examen de Álgebra");
+    expect(row?.textContent).toContain("Lista");
   });
 
-  it('shows an error message when the stats request fails', () => {
-    const { compiled } = setup(() => throwError(() => new Error('network error')));
+  it("shows an error message when the stats request fails", () => {
+    const { compiled } = setup(() => throwError(() => new Error("network error")));
 
     expect(compiled.querySelector('[data-testid="dashboard-error"]')).toBeTruthy();
   });
 
-  it('links the AI card to /app/ai/review', () => {
+  it("links the AI card to /app/ai/review", () => {
     const { compiled } = setup();
 
     const link = compiled.querySelector('[data-testid="dashboard-ai-link"]');
-    expect(link?.getAttribute('href')).toBe('/app/ai/review');
+    expect(link?.getAttribute("href")).toBe("/app/ai/review");
   });
 });
 ```
@@ -1546,22 +1664,22 @@ Expected: FAIL — `Cannot find module './dashboard.component'`.
 Create `apps/web/src/app/features/dashboard/dashboard.component.ts`:
 
 ```ts
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { Difficulty } from '@exams-generator/shared';
-import { CardComponent } from '../../ui/card/card.component';
-import { BarChartComponent, ChartDatum } from '../../ui/bar-chart/bar-chart.component';
-import { DonutChartComponent } from '../../ui/donut-chart/donut-chart.component';
-import { DashboardService } from './dashboard.service';
-import { DashboardStats } from './dashboard.models';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from "@angular/core";
+import { RouterLink } from "@angular/router";
+import { Difficulty } from "@exams-generator/shared";
+import { CardComponent } from "../../ui/card/card.component";
+import { BarChartComponent, ChartDatum } from "../../ui/bar-chart/bar-chart.component";
+import { DonutChartComponent } from "../../ui/donut-chart/donut-chart.component";
+import { DashboardService } from "./dashboard.service";
+import { DashboardStats } from "./dashboard.models";
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
-  [Difficulty.Easy]: 'Fácil',
-  [Difficulty.Medium]: 'Media',
-  [Difficulty.Hard]: 'Difícil',
+  [Difficulty.Easy]: "Fácil",
+  [Difficulty.Medium]: "Media",
+  [Difficulty.Hard]: "Difícil",
 };
 
-const ERROR_MESSAGE = 'No se pudieron cargar las estadísticas. Inténtalo de nuevo.';
+const ERROR_MESSAGE = "No se pudieron cargar las estadísticas. Inténtalo de nuevo.";
 
 /**
  * Dashboard landing page (design doc §4): three `ui-card`s (bank/exams/AI
@@ -1570,11 +1688,11 @@ const ERROR_MESSAGE = 'No se pudieron cargar las estadísticas. Inténtalo de nu
  * eagerly, render via signals).
  */
 @Component({
-  selector: 'app-dashboard',
+  selector: "app-dashboard",
   standalone: true,
   imports: [CardComponent, BarChartComponent, DonutChartComponent, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './dashboard.component.html',
+  templateUrl: "./dashboard.component.html",
 })
 export class DashboardComponent {
   private readonly dashboardService = inject(DashboardService);
@@ -1596,8 +1714,8 @@ export class DashboardComponent {
     const s = this.stats();
     if (!s) return [];
     return [
-      { label: 'Borrador', value: s.exams.byStatus.draft ?? 0 },
-      { label: 'Lista', value: s.exams.byStatus.ready ?? 0 },
+      { label: "Borrador", value: s.exams.byStatus.draft ?? 0 },
+      { label: "Lista", value: s.exams.byStatus.ready ?? 0 },
     ];
   });
 
@@ -1614,8 +1732,8 @@ export class DashboardComponent {
     });
   }
 
-  protected examStatusLabel(status: 'draft' | 'ready'): string {
-    return status === 'ready' ? 'Lista' : 'Borrador';
+  protected examStatusLabel(status: "draft" | "ready"): string {
+    return status === "ready" ? "Lista" : "Borrador";
   }
 }
 ```
@@ -1624,43 +1742,46 @@ Create `apps/web/src/app/features/dashboard/dashboard.component.html`:
 
 ```html
 @if (loading()) {
-  <p data-testid="dashboard-loading" class="text-sm text-n600">Cargando estadísticas…</p>
+<p data-testid="dashboard-loading" class="text-sm text-n600">Cargando estadísticas…</p>
 } @else if (errorMessage()) {
-  <p data-testid="dashboard-error" class="text-sm text-hard-text">{{ errorMessage() }}</p>
+<p data-testid="dashboard-error" class="text-sm text-hard-text">{{ errorMessage() }}</p>
 } @else if (stats(); as s) {
-  <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-    <ui-card data-testid="dashboard-card-bank">
-      <div header><p class="text-sm font-medium text-n600">Banco de preguntas</p></div>
-      <p class="text-2xl font-semibold text-n900">{{ s.bank.total }}</p>
-      <ui-bar-chart [data]="bankChartData()"></ui-bar-chart>
-    </ui-card>
+<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+  <ui-card data-testid="dashboard-card-bank">
+    <div header><p class="text-sm font-medium text-n600">Banco de preguntas</p></div>
+    <p class="text-2xl font-semibold text-n900">{{ s.bank.total }}</p>
+    <ui-bar-chart [data]="bankChartData()"></ui-bar-chart>
+  </ui-card>
 
-    <ui-card data-testid="dashboard-card-exams">
-      <div header><p class="text-sm font-medium text-n600">Exámenes</p></div>
-      <p class="text-2xl font-semibold text-n900">{{ s.exams.total }}</p>
-      <ui-donut-chart [data]="examChartData()"></ui-donut-chart>
-      <ul class="mt-3 flex flex-col gap-2">
-        @for (exam of s.exams.recent; track exam.id) {
-          <li data-testid="dashboard-recent-exam" class="flex items-center justify-between text-sm">
-            <span class="text-n800">{{ exam.title }}</span>
-            <span
-              class="rounded-full px-2 py-0.5 text-xs font-medium"
-              [class]="exam.status === 'ready' ? 'bg-tint-activo text-tint-texto' : 'bg-n100 text-n700'"
-              >{{ examStatusLabel(exam.status) }}</span
-            >
-          </li>
-        }
-      </ul>
-    </ui-card>
+  <ui-card data-testid="dashboard-card-exams">
+    <div header><p class="text-sm font-medium text-n600">Exámenes</p></div>
+    <p class="text-2xl font-semibold text-n900">{{ s.exams.total }}</p>
+    <ui-donut-chart [data]="examChartData()"></ui-donut-chart>
+    <ul class="mt-3 flex flex-col gap-2">
+      @for (exam of s.exams.recent; track exam.id) {
+      <li data-testid="dashboard-recent-exam" class="flex items-center justify-between text-sm">
+        <span class="text-n800">{{ exam.title }}</span>
+        <span
+          class="rounded-full px-2 py-0.5 text-xs font-medium"
+          [class]="exam.status === 'ready' ? 'bg-tint-activo text-tint-texto' : 'bg-n100 text-n700'"
+          >{{ examStatusLabel(exam.status) }}</span
+        >
+      </li>
+      }
+    </ul>
+  </ui-card>
 
-    <ui-card data-testid="dashboard-card-ai">
-      <div header><p class="text-sm font-medium text-n600">Cola de revisión IA</p></div>
-      <p class="text-2xl font-semibold text-n900">{{ s.aiDrafts.pending }}</p>
-      <a routerLink="/app/ai/review" data-testid="dashboard-ai-link" class="text-sm text-primary-600 hover:underline"
-        >Revisar drafts</a
-      >
-    </ui-card>
-  </div>
+  <ui-card data-testid="dashboard-card-ai">
+    <div header><p class="text-sm font-medium text-n600">Cola de revisión IA</p></div>
+    <p class="text-2xl font-semibold text-n900">{{ s.aiDrafts.pending }}</p>
+    <a
+      routerLink="/app/ai/review"
+      data-testid="dashboard-ai-link"
+      class="text-sm text-primary-600 hover:underline"
+      >Revisar drafts</a
+    >
+  </ui-card>
+</div>
 }
 ```
 
@@ -1681,12 +1802,14 @@ git commit -m "feat(web): add DashboardComponent with bank/exams/AI-queue cards"
 ### Task 9: Frontend — route wiring (`/app/dashboard` + nav item)
 
 **Files:**
+
 - Modify: `apps/web/src/app/app.routes.ts` (add `dashboard` child route + change the `app` route's empty-path redirect)
 - Modify: `apps/web/src/app/app.routes.spec.ts` (new assertions)
 - Modify: `apps/web/src/app/features/shell/shell.component.ts` (add "Dashboard" to `PRINCIPAL_GROUP`)
 - Modify: `apps/web/src/app/features/shell/shell.component.spec.ts` (new assertion)
 
 **Interfaces:**
+
 - Consumes: `DashboardComponent` (Task 8).
 
 - [ ] **Step 1: Write the failing route/nav tests**
@@ -1694,34 +1817,32 @@ git commit -m "feat(web): add DashboardComponent with bank/exams/AI-queue cards"
 Append to `apps/web/src/app/app.routes.spec.ts` (inside the existing `describe('app routes', ...)`, before its final closing `});`):
 
 ```ts
-  it('exposes /app/dashboard under the protected /app shell', () => {
-    const appRoute = routes.find((route) => route.path === 'app');
-    const dashboardRoute = appRoute?.children?.find((route) => route.path === 'dashboard');
-    expect(dashboardRoute).toBeTruthy();
-  });
+it("exposes /app/dashboard under the protected /app shell", () => {
+  const appRoute = routes.find((route) => route.path === "app");
+  const dashboardRoute = appRoute?.children?.find((route) => route.path === "dashboard");
+  expect(dashboardRoute).toBeTruthy();
+});
 
-  it('redirects the empty /app child path to dashboard (design doc §4)', () => {
-    const appRoute = routes.find((route) => route.path === 'app');
-    const indexRoute = appRoute?.children?.find(
-      (route) => route.path === '' && route.redirectTo,
-    );
-    expect(indexRoute?.redirectTo).toBe('dashboard');
-  });
+it("redirects the empty /app child path to dashboard (design doc §4)", () => {
+  const appRoute = routes.find((route) => route.path === "app");
+  const indexRoute = appRoute?.children?.find((route) => route.path === "" && route.redirectTo);
+  expect(indexRoute?.redirectTo).toBe("dashboard");
+});
 ```
 
 Append to `apps/web/src/app/features/shell/shell.component.spec.ts`'s `describe('ShellComponent', ...)`, before its final closing `});`:
 
 ```ts
-  it('lists "Dashboard" as the first item of the Principal group', () => {
-    const { compiled } = setup(Role.Teacher);
+it('lists "Dashboard" as the first item of the Principal group', () => {
+  const { compiled } = setup(Role.Teacher);
 
-    // NOTE: this file's Router mock stubs `serializeUrl: () => ''`, so
-    // `RouterLink`'s computed `href` is always empty here — assert on the
-    // rendered label/order instead (same style as this file's other tests),
-    // not on `getAttribute('href')`.
-    const links = Array.from(compiled.querySelectorAll('a[data-testid="nav-item"]'));
-    expect(links[0]?.textContent).toContain('Dashboard');
-  });
+  // NOTE: this file's Router mock stubs `serializeUrl: () => ''`, so
+  // `RouterLink`'s computed `href` is always empty here — assert on the
+  // rendered label/order instead (same style as this file's other tests),
+  // not on `getAttribute('href')`.
+  const links = Array.from(compiled.querySelectorAll('a[data-testid="nav-item"]'));
+  expect(links[0]?.textContent).toContain("Dashboard");
+});
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -1734,53 +1855,53 @@ Expected: FAIL — `/app/dashboard` route not found, "Dashboard" nav item not fo
 In `apps/web/src/app/app.routes.ts`, add the import and the two route entries:
 
 ```ts
-import { Routes } from '@angular/router';
-import { Role } from '@exams-generator/shared';
-import { authGuard } from './core/auth/auth.guard';
-import { roleGuard } from './core/auth/role.guard';
-import { LoginComponent } from './features/login/login.component';
-import { ShellComponent } from './features/shell/shell.component';
-import { ForbiddenComponent } from './features/forbidden/forbidden.component';
-import { DashboardComponent } from './features/dashboard/dashboard.component';
-import { BankListComponent } from './features/bank/bank-list/bank-list.component';
-import { BankUploadComponent } from './features/bank/bank-upload/bank-upload.component';
-import { BankNewComponent } from './features/bank/bank-new/bank-new.component';
-import { ExamListComponent } from './features/exams/exam-list/exam-list.component';
-import { ExamVersionsPanelComponent } from './features/exam-versions/exam-versions-panel/exam-versions-panel.component';
-import { ExamBuilderComponent } from './features/exams/exam-builder/exam-builder.component';
-import { ExamReviewComponent } from './features/exams/exam-review/exam-review.component';
-import { AiGenerateComponent } from './features/ai/ai-generate/ai-generate.component';
-import { AiReviewQueueComponent } from './features/ai/ai-review-queue/ai-review-queue.component';
-import { TenantSettingsComponent } from './features/tenant-settings/tenant-settings.component';
+import { Routes } from "@angular/router";
+import { Role } from "@exams-generator/shared";
+import { authGuard } from "./core/auth/auth.guard";
+import { roleGuard } from "./core/auth/role.guard";
+import { LoginComponent } from "./features/login/login.component";
+import { ShellComponent } from "./features/shell/shell.component";
+import { ForbiddenComponent } from "./features/forbidden/forbidden.component";
+import { DashboardComponent } from "./features/dashboard/dashboard.component";
+import { BankListComponent } from "./features/bank/bank-list/bank-list.component";
+import { BankUploadComponent } from "./features/bank/bank-upload/bank-upload.component";
+import { BankNewComponent } from "./features/bank/bank-new/bank-new.component";
+import { ExamListComponent } from "./features/exams/exam-list/exam-list.component";
+import { ExamVersionsPanelComponent } from "./features/exam-versions/exam-versions-panel/exam-versions-panel.component";
+import { ExamBuilderComponent } from "./features/exams/exam-builder/exam-builder.component";
+import { ExamReviewComponent } from "./features/exams/exam-review/exam-review.component";
+import { AiGenerateComponent } from "./features/ai/ai-generate/ai-generate.component";
+import { AiReviewQueueComponent } from "./features/ai/ai-review-queue/ai-review-queue.component";
+import { TenantSettingsComponent } from "./features/tenant-settings/tenant-settings.component";
 
 export const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'forbidden', component: ForbiddenComponent },
+  { path: "login", component: LoginComponent },
+  { path: "forbidden", component: ForbiddenComponent },
   {
-    path: 'app',
+    path: "app",
     component: ShellComponent,
     canActivate: [authGuard],
     children: [
-      { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'bank', component: BankListComponent },
-      { path: 'bank/upload', component: BankUploadComponent },
-      { path: 'bank/new', component: BankNewComponent },
-      { path: 'exams', component: ExamListComponent },
-      { path: 'exams/new', component: ExamBuilderComponent },
-      { path: 'exams/:examId', component: ExamReviewComponent },
-      { path: 'exams/:examId/versions', component: ExamVersionsPanelComponent },
-      { path: 'ai/generate', component: AiGenerateComponent },
-      { path: 'ai/review', component: AiReviewQueueComponent },
+      { path: "", pathMatch: "full", redirectTo: "dashboard" },
+      { path: "dashboard", component: DashboardComponent },
+      { path: "bank", component: BankListComponent },
+      { path: "bank/upload", component: BankUploadComponent },
+      { path: "bank/new", component: BankNewComponent },
+      { path: "exams", component: ExamListComponent },
+      { path: "exams/new", component: ExamBuilderComponent },
+      { path: "exams/:examId", component: ExamReviewComponent },
+      { path: "exams/:examId/versions", component: ExamVersionsPanelComponent },
+      { path: "ai/generate", component: AiGenerateComponent },
+      { path: "ai/review", component: AiReviewQueueComponent },
       {
-        path: 'settings',
+        path: "settings",
         component: TenantSettingsComponent,
         canActivate: [roleGuard(Role.SchoolAdmin)],
       },
     ],
   },
-  { path: '', pathMatch: 'full', redirectTo: 'app' },
-  { path: '**', redirectTo: 'login' },
+  { path: "", pathMatch: "full", redirectTo: "app" },
+  { path: "**", redirectTo: "login" },
 ];
 ```
 
@@ -1788,11 +1909,11 @@ In `apps/web/src/app/features/shell/shell.component.ts`, add "Dashboard" as the 
 
 ```ts
 const PRINCIPAL_GROUP: NavGroup = {
-  title: 'Principal',
+  title: "Principal",
   items: [
-    { label: 'Dashboard', route: '/app/dashboard' },
-    { label: 'Banco de preguntas', route: '/app/bank' },
-    { label: 'Mis exámenes', route: '/app/exams' },
+    { label: "Dashboard", route: "/app/dashboard" },
+    { label: "Banco de preguntas", route: "/app/bank" },
+    { label: "Mis exámenes", route: "/app/exams" },
   ],
 };
 ```
@@ -1814,6 +1935,7 @@ git commit -m "feat(web): wire /app/dashboard as the app index and add its nav i
 ### Task 10: Frontend — shell restyle (sidebar/topbar Tailwind classes)
 
 **Files:**
+
 - Modify: `apps/web/src/app/ui/sidebar/sidebar.component.ts` (row height/gap classes only, lines 17-48)
 - Modify: `apps/web/src/app/ui/topbar/topbar.component.ts` (add a decorative search field, lines 15-36)
 - Modify: `apps/web/src/app/ui/topbar/topbar.component.spec.ts` (icon `.pick()` needs `Search` too, plus a new assertion)
@@ -1826,11 +1948,11 @@ git commit -m "feat(web): wire /app/dashboard as the app index and add its nav i
 Modify `apps/web/src/app/ui/topbar/topbar.component.spec.ts` — add `Search` to the icon pick, and one new test:
 
 ```ts
-import { Component, importProvidersFrom } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
-import { describe, it, expect } from 'vitest';
-import { LucideAngularModule, Menu, Search } from 'lucide-angular';
-import { TopbarComponent } from './topbar.component';
+import { Component, importProvidersFrom } from "@angular/core";
+import { TestBed } from "@angular/core/testing";
+import { describe, it, expect } from "vitest";
+import { LucideAngularModule, Menu, Search } from "lucide-angular";
+import { TopbarComponent } from "./topbar.component";
 
 @Component({
   standalone: true,
@@ -1855,20 +1977,20 @@ function setup() {
   return { fixture, compiled: fixture.nativeElement as HTMLElement };
 }
 
-describe('TopbarComponent', () => {
-  it('renders the title', () => {
+describe("TopbarComponent", () => {
+  it("renders the title", () => {
     const { compiled } = setup();
 
-    expect(compiled.textContent).toContain('Exámenes');
+    expect(compiled.textContent).toContain("Exámenes");
   });
 
-  it('renders projected [actions] content', () => {
+  it("renders projected [actions] content", () => {
     const { compiled } = setup();
 
     expect(compiled.querySelector('[data-testid="topbar-action"]')).toBeTruthy();
   });
 
-  it('emits menuToggle when the menu button is clicked', () => {
+  it("emits menuToggle when the menu button is clicked", () => {
     const { fixture, compiled } = setup();
 
     compiled.querySelector<HTMLButtonElement>('[data-testid="topbar-menu-button"]')!.click();
@@ -1877,18 +1999,18 @@ describe('TopbarComponent', () => {
     expect(fixture.componentInstance.toggled).toBe(true);
   });
 
-  it('renders a lucide menu icon (no emoji) inside the menu button', () => {
+  it("renders a lucide menu icon (no emoji) inside the menu button", () => {
     const { compiled } = setup();
     const button = compiled.querySelector('[data-testid="topbar-menu-button"]')!;
-    expect(button.querySelector('lucide-angular,i-lucide')).toBeTruthy();
-    expect(button.textContent).not.toContain('☰');
+    expect(button.querySelector("lucide-angular,i-lucide")).toBeTruthy();
+    expect(button.textContent).not.toContain("☰");
   });
 
-  it('renders a decorative search field matching the Figma reference (no wired output)', () => {
+  it("renders a decorative search field matching the Figma reference (no wired output)", () => {
     const { compiled } = setup();
     const search = compiled.querySelector<HTMLInputElement>('[data-testid="topbar-search"]');
     expect(search).toBeTruthy();
-    expect(search?.className).toContain('bg-n50');
+    expect(search?.className).toContain("bg-n50");
   });
 });
 ```
@@ -1903,9 +2025,9 @@ Expected: FAIL — either `topbar-search` element not found, or (if `Search` ico
 Modify `apps/web/src/app/ui/sidebar/sidebar.component.ts` (row height + group gap only — `bg-tint-activo`/`text-tint-texto`, `data-testid="nav-item"`, `data-testid="nav-item-badge"` are all preserved verbatim):
 
 ```ts
-import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NavGroup } from '../ui.types';
+import { ChangeDetectionStrategy, Component, input, output } from "@angular/core";
+import { RouterLink, RouterLinkActive } from "@angular/router";
+import { NavGroup } from "../ui.types";
 
 /**
  * Design-system sidebar primitive (DECISION FE-4, DS-R6). Renders the
@@ -1914,7 +2036,7 @@ import { NavGroup } from '../ui.types';
  * `RouterLinkActive` and carries the "tint activo" background token.
  */
 @Component({
-  selector: 'ui-sidebar',
+  selector: "ui-sidebar",
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -1962,8 +2084,8 @@ export class SidebarComponent {
 Modify `apps/web/src/app/ui/topbar/topbar.component.ts` (add the decorative search field between the title block and the `[actions]` slot):
 
 ```ts
-import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { LucideAngularModule } from 'lucide-angular';
+import { ChangeDetectionStrategy, Component, input, output } from "@angular/core";
+import { LucideAngularModule } from "lucide-angular";
 
 /**
  * Design-system topbar primitive (DECISION FE-4). `menuToggle` drives the
@@ -1975,7 +2097,7 @@ import { LucideAngularModule } from 'lucide-angular';
  * match for the Figma reference only; no search behavior is in scope here.
  */
 @Component({
-  selector: 'ui-topbar',
+  selector: "ui-topbar",
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [LucideAngularModule],
@@ -2030,16 +2152,16 @@ Modify `apps/web/src/app/features/shell/shell.component.html` (3 class-only edit
   </aside>
 
   @if (mobileOpen()) {
-    <div data-testid="shell-mobile-drawer" class="fixed inset-0 z-40 md:hidden">
-      <div
-        data-testid="shell-mobile-backdrop"
-        class="absolute inset-0 bg-primary-900/40"
-        (click)="closeMobileMenu()"
-      ></div>
-      <div class="relative h-full w-60">
-        <ui-sidebar [groups]="navGroups()"></ui-sidebar>
-      </div>
+  <div data-testid="shell-mobile-drawer" class="fixed inset-0 z-40 md:hidden">
+    <div
+      data-testid="shell-mobile-backdrop"
+      class="absolute inset-0 bg-primary-900/40"
+      (click)="closeMobileMenu()"
+    ></div>
+    <div class="relative h-full w-60">
+      <ui-sidebar [groups]="navGroups()"></ui-sidebar>
     </div>
+  </div>
   }
 
   <div class="flex flex-1 flex-col overflow-hidden">
@@ -2055,17 +2177,19 @@ Modify `apps/web/src/app/features/shell/shell.component.html` (3 class-only edit
           <lucide-angular name="user" class="h-5 w-5"></lucide-angular>
         </button>
         @if (userMenuOpen()) {
-          <div class="absolute right-0 z-50 mt-2 w-48 rounded-card border border-n200 bg-white py-1 shadow-lg">
-            <button
-              type="button"
-              data-testid="logout-button"
-              class="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-n800 hover:bg-n50"
-              (click)="logout()"
-            >
-              <lucide-angular name="log-out" class="h-4 w-4"></lucide-angular>
-              Cerrar sesión
-            </button>
-          </div>
+        <div
+          class="absolute right-0 z-50 mt-2 w-48 rounded-card border border-n200 bg-white py-1 shadow-lg"
+        >
+          <button
+            type="button"
+            data-testid="logout-button"
+            class="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-n800 hover:bg-n50"
+            (click)="logout()"
+          >
+            <lucide-angular name="log-out" class="h-4 w-4"></lucide-angular>
+            Cerrar sesión
+          </button>
+        </div>
         }
       </div>
     </ui-topbar>

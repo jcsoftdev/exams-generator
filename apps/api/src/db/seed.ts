@@ -70,11 +70,23 @@ const ESCUELA_SYLLABUS: readonly SyllabusCourse[] = [
       { name: "División exacta e inexacta", grades: ["primaria_3", "primaria_4", "primaria_5"] },
       { name: "Fracciones", grades: ["primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
       { name: "Números decimales y porcentajes", grades: ["primaria_5", "primaria_6"] },
-      { name: "Figuras y cuerpos geométricos", grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5"] },
+      {
+        name: "Figuras y cuerpos geométricos",
+        grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5"],
+      },
       { name: "Perímetro, área y volumen", grades: ["primaria_4", "primaria_5", "primaria_6"] },
-      { name: "Medidas de longitud, peso, capacidad, tiempo y dinero", grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4"] },
-      { name: "Patrones y secuencias", grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
-      { name: "Gráficos, tablas, estadística y probabilidad", grades: ["primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
+      {
+        name: "Medidas de longitud, peso, capacidad, tiempo y dinero",
+        grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4"],
+      },
+      {
+        name: "Patrones y secuencias",
+        grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"],
+      },
+      {
+        name: "Gráficos, tablas, estadística y probabilidad",
+        grades: ["primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"],
+      },
     ],
   },
   {
@@ -82,17 +94,35 @@ const ESCUELA_SYLLABUS: readonly SyllabusCourse[] = [
     topics: [
       { name: "El abecedario, trazo de letras y conciencia fonológica", grades: ["primaria_1"] },
       { name: "Comprensión lectora literal", grades: ["primaria_1", "primaria_2", "primaria_3"] },
-      { name: "Comprensión lectora inferencial y crítica", grades: ["primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
+      {
+        name: "Comprensión lectora inferencial y crítica",
+        grades: ["primaria_3", "primaria_4", "primaria_5", "primaria_6"],
+      },
       { name: "Producción de textos narrativos", grades: ["primaria_1", "primaria_2", "primaria_3"] },
-      { name: "Producción de textos descriptivos e informativos", grades: ["primaria_3", "primaria_4", "primaria_5"] },
+      {
+        name: "Producción de textos descriptivos e informativos",
+        grades: ["primaria_3", "primaria_4", "primaria_5"],
+      },
       { name: "Producción de textos argumentativos", grades: ["primaria_5", "primaria_6"] },
-      { name: "Comunicación oral: diálogo y exposición", grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
+      {
+        name: "Comunicación oral: diálogo y exposición",
+        grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"],
+      },
       { name: "Sustantivo, adjetivo y verbo", grades: ["primaria_2", "primaria_3", "primaria_4"] },
-      { name: "Categorías gramaticales (pronombre, adverbio, preposición)", grades: ["primaria_4", "primaria_5", "primaria_6"] },
+      {
+        name: "Categorías gramaticales (pronombre, adverbio, preposición)",
+        grades: ["primaria_4", "primaria_5", "primaria_6"],
+      },
       { name: "Sujeto y predicado", grades: ["primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
       { name: "Acentuación y tildación", grades: ["primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
-      { name: "Signos de puntuación y ortografía básica", grades: ["primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
-      { name: "Sinónimos, antónimos y familia de palabras", grades: ["primaria_2", "primaria_3", "primaria_4"] },
+      {
+        name: "Signos de puntuación y ortografía básica",
+        grades: ["primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"],
+      },
+      {
+        name: "Sinónimos, antónimos y familia de palabras",
+        grades: ["primaria_2", "primaria_3", "primaria_4"],
+      },
       { name: "Conectores textuales", grades: ["primaria_4", "primaria_5", "primaria_6"] },
     ],
   },
@@ -103,23 +133,41 @@ const ESCUELA_SYLLABUS: readonly SyllabusCourse[] = [
       { name: "Las plantas: partes y funciones", grades: ["primaria_1", "primaria_2", "primaria_3"] },
       { name: "Los animales y sus hábitats", grades: ["primaria_1", "primaria_2", "primaria_3"] },
       { name: "El cuerpo humano: órganos de los sentidos", grades: ["primaria_1", "primaria_2"] },
-      { name: "Sistemas del cuerpo humano (digestivo, respiratorio, circulatorio)", grades: ["primaria_3", "primaria_4", "primaria_5"] },
+      {
+        name: "Sistemas del cuerpo humano (digestivo, respiratorio, circulatorio)",
+        grades: ["primaria_3", "primaria_4", "primaria_5"],
+      },
       { name: "Los estados de la materia", grades: ["primaria_2", "primaria_3", "primaria_4"] },
       { name: "Mezclas y cambios de la materia", grades: ["primaria_4", "primaria_5", "primaria_6"] },
       { name: "Fuerza, movimiento y energía", grades: ["primaria_4", "primaria_5", "primaria_6"] },
       { name: "La luz, el sonido y el calor", grades: ["primaria_3", "primaria_4", "primaria_5"] },
-      { name: "El método científico y la experimentación", grades: ["primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
-      { name: "El ecosistema y las cadenas alimenticias", grades: ["primaria_4", "primaria_5", "primaria_6"] },
-      { name: "Cuidado del ambiente y reciclaje", grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
+      {
+        name: "El método científico y la experimentación",
+        grades: ["primaria_3", "primaria_4", "primaria_5", "primaria_6"],
+      },
+      {
+        name: "El ecosistema y las cadenas alimenticias",
+        grades: ["primaria_4", "primaria_5", "primaria_6"],
+      },
+      {
+        name: "Cuidado del ambiente y reciclaje",
+        grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"],
+      },
       { name: "El sistema solar y los astros", grades: ["primaria_3", "primaria_4", "primaria_5"] },
-      { name: "Diseño y construcción de prototipos tecnológicos", grades: ["primaria_4", "primaria_5", "primaria_6"] },
+      {
+        name: "Diseño y construcción de prototipos tecnológicos",
+        grades: ["primaria_4", "primaria_5", "primaria_6"],
+      },
     ],
   },
   {
     name: "Personal Social",
     topics: [
       { name: "Mi identidad y mi familia", grades: ["primaria_1", "primaria_2"] },
-      { name: "Normas de convivencia en el aula y la escuela", grades: ["primaria_1", "primaria_2", "primaria_3"] },
+      {
+        name: "Normas de convivencia en el aula y la escuela",
+        grades: ["primaria_1", "primaria_2", "primaria_3"],
+      },
       { name: "Derechos y deberes del niño", grades: ["primaria_2", "primaria_3", "primaria_4"] },
       { name: "Instituciones y autoridades locales", grades: ["primaria_3", "primaria_4"] },
       { name: "Símbolos patrios y la nación peruana", grades: ["primaria_1", "primaria_2", "primaria_3"] },
@@ -127,20 +175,41 @@ const ESCUELA_SYLLABUS: readonly SyllabusCourse[] = [
       { name: "La conquista y el virreinato del Perú", grades: ["primaria_5", "primaria_6"] },
       { name: "La independencia del Perú", grades: ["primaria_5", "primaria_6"] },
       { name: "El Perú republicano", grades: ["primaria_6"] },
-      { name: "Las regiones naturales del Perú (costa, sierra, selva)", grades: ["primaria_2", "primaria_3", "primaria_4"] },
-      { name: "Departamentos y regiones del Perú (geografía)", grades: ["primaria_4", "primaria_5", "primaria_6"] },
-      { name: "Recursos naturales y actividades económicas", grades: ["primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
-      { name: "El dinero, el ahorro y el consumo responsable", grades: ["primaria_2", "primaria_3", "primaria_4", "primaria_5"] },
+      {
+        name: "Las regiones naturales del Perú (costa, sierra, selva)",
+        grades: ["primaria_2", "primaria_3", "primaria_4"],
+      },
+      {
+        name: "Departamentos y regiones del Perú (geografía)",
+        grades: ["primaria_4", "primaria_5", "primaria_6"],
+      },
+      {
+        name: "Recursos naturales y actividades económicas",
+        grades: ["primaria_3", "primaria_4", "primaria_5", "primaria_6"],
+      },
+      {
+        name: "El dinero, el ahorro y el consumo responsable",
+        grades: ["primaria_2", "primaria_3", "primaria_4", "primaria_5"],
+      },
       { name: "La democracia y la participación ciudadana", grades: ["primaria_5", "primaria_6"] },
     ],
   },
   {
     name: "Arte y Cultura",
     topics: [
-      { name: "Elementos del lenguaje visual (color, forma, línea)", grades: ["primaria_1", "primaria_2", "primaria_3"] },
+      {
+        name: "Elementos del lenguaje visual (color, forma, línea)",
+        grades: ["primaria_1", "primaria_2", "primaria_3"],
+      },
       { name: "Dibujo, pintura y collage", grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4"] },
-      { name: "Música: ritmo, sonido e instrumentos", grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
-      { name: "Danzas y música tradicional del Perú", grades: ["primaria_2", "primaria_3", "primaria_4", "primaria_5"] },
+      {
+        name: "Música: ritmo, sonido e instrumentos",
+        grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"],
+      },
+      {
+        name: "Danzas y música tradicional del Perú",
+        grades: ["primaria_2", "primaria_3", "primaria_4", "primaria_5"],
+      },
       { name: "Teatro y expresión corporal", grades: ["primaria_3", "primaria_4", "primaria_5"] },
       { name: "Apreciación y análisis de obras artísticas", grades: ["primaria_5", "primaria_6"] },
     ],
@@ -149,21 +218,39 @@ const ESCUELA_SYLLABUS: readonly SyllabusCourse[] = [
     name: "Educación Física",
     topics: [
       { name: "Esquema corporal y coordinación motriz", grades: ["primaria_1", "primaria_2"] },
-      { name: "Habilidades motrices básicas (correr, saltar, lanzar)", grades: ["primaria_1", "primaria_2", "primaria_3"] },
+      {
+        name: "Habilidades motrices básicas (correr, saltar, lanzar)",
+        grades: ["primaria_1", "primaria_2", "primaria_3"],
+      },
       { name: "Juegos predeportivos", grades: ["primaria_2", "primaria_3", "primaria_4"] },
-      { name: "Deportes de conjunto (fútbol, vóley, básquet)", grades: ["primaria_4", "primaria_5", "primaria_6"] },
-      { name: "Capacidades físicas (fuerza, velocidad, resistencia)", grades: ["primaria_4", "primaria_5", "primaria_6"] },
-      { name: "Higiene, nutrición y vida saludable", grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
+      {
+        name: "Deportes de conjunto (fútbol, vóley, básquet)",
+        grades: ["primaria_4", "primaria_5", "primaria_6"],
+      },
+      {
+        name: "Capacidades físicas (fuerza, velocidad, resistencia)",
+        grades: ["primaria_4", "primaria_5", "primaria_6"],
+      },
+      {
+        name: "Higiene, nutrición y vida saludable",
+        grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"],
+      },
     ],
   },
   {
     name: "Educación Religiosa",
     topics: [
       { name: "Dios creador y la creación", grades: ["primaria_1", "primaria_2"] },
-      { name: "La familia de Jesús y la Sagrada Familia", grades: ["primaria_1", "primaria_2", "primaria_3"] },
+      {
+        name: "La familia de Jesús y la Sagrada Familia",
+        grades: ["primaria_1", "primaria_2", "primaria_3"],
+      },
       { name: "Vida y enseñanzas de Jesús", grades: ["primaria_2", "primaria_3", "primaria_4"] },
       { name: "Los sacramentos", grades: ["primaria_3", "primaria_4", "primaria_5"] },
-      { name: "Valores cristianos y la convivencia fraterna", grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"] },
+      {
+        name: "Valores cristianos y la convivencia fraterna",
+        grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4", "primaria_5", "primaria_6"],
+      },
       { name: "La Biblia: Antiguo y Nuevo Testamento", grades: ["primaria_4", "primaria_5", "primaria_6"] },
     ],
   },
@@ -171,12 +258,21 @@ const ESCUELA_SYLLABUS: readonly SyllabusCourse[] = [
     name: "Inglés como Lengua Extranjera",
     topics: [
       { name: "Saludos y presentaciones (greetings)", grades: ["primaria_1", "primaria_2"] },
-      { name: "Vocabulario básico: colores, números y familia", grades: ["primaria_1", "primaria_2", "primaria_3"] },
+      {
+        name: "Vocabulario básico: colores, números y familia",
+        grades: ["primaria_1", "primaria_2", "primaria_3"],
+      },
       { name: "Verb to be y pronombres personales", grades: ["primaria_2", "primaria_3", "primaria_4"] },
       { name: "Presente simple (rutinas diarias)", grades: ["primaria_3", "primaria_4", "primaria_5"] },
-      { name: "Vocabulario temático (animales, comida, escuela)", grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4"] },
+      {
+        name: "Vocabulario temático (animales, comida, escuela)",
+        grades: ["primaria_1", "primaria_2", "primaria_3", "primaria_4"],
+      },
       { name: "Comprensión de textos cortos y diálogos", grades: ["primaria_4", "primaria_5", "primaria_6"] },
-      { name: "Preposiciones y estructuras there is / there are", grades: ["primaria_4", "primaria_5", "primaria_6"] },
+      {
+        name: "Preposiciones y estructuras there is / there are",
+        grades: ["primaria_4", "primaria_5", "primaria_6"],
+      },
     ],
   },
 ];
@@ -192,18 +288,36 @@ const COLEGIO_SYLLABUS: readonly SyllabusCourse[] = [
       { name: "Números enteros y operaciones", grades: ["secundaria_1"] },
       { name: "Fracciones, decimales y porcentajes", grades: ["secundaria_1", "secundaria_2"] },
       { name: "Razones, proporciones y regla de tres", grades: ["secundaria_1", "secundaria_2"] },
-      { name: "Potenciación, radicación y notación científica", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
-      { name: "Ecuaciones e inecuaciones de primer grado", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
+      {
+        name: "Potenciación, radicación y notación científica",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
+      {
+        name: "Ecuaciones e inecuaciones de primer grado",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
       { name: "Productos notables y factorización", grades: ["secundaria_3", "secundaria_4"] },
       { name: "Ecuaciones cuadráticas", grades: ["secundaria_3", "secundaria_4"] },
       { name: "Funciones: lineal, afín y cuadrática", grades: ["secundaria_3", "secundaria_4"] },
       { name: "Sistemas de ecuaciones lineales", grades: ["secundaria_2", "secundaria_3", "secundaria_4"] },
       { name: "Trigonometría: razones e identidades", grades: ["secundaria_4", "secundaria_5"] },
       { name: "Funciones exponenciales y logarítmicas", grades: ["secundaria_4", "secundaria_5"] },
-      { name: "Geometría plana: perímetros, áreas y polígonos", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
-      { name: "Geometría del espacio: sólidos y volúmenes", grades: ["secundaria_3", "secundaria_4", "secundaria_5"] },
-      { name: "Semejanza, congruencia y teorema de Pitágoras", grades: ["secundaria_2", "secundaria_3", "secundaria_4"] },
-      { name: "Estadística: tablas, gráficos y medidas de tendencia central", grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4"] },
+      {
+        name: "Geometría plana: perímetros, áreas y polígonos",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
+      {
+        name: "Geometría del espacio: sólidos y volúmenes",
+        grades: ["secundaria_3", "secundaria_4", "secundaria_5"],
+      },
+      {
+        name: "Semejanza, congruencia y teorema de Pitágoras",
+        grades: ["secundaria_2", "secundaria_3", "secundaria_4"],
+      },
+      {
+        name: "Estadística: tablas, gráficos y medidas de tendencia central",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4"],
+      },
       { name: "Probabilidad", grades: ["secundaria_2", "secundaria_3", "secundaria_4", "secundaria_5"] },
       { name: "Geometría analítica: la recta y la circunferencia", grades: ["secundaria_4", "secundaria_5"] },
       { name: "Programación lineal y optimización", grades: ["secundaria_5"] },
@@ -213,19 +327,43 @@ const COLEGIO_SYLLABUS: readonly SyllabusCourse[] = [
     name: "Comunicación",
     topics: [
       { name: "Comprensión lectora de textos narrativos", grades: ["secundaria_1", "secundaria_2"] },
-      { name: "Comprensión lectora de textos expositivos y argumentativos", grades: ["secundaria_3", "secundaria_4", "secundaria_5"] },
+      {
+        name: "Comprensión lectora de textos expositivos y argumentativos",
+        grades: ["secundaria_3", "secundaria_4", "secundaria_5"],
+      },
       { name: "Producción de textos narrativos", grades: ["secundaria_1", "secundaria_2"] },
-      { name: "Producción de textos argumentativos y ensayos", grades: ["secundaria_3", "secundaria_4", "secundaria_5"] },
-      { name: "Gramática: clases de palabras y estructura de la oración", grades: ["secundaria_1", "secundaria_2"] },
-      { name: "Ortografía: tildación y uso de grafías", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
+      {
+        name: "Producción de textos argumentativos y ensayos",
+        grades: ["secundaria_3", "secundaria_4", "secundaria_5"],
+      },
+      {
+        name: "Gramática: clases de palabras y estructura de la oración",
+        grades: ["secundaria_1", "secundaria_2"],
+      },
+      {
+        name: "Ortografía: tildación y uso de grafías",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
       { name: "Coherencia y cohesión textual", grades: ["secundaria_2", "secundaria_3"] },
-      { name: "Comunicación oral: exposición y debate", grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4", "secundaria_5"] },
+      {
+        name: "Comunicación oral: exposición y debate",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4", "secundaria_5"],
+      },
       { name: "Literatura peruana", grades: ["secundaria_3", "secundaria_4", "secundaria_5"] },
       { name: "Literatura latinoamericana y universal", grades: ["secundaria_4", "secundaria_5"] },
-      { name: "Géneros literarios: narrativo, lírico y dramático", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
-      { name: "Figuras literarias y recursos estilísticos", grades: ["secundaria_2", "secundaria_3", "secundaria_4"] },
+      {
+        name: "Géneros literarios: narrativo, lírico y dramático",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
+      {
+        name: "Figuras literarias y recursos estilísticos",
+        grades: ["secundaria_2", "secundaria_3", "secundaria_4"],
+      },
       { name: "El texto periodístico e informativo", grades: ["secundaria_2", "secundaria_3"] },
-      { name: "Textos funcionales: solicitud, informe, currículum vitae", grades: ["secundaria_4", "secundaria_5"] },
+      {
+        name: "Textos funcionales: solicitud, informe, currículum vitae",
+        grades: ["secundaria_4", "secundaria_5"],
+      },
       { name: "Medios de comunicación y lenguaje audiovisual", grades: ["secundaria_3", "secundaria_4"] },
       { name: "Etimología y vocabulario", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
     ],
@@ -236,10 +374,16 @@ const COLEGIO_SYLLABUS: readonly SyllabusCourse[] = [
       { name: "La célula: estructura y función", grades: ["secundaria_1", "secundaria_2"] },
       { name: "La materia: propiedades y estados", grades: ["secundaria_1"] },
       { name: "Ecosistemas y biodiversidad", grades: ["secundaria_1", "secundaria_2"] },
-      { name: "Nutrición y sistemas del cuerpo humano", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
+      {
+        name: "Nutrición y sistemas del cuerpo humano",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
       { name: "Reproducción y salud sexual", grades: ["secundaria_2", "secundaria_3"] },
       { name: "Fuerzas y movimiento (cinemática)", grades: ["secundaria_3", "secundaria_4"] },
-      { name: "Energía: formas y transformaciones", grades: ["secundaria_2", "secundaria_3", "secundaria_4"] },
+      {
+        name: "Energía: formas y transformaciones",
+        grades: ["secundaria_2", "secundaria_3", "secundaria_4"],
+      },
       { name: "Estructura atómica y tabla periódica", grades: ["secundaria_3", "secundaria_4"] },
       { name: "Reacciones químicas", grades: ["secundaria_4", "secundaria_5"] },
       { name: "Genética y herencia", grades: ["secundaria_4", "secundaria_5"] },
@@ -247,7 +391,10 @@ const COLEGIO_SYLLABUS: readonly SyllabusCourse[] = [
       { name: "Electricidad y magnetismo", grades: ["secundaria_4", "secundaria_5"] },
       { name: "Ondas: sonido y luz", grades: ["secundaria_4"] },
       { name: "Ecología y problemática ambiental", grades: ["secundaria_3", "secundaria_4", "secundaria_5"] },
-      { name: "Método científico y diseño experimental", grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4", "secundaria_5"] },
+      {
+        name: "Método científico y diseño experimental",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4", "secundaria_5"],
+      },
       { name: "Biotecnología y salud pública", grades: ["secundaria_5"] },
       { name: "Física moderna: introducción", grades: ["secundaria_5"] },
     ],
@@ -266,11 +413,20 @@ const COLEGIO_SYLLABUS: readonly SyllabusCourse[] = [
       { name: "Geografía física del Perú", grades: ["secundaria_1", "secundaria_2"] },
       { name: "Geografía económica y recursos naturales", grades: ["secundaria_2", "secundaria_3"] },
       { name: "Cartografía y orientación espacial", grades: ["secundaria_1"] },
-      { name: "Economía: producción, mercado y desarrollo", grades: ["secundaria_3", "secundaria_4", "secundaria_5"] },
+      {
+        name: "Economía: producción, mercado y desarrollo",
+        grades: ["secundaria_3", "secundaria_4", "secundaria_5"],
+      },
       { name: "Regiones naturales y geografía de América", grades: ["secundaria_1", "secundaria_2"] },
-      { name: "Cambio climático y desarrollo sostenible", grades: ["secundaria_3", "secundaria_4", "secundaria_5"] },
+      {
+        name: "Cambio climático y desarrollo sostenible",
+        grades: ["secundaria_3", "secundaria_4", "secundaria_5"],
+      },
       { name: "Perú contemporáneo: democracia y globalización", grades: ["secundaria_5"] },
-      { name: "Diversidad cultural y multiculturalidad", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
+      {
+        name: "Diversidad cultural y multiculturalidad",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
     ],
   },
   {
@@ -279,13 +435,22 @@ const COLEGIO_SYLLABUS: readonly SyllabusCourse[] = [
       { name: "Autoconocimiento e identidad personal", grades: ["secundaria_1", "secundaria_2"] },
       { name: "Proyecto de vida", grades: ["secundaria_4", "secundaria_5"] },
       { name: "Constitución Política del Perú", grades: ["secundaria_3", "secundaria_4"] },
-      { name: "Derechos humanos y derechos del niño", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
+      {
+        name: "Derechos humanos y derechos del niño",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
       { name: "Deberes y derechos ciudadanos", grades: ["secundaria_3", "secundaria_4", "secundaria_5"] },
       { name: "Instituciones democráticas del Perú", grades: ["secundaria_3", "secundaria_4"] },
-      { name: "Resolución de conflictos y convivencia escolar", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
+      {
+        name: "Resolución de conflictos y convivencia escolar",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
       { name: "Prevención de la violencia y el bullying", grades: ["secundaria_1", "secundaria_2"] },
       { name: "Educación sexual integral", grades: ["secundaria_2", "secundaria_3", "secundaria_4"] },
-      { name: "Participación ciudadana y organización estudiantil", grades: ["secundaria_4", "secundaria_5"] },
+      {
+        name: "Participación ciudadana y organización estudiantil",
+        grades: ["secundaria_4", "secundaria_5"],
+      },
     ],
   },
   {
@@ -295,23 +460,41 @@ const COLEGIO_SYLLABUS: readonly SyllabusCourse[] = [
       { name: "Presente simple y presente continuo", grades: ["secundaria_1", "secundaria_2"] },
       { name: "Pasado simple", grades: ["secundaria_2", "secundaria_3"] },
       { name: "Futuro: will / going to", grades: ["secundaria_3"] },
-      { name: "Comprensión de textos cortos (reading)", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
-      { name: "Producción escrita: descripciones y narraciones", grades: ["secundaria_2", "secundaria_3", "secundaria_4"] },
+      {
+        name: "Comprensión de textos cortos (reading)",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
+      {
+        name: "Producción escrita: descripciones y narraciones",
+        grades: ["secundaria_2", "secundaria_3", "secundaria_4"],
+      },
       { name: "Comparativos y superlativos", grades: ["secundaria_2", "secundaria_3"] },
       { name: "Verbos modales: can, must, should", grades: ["secundaria_3", "secundaria_4"] },
       { name: "Voz pasiva", grades: ["secundaria_4", "secundaria_5"] },
       { name: "Oraciones condicionales", grades: ["secundaria_4", "secundaria_5"] },
-      { name: "Comprensión auditiva (listening)", grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4", "secundaria_5"] },
-      { name: "Comunicación oral: diálogos y presentaciones", grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4", "secundaria_5"] },
+      {
+        name: "Comprensión auditiva (listening)",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4", "secundaria_5"],
+      },
+      {
+        name: "Comunicación oral: diálogos y presentaciones",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4", "secundaria_5"],
+      },
     ],
   },
   {
     name: "Arte y Cultura",
     topics: [
-      { name: "Elementos del lenguaje visual: línea, color y forma", grades: ["secundaria_1", "secundaria_2"] },
+      {
+        name: "Elementos del lenguaje visual: línea, color y forma",
+        grades: ["secundaria_1", "secundaria_2"],
+      },
       { name: "Dibujo y composición", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
       { name: "Historia del arte peruano", grades: ["secundaria_3", "secundaria_4"] },
-      { name: "Música: ritmo, melodía y géneros peruanos", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
+      {
+        name: "Música: ritmo, melodía y géneros peruanos",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
       { name: "Danza y expresión corporal", grades: ["secundaria_1", "secundaria_2"] },
       { name: "Teatro y expresión dramática", grades: ["secundaria_2", "secundaria_3"] },
       { name: "Artes visuales contemporáneas", grades: ["secundaria_4", "secundaria_5"] },
@@ -323,8 +506,14 @@ const COLEGIO_SYLLABUS: readonly SyllabusCourse[] = [
     name: "Educación Física",
     topics: [
       { name: "Habilidades motrices básicas", grades: ["secundaria_1", "secundaria_2"] },
-      { name: "Condición física: resistencia, fuerza y flexibilidad", grades: ["secundaria_1", "secundaria_2", "secundaria_3"] },
-      { name: "Deportes de conjunto: fútbol, vóley y básquet", grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4", "secundaria_5"] },
+      {
+        name: "Condición física: resistencia, fuerza y flexibilidad",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3"],
+      },
+      {
+        name: "Deportes de conjunto: fútbol, vóley y básquet",
+        grades: ["secundaria_1", "secundaria_2", "secundaria_3", "secundaria_4", "secundaria_5"],
+      },
       { name: "Atletismo", grades: ["secundaria_2", "secundaria_3"] },
       { name: "Juegos predeportivos y recreativos", grades: ["secundaria_1", "secundaria_2"] },
       { name: "Hábitos de vida saludable y nutrición deportiva", grades: ["secundaria_3", "secundaria_4"] },
@@ -797,8 +986,20 @@ interface UncpAnexo7Row {
 
 const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
   I: [
-    { examSection: "Matemática", courseName: "Aritmética", sourceLevel: "P.A.", questionCount: 5, weightPoints: 3.925 },
-    { examSection: "Matemática", courseName: "Álgebra", sourceLevel: "P.A.", questionCount: 5, weightPoints: 3.815 },
+    {
+      examSection: "Matemática",
+      courseName: "Aritmética",
+      sourceLevel: "P.A.",
+      questionCount: 5,
+      weightPoints: 3.925,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Álgebra",
+      sourceLevel: "P.A.",
+      questionCount: 5,
+      weightPoints: 3.815,
+    },
     {
       examSection: "Matemática",
       courseName: "Estadística y Probabilidades",
@@ -806,8 +1007,20 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
       questionCount: 3,
       weightPoints: 2.415,
     },
-    { examSection: "Comunicación", courseName: "Comunicación", sourceLevel: "P.I.", questionCount: 6, weightPoints: 3.918 },
-    { examSection: "Comunicación", courseName: "Comunicación", sourceLevel: "P.A.", questionCount: 5, weightPoints: 7.66 },
+    {
+      examSection: "Comunicación",
+      courseName: "Comunicación",
+      sourceLevel: "P.I.",
+      questionCount: 6,
+      weightPoints: 3.918,
+    },
+    {
+      examSection: "Comunicación",
+      courseName: "Comunicación",
+      sourceLevel: "P.A.",
+      questionCount: 5,
+      weightPoints: 7.66,
+    },
     {
       examSection: "Ciencia y Tecnología",
       courseName: "Biología",
@@ -822,8 +1035,20 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
       questionCount: 2,
       weightPoints: 2.112,
     },
-    { examSection: "Ciencia y Tecnología", courseName: "Química", sourceLevel: "P.A.", questionCount: 6, weightPoints: 7.272 },
-    { examSection: "Ciencia y Tecnología", courseName: "Física", sourceLevel: "P.A.", questionCount: 5, weightPoints: 5.925 },
+    {
+      examSection: "Ciencia y Tecnología",
+      courseName: "Química",
+      sourceLevel: "P.A.",
+      questionCount: 6,
+      weightPoints: 7.272,
+    },
+    {
+      examSection: "Ciencia y Tecnología",
+      courseName: "Física",
+      sourceLevel: "P.A.",
+      questionCount: 5,
+      weightPoints: 5.925,
+    },
     {
       examSection: "Ciencia y Tecnología",
       courseName: "Ecología",
@@ -831,7 +1056,13 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
       questionCount: 3,
       weightPoints: 3.744,
     },
-    { examSection: "DPCC", courseName: "Psicología", sourceLevel: "P.A.", questionCount: 6, weightPoints: 4.824 },
+    {
+      examSection: "DPCC",
+      courseName: "Psicología",
+      sourceLevel: "P.A.",
+      questionCount: 6,
+      weightPoints: 4.824,
+    },
     {
       examSection: "Preguntas Aptitudes",
       courseName: "Razonamiento Matemático",
@@ -869,12 +1100,48 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
     },
   ],
   II: [
-    { examSection: "Matemática", courseName: "Aritmética", sourceLevel: "P.A.", questionCount: 6, weightPoints: 6.756 },
-    { examSection: "Matemática", courseName: "Aritmética", sourceLevel: "P.I.", questionCount: 2, weightPoints: 2.096 },
-    { examSection: "Matemática", courseName: "Álgebra", sourceLevel: "P.A.", questionCount: 5, weightPoints: 5.84 },
-    { examSection: "Matemática", courseName: "Álgebra", sourceLevel: "P.I.", questionCount: 3, weightPoints: 3.102 },
-    { examSection: "Matemática", courseName: "Geometría", sourceLevel: "P.A.", questionCount: 5, weightPoints: 5.56 },
-    { examSection: "Matemática", courseName: "Trigonometría", sourceLevel: "P.A.", questionCount: 5, weightPoints: 5.565 },
+    {
+      examSection: "Matemática",
+      courseName: "Aritmética",
+      sourceLevel: "P.A.",
+      questionCount: 6,
+      weightPoints: 6.756,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Aritmética",
+      sourceLevel: "P.I.",
+      questionCount: 2,
+      weightPoints: 2.096,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Álgebra",
+      sourceLevel: "P.A.",
+      questionCount: 5,
+      weightPoints: 5.84,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Álgebra",
+      sourceLevel: "P.I.",
+      questionCount: 3,
+      weightPoints: 3.102,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Geometría",
+      sourceLevel: "P.A.",
+      questionCount: 5,
+      weightPoints: 5.56,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Trigonometría",
+      sourceLevel: "P.A.",
+      questionCount: 5,
+      weightPoints: 5.565,
+    },
     {
       examSection: "Matemática",
       courseName: "Estadística y Probabilidades",
@@ -882,9 +1149,27 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
       questionCount: 5,
       weightPoints: 4.905,
     },
-    { examSection: "Comunicación", courseName: "Comunicación", sourceLevel: "P.I.", questionCount: 5, weightPoints: 4.19 },
-    { examSection: "Ciencia y Tecnología", courseName: "Química", sourceLevel: "P.I.", questionCount: 5, weightPoints: 4.89 },
-    { examSection: "Ciencia y Tecnología", courseName: "Física", sourceLevel: "P.I.", questionCount: 6, weightPoints: 6.69 },
+    {
+      examSection: "Comunicación",
+      courseName: "Comunicación",
+      sourceLevel: "P.I.",
+      questionCount: 5,
+      weightPoints: 4.19,
+    },
+    {
+      examSection: "Ciencia y Tecnología",
+      courseName: "Química",
+      sourceLevel: "P.I.",
+      questionCount: 5,
+      weightPoints: 4.89,
+    },
+    {
+      examSection: "Ciencia y Tecnología",
+      courseName: "Física",
+      sourceLevel: "P.I.",
+      questionCount: 6,
+      weightPoints: 6.69,
+    },
     {
       examSection: "Ciencia y Tecnología",
       courseName: "Ecología",
@@ -929,9 +1214,27 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
     },
   ],
   III: [
-    { examSection: "Matemática", courseName: "Aritmética", sourceLevel: "P.I.", questionCount: 7, weightPoints: 8.127 },
-    { examSection: "Matemática", courseName: "Álgebra", sourceLevel: "P.I.", questionCount: 5, weightPoints: 5.795 },
-    { examSection: "Matemática", courseName: "Álgebra", sourceLevel: "P.B.", questionCount: 3, weightPoints: 2.781 },
+    {
+      examSection: "Matemática",
+      courseName: "Aritmética",
+      sourceLevel: "P.I.",
+      questionCount: 7,
+      weightPoints: 8.127,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Álgebra",
+      sourceLevel: "P.I.",
+      questionCount: 5,
+      weightPoints: 5.795,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Álgebra",
+      sourceLevel: "P.B.",
+      questionCount: 3,
+      weightPoints: 2.781,
+    },
     {
       examSection: "Matemática",
       courseName: "Estadística y Probabilidades",
@@ -939,7 +1242,13 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
       questionCount: 6,
       weightPoints: 6.75,
     },
-    { examSection: "Comunicación", courseName: "Comunicación", sourceLevel: "P.I.", questionCount: 6, weightPoints: 5.85 },
+    {
+      examSection: "Comunicación",
+      courseName: "Comunicación",
+      sourceLevel: "P.I.",
+      questionCount: 6,
+      weightPoints: 5.85,
+    },
     {
       examSection: "Ciencia y Tecnología",
       courseName: "Ecología",
@@ -947,11 +1256,41 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
       questionCount: 3,
       weightPoints: 1.815,
     },
-    { examSection: "Ciencias Sociales", courseName: "Historia", sourceLevel: "P.I.", questionCount: 3, weightPoints: 1.944 },
-    { examSection: "Ciencias Sociales", courseName: "Geografía", sourceLevel: "P.I.", questionCount: 3, weightPoints: 2.247 },
-    { examSection: "Ciencias Sociales", courseName: "Economía", sourceLevel: "P.I.", questionCount: 6, weightPoints: 7.608 },
-    { examSection: "DPCC", courseName: "Psicología", sourceLevel: "P.I.", questionCount: 3, weightPoints: 2.619 },
-    { examSection: "DPCC", courseName: "Educación Cívica", sourceLevel: "P.I.", questionCount: 5, weightPoints: 3.73 },
+    {
+      examSection: "Ciencias Sociales",
+      courseName: "Historia",
+      sourceLevel: "P.I.",
+      questionCount: 3,
+      weightPoints: 1.944,
+    },
+    {
+      examSection: "Ciencias Sociales",
+      courseName: "Geografía",
+      sourceLevel: "P.I.",
+      questionCount: 3,
+      weightPoints: 2.247,
+    },
+    {
+      examSection: "Ciencias Sociales",
+      courseName: "Economía",
+      sourceLevel: "P.I.",
+      questionCount: 6,
+      weightPoints: 7.608,
+    },
+    {
+      examSection: "DPCC",
+      courseName: "Psicología",
+      sourceLevel: "P.I.",
+      questionCount: 3,
+      weightPoints: 2.619,
+    },
+    {
+      examSection: "DPCC",
+      courseName: "Educación Cívica",
+      sourceLevel: "P.I.",
+      questionCount: 5,
+      weightPoints: 3.73,
+    },
     {
       examSection: "Preguntas Aptitudes",
       courseName: "Razonamiento Matemático",
@@ -996,8 +1335,20 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
     },
   ],
   IV: [
-    { examSection: "Matemática", courseName: "Aritmética", sourceLevel: "P.B.", questionCount: 5, weightPoints: 4.075 },
-    { examSection: "Matemática", courseName: "Álgebra", sourceLevel: "P.B.", questionCount: 4, weightPoints: 3.228 },
+    {
+      examSection: "Matemática",
+      courseName: "Aritmética",
+      sourceLevel: "P.B.",
+      questionCount: 5,
+      weightPoints: 4.075,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Álgebra",
+      sourceLevel: "P.B.",
+      questionCount: 4,
+      weightPoints: 3.228,
+    },
     {
       examSection: "Matemática",
       courseName: "Estadística y Probabilidades",
@@ -1005,8 +1356,20 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
       questionCount: 3,
       weightPoints: 2.775,
     },
-    { examSection: "Comunicación", courseName: "Comunicación", sourceLevel: "P.I.", questionCount: 5, weightPoints: 5.89 },
-    { examSection: "Comunicación", courseName: "Comunicación", sourceLevel: "P.B.", questionCount: 5, weightPoints: 5.18 },
+    {
+      examSection: "Comunicación",
+      courseName: "Comunicación",
+      sourceLevel: "P.I.",
+      questionCount: 5,
+      weightPoints: 5.89,
+    },
+    {
+      examSection: "Comunicación",
+      courseName: "Comunicación",
+      sourceLevel: "P.B.",
+      questionCount: 5,
+      weightPoints: 5.18,
+    },
     {
       examSection: "Ciencia y Tecnología",
       courseName: "Biología",
@@ -1021,12 +1384,48 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
       questionCount: 3,
       weightPoints: 2.934,
     },
-    { examSection: "Ciencias Sociales", courseName: "Historia", sourceLevel: "P.B.", questionCount: 5, weightPoints: 5.49 },
-    { examSection: "Ciencias Sociales", courseName: "Geografía", sourceLevel: "P.B.", questionCount: 3, weightPoints: 3.255 },
-    { examSection: "Ciencias Sociales", courseName: "Economía", sourceLevel: "P.B.", questionCount: 3, weightPoints: 3.009 },
-    { examSection: "DPCC", courseName: "Psicología", sourceLevel: "P.I.", questionCount: 5, weightPoints: 5.23 },
-    { examSection: "DPCC", courseName: "Filosofía", sourceLevel: "P.I.", questionCount: 3, weightPoints: 3.045 },
-    { examSection: "DPCC", courseName: "Educación Cívica", sourceLevel: "P.I.", questionCount: 3, weightPoints: 3.045 },
+    {
+      examSection: "Ciencias Sociales",
+      courseName: "Historia",
+      sourceLevel: "P.B.",
+      questionCount: 5,
+      weightPoints: 5.49,
+    },
+    {
+      examSection: "Ciencias Sociales",
+      courseName: "Geografía",
+      sourceLevel: "P.B.",
+      questionCount: 3,
+      weightPoints: 3.255,
+    },
+    {
+      examSection: "Ciencias Sociales",
+      courseName: "Economía",
+      sourceLevel: "P.B.",
+      questionCount: 3,
+      weightPoints: 3.009,
+    },
+    {
+      examSection: "DPCC",
+      courseName: "Psicología",
+      sourceLevel: "P.I.",
+      questionCount: 5,
+      weightPoints: 5.23,
+    },
+    {
+      examSection: "DPCC",
+      courseName: "Filosofía",
+      sourceLevel: "P.I.",
+      questionCount: 3,
+      weightPoints: 3.045,
+    },
+    {
+      examSection: "DPCC",
+      courseName: "Educación Cívica",
+      sourceLevel: "P.I.",
+      questionCount: 3,
+      weightPoints: 3.045,
+    },
     {
       examSection: "Preguntas Aptitudes",
       courseName: "Razonamiento Matemático",
@@ -1064,10 +1463,34 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
     },
   ],
   V: [
-    { examSection: "Matemática", courseName: "Aritmética", sourceLevel: "P.B.", questionCount: 5, weightPoints: 5.57 },
-    { examSection: "Matemática", courseName: "Álgebra", sourceLevel: "P.B.", questionCount: 5, weightPoints: 5.565 },
-    { examSection: "Matemática", courseName: "Geometría", sourceLevel: "P.B.", questionCount: 3, weightPoints: 3.333 },
-    { examSection: "Matemática", courseName: "Trigonometría", sourceLevel: "P.B.", questionCount: 3, weightPoints: 3.354 },
+    {
+      examSection: "Matemática",
+      courseName: "Aritmética",
+      sourceLevel: "P.B.",
+      questionCount: 5,
+      weightPoints: 5.57,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Álgebra",
+      sourceLevel: "P.B.",
+      questionCount: 5,
+      weightPoints: 5.565,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Geometría",
+      sourceLevel: "P.B.",
+      questionCount: 3,
+      weightPoints: 3.333,
+    },
+    {
+      examSection: "Matemática",
+      courseName: "Trigonometría",
+      sourceLevel: "P.B.",
+      questionCount: 3,
+      weightPoints: 3.354,
+    },
     {
       examSection: "Matemática",
       courseName: "Estadística y Probabilidades",
@@ -1075,7 +1498,13 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
       questionCount: 3,
       weightPoints: 3.198,
     },
-    { examSection: "Comunicación", courseName: "Comunicación", sourceLevel: "P.B.", questionCount: 6, weightPoints: 5.232 },
+    {
+      examSection: "Comunicación",
+      courseName: "Comunicación",
+      sourceLevel: "P.B.",
+      questionCount: 6,
+      weightPoints: 5.232,
+    },
     {
       examSection: "Ciencia y Tecnología",
       courseName: "Biología",
@@ -1083,8 +1512,20 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
       questionCount: 6,
       weightPoints: 6.09,
     },
-    { examSection: "Ciencia y Tecnología", courseName: "Química", sourceLevel: "P.B.", questionCount: 5, weightPoints: 4.825 },
-    { examSection: "Ciencia y Tecnología", courseName: "Física", sourceLevel: "P.B.", questionCount: 3, weightPoints: 2.943 },
+    {
+      examSection: "Ciencia y Tecnología",
+      courseName: "Química",
+      sourceLevel: "P.B.",
+      questionCount: 5,
+      weightPoints: 4.825,
+    },
+    {
+      examSection: "Ciencia y Tecnología",
+      courseName: "Física",
+      sourceLevel: "P.B.",
+      questionCount: 3,
+      weightPoints: 2.943,
+    },
     {
       examSection: "Ciencia y Tecnología",
       courseName: "Ecología",
@@ -1092,8 +1533,20 @@ const UNCP_ANEXO7: Readonly<Record<string, readonly UncpAnexo7Row[]>> = {
       questionCount: 5,
       weightPoints: 5.755,
     },
-    { examSection: "Ciencias Sociales", courseName: "Geografía", sourceLevel: "P.B.", questionCount: 3, weightPoints: 2.526 },
-    { examSection: "DPCC", courseName: "Psicología", sourceLevel: "P.B.", questionCount: 3, weightPoints: 1.797 },
+    {
+      examSection: "Ciencias Sociales",
+      courseName: "Geografía",
+      sourceLevel: "P.B.",
+      questionCount: 3,
+      weightPoints: 2.526,
+    },
+    {
+      examSection: "DPCC",
+      courseName: "Psicología",
+      sourceLevel: "P.B.",
+      questionCount: 3,
+      weightPoints: 1.797,
+    },
     {
       examSection: "Preguntas Aptitudes",
       courseName: "Razonamiento Matemático",
@@ -1315,7 +1768,10 @@ export async function seed(): Promise<void> {
   await reconcileLegacyTopics(canonicalIndex);
   await seedCycle();
 
-  const [bankSampleAdmin] = await db.select({ id: users.id }).from(users).where(eq(users.email, BANK_SAMPLE_ADMIN.email));
+  const [bankSampleAdmin] = await db
+    .select({ id: users.id })
+    .from(users)
+    .where(eq(users.email, BANK_SAMPLE_ADMIN.email));
   if (bankSampleAdmin) {
     await seedCollectedQuestions(bankSampleAdmin.id);
     // The harvested exam lots come after the collected corpus, and separately:
@@ -1385,7 +1841,9 @@ async function seedCanonicalTaxonomy(): Promise<CanonicalIndex> {
       .where(and(eq(topics.courseId, courseId), eq(topics.gradeLevel, "pre")));
 
     const existingBySlug = new Map(
-      existingRows.filter((row): row is { id: string; name: string; slug: string } => row.slug !== null).map((row) => [row.slug, row]),
+      existingRows
+        .filter((row): row is { id: string; name: string; slug: string } => row.slug !== null)
+        .map((row) => [row.slug, row]),
     );
     const existingByName = new Map(existingRows.map((row) => [row.name, row]));
 
@@ -1570,7 +2028,10 @@ async function reconcileLegacyTopics(index: CanonicalIndex): Promise<void> {
         .update(questions)
         .set({ topicId: canonical.topicId, subtopicId: canonical.subtopicId ?? null })
         .where(eq(questions.topicId, legacy.id));
-      await tx.update(generationJobs).set({ topicId: canonical.topicId }).where(eq(generationJobs.topicId, legacy.id));
+      await tx
+        .update(generationJobs)
+        .set({ topicId: canonical.topicId })
+        .where(eq(generationJobs.topicId, legacy.id));
       await tx
         .update(examBlueprintRows)
         .set({ topicId: canonical.topicId, ...(courseIdChanged ? { courseId: canonical.courseId } : {}) })
@@ -1600,7 +2061,10 @@ async function reconcileLegacyTopics(index: CanonicalIndex): Promise<void> {
           .select({ id: syllabusWeekMaps.id })
           .from(syllabusWeekMaps)
           .where(
-            and(eq(syllabusWeekMaps.templateId, weekMap.templateId), eq(syllabusWeekMaps.topicId, canonical.topicId)),
+            and(
+              eq(syllabusWeekMaps.templateId, weekMap.templateId),
+              eq(syllabusWeekMaps.topicId, canonical.topicId),
+            ),
           );
 
         if (existingCanonical) {
@@ -1625,11 +2089,17 @@ async function seedGradeLevels(): Promise<void> {
 }
 
 async function seedExamTypes(): Promise<void> {
-  await db.insert(examTypes).values([...EXAM_TYPES]).onConflictDoNothing({ target: examTypes.code });
+  await db
+    .insert(examTypes)
+    .values([...EXAM_TYPES])
+    .onConflictDoNothing({ target: examTypes.code });
 }
 
 async function seedUniversities(): Promise<void> {
-  await db.insert(universities).values([...UNIVERSITIES]).onConflictDoNothing({ target: universities.code });
+  await db
+    .insert(universities)
+    .values([...UNIVERSITIES])
+    .onConflictDoNothing({ target: universities.code });
 }
 
 /**
@@ -1724,7 +2194,9 @@ async function getCourseId(name: string): Promise<string> {
     .from(courses)
     .where(and(eq(courses.stage, "preuniversitario"), eq(courses.name, name)));
   if (!row) {
-    throw new Error(`Seed invariant violated: preuniversitario course '${name}' missing — run seedStage first`);
+    throw new Error(
+      `Seed invariant violated: preuniversitario course '${name}' missing — run seedStage first`,
+    );
   }
   return row.id;
 }
@@ -1759,7 +2231,9 @@ async function seedExamBlueprintTemplate(
       .from(tracks)
       .where(and(eq(tracks.universityId, university.id), eq(tracks.code, trackCode)));
     if (!track) {
-      throw new Error(`Seed invariant violated: track '${trackCode}' missing for university '${universityCode}'`);
+      throw new Error(
+        `Seed invariant violated: track '${trackCode}' missing for university '${universityCode}'`,
+      );
     }
     trackId = track.id;
   }
@@ -1900,7 +2374,11 @@ async function seedUncpBlueprintRows(templateId: string, rows: readonly UncpAnex
  * see `canonical-taxonomy-conservation.spec.ts` for the pure guard that
  * proves this can't happen for the two syllabus files this project ships.
  */
-async function seedSyllabusWeekMaps(templateId: string, syllabusPath: string, index: CanonicalIndex): Promise<number> {
+async function seedSyllabusWeekMaps(
+  templateId: string,
+  syllabusPath: string,
+  index: CanonicalIndex,
+): Promise<number> {
   const file = JSON.parse(readFileSync(syllabusPath, "utf8")) as SyllabusFile;
   let count = 0;
 
@@ -1913,7 +2391,12 @@ async function seedSyllabusWeekMaps(templateId: string, syllabusPath: string, in
             `Seed invariant violated: syllabus label '${topicLabel}' (${course.courseName}) has no canonical topic`,
           );
         }
-        return { templateId, courseId: canonical.courseId, topicId: canonical.topicId, weekNumber: weekEntry.week };
+        return {
+          templateId,
+          courseId: canonical.courseId,
+          topicId: canonical.topicId,
+          weekNumber: weekEntry.week,
+        };
       }),
     );
 

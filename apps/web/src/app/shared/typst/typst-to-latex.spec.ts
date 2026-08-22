@@ -62,7 +62,9 @@ describe('typstMathToLatex', () => {
     expect(typstMathToLatex('sqrt(x)')).toBe('\\sqrt{x}');
     expect(typstMathToLatex('root(3, 5)')).toBe('\\sqrt[3]{5}');
     expect(typstMathToLatex('abs(x - 2)')).toBe('\\left|x - 2\\right|');
-    expect(typstMathToLatex('mat(P, 1; 0, P)')).toBe('\\begin{pmatrix}P & 1 \\\\ 0 & P\\end{pmatrix}');
+    expect(typstMathToLatex('mat(P, 1; 0, P)')).toBe(
+      '\\begin{pmatrix}P & 1 \\\\ 0 & P\\end{pmatrix}',
+    );
     expect(typstMathToLatex('cases(x + 2y = 4, x - y = -8)')).toBe(
       '\\begin{cases}x + 2 y = 4 \\\\ x - y = -8\\end{cases}',
     );
@@ -92,7 +94,9 @@ describe('typstMathToLatex', () => {
 
   it('treats named operators as operators, leaving their argument parens alone', () => {
     expect(typstMathToLatex('log_3 (x)')).toBe('\\log_{3} \\left(x\\right)');
-    expect(typstMathToLatex('sin(x) + arcsin(y)')).toBe('\\sin\\left(x\\right) + \\arcsin\\left(y\\right)');
+    expect(typstMathToLatex('sin(x) + arcsin(y)')).toBe(
+      '\\sin\\left(x\\right) + \\arcsin\\left(y\\right)',
+    );
   });
 
   it('renders quoted runs as upright text, not as variables', () => {
@@ -101,7 +105,9 @@ describe('typstMathToLatex', () => {
 
   it('keeps set and interval delimiters literal, as Typst does', () => {
     expect(typstMathToLatex('a, b in {1,2}')).toBe('a , b \\in \\{ 1 , 2 \\}');
-    expect(typstMathToLatex(']0, a[ union ]b, +infinity[')).toBe('] 0 , a [ \\cup ] b , +\\infty [');
+    expect(typstMathToLatex(']0, a[ union ]b, +infinity[')).toBe(
+      '] 0 , a [ \\cup ] b , +\\infty [',
+    );
     expect(typstMathToLatex('{x | x in ZZ}')).toBe('\\{ x \\mid x \\in \\mathbb{Z} \\}');
   });
 
@@ -118,7 +124,9 @@ describe('typstMathToLatex', () => {
 
 describe('typstToPlainText', () => {
   it('drops the math delimiters and the in-math quoting', () => {
-    expect(typstToPlainText('El área es $36 pi "cm"^2$ exacto')).toBe('El área es 36 pi cm^2 exacto');
+    expect(typstToPlainText('El área es $36 pi "cm"^2$ exacto')).toBe(
+      'El área es 36 pi cm^2 exacto',
+    );
     expect(typstToPlainText('$"MCD"(a, b) = 36$')).toBe('MCD(a, b) = 36');
   });
 

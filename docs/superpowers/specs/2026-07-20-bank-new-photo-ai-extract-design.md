@@ -15,6 +15,7 @@
 ## 3. Componente — `bank-new.component.ts`
 
 Nuevos signals (mismo patrón que `bank-list.component.ts`'s Task 10 OCR box):
+
 - `extracting = signal(false)`
 - `extractError = signal<string | null>(null)`
 
@@ -42,26 +43,26 @@ Los dos `effect()` existentes se modifican para leer y consumir ese valor en vez
 // ANTES (efecto de sGradeLevel → cursos del tab Estructurada):
 effect(() => {
   const gradeLevel = this.sGradeLevel();
-  this.sCourseId.set('');
+  this.sCourseId.set("");
   this.sCourses.set([]);
   if (!gradeLevel) return;
   this.taxonomyService.getCourses(gradeLevel).subscribe({
     next: (courses) => this.sCourses.set(courses),
-    error: () => this.saveError.set('No se pudieron cargar los cursos. Recarga la página.'),
+    error: () => this.saveError.set("No se pudieron cargar los cursos. Recarga la página."),
   });
 });
 
 // DESPUÉS:
 effect(() => {
   const gradeLevel = this.sGradeLevel();
-  const preselectCourseId = this.pendingStructuredCourseId ?? '';
+  const preselectCourseId = this.pendingStructuredCourseId ?? "";
   this.pendingStructuredCourseId = null;
   this.sCourseId.set(preselectCourseId);
   this.sCourses.set([]);
   if (!gradeLevel) return;
   this.taxonomyService.getCourses(gradeLevel).subscribe({
     next: (courses) => this.sCourses.set(courses),
-    error: () => this.saveError.set('No se pudieron cargar los cursos. Recarga la página.'),
+    error: () => this.saveError.set("No se pudieron cargar los cursos. Recarga la página."),
   });
 });
 ```
@@ -72,14 +73,14 @@ Mismo cambio, mismo patrón, para el effect de `sCourseId` → temas:
 // DESPUÉS:
 effect(() => {
   const courseId = this.sCourseId();
-  const preselectTopicId = this.pendingStructuredTopicId ?? '';
+  const preselectTopicId = this.pendingStructuredTopicId ?? "";
   this.pendingStructuredTopicId = null;
   this.sTopicId.set(preselectTopicId);
   this.sTopics.set([]);
   if (!courseId) return;
   this.taxonomyService.getTopics(courseId, this.sGradeLevel() ?? undefined).subscribe({
     next: (topics) => this.sTopics.set(topics),
-    error: () => this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.'),
+    error: () => this.saveError.set("No se pudieron cargar los temas. Inténtalo de nuevo."),
   });
 });
 ```
@@ -140,6 +141,7 @@ Ninguna nueva — hereda toda la infraestructura ya construida: `POST /ai/questi
 ## 6. Testing
 
 Espejo de `bank-list.component.spec.ts`'s tests de `extractFromImage`:
+
 - Click en "Extraer con IA" con imagen + taxonomía Foto completa → llama `aiService.extractQuestionFromImage` con el file correcto.
 - Éxito → copia courseId/topicId/difficulty/gradeLevel de Foto a Estructurada, puebla body/alternatives/correctAnswer, cambia a tab `structured`.
 - Error → `extractError` seteado, se queda en tab `photo`, `extracting()` vuelve a `false`.

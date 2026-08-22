@@ -23,13 +23,7 @@ export interface GenerateQuestionInput {
 }
 
 /** Exactly 5 alternatives, per design doc §5.2. */
-export type GeneratedAlternatives = readonly [
-  string,
-  string,
-  string,
-  string,
-  string,
-];
+export type GeneratedAlternatives = readonly [string, string, string, string, string];
 
 export interface GeneratedQuestion {
   /** Typst markup — supports inline/block math. */
@@ -82,8 +76,7 @@ export interface ExtractQuestionInput {
  * from two unrelated generations would look like one continuous stream.
  */
 export type GenerateProgressEvent =
-  | { readonly type: "delta"; readonly text: string }
-  | { readonly type: "restart" };
+  { readonly type: "delta"; readonly text: string } | { readonly type: "restart" };
 
 export interface QuestionGeneratorPort {
   /**

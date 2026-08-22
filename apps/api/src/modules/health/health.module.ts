@@ -16,7 +16,8 @@ import { HEALTH_REDIS_CLIENT } from "./health.constants";
     { provide: STORAGE_PORT, useFactory: resolveStorageAdapter },
     {
       provide: HEALTH_REDIS_CLIENT,
-      useFactory: () => new Redis({ ...resolveRedisConnection(), lazyConnect: true, maxRetriesPerRequest: 1 }),
+      useFactory: () =>
+        new Redis({ ...resolveRedisConnection(), lazyConnect: true, maxRetriesPerRequest: 1 }),
     },
   ],
 })

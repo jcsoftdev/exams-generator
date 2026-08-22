@@ -114,10 +114,7 @@ export function buildVersions(
   for (let versionIndex = 0; versionIndex < versionCount; versionIndex++) {
     let questionOrder = shuffleArray(questionIds, rng);
     let attempts = 0;
-    while (
-      seenOrders.has(questionOrder.join("|")) &&
-      attempts < MAX_DISTINCTNESS_RETRIES
-    ) {
+    while (seenOrders.has(questionOrder.join("|")) && attempts < MAX_DISTINCTNESS_RETRIES) {
       questionOrder = shuffleArray(questionIds, rng);
       attempts++;
     }

@@ -32,7 +32,9 @@ export interface TabItem<T = string> {
           [class.text-primary-700]="value() === t.value"
           [class.text-n500]="value() !== t.value"
           (click)="valueChange.emit(t.value)"
-        >{{ t.label }}</button>
+        >
+          {{ t.label }}
+        </button>
       }
     </div>
   `,

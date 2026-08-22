@@ -7,16 +7,31 @@
   @if (tab() === 'data') {
     <div data-testid="tab-data-panel">
       @if (loading()) {
-        <div data-testid="loading-indicator" class="py-6 text-sm text-n600">Cargando configuración…</div>
+        <div data-testid="loading-indicator" class="py-6 text-sm text-n600">
+          Cargando configuración…
+        </div>
       } @else if (loadError()) {
-        <div data-testid="load-error" class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text">
+        <div
+          data-testid="load-error"
+          class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text"
+        >
           {{ loadError() }}
         </div>
       } @else {
         <div class="flex max-w-md flex-col gap-4">
           <div class="flex gap-3">
-            <ui-input label="Nombre del colegio" name="name" [value]="name()" (valueChange)="name.set($event)"></ui-input>
-            <ui-input label="Ciudad" name="city" [value]="city()" (valueChange)="city.set($event)"></ui-input>
+            <ui-input
+              label="Nombre del colegio"
+              name="name"
+              [value]="name()"
+              (valueChange)="name.set($event)"
+            ></ui-input>
+            <ui-input
+              label="Ciudad"
+              name="city"
+              [value]="city()"
+              (valueChange)="city.set($event)"
+            ></ui-input>
           </div>
 
           <div class="flex items-center gap-3">
@@ -43,18 +58,28 @@
           <p class="text-xs text-n500">Sale en el encabezado de cada examen PDF.</p>
 
           @if (saveError()) {
-            <p data-testid="save-error" class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">
+            <p
+              data-testid="save-error"
+              class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text"
+              role="alert"
+            >
               {{ saveError() }}
             </p>
           }
           @if (saveSuccess()) {
-            <p data-testid="save-success" class="rounded-field bg-easy-bg px-3 py-2 text-sm text-easy-text" role="status">
+            <p
+              data-testid="save-success"
+              class="rounded-field bg-easy-bg px-3 py-2 text-sm text-easy-text"
+              role="status"
+            >
               Configuración guardada.
             </p>
           }
 
           <span data-testid="save-button">
-            <ui-button variant="primary" [loading]="saving()" (clicked)="onSave()">Guardar</ui-button>
+            <ui-button variant="primary" [loading]="saving()" (clicked)="onSave()"
+              >Guardar</ui-button
+            >
           </span>
         </div>
       }
@@ -69,27 +94,43 @@
       </div>
 
       @if (usersActionError()) {
-        <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ usersActionError() }}</p>
+        <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">
+          {{ usersActionError() }}
+        </p>
       }
       @if (tempPassword(); as pw) {
-        <p data-testid="temp-password" class="rounded-field bg-tint-active px-3 py-2 text-sm text-tint-text">
-          Contraseña temporal (cópiala, se muestra una sola vez): <span class="font-mono font-semibold">{{ pw }}</span>
+        <p
+          data-testid="temp-password"
+          class="rounded-field bg-tint-active px-3 py-2 text-sm text-tint-text"
+        >
+          Contraseña temporal (cópiala, se muestra una sola vez):
+          <span class="font-mono font-semibold">{{ pw }}</span>
         </p>
       }
 
       @if (teachersLoading()) {
         <div class="h-12 animate-pulse rounded-field bg-n100"></div>
       } @else if (teachersError()) {
-        <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text">{{ teachersError() }}</p>
+        <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text">
+          {{ teachersError() }}
+        </p>
       } @else if (teachers().length === 0) {
-        <div data-testid="empty-teachers" class="rounded-card border border-dashed border-n200 p-8 text-center text-sm text-n500">
+        <div
+          data-testid="empty-teachers"
+          class="rounded-card border border-dashed border-n200 p-8 text-center text-sm text-n500"
+        >
           Aún no agregas profesores.
         </div>
       } @else {
         <div class="flex flex-col gap-2">
           @for (u of teachers(); track u.id) {
-            <div data-testid="teacher-row" class="flex items-center gap-3 rounded-card border border-n200 bg-surface p-3">
-              <div class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-100 text-xs font-semibold text-primary-700">
+            <div
+              data-testid="teacher-row"
+              class="flex items-center gap-3 rounded-card border border-n200 bg-surface p-3"
+            >
+              <div
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-100 text-xs font-semibold text-primary-700"
+              >
                 {{ initials(u) }}
               </div>
               <div class="min-w-0 flex-1">
@@ -105,7 +146,9 @@
                 class="inline-flex items-center rounded-field bg-primary-100 px-2 py-0.5 text-xs font-medium text-tint-text"
                 >{{ roleLabel(u.role) }}</span
               >
-              <ui-tag [variant]="u.active ? 'easy' : 'warning-stock'">{{ u.active ? 'Activo' : 'Desactivado' }}</ui-tag>
+              <ui-tag [variant]="u.active ? 'easy' : 'warning-stock'">{{
+                u.active ? 'Activo' : 'Desactivado'
+              }}</ui-tag>
               <div class="relative">
                 <button
                   type="button"
@@ -117,12 +160,18 @@
                   <lucide-angular name="ellipsis" class="h-4 w-4"></lucide-angular>
                 </button>
                 @if (openMenuId() === u.id) {
-                  <div class="absolute right-0 z-40 mt-1 w-56 rounded-card border border-n200 bg-surface py-1 shadow-lg">
+                  <div
+                    class="absolute right-0 z-40 mt-1 w-56 rounded-card border border-n200 bg-surface py-1 shadow-lg"
+                  >
                     <div data-testid="teacher-reset">
-                      <ui-button variant="ghost" (clicked)="requestReset(u)">Restablecer contraseña</ui-button>
+                      <ui-button variant="ghost" (clicked)="requestReset(u)"
+                        >Restablecer contraseña</ui-button
+                      >
                     </div>
                     <div data-testid="teacher-toggle-active">
-                      <ui-button variant="ghost" (clicked)="toggleActive(u)">{{ u.active ? 'Desactivar' : 'Reactivar' }}</ui-button>
+                      <ui-button variant="ghost" (clicked)="toggleActive(u)">{{
+                        u.active ? 'Desactivar' : 'Reactivar'
+                      }}</ui-button>
                     </div>
                   </div>
                 }
@@ -144,9 +193,24 @@
 
   <ui-modal [open]="addOpen()" title="Agregar profesor">
     <div class="flex flex-col gap-3">
-      <ui-input label="Nombre" name="new-teacher-name" [value]="newName()" (valueChange)="newName.set($event)"></ui-input>
-      <ui-input label="Correo" type="email" [value]="newEmail()" (valueChange)="newEmail.set($event)"></ui-input>
-      <ui-select label="Rol" [options]="roleOptions" [value]="newRole()" (valueChange)="onRoleChange($event)"></ui-select>
+      <ui-input
+        label="Nombre"
+        name="new-teacher-name"
+        [value]="newName()"
+        (valueChange)="newName.set($event)"
+      ></ui-input>
+      <ui-input
+        label="Correo"
+        type="email"
+        [value]="newEmail()"
+        (valueChange)="newEmail.set($event)"
+      ></ui-input>
+      <ui-select
+        label="Rol"
+        [options]="roleOptions"
+        [value]="newRole()"
+        (valueChange)="onRoleChange($event)"
+      ></ui-select>
       @if (tempPassword(); as pw) {
         <p class="rounded-field bg-tint-active px-3 py-2 text-sm text-tint-text">
           Contraseña temporal: <span class="font-mono font-semibold">{{ pw }}</span>
@@ -161,28 +225,44 @@
     <div actions class="flex justify-end gap-2">
       <ui-button variant="ghost" (clicked)="closeAdd()">Cerrar</ui-button>
       <div data-testid="add-teacher-submit">
-        <ui-button variant="primary" [disabled]="!addValid()" (clicked)="submitAdd()">Crear</ui-button>
+        <ui-button variant="primary" [disabled]="!addValid()" (clicked)="submitAdd()"
+          >Crear</ui-button
+        >
       </div>
     </div>
   </ui-modal>
 
-  <ui-modal [open]="pendingReset() !== null" title="Restablecer contraseña" (openChange)="cancelReset()">
+  <ui-modal
+    [open]="pendingReset() !== null"
+    title="Restablecer contraseña"
+    (openChange)="cancelReset()"
+  >
     <p data-testid="reset-confirm" class="text-sm text-n700">
-      ¿Seguro que quieres restablecer la contraseña de "{{ pendingReset()?.name }}"? La contraseña anterior deja de funcionar.
+      ¿Seguro que quieres restablecer la contraseña de "{{ pendingReset()?.name }}"? La contraseña
+      anterior deja de funcionar.
     </p>
     <div actions class="flex justify-end gap-2">
       <ui-button variant="ghost" (clicked)="cancelReset()">Cancelar</ui-button>
-      <div data-testid="reset-confirm-yes"><ui-button variant="danger" (clicked)="confirmReset()">Restablecer</ui-button></div>
+      <div data-testid="reset-confirm-yes">
+        <ui-button variant="danger" (clicked)="confirmReset()">Restablecer</ui-button>
+      </div>
     </div>
   </ui-modal>
 
-  <ui-modal [open]="pendingDeactivate() !== null" title="Desactivar profesor" (openChange)="cancelDeactivate()">
+  <ui-modal
+    [open]="pendingDeactivate() !== null"
+    title="Desactivar profesor"
+    (openChange)="cancelDeactivate()"
+  >
     <p data-testid="deactivate-confirm" class="text-sm text-n700">
-      ¿Seguro que quieres desactivar a "{{ pendingDeactivate()?.name }}"? No podrá iniciar sesión hasta que lo reactives.
+      ¿Seguro que quieres desactivar a "{{ pendingDeactivate()?.name }}"? No podrá iniciar sesión
+      hasta que lo reactives.
     </p>
     <div actions class="flex justify-end gap-2">
       <ui-button variant="ghost" (clicked)="cancelDeactivate()">Cancelar</ui-button>
-      <div data-testid="deactivate-confirm-yes"><ui-button variant="danger" (clicked)="confirmDeactivate()">Desactivar</ui-button></div>
+      <div data-testid="deactivate-confirm-yes">
+        <ui-button variant="danger" (clicked)="confirmDeactivate()">Desactivar</ui-button>
+      </div>
     </div>
   </ui-modal>
 </section>

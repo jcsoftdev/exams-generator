@@ -142,7 +142,10 @@ describe("BankRepository", () => {
     });
     createdQuestionIds.push(id);
 
-    const [row] = await db.select({ imageAssetId: questions.imageAssetId }).from(questions).where(inArray(questions.id, [id]));
+    const [row] = await db
+      .select({ imageAssetId: questions.imageAssetId })
+      .from(questions)
+      .where(inArray(questions.id, [id]));
     if (row?.imageAssetId) {
       createdAssetIds.push(row.imageAssetId);
     }
@@ -153,7 +156,10 @@ describe("BankRepository", () => {
   it("createImageQuestion() persists a question row with status='approved' and its backing asset row", async () => {
     const id = await createQuestion({ tenantId: null, createdBy: centralUserId });
 
-    const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+    const [row] = await db
+      .select()
+      .from(questions)
+      .where(inArray(questions.id, [id]));
     expect(row?.status).toBe("approved");
     expect(row?.type).toBe("image");
     expect(row?.imageAssetId).toBeTruthy();
@@ -193,7 +199,10 @@ describe("BankRepository", () => {
   it("createStructuredQuestion() persists a question row with status='approved', type='structured' and no backing asset", async () => {
     const id = await createStructuredQuestion({ tenantId: null, createdBy: centralUserId });
 
-    const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+    const [row] = await db
+      .select()
+      .from(questions)
+      .where(inArray(questions.id, [id]));
     expect(row?.status).toBe("approved");
     expect(row?.type).toBe("structured");
     expect(row?.imageAssetId).toBeNull();
@@ -217,7 +226,10 @@ describe("BankRepository", () => {
     });
     createdQuestionIds.push(id);
 
-    const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+    const [row] = await db
+      .select()
+      .from(questions)
+      .where(inArray(questions.id, [id]));
     expect(row?.figureCode).toBe("cetz.canvas({ /* triangle */ })");
   });
 
@@ -392,7 +404,10 @@ describe("BankRepository", () => {
         bodyTypst: "$z^2 = 9$, resuelve para $z$",
       });
 
-      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      const [row] = await db
+        .select()
+        .from(questions)
+        .where(inArray(questions.id, [id]));
       expect(row?.status).toBe("approved");
       expect(row?.aiGenerated).toBe(false);
     });
@@ -414,7 +429,10 @@ describe("BankRepository", () => {
       });
       createdQuestionIds.push(id);
 
-      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      const [row] = await db
+        .select()
+        .from(questions)
+        .where(inArray(questions.id, [id]));
       expect(row?.status).toBe("draft");
       expect(row?.aiGenerated).toBe(true);
     });
@@ -506,7 +524,10 @@ describe("BankRepository", () => {
       const result = await repository.approveQuestion(id, null);
       expect(result?.status).toBe("approved");
 
-      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      const [row] = await db
+        .select()
+        .from(questions)
+        .where(inArray(questions.id, [id]));
       expect(row?.status).toBe("approved");
     });
 
@@ -516,7 +537,10 @@ describe("BankRepository", () => {
       const result = await repository.approveQuestion(id, tenantBId);
       expect(result).toBeUndefined();
 
-      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      const [row] = await db
+        .select()
+        .from(questions)
+        .where(inArray(questions.id, [id]));
       expect(row?.status).toBe("draft");
     });
 
@@ -526,7 +550,10 @@ describe("BankRepository", () => {
       const result = await repository.rejectQuestion(id, null);
       expect(result).toBe(true);
 
-      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      const [row] = await db
+        .select()
+        .from(questions)
+        .where(inArray(questions.id, [id]));
       expect(row).toBeUndefined();
       createdQuestionIds.splice(createdQuestionIds.indexOf(id), 1);
     });
@@ -537,7 +564,10 @@ describe("BankRepository", () => {
       const result = await repository.rejectQuestion(id, tenantBId);
       expect(result).toBe(false);
 
-      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      const [row] = await db
+        .select()
+        .from(questions)
+        .where(inArray(questions.id, [id]));
       expect(row).toBeDefined();
     });
 
@@ -556,7 +586,10 @@ describe("BankRepository", () => {
       expect(result?.correctAnswer).toBe("1");
       expect(result?.figureCode).toBe("cetz.canvas({})");
 
-      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      const [row] = await db
+        .select()
+        .from(questions)
+        .where(inArray(questions.id, [id]));
       expect(row?.bodyTypst).toBe("edited body");
     });
 
@@ -638,8 +671,14 @@ describe("BankRepository", () => {
         await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
       }
 
-      const firstPage = await repository.listQuestions({ currentTenantId: null, topicId }, { page: 1, pageSize: 3 });
-      const secondPage = await repository.listQuestions({ currentTenantId: null, topicId }, { page: 2, pageSize: 3 });
+      const firstPage = await repository.listQuestions(
+        { currentTenantId: null, topicId },
+        { page: 1, pageSize: 3 },
+      );
+      const secondPage = await repository.listQuestions(
+        { currentTenantId: null, topicId },
+        { page: 2, pageSize: 3 },
+      );
 
       const firstIds = firstPage.items.map((q) => q.id);
       const secondIds = secondPage.items.map((q) => q.id);
@@ -652,8 +691,14 @@ describe("BankRepository", () => {
     it("keeps the same page stable across identical calls", async () => {
       await createQuestion({ tenantId: null, createdBy: centralUserId, topicId });
 
-      const once = await repository.listQuestions({ currentTenantId: null, topicId }, { page: 1, pageSize: 4 });
-      const twice = await repository.listQuestions({ currentTenantId: null, topicId }, { page: 1, pageSize: 4 });
+      const once = await repository.listQuestions(
+        { currentTenantId: null, topicId },
+        { page: 1, pageSize: 4 },
+      );
+      const twice = await repository.listQuestions(
+        { currentTenantId: null, topicId },
+        { page: 1, pageSize: 4 },
+      );
 
       expect(once.items.map((q) => q.id)).toEqual(twice.items.map((q) => q.id));
     });

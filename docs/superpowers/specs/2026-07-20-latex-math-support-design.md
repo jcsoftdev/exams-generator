@@ -13,6 +13,7 @@ Revisando `apps/api/logs/typst-failures.log` (archivo huérfano, gitignored, sin
 ## 1. Prerequisito — desfase de versión de typst (bug real, verificado)
 
 `infra/Dockerfile.api:6` fija `ARG TYPST_VERSION=0.12.0` — sin overrides en ningún workflow, compose o script de deploy (verificado con `rg` en todo el repo). Pero:
+
 - `openrouter-request-builder.ts:104-114` pinea CeTZ `@preview/cetz:0.5.2` con el comentario "verificado contra el binario pinneado en `infra/Dockerfile.api` (`TYPST_VERSION=0.15.1`)" — cita una versión que el Dockerfile nunca tuvo.
 - `apps/api/scripts/install-typst-dev.sh:15` sí fija `0.15.1`, y su comentario dice "Keep this in sync with infra/Dockerfile.api's ARG TYPST_VERSION" — nunca se sincronizó.
 - `typst-cli.adapter.golden.spec.ts:16` documenta "0.12.0 at time of writing".
@@ -28,7 +29,7 @@ Verificado: `@preview/mitex:0.2.7` (última versión en Typst Universe) no decla
 En `openrouter-request-builder.ts`, junto a `CETZ_RULES` (línea 126), un bloque paralelo:
 
 - Sintaxis Typst nativa dentro de `$...$` sigue siendo la opción por defecto (sin cambio a los ejemplos existentes de `TYPST_MATH_RULES`).
-- Si el modelo prefiere LaTeX para una expresión, debe envolverla explícitamente: `#mi("\frac{1}{2}")` inline o `#mitex(\`...\`)` para bloque — **nunca** LaTeX suelto dentro de `$...$` (eso Typst no lo compila, sea cual sea la versión).
+- Si el modelo prefiere LaTeX para una expresión, debe envolverla explícitamente: `#mi("\frac{1}{2}")` inline o `#mitex(\`...\`)`para bloque — **nunca** LaTeX suelto dentro de`$...$` (eso Typst no lo compila, sea cual sea la versión).
 - Debe incluir su propio `#import "@preview/mitex:0.2.7": mi, mitex` dentro de `bodyTypst`, solo si de hecho usa `#mi()`/`#mitex()` — mismo patrón que `CETZ_RULES` ya exige para `figureCode` (import inline, no global).
 - `TYPST_MATH_RULES` (línea 99) se ajusta: la prohibición de backslash sigue aplicando a `$...$` suelto; se agrega una frase aclarando que LaTeX SÍ es válido envuelto en `#mi()`/`#mitex()`.
 - `MITEX_RULES` se agrega a los 3 `SYSTEM_PROMPT` que ya comparten `CETZ_RULES` (generate, revise, extract — líneas 178, 231, 293).

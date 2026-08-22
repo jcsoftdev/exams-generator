@@ -113,12 +113,14 @@ async function deleteCourses(
   }
   const ids = refs.map((ref) => ref.id);
   await tx.delete(generationJobs).where(inArray(generationJobs.courseId, ids));
-  await tx.delete(questions).where(
-    inArray(
-      questions.topicId,
-      tx.select({ id: topics.id }).from(topics).where(inArray(topics.courseId, ids)),
-    ),
-  );
+  await tx
+    .delete(questions)
+    .where(
+      inArray(
+        questions.topicId,
+        tx.select({ id: topics.id }).from(topics).where(inArray(topics.courseId, ids)),
+      ),
+    );
   await tx.delete(topics).where(inArray(topics.courseId, ids));
   await tx.delete(courses).where(inArray(courses.id, ids));
   for (const ref of refs) {

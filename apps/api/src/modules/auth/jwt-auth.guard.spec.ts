@@ -29,12 +29,9 @@ describe("extractBearerToken", () => {
     expect(extractBearerToken("Bearer abc.def.ghi")).toBe("abc.def.ghi");
   });
 
-  it.each([undefined, "", "abc.def.ghi", "Basic abc", "Bearer "])(
-    "returns null for %p",
-    (header) => {
-      expect(extractBearerToken(header)).toBeNull();
-    },
-  );
+  it.each([undefined, "", "abc.def.ghi", "Basic abc", "Bearer "])("returns null for %p", (header) => {
+    expect(extractBearerToken(header)).toBeNull();
+  });
 });
 
 describe("JwtAuthGuard", () => {

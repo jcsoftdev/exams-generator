@@ -27,6 +27,7 @@
 ## File Structure
 
 **Backend (`apps/api/src/modules/ai`):**
+
 - `domain/ports/question-generator.port.ts` — add `GenerateProgressEvent` type, `generate()` gains optional `onProgress` param.
 - `adapters/in-memory-question-generator.adapter.ts` — `generate()` invokes `onProgress` once with the full body (dev/test streaming without a real API key).
 - `adapters/lazy-question-generator.adapter.ts` — passes `onProgress` through.
@@ -37,6 +38,7 @@
 - `ai.controller.ts` — new `POST generate/stream` hand-rolled SSE endpoint.
 
 **Frontend (`apps/web/src/app/features/ai`):**
+
 - `ai.models.ts` — mirror `GenerateQuestionStreamEvent`.
 - `parse-generate-stream-frames.ts` — **new**, pure SSE-frame parser for our own wire format (mirrors the backend's OpenRouter-side parser, different format).
 - `ai.service.ts` — `generateQuestionStream()`.
@@ -48,6 +50,7 @@
 ## Task 1: Port — optional `onProgress` callback + fakes
 
 **Files:**
+
 - Modify: `apps/api/src/modules/ai/domain/ports/question-generator.port.ts`
 - Modify: `apps/api/src/modules/ai/adapters/in-memory-question-generator.adapter.ts`
 - Modify: `apps/api/src/modules/ai/adapters/lazy-question-generator.adapter.ts`
@@ -55,6 +58,7 @@
 - Test: existing `apps/api/src/modules/ai/adapters/in-memory-question-generator.adapter.spec.ts` and `lazy-question-generator.adapter.spec.ts` stay green unmodified; the contract suite gets one new case.
 
 **Interfaces:**
+
 - Produces: `GenerateProgressEvent = { type: "delta"; text: string } | { type: "restart" }`; `QuestionGeneratorPort.generate(input, onProgress?: (event: GenerateProgressEvent) => void): Promise<GeneratedQuestion>`.
 
 - [ ] **Step 1: Failing contract test**
@@ -62,18 +66,16 @@
 Add to `apps/api/src/modules/ai/domain/ports/question-generator.port.contract.ts` (after the existing `figureCode` cases, before the closing `});`):
 
 ```ts
-    it("generate() invokes onProgress with at least one non-empty delta when provided", async () => {
-      const adapter = createAdapter();
-      const events: GenerateProgressEvent[] = [];
+it("generate() invokes onProgress with at least one non-empty delta when provided", async () => {
+  const adapter = createAdapter();
+  const events: GenerateProgressEvent[] = [];
 
-      await adapter.generate(BASE_INPUT, (event) => events.push(event));
+  await adapter.generate(BASE_INPUT, (event) => events.push(event));
 
-      const deltas = events.filter(
-        (e): e is { type: "delta"; text: string } => e.type === "delta",
-      );
-      expect(deltas.length).toBeGreaterThan(0);
-      expect(deltas.every((d) => d.text.length > 0)).toBe(true);
-    });
+  const deltas = events.filter((e): e is { type: "delta"; text: string } => e.type === "delta");
+  expect(deltas.length).toBeGreaterThan(0);
+  expect(deltas.every((d) => d.text.length > 0)).toBe(true);
+});
 ```
 
 Add `GenerateProgressEvent` to the existing import at the top of the file:
@@ -108,8 +110,7 @@ In `apps/api/src/modules/ai/domain/ports/question-generator.port.ts`, add after 
  * from two unrelated generations would look like one continuous stream.
  */
 export type GenerateProgressEvent =
-  | { readonly type: "delta"; readonly text: string }
-  | { readonly type: "restart" };
+  { readonly type: "delta"; readonly text: string } | { readonly type: "restart" };
 ```
 
 Replace the `generate()` method signature (lines 63-76) with:
@@ -216,12 +217,14 @@ git commit -m "feat(api): add optional onProgress callback to QuestionGeneratorP
 ## Task 2: OpenRouterAdapter — real SSE streaming
 
 **Files:**
+
 - Create: `apps/api/src/modules/ai/adapters/openrouter/openrouter-sse-parser.ts`
 - Test: `apps/api/src/modules/ai/adapters/openrouter/openrouter-sse-parser.spec.ts`
 - Modify: `apps/api/src/modules/ai/adapters/openrouter/openrouter.adapter.ts`
 - Modify: `apps/api/src/modules/ai/adapters/openrouter/openrouter.adapter.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `GenerateProgressEvent` (Task 1).
 - Produces: `parseOpenRouterSseBuffer(buffer: string): { events: readonly OpenRouterSseEvent[]; remainder: string }`; `OpenRouterAdapter.generate(input, onProgress?)` now genuinely streams when `onProgress` is passed.
 
@@ -245,7 +248,9 @@ describe("parseOpenRouterSseBuffer", () => {
   });
 
   it("keeps an incomplete trailing frame in remainder instead of dropping it", () => {
-    const { events, remainder } = parseOpenRouterSseBuffer(`${chunk("Hola")}\n\n${chunk("Mun").slice(0, 10)}`);
+    const { events, remainder } = parseOpenRouterSseBuffer(
+      `${chunk("Hola")}\n\n${chunk("Mun").slice(0, 10)}`,
+    );
 
     expect(events).toEqual([{ type: "delta", text: "Hola" }]);
     expect(remainder).toBe(chunk("Mun").slice(0, 10));
@@ -260,10 +265,7 @@ describe("parseOpenRouterSseBuffer", () => {
   it("emits a done event for the [DONE] sentinel and stops before it", () => {
     const { events } = parseOpenRouterSseBuffer(`${chunk("Hola")}\n\ndata: [DONE]\n\n`);
 
-    expect(events).toEqual([
-      { type: "delta", text: "Hola" },
-      { type: "done" },
-    ]);
+    expect(events).toEqual([{ type: "delta", text: "Hola" }, { type: "done" }]);
   });
 
   it("emits an error event when a chunk's finish_reason is 'error'", () => {
@@ -395,7 +397,12 @@ import {
   GenerateQuestionInput,
   ReviseQuestionInput,
 } from "../../domain/ports/question-generator.port";
-import { HttpClient, HttpSseResponse, OpenRouterAdapter, SseHttpClient } from "./openrouter.adapter";
+import {
+  HttpClient,
+  HttpSseResponse,
+  OpenRouterAdapter,
+  SseHttpClient,
+} from "./openrouter.adapter";
 ```
 
 Add this helper near the existing `jsonResponse`/`chatCompletion` helpers:
@@ -424,95 +431,106 @@ function sseResponse(status: number, pieces: readonly string[]): ReturnType<SseH
 Add a new `describe` block right before the closing `});` of the top-level `describe("OpenRouterAdapter", ...)`:
 
 ```ts
-  describe("streaming (onProgress provided)", () => {
-    it("sends stream: true and forwards each delta through onProgress", async () => {
-      const sseHttpClient = jest
-        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
-        .mockReturnValueOnce(
-          sseResponse(200, [
-            sseChunk('{"bodyTypst":"¿Cuánto'),
-            sseChunk(' es $1/2 + 1/4$?","alternatives":["1/4","3/4","1/2","1","2"],"correctAnswer":"b","figureCode":null}'),
-            "data: [DONE]\n\n",
-          ]),
-        );
-      const adapter = new OpenRouterAdapter({
-        apiKey: "sk-test-key",
-        model: "deepseek/deepseek-r1:free",
-        sseHttpClient,
-      });
-      const events: GenerateProgressEvent[] = [];
-
-      const result = await adapter.generate(INPUT, (event) => events.push(event));
-
-      expect(JSON.parse(sseHttpClient.mock.calls[0][1].body).stream).toBe(true);
-      expect(events.filter((e) => e.type === "delta")).toHaveLength(2);
-      expect(result.bodyTypst).toBe(VALID_QUESTION_JSON.bodyTypst);
-      expect(result.correctAnswer).toBe("b");
+describe("streaming (onProgress provided)", () => {
+  it("sends stream: true and forwards each delta through onProgress", async () => {
+    const sseHttpClient = jest
+      .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+      .mockReturnValueOnce(
+        sseResponse(200, [
+          sseChunk('{"bodyTypst":"¿Cuánto'),
+          sseChunk(
+            ' es $1/2 + 1/4$?","alternatives":["1/4","3/4","1/2","1","2"],"correctAnswer":"b","figureCode":null}',
+          ),
+          "data: [DONE]\n\n",
+        ]),
+      );
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      sseHttpClient,
     });
+    const events: GenerateProgressEvent[] = [];
 
-    it("emits a restart event before the internal retry when the first stream fails validation", async () => {
-      const sseHttpClient = jest
-        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
-        .mockReturnValueOnce(sseResponse(200, [sseChunk(JSON.stringify({ ...VALID_QUESTION_JSON, alternatives: ["only-one"] })), "data: [DONE]\n\n"]))
-        .mockReturnValueOnce(sseResponse(200, [sseChunk(JSON.stringify(VALID_QUESTION_JSON)), "data: [DONE]\n\n"]));
-      const adapter = new OpenRouterAdapter({
-        apiKey: "sk-test-key",
-        model: "deepseek/deepseek-r1:free",
-        sseHttpClient,
-      });
-      const events: GenerateProgressEvent[] = [];
+    const result = await adapter.generate(INPUT, (event) => events.push(event));
 
-      const result = await adapter.generate(INPUT, (event) => events.push(event));
-
-      expect(sseHttpClient).toHaveBeenCalledTimes(2);
-      expect(events.some((e) => e.type === "restart")).toBe(true);
-      expect(result.bodyTypst).toBe(VALID_QUESTION_JSON.bodyTypst);
-    });
-
-    it("throws AiInvalidResponseError when both streamed attempts fail validation", async () => {
-      const sseHttpClient = jest
-        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
-        .mockReturnValue(sseResponse(200, [sseChunk("not json at all"), "data: [DONE]\n\n"]));
-      const adapter = new OpenRouterAdapter({
-        apiKey: "sk-test-key",
-        model: "deepseek/deepseek-r1:free",
-        sseHttpClient,
-      });
-
-      await expect(adapter.generate(INPUT, () => {})).rejects.toBeInstanceOf(AiInvalidResponseError);
-    });
-
-    it("throws AiRateLimitError immediately on a 429 streaming response, without retrying", async () => {
-      const sseHttpClient = jest
-        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
-        .mockReturnValueOnce(sseResponse(429, []));
-      const adapter = new OpenRouterAdapter({
-        apiKey: "sk-test-key",
-        model: "deepseek/deepseek-r1:free",
-        sseHttpClient,
-      });
-
-      await expect(adapter.generate(INPUT, () => {})).rejects.toBeInstanceOf(AiRateLimitError);
-      expect(sseHttpClient).toHaveBeenCalledTimes(1);
-    });
-
-    it("does not touch the buffered httpClient at all when streaming", async () => {
-      const httpClient = jest.fn<ReturnType<HttpClient>, Parameters<HttpClient>>();
-      const sseHttpClient = jest
-        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
-        .mockReturnValueOnce(sseResponse(200, [sseChunk(JSON.stringify(VALID_QUESTION_JSON)), "data: [DONE]\n\n"]));
-      const adapter = new OpenRouterAdapter({
-        apiKey: "sk-test-key",
-        model: "deepseek/deepseek-r1:free",
-        httpClient,
-        sseHttpClient,
-      });
-
-      await adapter.generate(INPUT, () => {});
-
-      expect(httpClient).not.toHaveBeenCalled();
-    });
+    expect(JSON.parse(sseHttpClient.mock.calls[0][1].body).stream).toBe(true);
+    expect(events.filter((e) => e.type === "delta")).toHaveLength(2);
+    expect(result.bodyTypst).toBe(VALID_QUESTION_JSON.bodyTypst);
+    expect(result.correctAnswer).toBe("b");
   });
+
+  it("emits a restart event before the internal retry when the first stream fails validation", async () => {
+    const sseHttpClient = jest
+      .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+      .mockReturnValueOnce(
+        sseResponse(200, [
+          sseChunk(JSON.stringify({ ...VALID_QUESTION_JSON, alternatives: ["only-one"] })),
+          "data: [DONE]\n\n",
+        ]),
+      )
+      .mockReturnValueOnce(
+        sseResponse(200, [sseChunk(JSON.stringify(VALID_QUESTION_JSON)), "data: [DONE]\n\n"]),
+      );
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      sseHttpClient,
+    });
+    const events: GenerateProgressEvent[] = [];
+
+    const result = await adapter.generate(INPUT, (event) => events.push(event));
+
+    expect(sseHttpClient).toHaveBeenCalledTimes(2);
+    expect(events.some((e) => e.type === "restart")).toBe(true);
+    expect(result.bodyTypst).toBe(VALID_QUESTION_JSON.bodyTypst);
+  });
+
+  it("throws AiInvalidResponseError when both streamed attempts fail validation", async () => {
+    const sseHttpClient = jest
+      .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+      .mockReturnValue(sseResponse(200, [sseChunk("not json at all"), "data: [DONE]\n\n"]));
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      sseHttpClient,
+    });
+
+    await expect(adapter.generate(INPUT, () => {})).rejects.toBeInstanceOf(AiInvalidResponseError);
+  });
+
+  it("throws AiRateLimitError immediately on a 429 streaming response, without retrying", async () => {
+    const sseHttpClient = jest
+      .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+      .mockReturnValueOnce(sseResponse(429, []));
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      sseHttpClient,
+    });
+
+    await expect(adapter.generate(INPUT, () => {})).rejects.toBeInstanceOf(AiRateLimitError);
+    expect(sseHttpClient).toHaveBeenCalledTimes(1);
+  });
+
+  it("does not touch the buffered httpClient at all when streaming", async () => {
+    const httpClient = jest.fn<ReturnType<HttpClient>, Parameters<HttpClient>>();
+    const sseHttpClient = jest
+      .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+      .mockReturnValueOnce(
+        sseResponse(200, [sseChunk(JSON.stringify(VALID_QUESTION_JSON)), "data: [DONE]\n\n"]),
+      );
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      httpClient,
+      sseHttpClient,
+    });
+
+    await adapter.generate(INPUT, () => {});
+
+    expect(httpClient).not.toHaveBeenCalled();
+  });
+});
 ```
 
 - [ ] **Step 6: Run it, expect fail**
@@ -712,9 +730,11 @@ git commit -m "feat(api): stream OpenRouter generate() responses via SSE when on
 ## Task 3: Extract `generateOneItem` (pure refactor, no behavior change)
 
 **Files:**
+
 - Modify: `apps/api/src/modules/ai/generate-questions.service.ts`
 
 **Interfaces:**
+
 - Produces: `private generateOneItem(user, params, onProgress?): Promise<{ok:true; id:string} | {ok:false; error:string}>` — used by both the existing batch loop and the new streaming method (Task 4).
 
 - [ ] **Step 1: Establish the regression baseline**
@@ -727,7 +747,11 @@ Expected: PASS (all 7 existing tests green, before touching anything — this is
 In `apps/api/src/modules/ai/generate-questions.service.ts`, add `GenerateProgressEvent` to the import:
 
 ```ts
-import { GeneratedQuestion, GenerateProgressEvent, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
+import {
+  GeneratedQuestion,
+  GenerateProgressEvent,
+  QuestionGeneratorPort,
+} from "./domain/ports/question-generator.port";
 ```
 
 Replace the body of `generateQuestions()` from the `const created` line (97) through the closing of the `for` loop (170) — i.e. everything between `const taxonomy = ...` block ending and `return { created, failed };` — with a call into the new helper, and add the helper as a new private method:
@@ -863,10 +887,12 @@ git commit -m "refactor(api): extract generateOneItem from GenerateQuestionsServ
 ## Task 4: `GenerateQuestionsService.generateQuestionStream()`
 
 **Files:**
+
 - Modify: `apps/api/src/modules/ai/generate-questions.service.ts`
 - Modify: `apps/api/src/modules/ai/generate-questions.service.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `generateOneItem` (Task 3).
 - Produces: `export type GenerateQuestionStreamEvent = GenerateProgressEvent | { type: "done"; result: GenerateQuestionsResult }`; `GenerateQuestionsService.generateQuestionStream(user, dto: Omit<GenerateQuestionsDto, "count">): Observable<GenerateQuestionStreamEvent>`.
 
@@ -882,7 +908,10 @@ import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
 import { TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { AiInvalidResponseError } from "./domain/ports/question-generator.port";
-import { GenerateQuestionsService, GenerateQuestionStreamEvent } from "./generate-questions.service";
+import {
+  GenerateQuestionsService,
+  GenerateQuestionStreamEvent,
+} from "./generate-questions.service";
 ```
 
 Add a new `describe` block at the end of the file, before the final closing (mirrors `VALID_DTO`/`buildDeps` already defined above it):
@@ -943,7 +972,9 @@ describe("GenerateQuestionsService.generateQuestionStream", () => {
       type: "done",
       result: {
         created: [],
-        failed: [{ index: 0, error: "courseId/topicId not found, or topicId does not belong to courseId" }],
+        failed: [
+          { index: 0, error: "courseId/topicId not found, or topicId does not belong to courseId" },
+        ],
       },
     });
   });
@@ -951,10 +982,15 @@ describe("GenerateQuestionsService.generateQuestionStream", () => {
   it("emits a done/failed event (not a thrown exception) when required fields are missing", async () => {
     const { service } = buildDeps();
 
-    const events = await collect(service, { ...STREAM_DTO, courseId: undefined as unknown as string });
+    const events = await collect(service, {
+      ...STREAM_DTO,
+      courseId: undefined as unknown as string,
+    });
 
     expect(events).toHaveLength(1);
-    expect((events[0] as GenerateQuestionStreamEvent & { type: "done" }).result.failed).toHaveLength(1);
+    expect(
+      (events[0] as GenerateQuestionStreamEvent & { type: "done" }).result.failed,
+    ).toHaveLength(1);
   });
 });
 ```
@@ -986,8 +1022,7 @@ export interface GenerateQuestionsResult {
 
 /** Every event `generateQuestionStream()` can emit — mirrors `GenerateProgressEvent` plus a terminal `done` carrying the same `GenerateQuestionsResult` shape `generateQuestions()` resolves with. */
 export type GenerateQuestionStreamEvent =
-  | GenerateProgressEvent
-  | { readonly type: "done"; readonly result: GenerateQuestionsResult };
+  GenerateProgressEvent | { readonly type: "done"; readonly result: GenerateQuestionsResult };
 ```
 
 Add the new method to the class, right after `generateQuestions()` and before `generateOneItem()`:
@@ -1082,10 +1117,12 @@ git commit -m "feat(api): add GenerateQuestionsService.generateQuestionStream"
 ## Task 5: `POST /ai/questions/generate/stream` (hand-rolled SSE)
 
 **Files:**
+
 - Modify: `apps/api/src/modules/ai/ai.controller.ts`
 - Create: `apps/api/src/modules/ai/ai-generate-stream.e2e.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `GenerateQuestionsService.generateQuestionStream` (Task 4).
 - Produces: `POST /ai/questions/generate/stream` — `Content-Type: text/event-stream`, body is `data: <JSON.stringify(GenerateQuestionStreamEvent)>\n\n` frames, connection closes after the `done` frame.
 
@@ -1242,7 +1279,11 @@ import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
 import { ExtractQuestionService } from "./extract-question.service";
-import { GenerateQuestionsResult, GenerateQuestionsService, GenerateQuestionStreamEvent } from "./generate-questions.service";
+import {
+  GenerateQuestionsResult,
+  GenerateQuestionsService,
+  GenerateQuestionStreamEvent,
+} from "./generate-questions.service";
 import { GeneratedQuestion } from "./domain/ports/question-generator.port";
 import { ReviseQuestionService } from "./revise-question.service";
 ```
@@ -1324,12 +1365,14 @@ git commit -m "feat(api): add POST /ai/questions/generate/stream (SSE)"
 ## Task 6: Frontend — `GenerateQuestionStreamEvent` + SSE frame parser + `AiService`
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/ai/ai.models.ts`
 - Create: `apps/web/src/app/features/ai/parse-generate-stream-frames.ts`
 - Test: `apps/web/src/app/features/ai/parse-generate-stream-frames.spec.ts`
 - Modify: `apps/web/src/app/features/ai/ai.service.ts`
 
 **Interfaces:**
+
 - Produces: `GenerateQuestionStreamEvent` (mirrors the backend type); `parseGenerateStreamFrames(buffer: string): { events: readonly GenerateQuestionStreamEvent[]; remainder: string }`; `AiService.generateQuestionStream(payload): Observable<GenerateQuestionStreamEvent>`.
 
 - [ ] **Step 1: Add the mirrored type**
@@ -1346,9 +1389,9 @@ In `apps/web/src/app/features/ai/ai.models.ts`, add after `GenerateQuestionsResu
  * like one continuous stream.
  */
 export type GenerateQuestionStreamEvent =
-  | { readonly type: 'delta'; readonly text: string }
-  | { readonly type: 'restart' }
-  | { readonly type: 'done'; readonly result: GenerateQuestionsResult };
+  | { readonly type: "delta"; readonly text: string }
+  | { readonly type: "restart" }
+  | { readonly type: "done"; readonly result: GenerateQuestionsResult };
 ```
 
 - [ ] **Step 2: Failing parser test**
@@ -1356,47 +1399,47 @@ export type GenerateQuestionStreamEvent =
 Create `apps/web/src/app/features/ai/parse-generate-stream-frames.spec.ts`:
 
 ```ts
-import { describe, it, expect } from 'vitest';
-import { parseGenerateStreamFrames } from './parse-generate-stream-frames';
+import { describe, it, expect } from "vitest";
+import { parseGenerateStreamFrames } from "./parse-generate-stream-frames";
 
 function frame(payload: unknown): string {
   return `data: ${JSON.stringify(payload)}\n\n`;
 }
 
-describe('parseGenerateStreamFrames', () => {
-  it('parses one complete frame into its event, with an empty remainder', () => {
-    const { events, remainder } = parseGenerateStreamFrames(frame({ type: 'delta', text: 'Hola' }));
+describe("parseGenerateStreamFrames", () => {
+  it("parses one complete frame into its event, with an empty remainder", () => {
+    const { events, remainder } = parseGenerateStreamFrames(frame({ type: "delta", text: "Hola" }));
 
-    expect(events).toEqual([{ type: 'delta', text: 'Hola' }]);
-    expect(remainder).toBe('');
+    expect(events).toEqual([{ type: "delta", text: "Hola" }]);
+    expect(remainder).toBe("");
   });
 
-  it('parses multiple complete frames in order', () => {
-    const buffer = frame({ type: 'delta', text: 'Hola' }) + frame({ type: 'restart' });
+  it("parses multiple complete frames in order", () => {
+    const buffer = frame({ type: "delta", text: "Hola" }) + frame({ type: "restart" });
 
     const { events } = parseGenerateStreamFrames(buffer);
 
-    expect(events).toEqual([{ type: 'delta', text: 'Hola' }, { type: 'restart' }]);
+    expect(events).toEqual([{ type: "delta", text: "Hola" }, { type: "restart" }]);
   });
 
-  it('keeps an incomplete trailing frame in remainder instead of dropping or crashing', () => {
-    const complete = frame({ type: 'delta', text: 'Hola' });
-    const incomplete = frame({ type: 'delta', text: 'Mundo' }).slice(0, 10);
+  it("keeps an incomplete trailing frame in remainder instead of dropping or crashing", () => {
+    const complete = frame({ type: "delta", text: "Hola" });
+    const incomplete = frame({ type: "delta", text: "Mundo" }).slice(0, 10);
 
     const { events, remainder } = parseGenerateStreamFrames(complete + incomplete);
 
-    expect(events).toEqual([{ type: 'delta', text: 'Hola' }]);
+    expect(events).toEqual([{ type: "delta", text: "Hola" }]);
     expect(remainder).toBe(incomplete);
   });
 
-  it('skips a malformed frame instead of throwing', () => {
-    const { events } = parseGenerateStreamFrames('data: not json\n\n');
+  it("skips a malformed frame instead of throwing", () => {
+    const { events } = parseGenerateStreamFrames("data: not json\n\n");
 
     expect(events).toEqual([]);
   });
 
-  it('returns no events for an empty buffer', () => {
-    expect(parseGenerateStreamFrames('')).toEqual({ events: [], remainder: '' });
+  it("returns no events for an empty buffer", () => {
+    expect(parseGenerateStreamFrames("")).toEqual({ events: [], remainder: "" });
   });
 });
 ```
@@ -1411,7 +1454,7 @@ Expected: FAIL — `parse-generate-stream-frames.ts` doesn't exist.
 Create `apps/web/src/app/features/ai/parse-generate-stream-frames.ts`:
 
 ```ts
-import { GenerateQuestionStreamEvent } from './ai.models';
+import { GenerateQuestionStreamEvent } from "./ai.models";
 
 export interface ParsedStreamFrames {
   readonly events: readonly GenerateQuestionStreamEvent[];
@@ -1425,14 +1468,14 @@ export interface ParsedStreamFrames {
  * text just arrived — stateless, no internal buffering.
  */
 export function parseGenerateStreamFrames(buffer: string): ParsedStreamFrames {
-  const frames = buffer.split('\n\n');
-  const remainder = frames.pop() ?? '';
+  const frames = buffer.split("\n\n");
+  const remainder = frames.pop() ?? "";
   const events: GenerateQuestionStreamEvent[] = [];
 
   for (const frame of frames) {
-    const dataLine = frame.split('\n').find((line) => line.startsWith('data:'));
+    const dataLine = frame.split("\n").find((line) => line.startsWith("data:"));
     if (!dataLine) continue;
-    const payload = dataLine.slice('data:'.length).trim();
+    const payload = dataLine.slice("data:".length).trim();
     if (!payload) continue;
     try {
       events.push(JSON.parse(payload) as GenerateQuestionStreamEvent);
@@ -1455,10 +1498,16 @@ Expected: PASS (new parser suite green; nothing else touched yet).
 In `apps/web/src/app/features/ai/ai.service.ts`, extend the imports:
 
 ```ts
-import { HttpClient, HttpDownloadProgressEvent, HttpEventType, HttpParams, HttpResponse } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
-import { environment } from '../../../environments/environment';
+import {
+  HttpClient,
+  HttpDownloadProgressEvent,
+  HttpEventType,
+  HttpParams,
+  HttpResponse,
+} from "@angular/common/http";
+import { Injectable, inject } from "@angular/core";
+import { Observable } from "rxjs";
+import { environment } from "../../../environments/environment";
 import {
   AiRevisedQuestion,
   DraftQuestion,
@@ -1466,8 +1515,8 @@ import {
   GenerateQuestionsPayload,
   GenerateQuestionsResult,
   GenerateQuestionStreamEvent,
-} from './ai.models';
-import { parseGenerateStreamFrames } from './parse-generate-stream-frames';
+} from "./ai.models";
+import { parseGenerateStreamFrames } from "./parse-generate-stream-frames";
 ```
 
 Add the new method right after `generateQuestions()`:
@@ -1540,11 +1589,13 @@ git commit -m "feat(web): add AiService.generateQuestionStream and its SSE frame
 ## Task 7: `AiGenerateComponent` — consume the stream, show live progress
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/ai/ai-generate/ai-generate.component.ts`
 - Modify: `apps/web/src/app/features/ai/ai-generate/ai-generate.component.html`
 - Modify: `apps/web/src/app/features/ai/ai-generate/ai-generate.component.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `AiService.generateQuestionStream` (Task 6).
 - Produces: new `liveChars` signal (component-internal, exposed to the template).
 
@@ -1562,7 +1613,7 @@ import {
   GradeLevel,
   GRADE_LEVELS,
   GRADE_LEVEL_LABELS,
-} from '../ai.models';
+} from "../ai.models";
 ```
 
 Add a new signal next to `completed` (line 101):
@@ -1628,17 +1679,21 @@ In `apps/web/src/app/features/ai/ai-generate/ai-generate.component.html`, replac
 
 ```html
 @if (generating()) {
-  <div data-testid="batch-progress" class="rounded-card border border-n200 bg-white p-4">
-    <p class="mb-2 text-sm font-medium text-n700">Generando {{ completed() }}/{{ requested() }} preguntas…</p>
-    <ui-progress [current]="completed()" [total]="requested()"></ui-progress>
-    @if (liveChars() > 0) {
-      <p data-testid="stream-live-indicator" class="mt-2 text-xs text-n500">
-        Escribiendo pregunta… {{ liveChars() }} caracteres recibidos
-      </p>
-    } @else {
-      <p data-testid="stream-live-indicator" class="mt-2 text-xs text-n500">Conectando con el modelo…</p>
-    }
-  </div>
+<div data-testid="batch-progress" class="rounded-card border border-n200 bg-white p-4">
+  <p class="mb-2 text-sm font-medium text-n700">
+    Generando {{ completed() }}/{{ requested() }} preguntas…
+  </p>
+  <ui-progress [current]="completed()" [total]="requested()"></ui-progress>
+  @if (liveChars() > 0) {
+  <p data-testid="stream-live-indicator" class="mt-2 text-xs text-n500">
+    Escribiendo pregunta… {{ liveChars() }} caracteres recibidos
+  </p>
+  } @else {
+  <p data-testid="stream-live-indicator" class="mt-2 text-xs text-n500">
+    Conectando con el modelo…
+  </p>
+  }
+</div>
 }
 ```
 
@@ -1647,29 +1702,29 @@ In `apps/web/src/app/features/ai/ai-generate/ai-generate.component.html`, replac
 Replace `apps/web/src/app/features/ai/ai-generate/ai-generate.component.spec.ts` in full:
 
 ```ts
-import { TestBed } from '@angular/core/testing';
-import { describe, it, expect, vi } from 'vitest';
-import { Subject, of, throwError } from 'rxjs';
-import { HttpErrorResponse } from '@angular/common/http';
-import { ActivatedRoute, convertToParamMap, Router } from '@angular/router';
-import { LucideAngularModule, Sparkles, TriangleAlert, Plus, Minus } from 'lucide-angular';
-import { AiGenerateComponent } from './ai-generate.component';
-import { AiService } from '../ai.service';
-import { DraftCountService } from '../draft-count.service';
-import { DraftQuestion, GenerateQuestionsResult, GenerateQuestionStreamEvent } from '../ai.models';
-import { TaxonomyService } from '../../taxonomy/taxonomy.service';
-import { Course, Topic } from '../../taxonomy/taxonomy.models';
-import { Difficulty } from '@exams-generator/shared';
+import { TestBed } from "@angular/core/testing";
+import { describe, it, expect, vi } from "vitest";
+import { Subject, of, throwError } from "rxjs";
+import { HttpErrorResponse } from "@angular/common/http";
+import { ActivatedRoute, convertToParamMap, Router } from "@angular/router";
+import { LucideAngularModule, Sparkles, TriangleAlert, Plus, Minus } from "lucide-angular";
+import { AiGenerateComponent } from "./ai-generate.component";
+import { AiService } from "../ai.service";
+import { DraftCountService } from "../draft-count.service";
+import { DraftQuestion, GenerateQuestionsResult, GenerateQuestionStreamEvent } from "../ai.models";
+import { TaxonomyService } from "../../taxonomy/taxonomy.service";
+import { Course, Topic } from "../../taxonomy/taxonomy.models";
+import { Difficulty } from "@exams-generator/shared";
 
 const COURSES: Course[] = [
-  { id: 'c1', name: 'Biología' },
-  { id: 'c2', name: 'Química' },
+  { id: "c1", name: "Biología" },
+  { id: "c2", name: "Química" },
 ];
-const TOPICS: Topic[] = [{ id: 't1', name: 'La célula', courseId: 'c1' }];
+const TOPICS: Topic[] = [{ id: "t1", name: "La célula", courseId: "c1" }];
 
 /** Every existing test drove `generateQuestions()` with a bare `GenerateQuestionsResult`; the streaming API instead resolves via a terminal `done` event carrying that same result — this wraps it so the rest of the suite reads the same as before. */
 function doneEvent(result: GenerateQuestionsResult): GenerateQuestionStreamEvent {
-  return { type: 'done', result };
+  return { type: "done", result };
 }
 
 function setup(
@@ -1680,19 +1735,25 @@ function setup(
   } = {},
 ) {
   const generateQuestionStream = vi.fn(
-    over.genImpl ?? (() => of(doneEvent({ created: [{ id: 'a' }, { id: 'b' }], failed: [] }))),
+    over.genImpl ?? (() => of(doneEvent({ created: [{ id: "a" }, { id: "b" }], failed: [] }))),
   );
   const listDrafts = vi.fn(over.listDraftsImpl ?? (() => of([] as DraftQuestion[])));
   const getCourses = vi.fn(() => of(COURSES));
   const getTopics = vi.fn(() => of(TOPICS));
   const navigate = vi.fn();
   TestBed.configureTestingModule({
-    imports: [AiGenerateComponent, LucideAngularModule.pick({ Sparkles, TriangleAlert, Plus, Minus })],
+    imports: [
+      AiGenerateComponent,
+      LucideAngularModule.pick({ Sparkles, TriangleAlert, Plus, Minus }),
+    ],
     providers: [
       { provide: AiService, useValue: { generateQuestionStream, listDrafts } },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
       { provide: Router, useValue: { navigate } },
-      { provide: ActivatedRoute, useValue: { snapshot: { queryParamMap: convertToParamMap(over.queryParams ?? {}) } } },
+      {
+        provide: ActivatedRoute,
+        useValue: { snapshot: { queryParamMap: convertToParamMap(over.queryParams ?? {}) } },
+      },
     ],
   });
   const fixture = TestBed.createComponent(AiGenerateComponent);
@@ -1708,28 +1769,37 @@ function setup(
   };
 }
 
-function set(fixture: { componentInstance: unknown; detectChanges(): void }, prop: string, v: unknown) {
+function set(
+  fixture: { componentInstance: unknown; detectChanges(): void },
+  prop: string,
+  v: unknown,
+) {
   (fixture.componentInstance as Record<string, { set(x: unknown): void }>)[prop].set(v);
   fixture.detectChanges();
 }
 
 function fillForm(fixture: { componentInstance: unknown; detectChanges(): void }) {
-  set(fixture, 'courseId', 'c1');
-  set(fixture, 'topicId', 't1');
-  set(fixture, 'difficulty', 'easy');
-  set(fixture, 'gradeLevel', 'pre');
-  set(fixture, 'count', 3);
+  set(fixture, "courseId", "c1");
+  set(fixture, "topicId", "t1");
+  set(fixture, "difficulty", "easy");
+  set(fixture, "gradeLevel", "pre");
+  set(fixture, "count", 3);
 }
 
-describe('AiGenerateComponent', () => {
-  it('shows the 1-2-3 empty state before generating', () => {
+describe("AiGenerateComponent", () => {
+  it("shows the 1-2-3 empty state before generating", () => {
     const { compiled } = setup();
     expect(compiled.querySelector('[data-testid="batch-empty"]')).toBeTruthy();
   });
 
-  it('prefills grade, course, topic and difficulty from query params (exam-builder bridge)', () => {
+  it("prefills grade, course, topic and difficulty from query params (exam-builder bridge)", () => {
     const { fixture, getCourses, getTopics } = setup({
-      queryParams: { gradeLevel: 'secundaria_3', courseId: 'c1', topicId: 't1', difficulty: 'medium' },
+      queryParams: {
+        gradeLevel: "secundaria_3",
+        courseId: "c1",
+        topicId: "t1",
+        difficulty: "medium",
+      },
     });
     const ci = fixture.componentInstance as unknown as {
       gradeLevel(): string | null;
@@ -1738,74 +1808,92 @@ describe('AiGenerateComponent', () => {
       difficulty(): string | null;
     };
 
-    expect(ci.gradeLevel()).toBe('secundaria_3');
-    expect(ci.courseId()).toBe('c1');
-    expect(ci.topicId()).toBe('t1');
-    expect(ci.difficulty()).toBe('medium');
-    expect(getCourses).toHaveBeenCalledWith('secundaria_3');
-    expect(getTopics).toHaveBeenCalledWith('c1', 'secundaria_3');
+    expect(ci.gradeLevel()).toBe("secundaria_3");
+    expect(ci.courseId()).toBe("c1");
+    expect(ci.topicId()).toBe("t1");
+    expect(ci.difficulty()).toBe("medium");
+    expect(getCourses).toHaveBeenCalledWith("secundaria_3");
+    expect(getTopics).toHaveBeenCalledWith("c1", "secundaria_3");
   });
 
-  it('shows a live progress card while generating', () => {
+  it("shows a live progress card while generating", () => {
     const subject = new Subject<GenerateQuestionStreamEvent>();
     const { compiled, fixture } = setup({ genImpl: () => subject.asObservable() });
     fillForm(fixture);
-    set(fixture, 'count', 1); // one request so the single Subject drives the whole run
+    set(fixture, "count", 1); // one request so the single Subject drives the whole run
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(compiled.querySelector('[data-testid="batch-progress"]')).toBeTruthy();
-    subject.next(doneEvent({ created: [{ id: 'a' }, { id: 'b' }, { id: 'c' }], failed: [] }));
+    subject.next(doneEvent({ created: [{ id: "a" }, { id: "b" }, { id: "c" }], failed: [] }));
     subject.complete();
     fixture.detectChanges();
     expect(compiled.querySelector('[data-testid="batch-progress"]')).toBeFalsy();
   });
 
-  it('ticks the live character counter up as delta events arrive, and resets it on restart', () => {
+  it("ticks the live character counter up as delta events arrive, and resets it on restart", () => {
     const subject = new Subject<GenerateQuestionStreamEvent>();
     const { compiled, fixture } = setup({ genImpl: () => subject.asObservable() });
     fillForm(fixture);
-    set(fixture, 'count', 1);
+    set(fixture, "count", 1);
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toMatch(/conectando/i);
+    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toMatch(
+      /conectando/i,
+    );
 
-    subject.next({ type: 'delta', text: 'Hola' });
+    subject.next({ type: "delta", text: "Hola" });
     fixture.detectChanges();
-    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toContain('4');
+    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toContain(
+      "4",
+    );
 
-    subject.next({ type: 'delta', text: ' mundo' });
+    subject.next({ type: "delta", text: " mundo" });
     fixture.detectChanges();
-    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toContain('10');
+    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toContain(
+      "10",
+    );
 
-    subject.next({ type: 'restart' });
+    subject.next({ type: "restart" });
     fixture.detectChanges();
-    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toMatch(/conectando/i);
+    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toMatch(
+      /conectando/i,
+    );
 
-    subject.next(doneEvent({ created: [{ id: 'a' }], failed: [] }));
+    subject.next(doneEvent({ created: [{ id: "a" }], failed: [] }));
     subject.complete();
   });
 
-  it('does NOT reset the form after generating', () => {
+  it("does NOT reset the form after generating", () => {
     const { compiled, fixture } = setup();
     fillForm(fixture);
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
-    expect((fixture.componentInstance as unknown as { courseId(): string }).courseId()).toBe('c1');
+    expect((fixture.componentInstance as unknown as { courseId(): string }).courseId()).toBe("c1");
     expect((fixture.componentInstance as unknown as { count(): number }).count()).toBe(3);
   });
 
-  it('shows partial-failure banner with a retry-failed action', () => {
+  it("shows partial-failure banner with a retry-failed action", () => {
     const { compiled, fixture, generateQuestionStream } = setup({
       genImpl: () =>
-        of(doneEvent({ created: [{ id: 'a' }], failed: [{ index: 1, error: 'x' }, { index: 2, error: 'y' }] })),
+        of(
+          doneEvent({
+            created: [{ id: "a" }],
+            failed: [
+              { index: 1, error: "x" },
+              { index: 2, error: "y" },
+            ],
+          }),
+        ),
     });
     fillForm(fixture);
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(compiled.querySelector('[data-testid="batch-failures"]')).toBeTruthy();
     generateQuestionStream.mockClear();
-    generateQuestionStream.mockReturnValue(of(doneEvent({ created: [{ id: 'z' }, { id: 'w' }], failed: [] })));
+    generateQuestionStream.mockReturnValue(
+      of(doneEvent({ created: [{ id: "z" }, { id: "w" }], failed: [] })),
+    );
     (compiled.querySelector('[data-testid="retry-failed"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     // Sequential model: each request is a single question, one per failed item — count is no longer part of the payload at all.
@@ -1814,62 +1902,73 @@ describe('AiGenerateComponent', () => {
     );
   });
 
-  it('shows only the warning banner (no status card) when ALL questions fail validation on a 200 response', () => {
+  it("shows only the warning banner (no status card) when ALL questions fail validation on a 200 response", () => {
     const { compiled, fixture } = setup({
-      genImpl: () => of(doneEvent({ created: [], failed: [{ index: 0, error: 'x' }, { index: 1, error: 'y' }] })),
+      genImpl: () =>
+        of(
+          doneEvent({
+            created: [],
+            failed: [
+              { index: 0, error: "x" },
+              { index: 1, error: "y" },
+            ],
+          }),
+        ),
     });
     fillForm(fixture);
-    set(fixture, 'count', 1);
+    set(fixture, "count", 1);
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    expect(compiled.querySelector('.text-2xl.font-extrabold.text-primary-900')).toBeFalsy();
+    expect(compiled.querySelector(".text-2xl.font-extrabold.text-primary-900")).toBeFalsy();
     const banner = compiled.querySelector('[data-testid="batch-failures"]');
     expect(banner).toBeTruthy();
     expect(banner?.textContent).toMatch(/ninguna pregunta pasó la validación/i);
-    expect(compiled.querySelector('[data-testid="retry-failed"] button')?.textContent).toContain('Reintentar 2');
+    expect(compiled.querySelector('[data-testid="retry-failed"] button')?.textContent).toContain(
+      "Reintentar 2",
+    );
     expect(compiled.querySelector('[data-testid="batch-empty"]')).toBeTruthy();
   });
 
-  it('navigates to the review queue from the footer', () => {
+  it("navigates to the review queue from the footer", () => {
     const { compiled, fixture, navigate } = setup();
     fillForm(fixture);
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     (compiled.querySelector('[data-testid="go-review"] button') as HTMLButtonElement).click();
-    expect(navigate).toHaveBeenCalledWith(['/app/ai/review']);
+    expect(navigate).toHaveBeenCalledWith(["/app/ai/review"]);
   });
 
-  it('renders readable question cards with stem, alternatives, and the correct answer marked (visual fidelity with the Taller mockup)', () => {
+  it("renders readable question cards with stem, alternatives, and the correct answer marked (visual fidelity with the Taller mockup)", () => {
     const draft: DraftQuestion = {
-      id: 'a',
+      id: "a",
       tenantId: null,
-      courseId: 'c1',
-      topicId: 't1',
+      courseId: "c1",
+      topicId: "t1",
       difficulty: Difficulty.Easy,
-      gradeLevel: 'pre',
-      correctAnswer: '1',
-      bodyTypst: '¿Cuánto es 2+2?',
-      alternatives: ['3', '4', '5'],
+      gradeLevel: "pre",
+      correctAnswer: "1",
+      bodyTypst: "¿Cuánto es 2+2?",
+      alternatives: ["3", "4", "5"],
       figureCode: null,
     };
     const { compiled, fixture } = setup({
-      genImpl: () => of(doneEvent({ created: [{ id: 'a' }], failed: [] })),
+      genImpl: () => of(doneEvent({ created: [{ id: "a" }], failed: [] })),
       listDraftsImpl: () => of([draft]),
     });
     fillForm(fixture);
-    set(fixture, 'count', 1);
+    set(fixture, "count", 1);
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
     const card = compiled.querySelector('[data-testid="batch-question"]');
-    expect(card?.textContent).toContain('¿Cuánto es 2+2?');
-    expect(card?.textContent).toContain('Borrador IA');
+    expect(card?.textContent).toContain("¿Cuánto es 2+2?");
+    expect(card?.textContent).toContain("Borrador IA");
     const correctAlt = card?.querySelector('[data-testid="alt-correct"]');
-    expect(correctAlt?.textContent).toContain('4');
+    expect(correctAlt?.textContent).toContain("4");
   });
 
-  it('clamps the quantity stepper to the backend max of 10 and disables the + button at the cap', () => {
+  it("clamps the quantity stepper to the backend max of 10 and disables the + button at the cap", () => {
     const { compiled, fixture } = setup();
     const plusButton = compiled.querySelector('button[aria-label="Más"]') as HTMLButtonElement;
     for (let i = 0; i < 10; i++) {
@@ -1880,25 +1979,27 @@ describe('AiGenerateComponent', () => {
     expect(plusButton.disabled).toBe(true);
   });
 
-  it('retries with the ORIGINAL request params (snapshot), even if the form is edited afterward', () => {
+  it("retries with the ORIGINAL request params (snapshot), even if the form is edited afterward", () => {
     const { compiled, fixture, generateQuestionStream } = setup({
-      genImpl: () => of(doneEvent({ created: [{ id: 'a' }], failed: [{ index: 1, error: 'x' }] })),
+      genImpl: () => of(doneEvent({ created: [{ id: "a" }], failed: [{ index: 1, error: "x" }] })),
     });
     fillForm(fixture);
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    set(fixture, 'courseId', 'c2');
+    set(fixture, "courseId", "c2");
 
     generateQuestionStream.mockClear();
-    generateQuestionStream.mockReturnValue(of(doneEvent({ created: [{ id: 'z' }], failed: [] })));
+    generateQuestionStream.mockReturnValue(of(doneEvent({ created: [{ id: "z" }], failed: [] })));
     (compiled.querySelector('[data-testid="retry-failed"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    expect(generateQuestionStream).toHaveBeenCalledWith(expect.objectContaining({ courseId: 'c1' }));
+    expect(generateQuestionStream).toHaveBeenCalledWith(
+      expect.objectContaining({ courseId: "c1" }),
+    );
   });
 
-  it('shows only the error banner (no status card, empty state intact) when the whole request fails', () => {
+  it("shows only the error banner (no status card, empty state intact) when the whole request fails", () => {
     const serverError = new HttpErrorResponse({ status: 500 });
     const { compiled, fixture } = setup({
       genImpl: () => throwError(() => serverError),
@@ -1909,26 +2010,27 @@ describe('AiGenerateComponent', () => {
 
     expect(compiled.textContent).toMatch(/no se pudieron generar/i);
     expect(compiled.querySelector('[data-testid="batch-question"]')).toBeFalsy();
-    expect(compiled.querySelector('.text-2xl.font-extrabold.text-primary-900')).toBeFalsy();
+    expect(compiled.querySelector(".text-2xl.font-extrabold.text-primary-900")).toBeFalsy();
     expect(compiled.querySelector('[data-testid="batch-empty"]')).toBeTruthy();
   });
 
-  it('syncs the sidebar draft-count badge (DraftCountService) after generating (F8 fix)', () => {
+  it("syncs the sidebar draft-count badge (DraftCountService) after generating (F8 fix)", () => {
     const draftStub: DraftQuestion = {
-      id: 'a',
+      id: "a",
       tenantId: null,
-      courseId: 'c1',
-      topicId: 't1',
+      courseId: "c1",
+      topicId: "t1",
       difficulty: Difficulty.Easy,
-      gradeLevel: 'pre',
-      correctAnswer: '1',
-      bodyTypst: '¿Cuánto es 2+2?',
-      alternatives: ['3', '4'],
+      gradeLevel: "pre",
+      correctAnswer: "1",
+      bodyTypst: "¿Cuánto es 2+2?",
+      alternatives: ["3", "4"],
       figureCode: null,
     };
     let call = 0;
     const { compiled, fixture } = setup({
-      genImpl: () => of(doneEvent({ created: [{ id: 'a' }, { id: 'b' }, { id: 'c' }], failed: [] })),
+      genImpl: () =>
+        of(doneEvent({ created: [{ id: "a" }, { id: "b" }, { id: "c" }], failed: [] })),
       listDraftsImpl: () => of(call++ === 0 ? [] : [draftStub, draftStub, draftStub]),
     });
     const draftCountService = TestBed.inject(DraftCountService);

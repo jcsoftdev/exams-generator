@@ -15,6 +15,7 @@ Este cambio permite corregir el borrador in situ, reusando exactamente la infrae
 ## 2. Por qué esto es trabajo casi 100% frontend
 
 Verificado directamente en el backend antes de diseñar:
+
 - `PATCH /bank/questions/:id` (`bank.service.ts:editDraftQuestion` vía `requireManageableQuestion`) ya acepta status `draft` **y** `approved` — nada que cambiar.
 - El payload de esa ruta (`validate-update-structured-question.ts`) ya acepta `figureCode` — nada que cambiar.
 - `POST /ai/questions/:id/revise` (`revise-question.service.ts`) ya devuelve `figureCode` en su respuesta (mismo `RESPONSE_JSON_SCHEMA` que generar) — nada que cambiar.
@@ -36,6 +37,7 @@ Mirroring exacto de `bank-list.component.ts`, simplificado porque `DraftQuestion
 `editing`, `editSaving`, `editError`, `editCourseId`, `editTopicId`, `editDifficulty`, `editGradeLevel`, `editCorrectAnswer` (string índice "0"-"4"), `editBody`, `editAlternatives` (textarea, una por línea), `editFigureCode`, `editCourses`, `editTopics` (catálogo para los selects, cargado por `editGradeLevel`/`editCourseId` igual que `onGradeLevelChange`/`onCourseChange` en `ai-generate.component`).
 
 **Métodos:**
+
 - `startEdit(draft: DraftQuestion)`: siembra todos los signals desde `draft`, carga cursos vía `taxonomyService.getCourses(draft.gradeLevel)` y temas vía `getTopics(draft.courseId, draft.gradeLevel)`, pone `editing.set(true)`.
 - `onEditGradeLevelChange` / `onEditCourseChange`: mismo patrón cascada que `ai-generate.component` (cambiar grado resetea curso+tema; cambiar curso resetea tema).
 - `saveEdit()`: arma `UpdateQuestionPayload` completo (incluye `figureCode`), llama `bankService.updateQuestion(draft.id, patch)`. Al éxito: `editing.set(false)`, recarga la cola (`load()`) y recompila el preview del draft (`compilePreview(id)` si sigue siendo el seleccionado). Al error: `editError` con mensaje, mismo patrón que `approve`/`confirmReject`.

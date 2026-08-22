@@ -23,14 +23,22 @@ describe('PaginationComponent', () => {
 
   it('shows the range summary and page count when there is more than one page', () => {
     const { compiled } = setup(2, 20, 45);
-    expect(compiled.querySelector('[data-testid="pagination-summary"]')?.textContent).toContain('21–40 de 45');
-    expect(compiled.querySelector('[data-testid="pagination-current"]')?.textContent).toContain('2 / 3');
+    expect(compiled.querySelector('[data-testid="pagination-summary"]')?.textContent).toContain(
+      '21–40 de 45',
+    );
+    expect(compiled.querySelector('[data-testid="pagination-current"]')?.textContent).toContain(
+      '2 / 3',
+    );
   });
 
   it('disables "Anterior" on the first page and "Siguiente" on the last page', () => {
     const { compiled } = setup(1, 20, 45);
-    expect((compiled.querySelector('[data-testid="pagination-prev"]') as HTMLButtonElement).disabled).toBe(true);
-    expect((compiled.querySelector('[data-testid="pagination-next"]') as HTMLButtonElement).disabled).toBe(false);
+    expect(
+      (compiled.querySelector('[data-testid="pagination-prev"]') as HTMLButtonElement).disabled,
+    ).toBe(true);
+    expect(
+      (compiled.querySelector('[data-testid="pagination-next"]') as HTMLButtonElement).disabled,
+    ).toBe(false);
   });
 
   it('emits pageChange with the next/previous page on click', () => {

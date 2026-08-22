@@ -23,14 +23,15 @@ El objetivo explícito de este diseño es **resiliencia**: soportar cualquier ti
 
 Investigación con fuentes primarias .edu.pe (cacheada en `web-research` MCP, slugs `peru-university-admissions/uni-cepre-admission-syllabus` y `peru-university-admissions/uncp-ceprunc-admission-syllabus`):
 
-| | UNI (CEPRE-UNI) | UNCP (CEPRUNC) |
-|---|---|---|
-| Agrupación | **Sin áreas por carrera** — 28 especialidades bajo ~12 facultades, currícula uniforme. Pero SÍ tiene **tracks de preparación distintos**: Ciclo Básico (8 cursos, sin Humanidades, 21 semanas) vs Ciclo Preuniversitario (9 cursos, con Humanidades, 20 semanas) vs Intensivo I/II — cada uno con curso-set y calendario propio. | **5 áreas por carrera**: I Salud, II Ingenierías y Arquitectura, III Administrativas/Contables/Económicas, IV Sociales y Educación, V Agrarias |
-| Batería de examen | E1 (Aptitud+Humanidades, 745pts) + E2 (Matemática, 600pts) + E3 (Física y Química, 500pts) = 1845pts, uniforme para todos. **Puntos, no cantidad de preguntas por curso** — el reglamento no publica un desglose de Nº de preguntas por curso, solo pesos por sección. | Actual (2026-II): 80 preguntas por área, con **Nº de preguntas exacto por curso y por NIVEL** (P.B./P.I./P.A.) — tabla completa de las 5 áreas extraída de Anexo 7 del prospecto oficial. |
-| Ciclo | 20-21 semanas según track, oficial | No confirmado (no encontrado) |
-| Sílabo semana-a-semana | **Sí, completo** para el track Ciclo Preuniversitario — 9 cursos evaluados, Semana 00-20. RM (Razonamiento Matemático) se evalúa aparte pero **no tiene sílabo propio** — sus temas están etiquetados dentro de las semanas de Aritmética/Álgebra/Geometría. | **No existe públicamente** — Anexo 6 es catálogo plano de temas por curso (sin semana), no cronograma. Confirmado ausente tras dos pasadas de research. |
+|                        | UNI (CEPRE-UNI)                                                                                                                                                                                                                                                                                                                  | UNCP (CEPRUNC)                                                                                                                                                                            |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Agrupación             | **Sin áreas por carrera** — 28 especialidades bajo ~12 facultades, currícula uniforme. Pero SÍ tiene **tracks de preparación distintos**: Ciclo Básico (8 cursos, sin Humanidades, 21 semanas) vs Ciclo Preuniversitario (9 cursos, con Humanidades, 20 semanas) vs Intensivo I/II — cada uno con curso-set y calendario propio. | **5 áreas por carrera**: I Salud, II Ingenierías y Arquitectura, III Administrativas/Contables/Económicas, IV Sociales y Educación, V Agrarias                                            |
+| Batería de examen      | E1 (Aptitud+Humanidades, 745pts) + E2 (Matemática, 600pts) + E3 (Física y Química, 500pts) = 1845pts, uniforme para todos. **Puntos, no cantidad de preguntas por curso** — el reglamento no publica un desglose de Nº de preguntas por curso, solo pesos por sección.                                                           | Actual (2026-II): 80 preguntas por área, con **Nº de preguntas exacto por curso y por NIVEL** (P.B./P.I./P.A.) — tabla completa de las 5 áreas extraída de Anexo 7 del prospecto oficial. |
+| Ciclo                  | 20-21 semanas según track, oficial                                                                                                                                                                                                                                                                                               | No confirmado (no encontrado)                                                                                                                                                             |
+| Sílabo semana-a-semana | **Sí, completo** para el track Ciclo Preuniversitario — 9 cursos evaluados, Semana 00-20. RM (Razonamiento Matemático) se evalúa aparte pero **no tiene sílabo propio** — sus temas están etiquetados dentro de las semanas de Aritmética/Álgebra/Geometría.                                                                     | **No existe públicamente** — Anexo 6 es catálogo plano de temas por curso (sin semana), no cronograma. Confirmado ausente tras dos pasadas de research.                                   |
 
 **Implicaciones directas:**
+
 1. La agrupación secundaria (antes llamada "Area") no es siempre "área por carrera" — para UNI es "track de preparación". El modelo necesita un concepto genérico que cubra ambos casos sin forzar la semántica de uno sobre el otro.
 2. UNCP da conteo de preguntas real; UNI solo da pesos en puntos. No podemos asumir que siempre habrá un `question_count` confiable.
 3. UNCP diferencia NIVEL por fila (P.B./P.I./P.A.) — el modelo tiene que soportar múltiples filas por curso con distinta dificultad de origen, y esa distinción tiene que sobrevivir hasta el momento de generar el examen (si no, se pierde la fidelidad de la mezcla real).
@@ -54,6 +55,7 @@ Investigación con fuentes primarias .edu.pe (cacheada en `web-research` MCP, sl
 Todas las tablas nuevas usan `uuid("id").primaryKey().defaultRandom()` salvo donde se indique.
 
 ### `universities` — catálogo global, sin `tenant_id` (igual que `courses`)
+
 ```
 id      uuid PK
 code    text NOT NULL UNIQUE   -- "uni", "uncp"
@@ -62,6 +64,7 @@ active  boolean NOT NULL DEFAULT true
 ```
 
 ### `tracks` — catálogo global, opcional por universidad (generaliza área-por-carrera y ciclo-de-preparación)
+
 ```
 id             uuid PK
 university_id  uuid NOT NULL REFERENCES universities.id
@@ -70,9 +73,11 @@ name           text NOT NULL   -- "Ciencias de la Salud" / "Ciclo Preuniversitar
 kind           text NOT NULL   -- 'area' | 'cycle_track' — solo descriptivo para la UI, no filtra nada
 UNIQUE (university_id, code)
 ```
+
 Universidad sin necesidad de agrupación: cero filas de `tracks`, todo lo demás usa `track_id = NULL`.
 
 ### `exam_types` — catálogo sembrado, data-driven (ver §5)
+
 ```
 code           text PRIMARY KEY   -- "manual" | "fastest" | "eta" | "eta_by_week"
 label          text NOT NULL
@@ -82,6 +87,7 @@ sort_order     integer NOT NULL UNIQUE
 ```
 
 ### `exam_blueprint_templates` — la "receta" de curso+peso para (universidad, track?)
+
 ```
 id               uuid PK
 university_id    uuid NOT NULL REFERENCES universities.id
@@ -91,7 +97,9 @@ cycle_label      text NOT NULL                         -- "2026-II" — de dónd
 is_current       boolean NOT NULL DEFAULT true
 created_at       timestamptz NOT NULL DEFAULT now()
 ```
+
 **Nota de implementación — unicidad con columnas nullable:** un `UNIQUE` normal sobre `(university_id, track_id, tenant_id)` no funciona como se espera en Postgres porque `NULL <> NULL` (dos filas con `track_id NULL` no chocan). Usar un índice único parcial sobre una expresión con `COALESCE`:
+
 ```sql
 CREATE UNIQUE INDEX exam_blueprint_templates_current_idx
   ON exam_blueprint_templates (
@@ -101,9 +109,11 @@ CREATE UNIQUE INDEX exam_blueprint_templates_current_idx
   )
   WHERE is_current = true;
 ```
+
 (el mismo patrón aplica a `cycles`, ver abajo).
 
 ### `exam_blueprint_template_rows` — filas curso/tema/peso dentro de una plantilla
+
 ```
 id               uuid PK
 template_id      uuid NOT NULL REFERENCES exam_blueprint_templates.id
@@ -117,6 +127,7 @@ CHECK (question_count IS NOT NULL OR weight_points IS NOT NULL)
 ```
 
 ### `syllabus_week_maps` — tema→semana, opcional (existe para UNI, no para UNCP)
+
 ```
 id            uuid PK
 template_id   uuid NOT NULL REFERENCES exam_blueprint_templates.id
@@ -125,9 +136,11 @@ topic_id      uuid NOT NULL REFERENCES topics.id
 week_number   integer NOT NULL     -- 0-based, "Semana 00" de UNI
 UNIQUE (template_id, topic_id)
 ```
+
 `eta_by_week` solo está disponible para un `template_id` si `EXISTS` al menos una fila acá. Si no hay filas (caso UNCP hoy), la UI no ofrece esa opción para esa plantilla.
 
 ### `cycles` — tracking de semana activa, global por defecto, override por tenant, desacoplado de la versión de plantilla
+
 ```
 id                uuid PK
 tenant_id         uuid REFERENCES tenants.id      -- nullable: NULL = ciclo global compartido, set = calendario propio del tenant
@@ -138,10 +151,12 @@ starts_on         date NOT NULL
 week_length_days  integer NOT NULL DEFAULT 7
 is_active         boolean NOT NULL DEFAULT true
 ```
+
 Mismo patrón de índice único parcial con `COALESCE` que `exam_blueprint_templates`, sobre `(tenant_id, university_id, track_id) WHERE is_active`.
 `currentWeek` NO es columna — se deriva en dominio: `floor((today - starts_on) / week_length_days)`.
 
 ### Columnas nuevas en `exams` (existente)
+
 ```
 exam_type      text NOT NULL DEFAULT 'manual' REFERENCES exam_types.code
 university_id  uuid REFERENCES universities.id   -- nullable, solo si vino de plantilla
@@ -149,6 +164,7 @@ track_id       uuid REFERENCES tracks.id         -- nullable
 cycle_id       uuid REFERENCES cycles.id         -- nullable, solo eta_by_week
 week_number    integer                            -- nullable, snapshot congelado al generar (§3.3)
 ```
+
 Metadata de **cómo se produjo** el blueprint — el contenido real sigue viviendo en `exam_blueprint_rows`/`exam_questions`, sin cambios.
 
 ## 5. Cómo escala a cualquier tipo de examen futuro
@@ -161,17 +177,20 @@ week_scope:   'none' (sin filtro de semana) | 'current_only' (solo semana activa
 ```
 
 Seed inicial:
-| code | course_scope | week_scope |
-|---|---|---|
-| `manual` | none | none |
-| `fastest` | selected | current_only |
-| `eta` | all | none |
-| `eta_by_week` | all | cumulative |
+
+| code          | course_scope | week_scope   |
+| ------------- | ------------ | ------------ |
+| `manual`      | none         | none         |
+| `fastest`     | selected     | current_only |
+| `eta`         | all          | none         |
+| `eta_by_week` | all          | cumulative   |
 
 **Un único resolver genérico**, no cuatro funciones:
+
 ```
 resolveBlueprint(examType, template, currentWeek?, courseSelection?) → BlueprintRow[]
 ```
+
 Lee `course_scope`/`week_scope` del `exam_types` del examen, filtra `exam_blueprint_template_rows` (por curso si `course_scope='selected'`) y cruza con `syllabus_week_maps` según `week_scope`. Cada fila resultante pasa por `resolveDifficultyFromSourceLevel()` (§3.6) antes de convertirse en `BlueprintRow`.
 
 **Agregar un tipo nuevo que sea combinación de ejes existentes = 1 insert en `exam_types`, cero código.** Ejemplo: "simulacro final" (`all` + `none`, igual que `eta` pero con otro `cycle_label`/plantilla) no necesita nada nuevo.

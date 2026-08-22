@@ -24,34 +24,38 @@ import { users } from "./users.schema";
  * REgeneration would otherwise destroy the previous forms — `clearVersions`
  * already wiped them — and leave the exam with nothing at all.)
  */
-export const examVersionJobs = pgTable("exam_version_jobs", {
-  id: uuid("id").primaryKey().defaultRandom(),
-  tenantId: uuid("tenant_id")
-    .notNull()
-    .references(() => tenants.id),
-  examId: uuid("exam_id")
-    .notNull()
-    .references(() => exams.id),
-  createdBy: uuid("created_by")
-    .notNull()
-    .references(() => users.id),
-  createdByRole: roleEnum("created_by_role").notNull(),
-  versionCount: integer("version_count").notNull(),
-  status: generationJobStatusEnum("status").notNull().default("pending"),
-  completedCount: integer("completed_count").notNull().default(0),
-  failedReason: text("failed_reason"),
-  /**
-   * The question the Typst compile failed on, when the adapter could trace
-   * one (`ExamPdfGenerationError.questionId`). Deliberately NOT a foreign
-   * key: it is diagnostic text for the UI ("falló en la pregunta X"), and a
-   * job row must survive the question later being archived or deleted.
-   */
-  failedQuestionId: text("failed_question_id"),
-  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
-  completedAt: timestamp("completed_at", { withTimezone: true }),
-}, (table) => ({
-  examCreatedIdx: index("exam_version_jobs_exam_created_idx").on(table.examId, table.createdAt),
-  tenantCreatedIdx: index("exam_version_jobs_tenant_created_idx").on(table.tenantId, table.createdAt),
-  statusIdx: index("exam_version_jobs_status_idx").on(table.status),
-}));
+export const examVersionJobs = pgTable(
+  "exam_version_jobs",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    tenantId: uuid("tenant_id")
+      .notNull()
+      .references(() => tenants.id),
+    examId: uuid("exam_id")
+      .notNull()
+      .references(() => exams.id),
+    createdBy: uuid("created_by")
+      .notNull()
+      .references(() => users.id),
+    createdByRole: roleEnum("created_by_role").notNull(),
+    versionCount: integer("version_count").notNull(),
+    status: generationJobStatusEnum("status").notNull().default("pending"),
+    completedCount: integer("completed_count").notNull().default(0),
+    failedReason: text("failed_reason"),
+    /**
+     * The question the Typst compile failed on, when the adapter could trace
+     * one (`ExamPdfGenerationError.questionId`). Deliberately NOT a foreign
+     * key: it is diagnostic text for the UI ("falló en la pregunta X"), and a
+     * job row must survive the question later being archived or deleted.
+     */
+    failedQuestionId: text("failed_question_id"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+    completedAt: timestamp("completed_at", { withTimezone: true }),
+  },
+  (table) => ({
+    examCreatedIdx: index("exam_version_jobs_exam_created_idx").on(table.examId, table.createdAt),
+    tenantCreatedIdx: index("exam_version_jobs_tenant_created_idx").on(table.tenantId, table.createdAt),
+    statusIdx: index("exam_version_jobs_status_idx").on(table.status),
+  }),
+);

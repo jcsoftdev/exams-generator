@@ -35,7 +35,9 @@ describe('GridCellContentComponent', () => {
     const { compiled } = setup({ status: 'short' });
 
     expect(
-      compiled.querySelector('[data-testid="bridge-choose-bank"] button')!.getAttribute('aria-label'),
+      compiled
+        .querySelector('[data-testid="bridge-choose-bank"] button')!
+        .getAttribute('aria-label'),
     ).toContain('Aritmética · Conjuntos · Fácil');
   });
 
@@ -47,8 +49,12 @@ describe('GridCellContentComponent', () => {
 
   it('shows the bridge-to-AI actions when status is short, with the correct shortfall count', () => {
     const { compiled } = setup({ status: 'short' });
-    expect(compiled.querySelector('[data-testid="stock-warning"]')?.textContent).toContain('solo 2');
-    expect(compiled.querySelector('[data-testid="bridge-generate-ai"]')?.textContent).toContain('Generar 3 con IA');
+    expect(compiled.querySelector('[data-testid="stock-warning"]')?.textContent).toContain(
+      'solo 2',
+    );
+    expect(compiled.querySelector('[data-testid="bridge-generate-ai"]')?.textContent).toContain(
+      'Generar 3 con IA',
+    );
   });
 
   it('emits generateAi/chooseBank/lowerCount when the bridge buttons are clicked', () => {
@@ -60,9 +66,15 @@ describe('GridCellContentComponent', () => {
     fixture.componentInstance.chooseBank.subscribe(() => (chooseBank = true));
     fixture.componentInstance.lowerCount.subscribe(() => (lowerCount = true));
 
-    (compiled.querySelector('[data-testid="bridge-generate-ai"] button') as HTMLButtonElement).click();
-    (compiled.querySelector('[data-testid="bridge-choose-bank"] button') as HTMLButtonElement).click();
-    (compiled.querySelector('[data-testid="bridge-lower-count"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="bridge-generate-ai"] button') as HTMLButtonElement
+    ).click();
+    (
+      compiled.querySelector('[data-testid="bridge-choose-bank"] button') as HTMLButtonElement
+    ).click();
+    (
+      compiled.querySelector('[data-testid="bridge-lower-count"] button') as HTMLButtonElement
+    ).click();
 
     expect(generateAi).toBe(true);
     expect(chooseBank).toBe(true);
@@ -71,7 +83,9 @@ describe('GridCellContentComponent', () => {
 
   it('renders the comma-joined preview ids', () => {
     const { compiled } = setup();
-    expect(compiled.querySelector('[data-testid="preview-ids"]')?.textContent?.trim()).toBe('q1,q2');
+    expect(compiled.querySelector('[data-testid="preview-ids"]')?.textContent?.trim()).toBe(
+      'q1,q2',
+    );
   });
 
   it('emits requestedChange when the count input changes', () => {

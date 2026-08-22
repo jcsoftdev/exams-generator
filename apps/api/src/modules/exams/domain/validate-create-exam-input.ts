@@ -33,8 +33,7 @@ export interface CreateExamInput {
 }
 
 export type CreateExamValidation =
-  | { readonly ok: true }
-  | { readonly ok: false; readonly errors: readonly string[] };
+  { readonly ok: true } | { readonly ok: false; readonly errors: readonly string[] };
 
 const VALID_DIFFICULTIES = new Set<string>(Object.values(Difficulty));
 

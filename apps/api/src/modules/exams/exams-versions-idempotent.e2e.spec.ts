@@ -56,7 +56,10 @@ describe("POST /exams/:examId/versions — idempotent regeneration (e2e, B4)", (
 
     const suffix = randomUUID();
 
-    const [course] = await db.insert(courses).values({ name: `IdempotentE2E Course ${suffix}` }).returning({ id: courses.id });
+    const [course] = await db
+      .insert(courses)
+      .values({ name: `IdempotentE2E Course ${suffix}` })
+      .returning({ id: courses.id });
     courseId = course!.id;
 
     const [tenantA] = await db
@@ -173,7 +176,11 @@ describe("POST /exams/:examId/versions — idempotent regeneration (e2e, B4)", (
     const createResponse = await request(app.getHttpServer())
       .post("/exams")
       .set("Authorization", `Bearer ${tenantAToken}`)
-      .send({ title: "Idempotent exam", gradeLevel, blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }] })
+      .send({
+        title: "Idempotent exam",
+        gradeLevel,
+        blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+      })
       .expect(201);
     const examId = createResponse.body.id;
     createdExamIds.push(examId);
@@ -185,7 +192,10 @@ describe("POST /exams/:examId/versions — idempotent regeneration (e2e, B4)", (
     const firstVersions = await getVersionsRequest(examId).expect(200);
     expect(firstVersions.body.map((v: { code: string }) => v.code).sort()).toEqual(["A", "B"]);
 
-    const firstAssetIds = firstVersions.body.flatMap((v: { pdfUrl: string; answerSheetUrl: string }) => [v.pdfUrl, v.answerSheetUrl]);
+    const firstAssetIds = firstVersions.body.flatMap((v: { pdfUrl: string; answerSheetUrl: string }) => [
+      v.pdfUrl,
+      v.answerSheetUrl,
+    ]);
 
     // Regenerate with a DIFFERENT versionCount (3) -> must succeed, not collide on (examId, code).
     await generateVersionsAndWait(app, tenantAToken, examId, 3);
@@ -200,7 +210,10 @@ describe("POST /exams/:examId/versions — idempotent regeneration (e2e, B4)", (
     expect(versionRows).toHaveLength(3);
 
     // None of the first call's asset-backed URLs are still referenced by any current version row.
-    const currentAssetIds = versionsAfter.body.flatMap((v: { pdfUrl: string; answerSheetUrl: string }) => [v.pdfUrl, v.answerSheetUrl]);
+    const currentAssetIds = versionsAfter.body.flatMap((v: { pdfUrl: string; answerSheetUrl: string }) => [
+      v.pdfUrl,
+      v.answerSheetUrl,
+    ]);
     for (const staleUrl of firstAssetIds) {
       expect(currentAssetIds).not.toContain(staleUrl);
     }

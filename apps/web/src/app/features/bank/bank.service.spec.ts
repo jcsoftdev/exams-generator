@@ -98,7 +98,9 @@ describe('BankService', () => {
 
   describe('buildImageAssetUrl', () => {
     it('builds a URL from the apiBaseUrl and the imageAssetId', () => {
-      expect(service.buildImageAssetUrl('asset-1')).toBe(`${environment.apiBaseUrl}/assets/asset-1`);
+      expect(service.buildImageAssetUrl('asset-1')).toBe(
+        `${environment.apiBaseUrl}/assets/asset-1`,
+      );
     });
   });
 
@@ -232,9 +234,7 @@ describe('BankService', () => {
       const image = new File(['fake-bytes'], 'question.png', { type: 'image/png' });
       let result: { id: string } | undefined;
 
-      service
-        .replaceQuestionImage('q1', image)
-        .subscribe((response) => (result = response));
+      service.replaceQuestionImage('q1', image).subscribe((response) => (result = response));
 
       const req = httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/q1/image`);
       expect(req.request.method).toBe('POST');

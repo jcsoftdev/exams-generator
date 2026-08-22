@@ -10,10 +10,7 @@ import { runMigrations } from "../../db/migrate";
 import { courses, generationJobs, questions, tenants, topics, users } from "../../db/schema";
 import { TokenService } from "../auth/token.service";
 import { isTypstAvailableSync } from "../exams/adapters/pdf/test-utils/typst-availability";
-import {
-  GeneratedQuestion,
-  QuestionGeneratorPort,
-} from "./domain/ports/question-generator.port";
+import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
 
 const VALID_QUESTION: GeneratedQuestion = {
@@ -198,7 +195,14 @@ describeIfTypst("AI generation workflow (e2e)", () => {
     const created = await request(app.getHttpServer())
       .post("/ai/questions/jobs")
       .set("Authorization", `Bearer ${token}`)
-      .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1, withFigure: false })
+      .send({
+        courseId,
+        topicId,
+        difficulty: Difficulty.Easy,
+        gradeLevel: "primaria_1",
+        count: 1,
+        withFigure: false,
+      })
       .expect(202);
 
     const deadline = Date.now() + 15000;
@@ -260,11 +264,25 @@ describeIfTypst("AI generation workflow (e2e)", () => {
     const created = await request(app.getHttpServer())
       .post("/ai/questions/jobs")
       .set("Authorization", `Bearer ${tenantAToken}`)
-      .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1, withFigure: false })
+      .send({
+        courseId,
+        topicId,
+        difficulty: Difficulty.Easy,
+        gradeLevel: "primaria_1",
+        count: 1,
+        withFigure: false,
+      })
       .expect(202);
 
     const deadline = Date.now() + 15000;
-    let final: { status: string; createdCount: number; failedCount: number; failedItems: { index: number; error: string }[] } | undefined;
+    let final:
+      | {
+          status: string;
+          createdCount: number;
+          failedCount: number;
+          failedItems: { index: number; error: string }[];
+        }
+      | undefined;
     while (Date.now() < deadline) {
       const res = await request(app.getHttpServer())
         .get(`/ai/questions/jobs/${created.body.id}`)

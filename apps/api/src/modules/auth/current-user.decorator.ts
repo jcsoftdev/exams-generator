@@ -10,14 +10,12 @@ import { AuthTokenPayload } from "./token.service";
 export function extractCurrentUser(context: ExecutionContext): AuthTokenPayload {
   const request = context.switchToHttp().getRequest<AuthenticatedRequest>();
   if (!request.user) {
-    throw new Error(
-      "CurrentUser decorator used on a route without JwtAuthGuard applied first",
-    );
+    throw new Error("CurrentUser decorator used on a route without JwtAuthGuard applied first");
   }
   return request.user;
 }
 
 /** Route handler param decorator: `@CurrentUser() user: AuthTokenPayload`. */
-export const CurrentUser = createParamDecorator(
-  (_data: unknown, context: ExecutionContext) => extractCurrentUser(context),
+export const CurrentUser = createParamDecorator((_data: unknown, context: ExecutionContext) =>
+  extractCurrentUser(context),
 );

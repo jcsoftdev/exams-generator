@@ -12,7 +12,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <table class="w-full border-collapse text-left text-sm">
       <thead>
-        <tr><ng-content select="[head]"></ng-content></tr>
+        <tr>
+          <ng-content select="[head]"></ng-content>
+        </tr>
       </thead>
       <tbody>
         <ng-content select="[body]"></ng-content>

@@ -25,7 +25,9 @@ describe('QuestionContentFieldsComponent', () => {
   it('renders body and alternatives in their textareas', () => {
     const { compiled } = setup();
     const body = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
-    const alternatives = compiled.querySelector('[data-testid="edit-alternatives"]') as HTMLTextAreaElement;
+    const alternatives = compiled.querySelector(
+      '[data-testid="edit-alternatives"]',
+    ) as HTMLTextAreaElement;
     expect(body.value).toBe('¿Cuánto es 2+2?');
     expect(alternatives.value).toBe('4\n3\n5');
   });
@@ -41,7 +43,9 @@ describe('QuestionContentFieldsComponent', () => {
     bodyEl.value = 'nuevo enunciado';
     bodyEl.dispatchEvent(new Event('input'));
 
-    const altEl = compiled.querySelector('[data-testid="edit-alternatives"]') as HTMLTextAreaElement;
+    const altEl = compiled.querySelector(
+      '[data-testid="edit-alternatives"]',
+    ) as HTMLTextAreaElement;
     altEl.value = '1\n2';
     altEl.dispatchEvent(new Event('input'));
 

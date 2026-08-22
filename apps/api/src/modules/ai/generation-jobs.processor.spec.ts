@@ -57,7 +57,13 @@ function failedJob(jobId: string, attemptsMade: number, attempts: number): Job<{
 describe("GenerationJobsProcessor", () => {
   it("calls generateQuestions once per item (count:1) and appends each created id", async () => {
     const { processor, repository, generateQuestionsService, events } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "pending" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 3,
+      createdCount: 0,
+      failedCount: 0,
+      status: "pending",
+    });
     generateQuestionsService.generateQuestions
       .mockResolvedValueOnce({ created: [{ id: "q1" }], failed: [] })
       .mockResolvedValueOnce({ created: [{ id: "q2" }], failed: [] })
@@ -68,7 +74,14 @@ describe("GenerationJobsProcessor", () => {
     expect(generateQuestionsService.generateQuestions).toHaveBeenCalledTimes(3);
     expect(generateQuestionsService.generateQuestions).toHaveBeenCalledWith(
       { sub: "user-1", tenantId: "tenant-1", role: Role.Teacher },
-      { courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1, withFigure: false },
+      {
+        courseId: "course-1",
+        topicId: "topic-1",
+        difficulty: Difficulty.Easy,
+        gradeLevel: "primaria_1",
+        count: 1,
+        withFigure: false,
+      },
     );
     expect(repository.appendCreatedQuestion).toHaveBeenNthCalledWith(1, "job-1", "q1");
     expect(repository.appendCreatedQuestion).toHaveBeenNthCalledWith(3, "job-1", "q3");
@@ -83,7 +96,13 @@ describe("GenerationJobsProcessor", () => {
   it("records a per-item failure with the correct batch index, not the inner call's index:0", async () => {
     const { processor, repository, generateQuestionsService } = buildDeps();
     // resumed job: startIndex = 2 + 1 = 3, so loop starts at index 3
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 5, createdCount: 2, failedCount: 1, status: "running" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 5,
+      createdCount: 2,
+      failedCount: 1,
+      status: "running",
+    });
     generateQuestionsService.generateQuestions
       // First call (at loop index 3): fails with inner index 0; we must record batch index 3, not 0
       .mockResolvedValueOnce({ created: [], failed: [{ index: 0, error: "Typst compile failed" }] })
@@ -93,13 +112,22 @@ describe("GenerationJobsProcessor", () => {
     await processor.process(job("job-1"));
 
     // Proves we use the loop's own index (3), not result.failed[0].index (0)
-    expect(repository.appendFailedItem).toHaveBeenCalledWith("job-1", { index: 3, error: "Typst compile failed" });
+    expect(repository.appendFailedItem).toHaveBeenCalledWith("job-1", {
+      index: 3,
+      error: "Typst compile failed",
+    });
     expect(repository.appendCreatedQuestion).toHaveBeenCalledWith("job-1", "q5");
   });
 
   it("resumes from createdCount + failedCount instead of restarting at 0 (checkpoint-resume)", async () => {
     const { processor, repository, generateQuestionsService } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 5, createdCount: 2, failedCount: 1, status: "running" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 5,
+      createdCount: 2,
+      failedCount: 1,
+      status: "running",
+    });
     generateQuestionsService.generateQuestions
       .mockResolvedValueOnce({ created: [{ id: "q4" }], failed: [] })
       .mockResolvedValueOnce({ created: [{ id: "q5" }], failed: [] });
@@ -112,7 +140,13 @@ describe("GenerationJobsProcessor", () => {
 
   it("stops cooperatively when cancelRequested flips true between items, and marks the job cancelled", async () => {
     const { processor, repository, generateQuestionsService, events } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "pending" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 3,
+      createdCount: 0,
+      failedCount: 0,
+      status: "pending",
+    });
     repository.isCancelRequested.mockResolvedValueOnce(false).mockResolvedValueOnce(true);
     generateQuestionsService.generateQuestions.mockResolvedValueOnce({ created: [{ id: "q1" }], failed: [] });
 
@@ -126,7 +160,13 @@ describe("GenerationJobsProcessor", () => {
 
   it("no-ops when the job row is missing or already terminal", async () => {
     const { processor, repository, generateQuestionsService } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "completed" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 3,
+      createdCount: 0,
+      failedCount: 0,
+      status: "completed",
+    });
 
     await processor.process(job("job-1"));
 
@@ -138,7 +178,13 @@ describe("GenerationJobsProcessor", () => {
 describe("GenerationJobsProcessor - @OnWorkerEvent('failed')", () => {
   it("marks the job failed once BullMQ has exhausted all configured attempts", async () => {
     const { processor, repository, events } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "running" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 3,
+      createdCount: 0,
+      failedCount: 0,
+      status: "running",
+    });
 
     await processor.onFailed(failedJob("job-1", 3, 3));
 
@@ -148,7 +194,13 @@ describe("GenerationJobsProcessor - @OnWorkerEvent('failed')", () => {
 
   it("does NOT mark the job failed while attempts remain (mid-retry, not exhausted yet)", async () => {
     const { processor, repository, events } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "running" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 3,
+      createdCount: 0,
+      failedCount: 0,
+      status: "running",
+    });
 
     await processor.onFailed(failedJob("job-1", 1, 3));
 
@@ -158,7 +210,13 @@ describe("GenerationJobsProcessor - @OnWorkerEvent('failed')", () => {
 
   it("does NOT overwrite an already-terminal job (e.g. cancelled) when the failed event fires", async () => {
     const { processor, repository, events } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "cancelled" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 3,
+      createdCount: 0,
+      failedCount: 0,
+      status: "cancelled",
+    });
 
     await processor.onFailed(failedJob("job-1", 3, 3));
 

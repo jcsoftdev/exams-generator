@@ -26,7 +26,11 @@ describe('extractErrorMessage', () => {
   it('reads a plain string message from a wrapped Nest error body', () => {
     const error = new HttpErrorResponse({
       status: 400,
-      error: { statusCode: 400, message: 'Typst compile failed: unexpected token', error: 'Bad Request' },
+      error: {
+        statusCode: 400,
+        message: 'Typst compile failed: unexpected token',
+        error: 'Bad Request',
+      },
     });
 
     expect(extractErrorMessage(error)).toBe('Typst compile failed: unexpected token');

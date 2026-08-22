@@ -19,7 +19,9 @@ function fakeResponse() {
 
 describe("HealthController", () => {
   it("returns 200 with the aggregated result when every dependency is reachable", async () => {
-    const service = { check: async () => ({ status: "ok" as const, checks: { db: "ok", redis: "ok", storage: "ok" } }) };
+    const service = {
+      check: async () => ({ status: "ok" as const, checks: { db: "ok", redis: "ok", storage: "ok" } }),
+    };
     const controller = new HealthController(service as unknown as HealthService);
     const res = fakeResponse();
 

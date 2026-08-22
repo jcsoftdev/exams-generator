@@ -60,7 +60,10 @@ describe("POST /exams/:examId/versions — auto-confirm on generate (e2e, B3)", 
 
     const suffix = randomUUID();
 
-    const [course] = await db.insert(courses).values({ name: `AutoConfirmE2E Course ${suffix}` }).returning({ id: courses.id });
+    const [course] = await db
+      .insert(courses)
+      .values({ name: `AutoConfirmE2E Course ${suffix}` })
+      .returning({ id: courses.id });
     courseId = course!.id;
 
     const [staff] = await db
@@ -182,7 +185,11 @@ describe("POST /exams/:examId/versions — auto-confirm on generate (e2e, B3)", 
     const response = await request(app.getHttpServer())
       .post("/exams")
       .set("Authorization", `Bearer ${tenantAToken}`)
-      .send({ title: "Auto-confirm exam", gradeLevel, blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count }] })
+      .send({
+        title: "Auto-confirm exam",
+        gradeLevel,
+        blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count }],
+      })
       .expect(201);
     createdExamIds.push(response.body.id);
     return response.body.id;
@@ -195,7 +202,9 @@ describe("POST /exams/:examId/versions — auto-confirm on generate (e2e, B3)", 
   }
 
   function getExamRequest(examId: string) {
-    return request(app.getHttpServer()).get(`/exams/${examId}`).set("Authorization", `Bearer ${tenantAToken}`);
+    return request(app.getHttpServer())
+      .get(`/exams/${examId}`)
+      .set("Authorization", `Bearer ${tenantAToken}`);
   }
 
   function replaceRequest(examId: string, questionId: string) {

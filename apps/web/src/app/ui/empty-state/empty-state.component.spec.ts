@@ -29,7 +29,10 @@ class TwoCtaHostComponent {}
   // icon providers go in `providers` instead.
   imports: [EmptyStateComponent],
   providers: [LucideAngularModule.pick({ Check }).providers ?? []],
-  template: `<ui-empty-state message="No hay preguntas borrador para revisar." icon="check"></ui-empty-state>`,
+  template: `<ui-empty-state
+    message="No hay preguntas borrador para revisar."
+    icon="check"
+  ></ui-empty-state>`,
 })
 class IconHostComponent {}
 

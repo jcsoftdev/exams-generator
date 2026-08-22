@@ -11,7 +11,12 @@ import { TenantSettings } from './tenant-settings.models';
 import { UsersService } from '../users/users.service';
 import { TenantUser } from '../users/users.models';
 
-const SETTINGS: TenantSettings = { id: 'tenant-1', name: 'Colegio X', city: 'Arequipa', logoAssetId: null };
+const SETTINGS: TenantSettings = {
+  id: 'tenant-1',
+  name: 'Colegio X',
+  city: 'Arequipa',
+  logoAssetId: null,
+};
 
 function user(o: Partial<TenantUser> & { id: string }): TenantUser {
   return {
@@ -24,37 +29,57 @@ function user(o: Partial<TenantUser> & { id: string }): TenantUser {
   };
 }
 
-function setup(overrides: {
-  getSettingsImpl?: (...args: unknown[]) => unknown;
-  updateSettingsImpl?: (...args: unknown[]) => unknown;
-  fetchLogoImpl?: (...args: unknown[]) => unknown;
-  usersImpl?: () => unknown;
-  createImpl?: () => unknown;
-  setActiveImpl?: () => unknown;
-  resetImpl?: () => unknown;
-} = {}) {
+function setup(
+  overrides: {
+    getSettingsImpl?: (...args: unknown[]) => unknown;
+    updateSettingsImpl?: (...args: unknown[]) => unknown;
+    fetchLogoImpl?: (...args: unknown[]) => unknown;
+    usersImpl?: () => unknown;
+    createImpl?: () => unknown;
+    setActiveImpl?: () => unknown;
+    resetImpl?: () => unknown;
+  } = {},
+) {
   const getSettings = vi.fn(overrides.getSettingsImpl ?? (() => of(SETTINGS)));
-  const updateSettings = vi.fn(overrides.updateSettingsImpl ?? ((payload: TenantSettings) => of(payload)));
-  const fetchLogo = vi.fn(overrides.fetchLogoImpl ?? (() => of(new Blob(['fake'], { type: 'image/png' }))));
+  const updateSettings = vi.fn(
+    overrides.updateSettingsImpl ?? ((payload: TenantSettings) => of(payload)),
+  );
+  const fetchLogo = vi.fn(
+    overrides.fetchLogoImpl ?? (() => of(new Blob(['fake'], { type: 'image/png' }))),
+  );
   // `usersImpl` overrides return the bare `TenantUser[]` observable (as before the API
   // paginated `GET /users`) — wrapped here into the `{ items, total }` envelope the
   // component now expects, so every existing override keeps working unchanged.
   const list = vi.fn(() =>
     (
       (overrides.usersImpl ??
-        (() => of([user({ id: 'u1' }), user({ id: 'u2', active: false })]))) as () => Observable<TenantUser[]>
+        (() => of([user({ id: 'u1' }), user({ id: 'u2', active: false })]))) as () => Observable<
+        TenantUser[]
+      >
     )().pipe(map((items) => ({ items, total: items.length }))),
   );
   const create = vi.fn(
     overrides.createImpl ??
       (() =>
-        of({ id: 'u3', email: 'n@col.pe', name: 'Nuevo Profesor', role: 'teacher', temporaryPassword: 'temp12345678' })),
+        of({
+          id: 'u3',
+          email: 'n@col.pe',
+          name: 'Nuevo Profesor',
+          role: 'teacher',
+          temporaryPassword: 'temp12345678',
+        })),
   );
-  const setActive = vi.fn(overrides.setActiveImpl ?? ((id: string, active: boolean) => of({ id, active })));
-  const resetPassword = vi.fn(overrides.resetImpl ?? ((id: string) => of({ id, temporaryPassword: 'reset1234567' })));
+  const setActive = vi.fn(
+    overrides.setActiveImpl ?? ((id: string, active: boolean) => of({ id, active })),
+  );
+  const resetPassword = vi.fn(
+    overrides.resetImpl ?? ((id: string) => of({ id, temporaryPassword: 'reset1234567' })),
+  );
 
   let objectUrlCounter = 0;
-  vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:mock-preview-${objectUrlCounter++}`);
+  vi.spyOn(URL, 'createObjectURL').mockImplementation(
+    () => `blob:mock-preview-${objectUrlCounter++}`,
+  );
   vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
 
   TestBed.configureTestingModule({
@@ -70,10 +95,24 @@ function setup(overrides: {
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
 
-  return { fixture, compiled, getSettings, updateSettings, fetchLogo, list, create, setActive, resetPassword };
+  return {
+    fixture,
+    compiled,
+    getSettings,
+    updateSettings,
+    fetchLogo,
+    list,
+    create,
+    setActive,
+    resetPassword,
+  };
 }
 
-function selectLogoFile(compiled: HTMLElement, fixture: { detectChanges: () => void }, file: File): void {
+function selectLogoFile(
+  compiled: HTMLElement,
+  fixture: { detectChanges: () => void },
+  file: File,
+): void {
   const input = compiled.querySelector<HTMLInputElement>('input[type="file"]')!;
   Object.defineProperty(input, 'files', { value: [file], configurable: true });
   input.dispatchEvent(new Event('change'));
@@ -141,7 +180,9 @@ describe('TenantSettingsComponent', () => {
       nameInput.dispatchEvent(new Event('input'));
       selectLogoFile(compiled, fixture, file);
 
-      const saveButton = compiled.querySelector<HTMLButtonElement>('[data-testid="save-button"] button')!;
+      const saveButton = compiled.querySelector<HTMLButtonElement>(
+        '[data-testid="save-button"] button',
+      )!;
       saveButton.click();
       fixture.detectChanges();
 
@@ -159,11 +200,15 @@ describe('TenantSettingsComponent', () => {
       nameInput.value = 'Colegio Actualizado';
       nameInput.dispatchEvent(new Event('input'));
 
-      const saveButton = compiled.querySelector<HTMLButtonElement>('[data-testid="save-button"] button')!;
+      const saveButton = compiled.querySelector<HTMLButtonElement>(
+        '[data-testid="save-button"] button',
+      )!;
       saveButton.click();
       fixture.detectChanges();
 
-      expect(updateSettings).toHaveBeenCalledWith(expect.objectContaining({ name: 'Colegio Actualizado' }));
+      expect(updateSettings).toHaveBeenCalledWith(
+        expect.objectContaining({ name: 'Colegio Actualizado' }),
+      );
       expect(compiled.querySelector('[data-testid="save-error"]')).toBeFalsy();
       expect(compiled.querySelector('[data-testid="save-success"]')).toBeTruthy();
     });
@@ -202,7 +247,8 @@ describe('TenantSettingsComponent — tabs', () => {
 
   it('shows the teacher name (falling back to email only when name is missing) and the email alongside it', () => {
     const { compiled, fixture } = setup({
-      usersImpl: () => of([user({ id: 'u1', name: 'María Rojas', email: 'mrojas@sanmartin.edu.pe' })]),
+      usersImpl: () =>
+        of([user({ id: 'u1', name: 'María Rojas', email: 'mrojas@sanmartin.edu.pe' })]),
     });
     (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
     fixture.detectChanges();
@@ -224,10 +270,14 @@ describe('TenantSettingsComponent — tabs', () => {
   });
 
   it('pluralizes the active-count label: singular for 1, plural otherwise', () => {
-    const { compiled, fixture } = setup({ usersImpl: () => of([user({ id: 'u1', active: true })]) });
+    const { compiled, fixture } = setup({
+      usersImpl: () => of([user({ id: 'u1', active: true })]),
+    });
     (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
     fixture.detectChanges();
-    expect(compiled.querySelector('[data-testid="active-count"]')?.textContent?.trim()).toBe('1 profesor activo');
+    expect(compiled.querySelector('[data-testid="active-count"]')?.textContent?.trim()).toBe(
+      '1 profesor activo',
+    );
   });
 
   it('adds a teacher (name required) and shows the temporary password once', () => {
@@ -243,19 +293,37 @@ describe('TenantSettingsComponent — tabs', () => {
     instance.newName.set('Nuevo Profesor');
     instance.newEmail.set('n@col.pe');
     fixture.detectChanges();
-    (compiled.querySelector('[data-testid="add-teacher-submit"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="add-teacher-submit"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
-    expect(create).toHaveBeenCalledWith({ email: 'n@col.pe', name: 'Nuevo Profesor', role: 'teacher' });
-    expect(compiled.querySelector('[data-testid="temp-password"]')?.textContent).toContain('temp12345678');
+    expect(create).toHaveBeenCalledWith({
+      email: 'n@col.pe',
+      name: 'Nuevo Profesor',
+      role: 'teacher',
+    });
+    expect(compiled.querySelector('[data-testid="temp-password"]')?.textContent).toContain(
+      'temp12345678',
+    );
   });
 
   it('creates a teacher by typing into the real form fields and shows the name (+ initials) in the row after reload', () => {
     let listCall = 0;
     const { compiled, fixture } = setup({
       usersImpl: () =>
-        of(listCall++ === 0 ? [] : [user({ id: 'u9', name: 'Profesor Prueba QA', email: 'qa-visual@col.pe' })]),
+        of(
+          listCall++ === 0
+            ? []
+            : [user({ id: 'u9', name: 'Profesor Prueba QA', email: 'qa-visual@col.pe' })],
+        ),
       createImpl: () =>
-        of({ id: 'u9', email: 'qa-visual@col.pe', name: 'Profesor Prueba QA', role: 'teacher', temporaryPassword: 'temp12345678' }),
+        of({
+          id: 'u9',
+          email: 'qa-visual@col.pe',
+          name: 'Profesor Prueba QA',
+          role: 'teacher',
+          temporaryPassword: 'temp12345678',
+        }),
     });
     (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
     fixture.detectChanges();
@@ -270,7 +338,9 @@ describe('TenantSettingsComponent — tabs', () => {
     emailInput.dispatchEvent(new Event('input'));
     fixture.detectChanges();
 
-    (compiled.querySelector('[data-testid="add-teacher-submit"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="add-teacher-submit"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
 
     const nameCell = compiled.querySelector('[data-testid="teacher-name"]')!;
@@ -286,9 +356,13 @@ describe('TenantSettingsComponent — tabs', () => {
     fixture.detectChanges();
     (compiled.querySelector('[data-testid="add-teacher"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
-    (fixture.componentInstance as unknown as { newEmail: { set(v: string): void } }).newEmail.set('n@col.pe');
+    (fixture.componentInstance as unknown as { newEmail: { set(v: string): void } }).newEmail.set(
+      'n@col.pe',
+    );
     fixture.detectChanges();
-    (compiled.querySelector('[data-testid="add-teacher-submit"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="add-teacher-submit"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
     expect(create).not.toHaveBeenCalled();
   });
@@ -299,10 +373,14 @@ describe('TenantSettingsComponent — tabs', () => {
     fixture.detectChanges();
     (compiled.querySelectorAll('[data-testid="teacher-menu"]')[0] as HTMLButtonElement).click();
     fixture.detectChanges();
-    (compiled.querySelector('[data-testid="teacher-toggle-active"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="teacher-toggle-active"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
     expect(setActive).not.toHaveBeenCalled();
-    (compiled.querySelector('[data-testid="deactivate-confirm-yes"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="deactivate-confirm-yes"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
     expect(setActive).toHaveBeenCalledWith('u1', false);
   });
@@ -316,10 +394,14 @@ describe('TenantSettingsComponent — tabs', () => {
     (compiled.querySelector('[data-testid="teacher-reset"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(resetPassword).not.toHaveBeenCalled();
-    (compiled.querySelector('[data-testid="reset-confirm-yes"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="reset-confirm-yes"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
     expect(resetPassword).toHaveBeenCalledWith('u1');
-    expect(compiled.querySelector('[data-testid="temp-password"]')?.textContent).toContain('reset1234567');
+    expect(compiled.querySelector('[data-testid="temp-password"]')?.textContent).toContain(
+      'reset1234567',
+    );
   });
 
   it('shows an empty state when there are no teachers', () => {

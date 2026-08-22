@@ -57,12 +57,6 @@ export const examStatusEnum = pgEnum("exam_status", EXAM_STATUSES);
  * a job that ran to completion with some per-item failures is still
  * `completed`, with `createdCount < count`.
  */
-export const GENERATION_JOB_STATUSES = [
-  "pending",
-  "running",
-  "completed",
-  "failed",
-  "cancelled",
-] as const;
+export const GENERATION_JOB_STATUSES = ["pending", "running", "completed", "failed", "cancelled"] as const;
 export type GenerationJobStatus = (typeof GENERATION_JOB_STATUSES)[number];
 export const generationJobStatusEnum = pgEnum("generation_job_status", GENERATION_JOB_STATUSES);

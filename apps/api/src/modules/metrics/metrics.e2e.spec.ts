@@ -57,14 +57,8 @@ describe("Metrics endpoint (e2e)", () => {
     process.env.METRICS_TOKEN = "scrape-me";
     try {
       await request(app.getHttpServer()).get("/metrics").expect(403);
-      await request(app.getHttpServer())
-        .get("/metrics")
-        .set("Authorization", "Bearer wrong")
-        .expect(403);
-      await request(app.getHttpServer())
-        .get("/metrics")
-        .set("Authorization", "Bearer scrape-me")
-        .expect(200);
+      await request(app.getHttpServer()).get("/metrics").set("Authorization", "Bearer wrong").expect(403);
+      await request(app.getHttpServer()).get("/metrics").set("Authorization", "Bearer scrape-me").expect(200);
     } finally {
       delete process.env.METRICS_TOKEN;
     }

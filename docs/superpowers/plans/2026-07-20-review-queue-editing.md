@@ -21,12 +21,14 @@
 ### Task 1: Extend frontend models + cache full taxonomy for the edit form's selects
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/bank/bank.models.ts:126-133` (`UpdateQuestionPayload`)
 - Modify: `apps/web/src/app/features/ai/ai.models.ts:135-139` (`AiRevisedQuestion`)
 - Modify: `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.ts`
 - Test: `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.spec.ts`
 
 **Interfaces:**
+
 - Produces: `UpdateQuestionPayload.figureCode?: string`, `AiRevisedQuestion.figureCode?: string | null`, `AiReviewQueueComponent.courseOptions: Signal<SelectOption<string>[]>`, `AiReviewQueueComponent.editTopicOptions: Signal<SelectOption<string>[]>`, `AiReviewQueueComponent.difficultyOptions: SelectOption<Difficulty>[]`, `AiReviewQueueComponent.gradeLevelOptions: SelectOption<string>[]` — Task 2 consumes all four directly in the template.
 
 - [ ] **Step 1: Extend `UpdateQuestionPayload` with `figureCode`**
@@ -88,21 +90,21 @@ These are pure type additions (optional fields) — no existing code breaks, no 
 In `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.spec.ts`, add after the `'resolves course/topic names via TaxonomyService...'` test (currently ending around line 152):
 
 ```ts
-  it('exposes the full taxonomy as select options for the edit form (no extra HTTP call beyond the initial load)', () => {
-    const { fixture, getCourses } = setup();
-    const component = fixture.componentInstance as unknown as {
-      courseOptions: () => { value: string; label: string }[];
-      editTopicOptions: () => { value: string; label: string }[];
-      editCourseId: { set: (v: string) => void };
-    };
+it("exposes the full taxonomy as select options for the edit form (no extra HTTP call beyond the initial load)", () => {
+  const { fixture, getCourses } = setup();
+  const component = fixture.componentInstance as unknown as {
+    courseOptions: () => { value: string; label: string }[];
+    editTopicOptions: () => { value: string; label: string }[];
+    editCourseId: { set: (v: string) => void };
+  };
 
-    expect(component.courseOptions()).toEqual([{ value: 'c1', label: 'Biología' }]);
+  expect(component.courseOptions()).toEqual([{ value: "c1", label: "Biología" }]);
 
-    component.editCourseId.set('c1');
-    expect(component.editTopicOptions()).toEqual([{ value: 't1', label: 'Célula' }]);
+  component.editCourseId.set("c1");
+  expect(component.editTopicOptions()).toEqual([{ value: "t1", label: "Célula" }]);
 
-    expect(getCourses).toHaveBeenCalledTimes(1);
-  });
+  expect(getCourses).toHaveBeenCalledTimes(1);
+});
 ```
 
 - [ ] **Step 4: Run the test to verify it fails**
@@ -115,24 +117,24 @@ Expected: FAIL — `courseOptions`/`editTopicOptions`/`editCourseId` don't exist
 In `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.ts`, update the imports at the top:
 
 ```ts
-import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
-import { HttpErrorResponse } from '@angular/common/http';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { forkJoin, map, of, switchMap } from 'rxjs';
-import { LucideAngularModule } from 'lucide-angular';
-import { Difficulty } from '@exams-generator/shared';
-import { ButtonComponent } from '../../../ui/button/button.component';
-import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
-import { TagComponent } from '../../../ui/tag/tag.component';
-import { TagVariant } from '../../../ui/ui.types';
-import { ModalComponent } from '../../../ui/modal/modal.component';
-import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
-import { InputComponent } from '../../../ui/input/input.component';
-import { AiService } from '../ai.service';
-import { DraftQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../ai.models';
-import { DraftCountService } from '../draft-count.service';
-import { TaxonomyService } from '../../taxonomy/taxonomy.service';
-import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { Component, DestroyRef, computed, inject, signal } from "@angular/core";
+import { HttpErrorResponse } from "@angular/common/http";
+import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
+import { forkJoin, map, of, switchMap } from "rxjs";
+import { LucideAngularModule } from "lucide-angular";
+import { Difficulty } from "@exams-generator/shared";
+import { ButtonComponent } from "../../../ui/button/button.component";
+import { EmptyStateComponent } from "../../../ui/empty-state/empty-state.component";
+import { TagComponent } from "../../../ui/tag/tag.component";
+import { TagVariant } from "../../../ui/ui.types";
+import { ModalComponent } from "../../../ui/modal/modal.component";
+import { SelectComponent, SelectOption } from "../../../ui/select/select.component";
+import { InputComponent } from "../../../ui/input/input.component";
+import { AiService } from "../ai.service";
+import { DraftQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from "../ai.models";
+import { DraftCountService } from "../draft-count.service";
+import { TaxonomyService } from "../../taxonomy/taxonomy.service";
+import { Course, Topic } from "../../taxonomy/taxonomy.models";
 ```
 
 **Do NOT add `BankService`/`UpdateQuestionPayload` imports or a `bankService` injection here.** They belong in Task 3 (where `saveEdit()` actually calls `bankService.updateQuestion(...)`), not this task. This repo's `tsconfig.base.json` has `noUnusedLocals: true`, which rejects (TS6133) a private field or import that's never read — adding the injection here, unused until Task 3, does not compile without an ugly suppression workaround. (Corrected after Task 1's first implementation attempt hit exactly this — see `.superpowers/sdd/progress.md`.)
@@ -322,11 +324,13 @@ git commit -m "feat(web): cache full taxonomy and add figureCode to edit models 
 ### Task 2: `startEdit`/`cancelEdit` + edit-mode template skeleton (taxonomy, enunciado, alternativas)
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.ts`
 - Modify: `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.html`
 - Test: `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `courseOptions`, `editTopicOptions`, `difficultyOptions`, `gradeLevelOptions`, `editCorrectAnswerOptions` (Task 1); `DraftQuestion` (existing).
 - Produces: `startEdit(draft: DraftQuestion): void`, `cancelEdit(): void`, `onEditCourseChange(courseId: string | null): void` — Task 3's `saveEdit()` and Task 4's `reviseWithAi()` both assume `editing()` is already `true` and every `edit*` signal is seeded.
 
@@ -335,41 +339,43 @@ git commit -m "feat(web): cache full taxonomy and add figureCode to edit models 
 In `ai-review-queue.component.spec.ts`, add:
 
 ```ts
-  it('starts edit mode from the Editar button, seeding every field from the selected draft', () => {
-    const { compiled, fixture } = setup();
-    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
+it("starts edit mode from the Editar button, seeding every field from the selected draft", () => {
+  const { compiled, fixture } = setup();
+  (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
 
-    expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
-    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
-    expect(enunciado.value).toBe('7. ¿Cuál organelo sintetiza proteínas?\na) Lisosoma b) Ribosoma');
-    const alternatives = compiled.querySelector('[data-testid="edit-alternatives"]') as HTMLTextAreaElement;
-    expect(alternatives.value).toBe('4\n3');
-  });
+  expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
+  const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+  expect(enunciado.value).toBe("7. ¿Cuál organelo sintetiza proteínas?\na) Lisosoma b) Ribosoma");
+  const alternatives = compiled.querySelector(
+    '[data-testid="edit-alternatives"]',
+  ) as HTMLTextAreaElement;
+  expect(alternatives.value).toBe("4\n3");
+});
 
-  it('cancels edit mode without saving, restoring the read-only preview', () => {
-    const { compiled, fixture } = setup();
-    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
-    (compiled.querySelector('[data-testid="edit-cancel"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
+it("cancels edit mode without saving, restoring the read-only preview", () => {
+  const { compiled, fixture } = setup();
+  (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
+  (compiled.querySelector('[data-testid="edit-cancel"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
 
-    expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
-    expect(compiled.querySelector('[data-testid="paper-preview"]')).toBeTruthy();
-  });
+  expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
+  expect(compiled.querySelector('[data-testid="paper-preview"]')).toBeTruthy();
+});
 
-  it('filters the tema dropdown to the edit form\'s selected curso, with no extra HTTP call', () => {
-    const { compiled, fixture, getTopics } = setup();
-    getTopics.mockClear();
-    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
+it("filters the tema dropdown to the edit form's selected curso, with no extra HTTP call", () => {
+  const { compiled, fixture, getTopics } = setup();
+  getTopics.mockClear();
+  (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
 
-    const component = fixture.componentInstance as unknown as {
-      editTopicOptions: () => { value: string; label: string }[];
-    };
-    expect(component.editTopicOptions()).toEqual([{ value: 't1', label: 'Célula' }]);
-    expect(getTopics).not.toHaveBeenCalled();
-  });
+  const component = fixture.componentInstance as unknown as {
+    editTopicOptions: () => { value: string; label: string }[];
+  };
+  expect(component.editTopicOptions()).toEqual([{ value: "t1", label: "Célula" }]);
+  expect(getTopics).not.toHaveBeenCalled();
+});
 ```
 
 - [ ] **Step 2: Run the tests to verify they fail**
@@ -428,147 +434,197 @@ In `ai-review-queue.component.ts`, add these methods right after `letterFor()`:
 In `ai-review-queue.component.html`, find the panel block:
 
 ```html
-        <div class="mb-4">
-          @if (previewLoading()) {
-            <div data-testid="preview-loading" class="h-[32rem] animate-pulse rounded-card bg-n200"></div>
-          } @else if (previewUrl()) {
-            <div
-              data-testid="paper-preview"
-              class="rounded-card border border-paper-border bg-paper-bg p-3 shadow-inner"
-            >
-              <iframe
-                data-testid="preview-frame"
-                [src]="previewUrl()"
-                class="h-[32rem] w-full rounded bg-white"
-                title="Vista previa"
-              ></iframe>
-              <p class="mt-2 text-center text-xs text-n500">Vista previa real — así se imprimirá.</p>
-            </div>
-          } @else if (previewFailed()) {
-            <div data-testid="preview-fallback" class="rounded-card bg-n100 p-3 text-sm text-n700">
-              <p class="mb-2 text-xs text-warn-text">No se pudo generar la vista de impresión; mostramos el contenido.</p>
-              <p class="font-medium text-n900">{{ d.bodyTypst }}</p>
-              <ul class="mt-2 list-inside list-disc">
-                @for (alt of d.alternatives ?? []; track alt) { <li>{{ alt }}</li> }
-              </ul>
-            </div>
-          }
-        </div>
+<div class="mb-4">
+  @if (previewLoading()) {
+  <div data-testid="preview-loading" class="h-[32rem] animate-pulse rounded-card bg-n200"></div>
+  } @else if (previewUrl()) {
+  <div
+    data-testid="paper-preview"
+    class="rounded-card border border-paper-border bg-paper-bg p-3 shadow-inner"
+  >
+    <iframe
+      data-testid="preview-frame"
+      [src]="previewUrl()"
+      class="h-[32rem] w-full rounded bg-white"
+      title="Vista previa"
+    ></iframe>
+    <p class="mt-2 text-center text-xs text-n500">Vista previa real — así se imprimirá.</p>
+  </div>
+  } @else if (previewFailed()) {
+  <div data-testid="preview-fallback" class="rounded-card bg-n100 p-3 text-sm text-n700">
+    <p class="mb-2 text-xs text-warn-text">
+      No se pudo generar la vista de impresión; mostramos el contenido.
+    </p>
+    <p class="font-medium text-n900">{{ d.bodyTypst }}</p>
+    <ul class="mt-2 list-inside list-disc">
+      @for (alt of d.alternatives ?? []; track alt) {
+      <li>{{ alt }}</li>
+      }
+    </ul>
+  </div>
+  }
+</div>
 
-        <div class="flex flex-wrap gap-2">
-          <div data-testid="approve"><ui-button variant="primary" (clicked)="approve()"><span class="flex items-center gap-1"><lucide-angular name="check" class="h-4 w-4"></lucide-angular>Aprobar</span></ui-button></div>
-          <div data-testid="edit"><ui-button variant="ghost"><span class="flex items-center gap-1"><lucide-angular name="pencil" class="h-4 w-4"></lucide-angular>Editar</span></ui-button></div>
-          <div data-testid="reject"><ui-button variant="ghost" (clicked)="requestReject()"><span class="flex items-center gap-1 text-hard-text"><lucide-angular name="x" class="h-4 w-4"></lucide-angular>Rechazar</span></ui-button></div>
-        </div>
+<div class="flex flex-wrap gap-2">
+  <div data-testid="approve">
+    <ui-button variant="primary" (clicked)="approve()"
+      ><span class="flex items-center gap-1"
+        ><lucide-angular name="check" class="h-4 w-4"></lucide-angular>Aprobar</span
+      ></ui-button
+    >
+  </div>
+  <div data-testid="edit">
+    <ui-button variant="ghost"
+      ><span class="flex items-center gap-1"
+        ><lucide-angular name="pencil" class="h-4 w-4"></lucide-angular>Editar</span
+      ></ui-button
+    >
+  </div>
+  <div data-testid="reject">
+    <ui-button variant="ghost" (clicked)="requestReject()"
+      ><span class="flex items-center gap-1 text-hard-text"
+        ><lucide-angular name="x" class="h-4 w-4"></lucide-angular>Rechazar</span
+      ></ui-button
+    >
+  </div>
+</div>
 ```
 
 Replace with:
 
 ```html
-        @if (editing()) {
-          <div data-testid="panel-edit-form" class="flex flex-col gap-3">
-            <ui-select
-              label="Curso"
-              placeholder="Elige un curso"
-              [options]="courseOptions()"
-              [value]="editCourseId()"
-              (valueChange)="onEditCourseChange($event)"
-            ></ui-select>
-            <ui-select
-              label="Tema"
-              placeholder="Elige un tema"
-              [options]="editTopicOptions()"
-              [value]="editTopicId()"
-              (valueChange)="editTopicId.set($event ?? '')"
-            ></ui-select>
-            <ui-select
-              label="Nivel"
-              [options]="difficultyOptions"
-              [value]="editDifficulty()"
-              (valueChange)="editDifficulty.set($event)"
-            ></ui-select>
-            <ui-select
-              label="Grado"
-              [options]="gradeLevelOptions"
-              [value]="editGradeLevel()"
-              (valueChange)="editGradeLevel.set($event)"
-            ></ui-select>
+@if (editing()) {
+<div data-testid="panel-edit-form" class="flex flex-col gap-3">
+  <ui-select
+    label="Curso"
+    placeholder="Elige un curso"
+    [options]="courseOptions()"
+    [value]="editCourseId()"
+    (valueChange)="onEditCourseChange($event)"
+  ></ui-select>
+  <ui-select
+    label="Tema"
+    placeholder="Elige un tema"
+    [options]="editTopicOptions()"
+    [value]="editTopicId()"
+    (valueChange)="editTopicId.set($event ?? '')"
+  ></ui-select>
+  <ui-select
+    label="Nivel"
+    [options]="difficultyOptions"
+    [value]="editDifficulty()"
+    (valueChange)="editDifficulty.set($event)"
+  ></ui-select>
+  <ui-select
+    label="Grado"
+    [options]="gradeLevelOptions"
+    [value]="editGradeLevel()"
+    (valueChange)="editGradeLevel.set($event)"
+  ></ui-select>
 
-            <label class="text-sm text-n700">Enunciado
-              <textarea
-                data-testid="edit-enunciado"
-                class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
-                rows="3"
-                [value]="editBody()"
-                (input)="editBody.set($any($event.target).value)"
-              ></textarea>
-            </label>
-            <label class="text-sm text-n700">Alternativas (una por línea)
-              <textarea
-                data-testid="edit-alternatives"
-                class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
-                rows="4"
-                [value]="editAlternatives()"
-                (input)="editAlternatives.set($any($event.target).value)"
-              ></textarea>
-            </label>
-            <div data-testid="edit-correct-answer">
-              <ui-select
-                label="Clave (respuesta correcta)"
-                placeholder="Elige la alternativa correcta"
-                [options]="editCorrectAnswerOptions()"
-                [value]="editCorrectAnswer()"
-                (valueChange)="editCorrectAnswer.set($event ?? '')"
-              ></ui-select>
-            </div>
+  <label class="text-sm text-n700"
+    >Enunciado
+    <textarea
+      data-testid="edit-enunciado"
+      class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
+      rows="3"
+      [value]="editBody()"
+      (input)="editBody.set($any($event.target).value)"
+    ></textarea>
+  </label>
+  <label class="text-sm text-n700"
+    >Alternativas (una por línea)
+    <textarea
+      data-testid="edit-alternatives"
+      class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
+      rows="4"
+      [value]="editAlternatives()"
+      (input)="editAlternatives.set($any($event.target).value)"
+    ></textarea>
+  </label>
+  <div data-testid="edit-correct-answer">
+    <ui-select
+      label="Clave (respuesta correcta)"
+      placeholder="Elige la alternativa correcta"
+      [options]="editCorrectAnswerOptions()"
+      [value]="editCorrectAnswer()"
+      (valueChange)="editCorrectAnswer.set($event ?? '')"
+    ></ui-select>
+  </div>
 
-            @if (editError()) {
-              <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ editError() }}</p>
-            }
+  @if (editError()) {
+  <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">
+    {{ editError() }}
+  </p>
+  }
 
-            <div class="flex gap-2">
-              <div data-testid="edit-save">
-                <ui-button variant="primary" [disabled]="!editTopicId()" (clicked)="cancelEdit()">Guardar</ui-button>
-              </div>
-              <div data-testid="edit-cancel">
-                <ui-button variant="ghost" (clicked)="cancelEdit()">Cancelar</ui-button>
-              </div>
-            </div>
-          </div>
-        } @else {
-          <div class="mb-4">
-            @if (previewLoading()) {
-              <div data-testid="preview-loading" class="h-[32rem] animate-pulse rounded-card bg-n200"></div>
-            } @else if (previewUrl()) {
-              <div
-                data-testid="paper-preview"
-                class="rounded-card border border-paper-border bg-paper-bg p-3 shadow-inner"
-              >
-                <iframe
-                  data-testid="preview-frame"
-                  [src]="previewUrl()"
-                  class="h-[32rem] w-full rounded bg-white"
-                  title="Vista previa"
-                ></iframe>
-                <p class="mt-2 text-center text-xs text-n500">Vista previa real — así se imprimirá.</p>
-              </div>
-            } @else if (previewFailed()) {
-              <div data-testid="preview-fallback" class="rounded-card bg-n100 p-3 text-sm text-n700">
-                <p class="mb-2 text-xs text-warn-text">No se pudo generar la vista de impresión; mostramos el contenido.</p>
-                <p class="font-medium text-n900">{{ d.bodyTypst }}</p>
-                <ul class="mt-2 list-inside list-disc">
-                  @for (alt of d.alternatives ?? []; track alt) { <li>{{ alt }}</li> }
-                </ul>
-              </div>
-            }
-          </div>
+  <div class="flex gap-2">
+    <div data-testid="edit-save">
+      <ui-button variant="primary" [disabled]="!editTopicId()" (clicked)="cancelEdit()"
+        >Guardar</ui-button
+      >
+    </div>
+    <div data-testid="edit-cancel">
+      <ui-button variant="ghost" (clicked)="cancelEdit()">Cancelar</ui-button>
+    </div>
+  </div>
+</div>
+} @else {
+<div class="mb-4">
+  @if (previewLoading()) {
+  <div data-testid="preview-loading" class="h-[32rem] animate-pulse rounded-card bg-n200"></div>
+  } @else if (previewUrl()) {
+  <div
+    data-testid="paper-preview"
+    class="rounded-card border border-paper-border bg-paper-bg p-3 shadow-inner"
+  >
+    <iframe
+      data-testid="preview-frame"
+      [src]="previewUrl()"
+      class="h-[32rem] w-full rounded bg-white"
+      title="Vista previa"
+    ></iframe>
+    <p class="mt-2 text-center text-xs text-n500">Vista previa real — así se imprimirá.</p>
+  </div>
+  } @else if (previewFailed()) {
+  <div data-testid="preview-fallback" class="rounded-card bg-n100 p-3 text-sm text-n700">
+    <p class="mb-2 text-xs text-warn-text">
+      No se pudo generar la vista de impresión; mostramos el contenido.
+    </p>
+    <p class="font-medium text-n900">{{ d.bodyTypst }}</p>
+    <ul class="mt-2 list-inside list-disc">
+      @for (alt of d.alternatives ?? []; track alt) {
+      <li>{{ alt }}</li>
+      }
+    </ul>
+  </div>
+  }
+</div>
 
-          <div class="flex flex-wrap gap-2">
-            <div data-testid="approve"><ui-button variant="primary" (clicked)="approve()"><span class="flex items-center gap-1"><lucide-angular name="check" class="h-4 w-4"></lucide-angular>Aprobar</span></ui-button></div>
-            <div data-testid="edit"><ui-button variant="ghost" (clicked)="startEdit(d)"><span class="flex items-center gap-1"><lucide-angular name="pencil" class="h-4 w-4"></lucide-angular>Editar</span></ui-button></div>
-            <div data-testid="reject"><ui-button variant="ghost" (clicked)="requestReject()"><span class="flex items-center gap-1 text-hard-text"><lucide-angular name="x" class="h-4 w-4"></lucide-angular>Rechazar</span></ui-button></div>
-          </div>
-        }
+<div class="flex flex-wrap gap-2">
+  <div data-testid="approve">
+    <ui-button variant="primary" (clicked)="approve()"
+      ><span class="flex items-center gap-1"
+        ><lucide-angular name="check" class="h-4 w-4"></lucide-angular>Aprobar</span
+      ></ui-button
+    >
+  </div>
+  <div data-testid="edit">
+    <ui-button variant="ghost" (clicked)="startEdit(d)"
+      ><span class="flex items-center gap-1"
+        ><lucide-angular name="pencil" class="h-4 w-4"></lucide-angular>Editar</span
+      ></ui-button
+    >
+  </div>
+  <div data-testid="reject">
+    <ui-button variant="ghost" (clicked)="requestReject()"
+      ><span class="flex items-center gap-1 text-hard-text"
+        ><lucide-angular name="x" class="h-4 w-4"></lucide-angular>Rechazar</span
+      ></ui-button
+    >
+  </div>
+</div>
+}
 ```
 
 Note: `edit-save`'s `(clicked)` is temporarily wired to `cancelEdit()` — Task 3 rewires it to the real `saveEdit()`. This keeps Task 2 independently testable (cancel works, form renders, taxonomy filters correctly) without a save path that doesn't exist yet.
@@ -590,11 +646,13 @@ git commit -m "feat(web): wire startEdit/cancelEdit and the edit-mode form skele
 ### Task 3: `saveEdit()` — PATCH via BankService, including figureCode
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.ts`
 - Modify: `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.html`
 - Test: `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `BankService.updateQuestion(id: string, patch: UpdateQuestionPayload): Observable<BankQuestion>` (existing, unmodified); all `edit*` signals (Task 1/2).
 - Produces: `saveEdit(): void` — no further tasks depend on it, this is the terminal save path.
 
@@ -614,7 +672,7 @@ function setup(
 ) {
   const listDrafts = vi.fn(over.listImpl ?? (() => of(DRAFTS)));
   const previewDraft = vi.fn(
-    over.previewImpl ?? (() => of(new Blob(['%PDF'], { type: 'application/pdf' }))),
+    over.previewImpl ?? (() => of(new Blob(["%PDF"], { type: "application/pdf" }))),
   );
   const approveQuestion = vi.fn(over.approveImpl ?? ((id: string) => of({ id })));
   const rejectQuestion = vi.fn((id: string) => of({ id }));
@@ -622,13 +680,16 @@ function setup(
   const getTopics = vi.fn(over.getTopicsImpl ?? (() => of(TOPICS_C1)));
   const draftCountSet = vi.fn();
   let n = 0;
-  vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:pdf-${n++}`);
-  vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+  vi.spyOn(URL, "createObjectURL").mockImplementation(() => `blob:pdf-${n++}`);
+  vi.spyOn(URL, "revokeObjectURL").mockImplementation(() => undefined);
   TestBed.configureTestingModule({
     imports: [AiReviewQueueComponent],
     providers: [
       importProvidersFrom(LucideAngularModule.pick({ Check, Pencil, X, Sparkles })),
-      { provide: AiService, useValue: { listDrafts, previewDraft, approveQuestion, rejectQuestion } },
+      {
+        provide: AiService,
+        useValue: { listDrafts, previewDraft, approveQuestion, rejectQuestion },
+      },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
       { provide: DraftCountService, useValue: { set: draftCountSet } },
     ],
@@ -665,24 +726,27 @@ function setup(
 ) {
   const listDrafts = vi.fn(over.listImpl ?? (() => of(DRAFTS)));
   const previewDraft = vi.fn(
-    over.previewImpl ?? (() => of(new Blob(['%PDF'], { type: 'application/pdf' }))),
+    over.previewImpl ?? (() => of(new Blob(["%PDF"], { type: "application/pdf" }))),
   );
   const approveQuestion = vi.fn(over.approveImpl ?? ((id: string) => of({ id })));
   const rejectQuestion = vi.fn((id: string) => of({ id }));
   const reviseQuestion = vi.fn(
     over.reviseQuestionImpl ??
       ((id: string) =>
-        of({ bodyTypst: 'revisado', alternatives: ['1', '2'], correctAnswer: '0', figureCode: null })),
+        of({
+          bodyTypst: "revisado",
+          alternatives: ["1", "2"],
+          correctAnswer: "0",
+          figureCode: null,
+        })),
   );
   const getCourses = vi.fn(over.getCoursesImpl ?? (() => of(COURSES)));
   const getTopics = vi.fn(over.getTopicsImpl ?? (() => of(TOPICS_C1)));
-  const updateQuestion = vi.fn(
-    over.updateQuestionImpl ?? ((id: string) => of({ id } as unknown)),
-  );
+  const updateQuestion = vi.fn(over.updateQuestionImpl ?? ((id: string) => of({ id } as unknown)));
   const draftCountSet = vi.fn();
   let n = 0;
-  vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:pdf-${n++}`);
-  vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+  vi.spyOn(URL, "createObjectURL").mockImplementation(() => `blob:pdf-${n++}`);
+  vi.spyOn(URL, "revokeObjectURL").mockImplementation(() => undefined);
   TestBed.configureTestingModule({
     imports: [AiReviewQueueComponent],
     providers: [
@@ -717,104 +781,106 @@ function setup(
 Add the import at the top of the spec file — find:
 
 ```ts
-import { TaxonomyService } from '../../taxonomy/taxonomy.service';
-import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { TaxonomyService } from "../../taxonomy/taxonomy.service";
+import { Course, Topic } from "../../taxonomy/taxonomy.models";
 ```
 
 Replace with:
 
 ```ts
-import { TaxonomyService } from '../../taxonomy/taxonomy.service';
-import { Course, Topic } from '../../taxonomy/taxonomy.models';
-import { BankService } from '../../bank/bank.service';
+import { TaxonomyService } from "../../taxonomy/taxonomy.service";
+import { Course, Topic } from "../../taxonomy/taxonomy.models";
+import { BankService } from "../../bank/bank.service";
 ```
 
 Now add the tests, right after the `'filters the tema dropdown...'` test from Task 2:
 
 ```ts
-  it('saves the edited draft via BankService.updateQuestion with the full payload including figureCode, then exits edit mode', () => {
-    const { compiled, fixture, updateQuestion } = setup();
-    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
+it("saves the edited draft via BankService.updateQuestion with the full payload including figureCode, then exits edit mode", () => {
+  const { compiled, fixture, updateQuestion } = setup();
+  (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
 
-    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
-    enunciado.value = 'Enunciado corregido';
-    enunciado.dispatchEvent(new Event('input'));
-    fixture.detectChanges();
+  const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+  enunciado.value = "Enunciado corregido";
+  enunciado.dispatchEvent(new Event("input"));
+  fixture.detectChanges();
 
-    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
+  (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
 
-    expect(updateQuestion).toHaveBeenCalledWith('d1', {
-      topicId: 't1',
-      difficulty: Difficulty.Medium,
-      gradeLevel: 'secundaria_3',
-      correctAnswer: '0',
-      bodyTypst: 'Enunciado corregido',
-      alternatives: ['4', '3'],
-      figureCode: undefined,
-    });
-    expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
+  expect(updateQuestion).toHaveBeenCalledWith("d1", {
+    topicId: "t1",
+    difficulty: Difficulty.Medium,
+    gradeLevel: "secundaria_3",
+    correctAnswer: "0",
+    bodyTypst: "Enunciado corregido",
+    alternatives: ["4", "3"],
+    figureCode: undefined,
   });
+  expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
+});
 
-  it('sends figureCode in the save payload when the draft has one', () => {
-    const { compiled, fixture, updateQuestion } = setup({
-      listImpl: () => of([draft({ id: 'd1', figureCode: '#circle((0,0))' })]),
-    });
-    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
-    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
-
-    expect(updateQuestion).toHaveBeenCalledWith(
-      'd1',
-      expect.objectContaining({ figureCode: '#circle((0,0))' }),
-    );
+it("sends figureCode in the save payload when the draft has one", () => {
+  const { compiled, fixture, updateQuestion } = setup({
+    listImpl: () => of([draft({ id: "d1", figureCode: "#circle((0,0))" })]),
   });
+  (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
+  (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
 
-  it('shows an error and stays in edit mode when saving fails', () => {
-    const { compiled, fixture } = setup({
-      updateQuestionImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
-    });
-    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
-    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
+  expect(updateQuestion).toHaveBeenCalledWith(
+    "d1",
+    expect.objectContaining({ figureCode: "#circle((0,0))" }),
+  );
+});
 
-    expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
-    const error = compiled.querySelector('[role="alert"]');
-    expect(error?.textContent).toContain('No se pudo guardar');
+it("shows an error and stays in edit mode when saving fails", () => {
+  const { compiled, fixture } = setup({
+    updateQuestionImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
   });
+  (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
+  (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
 
-  it('reloads the queue and refreshes the preview EXACTLY ONCE after a successful save (reloadAfterSave, not load()+compilePreview double-firing)', () => {
-    const { compiled, fixture, listDrafts, previewDraft } = setup();
-    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
-    listDrafts.mockClear();
-    previewDraft.mockClear();
+  expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
+  const error = compiled.querySelector('[role="alert"]');
+  expect(error?.textContent).toContain("No se pudo guardar");
+});
 
-    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
+it("reloads the queue and refreshes the preview EXACTLY ONCE after a successful save (reloadAfterSave, not load()+compilePreview double-firing)", () => {
+  const { compiled, fixture, listDrafts, previewDraft } = setup();
+  (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
+  listDrafts.mockClear();
+  previewDraft.mockClear();
 
-    expect(listDrafts).toHaveBeenCalledTimes(1);
-    expect(previewDraft).toHaveBeenCalledTimes(1);
-    expect(previewDraft).toHaveBeenCalledWith('d1');
-  });
+  (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
 
-  it('keeps the edited draft selected after saving, even when it is not the first item in the queue', () => {
-    const { compiled, fixture } = setup();
-    const secondItem = compiled.querySelectorAll('[data-testid="review-item"]')[1] as HTMLButtonElement;
-    secondItem.click();
-    fixture.detectChanges();
-    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
-    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
+  expect(listDrafts).toHaveBeenCalledTimes(1);
+  expect(previewDraft).toHaveBeenCalledTimes(1);
+  expect(previewDraft).toHaveBeenCalledWith("d1");
+});
 
-    // d1's distinctive body text must NOT reappear — a reset-to-first-item
-    // regression would show it after the post-save reload.
-    expect(compiled.textContent).not.toContain('¿Cuál organelo sintetiza proteínas?');
-  });
+it("keeps the edited draft selected after saving, even when it is not the first item in the queue", () => {
+  const { compiled, fixture } = setup();
+  const secondItem = compiled.querySelectorAll(
+    '[data-testid="review-item"]',
+  )[1] as HTMLButtonElement;
+  secondItem.click();
+  fixture.detectChanges();
+  (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
+  (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
+
+  // d1's distinctive body text must NOT reappear — a reset-to-first-item
+  // regression would show it after the post-save reload.
+  expect(compiled.textContent).not.toContain("¿Cuál organelo sintetiza proteínas?");
+});
 ```
 
 - [ ] **Step 2: Run the tests to verify they fail**
@@ -827,17 +893,17 @@ Expected: FAIL — `saveEdit` isn't wired, `edit-save` still calls `cancelEdit()
 In `ai-review-queue.component.ts`, add the `BankService`/`UpdateQuestionPayload` imports (NOT added in Task 1 — deliberately deferred here, since this is the first step that actually reads them; adding an injected-but-unused field earlier fails to compile under this repo's `noUnusedLocals: true`). Find:
 
 ```ts
-import { TaxonomyService } from '../../taxonomy/taxonomy.service';
-import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { TaxonomyService } from "../../taxonomy/taxonomy.service";
+import { Course, Topic } from "../../taxonomy/taxonomy.models";
 ```
 
 Replace with:
 
 ```ts
-import { TaxonomyService } from '../../taxonomy/taxonomy.service';
-import { Course, Topic } from '../../taxonomy/taxonomy.models';
-import { BankService } from '../../bank/bank.service';
-import { UpdateQuestionPayload } from '../../bank/bank.models';
+import { TaxonomyService } from "../../taxonomy/taxonomy.service";
+import { Course, Topic } from "../../taxonomy/taxonomy.models";
+import { BankService } from "../../bank/bank.service";
+import { UpdateQuestionPayload } from "../../bank/bank.models";
 ```
 
 Add the injection next to `taxonomyService` — find:
@@ -931,62 +997,75 @@ Then add after `cancelEdit()`:
 Rewire the template's Guardar button — in `ai-review-queue.component.html`, find:
 
 ```html
-              <div data-testid="edit-save">
-                <ui-button variant="primary" [disabled]="!editTopicId()" (clicked)="cancelEdit()">Guardar</ui-button>
-              </div>
+<div data-testid="edit-save">
+  <ui-button variant="primary" [disabled]="!editTopicId()" (clicked)="cancelEdit()"
+    >Guardar</ui-button
+  >
+</div>
 ```
 
 Replace with:
 
 ```html
-              <div data-testid="edit-save">
-                <ui-button variant="primary" [loading]="editSaving()" [disabled]="editSaving() || !editTopicId()" (clicked)="saveEdit()">Guardar</ui-button>
-              </div>
+<div data-testid="edit-save">
+  <ui-button
+    variant="primary"
+    [loading]="editSaving()"
+    [disabled]="editSaving() || !editTopicId()"
+    (clicked)="saveEdit()"
+    >Guardar</ui-button
+  >
+</div>
 ```
 
 Also add the figura CeTZ textarea and the role="alert" attribute the tests expect — find:
 
 ```html
-            <div data-testid="edit-correct-answer">
-              <ui-select
-                label="Clave (respuesta correcta)"
-                placeholder="Elige la alternativa correcta"
-                [options]="editCorrectAnswerOptions()"
-                [value]="editCorrectAnswer()"
-                (valueChange)="editCorrectAnswer.set($event ?? '')"
-              ></ui-select>
-            </div>
+<div data-testid="edit-correct-answer">
+  <ui-select
+    label="Clave (respuesta correcta)"
+    placeholder="Elige la alternativa correcta"
+    [options]="editCorrectAnswerOptions()"
+    [value]="editCorrectAnswer()"
+    (valueChange)="editCorrectAnswer.set($event ?? '')"
+  ></ui-select>
+</div>
 
-            @if (editError()) {
-              <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ editError() }}</p>
-            }
+@if (editError()) {
+<p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">
+  {{ editError() }}
+</p>
+}
 ```
 
 Replace with:
 
 ```html
-            <div data-testid="edit-correct-answer">
-              <ui-select
-                label="Clave (respuesta correcta)"
-                placeholder="Elige la alternativa correcta"
-                [options]="editCorrectAnswerOptions()"
-                [value]="editCorrectAnswer()"
-                (valueChange)="editCorrectAnswer.set($event ?? '')"
-              ></ui-select>
-            </div>
-            <label class="text-sm text-n700">Figura (CeTZ) — opcional
-              <textarea
-                data-testid="edit-figure-code"
-                class="mt-1 block w-full rounded-field border border-n200 p-2 font-mono text-xs"
-                rows="4"
-                [value]="editFigureCode()"
-                (input)="editFigureCode.set($any($event.target).value)"
-              ></textarea>
-            </label>
+<div data-testid="edit-correct-answer">
+  <ui-select
+    label="Clave (respuesta correcta)"
+    placeholder="Elige la alternativa correcta"
+    [options]="editCorrectAnswerOptions()"
+    [value]="editCorrectAnswer()"
+    (valueChange)="editCorrectAnswer.set($event ?? '')"
+  ></ui-select>
+</div>
+<label class="text-sm text-n700"
+  >Figura (CeTZ) — opcional
+  <textarea
+    data-testid="edit-figure-code"
+    class="mt-1 block w-full rounded-field border border-n200 p-2 font-mono text-xs"
+    rows="4"
+    [value]="editFigureCode()"
+    (input)="editFigureCode.set($any($event.target).value)"
+  ></textarea>
+</label>
 
-            @if (editError()) {
-              <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ editError() }}</p>
-            }
+@if (editError()) {
+<p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">
+  {{ editError() }}
+</p>
+}
 ```
 
 - [ ] **Step 4: Run the tests to verify they pass**
@@ -1006,11 +1085,13 @@ git commit -m "feat(web): save review-queue draft edits via BankService, includi
 ### Task 4: "Editar con IA" — `reviseWithAi()`
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.ts`
 - Modify: `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.html`
 - Test: `apps/web/src/app/features/ai/ai-review-queue/ai-review-queue.component.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `AiService.reviseQuestion(id: string, instruction: string): Observable<AiRevisedQuestion>` (existing, unmodified — now typed with `figureCode` per Task 1).
 - Produces: `reviseWithAi(): void` — terminal, no further tasks depend on it.
 
@@ -1019,51 +1100,57 @@ git commit -m "feat(web): save review-queue draft edits via BankService, includi
 In `ai-review-queue.component.spec.ts`, add:
 
 ```ts
-  it('revises the draft with AI, populating the edit form WITHOUT saving', () => {
-    const { compiled, fixture, reviseQuestion, updateQuestion } = setup({
-      reviseQuestionImpl: () =>
-        of({
-          bodyTypst: 'Enunciado revisado por IA',
-          alternatives: ['10', '20', '30'],
-          correctAnswer: '2',
-          figureCode: '#import "@preview/cetz:0.5.2": canvas, draw',
-        }),
-    });
-    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
-
-    const instructionInput = compiled.querySelector('[data-testid="ai-instruction"] input') as HTMLInputElement;
-    instructionInput.value = 'hazla más difícil';
-    instructionInput.dispatchEvent(new Event('input'));
-    fixture.detectChanges();
-
-    (compiled.querySelector('[data-testid="ai-revise"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
-
-    expect(reviseQuestion).toHaveBeenCalledWith('d1', 'hazla más difícil');
-    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
-    expect(enunciado.value).toBe('Enunciado revisado por IA');
-    const alternatives = compiled.querySelector('[data-testid="edit-alternatives"]') as HTMLTextAreaElement;
-    expect(alternatives.value).toBe('10\n20\n30');
-    const figureCode = compiled.querySelector('[data-testid="edit-figure-code"]') as HTMLTextAreaElement;
-    expect(figureCode.value).toBe('#import "@preview/cetz:0.5.2": canvas, draw');
-    expect(updateQuestion).not.toHaveBeenCalled();
+it("revises the draft with AI, populating the edit form WITHOUT saving", () => {
+  const { compiled, fixture, reviseQuestion, updateQuestion } = setup({
+    reviseQuestionImpl: () =>
+      of({
+        bodyTypst: "Enunciado revisado por IA",
+        alternatives: ["10", "20", "30"],
+        correctAnswer: "2",
+        figureCode: '#import "@preview/cetz:0.5.2": canvas, draw',
+      }),
   });
+  (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
 
-  it('shows an error when AI revision fails, without touching the current form values', () => {
-    const { compiled, fixture } = setup({
-      reviseQuestionImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
-    });
-    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
-    (compiled.querySelector('[data-testid="ai-revise"] button') as HTMLButtonElement).click();
-    fixture.detectChanges();
+  const instructionInput = compiled.querySelector(
+    '[data-testid="ai-instruction"] input',
+  ) as HTMLInputElement;
+  instructionInput.value = "hazla más difícil";
+  instructionInput.dispatchEvent(new Event("input"));
+  fixture.detectChanges();
 
-    const error = compiled.querySelector('[data-testid="ai-error"]');
-    expect(error?.textContent).toContain('No se pudo revisar');
-    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
-    expect(enunciado.value).toBe('7. ¿Cuál organelo sintetiza proteínas?\na) Lisosoma b) Ribosoma');
+  (compiled.querySelector('[data-testid="ai-revise"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
+
+  expect(reviseQuestion).toHaveBeenCalledWith("d1", "hazla más difícil");
+  const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+  expect(enunciado.value).toBe("Enunciado revisado por IA");
+  const alternatives = compiled.querySelector(
+    '[data-testid="edit-alternatives"]',
+  ) as HTMLTextAreaElement;
+  expect(alternatives.value).toBe("10\n20\n30");
+  const figureCode = compiled.querySelector(
+    '[data-testid="edit-figure-code"]',
+  ) as HTMLTextAreaElement;
+  expect(figureCode.value).toBe('#import "@preview/cetz:0.5.2": canvas, draw');
+  expect(updateQuestion).not.toHaveBeenCalled();
+});
+
+it("shows an error when AI revision fails, without touching the current form values", () => {
+  const { compiled, fixture } = setup({
+    reviseQuestionImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
   });
+  (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
+  (compiled.querySelector('[data-testid="ai-revise"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
+
+  const error = compiled.querySelector('[data-testid="ai-error"]');
+  expect(error?.textContent).toContain("No se pudo revisar");
+  const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+  expect(enunciado.value).toBe("7. ¿Cuál organelo sintetiza proteínas?\na) Lisosoma b) Ribosoma");
+});
 ```
 
 - [ ] **Step 2: Run the tests to verify they fail**
@@ -1111,58 +1198,67 @@ In `ai-review-queue.component.ts`, add after `saveEdit()`:
 Add the "Editar con IA" box to the template — in `ai-review-queue.component.html`, find:
 
 ```html
-            <label class="text-sm text-n700">Figura (CeTZ) — opcional
-              <textarea
-                data-testid="edit-figure-code"
-                class="mt-1 block w-full rounded-field border border-n200 p-2 font-mono text-xs"
-                rows="4"
-                [value]="editFigureCode()"
-                (input)="editFigureCode.set($any($event.target).value)"
-              ></textarea>
-            </label>
+<label class="text-sm text-n700"
+  >Figura (CeTZ) — opcional
+  <textarea
+    data-testid="edit-figure-code"
+    class="mt-1 block w-full rounded-field border border-n200 p-2 font-mono text-xs"
+    rows="4"
+    [value]="editFigureCode()"
+    (input)="editFigureCode.set($any($event.target).value)"
+  ></textarea>
+</label>
 
-            @if (editError()) {
+@if (editError()) {
 ```
 
 Replace with:
 
 ```html
-            <label class="text-sm text-n700">Figura (CeTZ) — opcional
-              <textarea
-                data-testid="edit-figure-code"
-                class="mt-1 block w-full rounded-field border border-n200 p-2 font-mono text-xs"
-                rows="4"
-                [value]="editFigureCode()"
-                (input)="editFigureCode.set($any($event.target).value)"
-              ></textarea>
-            </label>
+<label class="text-sm text-n700"
+  >Figura (CeTZ) — opcional
+  <textarea
+    data-testid="edit-figure-code"
+    class="mt-1 block w-full rounded-field border border-n200 p-2 font-mono text-xs"
+    rows="4"
+    [value]="editFigureCode()"
+    (input)="editFigureCode.set($any($event.target).value)"
+  ></textarea>
+</label>
 
-            <div class="flex flex-col gap-2 rounded-field border border-dashed border-primary-300 bg-primary-50/40 p-3">
-              <span class="flex items-center gap-1 text-xs font-medium text-primary-700">
-                <lucide-angular name="sparkles" class="h-3.5 w-3.5"></lucide-angular>
-                Editar con IA
-              </span>
-              <div data-testid="ai-instruction">
-                <ui-input
-                  placeholder="hazla más difícil, corrige la figura…"
-                  [value]="aiInstruction()"
-                  (valueChange)="aiInstruction.set($event)"
-                ></ui-input>
-              </div>
-              <div data-testid="ai-revise" class="self-start">
-                <ui-button variant="ghost" [loading]="revising()" [disabled]="revising()" (clicked)="reviseWithAi()">
-                  <span class="flex items-center gap-1">
-                    <lucide-angular name="sparkles" class="h-4 w-4"></lucide-angular>
-                    Revisar con IA
-                  </span>
-                </ui-button>
-              </div>
-              @if (aiError()) {
-                <p data-testid="ai-error" class="text-sm text-hard-text" role="alert">{{ aiError() }}</p>
-              }
-            </div>
+<div
+  class="flex flex-col gap-2 rounded-field border border-dashed border-primary-300 bg-primary-50/40 p-3"
+>
+  <span class="flex items-center gap-1 text-xs font-medium text-primary-700">
+    <lucide-angular name="sparkles" class="h-3.5 w-3.5"></lucide-angular>
+    Editar con IA
+  </span>
+  <div data-testid="ai-instruction">
+    <ui-input
+      placeholder="hazla más difícil, corrige la figura…"
+      [value]="aiInstruction()"
+      (valueChange)="aiInstruction.set($event)"
+    ></ui-input>
+  </div>
+  <div data-testid="ai-revise" class="self-start">
+    <ui-button
+      variant="ghost"
+      [loading]="revising()"
+      [disabled]="revising()"
+      (clicked)="reviseWithAi()"
+    >
+      <span class="flex items-center gap-1">
+        <lucide-angular name="sparkles" class="h-4 w-4"></lucide-angular>
+        Revisar con IA
+      </span>
+    </ui-button>
+  </div>
+  @if (aiError()) {
+  <p data-testid="ai-error" class="text-sm text-hard-text" role="alert">{{ aiError() }}</p>
+  }
+</div>
 
-            @if (editError()) {
+@if (editError()) {
 ```
 
 Add the `Sparkles` icon to the module import used in the template's standalone `LucideAngularModule.pick(...)` — this component doesn't register icons itself (its host app module does), so no component-level change is needed beyond what's already imported; verify by grepping:

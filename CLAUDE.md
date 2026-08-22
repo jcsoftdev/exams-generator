@@ -1,4 +1,5 @@
 <!-- project-brain:start -->
+
 # Project: exams-generator
 
 This project is indexed with [project-brain](https://github.com/jcsoftdev/project-brain).
@@ -54,18 +55,18 @@ When answering questions about this codebase, run `search_context` first to find
 ## Module Documentation
 
 Detected modules:
+
 - apps
 - docs
 - infra
 - packages
 
 For each module stub in docs/modules/:
+
 1. Read the stub file.
 2. Fill in each section (Purpose, Key Files, Dependencies, Data Flow, Gotchas, Last Updated).
 3. Call add_knowledge with the filled content, source: "docs/modules/<name>.md",
    tags: ["module", "<name>"].
-Do this automatically when you open a project session and a stub is unfilled.
-
+   Do this automatically when you open a project session and a stub is unfilled.
 
 <!-- project-brain:end -->
-

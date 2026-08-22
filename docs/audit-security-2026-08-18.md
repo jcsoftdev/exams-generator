@@ -15,8 +15,7 @@ ausente/débil/corto aborta el arranque en vez de firmar.
 
 ## 🟠 P1 — id malformado → 500 (ARREGLADO, `78694d9`)
 
-`GET /exams/not-a-uuid` daba 500 (Postgres rechazando el cast a `uuid`); un UUID inexistente da
-404. No es SQLi (drizzle parametriza). `ParseUUIDPipe` en los 29 params uuid → 400 en el borde.
+`GET /exams/not-a-uuid` daba 500 (Postgres rechazando el cast a `uuid`); un UUID inexistente da 404. No es SQLi (drizzle parametriza). `ParseUUIDPipe` en los 29 params uuid → 400 en el borde.
 
 ## 🟡 MITIGADO — Desactivar un usuario no corta su token vigente
 
@@ -32,6 +31,7 @@ un token vigente en el momento de la desactivación.
 **Por qué no se arregló en esta pasada** (se intentó y se revirtió, a conciencia):
 El fix natural — que el guard revalide `active` en cada request — es un lookup por PK sub-ms,
 PERO:
+
 1. Es un cambio en el hot-path de CADA request autenticado (latencia + una dependencia de DB
    nueva en el guard, que hoy es stateless a propósito).
 2. Al aplicarlo, 11 tests e2e rompieron: unos porque firmaban tokens de usuarios que nunca
@@ -42,6 +42,7 @@ PERO:
 
 Es una decisión de arquitectura con costo por request — **del dueño del producto, no del
 auditor**. Opciones, de menor a mayor cambio:
+
 - **Bajar el TTL** — ✅ HECHO (`token.service.ts` `TOKEN_TTL` 24h → **8h**, `<commit>`). Acota
   la ventana a una jornada sin tocar el hot-path. El 401 redirige limpio a `/login?expired=1` y
   el builder persiste el trabajo en curso, así que expirar a media sesión es recuperable. 8h y
@@ -117,6 +118,7 @@ usa `createTenantFixture()` — un tenant VACÍO. El endpoint nunca se ejerció 
 con datos. Verde ≠ funciona.
 
 **Doble impacto**:
+
 - **Funcional**: no se puede dar de baja un colegio que tenga cualquier dato.
 - **Privacidad / derecho al olvido**: no existe NINGUNA vía para borrar los datos de un colegio.
   (Atenuante real: la app **no guarda PII de alumnos** — solo cuentas de docentes/admin
@@ -131,6 +133,7 @@ ANTES de borrar). Y la SEMÁNTICA es decisión de producto: ¿hard-delete inmedi
 ¿soft-delete con período de gracia? ¿export obligatorio antes? Eso no lo decide el auditor.
 
 **Opciones de implementación** (cuando se decida la semántica):
+
 1. **FK `ON DELETE CASCADE`** vía migración: Postgres ordena el borrado. Menos código,
    imposible equivocar el orden. Contra: la cascada queda "encendida" para siempre.
 2. **Transacción con deletes ordenados** en el service: explícito y auditable, sin cambio de

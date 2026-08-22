@@ -28,6 +28,7 @@
 ## File Structure
 
 **Backend (`apps/api/src`):**
+
 - `db/schema/enums.ts` — add `GENERATION_JOB_STATUSES`/`generationJobStatusEnum`.
 - `db/schema/generation-jobs.schema.ts` — **new**, the `generation_jobs` table.
 - `db/schema/index.ts` — export it.
@@ -41,6 +42,7 @@
 - `modules/ai/ai.e2e.spec.ts` — migrate off the removed endpoint (Task 5).
 
 **Infra:**
+
 - `infra/docker-compose.yml` — new `redis` service; `api` service gets `REDIS_HOST`/`REDIS_PORT` env + `depends_on`.
 - `apps/api/package.json` — add `bullmq`, `@nestjs/bullmq`, `ioredis`.
 
@@ -49,6 +51,7 @@
 ## Task 1: `generation_jobs` schema + `GenerationJobsRepository`
 
 **Files:**
+
 - Modify: `apps/api/src/db/schema/enums.ts`
 - Create: `apps/api/src/db/schema/generation-jobs.schema.ts`
 - Modify: `apps/api/src/db/schema/index.ts`
@@ -56,6 +59,7 @@
 - Test: `apps/api/src/modules/ai/generation-jobs.repository.spec.ts`
 
 **Interfaces:**
+
 - Produces: `GenerationJobStatus` (`"pending"|"running"|"completed"|"failed"|"cancelled"`), `generationJobs` table, `CreateGenerationJobRecord`, `GenerationJobRecord`, `GenerationJobFailedItem`, class `GenerationJobsRepository` with `create()`, `getById()`, `getByIdUnscoped()`, `list()`, `setStatus()`, `appendCreatedQuestion()`, `appendFailedItem()`, `isCancelRequested()`, `requestCancel()`.
 
 - [ ] **Step 1: Add the status enum**
@@ -434,7 +438,10 @@ export class GenerationJobsRepository {
     pageSize: number,
   ): Promise<{ items: GenerationJobRecord[]; total: number }> {
     const where = eq(generationJobs.tenantId, tenantId);
-    const [{ value: total }] = await db.select({ value: count() }).from(generationJobs).where(where);
+    const [{ value: total }] = await db
+      .select({ value: count() })
+      .from(generationJobs)
+      .where(where);
 
     const rows = await db
       .select()
@@ -497,7 +504,9 @@ export class GenerationJobsRepository {
     await db
       .update(generationJobs)
       .set({ cancelRequested: true, updatedAt: new Date() })
-      .where(and(eq(generationJobs.id, id), inArray(generationJobs.status, ["pending", "running"])));
+      .where(
+        and(eq(generationJobs.id, id), inArray(generationJobs.status, ["pending", "running"])),
+      );
   }
 }
 ```
@@ -519,6 +528,7 @@ git commit -m "feat(api): add generation_jobs schema and GenerationJobsRepositor
 ## Task 2: Redis infra + BullMQ wiring + `GenerationJobsProcessor`
 
 **Files:**
+
 - Modify: `infra/docker-compose.yml`
 - Modify: `apps/api/package.json`
 - Create: `apps/api/src/modules/ai/generation-jobs.env.ts`
@@ -527,6 +537,7 @@ git commit -m "feat(api): add generation_jobs schema and GenerationJobsRepositor
 - Modify: `apps/api/src/modules/ai/ai.module.ts`
 
 **Interfaces:**
+
 - Consumes: `GenerationJobsRepository` (Task 1), the existing `GenerateQuestionsService.generateQuestions()` (unmodified).
 - Produces: `resolveRedisConnection(): { host: string; port: number }`; `GenerationJobData = { jobId: string }`; class `GenerationJobsProcessor` (BullMQ `@Processor("generation")`).
 
@@ -535,42 +546,42 @@ git commit -m "feat(api): add generation_jobs schema and GenerationJobsRepositor
 Add a new `redis` service (after `minio`, before `api`):
 
 ```yaml
-  redis:
-    image: redis:7.4-bookworm
-    restart: unless-stopped
-    command: redis-server --appendonly yes
-    volumes:
-      - redis_data:/data
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-    ports:
-      - "${REDIS_HOST_PORT:-6390}:6379"
+redis:
+  image: redis:7.4-bookworm
+  restart: unless-stopped
+  command: redis-server --appendonly yes
+  volumes:
+    - redis_data:/data
+  healthcheck:
+    test: ["CMD", "redis-cli", "ping"]
+    interval: 5s
+    timeout: 5s
+    retries: 10
+  ports:
+    - "${REDIS_HOST_PORT:-6390}:6379"
 ```
 
 Add `redis` to the `api` service's `depends_on` and env:
 
 ```yaml
-    depends_on:
-      postgres:
-        condition: service_healthy
-      minio:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-    environment:
-      DATABASE_URL: postgres://${DB_USER:-exams}:${DB_PASSWORD:-exams}@postgres:5432/${DB_NAME:-exams_generator}
-      MINIO_ENDPOINT: minio
-      MINIO_PORT: 9000
-      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
-      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
-      REDIS_HOST: redis
-      REDIS_PORT: 6379
-      JWT_SECRET: ${JWT_SECRET:?JWT_SECRET must be set}
-      AI_MODEL: ${AI_MODEL}
-      PORT: 3000
+depends_on:
+  postgres:
+    condition: service_healthy
+  minio:
+    condition: service_healthy
+  redis:
+    condition: service_healthy
+environment:
+  DATABASE_URL: postgres://${DB_USER:-exams}:${DB_PASSWORD:-exams}@postgres:5432/${DB_NAME:-exams_generator}
+  MINIO_ENDPOINT: minio
+  MINIO_PORT: 9000
+  MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+  MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
+  REDIS_HOST: redis
+  REDIS_PORT: 6379
+  JWT_SECRET: ${JWT_SECRET:?JWT_SECRET must be set}
+  AI_MODEL: ${AI_MODEL}
+  PORT: 3000
 ```
 
 Add `redis_data:` to the top-level `volumes:` block.
@@ -673,7 +684,13 @@ function job(jobId: string): Job<{ jobId: string }> {
 describe("GenerationJobsProcessor", () => {
   it("calls generateQuestions once per item (count:1) and appends each created id", async () => {
     const { processor, repository, generateQuestionsService } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "pending" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 3,
+      createdCount: 0,
+      failedCount: 0,
+      status: "pending",
+    });
     generateQuestionsService.generateQuestions
       .mockResolvedValueOnce({ created: [{ id: "q1" }], failed: [] })
       .mockResolvedValueOnce({ created: [{ id: "q2" }], failed: [] })
@@ -684,7 +701,14 @@ describe("GenerationJobsProcessor", () => {
     expect(generateQuestionsService.generateQuestions).toHaveBeenCalledTimes(3);
     expect(generateQuestionsService.generateQuestions).toHaveBeenCalledWith(
       { sub: "user-1", tenantId: "tenant-1", role: Role.Teacher },
-      { courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1, withFigure: false },
+      {
+        courseId: "course-1",
+        topicId: "topic-1",
+        difficulty: Difficulty.Easy,
+        gradeLevel: "primaria_1",
+        count: 1,
+        withFigure: false,
+      },
     );
     expect(repository.appendCreatedQuestion).toHaveBeenNthCalledWith(1, "job-1", "q1");
     expect(repository.appendCreatedQuestion).toHaveBeenNthCalledWith(3, "job-1", "q3");
@@ -694,20 +718,35 @@ describe("GenerationJobsProcessor", () => {
 
   it("records a per-item failure with the correct batch index, not the inner call's index:0", async () => {
     const { processor, repository, generateQuestionsService } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 2, createdCount: 0, failedCount: 0, status: "pending" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 2,
+      createdCount: 0,
+      failedCount: 0,
+      status: "pending",
+    });
     generateQuestionsService.generateQuestions
       .mockResolvedValueOnce({ created: [], failed: [{ index: 0, error: "Typst compile failed" }] })
       .mockResolvedValueOnce({ created: [{ id: "q2" }], failed: [] });
 
     await processor.process(job("job-1"));
 
-    expect(repository.appendFailedItem).toHaveBeenCalledWith("job-1", { index: 0, error: "Typst compile failed" });
+    expect(repository.appendFailedItem).toHaveBeenCalledWith("job-1", {
+      index: 0,
+      error: "Typst compile failed",
+    });
     expect(repository.appendCreatedQuestion).toHaveBeenCalledWith("job-1", "q2");
   });
 
   it("resumes from createdCount + failedCount instead of restarting at 0 (checkpoint-resume)", async () => {
     const { processor, repository, generateQuestionsService } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 5, createdCount: 2, failedCount: 1, status: "running" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 5,
+      createdCount: 2,
+      failedCount: 1,
+      status: "running",
+    });
     generateQuestionsService.generateQuestions
       .mockResolvedValueOnce({ created: [{ id: "q4" }], failed: [] })
       .mockResolvedValueOnce({ created: [{ id: "q5" }], failed: [] });
@@ -720,9 +759,18 @@ describe("GenerationJobsProcessor", () => {
 
   it("stops cooperatively when cancelRequested flips true between items, and marks the job cancelled", async () => {
     const { processor, repository, generateQuestionsService } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "pending" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 3,
+      createdCount: 0,
+      failedCount: 0,
+      status: "pending",
+    });
     repository.isCancelRequested.mockResolvedValueOnce(false).mockResolvedValueOnce(true);
-    generateQuestionsService.generateQuestions.mockResolvedValueOnce({ created: [{ id: "q1" }], failed: [] });
+    generateQuestionsService.generateQuestions.mockResolvedValueOnce({
+      created: [{ id: "q1" }],
+      failed: [],
+    });
 
     await processor.process(job("job-1"));
 
@@ -733,7 +781,13 @@ describe("GenerationJobsProcessor", () => {
 
   it("no-ops when the job row is missing or already terminal", async () => {
     const { processor, repository, generateQuestionsService } = buildDeps();
-    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "completed" });
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 3,
+      createdCount: 0,
+      failedCount: 0,
+      status: "completed",
+    });
 
     await processor.process(job("job-1"));
 
@@ -910,10 +964,12 @@ git commit -m "feat(api): add Redis/BullMQ infra and GenerationJobsProcessor"
 ## Task 3: `GenerationJobsService`
 
 **Files:**
+
 - Create: `apps/api/src/modules/ai/generation-jobs.service.ts`
 - Test: `apps/api/src/modules/ai/generation-jobs.service.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `GenerationJobsRepository` (Task 1), `BankRepository.findCourseAndTopicNames` (existing), `validateGenerateQuestionsInput` (existing), BullMQ `Queue<GenerationJobData>` (Task 2's `GenerationJobData`).
 - Produces: `CreateGenerationJobDto`, class `GenerationJobsService` with `create()`, `get()`, `list()`, `cancel()`.
 
@@ -972,7 +1028,9 @@ function buildDeps() {
   } as unknown as jest.Mocked<GenerationJobsRepository>;
 
   const bankRepository = {
-    findCourseAndTopicNames: jest.fn().mockResolvedValue({ courseName: "Matemática", topicName: "Fracciones" }),
+    findCourseAndTopicNames: jest
+      .fn()
+      .mockResolvedValue({ courseName: "Matemática", topicName: "Fracciones" }),
   } as unknown as jest.Mocked<BankRepository>;
 
   const queue = { add: jest.fn().mockResolvedValue(undefined) };
@@ -1011,7 +1069,12 @@ describe("GenerationJobsService.create", () => {
 
     expect(record).toBe(JOB_RECORD);
     expect(repository.create).toHaveBeenCalledWith(
-      expect.objectContaining({ tenantId: "tenant-1", createdBy: "user-1", createdByRole: Role.Teacher, count: 5 }),
+      expect.objectContaining({
+        tenantId: "tenant-1",
+        createdBy: "user-1",
+        createdByRole: Role.Teacher,
+        count: 5,
+      }),
     );
     expect(queue.add).toHaveBeenCalledWith("generate", { jobId: "job-1" }, { jobId: "job-1" });
   });
@@ -1110,7 +1173,9 @@ export class GenerationJobsService {
       dto.topicId as string,
     );
     if (!taxonomy) {
-      throw new NotFoundException("courseId/topicId not found, or topicId does not belong to courseId");
+      throw new NotFoundException(
+        "courseId/topicId not found, or topicId does not belong to courseId",
+      );
     }
 
     const record = await this.repository.create({
@@ -1203,11 +1268,13 @@ git commit -m "feat(api): add GenerationJobsService"
 ## Task 4: `AiJobsController` — `/ai/questions/jobs`
 
 **Files:**
+
 - Create: `apps/api/src/modules/ai/ai-jobs.controller.ts`
 - Create: `apps/api/src/modules/ai/ai-jobs.e2e.spec.ts`
 - Modify: `apps/api/src/modules/ai/ai.module.ts`
 
 **Interfaces:**
+
 - Consumes: `GenerationJobsService` (Task 3).
 - Produces: `POST /ai/questions/jobs` (202), `GET /ai/questions/jobs` (200, paginated), `GET /ai/questions/jobs/:id` (200), `POST /ai/questions/jobs/:id/cancel` (200).
 
@@ -1298,7 +1365,12 @@ describeIfTypst("AI generation jobs (e2e)", () => {
     tenantAId = tenantA!.id;
     const [teacherA] = await db
       .insert(users)
-      .values({ tenantId: tenantAId, email: `jobs-e2e-a-${suffix}@exams-generator.test`, passwordHash: "x", role: Role.Teacher })
+      .values({
+        tenantId: tenantAId,
+        email: `jobs-e2e-a-${suffix}@exams-generator.test`,
+        passwordHash: "x",
+        role: Role.Teacher,
+      })
       .returning({ id: users.id });
     teacherAId = teacherA!.id;
 
@@ -1309,7 +1381,12 @@ describeIfTypst("AI generation jobs (e2e)", () => {
     tenantBId = tenantB!.id;
     const [teacherB] = await db
       .insert(users)
-      .values({ tenantId: tenantBId, email: `jobs-e2e-b-${suffix}@exams-generator.test`, passwordHash: "x", role: Role.Teacher })
+      .values({
+        tenantId: tenantBId,
+        email: `jobs-e2e-b-${suffix}@exams-generator.test`,
+        passwordHash: "x",
+        role: Role.Teacher,
+      })
       .returning({ id: users.id });
     teacherBId = teacherB!.id;
 
@@ -1330,7 +1407,14 @@ describeIfTypst("AI generation jobs (e2e)", () => {
   });
 
   function validBody() {
-    return { courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 2, withFigure: false };
+    return {
+      courseId,
+      topicId,
+      difficulty: Difficulty.Easy,
+      gradeLevel: "primaria_1",
+      count: 2,
+      withFigure: false,
+    };
   }
 
   async function waitForTerminal(token: string, jobId: string): Promise<Record<string, unknown>> {
@@ -1359,7 +1443,7 @@ describeIfTypst("AI generation jobs (e2e)", () => {
 
     const final = await waitForTerminal(tokenA, created.body.id);
     expect(final.status).toBe("completed");
-    expect((final.createdQuestionIds as string[])).toHaveLength(2);
+    expect(final.createdQuestionIds as string[]).toHaveLength(2);
     createdQuestionIds.push(...(final.createdQuestionIds as string[]));
   });
 
@@ -1428,7 +1512,7 @@ describeIfTypst("AI generation jobs (e2e)", () => {
 
     const final = await waitForTerminal(tokenA, created.body.id);
     expect(final.status).toBe("cancelled");
-    expect((final.createdCount as number)).toBeLessThan(10);
+    expect(final.createdCount as number).toBeLessThan(10);
     createdQuestionIds.push(...(final.createdQuestionIds as string[]));
   });
 
@@ -1476,7 +1560,17 @@ Expected: FAIL — 404s (route doesn't exist).
 Create `apps/api/src/modules/ai/ai-jobs.controller.ts`:
 
 ```ts
-import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post, Query, UseGuards } from "@nestjs/common";
+import {
+  Body,
+  Controller,
+  Get,
+  HttpCode,
+  HttpStatus,
+  Param,
+  Post,
+  Query,
+  UseGuards,
+} from "@nestjs/common";
 import { clampPagination } from "../../common/pagination.util";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
@@ -1549,15 +1643,18 @@ git commit -m "feat(api): add POST/GET /ai/questions/jobs endpoints"
 ## Task 5: Remove the old synchronous batch endpoint
 
 **Files:**
+
 - Modify: `apps/api/src/modules/ai/ai.controller.ts`
 - Modify: `apps/api/src/modules/ai/ai.e2e.spec.ts`
 
 **Interfaces:**
+
 - Removes: `POST /ai/questions/generate` and `GenerateQuestionsBody`/the `generate()` controller method. `GenerateQuestionsService` itself is UNCHANGED (still used internally by `GenerationJobsProcessor`).
 
 - [ ] **Step 1: Remove the endpoint**
 
 In `apps/api/src/modules/ai/ai.controller.ts`:
+
 - Remove the `GenerateQuestionsBody` interface.
 - Remove the `generate()` method (the `@Post("generate")` handler).
 - Remove the now-unused `GenerateQuestionsResult`/`GenerateQuestionsService` imports if `GenerateQuestionsService` is no longer injected in this controller's constructor — it isn't used by `revise`/`extract`, so also remove it from the constructor and the corresponding import.
@@ -1578,111 +1675,132 @@ The `revise`/`extract`/approve/reject/edit assertions are unchanged — only HOW
 Replace the `generateRequest` helper and the first three `it()` blocks (the ones exercising `/ai/questions/generate` directly) with:
 
 ```ts
-  async function generateOneDraft(token: string): Promise<string> {
-    const created = await request(app.getHttpServer())
-      .post("/ai/questions/jobs")
-      .set("Authorization", `Bearer ${token}`)
-      .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1, withFigure: false })
-      .expect(202);
+async function generateOneDraft(token: string): Promise<string> {
+  const created = await request(app.getHttpServer())
+    .post("/ai/questions/jobs")
+    .set("Authorization", `Bearer ${token}`)
+    .send({
+      courseId,
+      topicId,
+      difficulty: Difficulty.Easy,
+      gradeLevel: "primaria_1",
+      count: 1,
+      withFigure: false,
+    })
+    .expect(202);
 
-    const deadline = Date.now() + 15000;
-    while (Date.now() < deadline) {
-      const res = await request(app.getHttpServer())
-        .get(`/ai/questions/jobs/${created.body.id}`)
-        .set("Authorization", `Bearer ${token}`);
-      if (res.body.status === "completed") {
-        return res.body.createdQuestionIds[0];
-      }
-      if (res.body.status === "failed") {
-        throw new Error("Generation job failed unexpectedly in test setup");
-      }
-      await new Promise((resolve) => setTimeout(resolve, 200));
+  const deadline = Date.now() + 15000;
+  while (Date.now() < deadline) {
+    const res = await request(app.getHttpServer())
+      .get(`/ai/questions/jobs/${created.body.id}`)
+      .set("Authorization", `Bearer ${token}`);
+    if (res.body.status === "completed") {
+      return res.body.createdQuestionIds[0];
     }
-    throw new Error("Generation job did not complete in time");
+    if (res.body.status === "failed") {
+      throw new Error("Generation job failed unexpectedly in test setup");
+    }
+    await new Promise((resolve) => setTimeout(resolve, 200));
+  }
+  throw new Error("Generation job did not complete in time");
+}
+
+it("generate -> draft -> approve: a valid AI question compiles, saves as draft, and can be approved", async () => {
+  app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
+
+  const id = await generateOneDraft(tenantAToken);
+  createdQuestionIds.push(id);
+
+  const fetched = await request(app.getHttpServer())
+    .get(`/bank/questions/${id}`)
+    .set("Authorization", `Bearer ${tenantAToken}`)
+    .expect(200);
+
+  expect(fetched.body.status).toBe("draft");
+  expect(fetched.body.aiGenerated).toBe(true);
+  expect(fetched.body.type).toBe("structured");
+  expect(fetched.body.bodyTypst).toBe(VALID_QUESTION.bodyTypst);
+  expect(fetched.body.correctAnswer).toBe("1");
+
+  const drafts = await request(app.getHttpServer())
+    .get("/bank/questions")
+    .query({ status: "draft" })
+    .set("Authorization", `Bearer ${tenantAToken}`)
+    .expect(200);
+  expect(drafts.body.map((q: { id: string }) => q.id)).toContain(id);
+
+  await request(app.getHttpServer())
+    .post(`/bank/questions/${id}/approve`)
+    .set("Authorization", `Bearer ${tenantAToken}`)
+    .expect(201);
+
+  const approved = await request(app.getHttpServer())
+    .get(`/bank/questions/${id}`)
+    .set("Authorization", `Bearer ${tenantAToken}`)
+    .expect(200);
+  expect(approved.body.status).toBe("approved");
+});
+
+it("generate -> (invalid Typst markup) -> does NOT save, and the job reports the per-item compile error", async () => {
+  app = await buildApp(new ScriptedQuestionGeneratorAdapter([INVALID_TYPST_QUESTION]));
+
+  const created = await request(app.getHttpServer())
+    .post("/ai/questions/jobs")
+    .set("Authorization", `Bearer ${tenantAToken}`)
+    .send({
+      courseId,
+      topicId,
+      difficulty: Difficulty.Easy,
+      gradeLevel: "primaria_1",
+      count: 1,
+      withFigure: false,
+    })
+    .expect(202);
+
+  const deadline = Date.now() + 15000;
+  let final:
+    | {
+        status: string;
+        createdCount: number;
+        failedCount: number;
+        failedItems: { index: number; error: string }[];
+      }
+    | undefined;
+  while (Date.now() < deadline) {
+    const res = await request(app.getHttpServer())
+      .get(`/ai/questions/jobs/${created.body.id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`);
+    if (res.body.status === "completed") {
+      final = res.body;
+      break;
+    }
+    await new Promise((resolve) => setTimeout(resolve, 200));
   }
 
-  it("generate -> draft -> approve: a valid AI question compiles, saves as draft, and can be approved", async () => {
-    app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
+  expect(final).toBeDefined();
+  expect(final!.createdCount).toBe(0);
+  expect(final!.failedCount).toBe(1);
+  expect(final!.failedItems[0]!.error).toContain("Typst compile failed");
 
-    const id = await generateOneDraft(tenantAToken);
-    createdQuestionIds.push(id);
+  const drafts = await request(app.getHttpServer())
+    .get("/bank/questions")
+    .query({ status: "draft", topicId })
+    .set("Authorization", `Bearer ${tenantAToken}`)
+    .expect(200);
+  expect(drafts.body).toHaveLength(0);
+});
 
-    const fetched = await request(app.getHttpServer())
-      .get(`/bank/questions/${id}`)
-      .set("Authorization", `Bearer ${tenantAToken}`)
-      .expect(200);
+it("persists the requester's tenant on the generated draft — never visible to another tenant", async () => {
+  app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
 
-    expect(fetched.body.status).toBe("draft");
-    expect(fetched.body.aiGenerated).toBe(true);
-    expect(fetched.body.type).toBe("structured");
-    expect(fetched.body.bodyTypst).toBe(VALID_QUESTION.bodyTypst);
-    expect(fetched.body.correctAnswer).toBe("1");
+  const id = await generateOneDraft(tenantAToken);
+  createdQuestionIds.push(id);
 
-    const drafts = await request(app.getHttpServer())
-      .get("/bank/questions")
-      .query({ status: "draft" })
-      .set("Authorization", `Bearer ${tenantAToken}`)
-      .expect(200);
-    expect(drafts.body.map((q: { id: string }) => q.id)).toContain(id);
-
-    await request(app.getHttpServer())
-      .post(`/bank/questions/${id}/approve`)
-      .set("Authorization", `Bearer ${tenantAToken}`)
-      .expect(201);
-
-    const approved = await request(app.getHttpServer())
-      .get(`/bank/questions/${id}`)
-      .set("Authorization", `Bearer ${tenantAToken}`)
-      .expect(200);
-    expect(approved.body.status).toBe("approved");
-  });
-
-  it("generate -> (invalid Typst markup) -> does NOT save, and the job reports the per-item compile error", async () => {
-    app = await buildApp(new ScriptedQuestionGeneratorAdapter([INVALID_TYPST_QUESTION]));
-
-    const created = await request(app.getHttpServer())
-      .post("/ai/questions/jobs")
-      .set("Authorization", `Bearer ${tenantAToken}`)
-      .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1, withFigure: false })
-      .expect(202);
-
-    const deadline = Date.now() + 15000;
-    let final: { status: string; createdCount: number; failedCount: number; failedItems: { index: number; error: string }[] } | undefined;
-    while (Date.now() < deadline) {
-      const res = await request(app.getHttpServer())
-        .get(`/ai/questions/jobs/${created.body.id}`)
-        .set("Authorization", `Bearer ${tenantAToken}`);
-      if (res.body.status === "completed") {
-        final = res.body;
-        break;
-      }
-      await new Promise((resolve) => setTimeout(resolve, 200));
-    }
-
-    expect(final).toBeDefined();
-    expect(final!.createdCount).toBe(0);
-    expect(final!.failedCount).toBe(1);
-    expect(final!.failedItems[0]!.error).toContain("Typst compile failed");
-
-    const drafts = await request(app.getHttpServer())
-      .get("/bank/questions")
-      .query({ status: "draft", topicId })
-      .set("Authorization", `Bearer ${tenantAToken}`)
-      .expect(200);
-    expect(drafts.body).toHaveLength(0);
-  });
-
-  it("persists the requester's tenant on the generated draft — never visible to another tenant", async () => {
-    app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
-
-    const id = await generateOneDraft(tenantAToken);
-    createdQuestionIds.push(id);
-
-    await request(app.getHttpServer())
-      .get(`/bank/questions/${id}`)
-      .set("Authorization", `Bearer ${tenantBToken}`)
-      .expect(404);
-  });
+  await request(app.getHttpServer())
+    .get(`/bank/questions/${id}`)
+    .set("Authorization", `Bearer ${tenantBToken}`)
+    .expect(404);
+});
 ```
 
 Remove the old `rejects with 400 when required fields are missing` and `rejects with 401 when no Authorization header is sent` `it()` blocks entirely — that coverage now lives in `ai-jobs.e2e.spec.ts` (Task 4), which tests `POST /ai/questions/jobs` directly.
@@ -1690,16 +1808,16 @@ Remove the old `rejects with 400 when required fields are missing` and `rejects 
 For the remaining `it()` blocks (`approve/reject/edit: ...`), replace every occurrence of:
 
 ```ts
-    const response = await generateRequest(tenantAToken)
-      .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1 })
-      .expect(201);
-    const id = response.body.created[0].id;
+const response = await generateRequest(tenantAToken)
+  .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1 })
+  .expect(201);
+const id = response.body.created[0].id;
 ```
 
 with:
 
 ```ts
-    const id = await generateOneDraft(tenantAToken);
+const id = await generateOneDraft(tenantAToken);
 ```
 
 (Keep every assertion after that line unchanged in each of those four blocks.)

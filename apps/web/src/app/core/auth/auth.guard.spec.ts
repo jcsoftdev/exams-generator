@@ -15,9 +15,7 @@ function runGuard(isAuthenticated: boolean) {
     ],
   });
 
-  const result = TestBed.runInInjectionContext(() =>
-    authGuard({} as never, {} as never),
-  );
+  const result = TestBed.runInInjectionContext(() => authGuard({} as never, {} as never));
 
   return { result, parseUrl, parsedLoginUrl };
 }

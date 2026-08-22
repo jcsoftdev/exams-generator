@@ -13,7 +13,9 @@ import { parseComposeApiEnvironmentKeys } from "./parse-compose-api-environment"
 describe("docker-compose api environment parity", () => {
   it("has the exact same api environment keys in docker-compose.yml and docker-compose.dokploy.yml", () => {
     const infraDir = resolve(__dirname, "../../../../infra");
-    const devKeys = parseComposeApiEnvironmentKeys(readFileSync(resolve(infraDir, "docker-compose.yml"), "utf-8"));
+    const devKeys = parseComposeApiEnvironmentKeys(
+      readFileSync(resolve(infraDir, "docker-compose.yml"), "utf-8"),
+    );
     const dokployKeys = parseComposeApiEnvironmentKeys(
       readFileSync(resolve(infraDir, "docker-compose.dokploy.yml"), "utf-8"),
     );

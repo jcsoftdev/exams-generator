@@ -74,5 +74,4 @@ describe("AccountStatusService", () => {
 
     await expect(service.isUsable(userId)).resolves.toBe(false);
   });
-
 });

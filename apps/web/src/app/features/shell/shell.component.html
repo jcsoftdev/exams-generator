@@ -35,7 +35,9 @@
           type="button"
           data-testid="theme-toggle-button"
           class="relative flex h-8 w-8 items-center justify-center rounded-full text-n600 hover:bg-n100"
-          [attr.aria-label]="themeMode() === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
+          [attr.aria-label]="
+            themeMode() === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'
+          "
           (click)="toggleTheme()"
         >
           @if (themeMode() === 'dark') {
@@ -55,14 +57,22 @@
             <lucide-angular name="user" class="h-5 w-5"></lucide-angular>
           </button>
           @if (userMenuOpen()) {
-            <div class="absolute right-0 z-50 mt-2 w-64 rounded-card border border-n200 bg-surface py-1 shadow-lg">
+            <div
+              class="absolute right-0 z-50 mt-2 w-64 rounded-card border border-n200 bg-surface py-1 shadow-lg"
+            >
               @if (currentUser(); as user) {
                 <div data-testid="user-menu-identity" class="border-b border-n200 px-3 py-2">
-                  <p data-testid="user-menu-name" class="truncate text-sm font-medium text-n900">{{ user.name || user.email }}</p>
+                  <p data-testid="user-menu-name" class="truncate text-sm font-medium text-n900">
+                    {{ user.name || user.email }}
+                  </p>
                   @if (user.name) {
-                    <p data-testid="user-menu-email" class="truncate text-xs text-n500">{{ user.email }}</p>
+                    <p data-testid="user-menu-email" class="truncate text-xs text-n500">
+                      {{ user.email }}
+                    </p>
                   }
-                  <ui-tag data-testid="user-menu-role" variant="ai" class="mt-1 inline-block">{{ currentUserRoleLabel() }}</ui-tag>
+                  <ui-tag data-testid="user-menu-role" variant="ai" class="mt-1 inline-block">{{
+                    currentUserRoleLabel()
+                  }}</ui-tag>
                 </div>
               }
               <button

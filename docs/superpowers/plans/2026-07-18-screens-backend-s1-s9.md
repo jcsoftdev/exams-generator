@@ -22,6 +22,7 @@
 ### Task 1: S9 — Migración: timestamps + `users.active` + estado `archived`
 
 **Files:**
+
 - Modify: `apps/api/src/db/schema/enums.ts` (QUESTION_STATUSES)
 - Modify: `apps/api/src/db/schema/users.schema.ts` (active, createdAt)
 - Modify: `apps/api/src/db/schema/exams.schema.ts` (createdAt)
@@ -29,16 +30,19 @@
 - Create: `apps/api/drizzle/<generada>.sql` (vía drizzle-kit)
 
 **Interfaces:**
+
 - Produces: columnas `exams.created_at`, `questions.created_at`, `users.created_at` (todas `timestamptz NOT NULL DEFAULT now()`), `users.active boolean NOT NULL DEFAULT true`, y `QuestionStatus = "draft" | "approved" | "archived"`. Tasks 2, 5, 6, 8 dependen de esto.
 
 - [ ] **Step 1: Editar los 4 schemas**
 
 En `enums.ts` cambiar una línea:
+
 ```ts
 export const QUESTION_STATUSES = ["draft", "approved", "archived"] as const;
 ```
 
 En `users.schema.ts`:
+
 ```ts
 import { boolean, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 // ... dentro de pgTable("users", { ...columnas existentes... :
@@ -47,9 +51,11 @@ import { boolean, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 ```
 
 En `exams.schema.ts` y `questions.schema.ts`, agregar a la tabla principal (`exams`, `questions`) la misma columna:
+
 ```ts
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 ```
+
 (agregar `timestamp` al import de `drizzle-orm/pg-core` en cada archivo)
 
 - [ ] **Step 2: Generar y aplicar migración**
@@ -74,12 +80,14 @@ git commit -m "feat(db): timestamps en exams/questions/users, users.active y est
 ### Task 2: S1 — `GET /exams` (listar exámenes del tenant)
 
 **Files:**
+
 - Modify: `apps/api/src/modules/exams/exams.repository.ts`
 - Modify: `apps/api/src/modules/exams/exams.service.ts`
 - Modify: `apps/api/src/modules/exams/exams.controller.ts`
 - Test: `apps/api/src/modules/exams/exams.e2e.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `exams.createdAt` (Task 1), patrón `requireTenant` existente (`exams.service.ts:141`).
 - Produces: `GET /exams?status=&gradeLevel=&search=&page=1&pageSize=20` → `{ items: ExamListItem[], total: number }`, con `ExamListItem = { id, title, gradeLevel, status, questionCount, versionCount, createdAt }`. Orden `createdAt DESC`. El frontend (plan 2) consume esto.
 
@@ -147,6 +155,7 @@ describe("GET /exams (list)", () => {
 - [ ] **Step 3: Repo + service + controller**
 
 `exams.repository.ts` — nuevo método (patrón de `getExamById:215`):
+
 ```ts
 export interface ExamListFilters {
   readonly status?: "draft" | "ready";
@@ -197,9 +206,11 @@ export interface ExamListItem {
     };
   }
 ```
+
 (imports nuevos de `drizzle-orm`: `ilike`, `count`, `desc`, `sql`)
 
 `exams.service.ts`:
+
 ```ts
   async listExams(user: AuthTokenPayload, filters: ExamListFilters): Promise<{ items: ExamListItem[]; total: number }> {
     const tenantId = requireTenant(user);
@@ -208,6 +219,7 @@ export interface ExamListItem {
 ```
 
 `exams.controller.ts` (ANTES de `@Get(":examId")` para que no capture `exams?x` como param):
+
 ```ts
   @Get()
   async listExams(
@@ -225,6 +237,7 @@ export interface ExamListItem {
     });
   }
 ```
+
 (agregar `Query` al import de `@nestjs/common`)
 
 - [ ] **Step 4: Verde** — Run: `pnpm --filter @exams-generator/api test -- exams.e2e` → PASS.
@@ -236,10 +249,12 @@ export interface ExamListItem {
 ### Task 3: S2 — `POST /exams/:examId/duplicate`
 
 **Files:**
+
 - Modify: `apps/api/src/modules/exams/exams.repository.ts`, `exams.service.ts`, `exams.controller.ts`
 - Test: `apps/api/src/modules/exams/exams.e2e.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `getExamById(examId, tenantId)` existente; tablas `exams`, `examBlueprintRows`, `examQuestions`.
 - Produces: `POST /exams/:examId/duplicate` → `201 { id: string, title: string, status: "draft" }`. Copia: título `"Copia de <original>"`, `gradeLevel`, blueprint rows y selección (`exam_questions` con `blueprintRowId` remapeado). El nuevo examen SIEMPRE nace `draft` (re-editable), sin versiones.
 
@@ -278,6 +293,7 @@ describe("POST /exams/:examId/duplicate", () => {
 - [ ] **Step 3: Implementación**
 
 `exams.repository.ts`:
+
 ```ts
   async duplicateExam(examId: string, tenantId: string, createdBy: string): Promise<{ id: string; title: string } | undefined> {
     return db.transaction(async (tx) => {
@@ -322,6 +338,7 @@ describe("POST /exams/:examId/duplicate", () => {
 ```
 
 `exams.service.ts`:
+
 ```ts
   async duplicateExam(user: AuthTokenPayload, examId: string): Promise<{ id: string; title: string; status: "draft" }> {
     const tenantId = requireTenant(user);
@@ -332,6 +349,7 @@ describe("POST /exams/:examId/duplicate", () => {
 ```
 
 `exams.controller.ts`:
+
 ```ts
   @Post(":examId/duplicate")
   async duplicate(@CurrentUser() user: AuthTokenPayload, @Param("examId") examId: string) {
@@ -347,10 +365,12 @@ describe("POST /exams/:examId/duplicate", () => {
 ### Task 4: S3 — `DELETE /exams/:examId`
 
 **Files:**
+
 - Modify: `apps/api/src/modules/exams/exams.repository.ts`, `exams.service.ts`, `exams.controller.ts`
 - Test: `apps/api/src/modules/exams/exams.e2e.spec.ts`
 
 **Interfaces:**
+
 - Produces: `DELETE /exams/:examId` → `204`. Borra en transacción: `exam_versions` (sus assets pdf/answer-sheet quedan huérfanos en storage — aceptado, no hay GC), `exam_questions`, `exam_blueprint_rows`, `exams`. 404 cross-tenant/inexistente. Sin restricción por status (la confirmación es del frontend).
 
 - [ ] **Step 1: Test e2e que falla**
@@ -383,6 +403,7 @@ describe("DELETE /exams/:examId", () => {
 - [ ] **Step 3: Implementación**
 
 `exams.repository.ts`:
+
 ```ts
   async deleteExam(examId: string, tenantId: string): Promise<boolean> {
     return db.transaction(async (tx) => {
@@ -401,6 +422,7 @@ describe("DELETE /exams/:examId", () => {
 ```
 
 `exams.service.ts`:
+
 ```ts
   async deleteExam(user: AuthTokenPayload, examId: string): Promise<void> {
     const tenantId = requireTenant(user);
@@ -410,6 +432,7 @@ describe("DELETE /exams/:examId", () => {
 ```
 
 `exams.controller.ts` (agregar `Delete` al import):
+
 ```ts
   @Delete(":examId")
   @HttpCode(HttpStatus.NO_CONTENT)
@@ -426,10 +449,12 @@ describe("DELETE /exams/:examId", () => {
 ### Task 5: S4+S5 — Archivar pregunta + borrar borrador
 
 **Files:**
+
 - Modify: `apps/api/src/modules/bank/bank.repository.ts`, `bank.service.ts`, `bank.controller.ts`
 - Test: `apps/api/src/modules/bank/bank.e2e.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `requireVisibleDraft` (`bank.service.ts:194`), `assertCanManageTenant`, estado `archived` (Task 1).
 - Produces: `PATCH /bank/questions/:id/archive` → `200 { id, status: "archived" }` (solo `approved`, 409 si no; tenant/rol vía `canManageQuestionTenant`). `DELETE /bank/questions/:id` → `204` (solo `draft` propio — mismo gate que reject). Preguntas `archived` NUNCA entran a `getQuestionPool` (ya filtra `status=approved` — verificar con test).
 
@@ -484,6 +509,7 @@ describe("archive & delete", () => {
 - [ ] **Step 3: Implementación**
 
 `bank.service.ts`:
+
 ```ts
   async archiveQuestion(user: AuthTokenPayload, id: string): Promise<{ id: string; status: "archived" }> {
     const question = await this.repository.findQuestionById(id, user.tenantId);
@@ -503,6 +529,7 @@ describe("archive & delete", () => {
 ```
 
 `bank.repository.ts` (si no existen ya con ese nombre — seguir patrón de los updates existentes):
+
 ```ts
   async updateStatus(id: string, status: QuestionStatus): Promise<void> {
     await db.update(questions).set({ status }).where(eq(questions.id, id));
@@ -514,6 +541,7 @@ describe("archive & delete", () => {
 ```
 
 `bank.controller.ts` (agregar `Patch`/`Delete`/`HttpCode`/`HttpStatus` a imports si faltan):
+
 ```ts
   @Patch(":id/archive")
   async archive(@CurrentUser() user: AuthTokenPayload, @Param("id") id: string) {
@@ -535,10 +563,12 @@ describe("archive & delete", () => {
 ### Task 6: S6 — Paginación retro-compatible en `GET /bank/questions`
 
 **Files:**
+
 - Modify: `apps/api/src/modules/bank/bank.controller.ts`, `bank.service.ts`, `bank.repository.ts`
 - Test: `apps/api/src/modules/bank/bank.e2e.spec.ts`
 
 **Interfaces:**
+
 - Produces: `GET /bank/questions` SIN `page` → array plano (comportamiento actual, NO romper al web/ai actuales). CON `?page=&pageSize=` → `{ items: QuestionListItem[], total: number }`. Filtro `status=archived` ahora es válido.
 
 - [ ] **Step 1: Test e2e que falla**
@@ -582,6 +612,7 @@ describe("GET /bank/questions pagination", () => {
     });
   }
 ```
+
 (agregar `page?/pageSize?: string` a `ListQuestionsQueryParams`)
 
 - [ ] **Step 4: Verde** — bank.e2e PASS (incluye legacy tests intactos = retro-compat probada).
@@ -592,10 +623,12 @@ describe("GET /bank/questions pagination", () => {
 ### Task 7: S7 — `GET /bank/questions/:id/preview` (PDF Typst con caché)
 
 **Files:**
+
 - Modify: `apps/api/src/modules/bank/bank.controller.ts`, `bank.service.ts`
 - Test: `apps/api/src/modules/bank/bank.e2e.spec.ts`
 
 **Interfaces:**
+
 - Consumes: `PdfCompilerPort.compileExam()` (token `PDF_COMPILER_PORT` ya inyectado en `BankService` — ver `bank.module.ts`), patrón single-question de `editDraftQuestion` (`bank.service.ts:277-296`).
 - Produces: `GET /bank/questions/:id/preview` → `200` con `Content-Type: application/pdf`, body = PDF de UNA pregunta (`versionLabel: "preview"`). Solo preguntas `type=structured` (400 para `image` — el front muestra la imagen directa). Caché en memoria `Map<questionId, Buffer>`, invalidada por `PATCH :id` (edit). 404 tenant-scope.
 
@@ -620,6 +653,7 @@ describe("GET /bank/questions/:id/preview", () => {
   });
 });
 ```
+
 Nota: los e2e usan el adapter Typst real (CLI) — igual que los tests existentes de generación. Si el runner no tiene typst instalado, estos tests fallarán por entorno: correr los e2e existentes de versiones primero para confirmar que typst está disponible.
 
 - [ ] **Step 2: FAIL** — 404 route.
@@ -653,6 +687,7 @@ Nota: los e2e usan el adapter Typst real (CLI) — igual que los tests existente
     return pdf;
   }
 ```
+
 En el método de edición existente (`editDraftQuestion`), agregar `this.previewCache.delete(id);` tras persistir. En `bank.controller.ts`:
 
 ```ts
@@ -667,6 +702,7 @@ En el método de edición existente (`editDraftQuestion`), agregar `this.preview
     res.send(pdf);
   }
 ```
+
 (import `Res` de `@nestjs/common`, `Response` de `express`; colocar la ruta ANTES de `@Get(":id")` si el orden de matching lo requiere — en Nest las rutas estáticas más específicas van primero en el archivo)
 
 - [ ] **Step 4: Verde** — bank.e2e PASS.
@@ -677,12 +713,14 @@ En el método de edición existente (`editDraftQuestion`), agregar `this.preview
 ### Task 8: S8 — Módulo `users` completo
 
 **Files:**
+
 - Create: `apps/api/src/modules/users/users.module.ts`, `users.controller.ts`, `users.service.ts`, `users.repository.ts`
 - Create: `apps/api/src/modules/users/users.e2e.spec.ts`
 - Modify: `apps/api/src/app.module.ts` (import UsersModule — commit atómico, regla de integrador)
 - Modify: `apps/api/src/modules/auth/auth.service.ts` (login rechaza `active=false`)
 
 **Interfaces:**
+
 - Consumes: tabla `users` + columna `active` (Task 1), `hashPassword` (`auth/password.util.ts`), guards `JwtAuthGuard`+`RolesGuard`.
 - Produces:
   - `GET /users` → `{ id, email, role, active, createdAt }[]` del tenant del caller (school_admin).
@@ -704,7 +742,10 @@ describe("Users module (e2e)", () => {
   });
 
   it("teacher gets 403", async () => {
-    await request(app.getHttpServer()).get("/users").set("Authorization", `Bearer ${teacherAToken}`).expect(403);
+    await request(app.getHttpServer())
+      .get("/users")
+      .set("Authorization", `Bearer ${teacherAToken}`)
+      .expect(403);
   });
 
   it("creates teacher with temporary password, who can login", async () => {
@@ -790,6 +831,7 @@ describe("Users module (e2e)", () => {
 - [ ] **Step 3: Implementación**
 
 `users.repository.ts`:
+
 ```ts
 import { and, eq } from "drizzle-orm";
 import { db } from "../../db/client";
@@ -806,11 +848,20 @@ export interface TenantUser {
 export class UsersRepository {
   async listByTenant(tenantId: string): Promise<TenantUser[]> {
     const rows = await db.select().from(users).where(eq(users.tenantId, tenantId));
-    return rows.map((r) => ({ id: r.id, email: r.email, role: r.role, active: r.active, createdAt: r.createdAt.toISOString() }));
+    return rows.map((r) => ({
+      id: r.id,
+      email: r.email,
+      role: r.role,
+      active: r.active,
+      createdAt: r.createdAt.toISOString(),
+    }));
   }
 
   async findByIdInTenant(id: string, tenantId: string) {
-    const [row] = await db.select().from(users).where(and(eq(users.id, id), eq(users.tenantId, tenantId)));
+    const [row] = await db
+      .select()
+      .from(users)
+      .where(and(eq(users.id, id), eq(users.tenantId, tenantId)));
     return row;
   }
 
@@ -819,8 +870,16 @@ export class UsersRepository {
     return row;
   }
 
-  async create(tenantId: string, email: string, role: string, passwordHash: string): Promise<{ id: string }> {
-    const [row] = await db.insert(users).values({ tenantId, email, passwordHash, role: role as never }).returning({ id: users.id });
+  async create(
+    tenantId: string,
+    email: string,
+    role: string,
+    passwordHash: string,
+  ): Promise<{ id: string }> {
+    const [row] = await db
+      .insert(users)
+      .values({ tenantId, email, passwordHash, role: role as never })
+      .returning({ id: users.id });
     return row!;
   }
 
@@ -835,8 +894,14 @@ export class UsersRepository {
 ```
 
 `users.service.ts`:
+
 ```ts
-import { ConflictException, ForbiddenException, Injectable, NotFoundException } from "@nestjs/common";
+import {
+  ConflictException,
+  ForbiddenException,
+  Injectable,
+  NotFoundException,
+} from "@nestjs/common";
 import { randomBytes } from "node:crypto";
 import { hashPassword } from "../auth/password.util";
 import { AuthTokenPayload } from "../auth/token.service";
@@ -866,7 +931,12 @@ export class UsersService {
       throw new ConflictException(`Email already in use: ${email}`);
     }
     const temporaryPassword = generateTemporaryPassword();
-    const { id } = await this.repository.create(tenantId, email, role, await hashPassword(temporaryPassword));
+    const { id } = await this.repository.create(
+      tenantId,
+      email,
+      role,
+      await hashPassword(temporaryPassword),
+    );
     return { id, email, role, temporaryPassword };
   }
 
@@ -893,6 +963,7 @@ export class UsersService {
 ```
 
 `users.controller.ts`:
+
 ```ts
 import { Body, Controller, Get, Param, Patch, Post, UseGuards } from "@nestjs/common";
 import { Role } from "@exams-generator/shared";
@@ -915,12 +986,19 @@ export class UsersController {
   }
 
   @Post()
-  create(@CurrentUser() user: AuthTokenPayload, @Body() body: { email: string; role: "teacher" | "school_admin" }) {
+  create(
+    @CurrentUser() user: AuthTokenPayload,
+    @Body() body: { email: string; role: "teacher" | "school_admin" },
+  ) {
     return this.service.create(user, body.email, body.role);
   }
 
   @Patch(":id")
-  setActive(@CurrentUser() user: AuthTokenPayload, @Param("id") id: string, @Body() body: { active: boolean }) {
+  setActive(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id") id: string,
+    @Body() body: { active: boolean },
+  ) {
     return this.service.setActive(user, id, body.active);
   }
 
@@ -932,6 +1010,7 @@ export class UsersController {
 ```
 
 `users.module.ts`:
+
 ```ts
 import { Module } from "@nestjs/common";
 import { UsersController } from "./users.controller";
@@ -948,11 +1027,13 @@ export class UsersModule {}
 `app.module.ts`: agregar `UsersModule` al array `imports` (+ su import statement). **Commit separado** (regla integrador).
 
 `auth.service.ts`: en el login, tras verificar password, agregar:
+
 ```ts
 if (!user.active) {
   throw new UnauthorizedException("Account is deactivated");
 }
 ```
+
 (ubicar el punto exacto leyendo el método login actual; el select del login debe incluir la columna `active`)
 
 - [ ] **Step 4: Verde** — `pnpm --filter @exams-generator/api test -- users.e2e` PASS + `pnpm --filter @exams-generator/api test` PASS completo (auth.e2e sigue verde).

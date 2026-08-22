@@ -12,10 +12,6 @@ import { AssetsService } from "./assets.service";
  */
 @Module({
   controllers: [AssetsController],
-  providers: [
-    AssetsRepository,
-    AssetsService,
-    { provide: STORAGE_PORT, useFactory: resolveStorageAdapter },
-  ],
+  providers: [AssetsRepository, AssetsService, { provide: STORAGE_PORT, useFactory: resolveStorageAdapter }],
 })
 export class AssetsModule {}

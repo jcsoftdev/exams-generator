@@ -78,7 +78,9 @@ interface CanonicalTaxonomyFile {
 }
 
 /** classification label -> canonical (topic slug, subtopic slug) for one course. */
-function buildLabelToCanonicalSlugs(courseName: string): Map<string, { topicSlug: string; subtopicSlug: string }> {
+function buildLabelToCanonicalSlugs(
+  courseName: string,
+): Map<string, { topicSlug: string; subtopicSlug: string }> {
   const file = JSON.parse(readFileSync(CANONICAL_TAXONOMY_PATH, "utf8")) as CanonicalTaxonomyFile;
   const courseEntry = file.courses.find((entry) => entry.course === courseName);
   if (!courseEntry) {

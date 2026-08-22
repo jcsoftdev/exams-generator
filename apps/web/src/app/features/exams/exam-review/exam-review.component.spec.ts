@@ -80,12 +80,20 @@ function setup(overrides: {
 }) {
   const getExam = vi.fn(overrides.getExam ?? (() => of(EXAM)));
   const replaceQuestion = vi.fn(
-    overrides.replaceQuestion ?? (() => of({ examId: 'exam-1', oldQuestionId: 'q1', newQuestionId: 'q3' })),
+    overrides.replaceQuestion ??
+      (() => of({ examId: 'exam-1', oldQuestionId: 'q1', newQuestionId: 'q3' })),
   );
   const confirmExam = vi.fn(overrides.confirmExam ?? (() => of({ id: 'exam-1', status: 'ready' })));
   const generateVersions = vi.fn(
     overrides.generateVersions ??
-      (() => of({ id: 'job-1', examId: 'exam-1', versionCount: 2, status: 'pending', completedCount: 0 })),
+      (() =>
+        of({
+          id: 'job-1',
+          examId: 'exam-1',
+          versionCount: 2,
+          status: 'pending',
+          completedCount: 0,
+        })),
   );
   const navigate = vi.fn();
 
@@ -124,7 +132,9 @@ describe('ExamReviewComponent', () => {
     it('genera con la cantidad que trajo el builder en ?formas y va a la pantalla de formas', () => {
       const { compiled, fixture, generateVersions, navigate } = setup({ formas: '4' });
 
-      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="generate-from-review"] button')!;
+      const button = compiled.querySelector<HTMLButtonElement>(
+        '[data-testid="generate-from-review"] button',
+      )!;
       expect(button.textContent).toContain('4');
 
       button.click();
@@ -137,7 +147,9 @@ describe('ExamReviewComponent', () => {
     it('usa 2 formas cuando no viene ?formas (entrada directa por URL o desde la lista)', () => {
       const { compiled, fixture, generateVersions } = setup({});
 
-      compiled.querySelector<HTMLButtonElement>('[data-testid="generate-from-review"] button')!.click();
+      compiled
+        .querySelector<HTMLButtonElement>('[data-testid="generate-from-review"] button')!
+        .click();
       fixture.detectChanges();
 
       expect(generateVersions).toHaveBeenCalledWith('exam-1', 2);
@@ -146,7 +158,9 @@ describe('ExamReviewComponent', () => {
     it('ignora un ?formas basura en vez de mandar NaN al backend', () => {
       const { compiled, fixture, generateVersions } = setup({ formas: 'muchas' });
 
-      compiled.querySelector<HTMLButtonElement>('[data-testid="generate-from-review"] button')!.click();
+      compiled
+        .querySelector<HTMLButtonElement>('[data-testid="generate-from-review"] button')!
+        .click();
       fixture.detectChanges();
 
       expect(generateVersions).toHaveBeenCalledWith('exam-1', 2);
@@ -155,7 +169,9 @@ describe('ExamReviewComponent', () => {
     it('permite cambiar la cantidad acá mismo antes de generar', () => {
       const { compiled, fixture, generateVersions } = setup({ formas: '2' });
 
-      const container = compiled.querySelector('[data-testid="review-version-count"]') as HTMLElement;
+      const container = compiled.querySelector(
+        '[data-testid="review-version-count"]',
+      ) as HTMLElement;
       (container.querySelector('button[role="combobox"]') as HTMLButtonElement).click();
       fixture.detectChanges();
       const option = Array.from(container.querySelectorAll('[data-testid="select-option"]')).find(
@@ -164,7 +180,9 @@ describe('ExamReviewComponent', () => {
       option.click();
       fixture.detectChanges();
 
-      compiled.querySelector<HTMLButtonElement>('[data-testid="generate-from-review"] button')!.click();
+      compiled
+        .querySelector<HTMLButtonElement>('[data-testid="generate-from-review"] button')!
+        .click();
       fixture.detectChanges();
 
       expect(generateVersions).toHaveBeenCalledWith('exam-1', 5);
@@ -175,7 +193,9 @@ describe('ExamReviewComponent', () => {
         generateVersions: () => throwError(() => new HttpErrorResponse({ status: 409, error: {} })),
       });
 
-      compiled.querySelector<HTMLButtonElement>('[data-testid="generate-from-review"] button')!.click();
+      compiled
+        .querySelector<HTMLButtonElement>('[data-testid="generate-from-review"] button')!
+        .click();
       fixture.detectChanges();
 
       expect(compiled.textContent).toMatch(/no se pudo generar/i);
@@ -195,7 +215,7 @@ describe('ExamReviewComponent', () => {
    * la UI mostraba "No se pudo reemplazar la pregunta. Inténtalo de nuevo." —
    * un consejo falso, porque reintentar el mismo ID falla idéntico.
    */
-  it('surfaces the server\'s own 400 message instead of the generic retry copy', () => {
+  it("surfaces the server's own 400 message instead of the generic retry copy", () => {
     const { compiled, fixture } = setup({
       replaceQuestion: () =>
         throwError(
@@ -207,10 +227,14 @@ describe('ExamReviewComponent', () => {
         ),
     });
 
-    const manualInput = compiled.querySelector<HTMLInputElement>('[data-testid="manual-replacement-input"]')!;
+    const manualInput = compiled.querySelector<HTMLInputElement>(
+      '[data-testid="manual-replacement-input"]',
+    )!;
     manualInput.value = 'no-soy-un-uuid';
     manualInput.dispatchEvent(new Event('input'));
-    compiled.querySelector<HTMLButtonElement>('[data-testid="manual-replace-button"] button')!.click();
+    compiled
+      .querySelector<HTMLButtonElement>('[data-testid="manual-replace-button"] button')!
+      .click();
     fixture.detectChanges();
 
     expect(compiled.textContent).toContain('Replacement question not found in this tenant');
@@ -297,7 +321,8 @@ describe('ExamReviewComponent', () => {
    */
   it('separates a failed action from a failed load — no misleading "Reintentar" on an action error', () => {
     const { compiled, fixture } = setup({
-      replaceQuestion: () => throwError(() => new HttpErrorResponse({ status: 400, error: { message: 'ID inválido' } })),
+      replaceQuestion: () =>
+        throwError(() => new HttpErrorResponse({ status: 400, error: { message: 'ID inválido' } })),
     });
 
     compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.click();
@@ -336,7 +361,8 @@ describe('ExamReviewComponent', () => {
 
   it('clears the confirmation before the next action, so it never describes a stale swap', () => {
     const { compiled, fixture } = setup({
-      replaceQuestion: () => throwError(() => new HttpErrorResponse({ status: 400, error: { message: 'nope' } })),
+      replaceQuestion: () =>
+        throwError(() => new HttpErrorResponse({ status: 400, error: { message: 'nope' } })),
     });
 
     compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.click();
@@ -355,7 +381,9 @@ describe('ExamReviewComponent', () => {
     const pending = new Subject<{ examId: string; oldQuestionId: string; newQuestionId: string }>();
     const { compiled, fixture, replaceQuestion } = setup({ replaceQuestion: () => pending });
 
-    const button = compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!;
+    const button = compiled.querySelector<HTMLButtonElement>(
+      '[data-testid="reroll-button"] button',
+    )!;
     button.click();
     fixture.detectChanges();
 
@@ -372,7 +400,9 @@ describe('ExamReviewComponent', () => {
     compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.click();
     fixture.detectChanges();
 
-    expect(compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.disabled).toBe(false);
+    expect(
+      compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.disabled,
+    ).toBe(false);
   });
 
   it('re-enables it after a failed swap too — a dead row would be worse than the error', () => {
@@ -383,7 +413,9 @@ describe('ExamReviewComponent', () => {
     compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.click();
     fixture.detectChanges();
 
-    expect(compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.disabled).toBe(false);
+    expect(
+      compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.disabled,
+    ).toBe(false);
   });
 
   it('loads the exam by id from the route param and renders every selected question', () => {
@@ -420,8 +452,12 @@ describe('ExamReviewComponent', () => {
 
     expect(replaceQuestion).toHaveBeenCalledWith('exam-1', 'q1', { mode: 'reroll' });
     expect(getExam).toHaveBeenCalledWith('exam-1');
-    expect(compiled.querySelector('[data-testid="exam-question"][data-question-id="q1"]')).toBeNull();
-    expect(compiled.querySelector('[data-testid="exam-question"][data-question-id="q3"]')).toBeTruthy();
+    expect(
+      compiled.querySelector('[data-testid="exam-question"][data-question-id="q1"]'),
+    ).toBeNull();
+    expect(
+      compiled.querySelector('[data-testid="exam-question"][data-question-id="q3"]'),
+    ).toBeTruthy();
   });
 
   it('replaces a question manually with the entered replacement id', () => {
@@ -429,14 +465,21 @@ describe('ExamReviewComponent', () => {
       replaceQuestion: () => of({ examId: 'exam-1', oldQuestionId: 'q1', newQuestionId: 'q9' }),
     });
 
-    const manualInput = compiled.querySelector<HTMLInputElement>('[data-testid="manual-replacement-input"]')!;
+    const manualInput = compiled.querySelector<HTMLInputElement>(
+      '[data-testid="manual-replacement-input"]',
+    )!;
     manualInput.value = 'q9';
     manualInput.dispatchEvent(new Event('input'));
     fixture.detectChanges();
-    compiled.querySelector<HTMLButtonElement>('[data-testid="manual-replace-button"] button')!.click();
+    compiled
+      .querySelector<HTMLButtonElement>('[data-testid="manual-replace-button"] button')!
+      .click();
     fixture.detectChanges();
 
-    expect(replaceQuestion).toHaveBeenCalledWith('exam-1', 'q1', { mode: 'manual', replacementQuestionId: 'q9' });
+    expect(replaceQuestion).toHaveBeenCalledWith('exam-1', 'q1', {
+      mode: 'manual',
+      replacementQuestionId: 'q9',
+    });
   });
 
   it('shows an error message when replace fails', () => {
@@ -458,7 +501,9 @@ describe('ExamReviewComponent', () => {
 
     expect(confirmExam).toHaveBeenCalledWith('exam-1');
     expect(compiled.textContent).toMatch(/listo/i);
-    expect(compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.disabled).toBe(true);
+    expect(
+      compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.disabled,
+    ).toBe(true);
   });
 
   it('shows an error message when confirm fails', () => {

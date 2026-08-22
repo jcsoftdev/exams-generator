@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component, computed, effect, ElementRef, inject, signal, viewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  effect,
+  ElementRef,
+  inject,
+  signal,
+  viewChild,
+} from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { MeResponseDto, Role } from '@exams-generator/shared';
 import { LucideAngularModule } from 'lucide-angular';
@@ -90,7 +99,9 @@ export class ShellComponent {
   protected readonly themeMode = computed(() => this.themeService.mode());
   /** `null` until `GET /auth/me` resolves, or forever if it fails — the menu just falls back to no identity block (see constructor). */
   protected readonly currentUser = signal<MeResponseDto | null>(null);
-  protected readonly currentUserRoleLabel = computed(() => roleLabel(this.currentUser()?.role ?? null));
+  protected readonly currentUserRoleLabel = computed(() =>
+    roleLabel(this.currentUser()?.role ?? null),
+  );
 
   protected readonly navGroups = computed<NavGroup[]>(() => {
     const role = this.authService.currentRole();
@@ -152,7 +163,8 @@ export class ShellComponent {
       const isOpen = this.mobileOpen();
       const appColumnEl = this.appColumn()?.nativeElement;
       if (isOpen && !this.drawerWasOpen) {
-        this.drawerTrigger = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+        this.drawerTrigger =
+          document.activeElement instanceof HTMLElement ? document.activeElement : null;
         appColumnEl?.setAttribute('inert', '');
         queueMicrotask(() => this.drawerPanel()?.nativeElement.focus());
       } else if (!isOpen && this.drawerWasOpen) {
@@ -180,7 +192,9 @@ export class ShellComponent {
       return;
     }
 
-    const focusable = Array.from(panelEl.querySelectorAll<HTMLElement>(ShellComponent.FOCUSABLE_SELECTOR));
+    const focusable = Array.from(
+      panelEl.querySelectorAll<HTMLElement>(ShellComponent.FOCUSABLE_SELECTOR),
+    );
     if (focusable.length === 0) {
       event.preventDefault();
       panelEl.focus();

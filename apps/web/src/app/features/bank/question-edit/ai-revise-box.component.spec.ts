@@ -33,8 +33,12 @@ describe('AiReviseBoxComponent', () => {
   });
 
   it('shows the error message when present', () => {
-    const { compiled } = setup({ error: 'No se pudo revisar la pregunta con IA. Inténtalo de nuevo.' });
-    expect(compiled.querySelector('[data-testid="ai-error"]')?.textContent).toContain('No se pudo revisar');
+    const { compiled } = setup({
+      error: 'No se pudo revisar la pregunta con IA. Inténtalo de nuevo.',
+    });
+    expect(compiled.querySelector('[data-testid="ai-error"]')?.textContent).toContain(
+      'No se pudo revisar',
+    );
   });
 
   it('emits instructionChange as the user types', () => {

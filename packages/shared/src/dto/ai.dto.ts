@@ -20,13 +20,7 @@ import { Difficulty } from "../enums/difficulty.enum";
  * them into one is a reasonable follow-up but out of scope for this slice
  * (audit 2026-08-21, M4b).
  */
-export const GENERATION_JOB_STATUSES = [
-  "pending",
-  "running",
-  "completed",
-  "failed",
-  "cancelled",
-] as const;
+export const GENERATION_JOB_STATUSES = ["pending", "running", "completed", "failed", "cancelled"] as const;
 
 export type GenerationJobStatus = (typeof GENERATION_JOB_STATUSES)[number];
 
@@ -131,8 +125,7 @@ export interface GenerateQuestionsResult {
 
 /** Emitted mid-stream by `POST /ai/questions/generate/stream`, before the terminal `done` event. */
 export type GenerateProgressEvent =
-  | { readonly type: "delta"; readonly text: string }
-  | { readonly type: "restart" };
+  { readonly type: "delta"; readonly text: string } | { readonly type: "restart" };
 
 /**
  * Every event `POST /ai/questions/generate/stream` can emit. `restart` fires
@@ -142,8 +135,7 @@ export type GenerateProgressEvent =
  * unrelated generations will look like one continuous stream.
  */
 export type GenerateQuestionStreamEvent =
-  | GenerateProgressEvent
-  | { readonly type: "done"; readonly result: GenerateQuestionsResult };
+  GenerateProgressEvent | { readonly type: "done"; readonly result: GenerateQuestionsResult };
 
 /**
  * Response shape shared by `POST /ai/questions/:id/revise` and

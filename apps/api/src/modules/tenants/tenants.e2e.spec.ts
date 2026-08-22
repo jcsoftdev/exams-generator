@@ -5,15 +5,7 @@ import request from "supertest";
 import { Difficulty, Role } from "@exams-generator/shared";
 import { AppModule } from "../../app.module";
 import { db } from "../../db/client";
-import {
-  assets,
-  examQuestions,
-  examVersions,
-  exams,
-  questions,
-  tenants,
-  users,
-} from "../../db/schema";
+import { assets, examQuestions, examVersions, exams, questions, tenants, users } from "../../db/schema";
 import { eq } from "drizzle-orm";
 import { STORAGE_PORT } from "../bank/bank.constants";
 import { StorageObjectNotFoundError, StoragePort } from "../exams/domain/ports/storage.port";
@@ -111,9 +103,7 @@ describe("Tenants (e2e)", () => {
   describe("GET /tenants (list, N3)", () => {
     it("allows platform_admin to list all tenants (paginated)", async () => {
       const token = await loginAs(platformAdmin);
-      const res = await request(app.getHttpServer())
-        .get("/tenants")
-        .set("Authorization", `Bearer ${token}`);
+      const res = await request(app.getHttpServer()).get("/tenants").set("Authorization", `Bearer ${token}`);
 
       expect(res.status).toBe(200);
       expect(Array.isArray(res.body.items)).toBe(true);
@@ -130,9 +120,7 @@ describe("Tenants (e2e)", () => {
 
     it("forbids school_admin from listing all tenants", async () => {
       const token = await loginAs(schoolAdminA);
-      const res = await request(app.getHttpServer())
-        .get("/tenants")
-        .set("Authorization", `Bearer ${token}`);
+      const res = await request(app.getHttpServer()).get("/tenants").set("Authorization", `Bearer ${token}`);
 
       expect(res.status).toBe(403);
     });
@@ -324,9 +312,7 @@ describe("Tenants (e2e)", () => {
         })
         .returning();
 
-      await db
-        .insert(examQuestions)
-        .values({ examId: exam!.id, questionId: question!.id, position: 1 });
+      await db.insert(examQuestions).values({ examId: exam!.id, questionId: question!.id, position: 1 });
 
       // Sanity: a survivor tenant with its own user, untouched by the delete.
       const survivorUserId = teacherA.id;

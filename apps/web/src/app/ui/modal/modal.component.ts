@@ -1,4 +1,12 @@
-import { ChangeDetectionStrategy, Component, ElementRef, effect, input, model, viewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  effect,
+  input,
+  model,
+  viewChild,
+} from '@angular/core';
 
 /**
  * Design-system modal primitive (DECISION FE-4). Backdrop-click and Esc
@@ -78,7 +86,8 @@ export class ModalComponent {
     effect(() => {
       const isOpen = this.open();
       if (isOpen && !this.wasOpen) {
-        this.triggerElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+        this.triggerElement =
+          document.activeElement instanceof HTMLElement ? document.activeElement : null;
         queueMicrotask(() => this.panel()?.nativeElement.focus());
       } else if (!isOpen && this.wasOpen) {
         this.triggerElement?.focus();
@@ -99,7 +108,9 @@ export class ModalComponent {
       return;
     }
 
-    const focusable = Array.from(panelEl.querySelectorAll<HTMLElement>(ModalComponent.FOCUSABLE_SELECTOR));
+    const focusable = Array.from(
+      panelEl.querySelectorAll<HTMLElement>(ModalComponent.FOCUSABLE_SELECTOR),
+    );
     if (focusable.length === 0) {
       // Nothing inside to tab to — keep focus pinned on the panel itself (tabindex="-1").
       event.preventDefault();

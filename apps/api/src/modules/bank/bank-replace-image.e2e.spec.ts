@@ -121,9 +121,7 @@ describe("Bank module — replace image question's image (e2e)", () => {
   }
 
   function getByIdRequest(token: string, id: string) {
-    return request(app.getHttpServer())
-      .get(`/bank/questions/${id}`)
-      .set("Authorization", `Bearer ${token}`);
+    return request(app.getHttpServer()).get(`/bank/questions/${id}`).set("Authorization", `Bearer ${token}`);
   }
 
   async function trackAssetForQuestion(id: string): Promise<void> {

@@ -37,7 +37,11 @@
         pantalla y ambigua para un daltónico. `role="radio"` + `aria-checked` da
         el estado, y el punto `•` da una segunda señal que no depende del color.
       -->
-      <div role="radiogroup" aria-labelledby="nivel-label" class="flex overflow-hidden rounded-field border border-n300">
+      <div
+        role="radiogroup"
+        aria-labelledby="nivel-label"
+        class="flex overflow-hidden rounded-field border border-n300"
+      >
         @for (opt of difficultyOptions; track opt.value) {
           <button
             type="button"
@@ -85,7 +89,12 @@
     </div>
 
     <label class="flex items-center gap-2 text-sm text-n700">
-      <input type="checkbox" class="accent-primary-500" [checked]="withFigure()" (change)="withFigure.set($any($event.target).checked)" />
+      <input
+        type="checkbox"
+        class="accent-primary-500"
+        [checked]="withFigure()"
+        (change)="withFigure.set($any($event.target).checked)"
+      />
       Incluir figura (diagrama)
     </label>
 
@@ -100,18 +109,27 @@
     }
 
     <div data-testid="generate-button">
-      <ui-button variant="primary" [loading]="submitting()" [disabled]="submitting() || !valid()" (clicked)="generate()">
+      <ui-button
+        variant="primary"
+        [loading]="submitting()"
+        [disabled]="submitting() || !valid()"
+        (clicked)="generate()"
+      >
         <span class="flex w-full items-center justify-center gap-1.5">
           <lucide-angular name="sparkles" class="h-4 w-4"></lucide-angular>
           Generar {{ count() }} preguntas
         </span>
       </ui-button>
     </div>
-    <p class="text-center text-xs text-n500">Puedes seguir navegando — el progreso queda guardado.</p>
+    <p class="text-center text-xs text-n500">
+      Puedes seguir navegando — el progreso queda guardado.
+    </p>
   </div>
 
   <!-- Hint panel -->
-  <div class="flex flex-col items-center gap-3 rounded-card border border-dashed border-n300 p-10 text-center">
+  <div
+    class="flex flex-col items-center gap-3 rounded-card border border-dashed border-n300 p-10 text-center"
+  >
     <span class="flex h-10 w-10 items-center justify-center rounded-card bg-ai-bg text-ai-text">
       <lucide-angular name="sparkles" class="h-5 w-5"></lucide-angular>
     </span>
@@ -124,8 +142,11 @@
       <span><b class="text-primary-600">3</b> Revisas y apruebas</span>
     </div>
     <p class="max-w-xs text-xs text-n500">
-      Al generar verás el progreso en vivo, y puedes cambiar de pantalla sin perderlo. Revísalo luego en
-      <button type="button" class="font-bold text-primary-600 underline" (click)="goToHistory()">Historial</button>.
+      Al generar verás el progreso en vivo, y puedes cambiar de pantalla sin perderlo. Revísalo
+      luego en
+      <button type="button" class="font-bold text-primary-600 underline" (click)="goToHistory()">
+        Historial</button
+      >.
     </p>
   </div>
 </div>

@@ -18,8 +18,6 @@ describe("extractCurrentUser", () => {
   });
 
   it("throws when request.user is missing (guard not applied)", () => {
-    expect(() => extractCurrentUser(contextWithUser(undefined))).toThrow(
-      /JwtAuthGuard/,
-    );
+    expect(() => extractCurrentUser(contextWithUser(undefined))).toThrow(/JwtAuthGuard/);
   });
 });

@@ -65,7 +65,9 @@ export class AuthService {
 
   /** Cross-origin login handoff, step 2: redeem a one-time code for the real accessToken. Called from `/auth/callback` on the target tenant's subdomain. */
   exchangeCode(code: string): Observable<ExchangeTokenResponse> {
-    return this.http.post<ExchangeTokenResponse>(`${environment.apiBaseUrl}/auth/exchange`, { code });
+    return this.http.post<ExchangeTokenResponse>(`${environment.apiBaseUrl}/auth/exchange`, {
+      code,
+    });
   }
 
   /** Public entry point for `/auth/callback` to store a token obtained via `exchangeCode()` — same storage path `login()` uses internally via `setToken`. */

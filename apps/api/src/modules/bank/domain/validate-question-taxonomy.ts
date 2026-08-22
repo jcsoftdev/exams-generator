@@ -14,7 +14,8 @@ export interface QuestionTaxonomyPatch {
   readonly gradeLevel?: string;
 }
 
-export type TaxonomyValidation = { readonly ok: true } | { readonly ok: false; readonly errors: readonly string[] };
+export type TaxonomyValidation =
+  { readonly ok: true } | { readonly ok: false; readonly errors: readonly string[] };
 
 const DIFFICULTIES = new Set<string>(Object.values(Difficulty));
 

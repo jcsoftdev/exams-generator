@@ -98,7 +98,9 @@ describe('GenerationHistoryComponent', () => {
   it('shows how many attempts a retried chain has', () => {
     const { compiled } = setup({ items: [job({ id: 'job-1', attemptCount: 3 })], total: 1 });
 
-    expect(compiled.querySelector('[data-testid="attempt-count"]')?.textContent).toContain('3 intentos');
+    expect(compiled.querySelector('[data-testid="attempt-count"]')?.textContent).toContain(
+      '3 intentos',
+    );
   });
 
   it('shows the topic/course as the row title, not just raw counts', () => {
@@ -107,7 +109,11 @@ describe('GenerationHistoryComponent', () => {
       total: 1,
     });
 
-    expect(compiled.querySelector('[data-testid="job-title"]')?.textContent).toContain('Fracciones');
-    expect(compiled.querySelector('[data-testid="job-title"]')?.textContent).toContain('Matemática');
+    expect(compiled.querySelector('[data-testid="job-title"]')?.textContent).toContain(
+      'Fracciones',
+    );
+    expect(compiled.querySelector('[data-testid="job-title"]')?.textContent).toContain(
+      'Matemática',
+    );
   });
 });

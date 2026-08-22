@@ -9,7 +9,11 @@ import { hashBodyTypst } from "../bank/domain/hash-body-typst";
 import { GradeLevel } from "../exams/domain/value-objects/grade-level";
 import { PdfCompilerPort, TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { correctAnswerLetterToIndex } from "./domain/correct-answer-letter-to-index";
-import { GeneratedQuestion, GenerateProgressEvent, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
+import {
+  GeneratedQuestion,
+  GenerateProgressEvent,
+  QuestionGeneratorPort,
+} from "./domain/ports/question-generator.port";
 import {
   GenerateQuestionsInput,
   validateGenerateQuestionsInput,
@@ -45,8 +49,7 @@ export interface GenerateQuestionsResult {
 
 /** Every event `generateQuestionStream()` can emit — mirrors `GenerateProgressEvent` plus a terminal `done` carrying the same `GenerateQuestionsResult` shape `generateQuestions()` resolves with. */
 export type GenerateQuestionStreamEvent =
-  | GenerateProgressEvent
-  | { readonly type: "done"; readonly result: GenerateQuestionsResult };
+  GenerateProgressEvent | { readonly type: "done"; readonly result: GenerateQuestionsResult };
 
 /**
  * The `POST /ai/questions/generate` use case (design doc §5.2). Per
@@ -96,9 +99,7 @@ export class GenerateQuestionsService {
 
     const taxonomy = await this.bankRepository.findCourseAndTopicNames(courseId, topicId);
     if (!taxonomy) {
-      throw new NotFoundException(
-        `courseId/topicId not found, or topicId does not belong to courseId`,
-      );
+      throw new NotFoundException(`courseId/topicId not found, or topicId does not belong to courseId`);
     }
 
     const created: GenerateQuestionsCreatedItem[] = [];
@@ -164,7 +165,9 @@ export class GenerateQuestionsService {
               type: "done",
               result: {
                 created: [],
-                failed: [{ index: 0, error: "courseId/topicId not found, or topicId does not belong to courseId" }],
+                failed: [
+                  { index: 0, error: "courseId/topicId not found, or topicId does not belong to courseId" },
+                ],
               },
             });
             subscriber.complete();
@@ -173,7 +176,14 @@ export class GenerateQuestionsService {
 
           const outcome = await this.generateOneItem(
             user,
-            { topicId, courseName: taxonomy.courseName, topicName: taxonomy.topicName, difficulty, gradeLevel, withFigure },
+            {
+              topicId,
+              courseName: taxonomy.courseName,
+              topicName: taxonomy.topicName,
+              difficulty,
+              gradeLevel,
+              withFigure,
+            },
             (event) => {
               if (!cancelled) subscriber.next(event);
             },

@@ -21,7 +21,9 @@ export interface HealthCheckResult {
 function withTimeout(promise: Promise<unknown>): Promise<unknown> {
   return Promise.race([
     promise,
-    new Promise((_, reject) => setTimeout(() => reject(new Error("health check timed out")), PING_TIMEOUT_MS)),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("health check timed out")), PING_TIMEOUT_MS),
+    ),
   ]);
 }
 
@@ -54,11 +56,7 @@ export class HealthService implements OnModuleDestroy {
   }
 
   async check(): Promise<HealthCheckResult> {
-    const [db, redis, storage] = await Promise.all([
-      this.pingDb(),
-      this.pingRedis(),
-      this.pingStorage(),
-    ]);
+    const [db, redis, storage] = await Promise.all([this.pingDb(), this.pingRedis(), this.pingStorage()]);
     const status = db === "ok" && redis === "ok" && storage === "ok" ? "ok" : "error";
     return { status, checks: { db, redis, storage } };
   }

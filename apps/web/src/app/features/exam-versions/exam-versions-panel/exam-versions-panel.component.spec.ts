@@ -84,7 +84,8 @@ function setup(overrides: {
       ((assetUrl: string) => of(new Blob([`fake-bytes-${assetUrl}`], { type: 'application/pdf' }))),
   );
   const downloadVersionsZip = vi.fn(
-    overrides.downloadVersionsZipImpl ?? (() => of(new Blob(['fake-zip-bytes'], { type: 'application/zip' }))),
+    overrides.downloadVersionsZipImpl ??
+      (() => of(new Blob(['fake-zip-bytes'], { type: 'application/zip' }))),
   );
   const generateVersions = vi.fn(overrides.generateVersionsImpl ?? (() => of(job())));
   // Default: nothing in flight when the screen loads.
@@ -94,7 +95,8 @@ function setup(overrides: {
   );
   const getExam = vi.fn(overrides.getExamImpl ?? (() => of(EXAM_DETAIL)));
   const duplicateExam = vi.fn(
-    overrides.duplicateExamImpl ?? (() => of({ id: 'exam-copy', title: 'Copia de Examen de Biología', status: 'draft' })),
+    overrides.duplicateExamImpl ??
+      (() => of({ id: 'exam-copy', title: 'Copia de Examen de Biología', status: 'draft' })),
   );
   const navigate = vi.fn();
 
@@ -145,11 +147,17 @@ function setup(overrides: {
 }
 
 function openGeneratePanel(compiled: HTMLElement, fixture: { detectChanges: () => void }): void {
-  (compiled.querySelector('[data-testid="generate-more-versions"] button') as HTMLButtonElement).click();
+  (
+    compiled.querySelector('[data-testid="generate-more-versions"] button') as HTMLButtonElement
+  ).click();
   fixture.detectChanges();
 }
 
-function selectVersionCount(compiled: HTMLElement, fixture: { detectChanges: () => void }, label: string): void {
+function selectVersionCount(
+  compiled: HTMLElement,
+  fixture: { detectChanges: () => void },
+  label: string,
+): void {
   const container = compiled.querySelector('[data-testid="version-count-select"]') as HTMLElement;
   if (!container) {
     throw new Error('version count select not found');
@@ -184,7 +192,9 @@ describe('ExamVersionsPanelComponent', () => {
       expect(downloadAsset).toHaveBeenCalledWith('/assets/pdf-a');
       expect(downloadAsset).toHaveBeenCalledWith('/assets/answer-a');
 
-      const pdfLinks = compiled.querySelectorAll<HTMLAnchorElement>('[data-testid="version-pdf-link"]');
+      const pdfLinks = compiled.querySelectorAll<HTMLAnchorElement>(
+        '[data-testid="version-pdf-link"]',
+      );
       const answerLinks = compiled.querySelectorAll<HTMLAnchorElement>(
         '[data-testid="version-answer-link"]',
       );
@@ -203,15 +213,21 @@ describe('ExamVersionsPanelComponent', () => {
     it('names each downloaded PDF after the exam and its forma, not the blob id', () => {
       const { compiled } = setup({});
 
-      const pdfLink = compiled.querySelector<HTMLAnchorElement>('[data-testid="version-pdf-link"]')!;
-      const answerLink = compiled.querySelector<HTMLAnchorElement>('[data-testid="version-answer-link"]')!;
+      const pdfLink = compiled.querySelector<HTMLAnchorElement>(
+        '[data-testid="version-pdf-link"]',
+      )!;
+      const answerLink = compiled.querySelector<HTMLAnchorElement>(
+        '[data-testid="version-answer-link"]',
+      )!;
 
       expect(pdfLink.getAttribute('download')).toBe('Examen de Biología — Forma A.pdf');
       expect(answerLink.getAttribute('download')).toBe('Examen de Biología — Claves A.pdf');
     });
 
     it('names the ZIP after the exam title', () => {
-      const clickSpy = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => undefined);
+      const clickSpy = vi
+        .spyOn(HTMLAnchorElement.prototype, 'click')
+        .mockImplementation(() => undefined);
       const downloadSpy = vi.spyOn(HTMLAnchorElement.prototype, 'download', 'set');
       const { compiled, fixture } = setup({});
 
@@ -224,10 +240,14 @@ describe('ExamVersionsPanelComponent', () => {
     });
 
     it('downloads all versions as a ZIP via a blob: object URL when the button is clicked (N1)', () => {
-      const clickSpy = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => undefined);
+      const clickSpy = vi
+        .spyOn(HTMLAnchorElement.prototype, 'click')
+        .mockImplementation(() => undefined);
       const { compiled, fixture, downloadVersionsZip } = setup({});
 
-      const zipButton = compiled.querySelector<HTMLButtonElement>('[data-testid="download-zip"] button');
+      const zipButton = compiled.querySelector<HTMLButtonElement>(
+        '[data-testid="download-zip"] button',
+      );
       expect(zipButton?.disabled).toBe(false);
 
       zipButton!.click();
@@ -298,7 +318,9 @@ describe('ExamVersionsPanelComponent', () => {
           attempt++ === 0 ? throwError(() => new HttpErrorResponse({ status: 500 })) : of(VERSIONS),
       });
 
-      const retryButton = compiled.querySelector('[data-testid="retry-button"] button') as HTMLButtonElement;
+      const retryButton = compiled.querySelector(
+        '[data-testid="retry-button"] button',
+      ) as HTMLButtonElement;
       expect(retryButton).toBeTruthy();
 
       retryButton.click();
@@ -315,21 +337,31 @@ describe('ExamVersionsPanelComponent', () => {
       const { compiled, getExam } = setup({});
 
       expect(getExam).toHaveBeenCalledWith('exam-1');
-      expect(compiled.querySelector('[data-testid="exam-title"]')?.textContent).toContain('Examen de Biología');
-      expect(compiled.querySelector('[data-testid="exam-grade"]')?.textContent).toContain('2° secundaria');
-      expect(compiled.querySelector('[data-testid="exam-status-tag"]')?.textContent).toContain('Generado');
+      expect(compiled.querySelector('[data-testid="exam-title"]')?.textContent).toContain(
+        'Examen de Biología',
+      );
+      expect(compiled.querySelector('[data-testid="exam-grade"]')?.textContent).toContain(
+        '2° secundaria',
+      );
+      expect(compiled.querySelector('[data-testid="exam-status-tag"]')?.textContent).toContain(
+        'Generado',
+      );
     });
 
     it('shows "Borrador" tag for a draft exam', () => {
       const { compiled } = setup({ getExamImpl: () => of({ ...EXAM_DETAIL, status: 'draft' }) });
 
-      expect(compiled.querySelector('[data-testid="exam-status-tag"]')?.textContent).toContain('Borrador');
+      expect(compiled.querySelector('[data-testid="exam-status-tag"]')?.textContent).toContain(
+        'Borrador',
+      );
     });
 
     it('"Usar de plantilla" duplicates the exam and navigates to the copy\'s builder route', () => {
       const { compiled, duplicateExam, navigate } = setup({});
 
-      (compiled.querySelector('[data-testid="use-as-template"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="use-as-template"] button') as HTMLButtonElement
+      ).click();
 
       expect(duplicateExam).toHaveBeenCalledWith('exam-1');
       expect(navigate).toHaveBeenCalledWith(['/app/exams', 'exam-copy']);
@@ -340,7 +372,9 @@ describe('ExamVersionsPanelComponent', () => {
         duplicateExamImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
       });
 
-      (compiled.querySelector('[data-testid="use-as-template"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="use-as-template"] button') as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="action-error"]')).toBeTruthy();
@@ -348,7 +382,7 @@ describe('ExamVersionsPanelComponent', () => {
     });
   });
 
-describe('generar más formas — regeneración inline (F8 fix)', () => {
+  describe('generar más formas — regeneración inline (F8 fix)', () => {
     it('shows the inline "¿Cuántas formas?" selector (2/3/4/5) with a replace warning on click, without navigating anywhere', () => {
       const { compiled, fixture, navigate } = setup({});
 
@@ -362,11 +396,13 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
         'Se reemplazarán las formas actuales',
       );
 
-      const container = compiled.querySelector('[data-testid="version-count-select"]') as HTMLElement;
+      const container = compiled.querySelector(
+        '[data-testid="version-count-select"]',
+      ) as HTMLElement;
       (container.querySelector('button[role="combobox"]') as HTMLButtonElement).click();
       fixture.detectChanges();
-      const labels = Array.from(container.querySelectorAll('[data-testid="select-option"]')).map((o) =>
-        o.textContent?.trim(),
+      const labels = Array.from(container.querySelectorAll('[data-testid="select-option"]')).map(
+        (o) => o.textContent?.trim(),
       );
       expect(labels).toEqual(['2', '3', '4', '5']);
     });
@@ -386,11 +422,17 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
 
       openGeneratePanel(compiled, fixture);
       selectVersionCount(compiled, fixture, '4');
-      (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector(
+          '[data-testid="confirm-generate-versions"] button',
+        ) as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
 
       expect(generateVersions).not.toHaveBeenCalled();
-      (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement
+      ).click();
 
       expect(generateVersions).toHaveBeenCalledWith('exam-1', 4);
     });
@@ -403,9 +445,15 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
       });
 
       openGeneratePanel(compiled, fixture);
-      (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector(
+          '[data-testid="confirm-generate-versions"] button',
+        ) as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
-      (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
 
       // The POST resolving means "queued", not "done" — the list must NOT be
@@ -439,9 +487,15 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
         });
 
         openGeneratePanel(compiled, fixture);
-        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+        (
+          compiled.querySelector(
+            '[data-testid="confirm-generate-versions"] button',
+          ) as HTMLButtonElement
+        ).click();
         fixture.detectChanges();
-        (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+        (
+          compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement
+        ).click();
         fixture.detectChanges();
 
         const region = compiled.querySelector('[data-testid="version-job-live-region"]')!;
@@ -467,9 +521,15 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
         });
 
         openGeneratePanel(compiled, fixture);
-        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+        (
+          compiled.querySelector(
+            '[data-testid="confirm-generate-versions"] button',
+          ) as HTMLButtonElement
+        ).click();
         fixture.detectChanges();
-        (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+        (
+          compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement
+        ).click();
         fixture.detectChanges();
 
         const region = compiled.querySelector('[data-testid="version-job-live-region"]')!;
@@ -481,20 +541,33 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
       const { compiled, fixture, listVersions } = setup({
         generateVersionsImpl: () => of(job({ versionCount: 3 })),
         streamVersionJobImpl: () =>
-          of(job({ versionCount: 3, status: 'failed', completedCount: 2, failedReason: 'figura inválida' })),
+          of(
+            job({
+              versionCount: 3,
+              status: 'failed',
+              completedCount: 2,
+              failedReason: 'figura inválida',
+            }),
+          ),
       });
 
       openGeneratePanel(compiled, fixture);
-      (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector(
+          '[data-testid="confirm-generate-versions"] button',
+        ) as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
-      (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
 
       const banner = compiled.querySelector('[data-testid="generate-partial-failure"]');
       expect(banner?.textContent).toContain('2 de 3 formas');
-      expect(compiled.querySelector('[data-testid="generate-failure-reason"]')?.textContent).toContain(
-        'figura inválida',
-      );
+      expect(
+        compiled.querySelector('[data-testid="generate-failure-reason"]')?.textContent,
+      ).toContain('figura inválida');
       expect(compiled.querySelector('[data-testid="generate-total-failure"]')).toBeFalsy();
       // The list was still refreshed — those PDFs are downloadable.
       expect(listVersions).toHaveBeenCalledTimes(2);
@@ -508,9 +581,15 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
       });
 
       openGeneratePanel(compiled, fixture);
-      (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector(
+          '[data-testid="confirm-generate-versions"] button',
+        ) as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
-      (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="generate-total-failure"]')).toBeTruthy();
@@ -531,13 +610,23 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
           generateVersionsImpl: () => of(job({ versionCount: 3 })),
           streamVersionJobImpl: () => stream.asObservable(),
           latestVersionJobImpl: () =>
-            of(latestCalls++ === 0 ? null : job({ versionCount: 3, status: 'running', completedCount: 1 })),
+            of(
+              latestCalls++ === 0
+                ? null
+                : job({ versionCount: 3, status: 'running', completedCount: 1 }),
+            ),
         });
 
         openGeneratePanel(compiled, fixture);
-        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+        (
+          compiled.querySelector(
+            '[data-testid="confirm-generate-versions"] button',
+          ) as HTMLButtonElement
+        ).click();
         fixture.detectChanges();
-        (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+        (
+          compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement
+        ).click();
         fixture.detectChanges();
 
         stream.next(job({ versionCount: 3, status: 'running', completedCount: 1 }));
@@ -550,7 +639,9 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
         expect(compiled.querySelector('[data-testid="generate-total-failure"]')).toBeFalsy();
         expect(compiled.querySelector('[data-testid="generate-partial-failure"]')).toBeFalsy();
         // Last known progress stays visible — not reset to zero.
-        expect(compiled.querySelector('[data-testid="generate-progress"]')?.textContent).toContain('1 de 3 formas');
+        expect(compiled.querySelector('[data-testid="generate-progress"]')?.textContent).toContain(
+          '1 de 3 formas',
+        );
       });
 
       it('settles the connection-lost state and reloads the versions list once the recovery GET reports the job is terminal', () => {
@@ -560,13 +651,23 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
           generateVersionsImpl: () => of(job({ versionCount: 3 })),
           streamVersionJobImpl: () => stream.asObservable(),
           latestVersionJobImpl: () =>
-            of(latestCalls++ === 0 ? null : job({ versionCount: 3, status: 'completed', completedCount: 3 })),
+            of(
+              latestCalls++ === 0
+                ? null
+                : job({ versionCount: 3, status: 'completed', completedCount: 3 }),
+            ),
         });
 
         openGeneratePanel(compiled, fixture);
-        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+        (
+          compiled.querySelector(
+            '[data-testid="confirm-generate-versions"] button',
+          ) as HTMLButtonElement
+        ).click();
         fixture.detectChanges();
-        (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+        (
+          compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement
+        ).click();
         fixture.detectChanges();
         listVersions.mockClear();
 
@@ -584,15 +685,27 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
         const { compiled, fixture, streamVersionJob } = setup({
           generateVersionsImpl: () => of(job({ versionCount: 3 })),
           streamVersionJobImpl: () =>
-            streamCalls++ === 0 ? stream.asObservable() : of(job({ versionCount: 3, status: 'running', completedCount: 1 })),
+            streamCalls++ === 0
+              ? stream.asObservable()
+              : of(job({ versionCount: 3, status: 'running', completedCount: 1 })),
           latestVersionJobImpl: () =>
-            of(latestCalls++ === 0 ? null : job({ versionCount: 3, status: 'running', completedCount: 1 })),
+            of(
+              latestCalls++ === 0
+                ? null
+                : job({ versionCount: 3, status: 'running', completedCount: 1 }),
+            ),
         });
 
         openGeneratePanel(compiled, fixture);
-        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+        (
+          compiled.querySelector(
+            '[data-testid="confirm-generate-versions"] button',
+          ) as HTMLButtonElement
+        ).click();
         fixture.detectChanges();
-        (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+        (
+          compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement
+        ).click();
         fixture.detectChanges();
 
         stream.next(job({ versionCount: 3, status: 'running', completedCount: 1 }));
@@ -603,18 +716,23 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
         expect(compiled.querySelector('[data-testid="connection-lost-banner"]')).toBeTruthy();
         expect(streamVersionJob).toHaveBeenCalledTimes(1);
 
-        (compiled.querySelector('[data-testid="reconnect-button"] button') as HTMLButtonElement).click();
+        (
+          compiled.querySelector('[data-testid="reconnect-button"] button') as HTMLButtonElement
+        ).click();
         fixture.detectChanges();
 
         expect(streamVersionJob).toHaveBeenCalledTimes(2);
         expect(compiled.querySelector('[data-testid="connection-lost-banner"]')).toBeFalsy();
-        expect(compiled.querySelector('[data-testid="generate-progress"]')?.textContent).toContain('1 de 3 formas');
+        expect(compiled.querySelector('[data-testid="generate-progress"]')?.textContent).toContain(
+          '1 de 3 formas',
+        );
       });
     });
 
     it('re-attaches to a generation still running when the screen loads (e.g. started from the exam builder)', () => {
       const { compiled, streamVersionJob } = setup({
-        latestVersionJobImpl: () => of(job({ status: 'running', completedCount: 1, versionCount: 2 })),
+        latestVersionJobImpl: () =>
+          of(job({ status: 'running', completedCount: 1, versionCount: 2 })),
         streamVersionJobImpl: () => new Subject<ExamVersionJob>().asObservable(),
       });
 
@@ -630,9 +748,15 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
       });
 
       openGeneratePanel(compiled, fixture);
-      (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector(
+          '[data-testid="confirm-generate-versions"] button',
+        ) as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
-      (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="generate-error"]')).toBeTruthy();

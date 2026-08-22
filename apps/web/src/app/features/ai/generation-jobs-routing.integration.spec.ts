@@ -103,7 +103,10 @@ function setup() {
   TestBed.configureTestingModule({
     providers: [
       provideRouter(routes),
-      { provide: AiService, useValue: { streamGenerationJob, getDraft, listGenerationJobs, getGenerationJobChain } },
+      {
+        provide: AiService,
+        useValue: { streamGenerationJob, getDraft, listGenerationJobs, getGenerationJobChain },
+      },
       {
         provide: AuthService,
         useValue: {
@@ -111,15 +114,29 @@ function setup() {
           currentRole: signal(null),
           currentTenantId: signal('t1'),
           logout: vi.fn(),
-          me: vi.fn(() => of({ id: 'u1', name: 'Test User', email: 'test@user.local', role: 'teacher', tenantId: 't1' })),
+          me: vi.fn(() =>
+            of({
+              id: 'u1',
+              name: 'Test User',
+              email: 'test@user.local',
+              role: 'teacher',
+              tenantId: 't1',
+            }),
+          ),
         },
       },
       {
         provide: TenantSettingsService,
         useValue: { getSettings: () => of({ id: 't1', name: 'Test School', logoAssetId: null }) },
       },
-      { provide: DraftCountService, useValue: { count: signal<number | null>(null), set: vi.fn() } },
-      { provide: ThemeService, useValue: { mode: signal<'light' | 'dark'>('light'), toggle: vi.fn() } },
+      {
+        provide: DraftCountService,
+        useValue: { count: signal<number | null>(null), set: vi.fn() },
+      },
+      {
+        provide: ThemeService,
+        useValue: { mode: signal<'light' | 'dark'>('light'), toggle: vi.fn() },
+      },
       importProvidersFrom(
         LucideAngularModule.pick({
           Menu,
@@ -161,7 +178,7 @@ function setup() {
 }
 
 describe('AI generation-jobs routing (integration — real app.routes.ts)', () => {
-  it('navigating to /app/ai/jobs/:id (AiGenerateComponent\'s + row-click target) resolves through the real route table to GenerationJobDetailComponent and loads that job', async () => {
+  it("navigating to /app/ai/jobs/:id (AiGenerateComponent's + row-click target) resolves through the real route table to GenerationJobDetailComponent and loads that job", async () => {
     const { streamGenerationJob } = setup();
 
     const harness = await RouterTestingHarness.create('/app/ai/jobs/job-1');
@@ -172,7 +189,7 @@ describe('AI generation-jobs routing (integration — real app.routes.ts)', () =
     expect(streamGenerationJob).toHaveBeenCalledWith('job-1');
   });
 
-  it('navigating to /app/ai/jobs (AiGenerateComponent.goToHistory\'s target) resolves through the real route table to GenerationHistoryComponent and loads the list', async () => {
+  it("navigating to /app/ai/jobs (AiGenerateComponent.goToHistory's target) resolves through the real route table to GenerationHistoryComponent and loads the list", async () => {
     const { listGenerationJobs } = setup();
 
     const harness = await RouterTestingHarness.create('/app/ai/jobs');

@@ -97,8 +97,16 @@ describe("Users module (e2e)", () => {
 
     tenantAUserIds = [schoolAdminAId, teacherAId];
 
-    schoolAdminAToken = tokenService.sign({ sub: schoolAdminAId, tenantId: tenantAId, role: Role.SchoolAdmin });
-    schoolAdminBToken = tokenService.sign({ sub: schoolAdminBId, tenantId: tenantBId, role: Role.SchoolAdmin });
+    schoolAdminAToken = tokenService.sign({
+      sub: schoolAdminAId,
+      tenantId: tenantAId,
+      role: Role.SchoolAdmin,
+    });
+    schoolAdminBToken = tokenService.sign({
+      sub: schoolAdminBId,
+      tenantId: tenantBId,
+      role: Role.SchoolAdmin,
+    });
     teacherAToken = tokenService.sign({ sub: teacherAId, tenantId: tenantAId, role: Role.Teacher });
   });
 
@@ -135,7 +143,10 @@ describe("Users module (e2e)", () => {
   });
 
   it("teacher gets 403", async () => {
-    await request(app.getHttpServer()).get("/users").set("Authorization", `Bearer ${teacherAToken}`).expect(403);
+    await request(app.getHttpServer())
+      .get("/users")
+      .set("Authorization", `Bearer ${teacherAToken}`)
+      .expect(403);
   });
 
   it("creates teacher with temporary password, who can login", async () => {

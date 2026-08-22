@@ -33,7 +33,11 @@ describe("resolveAiProviderConfig", () => {
   });
 
   it("prefers AI_API_KEY when both key vars are present", () => {
-    const config = resolveAiProviderConfig({ AI_MODEL: "m", AI_API_KEY: "sk-new", OPENROUTER_API_KEY: "sk-legacy" });
+    const config = resolveAiProviderConfig({
+      AI_MODEL: "m",
+      AI_API_KEY: "sk-new",
+      OPENROUTER_API_KEY: "sk-legacy",
+    });
 
     expect(config.apiKey).toBe("sk-new");
   });

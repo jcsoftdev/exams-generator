@@ -12,12 +12,12 @@ Plataforma web multi-tenant que permite a colegios/academias generar exámenes t
 
 ## 2. Usuarios y Roles
 
-| Rol | Alcance | Capacidades |
-|---|---|---|
-| `platform_admin` | Global | Gestiona banco central, tenants, usuarios; genera preguntas con IA; aprueba borradores |
-| `content_editor` | Global | Carga/edita preguntas del banco central; genera con IA; sin gestión de tenants |
-| `school_admin` | Su tenant | Gestiona usuarios y logo de su colegio; todo lo del profesor |
-| `teacher` | Su tenant | Navega banco (central + privado), crea preguntas privadas, arma y genera exámenes |
+| Rol              | Alcance   | Capacidades                                                                            |
+| ---------------- | --------- | -------------------------------------------------------------------------------------- |
+| `platform_admin` | Global    | Gestiona banco central, tenants, usuarios; genera preguntas con IA; aprueba borradores |
+| `content_editor` | Global    | Carga/edita preguntas del banco central; genera con IA; sin gestión de tenants         |
+| `school_admin`   | Su tenant | Gestiona usuarios y logo de su colegio; todo lo del profesor                           |
+| `teacher`        | Su tenant | Navega banco (central + privado), crea preguntas privadas, arma y genera exámenes      |
 
 ## 3. Modelo de Datos (PostgreSQL)
 
@@ -46,6 +46,7 @@ exam_versions         id, exam_id, code ('A','B','C'...),
 ```
 
 Reglas:
+
 - `questions.tenant_id NULL` → visible para todos los tenants (banco central). Con `tenant_id` → visible solo para ese tenant.
 - Toda query de preguntas desde un tenant filtra: `tenant_id IS NULL OR tenant_id = :current`.
 - Preguntas `type=image`: la imagen contiene enunciado + alternativas; solo se guarda la clave aparte. **No se barajan sus alternativas.**
@@ -67,15 +68,15 @@ infra/
 
 ### Backend (NestJS) — módulos
 
-| Módulo | Responsabilidad |
-|---|---|
-| `auth` | Login JWT, guards por rol y tenant |
-| `tenants` | CRUD colegios, logo |
-| `bank` | CRUD preguntas (imagen y estructuradas), taxonomía, filtros, aprobación de borradores |
-| `ai` | Generación de preguntas vía `QuestionGeneratorPort` |
-| `exams` | Blueprint, selección automática, revisión/reemplazo, versiones |
-| `pdf` | Render Typst: plantillas, compilación, subida a MinIO |
-| `storage` | Adaptador S3/MinIO (assets) |
+| Módulo    | Responsabilidad                                                                       |
+| --------- | ------------------------------------------------------------------------------------- |
+| `auth`    | Login JWT, guards por rol y tenant                                                    |
+| `tenants` | CRUD colegios, logo                                                                   |
+| `bank`    | CRUD preguntas (imagen y estructuradas), taxonomía, filtros, aprobación de borradores |
+| `ai`      | Generación de preguntas vía `QuestionGeneratorPort`                                   |
+| `exams`   | Blueprint, selección automática, revisión/reemplazo, versiones                        |
+| `pdf`     | Render Typst: plantillas, compilación, subida a MinIO                                 |
+| `storage` | Adaptador S3/MinIO (assets)                                                           |
 
 ### Puertos y adaptadores clave
 
@@ -120,21 +121,21 @@ infra/
 
 ## 6. Stack (decidido)
 
-| Pieza | Tecnología | Justificación |
-|---|---|---|
-| Frontend | Angular | CRUD pesado, formularios reactivos, ecosistema del equipo |
-| Backend | NestJS | Hexagonal natural, módulos claros |
-| BD | PostgreSQL | Multi-tenant relacional limpio |
-| ORM | Drizzle | Tipado fuerte, migraciones SQL explícitas |
-| Storage | MinIO | S3-compatible self-host |
-| PDF | Typst (CLI) | Dos columnas nativas, matemáticas nivel LaTeX, figuras CeTZ, plantillas con variables, compila en ms |
-| IA | OpenRouter free tier tras puerto | Costo cero para validar; modelo configurable; ver referencia `openrouter/free-models` en web-research |
-| Deploy | Docker + Dokploy (VPS propio) | Infra existente |
-| Auth | JWT propio (NestJS) | Suficiente para MVP; sin dependencia externa |
+| Pieza    | Tecnología                       | Justificación                                                                                         |
+| -------- | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Frontend | Angular                          | CRUD pesado, formularios reactivos, ecosistema del equipo                                             |
+| Backend  | NestJS                           | Hexagonal natural, módulos claros                                                                     |
+| BD       | PostgreSQL                       | Multi-tenant relacional limpio                                                                        |
+| ORM      | Drizzle                          | Tipado fuerte, migraciones SQL explícitas                                                             |
+| Storage  | MinIO                            | S3-compatible self-host                                                                               |
+| PDF      | Typst (CLI)                      | Dos columnas nativas, matemáticas nivel LaTeX, figuras CeTZ, plantillas con variables, compila en ms  |
+| IA       | OpenRouter free tier tras puerto | Costo cero para validar; modelo configurable; ver referencia `openrouter/free-models` en web-research |
+| Deploy   | Docker + Dokploy (VPS propio)    | Infra existente                                                                                       |
+| Auth     | JWT propio (NestJS)              | Suficiente para MVP; sin dependencia externa                                                          |
 
 ## 7. Manejo de Errores
 
-- **IA devuelve JSON inválido**: se descarta y reporta de inmediato, sin reintento — ver `apps/api/src/modules/ai/generate-questions.service.ts:19-28,63-71`. El único reintento que existe en este flujo es sobre fallo de *compilación Typst* (`MAX_COMPILE_ATTEMPTS = 2`): recompilar es determinístico y barato porque el prompt no cambia (salvo que se le adjunte el `stderr` del compilador). Reintentar un JSON inválido, en cambio, vuelve a llamar al modelo con las mismas probabilidades de fallar — quema presupuesto de la API por el mismo resultado esperado, así que el código falla el ítem al toque en vez de re-promptear a ciegas.
+- **IA devuelve JSON inválido**: se descarta y reporta de inmediato, sin reintento — ver `apps/api/src/modules/ai/generate-questions.service.ts:19-28,63-71`. El único reintento que existe en este flujo es sobre fallo de _compilación Typst_ (`MAX_COMPILE_ATTEMPTS = 2`): recompilar es determinístico y barato porque el prompt no cambia (salvo que se le adjunte el `stderr` del compilador). Reintentar un JSON inválido, en cambio, vuelve a llamar al modelo con las mismas probabilidades de fallar — quema presupuesto de la API por el mismo resultado esperado, así que el código falla el ítem al toque en vez de re-promptear a ciegas.
 - **Marcado Typst inválido en pregunta**: la vista previa compila ANTES de guardar; error de compilación bloquea el guardado con mensaje.
 - **Stock insuficiente para blueprint**: error por fila ("Aritmética/media: pides 5, hay 3") antes de generar nada.
 - **Compilación de examen falla**: se reporta la pregunta culpable (compilación incremental por pregunta en la vista previa reduce este riesgo a casi cero).

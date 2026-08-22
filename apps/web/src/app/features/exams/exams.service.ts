@@ -58,7 +58,10 @@ export class ExamsService {
   }
 
   confirmExam(examId: string): Observable<ConfirmExamResult> {
-    return this.http.post<ConfirmExamResult>(`${environment.apiBaseUrl}/exams/${examId}/confirm`, {});
+    return this.http.post<ConfirmExamResult>(
+      `${environment.apiBaseUrl}/exams/${examId}/confirm`,
+      {},
+    );
   }
 
   /** `POST /exams/stock/batch` (B1) — pure read, order-matched availability per cell. */
@@ -94,13 +97,19 @@ export class ExamsService {
 
   /** `POST /exams/:id/duplicate` (S2) — clones an exam into a fresh draft. */
   duplicateExam(examId: string): Observable<DuplicateExamResult> {
-    return this.http.post<DuplicateExamResult>(`${environment.apiBaseUrl}/exams/${examId}/duplicate`, {});
+    return this.http.post<DuplicateExamResult>(
+      `${environment.apiBaseUrl}/exams/${examId}/duplicate`,
+      {},
+    );
   }
 
   /** `DELETE /exams/:id` (S3). */
   /** `PATCH /exams/:examId` (S4) — rename; the only mutable field of an exam. */
   renameExam(examId: string, title: string): Observable<{ id: string; title: string }> {
-    return this.http.patch<{ id: string; title: string }>(`${environment.apiBaseUrl}/exams/${examId}`, { title });
+    return this.http.patch<{ id: string; title: string }>(
+      `${environment.apiBaseUrl}/exams/${examId}`,
+      { title },
+    );
   }
 
   deleteExam(examId: string): Observable<void> {
@@ -134,6 +143,9 @@ export class ExamsService {
    * creates or mutates an exam.
    */
   resolveBlueprint(payload: ResolveBlueprintPayload): Observable<ResolveBlueprintResult> {
-    return this.http.post<ResolveBlueprintResult>(`${environment.apiBaseUrl}/exams/blueprint/resolve`, payload);
+    return this.http.post<ResolveBlueprintResult>(
+      `${environment.apiBaseUrl}/exams/blueprint/resolve`,
+      payload,
+    );
   }
 }

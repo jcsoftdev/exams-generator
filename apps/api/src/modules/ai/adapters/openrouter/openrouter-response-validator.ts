@@ -1,7 +1,4 @@
-import {
-  GeneratedAlternatives,
-  GeneratedQuestion,
-} from "../../domain/ports/question-generator.port";
+import { GeneratedAlternatives, GeneratedQuestion } from "../../domain/ports/question-generator.port";
 
 const VALID_ANSWER_LETTERS = new Set(["a", "b", "c", "d", "e"]);
 
@@ -35,9 +32,7 @@ const MITEX_BLOCK_CALL = /#mitex\(`[^`]*`\)/g;
  * them can never participate in pairing at all.
  */
 function findLatexCommandInMath(bodyTypst: string): string | undefined {
-  const withoutMitexCalls = bodyTypst
-    .replace(MITEX_MI_CALL, "")
-    .replace(MITEX_BLOCK_CALL, "");
+  const withoutMitexCalls = bodyTypst.replace(MITEX_MI_CALL, "").replace(MITEX_BLOCK_CALL, "");
 
   for (const match of withoutMitexCalls.matchAll(MATH_SEGMENT)) {
     const command = match[1].match(LATEX_COMMAND);
@@ -78,9 +73,7 @@ export interface ValidatedGeneratedQuestion {
  * `figureCode: null` (a common JSON-schema idiom for "optional field") is
  * normalized to `undefined` to match the port's TypeScript contract.
  */
-export function validateGeneratedQuestionShape(
-  value: unknown,
-): ValidatedGeneratedQuestion {
+export function validateGeneratedQuestionShape(value: unknown): ValidatedGeneratedQuestion {
   const errors: string[] = [];
 
   if (typeof value !== "object" || value === null || Array.isArray(value)) {
@@ -109,19 +102,12 @@ export function validateGeneratedQuestionShape(
     errors.push("alternatives must be an array of exactly 5 non-empty strings");
   }
 
-  if (
-    typeof payload.correctAnswer !== "string" ||
-    !VALID_ANSWER_LETTERS.has(payload.correctAnswer)
-  ) {
+  if (typeof payload.correctAnswer !== "string" || !VALID_ANSWER_LETTERS.has(payload.correctAnswer)) {
     errors.push('correctAnswer must be one of "a", "b", "c", "d", "e"');
   }
 
   const rawFigureCode = payload.figureCode;
-  if (
-    rawFigureCode !== undefined &&
-    rawFigureCode !== null &&
-    typeof rawFigureCode !== "string"
-  ) {
+  if (rawFigureCode !== undefined && rawFigureCode !== null && typeof rawFigureCode !== "string") {
     errors.push("figureCode must be a string, null, or omitted");
   }
 
@@ -156,10 +142,7 @@ export function validateGeneratedQuestionShape(
       bodyTypst: payload.bodyTypst as string,
       alternatives: alternatives as unknown as GeneratedAlternatives,
       correctAnswer: payload.correctAnswer as string,
-      figureCode:
-        typeof rawFigureCode === "string" && rawFigureCode.length > 0
-          ? rawFigureCode
-          : undefined,
+      figureCode: typeof rawFigureCode === "string" && rawFigureCode.length > 0 ? rawFigureCode : undefined,
       suggestedCourseName:
         typeof rawSuggestedCourse === "string" && rawSuggestedCourse.trim().length > 0
           ? rawSuggestedCourse

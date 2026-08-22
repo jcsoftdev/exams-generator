@@ -27,7 +27,11 @@ describe('checkTenantLookup', () => {
 
   afterEach(() => {
     httpMock.verify();
-    Object.defineProperty(window, 'location', { writable: true, configurable: true, value: originalLocation });
+    Object.defineProperty(window, 'location', {
+      writable: true,
+      configurable: true,
+      value: originalLocation,
+    });
   });
 
   it('does not call the API when the hostname is not a *.creaexamen.com subdomain', async () => {

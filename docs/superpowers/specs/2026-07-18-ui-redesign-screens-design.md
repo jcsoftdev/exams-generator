@@ -24,32 +24,32 @@
 
 **NUNCA emojis en la UI.** Todos los íconos salen de **Lucide** (`lucide-angular`, SVG stroke, tree-shakeable). Los emojis que aparecen en este doc y en los mockups son placeholders; mapa canónico:
 
-| Placeholder | Ícono Lucide |
-|---|---|
-| ✨ (IA) | `sparkles` |
-| 🔒 (banco central / bloqueado) | `lock` |
-| ⬇ (descargar) | `download` |
-| ⋯ (menú acciones) | `more-horizontal` |
-| ✓ (aprobar/correcta) | `check` |
-| ⚠ (warning) | `triangle-alert` |
-| 🔍 (buscar) | `search` |
-| 🏫 (logo colegio placeholder) | `school` |
+| Placeholder                    | Ícono Lucide      |
+| ------------------------------ | ----------------- |
+| ✨ (IA)                        | `sparkles`        |
+| 🔒 (banco central / bloqueado) | `lock`            |
+| ⬇ (descargar)                  | `download`        |
+| ⋯ (menú acciones)              | `more-horizontal` |
+| ✓ (aprobar/correcta)           | `check`           |
+| ⚠ (warning)                    | `triangle-alert`  |
+| 🔍 (buscar)                    | `search`          |
+| 🏫 (logo colegio placeholder)  | `school`          |
 
 Aplica también al doc base cuando el otro agente implemente el flujo maestro (candado del gate, sparkles del puente a IA, etc.).
 
 ## Endpoints nuevos que este spec agrega (además de B1–B4 del doc base)
 
-| ID | Endpoint | Para |
-|---|---|---|
-| S1 | `GET /exams` (list, filtros título/grado/estado, paginado) | Historial |
-| S2 | `POST /exams/:id/duplicate` | Usar de plantilla |
-| S3 | `DELETE /exams/:id` | Eliminar examen |
-| S4 | `PATCH /bank/questions/:id/archive` (estado `archived` nuevo en enum) | Archivar pregunta |
-| S5 | `DELETE /bank/questions/:id` (solo draft propio) | Borrar borrador |
-| S6 | Paginación en `GET /bank/questions` (= N2 promovido) | Banco |
-| S7 | `GET /bank/questions/:id/preview` (= N4 promovido, PNG vía Typst, caché) | Cola revisión WYSIWYG |
-| S8 | Módulo `users`: `GET/POST /users`, `PATCH /users/:id` (desactivar), `POST /users/:id/reset-password` (temporal) — tenant-scoped, school_admin | Config colegio |
-| S9 | Migración: `created_at` (+`updated_at`) en `exams`, `questions`, `users` — hoy NINGUNA tabla tiene timestamps (hallazgo del audit) | Prerequisito de S1 (orden reciente) y del orden FIFO de la cola |
+| ID  | Endpoint                                                                                                                                      | Para                                                            |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| S1  | `GET /exams` (list, filtros título/grado/estado, paginado)                                                                                    | Historial                                                       |
+| S2  | `POST /exams/:id/duplicate`                                                                                                                   | Usar de plantilla                                               |
+| S3  | `DELETE /exams/:id`                                                                                                                           | Eliminar examen                                                 |
+| S4  | `PATCH /bank/questions/:id/archive` (estado `archived` nuevo en enum)                                                                         | Archivar pregunta                                               |
+| S5  | `DELETE /bank/questions/:id` (solo draft propio)                                                                                              | Borrar borrador                                                 |
+| S6  | Paginación en `GET /bank/questions` (= N2 promovido)                                                                                          | Banco                                                           |
+| S7  | `GET /bank/questions/:id/preview` (= N4 promovido, PNG vía Typst, caché)                                                                      | Cola revisión WYSIWYG                                           |
+| S8  | Módulo `users`: `GET/POST /users`, `PATCH /users/:id` (desactivar), `POST /users/:id/reset-password` (temporal) — tenant-scoped, school_admin | Config colegio                                                  |
+| S9  | Migración: `created_at` (+`updated_at`) en `exams`, `questions`, `users` — hoy NINGUNA tabla tiene timestamps (hallazgo del audit)            | Prerequisito de S1 (orden reciente) y del orden FIFO de la cola |
 
 ## Pantallas (definidas)
 
@@ -58,6 +58,7 @@ Aplica también al doc base cuando el otro agente implemente el flujo maestro (c
 Mismo patrón del flujo maestro (lista izquierda + preview vivo derecha). Ruta existente `/app/bank`.
 
 **Estructura:**
+
 1. **Barra de filtros** arriba: Curso ▾ · Tema ▾ (dependiente de curso) · Nivel ▾ (fácil/media/difícil) · Grado ▾ · Estado ▾ (aprobada/borrador/archivada) + búsqueda por título + botón primario "+ Nueva pregunta" (derecha).
 2. **Lista izquierda (~55%)**: filas compactas — thumbnail chico (vía `/assets/:id`), título, curso·tema, tag de nivel. Fila activa = borde primary-500 + fondo primary-50. Paginación al pie ("124 preguntas · ‹ 1/7 ›", S6).
 3. **Panel derecho (~45%)**: pregunta seleccionada completa — imagen grande (o contenido estructurado formateado), título, badges (nivel, origen: "Colegio" tint / "IA" morado / "Banco central 🔒" primary-100), metadata (clave, grado, "usada en N exámenes"), acciones: **Editar** (ghost) · **Archivar** (ghost, S4) · **Borrar** (rojo, solo borrador propio, S5). Preguntas del banco central: sin acciones, nota "Pregunta del banco central — solo lectura".
@@ -73,6 +74,7 @@ Nav del sidebar renombrado a **"Mis exámenes"** en el grupo Principal (cumple m
 **Rutas** (ajuste mínimo al árbol — ver "Coordinación con doc base" al final): `/app/exams` = lista índice (pantalla nueva) · `/app/exams/new` = flujo maestro para examen nuevo (hoy exam-create vive en `/app/exams`; se mueve) · `/app/exams/:id` = flujo maestro sobre borrador existente · `/app/exams/:id/versions` = detalle de formas (existente, se enriquece).
 
 **Lista (índice):**
+
 1. Barra de filtros: Grado ▾ · Estado ▾ (borrador/generado) + búsqueda por título + botón primario "+ Nuevo examen" (→ flujo maestro).
 2. Tarjetas-fila por examen: título, grado, nº preguntas, nº formas, tag estado ("Generado" verde / "Borrador" ámbar). Acción según estado: "Abrir ›" (generado) / "Seguir armando ›" (borrador → flujo maestro con estado cargado).
 3. Menú ⋯ por examen: **Usar de plantilla** (S2 → flujo maestro precargado con contenido duplicado, título "Copia de …") · **Eliminar** (S3; borrador borra directo, generado pide confirmación con nombre del examen).
@@ -80,6 +82,7 @@ Nav del sidebar renombrado a **"Mis exámenes"** en el grupo Principal (cumple m
 5. Empty state: "Aún no tienes exámenes" + CTA "+ Nuevo examen".
 
 **Detalle (examen generado):**
+
 1. Encabezado: título, grado, tag estado, "Usar de plantilla".
 2. Formas: fila por Forma A/B/C… con "Examen (PDF) ⬇" + "Hoja de claves ⬇" (B4) + botón oscuro "⬇ Descargar todo (ZIP)" (N1 si está disponible; si no, se ocultan hasta implementarlo).
 3. "Generar más formas" → reutiliza paso 3 del flujo maestro (regeneración idempotente según B4 ⚠ del doc base).
@@ -91,11 +94,13 @@ Nav del sidebar renombrado a **"Mis exámenes"** en el grupo Principal (cumple m
 Ruta existente `/app/ai/generate`. Dos columnas: form persistente izquierda (~300px), resultados ("la tanda") derecha.
 
 **Form (izquierda, panel blanco):**
+
 1. Campos: Curso ▾ · Tema ▾ · Nivel (segmented fácil/media/difícil) · Grado ▾ · Cantidad (stepper − N +) · ☐ Incluir figura (diagrama).
 2. CTA primario full-width: "✨ Generar N preguntas". Hint: "Tarda ~1 min · puedes seguir navegando".
 3. El form NUNCA se resetea tras generar — ajustar y volver a pedir sin re-llenar.
 
 **Tanda (derecha):**
+
 1. Tarjeta de estado: "7/10 preguntas generadas" + contexto (curso·tema·nivel·grado) + barra de progreso. Durante generación: progreso vivo.
 2. Fallos parciales: banner warning "3 no pasaron la validación" + botón "Reintentar 3" (mismos parámetros, solo las faltantes).
 3. Preguntas legibles inline: nº (badge morado IA), chip "Borrador IA", clave, enunciado completo, alternativas con la correcta marcada ✓ verde. Colapsa a "y N borradores más…" si son muchas.
@@ -109,11 +114,13 @@ Ruta existente `/app/ai/generate`. Dos columnas: form persistente izquierda (~30
 Ruta existente `/app/ai/review`. Mismo patrón del Banco: lista izquierda (~240px) + panel derecha. Badge contador de pendientes en el nav del sidebar ("Cola de revisión · 7").
 
 **Lista (izquierda):**
+
 1. Fila por borrador: primera línea del enunciado (truncada), curso·tema, chip nivel. Activa = borde primary-500.
 2. Orden: más antiguo primero (FIFO — requiere S9). Fuente: `GET /bank/questions?status=draft`.
 3. La cola muestra TODOS los borradores del tenant (generados por IA y subidos a mano); el chip "Borrador IA" aparece solo en los de origen IA.
 
 **Panel (derecha):**
+
 1. Cabecera: chips "Borrador IA" (morado) + nivel·grado + "clave: X".
 2. **Preview "papel"** (S7, WYSIWYG): la pregunta renderizada por Typst como PNG, sobre fondo papel con nota "Vista previa real — así se imprimirá". Compilación bajo demanda al seleccionar + caché por pregunta; skeleton mientras compila; si falla el render → fallback a contenido formateado + aviso.
 3. Acciones: **✓ Aprobar** (verde sólido) · **Editar** (ghost → form estructurado, re-valida server-side, invalida caché del preview) · **Rechazar** (outline rojo, confirmación). Al decidir, la lista avanza al siguiente pendiente.
@@ -125,11 +132,13 @@ Ruta existente `/app/ai/review`. Mismo patrón del Banco: lista izquierda (~240p
 Ruta nueva `/app/settings` (grupo Colegio del sidebar). Visible solo para `school_admin` (roleGuard). Subtítulo: nombre del colegio.
 
 **Tab "Datos y logo":**
+
 1. Form: nombre del colegio, ciudad (campos de `PATCH /tenants/:id` existente).
 2. Logo: preview 64px + "Cambiar logo" (`POST /tenants/:id/logo` existente). Nota: "Sale en el encabezado de cada examen PDF".
 3. Guardado con botón primario + toast "Guardado".
 
 **Tab "Profesores" (módulo users nuevo, S8):**
+
 1. Contador "N profesores activos" + botón primario "+ Agregar profesor".
 2. Tabla: avatar iniciales, nombre — email, chip rol ("Administra" / "Profesor"), chip estado ("Activo" verde / "Desactivado" gris), menú ⋯.
 3. Menú ⋯: **Restablecer contraseña** (genera temporal, se muestra UNA vez en modal para copiar/entregar) · **Desactivar/Reactivar** (desactivado no puede iniciar sesión; nunca se borra — preserva autoría).
@@ -142,6 +151,7 @@ Ruta nueva `/app/settings` (grupo Colegio del sidebar). Visible solo para `schoo
 **Login** (`/login`): mitad izquierda oscura (primary-900) con marca, promesa ("Tus exámenes tipo admisión, listos para imprimir."), texto de apoyo y mini-preview de un examen generado (tarjeta primary-800); mitad derecha canvas claro con form: "Inicia sesión" / "Con la cuenta que te dio tu colegio", correo, contraseña, botón "Entrar". Ayuda: "¿Olvidaste tu contraseña? Pídele una nueva al administrador de tu colegio" (coherente con S8: reset por admin, sin email). Sin registro público. Mobile: panel oscuro se reduce a franja superior con marca; form debajo.
 
 **Shell (correcciones obligatorias, sin mockup):**
+
 1. **Topbar**: nombre del colegio + menú de usuario (iniciales) → "Cerrar sesión" (llama al `AuthService.logout()` existente que hoy nadie usa).
 2. **401 handling**: interceptor captura 401 → limpia sesión → redirect a `/login` con mensaje "Tu sesión expiró, vuelve a entrar". Hoy no existe: token vencido = app rota silenciosa.
 3. **roleGuard cableado** en rutas (existe testeado, sin uso): `/app/settings` solo school_admin; `/app/ai/*` según rol si aplica; resto autenticado.
@@ -153,6 +163,7 @@ Ruta nueva `/app/settings` (grupo Colegio del sidebar). Visible solo para `schoo
 ## Coordinación con doc base (para el agente que lo implementa)
 
 Este spec ajusta 3 cosas del doc base `2026-07-18-ui-redesign-design.md`:
+
 1. **Sidebar §4**: "Exámenes" + "Versiones y PDF" se fusionan en un solo nav "Mis exámenes" (lista → flujo maestro / detalle de formas).
 2. **Árbol de rutas**: se agrega `/app/exams` como índice y el flujo maestro de examen nuevo pasa a `/app/exams/new`. El doc base decía "no se cambia el árbol"; este es el ajuste mínimo que exige tener historial.
 3. **Promociones**: N2 (paginación banco) y N4 (preview WYSIWYG) pasan de nice-to-have a requeridos (S6, S7). N1 (ZIP) sigue nice-to-have: el detalle de formas oculta el botón ZIP hasta que exista.

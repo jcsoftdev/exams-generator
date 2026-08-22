@@ -20,10 +20,7 @@ const QUESTION_MARKER = /\/\/ q:(\S+)/;
  * the failing line precedes every marker (e.g. a syntax error in the
  * template shell itself, not attributable to any single question).
  */
-export function mapCompileErrorToQuestionId(
-  typstSource: string,
-  stderr: string,
-): string | undefined {
+export function mapCompileErrorToQuestionId(typstSource: string, stderr: string): string | undefined {
   const match = INPUT_LINE_REFERENCE.exec(stderr);
   if (!match) {
     return undefined;

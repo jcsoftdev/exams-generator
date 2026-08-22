@@ -1,8 +1,5 @@
 import { renderExamTypst, renderAnswerKeyTypst } from "./typst-template";
-import {
-  ExamPdfDocumentInput,
-  AnswerKeyDocumentInput,
-} from "../../domain/ports/pdf-compiler.port";
+import { ExamPdfDocumentInput, AnswerKeyDocumentInput } from "../../domain/ports/pdf-compiler.port";
 
 describe("renderExamTypst", () => {
   it("sets a 2-column page layout", () => {
@@ -60,9 +57,7 @@ describe("renderExamTypst", () => {
         continue;
       }
 
-      const markerIndex = lines.findIndex((line) =>
-        line.includes(`// q:${question.id}`),
-      );
+      const markerIndex = lines.findIndex((line) => line.includes(`// q:${question.id}`));
       expect(markerIndex).toBeGreaterThanOrEqual(0);
 
       const imageLine = lines
@@ -140,7 +135,7 @@ describe("renderExamTypst — structured questions", () => {
           type: "structured",
           bodyTypst: "Observa la figura",
           alternatives: ["a", "b"],
-          figureCode: '#box[triangle placeholder]',
+          figureCode: "#box[triangle placeholder]",
         },
       ],
     };

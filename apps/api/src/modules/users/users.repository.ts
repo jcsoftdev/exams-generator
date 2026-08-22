@@ -11,7 +11,10 @@ import { exams, generationJobs, questions, users } from "../../db/schema";
  */
 export class UsersRepository {
   async listByTenant(tenantId: string, page: number, pageSize: number): Promise<PagedTenantUsers> {
-    const [{ value: total }] = await db.select({ value: count() }).from(users).where(eq(users.tenantId, tenantId));
+    const [{ value: total }] = await db
+      .select({ value: count() })
+      .from(users)
+      .where(eq(users.tenantId, tenantId));
     const rows = await db
       .select()
       .from(users)
@@ -63,7 +66,10 @@ export class UsersRepository {
   }
 
   async findByIdInTenant(id: string, tenantId: string) {
-    const [row] = await db.select().from(users).where(and(eq(users.id, id), eq(users.tenantId, tenantId)));
+    const [row] = await db
+      .select()
+      .from(users)
+      .where(and(eq(users.id, id), eq(users.tenantId, tenantId)));
     return row;
   }
 
@@ -80,7 +86,13 @@ export class UsersRepository {
     return row;
   }
 
-  async create(tenantId: string, email: string, name: string, role: Role, passwordHash: string): Promise<{ id: string }> {
+  async create(
+    tenantId: string,
+    email: string,
+    name: string,
+    role: Role,
+    passwordHash: string,
+  ): Promise<{ id: string }> {
     const [row] = await db
       .insert(users)
       .values({ tenantId, email, name, passwordHash, role: role as never })
@@ -89,10 +101,16 @@ export class UsersRepository {
   }
 
   async setActive(id: string, tenantId: string, active: boolean): Promise<void> {
-    await db.update(users).set({ active }).where(and(eq(users.id, id), eq(users.tenantId, tenantId)));
+    await db
+      .update(users)
+      .set({ active })
+      .where(and(eq(users.id, id), eq(users.tenantId, tenantId)));
   }
 
   async setPasswordHash(id: string, tenantId: string, passwordHash: string): Promise<void> {
-    await db.update(users).set({ passwordHash }).where(and(eq(users.id, id), eq(users.tenantId, tenantId)));
+    await db
+      .update(users)
+      .set({ passwordHash })
+      .where(and(eq(users.id, id), eq(users.tenantId, tenantId)));
   }
 }

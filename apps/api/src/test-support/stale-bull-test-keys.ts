@@ -11,7 +11,10 @@ const KEY_PID_PATTERN = /^bull-test-w\d+-p(\d+)-/;
  * left alone. A key with an unrecognized shape (no parseable pid) is treated
  * as stale too — it can't belong to a worker we'd recognize as live.
  */
-export function selectStaleBullTestKeys(keys: readonly string[], isPidDead: (pid: number) => boolean): string[] {
+export function selectStaleBullTestKeys(
+  keys: readonly string[],
+  isPidDead: (pid: number) => boolean,
+): string[] {
   return keys.filter((key) => {
     const match = KEY_PID_PATTERN.exec(key);
     return !match || isPidDead(Number(match[1]));

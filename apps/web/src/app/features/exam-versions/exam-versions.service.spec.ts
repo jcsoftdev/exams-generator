@@ -62,7 +62,10 @@ describe('ExamVersionsService', () => {
       });
 
       const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/versions`);
-      req.flush({ message: 'Exam has no selected questions' }, { status: 409, statusText: 'Conflict' });
+      req.flush(
+        { message: 'Exam has no selected questions' },
+        { status: 409, statusText: 'Conflict' },
+      );
 
       expect((capturedError as { status: number }).status).toBe(409);
     });
@@ -142,7 +145,9 @@ describe('ExamVersionsService', () => {
       vi.useFakeTimers();
       try {
         let capturedError: unknown;
-        service.streamVersionJob('exam-1', 'job-1').subscribe({ error: (err) => (capturedError = err) });
+        service
+          .streamVersionJob('exam-1', 'job-1')
+          .subscribe({ error: (err) => (capturedError = err) });
 
         httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/versions/jobs/job-1/stream`);
 
@@ -164,7 +169,9 @@ describe('ExamVersionsService', () => {
           error: (err) => (capturedError = err),
         });
 
-        const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/versions/jobs/job-1/stream`);
+        const req = httpMock.expectOne(
+          `${environment.apiBaseUrl}/exams/exam-1/versions/jobs/job-1/stream`,
+        );
 
         vi.advanceTimersByTime(119_999);
         const running = { ...PENDING_JOB, status: 'running' as const, completedCount: 1 };

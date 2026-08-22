@@ -23,9 +23,6 @@ export const tracks = pgTable(
     kind: text("kind").notNull(),
   },
   (table) => ({
-    universityIdCodeIdx: uniqueIndex("tracks_university_id_code_idx").on(
-      table.universityId,
-      table.code,
-    ),
+    universityIdCodeIdx: uniqueIndex("tracks_university_id_code_idx").on(table.universityId, table.code),
   }),
 );

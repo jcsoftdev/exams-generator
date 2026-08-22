@@ -3,7 +3,9 @@ import { Difficulty } from '@exams-generator/shared';
 import { buildQuestionTree, filterQuestionTree } from './bank-question-tree';
 import { BankQuestion, BankTopicCount } from '../bank.models';
 
-function q(o: Partial<BankQuestion> & { id: string; courseId: string; topicId: string }): BankQuestion {
+function q(
+  o: Partial<BankQuestion> & { id: string; courseId: string; topicId: string },
+): BankQuestion {
   return {
     id: o.id,
     // `??` would turn an explicit null back into 't1', and null IS the value
@@ -59,9 +61,15 @@ describe('buildQuestionTree', () => {
     expect(fracciones?.loaded).toBe(false);
   });
 
-  it('fills in a topic\'s leaves once that topic\'s page has been fetched, leaving its siblings untouched', () => {
+  it("fills in a topic's leaves once that topic's page has been fetched, leaving its siblings untouched", () => {
     const loaded = new Map<string, readonly BankQuestion[]>([
-      ['t1', [q({ id: 'q1', courseId: 'c1', topicId: 't1' }), q({ id: 'q2', courseId: 'c1', topicId: 't1' })]],
+      [
+        't1',
+        [
+          q({ id: 'q1', courseId: 'c1', topicId: 't1' }),
+          q({ id: 'q2', courseId: 'c1', topicId: 't1' }),
+        ],
+      ],
     ]);
 
     const tree = buildQuestionTree(COUNTS, loaded, COURSE_NAMES, TOPIC_NAMES);
@@ -76,7 +84,7 @@ describe('buildQuestionTree', () => {
     expect(porcentajes?.loaded).toBe(false);
   });
 
-  it('keeps the course/topic counts from the summary even when only part of a topic\'s page is loaded', () => {
+  it("keeps the course/topic counts from the summary even when only part of a topic's page is loaded", () => {
     const loaded = new Map<string, readonly BankQuestion[]>([
       ['t1', [q({ id: 'q1', courseId: 'c1', topicId: 't1' })]],
     ]);
@@ -174,7 +182,9 @@ describe('filterQuestionTree', () => {
   it('recomputes the surviving course count from the summary totals, not from the loaded leaves', () => {
     const partiallyLoaded = buildQuestionTree(
       COUNTS,
-      new Map<string, readonly BankQuestion[]>([['t1', [q({ id: 'q1', courseId: 'c1', topicId: 't1' })]]]),
+      new Map<string, readonly BankQuestion[]>([
+        ['t1', [q({ id: 'q1', courseId: 'c1', topicId: 't1' })]],
+      ]),
       COURSE_NAMES,
       TOPIC_NAMES,
     );

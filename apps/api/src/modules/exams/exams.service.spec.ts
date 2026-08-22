@@ -1,5 +1,10 @@
 import { Difficulty, Role } from "@exams-generator/shared";
-import { BadRequestException, ConflictException, ForbiddenException, NotFoundException } from "@nestjs/common";
+import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  NotFoundException,
+} from "@nestjs/common";
 import { createSeededRng } from "./domain/ports/random.port";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BlueprintRowRecord, ExamsRepository, QuestionPoolCandidateRecord } from "./exams.repository";
@@ -54,7 +59,11 @@ describe("ExamsService.createExam", () => {
     const { service } = buildDeps();
 
     await expect(
-      service.createExam(STAFF, { title: "X", gradeLevel: "primaria_1", blueprint: [{ courseId: "c1", count: 1 }] }),
+      service.createExam(STAFF, {
+        title: "X",
+        gradeLevel: "primaria_1",
+        blueprint: [{ courseId: "c1", count: 1 }],
+      }),
     ).rejects.toBeInstanceOf(ForbiddenException);
   });
 
@@ -82,7 +91,10 @@ describe("ExamsService.createExam", () => {
     expect(repository.createExam).toHaveBeenCalledWith(
       expect.objectContaining({ tenantId: "tenant-1", createdBy: "teacher-1", gradeLevel: "primaria_1" }),
     );
-    expect(repository.getQuestionPool).toHaveBeenCalledWith({ tenantId: "tenant-1", gradeLevel: "primaria_1" });
+    expect(repository.getQuestionPool).toHaveBeenCalledWith({
+      tenantId: "tenant-1",
+      gradeLevel: "primaria_1",
+    });
     expect(repository.saveSelection).toHaveBeenCalledTimes(1);
     const [, savedSelections] = repository.saveSelection.mock.calls[0]!;
     expect(savedSelections).toHaveLength(2);
@@ -107,7 +119,12 @@ describe("ExamsService.createExam", () => {
     await expect(promise).rejects.toMatchObject({
       examId: "exam-2",
       shortages: [
-        expect.objectContaining({ courseId: "course-1", courseName: "Aritmética", requested: 5, available: 3 }),
+        expect.objectContaining({
+          courseId: "course-1",
+          courseName: "Aritmética",
+          requested: 5,
+          available: 3,
+        }),
       ],
     });
     expect(repository.saveSelection).not.toHaveBeenCalled();
@@ -152,9 +169,9 @@ describe("ExamsService.replaceQuestion", () => {
     });
     repository.findExamQuestion.mockResolvedValue(undefined);
 
-    await expect(service.replaceQuestion(TEACHER, "exam-1", "q-not-selected", { mode: "reroll" })).rejects.toBeInstanceOf(
-      NotFoundException,
-    );
+    await expect(
+      service.replaceQuestion(TEACHER, "exam-1", "q-not-selected", { mode: "reroll" }),
+    ).rejects.toBeInstanceOf(NotFoundException);
   });
 
   it("reroll: picks another matching, unused candidate and persists the swap", async () => {
@@ -242,7 +259,10 @@ describe("ExamsService.replaceQuestion", () => {
     repository.getSelectedQuestionIds.mockResolvedValue(["q1"]);
 
     await expect(
-      service.replaceQuestion(TEACHER, "exam-1", "q1", { mode: "manual", replacementQuestionId: "q-wrong-course" }),
+      service.replaceQuestion(TEACHER, "exam-1", "q1", {
+        mode: "manual",
+        replacementQuestionId: "q-wrong-course",
+      }),
     ).rejects.toBeInstanceOf(BadRequestException);
     expect(repository.replaceQuestion).not.toHaveBeenCalled();
   });
@@ -317,9 +337,7 @@ describe("ExamsService.getExamDetail", () => {
       title: "Simulacro",
       gradeLevel: "primaria_1",
       status: "draft",
-      questions: [
-        expect.objectContaining({ id: "q1", position: 0, type: "image", imageAssetId: "asset-1" }),
-      ],
+      questions: [expect.objectContaining({ id: "q1", position: 0, type: "image", imageAssetId: "asset-1" })],
     });
   });
 });
@@ -455,13 +473,10 @@ describe("ExamsService.countStock (B1)", () => {
       ],
     });
 
-    expect(repository.countStock).toHaveBeenCalledWith(
-      { tenantId: "tenant-1", gradeLevel: "secundaria_1" },
-      [
-        { courseId: "course-1", topicId: undefined, difficulty: "easy" },
-        { courseId: "course-1", topicId: "topic-1", difficulty: "hard" },
-      ],
-    );
+    expect(repository.countStock).toHaveBeenCalledWith({ tenantId: "tenant-1", gradeLevel: "secundaria_1" }, [
+      { courseId: "course-1", topicId: undefined, difficulty: "easy" },
+      { courseId: "course-1", topicId: "topic-1", difficulty: "hard" },
+    ]);
     expect(result).toEqual({
       results: [
         { courseId: "course-1", topicId: undefined, difficulty: "easy", available: 20 },
@@ -644,7 +659,12 @@ describe("ExamsService.resolveExamBlueprint", () => {
     repository.findCurrentTemplate.mockResolvedValue(null);
 
     await expect(
-      service.resolveExamBlueprint({ examTypeCode: "eta", universityId: "uni-1", trackId: null, tenantId: "tenant-1" }),
+      service.resolveExamBlueprint({
+        examTypeCode: "eta",
+        universityId: "uni-1",
+        trackId: null,
+        tenantId: "tenant-1",
+      }),
     ).rejects.toBeInstanceOf(NotFoundException);
     expect(repository.getTemplateRows).not.toHaveBeenCalled();
   });
@@ -744,7 +764,9 @@ describe("ExamsService.resolveExamBlueprint", () => {
       { courseId: "course-1", weightPoints: 100 },
       { courseId: "course-2", weightPoints: 100 },
     ]);
-    repository.getSyllabusForTemplate.mockResolvedValue([{ courseId: "course-1", topicId: "topic-1", weekNumber: 0 }]);
+    repository.getSyllabusForTemplate.mockResolvedValue([
+      { courseId: "course-1", topicId: "topic-1", weekNumber: 0 },
+    ]);
     repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-03-05"), weekLengthDays: 7 });
 
     jest.useFakeTimers().setSystemTime(new Date("2026-03-05")); // week 0
@@ -775,7 +797,9 @@ describe("ExamsService.resolveExamBlueprint", () => {
     // cumulative fallback always finds it — the blueprint stays non-empty no
     // matter which real calendar week this test runs on (this test isn't
     // about that behavior, just about the call-argument threading below).
-    repository.getSyllabusForTemplate.mockResolvedValue([{ courseId: "course-1", topicId: "topic-1", weekNumber: 0 }]);
+    repository.getSyllabusForTemplate.mockResolvedValue([
+      { courseId: "course-1", topicId: "topic-1", weekNumber: 0 },
+    ]);
     repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-01-01"), weekLengthDays: 7 });
 
     await service.resolveExamBlueprint({
@@ -979,7 +1003,9 @@ describe("ExamsService.resolveExamBlueprint", () => {
         expect(result.weekNumber).toBe(3);
         expect(result.effectiveWeekNumber).toBe(3);
         expect(result.usedCumulativeFallback).toBe(false);
-        expect(result.blueprint).toEqual([{ courseId: "course-1", topicId: "topic-3", count: 9, difficulty: undefined }]);
+        expect(result.blueprint).toEqual([
+          { courseId: "course-1", topicId: "topic-3", count: 9, difficulty: undefined },
+        ]);
       } finally {
         jest.useRealTimers();
       }

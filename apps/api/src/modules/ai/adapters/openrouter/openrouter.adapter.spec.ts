@@ -117,17 +117,15 @@ describe("OpenRouterAdapter", () => {
   });
 
   it("ignores a separate `reasoning` field and parses `content` only", async () => {
-    const httpClient = jest
-      .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
-      .mockReturnValueOnce(
-        jsonResponse(
-          200,
-          chatCompletion({
-            reasoning: "Let me think about fractions step by step... {\"decoy\": true}",
-            content: JSON.stringify(VALID_QUESTION_JSON),
-          }),
-        ),
-      );
+    const httpClient = jest.fn<ReturnType<HttpClient>, Parameters<HttpClient>>().mockReturnValueOnce(
+      jsonResponse(
+        200,
+        chatCompletion({
+          reasoning: 'Let me think about fractions step by step... {"decoy": true}',
+          content: JSON.stringify(VALID_QUESTION_JSON),
+        }),
+      ),
+    );
     const adapter = new OpenRouterAdapter({
       apiKey: "sk-test-key",
       model: "deepseek/deepseek-r1:free",
@@ -251,9 +249,7 @@ describe("OpenRouterAdapter", () => {
     const withFigureQuestion = { ...VALID_QUESTION_JSON, figureCode: "#cetz.canvas({})" };
     const httpClient = jest
       .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
-      .mockReturnValueOnce(
-        jsonResponse(200, chatCompletion({ content: JSON.stringify(noFigureQuestion) })),
-      )
+      .mockReturnValueOnce(jsonResponse(200, chatCompletion({ content: JSON.stringify(noFigureQuestion) })))
       .mockReturnValueOnce(
         jsonResponse(200, chatCompletion({ content: JSON.stringify(withFigureQuestion) })),
       );
@@ -428,7 +424,9 @@ describe("OpenRouterAdapter", () => {
         .mockReturnValueOnce(
           jsonResponse(
             200,
-            chatCompletion({ content: JSON.stringify({ ...VALID_QUESTION_JSON, alternatives: ["only-one"] }) }),
+            chatCompletion({
+              content: JSON.stringify({ ...VALID_QUESTION_JSON, alternatives: ["only-one"] }),
+            }),
           ),
         )
         .mockReturnValueOnce(
@@ -534,9 +532,7 @@ describe("OpenRouterAdapter", () => {
       const body = JSON.parse(init.body);
       const userMessage = body.messages.find((m: { role: string }) => m.role === "user");
       const imagePart = userMessage.content.find((p: { type: string }) => p.type === "image_url");
-      expect(imagePart.image_url.url).toBe(
-        `data:image/png;base64,${EXTRACT_INPUT.image.toString("base64")}`,
-      );
+      expect(imagePart.image_url.url).toBe(`data:image/png;base64,${EXTRACT_INPUT.image.toString("base64")}`);
     });
 
     it("throws AiInvalidResponseError when both attempts fail validation", async () => {
@@ -549,9 +545,7 @@ describe("OpenRouterAdapter", () => {
         httpClient,
       });
 
-      await expect(adapter.extractFromImage(EXTRACT_INPUT)).rejects.toBeInstanceOf(
-        AiInvalidResponseError,
-      );
+      await expect(adapter.extractFromImage(EXTRACT_INPUT)).rejects.toBeInstanceOf(AiInvalidResponseError);
       expect(httpClient).toHaveBeenCalledTimes(2);
     });
 
@@ -577,7 +571,9 @@ describe("OpenRouterAdapter", () => {
         .mockReturnValueOnce(
           sseResponse(200, [
             sseChunk('{"bodyTypst":"¿Cuánto'),
-            sseChunk(' es $1/2 + 1/4$?","alternatives":["1/4","3/4","1/2","1","2"],"correctAnswer":"b","figureCode":null,"conceptsUsed":["suma de fracciones","homogeneización de denominadores"],"solutionSteps":2}'),
+            sseChunk(
+              ' es $1/2 + 1/4$?","alternatives":["1/4","3/4","1/2","1","2"],"correctAnswer":"b","figureCode":null,"conceptsUsed":["suma de fracciones","homogeneización de denominadores"],"solutionSteps":2}',
+            ),
             "data: [DONE]\n\n",
           ]),
         );
@@ -599,8 +595,15 @@ describe("OpenRouterAdapter", () => {
     it("emits a restart event before the internal retry when the first stream fails validation", async () => {
       const sseHttpClient = jest
         .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
-        .mockReturnValueOnce(sseResponse(200, [sseChunk(JSON.stringify({ ...VALID_QUESTION_JSON, alternatives: ["only-one"] })), "data: [DONE]\n\n"]))
-        .mockReturnValueOnce(sseResponse(200, [sseChunk(JSON.stringify(VALID_QUESTION_JSON)), "data: [DONE]\n\n"]));
+        .mockReturnValueOnce(
+          sseResponse(200, [
+            sseChunk(JSON.stringify({ ...VALID_QUESTION_JSON, alternatives: ["only-one"] })),
+            "data: [DONE]\n\n",
+          ]),
+        )
+        .mockReturnValueOnce(
+          sseResponse(200, [sseChunk(JSON.stringify(VALID_QUESTION_JSON)), "data: [DONE]\n\n"]),
+        );
       const adapter = new OpenRouterAdapter({
         apiKey: "sk-test-key",
         model: "deepseek/deepseek-r1:free",
@@ -660,7 +663,9 @@ describe("OpenRouterAdapter", () => {
       const httpClient = jest.fn<ReturnType<HttpClient>, Parameters<HttpClient>>();
       const sseHttpClient = jest
         .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
-        .mockReturnValueOnce(sseResponse(200, [sseChunk(JSON.stringify(VALID_QUESTION_JSON)), "data: [DONE]\n\n"]));
+        .mockReturnValueOnce(
+          sseResponse(200, [sseChunk(JSON.stringify(VALID_QUESTION_JSON)), "data: [DONE]\n\n"]),
+        );
       const adapter = new OpenRouterAdapter({
         apiKey: "sk-test-key",
         model: "deepseek/deepseek-r1:free",

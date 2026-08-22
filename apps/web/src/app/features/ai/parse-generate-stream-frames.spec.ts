@@ -1,5 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { parseGenerateStreamFrames, parseGenerationJobStreamFrames } from './parse-generate-stream-frames';
+import {
+  parseGenerateStreamFrames,
+  parseGenerationJobStreamFrames,
+} from './parse-generate-stream-frames';
 
 function frame(payload: unknown): string {
   return `data: ${JSON.stringify(payload)}\n\n`;

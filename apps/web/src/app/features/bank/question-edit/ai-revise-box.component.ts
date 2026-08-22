@@ -19,16 +19,27 @@ import { InputComponent } from '../../../ui/input/input.component';
   providers: [LucideAngularModule.pick({ Sparkles }).providers ?? []],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="flex flex-col gap-2 rounded-field border border-dashed border-primary-300 bg-primary-50/40 p-3">
+    <div
+      class="flex flex-col gap-2 rounded-field border border-dashed border-primary-300 bg-primary-50/40 p-3"
+    >
       <span class="flex items-center gap-1 text-xs font-medium text-primary-700">
         <lucide-angular name="sparkles" class="h-3.5 w-3.5"></lucide-angular>
         Editar con IA
       </span>
       <div data-testid="ai-instruction">
-        <ui-input [placeholder]="placeholder()" [value]="instruction()" (valueChange)="instructionChange.emit($event)"></ui-input>
+        <ui-input
+          [placeholder]="placeholder()"
+          [value]="instruction()"
+          (valueChange)="instructionChange.emit($event)"
+        ></ui-input>
       </div>
       <div data-testid="ai-revise" class="self-start">
-        <ui-button variant="ghost" [loading]="loading()" [disabled]="loading()" (clicked)="revise.emit()">
+        <ui-button
+          variant="ghost"
+          [loading]="loading()"
+          [disabled]="loading()"
+          (clicked)="revise.emit()"
+        >
           <span class="flex items-center gap-1">
             <lucide-angular name="sparkles" class="h-4 w-4"></lucide-angular>
             Revisar con IA

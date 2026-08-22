@@ -56,7 +56,13 @@ export class AuthService {
    */
   async me(userId: string): Promise<MeResponseDto> {
     const [user] = await db
-      .select({ id: users.id, name: users.name, email: users.email, role: users.role, tenantId: users.tenantId })
+      .select({
+        id: users.id,
+        name: users.name,
+        email: users.email,
+        role: users.role,
+        tenantId: users.tenantId,
+      })
       .from(users)
       .where(eq(users.id, userId));
 

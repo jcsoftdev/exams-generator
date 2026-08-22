@@ -76,9 +76,7 @@ describe("TaxonomyRepository", () => {
 
   afterAll(async () => {
     await db.delete(topics).where(inArray(topics.id, [topicAId, topicBId, testFactoryTopicId]));
-    await db
-      .delete(courses)
-      .where(inArray(courses.id, [courseAId, courseBId, testFactoryCourseId]));
+    await db.delete(courses).where(inArray(courses.id, [courseAId, courseBId, testFactoryCourseId]));
     await pool.end();
   });
 

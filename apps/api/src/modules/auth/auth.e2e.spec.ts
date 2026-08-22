@@ -104,9 +104,7 @@ describe("Auth (e2e)", () => {
 
   describe("guard composition (JwtAuthGuard -> RolesGuard -> TenantGuard)", () => {
     it("returns 401 with no Authorization header", async () => {
-      const res = await request(app.getHttpServer()).get(
-        `/test-fixtures/tenants/${tenantA.id}/protected`,
-      );
+      const res = await request(app.getHttpServer()).get(`/test-fixtures/tenants/${tenantA.id}/protected`);
 
       expect(res.status).toBe(401);
     });
@@ -144,9 +142,7 @@ describe("Auth (e2e)", () => {
     it("exchanges a login accessToken for a code, then the code back for the same accessToken", async () => {
       const accessToken = await loginAs(schoolAdminTenantA);
 
-      const codeRes = await request(app.getHttpServer())
-        .post("/auth/exchange-code")
-        .send({ accessToken });
+      const codeRes = await request(app.getHttpServer()).post("/auth/exchange-code").send({ accessToken });
       expect(codeRes.status).toBe(200);
       expect(typeof codeRes.body.code).toBe("string");
       expect((codeRes.body.code as string).length).toBeGreaterThan(0);
@@ -174,9 +170,7 @@ describe("Auth (e2e)", () => {
 
     it("a code can only be redeemed once", async () => {
       const accessToken = await loginAs(schoolAdminTenantA);
-      const codeRes = await request(app.getHttpServer())
-        .post("/auth/exchange-code")
-        .send({ accessToken });
+      const codeRes = await request(app.getHttpServer()).post("/auth/exchange-code").send({ accessToken });
 
       const first = await request(app.getHttpServer())
         .post("/auth/exchange")

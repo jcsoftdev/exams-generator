@@ -48,9 +48,14 @@ async function main(): Promise<void> {
   const dataDir = resolve(dataPath, "..");
   const data = JSON.parse(readFileSync(dataPath, "utf8")) as ImageData;
 
-  const [adminRow] = await db.select({ id: users.id }).from(users).where(eq(users.email, BANK_SAMPLE_ADMIN_EMAIL));
+  const [adminRow] = await db
+    .select({ id: users.id })
+    .from(users)
+    .where(eq(users.email, BANK_SAMPLE_ADMIN_EMAIL));
   if (!adminRow) {
-    throw new Error(`Platform-staff seed user '${BANK_SAMPLE_ADMIN_EMAIL}' not found — run 'pnpm --filter api db:seed' first.`);
+    throw new Error(
+      `Platform-staff seed user '${BANK_SAMPLE_ADMIN_EMAIL}' not found — run 'pnpm --filter api db:seed' first.`,
+    );
   }
   const token = new TokenService().sign({ sub: adminRow.id, tenantId: null, role: Role.PlatformAdmin });
 
@@ -66,7 +71,10 @@ async function main(): Promise<void> {
       // topics for primaria_* live under 'escuela', secundaria_*/pre under
       // 'colegio'/'preuniversitario' — the topic lookup must span every
       // same-named course row (same fix as seed-preuni-course.ts).
-      const courseRows = await db.select({ id: courses.id }).from(courses).where(eq(courses.name, entry.courseName));
+      const courseRows = await db
+        .select({ id: courses.id })
+        .from(courses)
+        .where(eq(courses.name, entry.courseName));
       if (courseRows.length === 0) {
         throw new Error(`Course '${entry.courseName}' not found`);
       }
@@ -74,7 +82,13 @@ async function main(): Promise<void> {
       const [topicRow] = await db
         .select({ id: topics.id, courseId: topics.courseId })
         .from(topics)
-        .where(and(inArray(topics.courseId, courseIds), eq(topics.name, entry.topicName), eq(topics.gradeLevel, entry.gradeLevel)));
+        .where(
+          and(
+            inArray(topics.courseId, courseIds),
+            eq(topics.name, entry.topicName),
+            eq(topics.gradeLevel, entry.gradeLevel),
+          ),
+        );
       if (!topicRow) {
         throw new Error(`Topic '${entry.topicName}' not found in course '${entry.courseName}'`);
       }
@@ -118,7 +132,8 @@ async function main(): Promise<void> {
   const seeded = data.entries.length - failures - skipped;
   console.log(
     `\n${seeded}/${data.entries.length} image questions seeded successfully` +
-      (skipped > 0 ? ` (${skipped} already present)` : "") + ".",
+      (skipped > 0 ? ` (${skipped} already present)` : "") +
+      ".",
   );
   await pool.end();
   process.exitCode = failures > 0 ? 1 : 0;

@@ -1,4 +1,10 @@
-import { BadRequestException, HttpException, HttpStatus, NotFoundException, UnprocessableEntityException } from "@nestjs/common";
+import {
+  BadRequestException,
+  HttpException,
+  HttpStatus,
+  NotFoundException,
+  UnprocessableEntityException,
+} from "@nestjs/common";
 import { Role } from "@exams-generator/shared";
 import { AuthTokenPayload } from "../auth/token.service";
 import { AiController } from "./ai.controller";
@@ -23,11 +29,7 @@ const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1",
 function buildController() {
   const extractService = { extract: jest.fn() } as unknown as jest.Mocked<ExtractQuestionService>;
   const reviseService = { revise: jest.fn() } as unknown as jest.Mocked<ReviseQuestionService>;
-  const controller = new AiController(
-    {} as GenerateQuestionsService,
-    reviseService,
-    extractService,
-  );
+  const controller = new AiController({} as GenerateQuestionsService, reviseService, extractService);
   return { controller, extractService, reviseService };
 }
 
@@ -68,7 +70,9 @@ describe("AiController.extract", () => {
 
   it("maps any other AiGenerationError to 502", async () => {
     const { controller, extractService } = buildController();
-    extractService.extract.mockRejectedValue(new AiGenerationError("OpenRouter request failed with status 401"));
+    extractService.extract.mockRejectedValue(
+      new AiGenerationError("OpenRouter request failed with status 401"),
+    );
 
     const rejection = controller.extract(FILE);
     await expect(rejection).rejects.toBeInstanceOf(HttpException);
@@ -115,7 +119,9 @@ describe("AiController.revise", () => {
 
   it("maps any other AiGenerationError to 502", async () => {
     const { controller, reviseService } = buildController();
-    reviseService.revise.mockRejectedValue(new AiGenerationError("OpenRouter request failed with status 401"));
+    reviseService.revise.mockRejectedValue(
+      new AiGenerationError("OpenRouter request failed with status 401"),
+    );
 
     const rejection = controller.revise(TEACHER_USER, "q1", { instruction: "x" });
     await expect(rejection).rejects.toBeInstanceOf(HttpException);

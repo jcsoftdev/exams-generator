@@ -20,16 +20,47 @@ import { courses, questions, topics } from "../db/schema";
  */
 const FOREIGN_MARKERS = [
   // English
-  "the ", " which ", " of the ", " is the ", " are ", " what is ", " find the ",
-  " calculate the ", " following ", " answer ", " if the ",
+  "the ",
+  " which ",
+  " of the ",
+  " is the ",
+  " are ",
+  " what is ",
+  " find the ",
+  " calculate the ",
+  " following ",
+  " answer ",
+  " if the ",
   // French
-  " quelle ", " quelles ", " est ", " sont ", " dans ", " soit ", " les ",
-  " avec ", " pour ", " vrai ", " faux ",
+  " quelle ",
+  " quelles ",
+  " est ",
+  " sont ",
+  " dans ",
+  " soit ",
+  " les ",
+  " avec ",
+  " pour ",
+  " vrai ",
+  " faux ",
 ];
 
 const SPANISH_MARKERS = [
-  " el ", " la ", " los ", " las ", " de ", " que ", " en ", " un ", " una ",
-  " halle", " calcule", " determine", " cuál", " cuánto", " si ",
+  " el ",
+  " la ",
+  " los ",
+  " las ",
+  " de ",
+  " que ",
+  " en ",
+  " un ",
+  " una ",
+  " halle",
+  " calcule",
+  " determine",
+  " cuál",
+  " cuánto",
+  " si ",
 ];
 
 function score(text: string, markers: readonly string[]): number {
@@ -57,7 +88,11 @@ async function main(): Promise<void> {
     // Any English-teaching course is exempt, not just the one literally named
     // "Inglés" — the school stage calls it "Inglés como Lengua Extranjera".
     .filter((row) => !row.course.toLowerCase().includes("inglés"))
-    .map((row) => ({ ...row, foreign: score(row.body ?? "", FOREIGN_MARKERS), spanish: score(row.body ?? "", SPANISH_MARKERS) }))
+    .map((row) => ({
+      ...row,
+      foreign: score(row.body ?? "", FOREIGN_MARKERS),
+      spanish: score(row.body ?? "", SPANISH_MARKERS),
+    }))
     .filter((row) => row.foreign >= 2 && row.foreign > row.spanish);
 
   const byCourse = new Map<string, number>();
@@ -65,7 +100,9 @@ async function main(): Promise<void> {
     byCourse.set(row.course, (byCourse.get(row.course) ?? 0) + 1);
   }
 
-  console.log(`${rows.length} central questions with a statement; ${suspects.length} do not read as Spanish outside the Inglés course`);
+  console.log(
+    `${rows.length} central questions with a statement; ${suspects.length} do not read as Spanish outside the Inglés course`,
+  );
   for (const [course, count] of [...byCourse].sort((a, b) => b[1] - a[1])) {
     console.log(`  ${String(count).padStart(5)}  ${course}`);
   }

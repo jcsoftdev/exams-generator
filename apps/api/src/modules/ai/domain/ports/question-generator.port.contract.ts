@@ -75,7 +75,11 @@ export function runQuestionGeneratorPortContract(
     it("generate() accepts a previousCompileError hint and still resolves a valid question", async () => {
       const adapter = createAdapter();
 
-      const result = await adapter.generate(BASE_INPUT, undefined, "Typst compile failed: unknown variable x");
+      const result = await adapter.generate(
+        BASE_INPUT,
+        undefined,
+        "Typst compile failed: unknown variable x",
+      );
 
       expect(typeof result.bodyTypst).toBe("string");
       expect(result.bodyTypst.length).toBeGreaterThan(0);
@@ -87,9 +91,7 @@ export function runQuestionGeneratorPortContract(
 
       await adapter.generate(BASE_INPUT, (event) => events.push(event));
 
-      const deltas = events.filter(
-        (e): e is { type: "delta"; text: string } => e.type === "delta",
-      );
+      const deltas = events.filter((e): e is { type: "delta"; text: string } => e.type === "delta");
       expect(deltas.length).toBeGreaterThan(0);
       expect(deltas.every((d) => d.text.length > 0)).toBe(true);
     });

@@ -9,9 +9,9 @@ describe("accountTrackerFor", () => {
   it("counts against the signed-in account", () => {
     // Audit 2026-08-20 M9: a whole school shares one IP, so the IP bucket
     // punishes colleagues and misses the abuser.
-    expect(
-      accountTrackerFor({ user: { sub: "user-1", tenantId: "t1", role: Role.Teacher } }),
-    ).toBe("account:user-1");
+    expect(accountTrackerFor({ user: { sub: "user-1", tenantId: "t1", role: Role.Teacher } })).toBe(
+      "account:user-1",
+    );
   });
 
   it("returns null when there is no user, so the caller can fall back to the IP", () => {
@@ -20,9 +20,7 @@ describe("accountTrackerFor", () => {
   });
 
   it("treats an empty sub as no user rather than keying everyone together", () => {
-    expect(
-      accountTrackerFor({ user: { sub: "", tenantId: null, role: Role.Teacher } }),
-    ).toBeNull();
+    expect(accountTrackerFor({ user: { sub: "", tenantId: null, role: Role.Teacher } })).toBeNull();
   });
 });
 

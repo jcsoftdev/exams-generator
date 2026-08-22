@@ -6,12 +6,7 @@ import { ExamsController } from "./exams.controller";
 function buildDeps() {
   const versionJobsService = { get: jest.fn() } as unknown as jest.Mocked<ExamVersionJobsService>;
   const versionJobEvents = new ExamVersionJobEventsService();
-  const controller = new ExamsController(
-    null as never,
-    null as never,
-    versionJobsService,
-    versionJobEvents,
-  );
+  const controller = new ExamsController(null as never, null as never, versionJobsService, versionJobEvents);
   return { controller, versionJobsService, versionJobEvents };
 }
 

@@ -1,4 +1,10 @@
-import { BadRequestException, ConflictException, ForbiddenException, Injectable, NotFoundException } from "@nestjs/common";
+import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  Injectable,
+  NotFoundException,
+} from "@nestjs/common";
 import { randomBytes } from "node:crypto";
 import {
   CREATABLE_USER_ROLES,
@@ -35,7 +41,12 @@ export class UsersService {
     return this.repository.listByTenant(requireTenant(user), page, pageSize);
   }
 
-  async create(user: AuthTokenPayload, email: string, name: string, role: CreatableUserRole): Promise<CreateUserResult> {
+  async create(
+    user: AuthTokenPayload,
+    email: string,
+    name: string,
+    role: CreatableUserRole,
+  ): Promise<CreateUserResult> {
     // `body.role` is never validated by a class-validator DTO before it
     // reaches here (this codebase has none for this route) — the TS param
     // type is a compile-time contract, not a runtime guarantee, so this
@@ -57,7 +68,13 @@ export class UsersService {
       throw new ConflictException(`An account with this email already exists on the platform: ${email}`);
     }
     const temporaryPassword = generateTemporaryPassword();
-    const { id } = await this.repository.create(tenantId, email, name.trim(), role, await hashPassword(temporaryPassword));
+    const { id } = await this.repository.create(
+      tenantId,
+      email,
+      name.trim(),
+      role,
+      await hashPassword(temporaryPassword),
+    );
     return { id, email, name: name.trim(), role, temporaryPassword };
   }
 

@@ -16,7 +16,9 @@ const STATS: DashboardStats = {
   exams: {
     total: 2,
     byStatus: { draft: 1, ready: 1 },
-    recent: [{ id: 'exam-1', title: 'Examen 1', status: 'ready', createdAt: '2026-07-01T00:00:00.000Z' }],
+    recent: [
+      { id: 'exam-1', title: 'Examen 1', status: 'ready', createdAt: '2026-07-01T00:00:00.000Z' },
+    ],
   },
   aiDrafts: { pending: 1 },
 };

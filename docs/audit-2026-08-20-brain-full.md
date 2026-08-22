@@ -80,25 +80,20 @@ release workflow).
       **HECHO (2026-08-21)**: guard de lectura en `TaxonomyRepository` —
       `findAllCourses`/`findTopics`/`findTopicsByCourseIds` excluyen cualquier curso o tema
       cuyo nombre lleve la firma de fábrica de tests (`TEST_TAXONOMY_NAME_PATTERN`,
-      `apps/api/src/db/test-taxonomy-name.ts`, con spec propia). Decisiones:
-      - **Filtro por nombre, no columna `is_test`**: una columna solo protege lo que un fixture
-        futuro se acuerde de marcar, y además necesitaría un backfill que usaría… este mismo
-        regex. El patrón atrapa hoy mismo la basura ya sembrada, sin migración.
-      - **Es guard de lectura, no reemplazo de la purga**: `purge-test-taxonomy.ts` ahora
-        importa la misma constante en vez de duplicarla. La purga sigue siendo la que borra;
-        esto es lo que impide que la basura se vea mientras tanto. Importa porque los 4 cursos
-        de test que quedan en la DB local (`Test Course 81b7883e-…`, los dos
-        `ExamsRepo Course …` que el audit vio en vivo) están anclados por exámenes de test y la
-        purga los conserva a propósito — ahora son invisibles igual.
-      - **También filtra por el nombre del tema**, no solo el del curso: un spec que cuelgue su
-        tema de un curso real se colaría si no.
-      - Los fixtures de `taxonomy.repository.spec.ts` / `taxonomy.e2e.spec.ts` que deben ser
-        VISIBLES pasaron a un sufijo sin guiones (siguen únicos, siguen borrados por id), y cada
-        archivo ganó un fixture nombrado como fábrica de tests que verifica la exclusión.
-      - Cero preguntas cuelgan de esos cursos, así que el árbol del banco no estaba afectado
-        (verificado en la DB local). El "25 de 26 elegidos" del reporte era el botón "Todos":
-        no hay preselección automática en el builder — con el filtro esos cursos ya ni aparecen
-        para poder marcarse.
+      `apps/api/src/db/test-taxonomy-name.ts`, con spec propia). Decisiones: - **Filtro por nombre, no columna `is_test`**: una columna solo protege lo que un fixture
+      futuro se acuerde de marcar, y además necesitaría un backfill que usaría… este mismo
+      regex. El patrón atrapa hoy mismo la basura ya sembrada, sin migración. - **Es guard de lectura, no reemplazo de la purga**: `purge-test-taxonomy.ts` ahora
+      importa la misma constante en vez de duplicarla. La purga sigue siendo la que borra;
+      esto es lo que impide que la basura se vea mientras tanto. Importa porque los 4 cursos
+      de test que quedan en la DB local (`Test Course 81b7883e-…`, los dos
+      `ExamsRepo Course …` que el audit vio en vivo) están anclados por exámenes de test y la
+      purga los conserva a propósito — ahora son invisibles igual. - **También filtra por el nombre del tema**, no solo el del curso: un spec que cuelgue su
+      tema de un curso real se colaría si no. - Los fixtures de `taxonomy.repository.spec.ts` / `taxonomy.e2e.spec.ts` que deben ser
+      VISIBLES pasaron a un sufijo sin guiones (siguen únicos, siguen borrados por id), y cada
+      archivo ganó un fixture nombrado como fábrica de tests que verifica la exclusión. - Cero preguntas cuelgan de esos cursos, así que el árbol del banco no estaba afectado
+      (verificado en la DB local). El "25 de 26 elegidos" del reporte era el botón "Todos":
+      no hay preselección automática en el builder — con el filtro esos cursos ya ni aparecen
+      para poder marcarse.
       Verificado: 935 tests non-e2e + 273 e2e, 100% verde.
 
 - [x] **H2 — Basura de harvest impresa en alternativas del banco central.** Reproducido en vivo
@@ -113,34 +108,29 @@ release workflow).
       medición destapó: la forma más común es la ÚLTIMA alternativa terminando en
       `Rpta.: "C"` — la clave impresa en el examen del alumno. Origen: scrapes de blogspot
       (`banco-preguntas`, `razonamiento-verbal1`, `matematicasn`), no los lotes PDF, salvo 4
-      filas UNI 2020-1 que sí traían el pie del cuadernillo.
-      - `strip-solution-tail.ts` (dominio, spec propia): corta desde el primer ancla —
-        `Rpta`, `Clave:`, `CLAVES-RESPUESTAS`, `Key :`, `Solucionario`, `SOLUCIÓN:`,
-        `Resolución <1-2 dígitos>`, `Respuesta <A-E>`, "Ver respuesta correcta", "Lee la
-        explicación breve", y el pie `2da. Prueba`. Cada ancla exige más que la palabra suelta
-        porque las palabras sueltas son español normal: "una tecla de clave numérica" y
-        "Resolución 1080" (documento, no paso de solucionario) sobreviven, verificado con
-        casos reales de la DB. Si el corte dejaría vacío, devuelve el original: una opción en
-        blanco en un examen impreso es peor que una cola visible.
-      - **Dos caminos de ingesta**, para que no vuelva: `prepareCollectedContent` (scrapes) y
-        `planLotSeed` (lotes cosechados). En ambos el strip corre DESPUÉS del hash — el
-        `body_hash` es la única llave de dedup del seeder y repinnarla haría que el próximo
-        boot reinsertara el banco entero.
-      - **Un paso en sitio** (`strip-seeded-solution-tails.ts`, corre en el boot junto a los
-        otros backfills): ninguna de las dos ingestas reescribe lo ya guardado — el corpus
-        collected sí se re-deriva, los lotes NO (dedupean por hash con figura y nunca se
-        reescriben) y un par de filas son anteriores a ambos caminos. Trabaja sobre el valor
-        almacenado, así que alcanza los tres, y es idempotente por construcción (su salida ya
-        no contiene ancla). Alcance `tenant_id IS NULL`: si un profesor escribió "Rpta." en su
-        propia pregunta, no es nuestro para reescribir.
-      - `escape-collected-typst.ts` pasó a llamarse `normalize-collected-content.ts`: ya no
-        solo escapa Typst, y el nombre mentía.
-      - Resultado en la DB local: **120 → 3**, y las 3 son falsos positivos del barrido, no
-        basura: "Nadie sabe cómo aprobó el examen de admisión 2026-I" (contenido real),
-        "Aplicación de la Resolución 1080" (documento real) y una etiqueta de procedencia
-        `(CEPRE SAN MARCOS 2017-I)` pegada al final de una alternativa — una sola fila,
-        cosmética, no se le construyó regla propia por no arriesgar recortes en preguntas que
-        hablen de universidades.
+      filas UNI 2020-1 que sí traían el pie del cuadernillo. - `strip-solution-tail.ts` (dominio, spec propia): corta desde el primer ancla —
+      `Rpta`, `Clave:`, `CLAVES-RESPUESTAS`, `Key :`, `Solucionario`, `SOLUCIÓN:`,
+      `Resolución <1-2 dígitos>`, `Respuesta <A-E>`, "Ver respuesta correcta", "Lee la
+      explicación breve", y el pie `2da. Prueba`. Cada ancla exige más que la palabra suelta
+      porque las palabras sueltas son español normal: "una tecla de clave numérica" y
+      "Resolución 1080" (documento, no paso de solucionario) sobreviven, verificado con
+      casos reales de la DB. Si el corte dejaría vacío, devuelve el original: una opción en
+      blanco en un examen impreso es peor que una cola visible. - **Dos caminos de ingesta**, para que no vuelva: `prepareCollectedContent` (scrapes) y
+      `planLotSeed` (lotes cosechados). En ambos el strip corre DESPUÉS del hash — el
+      `body_hash` es la única llave de dedup del seeder y repinnarla haría que el próximo
+      boot reinsertara el banco entero. - **Un paso en sitio** (`strip-seeded-solution-tails.ts`, corre en el boot junto a los
+      otros backfills): ninguna de las dos ingestas reescribe lo ya guardado — el corpus
+      collected sí se re-deriva, los lotes NO (dedupean por hash con figura y nunca se
+      reescriben) y un par de filas son anteriores a ambos caminos. Trabaja sobre el valor
+      almacenado, así que alcanza los tres, y es idempotente por construcción (su salida ya
+      no contiene ancla). Alcance `tenant_id IS NULL`: si un profesor escribió "Rpta." en su
+      propia pregunta, no es nuestro para reescribir. - `escape-collected-typst.ts` pasó a llamarse `normalize-collected-content.ts`: ya no
+      solo escapa Typst, y el nombre mentía. - Resultado en la DB local: **120 → 3**, y las 3 son falsos positivos del barrido, no
+      basura: "Nadie sabe cómo aprobó el examen de admisión 2026-I" (contenido real),
+      "Aplicación de la Resolución 1080" (documento real) y una etiqueta de procedencia
+      `(CEPRE SAN MARCOS 2017-I)` pegada al final de una alternativa — una sola fila,
+      cosmética, no se le construyó regla propia por no arriesgar recortes en preguntas que
+      hablen de universidades.
       **Hallazgo nuevo al medir, NO incluido en este fix**: 73 enunciados (`body_typst`)
       cargan su propia solución. Hay tres formas distintas y ninguna se arregla cortando la
       cola: bloques `Texto: A) … E) … SOLUCIÓN: …` con las alternativas dentro del enunciado,
@@ -158,64 +148,59 @@ release workflow).
       firma válida ya no alcanza: el guard pregunta por la cuenta detrás del token en cada
       request, y devuelve 401 si está desactivada **o si la fila ya no existe** (las dos
       responden igual a propósito — quien tenga el token de una cuenta borrada no aprende
-      cuál de las dos era).
-      - **Cache en memoria, no Redis** (el audit sugería Redis 60s). El espacio de claves se
-        limita a ids que vienen dentro de tokens con firma válida, así que no se puede inundar;
-        con varias instancias cada una guarda su propia respuesta, a lo sumo 60s vieja — la
-        misma garantía, no una peor. Y una caída de Redis no se lleva puesta la autenticación.
-        Costo: ~1 lectura por usuario por minuto, no una por request.
-      - **`ACCOUNT_STATUS_TTL_MS = 60s` ES la ventana de revocación**, y `TOKEN_TTL` dejó de
-        serlo: su docstring decía "no hay revocación de tokens" y ya no es cierto. Lo que las
-        8h siguen acotando es un token ROBADO de una cuenta que sigue activa — eso nada lo
-        re-chequea.
-      - **`setActive` invalida la entrada**, así que la desactivación pega al instante en esa
-        instancia: esperar el TTL sería correcto pero un admin que acaba de tocar "Desactivar"
-        lo lee como que el botón no hizo nada.
-      - `taxonomy.e2e.spec.ts` firmaba un token para un `sub` inventado; ahora crea un usuario
-        real. Era el único spec del repo que lo hacía — los demás ya usaban ids reales.
-      - Tests nuevos: spec propia del servicio (activo / inexistente / desactivado tras vencer
-        el cache / invalidación), caso del guard, y dos e2e — desactivar revoca el token que el
-        profesor ya tenía en la mano, y un token de un usuario borrado da 401.
+      cuál de las dos era). - **Cache en memoria, no Redis** (el audit sugería Redis 60s). El espacio de claves se
+      limita a ids que vienen dentro de tokens con firma válida, así que no se puede inundar;
+      con varias instancias cada una guarda su propia respuesta, a lo sumo 60s vieja — la
+      misma garantía, no una peor. Y una caída de Redis no se lleva puesta la autenticación.
+      Costo: ~1 lectura por usuario por minuto, no una por request. - **`ACCOUNT_STATUS_TTL_MS = 60s` ES la ventana de revocación**, y `TOKEN_TTL` dejó de
+      serlo: su docstring decía "no hay revocación de tokens" y ya no es cierto. Lo que las
+      8h siguen acotando es un token ROBADO de una cuenta que sigue activa — eso nada lo
+      re-chequea. - **`setActive` invalida la entrada**, así que la desactivación pega al instante en esa
+      instancia: esperar el TTL sería correcto pero un admin que acaba de tocar "Desactivar"
+      lo lee como que el botón no hizo nada. - `taxonomy.e2e.spec.ts` firmaba un token para un `sub` inventado; ahora crea un usuario
+      real. Era el único spec del repo que lo hacía — los demás ya usaban ids reales. - Tests nuevos: spec propia del servicio (activo / inexistente / desactivado tras vencer
+      el cache / invalidación), caso del guard, y dos e2e — desactivar revoca el token que el
+      profesor ya tenía en la mano, y un token de un usuario borrado da 401.
       Verificado: **956 non-e2e + 275 e2e, 100% verde**.
       **Nota de entorno**: a mitad de la sesión 13 suites e2e y `minio-storage.adapter.spec`
       empezaron a fallar con `S3Error: Storage backend has reached its minimum free drive
-      threshold`, reproducible con el árbol limpio. No era del código: el disco de la VM de
+    threshold`, reproducible con el árbol limpio. No era del código: el disco de la VM de
       Docker estaba al 100% (60G de 63G) y `infra_minio_data` solo pesa 227 MB — los que
       ocupaban eran ajenos al proyecto (`voto-informado-ai_ollama_data` 20.48 GB sin
       contenedor, imágenes y build cache). `docker builder prune` liberó 5.06 GB y todo volvió
       a verde, sin tocar ningún volumen.
 
 - [~] **H4 — Compose de producción con fallbacks de credenciales públicas y Redis sin auth en
-      red compartida.** `docker-compose.dokploy.yml:21-22,37-38,80-81`:
-      `${DB_PASSWORD:-exams}`, `${MINIO_ROOT_PASSWORD:-minioadmin}` — si la var no está seteada
-      en Dokploy, prod arranca con credenciales publicadas en este repo. `exams-redis` corre
-      sin `requirepass`. El header del propio archivo documenta que la resolución DNS cruzó
-      proyectos en la `dokploy-network` compartida — es decir, otros proyectos del host
-      alcanzan estos servicios por red. Infrastructure.
-      **Fix**: `:?must be set` (como ya hace JWT_SECRET) para DB/MinIO; `requirepass` en Redis;
-      red interna propia para infra, solo api/web en la red compartida.
-      **HECHO (2026-08-20, parcial)**: `DB_PASSWORD`/`MINIO_ROOT_PASSWORD`/`REDIS_PASSWORD`
-      ahora `:?must be set` en `docker-compose.dokploy.yml`; `exams-redis` con `--requirepass`
-      y healthcheck autenticado; `resolveRedisConnection()` (`common/queue.env.ts`) soporta
-      `REDIS_PASSWORD` — omite la key cuando está vacía, dev local sigue sin auth — con spec
-      nueva (`queue.env.spec.ts`); parity guard verde (el parser de
-      `parse-compose-api-environment.ts` ahora tolera comentarios en el bloque `environment`,
-      con spec). **Pendiente**: red interna propia para infra. **Deploy nota**: setear
-      `REDIS_PASSWORD` (y passwords reales de DB/MinIO) en Dokploy ANTES del próximo deploy —
-      el compose ahora se niega a arrancar sin ellos.
+  red compartida.** `docker-compose.dokploy.yml:21-22,37-38,80-81`:
+  `${DB_PASSWORD:-exams}`, `${MINIO_ROOT_PASSWORD:-minioadmin}` — si la var no está seteada
+  en Dokploy, prod arranca con credenciales publicadas en este repo. `exams-redis` corre
+  sin `requirepass`. El header del propio archivo documenta que la resolución DNS cruzó
+  proyectos en la `dokploy-network` compartida — es decir, otros proyectos del host
+  alcanzan estos servicios por red. Infrastructure.
+  **Fix**: `:?must be set` (como ya hace JWT_SECRET) para DB/MinIO; `requirepass` en Redis;
+  red interna propia para infra, solo api/web en la red compartida.
+  **HECHO (2026-08-20, parcial)**: `DB_PASSWORD`/`MINIO_ROOT_PASSWORD`/`REDIS_PASSWORD`
+  ahora `:?must be set` en `docker-compose.dokploy.yml`; `exams-redis` con `--requirepass`
+  y healthcheck autenticado; `resolveRedisConnection()` (`common/queue.env.ts`) soporta
+  `REDIS_PASSWORD` — omite la key cuando está vacía, dev local sigue sin auth — con spec
+  nueva (`queue.env.spec.ts`); parity guard verde (el parser de
+  `parse-compose-api-environment.ts` ahora tolera comentarios en el bloque `environment`,
+  con spec). **Pendiente**: red interna propia para infra. **Deploy nota**: setear
+  `REDIS_PASSWORD` (y passwords reales de DB/MinIO) en Dokploy ANTES del próximo deploy —
+  el compose ahora se niega a arrancar sin ellos.
 
 - [~] **H5 — Imágenes Docker corren como root y el build puede des-congelar el lockfile en
-      silencio.** Ningún `USER` en `Dockerfile.api`/`Dockerfile.web`/(`Dockerfile.landing`);
-      no existe `.dockerignore` (context `..` + `COPY . .` arrastra `.git`, `node_modules`
-      locales y un `.env` raíz si existe, a la build stage);
-      `pnpm install --frozen-lockfile … || pnpm install` (`Dockerfile.api:28`,
-      `Dockerfile.web:14`) convierte un lockfile desincronizado en un build "verde" no
-      reproducible. DevOps.
-      **Fix**: `USER node`, `.dockerignore` raíz, quitar el `|| pnpm install`.
-      **HECHO (2026-08-20, parcial)**: `.dockerignore` raíz creado; `USER node` en el runtime
-      de `Dockerfile.api`; `|| pnpm install` eliminado de los tres Dockerfiles. **Pendiente**:
-      los runtimes nginx de web/landing siguen como root (cambiarlos implica
-      `nginx-unprivileged` + puerto ≠ 80 — cambio aparte, no quick win).
+  silencio.** Ningún `USER` en `Dockerfile.api`/`Dockerfile.web`/(`Dockerfile.landing`);
+  no existe `.dockerignore` (context `..` + `COPY . .` arrastra `.git`, `node_modules`
+  locales y un `.env` raíz si existe, a la build stage);
+  `pnpm install --frozen-lockfile … || pnpm install` (`Dockerfile.api:28`,
+  `Dockerfile.web:14`) convierte un lockfile desincronizado en un build "verde" no
+  reproducible. DevOps.
+  **Fix**: `USER node`, `.dockerignore` raíz, quitar el `|| pnpm install`.
+  **HECHO (2026-08-20, parcial)**: `.dockerignore` raíz creado; `USER node` en el runtime
+  de `Dockerfile.api`; `|| pnpm install` eliminado de los tres Dockerfiles. **Pendiente**:
+  los runtimes nginx de web/landing siguen como root (cambiarlos implica
+  `nginx-unprivileged` + puerto ≠ 80 — cambio aparte, no quick win).
 
 - [x] **H6 — Llamadas LLM sin techo de gasto: sin `max_tokens`, input sin truncar, sin
       circuit-breaker.** `openrouter-request-builder.ts` no manda `max_tokens` (factura lo que
@@ -226,33 +211,27 @@ release workflow).
       en `infra/env.example`). Cost + AI. Severidad condicionada: High al mover a modelo pagado.
       **Fix**: `max_tokens` explícito, cap de longitud en instruction (p. ej. 2 000 chars),
       contador de uso por tenant (ya existe `generation_jobs` para colgarlo).
-      **HECHO (2026-08-21)**:
-      - `MAX_COMPLETION_TOKENS = 3000` en los tres bodies (generate / revise / extract). Está
-        deliberadamente POR ENCIMA de lo que necesita una respuesta buena, no al ras: la
-        respuesta es una pregunta + 5 alternativas + una figura CeTZ opcional, bastante por
-        debajo de mil tokens. Un tope apretado cortaría el JSON a mitad de objeto, fallaría la
-        validación de schema y compraría un reintento — cambiar un bug de costo por uno de
-        correctitud. Es un muro contra la fuga, no un ajuste de presupuesto.
-      - `MAX_INSTRUCTION_CHARS = 2000` en `ReviseQuestionService`, validado ANTES de leer la
-        pregunta o llamar al modelo. El único tope que había era el body de 5mb, y esa cadena
-        se pega tal cual en el prompt.
-      - **El contador por tenant NO se hizo, y hay una razón**: el freno que faltaba ya existe
-        desde el audit del 2026-08-18 — `MAX_ACTIVE_JOBS_PER_TENANT = 20` corta el total de
-        jobs en vuelo por colegio, que es lo que permitía encolar miles. Un contador de consumo
-        es reporte (cuánto gastó cada colegio), no control, y pide esquema y pantalla propios.
-        Queda como ítem de producto aparte, no como agujero de gasto.
+      **HECHO (2026-08-21)**: - `MAX_COMPLETION_TOKENS = 3000` en los tres bodies (generate / revise / extract). Está
+      deliberadamente POR ENCIMA de lo que necesita una respuesta buena, no al ras: la
+      respuesta es una pregunta + 5 alternativas + una figura CeTZ opcional, bastante por
+      debajo de mil tokens. Un tope apretado cortaría el JSON a mitad de objeto, fallaría la
+      validación de schema y compraría un reintento — cambiar un bug de costo por uno de
+      correctitud. Es un muro contra la fuga, no un ajuste de presupuesto. - `MAX_INSTRUCTION_CHARS = 2000` en `ReviseQuestionService`, validado ANTES de leer la
+      pregunta o llamar al modelo. El único tope que había era el body de 5mb, y esa cadena
+      se pega tal cual en el prompt. - **El contador por tenant NO se hizo, y hay una razón**: el freno que faltaba ya existe
+      desde el audit del 2026-08-18 — `MAX_ACTIVE_JOBS_PER_TENANT = 20` corta el total de
+      jobs en vuelo por colegio, que es lo que permitía encolar miles. Un contador de consumo
+      es reporte (cuánto gastó cada colegio), no control, y pide esquema y pantalla propios.
+      Queda como ítem de producto aparte, no como agujero de gasto.
       Verificado: 986 non-e2e + 276 e2e.
 
 - [x] **H8 — 73 enunciados del banco central cargan su propia solución.** Encontrado al medir
       H2 (2026-08-21): `body_typst` de 73 preguntas contiene el solucionario de la fuente. Tres
-      formas, ninguna arreglable con el corte de cola de H2:
-      - Bloques completos: `GUERRA / Texto: A) palabra B) frase … SOLUCIÓN: Se denomina texto
-        al enunciado…` — las alternativas Y la explicación viven dentro del enunciado, así que
-        el alumno lee la respuesta en el propio texto de la pregunta.
-      - Palabra inyectada a mitad de frase: "…casi nunca llegan a morir de un ataque al
-        corazón, pero en sus **Solucionario** cerebros queda el rechazo…". Un corte por ancla
-        truncaría la pregunta a la mitad.
-      - Cola de solucionario después de un enunciado por lo demás sano.
+      formas, ninguna arreglable con el corte de cola de H2: - Bloques completos: `GUERRA / Texto: A) palabra B) frase … SOLUCIÓN: Se denomina texto
+      al enunciado…` — las alternativas Y la explicación viven dentro del enunciado, así que
+      el alumno lee la respuesta en el propio texto de la pregunta. - Palabra inyectada a mitad de frase: "…casi nunca llegan a morir de un ataque al
+      corazón, pero en sus **Solucionario** cerebros queda el rechazo…". Un corte por ancla
+      truncaría la pregunta a la mitad. - Cola de solucionario después de un enunciado por lo demás sano.
       Cortar a ciegas destruye enunciados buenos, y el barrido por regex tiene falsos positivos
       reales en este campo ("Resolución 217 – A" de la Asamblea General). Necesita clasificar
       las tres formas por separado y decidir por forma: recortar, re-extraer del scrape, o
@@ -266,14 +245,11 @@ release workflow).
       futbolista, portero) estaban intactas en su columna. O sea la pregunta estaba bien; solo
       había que cortar lo ajeno. Ahora el enunciado es "FÚTBOL" y la pregunta funciona.
       `stripStatementPollution` (dominio, spec propia) hace tres cosas distintas porque son
-      tres fallas distintas, y ninguna es la de H2 — por eso NO se reusó `stripSolutionTail`:
-      - **Bloque ajeno**: corta desde `Texto:` solo cuando lo sigue el bloque `A) palabra`. Un
-        texto de comprensión lectora que empiece con "Texto:" sobrevive.
-      - **Palabra inyectada a mitad de frase** ("en sus **Solucionario** cerebros", "haustorios
-        **Solucionario** , raíces"): se borra la palabra, no se corta la frase. Se reconoce por
-        el contexto en minúscula a ambos lados.
-      - **Cola al final**: solo se recorta un marcador que esté al FINAL. A mitad de frase
-        cortar truncaría la pregunta, que es exactamente el caso anterior.
+      tres fallas distintas, y ninguna es la de H2 — por eso NO se reusó `stripSolutionTail`: - **Bloque ajeno**: corta desde `Texto:` solo cuando lo sigue el bloque `A) palabra`. Un
+      texto de comprensión lectora que empiece con "Texto:" sobrevive. - **Palabra inyectada a mitad de frase** ("en sus **Solucionario** cerebros", "haustorios
+      **Solucionario** , raíces"): se borra la palabra, no se corta la frase. Se reconoce por
+      el contexto en minúscula a ambos lados. - **Cola al final**: solo se recorta un marcador que esté al FINAL. A mitad de frase
+      cortar truncaría la pregunta, que es exactamente el caso anterior.
       Va en `prepareCollectedContent`, no en un script suelto: el backfill del boot re-deriva
       el corpus collected desde los JSON, así que una limpieza en sitio se desharía sola en el
       siguiente arranque. Hash sobre el enunciado CRUDO, como el escapado.
@@ -290,14 +266,12 @@ release workflow).
       cerrar H8 diciendo que tres preguntas habían perdido su enunciado. Al ir a recuperarlas
       de su `source_url` bastó mirar sus alternativas y su clave para ver que las tres están
       **sanas**, y que el error fue de lectura: en las tres, "RESOLUCIÓN" es una PALABRA del
-      contenido, no el marcador de solucionario que mi barrido creyó.
-      - `83b35aca`: el "enunciado" `RESOLUCIÓN : INDECISIÓN` **es el par base** de una analogía
-        de antónimos. Alternativas: presteza:pesadez, prontitud:apatía, rapidez:festinación…
-        Clave almacenada: `presteza : pesadez` — antónimos. Coherente.
-      - `ce358204` y `b3011cad`: `… el par base escrito en mayúscula. RESOLUCIÓN : NORMA::` es
-        el enunciado COMPLETO — el par base es "resolución : norma" (una resolución es un tipo
-        de norma). Clave almacenada en ambas: `impuesto : tributo`, la misma relación de
-        hiperonimia. Coherente.
+      contenido, no el marcador de solucionario que mi barrido creyó. - `83b35aca`: el "enunciado" `RESOLUCIÓN : INDECISIÓN` **es el par base** de una analogía
+      de antónimos. Alternativas: presteza:pesadez, prontitud:apatía, rapidez:festinación…
+      Clave almacenada: `presteza : pesadez` — antónimos. Coherente. - `ce358204` y `b3011cad`: `… el par base escrito en mayúscula. RESOLUCIÓN : NORMA::` es
+      el enunciado COMPLETO — el par base es "resolución : norma" (una resolución es un tipo
+      de norma). Clave almacenada en ambas: `impuesto : tributo`, la misma relación de
+      hiperonimia. Coherente.
       **Lo que sí vale la pena guardarse**: las reglas de H8 dejaron estas tres en paz, y eso
       no fue suerte — el corte por cola solo dispara con el marcador AL FINAL, y el `RESOLUCIÓN`
       en mayúsculas solo se recorta de títulos que ya empiezan con "Copia de"/tras
@@ -323,16 +297,12 @@ release workflow).
       `(stage, name)`, así que el nivel es literalmente lo único que separa a los homónimos), y
       el web lo usa vía `courseLabels()` (`features/taxonomy/course-label.ts`, spec propia) en
       el árbol del banco y en el filtro de curso: "Comunicación · Colegio" /
-      "Comunicación · Preuniversitario".
-      - **Solo se etiqueta lo que se repite.** Poner el nivel a los 45 cursos ensuciaría el
-        caso común para arreglar el raro; los nombres únicos siguen desnudos.
-      - Comparación normalizada (trim + minúsculas), así que "Arte y Cultura" y
-        "arte y cultura " cuentan como el mismo nombre y ambos se desambiguan.
-      - Un `stage` que el front no conozca se imprime crudo en vez de omitirse: una distinción
-        que no sabemos nombrar sigue siendo una distinción que el lector necesita. Por eso
-        `Course.stage` es `string` y no la unión `Stage`.
-      - Etiqueta corta ("Colegio") y no `STAGE_LABELS` ("Colegio (Secundaria)"): aquí es un
-        sufijo sobre un nombre que ya es largo.
+      "Comunicación · Preuniversitario". - **Solo se etiqueta lo que se repite.** Poner el nivel a los 45 cursos ensuciaría el
+      caso común para arreglar el raro; los nombres únicos siguen desnudos. - Comparación normalizada (trim + minúsculas), así que "Arte y Cultura" y
+      "arte y cultura " cuentan como el mismo nombre y ambos se desambiguan. - Un `stage` que el front no conozca se imprime crudo en vez de omitirse: una distinción
+      que no sabemos nombrar sigue siendo una distinción que el lector necesita. Por eso
+      `Course.stage` es `string` y no la unión `Stage`. - Etiqueta corta ("Colegio") y no `STAGE_LABELS` ("Colegio (Secundaria)"): aquí es un
+      sufijo sobre un nombre que ya es largo.
       Verificado: 957 non-e2e + 275 e2e (API) y 839 tests de web, todo verde.
 
 - [x] **M3 — Móvil 390px: tarjetas de examen ilegibles.** Screenshot: título truncado a "Co…"
@@ -356,99 +326,83 @@ release workflow).
       confunde más que un sufijo de más.
 
 - [~] **M4 — Contrato API↔web duplicado a mano sin guard.** `packages/shared` solo cubre auth
-      (5 DTOs + 2 enums); las 10 features de web re-declaran cada shape de respuesta en
-      `*.models.ts` (p. ej. `ExamVersionJob` en `exam-versions.models.ts:28` vs
-      `ExamVersionJobRecord` en `exam-version-jobs.repository.ts:21`). Sin OpenAPI, sin test
-      de equivalencia, sin check de CI — el drift solo aparece en runtime. Contract Drift.
-      **EL GUARD, HECHO (2026-08-21); LA MIGRACIÓN DE CONTRATOS, EMPEZADA.**
-      Lo primero fue descubrir por qué "no hay check": **ningún runner chequea tipos**. jest
-      corre ts-jest con `isolatedModules` y vitest transpila con esbuild — los dos ejecutan
-      felices código que no compila. Por eso no alcanzaba con mover tipos a `shared`: sin un
-      typecheck real, dos declaraciones idénticas siguen sin estar atadas por nada.
-      - `pnpm typecheck` nuevo: tarea de turbo (`dependsOn: ["^build"]`, así `shared` se
-        construye antes de que la API resuelva sus tipos) + script por paquete, y un job
-        `typecheck` en `ci.yml`.
-      - **Encontró dos bugs reales en el primer intento**: `bank.repository.ts` tenía
-        `sourceName` DUPLICADO en dos object literals (TS1117) — una clave pisando a la otra,
-        delante de las narices de 993 tests que nunca la vieron. Arreglado.
-      - `apps/web/tsconfig.typecheck.json`: el mapeo de paths resuelve `@exams-generator/shared`
-        al FUENTE, que vive fuera de `apps/web`, y con el `rootDir` que TS infiere eso es un
-        TS6059 antes de reportar un solo problema real. Se ensancha a la raíz del repo; es
-        seguro porque solo corre con `--noEmit`, y apuntar al fuente y no al `.d.ts` compilado
-        es justamente el punto: `dist` puede estar viejo.
-      - Primer contrato migrado: `ExamVersionJob` + `EXAM_VERSION_JOB_STATUSES` viven ahora en
-        `packages/shared/src/dto/exam-version-job.dto.ts`. El web lo re-exporta desde su
-        `exam-versions.models.ts` (los otros 6 archivos no cambian: conservan su vocabulario
-        local con UNA sola declaración detrás). El `ExamVersionJobRecord` de la API sigue más
-        ancho a propósito — `tenantId`, `createdBy` y timestamps son almacenamiento, no
-        contrato.
-      - `exam-version-job-contract.spec.ts` (API) compara la lista de estados compartida contra
-        el enum de la base: `shared` no puede importar el schema de la API, así que las dos
-        listas están tan alineadas como ese test las mantenga.
-      **Comprobado que muerde**: renombrar `completedCount` en el tipo compartido tumba
-      `pnpm typecheck` con errores en el web. Antes de esto, el mismo rename pasaba los 993
-      tests de la API y los 844 del web sin una queja.
-      **Segunda tanda (2026-08-21)**: promovido el catálogo de grados, que estaba declarado
-      **cuatro veces** — el dominio de exams en la API y los modelos de bank, ai y exams en el
-      web. Los dos originales llevaban un comentario prometiendo promoverlo "si/cuando el
-      módulo de banco necesite el mismo catálogo"; lo necesitaba desde hacía tres copias, y el
-      de `ai.models.ts` decía "cuando una tercera feature lo necesite" — eran tres.
-      `GRADE_LEVELS`, `GradeLevel`, `isGradeLevel`, `STAGES`, `Stage`, `isStage` y
-      `stageForGrade` viven ahora en `packages/shared/src/domain/grade-level.ts` con spec
-      propia; los cuatro archivos re-exportan.
-      - **Las etiquetas NO se movieron a shared**: "1° primaria" es copy de UI en español que
-        solo el web renderiza. Pero pasaron de tres copias a una
-        (`features/taxonomy/grade-level-labels.ts`) — tres copias son tres oportunidades de que
-        "4° secundaria" se vuelva "4to secundaria" en una sola pantalla.
-      - `STAGE_LABELS` se borró de la API: copy en español que ningún código del servidor leía.
-      **Tercera tanda (2026-08-21)**: contratos de respuesta de **exams** y **bank**, en
-      paralelo. Mover el tipo fue lo de menos; lo que valió fue lo que apareció al comparar
-      campo por campo:
-      - `ExamListItem` de la API tenía `status: string` a secas — nada impedía que esa copia se
-        alejara de los estados válidos. Ahora es `ExamStatus`.
-      - En bank, `status` y `type` estaban OPCIONALES del lado web con un comentario que
-        culpaba a "la forma legacy del GET sin paginar". Se leyó el repositorio: las dos
-        sobrecargas seleccionan exactamente el mismo set de columnas, así que ninguno de los
-        dos falta nunca. El comentario describía un problema que no existía. Ahora son
-        obligatorios.
-      - `alternatives` es `unknown` en la API (jsonb sin `$type` de Drizzle) y
-        `readonly string[] | null` en el web. Lo que de verdad cruza el cable es lo segundo —
-        cada lectura en `bank.service.ts` castea a `readonly string[]` y cada escritura guarda
-        un array de strings. El contrato dice lo que se manda; el tipo de la API se queda
-        `unknown` porque es la descripción honesta de lo que garantiza la columna.
-      - `ExamListFilters` NO se movió: los dos lados difieren por diseño (la API los tiene
-        clampeados y obligatorios, el web opcionales antes de clampear). No es una forma de
-        wire.
-      **Y salió un hallazgo funcional que nadie había visto — ver M13.**
-      **Cuarta tanda (2026-08-21) — CERRADO**: ai, tenants, users y dashboard, tres agentes en
-      paralelo. Otra vez, comparar valió más que mover:
-      - **`role` era `string` a secas en LOS DOS lados** (`TenantUser` del web y el del
-        repositorio de la API), teniendo el enum `Role` compartido desde siempre. Ahora es
-        `Role` — el enum COMPLETO, no el subconjunto creable, porque la tabla guarda
-        `platform_admin` (lo siembra `db/seed.ts`) y `listByTenant` no filtra por rol:
-        estrecharlo haría que un tenant con una fila así mintiera sobre su propia lista.
-      - `UserRole` era una unión escrita a mano en el web y **la misma unión literal inline**
-        en el `@Body()` del controlador. Ahora `CREATABLE_USER_ROLES`, y la validación en
-        runtime de `UsersService.create` valida contra esa lista en vez de una cadena de `!==`.
-      - **`temporaryPassword` se mantuvo SOLO en `CreateUserResult` y `ResetPasswordResult`.**
-        Es un secreto de un solo uso; meterlo como opcional en `TenantUser` habría dejado la
-        puerta abierta a que una respuesta futura lo filtre.
-      - El web declaraba `figureCode?: string | null` para la IA, pero la API nunca manda
-        `null` — omite el campo. Verificado: no hay un solo `=== null` en ninguna punta.
-      - `bank.byStatus` viaja al web y **nadie lo renderiza**: se queda porque la API deriva
-        `aiDrafts.pending` de esa misma consulta agrupada, y sacarlo costaría una segunda
-        consulta al banco por un número. Documentado, no borrado — es dato de más en el cable,
-        el inverso de M13 y mucho menos grave.
-      **El guard cazó una suposición, no solo un rename**: un agente intentó estrechar
-      `AiRevisedQuestion.alternatives` a una tupla de 5 (el validador de OpenRouter rechaza
-      cualquier otra cosa) y `pnpm typecheck` le mostró que los fixtures de la feature *bank*
-      construyen ese tipo con 2 elementos. Revirtió y lo documentó.
-      **Pendiente menor**: `generation_jobs` y `exam_version_jobs` usan el MISMO enum de
-      Postgres, y shared tiene dos uniones idénticas declaradas por separado
-      (`GenerationJobStatus` y `ExamVersionJobStatus`), cada una fijada contra la misma fuente
-      desde specs distintas. Consolidarlas es candidato futuro, no deuda urgente.
-      Verificado con el árbol quieto: **1003 non-e2e + 276 e2e** (API), **849** (web),
-      **42** (shared), `pnpm typecheck` limpio.
+  (5 DTOs + 2 enums); las 10 features de web re-declaran cada shape de respuesta en
+  `*.models.ts` (p. ej. `ExamVersionJob` en `exam-versions.models.ts:28` vs
+  `ExamVersionJobRecord` en `exam-version-jobs.repository.ts:21`). Sin OpenAPI, sin test
+  de equivalencia, sin check de CI — el drift solo aparece en runtime. Contract Drift.
+  **EL GUARD, HECHO (2026-08-21); LA MIGRACIÓN DE CONTRATOS, EMPEZADA.**
+  Lo primero fue descubrir por qué "no hay check": **ningún runner chequea tipos**. jest
+  corre ts-jest con `isolatedModules` y vitest transpila con esbuild — los dos ejecutan
+  felices código que no compila. Por eso no alcanzaba con mover tipos a `shared`: sin un
+  typecheck real, dos declaraciones idénticas siguen sin estar atadas por nada. - `pnpm typecheck` nuevo: tarea de turbo (`dependsOn: ["^build"]`, así `shared` se
+  construye antes de que la API resuelva sus tipos) + script por paquete, y un job
+  `typecheck` en `ci.yml`. - **Encontró dos bugs reales en el primer intento**: `bank.repository.ts` tenía
+  `sourceName` DUPLICADO en dos object literals (TS1117) — una clave pisando a la otra,
+  delante de las narices de 993 tests que nunca la vieron. Arreglado. - `apps/web/tsconfig.typecheck.json`: el mapeo de paths resuelve `@exams-generator/shared`
+  al FUENTE, que vive fuera de `apps/web`, y con el `rootDir` que TS infiere eso es un
+  TS6059 antes de reportar un solo problema real. Se ensancha a la raíz del repo; es
+  seguro porque solo corre con `--noEmit`, y apuntar al fuente y no al `.d.ts` compilado
+  es justamente el punto: `dist` puede estar viejo. - Primer contrato migrado: `ExamVersionJob` + `EXAM_VERSION_JOB_STATUSES` viven ahora en
+  `packages/shared/src/dto/exam-version-job.dto.ts`. El web lo re-exporta desde su
+  `exam-versions.models.ts` (los otros 6 archivos no cambian: conservan su vocabulario
+  local con UNA sola declaración detrás). El `ExamVersionJobRecord` de la API sigue más
+  ancho a propósito — `tenantId`, `createdBy` y timestamps son almacenamiento, no
+  contrato. - `exam-version-job-contract.spec.ts` (API) compara la lista de estados compartida contra
+  el enum de la base: `shared` no puede importar el schema de la API, así que las dos
+  listas están tan alineadas como ese test las mantenga.
+  **Comprobado que muerde**: renombrar `completedCount` en el tipo compartido tumba
+  `pnpm typecheck` con errores en el web. Antes de esto, el mismo rename pasaba los 993
+  tests de la API y los 844 del web sin una queja.
+  **Segunda tanda (2026-08-21)**: promovido el catálogo de grados, que estaba declarado
+  **cuatro veces** — el dominio de exams en la API y los modelos de bank, ai y exams en el
+  web. Los dos originales llevaban un comentario prometiendo promoverlo "si/cuando el
+  módulo de banco necesite el mismo catálogo"; lo necesitaba desde hacía tres copias, y el
+  de `ai.models.ts` decía "cuando una tercera feature lo necesite" — eran tres.
+  `GRADE_LEVELS`, `GradeLevel`, `isGradeLevel`, `STAGES`, `Stage`, `isStage` y
+  `stageForGrade` viven ahora en `packages/shared/src/domain/grade-level.ts` con spec
+  propia; los cuatro archivos re-exportan. - **Las etiquetas NO se movieron a shared**: "1° primaria" es copy de UI en español que
+  solo el web renderiza. Pero pasaron de tres copias a una
+  (`features/taxonomy/grade-level-labels.ts`) — tres copias son tres oportunidades de que
+  "4° secundaria" se vuelva "4to secundaria" en una sola pantalla. - `STAGE_LABELS` se borró de la API: copy en español que ningún código del servidor leía.
+  **Tercera tanda (2026-08-21)**: contratos de respuesta de **exams** y **bank**, en
+  paralelo. Mover el tipo fue lo de menos; lo que valió fue lo que apareció al comparar
+  campo por campo: - `ExamListItem` de la API tenía `status: string` a secas — nada impedía que esa copia se
+  alejara de los estados válidos. Ahora es `ExamStatus`. - En bank, `status` y `type` estaban OPCIONALES del lado web con un comentario que
+  culpaba a "la forma legacy del GET sin paginar". Se leyó el repositorio: las dos
+  sobrecargas seleccionan exactamente el mismo set de columnas, así que ninguno de los
+  dos falta nunca. El comentario describía un problema que no existía. Ahora son
+  obligatorios. - `alternatives` es `unknown` en la API (jsonb sin `$type` de Drizzle) y
+  `readonly string[] | null` en el web. Lo que de verdad cruza el cable es lo segundo —
+  cada lectura en `bank.service.ts` castea a `readonly string[]` y cada escritura guarda
+  un array de strings. El contrato dice lo que se manda; el tipo de la API se queda
+  `unknown` porque es la descripción honesta de lo que garantiza la columna. - `ExamListFilters` NO se movió: los dos lados difieren por diseño (la API los tiene
+  clampeados y obligatorios, el web opcionales antes de clampear). No es una forma de
+  wire.
+  **Y salió un hallazgo funcional que nadie había visto — ver M13.**
+  **Cuarta tanda (2026-08-21) — CERRADO**: ai, tenants, users y dashboard, tres agentes en
+  paralelo. Otra vez, comparar valió más que mover: - **`role` era `string` a secas en LOS DOS lados** (`TenantUser` del web y el del
+  repositorio de la API), teniendo el enum `Role` compartido desde siempre. Ahora es
+  `Role` — el enum COMPLETO, no el subconjunto creable, porque la tabla guarda
+  `platform_admin` (lo siembra `db/seed.ts`) y `listByTenant` no filtra por rol:
+  estrecharlo haría que un tenant con una fila así mintiera sobre su propia lista. - `UserRole` era una unión escrita a mano en el web y **la misma unión literal inline**
+  en el `@Body()` del controlador. Ahora `CREATABLE_USER_ROLES`, y la validación en
+  runtime de `UsersService.create` valida contra esa lista en vez de una cadena de `!==`. - **`temporaryPassword` se mantuvo SOLO en `CreateUserResult` y `ResetPasswordResult`.**
+  Es un secreto de un solo uso; meterlo como opcional en `TenantUser` habría dejado la
+  puerta abierta a que una respuesta futura lo filtre. - El web declaraba `figureCode?: string | null` para la IA, pero la API nunca manda
+  `null` — omite el campo. Verificado: no hay un solo `=== null` en ninguna punta. - `bank.byStatus` viaja al web y **nadie lo renderiza**: se queda porque la API deriva
+  `aiDrafts.pending` de esa misma consulta agrupada, y sacarlo costaría una segunda
+  consulta al banco por un número. Documentado, no borrado — es dato de más en el cable,
+  el inverso de M13 y mucho menos grave.
+  **El guard cazó una suposición, no solo un rename**: un agente intentó estrechar
+  `AiRevisedQuestion.alternatives` a una tupla de 5 (el validador de OpenRouter rechaza
+  cualquier otra cosa) y `pnpm typecheck` le mostró que los fixtures de la feature _bank_
+  construyen ese tipo con 2 elementos. Revirtió y lo documentó.
+  **Pendiente menor**: `generation_jobs` y `exam_version_jobs` usan el MISMO enum de
+  Postgres, y shared tiene dos uniones idénticas declaradas por separado
+  (`GenerationJobStatus` y `ExamVersionJobStatus`), cada una fijada contra la misma fuente
+  desde specs distintas. Consolidarlas es candidato futuro, no deuda urgente.
+  Verificado con el árbol quieto: **1003 non-e2e + 276 e2e** (API), **849** (web),
+  **42** (shared), `pnpm typecheck` limpio.
 
 - [x] **M5 — Estado in-process bloquea una segunda instancia del API.**
       `ExamVersionJobEventsService` / `GenerationJobEventsService` son Subjects in-memory (el
@@ -474,52 +428,43 @@ release workflow).
       (`prom-client`). Expone las tres preguntas que valen: **rate/errores/latencia**
       (`http_request_duration_seconds` con `method`/`route`/`status_code`), **saturación**
       (`exams_queue_jobs{queue,state}` para las dos colas de BullMQ) y **salud del proceso**
-      (`collectDefaultMetrics`: lag del event loop, memoria).
-      - **Etiqueta por PLANTILLA de ruta, nunca por el path concreto** (`/exams/:examId`, no
-        `/exams/<uuid>`), y las rutas sin match caen en un literal `unmatched`. Una serie por
-        endpoint en vez de una por examen: es la diferencia entre un dashboard útil y tumbar
-        Prometheus por explosión de cardinalidad.
-      - El interceptor mide **también las que fallan** (rama `error` del `tap`): registrar solo
-        los éxitos hace que un endpoint que devuelve 500 se vea sano.
-      - **La profundidad de cola se lee en el scrape**, no en un timer: nada se mide cuando
-        nadie mira, y el número nunca está viejo por un intervalo de poll. Si Redis no
-        responde, sube `exams_queue_scrape_failures_total` y **el resto del scrape se sirve
-        igual** — justo cuando alguien mira esa página es cuando Redis está caído.
-      - **Detalle que costó una vuelta**: la primera versión incrementaba ese contador dentro
-        del callback `collect` del gauge. prom-client serializa en orden de registro, así que
-        el contador se escribía ANTES de correr el callback que lo incrementa: el primer scrape
-        fallido reportaba cero fallos y recién confesaba en el siguiente. Ahora la lectura pasa
-        explícitamente en `render()`, así todo el scrape describe el mismo instante.
-      - **Acceso**: el endpoint no puede ir tras `JwtAuthGuard` — un scraper no tiene cuenta.
-        Va con token `METRICS_TOKEN`, y **en producción se niega a responder si no está
-        configurado**: una variable sin setear no debe significar "público" en silencio. Fuera
-        de producción, sin token, abierto. Agregado a los dos composes (el guard de paridad lo
-        exige) y a `env.example`.
+      (`collectDefaultMetrics`: lag del event loop, memoria). - **Etiqueta por PLANTILLA de ruta, nunca por el path concreto** (`/exams/:examId`, no
+      `/exams/<uuid>`), y las rutas sin match caen en un literal `unmatched`. Una serie por
+      endpoint en vez de una por examen: es la diferencia entre un dashboard útil y tumbar
+      Prometheus por explosión de cardinalidad. - El interceptor mide **también las que fallan** (rama `error` del `tap`): registrar solo
+      los éxitos hace que un endpoint que devuelve 500 se vea sano. - **La profundidad de cola se lee en el scrape**, no en un timer: nada se mide cuando
+      nadie mira, y el número nunca está viejo por un intervalo de poll. Si Redis no
+      responde, sube `exams_queue_scrape_failures_total` y **el resto del scrape se sirve
+      igual** — justo cuando alguien mira esa página es cuando Redis está caído. - **Detalle que costó una vuelta**: la primera versión incrementaba ese contador dentro
+      del callback `collect` del gauge. prom-client serializa en orden de registro, así que
+      el contador se escribía ANTES de correr el callback que lo incrementa: el primer scrape
+      fallido reportaba cero fallos y recién confesaba en el siguiente. Ahora la lectura pasa
+      explícitamente en `render()`, así todo el scrape describe el mismo instante. - **Acceso**: el endpoint no puede ir tras `JwtAuthGuard` — un scraper no tiene cuenta.
+      Va con token `METRICS_TOKEN`, y **en producción se niega a responder si no está
+      configurado**: una variable sin setear no debe significar "público" en silencio. Fuera
+      de producción, sin token, abierto. Agregado a los dos composes (el guard de paridad lo
+      exige) y a `env.example`.
       Verificado: 1011 non-e2e + 279 e2e, incluidos 3 e2e del propio endpoint.
 
 - [~] **M7 — El PR gate excluye la capa más frágil (e2e) y nunca se verificó en runners.**
-      `ci.yml` corre non-e2e + db-serial; `api-e2e-manual` solo `workflow_dispatch` y su propio
-      header dice "unverified". Exclusión honesta y documentada — pero el riesgo real (BullMQ
-      races) queda sin gate. Testing/DevOps.
-      **HECHO A MEDIAS, Y A PROPÓSITO (2026-08-21)**: el job pasó a llamarse `api-e2e` y ahora
-      corre **cada noche** (cron 07:00 UTC) además de a demanda. NO gatea PRs todavía.
-      El razonamiento, porque las dos mitades importan:
-      - "Manual" significaba que **nunca había corrido en un runner** — cero señal, que es lo
-        que denuncia este hallazgo. Nocturno da señal real, sobre infraestructura real.
-      - Pero gatear cada PR con M14 sin diagnosticar entrena a la gente a re-correr el CI rojo
-        hasta que salga verde, que es peor que no tener gate. Por eso tampoco hay **reintento
-        automático**: un retry escondería justo la intermitencia que esto viene a medir.
-      - **El log del fallo se guarda como artifact** (30 días). Lo único que faltó cuando la
-        suite se puso roja fue el mensaje; un nocturno que solo diga "failed" reproduce ese
-        problema en cadencia.
-      - MinIO quedó pineado a la misma release que los composes en vez de `latest`: un tag
-        flotante puede poner el nocturno en rojo de un día para otro por un cambio ajeno, que
-        es exactamente lo que una señal nocturna no debe hacer.
-      **Criterio de promoción a gate de PR** (escrito para que no dependa de la memoria de
-      nadie): una racha de noches verdes seguidas **y** M14 con causa raíz.
+  `ci.yml` corre non-e2e + db-serial; `api-e2e-manual` solo `workflow_dispatch` y su propio
+  header dice "unverified". Exclusión honesta y documentada — pero el riesgo real (BullMQ
+  races) queda sin gate. Testing/DevOps.
+  **HECHO A MEDIAS, Y A PROPÓSITO (2026-08-21)**: el job pasó a llamarse `api-e2e` y ahora
+  corre **cada noche** (cron 07:00 UTC) además de a demanda. NO gatea PRs todavía.
+  El razonamiento, porque las dos mitades importan: - "Manual" significaba que **nunca había corrido en un runner** — cero señal, que es lo
+  que denuncia este hallazgo. Nocturno da señal real, sobre infraestructura real. - Pero gatear cada PR con M14 sin diagnosticar entrena a la gente a re-correr el CI rojo
+  hasta que salga verde, que es peor que no tener gate. Por eso tampoco hay **reintento
+  automático**: un retry escondería justo la intermitencia que esto viene a medir. - **El log del fallo se guarda como artifact** (30 días). Lo único que faltó cuando la
+  suite se puso roja fue el mensaje; un nocturno que solo diga "failed" reproduce ese
+  problema en cadencia. - MinIO quedó pineado a la misma release que los composes en vez de `latest`: un tag
+  flotante puede poner el nocturno en rojo de un día para otro por un cambio ajeno, que
+  es exactamente lo que una señal nocturna no debe hacer.
+  **Criterio de promoción a gate de PR** (escrito para que no dependa de la memoria de
+  nadie): una racha de noches verdes seguidas **y** M14 con causa raíz.
 
-- [x] **M8** *(HECHO 2026-08-20: nota `template-distribution-note` en el builder cuando el
-      reparto difiere del total pedido; 3 specs nuevas en exam-builder.component.spec.ts)* —
+- [x] **M8** _(HECHO 2026-08-20: nota `template-distribution-note` en el builder cuando el
+      reparto difiere del total pedido; 3 specs nuevas en exam-builder.component.spec.ts)_ —
       **Pedí 30 preguntas, la plantilla repartió 29, la UI no lo decía.** En vivo: spinner
       "Cantidad total = 30" → "29 preguntas pedidas en 29 celdas", sin mensaje del porqué
       (resto de la división entre cursos). El docente cree que pidió 30. Functional.
@@ -533,17 +478,14 @@ release workflow).
       `AI_PER_ACCOUNT_THROTTLE` (30/min). La IP es la unidad equivocada para un colegio: la
       sala de profesores comparte un NAT, así que la cubeta por IP castiga a los colegas del
       que se pasa, mientras que quien de verdad abusa se cambia de IP con el dato del celular.
-      La cuenta es lo que gasta la plata en esas rutas, así que es lo que se cuenta.
-      - **El orden de los guards ES el arreglo**: `@UseGuards(JwtAuthGuard,
-        AccountThrottlerGuard)`. Al revés, `request.user` no existe todavía y el guard degrada
-        en silencio a limitar por IP. Y no lo detectaría ninguna prueba de comportamiento,
-        porque el `skipIf: NODE_ENV === "test"` del `ThrottlerModule` apaga el throttler entero
-        bajo tests — por eso hay una spec que verifica el ORDEN de los guards por metadata en
-        los dos controladores, además de la del tracker.
-      - Si alguna vez corriera sin autenticar, cae a `super.getTracker` (la IP): una
-        configuración mala cuesta el límite fino, no todo el límite.
-      - 30/min está muy por encima de lo que hace un profesor a mano (generar, leer, revisar) y
-        muy por debajo de lo que hace un script.
+      La cuenta es lo que gasta la plata en esas rutas, así que es lo que se cuenta. - **El orden de los guards ES el arreglo**: `@UseGuards(JwtAuthGuard,
+      AccountThrottlerGuard)`. Al revés, `request.user` no existe todavía y el guard degrada
+      en silencio a limitar por IP. Y no lo detectaría ninguna prueba de comportamiento,
+      porque el `skipIf: NODE_ENV === "test"` del `ThrottlerModule` apaga el throttler entero
+      bajo tests — por eso hay una spec que verifica el ORDEN de los guards por metadata en
+      los dos controladores, además de la del tracker. - Si alguna vez corriera sin autenticar, cae a `super.getTracker` (la IP): una
+      configuración mala cuesta el límite fino, no todo el límite. - 30/min está muy por encima de lo que hace un profesor a mano (generar, leer, revisar) y
+      muy por debajo de lo que hace un script.
       Verificado: 989 non-e2e + 276 e2e.
 
 - [x] **M10 — Privacidad: sin export ni retención de datos personales.** `users.email/name`
@@ -551,65 +493,59 @@ release workflow).
       export de datos del usuario (Ley 29733 pide acceso/cancelación). Mitigantes: hard-delete
       de tenant completo ya existe (commit 237e14f), logs redactan `authorization`, fixtures
       usan dominios `.test`. Privacy.
-      **HECHO (2026-08-21)**, los dos derechos que pide la ley, del lado API:
-      - **Acceso**: `GET /users/:id/personal-data` devuelve todo lo que la plataforma guarda de
-        una persona — identidad + **cuántas** preguntas, exámenes y jobs firmó. Cuentas, no
-        contenido: un examen que armó un profesor es del colegio, no suyo, así que no es algo
-        que se lleve al irse; cuánto de eso lleva su nombre sí es lo que una solicitud de
-        acceso pregunta. **El hash de contraseña nunca se incluye** — un hash sigue siendo una
-        credencial, y responder "qué saben de mí" con la llave de la puerta sería absurdo. Hay
-        un test que lo fija.
-      - **Cancelación**: `POST /users/:id/anonymize`. **No es un DELETE, y llamarlo así sería
-        mentir**: `questions.created_by` y `exams.created_by` apuntan a esa fila y el trabajo
-        del colegio tiene que sobrevivir a que el profesor se vaya. Lo que se va es la persona
-        — email a lápida `@anonimo.invalid` (RFC 2606: jamás será un buzón real), nombre
-        borrado, contraseña reemplazada por algo que no es un hash válido (no hay login ni
-        "revertirlo"), cuenta desactivada. Invalida además el cache de `AccountStatusService`,
-        así que el token que la persona tenía abierto muere en el acto (H3).
-      - No se puede anonimizar la propia cuenta, mismo guard que "desactivar".
+      **HECHO (2026-08-21)**, los dos derechos que pide la ley, del lado API: - **Acceso**: `GET /users/:id/personal-data` devuelve todo lo que la plataforma guarda de
+      una persona — identidad + **cuántas** preguntas, exámenes y jobs firmó. Cuentas, no
+      contenido: un examen que armó un profesor es del colegio, no suyo, así que no es algo
+      que se lleve al irse; cuánto de eso lleva su nombre sí es lo que una solicitud de
+      acceso pregunta. **El hash de contraseña nunca se incluye** — un hash sigue siendo una
+      credencial, y responder "qué saben de mí" con la llave de la puerta sería absurdo. Hay
+      un test que lo fija. - **Cancelación**: `POST /users/:id/anonymize`. **No es un DELETE, y llamarlo así sería
+      mentir**: `questions.created_by` y `exams.created_by` apuntan a esa fila y el trabajo
+      del colegio tiene que sobrevivir a que el profesor se vaya. Lo que se va es la persona
+      — email a lápida `@anonimo.invalid` (RFC 2606: jamás será un buzón real), nombre
+      borrado, contraseña reemplazada por algo que no es un hash válido (no hay login ni
+      "revertirlo"), cuenta desactivada. Invalida además el cache de `AccountStatusService`,
+      así que el token que la persona tenía abierto muere en el acto (H3). - No se puede anonimizar la propia cuenta, mismo guard que "desactivar".
       **Alcance dicho de frente**: esto es la capacidad, no el proceso. Falta UI, falta la
       política de retención escrita (cuánto se guarda una cuenta inactiva) y falta completar
       la página `/privacidad` de la landing, que sigue con su banner TODO de razón social/RUC.
       La ley pide poder responder; ahora se puede.
 
-- [x] **M11** *(HECHO 2026-08-20: pineado a `RELEASE.2025-09-07T16-13-09Z` — la versión exacta
+- [x] **M11** _(HECHO 2026-08-20: pineado a `RELEASE.2025-09-07T16-13-09Z` — la versión exacta
       que `latest` resolvía localmente, probada contra el volumen de datos existente —
-      overrideable vía `MINIO_VERSION`; checksum de typst sigue pendiente)* —
+      overrideable vía `MINIO_VERSION`; checksum de typst sigue pendiente)_ —
       **`minio/minio:latest` flotante en ambos composes.** Un `pull` cualquiera puede
       cambiar la versión de MinIO bajo los pies de prod. Postgres/Redis sí están pineados.
       DevOps. (Bonus: typst se descarga de GitHub sin verificación de checksum,
       `Dockerfile.api:9-13`.)
 
 - [~] **M12 — Taxonomía con clasificación ruidosa.** En vivo bajo Geometría→Triángulos:
-      identidades trigonométricas ("senA+4senB…", "CtgB+CtgC") y un problema de cono
-      (variación porcentual de volumen). El blueprint por tema selecciona esto como
-      "Triángulos". Escala no determinada. Data quality.
-      **MEDIDO Y PARCIALMENTE CORREGIDO (2026-08-21)**. La medición corrige el propio
-      hallazgo:
-      - **Las trigonométricas NO están mal archivadas.** Se leyeron las 25 de 317 preguntas de
-        Triángulos que mencionan sen/cos/tg: todas son problemas DE triángulos que usan
-        trigonometría como herramienta ("Si el perímetro del triángulo ABC es 24 y el
-        circunradio mide 5, halla SenA+SenB+SenC"). Un profesor que pide preguntas de
-        triángulos recibe preguntas de triángulos. Mover eso a Trigonometría empeoraría el
-        banco, no lo arreglaría.
-      - **Los sólidos sí.** 3 de 317 en Triángulos y 1 en Circunferencia son problemas de
-        volumen de cono/cilindro: ahí el profesor pide triángulos y recibe un cono. Movidas a
-        Cuerpos Redondos con `scripts/refile-round-solid-questions.ts`
-        (`pnpm db:refile-round-solids`), sobre la regla de dominio `isRoundSolidQuestion` —
-        que exige el sólido **y** la medida (volumen / área lateral). Sin esa segunda
-        condición la regla se traga un problema de tiro parabólico ("dos esferas caen de una
-        mesa… calcula la altura"), que es física disfrazada de esfera: se dejó donde estaba, y
-        hay una spec que lo fija.
-      - El movimiento conserva curso y grado — solo cambia el tema — y si el curso no tiene
-        `cuerpos-redondos` a ese grado, la pregunta se reporta y no se fuerza a ningún lado.
-      **Lo que queda abierto, y por qué**: la única pregunta que la medición dejó marcada como
-      realmente mal ubicada es la de tiro parabólico bajo Segmentos y Ángulos — está en el
-      CURSO equivocado (Física, no Geometría), y mover de curso pide criterio por pregunta.
-      Certificar la clasificación de las 65 387 preguntas no es un barrido por palabras clave:
-      es un proyecto de re-clasificación semántica aparte. Lo que este ítem sí deja es la
-      escala real de la muestra que el audit señaló — ~1% de ruido duro, no el 10% que la
-      lectura por palabras sugiere.
-      Verificado: 973 non-e2e + 276 e2e.
+  identidades trigonométricas ("senA+4senB…", "CtgB+CtgC") y un problema de cono
+  (variación porcentual de volumen). El blueprint por tema selecciona esto como
+  "Triángulos". Escala no determinada. Data quality.
+  **MEDIDO Y PARCIALMENTE CORREGIDO (2026-08-21)**. La medición corrige el propio
+  hallazgo: - **Las trigonométricas NO están mal archivadas.** Se leyeron las 25 de 317 preguntas de
+  Triángulos que mencionan sen/cos/tg: todas son problemas DE triángulos que usan
+  trigonometría como herramienta ("Si el perímetro del triángulo ABC es 24 y el
+  circunradio mide 5, halla SenA+SenB+SenC"). Un profesor que pide preguntas de
+  triángulos recibe preguntas de triángulos. Mover eso a Trigonometría empeoraría el
+  banco, no lo arreglaría. - **Los sólidos sí.** 3 de 317 en Triángulos y 1 en Circunferencia son problemas de
+  volumen de cono/cilindro: ahí el profesor pide triángulos y recibe un cono. Movidas a
+  Cuerpos Redondos con `scripts/refile-round-solid-questions.ts`
+  (`pnpm db:refile-round-solids`), sobre la regla de dominio `isRoundSolidQuestion` —
+  que exige el sólido **y** la medida (volumen / área lateral). Sin esa segunda
+  condición la regla se traga un problema de tiro parabólico ("dos esferas caen de una
+  mesa… calcula la altura"), que es física disfrazada de esfera: se dejó donde estaba, y
+  hay una spec que lo fija. - El movimiento conserva curso y grado — solo cambia el tema — y si el curso no tiene
+  `cuerpos-redondos` a ese grado, la pregunta se reporta y no se fuerza a ningún lado.
+  **Lo que queda abierto, y por qué**: la única pregunta que la medición dejó marcada como
+  realmente mal ubicada es la de tiro parabólico bajo Segmentos y Ángulos — está en el
+  CURSO equivocado (Física, no Geometría), y mover de curso pide criterio por pregunta.
+  Certificar la clasificación de las 65 387 preguntas no es un barrido por palabras clave:
+  es un proyecto de re-clasificación semántica aparte. Lo que este ítem sí deja es la
+  escala real de la muestra que el audit señaló — ~1% de ruido duro, no el 10% que la
+  lectura por palabras sugiere.
+  Verificado: 973 non-e2e + 276 e2e.
 
 - [ ] **M13 — La advertencia de "pregunta usada en N exámenes" no puede aparecer nunca.**
       Encontrado al compartir el contrato de bank (2026-08-21, M4b). El web muestra
@@ -624,18 +560,15 @@ release workflow).
       `exam_questions` por pregunta y exponerlo, o quitar de la UI lo que no se puede sostener.
       Functional.
       **HECHO (2026-08-21)**: se eligió contarlo, porque el aviso protege algo real (hay PDFs
-      impresos con esa pregunta).
-      - `usedInExamCount` es ahora un subquery correlacionado en **las cuatro** rutas de
-        lectura que devuelven `QuestionListItem` (lista, por id, y las dos de update) — no dos,
-        que fue el primer intento y lo destapó el test del detalle. Barato: `exam_questions`
-        tiene índice por `question_id` y es único en `(exam_id, question_id)`, así que contar
-        filas ES contar exámenes.
-      - `aiGenerated` y `figureCode` entraron al contrato compartido: siempre cruzaron el cable
-        y el web simplemente nunca los declaró.
-      - **`origin` NO se transmite: se deriva.** Sin tenant → central; con tenant y
-        `aiGenerated` → ia; si no → colegio. Un campo derivado en el cable es una cosa más que
-        mantener sincronizada con las dos de las que se calcula. `questionOrigin()` en
-        `bank.models.ts`, con spec propia, y la rama "IA" del template por fin puede renderizar.
+      impresos con esa pregunta). - `usedInExamCount` es ahora un subquery correlacionado en **las cuatro** rutas de
+      lectura que devuelven `QuestionListItem` (lista, por id, y las dos de update) — no dos,
+      que fue el primer intento y lo destapó el test del detalle. Barato: `exam_questions`
+      tiene índice por `question_id` y es único en `(exam_id, question_id)`, así que contar
+      filas ES contar exámenes. - `aiGenerated` y `figureCode` entraron al contrato compartido: siempre cruzaron el cable
+      y el web simplemente nunca los declaró. - **`origin` NO se transmite: se deriva.** Sin tenant → central; con tenant y
+      `aiGenerated` → ia; si no → colegio. Un campo derivado en el cable es una cosa más que
+      mantener sincronizada con las dos de las que se calcula. `questionOrigin()` en
+      `bank.models.ts`, con spec propia, y la rama "IA" del template por fin puede renderizar.
       **Lo más incómodo de este hallazgo**: ya existía un test que decía
       "shows a used-in-exams warning… already used in exams" y pasaba — porque el fixture ponía
       `usedInExamCount: 2` a mano. El componente siempre funcionó; lo que nadie verificaba era
@@ -655,21 +588,18 @@ release workflow).
       proyecto serial. Nadie ha medido cuál es el recurso en disputa. Mientras no se sepa, un
       rojo en CI puede ser real o puede ser esto — que es exactamente lo que vuelve inútil a un
       gate. Testing.
-      **INVESTIGADO (2026-08-21), a medias y dicho como es**:
-      - **No se reprodujo**: 4 corridas completas de e2e y 3 de non-e2e, todas verdes. O sea no
-        tengo la causa de ninguno de los dos fallos observados; lo que sigue es de leer código,
-        no de reproducir.
-      - **Sí apareció un peligro real entre specs, y ese está arreglado**:
-        `db/body-hash-backfill.spec.ts` ejecutaba el UPDATE de la migración 0016 **sin acotar**
-        (`WHERE body_typst IS NOT NULL AND body_hash IS NULL`), o sea sobre TODA la tabla
-        `questions`. Con una docena de specs compartiendo el mismo Postgres de dev, ese WHERE
-        alcanza los fixtures de las demás: les calcula el hash de filas que acaban de insertar
-        —volteando un valor que ellas asertan— y, si el hash calculado choca, viola el índice
-        único `questions_tenant_id_body_hash_idx` y revienta este spec. Los dos sentidos del
-        daño explican la forma del síntoma. Ahora el UPDATE va scopeado por `id`: lo que el
-        test verifica es la EXPRESIÓN SQL, no el WHERE de la migración.
-      - **La mitad e2e sigue sin explicación.** `bank-alternative-images` falló una vez y no
-        volvió a fallar en 4 corridas. No lo cierro inventando una causa.
+      **INVESTIGADO (2026-08-21), a medias y dicho como es**: - **No se reprodujo**: 4 corridas completas de e2e y 3 de non-e2e, todas verdes. O sea no
+      tengo la causa de ninguno de los dos fallos observados; lo que sigue es de leer código,
+      no de reproducir. - **Sí apareció un peligro real entre specs, y ese está arreglado**:
+      `db/body-hash-backfill.spec.ts` ejecutaba el UPDATE de la migración 0016 **sin acotar**
+      (`WHERE body_typst IS NOT NULL AND body_hash IS NULL`), o sea sobre TODA la tabla
+      `questions`. Con una docena de specs compartiendo el mismo Postgres de dev, ese WHERE
+      alcanza los fixtures de las demás: les calcula el hash de filas que acaban de insertar
+      —volteando un valor que ellas asertan— y, si el hash calculado choca, viola el índice
+      único `questions_tenant_id_body_hash_idx` y revienta este spec. Los dos sentidos del
+      daño explican la forma del síntoma. Ahora el UPDATE va scopeado por `id`: lo que el
+      test verifica es la EXPRESIÓN SQL, no el WHERE de la migración. - **La mitad e2e sigue sin explicación.** `bank-alternative-images` falló una vez y no
+      volvió a fallar en 4 corridas. No lo cierro inventando una causa.
       **Qué haría falta para cerrarlo de verdad**: correr la suite en bucle con la semilla de
       orden de jest fijada y capturar el mensaje exacto la próxima vez que pase, en vez de
       volver a mirar un rojo ya perdido.
@@ -687,8 +617,8 @@ release workflow).
 
 ### Low / Info
 
-- [x] **L1** *(HECHO 2026-08-20: Logger pino `@Optional` inyectado, error estructurado con
-      examId/questionId/err; spec nueva del camino de fallo de recovery)* —
+- [x] **L1** _(HECHO 2026-08-20: Logger pino `@Optional` inyectado, error estructurado con
+      examId/questionId/err; spec nueva del camino de fallo de recovery)_ —
       `console.error` en `exam-generation.service.ts:229` en vez del Logger pino:
       ese error de swap queda fuera del stream estructurado (sin reqId/jobId queryables).
 - [x] **L2** — Higiene git: 60 archivos de datos de lotes (`apps/api/src/db/data/lot-*`)
@@ -702,8 +632,8 @@ release workflow).
       them through the boot path"): desde que el seeder los lee en el arranque, dejarlos fuera
       del repo significaría que un clon limpio no puede sembrar. Son 248 MB de datos en git —
       caro, pero es el precio de que el arranque sea reproducible.
-- [x] **L3** *(HECHO 2026-08-20: `gradeLevelLabel` en `question-display.util.ts`, aplicado al
-      detalle del banco)* — Detalle de pregunta mostraba "Grado: pre" (código crudo) en vez de
+- [x] **L3** _(HECHO 2026-08-20: `gradeLevelLabel` en `question-display.util.ts`, aplicado al
+      detalle del banco)_ — Detalle de pregunta mostraba "Grado: pre" (código crudo) en vez de
       la etiqueta.
 - [ ] **L4** — Sin formatter configurado (no prettier/biome); solo ESLint. La consistencia de
       estilo hoy es disciplina manual.

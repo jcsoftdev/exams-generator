@@ -156,9 +156,7 @@ describeIfTypst("POST /ai/questions/:id/revise (e2e)", () => {
   it("returns a revised, validated, UNSAVED draft — the persisted question is left untouched", async () => {
     const id = await createOwnQuestion(tenantAToken, "¿Cuánto es $1 + 1$?");
 
-    const response = await reviseRequest(tenantAToken, id)
-      .send({ instruction: "más difícil" })
-      .expect(200);
+    const response = await reviseRequest(tenantAToken, id).send({ instruction: "más difícil" }).expect(200);
 
     expect(response.body.bodyTypst).toBe("¿Cuánto es $1 + 1$? (revisado: más difícil)");
     expect(response.body.alternatives).toEqual(["1", "2", "3", "4", "5"]);

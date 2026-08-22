@@ -86,10 +86,7 @@ describe("Taxonomy endpoints (e2e)", () => {
       ["delete topics", () => db.delete(topics).where(inArray(topics.id, [topicAId, topicBId]))],
       [
         "delete courses",
-        () =>
-          db
-            .delete(courses)
-            .where(inArray(courses.id, [courseAId, courseBId, testFactoryCourseId])),
+        () => db.delete(courses).where(inArray(courses.id, [courseAId, courseBId, testFactoryCourseId])),
       ],
       ["delete reader user", () => deleteUserFixture(readerId)],
       ["close app", () => app.close()],
@@ -112,9 +109,7 @@ describe("Taxonomy endpoints (e2e)", () => {
     });
 
     it("returns every course for any authenticated user", async () => {
-      const res = await request(app.getHttpServer())
-        .get("/courses")
-        .set("Authorization", `Bearer ${token}`);
+      const res = await request(app.getHttpServer()).get("/courses").set("Authorization", `Bearer ${token}`);
 
       expect(res.status).toBe(200);
       const ids = (res.body as Array<{ id: string; name: string }>).map((c) => c.id);
@@ -124,9 +119,7 @@ describe("Taxonomy endpoints (e2e)", () => {
 
     it("never serves a test-factory course to the exam builder", async () => {
       // Audit 2026-08-20 H1 — e2e leftovers reached a real teacher's course grid.
-      const res = await request(app.getHttpServer())
-        .get("/courses")
-        .set("Authorization", `Bearer ${token}`);
+      const res = await request(app.getHttpServer()).get("/courses").set("Authorization", `Bearer ${token}`);
 
       expect(res.status).toBe(200);
       const ids = (res.body as Array<{ id: string }>).map((c) => c.id);
@@ -141,9 +134,7 @@ describe("Taxonomy endpoints (e2e)", () => {
     });
 
     it("returns every topic when no courseId filter is given", async () => {
-      const res = await request(app.getHttpServer())
-        .get("/topics")
-        .set("Authorization", `Bearer ${token}`);
+      const res = await request(app.getHttpServer()).get("/topics").set("Authorization", `Bearer ${token}`);
 
       expect(res.status).toBe(200);
       const ids = (res.body as Array<{ id: string }>).map((t) => t.id);
@@ -264,9 +255,7 @@ describe("Taxonomy endpoints (e2e)", () => {
     });
 
     it("rejects requests without a Bearer token", async () => {
-      const res = await request(app.getHttpServer()).get(
-        `/universities/${universityWithTracksId}/tracks`,
-      );
+      const res = await request(app.getHttpServer()).get(`/universities/${universityWithTracksId}/tracks`);
       expect(res.status).toBe(401);
     });
 

@@ -46,7 +46,12 @@ import { courseLabels } from '../../taxonomy/course-label';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { extractErrorMessage } from '../../ai/extract-error-message';
-import { buildQuestionTree, filterQuestionTree, QuestionTreeCourseNode, QuestionTreeTopicNode } from './bank-question-tree';
+import {
+  buildQuestionTree,
+  filterQuestionTree,
+  QuestionTreeCourseNode,
+  QuestionTreeTopicNode,
+} from './bank-question-tree';
 import { QuestionTaxonomyFieldsComponent } from '../question-edit/question-taxonomy-fields.component';
 import { QuestionContentFieldsComponent } from '../question-edit/question-content-fields.component';
 import { AiReviseBoxComponent } from '../question-edit/ai-revise-box.component';
@@ -254,7 +259,9 @@ export class BankListComponent {
   /** `GET /bank/questions/summary` — one `{courseId, topicId, total}` row per topic. The whole tree skeleton, no question payload. */
   protected readonly topicCounts = signal<readonly BankTopicCount[]>([]);
   /** `topicId` -> the questions fetched so far for that topic. Absent key = never expanded; the tree renders its count from `topicCounts` regardless. */
-  private readonly loadedQuestions = signal<ReadonlyMap<string, readonly BankQuestion[]>>(new Map());
+  private readonly loadedQuestions = signal<ReadonlyMap<string, readonly BankQuestion[]>>(
+    new Map(),
+  );
   /**
    * `topicId` -> highest page number already fetched. Tracked explicitly
    * rather than derived from `loadedQuestions[topicId].length / PAGE_SIZE`:
@@ -588,7 +595,8 @@ export class BankListComponent {
     }
 
     const alreadyLoaded = this.loadedQuestions().get(topicId) ?? [];
-    const expectedTotal = this.topicCounts().find((bucket) => bucket.topicId === topicId)?.total ?? 0;
+    const expectedTotal =
+      this.topicCounts().find((bucket) => bucket.topicId === topicId)?.total ?? 0;
     if (alreadyLoaded.length > 0 && alreadyLoaded.length >= expectedTotal) {
       return;
     }
@@ -681,7 +689,9 @@ export class BankListComponent {
   }
 
   /** Alternatives of a structured question, lettered a/b/c…, with the `correctAnswer` one flagged. Empty for image questions. */
-  protected alternativeRows(question: BankQuestion): { letter: string; text: string; correct: boolean }[] {
+  protected alternativeRows(
+    question: BankQuestion,
+  ): { letter: string; text: string; correct: boolean }[] {
     const alternatives = question.alternatives ?? [];
     const correctIndex = normalizeCorrectAnswer(question.correctAnswer);
     return alternatives.map((text, index) => {
@@ -778,7 +788,9 @@ export class BankListComponent {
     // have no `alternatives` to index into — so a letter is CORRECT there and
     // must NOT be normalized to an index (that would corrupt the clave).
     this.editCorrectAnswer.set(
-      question.type === 'structured' ? normalizeCorrectAnswer(question.correctAnswer) : question.correctAnswer,
+      question.type === 'structured'
+        ? normalizeCorrectAnswer(question.correctAnswer)
+        : question.correctAnswer,
     );
     this.editBody.set(question.bodyTypst ?? '');
     this.editAlternatives.set((question.alternatives ?? []).join('\n'));

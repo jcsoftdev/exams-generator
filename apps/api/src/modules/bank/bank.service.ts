@@ -147,10 +147,7 @@ export class BankService {
     @Inject(PDF_COMPILER_PORT) private readonly pdfCompiler: PdfCompilerPort,
   ) {}
 
-  async createImageQuestion(
-    user: AuthTokenPayload,
-    dto: CreateImageQuestionDto,
-  ): Promise<{ id: string }> {
+  async createImageQuestion(user: AuthTokenPayload, dto: CreateImageQuestionDto): Promise<{ id: string }> {
     assertCanManageTenant(user.role, user.tenantId);
 
     const validation = validateCreateImageQuestionInput({
@@ -341,10 +338,7 @@ export class BankService {
    * asserts it's still `status='draft'` (409 otherwise) — shared
    * precondition for approve/reject, both of which only ever act on drafts.
    */
-  private async requireVisibleDraft(
-    user: AuthTokenPayload,
-    id: string,
-  ): Promise<QuestionListItem> {
+  private async requireVisibleDraft(user: AuthTokenPayload, id: string): Promise<QuestionListItem> {
     const question = await this.repository.findQuestionById(id, user.tenantId);
     if (!question) {
       throw new NotFoundException(`Question not found: ${id}`);
@@ -361,10 +355,7 @@ export class BankService {
    * can MANAGE and that is still editable content-wise — `draft` OR `approved`
    * (never `archived`; never central-bank, which is read-only for tenants).
    */
-  private async requireManageableQuestion(
-    user: AuthTokenPayload,
-    id: string,
-  ): Promise<QuestionListItem> {
+  private async requireManageableQuestion(user: AuthTokenPayload, id: string): Promise<QuestionListItem> {
     const question = await this.repository.findQuestionById(id, user.tenantId);
     if (!question) {
       throw new NotFoundException(`Question not found: ${id}`);
@@ -473,11 +464,7 @@ export class BankService {
    * path (`editImageQuestion`): no `alternatives`, a LETTER `correctAnswer`,
    * and no Typst compile (there is no statement to compile).
    */
-  async editQuestion(
-    user: AuthTokenPayload,
-    id: string,
-    dto: EditQuestionDto,
-  ): Promise<QuestionListItem> {
+  async editQuestion(user: AuthTokenPayload, id: string, dto: EditQuestionDto): Promise<QuestionListItem> {
     const question = await this.requireManageableQuestion(user, id);
     if (question.type === "image") {
       return this.editImageQuestion(user, id, dto);
@@ -613,11 +600,7 @@ export class BankService {
    * creation — an orphaned MinIO object on a later DB failure is accepted
    * here, same as `createImageQuestion`'s tradeoff).
    */
-  async replaceImage(
-    user: AuthTokenPayload,
-    id: string,
-    file: Express.Multer.File,
-  ): Promise<{ id: string }> {
+  async replaceImage(user: AuthTokenPayload, id: string, file: Express.Multer.File): Promise<{ id: string }> {
     await this.requireManageableQuestion(user, id);
 
     const mime = requireImageMime(file);
@@ -686,19 +669,14 @@ export class BankService {
    * question can be archived (409 otherwise) — archiving a draft makes no
    * sense (reject/delete is the discard path for drafts).
    */
-  async archiveQuestion(
-    user: AuthTokenPayload,
-    id: string,
-  ): Promise<{ id: string; status: "archived" }> {
+  async archiveQuestion(user: AuthTokenPayload, id: string): Promise<{ id: string; status: "archived" }> {
     const question = await this.repository.findQuestionById(id, user.tenantId);
     if (!question) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
     assertCanManageTenant(user.role, question.tenantId);
     if (question.status !== "approved") {
-      throw new ConflictException(
-        `Only approved questions can be archived (status=${question.status})`,
-      );
+      throw new ConflictException(`Only approved questions can be archived (status=${question.status})`);
     }
     await this.repository.updateStatus(id, "archived");
     return { id, status: "archived" };

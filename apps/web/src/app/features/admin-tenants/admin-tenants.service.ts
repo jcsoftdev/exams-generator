@@ -3,7 +3,12 @@ import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { DeleteTenantResult } from '@exams-generator/shared';
-import { AdminTenant, CreateTenantPayload, PagedAdminTenants, UpdateTenantPayload } from './admin-tenants.models';
+import {
+  AdminTenant,
+  CreateTenantPayload,
+  PagedAdminTenants,
+  UpdateTenantPayload,
+} from './admin-tenants.models';
 
 /** Client for the `platform_admin`-only `/tenants` CRUD endpoints. */
 @Injectable({ providedIn: 'root' })

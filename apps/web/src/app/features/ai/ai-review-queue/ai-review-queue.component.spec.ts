@@ -67,13 +67,16 @@ function setup(
   const reviseQuestion = vi.fn(
     over.reviseQuestionImpl ??
       ((_id: string) =>
-        of({ bodyTypst: 'revisado', alternatives: ['1', '2'], correctAnswer: '0', figureCode: null })),
+        of({
+          bodyTypst: 'revisado',
+          alternatives: ['1', '2'],
+          correctAnswer: '0',
+          figureCode: null,
+        })),
   );
   const getCourses = vi.fn(over.getCoursesImpl ?? (() => of(COURSES)));
   const getTopicsForCourses = vi.fn(over.getTopicsForCoursesImpl ?? (() => of(TOPICS_C1)));
-  const updateQuestion = vi.fn(
-    over.updateQuestionImpl ?? ((id: string) => of({ id } as unknown)),
-  );
+  const updateQuestion = vi.fn(over.updateQuestionImpl ?? ((id: string) => of({ id } as unknown)));
   const draftCountSet = vi.fn();
   let n = 0;
   vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:pdf-${n++}`);
@@ -84,7 +87,13 @@ function setup(
       importProvidersFrom(LucideAngularModule.pick({ Check, Pencil, X, Sparkles, ChevronDown })),
       {
         provide: AiService,
-        useValue: { listDraftsPaged, previewDraft, approveQuestion, rejectQuestion, reviseQuestion },
+        useValue: {
+          listDraftsPaged,
+          previewDraft,
+          approveQuestion,
+          rejectQuestion,
+          reviseQuestion,
+        },
       },
       { provide: BankService, useValue: { updateQuestion } },
       { provide: TaxonomyService, useValue: { getCourses, getTopicsForCourses } },
@@ -171,7 +180,9 @@ describe('AiReviewQueueComponent', () => {
     (compiled.querySelector('[data-testid="reject"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(rejectQuestion).not.toHaveBeenCalled();
-    (compiled.querySelector('[data-testid="reject-confirm-yes"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="reject-confirm-yes"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
     expect(rejectQuestion).toHaveBeenCalledWith('d1');
   });
@@ -261,7 +272,7 @@ describe('AiReviewQueueComponent', () => {
     expect(draftCountSet).toHaveBeenCalledWith(2);
   });
 
-  it('pushes the server TOTAL (not the current page\'s items.length) to DraftCountService — the whole point of paginating', () => {
+  it("pushes the server TOTAL (not the current page's items.length) to DraftCountService — the whole point of paginating", () => {
     // A page can legitimately be smaller than the full queue; the badge must
     // never read `items.length` off a paginated response.
     const { draftCountSet } = setup({
@@ -297,7 +308,9 @@ describe('AiReviewQueueComponent', () => {
     (compiled.querySelector('[data-testid="reject"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     rejected = true;
-    (compiled.querySelector('[data-testid="reject-confirm-yes"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="reject-confirm-yes"] button') as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
     expect(draftCountSet).toHaveBeenCalledWith(1);
   });
@@ -386,9 +399,13 @@ describe('AiReviewQueueComponent', () => {
     fixture.detectChanges();
 
     expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
-    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+    const enunciado = compiled.querySelector(
+      '[data-testid="edit-enunciado"]',
+    ) as HTMLTextAreaElement;
     expect(enunciado.value).toBe('7. ¿Cuál organelo sintetiza proteínas?\na) Lisosoma b) Ribosoma');
-    const alternatives = compiled.querySelector('[data-testid="edit-alternatives"]') as HTMLTextAreaElement;
+    const alternatives = compiled.querySelector(
+      '[data-testid="edit-alternatives"]',
+    ) as HTMLTextAreaElement;
     expect(alternatives.value).toBe('4\n3');
   });
 
@@ -403,7 +420,7 @@ describe('AiReviewQueueComponent', () => {
     expect(compiled.querySelector('[data-testid="paper-preview"]')).toBeTruthy();
   });
 
-  it('filters the tema dropdown to the edit form\'s selected curso, with no extra HTTP call', () => {
+  it("filters the tema dropdown to the edit form's selected curso, with no extra HTTP call", () => {
     const { compiled, fixture, getTopicsForCourses } = setup();
     getTopicsForCourses.mockClear();
     (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
@@ -421,7 +438,9 @@ describe('AiReviewQueueComponent', () => {
     (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+    const enunciado = compiled.querySelector(
+      '[data-testid="edit-enunciado"]',
+    ) as HTMLTextAreaElement;
     enunciado.value = 'Enunciado corregido';
     enunciado.dispatchEvent(new Event('input'));
     fixture.detectChanges();
@@ -463,7 +482,9 @@ describe('AiReviewQueueComponent', () => {
     (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    const figureCode = compiled.querySelector('[data-testid="edit-figure-code"]') as HTMLTextAreaElement;
+    const figureCode = compiled.querySelector(
+      '[data-testid="edit-figure-code"]',
+    ) as HTMLTextAreaElement;
     expect(figureCode.value).toBe('#circle((0,0))');
     figureCode.value = '';
     figureCode.dispatchEvent(new Event('input'));
@@ -550,7 +571,9 @@ describe('AiReviewQueueComponent', () => {
 
   it('keeps the edited draft selected after saving, even when it is not the first item in the queue', () => {
     const { compiled, fixture } = setup();
-    const secondItem = compiled.querySelectorAll('[data-testid="review-item"]')[1] as HTMLButtonElement;
+    const secondItem = compiled.querySelectorAll(
+      '[data-testid="review-item"]',
+    )[1] as HTMLButtonElement;
     secondItem.click();
     fixture.detectChanges();
     (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
@@ -580,7 +603,9 @@ describe('AiReviewQueueComponent', () => {
     (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    const instructionInput = compiled.querySelector('[data-testid="ai-instruction"] input') as HTMLInputElement;
+    const instructionInput = compiled.querySelector(
+      '[data-testid="ai-instruction"] input',
+    ) as HTMLInputElement;
     instructionInput.value = 'hazla más difícil';
     instructionInput.dispatchEvent(new Event('input'));
     fixture.detectChanges();
@@ -589,11 +614,17 @@ describe('AiReviewQueueComponent', () => {
     fixture.detectChanges();
 
     expect(reviseQuestion).toHaveBeenCalledWith('d1', 'hazla más difícil');
-    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+    const enunciado = compiled.querySelector(
+      '[data-testid="edit-enunciado"]',
+    ) as HTMLTextAreaElement;
     expect(enunciado.value).toBe('Enunciado revisado por IA');
-    const alternatives = compiled.querySelector('[data-testid="edit-alternatives"]') as HTMLTextAreaElement;
+    const alternatives = compiled.querySelector(
+      '[data-testid="edit-alternatives"]',
+    ) as HTMLTextAreaElement;
     expect(alternatives.value).toBe('10\n20\n30');
-    const figureCode = compiled.querySelector('[data-testid="edit-figure-code"]') as HTMLTextAreaElement;
+    const figureCode = compiled.querySelector(
+      '[data-testid="edit-figure-code"]',
+    ) as HTMLTextAreaElement;
     expect(figureCode.value).toBe('#import "@preview/cetz:0.5.2": canvas, draw');
     expect(updateQuestion).not.toHaveBeenCalled();
   });
@@ -609,7 +640,9 @@ describe('AiReviewQueueComponent', () => {
 
     const error = compiled.querySelector('[data-testid="ai-error"]');
     expect(error?.textContent).toContain('No se pudo revisar');
-    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+    const enunciado = compiled.querySelector(
+      '[data-testid="edit-enunciado"]',
+    ) as HTMLTextAreaElement;
     expect(enunciado.value).toBe('7. ¿Cuál organelo sintetiza proteínas?\na) Lisosoma b) Ribosoma');
   });
 
@@ -704,7 +737,9 @@ describe('AiReviewQueueComponent', () => {
       (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
 
-      const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+      const enunciado = compiled.querySelector(
+        '[data-testid="edit-enunciado"]',
+      ) as HTMLTextAreaElement;
       enunciado.value = 'Cambio sin guardar';
       enunciado.dispatchEvent(new Event('input'));
       fixture.detectChanges();
@@ -734,7 +769,9 @@ describe('AiReviewQueueComponent', () => {
       const { compiled } = setup();
 
       expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
-      const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+      const enunciado = compiled.querySelector(
+        '[data-testid="edit-enunciado"]',
+      ) as HTMLTextAreaElement;
       expect(enunciado.value).toBe('Recuperado del sessionStorage');
       // Must be visibly announced — the teacher can't otherwise tell this
       // apart from the server's current values.
@@ -763,12 +800,16 @@ describe('AiReviewQueueComponent', () => {
       // should be spliced onto d1's panel.
       expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
 
-      const secondItem = compiled.querySelectorAll('[data-testid="review-item"]')[1] as HTMLButtonElement;
+      const secondItem = compiled.querySelectorAll(
+        '[data-testid="review-item"]',
+      )[1] as HTMLButtonElement;
       secondItem.click();
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
-      const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+      const enunciado = compiled.querySelector(
+        '[data-testid="edit-enunciado"]',
+      ) as HTMLTextAreaElement;
       expect(enunciado.value).toBe('Edición pendiente de d2');
     });
 
@@ -797,7 +838,9 @@ describe('AiReviewQueueComponent', () => {
       const { compiled, fixture } = setup();
       (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
-      const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+      const enunciado = compiled.querySelector(
+        '[data-testid="edit-enunciado"]',
+      ) as HTMLTextAreaElement;
       enunciado.value = 'Cambio sin guardar';
       enunciado.dispatchEvent(new Event('input'));
       fixture.detectChanges();
@@ -813,7 +856,9 @@ describe('AiReviewQueueComponent', () => {
       const { compiled, fixture } = setup();
       (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
-      const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+      const enunciado = compiled.querySelector(
+        '[data-testid="edit-enunciado"]',
+      ) as HTMLTextAreaElement;
       enunciado.value = 'Cambio sin guardar';
       enunciado.dispatchEvent(new Event('input'));
       fixture.detectChanges();

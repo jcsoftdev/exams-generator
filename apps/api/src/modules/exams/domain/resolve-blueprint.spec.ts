@@ -35,7 +35,12 @@ describe("resolveBlueprint", () => {
 
     it("omits `difficulty` when sourceLevel is absent (UNI rows)", () => {
       const templateRows: TemplateRow[] = [{ courseId: ARITMETICA, questionCount: 5 }];
-      const [row] = resolveBlueprint({ courseScope: "all", weekScope: "none", templateRows, syllabus: [] }).rows;
+      const [row] = resolveBlueprint({
+        courseScope: "all",
+        weekScope: "none",
+        templateRows,
+        syllabus: [],
+      }).rows;
       expect(row.difficulty).toBeUndefined();
     });
 
@@ -270,7 +275,9 @@ describe("resolveBlueprint", () => {
 
         const algebraRows = result.rows.filter((row) => row.courseId === ALGEBRA);
         const aritmeticaRows = result.rows.filter((row) => row.courseId === ARITMETICA);
-        expect(algebraRows).toEqual([{ courseId: ALGEBRA, topicId: "t-algebra-23", count: 8, difficulty: undefined }]);
+        expect(algebraRows).toEqual([
+          { courseId: ALGEBRA, topicId: "t-algebra-23", count: 8, difficulty: undefined },
+        ]);
         expect(aritmeticaRows).toHaveLength(3); // widened to cumulative
         expect(result.usedCumulativeFallback).toBe(true); // true because AT LEAST ONE row fell back
       });

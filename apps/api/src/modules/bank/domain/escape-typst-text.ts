@@ -42,9 +42,7 @@ const LINE_START_ENUM = /^(\s*)(\d+)\./;
  * figures that AI-authored questions rely on.
  */
 export function escapeTypstText(raw: string): string {
-  const inlineEscaped = raw
-    .replace(/\\/g, "\\\\")
-    .replace(INLINE_MARKUP, (character) => `\\${character}`);
+  const inlineEscaped = raw.replace(/\\/g, "\\\\").replace(INLINE_MARKUP, (character) => `\\${character}`);
 
   return inlineEscaped
     .split("\n")

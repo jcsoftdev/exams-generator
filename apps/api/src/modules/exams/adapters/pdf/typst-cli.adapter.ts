@@ -23,19 +23,14 @@ export interface CompileRunResult {
  * runner, deterministic stderr) without needing typst installed. The
  * default `spawnTypstRunner` is what production code actually uses.
  */
-export type CompileRunner = (
-  args: readonly string[],
-) => Promise<CompileRunResult>;
+export type CompileRunner = (args: readonly string[]) => Promise<CompileRunResult>;
 
 const TYPST_TIMEOUT_MS = 30_000;
 
 export const spawnTypstRunner: CompileRunner = (args) =>
   new Promise((resolve, reject) => {
     const controller = new AbortController();
-    const timeout = setTimeout(
-      () => controller.abort(),
-      TYPST_TIMEOUT_MS,
-    );
+    const timeout = setTimeout(() => controller.abort(), TYPST_TIMEOUT_MS);
 
     // Pin SOURCE_DATE_EPOCH so typst stamps a fixed creation date into the
     // PDF metadata. Without it the byte output varies with wall-clock time,
@@ -95,25 +90,12 @@ export class TypstCliAdapter implements PdfCompilerPort {
     try {
       await fs.writeFile(inputPath, typstSource, "utf-8");
 
-      const result = await this.runner([
-        "compile",
-        "--root",
-        "/",
-        inputPath,
-        outputPath,
-      ]);
+      const result = await this.runner(["compile", "--root", "/", inputPath, outputPath]);
 
       if (result.exitCode !== 0) {
-        const questionId = mapCompileErrorToQuestionId(
-          typstSource,
-          result.stderr,
-        );
+        const questionId = mapCompileErrorToQuestionId(typstSource, result.stderr);
         const suffix = questionId ? ` (question ${questionId})` : "";
-        throw new TypstCompilationError(
-          `typst compile failed${suffix}`,
-          questionId,
-          result.stderr,
-        );
+        throw new TypstCompilationError(`typst compile failed${suffix}`, questionId, result.stderr);
       }
 
       return await fs.readFile(outputPath);

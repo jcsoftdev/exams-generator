@@ -109,7 +109,9 @@ describe('TaxonomyService', () => {
       ];
       let result: Topic[] | undefined;
 
-      service.getTopicsForCourses(['course-1', 'course-2']).subscribe((response) => (result = response));
+      service
+        .getTopicsForCourses(['course-1', 'course-2'])
+        .subscribe((response) => (result = response));
 
       const req = httpMock.expectOne(
         (request) => request.url === `${environment.apiBaseUrl}/topics`,

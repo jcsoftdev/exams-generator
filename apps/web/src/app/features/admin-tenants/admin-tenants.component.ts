@@ -96,7 +96,9 @@ export class AdminTenantsComponent {
   }
 
   protected createValid(): boolean {
-    return this.createName().trim().length > 0 && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(this.createSlug());
+    return (
+      this.createName().trim().length > 0 && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(this.createSlug())
+    );
   }
 
   protected submitCreate(): void {
@@ -142,17 +144,19 @@ export class AdminTenantsComponent {
     if (!tenant || !this.editValid() || this.savingEdit()) return;
     this.savingEdit.set(true);
     this.editError.set(null);
-    this.service.update(tenant.id, { name: this.editName().trim(), city: this.editCity().trim() }).subscribe({
-      next: () => {
-        this.savingEdit.set(false);
-        this.editing.set(null);
-        this.load();
-      },
-      error: () => {
-        this.savingEdit.set(false);
-        this.editError.set('No se pudo guardar el colegio. Inténtalo de nuevo.');
-      },
-    });
+    this.service
+      .update(tenant.id, { name: this.editName().trim(), city: this.editCity().trim() })
+      .subscribe({
+        next: () => {
+          this.savingEdit.set(false);
+          this.editing.set(null);
+          this.load();
+        },
+        error: () => {
+          this.savingEdit.set(false);
+          this.editError.set('No se pudo guardar el colegio. Inténtalo de nuevo.');
+        },
+      });
   }
 
   // ---- activate/deactivate ----

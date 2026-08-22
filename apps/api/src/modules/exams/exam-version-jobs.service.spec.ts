@@ -44,7 +44,9 @@ function buildDeps() {
 describe("ExamVersionJobsService.create", () => {
   it("validates synchronously BEFORE enqueuing — a rejected exam never reaches the queue", async () => {
     const { service, generationService, repository, queue } = buildDeps();
-    generationService.prepareGeneration.mockRejectedValue(new ConflictException("Exam has no selected questions"));
+    generationService.prepareGeneration.mockRejectedValue(
+      new ConflictException("Exam has no selected questions"),
+    );
 
     await expect(service.create(TEACHER, "exam-1", 3)).rejects.toBeInstanceOf(ConflictException);
     expect(repository.create).not.toHaveBeenCalled();
@@ -98,7 +100,9 @@ describe("ExamVersionJobsService.get", () => {
   it("rejects platform staff (no tenant)", async () => {
     const { service } = buildDeps();
 
-    await expect(service.get({ sub: "s-1", tenantId: null, role: Role.ContentEditor }, "job-1")).rejects.toThrow();
+    await expect(
+      service.get({ sub: "s-1", tenantId: null, role: Role.ContentEditor }, "job-1"),
+    ).rejects.toThrow();
   });
 });
 

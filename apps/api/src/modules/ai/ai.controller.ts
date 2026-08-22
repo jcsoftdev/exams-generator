@@ -23,7 +23,11 @@ import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
 import { ExtractQuestionService } from "./extract-question.service";
 import { GenerateQuestionsService, GenerateQuestionStreamEvent } from "./generate-questions.service";
-import { AiGenerationError, AiInvalidResponseError, AiRateLimitError } from "./domain/ports/question-generator.port";
+import {
+  AiGenerationError,
+  AiInvalidResponseError,
+  AiRateLimitError,
+} from "./domain/ports/question-generator.port";
 import { ReviseQuestionService } from "./revise-question.service";
 
 interface GenerateQuestionsBody {

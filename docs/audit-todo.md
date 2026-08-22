@@ -8,11 +8,9 @@
 
 ---
 
-
 Legend: `[ ]` todo · `[~]` in progress · `[x]` done
 
 > **Nota (P2, logging wave)**: correr la suite e2e completa por primera vez esta sesión destapó 2 regresiones reales de trabajo anterior en esta misma auditoría: (1) el throttler de login (API P0) rompía cualquier e2e que hiciera >5 logins/min compartiendo IP/proceso — fix: `skipIf` en `ThrottlerModule.forRoot` cuando `NODE_ENV==="test"`. (2) La paginación de `GET /tenants` (API P1) rompía un test que buscaba tenants recién creados en una lista sin `ORDER BY` (la tabla no tiene `createdAt`) contra un Postgres local con cruft acumulado de corridas anteriores — fix: el test ya no busca presencia vía lista (ya cubierto por sus propios tests de `GET /tenants/:id`). Ambos arreglados y verificados: 694 tests non-e2e + 173 e2e, 100% verde.
-
 
 ## P0 — Arreglar antes de mostrar a cualquier usuario
 

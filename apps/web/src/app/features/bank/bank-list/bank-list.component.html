@@ -2,7 +2,10 @@
   <h1 class="text-xl font-semibold text-n900">Banco de preguntas</h1>
 
   <!-- Barra de filtros -->
-  <div class="flex flex-wrap items-end gap-3 rounded-card border border-n200 bg-surface p-3" data-testid="bank-filters">
+  <div
+    class="flex flex-wrap items-end gap-3 rounded-card border border-n200 bg-surface p-3"
+    data-testid="bank-filters"
+  >
     <div class="w-36">
       <ui-select
         label="Nivel"
@@ -39,7 +42,10 @@
       }
     </div>
   } @else if (errorMessage()) {
-    <div data-testid="error-state" class="rounded-card border border-n200 bg-surface p-8 text-center">
+    <div
+      data-testid="error-state"
+      class="rounded-card border border-n200 bg-surface p-8 text-center"
+    >
       <p class="text-n700">{{ errorMessage() }}</p>
       <div data-testid="retry-button" class="mt-3 inline-block">
         <ui-button variant="primary" (clicked)="retry()">Reintentar</ui-button>
@@ -47,7 +53,9 @@
     </div>
   } @else if (totalQuestions() === 0 && !bankHasAnyQuestions()) {
     <div data-testid="empty-bank">
-      <ui-empty-state message="Tu banco vacío aún no tiene preguntas. Sube preguntas o genéralas con IA.">
+      <ui-empty-state
+        message="Tu banco vacío aún no tiene preguntas. Sube preguntas o genéralas con IA."
+      >
         <div cta class="flex gap-2">
           <ui-button variant="primary" (clicked)="goToNew()">Subir preguntas</ui-button>
         </div>
@@ -55,7 +63,9 @@
     </div>
   } @else if (totalQuestions() === 0) {
     <div data-testid="empty-no-results">
-      <ui-empty-state message="No hay preguntas con esos filtros. Prueba limpiar los filtros."></ui-empty-state>
+      <ui-empty-state
+        message="No hay preguntas con esos filtros. Prueba limpiar los filtros."
+      ></ui-empty-state>
     </div>
   } @else {
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-[55%_45%]">
@@ -104,13 +114,18 @@
 
         <div data-testid="bank-tree" class="flex max-h-[70vh] flex-col gap-2 overflow-y-auto">
           @if (isFiltering() && filteredTree().length === 0) {
-            <div data-testid="tree-no-matches" class="rounded-card border border-dashed border-n200 p-6 text-center text-sm text-n500">
+            <div
+              data-testid="tree-no-matches"
+              class="rounded-card border border-dashed border-n200 p-6 text-center text-sm text-n500"
+            >
               No se encontraron preguntas para tu búsqueda.
             </div>
           }
           @for (course of filteredTree(); track course.courseId) {
             <!-- Nivel 1 · Curso: ancla dominante — banda sólida, chevron grande, label en negrita. -->
-            <div class="rounded-card border border-n200 bg-surface transition-colors hover:border-n300">
+            <div
+              class="rounded-card border border-n200 bg-surface transition-colors hover:border-n300"
+            >
               <button
                 type="button"
                 data-testid="course-header"
@@ -121,9 +136,15 @@
                 [class.border-b-0]="!isCourseExpanded(course.courseId)"
                 (click)="toggleCourse(course.courseId)"
               >
-                <lucide-angular [name]="chevronFor(isCourseExpanded(course.courseId))" class="h-5 w-5 shrink-0 text-n700"></lucide-angular>
+                <lucide-angular
+                  [name]="chevronFor(isCourseExpanded(course.courseId))"
+                  class="h-5 w-5 shrink-0 text-n700"
+                ></lucide-angular>
                 <span class="text-base font-bold text-n900">{{ course.name }}</span>
-                <span class="ml-1 shrink-0 rounded-full bg-surface px-2 py-0.5 text-xs font-medium text-n600">{{ course.questionCount }}</span>
+                <span
+                  class="ml-1 shrink-0 rounded-full bg-surface px-2 py-0.5 text-xs font-medium text-n600"
+                  >{{ course.questionCount }}</span
+                >
               </button>
 
               @if (isCourseExpanded(course.courseId)) {
@@ -139,7 +160,10 @@
                         class="flex w-full items-center gap-2 py-2 pl-8 pr-3 text-left transition-colors hover:bg-n50 focus:outline-none focus:ring-2 focus:ring-primary-300"
                         (click)="toggleTopic(topic.topicId)"
                       >
-                        <lucide-angular [name]="chevronFor(isTopicExpanded(topic.topicId))" class="h-3.5 w-3.5 shrink-0 text-n400"></lucide-angular>
+                        <lucide-angular
+                          [name]="chevronFor(isTopicExpanded(topic.topicId))"
+                          class="h-3.5 w-3.5 shrink-0 text-n400"
+                        ></lucide-angular>
                         <span class="text-sm font-medium text-n700">{{ topic.name }}</span>
                         <!-- Count comes from the server summary, NOT from the loaded leaves — it's the topic's real total even while collapsed. -->
                         <span class="text-xs text-n500">· {{ topic.questionCount }}</span>
@@ -159,25 +183,43 @@
                               (click)="select(q)"
                             >
                               @if (imageUrl(q); as url) {
-                                <img [src]="url" [alt]="'Pregunta ' + q.id" class="h-10 w-10 shrink-0 rounded-field object-cover" />
+                                <img
+                                  [src]="url"
+                                  [alt]="'Pregunta ' + q.id"
+                                  class="h-10 w-10 shrink-0 rounded-field object-cover"
+                                />
                               } @else {
                                 <div
                                   data-testid="question-placeholder"
                                   [attr.data-icon]="leafPlaceholderIcon(q)"
                                   class="flex h-10 w-10 shrink-0 items-center justify-center rounded-field bg-n100 text-n400"
                                 >
-                                  <lucide-angular [name]="leafPlaceholderIcon(q)" class="h-5 w-5"></lucide-angular>
+                                  <lucide-angular
+                                    [name]="leafPlaceholderIcon(q)"
+                                    class="h-5 w-5"
+                                  ></lucide-angular>
                                 </div>
                               }
                               <div class="min-w-0 flex-1">
                                 @if (questionSnippet(q); as snippet) {
-                                  <p data-testid="question-snippet" class="truncate text-sm font-medium text-n900">{{ snippet }}</p>
-                                  <p class="truncate text-xs text-n500">Clave: {{ correctAnswerLabel(q.correctAnswer) }}</p>
+                                  <p
+                                    data-testid="question-snippet"
+                                    class="truncate text-sm font-medium text-n900"
+                                  >
+                                    {{ snippet }}
+                                  </p>
+                                  <p class="truncate text-xs text-n500">
+                                    Clave: {{ correctAnswerLabel(q.correctAnswer) }}
+                                  </p>
                                 } @else {
-                                  <p class="truncate text-sm font-medium text-n900">Clave: {{ correctAnswerLabel(q.correctAnswer) }}</p>
+                                  <p class="truncate text-sm font-medium text-n900">
+                                    Clave: {{ correctAnswerLabel(q.correctAnswer) }}
+                                  </p>
                                 }
                               </div>
-                              <ui-tag [variant]="tagVariantFor(q.difficulty)">{{ difficultyLabel(q.difficulty) }}</ui-tag>
+                              <ui-tag [variant]="tagVariantFor(q.difficulty)">{{
+                                difficultyLabel(q.difficulty)
+                              }}</ui-tag>
                             </button>
                           }
 
@@ -189,7 +231,10 @@
                             </div>
                           } @else if (hasTopicFailed(topic.topicId)) {
                             <!-- Scoped to this branch: a failed topic never blanks the rest of the tree. -->
-                            <div data-testid="topic-error" class="flex items-center gap-2 pl-14 text-sm text-n700">
+                            <div
+                              data-testid="topic-error"
+                              class="flex items-center gap-2 pl-14 text-sm text-n700"
+                            >
                               <span>{{ topicErrorMessage }}</span>
                               <button
                                 type="button"
@@ -234,9 +279,17 @@
                 <div class="flex flex-col gap-2">
                   <span class="text-xs font-medium text-n500">Imagen</span>
                   @if (editImagePreviewUrl(); as preview) {
-                    <img [src]="preview" alt="Nueva imagen de la pregunta" class="h-28 w-28 rounded-field object-cover" />
+                    <img
+                      [src]="preview"
+                      alt="Nueva imagen de la pregunta"
+                      class="h-28 w-28 rounded-field object-cover"
+                    />
                   } @else if (imageUrl(q); as url) {
-                    <img [src]="url" [alt]="'Pregunta ' + q.id" class="h-28 w-28 rounded-field object-cover" />
+                    <img
+                      [src]="url"
+                      [alt]="'Pregunta ' + q.id"
+                      class="h-28 w-28 rounded-field object-cover"
+                    />
                   }
                   <input
                     data-testid="edit-image"
@@ -282,7 +335,9 @@
                   ></app-ai-revise-box>
 
                   <!-- Task 10: OCR extraction — reads a photographed question and fills the form above for review, same as "Editar con IA". -->
-                  <div class="flex flex-col gap-2 rounded-field border border-dashed border-primary-300 bg-primary-50 p-3">
+                  <div
+                    class="flex flex-col gap-2 rounded-field border border-dashed border-primary-300 bg-primary-50 p-3"
+                  >
                     <span class="flex items-center gap-1 text-xs font-medium text-primary-700">
                       <lucide-angular name="upload" class="h-3.5 w-3.5"></lucide-angular>
                       Leer desde imagen
@@ -321,27 +376,41 @@
                     data-testid="edit-warning"
                     class="rounded-field border border-warn-text/20 bg-warn-bg px-3 py-2 text-sm text-warn-text"
                   >
-                    Esta pregunta se usa en {{ q.usedInExamCount }} exámenes. Los PDFs ya generados no se
-                    actualizan automáticamente; regéneralos si hace falta.
+                    Esta pregunta se usa en {{ q.usedInExamCount }} exámenes. Los PDFs ya generados
+                    no se actualizan automáticamente; regéneralos si hace falta.
                   </div>
                 }
 
                 @if (editError()) {
-                  <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ editError() }}</p>
+                  <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">
+                    {{ editError() }}
+                  </p>
                 }
 
                 <div class="flex gap-2">
                   <div data-testid="edit-save">
-                    <ui-button variant="primary" [loading]="editSaving()" [disabled]="editSaving() || !editTopicId()" (clicked)="saveEdit()">Guardar</ui-button>
+                    <ui-button
+                      variant="primary"
+                      [loading]="editSaving()"
+                      [disabled]="editSaving() || !editTopicId()"
+                      (clicked)="saveEdit()"
+                      >Guardar</ui-button
+                    >
                   </div>
                   <div data-testid="edit-cancel">
-                    <ui-button variant="ghost" [disabled]="editSaving()" (clicked)="cancelEdit()">Cancelar</ui-button>
+                    <ui-button variant="ghost" [disabled]="editSaving()" (clicked)="cancelEdit()"
+                      >Cancelar</ui-button
+                    >
                   </div>
                 </div>
               </div>
             } @else {
               @if (imageUrl(q); as url) {
-                <img [src]="url" [alt]="'Pregunta ' + q.id" class="mb-3 max-h-64 w-full rounded object-contain" />
+                <img
+                  [src]="url"
+                  [alt]="'Pregunta ' + q.id"
+                  class="mb-3 max-h-64 w-full rounded object-contain"
+                />
               }
 
               @if (q.bodyTypst) {
@@ -363,9 +432,14 @@
                       [class.text-n700]="!alt.correct"
                     >
                       <span class="font-medium">{{ alt.letter }})</span>
-                      <span class="min-w-0 flex-1"><ui-math-text [value]="alt.text"></ui-math-text></span>
+                      <span class="min-w-0 flex-1"
+                        ><ui-math-text [value]="alt.text"></ui-math-text
+                      ></span>
                       @if (alt.correct) {
-                        <lucide-angular name="check" class="mt-0.5 h-4 w-4 shrink-0"></lucide-angular>
+                        <lucide-angular
+                          name="check"
+                          class="mt-0.5 h-4 w-4 shrink-0"
+                        ></lucide-angular>
                       }
                     </li>
                   }
@@ -373,22 +447,37 @@
               }
 
               <div class="mb-3 flex flex-wrap items-center gap-2">
-                <ui-tag [variant]="tagVariantFor(q.difficulty)">{{ difficultyLabel(q.difficulty) }}</ui-tag>
+                <ui-tag [variant]="tagVariantFor(q.difficulty)">{{
+                  difficultyLabel(q.difficulty)
+                }}</ui-tag>
                 @if (isCentral(q)) {
-                  <span class="inline-flex items-center gap-1 rounded-full bg-primary-100 px-2 py-0.5 text-xs text-primary-700">
+                  <span
+                    class="inline-flex items-center gap-1 rounded-full bg-primary-100 px-2 py-0.5 text-xs text-primary-700"
+                  >
                     <lucide-angular name="lock" class="h-3 w-3"></lucide-angular>
                     Banco central
                   </span>
                 } @else if (originOf(q) === 'ai') {
                   <ui-tag variant="ai">IA</ui-tag>
                 } @else {
-                  <span class="rounded-full bg-tint-active px-2 py-0.5 text-xs text-tint-text">Colegio</span>
+                  <span class="rounded-full bg-tint-active px-2 py-0.5 text-xs text-tint-text"
+                    >Colegio</span
+                  >
                 }
               </div>
               <dl class="mb-4 space-y-1 text-sm text-n700">
-                <div class="flex gap-2"><dt class="text-n500">Clave:</dt><dd>{{ correctAnswerLabel(q.correctAnswer) }}</dd></div>
-                <div class="flex gap-2"><dt class="text-n500">Grado:</dt><dd>{{ gradeLevelLabel(q.gradeLevel) }}</dd></div>
-                <div class="flex gap-2"><dt class="text-n500">Usada en:</dt><dd>{{ q.usedInExamCount }} exámenes</dd></div>
+                <div class="flex gap-2">
+                  <dt class="text-n500">Clave:</dt>
+                  <dd>{{ correctAnswerLabel(q.correctAnswer) }}</dd>
+                </div>
+                <div class="flex gap-2">
+                  <dt class="text-n500">Grado:</dt>
+                  <dd>{{ gradeLevelLabel(q.gradeLevel) }}</dd>
+                </div>
+                <div class="flex gap-2">
+                  <dt class="text-n500">Usada en:</dt>
+                  <dd>{{ q.usedInExamCount }} exámenes</dd>
+                </div>
                 @if (q.sourceName) {
                   <div data-testid="panel-source" class="flex gap-2">
                     <dt class="shrink-0 text-n500">Fuente:</dt>
@@ -398,11 +487,18 @@
               </dl>
 
               @if (actionError()) {
-                <p class="mb-3 rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ actionError() }}</p>
+                <p
+                  class="mb-3 rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text"
+                  role="alert"
+                >
+                  {{ actionError() }}
+                </p>
               }
 
               @if (isCentral(q)) {
-                <p data-testid="panel-readonly" class="text-sm text-n500">Pregunta del banco central — solo lectura.</p>
+                <p data-testid="panel-readonly" class="text-sm text-n500">
+                  Pregunta del banco central — solo lectura.
+                </p>
               } @else {
                 <div class="flex flex-wrap gap-2">
                   <div data-testid="panel-edit">
@@ -438,7 +534,9 @@
             }
           </div>
         } @else {
-          <div class="rounded-card border border-dashed border-n200 p-8 text-center text-sm text-n500">
+          <div
+            class="rounded-card border border-dashed border-n200 p-8 text-center text-sm text-n500"
+          >
             Selecciona una pregunta para ver el detalle.
           </div>
         }
@@ -452,17 +550,25 @@
     </p>
     <div actions class="flex justify-end gap-2">
       <ui-button variant="ghost" (clicked)="cancelDelete()">Cancelar</ui-button>
-      <div data-testid="delete-confirm-yes"><ui-button variant="danger" (clicked)="confirmDelete()">Borrar</ui-button></div>
+      <div data-testid="delete-confirm-yes">
+        <ui-button variant="danger" (clicked)="confirmDelete()">Borrar</ui-button>
+      </div>
     </div>
   </ui-modal>
 
-  <ui-modal [open]="pendingArchive() !== null" title="Archivar pregunta" (openChange)="cancelArchive()">
+  <ui-modal
+    [open]="pendingArchive() !== null"
+    title="Archivar pregunta"
+    (openChange)="cancelArchive()"
+  >
     <p data-testid="archive-confirm" class="text-sm text-n700">
       ¿Seguro que quieres archivar esta pregunta? Deja de estar disponible para nuevos exámenes.
     </p>
     <div actions class="flex justify-end gap-2">
       <ui-button variant="ghost" (clicked)="cancelArchive()">Cancelar</ui-button>
-      <div data-testid="archive-confirm-yes"><ui-button variant="danger" (clicked)="confirmArchive()">Archivar</ui-button></div>
+      <div data-testid="archive-confirm-yes">
+        <ui-button variant="danger" (clicked)="confirmArchive()">Archivar</ui-button>
+      </div>
     </div>
   </ui-modal>
 </div>

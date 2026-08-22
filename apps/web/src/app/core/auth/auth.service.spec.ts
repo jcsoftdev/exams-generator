@@ -131,7 +131,12 @@ describe('AuthService', () => {
   });
 
   it('rehydrates isAuthenticated/currentRole from a previously stored token', () => {
-    const token = buildFakeJwt({ sub: 'u1', role: 'school_admin', tenantId: 't2', exp: FUTURE_EXP });
+    const token = buildFakeJwt({
+      sub: 'u1',
+      role: 'school_admin',
+      tenantId: 't2',
+      exp: FUTURE_EXP,
+    });
     localStorage.setItem(TOKEN_STORAGE_KEY, token);
 
     // Fresh injector so the service constructor re-reads localStorage.

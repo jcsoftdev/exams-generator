@@ -16,12 +16,9 @@ describe("canManageQuestionTenant", () => {
     },
   );
 
-  it.each([Role.SchoolAdmin, Role.Teacher])(
-    "allows %s to manage a tenant's private questions",
-    (role) => {
-      expect(canManageQuestionTenant(role, "tenant-1")).toBe(true);
-    },
-  );
+  it.each([Role.SchoolAdmin, Role.Teacher])("allows %s to manage a tenant's private questions", (role) => {
+    expect(canManageQuestionTenant(role, "tenant-1")).toBe(true);
+  });
 
   it.each([Role.PlatformAdmin, Role.ContentEditor])(
     "denies %s from managing a tenant's private questions",

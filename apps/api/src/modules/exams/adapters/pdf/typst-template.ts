@@ -83,10 +83,7 @@ export function renderAnswerKeyTypst(input: AnswerKeyDocumentInput): string {
   // The id stays in the `// q:` marker, which is what `typst-error-mapper.ts`
   // reads and is invisible in the rendered PDF.
   const rows = input.entries
-    .map(
-      (entry, index) =>
-        `// q:${entry.questionId}\n  [${index + 1}], [${entry.correctOption}],`,
-    )
+    .map((entry, index) => `// q:${entry.questionId}\n  [${index + 1}], [${entry.correctOption}],`)
     .join("\n");
 
   return `#align(center)[= ${input.title} --- ${input.versionLabel} --- Clave de respuestas]

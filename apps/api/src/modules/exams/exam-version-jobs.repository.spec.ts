@@ -52,7 +52,12 @@ describe("ExamVersionJobsRepository", () => {
 
     const [otherExam] = await db
       .insert(exams)
-      .values({ tenantId, title: `VerJobs Other Exam ${suffix}`, gradeLevel: "primaria_1", createdBy: userId })
+      .values({
+        tenantId,
+        title: `VerJobs Other Exam ${suffix}`,
+        gradeLevel: "primaria_1",
+        createdBy: userId,
+      })
       .returning({ id: exams.id });
     otherExamId = otherExam!.id;
   });

@@ -74,7 +74,9 @@ function setup(
   } = {},
 ) {
   const streamGenerationJob = vi.fn(over.streamImpl ?? ((_id: string) => of(RUNNING_JOB)));
-  const cancelGenerationJob = vi.fn(over.cancelImpl ?? (() => of({ ...RUNNING_JOB, status: 'cancelled' as const })));
+  const cancelGenerationJob = vi.fn(
+    over.cancelImpl ?? (() => of({ ...RUNNING_JOB, status: 'cancelled' as const })),
+  );
   const getGenerationJob = vi.fn(over.getJobImpl ?? ((_id: string) => of(RUNNING_JOB)));
   const getDraft = vi.fn((_id: string) => of(DRAFT));
   // `DraftCountService` (providedIn: 'root') is injected transitively via
@@ -87,7 +89,8 @@ function setup(
   const createGenerationJob = vi.fn(over.createImpl ?? (() => of({ ...RUNNING_JOB, id: 'job-2' })));
   const getGenerationJobChain = vi.fn(over.chainImpl ?? (() => of({ items: [RUNNING_JOB] })));
   const navigate = vi.fn();
-  const paramMap$ = over.paramMap$ ?? new BehaviorSubject<ParamMap>(convertToParamMap({ id: 'job-1' }));
+  const paramMap$ =
+    over.paramMap$ ?? new BehaviorSubject<ParamMap>(convertToParamMap({ id: 'job-1' }));
   let n = 0;
   vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:pdf-${n++}`);
   vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
@@ -159,13 +162,17 @@ describe('GenerationJobDetailComponent', () => {
     const { compiled, previewDraft } = setup();
 
     expect(previewDraft).toHaveBeenCalledWith('q1');
-    expect(compiled.querySelector('[data-testid="preview-frame"]')?.getAttribute('src')).toMatch(/^blob:/);
+    expect(compiled.querySelector('[data-testid="preview-frame"]')?.getAttribute('src')).toMatch(
+      /^blob:/,
+    );
   });
 
   it('falls back to raw content when the preview fails to compile', () => {
     const { compiled } = setup({ previewImpl: () => throwError(() => new Error('boom')) });
 
-    expect(compiled.querySelector('[data-testid="preview-fallback"]')?.textContent).toContain('¿Cuánto es 2+2?');
+    expect(compiled.querySelector('[data-testid="preview-fallback"]')?.textContent).toContain(
+      '¿Cuánto es 2+2?',
+    );
   });
 
   it('updates live as the server pushes new frames on the same stream — no polling, no re-subscribe', () => {
@@ -214,7 +221,12 @@ describe('GenerationJobDetailComponent', () => {
 
       source$.next(RUNNING_JOB);
       fixture.detectChanges();
-      source$.next({ ...RUNNING_JOB, status: 'completed' as const, createdCount: 3, failedCount: 0 });
+      source$.next({
+        ...RUNNING_JOB,
+        status: 'completed' as const,
+        createdCount: 3,
+        failedCount: 0,
+      });
       fixture.detectChanges();
 
       const region = compiled.querySelector('[data-testid="job-live-region"]')!;
@@ -287,7 +299,9 @@ describe('GenerationJobDetailComponent', () => {
       expect(compiled.querySelector('[data-testid="connection-lost-banner"]')).toBeTruthy();
       expect(streamGenerationJob).toHaveBeenCalledTimes(1);
 
-      (compiled.querySelector('[data-testid="reconnect-button"] button') as HTMLButtonElement).click();
+      (
+        compiled.querySelector('[data-testid="reconnect-button"] button') as HTMLButtonElement
+      ).click();
       fixture.detectChanges();
 
       expect(streamGenerationJob).toHaveBeenCalledTimes(2);
@@ -313,7 +327,9 @@ describe('GenerationJobDetailComponent', () => {
   });
 
   it('does not show the cancel button once the job is terminal', () => {
-    const { compiled } = setup({ streamImpl: () => of({ ...RUNNING_JOB, status: 'completed' as const }) });
+    const { compiled } = setup({
+      streamImpl: () => of({ ...RUNNING_JOB, status: 'completed' as const }),
+    });
 
     expect(compiled.querySelector('[data-testid="cancel-job"]')).toBeFalsy();
   });
@@ -364,7 +380,9 @@ describe('GenerationJobDetailComponent', () => {
   });
 
   it('does not show a retry button when the job completed without any failures', () => {
-    const { compiled } = setup({ streamImpl: () => of({ ...RUNNING_JOB, status: 'completed' as const, createdCount: 3 }) });
+    const { compiled } = setup({
+      streamImpl: () => of({ ...RUNNING_JOB, status: 'completed' as const, createdCount: 3 }),
+    });
 
     expect(compiled.querySelector('[data-testid="retry-job"]')).toBeFalsy();
   });
@@ -390,7 +408,9 @@ describe('GenerationJobDetailComponent', () => {
 
   describe('retry history', () => {
     it('does not show a retry-history section for a job with no prior attempts', () => {
-      const { compiled, getGenerationJobChain } = setup({ chainImpl: () => of({ items: [RUNNING_JOB] }) });
+      const { compiled, getGenerationJobChain } = setup({
+        chainImpl: () => of({ items: [RUNNING_JOB] }),
+      });
 
       expect(getGenerationJobChain).toHaveBeenCalledWith('job-1');
       expect(compiled.querySelector('[data-testid="retry-history"]')).toBeFalsy();
@@ -423,7 +443,15 @@ describe('GenerationJobDetailComponent', () => {
     it('reloads the chain when the route id changes in place (retry navigation reuses the component instance)', () => {
       const paramMap$ = new BehaviorSubject<ParamMap>(convertToParamMap({ id: 'job-1' }));
       const getGenerationJobChain = vi.fn((id: string) =>
-        of({ items: id === 'job-1' ? [RUNNING_JOB] : [{ ...FAILED_JOB, id: 'job-0' }, { ...RUNNING_JOB, id: 'job-2' }] }),
+        of({
+          items:
+            id === 'job-1'
+              ? [RUNNING_JOB]
+              : [
+                  { ...FAILED_JOB, id: 'job-0' },
+                  { ...RUNNING_JOB, id: 'job-2' },
+                ],
+        }),
       );
       const { fixture } = setup({ paramMap$, chainImpl: getGenerationJobChain });
 

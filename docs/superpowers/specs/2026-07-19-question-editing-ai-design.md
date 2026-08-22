@@ -11,6 +11,7 @@
 El panel de detalle del banco (`bank-list.component`) muestra un botón **"Editar"** que hoy navega a `/app/bank/new?edit=<id>`, pero `bank-new.component` **ignora** ese query param — así que abre un formulario de creación vacío. Editar no funciona.
 
 Además, el profesor no tiene forma de:
+
 - Corregir un error en una pregunta ya guardada (estructurada o de imagen).
 - Pedirle a la IA que ajuste una pregunta ("hazla más difícil", "corrige el error", "mejora los distractores").
 - Convertir una foto de un enunciado en texto editable.
@@ -34,24 +35,29 @@ Este cambio entrega las tres capacidades, todas inline en el panel, respetando l
 El panel de detalle (`bank-list.component.html`, bloque `data-testid="bank-panel"`) gana un estado `editing` (signal). El botón **"Editar"** deja de navegar (`bank-list.component.ts:409-411`) y activa `editing`.
 
 ### 3.1 Modo lectura (actual) → modo edición
+
 En modo edición el panel muestra un formulario:
 
 **Campos comunes** (reusan `ui-select` / patrones de `bank-new`):
+
 - Curso · Tema (dependiente del curso) · Nivel · Grado.
 - Clave (respuesta correcta).
 
 **Según tipo:**
+
 - `structured`: enunciado (`textarea`, `bodyTypst`) + alternativas (`textarea`, una por línea).
 - `image`: thumbnail actual + input de archivo "Reemplazar imagen" (opcional — si no se sube, la imagen se conserva).
 
-**Advertencia de uso:** si `status === 'approved' && (usedInExamCount ?? 0) > 0`, banner ámbar (`ui-banner variant="warning"` o div `bg-warn-bg`): *"Esta pregunta se usa en N exámenes. Los PDFs ya generados no se actualizan automáticamente; regéneralos si hace falta."*
+**Advertencia de uso:** si `status === 'approved' && (usedInExamCount ?? 0) > 0`, banner ámbar (`ui-banner variant="warning"` o div `bg-warn-bg`): _"Esta pregunta se usa en N exámenes. Los PDFs ya generados no se actualizan automáticamente; regéneralos si hace falta."_
 
 **Acciones:** `[Cancelar]` (descarta, vuelve a lectura) · `[Guardar cambios]`.
 
 `usedInExamCount` ya viene en el detalle (`getQuestion`), así que no se necesita endpoint nuevo para la advertencia.
 
 ### 3.2 Caja de IA (dentro del modo edición)
+
 Bloque `✨ Instrucción a la IA`:
+
 - Input de texto para la instrucción + botón `Reescribir con IA`.
 - Al responder, los campos revisados **populan el formulario** (idealmente resaltando lo que cambió) para que el profesor revise antes de guardar.
 - Botón/afluente separado `Leer desde imagen` (OCR): sube una foto → rellena los campos estructurados.
@@ -59,26 +65,32 @@ Bloque `✨ Instrucción a la IA`:
 ## 4. Backend
 
 ### 4.1 Extender `PATCH /bank/:id` (edición manual)
+
 Hoy `EditDraftQuestionBody` (`bank.controller.ts:47`, `~199`) solo acepta `bodyTypst`, `alternatives`, `correctAnswer` y está pensado para **drafts** (lo usa la cola de revisión IA). Se extiende:
+
 - Aceptar además taxonomía editable: `courseId`, `topicId`, `difficulty`, `gradeLevel`.
 - Permitir edición en preguntas `approved` propias (no solo draft; nunca central). **Hoy `editDraftQuestion` rechaza explícitamente cualquier estado ≠ `draft` (`bank.service.ts:251-252`, `ConflictException`); ese guard se relaja para permitir `approved` propias y se mantiene el bloqueo de central (403) y el tenant-scoping.**
 - Conservar el guard de recompilación Typst para estructuradas (`validateUpdateStructuredQuestionInput` + `PdfCompilerPort` — una edición que no compila se rechaza; ver `bank.service.ts`). Invalida el cache de preview igual que hoy.
 - No toca la imagen (ver 4.2).
 
 ### 4.2 Nuevo `POST /bank/:id/image` (reemplazo de imagen)
+
 Multipart (`FileInterceptor`, como `POST /bank/image`). Sube una nueva imagen, crea el asset, repunta `imageAssetId` de la pregunta (solo para preguntas `type='image'` propias). Tenant-scoped vía `@CurrentUser()`.
 
 ### 4.3 IA — extender `QuestionGeneratorPort`
+
 `QuestionGeneratorPort` (`ai/domain/ports/question-generator.port.ts`, hoy con generación) gana dos métodos, implementados por el adapter OpenRouter (real) y fakes (`in-memory`/`lazy`) para tests:
 
 - **`reviseQuestion(input): Promise<RevisedQuestion>`** — recibe la pregunta actual (enunciado, alternativas, clave, taxonomía) + la instrucción; devuelve la versión revisada. **No persiste.**
 - **`extractFromImage(input): Promise<ExtractedQuestion>`** — recibe los bytes de la imagen; devuelve `{ bodyTypst, alternatives, correctAnswer }`. **No persiste.**
 
 Endpoints (módulo `ai`, junto a `POST /ai/questions/generate`):
+
 - **`POST /ai/questions/:id/revise`** body `{ instruction }` → carga la pregunta (tenant-scoped, 404 si no existe/otro tenant), llama `reviseQuestion`, **valida** la salida con el mismo compile Typst que la edición manual, y devuelve el borrador revisado (sin guardar). 422 si la IA produce algo que no compila (con mensaje claro para reintentar).
 - **`POST /ai/questions/extract`** multipart imagen → `extractFromImage` → valida → devuelve campos estructurados (sin guardar). No requiere `:id` (sirve también para poblar una pregunta nueva; el front la usa desde el editor).
 
 ### 4.4 Flujo de datos (IA revise)
+
 ```
 panel edición → instrucción → POST /ai/questions/:id/revise → LLM (QuestionGeneratorPort)
    → validación Typst → borrador revisado (no persistido) → campos del formulario

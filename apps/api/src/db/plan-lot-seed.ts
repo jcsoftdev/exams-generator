@@ -81,9 +81,7 @@ export function planLotSeed(input: PlanLotSeedInput): LotSeedPlan {
       continue;
     }
 
-    const fingerprint = entry.imagePath
-      ? input.figureFingerprints.get(entry.imagePath)
-      : undefined;
+    const fingerprint = entry.imagePath ? input.figureFingerprints.get(entry.imagePath) : undefined;
     const bodyHash = hashBodyTypst(entry.bodyTypst as string, fingerprint);
     if (seenHashes.has(bodyHash)) {
       skipped++;

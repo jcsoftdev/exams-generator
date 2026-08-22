@@ -34,7 +34,11 @@ function setup(opts: { exchangeCodeImpl?: (...a: unknown[]) => unknown } = {}) {
 
 describe('AuthCallbackComponent', () => {
   afterEach(() => {
-    Object.defineProperty(window, 'location', { writable: true, configurable: true, value: originalLocation });
+    Object.defineProperty(window, 'location', {
+      writable: true,
+      configurable: true,
+      value: originalLocation,
+    });
   });
 
   it('redeems the code from the URL fragment, stores the token, and navigates to /app', () => {

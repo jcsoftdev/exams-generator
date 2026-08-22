@@ -52,7 +52,9 @@ function buildDeps() {
     rejectQuestion: jest.fn().mockResolvedValue(false),
     topicExists: jest.fn().mockResolvedValue(true),
     getSubtopicTopicId: jest.fn().mockResolvedValue(undefined as string | undefined),
-    updateStructuredQuestionAndTaxonomy: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
+    updateStructuredQuestionAndTaxonomy: jest
+      .fn()
+      .mockResolvedValue(undefined as QuestionListItem | undefined),
   } as unknown as jest.Mocked<BankRepository>;
 
   const storage = {
@@ -324,9 +326,7 @@ describe("BankService.createStructuredQuestion", () => {
     await service.createStructuredQuestion(TEACHER_USER, { ...VALID_DTO, figureFingerprint: figureA });
     await service.createStructuredQuestion(TEACHER_USER, { ...VALID_DTO, figureFingerprint: figureB });
 
-    const [firstCall, secondCall] = (
-      repository.createStructuredQuestion as jest.Mock
-    ).mock.calls;
+    const [firstCall, secondCall] = (repository.createStructuredQuestion as jest.Mock).mock.calls;
     expect(firstCall[0].bodyHash).not.toBe(secondCall[0].bodyHash);
     expect(firstCall[0].bodyHash).toBe(hashBodyTypst(VALID_DTO.bodyTypst, figureA));
   });
@@ -450,9 +450,7 @@ describe("BankService.listQuestions", () => {
 
     await service.listQuestions(STAFF_USER, {});
 
-    expect(repository.listQuestions).toHaveBeenCalledWith(
-      expect.objectContaining({ currentTenantId: null }),
-    );
+    expect(repository.listQuestions).toHaveBeenCalledWith(expect.objectContaining({ currentTenantId: null }));
   });
 });
 
@@ -556,9 +554,7 @@ describe("BankService.approveQuestion", () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue(undefined);
 
-    await expect(service.approveQuestion(TEACHER_USER, "missing")).rejects.toBeInstanceOf(
-      NotFoundException,
-    );
+    await expect(service.approveQuestion(TEACHER_USER, "missing")).rejects.toBeInstanceOf(NotFoundException);
     expect(repository.approveQuestion).not.toHaveBeenCalled();
   });
 
@@ -566,9 +562,7 @@ describe("BankService.approveQuestion", () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, status: "approved" });
 
-    await expect(service.approveQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(
-      ConflictException,
-    );
+    await expect(service.approveQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(ConflictException);
     expect(repository.approveQuestion).not.toHaveBeenCalled();
   });
 
@@ -576,9 +570,7 @@ describe("BankService.approveQuestion", () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, tenantId: null });
 
-    await expect(service.approveQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(
-      ForbiddenException,
-    );
+    await expect(service.approveQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(ForbiddenException);
     expect(repository.approveQuestion).not.toHaveBeenCalled();
   });
 
@@ -586,9 +578,7 @@ describe("BankService.approveQuestion", () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
 
-    await expect(service.approveQuestion(STAFF_USER, "draft-1")).rejects.toBeInstanceOf(
-      ForbiddenException,
-    );
+    await expect(service.approveQuestion(STAFF_USER, "draft-1")).rejects.toBeInstanceOf(ForbiddenException);
     expect(repository.approveQuestion).not.toHaveBeenCalled();
   });
 });
@@ -609,27 +599,21 @@ describe("BankService.rejectQuestion", () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue(undefined);
 
-    await expect(service.rejectQuestion(TEACHER_USER, "missing")).rejects.toBeInstanceOf(
-      NotFoundException,
-    );
+    await expect(service.rejectQuestion(TEACHER_USER, "missing")).rejects.toBeInstanceOf(NotFoundException);
   });
 
   it("throws ConflictException when the question is already approved", async () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, status: "approved" });
 
-    await expect(service.rejectQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(
-      ConflictException,
-    );
+    await expect(service.rejectQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(ConflictException);
   });
 
   it("throws ForbiddenException when a tenant role (teacher) tries to reject a central draft", async () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, tenantId: null });
 
-    await expect(service.rejectQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(
-      ForbiddenException,
-    );
+    await expect(service.rejectQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(ForbiddenException);
     expect(repository.rejectQuestion).not.toHaveBeenCalled();
   });
 });
@@ -675,9 +659,9 @@ describe("BankService.editQuestion", () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue(undefined);
 
-    await expect(
-      service.editQuestion(TEACHER_USER, "missing", { bodyTypst: "x" }),
-    ).rejects.toBeInstanceOf(NotFoundException);
+    await expect(service.editQuestion(TEACHER_USER, "missing", { bodyTypst: "x" })).rejects.toBeInstanceOf(
+      NotFoundException,
+    );
   });
 
   it("edits an already-approved question too (not just draft)", async () => {
@@ -701,9 +685,9 @@ describe("BankService.editQuestion", () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, status: "archived" });
 
-    await expect(
-      service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" }),
-    ).rejects.toBeInstanceOf(ConflictException);
+    await expect(service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" })).rejects.toBeInstanceOf(
+      ConflictException,
+    );
     expect(repository.updateStructuredQuestionAndTaxonomy).not.toHaveBeenCalled();
   });
 
@@ -711,9 +695,9 @@ describe("BankService.editQuestion", () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
 
-    await expect(
-      service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "   " }),
-    ).rejects.toBeInstanceOf(BadRequestException);
+    await expect(service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "   " })).rejects.toBeInstanceOf(
+      BadRequestException,
+    );
     expect(repository.updateStructuredQuestionAndTaxonomy).not.toHaveBeenCalled();
   });
 
@@ -721,9 +705,9 @@ describe("BankService.editQuestion", () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, tenantId: null });
 
-    await expect(
-      service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" }),
-    ).rejects.toBeInstanceOf(ForbiddenException);
+    await expect(service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" })).rejects.toBeInstanceOf(
+      ForbiddenException,
+    );
     expect(repository.updateStructuredQuestionAndTaxonomy).not.toHaveBeenCalled();
   });
 
@@ -811,9 +795,7 @@ describe("BankService.previewQuestion", () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue(undefined);
 
-    await expect(service.previewQuestion(TEACHER_USER, "missing")).rejects.toBeInstanceOf(
-      NotFoundException,
-    );
+    await expect(service.previewQuestion(TEACHER_USER, "missing")).rejects.toBeInstanceOf(NotFoundException);
   });
 
   it("throws BadRequestException when the question is not structured", async () => {

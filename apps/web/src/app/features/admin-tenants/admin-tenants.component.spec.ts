@@ -17,15 +17,26 @@ function tenant(o: Partial<AdminTenant> & { id: string }): AdminTenant {
   };
 }
 
-function setup(overrides: {
-  listImpl?: () => unknown;
-  createImpl?: () => unknown;
-  updateImpl?: () => unknown;
-  removeImpl?: () => unknown;
-} = {}) {
-  const list = vi.fn(overrides.listImpl ?? (() => of({ items: [tenant({ id: 't1' }), tenant({ id: 't2', active: false })], total: 2 })));
-  const create = vi.fn(overrides.createImpl ?? (() => of(tenant({ id: 't3', name: 'Nuevo Colegio', slug: 'nuevo-colegio' }))));
-  const update = vi.fn(overrides.updateImpl ?? ((id: string, patch: Partial<AdminTenant>) => of(tenant({ id, ...patch }))));
+function setup(
+  overrides: {
+    listImpl?: () => unknown;
+    createImpl?: () => unknown;
+    updateImpl?: () => unknown;
+    removeImpl?: () => unknown;
+  } = {},
+) {
+  const list = vi.fn(
+    overrides.listImpl ??
+      (() => of({ items: [tenant({ id: 't1' }), tenant({ id: 't2', active: false })], total: 2 })),
+  );
+  const create = vi.fn(
+    overrides.createImpl ??
+      (() => of(tenant({ id: 't3', name: 'Nuevo Colegio', slug: 'nuevo-colegio' }))),
+  );
+  const update = vi.fn(
+    overrides.updateImpl ??
+      ((id: string, patch: Partial<AdminTenant>) => of(tenant({ id, ...patch }))),
+  );
   const remove = vi.fn(overrides.removeImpl ?? (() => of({ deleted: true as const })));
 
   TestBed.configureTestingModule({
@@ -50,7 +61,9 @@ describe('AdminTenantsComponent', () => {
   });
 
   it('shows a retry button on load failure', () => {
-    const { compiled, list } = setup({ listImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })) });
+    const { compiled, list } = setup({
+      listImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+    });
 
     expect(compiled.querySelector('[data-testid="error-state"]')).toBeTruthy();
     list.mockClear();
@@ -69,13 +82,19 @@ describe('AdminTenantsComponent', () => {
     (compiled.querySelector('[data-testid="create-tenant"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    const submit = compiled.querySelector('[data-testid="create-submit"] button') as HTMLButtonElement;
+    const submit = compiled.querySelector(
+      '[data-testid="create-submit"] button',
+    ) as HTMLButtonElement;
     expect(submit.disabled).toBe(true);
     submit.click();
     expect(create).not.toHaveBeenCalled();
 
-    (fixture.componentInstance as unknown as { createName: { set(v: string): void } }).createName.set('Colegio Nuevo');
-    (fixture.componentInstance as unknown as { createSlug: { set(v: string): void } }).createSlug.set('colegio-nuevo');
+    (
+      fixture.componentInstance as unknown as { createName: { set(v: string): void } }
+    ).createName.set('Colegio Nuevo');
+    (
+      fixture.componentInstance as unknown as { createSlug: { set(v: string): void } }
+    ).createSlug.set('colegio-nuevo');
     fixture.detectChanges();
 
     expect(submit.disabled).toBe(false);
@@ -87,7 +106,9 @@ describe('AdminTenantsComponent', () => {
     const { fixture, compiled, update } = setup();
     (compiled.querySelector('[data-testid="tenant-edit"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
-    (fixture.componentInstance as unknown as { editName: { set(v: string): void } }).editName.set('Colegio Renombrado');
+    (fixture.componentInstance as unknown as { editName: { set(v: string): void } }).editName.set(
+      'Colegio Renombrado',
+    );
     fixture.detectChanges();
     (compiled.querySelector('[data-testid="edit-submit"] button') as HTMLButtonElement).click();
 
@@ -96,28 +117,42 @@ describe('AdminTenantsComponent', () => {
 
   it('deactivating asks for confirmation before calling update', () => {
     const { fixture, compiled, update } = setup();
-    (compiled.querySelectorAll('[data-testid="tenant-toggle-active"] button')[0] as HTMLButtonElement).click();
+    (
+      compiled.querySelectorAll(
+        '[data-testid="tenant-toggle-active"] button',
+      )[0] as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
 
     expect(update).not.toHaveBeenCalled();
-    (compiled.querySelector('[data-testid="deactivate-confirm-yes"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="deactivate-confirm-yes"] button') as HTMLButtonElement
+    ).click();
     expect(update).toHaveBeenCalledWith('t1', { active: false });
   });
 
   it('reactivating does NOT ask for confirmation (non-destructive)', () => {
     const { compiled, update } = setup();
-    (compiled.querySelectorAll('[data-testid="tenant-toggle-active"] button')[1] as HTMLButtonElement).click();
+    (
+      compiled.querySelectorAll(
+        '[data-testid="tenant-toggle-active"] button',
+      )[1] as HTMLButtonElement
+    ).click();
 
     expect(update).toHaveBeenCalledWith('t2', { active: true });
   });
 
   it('deleting asks for confirmation before calling remove', () => {
     const { fixture, compiled, remove } = setup();
-    (compiled.querySelectorAll('[data-testid="tenant-delete"] button')[0] as HTMLButtonElement).click();
+    (
+      compiled.querySelectorAll('[data-testid="tenant-delete"] button')[0] as HTMLButtonElement
+    ).click();
     fixture.detectChanges();
 
     expect(remove).not.toHaveBeenCalled();
-    (compiled.querySelector('[data-testid="delete-confirm-yes"] button') as HTMLButtonElement).click();
+    (
+      compiled.querySelector('[data-testid="delete-confirm-yes"] button') as HTMLButtonElement
+    ).click();
     expect(remove).toHaveBeenCalledWith('t1');
   });
 });

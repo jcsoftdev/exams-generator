@@ -173,12 +173,9 @@ export class ExamsRepository implements ExamsRepositoryPort {
       // on the same number, which is a cosmetic tie, not a broken row.
       const title = duplicateTitle(
         original.title,
-        (
-          await tx
-            .select({ title: exams.title })
-            .from(exams)
-            .where(eq(exams.tenantId, tenantId))
-        ).map((row) => row.title),
+        (await tx.select({ title: exams.title }).from(exams).where(eq(exams.tenantId, tenantId))).map(
+          (row) => row.title,
+        ),
       );
 
       const [copy] = await tx
@@ -362,13 +359,7 @@ export class ExamsRepository implements ExamsRepositoryPort {
       })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
-      .where(
-        and(
-          visibility,
-          eq(questions.status, "approved"),
-          eq(questions.gradeLevel, filter.gradeLevel),
-        ),
-      );
+      .where(and(visibility, eq(questions.status, "approved"), eq(questions.gradeLevel, filter.gradeLevel)));
   }
 
   /**
@@ -528,10 +519,7 @@ export class ExamsRepository implements ExamsRepositoryPort {
    * answer + baked-in image, ordered by position. Tenant-scoped like
    * `getExamById` — returns `undefined` for another tenant's exam.
    */
-  async getExamForGeneration(
-    examId: string,
-    tenantId: string,
-  ): Promise<ExamForGenerationRecord | undefined> {
+  async getExamForGeneration(examId: string, tenantId: string): Promise<ExamForGenerationRecord | undefined> {
     const [examRow] = await this.db
       .select({
         id: exams.id,
@@ -622,7 +610,10 @@ export class ExamsRepository implements ExamsRepositoryPort {
       .where(inArray(questionAlternativeImages.questionId, questionIds as string[]))
       .orderBy(asc(questionAlternativeImages.alternativeIndex));
 
-    const rowsByQuestionId = new Map<string, { alternativeIndex: number; storageKey: string; mime: string }[]>();
+    const rowsByQuestionId = new Map<
+      string,
+      { alternativeIndex: number; storageKey: string; mime: string }[]
+    >();
     for (const row of rows) {
       const bucket = rowsByQuestionId.get(row.questionId) ?? [];
       bucket.push(row);
@@ -763,7 +754,10 @@ export class ExamsRepository implements ExamsRepositoryPort {
         return [];
       }
 
-      const assetRows = await tx.select({ storageKey: assets.storageKey }).from(assets).where(inArray(assets.id, assetIds));
+      const assetRows = await tx
+        .select({ storageKey: assets.storageKey })
+        .from(assets)
+        .where(inArray(assets.id, assetIds));
       await tx.delete(assets).where(inArray(assets.id, assetIds));
 
       return assetRows.map((row) => row.storageKey);
@@ -844,10 +838,7 @@ export class ExamsRepository implements ExamsRepositoryPort {
    * answer sheet). `innerJoin` skips any half-generated version missing an
    * asset — a fully generated version always has both. Ordered by `code ASC`.
    */
-  async getVersionAssetRecords(
-    examId: string,
-    tenantId: string,
-  ): Promise<VersionAssetRecord[] | undefined> {
+  async getVersionAssetRecords(examId: string, tenantId: string): Promise<VersionAssetRecord[] | undefined> {
     const exam = await this.getExamById(examId, tenantId);
     if (!exam) {
       return undefined;

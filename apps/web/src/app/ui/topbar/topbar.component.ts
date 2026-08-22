@@ -16,7 +16,9 @@ import { LucideAngularModule } from 'lucide-angular';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [LucideAngularModule],
   template: `
-    <header class="flex items-center justify-between gap-4 border-b border-n200 bg-surface px-4 py-3">
+    <header
+      class="flex items-center justify-between gap-4 border-b border-n200 bg-surface px-4 py-3"
+    >
       <div class="flex items-center gap-3">
         <button
           data-testid="topbar-menu-button"

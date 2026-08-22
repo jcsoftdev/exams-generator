@@ -48,14 +48,19 @@ function buildDeps() {
     getById: jest.fn().mockResolvedValue(JOB_RECORD),
     list: jest
       .fn()
-      .mockResolvedValue({ items: [{ ...JOB_RECORD, attemptCount: 1, courseName: "Matemática", topicName: "Fracciones" }], total: 1 }),
+      .mockResolvedValue({
+        items: [{ ...JOB_RECORD, attemptCount: 1, courseName: "Matemática", topicName: "Fracciones" }],
+        total: 1,
+      }),
     listChain: jest.fn().mockResolvedValue([JOB_RECORD]),
     requestCancel: jest.fn().mockResolvedValue(undefined),
     setStatus: jest.fn().mockResolvedValue(undefined),
   } as unknown as jest.Mocked<GenerationJobsRepository>;
 
   const bankRepository = {
-    findCourseAndTopicNames: jest.fn().mockResolvedValue({ courseName: "Matemática", topicName: "Fracciones" }),
+    findCourseAndTopicNames: jest
+      .fn()
+      .mockResolvedValue({ courseName: "Matemática", topicName: "Fracciones" }),
   } as unknown as jest.Mocked<BankRepository>;
 
   const queue = { add: jest.fn().mockResolvedValue(undefined) };
@@ -119,7 +124,12 @@ describe("GenerationJobsService.create", () => {
 
     expect(record).toBe(JOB_RECORD);
     expect(repository.create).toHaveBeenCalledWith(
-      expect.objectContaining({ tenantId: "tenant-1", createdBy: "user-1", createdByRole: Role.Teacher, count: 5 }),
+      expect.objectContaining({
+        tenantId: "tenant-1",
+        createdBy: "user-1",
+        createdByRole: Role.Teacher,
+        count: 5,
+      }),
     );
     expect(queue.add).toHaveBeenCalledWith("generate", { jobId: "job-1" }, { jobId: "job-1" });
   });
@@ -176,9 +186,9 @@ describe("GenerationJobsService.create — retry linkage", () => {
     const { service, repository, queue } = buildDeps();
     repository.getById.mockResolvedValue(undefined);
 
-    await expect(service.create(TEACHER, { ...VALID_DTO, retriedFromJobId: "missing-job" })).rejects.toBeInstanceOf(
-      NotFoundException,
-    );
+    await expect(
+      service.create(TEACHER, { ...VALID_DTO, retriedFromJobId: "missing-job" }),
+    ).rejects.toBeInstanceOf(NotFoundException);
     expect(queue.add).not.toHaveBeenCalled();
   });
 

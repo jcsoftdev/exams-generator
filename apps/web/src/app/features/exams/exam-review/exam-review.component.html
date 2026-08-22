@@ -56,81 +56,85 @@
       }
     </div>
   } @else {
-  <ul class="flex flex-col gap-3">
-    @for (question of questions(); track question.id; let i = $index) {
-      <li
-        class="rounded-card border border-n200 bg-surface p-4"
-        data-testid="exam-question"
-        [attr.data-question-id]="question.id"
-      >
-        <div class="flex items-start gap-3">
-          <span
-            class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-field bg-primary-50 text-sm font-semibold text-primary-700"
-            >{{ i + 1 }}</span
-          >
-          <div class="min-w-0 flex-1">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="text-sm font-medium text-n900">{{ question.courseName }}</span>
-              <span class="text-n300">·</span>
-              <span class="text-sm text-n600">{{ question.topicName }}</span>
-              <ui-tag [variant]="difficultyVariant(question.difficulty)">{{
-                difficultyLabel(question.difficulty)
-              }}</ui-tag>
+    <ul class="flex flex-col gap-3">
+      @for (question of questions(); track question.id; let i = $index) {
+        <li
+          class="rounded-card border border-n200 bg-surface p-4"
+          data-testid="exam-question"
+          [attr.data-question-id]="question.id"
+        >
+          <div class="flex items-start gap-3">
+            <span
+              class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-field bg-primary-50 text-sm font-semibold text-primary-700"
+              >{{ i + 1 }}</span
+            >
+            <div class="min-w-0 flex-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-sm font-medium text-n900">{{ question.courseName }}</span>
+                <span class="text-n300">·</span>
+                <span class="text-sm text-n600">{{ question.topicName }}</span>
+                <ui-tag [variant]="difficultyVariant(question.difficulty)">{{
+                  difficultyLabel(question.difficulty)
+                }}</ui-tag>
+              </div>
+
+              <!-- El enunciado: sin esto el docente decidía a ciegas (audit 2026-08-15). -->
+              @if (question.bodyTypst) {
+                <div data-testid="question-body" class="mt-2 text-sm text-n800">
+                  <ui-math-text [value]="question.bodyTypst"></ui-math-text>
+                </div>
+              } @else if (question.type === 'image') {
+                <p data-testid="question-body" class="mt-2 text-sm text-n500">
+                  Pregunta con imagen — se ve completa en el PDF.
+                </p>
+              }
+
+              <p data-testid="correct-answer" class="mt-1 text-xs text-n500">
+                Respuesta correcta:
+                <span class="font-medium text-n700">{{ correctAnswerLabel(question) }}</span>
+              </p>
             </div>
 
-            <!-- El enunciado: sin esto el docente decidía a ciegas (audit 2026-08-15). -->
-            @if (question.bodyTypst) {
-              <div data-testid="question-body" class="mt-2 text-sm text-n800">
-                <ui-math-text [value]="question.bodyTypst"></ui-math-text>
-              </div>
-            } @else if (question.type === 'image') {
-              <p data-testid="question-body" class="mt-2 text-sm text-n500">
-                Pregunta con imagen — se ve completa en el PDF.
-              </p>
-            }
-
-            <p data-testid="correct-answer" class="mt-1 text-xs text-n500">
-              Respuesta correcta:
-              <span class="font-medium text-n700">{{ correctAnswerLabel(question) }}</span>
-            </p>
-          </div>
-
-          <span class="shrink-0" data-testid="reroll-button">
-            <ui-button
-              variant="ghost"
-              size="sm"
-              [disabled]="isReady() || replacing()"
-              [loading]="replacing()"
-              (clicked)="reroll(question.id)"
-            >
-              <lucide-icon name="shuffle" class="h-4 w-4"></lucide-icon>
-              Cambiar
-            </ui-button>
-          </span>
-        </div>
-
-        @if (!isReady()) {
-          <div class="mt-3 flex items-end gap-2 border-t border-n100 pt-3">
-            <label class="flex-1 text-xs text-n600">
-              Reemplazar por una pregunta específica (ID)
-              <input
-                type="text"
-                data-testid="manual-replacement-input"
-                placeholder="ID de la pregunta"
-                class="mt-1 block w-full rounded-field border border-n200 px-3 py-2 text-sm text-n900 placeholder:text-n400 focus:border-primary-400 focus:outline-none"
-                (input)="onManualReplacementInput(question.id, $any($event.target).value)"
-              />
-            </label>
-            <span data-testid="manual-replace-button">
-              <ui-button variant="ghost" [disabled]="isReady() || replacing()" (clicked)="manualReplace(question.id)">
-                Reemplazar
+            <span class="shrink-0" data-testid="reroll-button">
+              <ui-button
+                variant="ghost"
+                size="sm"
+                [disabled]="isReady() || replacing()"
+                [loading]="replacing()"
+                (clicked)="reroll(question.id)"
+              >
+                <lucide-icon name="shuffle" class="h-4 w-4"></lucide-icon>
+                Cambiar
               </ui-button>
             </span>
           </div>
-        }
-      </li>
-    }
-  </ul>
+
+          @if (!isReady()) {
+            <div class="mt-3 flex items-end gap-2 border-t border-n100 pt-3">
+              <label class="flex-1 text-xs text-n600">
+                Reemplazar por una pregunta específica (ID)
+                <input
+                  type="text"
+                  data-testid="manual-replacement-input"
+                  placeholder="ID de la pregunta"
+                  class="mt-1 block w-full rounded-field border border-n200 px-3 py-2 text-sm text-n900 placeholder:text-n400 focus:border-primary-400 focus:outline-none"
+                  (input)="onManualReplacementInput(question.id, $any($event.target).value)"
+                />
+              </label>
+              <span data-testid="manual-replace-button">
+                <ui-button
+                  variant="ghost"
+                  [disabled]="isReady() || replacing()"
+                  (clicked)="manualReplace(question.id)"
+                >
+                  Reemplazar
+                </ui-button>
+              </span>
+            </div>
+          }
+        </li>
+      }
+    </ul>
   }
 
   <!--

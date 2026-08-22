@@ -212,7 +212,25 @@ const MULTI_CHAR_OPERATORS: readonly (readonly [string, string])[] = [
 ];
 
 /** Single characters that are safe to emit into LaTeX math verbatim. */
-const VERBATIM_CHARS = new Set(['+', '-', '*', '=', '<', '>', ',', ';', ':', '!', '?', '.', "'", '[', ']', '(', ')']);
+const VERBATIM_CHARS = new Set([
+  '+',
+  '-',
+  '*',
+  '=',
+  '<',
+  '>',
+  ',',
+  ';',
+  ':',
+  '!',
+  '?',
+  '.',
+  "'",
+  '[',
+  ']',
+  '(',
+  ')',
+]);
 
 /** Single characters that need a LaTeX spelling of their own. */
 const ESCAPED_CHARS: Readonly<Record<string, string>> = {
@@ -401,7 +419,11 @@ class MathParser {
         return { tex: token.v, atom: true, group: false };
 
       case 'str':
-        return this.absorbCall({ tex: `\\text{${escapeTextRun(token.v)}}`, atom: true, group: false });
+        return this.absorbCall({
+          tex: `\\text{${escapeTextRun(token.v)}}`,
+          atom: true,
+          group: false,
+        });
 
       case 'ident':
         return this.absorbCall(this.parseIdentifier(token.v));
@@ -578,15 +600,17 @@ const MITEX_IMPORT_PATTERN = /^[ \t]*#import\s+"[^"]*"\s*:[^\n]*\n?/gm;
  * the whole expression gets math.
  */
 export function typstToPlainText(source: string): string {
-  return source
-    .replace(MITEX_IMPORT_PATTERN, '')
-    .replace(/#mi(?:tex)?\(\s*[`"]([\s\S]*?)[`"]\s*\)/g, '$1')
-    // One pass, so an escaped `\$` becomes a literal `$` WITHOUT the next
-    // rule then stripping it as if it were a delimiter.
-    .replace(/\\\$|\$/g, (match) => (match === '\\$' ? '$' : ''))
-    .replace(/"([^"]*)"/g, '$1')
-    .replace(/\s+/g, ' ')
-    .trim();
+  return (
+    source
+      .replace(MITEX_IMPORT_PATTERN, '')
+      .replace(/#mi(?:tex)?\(\s*[`"]([\s\S]*?)[`"]\s*\)/g, '$1')
+      // One pass, so an escaped `\$` becomes a literal `$` WITHOUT the next
+      // rule then stripping it as if it were a delimiter.
+      .replace(/\\\$|\$/g, (match) => (match === '\\$' ? '$' : ''))
+      .replace(/"([^"]*)"/g, '$1')
+      .replace(/\s+/g, ' ')
+      .trim()
+  );
 }
 
 /**

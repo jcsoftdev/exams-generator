@@ -107,13 +107,21 @@ async function main(): Promise<void> {
       .select({ id: topics.id, courseId: topics.courseId })
       .from(topics)
       .where(
-        and(inArray(topics.courseId, courseIds), eq(topics.name, topic.name), eq(topics.gradeLevel, data.gradeLevel)),
+        and(
+          inArray(topics.courseId, courseIds),
+          eq(topics.name, topic.name),
+          eq(topics.gradeLevel, data.gradeLevel),
+        ),
       );
 
     if (!topicRow) {
       for (const question of topic.questions) {
         const label = `${topic.name} — ${question.sourceName}`;
-        results.push({ label, ok: false, error: `Topic '${topic.name}' not found in course '${data.courseName}'` });
+        results.push({
+          label,
+          ok: false,
+          error: `Topic '${topic.name}' not found in course '${data.courseName}'`,
+        });
         console.error(`FAIL ${label}: topic not found`);
       }
       continue;

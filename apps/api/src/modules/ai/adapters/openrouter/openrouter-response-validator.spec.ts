@@ -64,9 +64,9 @@ describe("validateGeneratedQuestionShape", () => {
   });
 
   it("rejects with a message naming the offending LaTeX command, for the retry prompt", () => {
-    expect(() =>
-      validateGeneratedQuestionShape({ ...VALID, bodyTypst: "Si $\\circ = 1$" }),
-    ).toThrow(/\\circ/);
+    expect(() => validateGeneratedQuestionShape({ ...VALID, bodyTypst: "Si $\\circ = 1$" })).toThrow(
+      /\\circ/,
+    );
   });
 
   it("accepts a lone backslash outside math mode (Typst line-break syntax)", () => {
@@ -96,8 +96,7 @@ describe("validateGeneratedQuestionShape", () => {
   it("accepts LaTeX wrapped in #mi(), even though it contains backslash commands", () => {
     const result = validateGeneratedQuestionShape({
       ...VALID,
-      bodyTypst:
-        'El área es #mi("\\frac{1}{2} \\cdot b \\cdot h") — con $b$ y $h$ en cm.',
+      bodyTypst: 'El área es #mi("\\frac{1}{2} \\cdot b \\cdot h") — con $b$ y $h$ en cm.',
     });
 
     expect(result.question.bodyTypst).toContain('#mi("\\frac{1}{2}');

@@ -23,7 +23,10 @@ import { SelectComponent, SelectOption } from '../../../ui/select/select.compone
 import { TableComponent } from '../../../ui/table/table.component';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
-import { DEFAULT_VERSION_COUNT, VERSION_COUNT_OPTIONS } from '../../exam-versions/exam-versions.models';
+import {
+  DEFAULT_VERSION_COUNT,
+  VERSION_COUNT_OPTIONS,
+} from '../../exam-versions/exam-versions.models';
 import { ExamsService } from '../exams.service';
 import {
   CreateExamBlueprintRow,
@@ -240,8 +243,15 @@ function toggleInSet(current: ReadonlySet<string>, id: string): ReadonlySet<stri
     ExamBuilderStore,
     // `ui-select` (Grado) needs Check too — this component-level `.pick()`
     // shadows the root `app.config.ts` registration for its own subtree.
-    LucideAngularModule.pick({ Sparkles, TriangleAlert, Lock, Inbox, ChevronDown, ChevronRight, Check })
-      .providers ?? [],
+    LucideAngularModule.pick({
+      Sparkles,
+      TriangleAlert,
+      Lock,
+      Inbox,
+      ChevronDown,
+      ChevronRight,
+      Check,
+    }).providers ?? [],
   ],
   templateUrl: './exam-builder.component.html',
 })
@@ -252,7 +262,11 @@ export class ExamBuilderComponent implements OnInit {
 
   protected readonly store = inject(ExamBuilderStore);
 
-  protected readonly difficulties: readonly Difficulty[] = [Difficulty.Easy, Difficulty.Medium, Difficulty.Hard];
+  protected readonly difficulties: readonly Difficulty[] = [
+    Difficulty.Easy,
+    Difficulty.Medium,
+    Difficulty.Hard,
+  ];
   protected readonly difficultyLabels = DIFFICULTY_LABELS;
   /**
    * Approved-question count per grade (`GET /exams/stock/grades`), empty until
@@ -425,7 +439,9 @@ export class ExamBuilderComponent implements OnInit {
         return null;
     }
   });
-  protected readonly showCourseMultiSelect = computed(() => this.selectedExamType()?.courseScope === 'selected');
+  protected readonly showCourseMultiSelect = computed(
+    () => this.selectedExamType()?.courseScope === 'selected',
+  );
 
   /**
    * The reported bug: "Cargar plantilla" used to be a dead, mute control —
@@ -473,14 +489,19 @@ export class ExamBuilderComponent implements OnInit {
     return this.store.requestedCells().length > 0 ? 'Volver a cargar' : 'Cargar plantilla';
   });
 
-  protected readonly canLoadTemplate = computed(() => !this.isManual() && this.loadTemplateBlockedReason() === null);
+  protected readonly canLoadTemplate = computed(
+    () => !this.isManual() && this.loadTemplateBlockedReason() === null,
+  );
 
   ngOnInit(): void {
     this.watchViewportWidth();
     // Silent on failure: a missing count must leave the labels untouched, never
     // claim "sin preguntas" for a grade that may well have thousands.
     this.examsService.gradeLevelStock().subscribe({
-      next: (result) => this.gradeLevelStock.set(new Map(result.results.map((row) => [row.gradeLevel, row.available]))),
+      next: (result) =>
+        this.gradeLevelStock.set(
+          new Map(result.results.map((row) => [row.gradeLevel, row.available])),
+        ),
       error: () => undefined,
     });
     this.examsService.getExamTypes().subscribe({
@@ -721,7 +742,10 @@ export class ExamBuilderComponent implements OnInit {
   protected readonly courseSearch = signal('');
 
   private static normalize(value: string): string {
-    return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    return value
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
   }
 
   protected readonly filteredTemplateCourses = computed(() => {
@@ -811,7 +835,9 @@ export class ExamBuilderComponent implements OnInit {
       examTypeCode: examType.code,
       universityId,
       ...(trackId ? { trackId } : {}),
-      ...(examType.courseScope === 'selected' ? { selectedCourseIds: Array.from(this.selectedCourseIds()) } : {}),
+      ...(examType.courseScope === 'selected'
+        ? { selectedCourseIds: Array.from(this.selectedCourseIds()) }
+        : {}),
       ...(totalQuestionsRaw ? { totalQuestionsOverride: Number(totalQuestionsRaw) } : {}),
     };
 
@@ -900,7 +926,8 @@ export class ExamBuilderComponent implements OnInit {
 
   private topicNameFor(courseId: string, topicId: string): string {
     return (
-      this.store.rows().find((row) => row.courseId === courseId && row.topicId === topicId)?.topicName ?? topicId
+      this.store.rows().find((row) => row.courseId === courseId && row.topicId === topicId)
+        ?.topicName ?? topicId
     );
   }
 
@@ -945,7 +972,10 @@ export class ExamBuilderComponent implements OnInit {
                   ],
                 })
                 .pipe(
-                  map((result) => ({ key: request.key, questionIds: result.selections[0]?.questionIds ?? [] })),
+                  map((result) => ({
+                    key: request.key,
+                    questionIds: result.selections[0]?.questionIds ?? [],
+                  })),
                   catchError(() => {
                     this.loadingPreview.set(false);
                     this.previewError.set('No se pudo cargar la vista previa. Inténtalo de nuevo.');
@@ -991,10 +1021,11 @@ export class ExamBuilderComponent implements OnInit {
   protected readonly examTitle = signal('');
   /** How many forms to compile on the FIRST generation — no longer hardcoded to 2. */
   protected readonly versionCount = signal(DEFAULT_VERSION_COUNT);
-  protected readonly versionCountOptions: readonly SelectOption<number>[] = VERSION_COUNT_OPTIONS.map((count) => ({
-    value: count,
-    label: String(count),
-  }));
+  protected readonly versionCountOptions: readonly SelectOption<number>[] =
+    VERSION_COUNT_OPTIONS.map((count) => ({
+      value: count,
+      label: String(count),
+    }));
 
   /** Placeholder doubles as a preview of the name the exam will get if the field stays empty. */
   protected titlePlaceholder(): string {
@@ -1035,7 +1066,9 @@ export class ExamBuilderComponent implements OnInit {
    * university yet is pure noise (audit 2026-08-15).
    */
   protected readonly showsGrid = computed(
-    () => this.selectedGradeLevel() !== null && (this.isManual() || this.store.requestedCells().length > 0),
+    () =>
+      this.selectedGradeLevel() !== null &&
+      (this.isManual() || this.store.requestedCells().length > 0),
   );
 
   /** Rows grouped by course, for the "read like the tree" course subheading (design doc §5.1). */
@@ -1046,7 +1079,9 @@ export class ExamBuilderComponent implements OnInit {
     }
     const requested = this.store.requested();
     const hasCount = (row: ContentRow) =>
-      this.difficulties.some((difficulty) => (requested.get(this.cellKey(row, difficulty)) ?? 0) > 0);
+      this.difficulties.some(
+        (difficulty) => (requested.get(this.cellKey(row, difficulty)) ?? 0) > 0,
+      );
     // A course whose every row is filtered out drops with them — an empty
     // group header would be noise in a view whose whole point is "only what
     // I asked for".
@@ -1182,43 +1217,48 @@ export class ExamBuilderComponent implements OnInit {
    * as before.
    */
   private loadTopicsAndStock(gradeLevel: GradeLevel, courses: readonly Course[]): void {
-    this.taxonomyService.getTopicsForCourses(courses.map((course) => course.id), gradeLevel).subscribe({
-      next: (topics) => {
-        if (topics.length === 0) {
+    this.taxonomyService
+      .getTopicsForCourses(
+        courses.map((course) => course.id),
+        gradeLevel,
+      )
+      .subscribe({
+        next: (topics) => {
+          if (topics.length === 0) {
+            this.loading.set(false);
+            this.emptyBank.set(true);
+            return;
+          }
+
+          const topicsByCourseId = new Map<string, Topic[]>();
+          for (const topic of topics) {
+            const bucket = topicsByCourseId.get(topic.courseId);
+            if (bucket) {
+              bucket.push(topic);
+            } else {
+              topicsByCourseId.set(topic.courseId, [topic]);
+            }
+          }
+
+          for (const course of courses) {
+            for (const topic of topicsByCourseId.get(course.id) ?? []) {
+              this.store.addRow({
+                id: `${course.id}:${topic.id}`,
+                courseId: course.id,
+                courseName: course.name,
+                topicId: topic.id,
+                topicName: topic.name,
+              });
+            }
+          }
+          this.collapseAllOnNarrowScreen();
+          this.loadStock(gradeLevel);
+        },
+        error: () => {
           this.loading.set(false);
-          this.emptyBank.set(true);
-          return;
-        }
-
-        const topicsByCourseId = new Map<string, Topic[]>();
-        for (const topic of topics) {
-          const bucket = topicsByCourseId.get(topic.courseId);
-          if (bucket) {
-            bucket.push(topic);
-          } else {
-            topicsByCourseId.set(topic.courseId, [topic]);
-          }
-        }
-
-        for (const course of courses) {
-          for (const topic of topicsByCourseId.get(course.id) ?? []) {
-            this.store.addRow({
-              id: `${course.id}:${topic.id}`,
-              courseId: course.id,
-              courseName: course.name,
-              topicId: topic.id,
-              topicName: topic.name,
-            });
-          }
-        }
-        this.collapseAllOnNarrowScreen();
-        this.loadStock(gradeLevel);
-      },
-      error: () => {
-        this.loading.set(false);
-        this.errorMessage.set('No se pudieron cargar las existencias. Inténtalo de nuevo.');
-      },
-    });
+          this.errorMessage.set('No se pudieron cargar las existencias. Inténtalo de nuevo.');
+        },
+      });
   }
 
   private loadStock(gradeLevel: GradeLevel): void {
@@ -1326,7 +1366,14 @@ export class ExamBuilderComponent implements OnInit {
 
     this.loadingPreview.set(true);
     this.previewError.set(null);
-    this.previewRequests.next({ key, courseId: row.courseId, topicId: row.topicId, difficulty, count, gradeLevel });
+    this.previewRequests.next({
+      key,
+      courseId: row.courseId,
+      topicId: row.topicId,
+      difficulty,
+      count,
+      gradeLevel,
+    });
   }
 
   protected lowerToStock(row: ContentRow, difficulty: Difficulty): void {
@@ -1352,7 +1399,9 @@ export class ExamBuilderComponent implements OnInit {
     // and the generator used to open at its own default of 5, so the teacher
     // had to re-derive a number this screen already knew (audit 2026-08-15).
     const shortfall =
-      row && difficulty ? Math.max(1, this.requestedFor(row, difficulty) - this.stockFor(row, difficulty)) : null;
+      row && difficulty
+        ? Math.max(1, this.requestedFor(row, difficulty) - this.stockFor(row, difficulty))
+        : null;
     const queryParams =
       row && shortfall !== null
         ? { courseId: row.courseId, topicId: row.topicId, difficulty, gradeLevel, count: shortfall }
@@ -1423,7 +1472,9 @@ export class ExamBuilderComponent implements OnInit {
         // would re-open the builder pre-filled with an exam that already
         // exists. Cleared BEFORE navigating so the effect can't re-save it.
         this.clearPersistedState();
-        this.router.navigate(['/app/exams', created.id], { queryParams: { formas: this.versionCount() } });
+        this.router.navigate(['/app/exams', created.id], {
+          queryParams: { formas: this.versionCount() },
+        });
       },
       error: () => {
         this.generating.set(false);

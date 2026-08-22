@@ -6,7 +6,7 @@ Cross-app shared code for the pnpm workspace. Today this is a single
 package, `@exams-generator/shared`, whose job is to keep `apps/api` and
 `apps/web` from redefining the same cross-cutting domain enums and the
 login/JWT contract twice and drifting apart. It is deliberately tiny in
-*surface* — nine exports total — but it is NOT narrow in *reach*: 152 files
+_surface_ — nine exports total — but it is NOT narrow in _reach_: 152 files
 across both apps import it (115 in `api`, 37 in `web`). It is still NOT a
 general utility library; `apps/landing` does not consume it at all (the
 landing site has no runtime relationship to the API).
@@ -41,7 +41,7 @@ landing site has no runtime relationship to the API).
 - Zero runtime dependencies — pure TypeScript types/enums/DTOs, compiled
   with `tsc` (`tsconfig.build.json`). Dev-only deps are ESLint tooling.
 - Consumed via the pnpm workspace protocol (`"@exams-generator/shared":
-  "workspace:*"` in both `apps/api/package.json` and
+"workspace:*"` in both `apps/api/package.json` and
   `apps/web/package.json`) — never published to a registry.
 
 ## Data Flow

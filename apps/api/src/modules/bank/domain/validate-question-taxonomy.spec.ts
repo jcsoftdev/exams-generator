@@ -20,8 +20,10 @@ describe("validateQuestionTaxonomy", () => {
     expect(validateQuestionTaxonomy({ gradeLevel: "primaria_1" })).toEqual({ ok: true });
   });
   it("accepts valid fields", () => {
-    expect(validateQuestionTaxonomy({ topicId: "t1", difficulty: "easy", gradeLevel: "primaria_1" })).toEqual({
-      ok: true,
-    });
+    expect(validateQuestionTaxonomy({ topicId: "t1", difficulty: "easy", gradeLevel: "primaria_1" })).toEqual(
+      {
+        ok: true,
+      },
+    );
   });
 });

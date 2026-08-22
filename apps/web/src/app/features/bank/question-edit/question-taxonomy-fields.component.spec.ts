@@ -19,7 +19,9 @@ function setup() {
   fixture.componentRef.setInput('courseOptions', [{ value: 'c1', label: 'Curso 1' }]);
   fixture.componentRef.setInput('topicOptions', [{ value: 't1', label: 'Tema 1' }]);
   fixture.componentRef.setInput('difficultyOptions', [{ value: Difficulty.Easy, label: 'Fácil' }]);
-  fixture.componentRef.setInput('gradeLevelOptions', [{ value: 'primaria_1', label: '1ro primaria' }]);
+  fixture.componentRef.setInput('gradeLevelOptions', [
+    { value: 'primaria_1', label: '1ro primaria' },
+  ]);
   fixture.detectChanges();
   return { fixture, compiled: fixture.nativeElement as HTMLElement };
 }

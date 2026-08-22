@@ -58,7 +58,13 @@ describe('ExamBuilderStore', () => {
 
   describe('rows', () => {
     it('addRow appends a content row; removeRow drops it by id', () => {
-      store.addRow({ id: 'row-1', courseId: 'c1', courseName: 'Matemática', topicId: 't1', topicName: 'Álgebra' });
+      store.addRow({
+        id: 'row-1',
+        courseId: 'c1',
+        courseName: 'Matemática',
+        topicId: 't1',
+        topicName: 'Álgebra',
+      });
       expect(store.rows()).toHaveLength(1);
 
       store.removeRow('row-1');
@@ -70,7 +76,9 @@ describe('ExamBuilderStore', () => {
     it('is "ok" when requested <= stock', () => {
       const key = buildCellKey('c1', 't1', Difficulty.Easy);
       store.setRequested(key, 6);
-      store.setStockResults([{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 }]);
+      store.setStockResults([
+        { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 },
+      ]);
 
       expect(store.cellStatus(key)).toBe('ok');
     });
@@ -78,7 +86,9 @@ describe('ExamBuilderStore', () => {
     it('is "short" when requested > stock', () => {
       const key = buildCellKey('c1', 't1', Difficulty.Easy);
       store.setRequested(key, 6);
-      store.setStockResults([{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 2 }]);
+      store.setStockResults([
+        { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 2 },
+      ]);
 
       expect(store.cellStatus(key)).toBe('short');
     });
@@ -153,10 +163,23 @@ describe('ExamBuilderStore', () => {
 
   describe('bulkLoadFromBlueprint (design doc §3.11 — template pre-fill)', () => {
     it('reuses an existing course+topic row and sets the requested count on the matching difficulty cell', () => {
-      store.addRow({ id: 'row-1', courseId: 'c1', courseName: 'Matemática', topicId: 't1', topicName: 'Álgebra' });
+      store.addRow({
+        id: 'row-1',
+        courseId: 'c1',
+        courseName: 'Matemática',
+        topicId: 't1',
+        topicName: 'Álgebra',
+      });
 
       store.bulkLoadFromBlueprint([
-        { courseId: 'c1', courseName: 'Matemática', topicId: 't1', topicName: 'Álgebra', count: 8, difficulty: Difficulty.Hard },
+        {
+          courseId: 'c1',
+          courseName: 'Matemática',
+          topicId: 't1',
+          topicName: 'Álgebra',
+          count: 8,
+          difficulty: Difficulty.Hard,
+        },
       ]);
 
       expect(store.rows()).toHaveLength(1); // reused, not duplicated
@@ -166,11 +189,22 @@ describe('ExamBuilderStore', () => {
 
     it('adds a new row when no matching course+topic row exists yet', () => {
       store.bulkLoadFromBlueprint([
-        { courseId: 'c1', courseName: 'Matemática', topicId: 't1', topicName: 'Álgebra', count: 4, difficulty: Difficulty.Easy },
+        {
+          courseId: 'c1',
+          courseName: 'Matemática',
+          topicId: 't1',
+          topicName: 'Álgebra',
+          count: 4,
+          difficulty: Difficulty.Easy,
+        },
       ]);
 
       expect(store.rows()).toHaveLength(1);
-      expect(store.rows()[0]).toMatchObject({ courseId: 'c1', topicId: 't1', topicName: 'Álgebra' });
+      expect(store.rows()[0]).toMatchObject({
+        courseId: 'c1',
+        topicId: 't1',
+        topicName: 'Álgebra',
+      });
       expect(store.requested().get(buildCellKey('c1', 't1', Difficulty.Easy))).toBe(4);
     });
 
@@ -198,7 +232,9 @@ describe('ExamBuilderStore', () => {
     });
 
     it('defaults an undefined resolved difficulty to Medium (documented default — UNI rows have no NIVEL to translate)', () => {
-      store.bulkLoadFromBlueprint([{ courseId: 'c1', courseName: 'Matemática', topicId: 't1', topicName: 'Álgebra', count: 7 }]);
+      store.bulkLoadFromBlueprint([
+        { courseId: 'c1', courseName: 'Matemática', topicId: 't1', topicName: 'Álgebra', count: 7 },
+      ]);
 
       expect(store.requested().get(buildCellKey('c1', 't1', Difficulty.Medium))).toBe(7);
     });
@@ -206,14 +242,18 @@ describe('ExamBuilderStore', () => {
 
   describe('setStockResults — whole-course sentinel round-trip (Bug 3)', () => {
     it('maps a result with topicId: undefined (echoed back from an omitted request field, meaning "whole course") to the sentinel "" CellKey instead of discarding it', () => {
-      store.setStockResults([{ courseId: 'c1', topicId: undefined, difficulty: Difficulty.Easy, available: 30 }]);
+      store.setStockResults([
+        { courseId: 'c1', topicId: undefined, difficulty: Difficulty.Easy, available: 30 },
+      ]);
 
       const key = buildCellKey('c1', '', Difficulty.Easy);
       expect(store.stock().get(key)).toBe(30);
     });
 
-    it('still ignores a result with no difficulty (defensive — never sent by this store\'s own requests, which always specify one)', () => {
-      store.setStockResults([{ courseId: 'c1', topicId: 't1', difficulty: undefined, available: 30 }]);
+    it("still ignores a result with no difficulty (defensive — never sent by this store's own requests, which always specify one)", () => {
+      store.setStockResults([
+        { courseId: 'c1', topicId: 't1', difficulty: undefined, available: 30 },
+      ]);
 
       expect(store.stock().size).toBe(0);
     });

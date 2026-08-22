@@ -10,7 +10,9 @@ describe('UsersService', () => {
   let httpMock: HttpTestingController;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({ providers: [UsersService, provideHttpClient(), provideHttpClientTesting()] });
+    TestBed.configureTestingModule({
+      providers: [UsersService, provideHttpClient(), provideHttpClientTesting()],
+    });
     service = TestBed.inject(UsersService);
     httpMock = TestBed.inject(HttpTestingController);
   });
@@ -29,7 +31,13 @@ describe('UsersService', () => {
     const req = httpMock.expectOne('/api/users');
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual({ email: 'a@b.pe', name: 'Ana Beltrán', role: 'teacher' });
-    req.flush({ id: 'u1', email: 'a@b.pe', name: 'Ana Beltrán', role: 'teacher', temporaryPassword: 'abc123def456' });
+    req.flush({
+      id: 'u1',
+      email: 'a@b.pe',
+      name: 'Ana Beltrán',
+      role: 'teacher',
+      temporaryPassword: 'abc123def456',
+    });
   });
 
   it('setActive PATCHes /users/:id', () => {

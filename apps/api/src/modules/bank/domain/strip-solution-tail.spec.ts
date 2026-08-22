@@ -2,12 +2,14 @@ import { stripSolutionTail } from "./strip-solution-tail";
 
 describe("stripSolutionTail", () => {
   it("cuts the answer key a scrape glued onto the last alternative", () => {
-    expect(stripSolutionTail('El héroe discreto . Rpta.: "E" Ver respuesta correcta >> Leer explicación breve')).toBe(
-      "El héroe discreto",
-    );
+    expect(
+      stripSolutionTail('El héroe discreto . Rpta.: "E" Ver respuesta correcta >> Leer explicación breve'),
+    ).toBe("El héroe discreto");
     expect(stripSolutionTail("Fátima Rpta. d")).toBe("Fátima");
     // The period belongs to the alternative; only a space-detached one is dropped.
-    expect(stripSolutionTail("La diéresis Precisión semántica. Rpta. D")).toBe("La diéresis Precisión semántica.");
+    expect(stripSolutionTail("La diéresis Precisión semántica. Rpta. D")).toBe(
+      "La diéresis Precisión semántica.",
+    );
   });
 
   it("cuts the source footer the harvest glued on", () => {
@@ -17,9 +19,9 @@ describe("stripSolutionTail", () => {
   });
 
   it("cuts a pasted resolución block without eating a real resolution number", () => {
-    expect(stripSolutionTail("Anaxímenes Resolución 1 De acuerdo al texto, la afirmación correcta sería")).toBe(
-      "Anaxímenes",
-    );
+    expect(
+      stripSolutionTail("Anaxímenes Resolución 1 De acuerdo al texto, la afirmación correcta sería"),
+    ).toBe("Anaxímenes");
     // Four digits is a document, not a numbered solution step.
     expect(stripSolutionTail("Aplicación de la Resolución 1080")).toBe("Aplicación de la Resolución 1080");
     expect(stripSolutionTail("La Resolución 217 – A de la Asamblea General")).toBe(
@@ -36,12 +38,12 @@ describe("stripSolutionTail", () => {
   });
 
   it("cuts the English 'Key :' and the site's own chrome", () => {
-    expect(stripSolutionTail("In Greek mythology there are ineffable improper scenes. Key: The text deals mainly")).toBe(
-      "In Greek mythology there are ineffable improper scenes.",
-    );
-    expect(stripSolutionTail("Corea del Norte. Rpta.: \"C\" Ver respuesta correcta >> Lee la explicación breve")).toBe(
-      "Corea del Norte.",
-    );
+    expect(
+      stripSolutionTail("In Greek mythology there are ineffable improper scenes. Key: The text deals mainly"),
+    ).toBe("In Greek mythology there are ineffable improper scenes.");
+    expect(
+      stripSolutionTail('Corea del Norte. Rpta.: "C" Ver respuesta correcta >> Lee la explicación breve'),
+    ).toBe("Corea del Norte.");
     expect(
       stripSolutionTail("You will feel immediately all the benefits. CLAVES-RESPUESTAS : 1) C 2) D 3) B"),
     ).toBe("You will feel immediately all the benefits.");
@@ -78,7 +80,9 @@ describe("stripSolutionTail", () => {
   });
 
   it("does not fire on a word that merely contains an anchor", () => {
-    expect(stripSolutionTail("La clavícula se fractura con facilidad")).toBe("La clavícula se fractura con facilidad");
+    expect(stripSolutionTail("La clavícula se fractura con facilidad")).toBe(
+      "La clavícula se fractura con facilidad",
+    );
     expect(stripSolutionTail("El teclado tiene una tecla de clave numérica")).toBe(
       "El teclado tiene una tecla de clave numérica",
     );

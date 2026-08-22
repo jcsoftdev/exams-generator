@@ -34,30 +34,18 @@ describe("validateCreateImageQuestionInput", () => {
   });
 
   it("rejects when difficulty is missing or not a valid Difficulty value", () => {
-    expect(
-      validateCreateImageQuestionInput({ ...VALID_INPUT, difficulty: undefined }).ok,
-    ).toBe(false);
-    expect(
-      validateCreateImageQuestionInput({ ...VALID_INPUT, difficulty: "impossible" }).ok,
-    ).toBe(false);
+    expect(validateCreateImageQuestionInput({ ...VALID_INPUT, difficulty: undefined }).ok).toBe(false);
+    expect(validateCreateImageQuestionInput({ ...VALID_INPUT, difficulty: "impossible" }).ok).toBe(false);
   });
 
   it("rejects when gradeLevel is missing or outside the seeded catalog", () => {
-    expect(
-      validateCreateImageQuestionInput({ ...VALID_INPUT, gradeLevel: undefined }).ok,
-    ).toBe(false);
-    expect(
-      validateCreateImageQuestionInput({ ...VALID_INPUT, gradeLevel: "universidad_1" }).ok,
-    ).toBe(false);
+    expect(validateCreateImageQuestionInput({ ...VALID_INPUT, gradeLevel: undefined }).ok).toBe(false);
+    expect(validateCreateImageQuestionInput({ ...VALID_INPUT, gradeLevel: "universidad_1" }).ok).toBe(false);
   });
 
   it("rejects when correctAnswer is missing or blank", () => {
-    expect(
-      validateCreateImageQuestionInput({ ...VALID_INPUT, correctAnswer: undefined }).ok,
-    ).toBe(false);
-    expect(
-      validateCreateImageQuestionInput({ ...VALID_INPUT, correctAnswer: "   " }).ok,
-    ).toBe(false);
+    expect(validateCreateImageQuestionInput({ ...VALID_INPUT, correctAnswer: undefined }).ok).toBe(false);
+    expect(validateCreateImageQuestionInput({ ...VALID_INPUT, correctAnswer: "   " }).ok).toBe(false);
   });
 
   it("rejects when no image file was attached", () => {

@@ -94,9 +94,6 @@ export const questions = pgTable(
     poolIdx: index("questions_pool_idx").on(table.gradeLevel, table.status),
     // Multiple NULL body_hash rows (all `type = 'image'` questions) never
     // collide under Postgres' NULL-distinct unique-index semantics.
-    tenantIdBodyHashIdx: uniqueIndex("questions_tenant_id_body_hash_idx").on(
-      table.tenantId,
-      table.bodyHash,
-    ),
+    tenantIdBodyHashIdx: uniqueIndex("questions_tenant_id_body_hash_idx").on(table.tenantId, table.bodyHash),
   }),
 );

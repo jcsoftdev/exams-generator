@@ -25,9 +25,11 @@ describe("isRoundSolidQuestion", () => {
   it("leaves a triangle problem that merely uses trigonometry alone", () => {
     // The 25 rows the audit read as misfiled trigonometry: triangle problems.
     expect(isRoundSolidQuestion("En un triángulo reduce: abcSenA(CtgB +CtgC)")).toBe(false);
-    expect(isRoundSolidQuestion("Si el perímetro del triángulo ABC es 24 y el circunradio mide 5. Halla: SenA + SenB + SenC")).toBe(
-      false,
-    );
+    expect(
+      isRoundSolidQuestion(
+        "Si el perímetro del triángulo ABC es 24 y el circunradio mide 5. Halla: SenA + SenB + SenC",
+      ),
+    ).toBe(false);
   });
 
   it("needs the solid, not just the measure", () => {

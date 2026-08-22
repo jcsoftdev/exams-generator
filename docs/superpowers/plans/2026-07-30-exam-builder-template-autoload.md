@@ -19,6 +19,7 @@
 Design doc: `docs/superpowers/specs/2026-07-30-exam-builder-template-autoload-design.md`.
 
 Run tests for this file from `apps/web/`:
+
 ```bash
 npx ng test --include='**/exam-builder.component.spec.ts' --watch=false
 ```
@@ -28,10 +29,12 @@ npx ng test --include='**/exam-builder.component.spec.ts' --watch=false
 ### Task 1: Auto-load when the selected university has no tracks
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/exams/exam-builder/exam-builder.component.ts:297-308` (`onUniversityChange`)
 - Test: `apps/web/src/app/features/exams/exam-builder/exam-builder.component.spec.ts` (new `it` inside the existing `describe('tipo de examen — cargar plantilla', ...)` block, which starts at line 844 and closes at line 977)
 
 **Interfaces:**
+
 - Consumes: existing `protected loadTemplate(): void` (component.ts:338), existing `ExamsService.getUniversityTracks(universityId): Observable<Track[]>`.
 - Produces: no new public members — `onUniversityChange` keeps its existing signature `(universityId: string | null): void`.
 
@@ -40,24 +43,24 @@ npx ng test --include='**/exam-builder.component.spec.ts' --watch=false
 Insert this `it` right before the closing `});` of `describe('tipo de examen — cargar plantilla', ...)` (currently line 977, i.e. right after the test ending at line 976):
 
 ```typescript
-    it('auto-loads the template when the selected university has no tracks, without clicking the button', () => {
-      const resolveBlueprint = vi.fn(() =>
-        of<ResolveBlueprintResult>({
-          blueprint: [{ courseId: 'c1', topicId: 't1', count: 9, difficulty: Difficulty.Hard }],
-          weekNumber: null,
-          templateId: 'tpl-1',
-        }),
-      );
-      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+it("auto-loads the template when the selected university has no tracks, without clicking the button", () => {
+  const resolveBlueprint = vi.fn(() =>
+    of<ResolveBlueprintResult>({
+      blueprint: [{ courseId: "c1", topicId: "t1", count: 9, difficulty: Difficulty.Hard }],
+      weekNumber: null,
+      templateId: "tpl-1",
+    }),
+  );
+  const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
 
-      selectGradeLevel(compiled, fixture, 'pre');
-      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
-      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+  selectGradeLevel(compiled, fixture, "pre");
+  selectFromUiSelect(compiled, fixture, "exam-type-select", "ETA");
+  selectFromUiSelect(compiled, fixture, "university-select", "UNI");
 
-      expect(resolveBlueprint).toHaveBeenCalledWith({ examTypeCode: 'eta', universityId: 'u1' });
-      const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:hard"]');
-      expect(input?.value).toBe('9');
-    });
+  expect(resolveBlueprint).toHaveBeenCalledWith({ examTypeCode: "eta", universityId: "u1" });
+  const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:hard"]');
+  expect(input?.value).toBe("9");
+});
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -109,10 +112,12 @@ GIT_COMMIT_SKILL=1 git commit -m "feat(web): auto-load exam template when univer
 ### Task 2: Auto-load when a track is selected
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/exams/exam-builder/exam-builder.component.ts:310-312` (`onTrackChange`)
 - Test: `apps/web/src/app/features/exams/exam-builder/exam-builder.component.spec.ts` (new `it`, same describe block as Task 1, inserted after Task 1's new test)
 
 **Interfaces:**
+
 - Consumes: existing `protected loadTemplate(): void` (component.ts:338).
 - Produces: no new public members — `onTrackChange` keeps its existing signature `(trackId: string | null): void`.
 
@@ -121,25 +126,29 @@ GIT_COMMIT_SKILL=1 git commit -m "feat(web): auto-load exam template when univer
 Insert this `it` directly after Task 1's test, still inside `describe('tipo de examen — cargar plantilla', ...)`:
 
 ```typescript
-    it('auto-loads the template when a track is selected, without clicking the button', () => {
-      const resolveBlueprint = vi.fn(() =>
-        of<ResolveBlueprintResult>({
-          blueprint: [{ courseId: 'c1', topicId: 't1', count: 7, difficulty: Difficulty.Easy }],
-          weekNumber: null,
-          templateId: 'tpl-2',
-        }),
-      );
-      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of(TRACKS) });
+it("auto-loads the template when a track is selected, without clicking the button", () => {
+  const resolveBlueprint = vi.fn(() =>
+    of<ResolveBlueprintResult>({
+      blueprint: [{ courseId: "c1", topicId: "t1", count: 7, difficulty: Difficulty.Easy }],
+      weekNumber: null,
+      templateId: "tpl-2",
+    }),
+  );
+  const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of(TRACKS) });
 
-      selectGradeLevel(compiled, fixture, 'pre');
-      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
-      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
-      selectFromUiSelect(compiled, fixture, 'track-select', 'Preuniversitario');
+  selectGradeLevel(compiled, fixture, "pre");
+  selectFromUiSelect(compiled, fixture, "exam-type-select", "ETA");
+  selectFromUiSelect(compiled, fixture, "university-select", "UNI");
+  selectFromUiSelect(compiled, fixture, "track-select", "Preuniversitario");
 
-      expect(resolveBlueprint).toHaveBeenCalledWith({ examTypeCode: 'eta', universityId: 'u1', trackId: 'trk1' });
-      const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:easy"]');
-      expect(input?.value).toBe('7');
-    });
+  expect(resolveBlueprint).toHaveBeenCalledWith({
+    examTypeCode: "eta",
+    universityId: "u1",
+    trackId: "trk1",
+  });
+  const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:easy"]');
+  expect(input?.value).toBe("7");
+});
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -180,10 +189,12 @@ GIT_COMMIT_SKILL=1 git commit -m "feat(web): auto-load exam template when a trac
 ### Task 3: Auto-load scoped to checked courses when a course checkbox is toggled
 
 **Files:**
+
 - Modify: `apps/web/src/app/features/exams/exam-builder/exam-builder.component.ts:318-320` (`toggleCourseSelection`)
 - Test: `apps/web/src/app/features/exams/exam-builder/exam-builder.component.spec.ts` (new `it`, same describe block, inserted after Task 2's new test)
 
 **Interfaces:**
+
 - Consumes: existing `protected loadTemplate(): void` (component.ts:338), existing `protected readonly canLoadTemplate = computed<boolean>(...)` (component.ts:236).
 - Produces: no new public members — `toggleCourseSelection` keeps its existing signature `(courseId: string): void`.
 
@@ -192,32 +203,32 @@ GIT_COMMIT_SKILL=1 git commit -m "feat(web): auto-load exam template when a trac
 Insert this `it` directly after Task 2's test, still inside `describe('tipo de examen — cargar plantilla', ...)`:
 
 ```typescript
-    it('auto-loads the template scoped to the checked course when a course checkbox is toggled, without clicking the button', () => {
-      const resolveBlueprint = vi.fn(() =>
-        of<ResolveBlueprintResult>({
-          blueprint: [{ courseId: 'c1', count: 5, difficulty: Difficulty.Medium }],
-          weekNumber: null,
-          templateId: 'tpl-3',
-        }),
-      );
-      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+it("auto-loads the template scoped to the checked course when a course checkbox is toggled, without clicking the button", () => {
+  const resolveBlueprint = vi.fn(() =>
+    of<ResolveBlueprintResult>({
+      blueprint: [{ courseId: "c1", count: 5, difficulty: Difficulty.Medium }],
+      weekNumber: null,
+      templateId: "tpl-3",
+    }),
+  );
+  const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
 
-      selectGradeLevel(compiled, fixture, 'pre');
-      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
-      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+  selectGradeLevel(compiled, fixture, "pre");
+  selectFromUiSelect(compiled, fixture, "exam-type-select", "Fastest");
+  selectFromUiSelect(compiled, fixture, "university-select", "UNI");
 
-      resolveBlueprint.mockClear();
-      (compiled.querySelector('[data-testid="course-checkbox-c1"]') as HTMLInputElement).click();
-      fixture.detectChanges();
+  resolveBlueprint.mockClear();
+  (compiled.querySelector('[data-testid="course-checkbox-c1"]') as HTMLInputElement).click();
+  fixture.detectChanges();
 
-      expect(resolveBlueprint).toHaveBeenCalledWith({
-        examTypeCode: 'fastest',
-        universityId: 'u1',
-        selectedCourseIds: ['c1'],
-      });
-      const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1::medium"]');
-      expect(input?.value).toBe('5');
-    });
+  expect(resolveBlueprint).toHaveBeenCalledWith({
+    examTypeCode: "fastest",
+    universityId: "u1",
+    selectedCourseIds: ["c1"],
+  });
+  const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1::medium"]');
+  expect(input?.value).toBe("5");
+});
 ```
 
 Note: `resolveBlueprint.mockClear()` runs after selecting the university — for a track-less university (`getUniversityTracks` returns `[]`), Task 1's change already auto-loads once at that point (with an empty `selectedCourseIds`). Clearing the mock isolates the assertion to the call made by the checkbox toggle itself.

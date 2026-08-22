@@ -16,8 +16,7 @@ export interface CreateImageQuestionInput {
 }
 
 export type CreateImageQuestionValidation =
-  | { readonly ok: true }
-  | { readonly ok: false; readonly errors: readonly string[] };
+  { readonly ok: true } | { readonly ok: false; readonly errors: readonly string[] };
 
 const VALID_DIFFICULTIES = new Set<string>(Object.values(Difficulty));
 

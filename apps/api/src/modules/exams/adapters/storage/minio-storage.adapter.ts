@@ -1,8 +1,5 @@
 import { Client } from "minio";
-import {
-  StoragePort,
-  StorageObjectNotFoundError,
-} from "../../domain/ports/storage.port";
+import { StoragePort, StorageObjectNotFoundError } from "../../domain/ports/storage.port";
 
 export interface MinioStorageAdapterConfig {
   readonly endPoint: string;
@@ -41,11 +38,7 @@ export class MinioStorageAdapter implements StoragePort {
     await this.client.putObject(this.bucket, key, data, data.length, {
       "Content-Type": contentType,
     });
-    return this.client.presignedGetObject(
-      this.bucket,
-      key,
-      PRESIGNED_URL_TTL_SECONDS,
-    );
+    return this.client.presignedGetObject(this.bucket, key, PRESIGNED_URL_TTL_SECONDS);
   }
 
   async get(key: string): Promise<Buffer> {
@@ -94,9 +87,7 @@ function isNotFoundError(error: unknown): boolean {
   );
 }
 
-async function streamToBuffer(
-  stream: NodeJS.ReadableStream,
-): Promise<Buffer> {
+async function streamToBuffer(stream: NodeJS.ReadableStream): Promise<Buffer> {
   const chunks: Buffer[] = [];
   for await (const chunk of stream) {
     chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));

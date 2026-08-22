@@ -17,7 +17,11 @@ function setHostname(hostname: string): void {
 }
 
 function restoreLocation(): void {
-  Object.defineProperty(window, 'location', { writable: true, configurable: true, value: originalLocation });
+  Object.defineProperty(window, 'location', {
+    writable: true,
+    configurable: true,
+    value: originalLocation,
+  });
 }
 
 function setup(
@@ -28,7 +32,9 @@ function setup(
   } = {},
 ) {
   const login = vi.fn(opts.loginImpl ?? (() => of({ accessToken: 'jwt', tenantSlug: null })));
-  const requestExchangeCode = vi.fn(opts.requestExchangeCodeImpl ?? (() => of({ code: 'one-time-code' })));
+  const requestExchangeCode = vi.fn(
+    opts.requestExchangeCodeImpl ?? (() => of({ code: 'one-time-code' })),
+  );
   const navigateByUrl = vi.fn();
   TestBed.configureTestingModule({
     imports: [LoginComponent],
@@ -37,7 +43,9 @@ function setup(
       { provide: Router, useValue: { navigateByUrl } },
       {
         provide: ActivatedRoute,
-        useValue: { snapshot: { queryParamMap: convertToParamMap(opts.expired ? { expired: '1' } : {}) } },
+        useValue: {
+          snapshot: { queryParamMap: convertToParamMap(opts.expired ? { expired: '1' } : {}) },
+        },
       },
     ],
   });
@@ -116,7 +124,9 @@ describe('LoginComponent', () => {
     submit(compiled);
     fixture.detectChanges();
 
-    const button = compiled.querySelector<HTMLButtonElement>('[data-testid="login-submit"] button')!;
+    const button = compiled.querySelector<HTMLButtonElement>(
+      '[data-testid="login-submit"] button',
+    )!;
     expect(button.disabled).toBe(true);
 
     subject.next({ accessToken: 'jwt', tenantSlug: null });

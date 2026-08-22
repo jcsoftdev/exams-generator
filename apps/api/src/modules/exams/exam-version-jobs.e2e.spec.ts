@@ -252,7 +252,10 @@ describe("POST /exams/:examId/versions — queued generation (e2e)", () => {
     const frames = (response.text as string)
       .split("\n\n")
       .filter((frame) => frame.startsWith("data:"))
-      .map((frame) => JSON.parse(frame.slice("data:".length).trim()) as { status: string; completedCount: number });
+      .map(
+        (frame) =>
+          JSON.parse(frame.slice("data:".length).trim()) as { status: string; completedCount: number },
+      );
 
     expect(frames.length).toBeGreaterThan(0);
     const last = frames[frames.length - 1]!;

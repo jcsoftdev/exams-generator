@@ -16,7 +16,8 @@ import { SelectComponent, SelectOption } from '../../../ui/select/select.compone
   imports: [SelectComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <label class="text-sm text-n700">Enunciado
+    <label class="text-sm text-n700"
+      >Enunciado
       <textarea
         data-testid="edit-enunciado"
         class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
@@ -25,7 +26,8 @@ import { SelectComponent, SelectOption } from '../../../ui/select/select.compone
         (input)="bodyChange.emit($any($event.target).value)"
       ></textarea>
     </label>
-    <label class="text-sm text-n700">Alternativas (una por línea)
+    <label class="text-sm text-n700"
+      >Alternativas (una por línea)
       <textarea
         data-testid="edit-alternatives"
         class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"

@@ -8,15 +8,19 @@ import { tenants } from "./tenants.schema";
  * (`school_admin`, `teacher`). The role/tenant pairing itself is enforced
  * by the auth module (PR5+), not by a DB constraint here.
  */
-export const users = pgTable("users", {
-  id: uuid("id").primaryKey().defaultRandom(),
-  tenantId: uuid("tenant_id").references(() => tenants.id),
-  email: text("email").notNull().unique(),
-  name: text("name"),
-  passwordHash: text("password_hash").notNull(),
-  role: roleEnum("role").notNull(),
-  active: boolean("active").notNull().default(true),
-  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-}, (table) => ({
-  tenantIdIdx: index("users_tenant_id_idx").on(table.tenantId),
-}));
+export const users = pgTable(
+  "users",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    tenantId: uuid("tenant_id").references(() => tenants.id),
+    email: text("email").notNull().unique(),
+    name: text("name"),
+    passwordHash: text("password_hash").notNull(),
+    role: roleEnum("role").notNull(),
+    active: boolean("active").notNull().default(true),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => ({
+    tenantIdIdx: index("users_tenant_id_idx").on(table.tenantId),
+  }),
+);

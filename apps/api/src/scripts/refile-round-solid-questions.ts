@@ -69,9 +69,7 @@ export async function refileRoundSolidQuestions(): Promise<{
         and(
           eq(topics.courseId, row.courseId),
           eq(topics.slug, TARGET_SLUG),
-          row.gradeLevel === null
-            ? isNull(topics.gradeLevel)
-            : eq(topics.gradeLevel, row.gradeLevel),
+          row.gradeLevel === null ? isNull(topics.gradeLevel) : eq(topics.gradeLevel, row.gradeLevel),
         ),
       );
 

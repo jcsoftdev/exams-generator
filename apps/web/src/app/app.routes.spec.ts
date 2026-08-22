@@ -133,9 +133,7 @@ describe('app routes', () => {
 
   it('redirects the empty /app child path to dashboard (design doc §4)', () => {
     const appRoute = routes.find((route) => route.path === 'app');
-    const indexRoute = appRoute?.children?.find(
-      (route) => route.path === '' && route.redirectTo,
-    );
+    const indexRoute = appRoute?.children?.find((route) => route.path === '' && route.redirectTo);
     expect(indexRoute?.redirectTo).toBe('dashboard');
   });
 

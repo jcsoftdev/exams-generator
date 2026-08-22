@@ -2,7 +2,14 @@ import { Component, computed, effect, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Difficulty } from '@exams-generator/shared';
-import { LucideAngularModule, Upload, Image as ImageIcon, Check, ChevronDown, Sparkles } from 'lucide-angular';
+import {
+  LucideAngularModule,
+  Upload,
+  Image as ImageIcon,
+  Check,
+  ChevronDown,
+  Sparkles,
+} from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
@@ -50,7 +57,10 @@ function normalizeForMatch(value: string): string {
 }
 
 /** Course names are a small, standard catalog (Aritmética, Comunicación...) — an exact normalized match is reliable. */
-function findCourseMatch(courses: readonly Course[], guess: string | undefined): Course | undefined {
+function findCourseMatch(
+  courses: readonly Course[],
+  guess: string | undefined,
+): Course | undefined {
   if (!guess) return undefined;
   const normalizedGuess = normalizeForMatch(guess);
   return courses.find((course) => normalizeForMatch(course.name) === normalizedGuess);
@@ -94,7 +104,10 @@ function toOptions(items: readonly { id: string; name: string }[]): SelectOption
   // `ui-select` (Grado/Curso/Tema/Nivel, both tabs) needs Check + ChevronDown —
   // this component-level `.pick()` shadows the root `app.config.ts` registration
   // for its own subtree, so the nested `ui-select` instances can't fall back to it.
-  providers: [LucideAngularModule.pick({ Upload, Image: ImageIcon, Check, ChevronDown, Sparkles }).providers ?? []],
+  providers: [
+    LucideAngularModule.pick({ Upload, Image: ImageIcon, Check, ChevronDown, Sparkles })
+      .providers ?? [],
+  ],
   templateUrl: './bank-new.component.html',
 })
 export class BankNewComponent {
@@ -299,7 +312,9 @@ export class BankNewComponent {
         },
         error: (_e: HttpErrorResponse) => {
           this.saving.set(false);
-          this.saveError.set('No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.');
+          this.saveError.set(
+            'No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.',
+          );
         },
       });
   }
@@ -360,7 +375,8 @@ export class BankNewComponent {
     suggestedCourseName: string | undefined;
     suggestedTopicName: string | undefined;
   }): void {
-    const { gradeLevel, photoCourseId, photoTopicId, suggestedCourseName, suggestedTopicName } = params;
+    const { gradeLevel, photoCourseId, photoTopicId, suggestedCourseName, suggestedTopicName } =
+      params;
 
     const applyPreselect = (courseId: string, topicId: string): void => {
       if (this.sGradeLevel() !== gradeLevel) {
@@ -370,7 +386,8 @@ export class BankNewComponent {
       this.sGradeLevel.set(gradeLevel);
     };
 
-    const courseId = photoCourseId || findCourseMatch(this.pCourses(), suggestedCourseName)?.id || '';
+    const courseId =
+      photoCourseId || findCourseMatch(this.pCourses(), suggestedCourseName)?.id || '';
 
     if (photoTopicId || !courseId || !suggestedTopicName) {
       applyPreselect(courseId, photoTopicId);
@@ -378,7 +395,8 @@ export class BankNewComponent {
     }
 
     this.taxonomyService.getTopics(courseId, gradeLevel).subscribe({
-      next: (topics) => applyPreselect(courseId, findTopicMatch(topics, suggestedTopicName)?.id ?? ''),
+      next: (topics) =>
+        applyPreselect(courseId, findTopicMatch(topics, suggestedTopicName)?.id ?? ''),
       error: () => applyPreselect(courseId, ''),
     });
   }
@@ -438,7 +456,9 @@ export class BankNewComponent {
         },
         error: (_e: HttpErrorResponse) => {
           this.saving.set(false);
-          this.saveError.set('No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.');
+          this.saveError.set(
+            'No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.',
+          );
         },
       });
   }

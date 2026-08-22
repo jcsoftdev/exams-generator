@@ -150,7 +150,10 @@ export function resolveBlueprint(options: ResolveBlueprintOptions): ResolveBluep
 }
 
 /** Resolves each row's total count — direct `questionCount` when known, else an exact-sum share of `totalQuestionsOverride` by `weightPoints`. */
-function resolveRowCounts(rows: readonly TemplateRow[], totalQuestionsOverride: number | undefined): number[] {
+function resolveRowCounts(
+  rows: readonly TemplateRow[],
+  totalQuestionsOverride: number | undefined,
+): number[] {
   const counts = new Array<number>(rows.length).fill(0);
   const unknownIndexes: number[] = [];
 
