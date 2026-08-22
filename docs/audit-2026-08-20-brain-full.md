@@ -185,7 +185,17 @@ release workflow).
   `REDIS_PASSWORD` — omite la key cuando está vacía, dev local sigue sin auth — con spec
   nueva (`queue.env.spec.ts`); parity guard verde (el parser de
   `parse-compose-api-environment.ts` ahora tolera comentarios en el bloque `environment`,
-  con spec). **Pendiente**: red interna propia para infra. **Deploy nota**: setear
+  con spec).
+  **Red interna: HECHA (2026-08-21), pero SIN VERIFICAR EN DEPLOY.** Postgres, Redis y MinIO
+  quedaron en `exams-internal` (`internal: true`), y solo `api`, `web` y `landing` siguen
+  además en `default` — la que Dokploy engancha a `dokploy-network` para que Traefik rutee. El
+  header del compose ya documenta lo que la red compartida hizo una vez: un `postgres` a secas
+  resolviendo a la base de OTRO proyecto. Renombrar a `exams-*` quitó la ambigüedad; esto quita
+  la **alcanzabilidad**, que es más fuerte que "tiene contraseña". `internal: true` además les
+  corta la salida a internet, correcto porque ninguno marca hacia afuera.
+  **La advertencia va en serio**: es el único cambio de esta tanda que no pude verificar —
+  Dokploy engancha por su cuenta los contenedores con dominio, y cómo trata a un compose que
+  declara sus propias redes no se comprueba desde una laptop. Rollback escrito en el archivo. **Deploy nota**: setear
   `REDIS_PASSWORD` (y passwords reales de DB/MinIO) en Dokploy ANTES del próximo deploy —
   el compose ahora se niega a arrancar sin ellos.
 
