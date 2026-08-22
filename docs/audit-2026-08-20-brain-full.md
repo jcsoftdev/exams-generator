@@ -635,8 +635,29 @@ release workflow).
 - [x] **L3** _(HECHO 2026-08-20: `gradeLevelLabel` en `question-display.util.ts`, aplicado al
       detalle del banco)_ — Detalle de pregunta mostraba "Grado: pre" (código crudo) en vez de
       la etiqueta.
-- [ ] **L4** — Sin formatter configurado (no prettier/biome); solo ESLint. La consistencia de
+- [x] **L4** — Sin formatter configurado (no prettier/biome); solo ESLint. La consistencia de
       estilo hoy es disciplina manual.
+      **HECHO (2026-08-21)**, con un matiz sobre el propio hallazgo: Prettier YA era
+      dependencia del root y ya había script `format`. Lo que faltaba no era el formatter sino
+      **configuración y check** — o sea estaba instalado y armado, y por eso nadie lo corría:
+      hacerlo significaba reformatear todo a los defaults de la herramienta.
+      - `.prettierrc.json` afinado a lo que el código YA hace, no a las opiniones de Prettier:
+        110 columnas (la API vive en ~120; 80 rewrapearía cada comentario del repo) y comillas
+        dobles salvo en `apps/web`, que sigue la convención de comillas simples de Angular.
+      - El reformat va en **commit propio** (`de8ea8b`, 309 archivos, cero comportamiento) y
+        está en `.git-blame-ignore-revs`: un repo lleno de comentarios trabajados merece seguir
+        apuntando a quien los escribió.
+      - `pnpm format:check` en el job de typecheck del CI.
+      **Y el formatter rompió cosas, que es lo que hay que contar**: en
+      `seed-idempotency.spec.ts` subió el bloque de comentarios que explica el timeout de 90s a
+      la línea del `},` **en orden inverso**, convirtiendo un párrafo en una línea ilegible.
+      Correr `--write` dos veces daba resultados distintos, o sea no era un accidente. El
+      comentario se restauró a mano y el archivo quedó excluido con la razón escrita. `docs/`
+      también: ahí oscila con las tablas anidadas en listas, y son documentos que se leen como
+      prosa, no diffs de código.
+      **Bug propio encontrado en el camino**: el override de markdown decía `*.md`, que solo
+      matchea la raíz — así `docs/` se escribía con un ancho y se verificaba con otro. El
+      formatter se contradecía a sí mismo. Ahora es `**/*.md`.
 - [x] **L5** — `packages/shared` `"test": "echo …"` no-op, pero el matrix de CI lo corre como
       si fuera una suite — verde decorativo.
       **HECHO (2026-08-21)**: primero se miró QUÉ hay en el paquete antes de decidir. Los
