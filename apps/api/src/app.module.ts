@@ -11,6 +11,7 @@ import { BankModule } from "./modules/bank/bank.module";
 import { DashboardModule } from "./modules/dashboard/dashboard.module";
 import { ExamsModule } from "./modules/exams/exams.module";
 import { HealthModule } from "./modules/health/health.module";
+import { MetricsModule } from "./modules/metrics/metrics.module";
 import { QueueModule } from "./common/queue.module";
 import { TaxonomyModule } from "./modules/taxonomy/taxonomy.module";
 import { TenantsModule } from "./modules/tenants/tenants.module";
@@ -58,6 +59,7 @@ import { UsersModule } from "./modules/users/users.module";
     // Shared BullMQ connection for every queue (`generation`, `exam-versions`).
     QueueModule,
     HealthModule,
+    MetricsModule,
     AuthModule,
     BankModule,
     TenantsModule,

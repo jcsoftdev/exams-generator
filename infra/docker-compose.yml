@@ -76,6 +76,10 @@ services:
       # with docker-compose.dokploy.yml — see compose-api-environment-parity.spec.ts.
       REDIS_PASSWORD: ${REDIS_PASSWORD:-}
       JWT_SECRET: ${JWT_SECRET:?JWT_SECRET must be set}
+      # Bearer token Prometheus must send to GET /metrics. Empty in dev, where
+      # the endpoint is open; in production the API refuses to serve metrics at
+      # all until this is set (see modules/metrics/metrics.env.ts).
+      METRICS_TOKEN: ${METRICS_TOKEN:-}
       AI_MODEL: ${AI_MODEL}
       AI_VISION_MODEL: ${AI_VISION_MODEL}
       OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}

@@ -445,10 +445,36 @@ release workflow).
       in-memory (límites por instancia). Asunción single-container documentada — pero no hay
       guard ni doc de despliegue que lo imponga. Scalability.
 
-- [ ] **M6 — Observabilidad = solo logs.** Sin métricas (rate/error/duración/saturación), sin
+- [x] **M6 — Observabilidad = solo logs.** Sin métricas (rate/error/duración/saturación), sin
       queue-depth de BullMQ, sin alerting — un worker muerto o una cola creciendo solo se nota
       cuando un usuario reclama. Lo bueno: pino estructurado, x-request-id, healthcheck con
       deps reales, `autoLogging.ignore` para /health. Observability.
+      **HECHO (2026-08-21)**: `MetricsModule` con `GET /metrics` en formato Prometheus
+      (`prom-client`). Expone las tres preguntas que valen: **rate/errores/latencia**
+      (`http_request_duration_seconds` con `method`/`route`/`status_code`), **saturación**
+      (`exams_queue_jobs{queue,state}` para las dos colas de BullMQ) y **salud del proceso**
+      (`collectDefaultMetrics`: lag del event loop, memoria).
+      - **Etiqueta por PLANTILLA de ruta, nunca por el path concreto** (`/exams/:examId`, no
+        `/exams/<uuid>`), y las rutas sin match caen en un literal `unmatched`. Una serie por
+        endpoint en vez de una por examen: es la diferencia entre un dashboard útil y tumbar
+        Prometheus por explosión de cardinalidad.
+      - El interceptor mide **también las que fallan** (rama `error` del `tap`): registrar solo
+        los éxitos hace que un endpoint que devuelve 500 se vea sano.
+      - **La profundidad de cola se lee en el scrape**, no en un timer: nada se mide cuando
+        nadie mira, y el número nunca está viejo por un intervalo de poll. Si Redis no
+        responde, sube `exams_queue_scrape_failures_total` y **el resto del scrape se sirve
+        igual** — justo cuando alguien mira esa página es cuando Redis está caído.
+      - **Detalle que costó una vuelta**: la primera versión incrementaba ese contador dentro
+        del callback `collect` del gauge. prom-client serializa en orden de registro, así que
+        el contador se escribía ANTES de correr el callback que lo incrementa: el primer scrape
+        fallido reportaba cero fallos y recién confesaba en el siguiente. Ahora la lectura pasa
+        explícitamente en `render()`, así todo el scrape describe el mismo instante.
+      - **Acceso**: el endpoint no puede ir tras `JwtAuthGuard` — un scraper no tiene cuenta.
+        Va con token `METRICS_TOKEN`, y **en producción se niega a responder si no está
+        configurado**: una variable sin setear no debe significar "público" en silencio. Fuera
+        de producción, sin token, abierto. Agregado a los dos composes (el guard de paridad lo
+        exige) y a `env.example`.
+      Verificado: 1011 non-e2e + 279 e2e, incluidos 3 e2e del propio endpoint.
 
 - [ ] **M7 — El PR gate excluye la capa más frágil (e2e) y nunca se verificó en runners.**
       `ci.yml` corre non-e2e + db-serial; `api-e2e-manual` solo `workflow_dispatch` y su propio
@@ -563,6 +589,15 @@ release workflow).
       el fixture no podía expresar "banco central"; el `origin: 'central'` que lo acompañaba
       tapaba el problema. Corregido a una comparación con `undefined`.
       Verificado: 999 non-e2e + 276 e2e (API), 849 (web), typecheck limpio.
+
+- [ ] **M14 — La suite e2e es intermitente bajo workers paralelos.** Visto dos veces el
+      2026-08-21 con specs distintas (`db/body-hash-backfill.spec.ts` en non-e2e y
+      `bank/bank-alternative-images.e2e.spec.ts` en e2e): fallan en una corrida completa y
+      pasan solas y al re-correr, sin cambios de por medio. Es la misma clase de carrera contra
+      la DB de dev compartida que en su momento obligó a aislar `seed-idempotency` en su propio
+      proyecto serial. Nadie ha medido cuál es el recurso en disputa. Mientras no se sepa, un
+      rojo en CI puede ser real o puede ser esto — que es exactamente lo que vuelve inútil a un
+      gate. Testing.
 
 ### Low / Info
 

@@ -101,6 +101,10 @@ services:
       # Redis client: BullMQ, /health ping, login-exchange.
       REDIS_PASSWORD: ${REDIS_PASSWORD:?REDIS_PASSWORD must be set}
       JWT_SECRET: ${JWT_SECRET:?JWT_SECRET must be set}
+      # Not `:?`: an operator who has not set up scraping yet should still be
+      # able to deploy. The API itself refuses to serve /metrics without it in
+      # production, so "unset" fails closed rather than exposing the endpoint.
+      METRICS_TOKEN: ${METRICS_TOKEN:-}
       AI_MODEL: ${AI_MODEL}
       AI_VISION_MODEL: ${AI_VISION_MODEL}
       OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
