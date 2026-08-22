@@ -1,0 +1,9 @@
+# Harvested question data: 1607 machine-generated JSON lots (248 MB). Nothing
+# reads them by eye, and reformatting them would bury every future data diff.
+apps/api/src/db/data/
+# Generated or vendored
+**/dist/
+**/.angular/
+**/coverage/
+pnpm-lock.yaml
+apps/api/drizzle/meta/

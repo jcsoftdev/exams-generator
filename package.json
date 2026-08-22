@@ -16,7 +16,8 @@
     "test": "turbo run test",
     "smoke:domains": "node infra/smoke-test-domains.mjs",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,html,scss,json,md}\""
+    "format": "prettier --write \"apps/**/*.{ts,html,scss}\" \"packages/**/*.ts\" \"*.{json,md}\" \"docs/**/*.md\" \".github/**/*.yml\"",
+    "format:check": "prettier --check \"apps/**/*.{ts,html,scss}\" \"packages/**/*.ts\" \"*.{json,md}\" \"docs/**/*.md\" \".github/**/*.yml\""
   },
   "devDependencies": {
     "prettier": "^3.3.3",
