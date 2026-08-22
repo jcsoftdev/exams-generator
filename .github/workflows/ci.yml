@@ -123,7 +123,7 @@ jobs:
   # and a single red mark is enough to block the PR.
   # ---------------------------------------------------------------------
   typecheck:
-    name: typecheck
+    name: typecheck + format
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -141,6 +141,13 @@ jobs:
 
       - name: Type-check every package
         run: pnpm typecheck
+
+      # Formatting is checked in the same job as types because both are the
+      # same kind of signal: mechanical, instant, and not worth a runner of
+      # their own. `--check` never rewrites anything in CI — a red here means
+      # running `pnpm format` locally, not a bot pushing a commit.
+      - name: Check formatting
+        run: pnpm format:check
 
   # ---------------------------------------------------------------------
   # apps/api — the hard part. jest.config.js defines three projects:

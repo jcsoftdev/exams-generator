@@ -7,3 +7,17 @@ apps/api/src/db/data/
 **/coverage/
 pnpm-lock.yaml
 apps/api/drizzle/meta/
+
+# Prettier CANNOT format this file stably. Its `it(..., 90_000)` timeout is
+# preceded by a long block of `//` comments, and Prettier hoists them onto the
+# `},` line — in REVERSE order, turning a paragraph that explains why the
+# budget is 90s into one unreadable line. Verified by running --write twice: it
+# oscillates. Excluded rather than sacrificed; the explanation is worth more
+# than the indentation.
+apps/api/src/db/seed-idempotency.spec.ts
+
+# Long-form audit and design documents. Prettier oscillates on them too — it
+# re-indents tables nested inside list items, and re-running --write keeps
+# producing a different result — and it buys nothing: these are read as prose,
+# not diffed as code. Code is what a formatter is for.
+docs/

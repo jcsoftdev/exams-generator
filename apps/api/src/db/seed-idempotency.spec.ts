@@ -62,7 +62,8 @@ describe("seed idempotency", () => {
       const keys = topicRows.map((row) => `${row.name}:${row.gradeLevel}`);
       expect(new Set(keys).size).toBe(topicRows.length);
     }
-  }, // `seed()` now also seeds the UNCP approximated weekly syllabus (19
+  },
+  // `seed()` now also seeds the UNCP approximated weekly syllabus (19
   // courses x 5 área templates, batched per course — see
   // `seedSyllabusWeekMaps` in `./seed.ts`) on top of UNI's, and this test
   // calls it twice. That's real extra DB work, not a hang: it stayed under

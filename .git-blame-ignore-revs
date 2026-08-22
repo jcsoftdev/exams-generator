@@ -1,0 +1,6 @@
+# Revisions that changed formatting only. `git blame` skips them with:
+#   git config blame.ignoreRevsFile .git-blame-ignore-revs
+# (GitHub reads this file automatically.)
+
+# style: apply Prettier across the repo, once — 309 files, zero behaviour.
+de8ea8baac912cac0321d98ba91105eec91c9d72

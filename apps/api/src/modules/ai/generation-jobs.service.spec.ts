@@ -46,12 +46,10 @@ function buildDeps() {
     create: jest.fn().mockResolvedValue(JOB_RECORD),
     countActiveByTenant: jest.fn().mockResolvedValue(0),
     getById: jest.fn().mockResolvedValue(JOB_RECORD),
-    list: jest
-      .fn()
-      .mockResolvedValue({
-        items: [{ ...JOB_RECORD, attemptCount: 1, courseName: "Matemática", topicName: "Fracciones" }],
-        total: 1,
-      }),
+    list: jest.fn().mockResolvedValue({
+      items: [{ ...JOB_RECORD, attemptCount: 1, courseName: "Matemática", topicName: "Fracciones" }],
+      total: 1,
+    }),
     listChain: jest.fn().mockResolvedValue([JOB_RECORD]),
     requestCancel: jest.fn().mockResolvedValue(undefined),
     setStatus: jest.fn().mockResolvedValue(undefined),

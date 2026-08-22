@@ -287,14 +287,12 @@ describe("Cross-tenant visibility (e2e)", () => {
       })
       .returning({ id: examBlueprintRows.id });
 
-    await db
-      .insert(examQuestions)
-      .values({
-        examId: examAId,
-        questionId: centralQuestionId,
-        blueprintRowId: blueprintRowA!.id,
-        position: 1,
-      });
+    await db.insert(examQuestions).values({
+      examId: examAId,
+      questionId: centralQuestionId,
+      blueprintRowId: blueprintRowA!.id,
+      position: 1,
+    });
 
     const [generationJob] = await db
       .insert(generationJobs)

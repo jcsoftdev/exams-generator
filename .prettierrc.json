@@ -6,11 +6,16 @@
   "overrides": [
     {
       "files": ["apps/web/**/*.{ts,html,scss}"],
-      "options": { "singleQuote": true }
+      "options": {
+        "singleQuote": true
+      }
     },
     {
-      "files": ["*.md"],
-      "options": { "printWidth": 100, "proseWrap": "preserve" }
+      "files": ["**/*.md"],
+      "options": {
+        "printWidth": 100,
+        "proseWrap": "preserve"
+      }
     }
   ]
 }
