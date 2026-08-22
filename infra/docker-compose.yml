@@ -108,7 +108,11 @@ services:
       api:
         condition: service_healthy
     ports:
-      - "${WEB_PORT:-8080}:80"
+      # Container side is 8080, not 80: the runtime is nginx-unprivileged and a
+      # non-root process cannot bind below 1024 (audit 2026-08-20, H5). Left at
+      # :80 this mapping points at a port nothing listens on, and `docker
+      # compose up` looks healthy while every request is refused.
+      - "${WEB_PORT:-8080}:8080"
 
 volumes:
   postgres_data:
