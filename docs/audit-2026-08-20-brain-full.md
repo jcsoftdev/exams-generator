@@ -450,11 +450,21 @@ release workflow).
       Verificado con el árbol quieto: **1003 non-e2e + 276 e2e** (API), **849** (web),
       **42** (shared), `pnpm typecheck` limpio.
 
-- [ ] **M5 — Estado in-process bloquea una segunda instancia del API.**
+- [x] **M5 — Estado in-process bloquea una segunda instancia del API.**
       `ExamVersionJobEventsService` / `GenerationJobEventsService` son Subjects in-memory (el
       SSE solo notifica en la instancia que procesó) y el ThrottlerModule usa storage
       in-memory (límites por instancia). Asunción single-container documentada — pero no hay
       guard ni doc de despliegue que lo imponga. Scalability.
+      **HECHO (2026-08-21)**: `deploy: replicas: 1` explícito en el servicio `api` de
+      `docker-compose.dokploy.yml`. El hallazgo no era el estado in-process — es una decisión
+      razonable para un solo contenedor — sino que **nada lo imponía**: la asunción vivía en
+      comentarios de código que quien escala en Dokploy no va a leer. Ahora está donde se
+      escala, con el porqué al lado: dos instancias romperían tres cosas en silencio (SSE que
+      nunca llega al navegador conectado a la otra instancia, límites de throttling que se
+      duplican, y caché de preview + `bucketEnsured` por proceso). Subirlo obliga a borrar ese
+      comentario, que es exactamente la fricción que se busca.
+      **No se movió nada a Redis**: hacerlo sin necesidad real sería complejidad comprada por
+      adelantado. El día que haga falta escalar, el orden es pub/sub primero, réplicas después.
 
 - [x] **M6 — Observabilidad = solo logs.** Sin métricas (rate/error/duración/saturación), sin
       queue-depth de BullMQ, sin alerting — un worker muerto o una cola creciendo solo se nota
@@ -650,11 +660,17 @@ release workflow).
       examId/questionId/err; spec nueva del camino de fallo de recovery)* —
       `console.error` en `exam-generation.service.ts:229` en vez del Logger pino:
       ese error de swap queda fuera del stream estructurado (sin reqId/jobId queryables).
-- [~] **L2** — Higiene git: 60 archivos de datos de lotes (`apps/api/src/db/data/lot-*`)
+- [x] **L2** — Higiene git: 60 archivos de datos de lotes (`apps/api/src/db/data/lot-*`)
       llevan días untracked — un `git clean` o un disco muerto los pierde. (Los `.pyc` que el
       snapshot inicial mostraba como trackeados ya no están en HEAD — `tools/harvest/.gitignore`
       los cubre; se agregó regla `__pycache__/` también al `.gitignore` raíz, 2026-08-20.)
       Falta decidir: commitear los lotes o respaldarlos.
+      **YA RESUELTO, verificado el 2026-08-21**: cero archivos sin trackear bajo
+      `apps/api/src/db/data`; hay **1607 archivos** commiteados en `db/data/lots`. La decisión
+      se tomó sola por el camino, en `a18698f` ("move harvested lots to db/data/lots and seed
+      them through the boot path"): desde que el seeder los lee en el arranque, dejarlos fuera
+      del repo significaría que un clon limpio no puede sembrar. Son 248 MB de datos en git —
+      caro, pero es el precio de que el arranque sea reproducible.
 - [x] **L3** *(HECHO 2026-08-20: `gradeLevelLabel` en `question-display.util.ts`, aplicado al
       detalle del banco)* — Detalle de pregunta mostraba "Grado: pre" (código crudo) en vez de
       la etiqueta.
