@@ -8,6 +8,7 @@ import {
   ResetPasswordResult,
   SetActiveResult,
 } from "@exams-generator/shared";
+import type { AnonymizeUserResult, PersonalDataExport } from "@exams-generator/shared";
 import { AccountStatusService } from "../auth/account-status.service";
 import { hashPassword } from "../auth/password.util";
 import { AuthTokenPayload } from "../auth/token.service";
@@ -73,6 +74,57 @@ export class UsersService {
     // button having done nothing.
     this.accountStatus.invalidate(targetId);
     return { id: targetId, active };
+  }
+
+  /**
+   * Ley 29733, derecho de acceso — everything stored about one person (audit
+   * 2026-08-20, M10). Tenant-scoped like every other action here: a
+   * school_admin answers for their own school's people, nobody else's.
+   */
+  async exportPersonalData(user: AuthTokenPayload, targetId: string): Promise<PersonalDataExport> {
+    const tenantId = requireTenant(user);
+    const target = await this.repository.findByIdInTenant(targetId, tenantId);
+    if (!target) throw new NotFoundException(`User not found: ${targetId}`);
+
+    const authored = await this.repository.countAuthored(targetId);
+
+    return {
+      user: {
+        id: target.id,
+        email: target.email,
+        name: target.name,
+        role: target.role,
+        active: target.active,
+        createdAt: target.createdAt.toISOString(),
+      },
+      authored,
+      exportedAt: new Date().toISOString(),
+    };
+  }
+
+  /**
+   * Ley 29733, derecho de cancelación. Not a delete, and the difference is
+   * deliberate: the row anchors `created_by` on questions and exams the school
+   * keeps. What goes is the person — email tombstoned, name dropped, password
+   * made unusable, account deactivated.
+   */
+  async anonymize(user: AuthTokenPayload, targetId: string): Promise<AnonymizeUserResult> {
+    const tenantId = requireTenant(user);
+    if (targetId === user.sub) {
+      throw new ConflictException("You cannot anonymize your own account");
+    }
+    const target = await this.repository.findByIdInTenant(targetId, tenantId);
+    if (!target) throw new NotFoundException(`User not found: ${targetId}`);
+
+    // Keyed by id so it stays unique against `users.email`'s global index, and
+    // `.invalid` because RFC 2606 reserves it: this address can never be a
+    // real inbox someone later mistakes for a contact.
+    const email = `anonimizado+${targetId}@anonimo.invalid`;
+    await this.repository.anonymize(targetId, tenantId, email);
+    // The token in their browser outlives the row change otherwise (audit H3).
+    this.accountStatus.invalidate(targetId);
+
+    return { id: targetId, email, anonymizedAt: new Date().toISOString() };
   }
 
   async resetPassword(user: AuthTokenPayload, targetId: string): Promise<ResetPasswordResult> {

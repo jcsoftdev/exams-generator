@@ -44,14 +44,16 @@ const DURATION_BUCKETS = [0.01, 0.05, 0.1, 0.3, 1, 3, 10, 30];
  */
 @Injectable()
 export class MetricsService {
+  private readonly registry: Registry;
   private readonly requestDuration: Histogram<"method" | "route" | "status_code">;
   private readonly queueScrapeFailures: Counter<"queue">;
   private readonly queueDepth: Gauge<"queue" | "state">;
 
-  constructor(
-    private readonly registry: Registry,
-    private readonly queues: readonly QueueDepthSource[],
-  ) {
+  private queues: readonly QueueDepthSource[];
+
+  constructor(registry: Registry, queues: readonly QueueDepthSource[]) {
+    this.registry = registry;
+    this.queues = queues;
     collectDefaultMetrics({ register: this.registry });
 
     this.requestDuration = new Histogram({
@@ -81,6 +83,17 @@ export class MetricsService {
       labelNames: ["queue", "state"],
       registers: [this.registry],
     });
+  }
+
+  /**
+   * Called once at startup with the queues found in the injector — see
+   * `MetricsModule` for why they are looked up instead of registered.
+   */
+  observeQueues(queues: readonly QueueDepthSource[]): void {
+    this.queues = queues;
+    for (const queue of queues) {
+      this.queueScrapeFailures.labels(queue.name).inc(0);
+    }
   }
 
   recordRequest({ method, route, statusCode, durationMs }: RequestSample): void {

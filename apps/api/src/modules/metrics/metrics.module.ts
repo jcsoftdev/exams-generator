@@ -1,30 +1,55 @@
-import { Module } from "@nestjs/common";
-import { BullModule, getQueueToken } from "@nestjs/bullmq";
-import { APP_INTERCEPTOR } from "@nestjs/core";
+import { Module, OnModuleInit } from "@nestjs/common";
+import { getQueueToken } from "@nestjs/bullmq";
+import { APP_INTERCEPTOR, ModuleRef } from "@nestjs/core";
 import { Queue } from "bullmq";
 import { Registry } from "prom-client";
 import { HttpMetricsInterceptor } from "./http-metrics.interceptor";
 import { MetricsController } from "./metrics.controller";
 import { MetricsService, QueueDepthSource } from "./metrics.service";
 
+/** The queues this module reports depth for — owned by AiModule and ExamsModule. */
+const OBSERVED_QUEUES = ["generation", "exam-versions"] as const;
+
 /**
- * Registers the two queues read-only, purely to ask them how deep they are.
- * `BullModule.registerQueue` is idempotent per name, so declaring them here as
- * well as in `AiModule`/`ExamsModule` shares one connection rather than
- * opening a second.
+ * Metrics for `GET /metrics` (audit 2026-08-20, M6).
+ *
+ * It deliberately does NOT call `BullModule.registerQueue`. Doing so looked
+ * harmless — same names, same connection options — but it creates a SECOND
+ * `Queue` instance per name, and every BullMQ queue opens its own Redis
+ * client. Under the e2e suite that is 26 AppModule boots × 4 workers, so the
+ * convenience of one decorator doubles the connection count of the whole run.
+ * Reading is not owning: the queues are looked up from the already-built
+ * injector instead, `strict: false` because they live in other modules.
  */
 @Module({
-  imports: [BullModule.registerQueue({ name: "generation" }, { name: "exam-versions" })],
   controllers: [MetricsController],
   providers: [
     { provide: Registry, useFactory: () => new Registry() },
     {
       provide: MetricsService,
-      inject: [Registry, getQueueToken("generation"), getQueueToken("exam-versions")],
-      useFactory: (registry: Registry, generation: Queue, examVersions: Queue) =>
-        new MetricsService(registry, [generation, examVersions] as unknown as QueueDepthSource[]),
+      inject: [Registry],
+      useFactory: (registry: Registry) => new MetricsService(registry, []),
     },
     { provide: APP_INTERCEPTOR, useClass: HttpMetricsInterceptor },
   ],
 })
-export class MetricsModule {}
+export class MetricsModule implements OnModuleInit {
+  constructor(
+    private readonly moduleRef: ModuleRef,
+    private readonly metrics: MetricsService,
+  ) {}
+
+  /**
+   * Wired here rather than in the factory because the feature modules that own
+   * the queues are not guaranteed to be initialised while this module's
+   * providers are being constructed.
+   */
+  onModuleInit(): void {
+    const found: QueueDepthSource[] = [];
+    for (const name of OBSERVED_QUEUES) {
+      const queue = this.moduleRef.get<Queue>(getQueueToken(name), { strict: false });
+      found.push({ name, getJobCounts: () => queue.getJobCounts() });
+    }
+    this.metrics.observeQueues(found);
+  }
+}

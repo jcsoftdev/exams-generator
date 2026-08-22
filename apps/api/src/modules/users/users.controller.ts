@@ -30,6 +30,26 @@ export class UsersController {
     return this.service.setActive(user, id, body.active);
   }
 
+  /**
+   * Ley 29733 — derecho de acceso. A GET, so answering an access request is a
+   * read and leaves no trace on the account it is about.
+   */
+  @Get(":id/personal-data")
+  exportPersonalData(@CurrentUser() user: AuthTokenPayload, @Param("id", ParseUUIDPipe) id: string) {
+    return this.service.exportPersonalData(user, id);
+  }
+
+  /**
+   * Ley 29733 — derecho de cancelación. POST, not DELETE: the row deliberately
+   * survives as an authorship anchor, and calling it DELETE would promise
+   * something this does not do.
+   */
+  @Post(":id/anonymize")
+  @HttpCode(200)
+  anonymize(@CurrentUser() user: AuthTokenPayload, @Param("id", ParseUUIDPipe) id: string) {
+    return this.service.anonymize(user, id);
+  }
+
   @Post(":id/reset-password")
   @HttpCode(200)
   resetPassword(@CurrentUser() user: AuthTokenPayload, @Param("id", ParseUUIDPipe) id: string) {

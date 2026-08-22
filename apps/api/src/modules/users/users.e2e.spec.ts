@@ -283,6 +283,71 @@ describe("Users module (e2e)", () => {
       .expect(401);
   });
 
+  it("exports everything stored about a person, and never their password hash", async () => {
+    // Ley 29733, derecho de acceso (audit 2026-08-20, M10).
+    const res = await request(app.getHttpServer())
+      .get(`/users/${createdTeacherId}/personal-data`)
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .expect(200);
+
+    expect(res.body.user.email).toBe(createdTeacherEmail);
+    expect(res.body.user.role).toBe(Role.Teacher);
+    expect(res.body.authored).toEqual({ questions: 0, exams: 0, generationJobs: 0 });
+    expect(JSON.stringify(res.body)).not.toMatch(/passwordHash|password_hash/i);
+  });
+
+  it("404s an access request for another school's user", async () => {
+    await request(app.getHttpServer())
+      .get(`/users/${createdTeacherId}/personal-data`)
+      .set("Authorization", `Bearer ${schoolAdminBToken}`)
+      .expect(404);
+  });
+
+  it("anonymizing strips the identity, kills the login, and revokes the live token", async () => {
+    // Ley 29733, derecho de cancelación. Deletion is impossible while
+    // questions/exams reference the row, so the person goes and the anchor stays.
+    const email = `to-anonymize-${randomUUID()}@colegio.test`;
+    const created = await request(app.getHttpServer())
+      .post("/users")
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .send({ email, name: "Para anonimizar", role: "teacher" })
+      .expect(201);
+    tenantAUserIds.push(created.body.id);
+    const theirToken = tokenService.sign({
+      sub: created.body.id,
+      tenantId: tenantAId,
+      role: Role.Teacher,
+    });
+    await request(app.getHttpServer())
+      .get("/courses")
+      .set("Authorization", `Bearer ${theirToken}`)
+      .expect(200);
+
+    const res = await request(app.getHttpServer())
+      .post(`/users/${created.body.id}/anonymize`)
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .expect(200);
+
+    expect(res.body.email).toMatch(/@anonimo\.invalid$/);
+    // The old address is gone, so the old password cannot get in either.
+    await request(app.getHttpServer())
+      .post("/auth/login")
+      .send({ email, password: created.body.temporaryPassword })
+      .expect(401);
+    // And the session they already had stops working immediately.
+    await request(app.getHttpServer())
+      .get("/courses")
+      .set("Authorization", `Bearer ${theirToken}`)
+      .expect(401);
+  });
+
+  it("refuses to anonymize the admin making the request", async () => {
+    await request(app.getHttpServer())
+      .post(`/users/${schoolAdminAId}/anonymize`)
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .expect(409);
+  });
+
   it("cannot deactivate self", async () => {
     await request(app.getHttpServer())
       .patch(`/users/${schoolAdminAId}`)

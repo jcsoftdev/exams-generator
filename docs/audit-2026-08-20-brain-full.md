@@ -546,11 +546,31 @@ release workflow).
         muy por debajo de lo que hace un script.
       Verificado: 989 non-e2e + 276 e2e.
 
-- [ ] **M10 — Privacidad: sin export ni retención de datos personales.** `users.email/name`
+- [x] **M10 — Privacidad: sin export ni retención de datos personales.** `users.email/name`
       sin política de retención; "Desactivar" conserva el registro para siempre; no hay
       export de datos del usuario (Ley 29733 pide acceso/cancelación). Mitigantes: hard-delete
       de tenant completo ya existe (commit 237e14f), logs redactan `authorization`, fixtures
       usan dominios `.test`. Privacy.
+      **HECHO (2026-08-21)**, los dos derechos que pide la ley, del lado API:
+      - **Acceso**: `GET /users/:id/personal-data` devuelve todo lo que la plataforma guarda de
+        una persona — identidad + **cuántas** preguntas, exámenes y jobs firmó. Cuentas, no
+        contenido: un examen que armó un profesor es del colegio, no suyo, así que no es algo
+        que se lleve al irse; cuánto de eso lleva su nombre sí es lo que una solicitud de
+        acceso pregunta. **El hash de contraseña nunca se incluye** — un hash sigue siendo una
+        credencial, y responder "qué saben de mí" con la llave de la puerta sería absurdo. Hay
+        un test que lo fija.
+      - **Cancelación**: `POST /users/:id/anonymize`. **No es un DELETE, y llamarlo así sería
+        mentir**: `questions.created_by` y `exams.created_by` apuntan a esa fila y el trabajo
+        del colegio tiene que sobrevivir a que el profesor se vaya. Lo que se va es la persona
+        — email a lápida `@anonimo.invalid` (RFC 2606: jamás será un buzón real), nombre
+        borrado, contraseña reemplazada por algo que no es un hash válido (no hay login ni
+        "revertirlo"), cuenta desactivada. Invalida además el cache de `AccountStatusService`,
+        así que el token que la persona tenía abierto muere en el acto (H3).
+      - No se puede anonimizar la propia cuenta, mismo guard que "desactivar".
+      **Alcance dicho de frente**: esto es la capacidad, no el proceso. Falta UI, falta la
+      política de retención escrita (cuánto se guarda una cuenta inactiva) y falta completar
+      la página `/privacidad` de la landing, que sigue con su banner TODO de razón social/RUC.
+      La ley pide poder responder; ahora se puede.
 
 - [x] **M11** *(HECHO 2026-08-20: pineado a `RELEASE.2025-09-07T16-13-09Z` — la versión exacta
       que `latest` resolvía localmente, probada contra el volumen de datos existente —
@@ -653,6 +673,17 @@ release workflow).
       **Qué haría falta para cerrarlo de verdad**: correr la suite en bucle con la semilla de
       orden de jest fijada y capturar el mensaje exacto la próxima vez que pase, en vez de
       volver a mirar un rojo ya perdido.
+      **Tercer episodio y un sospechoso propio (2026-08-21)**: falló `ai-jobs.e2e` una vez y
+      pasó en las siguientes. Al mirar qué había cambiado apareció algo que **introduje yo**
+      con M6: `MetricsModule` llamaba a `BullModule.registerQueue` para las dos colas que ya
+      registran `AiModule` y `ExamsModule`. Mismos nombres, misma conexión — pero eso crea una
+      SEGUNDA instancia de `Queue` por nombre, y cada cola BullMQ abre su propio cliente Redis.
+      En la suite e2e son 26 booteos del AppModule × 4 workers: la comodidad de un decorador
+      duplicaba las conexiones de toda la corrida. Ahora las colas se **buscan** en el injector
+      (`ModuleRef` con `strict: false`) en vez de registrarse: leer no es poseer.
+      3 corridas completas verdes después del cambio. **No es prueba de causalidad** — los
+      episodios anteriores son anteriores a M6 — pero sí es una fuente de contención que ya no
+      está.
 
 ### Low / Info
 

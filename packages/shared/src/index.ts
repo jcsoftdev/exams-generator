@@ -12,4 +12,5 @@ export * from "./dto/bank-question.dto";
 export * from "./dto/dashboard.dto";
 export * from "./dto/tenant.dto";
 export * from "./dto/user.dto";
+export * from "./dto/personal-data.dto";
 export * from "./dto/ai.dto";
