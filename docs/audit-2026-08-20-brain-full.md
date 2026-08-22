@@ -211,6 +211,18 @@ release workflow).
   de `Dockerfile.api`; `|| pnpm install` eliminado de los tres Dockerfiles. **Pendiente**:
   los runtimes nginx de web/landing siguen como root (cambiarlos implica
   `nginx-unprivileged` + puerto ≠ 80 — cambio aparte, no quick win).
+  **HECHO (2026-08-21)**: `Dockerfile.web` y `Dockerfile.landing` usan
+  `nginxinc/nginx-unprivileged:alpine` y los dos `.conf` escuchan en **8080**. El puerto no es
+  capricho: un proceso que no es root no puede bindear por debajo de 1024, así que 8080 es la
+  consecuencia de soltar root, no la decisión.
+  **Verificado corriéndolo, no solo leyéndolo**: con cada `.conf` montado en la imagen, `nginx -t`
+  pasa, el contenedor arranca como `uid=101(nginx)` y responde **HTTP 200** en 8080. (El primer
+  intento marcó `host not found in upstream "api"`, correcto fuera de compose; se repitió con
+  `--add-host api:127.0.0.1`.)
+  **PASO DE DEPLOY OBLIGATORIO**: Dokploy rutea a un puerto de contenedor configurado en su UI y
+  ahí todavía dice **80**. Cambiarlo a **8080** para `web` y `landing` en la MISMA ventana del
+  deploy, o Traefik devuelve 502 contra un contenedor sano y escuchando. La nota está también en
+  la cabecera de los dos Dockerfiles, que es donde la va a leer quien despliegue.
 
 - [x] **H6 — Llamadas LLM sin techo de gasto: sin `max_tokens`, input sin truncar, sin
       circuit-breaker.** `openrouter-request-builder.ts` no manda `max_tokens` (factura lo que
