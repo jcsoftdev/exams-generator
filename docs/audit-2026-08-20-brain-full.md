@@ -476,10 +476,26 @@ release workflow).
         exige) y a `env.example`.
       Verificado: 1011 non-e2e + 279 e2e, incluidos 3 e2e del propio endpoint.
 
-- [ ] **M7 — El PR gate excluye la capa más frágil (e2e) y nunca se verificó en runners.**
+- [~] **M7 — El PR gate excluye la capa más frágil (e2e) y nunca se verificó en runners.**
       `ci.yml` corre non-e2e + db-serial; `api-e2e-manual` solo `workflow_dispatch` y su propio
       header dice "unverified". Exclusión honesta y documentada — pero el riesgo real (BullMQ
       races) queda sin gate. Testing/DevOps.
+      **HECHO A MEDIAS, Y A PROPÓSITO (2026-08-21)**: el job pasó a llamarse `api-e2e` y ahora
+      corre **cada noche** (cron 07:00 UTC) además de a demanda. NO gatea PRs todavía.
+      El razonamiento, porque las dos mitades importan:
+      - "Manual" significaba que **nunca había corrido en un runner** — cero señal, que es lo
+        que denuncia este hallazgo. Nocturno da señal real, sobre infraestructura real.
+      - Pero gatear cada PR con M14 sin diagnosticar entrena a la gente a re-correr el CI rojo
+        hasta que salga verde, que es peor que no tener gate. Por eso tampoco hay **reintento
+        automático**: un retry escondería justo la intermitencia que esto viene a medir.
+      - **El log del fallo se guarda como artifact** (30 días). Lo único que faltó cuando la
+        suite se puso roja fue el mensaje; un nocturno que solo diga "failed" reproduce ese
+        problema en cadencia.
+      - MinIO quedó pineado a la misma release que los composes en vez de `latest`: un tag
+        flotante puede poner el nocturno en rojo de un día para otro por un cambio ajeno, que
+        es exactamente lo que una señal nocturna no debe hacer.
+      **Criterio de promoción a gate de PR** (escrito para que no dependa de la memoria de
+      nadie): una racha de noches verdes seguidas **y** M14 con causa raíz.
 
 - [x] **M8** *(HECHO 2026-08-20: nota `template-distribution-note` en el builder cuando el
       reparto difiere del total pedido; 3 specs nuevas en exam-builder.component.spec.ts)* —

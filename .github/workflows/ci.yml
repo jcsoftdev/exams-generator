@@ -37,6 +37,10 @@ on:
     branches: [main]
   push:
     branches: [main]
+  # Nightly, for the e2e job below only — see its header for why it does not
+  # gate pull requests yet.
+  schedule:
+    - cron: "0 7 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -151,7 +155,7 @@ jobs:
   #
   # DECISION: this job runs non-e2e + db-serial on every PR/push (Postgres
   # only — cheap, fast, deterministic). The e2e project is deliberately
-  # EXCLUDED from this job — see the `api-e2e-manual` job below for why and
+  # EXCLUDED from this job — see the `api-e2e` job below for why and
   # what running it would take. Excluding it here is a stated exclusion,
   # not a silent one: this is the comment describing it.
   #
@@ -233,8 +237,8 @@ jobs:
           exit $status
 
   # ---------------------------------------------------------------------
-  # apps/api e2e project — manual/workflow_dispatch ONLY, not part of the
-  # PR gate. Reasoning, spelled out rather than silently omitted:
+  # apps/api e2e project — runs NIGHTLY and on demand, and does not gate pull
+  # requests yet. Reasoning, spelled out rather than silently omitted:
   #
   #   1. Needs Redis + MinIO + the real `typst` binary, on top of Postgres.
   #      Redis is a plain GitHub Actions `services:` entry (its default
@@ -253,10 +257,20 @@ jobs:
   #      silently.
   #   3. The jest.config.js e2e project comments describe this as
   #      historically the flakiest layer (BullMQ job-theft / stalled-job
-  #      races were real production bugs here, not test flakiness) — a
-  #      still-maturing e2e job gating every PR would train people to
-  #      ignore red CI, which is the exact failure this workflow exists to
-  #      prevent. It stays manual until it's proven stable.
+  #      races were real production bugs here, not test flakiness), and the
+  #      suite HAS been seen failing once and passing on a rerun with no
+  #      change in between (audit M14, still unexplained). Gating every PR on
+  #      that trains people to rerun red CI until it is green, which is worse
+  #      than no gate at all.
+  #
+  #      But "manual only" meant it had never actually run on a runner —
+  #      audit M7. Nightly is the middle: real signal, on real infrastructure,
+  #      with nobody's PR held hostage to a coin flip. PROMOTE IT TO THE PR
+  #      GATE once it has a run of consecutive green nights and M14 has a
+  #      root cause; the point of the schedule is to produce that evidence.
+  #
+  #      No automatic retry, deliberately. A retry would hide exactly the
+  #      intermittency this is here to measure.
   #
   # `typst` itself: installed here by copying infra/Dockerfile.api's exact
   # install steps (same pinned TYPST_VERSION, same GitHub release asset,
@@ -264,9 +278,9 @@ jobs:
   # where CI legitimately needs the binary, since e2e specs are NOT
   # describe.skip-guarded the way the non-e2e typst golden spec is.
   # ---------------------------------------------------------------------
-  api-e2e-manual:
-    name: test (api — e2e, manual/unverified)
-    if: github.event_name == 'workflow_dispatch'
+  api-e2e:
+    name: test (api — e2e, nightly)
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
     services:
       postgres:
@@ -334,7 +348,10 @@ jobs:
 
       # Workaround for GitHub Actions `services:` not supporting a custom
       # command (see job header comment) — infra/docker-compose.yml's exact
-      # image, command, and 9030->9000 port mapping (matches
+      # image (same pinned release, not `latest`: a floating tag would let an
+      # unrelated MinIO change turn this job red overnight, which is the one
+      # thing a nightly signal must not do), command, and 9030->9000 port
+      # mapping (matches
       # MINIO_API_PORT's default in infra/env.example, which is also what
       # apps/api/src/modules/bank/storage-provider.ts falls back to).
       - name: Start MinIO
@@ -343,7 +360,7 @@ jobs:
             -p 9030:9000 -p 9003:9001 \
             -e MINIO_ROOT_USER=minioadmin \
             -e MINIO_ROOT_PASSWORD=minioadmin \
-            minio/minio:latest server /data --console-address ":9001"
+            minio/minio:RELEASE.2025-09-07T16-13-09Z server /data --console-address ":9001"
           for i in $(seq 1 20); do
             curl -fsS http://localhost:9030/minio/health/ready && break
             sleep 2
@@ -352,6 +369,17 @@ jobs:
       # This job runs the exact same three-phase chain as apps/api/package.json's
       # own "test" script, unmodified — this is the only job that legitimately
       # needs all three phases.
+      # Tee'd to a file and uploaded below: the one thing missing when the
+      # suite last went red intermittently was the message (audit M14). A
+      # nightly that only says "failed" reproduces that problem on a schedule.
       - name: Run full jest suite (non-e2e, db-serial, e2e)
         working-directory: apps/api
-        run: pnpm test
+        run: set -o pipefail && pnpm test 2>&1 | tee /tmp/api-suite.log
+
+      - name: Upload the suite log when it fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-suite-log
+          path: /tmp/api-suite.log
+          retention-days: 30
