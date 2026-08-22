@@ -598,6 +598,24 @@ release workflow).
       proyecto serial. Nadie ha medido cuál es el recurso en disputa. Mientras no se sepa, un
       rojo en CI puede ser real o puede ser esto — que es exactamente lo que vuelve inútil a un
       gate. Testing.
+      **INVESTIGADO (2026-08-21), a medias y dicho como es**:
+      - **No se reprodujo**: 4 corridas completas de e2e y 3 de non-e2e, todas verdes. O sea no
+        tengo la causa de ninguno de los dos fallos observados; lo que sigue es de leer código,
+        no de reproducir.
+      - **Sí apareció un peligro real entre specs, y ese está arreglado**:
+        `db/body-hash-backfill.spec.ts` ejecutaba el UPDATE de la migración 0016 **sin acotar**
+        (`WHERE body_typst IS NOT NULL AND body_hash IS NULL`), o sea sobre TODA la tabla
+        `questions`. Con una docena de specs compartiendo el mismo Postgres de dev, ese WHERE
+        alcanza los fixtures de las demás: les calcula el hash de filas que acaban de insertar
+        —volteando un valor que ellas asertan— y, si el hash calculado choca, viola el índice
+        único `questions_tenant_id_body_hash_idx` y revienta este spec. Los dos sentidos del
+        daño explican la forma del síntoma. Ahora el UPDATE va scopeado por `id`: lo que el
+        test verifica es la EXPRESIÓN SQL, no el WHERE de la migración.
+      - **La mitad e2e sigue sin explicación.** `bank-alternative-images` falló una vez y no
+        volvió a fallar en 4 corridas. No lo cierro inventando una causa.
+      **Qué haría falta para cerrarlo de verdad**: correr la suite en bucle con la semilla de
+      orden de jest fijada y capturar el mensaje exacto la próxima vez que pase, en vez de
+      volver a mirar un rojo ya perdido.
 
 ### Low / Info
 

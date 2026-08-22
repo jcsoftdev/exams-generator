@@ -79,10 +79,18 @@ describe("0016_body_hash_backfill.sql", () => {
     // like `\s` cooks down to a bare `s`, silently stripping the backslash
     // before this ever reaches Postgres — the actual .sql migration file
     // isn't parsed as a JS string, so it doesn't have this problem.
+    // SCOPED TO THIS ROW, unlike the migration it mirrors. The real 0016 runs
+    // once against a quiet database; this spec runs beside a dozen others
+    // sharing one dev Postgres, and `WHERE body_hash IS NULL` matches THEIR
+    // fixtures too. Table-wide, it hashed rows another spec had just inserted
+    // — flipping a value they assert on, and risking a unique violation on
+    // `questions_tenant_id_body_hash_idx` if the computed hash collided, which
+    // surfaced as this spec failing at random in a full run (audit M14).
+    // What is under test is the SQL EXPRESSION, not the WHERE clause.
     await db.execute(sql`
       UPDATE questions
       SET body_hash = encode(digest(regexp_replace(body_typst, '^\\s+|\\s+$', '', 'g'), 'sha256'), 'hex')
-      WHERE body_typst IS NOT NULL AND body_hash IS NULL
+      WHERE id = ${row!.id} AND body_typst IS NOT NULL AND body_hash IS NULL
     `);
 
     const [after] = await db.select().from(questions).where(eq(questions.id, row!.id));
