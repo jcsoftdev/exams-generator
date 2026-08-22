@@ -286,13 +286,24 @@ release workflow).
       Recortar deja la pregunta vacía y adivinar el par base sería inventar contenido; el
       camino real es re-extraerlas de la fuente. Ver ítem H9.
 
-- [ ] **H9 — 3 preguntas sin enunciado recuperable.** Separadas de H8 (2026-08-21) porque no
-      se arreglan cortando: el scrape nunca capturó el enunciado. Una es
-      `RESOLUCIÓN : INDECISIÓN` a secas; las otras dos son analogías cuyo par base se truncó
-      (`Seleccione la opción que mantiene una relación concordante con el par base escrito en
-      mayúscula. RESOLUCIÓN : NORMA::`). Las tres son inrespondibles hoy. Adivinar el par base
-      sería inventar contenido, así que la salida es re-extraerlas de su `source_url` o
-      archivarlas — decisión de producto, no mecánica. Data quality.
+- [x] **H9 — NO ERA UN DEFECTO. Falso positivo mío, corregido el 2026-08-21.** Lo levanté al
+      cerrar H8 diciendo que tres preguntas habían perdido su enunciado. Al ir a recuperarlas
+      de su `source_url` bastó mirar sus alternativas y su clave para ver que las tres están
+      **sanas**, y que el error fue de lectura: en las tres, "RESOLUCIÓN" es una PALABRA del
+      contenido, no el marcador de solucionario que mi barrido creyó.
+      - `83b35aca`: el "enunciado" `RESOLUCIÓN : INDECISIÓN` **es el par base** de una analogía
+        de antónimos. Alternativas: presteza:pesadez, prontitud:apatía, rapidez:festinación…
+        Clave almacenada: `presteza : pesadez` — antónimos. Coherente.
+      - `ce358204` y `b3011cad`: `… el par base escrito en mayúscula. RESOLUCIÓN : NORMA::` es
+        el enunciado COMPLETO — el par base es "resolución : norma" (una resolución es un tipo
+        de norma). Clave almacenada en ambas: `impuesto : tributo`, la misma relación de
+        hiperonimia. Coherente.
+      **Lo que sí vale la pena guardarse**: las reglas de H8 dejaron estas tres en paz, y eso
+      no fue suerte — el corte por cola solo dispara con el marcador AL FINAL, y el `RESOLUCIÓN`
+      en mayúsculas solo se recorta de títulos que ya empiezan con "Copia de"/tras
+      "SOLUCIONARIO". Si hubieran sido un poco más agresivas, habrían destruido tres preguntas
+      buenas para arreglar cero. La lección es la de siempre: el barrido señala candidatos, la
+      pregunta la decide leerla.
 
 ### Medium
 

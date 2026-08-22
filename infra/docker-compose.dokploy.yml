@@ -72,6 +72,17 @@ services:
       retries: 10
 
   api:
+    # ONE replica, and this line is the enforcement, not a default being
+    # restated. Two API containers would break three things quietly rather
+    # than loudly (audit 2026-08-20, M5): the SSE progress streams push from
+    # in-process Subjects, so a browser connected to instance A never hears
+    # about a job instance B is running; the ThrottlerModule counts in memory,
+    # so every limit silently doubles; and the Typst preview cache and
+    # `bucketEnsured` flag are per-process. Scaling out means moving those to
+    # Redis pub/sub and shared storage FIRST — until then this stays at 1, and
+    # anyone raising it should have to delete this comment to do it.
+    deploy:
+      replicas: 1
     build:
       context: ..
       dockerfile: infra/Dockerfile.api
