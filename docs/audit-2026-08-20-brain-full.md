@@ -170,7 +170,7 @@ release workflow).
       contenedor, imágenes y build cache). `docker builder prune` liberó 5.06 GB y todo volvió
       a verde, sin tocar ningún volumen.
 
-- [~] **H4 — Compose de producción con fallbacks de credenciales públicas y Redis sin auth en
+- [x] **H4 — Compose de producción con fallbacks de credenciales públicas y Redis sin auth en
   red compartida.** `docker-compose.dokploy.yml:21-22,37-38,80-81`:
   `${DB_PASSWORD:-exams}`, `${MINIO_ROOT_PASSWORD:-minioadmin}` — si la var no está seteada
   en Dokploy, prod arranca con credenciales publicadas en este repo. `exams-redis` corre
@@ -199,7 +199,7 @@ release workflow).
   `REDIS_PASSWORD` (y passwords reales de DB/MinIO) en Dokploy ANTES del próximo deploy —
   el compose ahora se niega a arrancar sin ellos.
 
-- [~] **H5 — Imágenes Docker corren como root y el build puede des-congelar el lockfile en
+- [x] **H5 — Imágenes Docker corren como root y el build puede des-congelar el lockfile en
   silencio.** Ningún `USER` en `Dockerfile.api`/`Dockerfile.web`/(`Dockerfile.landing`);
   no existe `.dockerignore` (context `..` + `COPY . .` arrastra `.git`, `node_modules`
   locales y un `.env` raíz si existe, a la build stage);
@@ -347,7 +347,7 @@ release workflow).
       la etiqueta de un mismo curso cambiara al cambiar de filtro, y una etiqueta inestable
       confunde más que un sufijo de más.
 
-- [~] **M4 — Contrato API↔web duplicado a mano sin guard.** `packages/shared` solo cubre auth
+- [x] **M4 — Contrato API↔web duplicado a mano sin guard.** `packages/shared` solo cubre auth
   (5 DTOs + 2 enums); las 10 features de web re-declaran cada shape de respuesta en
   `*.models.ts` (p. ej. `ExamVersionJob` en `exam-versions.models.ts:28` vs
   `ExamVersionJobRecord` en `exam-version-jobs.repository.ts:21`). Sin OpenAPI, sin test
@@ -569,7 +569,7 @@ release workflow).
   lectura por palabras sugiere.
   Verificado: 973 non-e2e + 276 e2e.
 
-- [ ] **M13 — La advertencia de "pregunta usada en N exámenes" no puede aparecer nunca.**
+- [x] **M13 — La advertencia de "pregunta usada en N exámenes" no puede aparecer nunca.**
       Encontrado al compartir el contrato de bank (2026-08-21, M4b). El web muestra
       "Usada en: {{ q.usedInExamCount ?? 0 }} exámenes" y condiciona un aviso a
       `(question.usedInExamCount ?? 0) > 0` antes de editar una pregunta aprobada — pero
