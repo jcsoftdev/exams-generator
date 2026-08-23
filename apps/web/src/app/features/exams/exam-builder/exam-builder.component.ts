@@ -358,6 +358,15 @@ export class ExamBuilderComponent implements OnInit {
   protected readonly templateDistributionShortfall = signal<{
     requested: number;
     distributed: number;
+    /**
+     * Why the two numbers differ, which the teacher cannot tell from the
+     * numbers alone: a template that publishes its own per-course counts
+     * IGNORES the requested total outright (UNCP answers 80 whether you ask
+     * for 60 or 200), while a template without counts uses the total and lands
+     * a question or two short on the division. Same discrepancy, opposite
+     * explanations — and only the server knows which (found live 2026-08-23).
+     */
+    countsFromTemplate: boolean;
   } | null>(null);
   /** Raw text of the optional "Cantidad total de preguntas" field — only needed when a university (e.g. UNI) publishes point totals but no per-course question count (`totalQuestionsOverride`). */
   protected readonly templateTotalQuestions = signal<string>('');
@@ -855,7 +864,7 @@ export class ExamBuilderComponent implements OnInit {
         const distributed = result.blueprint.reduce((sum, row) => sum + row.count, 0);
         this.templateDistributionShortfall.set(
           requested !== null && Number.isFinite(requested) && distributed !== requested
-            ? { requested, distributed }
+            ? { requested, distributed, countsFromTemplate: result.countsFromTemplate === true }
             : null,
         );
         this.mergeResolvedBlueprint(result.blueprint);

@@ -235,10 +235,17 @@
           data-testid="template-distribution-note"
           class="rounded-card border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-n800"
         >
-          La plantilla repartió <strong>{{ shortfall.distributed }}</strong> preguntas de las
-          <strong>{{ shortfall.requested }}</strong> que pediste — el reparto entre cursos no da un
-          número exacto. Ajusta cualquier celda a mano si necesitas exactamente
-          {{ shortfall.requested }}.
+          @if (shortfall.countsFromTemplate) {
+            Esta universidad publica cuántas preguntas van por curso, así que el examen tiene
+            <strong>{{ shortfall.distributed }}</strong> y no las
+            <strong>{{ shortfall.requested }}</strong> que pediste — tu total no se aplica aquí.
+            Cambia las celdas que quieras si necesitas otro tamaño.
+          } @else {
+            La plantilla repartió <strong>{{ shortfall.distributed }}</strong> preguntas de las
+            <strong>{{ shortfall.requested }}</strong> que pediste — el reparto entre cursos no da
+            un número exacto. Ajusta cualquier celda a mano si necesitas exactamente
+            {{ shortfall.requested }}.
+          }
         </p>
       }
 

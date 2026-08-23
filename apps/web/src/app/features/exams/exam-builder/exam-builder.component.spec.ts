@@ -1845,6 +1845,35 @@ describe('ExamBuilderComponent', () => {
       expect(note!.textContent).toContain('30');
     });
 
+    it('dice que el total NO se aplica cuando la universidad publica sus propios conteos', () => {
+      // UNCP responde 80 tanto si pides 60 como si pides 200: el total no se
+      // reparte, se ignora. Culpar al redondeo ahí es una explicación falsa
+      // (encontrado en vivo 2026-08-23).
+      const resolveBlueprint = vi.fn((_payload: ResolveBlueprintPayload) =>
+        of<ResolveBlueprintResult>({
+          blueprint: [{ courseId: 'c1', topicId: 't1', count: 80, difficulty: Difficulty.Hard }],
+          weekNumber: null,
+          templateId: 'tpl-uncp',
+          usedCumulativeFallback: false,
+          countsFromTemplate: true,
+          effectiveWeekNumber: null,
+        }),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      setTotalQuestionsOverride(compiled, fixture, '60');
+      vi.advanceTimersByTime(TEMPLATE_RELOAD_DEBOUNCE_MS);
+      fixture.detectChanges();
+
+      const note = compiled.querySelector('[data-testid="template-distribution-note"]');
+      expect(note!.textContent).toContain('publica cuántas preguntas van por curso');
+      expect(note!.textContent).toContain('no se aplica');
+      // La explicación de redondeo NO debe aparecer en este caso.
+      expect(note!.textContent).not.toContain('no da un número exacto');
+    });
+
     it('no muestra la nota de reparto cuando la plantilla reparte exactamente lo pedido', () => {
       const resolveBlueprint = vi.fn((_payload: ResolveBlueprintPayload) =>
         resolveCon([{ courseId: 'c1', count: 30, difficulty: Difficulty.Medium }])(),

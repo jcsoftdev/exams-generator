@@ -633,6 +633,8 @@ describe("ExamsService.resolveExamBlueprint", () => {
       weekNumber: null,
       templateId: null,
       usedCumulativeFallback: false,
+      // No template at all, so nothing published counts.
+      countsFromTemplate: false,
       effectiveWeekNumber: null,
     });
     expect(repository.findCurrentTemplate).not.toHaveBeenCalled();
@@ -843,6 +845,52 @@ describe("ExamsService.resolveExamBlueprint", () => {
     expect(caught?.message).toBe(
       "Esta plantilla no tiene conteo de preguntas por curso — indica un total de preguntas.",
     );
+  });
+
+  it("says the counts came from the TEMPLATE when every row publishes its own", async () => {
+    // The teacher's total is ignored in this case, and the UI has to explain
+    // WHY. Guessing from the numbers gets it wrong: it looks like a rounding
+    // remainder and is not one (audit 2026-08-23, seen live on UNCP área I —
+    // asking for 60 and for 200 both return the template's 80).
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "none" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+    repository.getTemplateRows.mockResolvedValue([
+      { courseId: "course-1", questionCount: 5 },
+      { courseId: "course-2", questionCount: 3 },
+    ]);
+    repository.getSyllabusForTemplate.mockResolvedValue([]);
+
+    const result = await service.resolveExamBlueprint({
+      examTypeCode: "eta",
+      universityId: "uni-1",
+      trackId: null,
+      tenantId: "tenant-1",
+      totalQuestionsOverride: 60,
+    });
+
+    expect(result.countsFromTemplate).toBe(true);
+  });
+
+  it("says the counts came from the requested TOTAL when the template publishes none", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "none" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+    repository.getTemplateRows.mockResolvedValue([
+      { courseId: "course-1", weightPoints: 100 },
+      { courseId: "course-2", weightPoints: 100 },
+    ]);
+    repository.getSyllabusForTemplate.mockResolvedValue([]);
+
+    const result = await service.resolveExamBlueprint({
+      examTypeCode: "eta",
+      universityId: "uni-1",
+      trackId: null,
+      tenantId: "tenant-1",
+      totalQuestionsOverride: 60,
+    });
+
+    expect(result.countsFromTemplate).toBe(false);
   });
 
   it("does not throw when courseScope='selected' and the only row lacking questionCount is excluded by selectedCourseIds — exclusion happens before the check", async () => {

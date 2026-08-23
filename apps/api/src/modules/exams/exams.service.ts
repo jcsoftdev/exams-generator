@@ -208,6 +208,18 @@ export interface ResolveExamBlueprintResult {
    */
   readonly usedCumulativeFallback: boolean;
   /**
+   * True when every in-scope template row publishes its own `questionCount`,
+   * so the blueprint's totals come from the TEMPLATE and any
+   * `totalQuestionsOverride` the teacher sent was not applied.
+   *
+   * The client cannot infer this from the numbers, and guessing gets it wrong
+   * in a way that misinforms: UNCP área I answers 80 whether you ask for 60 or
+   * for 200, which reads exactly like a rounding remainder and is not one. The
+   * builder needs to say "this university publishes its own counts", not "the
+   * split did not divide evenly" (found live 2026-08-23).
+   */
+  readonly countsFromTemplate: boolean;
+  /**
    * Refinement on top of the P0 fix above (docs/audit-2026-08-14.md, same
    * item, 2026-08-14): the last `weekNumber` this (university, track)
    * template's syllabus actually has content for — `Math.max` over
@@ -668,6 +680,8 @@ export class ExamsService {
         weekNumber: null,
         templateId: null,
         usedCumulativeFallback: false,
+        // `manual` has no template at all, so nothing published any counts.
+        countsFromTemplate: false,
         effectiveWeekNumber: null,
       };
     }
@@ -693,10 +707,14 @@ export class ExamsService {
         ? templateRows.filter((row) => (input.selectedCourseIds ?? []).includes(row.courseId))
         : templateRows;
 
-    if (
-      inScopeRows.some((row) => row.questionCount === undefined || row.questionCount === null) &&
-      input.totalQuestionsOverride === undefined
-    ) {
+    // Every in-scope row carrying its own count means the template decides the
+    // totals and the teacher's requested total is not applied — which the
+    // builder has to be able to SAY, not guess from the arithmetic.
+    const countsFromTemplate = inScopeRows.every(
+      (row) => row.questionCount !== undefined && row.questionCount !== null,
+    );
+
+    if (!countsFromTemplate && input.totalQuestionsOverride === undefined) {
       throw new BadRequestException(
         "Esta plantilla no tiene conteo de preguntas por curso — indica un total de preguntas.",
       );
@@ -773,6 +791,13 @@ export class ExamsService {
         ? null
         : Math.min(weekNumber ?? maxSyllabusWeek, maxSyllabusWeek);
 
-    return { blueprint, weekNumber, templateId: template.id, usedCumulativeFallback, effectiveWeekNumber };
+    return {
+      blueprint,
+      weekNumber,
+      templateId: template.id,
+      usedCumulativeFallback,
+      countsFromTemplate,
+      effectiveWeekNumber,
+    };
   }
 }

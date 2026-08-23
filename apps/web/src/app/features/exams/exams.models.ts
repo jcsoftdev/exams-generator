@@ -267,6 +267,12 @@ export interface ResolveBlueprintResult {
   readonly templateId: string | null;
   readonly usedCumulativeFallback?: boolean;
   /**
+   * True when the university's template publishes its own per-course counts,
+   * so a requested total was NOT applied. Optional for the same reason as
+   * `usedCumulativeFallback` — older/mocked responses may omit it.
+   */
+  readonly countsFromTemplate?: boolean;
+  /**
    * Refinement on top of `usedCumulativeFallback` (docs/audit-2026-08-14.md,
    * same item): the last week this (university, track) syllabus actually has
    * content for — `null` when the backend has nothing to report (older/mocked
