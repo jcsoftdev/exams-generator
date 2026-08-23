@@ -882,6 +882,29 @@ describe('BankListComponent', () => {
       expect(warning?.textContent).toMatch(/2 exámenes/);
     });
 
+    it('dice "1 examen" en singular, en el detalle y en el aviso de edición', () => {
+      // Con el conteo clavado en 0 nadie veía el plural mal; en cuanto llegó el
+      // número real aparecieron dos "1 exámenes" (audit M13).
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) =>
+          of(makeQuestion({ id, tenantId: 't1', status: 'approved', usedInExamCount: 1 })),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.textContent).toContain('1 examen');
+      expect(compiled.textContent).not.toContain('1 exámenes');
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const warning = compiled.querySelector('[data-testid="edit-warning"]');
+      expect(warning!.textContent).toContain('1 examen');
+      expect(warning!.textContent).not.toContain('1 exámenes');
+    });
+
     it('tags an AI-authored question of this school with the IA chip', () => {
       // The template branch behind this was dead: it compared `q.origin`, a
       // field nothing ever sent (audit 2026-08-21, M13). Origin is derived now.

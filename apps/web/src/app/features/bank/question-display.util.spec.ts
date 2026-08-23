@@ -1,4 +1,4 @@
-import { correctAnswerLabel, gradeLevelLabel } from './question-display.util';
+import { correctAnswerLabel, examCountLabel, gradeLevelLabel } from './question-display.util';
 
 /**
  * Audit 2026-08-20 (M1/L3): the bank list/detail rendered the STORED
@@ -38,5 +38,19 @@ describe('gradeLevelLabel', () => {
 
   it('falls back to the raw code for an unknown grade', () => {
     expect(gradeLevelLabel('mystery_level')).toBe('mystery_level');
+  });
+});
+
+describe('examCountLabel', () => {
+  it('uses the singular for exactly one exam', () => {
+    // "1 exámenes" was visible in two places the moment the count became real
+    // — before the fix it always read 0, so nobody saw it (audit M13).
+    expect(examCountLabel(1)).toBe('1 examen');
+  });
+
+  it('uses the plural for none and for many', () => {
+    expect(examCountLabel(0)).toBe('0 exámenes');
+    expect(examCountLabel(2)).toBe('2 exámenes');
+    expect(examCountLabel(21)).toBe('21 exámenes');
   });
 });

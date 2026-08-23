@@ -25,3 +25,16 @@ export function correctAnswerLabel(correctAnswer: string): string {
 export function gradeLevelLabel(gradeLevel: string): string {
   return GRADE_LEVEL_LABELS[gradeLevel as GradeLevel] ?? gradeLevel;
 }
+
+/**
+ * "1 examen" / "N exámenes".
+ *
+ * The plural was hardcoded in both places that show this number, which nobody
+ * noticed while `usedInExamCount` never arrived from the API and the count was
+ * permanently 0 — "0 exámenes" is correct Spanish. The moment the count became
+ * real (audit M13), the detail panel and the pre-edit warning both started
+ * saying "1 exámenes".
+ */
+export function examCountLabel(count: number): string {
+  return count === 1 ? '1 examen' : `${count} exámenes`;
+}

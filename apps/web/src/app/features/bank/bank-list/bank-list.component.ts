@@ -40,7 +40,7 @@ import {
   questionOrigin,
   QuestionOrigin,
 } from '../bank.models';
-import { correctAnswerLabel, gradeLevelLabel } from '../question-display.util';
+import { correctAnswerLabel, examCountLabel, gradeLevelLabel } from '../question-display.util';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { courseLabels } from '../../taxonomy/course-label';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
@@ -709,6 +709,9 @@ export class BankListComponent {
       error: () => {},
     });
   }
+
+  /** Template helper — see `examCountLabel`: the plural used to be hardcoded. */
+  protected readonly examCountLabel = examCountLabel;
 
   protected isCentral(question: BankQuestion): boolean {
     return questionOrigin(question) === 'central';
