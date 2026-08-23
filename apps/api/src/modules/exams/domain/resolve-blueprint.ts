@@ -17,6 +17,22 @@ export interface SyllabusEntry {
   readonly weekNumber: number;
 }
 
+/**
+ * One (course, topic) pair from the tenant-visible topic catalog — the whole
+ * catalog for the course, NOT a week-scoped slice (that is `SyllabusEntry`).
+ *
+ * Supplied only for `weekScope: 'none'` templates, which are exactly the ones
+ * that have no syllabus to expand by: without this the resolver emits a single
+ * whole-course row and the teacher lands on "Todos los temas" with no per-topic
+ * breakdown to adjust. With it, each course's count is pre-selected across its
+ * own topics, matching the per-topic shape the week-scoped types already
+ * produce.
+ */
+export interface CourseTopic {
+  readonly courseId: string;
+  readonly topicId: string;
+}
+
 export type CourseScope = "none" | "all" | "selected";
 export type WeekScope = "none" | "current_only" | "cumulative";
 
@@ -36,6 +52,13 @@ export interface ResolveBlueprintOptions {
    * are derived as an exact-sum proportional split of this total by weight.
    */
   readonly totalQuestionsOverride?: number;
+  /**
+   * The full topic catalog for the courses in scope. Optional: omitted (or
+   * empty for a given course) keeps the pre-existing whole-course row for that
+   * course, so a template referencing a course with no topics loaded degrades
+   * exactly as it did before instead of vanishing.
+   */
+  readonly courseTopics?: readonly CourseTopic[];
 }
 
 /**
@@ -90,14 +113,37 @@ export function resolveBlueprint(options: ResolveBlueprintOptions): ResolveBluep
   const counts = resolveRowCounts(filteredRows, options.totalQuestionsOverride);
 
   if (weekScope === "none") {
-    const rows = filteredRows
-      .map((row, index) => ({
-        courseId: row.courseId,
-        topicId: row.topicId ?? undefined,
-        count: counts[index],
-        difficulty: resolveDifficultyFromSourceLevel(row.sourceLevel),
-      }))
-      .filter((row) => row.count > 0);
+    const rows: BlueprintRow[] = [];
+
+    filteredRows.forEach((row, index) => {
+      const count = counts[index];
+      if (count <= 0) {
+        return;
+      }
+      const difficulty = resolveDifficultyFromSourceLevel(row.sourceLevel);
+
+      // A row that names its own topic is already as specific as it gets —
+      // expanding it would contradict the template.
+      if (row.topicId) {
+        rows.push({ courseId: row.courseId, topicId: row.topicId, count, difficulty });
+        return;
+      }
+
+      const topics = (options.courseTopics ?? []).filter((topic) => topic.courseId === row.courseId);
+      if (topics.length === 0) {
+        rows.push({ courseId: row.courseId, topicId: undefined, count, difficulty });
+        return;
+      }
+
+      const perTopicCounts = distributeEvenly(count, topics.length);
+      topics.forEach((topic, topicIndex) => {
+        const topicCount = perTopicCounts[topicIndex];
+        if (topicCount > 0) {
+          rows.push({ courseId: row.courseId, topicId: topic.topicId, count: topicCount, difficulty });
+        }
+      });
+    });
+
     return { rows, usedCumulativeFallback: false };
   }
 

@@ -249,196 +249,222 @@
         </p>
       }
 
-      <!-- Expand/collapse controls — fold away courses the teacher isn't filling (design doc §5.1 "árbol") -->
-      <div data-testid="tree-controls" class="flex items-center gap-2">
-        <ui-button data-testid="expand-all" variant="ghost" (clicked)="expandAll()"
-          >Expandir todo</ui-button
-        >
-        <ui-button data-testid="collapse-all" variant="ghost" (clicked)="collapseAll()"
-          >Colapsar todo</ui-button
-        >
-      </div>
-
       <!--
+        La plantilla ya llega resuelta tema por tema y nivel por nivel, así que
+        para un tipo guiado la grilla no es el trabajo — es el detalle. Plegada
+        por defecto, el docente pasa del "Tipo de examen" al botón sin cruzar 80
+        celdas. Manual no la pliega nunca: ahí la grilla ES la herramienta.
+      -->
+      @if (gridCollapsible()) {
+        <div data-testid="grid-disclosure">
+          <ui-button variant="ghost" (clicked)="toggleGrid()">
+            <lucide-icon [name]="chevronFor(gridOpen())" [size]="16"></lucide-icon>
+            {{ gridDisclosureLabel() }}
+          </ui-button>
+        </div>
+      }
+
+      @if (gridOpen()) {
+        <!-- Expand/collapse controls — fold away courses the teacher isn't filling (design doc §5.1 "árbol") -->
+        <div data-testid="tree-controls" class="flex items-center gap-2">
+          <ui-button data-testid="expand-all" variant="ghost" (clicked)="expandAll()"
+            >Expandir todo</ui-button
+          >
+          <ui-button data-testid="collapse-all" variant="ghost" (clicked)="collapseAll()"
+            >Colapsar todo</ui-button
+          >
+        </div>
+
+        <!--
         Un solo layout montado a la vez (audit 2026-08-15): antes ambos vivían
         en el DOM vía `hidden md:block` / `md:hidden`, o sea 1,656 inputs para
         828 celdas. `isNarrowScreen` sigue el viewport en vivo, así que
         redimensionar cambia de layout igual que antes.
       -->
-      @if (!isNarrowScreen()) {
-        <!-- Desktop: full grid table (curso · tema rows x dificultad columns), grouped by course, sticky header -->
-        <div
-          data-testid="content-table-desktop"
-          class="overflow-hidden rounded-card border border-n200 bg-surface"
-        >
-          <div class="max-h-[70vh] overflow-y-auto">
-            <ui-table>
-              <th
-                head
-                class="sticky top-0 z-10 border-b border-n200 bg-surface px-3 py-2 font-semibold text-n700"
-              >
-                Curso · Tema
-              </th>
-              @for (difficulty of difficulties; track difficulty) {
+        @if (!isNarrowScreen()) {
+          <!-- Desktop: full grid table (curso · tema rows x dificultad columns), grouped by course, sticky header -->
+          <div
+            data-testid="content-table-desktop"
+            class="overflow-hidden rounded-card border border-n200 bg-surface"
+          >
+            <div class="max-h-[70vh] overflow-y-auto">
+              <ui-table>
                 <th
                   head
-                  class="sticky top-0 z-10 border-b border-n200 bg-surface px-3 py-2 text-right font-semibold text-n700"
+                  class="sticky top-0 z-10 border-b border-n200 bg-surface px-3 py-2 font-semibold text-n700"
                 >
-                  {{ difficultyLabels[difficulty] }}
+                  Curso · Tema
                 </th>
-              }
-              @for (group of groupedRows(); track group.courseId) {
-                <ng-container body>
-                  <tr class="bg-n100">
-                    <td colspan="4" class="p-0">
-                      <button
-                        type="button"
-                        data-testid="course-group-header"
-                        [attr.aria-expanded]="isCourseExpanded(group.courseId)"
-                        class="flex w-full items-center gap-2 px-3 py-1.5 text-left text-xs font-semibold uppercase tracking-wide text-n700 hover:bg-n200 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-inset"
-                        (click)="toggleCourse(group.courseId)"
-                      >
-                        <lucide-icon
-                          [name]="chevronFor(isCourseExpanded(group.courseId))"
-                          [size]="16"
-                          class="shrink-0 text-n600"
-                        ></lucide-icon>
-                        {{ group.courseName }}
-                        <span class="text-n500">· {{ group.rows.length }}</span>
-                      </button>
-                    </td>
-                  </tr>
-                  @if (isCourseExpanded(group.courseId)) {
-                    @for (row of group.rows; track row.id) {
-                      <tr
-                        data-testid="builder-row"
-                        class="border-b border-n100 odd:bg-surface even:bg-n50 hover:bg-primary-50"
-                      >
-                        <td class="px-3 py-2 text-n800">{{ row.topicName }}</td>
-                        @for (difficulty of difficulties; track difficulty) {
-                          <td
-                            data-testid="builder-cell"
-                            [attr.data-cell-key]="cellKey(row, difficulty)"
-                            [class]="cellClasses(row, difficulty)"
-                          >
-                            <app-grid-cell-content
-                              [inputName]="'requested-' + cellKey(row, difficulty)"
-                              [cellKey]="cellKey(row, difficulty)"
-                              [cellLabel]="cellLabel(group.courseName, row, difficulty)"
-                              [requestedStr]="requestedStrFor(row, difficulty)"
-                              [requested]="requestedFor(row, difficulty)"
-                              [stock]="stockFor(row, difficulty)"
-                              [status]="statusFor(row, difficulty)"
-                              [stockOkClasses]="stockOkClasses(row, difficulty)"
-                              [previewIds]="previewFor(row, difficulty)"
-                              (requestedChange)="onRequestedChange(row, difficulty, $event)"
-                              (generateAi)="goToAiGenerate(row, difficulty)"
-                              (chooseBank)="goToBank()"
-                              (lowerCount)="lowerToStock(row, difficulty)"
-                            ></app-grid-cell-content>
-                          </td>
-                        }
-                      </tr>
-                    }
-                  }
-                </ng-container>
-              }
-              <tr body data-testid="totals-row" class="border-t-2 border-n300 bg-n50 font-semibold">
-                <td class="px-3 py-2 text-n700">Total</td>
                 @for (difficulty of difficulties; track difficulty) {
-                  <td
-                    [attr.data-testid]="'total-' + difficulty"
-                    class="px-3 py-2 text-right text-n700"
+                  <th
+                    head
+                    class="sticky top-0 z-10 border-b border-n200 bg-surface px-3 py-2 text-right font-semibold text-n700"
                   >
-                    {{ totalFor(difficulty) }}
-                  </td>
+                    {{ difficultyLabels[difficulty] }}
+                  </th>
                 }
-              </tr>
-            </ui-table>
-          </div>
-
-          <div
-            data-testid="grand-total"
-            class="border-t border-n200 bg-n50 px-3 py-2 text-right text-sm font-semibold text-n700"
-          >
-            Total general: {{ grandTotalValue() }}
-          </div>
-
-          <div data-testid="preview-panel" class="border-t border-n200 px-3 py-3 text-sm text-n600">
-            Vista previa: selección indicativa, la selección final se confirma al generar versiones.
-          </div>
-        </div>
-      } @else {
-        <!-- Mobile: stacked per-topic cards grouped by course, totals summary + preview panel below the cards -->
-        <div data-testid="content-cards-mobile" class="flex flex-col gap-4">
-          @for (group of groupedRows(); track group.courseId) {
-            <button
-              type="button"
-              data-testid="course-group-header"
-              class="flex w-full items-center gap-2 px-1 py-1 text-left text-xs font-semibold uppercase tracking-wide text-n600 hover:text-n800"
-              (click)="toggleCourse(group.courseId)"
-            >
-              <lucide-icon
-                [name]="chevronFor(isCourseExpanded(group.courseId))"
-                [size]="14"
-                class="shrink-0"
-              ></lucide-icon>
-              {{ group.courseName }}
-              <span class="text-n500">· {{ group.rows.length }}</span>
-            </button>
-            @if (isCourseExpanded(group.courseId)) {
-              @for (row of group.rows; track row.id) {
-                <ui-card data-testid="builder-card">
-                  <p class="font-medium text-n900">{{ row.topicName }}</p>
+                @for (group of groupedRows(); track group.courseId) {
+                  <ng-container body>
+                    <tr class="bg-n100">
+                      <td colspan="4" class="p-0">
+                        <button
+                          type="button"
+                          data-testid="course-group-header"
+                          [attr.aria-expanded]="isCourseExpanded(group.courseId)"
+                          class="flex w-full items-center gap-2 px-3 py-1.5 text-left text-xs font-semibold uppercase tracking-wide text-n700 hover:bg-n200 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-inset"
+                          (click)="toggleCourse(group.courseId)"
+                        >
+                          <lucide-icon
+                            [name]="chevronFor(isCourseExpanded(group.courseId))"
+                            [size]="16"
+                            class="shrink-0 text-n600"
+                          ></lucide-icon>
+                          {{ group.courseName }}
+                          <span class="text-n500">· {{ group.rows.length }}</span>
+                        </button>
+                      </td>
+                    </tr>
+                    @if (isCourseExpanded(group.courseId)) {
+                      @for (row of group.rows; track row.id) {
+                        <tr
+                          data-testid="builder-row"
+                          class="border-b border-n100 odd:bg-surface even:bg-n50 hover:bg-primary-50"
+                        >
+                          <td class="px-3 py-2 text-n800">{{ row.topicName }}</td>
+                          @for (difficulty of difficulties; track difficulty) {
+                            <td
+                              data-testid="builder-cell"
+                              [attr.data-cell-key]="cellKey(row, difficulty)"
+                              [class]="cellClasses(row, difficulty)"
+                            >
+                              <app-grid-cell-content
+                                [inputName]="'requested-' + cellKey(row, difficulty)"
+                                [cellKey]="cellKey(row, difficulty)"
+                                [cellLabel]="cellLabel(group.courseName, row, difficulty)"
+                                [requestedStr]="requestedStrFor(row, difficulty)"
+                                [requested]="requestedFor(row, difficulty)"
+                                [stock]="stockFor(row, difficulty)"
+                                [status]="statusFor(row, difficulty)"
+                                [stockOkClasses]="stockOkClasses(row, difficulty)"
+                                [previewIds]="previewFor(row, difficulty)"
+                                (requestedChange)="onRequestedChange(row, difficulty, $event)"
+                                (generateAi)="goToAiGenerate(row, difficulty)"
+                                (chooseBank)="goToBank()"
+                                (lowerCount)="lowerToStock(row, difficulty)"
+                              ></app-grid-cell-content>
+                            </td>
+                          }
+                        </tr>
+                      }
+                    }
+                  </ng-container>
+                }
+                <tr
+                  body
+                  data-testid="totals-row"
+                  class="border-t-2 border-n300 bg-n50 font-semibold"
+                >
+                  <td class="px-3 py-2 text-n700">Total</td>
                   @for (difficulty of difficulties; track difficulty) {
-                    <div
-                      data-testid="builder-cell"
-                      [attr.data-cell-key]="cellKey(row, difficulty)"
-                      [class]="cellClasses(row, difficulty) + ' mt-2 border-t border-n100 pt-2'"
+                    <td
+                      [attr.data-testid]="'total-' + difficulty"
+                      class="px-3 py-2 text-right text-n700"
                     >
-                      <p class="text-sm font-medium text-n700">
-                        {{ difficultyLabels[difficulty] }}
-                      </p>
-                      <app-grid-cell-content
-                        [inputName]="'requested-' + cellKey(row, difficulty)"
-                        [cellKey]="cellKey(row, difficulty)"
-                        [cellLabel]="cellLabel(group.courseName, row, difficulty)"
-                        [requestedStr]="requestedStrFor(row, difficulty)"
-                        [requested]="requestedFor(row, difficulty)"
-                        [stock]="stockFor(row, difficulty)"
-                        [status]="statusFor(row, difficulty)"
-                        [stockOkClasses]="stockOkClasses(row, difficulty)"
-                        [previewIds]="previewFor(row, difficulty)"
-                        (requestedChange)="onRequestedChange(row, difficulty, $event)"
-                        (generateAi)="goToAiGenerate(row, difficulty)"
-                        (chooseBank)="goToBank()"
-                        (lowerCount)="lowerToStock(row, difficulty)"
-                      ></app-grid-cell-content>
-                    </div>
+                      {{ totalFor(difficulty) }}
+                    </td>
                   }
-                </ui-card>
+                </tr>
+              </ui-table>
+            </div>
+
+            <div
+              data-testid="grand-total"
+              class="border-t border-n200 bg-n50 px-3 py-2 text-right text-sm font-semibold text-n700"
+            >
+              Total general: {{ grandTotalValue() }}
+            </div>
+
+            <div
+              data-testid="preview-panel"
+              class="border-t border-n200 px-3 py-3 text-sm text-n600"
+            >
+              Vista previa: selección indicativa, la selección final se confirma al generar
+              versiones.
+            </div>
+          </div>
+        } @else {
+          <!-- Mobile: stacked per-topic cards grouped by course, totals summary + preview panel below the cards -->
+          <div data-testid="content-cards-mobile" class="flex flex-col gap-4">
+            @for (group of groupedRows(); track group.courseId) {
+              <button
+                type="button"
+                data-testid="course-group-header"
+                class="flex w-full items-center gap-2 px-1 py-1 text-left text-xs font-semibold uppercase tracking-wide text-n600 hover:text-n800"
+                (click)="toggleCourse(group.courseId)"
+              >
+                <lucide-icon
+                  [name]="chevronFor(isCourseExpanded(group.courseId))"
+                  [size]="14"
+                  class="shrink-0"
+                ></lucide-icon>
+                {{ group.courseName }}
+                <span class="text-n500">· {{ group.rows.length }}</span>
+              </button>
+              @if (isCourseExpanded(group.courseId)) {
+                @for (row of group.rows; track row.id) {
+                  <ui-card data-testid="builder-card">
+                    <p class="font-medium text-n900">{{ row.topicName }}</p>
+                    @for (difficulty of difficulties; track difficulty) {
+                      <div
+                        data-testid="builder-cell"
+                        [attr.data-cell-key]="cellKey(row, difficulty)"
+                        [class]="cellClasses(row, difficulty) + ' mt-2 border-t border-n100 pt-2'"
+                      >
+                        <p class="text-sm font-medium text-n700">
+                          {{ difficultyLabels[difficulty] }}
+                        </p>
+                        <app-grid-cell-content
+                          [inputName]="'requested-' + cellKey(row, difficulty)"
+                          [cellKey]="cellKey(row, difficulty)"
+                          [cellLabel]="cellLabel(group.courseName, row, difficulty)"
+                          [requestedStr]="requestedStrFor(row, difficulty)"
+                          [requested]="requestedFor(row, difficulty)"
+                          [stock]="stockFor(row, difficulty)"
+                          [status]="statusFor(row, difficulty)"
+                          [stockOkClasses]="stockOkClasses(row, difficulty)"
+                          [previewIds]="previewFor(row, difficulty)"
+                          (requestedChange)="onRequestedChange(row, difficulty, $event)"
+                          (generateAi)="goToAiGenerate(row, difficulty)"
+                          (chooseBank)="goToBank()"
+                          (lowerCount)="lowerToStock(row, difficulty)"
+                        ></app-grid-cell-content>
+                      </div>
+                    }
+                  </ui-card>
+                }
               }
             }
-          }
 
-          <ui-card data-testid="totals-mobile" [tone]="'muted'">
-            <div class="flex flex-wrap items-center justify-between gap-2 text-sm text-n700">
-              <span
-                >Total: <strong>{{ grandTotalValue() }}</strong></span
-              >
-              @for (difficulty of difficulties; track difficulty) {
+            <ui-card data-testid="totals-mobile" [tone]="'muted'">
+              <div class="flex flex-wrap items-center justify-between gap-2 text-sm text-n700">
                 <span
-                  >{{ difficultyLabels[difficulty] }}:
-                  <strong>{{ totalFor(difficulty) }}</strong></span
+                  >Total: <strong>{{ grandTotalValue() }}</strong></span
                 >
-              }
-            </div>
-          </ui-card>
+                @for (difficulty of difficulties; track difficulty) {
+                  <span
+                    >{{ difficultyLabels[difficulty] }}:
+                    <strong>{{ totalFor(difficulty) }}</strong></span
+                  >
+                }
+              </div>
+            </ui-card>
 
-          <div data-testid="preview-panel" class="text-sm text-n600">
-            Vista previa: selección indicativa, la selección final se confirma al generar versiones.
+            <div data-testid="preview-panel" class="text-sm text-n600">
+              Vista previa: selección indicativa, la selección final se confirma al generar
+              versiones.
+            </div>
           </div>
-        </div>
+        }
       }
 
       @if (generateError()) {

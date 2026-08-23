@@ -638,6 +638,7 @@ export class ExamBuilderComponent implements OnInit {
     // the two behave identically below but only one of them is a claim about
     // what the teacher wants.
     this.selectedExamTypeCode.set(code);
+    this.gridManuallyOpen.set(false);
     this.store.clearRequested();
     this.selectedUniversityId.set(null);
     this.selectedTrackId.set(null);
@@ -1079,6 +1080,44 @@ export class ExamBuilderComponent implements OnInit {
       this.selectedGradeLevel() !== null &&
       (this.isManual() || this.store.requestedCells().length > 0),
   );
+
+  /**
+   * Whether the grid is a foldable DETAIL rather than the work itself.
+   *
+   * A guided exam type resolves its template down to the topic and the
+   * difficulty already — the teacher fills nothing. What stood between them
+   * and the action was the grid: 80 cells over 21 course groups on the real
+   * UNCP Área II template. Manual is the exact opposite (the grid IS the
+   * tool), and a guided type with no resolved rows has nothing to fold.
+   */
+  protected readonly gridCollapsible = computed(
+    () => !this.isManual() && this.store.requestedCells().length > 0,
+  );
+
+  /** Set only by the disclosure itself — reset whenever the exam type changes. */
+  private readonly gridManuallyOpen = signal(false);
+
+  /**
+   * A shortage forces the grid open and KEEPS it open: the cells that can't
+   * be filled are the only place to fix them (lower the count, generate with
+   * AI, pick from the bank), and the footer button stays locked until they
+   * are. Folding that away would leave a padlock with its explanation hidden.
+   */
+  protected readonly gridOpen = computed(
+    () => !this.gridCollapsible() || this.gridManuallyOpen() || !this.store.allSatisfiable(),
+  );
+
+  protected readonly gridDisclosureLabel = computed(() => {
+    if (this.gridOpen()) {
+      return 'Ocultar temas y dificultad';
+    }
+    const cells = this.store.requestedCells().length;
+    return `Ajustar temas y dificultad (opcional) · ${cells} ${cells === 1 ? 'celda' : 'celdas'}`;
+  });
+
+  protected toggleGrid(): void {
+    this.gridManuallyOpen.update((open) => !open);
+  }
 
   /** Rows grouped by course, for the "read like the tree" course subheading (design doc §5.1). */
   protected readonly groupedRows = computed<readonly RowGroup[]>(() => {

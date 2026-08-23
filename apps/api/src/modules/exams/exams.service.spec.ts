@@ -31,6 +31,7 @@ function buildDeps() {
     findCurrentTemplate: jest.fn(),
     getTemplateRows: jest.fn(),
     getSyllabusForTemplate: jest.fn(),
+    getTopicsForCourses: jest.fn().mockResolvedValue([]),
     findActiveCycle: jest.fn(),
   } as unknown as jest.Mocked<ExamsRepository>;
 
@@ -689,6 +690,55 @@ describe("ExamsService.resolveExamBlueprint", () => {
     expect(result.weekNumber).toBeNull();
     expect(result.templateId).toBe("template-1");
     expect(result.blueprint).toEqual([{ courseId: "course-1", count: 5, difficulty: undefined }]);
+  });
+
+  it("pre-selects each course's topics for a week_scope='none' type, asking only for the in-scope courses", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "selected", weekScope: "none" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+    repository.getTemplateRows.mockResolvedValue([
+      { courseId: "course-1", questionCount: 4 },
+      { courseId: "course-2", questionCount: 9 },
+    ]);
+    repository.getSyllabusForTemplate.mockResolvedValue([]);
+    repository.getTopicsForCourses.mockResolvedValue([
+      { courseId: "course-1", topicId: "topic-a" },
+      { courseId: "course-1", topicId: "topic-b" },
+    ]);
+
+    const result = await service.resolveExamBlueprint({
+      examTypeCode: "eta",
+      universityId: "uni-1",
+      trackId: null,
+      tenantId: "tenant-1",
+      selectedCourseIds: ["course-1"],
+    });
+
+    expect(repository.getTopicsForCourses).toHaveBeenCalledWith(["course-1"], "pre");
+    expect(result.blueprint).toEqual([
+      { courseId: "course-1", topicId: "topic-a", count: 2, difficulty: undefined },
+      { courseId: "course-1", topicId: "topic-b", count: 2, difficulty: undefined },
+    ]);
+  });
+
+  it("never asks for the topic catalog when the week scope already expands by syllabus", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "cumulative" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+    repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", questionCount: 4 }]);
+    repository.getSyllabusForTemplate.mockResolvedValue([
+      { courseId: "course-1", topicId: "topic-a", weekNumber: 0 },
+    ]);
+    repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-03-05"), weekLengthDays: 7 });
+
+    await service.resolveExamBlueprint({
+      examTypeCode: "eta_by_week",
+      universityId: "uni-1",
+      trackId: null,
+      tenantId: "tenant-1",
+    });
+
+    expect(repository.getTopicsForCourses).not.toHaveBeenCalled();
   });
 
   it("throws NotFoundException when week_scope != 'none' and no active cycle is found — never silently defaults to week 0", async () => {

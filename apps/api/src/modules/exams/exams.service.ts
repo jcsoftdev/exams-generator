@@ -242,6 +242,18 @@ export interface ResolveExamBlueprintResult {
   readonly effectiveWeekNumber: number | null;
 }
 
+/**
+ * The grade level every template-backed exam type resolves at.
+ *
+ * Not a choice made here: `week_scope`-bearing exam types are all
+ * pre-admission by construction (design doc §3.11), which is why the builder
+ * hides the "Grado" select and shows "automático para este tipo de examen"
+ * for them. The topic catalog behind `courseTopics` MUST be read at the same
+ * grade the builder's grid is built at, or a pre-selected topic lands on a
+ * row the grid has no name or stock for.
+ */
+const TEMPLATE_GRADE_LEVEL = "pre";
+
 function requireTenant(user: AuthTokenPayload): string {
   if (!user.tenantId) {
     throw new ForbiddenException("Only tenant users (school_admin/teacher) can manage exams");
@@ -743,6 +755,18 @@ export class ExamsService {
       }
     }
 
+    // A week-scoped type already expands into topics through the syllabus, so
+    // the catalog is only fetched for the types that would otherwise land the
+    // teacher on a single "Todos los temas" row per course (`week_scope='none'`
+    // — e.g. UNCP, which has no syllabus at all).
+    const courseTopics =
+      examType.weekScope === "none"
+        ? await this.repository.getTopicsForCourses(
+            inScopeRows.map((row) => row.courseId),
+            TEMPLATE_GRADE_LEVEL,
+          )
+        : [];
+
     const { rows: blueprint, usedCumulativeFallback } = resolveBlueprint({
       courseScope: examType.courseScope as CourseScope,
       weekScope: examType.weekScope as WeekScope,
@@ -751,6 +775,7 @@ export class ExamsService {
       currentWeek: weekNumber ?? undefined,
       selectedCourseIds: input.selectedCourseIds,
       totalQuestionsOverride: input.totalQuestionsOverride,
+      courseTopics,
     });
 
     // A week-scoped type (`fastest`/`eta_by_week`) resolving to ZERO rows is

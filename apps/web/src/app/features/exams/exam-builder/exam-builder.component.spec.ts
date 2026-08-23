@@ -206,6 +206,26 @@ function selectFromUiSelect(
   fixture.detectChanges();
 }
 
+/**
+ * Opens the folded grid for a guided exam type. A template-driven flow now
+ * lands on the receipt + the action, with the 80-cell grid one click away —
+ * every test that asserts on a CELL has to ask for the cells first. No-op for
+ * manual (nothing to unfold) and for an already-open grid (a shortage forces
+ * it open).
+ */
+function openGrid(compiled: HTMLElement, fixture: { detectChanges: () => void }): void {
+  if (compiled.querySelector('[data-testid="content-table-desktop"]')) {
+    return; // ya abierta — el disparador es un toggle, un segundo click la cerraría
+  }
+  const disclosure = compiled.querySelector<HTMLButtonElement>(
+    '[data-testid="grid-disclosure"] button',
+  );
+  if (disclosure) {
+    disclosure.click();
+    fixture.detectChanges();
+  }
+}
+
 function selectGradeLevel(
   compiled: HTMLElement,
   fixture: { detectChanges: () => void },
@@ -1334,8 +1354,11 @@ describe('ExamBuilderComponent', () => {
       selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
       selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
 
-      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeTruthy();
+      // La grilla llega plegada; lo que aparece es el recibo de la plantilla.
+      expect(compiled.querySelector('[data-testid="template-summary"]')).toBeTruthy();
       expect(compiled.querySelector('[data-testid="template-pending-hint"]')).toBeFalsy();
+      openGrid(compiled, fixture);
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeTruthy();
     });
 
     it('en manual la grilla sigue apareciendo con solo elegir el grado', () => {
@@ -1387,6 +1410,89 @@ describe('ExamBuilderComponent', () => {
 
       const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:easy"]')!;
       expect(input.getAttribute('aria-label')).toBe('Preguntas de Matemática · Álgebra · Fácil');
+    });
+  });
+
+  /**
+   * El pedido: elegir el tipo de examen y llegar al botón sin rellenar nada.
+   * La plantilla ya autocarga, así que lo único que separaba al docente de la
+   * acción era la pared de celdas — 80 en la plantilla real de UNCP Área II.
+   * La grilla pasa a ser opcional, NO desaparece: sigue siendo la única forma
+   * de ajustar una celda, y se abre sola cuando hay algo que arreglar.
+   */
+  describe('grilla plegable — plantilla lista sin pared de celdas', () => {
+    const TEMPLATE_BLUEPRINT = {
+      blueprint: [{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, count: 3 }],
+      weekNumber: null,
+      templateId: 'tpl-1',
+    };
+
+    it('no monta la tabla cuando la plantilla resolvió sola — solo el resumen y el disparador', () => {
+      const { compiled, fixture } = setup({ resolveBlueprint: () => of(TEMPLATE_BLUEPRINT) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      expect(compiled.querySelector('[data-testid="template-summary"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="grid-disclosure"]')).toBeTruthy();
+    });
+
+    it('el disparador abre la grilla — ajustar a mano sigue siendo posible', () => {
+      const { compiled, fixture } = setup({ resolveBlueprint: () => of(TEMPLATE_BLUEPRINT) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      (
+        compiled.querySelector('[data-testid="grid-disclosure"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeTruthy();
+    });
+
+    it('deja el botón de avanzar habilitado sin abrir la grilla ni una vez', () => {
+      const { compiled, fixture } = setup({ resolveBlueprint: () => of(TEMPLATE_BLUEPRINT) });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      const generate = compiled.querySelector<HTMLButtonElement>(
+        '[data-testid="generate-versions"] button',
+      )!;
+      expect(generate.disabled).toBe(false);
+    });
+
+    it('abre la grilla sola cuando el stock no alcanza — nadie arregla lo que no ve', () => {
+      // MIXED_STOCK, no ZERO_STOCK: con el banco entero en cero la pantalla es
+      // el estado vacío ("No hay preguntas aprobadas"), no una grilla con
+      // faltantes. El faltante que interesa es el de UNA celda.
+      const { compiled, fixture } = setup({
+        resolveBlueprint: () =>
+          of({
+            blueprint: [{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, count: 3 }],
+            weekNumber: null,
+            templateId: 'tpl-1',
+          }),
+        stockBatch: () => of(MIXED_STOCK),
+      });
+
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeTruthy();
+      // Y sin disparador para volver a plegarla mientras siga rota.
+      expect(compiled.querySelector('[data-testid="grid-disclosure"]')).toBeTruthy();
+    });
+
+    it('manual no cambia: la grilla ES la herramienta, se monta abierta', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="grid-disclosure"]')).toBeFalsy();
     });
   });
 
@@ -1763,9 +1869,11 @@ describe('ExamBuilderComponent', () => {
 
       selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
       selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      openGrid(compiled, fixture);
       expect(compiled.querySelector('[data-testid="grand-total"]')!.textContent).toContain('9');
 
       selectFromUiSelect(compiled, fixture, 'university-select', 'UNCP');
+      openGrid(compiled, fixture);
 
       // 4, no 13: la segunda plantilla reemplaza, no se suma.
       expect(compiled.querySelector('[data-testid="grand-total"]')!.textContent).toContain('4');
@@ -1921,6 +2029,7 @@ describe('ExamBuilderComponent', () => {
 
       expect(resolveBlueprint).toHaveBeenCalledWith({ examTypeCode: 'eta', universityId: 'u1' });
 
+      openGrid(compiled, fixture);
       const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:hard"]');
       expect(input?.value).toBe('9');
     });
@@ -2136,6 +2245,7 @@ describe('ExamBuilderComponent', () => {
       selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
 
       expect(resolveBlueprint).toHaveBeenCalledWith({ examTypeCode: 'eta', universityId: 'u1' });
+      openGrid(compiled, fixture);
       const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:hard"]');
       expect(input?.value).toBe('9');
     });
@@ -2166,6 +2276,7 @@ describe('ExamBuilderComponent', () => {
         universityId: 'u1',
         trackId: 'trk1',
       });
+      openGrid(compiled, fixture);
       const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:easy"]');
       expect(input?.value).toBe('7');
     });
@@ -2579,6 +2690,7 @@ describe('ExamBuilderComponent', () => {
       (compiled.querySelector('[data-testid="load-template"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
 
+      openGrid(compiled, fixture);
       const cell = compiled.querySelector('[data-cell-key="c1::easy"]')!;
       expect(cell.textContent).toContain('de 30');
     });
@@ -2616,6 +2728,7 @@ describe('ExamBuilderComponent', () => {
       (compiled.querySelector('[data-testid="load-template"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
 
+      openGrid(compiled, fixture);
       const cell = compiled.querySelector('[data-cell-key="c1::easy"]')!;
       expect(cell.textContent).toContain('de 30');
     });

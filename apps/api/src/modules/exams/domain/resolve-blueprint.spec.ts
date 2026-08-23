@@ -1,5 +1,5 @@
 import { Difficulty } from "@exams-generator/shared";
-import { resolveBlueprint, TemplateRow, SyllabusEntry } from "./resolve-blueprint";
+import { resolveBlueprint, CourseTopic, TemplateRow, SyllabusEntry } from "./resolve-blueprint";
 
 const ARITMETICA = "course-aritmetica";
 const ALGEBRA = "course-algebra";
@@ -96,6 +96,90 @@ describe("resolveBlueprint", () => {
         totalQuestionsOverride: 10, // 10/3 each — must not silently drop to 9 or overshoot 11
       });
       expect(result.rows.reduce((sum, row) => sum + row.count, 0)).toBe(10);
+    });
+
+    describe("courseTopics — pre-selects the course's topics instead of one whole-course row", () => {
+      const courseTopics: CourseTopic[] = [
+        { courseId: ARITMETICA, topicId: "t-conjuntos" },
+        { courseId: ARITMETICA, topicId: "t-razones" },
+        { courseId: ALGEBRA, topicId: "t-polinomios" },
+      ];
+
+      it("splits a whole-course row evenly across every topic of that course", () => {
+        const templateRows: TemplateRow[] = [
+          { courseId: ARITMETICA, questionCount: 12, sourceLevel: "P.A." },
+        ];
+        const result = resolveBlueprint({
+          courseScope: "all",
+          weekScope: "none",
+          templateRows,
+          syllabus: [],
+          courseTopics,
+        });
+
+        expect(result.rows).toEqual([
+          { courseId: ARITMETICA, topicId: "t-conjuntos", count: 6, difficulty: Difficulty.Hard },
+          { courseId: ARITMETICA, topicId: "t-razones", count: 6, difficulty: Difficulty.Hard },
+        ]);
+      });
+
+      it("keeps the per-course total exact when it does not divide evenly", () => {
+        const templateRows: TemplateRow[] = [{ courseId: ARITMETICA, questionCount: 7 }];
+        const result = resolveBlueprint({
+          courseScope: "all",
+          weekScope: "none",
+          templateRows,
+          syllabus: [],
+          courseTopics,
+        });
+
+        expect(result.rows.reduce((sum, row) => sum + row.count, 0)).toBe(7);
+      });
+
+      it("leaves a course with no known topics as a whole-course row", () => {
+        const templateRows: TemplateRow[] = [{ courseId: COMUNICACION, questionCount: 6 }];
+        const result = resolveBlueprint({
+          courseScope: "all",
+          weekScope: "none",
+          templateRows,
+          syllabus: [],
+          courseTopics,
+        });
+
+        expect(result.rows).toEqual([{ courseId: COMUNICACION, count: 6, difficulty: undefined }]);
+      });
+
+      it("never re-expands a template row that already names its own topic", () => {
+        const templateRows: TemplateRow[] = [
+          { courseId: ARITMETICA, topicId: "t-razones", questionCount: 4 },
+        ];
+        const result = resolveBlueprint({
+          courseScope: "all",
+          weekScope: "none",
+          templateRows,
+          syllabus: [],
+          courseTopics,
+        });
+
+        expect(result.rows).toEqual([
+          { courseId: ARITMETICA, topicId: "t-razones", count: 4, difficulty: undefined },
+        ]);
+      });
+
+      it("drops the topics that round down to zero rather than emitting empty cells", () => {
+        const templateRows: TemplateRow[] = [{ courseId: ARITMETICA, questionCount: 1 }];
+        const result = resolveBlueprint({
+          courseScope: "all",
+          weekScope: "none",
+          templateRows,
+          syllabus: [],
+          courseTopics,
+        });
+
+        expect(result.rows).toEqual([
+          { courseId: ARITMETICA, topicId: "t-conjuntos", count: 1, difficulty: undefined },
+        ]);
+      });
     });
   });
 

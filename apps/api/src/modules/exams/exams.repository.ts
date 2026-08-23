@@ -20,8 +20,9 @@ import {
   tenants,
   topics,
 } from "../../db/schema";
+import { TEST_TAXONOMY_NAME_PATTERN } from "../../db/test-taxonomy-name";
 import { duplicateTitle } from "./domain/duplicate-title";
-import { SyllabusEntry, TemplateRow } from "./domain/resolve-blueprint";
+import { CourseTopic, SyllabusEntry, TemplateRow } from "./domain/resolve-blueprint";
 import {
   ActiveCycleRecord,
   BlueprintRowRecord,
@@ -946,6 +947,36 @@ export class ExamsRepository implements ExamsRepositoryPort {
       })
       .from(syllabusWeekMaps)
       .where(eq(syllabusWeekMaps.templateId, templateId));
+  }
+
+  /**
+   * Every topic of the given courses, for the resolver to pre-select against
+   * (design doc §3.11) — the whole catalog, not a week slice.
+   *
+   * Carries the same test-fixture guard the product-facing taxonomy catalog
+   * uses (audit 2026-08-20, H1): `courses`/`topics` are global, so an
+   * interrupted spec run must never seed a real teacher's exam with its
+   * fixtures. An empty `courseIds` short-circuits — Drizzle's `inArray` on an
+   * empty list is unsafe/version-dependent.
+   */
+  async getTopicsForCourses(courseIds: readonly string[], gradeLevel: string): Promise<CourseTopic[]> {
+    if (courseIds.length === 0) {
+      return [];
+    }
+
+    return this.db
+      .select({ courseId: topics.courseId, topicId: topics.id })
+      .from(topics)
+      .innerJoin(courses, eq(topics.courseId, courses.id))
+      .where(
+        and(
+          sql`${courses.name} !~ ${TEST_TAXONOMY_NAME_PATTERN}`,
+          sql`${topics.name} !~ ${TEST_TAXONOMY_NAME_PATTERN}`,
+          inArray(topics.courseId, [...courseIds]),
+          eq(topics.gradeLevel, gradeLevel),
+        ),
+      )
+      .orderBy(asc(topics.name));
   }
 
   /**
