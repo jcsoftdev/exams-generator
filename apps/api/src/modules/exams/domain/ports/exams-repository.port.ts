@@ -5,7 +5,7 @@ import {
   ExamListItem as SharedExamListItem,
 } from "@exams-generator/shared";
 import { ExamStatus, QuestionType } from "../../../../db/schema/enums";
-import { SyllabusEntry, TemplateRow } from "../resolve-blueprint";
+import { CourseTopic, SyllabusEntry, TemplateRow } from "../resolve-blueprint";
 
 /**
  * The persistence port for the exams module. `ExamsRepository` (the Drizzle
@@ -287,6 +287,13 @@ export interface ExamsRepositoryPort {
   ): Promise<CurrentTemplateRecord | null>;
   getTemplateRows(templateId: string): Promise<TemplateRow[]>;
   getSyllabusForTemplate(templateId: string): Promise<SyllabusEntry[]>;
+  /**
+   * The full topic catalog for the given courses at one grade level — what
+   * pre-selects a template's topics when the exam type has no syllabus to
+   * expand by (`week_scope='none'`). NOT week-scoped: that is
+   * `getSyllabusForTemplate()`.
+   */
+  getTopicsForCourses(courseIds: readonly string[], gradeLevel: string): Promise<CourseTopic[]>;
   findActiveCycle(
     universityId: string,
     trackId: string | null,
