@@ -408,8 +408,23 @@ y B son iguales y unitarios, calcular a + b + c … | Respuesta correcta: B) 7`.
   Manual → "Lo armas tú: eliges curso por curso…" con Grado visible y cero afordancias de
   plantilla.
 
-- [ ] **El campo "Cantidad total de preguntas" se muestra siempre** con su párrafo de ayuda
+- [x] **El campo "Cantidad total de preguntas" se muestra siempre** con su párrafo de ayuda
       largo, aunque solo aplica a plantillas tipo UNI.
+      **Revisado en vivo el 2026-08-23 probando los 4 tipos a nivel preuni.** El campo sigue
+      visible, pero su ayuda ya no engaña: "Opcional — solo necesario si la universidad no
+      publica la cantidad de preguntas por curso (p. ej. UNI)". Lo que SÍ engañaba era otra
+      cosa, encontrada en esa misma pasada:
+      - Pedir 60 preguntas en **UNCP área I** devuelve **80**. Pedir 200 también devuelve 80:
+        esa plantilla publica sus conteos por curso y el total del docente **no se aplica**.
+      - La nota de reparto (M8) daba el número correcto y **la razón falsa** — culpaba al
+        redondeo en ambos casos — y remataba con "ajusta cualquier celda si necesitas
+        exactamente 60", como si faltara un retoque, cuando sobran 20 preguntas en 16 celdas.
+      - **Arreglado**: `resolveExamBlueprint` devuelve `countsFromTemplate`, porque el cliente
+        NO puede deducirlo de los números y deducirlo mal es lo que producía la explicación
+        falsa. El builder elige el mensaje según la causa real, con spec que fija los dos y
+        que verifica que la explicación de redondeo NO aparezca en el caso UNCP.
+      Medición de los 4 tipos (preuni): `eta`/UNI 80→80 (aplica), `eta`/UNCP 60→80 (no aplica),
+      `eta_by_week`/UNI 40→38 (aplica, redondeo real), `eta_by_week`/UNCP 40→80 (no aplica).
 - [x] **La grilla completa se cargaba apenas elegías un tipo no-manual**, antes de elegir
       universidad: 276 filas de ruido bajo un formulario de 3 campos.
       **HECHO**: `showsGrid()` — en manual basta el grado (la grilla ES la herramienta); en un tipo
