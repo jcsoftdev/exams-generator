@@ -40,7 +40,13 @@ describe("AssetsService.getAssetContent", () => {
 
     expect(repository.findAssetById).toHaveBeenCalledWith(CENTRAL_ASSET.id, TEACHER_USER.tenantId);
     expect(storage.get).toHaveBeenCalledWith(CENTRAL_ASSET.storageKey);
-    expect(result).toEqual({ buffer: Buffer.from("fake-png-bytes"), mime: "image/png" });
+    expect(result).toEqual({
+      buffer: Buffer.from("fake-png-bytes"),
+      mime: "image/png",
+      // Carried out of the service so the controller can name a PDF download
+      // after it — see `pdfDownloadFilename`.
+      storageKey: CENTRAL_ASSET.storageKey,
+    });
   });
 
   it("throws NotFoundException when the repository finds no visible asset (missing or cross-tenant)", async () => {

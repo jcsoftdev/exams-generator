@@ -7,6 +7,12 @@ import { AssetsRepository } from "./assets.repository";
 export interface AssetContent {
   readonly buffer: Buffer;
   readonly mime: string;
+  /**
+   * Carried through so the controller can derive a download filename —
+   * `assets` has no display-name column, and the key's basename is the only
+   * name a stored object has (`pdfDownloadFilename`).
+   */
+  readonly storageKey: string;
 }
 
 /**
@@ -32,7 +38,7 @@ export class AssetsService {
 
     try {
       const buffer = await this.storage.get(asset.storageKey);
-      return { buffer, mime: asset.mime };
+      return { buffer, mime: asset.mime, storageKey: asset.storageKey };
     } catch (error) {
       if (error instanceof StorageObjectNotFoundError) {
         // DB row survives but the underlying object was deleted/missing —

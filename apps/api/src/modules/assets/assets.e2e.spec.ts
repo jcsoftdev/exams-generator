@@ -106,8 +106,16 @@ describe("Assets module (e2e)", () => {
     await pool.end();
   });
 
-  async function createAsset(tenantId: string | null, mime: string, bytes: Buffer): Promise<string> {
-    const key = `test/assets-e2e/${randomUUID()}`;
+  async function createAsset(
+    tenantId: string | null,
+    mime: string,
+    bytes: Buffer,
+    basename?: string,
+  ): Promise<string> {
+    // `basename` lets a test control the tail of the storage key — the part
+    // the download filename is derived from — while keeping the key itself
+    // unique and storage-legal.
+    const key = `test/assets-e2e/${randomUUID()}${basename ? `/${basename}` : ""}`;
     await storage.put(key, bytes, mime);
     createdKeys.push(key);
 
@@ -165,6 +173,56 @@ describe("Assets module (e2e)", () => {
     const id = await createAsset(null, "image/png", Buffer.from("x"));
 
     await request(app.getHttpServer()).get(`/assets/${id}`).expect(401);
+  });
+
+  /**
+   * Exam version PDFs are served through this same route
+   * (`exam-generation.service.ts` stores them as `/assets/:id`), but the route
+   * was written for images only: every non-image mime collapsed to
+   * octet-stream and the disposition never carried a filename. Hitting the URL
+   * directly — open in a new tab, "save link as", any non-browser client —
+   * therefore saved the URL's last segment: a bare uuid with NO extension.
+   * The web panel masked it by fetching the blob and setting `download` on the
+   * anchor itself.
+   */
+  it("GET /assets/:id — serves a PDF as a real PDF attachment, with a filename that has the extension", async () => {
+    const pdf = Buffer.from("%PDF-1.7\nfake-exam-bytes");
+    const id = await createAsset(tenantAId, "application/pdf", pdf, "exam.pdf");
+
+    const response = await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .expect(200);
+
+    expect(response.headers["content-type"]).toMatch(/^application\/pdf/);
+    // `attachment`, never `inline`: a PDF rendered inline runs its own
+    // scripting in the viewer, and the whole point here is saving the file.
+    expect(response.headers["content-disposition"]).toBe('attachment; filename="exam.pdf"');
+    expect(response.headers["x-content-type-options"]).toBe("nosniff");
+    expect(Buffer.compare(response.body as Buffer, pdf)).toBe(0);
+  });
+
+  it("GET /assets/:id — falls back to the asset id when the storage key's tail is not a .pdf name", async () => {
+    const id = await createAsset(tenantAId, "application/pdf", Buffer.from("%PDF-1.7"));
+
+    const response = await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .expect(200);
+
+    expect(response.headers["content-disposition"]).toBe(`attachment; filename="${id}.pdf"`);
+  });
+
+  it("GET /assets/:id — an image is still served inline, unchanged", async () => {
+    const id = await createAsset(tenantAId, "image/png", Buffer.from("real-png-ish"));
+
+    const response = await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .expect(200);
+
+    expect(response.headers["content-type"]).toBe("image/png");
+    expect(response.headers["content-disposition"]).toBe("inline");
   });
 
   it("GET /assets/:id — collapses a hostile stored mime to octet-stream with nosniff (no stored XSS)", async () => {
