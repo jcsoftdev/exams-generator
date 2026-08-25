@@ -11,12 +11,8 @@ import {
 } from "@nestjs/common";
 import { Logger } from "nestjs-pino";
 import { AuthTokenPayload } from "../auth/token.service";
-import {
-  SelectedQuestion,
-  SelectionSection,
-  Version,
-  buildVersions,
-} from "./domain/version-shuffler";
+import { Version, buildVersions } from "./domain/version-shuffler";
+import { QuestionPlacement, groupIntoSections } from "./domain/exam-sections";
 import { pickReplacementQuestion } from "./domain/pick-replacement-question";
 import { Rng, createSeededRng } from "./domain/ports/random.port";
 import {
@@ -326,29 +322,33 @@ export class ExamVersionGenerationService {
     // questions carry `alternatives` so `buildVersions()`/`VersionShuffler`
     // actually shuffles them and recomputes the answer key; `image`
     // questions pass `correctAnswer` straight through, unchanged.
-    const selected: SelectedQuestion[] = exam.selectedQuestions.map((q): SelectedQuestion =>
-      q.type === "structured"
-        ? {
-            type: "structured",
-            questionId: q.questionId,
-            alternatives: q.alternatives ?? [],
-            correctAnswer: q.correctAnswer,
-            alternativeImages: q.alternativeImages,
-          }
-        : {
-            questionId: q.questionId,
-            correctAnswer: q.correctAnswer,
-          },
-    );
-    // The repository still hands back a FLAT selection, so the booklet is one
-    // unlabeled section holding one unlabeled block — the shape the port calls
-    // "no heading". `buildVersions` then shuffles inside that single block,
-    // which is exactly what it did before sections existed. Once the
-    // repository starts exposing the blueprint's real sections, only this
-    // wrapper changes; everything downstream already reads `sectionLayout`.
-    const sections: SelectionSection[] = [
-      { code: null, label: null, blocks: [{ label: "", questions: selected }] },
-    ];
+    const placements: QuestionPlacement[] = exam.selectedQuestions.map((q, index) => ({
+      question:
+        q.type === "structured"
+          ? {
+              type: "structured",
+              questionId: q.questionId,
+              alternatives: q.alternatives ?? [],
+              correctAnswer: q.correctAnswer,
+              alternativeImages: q.alternativeImages,
+            }
+          : {
+              questionId: q.questionId,
+              correctAnswer: q.correctAnswer,
+            },
+      // Defaults cover a legacy row with no blueprint row behind it: it lands
+      // in the unlabeled section and the unlabeled block, which is exactly the
+      // headingless booklet this service printed before sections existed.
+      sortOrder: q.sortOrder ?? index,
+      blockLabel: q.blockLabel ?? "",
+      sectionCode: q.sectionCode ?? null,
+      sectionLabel: q.sectionLabel ?? null,
+    }));
+
+    // Sections and blocks come from what the blueprint rows declared;
+    // `buildVersions` then permutes block order per version and questions
+    // inside each block, never moving a question across a section.
+    const sections = groupIntoSections(placements);
     const versions = buildVersions(sections, versionCount, this.rngFactory());
 
     const questionById = new Map(exam.selectedQuestions.map((q) => [q.questionId, q]));

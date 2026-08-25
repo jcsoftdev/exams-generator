@@ -125,6 +125,45 @@ function buildDeps() {
   return { service, repository, storage, pdfCompiler, logger };
 }
 
+/**
+ * An exam whose blueprint rows DID declare a layout. The fixtures above
+ * deliberately declare none — that is the legacy/manual path, where every
+ * question lands in one unlabeled section — so this one covers the other
+ * half: real pruebas and real blocks reaching the printed booklet.
+ */
+function sectionedExam(): ExamForGenerationRecord {
+  const placed = (
+    questionId: string,
+    sortOrder: number,
+    blockLabel: string,
+    sectionCode: string,
+    sectionLabel: string,
+  ) => ({
+    questionId,
+    position: sortOrder,
+    type: "image" as const,
+    correctAnswer: "a",
+    imageStorageKey: `bank/questions/${questionId}`,
+    imageMime: "image/png",
+    bodyTypst: null,
+    alternatives: null,
+    figureCode: null,
+    sortOrder,
+    blockLabel,
+    sectionCode,
+    sectionLabel,
+  });
+
+  return {
+    ...READY_EXAM,
+    selectedQuestions: [
+      placed("rm1", 0, "RAZ. MATEMÁTICO", "E1", "PRIMERA PRUEBA"),
+      placed("rv1", 1, "RAZ. VERBAL", "E1", "PRIMERA PRUEBA"),
+      placed("m1", 2, "MATEMÁTICA", "E2", "SEGUNDA PRUEBA"),
+    ],
+  };
+}
+
 describe("ExamVersionGenerationService.generateVersions", () => {
   it("rejects when the exam does not exist or belongs to another tenant", async () => {
     const { service, repository } = buildDeps();
@@ -172,6 +211,57 @@ describe("ExamVersionGenerationService.generateVersions", () => {
 
     await expect(service.generateVersions(TEACHER, "exam-1", 2)).rejects.toBeInstanceOf(ConflictException);
     expect(repository.confirmExam).not.toHaveBeenCalled();
+  });
+
+  it("MUST: the PDF receives the sections and blocks the blueprint rows declared", async () => {
+    const { service, repository, pdfCompiler, storage } = buildDeps();
+    repository.getExamForGeneration.mockResolvedValue(sectionedExam());
+    repository.createAsset.mockResolvedValue({ id: "asset-id" });
+    for (const id of ["rm1", "rv1", "m1"]) {
+      await storage.put(`bank/questions/${id}`, Buffer.from(`png-${id}`), "image/png");
+    }
+
+    await service.generateVersions(TEACHER, "exam-1", 1);
+
+    const [input] = pdfCompiler.examCalls;
+    expect(input!.sections.map((s) => s.code)).toEqual(["E1", "E2"]);
+    expect(input!.sections[0]!.blocks.map((b) => b.label).sort()).toEqual([
+      "RAZ. MATEMÁTICO",
+      "RAZ. VERBAL",
+    ]);
+    expect(input!.sections[1]!.blocks.map((b) => b.label)).toEqual(["MATEMÁTICA"]);
+  });
+
+  it("MUST: the answer key is grouped like the booklet, with the same local numbering", async () => {
+    const { service, repository, pdfCompiler, storage } = buildDeps();
+    repository.getExamForGeneration.mockResolvedValue(sectionedExam());
+    repository.createAsset.mockResolvedValue({ id: "asset-id" });
+    for (const id of ["rm1", "rv1", "m1"]) {
+      await storage.put(`bank/questions/${id}`, Buffer.from(`png-${id}`), "image/png");
+    }
+
+    await service.generateVersions(TEACHER, "exam-1", 1);
+
+    const [examInput] = pdfCompiler.examCalls;
+    const [keyInput] = pdfCompiler.answerKeyCalls;
+
+    // Two real sections, not the degenerate single-section fallback — without
+    // this the mirroring below holds trivially and proves nothing.
+    expect(keyInput!.sections.map((s) => s.label)).toEqual([
+      "PRIMERA PRUEBA",
+      "SEGUNDA PRUEBA",
+    ]);
+    expect(keyInput!.sections.map((s) => s.label)).toEqual(
+      examInput!.sections.map((s) => s.label),
+    );
+    // ...and each key section holds exactly the questions its booklet section
+    // printed, in the same order, so "14" means the same thing on both.
+    keyInput!.sections.forEach((keySection, index) => {
+      const printed = examInput!.sections[index]!.blocks.flatMap((block) =>
+        block.questions.map((q) => q.id),
+      );
+      expect(keySection.entries.map((e) => e.questionId)).toEqual(printed);
+    });
   });
 
   it("rejects a non-positive versionCount", async () => {
