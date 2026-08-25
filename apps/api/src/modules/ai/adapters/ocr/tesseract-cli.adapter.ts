@@ -70,6 +70,12 @@ export class TesseractCliAdapter implements TextRegionDetectorPort {
     private readonly readSize: ImageSizeReader = defaultReadSize,
   ) {}
 
+  /**
+   * `_mimeType` is deliberately ignored and the temp file is always written
+   * as `page.png` whatever the bytes actually are: tesseract hands the file
+   * to leptonica, which sniffs the format from the content, not from the
+   * extension. A JPEG written under a `.png` name decodes exactly the same.
+   */
   async detect(image: Buffer, _mimeType: string): Promise<readonly TextWord[]> {
     const { width, height } = await this.readSize(image);
     if (width === 0 || height === 0) {

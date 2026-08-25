@@ -1,6 +1,6 @@
 import { OcrRunner, TesseractCliAdapter } from "./tesseract-cli.adapter";
 
-/** Cabecera + filas reales del formato `tsv` de tesseract, recortadas a lo que el adaptador usa. */
+/** A real tesseract `tsv` header plus real rows, trimmed to the columns the adapter uses. */
 const TSV_HEADER =
   "level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext";
 

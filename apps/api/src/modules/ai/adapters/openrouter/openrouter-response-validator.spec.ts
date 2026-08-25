@@ -268,11 +268,14 @@ describe("validateGeneratedQuestionShape — excess properties never reach the q
       solutionSteps: 1,
       // The two fields this plan removed from the contract, plus an
       // arbitrary one — this is about excess properties in general, not
-      // only about figureBox/alternativeBoxes specifically. The validator
-      // builds `question` field-by-field from `payload.*`; a future
-      // maintainer "simplifying" that into `{ ...payload, bodyTypst }`
-      // would silently reopen this leak across every adapter at once, and
-      // nothing else in this suite would catch it.
+      // only about figureBox/alternativeBoxes specifically.
+      // `validateGeneratedQuestionShape` builds `question` field-by-field
+      // from `payload.*`; a future maintainer "simplifying" that into
+      // `{ ...payload, bodyTypst }` would silently reopen this leak on the
+      // OpenRouter path, and nothing else in this suite would catch it.
+      // Scoped to THIS validator: it is the only thing under test here, and
+      // adapters that never route through it — `InMemoryQuestionGeneratorAdapter`
+      // returns object literals directly — are not covered by this guard.
       figureBox: { x: 0.1, y: 0.2, w: 0.5, h: 0.3 },
       alternativeBoxes: [null, null, null, null, null],
       somethingElse: "x",

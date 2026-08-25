@@ -13,7 +13,17 @@ import { NormalizedBox } from "../normalized-box";
 export interface TextWord {
   readonly text: string;
   readonly box: NormalizedBox;
-  /** 0..100 as tesseract reports it. */
+  /**
+   * 0..100 as tesseract reports it.
+   *
+   * Informational only — callers do NOT filter on it. Every implementation
+   * MUST have applied its own confidence floor before returning, because a
+   * low-confidence box is the dangerous direction: `findFigureRegions` erases
+   * every box it is handed, so a phantom word mutilates the figure
+   * underneath it and the teacher never sees why. A real word left unerased
+   * only widens a crop, which the teacher can adjust. See
+   * `MIN_WORD_CONFIDENCE` in `TesseractCliAdapter`.
+   */
   readonly confidence: number;
 }
 
