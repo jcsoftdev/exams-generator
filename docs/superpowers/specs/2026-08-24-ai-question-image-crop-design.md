@@ -219,8 +219,16 @@ modelo; cuando el humano marca el rectángulo a mano, hay que respetar lo que ma
 El `410` es un estado esperado, no un error de sistema: la web lo traduce a "la
 sesión de recorte expiró, vuelve a extraer".
 
-`extractionId` se guarda en el cache junto a `userId`; una petición de otro usuario
-recibe `404`, no `403` (no se confirma la existencia del recurso ajeno).
+`extractionId` se guarda en el cache junto a `userId`. Una petición de otro usuario
+recibe **el mismo `410`** que un id inexistente o vencido — no un `403` ni un `404`.
+
+La primera versión de este diseño decía `404` para el recurso ajeno, razonando que un
+`403` confirmaría su existencia. Eso estaba mal: si "no existe o venció" devuelve `410`
+y "existe pero es de otro" devuelve `404`, entonces el `404` ES la confirmación que el
+`403` habría dado. Cerrar el oráculo exige que ambos casos respondan idéntico. Se elige
+`410` y no `404` porque el usuario legítimo con su propia sesión vencida necesita ese
+código para que la web le ofrezca re-extraer, y el mensaje ("la sesión de recorte
+expiró") no revela nada a quien adivinó un id ajeno.
 
 **Throttling:** `AiController` está bajo `AccountThrottlerGuard` con
 `AI_PER_ACCOUNT_THROTTLE`, un límite pensado para llamadas a modelo, que son caras y
