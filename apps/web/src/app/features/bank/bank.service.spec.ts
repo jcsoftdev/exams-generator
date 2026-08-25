@@ -265,4 +265,42 @@ describe('BankService', () => {
       expect(result).toEqual(blob);
     });
   });
+
+  describe('setAlternativeImages', () => {
+    it('posts one image per named alternative slot', () => {
+      service
+        .setAlternativeImages('q1', [
+          { alternativeIndex: 0, file: new File(['a'], 'a.png', { type: 'image/png' }) },
+          { alternativeIndex: 2, file: new File(['c'], 'c.png', { type: 'image/png' }) },
+        ])
+        .subscribe();
+
+      const req = httpMock.expectOne(
+        `${environment.apiBaseUrl}/bank/questions/q1/alternative-images`,
+      );
+      const body = req.request.body as FormData;
+      expect(body.getAll('images').length).toBe(2);
+      expect(body.getAll('indexes')).toEqual(['0', '2']);
+      req.flush({ id: 'q1' });
+    });
+
+    it('pairs each image with its own index in append order, not images-then-indexes', () => {
+      service
+        .setAlternativeImages('q1', [
+          { alternativeIndex: 0, file: new File(['a'], 'a.png', { type: 'image/png' }) },
+          { alternativeIndex: 2, file: new File(['c'], 'c.png', { type: 'image/png' }) },
+        ])
+        .subscribe();
+
+      const req = httpMock.expectOne(
+        `${environment.apiBaseUrl}/bank/questions/q1/alternative-images`,
+      );
+      const body = req.request.body as FormData;
+      const entries = Array.from(body.entries()).filter(
+        ([key]) => key === 'images' || key === 'indexes',
+      );
+      expect(entries.map(([key]) => key)).toEqual(['images', 'indexes', 'images', 'indexes']);
+      req.flush({ id: 'q1' });
+    });
+  });
 });

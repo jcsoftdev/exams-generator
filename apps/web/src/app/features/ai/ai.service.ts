@@ -7,6 +7,7 @@ import {
 } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, map, timeout } from 'rxjs';
+import { AiExtractedQuestion, AiQuestionCrop, NormalizedBoxDto } from '@exams-generator/shared';
 import { environment } from '../../../environments/environment';
 import {
   AiRevisedQuestion,
@@ -220,15 +221,26 @@ export class AiService {
   /**
    * Task 7: OCR extraction of a structured question from a photographed
    * image — `POST /ai/questions/extract`. Multipart field name is `"file"`
-   * (same convention as `BankService.replaceQuestionImage`).
+   * (same convention as `BankService.replaceQuestionImage`). Task 8 widens
+   * the response to `AiExtractedQuestion` — a superset of `AiRevisedQuestion`
+   * carrying the crop fields (`figureCrop`, `alternativeCrops`,
+   * `extractionId`) needed to review and re-cut figures before saving.
    */
-  extractQuestionFromImage(image: File): Observable<AiRevisedQuestion> {
+  extractQuestionFromImage(image: File): Observable<AiExtractedQuestion> {
     const formData = new FormData();
     formData.set('file', image);
 
-    return this.http.post<AiRevisedQuestion>(
+    return this.http.post<AiExtractedQuestion>(
       `${environment.apiBaseUrl}/ai/questions/extract`,
       formData,
+    );
+  }
+
+  /** `POST /ai/questions/extract/:extractionId/crop` — re-cuts one crop with a hand-drawn box. */
+  recropExtraction(extractionId: string, box: NormalizedBoxDto): Observable<AiQuestionCrop> {
+    return this.http.post<AiQuestionCrop>(
+      `${environment.apiBaseUrl}/ai/questions/extract/${extractionId}/crop`,
+      { box },
     );
   }
 

@@ -161,4 +161,25 @@ export class BankService {
   fetchQuestionImage(imageAssetId: string): Observable<Blob> {
     return this.http.get(this.buildImageAssetUrl(imageAssetId), { responseType: 'blob' });
   }
+
+  /**
+   * Attaches images to the alternative slots that have one. `indexes` names
+   * the slot for each image, so a question with drawings on only a) and c)
+   * uploads exactly two files (see the API's `resolveAlternativeSlots`).
+   */
+  setAlternativeImages(
+    id: string,
+    crops: readonly { alternativeIndex: number; file: File }[],
+  ): Observable<{ id: string }> {
+    const formData = new FormData();
+    for (const crop of crops) {
+      formData.append('images', crop.file);
+      formData.append('indexes', String(crop.alternativeIndex));
+    }
+
+    return this.http.post<{ id: string }>(
+      `${environment.apiBaseUrl}/bank/questions/${id}/alternative-images`,
+      formData,
+    );
+  }
 }
