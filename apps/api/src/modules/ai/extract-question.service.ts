@@ -11,7 +11,7 @@ import { TextRegionDetectorPort } from "./domain/ports/text-region-detector.port
 import { NormalizedBox } from "./domain/normalized-box";
 import { findFigureRegions } from "./domain/find-figure-regions";
 import { attributeFigureToAlternative } from "./domain/attribute-figure-to-alternative";
-import { CACHE_MAX_WIDTH_PX, CROP_MAX_WIDTH_PX } from "./domain/crop.constants";
+import { ANALYSIS_MAX_WIDTH_PX, CACHE_MAX_WIDTH_PX, CROP_MAX_WIDTH_PX } from "./domain/crop.constants";
 import {
   EXTRACTION_CACHE_PORT,
   IMAGE_CROPPER_PORT,
@@ -143,18 +143,27 @@ export class ExtractQuestionService {
    * page's own alternative markers say which drawing belongs to which option.
    *
    * Deliberately total, exactly as before: any failure here — a missing
-   * tesseract, an image sharp cannot decode, a crop that throws — is logged
-   * and swallowed, and the caller still gets the transcription. The text is
-   * the valuable half of this endpoint.
+   * tesseract, an image sharp cannot decode, a downscale or a crop that
+   * throws — is logged and swallowed, and the caller still gets the
+   * transcription. The text is the valuable half of this endpoint.
    */
   private async buildCrops(
     image: Buffer,
     mimeType: string,
   ): Promise<{ figureCrop?: AiQuestionCrop; alternativeCrops?: readonly AiAlternativeCrop[] }> {
     try {
+      // Detection runs on a BOUNDED raster, never on the raw upload. See
+      // `ANALYSIS_MAX_WIDTH_PX`: `raster()` decodes at full resolution and
+      // `findFigureRegions` then allocates two more planes of that size plus
+      // a per-pixel flood-fill stack, which on a 24 MP photo is tens of MB
+      // per concurrent request. The crops below are still cut from the
+      // ORIGINAL `image` — a normalized box is a 0..1 fraction, so it points
+      // at the same thing at either scale and `crop` re-derives full-
+      // resolution pixels from it.
+      const analysed = await this.cropper.downscale(image, mimeType, ANALYSIS_MAX_WIDTH_PX);
       const [raster, words] = await Promise.all([
-        this.cropper.raster(image, mimeType),
-        this.detector.detect(image, mimeType),
+        this.cropper.raster(analysed.image, analysed.mimeType),
+        this.detector.detect(analysed.image, analysed.mimeType),
       ]);
 
       const figures = findFigureRegions(raster, words);

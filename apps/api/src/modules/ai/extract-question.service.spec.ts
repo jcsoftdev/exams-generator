@@ -4,6 +4,7 @@ import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/questio
 import { ImageCropperPort } from "./domain/ports/image-cropper.port";
 import { ExtractionCachePort } from "./domain/ports/extraction-cache.port";
 import { TextRegionDetectorPort } from "./domain/ports/text-region-detector.port";
+import { ANALYSIS_MAX_WIDTH_PX } from "./domain/crop.constants";
 import { ExtractQuestionService } from "./extract-question.service";
 import { fakePng } from "../../test-support/image-fixtures";
 
@@ -253,6 +254,44 @@ describe("ExtractQuestionService.extract — crops", () => {
     expect(result.bodyTypst).toBe(EXTRACTED_QUESTION.bodyTypst);
     expect(result.figureCrop).toBeDefined();
     expect(result.extractionId).toBeUndefined();
+  });
+});
+
+describe("ExtractQuestionService.extract — bounded analysis resolution", () => {
+  it("MUST: analyses a DOWNSCALED raster but cuts the crop from the ORIGINAL photo", async () => {
+    const { service, cropper, detector } = buildDeps();
+    const file = { buffer: fakePng(), mimetype: "image/png" };
+    const analysed = Buffer.from("downscaled-for-analysis");
+    cropper.downscale.mockResolvedValue({ image: analysed, mimeType: "image/png" });
+    cropper.raster.mockResolvedValue(RASTER_WITH_FIGURE);
+
+    await service.extract(USER, file);
+
+    // A 24 MP upload would otherwise be decoded at full resolution and then
+    // carry an erased copy, a `seen` plane and a per-pixel flood-fill stack.
+    expect(cropper.downscale).toHaveBeenCalledWith(file.buffer, "image/png", ANALYSIS_MAX_WIDTH_PX);
+    expect(cropper.raster).toHaveBeenCalledWith(analysed, "image/png");
+    expect(detector.detect).toHaveBeenCalledWith(analysed, "image/png");
+    // Precision is unaffected because the box is a 0..1 fraction and `crop`
+    // re-derives its pixels from whatever image it is handed — so it must be
+    // handed the original, not the downscale.
+    expect(cropper.crop).toHaveBeenCalledWith(
+      file.buffer,
+      "image/png",
+      expect.anything(),
+      expect.any(Number),
+    );
+  });
+
+  it("still returns the transcription when the analysis downscale blows up", async () => {
+    const { service, cropper } = buildDeps();
+    cropper.raster.mockResolvedValue(RASTER_WITH_FIGURE);
+    cropper.downscale.mockRejectedValue(new Error("unsupported image format"));
+
+    const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
+
+    expect(result.bodyTypst).toBe(EXTRACTED_QUESTION.bodyTypst);
+    expect(result.figureCrop).toBeUndefined();
   });
 });
 
