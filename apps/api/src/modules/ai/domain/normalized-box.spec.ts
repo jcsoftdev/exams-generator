@@ -1,4 +1,4 @@
-import { isValidNormalizedBox, toPixelRect } from "./normalized-box";
+import { isValidNormalizedBox, toPixelRect, toNormalizedBox } from "./normalized-box";
 
 describe("isValidNormalizedBox", () => {
   it("accepts a box fully inside the 0..1 canvas", () => {
@@ -56,5 +56,16 @@ describe("toPixelRect", () => {
     const rect = toPixelRect({ x: 0.999, y: 0.999, w: 0.001, h: 0.001 }, 100, 100);
     expect(rect.left + rect.width).toBeLessThanOrEqual(100);
     expect(rect.top + rect.height).toBeLessThanOrEqual(100);
+  });
+});
+
+describe("toNormalizedBox", () => {
+  it("converts pixel rect back to normalized box (inverse of toPixelRect)", () => {
+    expect(toNormalizedBox({ left: 200, top: 200, width: 400, height: 100 }, 800, 400)).toEqual({
+      x: 0.25,
+      y: 0.5,
+      w: 0.5,
+      h: 0.25,
+    });
   });
 });

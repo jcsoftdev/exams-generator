@@ -57,7 +57,11 @@ export function toPixelRect(box: NormalizedBox, width: number, height: number): 
   return { left, top, width: rectWidth, height: rectHeight };
 }
 
-/** Inverse of `toPixelRect` — turns a pixel rect back into a normalized box. */
+/**
+ * Inverse of `toPixelRect` — turns a pixel rect back into a normalized box.
+ * Note: not exact round-tripping because `toPixelRect` rounds to whole pixels.
+ * `toNormalizedBox(toPixelRect(box, w, h), w, h)` generally does not reconstruct `box`.
+ */
 export function toNormalizedBox(rect: PixelRect, width: number, height: number): NormalizedBox {
   return {
     x: rect.left / width,
