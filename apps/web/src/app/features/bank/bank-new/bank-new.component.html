@@ -242,6 +242,15 @@
           (recrop)="onRecrop($event)"
           (discard)="onDiscard($event)"
         />
+        @if (extractError()) {
+          <p
+            data-testid="extract-error"
+            class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text"
+            role="alert"
+          >
+            {{ extractError() }}
+          </p>
+        }
       }
 
       @if (!structuredValid()) {

@@ -804,7 +804,7 @@ describe('BankNewComponent', () => {
       expect(instance.cropSlots()[0]!.busy).toBe(false);
     });
 
-    it('translates a 410 from the re-crop endpoint into an expired-session message, and any other status into the generic one', () => {
+    it('translates a 410 from the re-crop endpoint into an expired-session message, rendered visibly next to the crop review', () => {
       const { fixture, compiled } = setup({
         extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROPS),
         recropExtractionImpl: () => throwError(() => new HttpErrorResponse({ status: 410 })),
@@ -825,6 +825,33 @@ describe('BankNewComponent', () => {
         'La sesión de recorte expiró. Vuelve a extraer la pregunta desde la foto.',
       );
       expect(instance.cropSlots()[0]!.busy).toBe(false);
+      // The signal alone proves nothing if it's never rendered anywhere the
+      // teacher can read it — assert the DOM text, not just the signal.
+      expect(compiled.querySelector('[data-testid="extract-error"]')?.textContent).toContain(
+        'La sesión de recorte expiró',
+      );
+    });
+
+    it('translates any other re-crop failure status into the generic retry message', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROPS),
+        recropExtractionImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      extractInto(fixture);
+
+      const instance = fixture.componentInstance as unknown as {
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        extractError(): string | null;
+      };
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+      fixture.detectChanges();
+
+      expect(instance.extractError()).toBe('No se pudo recortar. Inténtalo de nuevo.');
+      expect(compiled.querySelector('[data-testid="extract-error"]')?.textContent).toContain(
+        'No se pudo recortar',
+      );
     });
 
     it('drops a slot the teacher discarded so it is never uploaded', () => {
