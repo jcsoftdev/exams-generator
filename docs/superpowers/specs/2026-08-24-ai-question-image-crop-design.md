@@ -109,11 +109,12 @@ export interface ImageCropperPort {
 Adaptadores:
 
 - `SharpImageCropperAdapter` — producción. **`sharp` es la única dependencia nueva del
-  proyecto.** Es un módulo nativo: hay que agregarlo al stage de build de
-  `infra/Dockerfile.api` y verificar que la imagen base tenga las libs que necesita
-  (`sharp` publica binarios precompilados para linux-x64/arm64 glibc; si la imagen es
-  Alpine hace falta el paquete `vips`). Este es el único riesgo de infraestructura del
-  plan y hay que resolverlo en la primera tarea, no al final.
+  proyecto.** Es un módulo nativo con binarios precompilados. `infra/Dockerfile.api`
+  parte de `node:22-bookworm-slim` (Debian/glibc, no Alpine), así que el binario
+  `@img/sharp-linux-x64` precompilado sirve sin instalar `vips` a mano. Lo que sí hay
+  que verificar es que ese paquete opcional sobreviva el
+  `pnpm deploy --prod --legacy` del stage de build hasta el runtime — es el único
+  riesgo de infraestructura del plan, y se resuelve en la primera tarea, no al final.
 - `InMemoryImageCropperAdapter` — tests. Devuelve un raster sintético y un buffer
   determinista.
 
