@@ -24,4 +24,29 @@ export interface ImageCropperPort {
    * @throws when the bytes are not a decodable image.
    */
   crop(image: Buffer, mimeType: string, box: NormalizedBox, maxWidthPx: number): Promise<Buffer>;
+
+  /**
+   * Shrinks the WHOLE image to `maxWidthPx` when it is wider than that,
+   * preserving aspect ratio and original format; returns the input
+   * untouched (same `Buffer` instance, no re-encode) when it already fits.
+   *
+   * Exists for `ExtractionCachePort` (Important Finding 5): the extraction's
+   * source photo can be up to 5 MB, and holding it uncompressed in the same
+   * Redis keyspace BullMQ uses is a real memory risk. `crop`'s own
+   * `maxWidthPx` cap only bounds ONE cut, never the cached original.
+   *
+   * Because normalized boxes (`NormalizedBox`) are 0..1 FRACTIONS of the
+   * image's own width/height — not absolute pixels — a uniform downscale
+   * never moves what a given box points at: `crop`'s `toPixelRect` re-derives
+   * pixel coordinates from whatever width/height the image handed it
+   * actually has. Re-cropping from a downscaled cache entry is therefore
+   * exactly as correct as re-cropping from the original, just lower-resolution.
+   *
+   * @throws when the bytes are not a decodable image.
+   */
+  downscale(
+    image: Buffer,
+    mimeType: string,
+    maxWidthPx: number,
+  ): Promise<{ image: Buffer; mimeType: string }>;
 }

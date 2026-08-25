@@ -17,6 +17,7 @@ function buildDeps() {
   const cropper: jest.Mocked<ImageCropperPort> = {
     raster: jest.fn(),
     crop: jest.fn().mockResolvedValue(Buffer.from("recropped-bytes")),
+    downscale: jest.fn(),
   };
   return { service: new RecropQuestionService(cache, cropper), cache, cropper };
 }

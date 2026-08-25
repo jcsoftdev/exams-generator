@@ -9,7 +9,7 @@ import { ImageCropperPort } from "./domain/ports/image-cropper.port";
 import { ExtractionCachePort } from "./domain/ports/extraction-cache.port";
 import { NormalizedBox } from "./domain/normalized-box";
 import { snapBoxToInk } from "./domain/snap-box-to-ink";
-import { CROP_INK_PADDING_PX, CROP_MAX_WIDTH_PX } from "./domain/crop.constants";
+import { CACHE_MAX_WIDTH_PX, CROP_INK_PADDING_PX, CROP_MAX_WIDTH_PX } from "./domain/crop.constants";
 import { EXTRACTION_CACHE_PORT, IMAGE_CROPPER_PORT, QUESTION_GENERATOR_PORT } from "./ai.constants";
 import { correctAnswerLetterToIndex } from "./domain/correct-answer-letter-to-index";
 
@@ -108,7 +108,19 @@ export class ExtractQuestionService {
     // acceptable trade, not losing the whole response.
     try {
       const extractionId = randomUUID();
-      await this.cache.put(extractionId, { userId: user.sub, image: file.buffer, mimeType });
+      // Downscaled before caching (Important Finding 5): the extraction
+      // cache lives in the same Redis keyspace BullMQ's queues use, and an
+      // uncapped 5 MB photo per extraction is a real memory risk to that
+      // keyspace. `downscale` is resolution-safe for re-cropping — normalized
+      // boxes are 0..1 fractions of whatever width/height the cached image
+      // reports, not absolute pixels, so a uniform downscale never moves
+      // what a box points at.
+      const cached = await this.cropper.downscale(file.buffer, mimeType, CACHE_MAX_WIDTH_PX);
+      await this.cache.put(extractionId, {
+        userId: user.sub,
+        image: cached.image,
+        mimeType: cached.mimeType,
+      });
       return { ...draft, ...crops, extractionId };
     } catch (error) {
       this.logger.warn(

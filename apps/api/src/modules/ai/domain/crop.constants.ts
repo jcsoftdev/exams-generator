@@ -12,3 +12,14 @@ export const CROP_MAX_WIDTH_PX = 1200;
 
 /** Breathing room left around the ink so a stroke never touches the crop edge. */
 export const CROP_INK_PADDING_PX = 8;
+
+/**
+ * Cap for the photo `ExtractionCachePort` holds for re-cropping (Important
+ * Finding 5). The teacher's photo can be up to 5 MB and the cache lives in
+ * the same Redis keyspace BullMQ's queues use — at ~30 extractions/min and a
+ * 30-minute TTL, uncapped photos could reach ~4.5 GB resident. Comfortably
+ * above `CROP_MAX_WIDTH_PX` (1200) so re-crop output quality is unaffected —
+ * `crop()` downscales further from this cached copy exactly as it would
+ * from the original.
+ */
+export const CACHE_MAX_WIDTH_PX = 2000;
