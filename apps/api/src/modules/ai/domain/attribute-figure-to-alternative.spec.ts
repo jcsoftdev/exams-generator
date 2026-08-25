@@ -26,6 +26,18 @@ describe("attributeFigureToAlternative", () => {
     expect(result.complement).toBeUndefined();
   });
 
+  it("MUST: a figure whose centre lands exactly on a marker's top belongs to THAT alternative, not the one above", () => {
+    // y=0.69, h=0.02 gives a centre of EXACTLY 0.7 in IEEE 754 double
+    // arithmetic (0.66 + 0.08/2 does not: it lands on 0.7000000000000001,
+    // which would pass this assertion for the wrong reason). The band is
+    // [own top, next top), so a centre equal to C)'s top is C's, not B's.
+    const onCsTop = { x: 0.3, y: 0.69, w: 0.2, h: 0.02 };
+
+    const result = attributeFigureToAlternative([onCsTop], MARKERS);
+
+    expect(result.byAlternative).toEqual([{ alternativeIndex: 2, box: onCsTop }]);
+  });
+
   it("MUST: a figure above the first marker is the statement's complement", () => {
     const result = attributeFigureToAlternative([figure(0.2)], MARKERS);
 
