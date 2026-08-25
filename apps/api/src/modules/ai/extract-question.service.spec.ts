@@ -145,8 +145,6 @@ describe("ExtractQuestionService.extract", () => {
 });
 
 describe("ExtractQuestionService.extract — crops", () => {
-  const FIGURE_BOX = { x: 0.1, y: 0.2, w: 0.5, h: 0.3 };
-
   it("does not call the cropper when there is no ink for the OCR to leave behind", async () => {
     const { service, cropper } = buildDeps();
 
@@ -166,24 +164,6 @@ describe("ExtractQuestionService.extract — crops", () => {
     expect(result.figureCrop).toBeUndefined();
     expect(result.bodyTypst).toBe(EXTRACTED_QUESTION.bodyTypst);
     expect(result.correctAnswer).toBe("1");
-  });
-
-  it("never leaks the raw boxes from the generator contract into the HTTP response", async () => {
-    const { service, generator, cropper } = buildDeps();
-    // A model that still reports a box must not influence anything, and must
-    // never resurface on the response either.
-    generator.extractFromImage.mockResolvedValue({ ...EXTRACTED_QUESTION, figureBox: FIGURE_BOX } as never);
-    cropper.raster.mockResolvedValue(RASTER_WITH_FIGURE);
-
-    const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
-
-    expect(result).not.toHaveProperty("figureBox");
-    expect(result).not.toHaveProperty("alternativeBoxes");
-    // Companion assertion: without this, an empty `{}` response would also
-    // satisfy the two checks above — proving `figureCrop` really is present
-    // rules that out and confirms the crop was computed from OCR geometry,
-    // not just dropped.
-    expect(result.figureCrop).toBeDefined();
   });
 
   it("returns one crop per figure the page's own alternative markers attribute to it", async () => {

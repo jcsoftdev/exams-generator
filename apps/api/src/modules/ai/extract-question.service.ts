@@ -42,11 +42,9 @@ export interface ExtractQuestionFile {
  * representation.
  *
  * The response also carries finished `data:` URL crops for the question's
- * figures — but their boxes no longer come from the model. The model's
- * `figureBox`/`alternativeBoxes` are a generator-contract detail (a vision
- * model's guess at pixel coordinates) that never reaches the HTTP response;
- * they are stripped out here and ignored. Instead the crop geometry comes
- * from the page's own OCR: `TextRegionDetectorPort` locates every word,
+ * figures — but their boxes never come from the model: `QuestionGeneratorPort`
+ * no longer asks it for crop coordinates at all. Instead the crop geometry
+ * comes from the page's own OCR: `TextRegionDetectorPort` locates every word,
  * `findFigureRegions` keeps whatever ink is left once the text is erased,
  * and `attributeFigureToAlternative` decides which alternative a figure
  * belongs to from the `A)`–`E)` marker bands (see `buildCrops`). Nothing
@@ -98,16 +96,11 @@ export class ExtractQuestionService {
       throw new UnprocessableEntityException({ message: "AI produced invalid content", errors });
     }
 
-    // The boxes are generator-contract detail — a vision model's guess at
-    // pixel coordinates. `buildCrops` no longer reads them; they are
-    // destructured out here purely so they never spread into the returned
-    // object (the `_`-prefixed bindings are otherwise unused).
-    const { figureBox: _figureBox, alternativeBoxes: _alternativeBoxes, ...draft } = extractedWithIndex;
     const crops = await this.buildCrops(file.buffer, mimeType);
 
     const hasCrops = !!crops.figureCrop || (crops.alternativeCrops?.length ?? 0) > 0;
     if (!hasCrops) {
-      return { ...draft, ...crops };
+      return { ...extractedWithIndex, ...crops };
     }
 
     // Only cached when there is something to re-crop: a text-only question
@@ -135,12 +128,12 @@ export class ExtractQuestionService {
         image: cached.image,
         mimeType: cached.mimeType,
       });
-      return { ...draft, ...crops, extractionId };
+      return { ...extractedWithIndex, ...crops, extractionId };
     } catch (error) {
       this.logger.warn(
         `Extraction cache write failed, returning crops without a re-crop handle: ${(error as Error).message}`,
       );
-      return { ...draft, ...crops };
+      return { ...extractedWithIndex, ...crops };
     }
   }
 
