@@ -6,7 +6,13 @@ import { SharpImageCropperAdapter } from "./adapters/image/sharp-image-cropper.a
 import { RedisExtractionCacheAdapter } from "./adapters/cache/redis-extraction-cache.adapter";
 import { AiController } from "./ai.controller";
 import { AiJobsController } from "./ai-jobs.controller";
-import { EXTRACTION_CACHE_PORT, IMAGE_CROPPER_PORT, QUESTION_GENERATOR_PORT } from "./ai.constants";
+import {
+  EXTRACTION_CACHE_PORT,
+  IMAGE_CROPPER_PORT,
+  QUESTION_GENERATOR_PORT,
+  TEXT_REGION_DETECTOR_PORT,
+} from "./ai.constants";
+import { TesseractCliAdapter } from "./adapters/ocr/tesseract-cli.adapter";
 import { resolveQuestionGeneratorAdapter } from "./ai-provider";
 import { GenerationJobEventsService } from "./generation-job-events.service";
 import { GenerationJobsProcessor } from "./generation-jobs.processor";
@@ -47,6 +53,7 @@ import { ReviseQuestionService } from "./revise-question.service";
     },
     { provide: IMAGE_CROPPER_PORT, useClass: SharpImageCropperAdapter },
     { provide: EXTRACTION_CACHE_PORT, useClass: RedisExtractionCacheAdapter },
+    { provide: TEXT_REGION_DETECTOR_PORT, useClass: TesseractCliAdapter },
   ],
   exports: [QUESTION_GENERATOR_PORT, GenerationJobsRepository, GenerationJobsService],
 })
