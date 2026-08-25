@@ -48,6 +48,16 @@ export interface CreateExamBlueprintRow {
   readonly topicId?: string;
   readonly difficulty?: Difficulty;
   readonly count: number;
+  /**
+   * Official layout, carried straight back from
+   * `POST /exams/blueprint/resolve`. Absent for a row the teacher added by
+   * hand; the backend then places it in the unlabeled section.
+   */
+  readonly sortOrder?: number;
+  readonly blockCode?: string | null;
+  readonly blockLabel?: string | null;
+  readonly sectionCode?: string | null;
+  readonly sectionLabel?: string | null;
 }
 
 export interface CreateExamPayload {

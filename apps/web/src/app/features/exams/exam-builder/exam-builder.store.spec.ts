@@ -162,6 +162,47 @@ describe('ExamBuilderStore', () => {
   });
 
   describe('bulkLoadFromBlueprint (design doc §3.11 — template pre-fill)', () => {
+    it('remembers each resolved row\'s layout, keyed by course and topic', () => {
+      const store = new ExamBuilderStore();
+
+      store.bulkLoadFromBlueprint([
+        {
+          courseId: 'c1',
+          courseName: 'Aritmética',
+          topicId: 't1',
+          topicName: 'Conjuntos',
+          count: 4,
+          layout: {
+            sortOrder: 2,
+            blockCode: 'matematica',
+            blockLabel: 'MATEMÁTICA',
+            sectionCode: 'E2',
+            sectionLabel: 'SEGUNDA PRUEBA',
+          },
+        },
+      ]);
+
+      expect(store.layoutFor('c1', 't1')?.sectionCode).toBe('E2');
+      expect(store.layoutFor('c1', 't1')?.blockLabel).toBe('MATEMÁTICA');
+      // A row nobody loaded from a template has none — the hand-added case.
+      expect(store.layoutFor('c1', 'other')).toBeUndefined();
+    });
+
+    it('stores a whole-course row\'s layout under the sentinel topic id', () => {
+      const store = new ExamBuilderStore();
+
+      store.bulkLoadFromBlueprint([
+        {
+          courseId: 'c9',
+          courseName: 'Física',
+          count: 20,
+          layout: { sortOrder: 0, sectionCode: 'E3', sectionLabel: 'TERCERA PRUEBA' },
+        },
+      ]);
+
+      expect(store.layoutFor('c9', '')?.sectionCode).toBe('E3');
+    });
+
     it('reuses an existing course+topic row and sets the requested count on the matching difficulty cell', () => {
       store.addRow({
         id: 'row-1',
