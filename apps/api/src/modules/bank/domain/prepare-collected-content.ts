@@ -1,4 +1,5 @@
 import { escapeTypstText } from "./escape-typst-text";
+import { convertLatexMathRuns } from "./latex-math-to-typst";
 import { hashBodyTypst } from "./hash-body-typst";
 import { stripSolutionTail } from "./strip-solution-tail";
 import { stripStatementPollution } from "./strip-statement-pollution";
@@ -31,6 +32,13 @@ export interface PreparedCollectedContent {
  * statement is the stable identity of a scraped question; how we render it
  * is not. Stripping runs AFTER the hash for the same reason.
  *
+ * `convertLatexMathRuns` runs FIRST, ahead of the escaper. Part of the scrape
+ * was transcribed into LaTeX rather than Typst (`$\dfrac{\alpha}{\beta}$`,
+ * 244 runs), which Typst cannot compile — so those runs used to be escaped and
+ * printed with their backslashes showing. Translating them here, and only when
+ * every command is one the translator positively knows, turns them into real
+ * formulas without ever handing Typst something it would choke on.
+ *
  * Alternatives go through `stripSolutionTail` and the statement through
  * `stripStatementPollution`: the scrapes glued the source page's answer key
  * onto the last option (audit 2026-08-20, H2) and, in the statement, a whole
@@ -40,8 +48,10 @@ export interface PreparedCollectedContent {
  */
 export function prepareCollectedContent(raw: RawCollectedContent): PreparedCollectedContent {
   return {
-    bodyTypst: escapeTypstText(stripStatementPollution(raw.bodyTypst)),
-    alternatives: raw.alternatives.map((alternative) => escapeTypstText(stripSolutionTail(alternative))),
+    bodyTypst: escapeTypstText(convertLatexMathRuns(stripStatementPollution(raw.bodyTypst))),
+    alternatives: raw.alternatives.map((alternative) =>
+      escapeTypstText(convertLatexMathRuns(stripSolutionTail(alternative))),
+    ),
     bodyHash: hashBodyTypst(raw.bodyTypst),
   };
 }

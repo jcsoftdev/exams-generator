@@ -1,17 +1,22 @@
 import { renderExamTypst, renderAnswerKeyTypst } from "./typst-template";
 import { ExamPdfDocumentInput, AnswerKeyDocumentInput } from "../../domain/ports/pdf-compiler.port";
 
+/** Wraps a flat question list in the minimal shape: one unlabeled section, one unlabeled block. */
+const oneBlock = (questions: ExamPdfDocumentInput["sections"][number]["blocks"][number]["questions"]) => [
+  { code: null, label: null, blocks: [{ label: "", questions }] },
+];
+
 describe("renderExamTypst", () => {
-  it("sets a 2-column page layout", () => {
+  it("wraps each section's content in a two-column layout", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [{ id: "q1", imageAbsolutePath: "/fixtures/q1.png" }],
+      sections: oneBlock([{ id: "q1", imageAbsolutePath: "/fixtures/q1.png" }]),
     };
 
     const source = renderExamTypst(input);
 
-    expect(source).toContain("columns: 2");
+    expect(source).toContain("#columns(2)[");
   });
 
   it("embeds the tenant logo when provided", () => {
@@ -19,7 +24,7 @@ describe("renderExamTypst", () => {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
       tenantLogoAbsolutePath: "/fixtures/logo.png",
-      questions: [{ id: "q1", imageAbsolutePath: "/fixtures/q1.png" }],
+      sections: oneBlock([{ id: "q1", imageAbsolutePath: "/fixtures/q1.png" }]),
     };
 
     const source = renderExamTypst(input);
@@ -31,7 +36,7 @@ describe("renderExamTypst", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [{ id: "q1", imageAbsolutePath: "/fixtures/q1.png" }],
+      sections: oneBlock([{ id: "q1", imageAbsolutePath: "/fixtures/q1.png" }]),
     };
 
     const source = renderExamTypst(input);
@@ -40,19 +45,20 @@ describe("renderExamTypst", () => {
   });
 
   it("embeds every question's image, each preceded by a `// q:{id}` marker", () => {
+    const questions = [
+      { id: "q1", imageAbsolutePath: "/fixtures/q1.png" },
+      { id: "q2", imageAbsolutePath: "/fixtures/q2.png" },
+    ];
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
-        { id: "q1", imageAbsolutePath: "/fixtures/q1.png" },
-        { id: "q2", imageAbsolutePath: "/fixtures/q2.png" },
-      ],
+      sections: oneBlock(questions),
     };
 
     const source = renderExamTypst(input);
     const lines = source.split("\n");
 
-    for (const question of input.questions) {
+    for (const question of questions) {
       if (question.type === "structured") {
         continue;
       }
@@ -71,7 +77,7 @@ describe("renderExamTypst", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version B",
-      questions: [{ id: "q1", imageAbsolutePath: "/fixtures/q1.png" }],
+      sections: oneBlock([{ id: "q1", imageAbsolutePath: "/fixtures/q1.png" }]),
     };
 
     const source = renderExamTypst(input);
@@ -86,14 +92,14 @@ describe("renderExamTypst — structured questions", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: oneBlock([
         {
           id: "sq1",
           type: "structured",
           bodyTypst: "Resuelve: $x + 1 = 2$",
           alternatives: ["1", "2", "3"],
         },
-      ],
+      ]),
     };
 
     const source = renderExamTypst(input);
@@ -108,14 +114,14 @@ describe("renderExamTypst — structured questions", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: oneBlock([
         {
           id: "sq1",
           type: "structured",
           bodyTypst: "Resuelve: $x + 1 = 2$",
           alternatives: ["1", "2", "3"],
         },
-      ],
+      ]),
     };
 
     const source = renderExamTypst(input);
@@ -129,7 +135,7 @@ describe("renderExamTypst — structured questions", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: oneBlock([
         {
           id: "sq1",
           type: "structured",
@@ -137,7 +143,7 @@ describe("renderExamTypst — structured questions", () => {
           alternatives: ["a", "b"],
           figureCode: "#box[triangle placeholder]",
         },
-      ],
+      ]),
     };
 
     const source = renderExamTypst(input);
@@ -149,14 +155,14 @@ describe("renderExamTypst — structured questions", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: oneBlock([
         {
           id: "sq1",
           type: "structured",
           bodyTypst: "Sin figura",
           alternatives: ["a", "b"],
         },
-      ],
+      ]),
     };
 
     const source = renderExamTypst(input);
@@ -168,7 +174,7 @@ describe("renderExamTypst — structured questions", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: oneBlock([
         {
           id: "sq1",
           type: "structured",
@@ -176,19 +182,19 @@ describe("renderExamTypst — structured questions", () => {
           alternatives: ["a", "b"],
           imageAbsolutePath: "/fixtures/complement-chart.png",
         },
-      ],
+      ]),
     };
 
     const source = renderExamTypst(input);
 
-    expect(source).toContain('#image("/fixtures/complement-chart.png"');
+    expect(source).toContain('image("/fixtures/complement-chart.png"');
   });
 
   it("renders an alternative with an image path as #image(...) instead of its (empty) text", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: oneBlock([
         {
           id: "sq1",
           type: "structured",
@@ -196,21 +202,21 @@ describe("renderExamTypst — structured questions", () => {
           alternatives: ["", "", ""],
           alternativeImagePaths: ["/fixtures/alt-a.png", "/fixtures/alt-b.png", "/fixtures/alt-c.png"],
         },
-      ],
+      ]),
     };
 
     const source = renderExamTypst(input);
 
-    expect(source).toContain('A) #image("/fixtures/alt-a.png", width: 35%)');
-    expect(source).toContain('B) #image("/fixtures/alt-b.png", width: 35%)');
-    expect(source).toContain('C) #image("/fixtures/alt-c.png", width: 35%)');
+    expect(source).toContain('A) #box(image("/fixtures/alt-a.png", height: 1.1cm))');
+    expect(source).toContain('B) #box(image("/fixtures/alt-b.png", height: 1.1cm))');
+    expect(source).toContain('C) #box(image("/fixtures/alt-c.png", height: 1.1cm))');
   });
 
   it("mixed: renders text alternatives normally and only the ones with an image path as #image(...)", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: oneBlock([
         {
           id: "sq1",
           type: "structured",
@@ -218,13 +224,13 @@ describe("renderExamTypst — structured questions", () => {
           alternatives: ["texto plano", "", "otro texto"],
           alternativeImagePaths: [undefined, "/fixtures/alt-b.png", undefined],
         },
-      ],
+      ]),
     };
 
     const source = renderExamTypst(input);
 
     expect(source).toContain("A) texto plano");
-    expect(source).toContain('B) #image("/fixtures/alt-b.png", width: 35%)');
+    expect(source).toContain('B) #box(image("/fixtures/alt-b.png", height: 1.1cm))');
     expect(source).toContain("C) otro texto");
   });
 
@@ -232,14 +238,14 @@ describe("renderExamTypst — structured questions", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: oneBlock([
         {
           id: "sq1",
           type: "structured",
           bodyTypst: "Sin imágenes de alternativas",
           alternatives: ["a", "b"],
         },
-      ],
+      ]),
     };
 
     const source = renderExamTypst(input);
@@ -253,7 +259,7 @@ describe("renderExamTypst — structured questions", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: oneBlock([
         {
           id: "sq1",
           type: "structured",
@@ -262,27 +268,27 @@ describe("renderExamTypst — structured questions", () => {
           figureCode: "#box[triangle placeholder]",
           imageAbsolutePath: "/fixtures/complement-chart.png",
         },
-      ],
+      ]),
     };
 
     const source = renderExamTypst(input);
 
     expect(source).toContain("#box[triangle placeholder]");
-    expect(source).toContain('#image("/fixtures/complement-chart.png"');
+    expect(source).toContain('image("/fixtures/complement-chart.png"');
   });
 
   it("omits any complement image() call when imageAbsolutePath is not provided", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: oneBlock([
         {
           id: "sq1",
           type: "structured",
           bodyTypst: "Sin imagen complementaria",
           alternatives: ["a", "b"],
         },
-      ],
+      ]),
     };
 
     const source = renderExamTypst(input);
@@ -294,7 +300,7 @@ describe("renderExamTypst — structured questions", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: oneBlock([
         { id: "q1", imageAbsolutePath: "/fixtures/q1.png" },
         {
           id: "sq1",
@@ -302,7 +308,7 @@ describe("renderExamTypst — structured questions", () => {
           bodyTypst: "Resuelve: $x + 1 = 2$",
           alternatives: ["1", "2"],
         },
-      ],
+      ]),
     };
 
     const source = renderExamTypst(input);
@@ -314,20 +320,100 @@ describe("renderExamTypst — structured questions", () => {
   });
 });
 
+describe("renderExamTypst — official layout", () => {
+  const structured = (id: string, body: string) =>
+    ({ id, type: "structured", bodyTypst: body, alternatives: ["uno", "dos"] }) as const;
+
+  const twoSectionInput = (): ExamPdfDocumentInput => ({
+    title: "ETA UNI",
+    versionLabel: "Forma A",
+    sections: [
+      {
+        code: "E1",
+        label: "PRIMERA PRUEBA",
+        blocks: [
+          { label: "RAZ. MATEMÁTICO", questions: [structured("a", "ra"), structured("b", "rb")] },
+          { label: "RAZ. VERBAL", questions: [structured("c", "rc")] },
+        ],
+      },
+      {
+        code: "E2",
+        label: "SEGUNDA PRUEBA",
+        blocks: [{ label: "MATEMÁTICA", questions: [structured("d", "rd")] }],
+      },
+    ],
+  });
+
+  it("emits each section's title", () => {
+    const source = renderExamTypst(twoSectionInput());
+
+    expect(source).toContain("PRIMERA PRUEBA");
+    expect(source).toContain("SEGUNDA PRUEBA");
+  });
+
+  it("emits each block's heading", () => {
+    const source = renderExamTypst(twoSectionInput());
+
+    expect(source).toContain("RAZ. MATEMÁTICO");
+    expect(source).toContain("RAZ. VERBAL");
+    expect(source).toContain("MATEMÁTICA");
+  });
+
+  it("puts the section title OUTSIDE the columns, so it spans the full page width", () => {
+    const source = renderExamTypst(twoSectionInput());
+
+    const headingIndex = source.indexOf("PRIMERA PRUEBA");
+    const columnsIndex = source.indexOf("#columns(2)");
+
+    expect(headingIndex).toBeGreaterThan(-1);
+    expect(columnsIndex).toBeGreaterThan(headingIndex);
+    expect(source).not.toContain("columns: 2");
+  });
+
+  it("inserts a page break between sections, but not before the first one", () => {
+    const source = renderExamTypst(twoSectionInput());
+
+    expect(source.split("#pagebreak()")).toHaveLength(2);
+    expect(source.indexOf("#pagebreak()")).toBeGreaterThan(source.indexOf("PRIMERA PRUEBA"));
+  });
+
+  it("MUST: numbering restarts at every section", () => {
+    const source = renderExamTypst(twoSectionInput());
+
+    // E1 numbers 1,2,3 and E2 starts over at 1.
+    expect(source).toContain("*1.* ra");
+    expect(source).toContain("*2.* rb");
+    expect(source).toContain("*3.* rc");
+    expect(source).toContain("*1.* rd");
+  });
+
+  it("a single unlabeled section with a single unlabeled block emits no headings or page break", () => {
+    const source = renderExamTypst({
+      title: "Vista previa",
+      versionLabel: "preview",
+      sections: [{ code: null, label: null, blocks: [{ label: "", questions: [structured("x", "rx")] }] }],
+    });
+
+    expect(source).not.toContain("#pagebreak()");
+    expect(source).toContain("*1.* rx");
+  });
+});
+
 describe("renderAnswerKeyTypst", () => {
   it("marks every entry with a `// q:{id}` marker for error-mapping", () => {
+    const entries = [
+      { questionId: "q1", correctOption: "B" },
+      { questionId: "q2", correctOption: "D" },
+    ];
     const input: AnswerKeyDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      entries: [
-        { questionId: "q1", correctOption: "B" },
-        { questionId: "q2", correctOption: "D" },
-      ],
+      sections: [{ label: null, entries }],
     };
 
     const source = renderAnswerKeyTypst(input);
 
-    for (const entry of input.entries) {
+    for (const entry of entries) {
       expect(source).toContain(`// q:${entry.questionId}`);
     }
   });
@@ -336,7 +422,7 @@ describe("renderAnswerKeyTypst", () => {
     const input: AnswerKeyDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      entries: [{ questionId: "q1", correctOption: "B" }],
+      sections: [{ label: null, entries: [{ questionId: "q1", correctOption: "B" }] }],
     };
 
     const source = renderAnswerKeyTypst(input);
@@ -348,9 +434,14 @@ describe("renderAnswerKeyTypst", () => {
     const input: AnswerKeyDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      entries: [
-        { questionId: "324a9515-febf-4f76-9309-c8e680904dd9", correctOption: "C" },
-        { questionId: "f9969f3c-e77e-4ee2-872b-7709c64d1060", correctOption: "B" },
+      sections: [
+        {
+          label: null,
+          entries: [
+            { questionId: "324a9515-febf-4f76-9309-c8e680904dd9", correctOption: "C" },
+            { questionId: "f9969f3c-e77e-4ee2-872b-7709c64d1060", correctOption: "B" },
+          ],
+        },
       ],
     };
 
@@ -365,10 +456,15 @@ describe("renderAnswerKeyTypst", () => {
     const input: AnswerKeyDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version B",
-      entries: [
-        { questionId: "q9", correctOption: "A" },
-        { questionId: "q4", correctOption: "E" },
-        { questionId: "q7", correctOption: "D" },
+      sections: [
+        {
+          label: null,
+          entries: [
+            { questionId: "q9", correctOption: "A" },
+            { questionId: "q4", correctOption: "E" },
+            { questionId: "q7", correctOption: "D" },
+          ],
+        },
       ],
     };
 
@@ -383,11 +479,117 @@ describe("renderAnswerKeyTypst", () => {
     const input: AnswerKeyDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      entries: [{ questionId: "q1", correctOption: "B" }],
+      sections: [{ label: null, entries: [{ questionId: "q1", correctOption: "B" }] }],
     };
 
     const source = renderAnswerKeyTypst(input);
 
     expect(source).not.toContain("#image(");
+  });
+
+  it("caps a complement image's height so a tall figure cannot own the column", () => {
+    const typst = renderExamTypst({
+      title: "T",
+      versionLabel: "Forma A",
+      sections: oneBlock([
+        {
+          id: "q1",
+          type: "structured",
+          bodyTypst: "¿Qué hora marca el reloj?",
+          alternatives: ["a", "b"],
+          imageAbsolutePath: "/tmp/clock.png",
+        },
+      ]),
+    });
+
+    expect(typst).toContain('let natural = measure(image("/tmp/clock.png"))');
+    expect(typst).toMatch(/if scaled > \d+cm/);
+    expect(typst).toContain("#layout(size =>");
+  });
+
+  it("sizes an alternative image by height, so five drawings still fit one column", () => {
+    const typst = renderExamTypst({
+      title: "T",
+      versionLabel: "Forma A",
+      sections: oneBlock([
+        {
+          id: "q1",
+          type: "structured",
+          bodyTypst: "¿Qué figura continúa?",
+          alternatives: ["", "", "", "", ""],
+          alternativeImagePaths: ["/a.png", "/b.png", "/c.png", "/d.png", "/e.png"],
+        },
+      ]),
+    });
+
+    expect(typst).toContain('A) #box(image("/a.png", height: ');
+    expect(typst).not.toContain("width: 35%");
+  });
+
+  it("gives the alternatives enough leading that stacked fractions do not collide", () => {
+    const typst = renderExamTypst({
+      title: "T",
+      versionLabel: "Forma A",
+      sections: oneBlock([
+        { id: "q1", type: "structured", bodyTypst: "Calcula", alternatives: ["$2/11$", "$3/11$"] },
+      ]),
+    });
+
+    expect(typst).toMatch(/#set par\(leading:/);
+  });
+});
+
+describe("renderAnswerKeyTypst — local numbering per section", () => {
+  const input = (): AnswerKeyDocumentInput => ({
+    title: "ETA UNI",
+    versionLabel: "Forma A",
+    sections: [
+      {
+        label: "PRIMERA PRUEBA",
+        entries: [
+          { questionId: "a", correctOption: "C" },
+          { questionId: "b", correctOption: "A" },
+        ],
+      },
+      {
+        label: "SEGUNDA PRUEBA",
+        entries: [{ questionId: "c", correctOption: "E" }],
+      },
+    ],
+  });
+
+  it("MUST: numbering restarts per section, matching the booklet", () => {
+    const source = renderAnswerKeyTypst(input());
+
+    expect(source).toContain("[1], [C],");
+    expect(source).toContain("[2], [A],");
+    // The exam's third question is the 1st of the second test, not the 3rd.
+    expect(source).toContain("[1], [E],");
+    expect(source).not.toContain("[3], [E],");
+  });
+
+  it("labels each section of the key", () => {
+    const source = renderAnswerKeyTypst(input());
+
+    expect(source).toContain("PRIMERA PRUEBA");
+    expect(source).toContain("SEGUNDA PRUEBA");
+  });
+
+  it("keeps the // q:{id} marker for every entry", () => {
+    const source = renderAnswerKeyTypst(input());
+
+    expect(source).toContain("// q:a");
+    expect(source).toContain("// q:c");
+  });
+
+  it("an unlabeled section emits no heading", () => {
+    const source = renderAnswerKeyTypst({
+      title: "Repaso",
+      versionLabel: "Forma A",
+      sections: [{ label: null, entries: [{ questionId: "x", correctOption: "B" }] }],
+    });
+
+    expect(source).toContain("[1], [B],");
+    expect(source).toContain("Clave de respuestas");
   });
 });

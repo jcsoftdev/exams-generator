@@ -1,0 +1,166 @@
+{
+  "lot": "lot-14-uncp-2021-primera-seleccion-a3",
+  "transcriptions": [
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/alg-lot-14-uncp-2021-primera-seleccion-a3-alg-05.png",
+      "bodyTypst": "Determinar el coeficiente del término de grado 5 en la expansión de: $p(x) = (x^5 - x^(-5))^5$",
+      "alternatives": [
+        "21",
+        "14",
+        "10",
+        "17",
+        "18"
+      ]
+    },
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/alg-lot-14-uncp-2021-primera-seleccion-a3-alg-06.png",
+      "bodyTypst": "Siendo $a$, $b$ y $c$ raíces de la ecuación $x^3 - 5x - 3 = 0$, determina el valor de $M = a^3 + b^3 + c^3$",
+      "alternatives": [
+        "$-3$",
+        "9",
+        "$-5$",
+        "5",
+        "3"
+      ]
+    },
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/geo-lot-14-uncp-2021-primera-seleccion-a3-geo-07.png",
+      "bodyTypst": "Seis cerámicos de forma cuadrada y del mismo tamaño cuyo lado mide 40 cm, es pintado según muestra la figura (región sombreada). Calcula el área pintada (en centímetros cuadrados).",
+      "alternatives": [
+        "6 800",
+        "8 400",
+        "9 600",
+        "7 200",
+        "9 600"
+      ],
+      "figureCrop": {
+        "left": 0.345,
+        "top": 0.21,
+        "right": 0.7,
+        "bottom": 0.69
+      }
+    },
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/trig-lot-14-uncp-2021-primera-seleccion-a3-tri-08.png",
+      "bodyTypst": "Sabiendo que $op(\"sen\")^2 alpha + op(\"cos\")^2 alpha + 2 op(\"sen\") alpha thin op(\"cos\") alpha = 6/4$, calcula el valor de $T = op(\"csc\") alpha thin op(\"sec\") alpha$",
+      "alternatives": [
+        "4",
+        "5",
+        "3",
+        "7",
+        "6"
+      ]
+    },
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/esta-lot-14-uncp-2021-primera-seleccion-a3-est-10.png",
+      "bodyTypst": "Las notas de Alberto en Estadística son: 12 ; 09 ; 10 ; 11 ; 13. Calcula el coeficiente de variación de dichas notas.",
+      "alternatives": [
+        "$2/11$",
+        "$3/11$",
+        "$sqrt(3)/11$",
+        "$sqrt(5)/11$",
+        "$sqrt(2)/11$"
+      ]
+    },
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/ing-lot-14-uncp-2021-primera-seleccion-a3-ing-40.png",
+      "bodyTypst": "Elija la respuesta correcta de acuerdo con la imagen: What are they doing?",
+      "alternatives": [
+        "They are speaking.",
+        "They are playing.",
+        "They are dancing.",
+        "They are coming.",
+        "They are saying good bye."
+      ],
+      "figureCrop": {
+        "left": 0.35,
+        "top": 0.19,
+        "right": 0.8,
+        "bottom": 0.79
+      }
+    },
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/ing-lot-14-uncp-2021-primera-seleccion-a3-ing-41.png",
+      "bodyTypst": "Relaciona las expresiones con las imágenes:\n\nI. Hi! How are you?\n\nII. She is my wife.\n\nIII. Here is the menu, sir.",
+      "alternatives": [
+        "IB -- IIA -- IIIC",
+        "IC -- IIA -- IIIB",
+        "IB -- IIC -- IIIA",
+        "IA -- IIB -- IIIC",
+        "IC -- IIB -- IIIA"
+      ],
+      "figureCrop": {
+        "left": 0.07,
+        "top": 0.32,
+        "right": 0.945,
+        "bottom": 0.81
+      }
+    },
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/rm-lot-14-uncp-2021-primera-seleccion-a3-raz-42.png",
+      "bodyTypst": "La siguiente operación matemática se define: $a + b = a/b + b/a$. Calcule el valor de $(1/2 + 1/4)$",
+      "alternatives": [
+        "$5/2$",
+        "$9/2$",
+        "$3/2$",
+        "$7/2$",
+        "$1/2$"
+      ]
+    },
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/rm-lot-14-uncp-2021-primera-seleccion-a3-raz-43.png",
+      "unreadable": "las cinco alternativas son figuras, y el formato de lote todavía no admite una imagen por alternativa"
+    },
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/rm-lot-14-uncp-2021-primera-seleccion-a3-raz-44.png",
+      "bodyTypst": "Determina el valor de \"x\" en la figura.",
+      "alternatives": [
+        "42",
+        "46",
+        "35",
+        "56",
+        "48"
+      ],
+      "figureCrop": {
+        "left": 0.31,
+        "top": 0.23,
+        "right": 0.83,
+        "bottom": 0.7
+      }
+    },
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/rm-lot-14-uncp-2021-primera-seleccion-a3-raz-47.png",
+      "bodyTypst": "¿Qué hora es, según el reloj de la figura?",
+      "alternatives": [
+        "1h 32 $10/8$ min",
+        "1h 32 $8/7$ min",
+        "1h 33 $7/11$ min",
+        "1h 33 $4/11$ min",
+        "1h 33 min"
+      ],
+      "figureCrop": {
+        "left": 0.56,
+        "top": 0.22,
+        "right": 0.99,
+        "bottom": 0.88
+      }
+    },
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/rm-lot-14-uncp-2021-primera-seleccion-a3-raz-49.png",
+      "bodyTypst": "La rueda de la figura, al girar, presenta el número 0 en la primera vuelta, luego en la segunda vuelta muestra el número 6, en la tercera muestra el número 24 y en las siguientes al 78 y 240, respectivamente. ¿Qué número mostrará en la sexta vuelta?",
+      "alternatives": [
+        "716",
+        "672",
+        "696",
+        "756",
+        "726"
+      ],
+      "figureCrop": {
+        "left": 0.37,
+        "top": 0.44,
+        "right": 0.65,
+        "bottom": 1.0
+      }
+    }
+  ]
+}

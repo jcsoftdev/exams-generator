@@ -1,0 +1,54 @@
+{
+  "lot": "lot-14-uncp-2021-primera-seleccion-a3",
+  "transcriptions": [
+    {
+      "imagePath": "lot-14-uncp-2021-primera-seleccion-a3-image/rm-lot-14-uncp-2021-primera-seleccion-a3-raz-43.png",
+      "bodyTypst": "En la siguiente secuencia, la figura que continúa es:",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "figureCrop": {
+        "left": 0.307,
+        "top": 0.201,
+        "right": 0.819,
+        "bottom": 0.554
+      },
+      "alternativeCrops": [
+        {
+          "left": 0.137,
+          "top": 0.645,
+          "right": 0.227,
+          "bottom": 0.956
+        },
+        {
+          "left": 0.332,
+          "top": 0.695,
+          "right": 0.39,
+          "bottom": 0.93
+        },
+        {
+          "left": 0.505,
+          "top": 0.681,
+          "right": 0.57,
+          "bottom": 0.937
+        },
+        {
+          "left": 0.69,
+          "top": 0.707,
+          "right": 0.788,
+          "bottom": 0.923
+        },
+        {
+          "left": 0.874,
+          "top": 0.695,
+          "right": 0.976,
+          "bottom": 0.93
+        }
+      ]
+    }
+  ]
+}

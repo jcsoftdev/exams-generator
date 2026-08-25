@@ -66,6 +66,56 @@ export type SelectedQuestion = SelectedImageQuestion | SelectedStructuredQuestio
  * `alternativeImages`), same permutation, same index alignment — entry `i`
  * here is always the image for `shuffledAlternatives[questionId][i]`.
  */
+
+/**
+ * A PRINTED block in the booklet. An empty `label` means "no heading" (the
+ * single-question preview case, and versions generated before this
+ * feature).
+ *
+ * A block is NOT a course: UNI prints "MATEMÁTICA" as a single 40-question
+ * block that covers Aritmética, Álgebra, Geometría, and Trigonometría
+ * (design doc §2.2). Questions from different courses mix freely inside the
+ * block — that's exactly what the real booklet does.
+ */
+export interface SelectionBlock {
+  readonly label: string;
+  readonly questions: readonly SelectedQuestion[];
+}
+
+/**
+ * A section of the booklet — the "prueba" in UNI's vocabulary (E1/E2/E3), the
+ * curricular area in UNCP's. `code`/`label` are `null` for a manual exam,
+ * which has a single unlabeled section.
+ *
+ * Printed numbering restarts at every section.
+ */
+export interface SelectionSection {
+  readonly code: string | null;
+  readonly label: string | null;
+  readonly blocks: readonly SelectionBlock[];
+}
+
+/** A block inside a version's frozen layout: its label plus how many questions it occupies. */
+export interface SectionBlockLayout {
+  readonly label: string;
+  readonly count: number;
+}
+
+export interface SectionLayoutEntry {
+  readonly code: string | null;
+  readonly label: string | null;
+  readonly blocks: readonly SectionBlockLayout[];
+}
+
+/**
+ * The frozen printed structure of one version. Stores `count` and NEVER
+ * `questionIds`: `questionOrder` is the only source of truth for order, and
+ * the `count`s only tell the renderer where to cut (design doc §3.6).
+ *
+ * INVARIANT: the sum of every `count` equals the length of `questionOrder`.
+ */
+export type SectionLayout = readonly SectionLayoutEntry[];
+
 export interface Version {
   readonly code: string;
   readonly questionOrder: string[];

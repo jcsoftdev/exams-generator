@@ -177,6 +177,7 @@ const CETZ_RULES = [
   "Estructura obligatoria: `#canvas({ import draw: *  ...dibujos... })`. Coordenadas como tuplas `(x, y)`.",
   "Funciones disponibles: `line((x1,y1), (x2,y2), .., close: true)`, `circle((x,y), radius: r)`, `content((x,y), [texto])`, `rect((x1,y1), (x2,y2))`.",
   "PROHIBIDO devolver un placeholder o solo la palabra 'CeTZ'/'figura' en figureCode — o es código real que empieza con el import de arriba, o es null.",
+  "CeTZ dibuja figuras geométricas y esquemas, NO reproduce imágenes: si lo que acompaña a la pregunta es una fotografía, un afiche, un escaneo o un gráfico estadístico con estilo propio, devuelve figureCode null — esa imagen se adjunta aparte como complemento — y deja el enunciado completo en bodyTypst.",
   "Si dibujas un polígono con vértices nombrados (ej. un cuadrilátero ABCD, un triángulo PQR), usa UNA sola llamada a line() con TODOS los vértices en el orden del perímetro (el mismo orden en que aparecen en el nombre, ej. ABCD → A, B, C, D) y close: true al final — NUNCA generes los lados con varias llamadas line() separadas, porque así es fácil conectar dos vértices que en realidad son una DIAGONAL (ej. A con C en un cuadrilátero ABCD) creyendo que es un lado. NUNCA conectes diagonales como si fueran lados del perímetro.",
   "Ejemplo válido completo:",
   CETZ_EXAMPLE,
@@ -347,6 +348,9 @@ export function buildOpenRouterReviseRequestBody(
 const EXTRACT_SYSTEM_PROMPT = [
   "Eres un asistente que extrae preguntas tipo examen de admisión desde fotos de material impreso o manuscrito peruano.",
   "Lee la imagen y transcribe la pregunta que contiene: enunciado, alternativas y, si es identificable, la alternativa correcta.",
+  "La imagen es un recorte de un examen impreso, así que trae marcas de su hoja de origen que NO son parte de la pregunta: la numeración con que venía (\"17.\", \"06.\", \"43.\"), las letras de sus alternativas (\"a)\", \"b)\", \"A)\"), encabezados, pies de página y marcas de agua (\"Prohibida su venta\", \"Distribución gratuita\"), y a veces un pedazo de la pregunta vecina. Devuelve SOLO la pregunta: sin su numeración, sin las letras de sus alternativas, sin nada de la hoja.",
+  "Si el recorte trae texto de una segunda pregunta, transcribe únicamente la que está completa y descarta la otra.",
+  "Transcribe la matemática como Typst, nunca como texto plano aplanado: los subíndices y superíndices que el recorte muestra pequeños son parte de la fórmula ($H_2 O$, $x^2$), y un operador con símbolo propio se escribe con ese símbolo, no con un signo de interrogación ni un emoji.",
   'Además, sugiere el curso (ej. "Aritmética", "Comunicación", "Historia del Perú") y el tema/subtema específico que la pregunta evalúa, SOLO si puedes inferirlos con confianza del contenido de la imagen — si no estás seguro, responde null en ese campo en vez de adivinar.',
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
   TYPST_MATH_RULES,

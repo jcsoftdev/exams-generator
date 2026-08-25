@@ -86,6 +86,14 @@ def check_entry(entry: dict, lot_dir: Path, valid: set[tuple[str, str]]) -> list
     if image and not (lot_dir / image).exists():
         problems.append(f"imagePath does not exist: {image}")
 
+    # One image per alternative slot, `null` where the option is plain text. A
+    # sequence question offers five drawings and no words, so those slots are
+    # legitimately empty strings — see `plan-image-lot-restructure.ts`.
+    alternative_images = entry.get("alternativeImagePaths") or []
+    for slot in alternative_images:
+        if slot and not (lot_dir / slot).exists():
+            problems.append(f"alternativeImagePaths entry does not exist: {slot}")
+
     body = (entry.get("bodyTypst") or "").strip()
     answer = entry.get("correctAnswer")
     if body and "ingl" not in fold_spaces(course or "") and not reads_as_spanish(body):
@@ -94,8 +102,16 @@ def check_entry(entry: dict, lot_dir: Path, valid: set[tuple[str, str]]) -> list
         alternatives = entry.get("alternatives") or []
         if len(alternatives) < 2:
             problems.append(f"only {len(alternatives)} alternatives")
-        if any(not str(a).strip() for a in alternatives):
-            problems.append("an alternative is empty")
+        if alternative_images and len(alternative_images) != len(alternatives):
+            problems.append(
+                f"alternativeImagePaths has {len(alternative_images)} slots "
+                f"for {len(alternatives)} alternatives"
+            )
+        if any(
+            not str(a).strip() and not (alternative_images[i] if i < len(alternative_images) else None)
+            for i, a in enumerate(alternatives)
+        ):
+            problems.append("an alternative is empty and has no image either")
         if not (isinstance(answer, str) and answer.isdigit() and int(answer) < len(alternatives)):
             problems.append(f"correctAnswer {answer!r} is not an index into {len(alternatives)} alternatives")
     else:
@@ -142,6 +158,9 @@ def main() -> int:
 
                 if entry.get("imagePath"):
                     referenced_in_dir.add(entry["imagePath"])
+                for slot in entry.get("alternativeImagePaths") or []:
+                    if slot:
+                        referenced_in_dir.add(slot)
 
                 source = entry.get("sourceName") or ""
                 if source in seen_sources and seen_sources[source] != path.name:

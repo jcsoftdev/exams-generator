@@ -282,6 +282,30 @@ describe("buildOpenRouterExtractRequestBody", () => {
     );
   });
 
+  it("tells the model to drop the numbering the source printed on the question", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
+
+    expect(promptText).toMatch(/numeraci[oó]n/i);
+  });
+
+  it("tells the model to drop the letters the source printed on the alternatives", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
+
+    expect(promptText).toMatch(/letra/i);
+  });
+
+  it("tells the model to transcribe the statement rather than describe the image", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
+
+    expect(promptText).toMatch(/transcribe/i);
+  });
+
+  it("tells the model to leave figureCode null when the figure is a photograph it cannot draw", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
+
+    expect(promptText).toMatch(/fotograf|afiche|escaneo/i);
+  });
+
   it("tells the model to guess course/topic ONLY when confident, null otherwise", () => {
     const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
 

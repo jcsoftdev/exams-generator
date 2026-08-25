@@ -4,6 +4,13 @@ export interface StructuredContentInput {
   readonly bodyTypst: string | undefined;
   readonly alternatives: readonly string[] | undefined;
   readonly correctAnswer: string | undefined;
+  /**
+   * Per-slot flag saying that alternative is a picture rather than a phrase —
+   * a sequence question whose five options ARE the drawings has nothing to put
+   * in the text, and `typst-template.ts` renders the image in place of it.
+   * Omitted entirely for the ordinary all-text question.
+   */
+  readonly alternativeHasImage?: readonly boolean[];
 }
 
 /**
@@ -22,10 +29,11 @@ export function validateStructuredContent(input: StructuredContentInput): string
   }
 
   const alternatives = input.alternatives;
+  const hasImage = (index: number): boolean => input.alternativeHasImage?.[index] === true;
   if (
     !alternatives ||
     alternatives.length < MIN_ALTERNATIVES ||
-    alternatives.some((alt) => !alt || alt.trim().length === 0)
+    alternatives.some((alt, index) => (!alt || alt.trim().length === 0) && !hasImage(index))
   ) {
     errors.push(`alternatives is required and must have at least ${MIN_ALTERNATIVES} non-blank entries`);
   }

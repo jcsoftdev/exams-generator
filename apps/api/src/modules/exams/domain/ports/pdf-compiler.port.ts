@@ -35,11 +35,35 @@ export interface ExamPdfStructuredQuestion {
 
 export type ExamPdfQuestion = ExamPdfImageQuestion | ExamPdfStructuredQuestion;
 
+/**
+ * A printed block of the booklet. An empty `label` means "no heading" (the
+ * single-question preview, and versions generated before the official layout
+ * feature).
+ *
+ * A block spans several courses by definition — the UNI prints "MATEMÁTICA"
+ * as a single 40-question block (design doc §2.2).
+ */
+export interface ExamPdfBlock {
+  readonly label: string;
+  readonly questions: readonly ExamPdfQuestion[];
+}
+
+/**
+ * A section of the booklet — the "prueba" (E1/E2/E3) at UNI, the curricular
+ * area at UNCP. A missing/null `label` means no heading and no page break.
+ * The printed numbering restarts at every section.
+ */
+export interface ExamPdfSection {
+  readonly code?: string | null;
+  readonly label?: string | null;
+  readonly blocks: readonly ExamPdfBlock[];
+}
+
 export interface ExamPdfDocumentInput {
   readonly title: string;
   readonly versionLabel: string;
   readonly tenantLogoAbsolutePath?: string;
-  readonly questions: readonly ExamPdfQuestion[];
+  readonly sections: readonly ExamPdfSection[];
 }
 
 export interface AnswerKeyEntry {
@@ -47,10 +71,20 @@ export interface AnswerKeyEntry {
   readonly correctOption: string;
 }
 
+/**
+ * A stretch of the answer key that corresponds to one booklet section. Its
+ * numbering is LOCAL: if the booklet says "14", the key has to say "14" too,
+ * not that question's global position in the exam (design doc §6.3).
+ */
+export interface AnswerKeySection {
+  readonly label?: string | null;
+  readonly entries: readonly AnswerKeyEntry[];
+}
+
 export interface AnswerKeyDocumentInput {
   readonly title: string;
   readonly versionLabel: string;
-  readonly entries: readonly AnswerKeyEntry[];
+  readonly sections: readonly AnswerKeySection[];
 }
 
 export interface PdfCompilerPort {

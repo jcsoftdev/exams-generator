@@ -12,6 +12,12 @@ A question becomes an image when its text cannot be trusted: a missing
 alternative, or math that `pdftotext` mangles. Everything else stays text, which
 is searchable and re-typesettable.
 
+An image entry is a WAY STATION, not a finished question. The PNG is a crop of
+someone else's exam sheet and carries its numbering, its lowercase `a)`-`e)`
+lettering and its watermarks straight into the generated exam. Run
+`apps/api/src/scripts/restructure-image-lot.ts` afterwards to read the crops
+back into text; whatever it cannot recover stays an image, which is the point.
+
 Course and topic come from `classify_topics.py`; run with `--dry-run` first and
 read the printed assignments before seeding — the classifier is a suggestion.
 """
@@ -156,7 +162,9 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true", help="print assignments, write nothing")
     ap.add_argument("--all-images", action="store_true",
                     help="bake every question as a PNG — for PDFs whose symbol fonts "
-                         "pdftotext transcribes wrongly")
+                         "pdftotext transcribes wrongly. Follow with "
+                         "restructure-image-lot.ts: the bank's standard is text plus an "
+                         "optional complement image, never a screenshot of the source sheet")
     args = ap.parse_args()
 
     parsed = json.loads(args.parsed.read_text())
