@@ -1,0 +1,73 @@
+import { attributeFigureToAlternative } from "./attribute-figure-to-alternative";
+import { TextWord } from "./ports/text-region-detector.port";
+
+function marker(text: string, y: number): TextWord {
+  return { text, box: { x: 0.05, y, w: 0.04, h: 0.03 }, confidence: 95 };
+}
+
+function figure(y: number): { x: number; y: number; w: number; h: number } {
+  return { x: 0.3, y, w: 0.2, h: 0.08 };
+}
+
+/** Markers at 0.50, 0.60, 0.70, 0.80, 0.90 — the alternatives block of a page. */
+const MARKERS = [
+  marker("A)", 0.5),
+  marker("B)", 0.6),
+  marker("C)", 0.7),
+  marker("D)", 0.8),
+  marker("E)", 0.9),
+];
+
+describe("attributeFigureToAlternative", () => {
+  it("MUST: a figure inside C)'s band belongs to alternative index 2", () => {
+    const result = attributeFigureToAlternative([figure(0.72)], MARKERS);
+
+    expect(result.byAlternative).toEqual([{ alternativeIndex: 2, box: figure(0.72) }]);
+    expect(result.complement).toBeUndefined();
+  });
+
+  it("MUST: a figure above the first marker is the statement's complement", () => {
+    const result = attributeFigureToAlternative([figure(0.2)], MARKERS);
+
+    expect(result.complement).toEqual(figure(0.2));
+    expect(result.byAlternative).toEqual([]);
+  });
+
+  it("splits several figures across their own alternatives", () => {
+    const result = attributeFigureToAlternative([figure(0.52), figure(0.82)], MARKERS);
+
+    expect(result.byAlternative.map((entry) => entry.alternativeIndex)).toEqual([0, 3]);
+  });
+
+  it("accepts the other marker punctuations a printed exam uses", () => {
+    const dotted = [marker("a.", 0.5), marker("b.", 0.6), marker("c.", 0.7)];
+
+    const result = attributeFigureToAlternative([figure(0.72)], dotted);
+
+    expect(result.byAlternative).toEqual([{ alternativeIndex: 2, box: figure(0.72) }]);
+  });
+
+  it("with no marker recognised, every figure is complement — the common case degrading safely", () => {
+    const result = attributeFigureToAlternative([figure(0.72)], [marker("Hola", 0.5)]);
+
+    expect(result.complement).toEqual(figure(0.72));
+    expect(result.byAlternative).toEqual([]);
+  });
+
+  it("keeps only the FIRST occurrence of a letter — the letter also appears inside the answers' text", () => {
+    const noisy = [...MARKERS, marker("A)", 0.95)];
+
+    const result = attributeFigureToAlternative([figure(0.96)], noisy);
+
+    // 0.96 is below E)'s marker at 0.90, so it belongs to E (index 4), not to
+    // the stray "A)" the OCR also found down there.
+    expect(result.byAlternative).toEqual([{ alternativeIndex: 4, box: figure(0.96) }]);
+  });
+
+  it("takes at most one complement — a second figure above the markers is dropped, not stacked", () => {
+    const result = attributeFigureToAlternative([figure(0.1), figure(0.2)], MARKERS);
+
+    expect(result.complement).toEqual(figure(0.1));
+    expect(result.byAlternative).toEqual([]);
+  });
+});
