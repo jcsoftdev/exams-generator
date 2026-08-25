@@ -2,9 +2,10 @@ import { Module } from "@nestjs/common";
 import { BullModule } from "@nestjs/bullmq";
 import { BankModule } from "../bank/bank.module";
 import { LazyQuestionGeneratorAdapter } from "./adapters/lazy-question-generator.adapter";
+import { SharpImageCropperAdapter } from "./adapters/image/sharp-image-cropper.adapter";
 import { AiController } from "./ai.controller";
 import { AiJobsController } from "./ai-jobs.controller";
-import { QUESTION_GENERATOR_PORT } from "./ai.constants";
+import { IMAGE_CROPPER_PORT, QUESTION_GENERATOR_PORT } from "./ai.constants";
 import { resolveQuestionGeneratorAdapter } from "./ai-provider";
 import { GenerationJobEventsService } from "./generation-job-events.service";
 import { GenerationJobsProcessor } from "./generation-jobs.processor";
@@ -41,6 +42,7 @@ import { ReviseQuestionService } from "./revise-question.service";
       provide: QUESTION_GENERATOR_PORT,
       useFactory: () => new LazyQuestionGeneratorAdapter(resolveQuestionGeneratorAdapter),
     },
+    { provide: IMAGE_CROPPER_PORT, useClass: SharpImageCropperAdapter },
   ],
   exports: [QUESTION_GENERATOR_PORT, GenerationJobsRepository, GenerationJobsService],
 })

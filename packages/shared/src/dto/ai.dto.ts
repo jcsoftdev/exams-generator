@@ -178,3 +178,41 @@ export interface AiRevisedQuestion {
   readonly suggestedCourseName?: string;
   readonly suggestedTopicName?: string;
 }
+
+/** A crop rectangle in coordinates normalized to 0..1 — see the API's `NormalizedBox`. */
+export interface NormalizedBoxDto {
+  readonly x: number;
+  readonly y: number;
+  readonly w: number;
+  readonly h: number;
+}
+
+/**
+ * One cropped graphic, carried inline as a `data:` URL rather than as an
+ * asset id. Nothing is persisted until the teacher saves the question, so a
+ * discarded draft leaves no orphan asset behind to clean up.
+ */
+export interface AiQuestionCrop {
+  readonly dataUrl: string;
+  readonly box: NormalizedBoxDto;
+}
+
+/** A crop belonging to one alternative slot. `alternativeIndex` is 0-based. */
+export interface AiAlternativeCrop extends AiQuestionCrop {
+  readonly alternativeIndex: number;
+}
+
+/**
+ * `POST /ai/questions/extract`'s response. Extends the revise response with
+ * the crop fields; both are absent when the photo held no graphic at all,
+ * which is the signal the UI uses to render no crop controls.
+ *
+ * Task 6 adds an `extractionId` here (a Redis cache handle for a follow-up
+ * re-crop endpoint) — deliberately not added yet, since this task builds the
+ * initial extraction only, not the cache it will sit on top of.
+ */
+export interface AiExtractedQuestion extends AiRevisedQuestion {
+  readonly figureCrop?: AiQuestionCrop;
+  /** Sparse — only the alternatives that are drawings appear here. */
+  readonly alternativeCrops?: readonly AiAlternativeCrop[];
+}

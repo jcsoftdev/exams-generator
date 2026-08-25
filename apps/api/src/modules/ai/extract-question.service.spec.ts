@@ -1,5 +1,6 @@
 import { BadRequestException, UnprocessableEntityException } from "@nestjs/common";
 import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
+import { ImageCropperPort } from "./domain/ports/image-cropper.port";
 import { ExtractQuestionService } from "./extract-question.service";
 import { fakePng } from "../../test-support/image-fixtures";
 
@@ -17,8 +18,16 @@ function buildDeps() {
     extractFromImage: jest.fn().mockResolvedValue(EXTRACTED_QUESTION),
   };
 
-  const service = new ExtractQuestionService(generator);
-  return { service, generator };
+  const cropper: jest.Mocked<ImageCropperPort> = {
+    // 4x1 all-white raster: `snapBoxToInk` finds no contrast and leaves every
+    // box exactly as the model reported it, so these tests assert the
+    // service's plumbing, not the snapping algorithm (covered in its own spec).
+    raster: jest.fn().mockResolvedValue({ gray: new Uint8Array(4).fill(255), width: 4, height: 1 }),
+    crop: jest.fn().mockResolvedValue(Buffer.from("cropped-png-bytes")),
+  };
+
+  const service = new ExtractQuestionService(generator, cropper);
+  return { service, generator, cropper };
 }
 
 describe("ExtractQuestionService.extract", () => {
@@ -69,5 +78,73 @@ describe("ExtractQuestionService.extract", () => {
 
     await expect(service.extract(file)).rejects.toBeInstanceOf(BadRequestException);
     expect(generator.extractFromImage).not.toHaveBeenCalled();
+  });
+});
+
+describe("ExtractQuestionService.extract — crops", () => {
+  const FIGURE_BOX = { x: 0.1, y: 0.2, w: 0.5, h: 0.3 };
+  const ALT_BOX = { x: 0.1, y: 0.7, w: 0.2, h: 0.1 };
+
+  it("does not touch the cropper when the model reported no boxes", async () => {
+    const { service, cropper } = buildDeps();
+
+    const result = await service.extract({ buffer: fakePng(), mimetype: "image/png" });
+
+    expect(cropper.raster).not.toHaveBeenCalled();
+    expect(cropper.crop).not.toHaveBeenCalled();
+    expect(result.figureCrop).toBeUndefined();
+    expect(result.alternativeCrops).toBeUndefined();
+  });
+
+  it("crops the figure box and returns it as a data URL", async () => {
+    const { service, generator, cropper } = buildDeps();
+    generator.extractFromImage.mockResolvedValue({ ...EXTRACTED_QUESTION, figureBox: FIGURE_BOX });
+
+    const result = await service.extract({ buffer: fakePng(), mimetype: "image/png" });
+
+    expect(cropper.crop).toHaveBeenCalledTimes(1);
+    expect(result.figureCrop!.box).toEqual(FIGURE_BOX);
+    expect(result.figureCrop!.dataUrl).toBe(
+      `data:image/png;base64,${Buffer.from("cropped-png-bytes").toString("base64")}`,
+    );
+  });
+
+  it("returns one crop per graphic alternative, carrying its index, and skips the text ones", async () => {
+    const { service, generator } = buildDeps();
+    generator.extractFromImage.mockResolvedValue({
+      ...EXTRACTED_QUESTION,
+      alternativeBoxes: [ALT_BOX, null, ALT_BOX, null, null],
+    });
+
+    const result = await service.extract({ buffer: fakePng(), mimetype: "image/png" });
+
+    expect(result.alternativeCrops!.map((crop) => crop.alternativeIndex)).toEqual([0, 2]);
+    expect(result.alternativeCrops![0]!.box).toEqual(ALT_BOX);
+  });
+
+  it("still returns the transcribed question when cropping blows up", async () => {
+    const { service, generator, cropper } = buildDeps();
+    generator.extractFromImage.mockResolvedValue({ ...EXTRACTED_QUESTION, figureBox: FIGURE_BOX });
+    cropper.raster.mockRejectedValue(new Error("unsupported image format"));
+
+    const result = await service.extract({ buffer: fakePng(), mimetype: "image/png" });
+
+    expect(result.figureCrop).toBeUndefined();
+    expect(result.bodyTypst).toBe(EXTRACTED_QUESTION.bodyTypst);
+    expect(result.correctAnswer).toBe("1");
+  });
+
+  it("never leaks the raw boxes from the generator contract into the HTTP response", async () => {
+    const { service, generator } = buildDeps();
+    generator.extractFromImage.mockResolvedValue({ ...EXTRACTED_QUESTION, figureBox: FIGURE_BOX });
+
+    const result = await service.extract({ buffer: fakePng(), mimetype: "image/png" });
+
+    expect(result).not.toHaveProperty("figureBox");
+    expect(result).not.toHaveProperty("alternativeBoxes");
+    // Companion assertion: without this, an empty `{}` response would also
+    // satisfy the two checks above — proving `figureCrop` really is present
+    // rules that out and confirms the boxes were converted, not just dropped.
+    expect(result.figureCrop).toBeDefined();
   });
 });

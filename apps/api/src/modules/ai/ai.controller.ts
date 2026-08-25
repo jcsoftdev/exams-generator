@@ -15,7 +15,7 @@ import {
 } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { Throttle } from "@nestjs/throttler";
-import { AiRevisedQuestion } from "@exams-generator/shared";
+import { AiExtractedQuestion, AiRevisedQuestion } from "@exams-generator/shared";
 import { AccountThrottlerGuard, AI_PER_ACCOUNT_THROTTLE } from "../../common/account-throttler.guard";
 import { Response } from "express";
 import { CurrentUser } from "../auth/current-user.decorator";
@@ -165,7 +165,7 @@ export class AiController {
   @Post("extract")
   @HttpCode(200)
   @UseInterceptors(FileInterceptor("file", { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
-  async extract(@UploadedFile() file: Express.Multer.File): Promise<AiRevisedQuestion> {
+  async extract(@UploadedFile() file: Express.Multer.File): Promise<AiExtractedQuestion> {
     if (!file) {
       throw new BadRequestException("file is required");
     }
