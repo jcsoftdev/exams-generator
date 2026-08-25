@@ -69,14 +69,14 @@ describe("snapBoxToInk", () => {
     expect(snapBoxToInk(raster, box, 0)).toEqual(box);
   });
 
-  it("never grows beyond the bounded expansion margin around the model's box", () => {
-    // Ink spans the whole canvas, but the model pointed at a tiny corner.
-    const raster = rasterWithInk({ left: 0, top: 0, width: 8, height: 8 });
-    const snapped = snapBoxToInk(raster, { x: 0, y: 0, w: 0.25, h: 0.25 }, 0);
+  it("ignores ink outside the expanded search window instead of chasing it", () => {
+    // A black bar spanning the FULL width at rows 2-3, on white paper.
+    const raster = rasterWithInk({ left: 0, top: 2, width: 8, height: 2 });
+    // The model pointed at a 2x2 patch: pixels x 2..3, y 2..3.
+    const snapped = snapBoxToInk(raster, { x: 0.25, y: 0.25, w: 0.25, h: 0.25 }, 0);
 
-    // Expansion is capped at half the reported box's size on each side, so a
-    // box that pointed at a paragraph can never swallow the entire page.
-    expect(snapped.w).toBeLessThanOrEqual(0.25 * 2);
-    expect(snapped.h).toBeLessThanOrEqual(0.25 * 2);
+    // Unclamped, the bar's ink bounds would be x 0..7 (w = 8/8). The search
+    // window caps the horizontal reach at x 1..4, so the snap stops there.
+    expect(snapped).toEqual({ x: 1 / 8, y: 2 / 8, w: 4 / 8, h: 2 / 8 });
   });
 });

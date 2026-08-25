@@ -23,6 +23,11 @@ const MAX_EXPANSION_RATIO = 0.5;
  */
 const INK_CONTRAST = 0.35;
 
+/**
+ * Minimum span (brightest - darkest) to distinguish ink from blank paper or uniform grey.
+ */
+const MIN_CONTRAST_SPAN = 32;
+
 function searchArea(box: NormalizedBox, raster: ImageRaster): PixelRect {
   const expanded: NormalizedBox = {
     x: Math.max(box.x - box.w * MAX_EXPANSION_RATIO, 0),
@@ -55,7 +60,7 @@ function inkThreshold(raster: ImageRaster, area: PixelRect): number | null {
     }
   }
   const span = brightest - darkest;
-  if (span < 32) {
+  if (span < MIN_CONTRAST_SPAN) {
     return null;
   }
   return darkest + span * INK_CONTRAST;
