@@ -1,8 +1,12 @@
 import { BadRequestException, UnprocessableEntityException } from "@nestjs/common";
+import { AuthTokenPayload } from "../auth/token.service";
 import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import { ImageCropperPort } from "./domain/ports/image-cropper.port";
+import { ExtractionCachePort } from "./domain/ports/extraction-cache.port";
 import { ExtractQuestionService } from "./extract-question.service";
 import { fakePng } from "../../test-support/image-fixtures";
+
+const USER = { sub: "user-1", tenantId: "tenant-1" } as unknown as AuthTokenPayload;
 
 const EXTRACTED_QUESTION: GeneratedQuestion = {
   bodyTypst: "¿Cuánto es $2 + 2$?",
@@ -26,8 +30,13 @@ function buildDeps() {
     crop: jest.fn().mockResolvedValue(Buffer.from("cropped-png-bytes")),
   };
 
-  const service = new ExtractQuestionService(generator, cropper);
-  return { service, generator, cropper };
+  const cache: jest.Mocked<ExtractionCachePort> = {
+    put: jest.fn(),
+    get: jest.fn(),
+  };
+
+  const service = new ExtractQuestionService(generator, cropper, cache);
+  return { service, generator, cropper, cache };
 }
 
 describe("ExtractQuestionService.extract", () => {
@@ -35,7 +44,7 @@ describe("ExtractQuestionService.extract", () => {
     const { service, generator } = buildDeps();
     const file = { buffer: fakePng(), mimetype: "image/png" };
 
-    const result = await service.extract(file);
+    const result = await service.extract(USER, file);
 
     expect(generator.extractFromImage).toHaveBeenCalledWith({
       image: file.buffer,
@@ -54,7 +63,7 @@ describe("ExtractQuestionService.extract", () => {
     });
     const file = { buffer: fakePng(), mimetype: "image/png" };
 
-    const result = await service.extract(file);
+    const result = await service.extract(USER, file);
 
     expect(result.correctAnswer).toBe("1");
   });
@@ -69,14 +78,14 @@ describe("ExtractQuestionService.extract", () => {
     });
     const file = { buffer: fakePng(), mimetype: "image/png" };
 
-    await expect(service.extract(file)).rejects.toBeInstanceOf(UnprocessableEntityException);
+    await expect(service.extract(USER, file)).rejects.toBeInstanceOf(UnprocessableEntityException);
   });
 
   it("rejects a non-image buffer with 400 WITHOUT spending a vision call", async () => {
     const { service, generator } = buildDeps();
     const file = { buffer: Buffer.from("<svg><script/></svg>"), mimetype: "image/png" };
 
-    await expect(service.extract(file)).rejects.toBeInstanceOf(BadRequestException);
+    await expect(service.extract(USER, file)).rejects.toBeInstanceOf(BadRequestException);
     expect(generator.extractFromImage).not.toHaveBeenCalled();
   });
 });
@@ -88,7 +97,7 @@ describe("ExtractQuestionService.extract — crops", () => {
   it("does not touch the cropper when the model reported no boxes", async () => {
     const { service, cropper } = buildDeps();
 
-    const result = await service.extract({ buffer: fakePng(), mimetype: "image/png" });
+    const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
 
     expect(cropper.raster).not.toHaveBeenCalled();
     expect(cropper.crop).not.toHaveBeenCalled();
@@ -100,7 +109,7 @@ describe("ExtractQuestionService.extract — crops", () => {
     const { service, generator, cropper } = buildDeps();
     generator.extractFromImage.mockResolvedValue({ ...EXTRACTED_QUESTION, figureBox: FIGURE_BOX });
 
-    const result = await service.extract({ buffer: fakePng(), mimetype: "image/png" });
+    const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
 
     expect(cropper.crop).toHaveBeenCalledTimes(1);
     expect(result.figureCrop!.box).toEqual(FIGURE_BOX);
@@ -116,7 +125,7 @@ describe("ExtractQuestionService.extract — crops", () => {
       alternativeBoxes: [ALT_BOX, null, ALT_BOX, null, null],
     });
 
-    const result = await service.extract({ buffer: fakePng(), mimetype: "image/png" });
+    const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
 
     expect(result.alternativeCrops!.map((crop) => crop.alternativeIndex)).toEqual([0, 2]);
     expect(result.alternativeCrops![0]!.box).toEqual(ALT_BOX);
@@ -127,7 +136,7 @@ describe("ExtractQuestionService.extract — crops", () => {
     generator.extractFromImage.mockResolvedValue({ ...EXTRACTED_QUESTION, figureBox: FIGURE_BOX });
     cropper.raster.mockRejectedValue(new Error("unsupported image format"));
 
-    const result = await service.extract({ buffer: fakePng(), mimetype: "image/png" });
+    const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
 
     expect(result.figureCrop).toBeUndefined();
     expect(result.bodyTypst).toBe(EXTRACTED_QUESTION.bodyTypst);
@@ -138,7 +147,7 @@ describe("ExtractQuestionService.extract — crops", () => {
     const { service, generator } = buildDeps();
     generator.extractFromImage.mockResolvedValue({ ...EXTRACTED_QUESTION, figureBox: FIGURE_BOX });
 
-    const result = await service.extract({ buffer: fakePng(), mimetype: "image/png" });
+    const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
 
     expect(result).not.toHaveProperty("figureBox");
     expect(result).not.toHaveProperty("alternativeBoxes");
@@ -146,5 +155,25 @@ describe("ExtractQuestionService.extract — crops", () => {
     // satisfy the two checks above — proving `figureCrop` really is present
     // rules that out and confirms the boxes were converted, not just dropped.
     expect(result.figureCrop).toBeDefined();
+  });
+
+  it("caches the photo and returns an extractionId only when there is something to re-crop", async () => {
+    const { service, generator, cache } = buildDeps();
+    generator.extractFromImage.mockResolvedValue({ ...EXTRACTED_QUESTION, figureBox: FIGURE_BOX });
+    const file = { buffer: fakePng(), mimetype: "image/png" };
+
+    const withCrop = await service.extract(USER, file);
+    expect(withCrop.extractionId).toEqual(expect.any(String));
+    expect(cache.put).toHaveBeenCalledWith(withCrop.extractionId, {
+      userId: USER.sub,
+      image: file.buffer,
+      mimeType: "image/png",
+    });
+
+    generator.extractFromImage.mockResolvedValue(EXTRACTED_QUESTION);
+    cache.put.mockClear();
+    const withoutCrop = await service.extract(USER, file);
+    expect(withoutCrop.extractionId).toBeUndefined();
+    expect(cache.put).not.toHaveBeenCalled();
   });
 });

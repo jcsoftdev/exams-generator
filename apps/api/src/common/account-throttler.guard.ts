@@ -39,6 +39,13 @@ export function accountTrackerFor(request: { user?: AuthTokenPayload }): string 
  */
 export const AI_PER_ACCOUNT_THROTTLE = { default: { ttl: 60_000, limit: 30 } };
 
+/**
+ * Crop adjustment calls no model: they re-cut an image already in Redis.
+ * Inheriting `AI_PER_ACCOUNT_THROTTLE` (30/min, sized for paid model calls)
+ * would let three crop adjustments eat a teacher's whole generation quota.
+ */
+export const AI_CROP_PER_ACCOUNT_THROTTLE = { default: { ttl: 60_000, limit: 240 } };
+
 @Injectable()
 export class AccountThrottlerGuard extends ThrottlerGuard {
   protected override getTracker(req: Record<string, unknown>): Promise<string> {

@@ -207,12 +207,16 @@ export interface AiAlternativeCrop extends AiQuestionCrop {
  * the crop fields; both are absent when the photo held no graphic at all,
  * which is the signal the UI uses to render no crop controls.
  *
- * Task 6 adds an `extractionId` here (a Redis cache handle for a follow-up
- * re-crop endpoint) — deliberately not added yet, since this task builds the
- * initial extraction only, not the cache it will sit on top of.
+ * `extractionId` (Task 6) is a Redis cache handle for
+ * `POST /ai/questions/extract/:extractionId/crop`, the follow-up manual
+ * re-crop endpoint — present only when the photo actually held something to
+ * re-crop (i.e. whenever `figureCrop`/`alternativeCrops` are present); a
+ * text-only extraction never populates it, since there is nothing to hold a
+ * cache entry open for.
  */
 export interface AiExtractedQuestion extends AiRevisedQuestion {
   readonly figureCrop?: AiQuestionCrop;
   /** Sparse — only the alternatives that are drawings appear here. */
   readonly alternativeCrops?: readonly AiAlternativeCrop[];
+  readonly extractionId?: string;
 }

@@ -1,13 +1,16 @@
+import { randomUUID } from "node:crypto";
 import { Inject, Injectable, Logger, UnprocessableEntityException } from "@nestjs/common";
 import { AiAlternativeCrop, AiExtractedQuestion, AiQuestionCrop } from "@exams-generator/shared";
 import { requireImageMime } from "../assets/image-mime";
 import { validateStructuredContent } from "../bank/domain/validate-structured-content";
+import { AuthTokenPayload } from "../auth/token.service";
 import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import { ImageCropperPort } from "./domain/ports/image-cropper.port";
+import { ExtractionCachePort } from "./domain/ports/extraction-cache.port";
 import { NormalizedBox } from "./domain/normalized-box";
 import { snapBoxToInk } from "./domain/snap-box-to-ink";
 import { CROP_INK_PADDING_PX, CROP_MAX_WIDTH_PX } from "./domain/crop.constants";
-import { IMAGE_CROPPER_PORT, QUESTION_GENERATOR_PORT } from "./ai.constants";
+import { EXTRACTION_CACHE_PORT, IMAGE_CROPPER_PORT, QUESTION_GENERATOR_PORT } from "./ai.constants";
 import { correctAnswerLetterToIndex } from "./domain/correct-answer-letter-to-index";
 
 /** Raw multipart file shape this service needs — decoupled from Express/Multer types. */
@@ -37,6 +40,13 @@ export interface ExtractQuestionFile {
  * the response instead carries finished `data:` URL crops, snapped to the
  * real ink via `snapBoxToInk` and cut via `ImageCropperPort`. Nothing about
  * a crop is persisted here; a discarded draft leaves no orphan asset behind.
+ *
+ * Task 6: when there is at least one crop to adjust, the original photo is
+ * also stashed in `ExtractionCachePort` under a fresh `extractionId`, so the
+ * teacher can drag the rectangle and re-cut via `RecropQuestionService`
+ * without re-uploading the photo. A text-only extraction skips the cache
+ * entirely — there is no crop UI for it, so holding the photo for 30 minutes
+ * would buy nothing.
  */
 @Injectable()
 export class ExtractQuestionService {
@@ -45,9 +55,10 @@ export class ExtractQuestionService {
   constructor(
     @Inject(QUESTION_GENERATOR_PORT) private readonly generator: QuestionGeneratorPort,
     @Inject(IMAGE_CROPPER_PORT) private readonly cropper: ImageCropperPort,
+    @Inject(EXTRACTION_CACHE_PORT) private readonly cache: ExtractionCachePort,
   ) {}
 
-  async extract(file: ExtractQuestionFile): Promise<AiExtractedQuestion> {
+  async extract(user: AuthTokenPayload, file: ExtractQuestionFile): Promise<AiExtractedQuestion> {
     // Sniff before spending a vision-model call: `file.mimetype` is the
     // client's header, so a non-image (or a 5MB HTML blob) would otherwise be
     // shipped to OpenRouter and billed for nothing. Use the sniffed mime, not
@@ -80,7 +91,15 @@ export class ExtractQuestionService {
     const { figureBox, alternativeBoxes, ...draft } = extractedWithIndex;
     const crops = await this.buildCrops(file.buffer, mimeType, figureBox, alternativeBoxes);
 
-    return { ...draft, ...crops };
+    const hasCrops = !!crops.figureCrop || (crops.alternativeCrops?.length ?? 0) > 0;
+    if (!hasCrops) {
+      return { ...draft, ...crops };
+    }
+    // Only cached when there is something to re-crop: a text-only question
+    // has no crop UI, so holding its photo for 30 minutes buys nothing.
+    const extractionId = randomUUID();
+    await this.cache.put(extractionId, { userId: user.sub, image: file.buffer, mimeType });
+    return { ...draft, ...crops, extractionId };
   }
 
   /**

@@ -6,6 +6,7 @@ import {
   HttpException,
   HttpStatus,
   Param,
+  ParseUUIDPipe,
   Post,
   Res,
   UnprocessableEntityException,
@@ -15,12 +16,17 @@ import {
 } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
 import { Throttle } from "@nestjs/throttler";
-import { AiExtractedQuestion, AiRevisedQuestion } from "@exams-generator/shared";
-import { AccountThrottlerGuard, AI_PER_ACCOUNT_THROTTLE } from "../../common/account-throttler.guard";
+import { AiExtractedQuestion, AiQuestionCrop, AiRevisedQuestion } from "@exams-generator/shared";
+import {
+  AccountThrottlerGuard,
+  AI_CROP_PER_ACCOUNT_THROTTLE,
+  AI_PER_ACCOUNT_THROTTLE,
+} from "../../common/account-throttler.guard";
 import { Response } from "express";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
+import { NormalizedBox } from "./domain/normalized-box";
 import { ExtractQuestionService } from "./extract-question.service";
 import { GenerateQuestionsService, GenerateQuestionStreamEvent } from "./generate-questions.service";
 import {
@@ -28,6 +34,7 @@ import {
   AiInvalidResponseError,
   AiRateLimitError,
 } from "./domain/ports/question-generator.port";
+import { RecropQuestionService } from "./recrop-question.service";
 import { ReviseQuestionService } from "./revise-question.service";
 
 interface GenerateQuestionsBody {
@@ -41,6 +48,16 @@ interface GenerateQuestionsBody {
 
 interface ReviseQuestionBody {
   readonly instruction?: string;
+}
+
+/**
+ * Not a `class-validator` DTO like the rest of this module's request bodies
+ * (none of them are — see `main.ts`'s `ValidationPipe` docstring): the real
+ * validation is `isValidNormalizedBox` inside `RecropQuestionService.recrop`,
+ * which rejects a box outside the 0..1 canvas with 400.
+ */
+interface RecropQuestionBody {
+  readonly box: NormalizedBox;
 }
 
 /**
@@ -79,6 +96,7 @@ export class AiController {
     private readonly service: GenerateQuestionsService,
     private readonly reviseService: ReviseQuestionService,
     private readonly extractService: ExtractQuestionService,
+    private readonly recropService: RecropQuestionService,
   ) {}
 
   /**
@@ -165,14 +183,33 @@ export class AiController {
   @Post("extract")
   @HttpCode(200)
   @UseInterceptors(FileInterceptor("file", { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
-  async extract(@UploadedFile() file: Express.Multer.File): Promise<AiExtractedQuestion> {
+  async extract(
+    @CurrentUser() user: AuthTokenPayload,
+    @UploadedFile() file: Express.Multer.File,
+  ): Promise<AiExtractedQuestion> {
     if (!file) {
       throw new BadRequestException("file is required");
     }
     try {
-      return await this.extractService.extract({ buffer: file.buffer, mimetype: file.mimetype });
+      return await this.extractService.extract(user, { buffer: file.buffer, mimetype: file.mimetype });
     } catch (error) {
       mapAiProviderError(error);
     }
+  }
+
+  /**
+   * `POST /ai/questions/extract/:extractionId/crop` — re-cuts one crop with a
+   * box the teacher drew. 200, never 201: nothing is created, and the photo it
+   * reads was cached by the extraction call, not by this one.
+   */
+  @Post("extract/:extractionId/crop")
+  @HttpCode(200)
+  @Throttle(AI_CROP_PER_ACCOUNT_THROTTLE)
+  async recrop(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("extractionId", ParseUUIDPipe) extractionId: string,
+    @Body() body: RecropQuestionBody,
+  ): Promise<AiQuestionCrop> {
+    return this.recropService.recrop(user, extractionId, body.box);
   }
 }
