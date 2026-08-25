@@ -1527,6 +1527,8 @@ Expected: PASS — 4 tests.
 
 `ExtractQuestionService` recibe también `ExtractionCachePort` y el `AuthTokenPayload` del usuario. `AiController.extract` pasa a llevar `@CurrentUser()`.
 
+**Esto rompe los tests de Task 5 a propósito**, y arreglarlos es parte de este paso: `buildDeps()` suma un tercer mock (`cache: { put: jest.fn(), get: jest.fn() }`) al constructor, y cada llamada `service.extract(file)` pasa a ser `service.extract(USER, file)` con `const USER = { sub: "user-1", tenantId: "tenant-1" } as unknown as AuthTokenPayload`. Es un cambio mecánico sobre tests que ya existen — no se reescribe ninguna aserción.
+
 ```ts
 // extract-question.service.ts — constructor gains:
     @Inject(EXTRACTION_CACHE_PORT) private readonly cache: ExtractionCachePort,
@@ -1656,6 +1658,8 @@ export const AI_CROP_PER_ACCOUNT_THROTTLE = { default: { ttl: 60_000, limit: 240
       .attach("file", png, "question.png")
       .expect(200);
 
+    // `redis` is the shared client, pulled from the running app:
+    //   const redis = app.get<Redis>(REDIS_CLIENT);
     await redis.del(`ai:extract:${extracted.body.extractionId}`);
 
     await request(app.getHttpServer())
@@ -2275,7 +2279,8 @@ export class CropReviewComponent {
   }
 }
 
-function sameTarget(a: CropTarget, b: CropTarget): boolean {
+/** Exported because `bank-new` matches slots by target too — see Task 10. */
+export function sameTarget(a: CropTarget, b: CropTarget): boolean {
   if (a.kind !== b.kind) {
     return false;
   }
