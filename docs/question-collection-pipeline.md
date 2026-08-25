@@ -111,6 +111,65 @@ Cuándo usar `--all-images`: cuando `pdftotext` transcribe mal los símbolos del
 (fórmulas rotas, `µ` que sale como `P`, radicales perdidos). Un PNG horneado vale más que
 un texto en el que no se puede confiar.
 
+`--all-images` produce una forma **de paso, no de destino**. Un PNG de la hoja entera
+arrastra lo que la hoja traía y que no es la pregunta: su numeración de origen (`17.`,
+`06.`), sus alternativas en minúscula `a)`-`e)` chocando con las `A)`-`E)` que imprime
+`typst-template.ts`, marcas de agua (`Prohibida su venta`) y a veces un pedazo de la
+pregunta vecina. Eso contradice la regla de oro de arriba, y así se vieron 12 de las 70
+preguntas del examen del 2026-08-23.
+
+### Recuperar un lote horneado (sin proveedor de visión)
+
+Quien lee los PNG es la sesión de agente que trabaja en este repo. No hace falta pagar un
+endpoint para que describa una imagen que el propio lector puede abrir, así que el trabajo
+se parte en dos y queda reanudable:
+
+```bash
+# 1. qué recortes faltan, con la ruta que hay que abrir
+pnpm --filter @exams-generator/api restructure-image-lot -- --status
+pnpm --filter @exams-generator/api restructure-image-lot -- --lot <slug> --export --limit 12
+
+# 2. medir las cajas en vez de calcularlas a ojo
+python3 tools/harvest/figure_bounds.py <crop>.png --band 0.60 0.99   # fila de alternativas
+python3 tools/harvest/figure_bounds.py <crop>.png --band 0.17 0.60   # figura del enunciado
+
+# 3. escribir db/data/lots/transcriptions/<slug>.json y comprobar que compila
+pnpm --filter @exams-generator/api restructure-image-lot -- --verify <archivo>.json
+
+# 4. aplicar, y mirar cómo IMPRIME antes de sembrar
+pnpm --filter @exams-generator/api restructure-image-lot -- --lot <slug> --apply <archivo>.json
+pnpm --filter @exams-generator/api preview-lot -- <slug> "pregunta 43"
+```
+
+Una transcripción es un objeto por recorte, unido por `imagePath`:
+
+| campo | para qué |
+| --- | --- |
+| `bodyTypst` / `alternatives` | el enunciado y las opciones, ya en Typst |
+| `figureCode` | CeTZ, cuando la figura se puede redibujar; entonces no se recorta nada |
+| `figureCrop` | la caja de la figura dentro del recorte, en fracciones 0..1 |
+| `alternativeCrops` | una caja por alternativa, `null` donde la opción es texto |
+| `unreadable` | por qué este recorte NO puede volverse texto; se queda como imagen |
+
+Reglas que no se negocian:
+
+- **La clave publicada del lote gana siempre.** El lector la adivinaría desde una foto, y una
+  clave mal puesta es el único defecto que un profesor no detecta a simple vista.
+- **Cinco alternativas**, más estricto que el piso de 2 del banco: una opción perdida es el
+  síntoma que hizo hornear el PNG, y aceptar cuatro lavaría esa pérdida.
+- **Nunca se reutiliza el recorte de pregunta entera como complemento** — reimprimiría el
+  enunciado junto con la numeración y las letras del original. El complemento es la figura
+  sola, recortada.
+- **Medir, no estimar.** `figure_bounds.py` imprime las cajas listas para copiar; una caja un
+  pelo angosta amputa el borde derecho de un dibujo y una un pelo ancha se traga el `c)` del
+  vecino. Las dos sobreviven al compile y solo salen en el examen impreso.
+- **Verificar el compile y la impresión.** `--verify` compila con el binario Typst pineado
+  (0.15.1) y `--apply` se niega a aplicar un lote que no compile. `preview-lot` renderiza con
+  la plantilla real: es lo único que muestra los defectos de layout, que no fallan el compile.
+
+Al terminar un lote, `validate_lots.py` avisa de los PNG de pregunta entera que ya no
+referencia nadie; `--apply --prune` los borra.
+
 Verificación obligatoria antes de sembrar un lote:
 
 1. `validate_lots.py` en verde.

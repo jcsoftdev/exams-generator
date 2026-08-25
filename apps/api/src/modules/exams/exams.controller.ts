@@ -56,6 +56,17 @@ interface CreateExamBody {
     readonly topicId?: string;
     readonly difficulty?: string;
     readonly count?: number;
+    /**
+     * Layout metadata `POST /exams/blueprint/resolve` already worked out. The
+     * builder sends it straight back: without it everything the template
+     * resolved is lost on the round trip and the exam prints with no sections
+     * (design doc §4). Absent in a manual blueprint.
+     */
+    readonly sortOrder?: number;
+    readonly blockCode?: string;
+    readonly blockLabel?: string;
+    readonly sectionCode?: string;
+    readonly sectionLabel?: string;
   }>;
   readonly examType?: string;
   readonly universityId?: string;

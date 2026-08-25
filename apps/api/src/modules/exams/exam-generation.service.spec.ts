@@ -12,6 +12,21 @@ import { AuthTokenPayload } from "../auth/token.service";
 import { ExamForGenerationRecord, ExamsRepository } from "./exams.repository";
 import { ExamPdfGenerationError, ExamVersionGenerationService } from "./exam-generation.service";
 
+/**
+ * The PDF port takes a booklet as sections -> blocks -> questions, but these
+ * tests assert on the FLAT set of questions the service handed it: which ids
+ * were compiled, which paths were materialized, how the answer key lines up.
+ * None of that cares how the booklet is divided, so the two helpers below
+ * flatten the input once and every assertion stays as it was.
+ */
+function allQuestions(input: ExamPdfDocumentInput) {
+  return input.sections.flatMap((section) => section.blocks.flatMap((block) => block.questions));
+}
+
+function allEntries(input: AnswerKeyDocumentInput) {
+  return input.sections.flatMap((section) => section.entries);
+}
+
 const TEACHER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1", role: Role.Teacher };
 
 const READY_EXAM: ExamForGenerationRecord = {
@@ -110,6 +125,45 @@ function buildDeps() {
   return { service, repository, storage, pdfCompiler, logger };
 }
 
+/**
+ * An exam whose blueprint rows DID declare a layout. The fixtures above
+ * deliberately declare none — that is the legacy/manual path, where every
+ * question lands in one unlabeled section — so this one covers the other
+ * half: real pruebas and real blocks reaching the printed booklet.
+ */
+function sectionedExam(): ExamForGenerationRecord {
+  const placed = (
+    questionId: string,
+    sortOrder: number,
+    blockLabel: string,
+    sectionCode: string,
+    sectionLabel: string,
+  ) => ({
+    questionId,
+    position: sortOrder,
+    type: "image" as const,
+    correctAnswer: "a",
+    imageStorageKey: `bank/questions/${questionId}`,
+    imageMime: "image/png",
+    bodyTypst: null,
+    alternatives: null,
+    figureCode: null,
+    sortOrder,
+    blockLabel,
+    sectionCode,
+    sectionLabel,
+  });
+
+  return {
+    ...READY_EXAM,
+    selectedQuestions: [
+      placed("rm1", 0, "RAZ. MATEMÁTICO", "E1", "PRIMERA PRUEBA"),
+      placed("rv1", 1, "RAZ. VERBAL", "E1", "PRIMERA PRUEBA"),
+      placed("m1", 2, "MATEMÁTICA", "E2", "SEGUNDA PRUEBA"),
+    ],
+  };
+}
+
 describe("ExamVersionGenerationService.generateVersions", () => {
   it("rejects when the exam does not exist or belongs to another tenant", async () => {
     const { service, repository } = buildDeps();
@@ -159,6 +213,47 @@ describe("ExamVersionGenerationService.generateVersions", () => {
     expect(repository.confirmExam).not.toHaveBeenCalled();
   });
 
+  it("MUST: the PDF receives the sections and blocks the blueprint rows declared", async () => {
+    const { service, repository, pdfCompiler, storage } = buildDeps();
+    repository.getExamForGeneration.mockResolvedValue(sectionedExam());
+    repository.createAsset.mockResolvedValue({ id: "asset-id" });
+    for (const id of ["rm1", "rv1", "m1"]) {
+      await storage.put(`bank/questions/${id}`, Buffer.from(`png-${id}`), "image/png");
+    }
+
+    await service.generateVersions(TEACHER, "exam-1", 1);
+
+    const [input] = pdfCompiler.examCalls;
+    expect(input!.sections.map((s) => s.code)).toEqual(["E1", "E2"]);
+    expect(input!.sections[0]!.blocks.map((b) => b.label).sort()).toEqual(["RAZ. MATEMÁTICO", "RAZ. VERBAL"]);
+    expect(input!.sections[1]!.blocks.map((b) => b.label)).toEqual(["MATEMÁTICA"]);
+  });
+
+  it("MUST: the answer key is grouped like the booklet, with the same local numbering", async () => {
+    const { service, repository, pdfCompiler, storage } = buildDeps();
+    repository.getExamForGeneration.mockResolvedValue(sectionedExam());
+    repository.createAsset.mockResolvedValue({ id: "asset-id" });
+    for (const id of ["rm1", "rv1", "m1"]) {
+      await storage.put(`bank/questions/${id}`, Buffer.from(`png-${id}`), "image/png");
+    }
+
+    await service.generateVersions(TEACHER, "exam-1", 1);
+
+    const [examInput] = pdfCompiler.examCalls;
+    const [keyInput] = pdfCompiler.answerKeyCalls;
+
+    // Two real sections, not the degenerate single-section fallback — without
+    // this the mirroring below holds trivially and proves nothing.
+    expect(keyInput!.sections.map((s) => s.label)).toEqual(["PRIMERA PRUEBA", "SEGUNDA PRUEBA"]);
+    expect(keyInput!.sections.map((s) => s.label)).toEqual(examInput!.sections.map((s) => s.label));
+    // ...and each key section holds exactly the questions its booklet section
+    // printed, in the same order, so "14" means the same thing on both.
+    keyInput!.sections.forEach((keySection, index) => {
+      const printed = examInput!.sections[index]!.blocks.flatMap((block) => block.questions.map((q) => q.id));
+      expect(keySection.entries.map((e) => e.questionId)).toEqual(printed);
+    });
+  });
+
   it("rejects a non-positive versionCount", async () => {
     const { service, repository } = buildDeps();
     repository.getExamForGeneration.mockResolvedValue(READY_EXAM);
@@ -181,8 +276,12 @@ describe("ExamVersionGenerationService.generateVersions", () => {
     for (const call of pdfCompiler.examCalls) {
       expect(call.title).toBe("Simulacro San Marcos");
       expect(call.tenantLogoAbsolutePath).toBeDefined();
-      expect(call.questions.map((q) => q.id).sort()).toEqual(["q1", "q2"]);
-      for (const q of call.questions) {
+      expect(
+        allQuestions(call)
+          .map((q) => q.id)
+          .sort(),
+      ).toEqual(["q1", "q2"]);
+      for (const q of allQuestions(call)) {
         // READY_EXAM fixture is all image questions; narrow the discriminated
         // union (structured questions carry no on-disk image path).
         expect(q.type).not.toBe("structured");
@@ -194,7 +293,7 @@ describe("ExamVersionGenerationService.generateVersions", () => {
 
     // answer key entries reflect the correct answer regardless of shuffled position.
     for (const call of pdfCompiler.answerKeyCalls) {
-      const byId = new Map(call.entries.map((e) => [e.questionId, e.correctOption]));
+      const byId = new Map(allEntries(call).map((e) => [e.questionId, e.correctOption]));
       expect(byId.get("q1")).toBe("b");
       expect(byId.get("q2")).toBe("d");
     }
@@ -226,9 +325,13 @@ describe("ExamVersionGenerationService.generateVersions", () => {
       const examCall = pdfCompiler.examCalls[i]!;
       const answerKeyCall = pdfCompiler.answerKeyCalls[i]!;
 
-      expect(examCall.questions.map((q) => q.id).sort()).toEqual(["q1", "q2", "q3"]);
+      expect(
+        allQuestions(examCall)
+          .map((q) => q.id)
+          .sort(),
+      ).toEqual(["q1", "q2", "q3"]);
 
-      const structuredQuestion = examCall.questions.find((q) => q.id === "q3");
+      const structuredQuestion = allQuestions(examCall).find((q) => q.id === "q3");
       expect(structuredQuestion?.type).toBe("structured");
       if (structuredQuestion?.type !== "structured") {
         throw new Error("expected q3 to render as a structured question");
@@ -240,19 +343,19 @@ describe("ExamVersionGenerationService.generateVersions", () => {
 
       // The image question in the same version is completely unaffected —
       // still a materialized on-disk path, never shuffled alternatives.
-      const imageQuestion = examCall.questions.find((q) => q.id === "q1");
+      const imageQuestion = allQuestions(examCall).find((q) => q.id === "q1");
       expect(imageQuestion?.type).not.toBe("structured");
 
       // Release-gate invariant (Lane D4): the answer key's letter for q3
       // must point at the alternative text that was ORIGINALLY correct
       // (index 1 -> "6"), regardless of where shuffling moved it.
-      const structuredEntry = answerKeyCall.entries.find((e) => e.questionId === "q3");
+      const structuredEntry = allEntries(answerKeyCall).find((e) => e.questionId === "q3");
       expect(structuredEntry).toBeDefined();
       const letterIndex = structuredEntry!.correctOption.charCodeAt(0) - "A".charCodeAt(0);
       expect(structuredQuestion.alternatives[letterIndex]).toBe("6");
 
       // Image answer keys still pass through unchanged.
-      const byId = new Map(answerKeyCall.entries.map((e) => [e.questionId, e.correctOption]));
+      const byId = new Map(allEntries(answerKeyCall).map((e) => [e.questionId, e.correctOption]));
       expect(byId.get("q1")).toBe("b");
       expect(byId.get("q2")).toBe("d");
     }
@@ -280,7 +383,7 @@ describe("ExamVersionGenerationService.generateVersions", () => {
 
     expect(results).toHaveLength(1);
     const examCall = pdfCompiler.examCalls[0]!;
-    const structuredQuestion = examCall.questions.find((q) => q.id === "q3");
+    const structuredQuestion = allQuestions(examCall).find((q) => q.id === "q3");
     expect(structuredQuestion?.type).toBe("structured");
     if (structuredQuestion?.type !== "structured") {
       throw new Error("expected q3 to render as a structured question");
@@ -315,7 +418,7 @@ describe("ExamVersionGenerationService.generateVersions", () => {
 
     expect(results).toHaveLength(3);
     for (const examCall of pdfCompiler.examCalls) {
-      const structuredQuestion = examCall.questions.find((q) => q.id === "q3");
+      const structuredQuestion = allQuestions(examCall).find((q) => q.id === "q3");
       expect(structuredQuestion?.type).toBe("structured");
       if (structuredQuestion?.type !== "structured") {
         throw new Error("expected q3 to render as a structured question");

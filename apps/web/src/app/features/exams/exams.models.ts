@@ -48,6 +48,16 @@ export interface CreateExamBlueprintRow {
   readonly topicId?: string;
   readonly difficulty?: Difficulty;
   readonly count: number;
+  /**
+   * Official layout, carried straight back from
+   * `POST /exams/blueprint/resolve`. Absent for a row the teacher added by
+   * hand; the backend then places it in the unlabeled section.
+   */
+  readonly sortOrder?: number;
+  readonly blockCode?: string | null;
+  readonly blockLabel?: string | null;
+  readonly sectionCode?: string | null;
+  readonly sectionLabel?: string | null;
 }
 
 export interface CreateExamPayload {
@@ -237,6 +247,21 @@ export interface ResolvedBlueprintRow {
   readonly topicId?: string;
   readonly count: number;
   readonly difficulty?: Difficulty;
+  /**
+   * Official layout resolved by the template (design doc §4). The backend
+   * already returns these and `POST /exams` already accepts them back; the
+   * builder does NOT yet carry them across its grid, so a template-backed
+   * exam created from the UI still prints without sections. See the note on
+   * `toCreateExamBlueprintRow` in `exam-builder.component.ts`.
+   *
+   * Not editable from the UI by design — block order is not something a
+   * teacher adjusts (design doc §9); these are transported, not shown.
+   */
+  readonly sortOrder?: number;
+  readonly blockCode?: string | null;
+  readonly blockLabel?: string | null;
+  readonly sectionCode?: string | null;
+  readonly sectionLabel?: string | null;
 }
 
 /** `POST /exams/blueprint/resolve` (design doc §3.11) request — `trackId` omitted for a track-less university. */

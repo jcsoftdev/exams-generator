@@ -42,6 +42,15 @@ FROM base AS runtime
 ENV NODE_ENV=production
 COPY --from=build /app/deploy ./
 
+# Proves `sharp`'s native binary actually loads in THIS image at build time,
+# not at deploy time (recommendation, ai-question-image-crop final review).
+# `pnpm deploy --prod` prunes devDependencies but not optionalDependencies —
+# sharp ships its platform binary as one — and `sharp` is imported at module
+# top level in the image-cropper adapter, so a broken binary would otherwise
+# fail at app boot, not here. Zero network dependency: sharp's binary was
+# already installed by the `deps` stage above.
+RUN node -e "require('sharp')"
+
 # Non-root (audit 2026-08-20 H5). The `node` user ships with the base image;
 # the app only ever writes to os.tmpdir() (exam-generation temp dirs), which
 # is world-writable, so read-only /app is fine.

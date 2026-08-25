@@ -31,4 +31,26 @@ describe("findUnescapedTypstMarkup", () => {
 
     expect(findUnescapedTypstMarkup(escapeTypstText(nasty))).toBeUndefined();
   });
+
+  it("accepts an authored math span, whose markup is the formula itself", () => {
+    expect(findUnescapedTypstMarkup("Calcula: $cot(1/2 cdot arcsec(61/60))$")).toBeUndefined();
+  });
+
+  it("accepts the sub- and superscripts a formula needs", () => {
+    expect(findUnescapedTypstMarkup("Sea $f(x) = x^2 + A_B$ la funcion")).toBeUndefined();
+  });
+
+  it("still reports bare markup sitting outside a math span", () => {
+    expect(findUnescapedTypstMarkup("Sea $x^2$ y 532_(6)")).toBe("_");
+  });
+
+  it("still reports a currency dollar that no formula claimed", () => {
+    expect(findUnescapedTypstMarkup("un auto de $ 4840 y un capital $ 4000")).toBe("$");
+  });
+
+  it("accepts a math-carrying statement round-tripped through escapeTypstText", () => {
+    const mixed = "Calcula: $cot(1/2 cdot arcsec(61/60))$ si vale $ 4840 y 532_(6)\n- item";
+
+    expect(findUnescapedTypstMarkup(escapeTypstText(mixed))).toBeUndefined();
+  });
 });

@@ -578,6 +578,74 @@ describe("ExamsRepository", () => {
       expect(forGeneration?.selectedQuestions[0]!.alternatives).toBeNull();
     });
 
+    it("exposes the printed block and section of every question, from its blueprint row", async () => {
+      const q1 = await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel: "primaria_4",
+      });
+
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Layout generation exam",
+        gradeLevel: "primaria_4",
+        createdBy: tenantAUserId,
+        blueprint: [
+          {
+            courseId,
+            count: 1,
+            sortOrder: 3,
+            blockCode: "matematica",
+            blockLabel: "MATEMÁTICA",
+            sectionCode: "E2",
+            sectionLabel: "SEGUNDA PRUEBA",
+          },
+        ],
+      });
+      createdExamIds.push(examId);
+      const [row] = await repository.getBlueprintRows(examId);
+      await repository.saveSelection(examId, [{ blueprintRowId: row!.id, questionId: q1 }]);
+
+      const forGeneration = await repository.getExamForGeneration(examId, tenantAId);
+
+      const [question] = forGeneration!.selectedQuestions;
+      expect(question!.blockLabel).toBe("MATEMÁTICA");
+      expect(question!.sectionCode).toBe("E2");
+      expect(question!.sectionLabel).toBe("SEGUNDA PRUEBA");
+      // 3, not the question's position: the row's own declared order.
+      expect(question!.sortOrder).toBe(3);
+    });
+
+    it("a row with no declared block falls back to the course name, which is what a manual exam has", async () => {
+      const q1 = await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel: "primaria_4",
+      });
+
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Manual generation exam",
+        gradeLevel: "primaria_4",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+      const [row] = await repository.getBlueprintRows(examId);
+      await repository.saveSelection(examId, [{ blueprintRowId: row!.id, questionId: q1 }]);
+
+      const forGeneration = await repository.getExamForGeneration(examId, tenantAId);
+
+      const [question] = forGeneration!.selectedQuestions;
+      const [course] = await db
+        .select()
+        .from(courses)
+        .where(inArray(courses.id, [courseId]));
+      expect(question!.blockLabel).toBe(course!.name);
+      expect(question!.sectionCode).toBeNull();
+      expect(question!.sectionLabel).toBeNull();
+    });
+
     it("returns bodyTypst/alternatives/figureCode (and a null imageStorageKey) for a type='structured' selected question (Lane B1xD4 gap)", async () => {
       const structuredId = await createStructuredQuestion({
         tenantId: tenantAId,
@@ -797,6 +865,7 @@ describe("ExamsRepository", () => {
         code: "A",
         questionOrder: ["q1", "q2"],
         answerKey: { 0: "a", 1: "b" },
+        sectionLayout: [],
         pdfAssetId: pdfAsset.id,
         answerSheetAssetId: answerAsset.id,
       });
@@ -808,6 +877,45 @@ describe("ExamsRepository", () => {
       expect(versionRow?.code).toBe("A");
       expect(versionRow?.pdfAssetId).toBe(pdfAsset.id);
       expect(versionRow?.answerSheetAssetId).toBe(answerAsset.id);
+    });
+
+    it("persists the version's frozen sectionLayout as given", async () => {
+      const layout = [{ code: "E2", label: "SEGUNDA PRUEBA", blocks: [{ label: "MATEMÁTICA", count: 1 }] }];
+      const pdfAsset = await repository.createAsset(
+        tenantAId,
+        `exams/${randomUUID()}.pdf`,
+        "application/pdf",
+      );
+      const answerAsset = await repository.createAsset(
+        tenantAId,
+        `exams/${randomUUID()}.pdf`,
+        "application/pdf",
+      );
+      createdAssetIds.push(pdfAsset.id, answerAsset.id);
+
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Layout persistence exam",
+        gradeLevel: "primaria_4",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+
+      await repository.saveVersion(examId, {
+        code: "A",
+        questionOrder: ["q1"],
+        answerKey: { 0: "c" },
+        sectionLayout: layout,
+        pdfAssetId: pdfAsset.id,
+        answerSheetAssetId: answerAsset.id,
+      });
+
+      const [versionRow] = await db
+        .select()
+        .from(examVersions)
+        .where(inArray(examVersions.examId, [examId]));
+      expect(versionRow?.sectionLayout).toEqual(layout);
     });
   });
 
@@ -841,6 +949,7 @@ describe("ExamsRepository", () => {
         code: "A",
         questionOrder: ["q1"],
         answerKey: { 0: "a" },
+        sectionLayout: [],
         pdfAssetId: pdfAsset.id,
         answerSheetAssetId: answerAsset.id,
       });
@@ -965,6 +1074,7 @@ describe("ExamsRepository", () => {
           code,
           questionOrder: questionIds,
           answerKey: { 0: "a" },
+          sectionLayout: [],
           pdfAssetId: pdfAsset.id,
           answerSheetAssetId: answerAsset.id,
         });
@@ -1173,6 +1283,7 @@ describe("ExamsRepository", () => {
           code,
           questionOrder: ["q1"],
           answerKey: { 0: "a" },
+          sectionLayout: [],
           pdfAssetId: pdfAsset.id,
           answerSheetAssetId: answerAsset.id,
         });

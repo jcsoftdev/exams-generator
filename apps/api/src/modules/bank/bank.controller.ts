@@ -39,6 +39,27 @@ const MAX_IMAGE_UPLOAD_BYTES = 5 * 1024 * 1024;
  */
 const DEFAULT_UNPAGED_WINDOW = { page: 1, pageSize: 100 };
 
+/**
+ * Multipart carries no types: `indexes` arrives as a repeated field (an array
+ * of strings) or, with a single value, as one bare string. Anything
+ * unparseable becomes `NaN`, which `resolveAlternativeSlots` rejects with a
+ * 400 — this helper never guesses.
+ *
+ * `Number("")` and `Number("  ")` both evaluate to `0`, NOT `NaN` — left
+ * alone, a blank field (a stray/empty multipart field, a realistic accident)
+ * would silently land on alternative slot 0 instead of failing loudly. Blank
+ * strings are mapped to `NaN` explicitly before conversion so they hit the
+ * SAME 400 path as any other unparseable value.
+ */
+export function parseIndexes(raw: string | string[] | undefined): number[] | undefined {
+  if (raw === undefined) {
+    return undefined;
+  }
+  return (Array.isArray(raw) ? raw : [raw]).map((value) =>
+    value.trim() === "" ? Number.NaN : Number(value),
+  );
+}
+
 interface CreateImageQuestionBody {
   readonly courseId?: string;
   readonly topicId?: string;
@@ -82,6 +103,16 @@ interface EditDraftQuestionBody {
   readonly topicId?: string;
   readonly difficulty?: string;
   readonly gradeLevel?: string;
+}
+
+/**
+ * `POST :id/alternative-images`'s optional multipart field naming which
+ * alternative slot each uploaded file belongs to. Multipart carries no
+ * types: repeated `indexes` fields arrive as a string array, a single one
+ * arrives as one bare string — `parseIndexes` normalizes both.
+ */
+interface SetAlternativeImagesBody {
+  readonly indexes?: string | string[];
 }
 
 interface ListQuestionsQueryParams {
@@ -315,13 +346,17 @@ export class BankController {
   }
 
   /**
-   * Attaches one image per alternative slot of a `type='structured'`
-   * question — `images[i]` becomes the image for `alternatives[i]`, so
-   * `files.length` must exactly match the question's `alternatives.length`
-   * (validated in `BankService.setAlternativeImages`, 400 otherwise). Same
-   * 404/403/409 gate as `POST :id/image`. `8` = `ALTERNATIVE_LETTERS.length`
-   * (the printable-letter ceiling, `typst-template.ts`) — the max alternatives
-   * a structured question can realistically have.
+   * Attaches images to alternative slots of a `type='structured'` question.
+   * Without `indexes`, `images[i]` becomes the image for `alternatives[i]`
+   * and `files.length` must exactly match the question's
+   * `alternatives.length` (validated in `BankService.setAlternativeImages`,
+   * 400 otherwise) — the original all-or-nothing contract. With `indexes`
+   * (a multipart field naming which slot each file belongs to) only SOME
+   * alternatives get an image, which is what a question whose drawings sit
+   * on a subset of its alternatives needs. Same 404/403/409 gate as
+   * `POST :id/image`. `8` = `ALTERNATIVE_LETTERS.length` (the
+   * printable-letter ceiling, `typst-template.ts`) — the max alternatives a
+   * structured question can realistically have.
    */
   @Post(":id/alternative-images")
   @HttpCode(HttpStatus.CREATED)
@@ -330,8 +365,9 @@ export class BankController {
     @CurrentUser() user: AuthTokenPayload,
     @Param("id", ParseUUIDPipe) id: string,
     @UploadedFiles() files: Express.Multer.File[] | undefined,
+    @Body() body: SetAlternativeImagesBody,
   ): Promise<{ id: string }> {
-    return this.service.setAlternativeImages(user, id, files ?? []);
+    return this.service.setAlternativeImages(user, id, files ?? [], parseIndexes(body.indexes));
   }
 
   /** Lane D4 (S4): soft-removes an `approved` question — never a draft. */

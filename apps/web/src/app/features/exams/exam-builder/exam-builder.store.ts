@@ -41,6 +41,24 @@ export interface ResolvedTemplateRow {
   readonly topicName?: string;
   readonly count: number;
   readonly difficulty?: Difficulty;
+  /** Official layout the template resolved — see `RowLayout`. */
+  readonly layout?: RowLayout;
+}
+
+/**
+ * Where a template-backed row prints (design doc §4). Keyed by course+topic
+ * and NOT by difficulty: a course's P.B./P.I./P.A. cells all belong to the
+ * same printed block, so the layout is a property of the row, not the cell.
+ *
+ * A row the teacher added by hand has none, and the backend then places it in
+ * the unlabeled section — the same fallback `createExam` applies server-side.
+ */
+export interface RowLayout {
+  readonly sortOrder?: number;
+  readonly blockCode?: string | null;
+  readonly blockLabel?: string | null;
+  readonly sectionCode?: string | null;
+  readonly sectionLabel?: string | null;
 }
 
 /**
@@ -247,6 +265,16 @@ export class ExamBuilderStore {
    * a literal empty string, see that method's doc-comment.
    */
   bulkLoadFromBlueprint(rows: readonly ResolvedTemplateRow[]): void {
+    this.layoutByRow.update((current) => {
+      const next = new Map(current);
+      for (const row of rows) {
+        if (row.layout) {
+          next.set(`${row.courseId}:${row.topicId ?? WHOLE_COURSE_TOPIC_ID}`, row.layout);
+        }
+      }
+      return next;
+    });
+
     for (const row of rows) {
       const topicId = row.topicId ?? WHOLE_COURSE_TOPIC_ID;
       const topicName = row.topicId ? (row.topicName ?? row.topicId) : WHOLE_COURSE_TOPIC_NAME;
@@ -274,6 +302,19 @@ export class ExamBuilderStore {
    * ONLY `key` — every other cell's cached array keeps its exact prior
    * reference (EB-R5, B2-R5's client-cache mandate).
    */
+  /**
+   * Layout per `courseId:topicId`, filled by `bulkLoadFromBlueprint` and read
+   * when the create payload is assembled. Kept OUT of `ContentRow` on
+   * purpose: rows are the editable grid the teacher works in, and the layout
+   * is transported data they never see or change (design doc §9).
+   */
+  private readonly layoutByRow = signal<ReadonlyMap<string, RowLayout>>(new Map());
+
+  /** The layout a row carries, or `undefined` for a hand-added row. */
+  layoutFor(courseId: string, topicId: string): RowLayout | undefined {
+    return this.layoutByRow().get(`${courseId}:${topicId}`);
+  }
+
   mergePreview(key: CellKey, questionIds: readonly string[]): void {
     this.previewCache.update((current) => {
       const next = new Map(current);

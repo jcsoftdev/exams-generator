@@ -49,4 +49,38 @@ describe("validateStructuredContent", () => {
       expect.arrayContaining([expect.stringContaining("correctAnswer")]),
     );
   });
+
+  it("accepts a blank alternative whose slot carries an image instead of text", () => {
+    const errors = validateStructuredContent({
+      bodyTypst: "¿Qué figura continúa la secuencia?",
+      alternatives: ["", "", "", "", ""],
+      correctAnswer: "2",
+      alternativeHasImage: [true, true, true, true, true],
+    });
+
+    expect(errors).toEqual([]);
+  });
+
+  it("still rejects a blank alternative whose slot has no image either", () => {
+    const errors = validateStructuredContent({
+      bodyTypst: "¿Qué figura continúa la secuencia?",
+      alternatives: ["", "b", "c", "d", "e"],
+      correctAnswer: "2",
+      alternativeHasImage: [false, false, false, false, false],
+    });
+
+    expect(errors).toHaveLength(1);
+    expect(errors[0]).toContain("non-blank");
+  });
+
+  it("lets text and image alternatives sit side by side", () => {
+    const errors = validateStructuredContent({
+      bodyTypst: "¿Cuál corresponde?",
+      alternatives: ["ninguna", "", "c", "", "e"],
+      correctAnswer: "1",
+      alternativeHasImage: [false, true, false, true, false],
+    });
+
+    expect(errors).toEqual([]);
+  });
 });

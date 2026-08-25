@@ -1,3 +1,5 @@
+import { splitTypstMathSpans } from "./split-typst-math-spans";
+
 /** Markup characters that are only inert once backslash-escaped. */
 const INLINE_MARKUP = new Set(["#", "$", "*", "_", "`", "@", "<", ">", "~", "[", "]"]);
 
@@ -16,13 +18,42 @@ const LINE_START_MARKUP = new Set(["=", "-", "+", "/"]);
  * to a failing exam. A cheap structural check that runs on every ingested
  * entry turns the NEXT such gap into a seeder log line instead of a broken
  * PDF weeks later.
+ *
+ * Math runs are skipped, not inspected. `escapeTypstText` deliberately emits
+ * them verbatim (see `split-typst-math-spans.ts`), so their `^`, `_` and
+ * dollars are the formula rather than stray markup — checking them would
+ * report every AI-transcribed statement in the bank as unprintable and hand
+ * it to `archive-unprintable-questions`. Dollars no formula claimed are still
+ * reported: those are the currency signs that must stay escaped.
  */
 export function findUnescapedTypstMarkup(text: string): string | undefined {
+  for (const segment of splitTypstMathSpans(text)) {
+    if (segment.kind === "math") {
+      continue;
+    }
+
+    const found = findInProse(segment.value, segment.atLineStart);
+    if (found !== undefined) {
+      return found;
+    }
+  }
+
+  return undefined;
+}
+
+/**
+ * `segmentAtLineStart` says whether this prose run's FIRST line really opens
+ * a line — a run trailing a formula does not, so its leading `-` is a minus.
+ */
+function findInProse(text: string, segmentAtLineStart: boolean): string | undefined {
+  let lineNumber = 0;
+
   for (const line of text.split("\n")) {
     let index = 0;
     // A line's leading whitespace does not consume its "start" position:
     // Typst still reads `  - item` as a list item.
-    let atLineStart = true;
+    let atLineStart = lineNumber > 0 || segmentAtLineStart;
+    lineNumber++;
 
     while (index < line.length) {
       const character = line[index]!;

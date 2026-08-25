@@ -7,9 +7,20 @@ import { ExamPdfDocumentInput } from "../../domain/ports/pdf-compiler.port";
 const EXAM_INPUT: ExamPdfDocumentInput = {
   title: "Simulacro San Marcos",
   versionLabel: "Version A",
-  questions: [
-    { id: "q1", imageAbsolutePath: "/fixtures/q1.png" },
-    { id: "q2", imageAbsolutePath: "/fixtures/q2-broken.png" },
+  sections: [
+    {
+      code: null,
+      label: null,
+      blocks: [
+        {
+          label: "",
+          questions: [
+            { id: "q1", imageAbsolutePath: "/fixtures/q1.png" },
+            { id: "q2", imageAbsolutePath: "/fixtures/q2-broken.png" },
+          ],
+        },
+      ],
+    },
   ],
 };
 
@@ -63,7 +74,7 @@ describe("TypstCliAdapter", () => {
     const pdf = await adapter.compileAnswerKey({
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      entries: [{ questionId: "q1", correctOption: "B" }],
+      sections: [{ label: null, entries: [{ questionId: "q1", correctOption: "B" }] }],
     });
 
     expect(pdf.toString()).toBe("%PDF-answer-key");

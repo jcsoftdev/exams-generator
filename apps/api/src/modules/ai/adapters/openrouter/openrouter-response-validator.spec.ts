@@ -156,3 +156,80 @@ describe("validateGeneratedQuestionShape", () => {
     });
   });
 });
+
+describe("validateGeneratedQuestionShape — crop boxes", () => {
+  /** A payload that already satisfies every pre-existing rule. */
+  function basePayload(): Record<string, unknown> {
+    return {
+      bodyTypst: "¿Cuánto es $2 + 2$?",
+      alternatives: ["3", "4", "5", "6", "7"],
+      correctAnswer: "b",
+      conceptsUsed: ["suma"],
+      solutionSteps: 1,
+    };
+  }
+
+  it("keeps a valid figureBox", () => {
+    const { question } = validateGeneratedQuestionShape({
+      ...basePayload(),
+      figureBox: { x: 0.1, y: 0.2, w: 0.5, h: 0.3 },
+    });
+
+    expect(question.figureBox).toEqual({ x: 0.1, y: 0.2, w: 0.5, h: 0.3 });
+  });
+
+  it("drops an out-of-canvas figureBox without failing the extraction", () => {
+    const { question } = validateGeneratedQuestionShape({
+      ...basePayload(),
+      figureBox: { x: 0.8, y: 0.2, w: 0.5, h: 0.3 },
+    });
+
+    expect(question.figureBox).toBeUndefined();
+    expect(question.bodyTypst).toBe("¿Cuánto es $2 + 2$?");
+  });
+
+  it("normalizes a null figureBox to undefined", () => {
+    const { question } = validateGeneratedQuestionShape({ ...basePayload(), figureBox: null });
+
+    expect(question.figureBox).toBeUndefined();
+  });
+
+  it("keeps alternativeBoxes with nulls for the text-only alternatives", () => {
+    const box = { x: 0.1, y: 0.6, w: 0.15, h: 0.1 };
+    const { question } = validateGeneratedQuestionShape({
+      ...basePayload(),
+      alternativeBoxes: [box, null, box, null, null],
+    });
+
+    expect(question.alternativeBoxes).toEqual([box, null, box, null, null]);
+  });
+
+  it("nulls out only the invalid entries of alternativeBoxes", () => {
+    const good = { x: 0.1, y: 0.6, w: 0.15, h: 0.1 };
+    const { question } = validateGeneratedQuestionShape({
+      ...basePayload(),
+      alternativeBoxes: [good, { x: 0.5, y: 0.5, w: 0.9, h: 0.1 }, null, null, null],
+    });
+
+    expect(question.alternativeBoxes).toEqual([good, null, null, null, null]);
+  });
+
+  it("drops alternativeBoxes entirely when its length does not match the alternatives", () => {
+    const box = { x: 0.1, y: 0.6, w: 0.15, h: 0.1 };
+    const { question } = validateGeneratedQuestionShape({
+      ...basePayload(),
+      alternativeBoxes: [box, null],
+    });
+
+    expect(question.alternativeBoxes).toBeUndefined();
+  });
+
+  it("drops alternativeBoxes when every entry is null — nothing to crop", () => {
+    const { question } = validateGeneratedQuestionShape({
+      ...basePayload(),
+      alternativeBoxes: [null, null, null, null, null],
+    });
+
+    expect(question.alternativeBoxes).toBeUndefined();
+  });
+});

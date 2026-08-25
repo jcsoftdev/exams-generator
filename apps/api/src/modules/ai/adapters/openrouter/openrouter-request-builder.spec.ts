@@ -282,6 +282,30 @@ describe("buildOpenRouterExtractRequestBody", () => {
     );
   });
 
+  it("tells the model to drop the numbering the source printed on the question", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
+
+    expect(promptText).toMatch(/numeraci[oó]n/i);
+  });
+
+  it("tells the model to drop the letters the source printed on the alternatives", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
+
+    expect(promptText).toMatch(/letra/i);
+  });
+
+  it("tells the model to transcribe the statement rather than describe the image", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
+
+    expect(promptText).toMatch(/transcribe/i);
+  });
+
+  it("tells the model to leave figureCode null when the figure is a photograph it cannot draw", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
+
+    expect(promptText).toMatch(/fotograf|afiche|escaneo/i);
+  });
+
   it("tells the model to guess course/topic ONLY when confident, null otherwise", () => {
     const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
 
@@ -332,6 +356,33 @@ describe("buildOpenRouterExtractRequestBody", () => {
 
     const systemMessage = body.messages.find((m) => m.role === "system");
     expect(systemMessage!.content as string).toContain("@preview/mitex:0.2.7");
+  });
+});
+
+describe("buildOpenRouterExtractRequestBody — crop boxes", () => {
+  it("asks the schema for figureBox and alternativeBoxes", () => {
+    const body = buildOpenRouterExtractRequestBody("some/vision-model", {
+      image: Buffer.from([0x89, 0x50, 0x4e, 0x47]),
+      mimeType: "image/png",
+    });
+
+    const schema = body.response_format!.json_schema!.schema;
+    expect(schema.properties).toHaveProperty("figureBox");
+    expect(schema.properties).toHaveProperty("alternativeBoxes");
+    // `strict: true` schemas require every declared property to be listed.
+    expect(schema.required).toEqual(expect.arrayContaining(["figureBox", "alternativeBoxes"]));
+  });
+
+  it("tells the model the coordinates are fractions of the image, not pixels", () => {
+    const body = buildOpenRouterExtractRequestBody("some/vision-model", {
+      image: Buffer.from([0x89, 0x50, 0x4e, 0x47]),
+      mimeType: "image/png",
+    });
+
+    const systemPrompt = body.messages[0]!.content as string;
+    expect(systemPrompt).toContain("fracción");
+    expect(systemPrompt).toContain("figureBox");
+    expect(systemPrompt).toContain("alternativeBoxes");
   });
 });
 

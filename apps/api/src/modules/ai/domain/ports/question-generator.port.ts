@@ -1,5 +1,6 @@
 import { Difficulty } from "@exams-generator/shared";
 import { GradeLevel } from "../../../exams/domain/value-objects/grade-level";
+import { NormalizedBox } from "../normalized-box";
 
 /**
  * QuestionGeneratorPort — the domain/application layer never talks to an AI
@@ -43,6 +44,18 @@ export interface GeneratedQuestion {
    */
   readonly suggestedCourseName?: string;
   readonly suggestedTopicName?: string;
+  /**
+   * `extractFromImage` only — where the question's complement figure sits in
+   * the photo. Absent when the question is text and formulas alone, which is
+   * the common case; the UI shows no crop controls at all then.
+   */
+  readonly figureBox?: NormalizedBox;
+  /**
+   * `extractFromImage` only — one slot per alternative, `null` for the ones
+   * that are plain text. Absent when no alternative is a drawing. Always the
+   * same length as `alternatives` when present.
+   */
+  readonly alternativeBoxes?: readonly (NormalizedBox | null)[];
 }
 
 /** Input for `QuestionGeneratorPort.reviseQuestion()` — AI-assisted edit of an existing question. */

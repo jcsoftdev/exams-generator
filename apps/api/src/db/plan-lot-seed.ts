@@ -15,6 +15,18 @@ export interface LotEntry {
   readonly difficulty: string;
   readonly bodyTypst?: string;
   readonly alternatives?: readonly string[];
+  /**
+   * CeTZ drawing for a `structured` entry whose figure the harvest could
+   * redraw as vector code — mutually exclusive with `imagePath` in practice,
+   * since a redrawn figure makes the crop redundant.
+   */
+  readonly figureCode?: string;
+  /**
+   * One image per alternative slot, `null` where that option is plain text.
+   * A sequence question whose five options ARE drawings has nothing to write
+   * in `alternatives`, so those slots hold `""` and the picture stands in.
+   */
+  readonly alternativeImagePaths?: readonly (string | null)[];
   readonly correctAnswer: string;
   readonly imagePath?: string;
   readonly sourceUrl?: string;

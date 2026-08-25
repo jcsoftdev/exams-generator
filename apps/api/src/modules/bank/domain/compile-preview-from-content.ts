@@ -25,13 +25,27 @@ export async function compilePreviewFromContent(
   const input: ExamPdfDocumentInput = {
     title: "Vista previa",
     versionLabel: "preview",
-    questions: [
+    // A preview is one question with no headings at all: an unlabeled section
+    // holding an unlabeled block. The template prints neither, so the output
+    // is the bare question — see `ExamPdfBlock` in the port.
+    sections: [
       {
-        id,
-        type: "structured",
-        bodyTypst,
-        alternatives,
-        figureCode,
+        code: null,
+        label: null,
+        blocks: [
+          {
+            label: "",
+            questions: [
+              {
+                id,
+                type: "structured",
+                bodyTypst,
+                alternatives,
+                figureCode,
+              },
+            ],
+          },
+        ],
       },
     ],
   };

@@ -23,6 +23,20 @@ export interface BlueprintRow {
   readonly topicId?: string;
   readonly difficulty?: Difficulty;
   readonly count: number;
+  /**
+   * Where this row gets printed (design doc §4). `sortOrder` fixes the
+   * canonical order; `blockCode`/`blockLabel` the printed block — which spans
+   * several courses and is NOT the course; `sectionCode`/`sectionLabel` the
+   * prueba. All absent in a manual blueprint with no template behind it.
+   *
+   * `matchesRow()` deliberately ignores them: they are layout metadata, not
+   * question-selection criteria.
+   */
+  readonly sortOrder?: number;
+  readonly blockCode?: string | null;
+  readonly blockLabel?: string | null;
+  readonly sectionCode?: string | null;
+  readonly sectionLabel?: string | null;
 }
 
 export interface RowShortage {

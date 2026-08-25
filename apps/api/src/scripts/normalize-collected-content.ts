@@ -3,9 +3,19 @@ import { join } from "node:path";
 import { and, eq, isNull, ne, or, sql } from "drizzle-orm";
 import { db, pool } from "../db/client";
 import { questions } from "../db/schema";
+import { flattenGradeScopedQuestions } from "../db/flatten-grade-scoped-questions";
 import { prepareCollectedContent } from "../modules/bank/domain/prepare-collected-content";
 
-const COLLECTED_DIR = join(__dirname, "..", "db", "data", "collected");
+const DATA_DIR = join(__dirname, "..", "db", "data");
+const COLLECTED_DIR = join(DATA_DIR, "collected");
+/**
+ * `seed-collected-questions.ts` escapes the school-level `escolar-*.json`
+ * files through the very same `prepareCollectedContent`, so their rows carry
+ * the same damage and have to be repaired from the same source of truth.
+ * Reading only `collected/` left every school question stuck with whatever
+ * the escaper wrote on the day it was seeded.
+ */
+const SCHOOL_FILE_PREFIX = "escolar-";
 
 interface CollectedEntry {
   readonly bodyTypst: string;
@@ -34,61 +44,83 @@ interface CollectedData {
  * earlier run of this same script.
  *
  * Scope is deliberately narrow: `tenant_id IS NULL` (central bank only) AND
- * a hash present in the collected JSON. AI-authored questions are real Typst
- * markup — `$x^2$`, CeTZ figures — and escaping them would destroy exactly
- * the content the escape is meant to protect.
+ * a hash present in the collected JSON, so tenant-authored questions — real
+ * Typst markup, CeTZ figures — are never rewritten from a file they did not
+ * come from.
+ *
+ * Re-running this is also how the escaper's own fixes reach rows already in
+ * the bank. It is what repairs the statements whose `$...$` math the escaper
+ * used to flatten into literal dollars (see `split-typst-math-spans.ts`):
+ * the JSON always held the formula, only the column was wrong.
  */
-export async function normalizeCollectedContent(): Promise<{ updated: number; checked: number }> {
-  const files = readdirSync(COLLECTED_DIR).filter((name) => name.endsWith(".json"));
+/**
+ * The same two sources `seed-collected-questions.ts` reads: the flat
+ * preuniversitario bank under `data/collected/`, and the grade-scoped
+ * school files in `data/` that `flattenGradeScopedQuestions` unnests.
+ */
+function readAllEntries(): CollectedEntry[] {
+  const entries: CollectedEntry[] = [];
 
+  for (const file of readdirSync(COLLECTED_DIR).filter((name) => name.endsWith(".json"))) {
+    const data = JSON.parse(readFileSync(join(COLLECTED_DIR, file), "utf8")) as CollectedData;
+    entries.push(...(data.entries ?? []));
+  }
+
+  const school = readdirSync(DATA_DIR).filter(
+    (name) => name.startsWith(SCHOOL_FILE_PREFIX) && name.endsWith(".json"),
+  );
+  for (const file of school) {
+    entries.push(...flattenGradeScopedQuestions(JSON.parse(readFileSync(join(DATA_DIR, file), "utf8"))));
+  }
+
+  return entries;
+}
+
+export async function normalizeCollectedContent(): Promise<{ updated: number; checked: number }> {
   let updated = 0;
   let checked = 0;
 
-  for (const file of files) {
-    const data = JSON.parse(readFileSync(join(COLLECTED_DIR, file), "utf8")) as CollectedData;
+  for (const entry of readAllEntries()) {
+    const content = prepareCollectedContent({
+      bodyTypst: entry.bodyTypst,
+      alternatives: entry.alternatives,
+    });
 
-    for (const entry of data.entries) {
-      const content = prepareCollectedContent({
-        bodyTypst: entry.bodyTypst,
-        alternatives: entry.alternatives,
-      });
+    // Nothing to rewrite when the scrape held neither markup characters nor
+    // a solution tail — the overwhelming majority of the bank. Skipping them
+    // keeps this a few thousand UPDATEs instead of sixty-four thousand
+    // no-op writes.
+    const unchanged =
+      content.bodyTypst === entry.bodyTypst &&
+      content.alternatives.every((alternative, index) => alternative === entry.alternatives[index]);
+    if (unchanged) {
+      continue;
+    }
 
-      // Nothing to rewrite when the scrape held neither markup characters nor
-      // a solution tail — the overwhelming majority of the bank. Skipping them
-      // keeps this a few thousand UPDATEs instead of sixty-four thousand
-      // no-op writes.
-      const unchanged =
-        content.bodyTypst === entry.bodyTypst &&
-        content.alternatives.every((alternative, index) => alternative === entry.alternatives[index]);
-      if (unchanged) {
-        continue;
-      }
-
-      // The inequality guard is what makes this affordable to run on EVERY
-      // boot (see `seed.ts`): after the first pass every row already matches,
-      // so the statement touches nothing and the whole backfill costs one
-      // cheap indexed lookup per entry instead of ~7.6k writes per deploy.
-      const result = await db
-        .update(questions)
-        .set({ bodyTypst: content.bodyTypst, alternatives: content.alternatives })
-        .where(
-          and(
-            isNull(questions.tenantId),
-            eq(questions.bodyHash, content.bodyHash),
-            or(
-              ne(questions.bodyTypst, content.bodyTypst),
-              ne(
-                sql`${questions.alternatives}::text`,
-                sql`${JSON.stringify(content.alternatives)}::jsonb::text`,
-              ),
+    // The inequality guard is what makes this affordable to run on EVERY
+    // boot (see `seed.ts`): after the first pass every row already matches,
+    // so the statement touches nothing and the whole backfill costs one
+    // cheap indexed lookup per entry instead of ~7.6k writes per deploy.
+    const result = await db
+      .update(questions)
+      .set({ bodyTypst: content.bodyTypst, alternatives: content.alternatives })
+      .where(
+        and(
+          isNull(questions.tenantId),
+          eq(questions.bodyHash, content.bodyHash),
+          or(
+            ne(questions.bodyTypst, content.bodyTypst),
+            ne(
+              sql`${questions.alternatives}::text`,
+              sql`${JSON.stringify(content.alternatives)}::jsonb::text`,
             ),
           ),
-        )
-        .returning({ id: questions.id });
+        ),
+      )
+      .returning({ id: questions.id });
 
-      checked++;
-      updated += result.length;
-    }
+    checked++;
+    updated += result.length;
   }
 
   return { updated, checked };

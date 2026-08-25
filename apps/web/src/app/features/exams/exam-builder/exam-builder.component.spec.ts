@@ -2764,4 +2764,34 @@ describe('ExamBuilderComponent', () => {
       expect(row).toEqual({ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, count: 6 });
     });
   });
+
+  describe('layout round-trip (design doc §4 — the exam must print with sections)', () => {
+    it('carries the template layout onto the CreateExamBlueprintRow', () => {
+      const key = buildCellKey('c1', 't1', Difficulty.Easy);
+
+      const row = toCreateExamBlueprintRow(key, 6, {
+        sortOrder: 3,
+        blockCode: 'matematica',
+        blockLabel: 'MATEMÁTICA',
+        sectionCode: 'E2',
+        sectionLabel: 'SEGUNDA PRUEBA',
+      });
+
+      expect(row.sortOrder).toBe(3);
+      expect(row.blockCode).toBe('matematica');
+      expect(row.blockLabel).toBe('MATEMÁTICA');
+      expect(row.sectionCode).toBe('E2');
+      expect(row.sectionLabel).toBe('SEGUNDA PRUEBA');
+    });
+
+    it('a hand-added row carries no layout keys at all, so the backend applies its own fallback', () => {
+      const key = buildCellKey('c1', 't1', Difficulty.Easy);
+
+      const row = toCreateExamBlueprintRow(key, 6);
+
+      expect(row).not.toHaveProperty('sectionCode');
+      expect(row).not.toHaveProperty('blockLabel');
+      expect(row).toEqual({ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, count: 6 });
+    });
+  });
 });

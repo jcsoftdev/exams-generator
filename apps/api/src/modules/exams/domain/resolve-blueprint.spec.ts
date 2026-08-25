@@ -5,6 +5,20 @@ const ARITMETICA = "course-aritmetica";
 const ALGEBRA = "course-algebra";
 const COMUNICACION = "course-comunicacion";
 
+/**
+ * Layout defaults for a template row that carries none: every layout field
+ * null, order falling back to the row's position. Spread into an expected row
+ * so these assertions keep using exact `toEqual` — weakening them to
+ * `toMatchObject` would stop them catching an unexpected extra field.
+ */
+const noLayout = (sortOrder: number) => ({
+  sortOrder,
+  blockCode: null,
+  blockLabel: null,
+  sectionCode: null,
+  sectionLabel: null,
+});
+
 describe("resolveBlueprint", () => {
   describe("courseScope='none' (manual)", () => {
     it("always returns no rows — manual creation never uses a template", () => {
@@ -28,8 +42,8 @@ describe("resolveBlueprint", () => {
       const result = resolveBlueprint({ courseScope: "all", weekScope: "none", templateRows, syllabus: [] });
 
       expect(result.rows).toEqual([
-        { courseId: ARITMETICA, count: 12, difficulty: Difficulty.Hard },
-        { courseId: ALGEBRA, count: 8, difficulty: Difficulty.Medium },
+        { courseId: ARITMETICA, count: 12, difficulty: Difficulty.Hard, ...noLayout(0) },
+        { courseId: ALGEBRA, count: 8, difficulty: Difficulty.Medium, ...noLayout(1) },
       ]);
     });
 
@@ -57,7 +71,7 @@ describe("resolveBlueprint", () => {
         syllabus: [],
         selectedCourseIds: [ALGEBRA],
       });
-      expect(result.rows).toEqual([{ courseId: ALGEBRA, count: 8, difficulty: undefined }]);
+      expect(result.rows).toEqual([{ courseId: ALGEBRA, count: 8, difficulty: undefined, ...noLayout(0) }]);
     });
 
     it("derives count from weightPoints proportionally when questionCount is missing (UNI case)", () => {
@@ -77,8 +91,8 @@ describe("resolveBlueprint", () => {
       });
       // 150:50 = 3:1 → 30 and 10 out of 40, exact split with no remainder.
       expect(result.rows).toEqual([
-        { courseId: ARITMETICA, count: 30, difficulty: undefined },
-        { courseId: ALGEBRA, count: 10, difficulty: undefined },
+        { courseId: ARITMETICA, count: 30, difficulty: undefined, ...noLayout(0) },
+        { courseId: ALGEBRA, count: 10, difficulty: undefined, ...noLayout(1) },
       ]);
     });
 
@@ -118,8 +132,20 @@ describe("resolveBlueprint", () => {
         });
 
         expect(result.rows).toEqual([
-          { courseId: ARITMETICA, topicId: "t-conjuntos", count: 6, difficulty: Difficulty.Hard },
-          { courseId: ARITMETICA, topicId: "t-razones", count: 6, difficulty: Difficulty.Hard },
+          {
+            courseId: ARITMETICA,
+            topicId: "t-conjuntos",
+            count: 6,
+            difficulty: Difficulty.Hard,
+            ...noLayout(0),
+          },
+          {
+            courseId: ARITMETICA,
+            topicId: "t-razones",
+            count: 6,
+            difficulty: Difficulty.Hard,
+            ...noLayout(0),
+          },
         ]);
       });
 
@@ -146,7 +172,9 @@ describe("resolveBlueprint", () => {
           courseTopics,
         });
 
-        expect(result.rows).toEqual([{ courseId: COMUNICACION, count: 6, difficulty: undefined }]);
+        expect(result.rows).toEqual([
+          { courseId: COMUNICACION, count: 6, difficulty: undefined, ...noLayout(0) },
+        ]);
       });
 
       it("never re-expands a template row that already names its own topic", () => {
@@ -162,7 +190,7 @@ describe("resolveBlueprint", () => {
         });
 
         expect(result.rows).toEqual([
-          { courseId: ARITMETICA, topicId: "t-razones", count: 4, difficulty: undefined },
+          { courseId: ARITMETICA, topicId: "t-razones", count: 4, difficulty: undefined, ...noLayout(0) },
         ]);
       });
 
@@ -177,7 +205,7 @@ describe("resolveBlueprint", () => {
         });
 
         expect(result.rows).toEqual([
-          { courseId: ARITMETICA, topicId: "t-conjuntos", count: 1, difficulty: undefined },
+          { courseId: ARITMETICA, topicId: "t-conjuntos", count: 1, difficulty: undefined, ...noLayout(0) },
         ]);
       });
     });
@@ -201,7 +229,7 @@ describe("resolveBlueprint", () => {
         selectedCourseIds: [ARITMETICA],
       });
       expect(result.rows).toEqual([
-        { courseId: ARITMETICA, topicId: "t-numeracion", count: 12, difficulty: undefined },
+        { courseId: ARITMETICA, topicId: "t-numeracion", count: 12, difficulty: undefined, ...noLayout(0) },
       ]);
       expect(result.usedCumulativeFallback).toBe(false);
     });
@@ -321,7 +349,7 @@ describe("resolveBlueprint", () => {
         });
 
         expect(result.rows).toEqual([
-          { courseId: ARITMETICA, topicId: "t-numeracion", count: 12, difficulty: undefined },
+          { courseId: ARITMETICA, topicId: "t-numeracion", count: 12, difficulty: undefined, ...noLayout(0) },
         ]);
         expect(result.usedCumulativeFallback).toBe(false);
       });
@@ -360,11 +388,160 @@ describe("resolveBlueprint", () => {
         const algebraRows = result.rows.filter((row) => row.courseId === ALGEBRA);
         const aritmeticaRows = result.rows.filter((row) => row.courseId === ARITMETICA);
         expect(algebraRows).toEqual([
-          { courseId: ALGEBRA, topicId: "t-algebra-23", count: 8, difficulty: undefined },
+          { courseId: ALGEBRA, topicId: "t-algebra-23", count: 8, difficulty: undefined, ...noLayout(1) },
         ]);
         expect(aritmeticaRows).toHaveLength(3); // widened to cumulative
         expect(result.usedCumulativeFallback).toBe(true); // true because AT LEAST ONE row fell back
       });
+    });
+  });
+  describe("layout propagation", () => {
+    it("copies section, block and order from the template onto every BlueprintRow", () => {
+      const outcome = resolveBlueprint({
+        courseScope: "all",
+        weekScope: "none",
+        templateRows: [
+          {
+            courseId: "aritmetica",
+            questionCount: 10,
+            sortOrder: 0,
+            blockCode: "matematica",
+            blockLabel: "MATEMÁTICA",
+            sectionCode: "E2",
+            sectionLabel: "SEGUNDA PRUEBA — MATEMÁTICA",
+          },
+          {
+            courseId: "algebra",
+            questionCount: 10,
+            sortOrder: 1,
+            blockCode: "matematica",
+            blockLabel: "MATEMÁTICA",
+            sectionCode: "E2",
+            sectionLabel: "SEGUNDA PRUEBA — MATEMÁTICA",
+          },
+        ],
+        syllabus: [],
+      });
+
+      expect(outcome.rows).toHaveLength(2);
+      for (const row of outcome.rows) {
+        expect(row.blockCode).toBe("matematica");
+        expect(row.blockLabel).toBe("MATEMÁTICA");
+        expect(row.sectionCode).toBe("E2");
+        expect(row.sectionLabel).toBe("SEGUNDA PRUEBA — MATEMÁTICA");
+      }
+      expect(outcome.rows.map((r) => r.sortOrder)).toEqual([0, 1]);
+    });
+
+    it("a block spans several courses: rows of different courses share one sectionCode", () => {
+      const outcome = resolveBlueprint({
+        courseScope: "all",
+        weekScope: "none",
+        templateRows: [
+          {
+            courseId: "fisica",
+            questionCount: 20,
+            sortOrder: 0,
+            blockCode: "fisica",
+            blockLabel: "FÍSICA",
+            sectionCode: "E3",
+            sectionLabel: "TERCERA PRUEBA",
+          },
+          {
+            courseId: "quimica",
+            questionCount: 20,
+            sortOrder: 1,
+            blockCode: "quimica",
+            blockLabel: "QUÍMICA",
+            sectionCode: "E3",
+            sectionLabel: "TERCERA PRUEBA",
+          },
+        ],
+        syllabus: [],
+      });
+
+      expect(new Set(outcome.rows.map((r) => r.sectionCode))).toEqual(new Set(["E3"]));
+      expect(new Set(outcome.rows.map((r) => r.blockCode))).toEqual(new Set(["fisica", "quimica"]));
+    });
+
+    it("a template with no layout data yields rows with no section or block, ordered by position", () => {
+      const outcome = resolveBlueprint({
+        courseScope: "all",
+        weekScope: "none",
+        templateRows: [
+          { courseId: "aritmetica", questionCount: 3 },
+          { courseId: "algebra", questionCount: 2 },
+        ],
+        syllabus: [],
+      });
+
+      expect(outcome.rows.map((r) => r.sectionCode ?? null)).toEqual([null, null]);
+      expect(outcome.rows.map((r) => r.sortOrder)).toEqual([0, 1]);
+    });
+  });
+
+  describe("official block total", () => {
+    it("reports the block whose per-course split falls short of its official total", () => {
+      const outcome = resolveBlueprint({
+        courseScope: "all",
+        weekScope: "none",
+        templateRows: [
+          {
+            courseId: "aritmetica",
+            questionCount: 10,
+            sortOrder: 0,
+            blockCode: "matematica",
+            blockLabel: "MATEMÁTICA",
+            blockQuestionCount: 40,
+          },
+          {
+            courseId: "algebra",
+            questionCount: 10,
+            sortOrder: 1,
+            blockCode: "matematica",
+            blockLabel: "MATEMÁTICA",
+            blockQuestionCount: 40,
+          },
+        ],
+        syllabus: [],
+      });
+
+      expect(outcome.blockCountMismatches).toEqual([
+        { blockCode: "matematica", blockLabel: "MATEMÁTICA", expected: 40, actual: 20 },
+      ]);
+    });
+
+    it("reports nothing when the split adds up to the official total exactly", () => {
+      const outcome = resolveBlueprint({
+        courseScope: "all",
+        weekScope: "none",
+        templateRows: [
+          {
+            courseId: "fisica",
+            questionCount: 20,
+            sortOrder: 0,
+            blockCode: "e3-fisica",
+            blockLabel: "FÍSICA",
+            blockQuestionCount: 20,
+          },
+        ],
+        syllabus: [],
+      });
+
+      expect(outcome.blockCountMismatches).toEqual([]);
+    });
+
+    it("a block with no published official total is never reported", () => {
+      const outcome = resolveBlueprint({
+        courseScope: "all",
+        weekScope: "none",
+        templateRows: [
+          { courseId: "aritmetica", questionCount: 3, sortOrder: 0, blockCode: "mat", blockLabel: "MAT" },
+        ],
+        syllabus: [],
+      });
+
+      expect(outcome.blockCountMismatches).toEqual([]);
     });
   });
 });

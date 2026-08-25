@@ -1,3 +1,5 @@
+import { splitTypstMathSpans } from "./split-typst-math-spans";
+
 /**
  * Characters Typst reads as markup anywhere in a line. `\` is deliberately
  * absent — it has to be escaped FIRST, on its own, or it would also escape
@@ -40,16 +42,39 @@ const LINE_START_ENUM = /^(\s*)(\d+)\./;
  * and `scripts/normalize-collected-content.ts`), never at render time: escaping
  * in the template would equally destroy the legitimate `$...$` math and CeTZ
  * figures that AI-authored questions rely on.
+ *
+ * The collected corpus turned out not to be uniformly raw prose, though. Part
+ * of it was transcribed into real Typst math by the harvest pipeline, so this
+ * escapes PER SEGMENT (`split-typst-math-spans.ts`): prose is escaped as
+ * before, and a run the splitter recognises as a formula is re-emitted with
+ * its dollars intact. Escaping those too is what printed `$cot(1/2 cdot
+ * arcsec(61/60))$` literally in the 2026-08-23 exam.
  */
 export function escapeTypstText(raw: string): string {
+  return splitTypstMathSpans(raw)
+    .map((segment) =>
+      segment.kind === "math" ? `$${segment.value}$` : escapeTextSegment(segment.value, segment.atLineStart),
+    )
+    .join("");
+}
+
+/**
+ * Escapes one prose run. `atLineStart` says whether the run's FIRST line is
+ * a real line start — a run sitting after a formula on the same line is not,
+ * and its leading `-` is an ordinary minus rather than a list marker. Every
+ * later line inside the run always is.
+ */
+function escapeTextSegment(raw: string, atLineStart: boolean): string {
   const inlineEscaped = raw.replace(/\\/g, "\\\\").replace(INLINE_MARKUP, (character) => `\\${character}`);
 
   return inlineEscaped
     .split("\n")
-    .map((line) =>
-      line
-        .replace(LINE_START_SYMBOL, (_match, indent: string, marker: string) => `${indent}\\${marker}`)
-        .replace(LINE_START_ENUM, (_match, indent: string, digits: string) => `${indent}${digits}\\.`),
+    .map((line, index) =>
+      index === 0 && !atLineStart
+        ? line
+        : line
+            .replace(LINE_START_SYMBOL, (_match, indent: string, marker: string) => `${indent}\\${marker}`)
+            .replace(LINE_START_ENUM, (_match, indent: string, digits: string) => `${indent}${digits}\\.`),
     )
     .join("\n");
 }

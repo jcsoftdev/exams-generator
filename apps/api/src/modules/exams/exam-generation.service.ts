@@ -11,13 +11,16 @@ import {
 } from "@nestjs/common";
 import { Logger } from "nestjs-pino";
 import { AuthTokenPayload } from "../auth/token.service";
-import { SelectedQuestion, Version, buildVersions } from "./domain/version-shuffler";
+import { Version, buildVersions } from "./domain/version-shuffler";
+import { QuestionPlacement, groupIntoSections } from "./domain/exam-sections";
 import { pickReplacementQuestion } from "./domain/pick-replacement-question";
 import { Rng, createSeededRng } from "./domain/ports/random.port";
 import {
   AnswerKeyDocumentInput,
+  AnswerKeySection,
   ExamPdfDocumentInput,
   ExamPdfQuestion,
+  ExamPdfSection,
   PdfCompilerPort,
   TypstCompilationError,
 } from "./domain/ports/pdf-compiler.port";
@@ -319,21 +322,34 @@ export class ExamVersionGenerationService {
     // questions carry `alternatives` so `buildVersions()`/`VersionShuffler`
     // actually shuffles them and recomputes the answer key; `image`
     // questions pass `correctAnswer` straight through, unchanged.
-    const selected: SelectedQuestion[] = exam.selectedQuestions.map((q): SelectedQuestion =>
-      q.type === "structured"
-        ? {
-            type: "structured",
-            questionId: q.questionId,
-            alternatives: q.alternatives ?? [],
-            correctAnswer: q.correctAnswer,
-            alternativeImages: q.alternativeImages,
-          }
-        : {
-            questionId: q.questionId,
-            correctAnswer: q.correctAnswer,
-          },
-    );
-    const versions = buildVersions(selected, versionCount, this.rngFactory());
+    const placements: QuestionPlacement[] = exam.selectedQuestions.map((q, index) => ({
+      question:
+        q.type === "structured"
+          ? {
+              type: "structured",
+              questionId: q.questionId,
+              alternatives: q.alternatives ?? [],
+              correctAnswer: q.correctAnswer,
+              alternativeImages: q.alternativeImages,
+            }
+          : {
+              questionId: q.questionId,
+              correctAnswer: q.correctAnswer,
+            },
+      // Defaults cover a legacy row with no blueprint row behind it: it lands
+      // in the unlabeled section and the unlabeled block, which is exactly the
+      // headingless booklet this service printed before sections existed.
+      sortOrder: q.sortOrder ?? index,
+      blockLabel: q.blockLabel ?? "",
+      sectionCode: q.sectionCode ?? null,
+      sectionLabel: q.sectionLabel ?? null,
+    }));
+
+    // Sections and blocks come from what the blueprint rows declared;
+    // `buildVersions` then permutes block order per version and questions
+    // inside each block, never moving a question across a section.
+    const sections = groupIntoSections(placements);
+    const versions = buildVersions(sections, versionCount, this.rngFactory());
 
     const questionById = new Map(exam.selectedQuestions.map((q) => [q.questionId, q]));
 
@@ -452,7 +468,11 @@ export class ExamVersionGenerationService {
       title: exam.title,
       versionLabel,
       tenantLogoAbsolutePath: logoPath,
-      questions: version.questionOrder.map((questionId) =>
+      // Cut `questionOrder` by the layout the shuffler froze for THIS version.
+      // The layout stores counts and never ids — `questionOrder` is the single
+      // source of truth for order, and the counts only say where to cut
+      // (design doc §3.6), so walking them in step is the whole mapping.
+      sections: this.sliceByLayout(version, (questionId) =>
         this.buildPdfQuestion(
           questionId,
           questionById,
@@ -466,10 +486,10 @@ export class ExamVersionGenerationService {
     const answerKeyInput: AnswerKeyDocumentInput = {
       title: exam.title,
       versionLabel,
-      entries: version.questionOrder.map((questionId, position) => ({
-        questionId,
-        correctOption: version.answerKey[position]!,
-      })),
+      // Cut by the SAME layout as the booklet, so the key's local numbering
+      // and the booklet's printed numbering are the same run: if the booklet
+      // says "14", the key says "14" (design doc §6.3).
+      sections: this.sliceAnswerKeyByLayout(version),
     };
 
     let examPdf: Buffer;
@@ -504,6 +524,7 @@ export class ExamVersionGenerationService {
       code: version.code,
       questionOrder: version.questionOrder,
       answerKey: version.answerKey,
+      sectionLayout: version.sectionLayout,
       pdfAssetId: pdfAsset.id,
       answerSheetAssetId: answerKeyAsset.id,
     });
@@ -523,6 +544,47 @@ export class ExamVersionGenerationService {
    * materialized in `imagePathByQuestionId`. `type='image'` questions keep
    * rendering from the materialized on-disk path, unchanged.
    */
+  /**
+   * Rebuilds the booklet's sections/blocks by walking `version.sectionLayout`
+   * and consuming `version.questionOrder` in step. The layout deliberately
+   * stores counts and never ids, so this cursor walk is the ONLY thing that
+   * pairs the two — which is why both PDFs must slice with the same helper,
+   * or the key would stop lining up with the booklet.
+   */
+  private sliceByLayout(
+    version: Version,
+    toPdfQuestion: (questionId: string) => ExamPdfQuestion,
+  ): ExamPdfSection[] {
+    let cursor = 0;
+    return version.sectionLayout.map((section) => ({
+      code: section.code,
+      label: section.label,
+      blocks: section.blocks.map((block) => {
+        const ids = version.questionOrder.slice(cursor, cursor + block.count);
+        cursor += block.count;
+        return { label: block.label, questions: ids.map(toPdfQuestion) };
+      }),
+    }));
+  }
+
+  /**
+   * The answer key's sections mirror the booklet's, but flattened one level:
+   * the key prints a table per SECTION, not per block, because its numbering
+   * restarts per section and not per block (design doc §6.3).
+   */
+  private sliceAnswerKeyByLayout(version: Version): AnswerKeySection[] {
+    let cursor = 0;
+    return version.sectionLayout.map((section) => {
+      const count = section.blocks.reduce((sum, block) => sum + block.count, 0);
+      const entries = version.questionOrder.slice(cursor, cursor + count).map((questionId, i) => ({
+        questionId,
+        correctOption: version.answerKey[cursor + i]!,
+      }));
+      cursor += count;
+      return { label: section.label, entries };
+    });
+  }
+
   private buildPdfQuestion(
     questionId: string,
     questionById: ReadonlyMap<string, SelectedQuestionForGeneration>,

@@ -1,0 +1,62 @@
+@for (slot of slots(); track trackByLabel($index, slot)) {
+  <div data-testid="crop-slot" class="flex flex-col gap-2 rounded-field border border-n200 p-3">
+    <span data-testid="crop-slot-label" class="text-sm font-medium text-n700">{{
+      slot.label
+    }}</span>
+
+    <div class="flex flex-wrap items-start gap-4">
+      <div
+        #container
+        data-testid="crop-container"
+        class="relative w-64 select-none touch-none"
+        (pointerdown)="startMove($event, container, slot)"
+        (pointermove)="onPointerMove($event, container)"
+        (pointerup)="onPointerUp()"
+        (pointercancel)="onPointerUp()"
+      >
+        <img [src]="photoUrl()" alt="" class="block w-full h-auto" />
+        <div
+          class="absolute cursor-move border-2 border-primary-500 bg-primary-500/10"
+          [style.left.%]="boxFor(slot).x * 100"
+          [style.top.%]="boxFor(slot).y * 100"
+          [style.width.%]="boxFor(slot).w * 100"
+          [style.height.%]="boxFor(slot).h * 100"
+        >
+          @for (handle of resizeHandles; track handle) {
+            <div
+              class="absolute h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white bg-primary-600"
+              [style.left]="handlePosition(handle).left"
+              [style.top]="handlePosition(handle).top"
+              (pointerdown)="startResize($event, container, slot, handle)"
+            ></div>
+          }
+        </div>
+      </div>
+
+      <img
+        [src]="slot.dataUrl"
+        alt="Recorte actual"
+        class="h-32 w-32 rounded-field border border-n200 object-contain"
+      />
+    </div>
+
+    <div class="flex gap-2">
+      <button
+        type="button"
+        [disabled]="slot.busy"
+        (click)="applyBox(slot.target, boxFor(slot))"
+        class="rounded-field bg-primary-600 px-3 py-1.5 text-sm text-white disabled:opacity-50"
+      >
+        Aplicar recorte
+      </button>
+      <button
+        type="button"
+        data-testid="crop-discard"
+        (click)="removeSlot(slot.target)"
+        class="rounded-field border border-n200 px-3 py-1.5 text-sm text-n700"
+      >
+        Descartar
+      </button>
+    </div>
+  </div>
+}

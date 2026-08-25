@@ -100,4 +100,34 @@ describe("escapeTypstText", () => {
   it("returns an empty string unchanged", () => {
     expect(escapeTypstText("")).toBe("");
   });
+
+  it("leaves an authored math span verbatim, dollars and all", () => {
+    expect(escapeTypstText("Calcula: $cot(1/2 cdot arcsec(61/60))$")).toBe(
+      "Calcula: $cot(1/2 cdot arcsec(61/60))$",
+    );
+  });
+
+  it("leaves the markup characters a formula needs alone inside the span", () => {
+    expect(escapeTypstText("Sea $f(x) = x^2 + A_B$ la funcion")).toBe("Sea $f(x) = x^2 + A_B$ la funcion");
+  });
+
+  it("still escapes currency dollars that happen to pair across prose", () => {
+    expect(escapeTypstText("un auto de $ 4840 y un capital $ 4000")).toBe(
+      "un auto de \\$ 4840 y un capital \\$ 4000",
+    );
+  });
+
+  it("escapes the prose around a math span without touching the span", () => {
+    expect(escapeTypstText("el intervalo $[0, 1]$ y el rango [2, 3]")).toBe(
+      "el intervalo $[0, 1]$ y el rango \\[2, 3\\]",
+    );
+  });
+
+  it("still escapes a line-start marker on a line that also carries math", () => {
+    expect(escapeTypstText("- vale $x^2$")).toBe("\\- vale $x^2$");
+  });
+
+  it("escapes a line-start marker on a line that begins after a math span", () => {
+    expect(escapeTypstText("$x^2$\n= 5 exacto")).toBe("$x^2$\n\\= 5 exacto");
+  });
 });

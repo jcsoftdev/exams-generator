@@ -80,6 +80,14 @@ export const examBlueprintRows = pgTable(
     topicId: uuid("topic_id").references(() => topics.id),
     difficulty: difficultyEnum("difficulty"),
     count: integer("count").notNull(),
+    /** Order of the row within the exam. Manual: the row's index in the builder. */
+    sortOrder: integer("sort_order").notNull().default(0),
+    /** Printed block — copied from the template, or the course name in a manual exam. */
+    blockCode: text("block_code"),
+    blockLabel: text("block_label"),
+    /** Section/exam — `null` in a manual exam, which has a single unlabeled section. */
+    sectionCode: text("section_code"),
+    sectionLabel: text("section_label"),
   },
   (table) => ({
     examIdIdx: index("exam_blueprint_rows_exam_id_idx").on(table.examId),
@@ -140,6 +148,18 @@ export const examVersions = pgTable(
     questionOrder: jsonb("question_order").notNull(),
     alternativeOrders: jsonb("alternative_orders"),
     answerKey: jsonb("answer_key").notNull(),
+    /**
+     * Frozen printed structure of THIS version (spec §3.5): the sections in
+     * their canonical order and, within each one, the blocks in the shuffled
+     * order this version got. Stores `count` and NEVER `questionIds` —
+     * `question_order` is the only source of truth for the order, so there
+     * are never two copies of the same data that can drift apart (spec §3.6).
+     *
+     * `[]` on versions generated before this feature: the renderer treats it
+     * as a single unlabeled section with a single unlabeled block, so those
+     * versions still produce the exact same PDF.
+     */
+    sectionLayout: jsonb("section_layout").notNull().default([]),
     pdfAssetId: uuid("pdf_asset_id").references(() => assets.id),
     answerSheetAssetId: uuid("answer_sheet_asset_id").references(() => assets.id),
   },

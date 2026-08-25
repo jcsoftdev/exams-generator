@@ -46,6 +46,7 @@ import {
   ContentRow,
   ExamBuilderStore,
   ResolvedTemplateRow,
+  RowLayout,
   buildCellKey,
 } from './exam-builder.store';
 import { RowGroup, groupRowsByCourse } from './group-rows-by-course';
@@ -188,7 +189,11 @@ export function toApiTopicId(topicId: string): string | undefined {
  * row has no stock-batch result yet, so it can't be driven through that full
  * DOM flow — see exam-builder.component.spec.ts).
  */
-export function toCreateExamBlueprintRow(key: CellKey, count: number): CreateExamBlueprintRow {
+export function toCreateExamBlueprintRow(
+  key: CellKey,
+  count: number,
+  layout?: RowLayout,
+): CreateExamBlueprintRow {
   const { courseId, topicId, difficulty } = parseCellKey(key);
   const apiTopicId = toApiTopicId(topicId);
   return {
@@ -196,6 +201,9 @@ export function toCreateExamBlueprintRow(key: CellKey, count: number): CreateExa
     ...(apiTopicId !== undefined ? { topicId: apiTopicId } : {}),
     difficulty,
     count,
+    // Spread rather than always-present keys: a hand-added row carries no
+    // layout, and the backend's own fallback is what places it then.
+    ...(layout ?? {}),
   };
 }
 
@@ -910,6 +918,15 @@ export class ExamBuilderComponent implements OnInit {
       topicName: row.topicId ? this.topicNameFor(row.courseId, row.topicId) : undefined,
       count: row.count,
       difficulty: row.difficulty,
+      // Transported verbatim: the teacher never sees or edits these, but
+      // without them the exam prints with no sections (design doc §4).
+      layout: {
+        sortOrder: row.sortOrder,
+        blockCode: row.blockCode,
+        blockLabel: row.blockLabel,
+        sectionCode: row.sectionCode,
+        sectionLabel: row.sectionLabel,
+      },
     }));
     this.store.bulkLoadFromBlueprint(resolved);
 
@@ -1499,9 +1516,14 @@ export class ExamBuilderComponent implements OnInit {
     this.generating.set(true);
     this.generateError.set(null);
 
-    const blueprint: CreateExamBlueprintRow[] = this.store
-      .requestedCells()
-      .map((key) => toCreateExamBlueprintRow(key, this.store.requested().get(key) ?? 0));
+    const blueprint: CreateExamBlueprintRow[] = this.store.requestedCells().map((key) => {
+      const { courseId, topicId } = parseCellKey(key);
+      return toCreateExamBlueprintRow(
+        key,
+        this.store.requested().get(key) ?? 0,
+        this.store.layoutFor(courseId, topicId),
+      );
+    });
 
     const title = this.examTitle().trim() || defaultExamTitle(gradeLevel);
 

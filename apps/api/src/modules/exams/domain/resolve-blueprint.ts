@@ -8,6 +8,17 @@ export interface TemplateRow {
   readonly questionCount?: number | null;
   readonly weightPoints?: number | null;
   readonly sourceLevel?: string | null;
+  readonly sortOrder?: number | null;
+  readonly blockCode?: string | null;
+  readonly blockLabel?: string | null;
+  readonly sectionCode?: string | null;
+  readonly sectionLabel?: string | null;
+  /**
+   * The block's OFFICIAL total, as the university publishes it — 40 questions
+   * of Mathematics, say. Our per-course split has to add up to it; when it
+   * doesn't, `blockCountMismatches` reports the discrepancy.
+   */
+  readonly blockQuestionCount?: number | null;
 }
 
 /** One row from `syllabus_week_maps` — only present for universities/tracks that have real week data (UNI today). */
@@ -84,6 +95,25 @@ export interface ResolveBlueprintOutcome {
    * normal behavior, never a degraded fallback.
    */
   readonly usedCumulativeFallback: boolean;
+  /**
+   * Blocks whose per-course split does not add up to the total the university
+   * published. Reported, never silently corrected — same principle as
+   * `usedCumulativeFallback` above: the total is official data and the split
+   * is ours, so a discrepancy is a template error somebody has to see
+   * (design doc §3.9, §5.1).
+   */
+  readonly blockCountMismatches: readonly BlockCountMismatch[];
+}
+
+/**
+ * A block whose per-course split does not sum to the university's published
+ * total for it.
+ */
+export interface BlockCountMismatch {
+  readonly blockCode: string;
+  readonly blockLabel: string | null;
+  readonly expected: number;
+  readonly actual: number;
 }
 
 /**
@@ -102,7 +132,7 @@ export function resolveBlueprint(options: ResolveBlueprintOptions): ResolveBluep
   const { courseScope, weekScope, templateRows, syllabus } = options;
 
   if (courseScope === "none") {
-    return { rows: [], usedCumulativeFallback: false };
+    return { rows: [], usedCumulativeFallback: false, blockCountMismatches: [] };
   }
 
   const filteredRows =
@@ -111,6 +141,7 @@ export function resolveBlueprint(options: ResolveBlueprintOptions): ResolveBluep
       : templateRows;
 
   const counts = resolveRowCounts(filteredRows, options.totalQuestionsOverride);
+  const blockCountMismatches = findBlockCountMismatches(filteredRows);
 
   if (weekScope === "none") {
     const rows: BlueprintRow[] = [];
@@ -125,13 +156,19 @@ export function resolveBlueprint(options: ResolveBlueprintOptions): ResolveBluep
       // A row that names its own topic is already as specific as it gets —
       // expanding it would contradict the template.
       if (row.topicId) {
-        rows.push({ courseId: row.courseId, topicId: row.topicId, count, difficulty });
+        rows.push({
+          courseId: row.courseId,
+          topicId: row.topicId,
+          count,
+          difficulty,
+          ...layoutOf(row, index),
+        });
         return;
       }
 
       const topics = (options.courseTopics ?? []).filter((topic) => topic.courseId === row.courseId);
       if (topics.length === 0) {
-        rows.push({ courseId: row.courseId, topicId: undefined, count, difficulty });
+        rows.push({ courseId: row.courseId, topicId: undefined, count, difficulty, ...layoutOf(row, index) });
         return;
       }
 
@@ -139,12 +176,18 @@ export function resolveBlueprint(options: ResolveBlueprintOptions): ResolveBluep
       topics.forEach((topic, topicIndex) => {
         const topicCount = perTopicCounts[topicIndex];
         if (topicCount > 0) {
-          rows.push({ courseId: row.courseId, topicId: topic.topicId, count: topicCount, difficulty });
+          rows.push({
+            courseId: row.courseId,
+            topicId: topic.topicId,
+            count: topicCount,
+            difficulty,
+            ...layoutOf(row, index),
+          });
         }
       });
     });
 
-    return { rows, usedCumulativeFallback: false };
+    return { rows, usedCumulativeFallback: false, blockCountMismatches };
   }
 
   const currentWeek = options.currentWeek ?? 0;
@@ -187,12 +230,64 @@ export function resolveBlueprint(options: ResolveBlueprintOptions): ResolveBluep
     topicsInScope.forEach((topic, topicIndex) => {
       const count = perTopicCounts[topicIndex];
       if (count > 0) {
-        result.push({ courseId: row.courseId, topicId: topic.topicId, count, difficulty });
+        result.push({
+          courseId: row.courseId,
+          topicId: topic.topicId,
+          count,
+          difficulty,
+          ...layoutOf(row, index),
+        });
       }
     });
   });
 
-  return { rows: result, usedCumulativeFallback };
+  return { rows: result, usedCumulativeFallback, blockCountMismatches };
+}
+
+/**
+ * A template row's layout metadata. When the template carries none — a source
+ * that only publishes weights — `sortOrder` falls back to the row's index:
+ * with no explicit order, the source's own order is the best signal there is.
+ */
+function layoutOf(row: TemplateRow, index: number) {
+  return {
+    sortOrder: row.sortOrder ?? index,
+    blockCode: row.blockCode ?? null,
+    blockLabel: row.blockLabel ?? null,
+    sectionCode: row.sectionCode ?? null,
+    sectionLabel: row.sectionLabel ?? null,
+  };
+}
+
+/**
+ * Compares, per block, the published official total against the sum of the
+ * per-course split. Only looks at blocks that declare a total: with nothing
+ * published there is nothing to compare against.
+ */
+function findBlockCountMismatches(rows: readonly TemplateRow[]): BlockCountMismatch[] {
+  const byBlock = new Map<string, { blockLabel: string | null; expected: number; actual: number }>();
+
+  for (const row of rows) {
+    if (!row.blockCode || row.blockQuestionCount == null) {
+      continue;
+    }
+    const entry = byBlock.get(row.blockCode) ?? {
+      blockLabel: row.blockLabel ?? null,
+      expected: row.blockQuestionCount,
+      actual: 0,
+    };
+    entry.actual += row.questionCount ?? 0;
+    byBlock.set(row.blockCode, entry);
+  }
+
+  return [...byBlock.entries()]
+    .filter(([, entry]) => entry.actual !== entry.expected)
+    .map(([blockCode, entry]) => ({
+      blockCode,
+      blockLabel: entry.blockLabel,
+      expected: entry.expected,
+      actual: entry.actual,
+    }));
 }
 
 /** Resolves each row's total count — direct `questionCount` when known, else an exact-sum share of `totalQuestionsOverride` by `weightPoints`. */
