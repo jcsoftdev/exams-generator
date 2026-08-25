@@ -257,3 +257,32 @@ describe("validateGeneratedQuestionShape — the model's boxes are ignored", () 
     expect(question.bodyTypst).toBe("¿Cuánto es $2 + 2$?");
   });
 });
+
+describe("validateGeneratedQuestionShape — excess properties never reach the question", () => {
+  it("carries over only the declared fields, whatever else the payload adds", () => {
+    const { question } = validateGeneratedQuestionShape({
+      bodyTypst: "¿Cuánto es $2 + 2$?",
+      alternatives: ["3", "4", "5", "6", "7"],
+      correctAnswer: "b",
+      conceptsUsed: ["suma"],
+      solutionSteps: 1,
+      // The two fields this plan removed from the contract, plus an
+      // arbitrary one — this is about excess properties in general, not
+      // only about figureBox/alternativeBoxes specifically. The validator
+      // builds `question` field-by-field from `payload.*`; a future
+      // maintainer "simplifying" that into `{ ...payload, bodyTypst }`
+      // would silently reopen this leak across every adapter at once, and
+      // nothing else in this suite would catch it.
+      figureBox: { x: 0.1, y: 0.2, w: 0.5, h: 0.3 },
+      alternativeBoxes: [null, null, null, null, null],
+      somethingElse: "x",
+    });
+
+    expect(question).not.toHaveProperty("figureBox");
+    expect(question).not.toHaveProperty("alternativeBoxes");
+    expect(question).not.toHaveProperty("somethingElse");
+    // Without this, an empty `question` would also satisfy every check
+    // above — proving a real field still comes through rules that out.
+    expect(question.bodyTypst).toBe("¿Cuánto es $2 + 2$?");
+  });
+});
