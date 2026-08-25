@@ -123,6 +123,25 @@ describe('CropReviewComponent', () => {
       box: { x: 0.3, y: 0.3, w: 0.5, h: 0.5 },
     });
   });
+
+  it('does not emit recrop for a plain click with no movement between pointerdown and pointerup', async () => {
+    const fixture = await render([SLOT]);
+    const emitted: unknown[] = [];
+    fixture.componentInstance.recrop.subscribe((event) => emitted.push(event));
+
+    const container = (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>(
+      '[data-testid="crop-container"]',
+    )!;
+    stubRect(container, 200, 100);
+
+    // Same spot down and up — no pointermove in between at all. The teacher
+    // just tapped the photo (or grabbed a handle and let go without
+    // dragging); the box never changed, so no HTTP round trip should fire.
+    dispatchPointer(container, 'pointerdown', 20, 10);
+    dispatchPointer(container, 'pointerup', 20, 10);
+
+    expect(emitted.length).toBe(0);
+  });
 });
 
 describe('clampMove — keeps a dragged box inside the 0..1 canvas', () => {

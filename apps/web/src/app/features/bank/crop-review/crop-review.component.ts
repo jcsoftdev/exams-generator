@@ -47,6 +47,14 @@ export class CropReviewComponent {
   protected dragStartX = 0;
   protected dragStartY = 0;
   protected dragStartBox: NormalizedBoxDto | null = null;
+  /**
+   * Set by `onPointerMove` once the pointer actually moves during this drag.
+   * A `pointerdown` immediately followed by `pointerup` — a plain click on
+   * the container, or a resize handle tapped and released — never sets it,
+   * so `onPointerUp` has a way to tell "the teacher adjusted the box" apart
+   * from "the teacher just clicked it" and skip the no-op `recrop`.
+   */
+  protected moved = false;
 
   /** Called by the drag handler once the teacher lets go of the rectangle. */
   applyBox(target: CropTarget, box: NormalizedBoxDto): void {
@@ -105,6 +113,7 @@ export class CropReviewComponent {
     this.dragHandle = handle;
     this.dragStartX = (event.clientX - rect.left) / rect.width;
     this.dragStartY = (event.clientY - rect.top) / rect.height;
+    this.moved = false;
     // Keep receiving move/up events even if the pointer leaves the container mid-drag.
     container.setPointerCapture?.(event.pointerId);
   }
@@ -130,10 +139,15 @@ export class CropReviewComponent {
       this.dragMode === 'move'
         ? clampMove(this.dragStartBox, dx, dy)
         : clampResize(this.dragStartBox, this.dragHandle!, dx, dy);
+    this.moved = true;
   }
 
   protected onPointerUp(): void {
-    if (this.dragTarget && this.dragBox) {
+    // A click with no movement between pointerdown and pointerup — the
+    // rectangle tapped, or a resize handle grabbed and released in place —
+    // must NOT fire recrop: the box never changed, so it would be a wasted
+    // HTTP round trip and a `busy` flash for nothing (Task 10).
+    if (this.dragTarget && this.dragBox && this.moved) {
       this.applyBox(this.dragTarget, this.dragBox);
     }
     this.dragTarget = null;
@@ -141,6 +155,7 @@ export class CropReviewComponent {
     this.dragMode = null;
     this.dragHandle = null;
     this.dragStartBox = null;
+    this.moved = false;
   }
 }
 
