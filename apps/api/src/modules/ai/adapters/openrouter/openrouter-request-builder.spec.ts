@@ -379,32 +379,24 @@ describe("buildOpenRouterExtractRequestBody", () => {
     const systemMessage = body.messages.find((m) => m.role === "system");
     expect(systemMessage!.content as string).toContain("@preview/mitex:0.2.7");
   });
-});
 
-describe("buildOpenRouterExtractRequestBody — crop boxes", () => {
-  it("asks the schema for figureBox and alternativeBoxes", () => {
-    const body = buildOpenRouterExtractRequestBody("some/vision-model", {
-      image: Buffer.from([0x89, 0x50, 0x4e, 0x47]),
-      mimeType: "image/png",
-    });
+  it("no longer asks the model for crop boxes — the figure is found by OCR, not reported", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
 
-    const schema = body.response_format!.json_schema!.schema;
-    expect(schema.properties).toHaveProperty("figureBox");
-    expect(schema.properties).toHaveProperty("alternativeBoxes");
-    // `strict: true` schemas require every declared property to be listed.
-    expect(schema.required).toEqual(expect.arrayContaining(["figureBox", "alternativeBoxes"]));
+    // Asking a vision model for pixel coordinates is what this design replaced.
+    // Re-adding these rules is the regression to catch.
+    expect(promptText).not.toMatch(/figureBox/);
+    expect(promptText).not.toMatch(/alternativeBoxes/);
+    expect(promptText).not.toMatch(/recuadro/i);
   });
 
-  it("tells the model the coordinates are fractions of the image, not pixels", () => {
-    const body = buildOpenRouterExtractRequestBody("some/vision-model", {
-      image: Buffer.from([0x89, 0x50, 0x4e, 0x47]),
-      mimeType: "image/png",
-    });
+  it("the extract schema no longer declares the box fields", () => {
+    const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
 
-    const systemPrompt = body.messages[0]!.content as string;
-    expect(systemPrompt).toContain("fracción");
-    expect(systemPrompt).toContain("figureBox");
-    expect(systemPrompt).toContain("alternativeBoxes");
+    const schema = body.response_format!.json_schema!.schema;
+    expect(schema.properties).not.toHaveProperty("figureBox");
+    expect(schema.properties).not.toHaveProperty("alternativeBoxes");
+    expect(schema.required).not.toContain("figureBox");
   });
 });
 
