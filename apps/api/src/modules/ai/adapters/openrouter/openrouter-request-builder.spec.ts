@@ -335,6 +335,33 @@ describe("buildOpenRouterExtractRequestBody", () => {
   });
 });
 
+describe("buildOpenRouterExtractRequestBody — crop boxes", () => {
+  it("asks the schema for figureBox and alternativeBoxes", () => {
+    const body = buildOpenRouterExtractRequestBody("some/vision-model", {
+      image: Buffer.from([0x89, 0x50, 0x4e, 0x47]),
+      mimeType: "image/png",
+    });
+
+    const schema = body.response_format!.json_schema!.schema;
+    expect(schema.properties).toHaveProperty("figureBox");
+    expect(schema.properties).toHaveProperty("alternativeBoxes");
+    // `strict: true` schemas require every declared property to be listed.
+    expect(schema.required).toEqual(expect.arrayContaining(["figureBox", "alternativeBoxes"]));
+  });
+
+  it("tells the model the coordinates are fractions of the image, not pixels", () => {
+    const body = buildOpenRouterExtractRequestBody("some/vision-model", {
+      image: Buffer.from([0x89, 0x50, 0x4e, 0x47]),
+      mimeType: "image/png",
+    });
+
+    const systemPrompt = body.messages[0]!.content as string;
+    expect(systemPrompt).toContain("fracción");
+    expect(systemPrompt).toContain("figureBox");
+    expect(systemPrompt).toContain("alternativeBoxes");
+  });
+});
+
 describe("spend ceiling", () => {
   it("caps the completion of every request kind", () => {
     // Audit 2026-08-20 H6: without max_tokens the bill is whatever the model
