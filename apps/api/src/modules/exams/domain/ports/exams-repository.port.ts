@@ -1,3 +1,4 @@
+import { SectionLayout } from "../version-shuffler";
 import {
   Difficulty,
   ExamDetail as SharedExamDetail,
@@ -21,6 +22,16 @@ export interface CreateExamBlueprintRowRecord {
   readonly topicId?: string;
   readonly difficulty?: Difficulty;
   readonly count: number;
+  /**
+   * Where this row prints (design doc §4), carried straight through from the
+   * resolver's `BlueprintRow`. All optional: a manual exam declares none, and
+   * `sortOrder` then falls back to the blueprint's own order.
+   */
+  readonly sortOrder?: number;
+  readonly blockCode?: string | null;
+  readonly blockLabel?: string | null;
+  readonly sectionCode?: string | null;
+  readonly sectionLabel?: string | null;
 }
 
 /**
@@ -183,6 +194,17 @@ export interface SelectedQuestionForGeneration {
    * entirely when this question has no per-alternative images at all.
    */
   readonly alternativeImages?: readonly ({ storageKey: string; mime: string } | null)[] | null;
+  /**
+   * Where this question gets printed (design doc §4). Comes from its
+   * `exam_blueprint_rows` via `exam_questions.blueprint_row_id`.
+   *
+   * `blockLabel` falls back to the course name when the row declares no
+   * block — the manual-exam case, where each course is its own block.
+   */
+  readonly sortOrder: number;
+  readonly blockLabel: string;
+  readonly sectionCode: string | null;
+  readonly sectionLabel: string | null;
 }
 
 export interface ExamForGenerationRecord {
@@ -223,6 +245,8 @@ export interface SaveVersionRecord {
   readonly code: string;
   readonly questionOrder: readonly string[];
   readonly answerKey: Readonly<Record<number, string>>;
+  /** This form's frozen printed structure (design doc §3.5). */
+  readonly sectionLayout: SectionLayout;
   readonly pdfAssetId: string;
   readonly answerSheetAssetId: string;
 }

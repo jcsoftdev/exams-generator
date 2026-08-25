@@ -524,6 +524,7 @@ export class ExamVersionGenerationService {
       code: version.code,
       questionOrder: version.questionOrder,
       answerKey: version.answerKey,
+      sectionLayout: version.sectionLayout,
       pdfAssetId: pdfAsset.id,
       answerSheetAssetId: answerKeyAsset.id,
     });

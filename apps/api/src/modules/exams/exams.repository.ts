@@ -131,12 +131,22 @@ export class ExamsRepository implements ExamsRepositoryPort {
       }
 
       await tx.insert(examBlueprintRows).values(
-        record.blueprint.map((row) => ({
+        // The layout metadata the resolver worked out travels through to the
+        // row. Resolving where a row prints and then dropping it at the write
+        // boundary would leave `getExamForGeneration` with nothing to read.
+        // `sortOrder` falls back to the blueprint's own order for a manual
+        // exam, which has no template behind it.
+        record.blueprint.map((row, index) => ({
           examId: exam.id,
           courseId: row.courseId,
           topicId: row.topicId,
           difficulty: row.difficulty,
           count: row.count,
+          sortOrder: row.sortOrder ?? index,
+          blockCode: row.blockCode ?? null,
+          blockLabel: row.blockLabel ?? null,
+          sectionCode: row.sectionCode ?? null,
+          sectionLabel: row.sectionLabel ?? null,
         })),
       );
 
@@ -549,10 +559,19 @@ export class ExamsRepository implements ExamsRepositoryPort {
         bodyTypst: questions.bodyTypst,
         alternatives: questions.alternatives,
         figureCode: questions.figureCode,
+        sortOrder: examBlueprintRows.sortOrder,
+        blockLabel: examBlueprintRows.blockLabel,
+        sectionCode: examBlueprintRows.sectionCode,
+        sectionLabel: examBlueprintRows.sectionLabel,
+        courseName: courses.name,
       })
       .from(examQuestions)
       .innerJoin(questions, eq(examQuestions.questionId, questions.id))
       .leftJoin(assets, eq(questions.imageAssetId, assets.id))
+      // leftJoin and not innerJoin: `blueprintRowId` is nullable for legacy and
+      // manual inserts, and a question with no row must not vanish from the exam.
+      .leftJoin(examBlueprintRows, eq(examQuestions.blueprintRowId, examBlueprintRows.id))
+      .leftJoin(courses, eq(examBlueprintRows.courseId, courses.id))
       .where(eq(examQuestions.examId, examId))
       .orderBy(asc(examQuestions.position));
 
@@ -577,6 +596,14 @@ export class ExamsRepository implements ExamsRepositoryPort {
         alternatives: (row.alternatives as readonly string[] | null) ?? null,
         figureCode: row.figureCode,
         alternativeImages: alternativeImagesByQuestionId.get(row.questionId) ?? null,
+        // `blockLabel` falls back to the course name: in a manual exam each
+        // course is its own block. Empty string when there is no course either
+        // (a legacy row with no `blueprint_row_id`), which the renderer treats
+        // as "no heading".
+        sortOrder: row.sortOrder ?? row.position,
+        blockLabel: row.blockLabel ?? row.courseName ?? "",
+        sectionCode: row.sectionCode ?? null,
+        sectionLabel: row.sectionLabel ?? null,
       })),
     };
   }
@@ -719,6 +746,7 @@ export class ExamsRepository implements ExamsRepositoryPort {
       code: version.code,
       questionOrder: version.questionOrder,
       answerKey: version.answerKey,
+      sectionLayout: version.sectionLayout,
       pdfAssetId: version.pdfAssetId,
       answerSheetAssetId: version.answerSheetAssetId,
     });
