@@ -32,26 +32,31 @@ const RASTER_WITH_FIGURE = {
 /**
  * A raster with two black blocks, one per alternative band, well clear (by
  * column) of every marker so erasing the markers never touches the ink.
+ * Both blocks sit at columns 4-15; "b"'s is rows 8-9, "c"'s is rows 14-15 —
+ * i.e. normalized boxes { x: 0.2, y: 0.4, w: 0.6, h: 0.1 } and
+ * { x: 0.2, y: 0.7, w: 0.6, h: 0.1 } respectively.
  */
 const RASTER_WITH_TWO_ALTERNATIVE_FIGURES = {
   gray: (() => {
     const width = 20;
-    const height = 30;
+    const height = 20;
     const gray = new Uint8Array(width * height).fill(255);
     const paintRow = (y: number) => gray.fill(0, y * width + 4, y * width + 16);
-    for (let y = 10; y < 14; y++) paintRow(y); // alternative "b"'s figure
-    for (let y = 20; y < 24; y++) paintRow(y); // alternative "c"'s figure
+    paintRow(8);
+    paintRow(9); // alternative "b"'s figure
+    paintRow(14);
+    paintRow(15); // alternative "c"'s figure
     return gray;
   })(),
   width: 20,
-  height: 30,
+  height: 20,
 };
 
-/** `a)` near the top, `b)` above the first block's band, `c)` above the second's. */
+/** `a)` right at the top (so no figure is ever above it), `b)` above the first block's band, `c)` above the second's. */
 const ALTERNATIVE_MARKERS = [
-  { text: "a)", box: { x: 0, y: 0.03, w: 0.05, h: 0.03 }, confidence: 90 },
-  { text: "b)", box: { x: 0, y: 0.23, w: 0.05, h: 0.03 }, confidence: 90 },
-  { text: "c)", box: { x: 0, y: 0.5, w: 0.05, h: 0.03 }, confidence: 90 },
+  { text: "a)", box: { x: 0, y: 0, w: 0.05, h: 0.03 }, confidence: 90 },
+  { text: "b)", box: { x: 0, y: 0.25, w: 0.05, h: 0.03 }, confidence: 90 },
+  { text: "c)", box: { x: 0, y: 0.6, w: 0.05, h: 0.03 }, confidence: 90 },
 ];
 
 function buildDeps() {
@@ -190,6 +195,8 @@ describe("ExtractQuestionService.extract — crops", () => {
 
     expect(result.figureCrop).toBeUndefined();
     expect(result.alternativeCrops?.map((crop) => crop.alternativeIndex)).toEqual([1, 2]);
+    // "b"'s block: columns 4-15, rows 8-9 of the 20x20 fixture, normalized.
+    expect(result.alternativeCrops![0]!.box).toEqual({ x: 0.2, y: 0.4, w: 0.6, h: 0.1 });
     expect(cropper.crop).toHaveBeenCalledTimes(2);
   });
 
@@ -252,7 +259,12 @@ describe("ExtractQuestionService.extract — figures from OCR", () => {
 
     const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
 
-    expect(result.figureCrop).toBeDefined();
+    // The 20x20 raster's black block is columns 4-15, rows 10-17 —
+    // normalized that is exactly this box.
+    expect(result.figureCrop!.box).toEqual({ x: 0.2, y: 0.5, w: 0.6, h: 0.4 });
+    expect(result.figureCrop!.dataUrl).toBe(
+      `data:image/png;base64,${Buffer.from("cropped-png-bytes").toString("base64")}`,
+    );
     expect(cropper.crop).toHaveBeenCalledTimes(1);
   });
 
