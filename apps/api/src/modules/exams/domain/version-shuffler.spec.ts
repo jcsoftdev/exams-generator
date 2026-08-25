@@ -1,5 +1,20 @@
 import { createSeededRng } from "./ports/random.port";
-import { buildVersions, SelectedQuestion, SelectedStructuredQuestion } from "./version-shuffler";
+import {
+  buildVersions,
+  SelectedQuestion,
+  SelectedStructuredQuestion,
+  SelectionSection,
+} from "./version-shuffler";
+
+/**
+ * Wraps a flat selection in the minimal booklet shape: one unlabeled section
+ * holding one unlabeled block. Every pre-sections test keeps its assertions
+ * unchanged — their invariants (the key follows the content, `questionOrder`
+ * is a bijection) must hold identically whether or not the exam has sections.
+ */
+const oneBlock = (questions: readonly SelectedQuestion[]): SelectionSection[] => [
+  { code: null, label: null, blocks: [{ label: "", questions }] },
+];
 
 describe("buildVersions", () => {
   it("builds a version per requested count, coded A, B, C... sequentially", () => {
@@ -9,7 +24,7 @@ describe("buildVersions", () => {
       { questionId: "q3", correctAnswer: "C" },
     ];
 
-    const versions = buildVersions(selected, 3, createSeededRng(1));
+    const versions = buildVersions(oneBlock(selected), 3, createSeededRng(1));
 
     expect(versions).toHaveLength(3);
     expect(versions.map((v) => v.code)).toEqual(["A", "B", "C"]);
@@ -23,7 +38,7 @@ describe("buildVersions", () => {
       { questionId: "q4", correctAnswer: "D" },
     ];
 
-    const versions = buildVersions(selected, 2, createSeededRng(42));
+    const versions = buildVersions(oneBlock(selected), 2, createSeededRng(42));
 
     const correctAnswerByQuestionId = new Map(selected.map((q) => [q.questionId, q.correctAnswer]));
 
@@ -44,7 +59,7 @@ describe("buildVersions", () => {
     ];
     const inputIds = selected.map((q) => q.questionId).sort();
 
-    const versions = buildVersions(selected, 4, createSeededRng(7));
+    const versions = buildVersions(oneBlock(selected), 4, createSeededRng(7));
 
     for (const version of versions) {
       expect(version.questionOrder).toHaveLength(selected.length);
@@ -62,7 +77,7 @@ describe("buildVersions", () => {
       { questionId: "q5", correctAnswer: "E" },
     ];
 
-    const versions = buildVersions(selected, 3, createSeededRng(123));
+    const versions = buildVersions(oneBlock(selected), 3, createSeededRng(123));
 
     const orders = versions.map((v) => v.questionOrder.join("|"));
     expect(new Set(orders).size).toBe(orders.length);
@@ -71,7 +86,7 @@ describe("buildVersions", () => {
   it("boundary: n=1 makes exact-distinctness across versions impossible — must not throw and still returns versionCount versions", () => {
     const selected: SelectedQuestion[] = [{ questionId: "only", correctAnswer: "A" }];
 
-    const versions = buildVersions(selected, 3, createSeededRng(5));
+    const versions = buildVersions(oneBlock(selected), 3, createSeededRng(5));
 
     expect(versions).toHaveLength(3);
     expect(versions.map((v) => v.code)).toEqual(["A", "B", "C"]);
@@ -87,7 +102,7 @@ describe("buildVersions", () => {
       { questionId: "q2", correctAnswer: "B" },
     ];
 
-    const versions = buildVersions(selected, 5, createSeededRng(9));
+    const versions = buildVersions(oneBlock(selected), 5, createSeededRng(9));
 
     expect(versions).toHaveLength(5);
     for (const version of versions) {
@@ -108,7 +123,7 @@ describe("buildVersions", () => {
     };
     const selected: SelectedQuestion[] = [structuredQuestion];
 
-    const versions = buildVersions(selected, 1, createSeededRng(99));
+    const versions = buildVersions(oneBlock(selected), 1, createSeededRng(99));
     const [version] = versions;
 
     const shuffled = version.shuffledAlternatives["q1"];
@@ -135,7 +150,7 @@ describe("buildVersions", () => {
     };
     const selected: SelectedQuestion[] = [structuredQuestion];
 
-    const versions = buildVersions(selected, 1, createSeededRng(99));
+    const versions = buildVersions(oneBlock(selected), 1, createSeededRng(99));
     const [version] = versions;
 
     const shuffledAlternatives = version.shuffledAlternatives["q1"]!;
@@ -163,7 +178,7 @@ describe("buildVersions", () => {
       correctAnswer: "0",
     };
 
-    const versions = buildVersions([structuredQuestion], 2, createSeededRng(3));
+    const versions = buildVersions(oneBlock([structuredQuestion]), 2, createSeededRng(3));
 
     for (const version of versions) {
       expect(version.shuffledAlternativeImages["q1"]).toBeUndefined();
@@ -176,7 +191,7 @@ describe("buildVersions", () => {
       { questionId: "q2", correctAnswer: "A" }, // type omitted defaults to image
     ];
 
-    const versions = buildVersions(selected, 2, createSeededRng(11));
+    const versions = buildVersions(oneBlock(selected), 2, createSeededRng(11));
 
     for (const version of versions) {
       expect(version.shuffledAlternatives["q1"]).toBeUndefined();
@@ -202,7 +217,7 @@ describe("buildVersions", () => {
       const correctAnswerByQuestionId = new Map(selected.map((q) => [q.questionId, q.correctAnswer]));
       const inputIds = selected.map((q) => q.questionId).sort();
 
-      const versions = buildVersions(selected, versionCount, createSeededRng(scenario));
+      const versions = buildVersions(oneBlock(selected), versionCount, createSeededRng(scenario));
 
       expect(versions).toHaveLength(versionCount);
       versions.forEach((version, index) => {
@@ -266,7 +281,7 @@ describe("buildVersions", () => {
         }),
       );
 
-      const versions = buildVersions(selected, versionCount, createSeededRng(scenario));
+      const versions = buildVersions(oneBlock(selected), versionCount, createSeededRng(scenario));
 
       expect(versions).toHaveLength(versionCount);
 
@@ -293,6 +308,99 @@ describe("buildVersions", () => {
         }
       }
     }
+  });
+
+  const q = (id: string): SelectedQuestion => ({ questionId: id, correctAnswer: "A" });
+
+  const twoSections = (): SelectionSection[] => [
+    {
+      code: "E1",
+      label: "PRIMERA PRUEBA",
+      blocks: [
+        { label: "RAZ. MATEMÁTICO", questions: [q("rm1"), q("rm2"), q("rm3")] },
+        { label: "RAZ. VERBAL", questions: [q("rv1"), q("rv2")] },
+      ],
+    },
+    {
+      code: "E2",
+      label: "SEGUNDA PRUEBA",
+      blocks: [{ label: "MATEMÁTICA", questions: [q("m1"), q("m2")] }],
+    },
+  ];
+
+  it("MUST: questions of the same block stay contiguous in questionOrder", () => {
+    const versions = buildVersions(twoSections(), 5, createSeededRng(7));
+
+    const blockOf = new Map<string, string>([
+      ["rm1", "RM"],
+      ["rm2", "RM"],
+      ["rm3", "RM"],
+      ["rv1", "RV"],
+      ["rv2", "RV"],
+      ["m1", "MAT"],
+      ["m2", "MAT"],
+    ]);
+
+    for (const version of versions) {
+      const labels = version.questionOrder.map((id) => blockOf.get(id)!);
+      const runs = labels.filter((label, index) => label !== labels[index - 1]);
+      expect(new Set(runs).size).toBe(runs.length); // no block appears in two separate runs
+    }
+  });
+
+  it("MUST: no question crosses from one section into another", () => {
+    const versions = buildVersions(twoSections(), 5, createSeededRng(11));
+
+    for (const version of versions) {
+      const firstSectionCount = version.sectionLayout[0]!.blocks.reduce((sum, b) => sum + b.count, 0);
+      const printedFirst = version.questionOrder.slice(0, firstSectionCount);
+      const printedSecond = version.questionOrder.slice(firstSectionCount);
+
+      expect(printedFirst.every((id) => id.startsWith("rm") || id.startsWith("rv"))).toBe(true);
+      expect(printedSecond.every((id) => id.startsWith("m"))).toBe(true);
+    }
+  });
+
+  it("MUST: sections always keep their canonical order", () => {
+    const versions = buildVersions(twoSections(), 8, createSeededRng(3));
+
+    for (const version of versions) {
+      expect(version.sectionLayout.map((s) => s.code)).toEqual(["E1", "E2"]);
+      expect(version.sectionLayout.map((s) => s.label)).toEqual([
+        "PRIMERA PRUEBA",
+        "SEGUNDA PRUEBA",
+      ]);
+    }
+  });
+
+  it("block order varies across versions when a section has two or more", () => {
+    const versions = buildVersions(twoSections(), 12, createSeededRng(5));
+
+    const firstSectionBlockOrders = new Set(
+      versions.map((v) => v.sectionLayout[0]!.blocks.map((b) => b.label).join("|")),
+    );
+
+    expect(firstSectionBlockOrders.size).toBeGreaterThan(1);
+  });
+
+  it("INVARIANT: the layout's counts sum to the length of questionOrder", () => {
+    const versions = buildVersions(twoSections(), 6, createSeededRng(9));
+
+    for (const version of versions) {
+      const total = version.sectionLayout.reduce(
+        (sum, section) => sum + section.blocks.reduce((acc, block) => acc + block.count, 0),
+        0,
+      );
+      expect(total).toBe(version.questionOrder.length);
+    }
+  });
+
+  it("an unlabeled section with an unlabeled block produces the minimal layout", () => {
+    const versions = buildVersions(oneBlock([q("a"), q("b")]), 1, createSeededRng(1));
+
+    expect(versions[0]!.sectionLayout).toEqual([
+      { code: null, label: null, blocks: [{ label: "", count: 2 }] },
+    ]);
   });
 });
 

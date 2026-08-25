@@ -11,13 +11,20 @@ import {
 } from "@nestjs/common";
 import { Logger } from "nestjs-pino";
 import { AuthTokenPayload } from "../auth/token.service";
-import { SelectedQuestion, Version, buildVersions } from "./domain/version-shuffler";
+import {
+  SelectedQuestion,
+  SelectionSection,
+  Version,
+  buildVersions,
+} from "./domain/version-shuffler";
 import { pickReplacementQuestion } from "./domain/pick-replacement-question";
 import { Rng, createSeededRng } from "./domain/ports/random.port";
 import {
   AnswerKeyDocumentInput,
+  AnswerKeySection,
   ExamPdfDocumentInput,
   ExamPdfQuestion,
+  ExamPdfSection,
   PdfCompilerPort,
   TypstCompilationError,
 } from "./domain/ports/pdf-compiler.port";
@@ -333,7 +340,16 @@ export class ExamVersionGenerationService {
             correctAnswer: q.correctAnswer,
           },
     );
-    const versions = buildVersions(selected, versionCount, this.rngFactory());
+    // The repository still hands back a FLAT selection, so the booklet is one
+    // unlabeled section holding one unlabeled block — the shape the port calls
+    // "no heading". `buildVersions` then shuffles inside that single block,
+    // which is exactly what it did before sections existed. Once the
+    // repository starts exposing the blueprint's real sections, only this
+    // wrapper changes; everything downstream already reads `sectionLayout`.
+    const sections: SelectionSection[] = [
+      { code: null, label: null, blocks: [{ label: "", questions: selected }] },
+    ];
+    const versions = buildVersions(sections, versionCount, this.rngFactory());
 
     const questionById = new Map(exam.selectedQuestions.map((q) => [q.questionId, q]));
 
@@ -452,48 +468,28 @@ export class ExamVersionGenerationService {
       title: exam.title,
       versionLabel,
       tenantLogoAbsolutePath: logoPath,
-      // One unlabeled section holding one unlabeled block — the shape the port
-      // documents for "versions generated before the official layout feature".
-      // It prints exactly what this service printed before sections existed:
-      // a flat, continuously-numbered run of questions with no headings and no
-      // page breaks. Exams that DO carry a layout get their real sections once
-      // the shuffler starts emitting `sectionLayout`.
-      sections: [
-        {
-          code: null,
-          label: null,
-          blocks: [
-            {
-              label: "",
-              questions: version.questionOrder.map((questionId) =>
-                this.buildPdfQuestion(
-                  questionId,
-                  questionById,
-                  imagePathByQuestionId,
-                  altImagePathsByQuestionId,
-                  version,
-                ),
-              ),
-            },
-          ],
-        },
-      ],
+      // Cut `questionOrder` by the layout the shuffler froze for THIS version.
+      // The layout stores counts and never ids — `questionOrder` is the single
+      // source of truth for order, and the counts only say where to cut
+      // (design doc §3.6), so walking them in step is the whole mapping.
+      sections: this.sliceByLayout(version, (questionId) =>
+        this.buildPdfQuestion(
+          questionId,
+          questionById,
+          imagePathByQuestionId,
+          altImagePathsByQuestionId,
+          version,
+        ),
+      ),
     };
 
     const answerKeyInput: AnswerKeyDocumentInput = {
       title: exam.title,
       versionLabel,
-      // Matches the booklet above: one unlabeled section, so the key's local
-      // numbering and the booklet's printed numbering stay the same run.
-      sections: [
-        {
-          label: null,
-          entries: version.questionOrder.map((questionId, position) => ({
-            questionId,
-            correctOption: version.answerKey[position]!,
-          })),
-        },
-      ],
+      // Cut by the SAME layout as the booklet, so the key's local numbering
+      // and the booklet's printed numbering are the same run: if the booklet
+      // says "14", the key says "14" (design doc §6.3).
+      sections: this.sliceAnswerKeyByLayout(version),
     };
 
     let examPdf: Buffer;
@@ -547,6 +543,47 @@ export class ExamVersionGenerationService {
    * materialized in `imagePathByQuestionId`. `type='image'` questions keep
    * rendering from the materialized on-disk path, unchanged.
    */
+  /**
+   * Rebuilds the booklet's sections/blocks by walking `version.sectionLayout`
+   * and consuming `version.questionOrder` in step. The layout deliberately
+   * stores counts and never ids, so this cursor walk is the ONLY thing that
+   * pairs the two — which is why both PDFs must slice with the same helper,
+   * or the key would stop lining up with the booklet.
+   */
+  private sliceByLayout(
+    version: Version,
+    toPdfQuestion: (questionId: string) => ExamPdfQuestion,
+  ): ExamPdfSection[] {
+    let cursor = 0;
+    return version.sectionLayout.map((section) => ({
+      code: section.code,
+      label: section.label,
+      blocks: section.blocks.map((block) => {
+        const ids = version.questionOrder.slice(cursor, cursor + block.count);
+        cursor += block.count;
+        return { label: block.label, questions: ids.map(toPdfQuestion) };
+      }),
+    }));
+  }
+
+  /**
+   * The answer key's sections mirror the booklet's, but flattened one level:
+   * the key prints a table per SECTION, not per block, because its numbering
+   * restarts per section and not per block (design doc §6.3).
+   */
+  private sliceAnswerKeyByLayout(version: Version): AnswerKeySection[] {
+    let cursor = 0;
+    return version.sectionLayout.map((section) => {
+      const count = section.blocks.reduce((sum, block) => sum + block.count, 0);
+      const entries = version.questionOrder.slice(cursor, cursor + count).map((questionId, i) => ({
+        questionId,
+        correctOption: version.answerKey[cursor + i]!,
+      }));
+      cursor += count;
+      return { label: section.label, entries };
+    });
+  }
+
   private buildPdfQuestion(
     questionId: string,
     questionById: ReadonlyMap<string, SelectedQuestionForGeneration>,

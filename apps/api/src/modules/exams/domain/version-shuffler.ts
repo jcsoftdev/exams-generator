@@ -125,6 +125,13 @@ export interface Version {
     string,
     readonly ({ storageKey: string; mime: string } | null)[]
   >;
+  /**
+   * The printed structure of THIS form: sections in canonical order, blocks in
+   * whatever shuffled order this version drew. It belongs to the version and
+   * not to the exam precisely because block order changes per version
+   * (design doc §3.5).
+   */
+  readonly sectionLayout: SectionLayout;
 }
 
 const MAX_DISTINCTNESS_RETRIES = 50;
@@ -148,27 +155,29 @@ const MAX_DISTINCTNESS_RETRIES = 50;
  *   n=1 or n=2 with versionCount > n!).
  */
 export function buildVersions(
-  selected: readonly SelectedQuestion[],
+  sections: readonly SelectionSection[],
   versionCount: number,
   rng: Rng,
 ): Version[] {
-  if (selected.length === 0) {
+  const allQuestions = sections.flatMap((section) =>
+    section.blocks.flatMap((block) => block.questions),
+  );
+  if (allQuestions.length === 0) {
     return [];
   }
 
-  const questionIds = selected.map((q) => q.questionId);
-  const questionById = new Map(selected.map((q) => [q.questionId, q]));
+  const questionById = new Map(allQuestions.map((q) => [q.questionId, q]));
   const seenOrders = new Set<string>();
   const versions: Version[] = [];
 
   for (let versionIndex = 0; versionIndex < versionCount; versionIndex++) {
-    let questionOrder = shuffleArray(questionIds, rng);
+    let laidOut = layOutOneVersion(sections, rng);
     let attempts = 0;
-    while (seenOrders.has(questionOrder.join("|")) && attempts < MAX_DISTINCTNESS_RETRIES) {
-      questionOrder = shuffleArray(questionIds, rng);
+    while (seenOrders.has(laidOut.questionOrder.join("|")) && attempts < MAX_DISTINCTNESS_RETRIES) {
+      laidOut = layOutOneVersion(sections, rng);
       attempts++;
     }
-    seenOrders.add(questionOrder.join("|"));
+    seenOrders.add(laidOut.questionOrder.join("|"));
 
     const answerKey: Record<number, string> = {};
     const shuffledAlternatives: Record<string, readonly string[]> = {};
@@ -177,7 +186,7 @@ export function buildVersions(
       readonly ({ storageKey: string; mime: string } | null)[]
     > = {};
 
-    questionOrder.forEach((questionId, position) => {
+    laidOut.questionOrder.forEach((questionId, position) => {
       const question = questionById.get(questionId)!;
       if (question.type === "structured") {
         const { alternatives, answerLetter, alternativeImages } = shuffleStructuredAlternatives(
@@ -196,14 +205,48 @@ export function buildVersions(
 
     versions.push({
       code: versionCodeFor(versionIndex),
-      questionOrder,
+      questionOrder: laidOut.questionOrder,
       answerKey,
       shuffledAlternatives,
       shuffledAlternativeImages,
+      sectionLayout: laidOut.sectionLayout,
     });
   }
 
   return versions;
+}
+
+/**
+ * One layout pass: SECTIONS are walked in their canonical order and are NEVER
+ * permuted — a Chemistry question cannot land in the Mathematics prueba —
+ * while inside each section the order of BLOCKS is permuted (anti-copying,
+ * design doc §3.4) and inside each block its questions are permuted, mixing
+ * courses and levels the way the real booklet does.
+ */
+function layOutOneVersion(
+  sections: readonly SelectionSection[],
+  rng: Rng,
+): { questionOrder: string[]; sectionLayout: SectionLayoutEntry[] } {
+  const questionOrder: string[] = [];
+  const sectionLayout: SectionLayoutEntry[] = [];
+
+  for (const section of sections) {
+    const blocks = shuffleArray([...section.blocks], rng);
+    const blockLayout: SectionBlockLayout[] = [];
+
+    for (const block of blocks) {
+      const ids = shuffleArray(
+        block.questions.map((question) => question.questionId),
+        rng,
+      );
+      questionOrder.push(...ids);
+      blockLayout.push({ label: block.label, count: ids.length });
+    }
+
+    sectionLayout.push({ code: section.code, label: section.label, blocks: blockLayout });
+  }
+
+  return { questionOrder, sectionLayout };
 }
 
 /**
