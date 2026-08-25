@@ -148,15 +148,25 @@ export type ResizeHandle = 'nw' | 'n' | 'ne' | 'e' | 'se' | 's' | 'sw' | 'w';
 
 export const RESIZE_HANDLES: readonly ResizeHandle[] = ['nw', 'n', 'ne', 'e', 'se', 's', 'sw', 'w'];
 
-/** Translates the box by (dx, dy), clamped so it never crosses the photo's 0..1 edges. */
-function clampMove(box: NormalizedBoxDto, dx: number, dy: number): NormalizedBoxDto {
+/**
+ * Translates the box by (dx, dy), clamped so it never crosses the photo's
+ * 0..1 edges. Exported so its boundary behavior — the guard against the API's
+ * `isValidNormalizedBox` (which DISCARDS, not clamps, an out-of-canvas box)
+ * — can be unit-tested directly rather than only through simulated drags.
+ */
+export function clampMove(box: NormalizedBoxDto, dx: number, dy: number): NormalizedBoxDto {
   const x = clamp(box.x + dx, 0, 1 - box.w);
   const y = clamp(box.y + dy, 0, 1 - box.h);
   return { x, y, w: box.w, h: box.h };
 }
 
-/** Resizes the box from the dragged handle, clamped to 0..1 and to a minimum size. */
-function clampResize(box: NormalizedBoxDto, handle: ResizeHandle, dx: number, dy: number): NormalizedBoxDto {
+/**
+ * Resizes the box from the dragged handle, clamped to 0..1 and to a minimum
+ * size — the API rejects `w <= 0` / `h <= 0` outright, so a resize that would
+ * collapse or invert an edge is stopped at `MIN` instead of ever reaching 0.
+ * Exported for the same reason as `clampMove`.
+ */
+export function clampResize(box: NormalizedBoxDto, handle: ResizeHandle, dx: number, dy: number): NormalizedBoxDto {
   const MIN = 0.02;
   let { x, y, w, h } = box;
   const right = box.x + box.w;

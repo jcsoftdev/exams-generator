@@ -5,6 +5,7 @@
     <div class="flex flex-wrap items-start gap-4">
       <div
         #container
+        data-testid="crop-container"
         class="relative w-64 select-none touch-none"
         (pointerdown)="startMove($event, container, slot)"
         (pointermove)="onPointerMove($event, container)"
