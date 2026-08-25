@@ -55,6 +55,20 @@ const POOL: QuestionPoolCandidateRecord[] = [
   { id: "q3", courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Easy },
 ];
 
+/**
+ * Layout defaults for a template row that carries none — mirrors the helper in
+ * `resolve-blueprint.spec.ts`. Spread into an expected blueprint row so these
+ * assertions keep using exact `toEqual` instead of being weakened to
+ * `toMatchObject`, which would stop catching an unexpected extra field.
+ */
+const noLayout = (sortOrder: number) => ({
+  sortOrder,
+  blockCode: null,
+  blockLabel: null,
+  sectionCode: null,
+  sectionLabel: null,
+});
+
 describe("ExamsService.createExam", () => {
   it("rejects platform staff (no tenant) — exams always belong to a tenant", async () => {
     const { service } = buildDeps();
@@ -689,7 +703,7 @@ describe("ExamsService.resolveExamBlueprint", () => {
     expect(repository.findActiveCycle).not.toHaveBeenCalled();
     expect(result.weekNumber).toBeNull();
     expect(result.templateId).toBe("template-1");
-    expect(result.blueprint).toEqual([{ courseId: "course-1", count: 5, difficulty: undefined }]);
+    expect(result.blueprint).toEqual([{ courseId: "course-1", count: 5, difficulty: undefined, ...noLayout(0) }]);
   });
 
   it("pre-selects each course's topics for a week_scope='none' type, asking only for the in-scope courses", async () => {
@@ -716,8 +730,8 @@ describe("ExamsService.resolveExamBlueprint", () => {
 
     expect(repository.getTopicsForCourses).toHaveBeenCalledWith(["course-1"], "pre");
     expect(result.blueprint).toEqual([
-      { courseId: "course-1", topicId: "topic-a", count: 2, difficulty: undefined },
-      { courseId: "course-1", topicId: "topic-b", count: 2, difficulty: undefined },
+      { courseId: "course-1", topicId: "topic-a", count: 2, difficulty: undefined, ...noLayout(0) },
+      { courseId: "course-1", topicId: "topic-b", count: 2, difficulty: undefined, ...noLayout(0) },
     ]);
   });
 
@@ -961,7 +975,7 @@ describe("ExamsService.resolveExamBlueprint", () => {
       selectedCourseIds: ["course-1"],
     });
 
-    expect(result.blueprint).toEqual([{ courseId: "course-1", count: 5, difficulty: undefined }]);
+    expect(result.blueprint).toEqual([{ courseId: "course-1", count: 5, difficulty: undefined, ...noLayout(0) }]);
   });
 
   // --- P0 fix: "Rápido (semana actual)" produced a silent empty exam once
@@ -1102,7 +1116,7 @@ describe("ExamsService.resolveExamBlueprint", () => {
         expect(result.effectiveWeekNumber).toBe(3);
         expect(result.usedCumulativeFallback).toBe(false);
         expect(result.blueprint).toEqual([
-          { courseId: "course-1", topicId: "topic-3", count: 9, difficulty: undefined },
+          { courseId: "course-1", topicId: "topic-3", count: 9, difficulty: undefined, ...noLayout(0) },
         ]);
       } finally {
         jest.useRealTimers();
