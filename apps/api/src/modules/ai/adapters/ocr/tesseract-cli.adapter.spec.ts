@@ -33,6 +33,12 @@ describe("TesseractCliAdapter", () => {
         tsv([
           "1\t1\t0\t0\t0\t0\t0\t0\t200\t100\t-1\t",
           "4\t1\t1\t1\t1\t0\t20\t10\t40\t20\t-1\t",
+          // Synthetic: real tesseract never emits non-blank text with high
+          // confidence at a non-word level, but that is the point — this row
+          // is deliberately built so ONLY the level check can drop it. If the
+          // `cells[0] !== WORD_LEVEL` guard were ever removed, this row alone
+          // (not the two above) would make the assertion fail.
+          "4\t1\t1\t1\t1\t0\t20\t10\t40\t20\t95\tLinea",
           "5\t1\t1\t1\t1\t1\t20\t10\t40\t20\t96\tHola",
         ]),
       ),
