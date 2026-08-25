@@ -1296,7 +1296,7 @@ El re-recorte manual **no** pasa por `snapBoxToInk`: el snap arregla la punterí
 
 ```ts
 // apps/api/src/modules/ai/recrop-question.service.spec.ts
-import { BadRequestException, GoneException, NotFoundException } from "@nestjs/common";
+import { BadRequestException, GoneException } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
 import { ImageCropperPort } from "./domain/ports/image-cropper.port";
 import { ExtractionCachePort } from "./domain/ports/extraction-cache.port";
@@ -1347,7 +1347,7 @@ describe("RecropQuestionService.recrop", () => {
     // Same 410 as an unknown/expired id: responding differently here would BE
     // the existence confirmation that avoiding a 403 was meant to remove.
     await expect(service.recrop(OTHER_USER, "extraction-1", BOX)).rejects.toBeInstanceOf(
-      NotFoundException,
+      GoneException,
     );
   });
 
@@ -1466,13 +1466,7 @@ Registrar `RedisModule` en `apps/api/src/app.module.ts`, junto a `QueueModule`.
 
 ```ts
 // apps/api/src/modules/ai/recrop-question.service.ts
-import {
-  BadRequestException,
-  GoneException,
-  Inject,
-  Injectable,
-  NotFoundException,
-} from "@nestjs/common";
+import { BadRequestException, GoneException, Inject, Injectable } from "@nestjs/common";
 import { AiQuestionCrop } from "@exams-generator/shared";
 import { AuthTokenPayload } from "../auth/token.service";
 import { NormalizedBox, isValidNormalizedBox } from "./domain/normalized-box";
@@ -1506,15 +1500,13 @@ export class RecropQuestionService {
     }
 
     const cached = await this.cache.get(extractionId);
-    if (!cached) {
+    // One branch, one response: an unknown id, an expired one and someone
+    // else's all answer identically. A distinct code for "exists but is not
+    // yours" is itself the existence oracle — see the spec. The Spanish
+    // "expired" message is correct for the legitimate user and reveals
+    // nothing to whoever guessed someone else's id.
+    if (!cached || cached.userId !== user.sub) {
       throw new GoneException("This crop session expired — extract the question again");
-    }
-    // Same 410 as an unknown/expired id — see the spec: a distinct code for
-    // "exists but is not yours" is itself the existence oracle.
-    // The Spanish "expired" message is correct for the legitimate user and
-    // reveals nothing to whoever guessed someone else's id.
-    if (cached.userId !== user.sub) {
-      throw new NotFoundException(`Extraction not found: ${extractionId}`);
     }
 
     const bytes = await this.cropper.crop(cached.image, cached.mimeType, box, CROP_MAX_WIDTH_PX);
