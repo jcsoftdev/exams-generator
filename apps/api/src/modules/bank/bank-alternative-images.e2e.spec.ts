@@ -18,6 +18,8 @@ import {
   users,
 } from "../../db/schema";
 import { TokenService } from "../auth/token.service";
+import { STORAGE_PORT } from "./bank.constants";
+import { StoragePort } from "../exams/domain/ports/storage.port";
 
 /**
  * Full HTTP e2e for `POST /bank/questions/:id/alternative-images` — attaches
@@ -28,6 +30,7 @@ import { TokenService } from "../auth/token.service";
 describe("Bank module — set structured question alternative images (e2e)", () => {
   let app: INestApplication;
   let tokenService: TokenService;
+  let storage: StoragePort;
 
   let courseId: string;
   let topicId: string;
@@ -52,6 +55,7 @@ describe("Bank module — set structured question alternative images (e2e)", () 
     app = moduleRef.createNestApplication();
     await app.init();
     tokenService = moduleRef.get(TokenService);
+    storage = moduleRef.get(STORAGE_PORT);
 
     const suffix = randomUUID();
 
@@ -193,6 +197,53 @@ describe("Bank module — set structured question alternative images (e2e)", () 
       .orderBy(asc(questionAlternativeImages.alternativeIndex));
 
     expect(rows.map((row) => row.alternativeIndex)).toEqual([0, 1, 2]);
+  });
+
+  it("attaches images to a SPARSE, non-contiguous set of alternative slots (indexes), and the right image lands at the right slot", async () => {
+    // 5-alternative structured question, matching spec §10's "indexes
+    // esparso" scenario (a drawing sits on only SOME alternatives) — the
+    // full HTTP round trip is what unit tests structurally cannot cover:
+    // `append-field` producing `["0","2"]` for a repeated multipart field is
+    // already unit-tested, and so is `@Body()` on a multipart route
+    // elsewhere in this repo, but neither proves the file-to-index
+    // positional pairing survives an ACTUAL request.
+    const id = await createStructuredQuestion(tenantAToken, ["a", "b", "c", "d", "e"]);
+    // Distinct bytes per image (fakePng's `tag` argument), so a positional
+    // swap between slot 0 and slot 2 is detectable by content, not just by
+    // row count.
+    const imageForSlot0 = fakePng(`sparse-slot-0-${randomUUID()}`);
+    const imageForSlot2 = fakePng(`sparse-slot-2-${randomUUID()}`);
+
+    const response = await setAlternativeImagesRequest(tenantAToken, id)
+      .field("indexes", "0")
+      .field("indexes", "2")
+      .attach("images", imageForSlot0, "slot-0.png")
+      .attach("images", imageForSlot2, "slot-2.png")
+      .expect(201);
+
+    expect(response.body.id).toBe(id);
+
+    const rows = await db
+      .select({
+        alternativeIndex: questionAlternativeImages.alternativeIndex,
+        storageKey: assets.storageKey,
+      })
+      .from(questionAlternativeImages)
+      .innerJoin(assets, eq(questionAlternativeImages.assetId, assets.id))
+      .where(eq(questionAlternativeImages.questionId, id))
+      .orderBy(asc(questionAlternativeImages.alternativeIndex));
+
+    // Sparse: exactly the two named slots, nothing at 1, 3 or 4.
+    expect(rows.map((row) => row.alternativeIndex)).toEqual([0, 2]);
+
+    const [slot0, slot2] = rows;
+    const slot0Bytes = await storage.get(slot0!.storageKey);
+    const slot2Bytes = await storage.get(slot2!.storageKey);
+
+    // Byte-for-byte, not just row count — this is what catches a swap.
+    expect(slot0Bytes.equals(imageForSlot0)).toBe(true);
+    expect(slot2Bytes.equals(imageForSlot2)).toBe(true);
+    expect(slot0Bytes.equals(imageForSlot2)).toBe(false);
   });
 
   it("re-attaching REPLACES the full previous set instead of accumulating rows", async () => {
