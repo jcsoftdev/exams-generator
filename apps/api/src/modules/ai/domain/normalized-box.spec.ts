@@ -38,11 +38,15 @@ describe("isValidNormalizedBox", () => {
 
 describe("toPixelRect", () => {
   it("scales and rounds the box to whole pixels", () => {
-    expect(toPixelRect({ x: 0.25, y: 0.5, w: 0.5, h: 0.25 }, 800, 400)).toEqual({
-      left: 200,
-      top: 200,
-      width: 400,
-      height: 100,
+    // Deliberately non-coinciding left/top and width/height: a box that
+    // accidentally produced left === top (or width === height) would let a
+    // left/top or width/height transposition bug pass silently — Minor
+    // Finding 9.
+    expect(toPixelRect({ x: 0.1, y: 0.3, w: 0.2, h: 0.05 }, 800, 400)).toEqual({
+      left: 80,
+      top: 120,
+      width: 160,
+      height: 20,
     });
   });
 
@@ -61,11 +65,12 @@ describe("toPixelRect", () => {
 
 describe("toNormalizedBox", () => {
   it("converts pixel rect back to normalized box (inverse of toPixelRect)", () => {
-    expect(toNormalizedBox({ left: 200, top: 200, width: 400, height: 100 }, 800, 400)).toEqual({
-      x: 0.25,
-      y: 0.5,
-      w: 0.5,
-      h: 0.25,
+    // Same non-coinciding fixture as toPixelRect's test, for the same reason.
+    expect(toNormalizedBox({ left: 80, top: 120, width: 160, height: 20 }, 800, 400)).toEqual({
+      x: 0.1,
+      y: 0.3,
+      w: 0.2,
+      h: 0.05,
     });
   });
 });
