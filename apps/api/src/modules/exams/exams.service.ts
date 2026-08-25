@@ -33,6 +33,12 @@ export interface CreateExamBlueprintRowDto {
   readonly topicId?: string;
   readonly difficulty?: string;
   readonly count?: number;
+  /** Layout metadata resolved from the template — see `CreateExamBody`. */
+  readonly sortOrder?: number;
+  readonly blockCode?: string | null;
+  readonly blockLabel?: string | null;
+  readonly sectionCode?: string | null;
+  readonly sectionLabel?: string | null;
 }
 
 /**
@@ -316,11 +322,19 @@ export class ExamsService {
       title: dto.title as string,
       gradeLevel,
       createdBy: user.sub,
+      // The layout the template resolved rides through untouched. A manual
+      // blueprint declares none; the repository then falls back to the row's
+      // own position for `sortOrder`.
       blueprint: (dto.blueprint as CreateExamBlueprintRowDto[]).map((row) => ({
         courseId: row.courseId as string,
         topicId: row.topicId,
         difficulty: row.difficulty as Difficulty | undefined,
         count: row.count as number,
+        sortOrder: row.sortOrder,
+        blockCode: row.blockCode ?? null,
+        blockLabel: row.blockLabel ?? null,
+        sectionCode: row.sectionCode ?? null,
+        sectionLabel: row.sectionLabel ?? null,
       })),
       examType: dto.examType,
       universityId: dto.universityId,

@@ -91,6 +91,59 @@ describe("ExamsService.createExam", () => {
     expect(repository.createExam).not.toHaveBeenCalled();
   });
 
+  it("MUST: the layout the resolver returned survives the round trip into createExam", async () => {
+    const { service, repository } = buildDeps();
+    repository.createExam.mockResolvedValue({ id: "exam-1" });
+    repository.getBlueprintRows.mockResolvedValue([ROW]);
+    repository.getQuestionPool.mockResolvedValue(POOL);
+
+    await service.createExam(TEACHER, {
+      title: "ETA UNI",
+      gradeLevel: "secundaria_5",
+      blueprint: [
+        {
+          courseId: "course-1",
+          count: 1,
+          sortOrder: 3,
+          blockCode: "matematica",
+          blockLabel: "MATEMÁTICA",
+          sectionCode: "E2",
+          sectionLabel: "SEGUNDA PRUEBA — MATEMÁTICA",
+        },
+      ],
+    });
+
+    const [row] = repository.createExam.mock.calls[0]![0].blueprint;
+    expect(row.sortOrder).toBe(3);
+    expect(row.blockCode).toBe("matematica");
+    expect(row.blockLabel).toBe("MATEMÁTICA");
+    expect(row.sectionCode).toBe("E2");
+    expect(row.sectionLabel).toBe("SEGUNDA PRUEBA — MATEMÁTICA");
+  });
+
+  it("a manual blueprint declares no layout, so every layout field reaches the repository null", async () => {
+    const { service, repository } = buildDeps();
+    repository.createExam.mockResolvedValue({ id: "exam-1" });
+    repository.getBlueprintRows.mockResolvedValue([ROW]);
+    repository.getQuestionPool.mockResolvedValue(POOL);
+
+    await service.createExam(TEACHER, {
+      title: "Repaso",
+      gradeLevel: "secundaria_3",
+      blueprint: [{ courseId: "course-1", count: 1 }],
+    });
+
+    const [row] = repository.createExam.mock.calls[0]![0].blueprint;
+    // `sortOrder` stays undefined here on purpose: the repository is the one
+    // that falls back to the row's position, so a manual blueprint never has
+    // to invent an order the caller did not give.
+    expect(row.sortOrder).toBeUndefined();
+    expect(row.blockCode).toBeNull();
+    expect(row.blockLabel).toBeNull();
+    expect(row.sectionCode).toBeNull();
+    expect(row.sectionLabel).toBeNull();
+  });
+
   it("creates the exam, builds the pool scoped to the caller's tenant, and saves the selection when stock is sufficient", async () => {
     const { service, repository } = buildDeps();
     repository.createExam.mockResolvedValue({ id: "exam-1" });
