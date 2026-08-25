@@ -504,13 +504,26 @@ export class BankService {
       await this.pdfCompiler.compileExam({
         title: "Draft preview",
         versionLabel: "preview",
-        questions: [
+        // Unlabeled section + unlabeled block: a draft preview prints the bare
+        // question, with none of the booklet's headings.
+        sections: [
           {
-            id,
-            type: "structured",
-            bodyTypst: merged.bodyTypst,
-            alternatives: merged.alternatives,
-            figureCode: merged.figureCode,
+            code: null,
+            label: null,
+            blocks: [
+              {
+                label: "",
+                questions: [
+                  {
+                    id,
+                    type: "structured",
+                    bodyTypst: merged.bodyTypst,
+                    alternatives: merged.alternatives,
+                    figureCode: merged.figureCode,
+                  },
+                ],
+              },
+            ],
           },
         ],
       });

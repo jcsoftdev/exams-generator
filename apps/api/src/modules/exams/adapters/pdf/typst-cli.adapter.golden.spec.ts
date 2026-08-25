@@ -21,9 +21,20 @@ const GOLDEN_INPUT: ExamPdfDocumentInput = {
   title: "Simulacro San Marcos",
   versionLabel: "Version A",
   tenantLogoAbsolutePath: path.join(FIXTURES_DIR, "logo.png"),
-  questions: [
-    { id: "q1", imageAbsolutePath: path.join(FIXTURES_DIR, "q1.png") },
-    { id: "q2", imageAbsolutePath: path.join(FIXTURES_DIR, "q2.png") },
+  sections: [
+    {
+      code: null,
+      label: null,
+      blocks: [
+        {
+          label: "",
+          questions: [
+            { id: "q1", imageAbsolutePath: path.join(FIXTURES_DIR, "q1.png") },
+            { id: "q2", imageAbsolutePath: path.join(FIXTURES_DIR, "q2.png") },
+          ],
+        },
+      ],
+    },
   ],
 };
 
@@ -46,9 +57,14 @@ describeIfTypst("TypstCliAdapter golden compile (real typst binary)", () => {
     const pdf = await adapter.compileAnswerKey({
       title: GOLDEN_INPUT.title,
       versionLabel: GOLDEN_INPUT.versionLabel,
-      entries: [
-        { questionId: "q1", correctOption: "B" },
-        { questionId: "q2", correctOption: "D" },
+      sections: [
+        {
+          label: null,
+          entries: [
+            { questionId: "q1", correctOption: "B" },
+            { questionId: "q2", correctOption: "D" },
+          ],
+        },
       ],
     });
 
@@ -61,14 +77,25 @@ describeIfTypst("TypstCliAdapter golden compile (real typst binary)", () => {
     const mixedInput: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
-        { id: "q1", imageAbsolutePath: path.join(FIXTURES_DIR, "q1.png") },
+      sections: [
         {
-          id: "sq1",
-          type: "structured",
-          bodyTypst: "Resuelve para $x$: $x + 1 = 2$",
-          alternatives: ["1", "2", "3", "4"],
-          figureCode: "#box(width: 2cm, height: 2cm, stroke: 1pt)[]",
+          code: null,
+          label: null,
+          blocks: [
+            {
+              label: "",
+              questions: [
+                { id: "q1", imageAbsolutePath: path.join(FIXTURES_DIR, "q1.png") },
+                {
+                  id: "sq1",
+                  type: "structured",
+                  bodyTypst: "Resuelve para $x$: $x + 1 = 2$",
+                  alternatives: ["1", "2", "3", "4"],
+                  figureCode: "#box(width: 2cm, height: 2cm, stroke: 1pt)[]",
+                },
+              ],
+            },
+          ],
         },
       ],
     };
@@ -89,13 +116,24 @@ describeIfTypst("TypstCliAdapter golden compile (real typst binary)", () => {
     const pdf = await adapter.compileExam({
       title: "Simulacro San Marcos",
       versionLabel: "Version A",
-      questions: [
+      sections: [
         {
-          id: "q-mitex",
-          type: "structured",
-          bodyTypst:
-            '#import "@preview/mitex:0.2.7": mi; Si el ángulo mide 70 grados, halla #mi("\\frac{1}{2} \\cdot 70^\\circ").',
-          alternatives: ["35", "70", "140", "17.5", "N.A."],
+          code: null,
+          label: null,
+          blocks: [
+            {
+              label: "",
+              questions: [
+                {
+                  id: "q-mitex",
+                  type: "structured",
+                  bodyTypst:
+                    '#import "@preview/mitex:0.2.7": mi; Si el ángulo mide 70 grados, halla #mi("\\frac{1}{2} \\cdot 70^\\circ").',
+                  alternatives: ["35", "70", "140", "17.5", "N.A."],
+                },
+              ],
+            },
+          ],
         },
       ],
     });

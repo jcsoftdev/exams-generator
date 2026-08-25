@@ -161,21 +161,30 @@ ${alternativesBlock}`;
 }
 
 export function renderAnswerKeyTypst(input: AnswerKeyDocumentInput): string {
-  // The printed cell is the question's POSITION in this form, matching the
-  // `*N.*` numbering `renderStructuredQuestionBlock` prints on the exam — a
-  // teacher grades against "14 -> C", and cannot do anything with a uuid.
-  // The id stays in the `// q:` marker, which is what `typst-error-mapper.ts`
-  // reads and is invisible in the rendered PDF.
-  const rows = input.entries
-    .map((entry, index) => `// q:${entry.questionId}\n  [${index + 1}], [${entry.correctOption}],`)
-    .join("\n");
+  // The printed cell is the question's position WITHIN ITS SECTION, which is
+  // exactly the `*N.*` that `renderSection` prints in the booklet — a teacher
+  // grades against "14 -> C" and can do nothing with a uuid, nor with a global
+  // position the booklet never shows. The id stays in the `// q:` marker,
+  // which is what `typst-error-mapper.ts` reads and is invisible in the PDF.
+  const sections = input.sections
+    .map((section) => {
+      const heading = section.label ? `#align(center)[== ${section.label}]\n\n` : "";
+      const rows = section.entries
+        .map(
+          (entry, index) => `// q:${entry.questionId}\n  [${index + 1}], [${entry.correctOption}],`,
+        )
+        .join("\n");
 
-  return `#align(center)[= ${input.title} --- ${input.versionLabel} --- Clave de respuestas]
-
-#table(
+      return `${heading}#table(
   columns: 2,
   [Pregunta], [Respuesta],
 ${rows}
-)
+)`;
+    })
+    .join("\n\n");
+
+  return `#align(center)[= ${input.title} --- ${input.versionLabel} --- Clave de respuestas]
+
+${sections}
 `;
 }

@@ -452,24 +452,48 @@ export class ExamVersionGenerationService {
       title: exam.title,
       versionLabel,
       tenantLogoAbsolutePath: logoPath,
-      questions: version.questionOrder.map((questionId) =>
-        this.buildPdfQuestion(
-          questionId,
-          questionById,
-          imagePathByQuestionId,
-          altImagePathsByQuestionId,
-          version,
-        ),
-      ),
+      // One unlabeled section holding one unlabeled block — the shape the port
+      // documents for "versions generated before the official layout feature".
+      // It prints exactly what this service printed before sections existed:
+      // a flat, continuously-numbered run of questions with no headings and no
+      // page breaks. Exams that DO carry a layout get their real sections once
+      // the shuffler starts emitting `sectionLayout`.
+      sections: [
+        {
+          code: null,
+          label: null,
+          blocks: [
+            {
+              label: "",
+              questions: version.questionOrder.map((questionId) =>
+                this.buildPdfQuestion(
+                  questionId,
+                  questionById,
+                  imagePathByQuestionId,
+                  altImagePathsByQuestionId,
+                  version,
+                ),
+              ),
+            },
+          ],
+        },
+      ],
     };
 
     const answerKeyInput: AnswerKeyDocumentInput = {
       title: exam.title,
       versionLabel,
-      entries: version.questionOrder.map((questionId, position) => ({
-        questionId,
-        correctOption: version.answerKey[position]!,
-      })),
+      // Matches the booklet above: one unlabeled section, so the key's local
+      // numbering and the booklet's printed numbering stay the same run.
+      sections: [
+        {
+          label: null,
+          entries: version.questionOrder.map((questionId, position) => ({
+            questionId,
+            correctOption: version.answerKey[position]!,
+          })),
+        },
+      ],
     };
 
     let examPdf: Buffer;

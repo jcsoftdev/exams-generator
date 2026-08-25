@@ -261,13 +261,27 @@ export class GenerateQuestionsService {
           await this.pdfCompiler.compileExam({
             title: "AI generation preview",
             versionLabel: "preview",
-            questions: [
+            // Unlabeled section + unlabeled block: this compile only proves the
+            // generated question renders, so it carries none of the booklet's
+            // headings.
+            sections: [
               {
-                id: randomUUID(),
-                type: "structured",
-                bodyTypst: generated.bodyTypst,
-                alternatives: generated.alternatives,
-                figureCode: generated.figureCode,
+                code: null,
+                label: null,
+                blocks: [
+                  {
+                    label: "",
+                    questions: [
+                      {
+                        id: randomUUID(),
+                        type: "structured",
+                        bodyTypst: generated.bodyTypst,
+                        alternatives: generated.alternatives,
+                        figureCode: generated.figureCode,
+                      },
+                    ],
+                  },
+                ],
               },
             ],
           });
