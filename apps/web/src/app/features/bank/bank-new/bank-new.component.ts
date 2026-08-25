@@ -19,6 +19,7 @@ import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
+import { extractErrorMessage } from '../../ai/extract-error-message';
 import {
   CropReviewComponent,
   CropSlot,
@@ -454,10 +455,19 @@ export class BankNewComponent {
       },
       error: (error: HttpErrorResponse) => {
         this.extracting.set(false);
+        // 429 gets its own wording because the server's body says nothing
+        // actionable about a free-tier quota. Every other 4xx DOES explain
+        // itself — a 422 carries the validation errors, a 400 says the file
+        // is not a readable image — and swallowing those left the teacher
+        // with "inténtalo de nuevo" for a problem retrying never fixes. The
+        // edit flow (`bank-list`) already surfaced them; this one did not.
         this.extractError.set(
           error.status === 429
             ? 'La IA alcanzó su límite de uso gratuito. Espera unos minutos e inténtalo de nuevo.'
-            : 'No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.',
+            : extractErrorMessage(
+                error,
+                'No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.',
+              ),
         );
       },
     });
