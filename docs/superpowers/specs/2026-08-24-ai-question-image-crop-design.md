@@ -322,8 +322,8 @@ E2E (Jest, API):
 
 - `POST /ai/questions/extract` con `InMemoryQuestionGeneratorAdapter` devolviendo
   boxes: la respuesta trae `extractionId` y recortes.
-- `POST /ai/questions/extract/:id/crop`: recorte feliz, `410` con cache vencido, `404`
-  con `extractionId` de otro usuario.
+- `POST /ai/questions/extract/:id/crop`: recorte feliz, `410` con cache vencido, y `410`
+  —el mismo, indistinguible— con `extractionId` de otro usuario.
 - `POST /bank/questions/:id/alternative-images` con `indexes` esparso.
 
 Web (Vitest):
