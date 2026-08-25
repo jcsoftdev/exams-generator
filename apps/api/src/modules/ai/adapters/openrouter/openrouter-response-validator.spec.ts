@@ -157,6 +157,88 @@ describe("validateGeneratedQuestionShape", () => {
   });
 });
 
+describe("validateGeneratedQuestionShape — answer leaked into the statement", () => {
+  function withBody(bodyTypst: string): Record<string, unknown> {
+    return {
+      bodyTypst,
+      alternatives: ["1", "2", "3", "4", "5"],
+      correctAnswer: "e",
+      conceptsUsed: ["conjuntos"],
+      solutionSteps: 2,
+    };
+  }
+
+  /** Verbatim from a real extraction: every proposition annotated with its verdict. */
+  const LEAKED = [
+    "Si: $A = {13; 5}$ indicar cuantas proposiciones son verdaderas.",
+    "",
+    "$(3; {5}] subset A -> F$",
+    "",
+    "$(3; 5] subset.not A -> V$",
+    "",
+    "$emptyset in P(A) -> V$",
+  ].join("\n");
+
+  it("MUST: rejects a body whose propositions carry -> V / -> F verdicts", () => {
+    // Shipping this prints the answer key inside the exam question.
+    expect(() => validateGeneratedQuestionShape(withBody(LEAKED))).toThrow(/TRANSCRIBE/i);
+  });
+
+  it("names the count in the error, so the retry knows how much to remove", () => {
+    expect(() => validateGeneratedQuestionShape(withBody(LEAKED))).toThrow(/3 lines/);
+  });
+
+  it("also catches ticks and crosses, and a trailing (V)", () => {
+    const ticks = "Proposición uno ✓\n\nProposición dos ✗";
+    const parens = "Proposición uno (V)\n\nProposición dos (F)";
+
+    expect(() => validateGeneratedQuestionShape(withBody(ticks))).toThrow(/TRANSCRIBE/i);
+    expect(() => validateGeneratedQuestionShape(withBody(parens))).toThrow(/TRANSCRIBE/i);
+  });
+
+  it("leaves a legitimate arrow alone — a limit is not a verdict", () => {
+    const legit = "Si $x -> 3$ entonces el límite es $9$.\n\nHalla el valor de $y$.";
+
+    expect(() => validateGeneratedQuestionShape(withBody(legit))).not.toThrow();
+  });
+
+  it("tolerates ONE annotation — a column of them is the model solving, a single one may be the question's own wording", () => {
+    const single = "La proposición $p -> V$ se lee así.\n\n¿Cuál es el valor?";
+
+    expect(() => validateGeneratedQuestionShape(withBody(single))).not.toThrow();
+  });
+});
+
+describe("validateGeneratedQuestionShape — correctAnswer casing", () => {
+  function basePayload(): Record<string, unknown> {
+    return {
+      bodyTypst: "¿Cuánto es $2 + 2$?",
+      alternatives: ["3", "4", "5", "6", "7"],
+      correctAnswer: "b",
+      conceptsUsed: ["suma"],
+      solutionSteps: 1,
+    };
+  }
+
+  it('accepts an uppercase letter and normalizes it — models emit "E" constantly', () => {
+    const { question } = validateGeneratedQuestionShape({ ...basePayload(), correctAnswer: "E" });
+
+    expect(question.correctAnswer).toBe("e");
+  });
+
+  it("tolerates surrounding whitespace", () => {
+    const { question } = validateGeneratedQuestionShape({ ...basePayload(), correctAnswer: " c " });
+
+    expect(question.correctAnswer).toBe("c");
+  });
+
+  it("still rejects a letter outside a..e", () => {
+    expect(() => validateGeneratedQuestionShape({ ...basePayload(), correctAnswer: "Z" })).toThrow(
+      /correctAnswer/,
+    );
+  });
+});
+
 describe("validateGeneratedQuestionShape — crop boxes", () => {
   /** A payload that already satisfies every pre-existing rule. */
   function basePayload(): Record<string, unknown> {

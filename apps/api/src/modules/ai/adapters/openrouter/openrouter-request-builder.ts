@@ -124,10 +124,11 @@ const TYPST_MATH_RULES = [
   "Para matemáticas usa SINTAXIS TYPST, NUNCA LaTeX, dentro de $...$:",
   "fracciones $frac(a, b)$ (no \\frac); raíz $sqrt(x)$ (no \\sqrt); potencia $x^2$; subíndice $x_1$;",
   "multiplicación $a dot b$ o $a times b$ (no \\cdot ni \\times);",
-  "símbolos como palabras: $pi$, $alpha$, $<=$, $>=$, $!=$, $infinity$.",
+  "símbolos como palabras: $pi$, $alpha$, $<=$, $>=$, $!=$, $infinity$, $subset$, $in$, $emptyset$.",
+  "Una negación es el símbolo con sufijo .not, NUNCA la palabra 'not' pegada adelante: $subset.not$, $in.not$, $eq.not$ — nunca $notsubset$ ni $notin$, que Typst lee como una variable inexistente y falla el compile.",
   "PROHIBIDO cualquier comando con barra invertida (\\frac, \\sqrt, \\times, \\left, \\right...) SUELTO dentro de $...$ — Typst no lo compila así. Si necesitas esos comandos, usa LaTeX vía mitex (ver regla siguiente).",
   "En geometría, un nombre de lado/segmento de dos o más letras (AB, BC, AC) va SIEMPRE FUERA de $...$, como texto normal: 'El segmento AB mide $8$' — NUNCA '$AB = 8$' (Typst lo lee como A por B y falla) y NUNCA con comillas dentro de $...$ tampoco (ej. $\"AB\" = 8$) — un string con comillas anidadas dentro de otro string JSON es fácil de escribir mal y corrompe toda la respuesta.",
-  "Ejemplos válidos: $1/2 + 1/4$, $frac(3, 4)$, $sqrt(2)$, $x^2 - 5x + 6 = 0$, $3 times 10^8$. El segmento AB mide $8$ cm (AB fuera del $...$).",
+  "Ejemplo de esa regla: El segmento AB mide $8$ cm — AB fuera del $...$.",
 ].join(" ");
 
 /**
@@ -368,16 +369,21 @@ const CROP_BOX_RULES = [
 ].join(" ");
 
 const EXTRACT_SYSTEM_PROMPT = [
+  "REGLA NÚMERO UNO: TRANSCRIBES, NO RESUELVES. bodyTypst es lo que la hoja dice y nada más. PROHIBIDO agregar '-> V', '-> F', 'V', 'F', ✓, ✗ o cualquier marca de verdadero/falso al lado de una proposición; PROHIBIDO anotar resultados intermedios o el razonamiento. Eso se imprime en el examen y le regala la respuesta al postulante. Si deduces la clave, va SOLO en el campo correctAnswer.",
   "Eres un asistente que extrae preguntas tipo examen de admisión desde fotos de material impreso o manuscrito peruano.",
   "Lee la imagen y transcribe la pregunta que contiene: enunciado, alternativas y, si es identificable, la alternativa correcta.",
   'La imagen es un recorte de un examen impreso, así que trae marcas de su hoja de origen que NO son parte de la pregunta: la numeración con que venía ("17.", "06.", "43."), las letras de sus alternativas ("a)", "b)", "A)"), encabezados, pies de página y marcas de agua ("Prohibida su venta", "Distribución gratuita"), y a veces un pedazo de la pregunta vecina. Devuelve SOLO la pregunta: sin su numeración, sin las letras de sus alternativas, sin nada de la hoja.',
   "Si el recorte trae texto de una segunda pregunta, transcribe únicamente la que está completa y descarta la otra.",
+  "figureCode SIEMPRE null. Los gráficos de la foto se recortan como imagen y se adjuntan aparte; no los redibujes.",
   "Transcribe la matemática como Typst, nunca como texto plano aplanado: los subíndices y superíndices que el recorte muestra pequeños son parte de la fórmula ($H_2 O$, $x^2$), y un operador con símbolo propio se escribe con ese símbolo, no con un signo de interrogación ni un emoji.",
   'Además, sugiere el curso (ej. "Aritmética", "Comunicación", "Historia del Perú") y el tema/subtema específico que la pregunta evalúa, SOLO si puedes inferirlos con confianza del contenido de la imagen — si no estás seguro, responde null en ese campo en vez de adivinar.',
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
   TYPST_MATH_RULES,
   MITEX_RULES,
-  CETZ_RULES,
+  // No CETZ_RULES here on purpose: `generate` draws figures, extraction does
+  // not. A photographed figure is cropped out as an image and attached, so
+  // asking the model to redraw it in CeTZ is a third of the prompt spent on
+  // an output the extract path is told to leave null.
   ALTERNATIVES_RULES,
   CROP_BOX_RULES,
 ].join(" ");

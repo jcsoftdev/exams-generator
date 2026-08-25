@@ -143,6 +143,13 @@ describe("buildOpenRouterRequestBody", () => {
     expect(promptText).toContain("@preview/cetz:0.5.2");
   });
 
+  it("spells out that a negated symbol takes the .not suffix — `notsubset` is not a Typst variable", () => {
+    const promptText = promptTextOf(buildOpenRouterReviseRequestBody("some/free-model:free", REVISE_INPUT));
+
+    expect(promptText).toContain("subset.not");
+    expect(promptText).toContain("notsubset");
+  });
+
   it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
     const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
 
@@ -300,10 +307,21 @@ describe("buildOpenRouterExtractRequestBody", () => {
     expect(promptText).toMatch(/transcribe/i);
   });
 
-  it("tells the model to leave figureCode null when the figure is a photograph it cannot draw", () => {
+  it("tells the model figureCode is ALWAYS null, because a photographed figure is cropped out as an image", () => {
     const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
 
-    expect(promptText).toMatch(/fotograf|afiche|escaneo/i);
+    expect(promptText).toMatch(/figureCode SIEMPRE null/i);
+    expect(promptText).toMatch(/se recortan como imagen/i);
+  });
+
+  it("MUST: tells the model to transcribe and never solve — a V/F annotation would print the answer on the exam", () => {
+    const promptText = promptTextOf(buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT));
+
+    expect(promptText).toMatch(/NO RESUELVES/);
+    // The rule leads the prompt: buried among the numbering rules it did not
+    // take, and the model kept annotating each proposition with -> V / -> F.
+    expect(promptText.indexOf("NO RESUELVES")).toBeLessThan(200);
+    expect(promptText).toMatch(/correctAnswer/);
   });
 
   it("tells the model to guess course/topic ONLY when confident, null otherwise", () => {
@@ -344,11 +362,15 @@ describe("buildOpenRouterExtractRequestBody", () => {
     expect(textPart!.text).toContain("boom");
   });
 
-  it("pins the CeTZ package version compatible with the deployed typst binary", () => {
+  it("carries NO CeTZ drawing rules — extraction never draws a figure, it crops one", () => {
     const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
 
+    // A third of the prompt used to teach CeTZ here, for an output this path
+    // is now told to leave null. `generate` still carries them (asserted in
+    // its own test above); re-adding them here is the regression to catch.
     const systemMessage = body.messages.find((m) => m.role === "system");
-    expect(systemMessage!.content as string).toContain("@preview/cetz:0.5.2");
+    expect(systemMessage!.content as string).not.toContain("@preview/cetz");
+    expect(systemMessage!.content as string).not.toContain("#canvas(");
   });
 
   it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
