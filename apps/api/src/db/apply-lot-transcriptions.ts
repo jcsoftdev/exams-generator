@@ -113,9 +113,7 @@ function assertBoxInsideImage(box: FigureCropBox, imagePath: string): void {
  * the same file is a no-op that reports its entries as `unmatched`, because
  * by then they are no longer pending.
  */
-export function applyLotTranscriptions(
-  input: ApplyLotTranscriptionsInput,
-): ApplyLotTranscriptionsResult {
+export function applyLotTranscriptions(input: ApplyLotTranscriptionsInput): ApplyLotTranscriptionsResult {
   const byImagePath = new Map<string, LotTranscription>();
   for (const transcription of input.transcriptions) {
     if (byImagePath.has(transcription.imagePath)) {

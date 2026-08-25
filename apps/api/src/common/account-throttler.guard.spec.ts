@@ -67,10 +67,7 @@ describe("Important Finding 6: an account-scoped @Throttle override must never r
     // module registers an unnamed throttler). Asserting on the constant
     // above only proves the constant is small; this proves the decorator
     // actually applied it to the route handler the guards inspect.
-    const limit = Reflect.getMetadata(
-      "THROTTLER:LIMITdefault",
-      AiController.prototype.recrop,
-    ) as number;
+    const limit = Reflect.getMetadata("THROTTLER:LIMITdefault", AiController.prototype.recrop) as number;
     expect(limit).toBeLessThanOrEqual(GLOBAL_IP_LIMIT);
   });
 });

@@ -68,9 +68,7 @@ const SOURCE_NUMBERING = /^\s*\d{1,3}\s*[.)–-]\s+/;
  * from a picture, and a silently wrong key is the one defect a teacher
  * cannot catch by eye.
  */
-export function planImageLotRestructure(
-  input: PlanImageLotRestructureInput,
-): ImageLotRestructureOutcome {
+export function planImageLotRestructure(input: PlanImageLotRestructureInput): ImageLotRestructureOutcome {
   const { entry, extracted } = input;
 
   if (!extracted) {

@@ -53,8 +53,7 @@ export function previewLot(lot: string, filters: readonly string[]): { rendered:
 }
 
 function readLot(lot: string): LotEntry[] {
-  return (JSON.parse(readFileSync(join(LOTS_DIR, `${lot}.json`), "utf8")) as { entries: LotEntry[] })
-    .entries;
+  return (JSON.parse(readFileSync(join(LOTS_DIR, `${lot}.json`), "utf8")) as { entries: LotEntry[] }).entries;
 }
 
 if (require.main === module) {

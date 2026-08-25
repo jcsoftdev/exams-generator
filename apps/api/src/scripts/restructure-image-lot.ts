@@ -1,5 +1,13 @@
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  mkdtempSync,
+  readFileSync,
+  readdirSync,
+  rmSync,
+  unlinkSync,
+  writeFileSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { FigureCropJob, LotTranscription, applyLotTranscriptions } from "../db/apply-lot-transcriptions";
@@ -59,9 +67,7 @@ export interface WorklistItem {
  * `typst-template.ts` renders them, because that is where an unbalanced `$`
  * actually bites: it swallows the text after it rather than erroring in place.
  */
-export function verifyTranscriptionCompiles(
-  transcription: LotTranscription,
-): string | undefined {
+export function verifyTranscriptionCompiles(transcription: LotTranscription): string | undefined {
   if (transcription.unreadable) {
     return undefined;
   }
@@ -169,9 +175,11 @@ export function applyTranscriptionFile(
     .map((transcription) => transcription.imagePath)
     .filter((imagePath) => !stillReferenced.has(imagePath));
   if (options.prune) {
-    orphans.filter((imagePath) => existsSync(join(LOTS_DIR, imagePath))).forEach((imagePath) => {
-      unlinkSync(join(LOTS_DIR, imagePath));
-    });
+    orphans
+      .filter((imagePath) => existsSync(join(LOTS_DIR, imagePath)))
+      .forEach((imagePath) => {
+        unlinkSync(join(LOTS_DIR, imagePath));
+      });
   }
 
   return {
@@ -205,12 +213,18 @@ export function status(): Array<{ lot: string; pending: number }> {
 function cutFigure(job: FigureCropJob): void {
   execFileSync("python3", [
     CROP_FIGURE_BOX,
-    "--source", join(LOTS_DIR, job.source),
-    "--target", join(LOTS_DIR, job.target),
-    "--left", String(job.box.left),
-    "--top", String(job.box.top),
-    "--right", String(job.box.right),
-    "--bottom", String(job.box.bottom),
+    "--source",
+    join(LOTS_DIR, job.source),
+    "--target",
+    join(LOTS_DIR, job.target),
+    "--left",
+    String(job.box.left),
+    "--top",
+    String(job.box.top),
+    "--right",
+    String(job.box.right),
+    "--bottom",
+    String(job.box.bottom),
   ]);
 }
 

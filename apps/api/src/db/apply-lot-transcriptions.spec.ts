@@ -62,9 +62,7 @@ describe("applyLotTranscriptions", () => {
     });
 
     expect(result.imageEntries).toHaveLength(1);
-    expect(result.reasons).toEqual([
-      "UNI — Álgebra, pregunta 1 (clave C): el recorte corta el enunciado",
-    ]);
+    expect(result.reasons).toEqual(["UNI — Álgebra, pregunta 1 (clave C): el recorte corta el enunciado"]);
   });
 
   it("keeps an entry whose transcription does not survive the planner", () => {

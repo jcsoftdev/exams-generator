@@ -30,9 +30,9 @@ function buildDeps() {
     crop: jest.fn().mockResolvedValue(Buffer.from("cropped-png-bytes")),
     // Identity by default (mirrors a real image already under the cache's
     // width cap) — tests that care about actual downscaling override this.
-    downscale: jest.fn().mockImplementation((image: Buffer, mimeType: string) =>
-      Promise.resolve({ image, mimeType }),
-    ),
+    downscale: jest
+      .fn()
+      .mockImplementation((image: Buffer, mimeType: string) => Promise.resolve({ image, mimeType })),
   };
 
   const cache: jest.Mocked<ExtractionCachePort> = {

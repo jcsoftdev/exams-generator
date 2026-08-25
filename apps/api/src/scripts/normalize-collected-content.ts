@@ -86,38 +86,38 @@ export async function normalizeCollectedContent(): Promise<{ updated: number; ch
       alternatives: entry.alternatives,
     });
 
-      // Nothing to rewrite when the scrape held neither markup characters nor
-      // a solution tail — the overwhelming majority of the bank. Skipping them
-      // keeps this a few thousand UPDATEs instead of sixty-four thousand
-      // no-op writes.
-      const unchanged =
-        content.bodyTypst === entry.bodyTypst &&
-        content.alternatives.every((alternative, index) => alternative === entry.alternatives[index]);
-      if (unchanged) {
-        continue;
-      }
+    // Nothing to rewrite when the scrape held neither markup characters nor
+    // a solution tail — the overwhelming majority of the bank. Skipping them
+    // keeps this a few thousand UPDATEs instead of sixty-four thousand
+    // no-op writes.
+    const unchanged =
+      content.bodyTypst === entry.bodyTypst &&
+      content.alternatives.every((alternative, index) => alternative === entry.alternatives[index]);
+    if (unchanged) {
+      continue;
+    }
 
-      // The inequality guard is what makes this affordable to run on EVERY
-      // boot (see `seed.ts`): after the first pass every row already matches,
-      // so the statement touches nothing and the whole backfill costs one
-      // cheap indexed lookup per entry instead of ~7.6k writes per deploy.
-      const result = await db
-        .update(questions)
-        .set({ bodyTypst: content.bodyTypst, alternatives: content.alternatives })
-        .where(
-          and(
-            isNull(questions.tenantId),
-            eq(questions.bodyHash, content.bodyHash),
-            or(
-              ne(questions.bodyTypst, content.bodyTypst),
-              ne(
-                sql`${questions.alternatives}::text`,
-                sql`${JSON.stringify(content.alternatives)}::jsonb::text`,
-              ),
+    // The inequality guard is what makes this affordable to run on EVERY
+    // boot (see `seed.ts`): after the first pass every row already matches,
+    // so the statement touches nothing and the whole backfill costs one
+    // cheap indexed lookup per entry instead of ~7.6k writes per deploy.
+    const result = await db
+      .update(questions)
+      .set({ bodyTypst: content.bodyTypst, alternatives: content.alternatives })
+      .where(
+        and(
+          isNull(questions.tenantId),
+          eq(questions.bodyHash, content.bodyHash),
+          or(
+            ne(questions.bodyTypst, content.bodyTypst),
+            ne(
+              sql`${questions.alternatives}::text`,
+              sql`${JSON.stringify(content.alternatives)}::jsonb::text`,
             ),
           ),
-        )
-        .returning({ id: questions.id });
+        ),
+      )
+      .returning({ id: questions.id });
 
     checked++;
     updated += result.length;

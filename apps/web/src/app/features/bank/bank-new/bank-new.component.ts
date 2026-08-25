@@ -665,7 +665,10 @@ export class BankNewComponent {
           slot.target.kind === 'alternative',
       )
       .map((slot) => {
-        const alternativeIndex = this.reresolveAlternativeIndex(slot.target.alternativeIndex, available);
+        const alternativeIndex = this.reresolveAlternativeIndex(
+          slot.target.alternativeIndex,
+          available,
+        );
         return alternativeIndex === null
           ? null
           : { alternativeIndex, file: dataUrlToFile(slot.dataUrl, 'alternativa.png') };

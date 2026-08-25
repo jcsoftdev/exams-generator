@@ -132,8 +132,20 @@ describe("resolveBlueprint", () => {
         });
 
         expect(result.rows).toEqual([
-          { courseId: ARITMETICA, topicId: "t-conjuntos", count: 6, difficulty: Difficulty.Hard, ...noLayout(0) },
-          { courseId: ARITMETICA, topicId: "t-razones", count: 6, difficulty: Difficulty.Hard, ...noLayout(0) },
+          {
+            courseId: ARITMETICA,
+            topicId: "t-conjuntos",
+            count: 6,
+            difficulty: Difficulty.Hard,
+            ...noLayout(0),
+          },
+          {
+            courseId: ARITMETICA,
+            topicId: "t-razones",
+            count: 6,
+            difficulty: Difficulty.Hard,
+            ...noLayout(0),
+          },
         ]);
       });
 
@@ -160,7 +172,9 @@ describe("resolveBlueprint", () => {
           courseTopics,
         });
 
-        expect(result.rows).toEqual([{ courseId: COMUNICACION, count: 6, difficulty: undefined, ...noLayout(0) }]);
+        expect(result.rows).toEqual([
+          { courseId: COMUNICACION, count: 6, difficulty: undefined, ...noLayout(0) },
+        ]);
       });
 
       it("never re-expands a template row that already names its own topic", () => {

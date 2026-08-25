@@ -705,9 +705,7 @@ export class BankService {
       );
     }
     if (indexes.some((index) => !Number.isInteger(index) || index < 0 || index >= alternativeCount)) {
-      throw new BadRequestException(
-        `Every index must be an integer between 0 and ${alternativeCount - 1}`,
-      );
+      throw new BadRequestException(`Every index must be an integer between 0 and ${alternativeCount - 1}`);
     }
     if (new Set(indexes).size !== indexes.length) {
       throw new BadRequestException("indexes must not repeat — one image per alternative slot");

@@ -225,10 +225,7 @@ describe("ExamVersionGenerationService.generateVersions", () => {
 
     const [input] = pdfCompiler.examCalls;
     expect(input!.sections.map((s) => s.code)).toEqual(["E1", "E2"]);
-    expect(input!.sections[0]!.blocks.map((b) => b.label).sort()).toEqual([
-      "RAZ. MATEMÁTICO",
-      "RAZ. VERBAL",
-    ]);
+    expect(input!.sections[0]!.blocks.map((b) => b.label).sort()).toEqual(["RAZ. MATEMÁTICO", "RAZ. VERBAL"]);
     expect(input!.sections[1]!.blocks.map((b) => b.label)).toEqual(["MATEMÁTICA"]);
   });
 
@@ -247,19 +244,12 @@ describe("ExamVersionGenerationService.generateVersions", () => {
 
     // Two real sections, not the degenerate single-section fallback — without
     // this the mirroring below holds trivially and proves nothing.
-    expect(keyInput!.sections.map((s) => s.label)).toEqual([
-      "PRIMERA PRUEBA",
-      "SEGUNDA PRUEBA",
-    ]);
-    expect(keyInput!.sections.map((s) => s.label)).toEqual(
-      examInput!.sections.map((s) => s.label),
-    );
+    expect(keyInput!.sections.map((s) => s.label)).toEqual(["PRIMERA PRUEBA", "SEGUNDA PRUEBA"]);
+    expect(keyInput!.sections.map((s) => s.label)).toEqual(examInput!.sections.map((s) => s.label));
     // ...and each key section holds exactly the questions its booklet section
     // printed, in the same order, so "14" means the same thing on both.
     keyInput!.sections.forEach((keySection, index) => {
-      const printed = examInput!.sections[index]!.blocks.flatMap((block) =>
-        block.questions.map((q) => q.id),
-      );
+      const printed = examInput!.sections[index]!.blocks.flatMap((block) => block.questions.map((q) => q.id));
       expect(keySection.entries.map((e) => e.questionId)).toEqual(printed);
     });
   });
@@ -286,7 +276,11 @@ describe("ExamVersionGenerationService.generateVersions", () => {
     for (const call of pdfCompiler.examCalls) {
       expect(call.title).toBe("Simulacro San Marcos");
       expect(call.tenantLogoAbsolutePath).toBeDefined();
-      expect(allQuestions(call).map((q) => q.id).sort()).toEqual(["q1", "q2"]);
+      expect(
+        allQuestions(call)
+          .map((q) => q.id)
+          .sort(),
+      ).toEqual(["q1", "q2"]);
       for (const q of allQuestions(call)) {
         // READY_EXAM fixture is all image questions; narrow the discriminated
         // union (structured questions carry no on-disk image path).
@@ -331,7 +325,11 @@ describe("ExamVersionGenerationService.generateVersions", () => {
       const examCall = pdfCompiler.examCalls[i]!;
       const answerKeyCall = pdfCompiler.answerKeyCalls[i]!;
 
-      expect(allQuestions(examCall).map((q) => q.id).sort()).toEqual(["q1", "q2", "q3"]);
+      expect(
+        allQuestions(examCall)
+          .map((q) => q.id)
+          .sort(),
+      ).toEqual(["q1", "q2", "q3"]);
 
       const structuredQuestion = allQuestions(examCall).find((q) => q.id === "q3");
       expect(structuredQuestion?.type).toBe("structured");

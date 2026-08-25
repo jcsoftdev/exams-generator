@@ -58,7 +58,9 @@ describe('CropReviewComponent', () => {
     ]);
 
     const labels = Array.from(
-      (fixture.nativeElement as HTMLElement).querySelectorAll<HTMLElement>('[data-testid="crop-slot-label"]'),
+      (fixture.nativeElement as HTMLElement).querySelectorAll<HTMLElement>(
+        '[data-testid="crop-slot-label"]',
+      ),
     ).map((el) => el.textContent?.trim());
     expect(labels).toEqual(['Figura del enunciado', 'Alternativa c)']);
   });

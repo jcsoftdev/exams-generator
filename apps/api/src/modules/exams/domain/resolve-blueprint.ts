@@ -156,7 +156,13 @@ export function resolveBlueprint(options: ResolveBlueprintOptions): ResolveBluep
       // A row that names its own topic is already as specific as it gets —
       // expanding it would contradict the template.
       if (row.topicId) {
-        rows.push({ courseId: row.courseId, topicId: row.topicId, count, difficulty, ...layoutOf(row, index) });
+        rows.push({
+          courseId: row.courseId,
+          topicId: row.topicId,
+          count,
+          difficulty,
+          ...layoutOf(row, index),
+        });
         return;
       }
 

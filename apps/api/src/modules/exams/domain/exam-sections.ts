@@ -53,8 +53,6 @@ export function groupIntoSections(placements: readonly QuestionPlacement[]): Sel
   return [...sectionsByKey.values()].map((section) => ({
     code: section.code,
     label: section.label,
-    blocks: [...section.blocks.entries()].map(
-      ([label, questions]): SelectionBlock => ({ label, questions }),
-    ),
+    blocks: [...section.blocks.entries()].map(([label, questions]): SelectionBlock => ({ label, questions })),
   }));
 }

@@ -367,9 +367,7 @@ describe('AiService', () => {
       const crop: AiQuestionCrop = { dataUrl: 'data:image/png;base64,AAA', box };
       let result: AiQuestionCrop | undefined;
 
-      service
-        .recropExtraction('extraction-1', box)
-        .subscribe((response) => (result = response));
+      service.recropExtraction('extraction-1', box).subscribe((response) => (result = response));
 
       const req = httpMock.expectOne(
         `${environment.apiBaseUrl}/ai/questions/extract/extraction-1/crop`,

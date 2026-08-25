@@ -94,5 +94,4 @@ describe("splitTypstMathSpans", () => {
   it("rejects LaTeX even when every command it names is also a Typst identifier", () => {
     expect(kinds("vale $\\sqrt{5} + \\pi$")).toEqual(["text"]);
   });
-
 });

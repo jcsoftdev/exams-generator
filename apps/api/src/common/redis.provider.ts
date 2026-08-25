@@ -28,7 +28,8 @@ export const REDIS_CLIENT = Symbol("RedisClient");
       // so a Redis outage surfaces on first use instead of blocking app boot,
       // and `maxRetriesPerRequest: 1` instead of ioredis's default 20 retries
       // so a down Redis fails a request fast rather than hanging it.
-      useFactory: () => new Redis({ ...resolveRedisConnection(), lazyConnect: true, maxRetriesPerRequest: 1 }),
+      useFactory: () =>
+        new Redis({ ...resolveRedisConnection(), lazyConnect: true, maxRetriesPerRequest: 1 }),
     },
   ],
   exports: [REDIS_CLIENT],

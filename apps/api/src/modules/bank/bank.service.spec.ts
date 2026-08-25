@@ -882,11 +882,10 @@ describe("BankService.setAlternativeImages", () => {
     await service.setAlternativeImages(TEACHER_USER, "q1", [file("a"), file("c")], [0, 2]);
 
     expect(storage.put).toHaveBeenCalledTimes(2);
-    expect(repository.setAlternativeImages).toHaveBeenCalledWith(
-      "q1",
-      TEACHER_USER.tenantId,
-      [expect.objectContaining({ alternativeIndex: 0 }), expect.objectContaining({ alternativeIndex: 2 })],
-    );
+    expect(repository.setAlternativeImages).toHaveBeenCalledWith("q1", TEACHER_USER.tenantId, [
+      expect.objectContaining({ alternativeIndex: 0 }),
+      expect.objectContaining({ alternativeIndex: 2 }),
+    ]);
   });
 
   it("still requires one file per alternative when indexes is omitted, with the original error message", async () => {
@@ -916,9 +915,9 @@ describe("BankService.setAlternativeImages", () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue(structuredQuestionWith5Alternatives());
 
-    await expect(
-      service.setAlternativeImages(TEACHER_USER, "q1", [file("a")], [7]),
-    ).rejects.toBeInstanceOf(BadRequestException);
+    await expect(service.setAlternativeImages(TEACHER_USER, "q1", [file("a")], [7])).rejects.toBeInstanceOf(
+      BadRequestException,
+    );
     expect(repository.setAlternativeImages).not.toHaveBeenCalled();
   });
 

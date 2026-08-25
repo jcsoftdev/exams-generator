@@ -159,9 +159,7 @@ export function buildVersions(
   versionCount: number,
   rng: Rng,
 ): Version[] {
-  const allQuestions = sections.flatMap((section) =>
-    section.blocks.flatMap((block) => block.questions),
-  );
+  const allQuestions = sections.flatMap((section) => section.blocks.flatMap((block) => block.questions));
   if (allQuestions.length === 0) {
     return [];
   }

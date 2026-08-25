@@ -22,11 +22,7 @@ export class RecropQuestionService {
     @Inject(IMAGE_CROPPER_PORT) private readonly cropper: ImageCropperPort,
   ) {}
 
-  async recrop(
-    user: AuthTokenPayload,
-    extractionId: string,
-    box: NormalizedBox,
-  ): Promise<AiQuestionCrop> {
+  async recrop(user: AuthTokenPayload, extractionId: string, box: NormalizedBox): Promise<AiQuestionCrop> {
     if (!isValidNormalizedBox(box)) {
       throw new BadRequestException("box must be inside the 0..1 canvas and have a positive size");
     }

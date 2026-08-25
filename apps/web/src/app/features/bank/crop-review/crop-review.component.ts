@@ -2,8 +2,7 @@ import { ChangeDetectionStrategy, Component, input, output } from '@angular/core
 import { NormalizedBoxDto } from '@exams-generator/shared';
 
 export type CropTarget =
-  | { readonly kind: 'figure' }
-  | { readonly kind: 'alternative'; readonly alternativeIndex: number };
+  { readonly kind: 'figure' } | { readonly kind: 'alternative'; readonly alternativeIndex: number };
 
 export interface CropSlot {
   readonly target: CropTarget;
@@ -89,7 +88,12 @@ export class CropReviewComponent {
     this.beginDrag(event, container, slot, 'move', null);
   }
 
-  protected startResize(event: PointerEvent, container: HTMLElement, slot: CropSlot, handle: ResizeHandle): void {
+  protected startResize(
+    event: PointerEvent,
+    container: HTMLElement,
+    slot: CropSlot,
+    handle: ResizeHandle,
+  ): void {
     if (slot.busy) {
       return;
     }
@@ -181,7 +185,12 @@ export function clampMove(box: NormalizedBoxDto, dx: number, dy: number): Normal
  * collapse or invert an edge is stopped at `MIN` instead of ever reaching 0.
  * Exported for the same reason as `clampMove`.
  */
-export function clampResize(box: NormalizedBoxDto, handle: ResizeHandle, dx: number, dy: number): NormalizedBoxDto {
+export function clampResize(
+  box: NormalizedBoxDto,
+  handle: ResizeHandle,
+  dx: number,
+  dy: number,
+): NormalizedBoxDto {
   const MIN = 0.02;
   let { x, y, w, h } = box;
   const right = box.x + box.w;
@@ -216,5 +225,8 @@ export function sameTarget(a: CropTarget, b: CropTarget): boolean {
   if (a.kind !== b.kind) {
     return false;
   }
-  return a.kind === 'figure' || a.alternativeIndex === (b as { alternativeIndex: number }).alternativeIndex;
+  return (
+    a.kind === 'figure' ||
+    a.alternativeIndex === (b as { alternativeIndex: number }).alternativeIndex
+  );
 }

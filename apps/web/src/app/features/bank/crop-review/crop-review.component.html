@@ -1,6 +1,8 @@
 @for (slot of slots(); track trackByLabel($index, slot)) {
   <div data-testid="crop-slot" class="flex flex-col gap-2 rounded-field border border-n200 p-3">
-    <span data-testid="crop-slot-label" class="text-sm font-medium text-n700">{{ slot.label }}</span>
+    <span data-testid="crop-slot-label" class="text-sm font-medium text-n700">{{
+      slot.label
+    }}</span>
 
     <div class="flex flex-wrap items-start gap-4">
       <div
@@ -31,7 +33,11 @@
         </div>
       </div>
 
-      <img [src]="slot.dataUrl" alt="Recorte actual" class="h-32 w-32 rounded-field border border-n200 object-contain" />
+      <img
+        [src]="slot.dataUrl"
+        alt="Recorte actual"
+        class="h-32 w-32 rounded-field border border-n200 object-contain"
+      />
     </div>
 
     <div class="flex gap-2">

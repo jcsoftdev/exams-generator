@@ -52,11 +52,7 @@ describe("groupIntoSections", () => {
     ]);
 
     expect(sections.map((s) => s.code)).toEqual(["E1", "E2", "E3"]);
-    expect(sections.map((s) => s.label)).toEqual([
-      "PRIMERA PRUEBA",
-      "SEGUNDA PRUEBA",
-      "TERCERA PRUEBA",
-    ]);
+    expect(sections.map((s) => s.label)).toEqual(["PRIMERA PRUEBA", "SEGUNDA PRUEBA", "TERCERA PRUEBA"]);
   });
 
   it("filas del mismo bloque que quedaron separadas por sortOrder se fusionan en un solo bloque", () => {

@@ -1516,16 +1516,14 @@ export class ExamBuilderComponent implements OnInit {
     this.generating.set(true);
     this.generateError.set(null);
 
-    const blueprint: CreateExamBlueprintRow[] = this.store
-      .requestedCells()
-      .map((key) => {
-        const { courseId, topicId } = parseCellKey(key);
-        return toCreateExamBlueprintRow(
-          key,
-          this.store.requested().get(key) ?? 0,
-          this.store.layoutFor(courseId, topicId),
-        );
-      });
+    const blueprint: CreateExamBlueprintRow[] = this.store.requestedCells().map((key) => {
+      const { courseId, topicId } = parseCellKey(key);
+      return toCreateExamBlueprintRow(
+        key,
+        this.store.requested().get(key) ?? 0,
+        this.store.layoutFor(courseId, topicId),
+      );
+    });
 
     const title = this.examTitle().trim() || defaultExamTitle(gradeLevel);
 

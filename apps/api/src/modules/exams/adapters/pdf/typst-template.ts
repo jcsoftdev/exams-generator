@@ -136,9 +136,7 @@ function renderStructuredQuestionBlock(
   number: number,
 ): string {
   const figureBlock = question.figureCode ? `\n\n${question.figureCode}` : "";
-  const imageBlock = question.imageAbsolutePath
-    ? `\n\n${renderCappedImage(question.imageAbsolutePath)}`
-    : "";
+  const imageBlock = question.imageAbsolutePath ? `\n\n${renderCappedImage(question.imageAbsolutePath)}` : "";
   const alternativesBlock = question.alternatives
     .map((alternative, index) => {
       const letter = ALTERNATIVE_LETTERS[index] ?? index + 1;
@@ -146,10 +144,10 @@ function renderStructuredQuestionBlock(
       // An alternative with its own image carries no text (`alternative` is
       // `""` for this variant) — render the image instead of an empty line.
       return alternativeImagePath
-        // `#box` keeps the drawing on the SAME line as its letter. A bare
-        // `#image` is taller than the line it sits on, so it wraps and the
-        // option prints as "A)" with an orphaned picture underneath it.
-        ? `${letter}) #box(image("${alternativeImagePath}", height: ${ALTERNATIVE_IMAGE_HEIGHT}))`
+        ? // `#box` keeps the drawing on the SAME line as its letter. A bare
+          // `#image` is taller than the line it sits on, so it wraps and the
+          // option prints as "A)" with an orphaned picture underneath it.
+          `${letter}) #box(image("${alternativeImagePath}", height: ${ALTERNATIVE_IMAGE_HEIGHT}))`
         : `${letter}) ${alternative}`;
     })
     .join(" \\ \n");
@@ -170,9 +168,7 @@ export function renderAnswerKeyTypst(input: AnswerKeyDocumentInput): string {
     .map((section) => {
       const heading = section.label ? `#align(center)[== ${section.label}]\n\n` : "";
       const rows = section.entries
-        .map(
-          (entry, index) => `// q:${entry.questionId}\n  [${index + 1}], [${entry.correctOption}],`,
-        )
+        .map((entry, index) => `// q:${entry.questionId}\n  [${index + 1}], [${entry.correctOption}],`)
         .join("\n");
 
       return `${heading}#table(

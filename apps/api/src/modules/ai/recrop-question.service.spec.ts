@@ -32,9 +32,7 @@ describe("RecropQuestionService.recrop", () => {
     expect(cropper.crop).toHaveBeenCalledWith(expect.any(Buffer), "image/png", BOX, 1200);
     expect(cropper.raster).not.toHaveBeenCalled();
     expect(result.box).toEqual(BOX);
-    expect(result.dataUrl).toBe(
-      `data:image/png;base64,${Buffer.from("recropped-bytes").toString("base64")}`,
-    );
+    expect(result.dataUrl).toBe(`data:image/png;base64,${Buffer.from("recropped-bytes").toString("base64")}`);
   });
 
   it("throws Gone when the cached photo has expired", async () => {
@@ -47,9 +45,7 @@ describe("RecropQuestionService.recrop", () => {
   it("returns the same Gone as an unknown id for another account's extraction, so the response cannot confirm the id exists", async () => {
     const { service } = buildDeps();
 
-    await expect(service.recrop(OTHER_USER, "extraction-1", BOX)).rejects.toBeInstanceOf(
-      GoneException,
-    );
+    await expect(service.recrop(OTHER_USER, "extraction-1", BOX)).rejects.toBeInstanceOf(GoneException);
   });
 
   it("rejects a box outside the 0..1 canvas", async () => {

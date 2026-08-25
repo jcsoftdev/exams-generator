@@ -6,7 +6,18 @@
  */
 const ONE_ARGUMENT: Record<string, (argument: string) => string> = {
   sqrt: (argument) => `sqrt(${argument})`,
-  mathbb: (argument) => (argument === "R" ? "RR" : argument === "N" ? "NN" : argument === "Z" ? "ZZ" : argument === "Q" ? "QQ" : argument === "C" ? "CC" : ""),
+  mathbb: (argument) =>
+    argument === "R"
+      ? "RR"
+      : argument === "N"
+        ? "NN"
+        : argument === "Z"
+          ? "ZZ"
+          : argument === "Q"
+            ? "QQ"
+            : argument === "C"
+              ? "CC"
+              : "",
 };
 
 const TWO_ARGUMENTS: Record<string, (first: string, second: string) => string> = {
@@ -24,19 +35,69 @@ const TWO_ARGUMENTS: Record<string, (first: string, second: string) => string> =
  * (`cos`, `tan`, ...) are already upright, so they pass through by name.
  */
 const TOKENS: Record<string, string> = {
-  alpha: "alpha", beta: "beta", gamma: "gamma", delta: "delta", epsilon: "epsilon",
-  theta: "theta", lambda: "lambda", mu: "mu", pi: "pi", rho: "rho", sigma: "sigma",
-  tau: "tau", phi: "phi", varphi: "phi.alt", psi: "psi", omega: "omega",
-  Delta: "Delta", Omega: "Omega", Sigma: "Sigma", Phi: "Phi", Theta: "Theta",
-  sen: 'op("sen")', sin: "sin", cos: "cos", tan: "tan", sec: "sec", csc: "csc", cot: "cot",
-  arcsen: 'op("arcsen")', arcsin: "arcsin", arccos: "arccos", arctan: "arctan",
-  log: "log", ln: "ln", lim: "lim", sum: "sum", prod: "product", int: "integral",
-  in: "in", notin: "in.not", subset: "subset", cup: "union", cap: "sect",
-  emptyset: "nothing", infty: "infinity", forall: "forall", exists: "exists",
-  cdot: "dot", times: "times", div: "div", pm: "plus.minus", mp: "minus.plus",
-  neq: "!=", leq: "<=", geq: ">=", approx: "approx", equiv: "equiv",
-  rightarrow: "->", Rightarrow: "=>", leftarrow: "<-", to: "->",
-  quad: "quad", qquad: "wide",
+  alpha: "alpha",
+  beta: "beta",
+  gamma: "gamma",
+  delta: "delta",
+  epsilon: "epsilon",
+  theta: "theta",
+  lambda: "lambda",
+  mu: "mu",
+  pi: "pi",
+  rho: "rho",
+  sigma: "sigma",
+  tau: "tau",
+  phi: "phi",
+  varphi: "phi.alt",
+  psi: "psi",
+  omega: "omega",
+  Delta: "Delta",
+  Omega: "Omega",
+  Sigma: "Sigma",
+  Phi: "Phi",
+  Theta: "Theta",
+  sen: 'op("sen")',
+  sin: "sin",
+  cos: "cos",
+  tan: "tan",
+  sec: "sec",
+  csc: "csc",
+  cot: "cot",
+  arcsen: 'op("arcsen")',
+  arcsin: "arcsin",
+  arccos: "arccos",
+  arctan: "arctan",
+  log: "log",
+  ln: "ln",
+  lim: "lim",
+  sum: "sum",
+  prod: "product",
+  int: "integral",
+  in: "in",
+  notin: "in.not",
+  subset: "subset",
+  cup: "union",
+  cap: "sect",
+  emptyset: "nothing",
+  infty: "infinity",
+  forall: "forall",
+  exists: "exists",
+  cdot: "dot",
+  times: "times",
+  div: "div",
+  pm: "plus.minus",
+  mp: "minus.plus",
+  neq: "!=",
+  leq: "<=",
+  geq: ">=",
+  approx: "approx",
+  equiv: "equiv",
+  rightarrow: "->",
+  Rightarrow: "=>",
+  leftarrow: "<-",
+  to: "->",
+  quad: "quad",
+  qquad: "wide",
 };
 
 /** Commands that only told LaTeX how big to draw a delimiter. Typst grows them itself. */
@@ -44,11 +105,16 @@ const DROPPED = new Set(["left", "right", "displaystyle", "textstyle", "limits",
 
 /** Escapes that stand for a literal character or a space. */
 const LITERALS: Record<string, string> = {
-  "{": "{", "}": "}", "%": "%", $: "$", " ": " ",
+  "{": "{",
+  "}": "}",
+  "%": "%",
+  $: "$",
+  " ": " ",
   // Padded, because these are spacing commands that sit flush against their
   // neighbours in LaTeX (`\alpha,\, \beta`) and would otherwise weld onto
   // them. `collapseSpaces` tidies whatever doubling that causes.
-  ",": " thin ", ";": " thick ",
+  ",": " thin ",
+  ";": " thick ",
 };
 
 /**
@@ -78,7 +144,10 @@ export function latexMathToTypst(run: string): string | undefined {
     const character = run[index]!;
 
     if (character !== "\\") {
-      out += character === "^" || character === "_" ? readScript(run, index, character, (skip) => (index += skip)) : character;
+      out +=
+        character === "^" || character === "_"
+          ? readScript(run, index, character, (skip) => (index += skip))
+          : character;
       index++;
       continue;
     }

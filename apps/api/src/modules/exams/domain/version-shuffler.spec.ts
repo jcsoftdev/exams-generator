@@ -366,10 +366,7 @@ describe("buildVersions", () => {
 
     for (const version of versions) {
       expect(version.sectionLayout.map((s) => s.code)).toEqual(["E1", "E2"]);
-      expect(version.sectionLayout.map((s) => s.label)).toEqual([
-        "PRIMERA PRUEBA",
-        "SEGUNDA PRUEBA",
-      ]);
+      expect(version.sectionLayout.map((s) => s.label)).toEqual(["PRIMERA PRUEBA", "SEGUNDA PRUEBA"]);
     }
   });
 

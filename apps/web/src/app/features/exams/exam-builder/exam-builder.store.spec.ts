@@ -162,7 +162,7 @@ describe('ExamBuilderStore', () => {
   });
 
   describe('bulkLoadFromBlueprint (design doc §3.11 — template pre-fill)', () => {
-    it('remembers each resolved row\'s layout, keyed by course and topic', () => {
+    it("remembers each resolved row's layout, keyed by course and topic", () => {
       const store = new ExamBuilderStore();
 
       store.bulkLoadFromBlueprint([
@@ -188,7 +188,7 @@ describe('ExamBuilderStore', () => {
       expect(store.layoutFor('c1', 'other')).toBeUndefined();
     });
 
-    it('stores a whole-course row\'s layout under the sentinel topic id', () => {
+    it("stores a whole-course row's layout under the sentinel topic id", () => {
       const store = new ExamBuilderStore();
 
       store.bulkLoadFromBlueprint([

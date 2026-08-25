@@ -637,7 +637,10 @@ describe("ExamsRepository", () => {
       const forGeneration = await repository.getExamForGeneration(examId, tenantAId);
 
       const [question] = forGeneration!.selectedQuestions;
-      const [course] = await db.select().from(courses).where(inArray(courses.id, [courseId]));
+      const [course] = await db
+        .select()
+        .from(courses)
+        .where(inArray(courses.id, [courseId]));
       expect(question!.blockLabel).toBe(course!.name);
       expect(question!.sectionCode).toBeNull();
       expect(question!.sectionLabel).toBeNull();
@@ -877,9 +880,7 @@ describe("ExamsRepository", () => {
     });
 
     it("persists the version's frozen sectionLayout as given", async () => {
-      const layout = [
-        { code: "E2", label: "SEGUNDA PRUEBA", blocks: [{ label: "MATEMÁTICA", count: 1 }] },
-      ];
+      const layout = [{ code: "E2", label: "SEGUNDA PRUEBA", blocks: [{ label: "MATEMÁTICA", count: 1 }] }];
       const pdfAsset = await repository.createAsset(
         tenantAId,
         `exams/${randomUUID()}.pdf`,

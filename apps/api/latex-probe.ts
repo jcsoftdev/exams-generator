@@ -6,8 +6,12 @@ import { prepareCollectedContent } from "./src/modules/bank/domain/prepare-colle
 
 const DATA = join(__dirname, "src", "db", "data");
 const files = [
-  ...readdirSync(join(DATA, "collected")).filter((n) => n.endsWith(".json")).map((n) => join(DATA, "collected", n)),
-  ...readdirSync(DATA).filter((n) => n.startsWith("escolar-") && n.endsWith(".json")).map((n) => join(DATA, n)),
+  ...readdirSync(join(DATA, "collected"))
+    .filter((n) => n.endsWith(".json"))
+    .map((n) => join(DATA, "collected", n)),
+  ...readdirSync(DATA)
+    .filter((n) => n.startsWith("escolar-") && n.endsWith(".json"))
+    .map((n) => join(DATA, n)),
 ];
 
 const directory = mkdtempSync(join(tmpdir(), "latex-probe-"));
@@ -33,7 +37,9 @@ for (const f of files) {
     const leftover = parts.some((t) => /\\\\\$|\\\$/.test(t) && /\\[a-z]/.test(t));
     if (leftover) {
       stillLatex++;
-      for (const [, cmd] of [item.bodyTypst as string, ...alts].join(" ").matchAll(/\$[^$\n]*?\\([A-Za-z]+)/g)) {
+      for (const [, cmd] of [item.bodyTypst as string, ...alts]
+        .join(" ")
+        .matchAll(/\$[^$\n]*?\\([A-Za-z]+)/g)) {
         untranslated.add(cmd);
       }
     } else {
@@ -47,7 +53,8 @@ for (const f of files) {
       compiled++;
     } catch (error) {
       const stderr = (error as { stderr?: Buffer }).stderr?.toString().split("\n")[0] ?? String(error);
-      if (failures.length < 8) failures.push(`${(item.sourceName as string) ?? "?"}\n    ${stderr}\n    ${parts[0]?.slice(0, 120)}`);
+      if (failures.length < 8)
+        failures.push(`${(item.sourceName as string) ?? "?"}\n    ${stderr}\n    ${parts[0]?.slice(0, 120)}`);
     }
   }
 }

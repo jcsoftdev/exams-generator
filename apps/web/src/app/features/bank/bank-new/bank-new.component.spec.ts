@@ -737,10 +737,21 @@ describe('BankNewComponent', () => {
       alternatives: ['a', 'b', 'c', 'd', 'e'],
       correctAnswer: '0',
       extractionId: 'extraction-1',
-      figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 } },
+      figureCrop: {
+        dataUrl: 'data:image/png;base64,AAAA',
+        box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 },
+      },
       alternativeCrops: [
-        { alternativeIndex: 0, dataUrl: 'data:image/png;base64,BBBB', box: { x: 0, y: 0.7, w: 0.1, h: 0.1 } },
-        { alternativeIndex: 2, dataUrl: 'data:image/png;base64,CCCC', box: { x: 0.3, y: 0.7, w: 0.1, h: 0.1 } },
+        {
+          alternativeIndex: 0,
+          dataUrl: 'data:image/png;base64,BBBB',
+          box: { x: 0, y: 0.7, w: 0.1, h: 0.1 },
+        },
+        {
+          alternativeIndex: 2,
+          dataUrl: 'data:image/png;base64,CCCC',
+          box: { x: 0.3, y: 0.7, w: 0.1, h: 0.1 },
+        },
       ],
     };
 
@@ -981,10 +992,21 @@ describe('BankNewComponent', () => {
       alternatives: ['Uno', 'Dos', 'Tres', 'Cuatro', 'Cinco'],
       correctAnswer: '0',
       extractionId: 'extraction-1',
-      figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 } },
+      figureCrop: {
+        dataUrl: 'data:image/png;base64,AAAA',
+        box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 },
+      },
       alternativeCrops: [
-        { alternativeIndex: 0, dataUrl: 'data:image/png;base64,BBBB', box: { x: 0, y: 0.7, w: 0.1, h: 0.1 } },
-        { alternativeIndex: 2, dataUrl: 'data:image/png;base64,CCCC', box: { x: 0.3, y: 0.7, w: 0.1, h: 0.1 } },
+        {
+          alternativeIndex: 0,
+          dataUrl: 'data:image/png;base64,BBBB',
+          box: { x: 0, y: 0.7, w: 0.1, h: 0.1 },
+        },
+        {
+          alternativeIndex: 2,
+          dataUrl: 'data:image/png;base64,CCCC',
+          box: { x: 0.3, y: 0.7, w: 0.1, h: 0.1 },
+        },
       ],
     };
 
@@ -1073,9 +1095,16 @@ describe('BankNewComponent', () => {
         alternatives: ['2', '4', '2', '8'],
         correctAnswer: '0',
         extractionId: 'extraction-1',
-        figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 } },
+        figureCrop: {
+          dataUrl: 'data:image/png;base64,AAAA',
+          box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 },
+        },
         alternativeCrops: [
-          { alternativeIndex: 2, dataUrl: 'data:image/png;base64,CCCC', box: { x: 0.3, y: 0.7, w: 0.1, h: 0.1 } },
+          {
+            alternativeIndex: 2,
+            dataUrl: 'data:image/png;base64,CCCC',
+            box: { x: 0.3, y: 0.7, w: 0.1, h: 0.1 },
+          },
         ],
       };
       const { fixture, compiled, setAlternativeImages } = setup({
@@ -1106,7 +1135,10 @@ describe('BankNewComponent', () => {
             alternatives: ['a', 'b'],
             correctAnswer: '0',
             extractionId: 'extraction-1',
-            figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0, y: 0, w: 0.2, h: 0.2 } },
+            figureCrop: {
+              dataUrl: 'data:image/png;base64,AAAA',
+              box: { x: 0, y: 0, w: 0.2, h: 0.2 },
+            },
           } satisfies AiExtractedQuestion),
       });
       vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
@@ -1130,7 +1162,10 @@ describe('BankNewComponent', () => {
             alternatives: ['a', 'b'],
             correctAnswer: '0',
             extractionId: 'extraction-1',
-            figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0, y: 0, w: 0.2, h: 0.2 } },
+            figureCrop: {
+              dataUrl: 'data:image/png;base64,AAAA',
+              box: { x: 0, y: 0, w: 0.2, h: 0.2 },
+            },
           } satisfies AiExtractedQuestion),
         recropExtractionImpl: () =>
           of({ dataUrl: 'data:image/png;base64,ZZZZ', box: { x: 0, y: 0, w: 0.2, h: 0.2 } }),
@@ -1170,7 +1205,10 @@ describe('BankNewComponent', () => {
             alternatives: ['a', 'b'],
             correctAnswer: '0',
             extractionId: 'extraction-1',
-            figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0, y: 0, w: 0.2, h: 0.2 } },
+            figureCrop: {
+              dataUrl: 'data:image/png;base64,AAAA',
+              box: { x: 0, y: 0, w: 0.2, h: 0.2 },
+            },
           } satisfies AiExtractedQuestion),
       });
       vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
@@ -1185,9 +1223,7 @@ describe('BankNewComponent', () => {
       });
       fixture.detectChanges();
 
-      expect(
-        compiled.querySelector('[data-testid="structured-image-upload-preview"]'),
-      ).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="structured-image-upload-preview"]')).toBeFalsy();
     });
   });
 
@@ -1197,9 +1233,16 @@ describe('BankNewComponent', () => {
       alternatives: ['a', 'b', 'c', 'd', 'e'],
       correctAnswer: '0',
       extractionId: 'extraction-1',
-      figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 } },
+      figureCrop: {
+        dataUrl: 'data:image/png;base64,AAAA',
+        box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 },
+      },
       alternativeCrops: [
-        { alternativeIndex: 0, dataUrl: 'data:image/png;base64,BBBB', box: { x: 0, y: 0.7, w: 0.1, h: 0.1 } },
+        {
+          alternativeIndex: 0,
+          dataUrl: 'data:image/png;base64,BBBB',
+          box: { x: 0, y: 0.7, w: 0.1, h: 0.1 },
+        },
       ],
     };
 
@@ -1283,7 +1326,10 @@ describe('BankNewComponent', () => {
             bodyTypst: 'x',
             alternatives: ['a', 'b'],
             correctAnswer: '0',
-            figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0, y: 0, w: 0.2, h: 0.2 } },
+            figureCrop: {
+              dataUrl: 'data:image/png;base64,AAAA',
+              box: { x: 0, y: 0, w: 0.2, h: 0.2 },
+            },
           } satisfies AiExtractedQuestion),
       });
       fillPhotoTaxonomy(fixture);

@@ -55,7 +55,9 @@ export function parseIndexes(raw: string | string[] | undefined): number[] | und
   if (raw === undefined) {
     return undefined;
   }
-  return (Array.isArray(raw) ? raw : [raw]).map((value) => (value.trim() === "" ? Number.NaN : Number(value)));
+  return (Array.isArray(raw) ? raw : [raw]).map((value) =>
+    value.trim() === "" ? Number.NaN : Number(value),
+  );
 }
 
 interface CreateImageQuestionBody {

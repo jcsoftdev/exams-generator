@@ -64,7 +64,9 @@ describe("planImageLotRestructure", () => {
       extracted: { ...EXTRACTED, bodyTypst: "17. Si $A subset RR$ determine el conjunto $A$." },
     });
 
-    expect(result.kind === "structured" && result.entry.bodyTypst).toBe("Si $A subset RR$ determine el conjunto $A$.");
+    expect(result.kind === "structured" && result.entry.bodyTypst).toBe(
+      "Si $A subset RR$ determine el conjunto $A$.",
+    );
   });
 
   it("stays an image question when extraction failed outright", () => {

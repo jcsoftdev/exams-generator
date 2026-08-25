@@ -154,9 +154,7 @@ describe("SharpImageCropperAdapter", () => {
     it("rejects bytes that are not a decodable image", async () => {
       const adapter = new SharpImageCropperAdapter();
 
-      await expect(
-        adapter.downscale(Buffer.from("not-an-image"), "image/png", 2000),
-      ).rejects.toThrow();
+      await expect(adapter.downscale(Buffer.from("not-an-image"), "image/png", 2000)).rejects.toThrow();
     });
   });
 });
