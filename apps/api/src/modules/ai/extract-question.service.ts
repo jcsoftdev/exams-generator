@@ -95,11 +95,27 @@ export class ExtractQuestionService {
     if (!hasCrops) {
       return { ...draft, ...crops };
     }
+
     // Only cached when there is something to re-crop: a text-only question
     // has no crop UI, so holding its photo for 30 minutes buys nothing.
-    const extractionId = randomUUID();
-    await this.cache.put(extractionId, { userId: user.sub, image: file.buffer, mimeType });
-    return { ...draft, ...crops, extractionId };
+    //
+    // Its own try/catch, deliberately OUTSIDE `buildCrops`'s: by this point the
+    // vision call already succeeded and was billed, and the crops are already
+    // built. A Redis hiccup here must not turn that into a 500 — same "the
+    // transcription is the valuable half" argument `buildCrops` makes for
+    // itself, just one step later. Losing only the ability to re-crop (no
+    // `extractionId`, so the UI falls back to the text-only shape) is the
+    // acceptable trade, not losing the whole response.
+    try {
+      const extractionId = randomUUID();
+      await this.cache.put(extractionId, { userId: user.sub, image: file.buffer, mimeType });
+      return { ...draft, ...crops, extractionId };
+    } catch (error) {
+      this.logger.warn(
+        `Extraction cache write failed, returning crops without a re-crop handle: ${(error as Error).message}`,
+      );
+      return { ...draft, ...crops };
+    }
   }
 
   /**

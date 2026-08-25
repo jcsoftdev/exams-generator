@@ -176,4 +176,17 @@ describe("ExtractQuestionService.extract — crops", () => {
     expect(withoutCrop.extractionId).toBeUndefined();
     expect(cache.put).not.toHaveBeenCalled();
   });
+
+  it("still returns the transcription and its crops when the cache write fails", async () => {
+    const { service, generator, cache } = buildDeps();
+    generator.extractFromImage.mockResolvedValue({ ...EXTRACTED_QUESTION, figureBox: FIGURE_BOX });
+    cache.put.mockRejectedValue(new Error("ECONNREFUSED"));
+    const file = { buffer: fakePng(), mimetype: "image/png" };
+
+    const result = await service.extract(USER, file);
+
+    expect(result.bodyTypst).toBe(EXTRACTED_QUESTION.bodyTypst);
+    expect(result.figureCrop).toBeDefined();
+    expect(result.extractionId).toBeUndefined();
+  });
 });

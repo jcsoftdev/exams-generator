@@ -23,7 +23,12 @@ export const REDIS_CLIENT = Symbol("RedisClient");
   providers: [
     {
       provide: REDIS_CLIENT,
-      useFactory: () => new Redis(resolveRedisConnection()),
+      // Same options as every other Redis client in this repo (`auth.module.ts`,
+      // `health.module.ts`, `test-support/jest-global-setup.ts`): `lazyConnect`
+      // so a Redis outage surfaces on first use instead of blocking app boot,
+      // and `maxRetriesPerRequest: 1` instead of ioredis's default 20 retries
+      // so a down Redis fails a request fast rather than hanging it.
+      useFactory: () => new Redis({ ...resolveRedisConnection(), lazyConnect: true, maxRetriesPerRequest: 1 }),
     },
   ],
   exports: [REDIS_CLIENT],
@@ -32,6 +37,10 @@ export class RedisModule implements OnModuleDestroy {
   constructor(@Inject(REDIS_CLIENT) private readonly redis: Redis) {}
 
   async onModuleDestroy(): Promise<void> {
-    await this.redis.quit();
+    // `quit()` rejects on a client that never actually connected (e.g. it was
+    // never used, or Redis was down for the whole test); left unguarded, that
+    // rejection escapes into `app.close()` and turns a Redis outage into a
+    // failed SHUTDOWN across all 27 e2e suites. `disconnect()` never rejects.
+    await this.redis.quit().catch(() => this.redis.disconnect());
   }
 }

@@ -1,10 +1,4 @@
-import {
-  BadRequestException,
-  GoneException,
-  Inject,
-  Injectable,
-  NotFoundException,
-} from "@nestjs/common";
+import { BadRequestException, GoneException, Inject, Injectable } from "@nestjs/common";
 import { AiQuestionCrop } from "@exams-generator/shared";
 import { AuthTokenPayload } from "../auth/token.service";
 import { NormalizedBox, isValidNormalizedBox } from "./domain/normalized-box";
@@ -38,15 +32,24 @@ export class RecropQuestionService {
     }
 
     const cached = await this.cache.get(extractionId);
-    if (!cached) {
-      throw new GoneException("This crop session expired — extract the question again");
-    }
-    // 404 rather than 403: a 403 would confirm the id exists to whoever guessed it.
-    if (cached.userId !== user.sub) {
-      throw new NotFoundException(`Extraction not found: ${extractionId}`);
+    // Same status AND message for "unknown/expired" and "exists but is not
+    // yours" — deliberately not a distinct code (404, 403, ...) for the
+    // second case: a distinct code IS the existence oracle a different
+    // status would leak to whoever guessed this extractionId. The identical
+    // "expired" wording reveals nothing to them either.
+    const EXPIRED_MESSAGE = "This crop session expired — extract the question again";
+    if (!cached || cached.userId !== user.sub) {
+      throw new GoneException(EXPIRED_MESSAGE);
     }
 
     const bytes = await this.cropper.crop(cached.image, cached.mimeType, box, CROP_MAX_WIDTH_PX);
-    return { dataUrl: `data:image/png;base64,${bytes.toString("base64")}`, box };
+    // Rebuilt field-by-field rather than echoing `box` verbatim:
+    // `isValidNormalizedBox` is a type guard, not a stripper, so any extra
+    // properties on the client's JSON body would otherwise round-trip into a
+    // value typed `AiQuestionCrop`.
+    return {
+      dataUrl: `data:image/png;base64,${bytes.toString("base64")}`,
+      box: { x: box.x, y: box.y, w: box.w, h: box.h },
+    };
   }
 }

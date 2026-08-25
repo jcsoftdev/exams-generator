@@ -147,7 +147,7 @@ describe("POST /ai/questions/extract/:extractionId/crop (e2e)", () => {
       .expect(410);
   });
 
-  it("returns 404 for another account's extractionId", async () => {
+  it("returns the same 410 as an unknown id for another account's extractionId, so the response cannot confirm the id exists", async () => {
     const png = await realPng();
     const extracted = await request(app.getHttpServer())
       .post("/ai/questions/extract")
@@ -159,6 +159,6 @@ describe("POST /ai/questions/extract/:extractionId/crop (e2e)", () => {
       .post(`/ai/questions/extract/${extracted.body.extractionId}/crop`)
       .set("Authorization", `Bearer ${otherUserToken}`)
       .send({ box: { x: 0, y: 0, w: 0.25, h: 0.25 } })
-      .expect(404);
+      .expect(410);
   });
 });

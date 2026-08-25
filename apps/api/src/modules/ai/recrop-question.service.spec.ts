@@ -1,4 +1,4 @@
-import { BadRequestException, GoneException, NotFoundException } from "@nestjs/common";
+import { BadRequestException, GoneException } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
 import { ImageCropperPort } from "./domain/ports/image-cropper.port";
 import { ExtractionCachePort } from "./domain/ports/extraction-cache.port";
@@ -43,12 +43,11 @@ describe("RecropQuestionService.recrop", () => {
     await expect(service.recrop(USER, "extraction-1", BOX)).rejects.toBeInstanceOf(GoneException);
   });
 
-  it("throws NotFound — not Forbidden — for another user's extraction", async () => {
+  it("returns the same Gone as an unknown id for another account's extraction, so the response cannot confirm the id exists", async () => {
     const { service } = buildDeps();
 
-    // 404 rather than 403: a 403 would confirm that this extractionId exists.
     await expect(service.recrop(OTHER_USER, "extraction-1", BOX)).rejects.toBeInstanceOf(
-      NotFoundException,
+      GoneException,
     );
   });
 
