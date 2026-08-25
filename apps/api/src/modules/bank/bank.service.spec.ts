@@ -8,6 +8,7 @@ import {
 import { AuthTokenPayload } from "../auth/token.service";
 import { TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { fakePng } from "../../test-support/image-fixtures";
+import { parseIndexes } from "./bank.controller";
 import { BankRepository, QuestionListItem } from "./bank.repository";
 import { BankService } from "./bank.service";
 import { hashBodyTypst } from "./domain/hash-body-typst";
@@ -927,6 +928,19 @@ describe("BankService.setAlternativeImages", () => {
 
     await expect(
       service.setAlternativeImages(TEACHER_USER, "q1", [file("a"), file("b")], [1, 1]),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.setAlternativeImages).not.toHaveBeenCalled();
+  });
+
+  it("rejects an empty-string index instead of silently coercing it to slot 0 (Number('') === 0)", async () => {
+    // parseIndexes is the controller's multipart-to-number[] boundary; wiring
+    // its real output into the real service (not a mock) is what proves the
+    // blank-field bug is actually closed end to end, not just in isolation.
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(structuredQuestionWith5Alternatives());
+
+    await expect(
+      service.setAlternativeImages(TEACHER_USER, "q1", [file("a")], parseIndexes("")),
     ).rejects.toBeInstanceOf(BadRequestException);
     expect(repository.setAlternativeImages).not.toHaveBeenCalled();
   });

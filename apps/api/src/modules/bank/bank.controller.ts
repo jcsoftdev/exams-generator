@@ -44,12 +44,18 @@ const DEFAULT_UNPAGED_WINDOW = { page: 1, pageSize: 100 };
  * of strings) or, with a single value, as one bare string. Anything
  * unparseable becomes `NaN`, which `resolveAlternativeSlots` rejects with a
  * 400 — this helper never guesses.
+ *
+ * `Number("")` and `Number("  ")` both evaluate to `0`, NOT `NaN` — left
+ * alone, a blank field (a stray/empty multipart field, a realistic accident)
+ * would silently land on alternative slot 0 instead of failing loudly. Blank
+ * strings are mapped to `NaN` explicitly before conversion so they hit the
+ * SAME 400 path as any other unparseable value.
  */
-function parseIndexes(raw: string | string[] | undefined): number[] | undefined {
+export function parseIndexes(raw: string | string[] | undefined): number[] | undefined {
   if (raw === undefined) {
     return undefined;
   }
-  return (Array.isArray(raw) ? raw : [raw]).map((value) => Number(value));
+  return (Array.isArray(raw) ? raw : [raw]).map((value) => (value.trim() === "" ? Number.NaN : Number(value)));
 }
 
 interface CreateImageQuestionBody {
