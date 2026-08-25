@@ -267,11 +267,14 @@ describe('BankService', () => {
   });
 
   describe('setAlternativeImages', () => {
-    it('posts one image per named alternative slot', () => {
+    it('pairs each image with its own alternative index by position, not just as two separate sets', () => {
+      const fileA = new File(['a'], 'a.png', { type: 'image/png' });
+      const fileC = new File(['c'], 'c.png', { type: 'image/png' });
+
       service
         .setAlternativeImages('q1', [
-          { alternativeIndex: 0, file: new File(['a'], 'a.png', { type: 'image/png' }) },
-          { alternativeIndex: 2, file: new File(['c'], 'c.png', { type: 'image/png' }) },
+          { alternativeIndex: 0, file: fileA },
+          { alternativeIndex: 2, file: fileC },
         ])
         .subscribe();
 
@@ -279,27 +282,19 @@ describe('BankService', () => {
         `${environment.apiBaseUrl}/bank/questions/q1/alternative-images`,
       );
       const body = req.request.body as FormData;
-      expect(body.getAll('images').length).toBe(2);
-      expect(body.getAll('indexes')).toEqual(['0', '2']);
-      req.flush({ id: 'q1' });
-    });
+      const images = body.getAll('images');
+      const indexes = body.getAll('indexes');
 
-    it('pairs each image with its own index in append order, not images-then-indexes', () => {
-      service
-        .setAlternativeImages('q1', [
-          { alternativeIndex: 0, file: new File(['a'], 'a.png', { type: 'image/png' }) },
-          { alternativeIndex: 2, file: new File(['c'], 'c.png', { type: 'image/png' }) },
-        ])
-        .subscribe();
+      // Identity (`toBe`), not shape — and pinned by position, so an
+      // implementation that appends all images then all indexes (still
+      // satisfying getAll('images').length===2 and getAll('indexes')===
+      // ['0','2']) or that swaps which file sits at which slot cannot pass.
+      expect(images.length).toBe(2);
+      expect(images[0]).toBe(fileA);
+      expect(indexes[0]).toBe('0');
+      expect(images[1]).toBe(fileC);
+      expect(indexes[1]).toBe('2');
 
-      const req = httpMock.expectOne(
-        `${environment.apiBaseUrl}/bank/questions/q1/alternative-images`,
-      );
-      const body = req.request.body as FormData;
-      const entries = Array.from(body.entries()).filter(
-        ([key]) => key === 'images' || key === 'indexes',
-      );
-      expect(entries.map(([key]) => key)).toEqual(['images', 'indexes', 'images', 'indexes']);
       req.flush({ id: 'q1' });
     });
   });

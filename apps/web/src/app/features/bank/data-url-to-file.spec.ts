@@ -13,7 +13,13 @@ describe('dataUrlToFile', () => {
     expect(new Uint8Array(await file.arrayBuffer())).toEqual(bytes);
   });
 
-  it('throws on a data URL that is not base64-encoded', () => {
-    expect(() => dataUrlToFile('data:image/png,not-base64', 'x.png')).toThrow();
+  it('throws on a data URL missing the ";base64" marker, even when the payload is valid base64', () => {
+    // 'YWJjZA==' is valid base64 (decodes cleanly) — the header lacks
+    // ';base64', so only the guard's header check rejects this, never
+    // `atob` on its own. This is the discriminating case: an input whose
+    // payload is base64-alphabet-INVALID (e.g. 'not-base64') would also
+    // make `atob` throw by itself, so a test built on that input can't tell
+    // a real guard from no guard at all.
+    expect(() => dataUrlToFile('data:image/png,YWJjZA==', 'x.png')).toThrow();
   });
 });
