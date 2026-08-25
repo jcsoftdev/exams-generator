@@ -115,11 +115,11 @@ Adaptadores:
   que verificar es que ese paquete opcional sobreviva el
   `pnpm deploy --prod --legacy` del stage de build hasta el runtime — es el único
   riesgo de infraestructura del plan, y se resuelve en la primera tarea, no al final.
-- `InMemoryImageCropperAdapter` — tests. Devuelve un raster sintético y un buffer
-  determinista.
-
-Ambos corren el mismo contract test (`image-cropper.port.spec.ts`), igual que
-`storage.port.spec.ts`.
+No hay adaptador falso. `sharp` es puro CPU, sin red y sin estado: en los tests
+unitarios de servicios se usa un `jest.Mocked<ImageCropperPort>` inline (mismo patrón
+que el `buildDeps()` de `extract-question.service.spec.ts`), y en los e2e corre el
+adaptador real contra PNGs de verdad. Un segundo adaptador solo para tests sería
+código que nadie ejecuta en producción y que puede divergir en silencio del real.
 
 ## 5. Ajuste a tinta
 
@@ -298,8 +298,10 @@ Dominio (Jest, API):
 
 Puertos y servicios (Jest, API):
 
-- `image-cropper.port.spec.ts` — contract test corrido contra el adaptador `sharp` y
-  contra el fake.
+- `sharp-image-cropper.adapter.spec.ts` — contra PNGs generados en el propio test
+  (lienzo blanco con un cuadro negro en posición conocida): `raster()` devuelve las
+  dimensiones reales y marca tinta donde corresponde; `crop()` extrae el rectángulo
+  correcto y reescala solo cuando el recorte supera `maxWidthPx`.
 - `extract-question.service.spec.ts` — se extiende: con `figureBox` produce recorte;
   sin box no produce nada ni consulta el cropper; box inválido se descarta sin romper
   la extracción de texto; `alternativeBoxes` con nulls produce `alternativeCrops`
