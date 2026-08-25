@@ -20,13 +20,24 @@ const FIXTURES_DIR = path.join(__dirname, "__fixtures__");
 const describeIfTesseract = isTesseractAvailableSync() ? describe : describe.skip;
 
 /**
- * GOLDEN e2e for OCR-driven figure detection (design doc Task 6) — the ONLY
- * place in this branch the real `tesseract` binary is exercised. Every unit
+ * Where the text stops in `question-with-circuit.png`, measured by running
+ * the real `TesseractCliAdapter` over the fixture: its lowest word box ends
+ * at y ≈ 0.2426. Rounded up marginally so the assertion below reads as
+ * "strictly past the text", not "level with it".
+ */
+const TEXT_BOTTOM_Y = 0.25;
+
+/**
+ * GOLDEN e2e for OCR-driven figure detection (design doc Task 6). Every unit
  * spec covering `TesseractCliAdapter`'s TSV parsing, `findFigureRegions`'s
  * subtraction algorithm and `attributeFigureToAlternative` uses mocked OCR
  * output; this test is what proves those mocks agree with what the actual
  * binary emits on a real page, not with what a test author imagined it
  * would.
+ *
+ * `ai-extract-crop.e2e.spec.ts` also runs the real binary (it reuses the same
+ * circuit fixture to get a crop worth re-cutting), but this is the suite that
+ * pins the DETECTION geometry; that one pins the re-crop flow.
  *
  * Copies the app bootstrap and auth setup from `ai-extract.e2e.spec.ts`.
  * `QUESTION_GENERATOR_PORT` stays stubbed with the same in-memory fake: the
@@ -110,10 +121,21 @@ describeIfTesseract("POST /ai/questions/extract — OCR figure detection (golden
 
     expect(response.body.figureCrop).toBeDefined();
     expect(response.body.figureCrop.dataUrl).toMatch(/^data:image\/png;base64,/);
-    // The crop is the drawing, not the whole page: a box that swallowed
-    // the text would be nearly full height. The fixture's rect sits at
-    // ~25% of the page height, well clear of this threshold.
-    expect(response.body.figureCrop.box.h).toBeLessThan(0.8);
+    // The crop must not overlap the TEXT — the property the design doc asks
+    // this suite to prove, and the one every "the whole page became one
+    // component" regression breaks. Both numbers are measured off this
+    // fixture by running the real pipeline over it: the OCR's lowest word
+    // ends at y ≈ 0.243, and the drawing's crop starts at y ≈ 0.449 (its ink
+    // at ≈ 0.458, less CROP_INK_PADDING_PX over a 907px-tall page). The
+    // threshold sits just below the text so a merged box — which necessarily
+    // starts at or above the stem, near y ≈ 0.09 — fails immediately, while
+    // leaving ~0.2 of headroom for OCR jitter on the correct side.
+    expect(response.body.figureCrop.box.y).toBeGreaterThan(TEXT_BOTTOM_Y);
+    // Still worth pinning separately: the drawing is ~0.27 of the page
+    // height, so a box stretching down the rest of the sheet is wrong even
+    // if it started below the text.
+    expect(response.body.figureCrop.box.h).toBeLessThan(0.5);
+    expect(response.body.figureCrop.box.y + response.body.figureCrop.box.h).toBeLessThanOrEqual(1);
     // No `a)`/`b)`/... markers anywhere on this page, so
     // `attributeFigureToAlternative` treats the lone figure as the
     // statement's own complement rather than an alternative's drawing.
