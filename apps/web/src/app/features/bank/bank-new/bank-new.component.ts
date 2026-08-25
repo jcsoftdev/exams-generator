@@ -665,11 +665,7 @@ export class BankNewComponent {
           slot.target.kind === 'alternative',
       )
       .map((slot) => {
-        const alternativeIndex = this.reresolveAlternativeIndex(
-          slot.target.alternativeIndex,
-          currentAlternatives,
-          available,
-        );
+        const alternativeIndex = this.reresolveAlternativeIndex(slot.target.alternativeIndex, available);
         return alternativeIndex === null
           ? null
           : { alternativeIndex, file: dataUrlToFile(slot.dataUrl, 'alternativa.png') };
@@ -698,42 +694,69 @@ export class BankNewComponent {
    * (Critical Finding 1). Returns `null` when the crop cannot be safely
    * reattached — the caller drops it rather than guessing.
    *
-   * Matching strategy: exact string match, after trim, against the ORIGINAL
-   * text captured at extraction (`extractedAlternatives[originalIndex]`).
+   * Matching strategy: IDENTITY first, then a positional-shift fallback.
+   * "Identity" means the current entry that still sits at `originalIndex`
+   * AND still carries the original text — the common case where nothing (or
+   * nothing relevant to this crop) was edited, verified without caring
+   * whether that text is unique. Only when no entry still occupies its
+   * original slot with its original text does this fall back to matching by
+   * text alone, picking the first unclaimed occurrence — this is what
+   * follows a crop's alternative when an EARLIER line was edited/deleted and
+   * everything after it shifted.
+   *
+   * Text-only matching was tried first and reverted: it ignores
+   * `originalIndex` entirely, so with duplicate alternative text (not exotic
+   * in a maths bank — repeated numeric options happen) it can misattach a
+   * crop with NO teacher edit at all. Example: extracted alternatives
+   * `["2","4","2","8"]`, a crop frozen at index 2 — text-only matching
+   * returns 0 (the FIRST "2"), moving the crop from C to A while nothing was
+   * ever edited. The identity check catches this: index 2 still holds "2",
+   * so it matches itself before the text-only fallback ever runs.
+   *
    * `available` tracks which current positions are still unclaimed so two
    * crops whose original text happened to be identical don't both grab the
-   * same occurrence — matched entries are removed from it as they're used.
+   * same occurrence — matched entries are removed from it as they're used,
+   * via the SAME `available` list identity matching consults first.
    *
    * The one case this is EXPECTED to miss: a drawing alternative whose text
    * the teacher blanked, per the pdf-template convention ("an alternative
    * with its own image carries no text"). `alternativesList()` filters blank
    * lines out entirely, so the blanked line simply isn't in `available` to
    * match against — the original (non-blank) text can never be found there
-   * again. That is the correct, SAFE outcome: rather than guess a new
-   * position for an alternative that no longer exists in the submitted
-   * array, the crop is dropped. Silently misattaching it to whatever now
-   * occupies its old index would be worse — that is exactly Critical
-   * Finding 1.
+   * again, by identity or otherwise. That is the correct, SAFE outcome:
+   * rather than guess a new position for an alternative that no longer
+   * exists in the submitted array, the crop is dropped. Silently
+   * misattaching it to whatever now occupies its old index would be worse —
+   * that is exactly Critical Finding 1.
    *
    * The `originalText.length === 0` branch is a defensive fallback only, not
    * a supported path: `validateStructuredContent` (server-side) rejects any
    * extraction response with a blank alternative, so `extractedAlternatives`
    * can never actually hold one. If it somehow did, positional fallback is
    * the only signal left — it has NO way to detect an earlier
-   * deletion/reorder and can misattach in that case. It exists only so this
-   * method has a defined, non-throwing return, not because its result is
-   * trustworthy.
+   * deletion/reorder and can misattach in that case. It still consumes its
+   * slot from `available` (like every other branch) so a later crop can't
+   * double-claim the same position; it exists only so this method has a
+   * defined, non-throwing return, not because its result is trustworthy.
    */
   private reresolveAlternativeIndex(
     originalIndex: number,
-    currentAlternatives: readonly string[],
     available: { text: string; index: number }[],
   ): number | null {
     const originalText = (this.extractedAlternatives[originalIndex] ?? '').trim();
     if (originalText.length === 0) {
-      return originalIndex < currentAlternatives.length ? originalIndex : null;
+      const idx = available.findIndex((entry) => entry.index === originalIndex);
+      if (idx === -1) {
+        return null;
+      }
+      available.splice(idx, 1);
+      return originalIndex;
     }
-    const matchAt = available.findIndex((entry) => entry.text === originalText);
+    const identityAt = available.findIndex(
+      (entry) => entry.index === originalIndex && entry.text === originalText,
+    );
+    const matchAt =
+      identityAt !== -1 ? identityAt : available.findIndex((entry) => entry.text === originalText);
     if (matchAt === -1) {
       return null;
     }

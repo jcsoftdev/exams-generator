@@ -1061,6 +1061,40 @@ describe('BankNewComponent', () => {
         { alternativeIndex: 2, file: expect.any(File) },
       ]);
     });
+
+    it('keeps a crop on its own alternative when the text is DUPLICATED elsewhere and nothing was edited (regression: text-only matching would move it to the wrong duplicate)', () => {
+      // Duplicate numeric alternatives are not exotic in a maths bank — "2"
+      // appears at both index 0 and index 2. The crop is frozen at index 2.
+      // Matching by text ALONE (ignoring the frozen index) would find the
+      // FIRST "2" (index 0) and misattach the crop there — with NO teacher
+      // edit at all. Identity (index 2 still holds "2") must win first.
+      const EXTRACTED_WITH_DUPLICATE_TEXT: AiExtractedQuestion = {
+        bodyTypst: '¿Cuál es el valor correcto?',
+        alternatives: ['2', '4', '2', '8'],
+        correctAnswer: '0',
+        extractionId: 'extraction-1',
+        figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 } },
+        alternativeCrops: [
+          { alternativeIndex: 2, dataUrl: 'data:image/png;base64,CCCC', box: { x: 0.3, y: 0.7, w: 0.1, h: 0.1 } },
+        ],
+      };
+      const { fixture, compiled, setAlternativeImages } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_DUPLICATE_TEXT),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      extractInto(fixture);
+      set(fixture, 'sDifficulty', 'easy');
+      // No edit to sAlternatives — it stays exactly as extracted.
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+
+      expect(setAlternativeImages).toHaveBeenCalledWith('str-q', [
+        { alternativeIndex: 2, file: expect.any(File) }, // must stay at 2, not jump to 0
+      ]);
+    });
   });
 
   describe('Important 2: the complement-image preview stays synced with what actually uploads', () => {
