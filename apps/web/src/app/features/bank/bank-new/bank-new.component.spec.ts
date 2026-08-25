@@ -4,6 +4,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { NormalizedBoxDto, AiExtractedQuestion } from '@exams-generator/shared';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { BankNewComponent } from './bank-new.component';
 import { BankService } from '../bank.service';
@@ -11,6 +12,7 @@ import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { AiRevisedQuestion } from '../../ai/ai.models';
+import { CropSlot, CropTarget } from '../crop-review/crop-review.component';
 
 const COURSES: Course[] = [
   { id: 'c1', name: 'Matemática', stage: 'preuniversitario' },
@@ -27,11 +29,17 @@ function setup(
     getCourses?: () => unknown;
     getTopics?: (courseId: string) => unknown;
     extractQuestionFromImageImpl?: (image: File) => unknown;
+    recropExtractionImpl?: (extractionId: string, box: NormalizedBoxDto) => unknown;
+    setAlternativeImagesImpl?: (
+      id: string,
+      crops: readonly { alternativeIndex: number; file: File }[],
+    ) => unknown;
   } = {},
 ) {
   const uploadImageQuestion = vi.fn(over.uploadImpl ?? (() => of({ id: 'img-q' })));
   const createStructuredQuestion = vi.fn(over.structuredImpl ?? (() => of({ id: 'str-q' })));
   const replaceQuestionImage = vi.fn(over.replaceImageImpl ?? (() => of({ id: 'str-q' })));
+  const setAlternativeImages = vi.fn(over.setAlternativeImagesImpl ?? (() => of({ id: 'str-q' })));
   const getCourses = vi.fn(over.getCourses ?? (() => of(COURSES)));
   const getTopics = vi.fn(
     over.getTopics ?? ((courseId: string) => of(courseId === 'c1' ? TOPICS_C1 : TOPICS_C2)),
@@ -44,16 +52,25 @@ function setup(
   const extractQuestionFromImage = vi.fn(
     over.extractQuestionFromImageImpl ?? (() => of(extracted)),
   );
+  const recropExtraction = vi.fn(
+    over.recropExtractionImpl ??
+      (() => of({ dataUrl: 'data:image/png;base64,ZZZZ', box: { x: 0, y: 0, w: 0.2, h: 0.2 } })),
+  );
   const navigate = vi.fn();
   TestBed.configureTestingModule({
     imports: [BankNewComponent],
     providers: [
       {
         provide: BankService,
-        useValue: { uploadImageQuestion, createStructuredQuestion, replaceQuestionImage },
+        useValue: {
+          uploadImageQuestion,
+          createStructuredQuestion,
+          replaceQuestionImage,
+          setAlternativeImages,
+        },
       },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
-      { provide: AiService, useValue: { extractQuestionFromImage } },
+      { provide: AiService, useValue: { extractQuestionFromImage, recropExtraction } },
       { provide: Router, useValue: { navigate } },
     ],
   });
@@ -65,9 +82,11 @@ function setup(
     uploadImageQuestion,
     createStructuredQuestion,
     replaceQuestionImage,
+    setAlternativeImages,
     getCourses,
     getTopics,
     extractQuestionFromImage,
+    recropExtraction,
     navigate,
   };
 }
@@ -227,7 +246,7 @@ describe('BankNewComponent', () => {
     fixture.detectChanges();
 
     expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
-      'no se pudo adjuntar la imagen complementaria',
+      'no se pudieron adjuntar las imágenes',
     );
     expect(navigate).not.toHaveBeenCalled();
   });
@@ -709,6 +728,223 @@ describe('BankNewComponent', () => {
 
       expect(compiled.querySelector('[data-testid="extract-error"]')).toBeTruthy();
       expect(compiled.querySelector('[data-testid="tab-photo-panel"]')).toBeTruthy();
+    });
+  });
+
+  describe('AI crops', () => {
+    const EXTRACTED_WITH_CROPS: AiExtractedQuestion = {
+      bodyTypst: '¿Qué muestra la figura?',
+      alternatives: ['a', 'b', 'c', 'd', 'e'],
+      correctAnswer: '0',
+      extractionId: 'extraction-1',
+      figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 } },
+      alternativeCrops: [
+        { alternativeIndex: 0, dataUrl: 'data:image/png;base64,BBBB', box: { x: 0, y: 0.7, w: 0.1, h: 0.1 } },
+        { alternativeIndex: 2, dataUrl: 'data:image/png;base64,CCCC', box: { x: 0.3, y: 0.7, w: 0.1, h: 0.1 } },
+      ],
+    };
+
+    function extractInto(fixture: { componentInstance: unknown; detectChanges(): void }): void {
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+    }
+
+    it('renders no crop review when the extraction returned no crops', () => {
+      const { fixture, compiled } = setup(); // default extracted carries neither figureCrop nor alternativeCrops
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      extractInto(fixture);
+
+      expect(compiled.querySelector('app-crop-review')).toBeNull();
+    });
+
+    it('renders the crop review and builds one slot per returned crop, labelled by alternative letter', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROPS),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      extractInto(fixture);
+
+      // Companion to the "no crops" test above: proves crop review actually
+      // renders when crops ARE present, so neither test passes against a
+      // component that never renders it.
+      expect(compiled.querySelector('app-crop-review')).toBeTruthy();
+      const instance = fixture.componentInstance as unknown as {
+        cropSlots(): readonly CropSlot[];
+      };
+      expect(instance.cropSlots().map((slot) => slot.label)).toEqual([
+        'Figura del enunciado',
+        'Alternativa a)',
+        'Alternativa c)',
+      ]);
+    });
+
+    it('replaces a slot with the API result after a manual re-crop', () => {
+      const { fixture, compiled, recropExtraction } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROPS),
+        recropExtractionImpl: () =>
+          of({ dataUrl: 'data:image/png;base64,ZZZZ', box: { x: 0, y: 0, w: 0.2, h: 0.2 } }),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      extractInto(fixture);
+
+      const instance = fixture.componentInstance as unknown as {
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        cropSlots(): readonly CropSlot[];
+      };
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+      fixture.detectChanges();
+
+      expect(recropExtraction).toHaveBeenCalledWith('extraction-1', { x: 0, y: 0, w: 0.2, h: 0.2 });
+      expect(instance.cropSlots()[0]!.dataUrl).toBe('data:image/png;base64,ZZZZ');
+      expect(instance.cropSlots()[0]!.busy).toBe(false);
+    });
+
+    it('translates a 410 from the re-crop endpoint into an expired-session message, and any other status into the generic one', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROPS),
+        recropExtractionImpl: () => throwError(() => new HttpErrorResponse({ status: 410 })),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      extractInto(fixture);
+
+      const instance = fixture.componentInstance as unknown as {
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        extractError(): string | null;
+        cropSlots(): readonly CropSlot[];
+      };
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+      fixture.detectChanges();
+
+      expect(instance.extractError()).toBe(
+        'La sesión de recorte expiró. Vuelve a extraer la pregunta desde la foto.',
+      );
+      expect(instance.cropSlots()[0]!.busy).toBe(false);
+    });
+
+    it('drops a slot the teacher discarded so it is never uploaded', () => {
+      const { fixture, compiled, setAlternativeImages } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROPS),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      extractInto(fixture);
+
+      const instance = fixture.componentInstance as unknown as {
+        onDiscard(target: CropTarget): void;
+        cropSlots(): readonly CropSlot[];
+      };
+      instance.onDiscard({ kind: 'alternative', alternativeIndex: 2 });
+      fixture.detectChanges();
+
+      expect(instance.cropSlots().map((slot) => slot.label)).toEqual([
+        'Figura del enunciado',
+        'Alternativa a)',
+      ]);
+
+      // The discard must also be reflected in what actually gets uploaded —
+      // not merely in the slot list shown to the teacher.
+      set(fixture, 'sDifficulty', 'easy');
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+
+      expect(setAlternativeImages).toHaveBeenCalledWith('str-q', [
+        { alternativeIndex: 0, file: expect.any(File) },
+      ]);
+    });
+
+    it('discarding the figure crop also clears sImage, so the complement image upload is skipped', () => {
+      const { fixture, compiled, replaceQuestionImage } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROPS),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      extractInto(fixture);
+
+      const instance = fixture.componentInstance as unknown as {
+        onDiscard(target: CropTarget): void;
+      };
+      instance.onDiscard({ kind: 'figure' });
+      fixture.detectChanges();
+      set(fixture, 'sDifficulty', 'easy');
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+
+      expect(replaceQuestionImage).not.toHaveBeenCalled();
+    });
+
+    it('uploads the figure crop and the alternative crops after creating the question', () => {
+      const {
+        fixture,
+        compiled,
+        createStructuredQuestion,
+        replaceQuestionImage,
+        setAlternativeImages,
+      } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROPS),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      extractInto(fixture);
+      set(fixture, 'sDifficulty', 'easy');
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+
+      expect(createStructuredQuestion).toHaveBeenCalled();
+      expect(replaceQuestionImage).toHaveBeenCalledWith('str-q', expect.any(File));
+      // If the alternative index were taken from array POSITION rather than
+      // from each slot's own target, this sparse [0, 2] set would come back
+      // as [0, 1] instead — this assertion would then fail.
+      expect(setAlternativeImages).toHaveBeenCalledWith('str-q', [
+        { alternativeIndex: 0, file: expect.any(File) },
+        { alternativeIndex: 2, file: expect.any(File) },
+      ]);
+    });
+
+    it('keeps the created question and shows an actionable error when an image upload fails', () => {
+      let attempt = 0;
+      const { fixture, compiled, createStructuredQuestion, setAlternativeImages } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROPS),
+        setAlternativeImagesImpl: () => {
+          attempt++;
+          return attempt === 1
+            ? throwError(() => new HttpErrorResponse({ status: 500 }))
+            : of({ id: 'str-q' });
+        },
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      extractInto(fixture);
+      set(fixture, 'sDifficulty', 'easy');
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as {
+        saveError(): string | null;
+        submitStructured(): void;
+      };
+      expect(instance.saveError()).toContain('La pregunta se guardó');
+      expect(createStructuredQuestion).toHaveBeenCalledTimes(1);
+
+      // Retry must not create a second question — it retries only the
+      // upload, against the SAME question id, proving the id was retained
+      // rather than just re-showing the same message text.
+      instance.submitStructured();
+      fixture.detectChanges();
+      expect(createStructuredQuestion).toHaveBeenCalledTimes(1);
+      expect(setAlternativeImages).toHaveBeenLastCalledWith('str-q', expect.any(Array));
     });
   });
 });

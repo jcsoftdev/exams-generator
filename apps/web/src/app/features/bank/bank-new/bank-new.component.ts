@@ -1,7 +1,7 @@
 import { Component, computed, effect, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Difficulty } from '@exams-generator/shared';
+import { AiExtractedQuestion, Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
 import {
   LucideAngularModule,
   Upload,
@@ -19,6 +19,13 @@ import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
+import {
+  CropReviewComponent,
+  CropSlot,
+  CropTarget,
+  sameTarget,
+} from '../crop-review/crop-review.component';
+import { dataUrlToFile } from '../data-url-to-file';
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   [Difficulty.Easy]: 'Fácil',
@@ -84,6 +91,30 @@ function toOptions(items: readonly { id: string; name: string }[]): SelectOption
   return items.map((item) => ({ value: item.id, label: item.name }));
 }
 
+/** Turns the extraction response's crops into review slots, figure first. */
+function buildCropSlots(extracted: AiExtractedQuestion): readonly CropSlot[] {
+  const slots: CropSlot[] = [];
+  if (extracted.figureCrop) {
+    slots.push({
+      target: { kind: 'figure' },
+      label: 'Figura del enunciado',
+      dataUrl: extracted.figureCrop.dataUrl,
+      box: extracted.figureCrop.box,
+      busy: false,
+    });
+  }
+  for (const crop of extracted.alternativeCrops ?? []) {
+    slots.push({
+      target: { kind: 'alternative', alternativeIndex: crop.alternativeIndex },
+      label: `Alternativa ${CORRECT_ANSWER_LETTERS[crop.alternativeIndex] ?? crop.alternativeIndex})`,
+      dataUrl: crop.dataUrl,
+      box: crop.box,
+      busy: false,
+    });
+  }
+  return slots;
+}
+
 /**
  * Task 6: "Nueva pregunta" creator with two tabs — "Foto de la pregunta"
  * (existing `POST /bank/questions/image` multipart upload) and "Escribir
@@ -100,7 +131,14 @@ function toOptions(items: readonly { id: string; name: string }[]): SelectOption
 @Component({
   selector: 'app-bank-new',
   standalone: true,
-  imports: [ButtonComponent, InputComponent, SelectComponent, TabsComponent, LucideAngularModule],
+  imports: [
+    ButtonComponent,
+    InputComponent,
+    SelectComponent,
+    TabsComponent,
+    LucideAngularModule,
+    CropReviewComponent,
+  ],
   // `ui-select` (Grado/Curso/Tema/Nivel, both tabs) needs Check + ChevronDown —
   // this component-level `.pick()` shadows the root `app.config.ts` registration
   // for its own subtree, so the nested `ui-select` instances can't fall back to it.
@@ -163,6 +201,17 @@ export class BankNewComponent {
   /** Optional complement image (chart/diagram/passage scan) — never required, `structuredValid()` doesn't check it. */
   protected readonly sImage = signal<File | null>(null);
   protected readonly sImagePreviewUrl = signal<string | null>(null);
+
+  /** Handle for the re-crop endpoint; null when the extraction produced no crops. */
+  private extractionId: string | null = null;
+  protected readonly cropSlots = signal<readonly CropSlot[]>([]);
+
+  /**
+   * The photo the crops were cut from, as an object URL. Feeds
+   * `<app-crop-review>`'s background — the teacher adjusts the rectangle over
+   * the ORIGINAL photo, not over the crop.
+   */
+  protected readonly cropPhotoUrl = computed(() => this.pImagePreviewUrl());
 
   /**
    * Consumed once by the `sGradeLevel`/`sCourseId` effects below — lets
@@ -338,6 +387,14 @@ export class BankNewComponent {
         // sDifficulty is intentionally left untouched — Nivel is never
         // auto-filled from AI, the human always picks it.
 
+        this.extractionId = extracted.extractionId ?? null;
+        this.cropSlots.set(buildCropSlots(extracted));
+        // The figure crop feeds the SAME signal the manual complement-image
+        // picker feeds, so the existing save chain uploads it with no change.
+        this.sImage.set(
+          extracted.figureCrop ? dataUrlToFile(extracted.figureCrop.dataUrl, 'figura.png') : null,
+        );
+
         this.resolveStructuredTaxonomy({
           gradeLevel,
           photoCourseId,
@@ -399,6 +456,51 @@ export class BankNewComponent {
         applyPreselect(courseId, findTopicMatch(topics, suggestedTopicName)?.id ?? ''),
       error: () => applyPreselect(courseId, ''),
     });
+  }
+
+  protected onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void {
+    const extractionId = this.extractionId;
+    if (!extractionId) return;
+
+    this.updateSlot(event.target, (slot) => ({ ...slot, busy: true }));
+    this.aiService.recropExtraction(extractionId, event.box).subscribe({
+      next: (crop) => {
+        this.updateSlot(event.target, (slot) => ({
+          ...slot,
+          dataUrl: crop.dataUrl,
+          box: crop.box,
+          busy: false,
+        }));
+        if (event.target.kind === 'figure') {
+          this.sImage.set(dataUrlToFile(crop.dataUrl, 'figura.png'));
+        }
+      },
+      error: (error: HttpErrorResponse) => {
+        this.updateSlot(event.target, (slot) => ({ ...slot, busy: false }));
+        // A 410 means the crop session expired, the id was never ours, or
+        // it belongs to another account — the API deliberately returns the
+        // SAME status for all three so the response can't confirm an id
+        // exists. Any other status is a plain re-crop failure.
+        this.extractError.set(
+          error.status === 410
+            ? 'La sesión de recorte expiró. Vuelve a extraer la pregunta desde la foto.'
+            : 'No se pudo recortar. Inténtalo de nuevo.',
+        );
+      },
+    });
+  }
+
+  protected onDiscard(target: CropTarget): void {
+    this.cropSlots.update((slots) => slots.filter((slot) => !sameTarget(slot.target, target)));
+    if (target.kind === 'figure') {
+      this.sImage.set(null);
+    }
+  }
+
+  private updateSlot(target: CropTarget, patch: (slot: CropSlot) => CropSlot): void {
+    this.cropSlots.update((slots) =>
+      slots.map((slot) => (sameTarget(slot.target, target) ? patch(slot) : slot)),
+    );
   }
 
   protected structuredValid(): boolean {
@@ -466,21 +568,51 @@ export class BankNewComponent {
   private attachStructuredImageAndFinish(id: string): void {
     const image = this.sImage();
     if (!image) {
+      this.attachAlternativeImagesAndFinish(id);
+      return;
+    }
+    this.bankService.replaceQuestionImage(id, image).subscribe({
+      next: () => this.attachAlternativeImagesAndFinish(id),
+      error: () => this.failAfterCreate(),
+    });
+  }
+
+  /** Second half of the save chain — uploads any alternative crops the teacher kept, sparse by design. */
+  private attachAlternativeImagesAndFinish(id: string): void {
+    const crops = this.cropSlots()
+      .filter(
+        (slot): slot is CropSlot & { target: { kind: 'alternative'; alternativeIndex: number } } =>
+          slot.target.kind === 'alternative',
+      )
+      .map((slot) => ({
+        alternativeIndex: slot.target.alternativeIndex,
+        file: dataUrlToFile(slot.dataUrl, 'alternativa.png'),
+      }));
+
+    if (crops.length === 0) {
       this.saving.set(false);
       this.router.navigate(['/app/bank']);
       return;
     }
-    this.bankService.replaceQuestionImage(id, image).subscribe({
+
+    this.bankService.setAlternativeImages(id, crops).subscribe({
       next: () => {
         this.saving.set(false);
         this.router.navigate(['/app/bank']);
       },
-      error: () => {
-        this.saving.set(false);
-        this.saveError.set(
-          'La pregunta se guardó, pero no se pudo adjuntar la imagen complementaria. Edítala desde el banco para volver a intentarlo.',
-        );
-      },
+      error: () => this.failAfterCreate(),
     });
+  }
+
+  /**
+   * The question itself is already created and `sCreatedQuestionId` is set,
+   * so a resubmit retries only the image uploads. Deleting the question
+   * instead would throw away a good transcription over a failed upload.
+   */
+  private failAfterCreate(): void {
+    this.saving.set(false);
+    this.saveError.set(
+      'La pregunta se guardó, pero no se pudieron adjuntar las imágenes. Edítala desde el banco para volver a intentarlo.',
+    );
   }
 }

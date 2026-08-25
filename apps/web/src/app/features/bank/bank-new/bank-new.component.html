@@ -235,6 +235,15 @@
         </label>
       </div>
 
+      @if (cropSlots().length > 0 && cropPhotoUrl(); as photoUrl) {
+        <app-crop-review
+          [photoUrl]="photoUrl"
+          [slots]="cropSlots()"
+          (recrop)="onRecrop($event)"
+          (discard)="onDiscard($event)"
+        />
+      }
+
       @if (!structuredValid()) {
         <p data-testid="structured-validation" class="text-xs text-hard-text">
           Completa grado, curso, tema, nivel, enunciado, al menos 2 alternativas y la clave para
