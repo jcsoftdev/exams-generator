@@ -13,7 +13,8 @@
 ## Global Constraints
 
 - El proyecto corre en **Strict TDD**: cada tarea escribe el test que falla ANTES de la implementación, y se verifica que falle por la razón correcta.
-- Comandos de test: API unitarios `pnpm --filter @exams-generator/api exec jest --selectProjects non-e2e <ruta>`; API e2e `pnpm --filter @exams-generator/api exec jest --selectProjects e2e <ruta>`; web `pnpm --filter @exams-generator/web test`.
+- Comandos de test: API unitarios `pnpm --filter @exams-generator/api exec jest --selectProjects non-e2e --testPathPattern '<patrón>'`; API e2e `pnpm --filter @exams-generator/api exec jest --selectProjects e2e --testPathPattern '<patrón>'`; web `pnpm --filter @exams-generator/web test`.
+  - **Ojo**: pasar la ruta como argumento posicional NO filtra nada — `jest --selectProjects non-e2e src/.../x.spec.ts` corre las 112 suites igual ("Ran all test suites"). Solo `--testPathPattern` acota de verdad. La evidencia de TDD tiene que salir de la corrida acotada; un agregado de suite completa no prueba que tus tests corrieron.
 - **Nunca correr build** (`pnpm build`) como parte de una tarea. Para verificar tipos: `pnpm --filter @exams-generator/api typecheck`.
 - Commits en Conventional Commits, en inglés, **sin** `Co-Authored-By` ni atribución a IA.
 - Comentarios y documentación de código en inglés; textos visibles al usuario en español peruano.
