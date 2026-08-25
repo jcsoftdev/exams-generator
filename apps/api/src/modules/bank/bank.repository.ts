@@ -734,16 +734,22 @@ export class BankRepository implements BankRepositoryPort {
    * images: re-checks tenant visibility (belt-and-suspenders, same as
    * `replaceImageAsset`), wipes any existing `question_alternative_images`
    * rows for this question, then inserts one fresh `assets` row + one
-   * `question_alternative_images` row per entry in `images`, at its array
-   * index — all inside a single transaction, so a failure partway never
-   * leaves a mix of old and new images attached. The caller (service) has
-   * already asserted `type='structured'` and `images.length ===
-   * alternatives.length` before reaching here.
+   * `question_alternative_images` row per entry in `images`, at the slot it
+   * names (`image.alternativeIndex`) rather than its array position — all
+   * inside a single transaction, so a failure partway never leaves a mix of
+   * old and new images attached. Slots not named in `images` end up with no
+   * image, which is how a question with drawings on only some alternatives
+   * is stored. The caller (service) has already validated the slots via
+   * `resolveAlternativeSlots` before reaching here.
    */
   async setAlternativeImages(
     id: string,
     currentTenantId: string | null,
-    images: readonly { readonly storageKey: string; readonly mime: string }[],
+    images: readonly {
+      readonly storageKey: string;
+      readonly mime: string;
+      readonly alternativeIndex: number;
+    }[],
   ): Promise<string | undefined> {
     return this.db.transaction(async (tx) => {
       const visibility: SQL = currentTenantId
@@ -761,8 +767,7 @@ export class BankRepository implements BankRepositoryPort {
 
       await tx.delete(questionAlternativeImages).where(eq(questionAlternativeImages.questionId, id));
 
-      for (let index = 0; index < images.length; index++) {
-        const image = images[index]!;
+      for (const image of images) {
         const [asset] = await tx
           .insert(assets)
           .values({ tenantId: currentTenantId, storageKey: image.storageKey, mime: image.mime })
@@ -774,7 +779,7 @@ export class BankRepository implements BankRepositoryPort {
 
         await tx.insert(questionAlternativeImages).values({
           questionId: id,
-          alternativeIndex: index,
+          alternativeIndex: image.alternativeIndex,
           assetId: asset.id,
         });
       }

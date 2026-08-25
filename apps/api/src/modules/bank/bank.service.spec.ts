@@ -55,6 +55,7 @@ function buildDeps() {
     updateStructuredQuestionAndTaxonomy: jest
       .fn()
       .mockResolvedValue(undefined as QuestionListItem | undefined),
+    setAlternativeImages: jest.fn().mockResolvedValue("q1"),
   } as unknown as jest.Mocked<BankRepository>;
 
   const storage = {
@@ -71,6 +72,31 @@ function buildDeps() {
 
   const service = new BankService(repository, storage, pdfCompiler);
   return { service, repository, storage, pdfCompiler };
+}
+
+/** A Multer file whose buffer tag makes it distinguishable in test assertions. */
+function file(tag: string): Express.Multer.File {
+  return { buffer: fakePng(tag), mimetype: "image/png" } as Express.Multer.File;
+}
+
+/** A `type='structured'` question with 5 alternatives — sparse-slot fixture. */
+function structuredQuestionWith5Alternatives(): QuestionListItem {
+  return {
+    id: "q1",
+    tenantId: "tenant-1",
+    courseId: "course-1",
+    topicId: "topic-1",
+    difficulty: Difficulty.Easy,
+    gradeLevel: "primaria_1",
+    correctAnswer: "0",
+    type: "structured",
+    status: "approved",
+    aiGenerated: false,
+    imageAssetId: null,
+    bodyTypst: "body",
+    alternatives: ["a", "b", "c", "d", "e"],
+    figureCode: null,
+  };
 }
 
 describe("BankService.createImageQuestion", () => {
@@ -844,5 +870,64 @@ describe("BankService.previewQuestion", () => {
     const compileCallsBeforeRefetch = pdfCompiler.compileExam.mock.calls.length;
     await service.previewQuestion(TEACHER_USER, "draft-0");
     expect(pdfCompiler.compileExam.mock.calls.length).toBe(compileCallsBeforeRefetch + 1);
+  });
+});
+
+describe("BankService.setAlternativeImages", () => {
+  it("maps each file to the slot named in indexes, leaving the other alternatives without an image", async () => {
+    const { service, repository, storage } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(structuredQuestionWith5Alternatives());
+
+    await service.setAlternativeImages(TEACHER_USER, "q1", [file("a"), file("c")], [0, 2]);
+
+    expect(storage.put).toHaveBeenCalledTimes(2);
+    expect(repository.setAlternativeImages).toHaveBeenCalledWith(
+      "q1",
+      TEACHER_USER.tenantId,
+      [expect.objectContaining({ alternativeIndex: 0 }), expect.objectContaining({ alternativeIndex: 2 })],
+    );
+  });
+
+  it("still requires one file per alternative when indexes is omitted, with the original error message", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(structuredQuestionWith5Alternatives());
+
+    await expect(service.setAlternativeImages(TEACHER_USER, "q1", [file("a")])).rejects.toBeInstanceOf(
+      BadRequestException,
+    );
+    await expect(service.setAlternativeImages(TEACHER_USER, "q1", [file("a")])).rejects.toThrow(
+      "Expected exactly 5 image(s) (one per alternative), got 1",
+    );
+    expect(repository.setAlternativeImages).not.toHaveBeenCalled();
+  });
+
+  it("rejects indexes whose length does not match the files", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(structuredQuestionWith5Alternatives());
+
+    await expect(
+      service.setAlternativeImages(TEACHER_USER, "q1", [file("a"), file("c")], [0]),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.setAlternativeImages).not.toHaveBeenCalled();
+  });
+
+  it("rejects an index outside the alternatives range", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(structuredQuestionWith5Alternatives());
+
+    await expect(
+      service.setAlternativeImages(TEACHER_USER, "q1", [file("a")], [7]),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.setAlternativeImages).not.toHaveBeenCalled();
+  });
+
+  it("rejects a repeated index — two images cannot share one slot", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(structuredQuestionWith5Alternatives());
+
+    await expect(
+      service.setAlternativeImages(TEACHER_USER, "q1", [file("a"), file("b")], [1, 1]),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.setAlternativeImages).not.toHaveBeenCalled();
   });
 });

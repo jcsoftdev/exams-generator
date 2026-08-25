@@ -1,9 +1,19 @@
 import { randomUUID } from "node:crypto";
 import { Difficulty, Role } from "@exams-generator/shared";
-import { inArray } from "drizzle-orm";
+import { eq, inArray } from "drizzle-orm";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
-import { assets, courses, examQuestions, exams, questions, tenants, topics, users } from "../../db/schema";
+import {
+  assets,
+  courses,
+  examQuestions,
+  exams,
+  questionAlternativeImages,
+  questions,
+  tenants,
+  topics,
+  users,
+} from "../../db/schema";
 import { QuestionStatus } from "../../db/schema/enums";
 import { BankRepository } from "./bank.repository";
 import { hashBodyTypst } from "./domain/hash-body-typst";
@@ -907,6 +917,31 @@ describe("BankRepository", () => {
       // Under a null-scope regression (null aggregate starts counting tenant
       // rows), deltaNull absorbs tenant A's insert but deltaC does not.
       expect(afterNull - beforeNull).toBe(afterC - beforeC);
+    });
+  });
+
+  describe("setAlternativeImages()", () => {
+    it("stores each image at the alternative slot it names, leaving the other slots empty", async () => {
+      const questionId = await createStructuredQuestion({
+        tenantId: null,
+        createdBy: centralUserId,
+        bodyTypst: `alt-images sparse body ${randomUUID()}`,
+      });
+
+      const result = await repository.setAlternativeImages(questionId, null, [
+        { storageKey: `test/${randomUUID()}`, mime: "image/png", alternativeIndex: 0 },
+        { storageKey: `test/${randomUUID()}`, mime: "image/png", alternativeIndex: 2 },
+      ]);
+
+      expect(result).toBe(questionId);
+
+      const rows = await db
+        .select()
+        .from(questionAlternativeImages)
+        .where(eq(questionAlternativeImages.questionId, questionId));
+
+      expect(rows.map((row) => row.alternativeIndex).sort()).toEqual([0, 2]);
+      createdAssetIds.push(...rows.map((row) => row.assetId));
     });
   });
 });
