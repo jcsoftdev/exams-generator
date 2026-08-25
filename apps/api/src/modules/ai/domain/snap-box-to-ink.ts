@@ -48,8 +48,14 @@ function searchArea(box: NormalizedBox, raster: ImageRaster): PixelRect {
  * cutoff below which a pixel counts as ink — or `null` when the area has no
  * meaningful contrast at all (blank paper, uniform grey), which is the
  * caller's signal to leave the box alone.
+ *
+ * Exported because `findFigureRegions` needs the SAME cutoff for a whole
+ * raster (pass `{ left: 0, top: 0, width, height }`) rather than a second,
+ * drifting copy of the formula. A phone photo of grey paper has no pixel near
+ * 255; any absolute cutoff either reads the whole sheet as ink or misses the
+ * ink entirely, depending on the light.
  */
-function inkThreshold(raster: ImageRaster, area: PixelRect): number | null {
+export function inkThreshold(raster: ImageRaster, area: PixelRect): number | null {
   let darkest = 255;
   let brightest = 0;
   for (let y = area.top; y < area.top + area.height; y++) {

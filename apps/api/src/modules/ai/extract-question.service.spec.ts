@@ -16,40 +16,52 @@ const EXTRACTED_QUESTION: GeneratedQuestion = {
   correctAnswer: "b",
 };
 
-/** A raster with a black block in its lower half and nothing else. */
+/**
+ * 200x200 rather than a 20x20 toy: `findFigureRegions` pads each figure by
+ * `CROP_INK_PADDING_PX` (8px), which on a 20px raster is 40% of the canvas
+ * and would clamp every fixture flat against the edges. At this size the
+ * padding is the ~4% of the page it is on a real photo, so the boxes below
+ * stay exact and readable.
+ */
+const RASTER_SIZE = 200;
+
+function blankRaster(): Uint8Array {
+  return new Uint8Array(RASTER_SIZE * RASTER_SIZE).fill(255);
+}
+
+function paintBlock(gray: Uint8Array, top: number, bottom: number, left: number, right: number): void {
+  for (let y = top; y <= bottom; y++) {
+    gray.fill(0, y * RASTER_SIZE + left, y * RASTER_SIZE + right + 1);
+  }
+}
+
+/** A raster with a black block in its lower half (cols 40-159, rows 100-179) and nothing else. */
 const RASTER_WITH_FIGURE = {
   gray: (() => {
-    const gray = new Uint8Array(20 * 20).fill(255);
-    for (let y = 10; y < 18; y++) {
-      gray.fill(0, y * 20 + 4, y * 20 + 16);
-    }
+    const gray = blankRaster();
+    paintBlock(gray, 100, 179, 40, 159);
     return gray;
   })(),
-  width: 20,
-  height: 20,
+  width: RASTER_SIZE,
+  height: RASTER_SIZE,
 };
 
 /**
  * A raster with two black blocks, one per alternative band, well clear (by
  * column) of every marker so erasing the markers never touches the ink.
- * Both blocks sit at columns 4-15; "b"'s is rows 8-9, "c"'s is rows 14-15 —
- * i.e. normalized boxes { x: 0.2, y: 0.4, w: 0.6, h: 0.1 } and
- * { x: 0.2, y: 0.7, w: 0.6, h: 0.1 } respectively.
+ * Both blocks sit at columns 40-159; "b"'s is rows 80-99, "c"'s is rows
+ * 140-159 — i.e. component boxes { x: 0.2, y: 0.4, w: 0.6, h: 0.1 } and
+ * { x: 0.2, y: 0.7, w: 0.6, h: 0.1 } respectively, before padding.
  */
 const RASTER_WITH_TWO_ALTERNATIVE_FIGURES = {
   gray: (() => {
-    const width = 20;
-    const height = 20;
-    const gray = new Uint8Array(width * height).fill(255);
-    const paintRow = (y: number) => gray.fill(0, y * width + 4, y * width + 16);
-    paintRow(8);
-    paintRow(9); // alternative "b"'s figure
-    paintRow(14);
-    paintRow(15); // alternative "c"'s figure
+    const gray = blankRaster();
+    paintBlock(gray, 80, 99, 40, 159); // alternative "b"'s figure
+    paintBlock(gray, 140, 159, 40, 159); // alternative "c"'s figure
     return gray;
   })(),
-  width: 20,
-  height: 20,
+  width: RASTER_SIZE,
+  height: RASTER_SIZE,
 };
 
 /** `a)` right at the top (so no figure is ever above it), `b)` above the first block's band, `c)` above the second's. */
@@ -58,6 +70,17 @@ const ALTERNATIVE_MARKERS = [
   { text: "b)", box: { x: 0, y: 0.25, w: 0.05, h: 0.03 }, confidence: 90 },
   { text: "c)", box: { x: 0, y: 0.6, w: 0.05, h: 0.03 }, confidence: 90 },
 ];
+
+/**
+ * One word in the page's top-left corner, clear of every fixture's ink.
+ *
+ * The default detector result is NOT an empty list, because an empty list is
+ * now a hard bail in `findFigureRegions` — OCR silence means the "erase the
+ * text, keep what is left" algorithm has nothing to subtract, so it reports no
+ * figures at all. A fixture exercising the crop path has to look like a page
+ * the OCR actually read, which every real page is.
+ */
+const STRAY_WORD = { text: "de", box: { x: 0.02, y: 0.01, w: 0.03, h: 0.02 }, confidence: 90 };
 
 function buildDeps() {
   const generator: jest.Mocked<QuestionGeneratorPort> = {
@@ -86,7 +109,7 @@ function buildDeps() {
   };
 
   const detector: jest.Mocked<TextRegionDetectorPort> = {
-    detect: jest.fn().mockResolvedValue([]),
+    detect: jest.fn().mockResolvedValue([STRAY_WORD]),
   };
 
   const service = new ExtractQuestionService(generator, cropper, cache, detector);
@@ -175,8 +198,10 @@ describe("ExtractQuestionService.extract — crops", () => {
 
     expect(result.figureCrop).toBeUndefined();
     expect(result.alternativeCrops?.map((crop) => crop.alternativeIndex)).toEqual([1, 2]);
-    // "b"'s block: columns 4-15, rows 8-9 of the 20x20 fixture, normalized.
-    expect(result.alternativeCrops![0]!.box).toEqual({ x: 0.2, y: 0.4, w: 0.6, h: 0.1 });
+    // "b"'s block is columns 40-159, rows 80-99 of the 200x200 fixture; the
+    // crop is that box plus CROP_INK_PADDING_PX (8px) on all four sides —
+    // cols 32-167, rows 72-107.
+    expect(result.alternativeCrops![0]!.box).toEqual({ x: 0.16, y: 0.36, w: 0.68, h: 0.18 });
     expect(cropper.crop).toHaveBeenCalledTimes(2);
   });
 
@@ -235,13 +260,14 @@ describe("ExtractQuestionService.extract — figures from OCR", () => {
   it("crops the ink the OCR did not mark as text", async () => {
     const { service, cropper, detector } = buildDeps();
     cropper.raster.mockResolvedValue(RASTER_WITH_FIGURE);
-    detector.detect.mockResolvedValue([]);
+    detector.detect.mockResolvedValue([STRAY_WORD]);
 
     const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
 
-    // The 20x20 raster's black block is columns 4-15, rows 10-17 —
-    // normalized that is exactly this box.
-    expect(result.figureCrop!.box).toEqual({ x: 0.2, y: 0.5, w: 0.6, h: 0.4 });
+    // The raster's black block is columns 40-159, rows 100-179; the crop is
+    // that box plus CROP_INK_PADDING_PX (8px) on all four sides — cols
+    // 32-167, rows 92-187.
+    expect(result.figureCrop!.box).toEqual({ x: 0.16, y: 0.46, w: 0.68, h: 0.48 });
     expect(result.figureCrop!.dataUrl).toBe(
       `data:image/png;base64,${Buffer.from("cropped-png-bytes").toString("base64")}`,
     );
@@ -262,6 +288,23 @@ describe("ExtractQuestionService.extract — figures from OCR", () => {
     expect(cropper.crop).not.toHaveBeenCalled();
   });
 
+  it("MUST: offers no crops when the OCR reported no words, however much ink the page holds", async () => {
+    const { service, cropper, detector } = buildDeps();
+    cropper.raster.mockResolvedValue(RASTER_WITH_FIGURE);
+    // Cursive handwriting, a missing language pack: tesseract exits 0 and
+    // reports nothing. Nothing gets erased, so every blob of ink would
+    // otherwise be offered to the teacher as a "figure" to crop.
+    detector.detect.mockResolvedValue([]);
+
+    const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
+
+    expect(result.figureCrop).toBeUndefined();
+    expect(result.alternativeCrops).toBeUndefined();
+    expect(cropper.crop).not.toHaveBeenCalled();
+    // The transcription is the valuable half and still comes back.
+    expect(result.bodyTypst).toBe(EXTRACTED_QUESTION.bodyTypst);
+  });
+
   it("MUST: still returns the transcription when the OCR blows up", async () => {
     const { service, detector } = buildDeps();
     detector.detect.mockRejectedValue(new Error("tesseract not found"));
@@ -279,8 +322,8 @@ describe("ExtractQuestionService.extract — figures from OCR", () => {
       ...EXTRACTED_QUESTION,
       figureBox: { x: 0, y: 0, w: 1, h: 1 },
     } as never);
-    cropper.raster.mockResolvedValue({ gray: new Uint8Array(400).fill(255), width: 20, height: 20 });
-    detector.detect.mockResolvedValue([]);
+    cropper.raster.mockResolvedValue({ gray: blankRaster(), width: RASTER_SIZE, height: RASTER_SIZE });
+    detector.detect.mockResolvedValue([STRAY_WORD]);
 
     const result = await service.extract(USER, { buffer: fakePng(), mimetype: "image/png" });
 
