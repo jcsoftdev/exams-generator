@@ -207,6 +207,28 @@ export class BankNewComponent {
   protected readonly cropSlots = signal<readonly CropSlot[]>([]);
 
   /**
+   * The alternative TEXT captured at extraction time, indexed the same way
+   * `AiAlternativeCrop.alternativeIndex` is — i.e. `extractedAlternatives[i]`
+   * is what alternative `i` said the moment the crop for it was cut. Frozen
+   * `alternativeIndex` values on `cropSlots` go stale the instant the teacher
+   * edits `sAlternatives` (a free-text textarea whose parsed list can shift
+   * or shrink); this lets `attachAlternativeImagesAndFinish` re-derive each
+   * crop's CURRENT index instead of trusting the frozen one. See Critical
+   * Finding 1.
+   */
+  private extractedAlternatives: readonly string[] = [];
+
+  /**
+   * True while `sImage` holds a crop cut from the CURRENT extraction (figure
+   * crop or its re-crop) rather than a file the teacher picked manually via
+   * the structured tab's own file input. `setImage` (photo tab) uses this to
+   * decide whether swapping the photo should also clear `sImage` — a
+   * manually picked complement image has nothing to do with the photo tab
+   * and must survive a photo change. See Important Finding 3.
+   */
+  private sImageFromCrop = false;
+
+  /**
    * The photo the crops were cut from, as an object URL. Feeds
    * `<app-crop-review>`'s background — the teacher adjusts the rectangle over
    * the ORIGINAL photo, not over the crop.
@@ -303,11 +325,30 @@ export class BankNewComponent {
     }
     this.pImage.set(file);
     this.pImagePreviewUrl.set(file ? URL.createObjectURL(file) : null);
+
+    // Crops (and any pending re-crop handle) are always cut FROM the photo
+    // that was just replaced — the moment it changes (or is cleared), they
+    // describe a photo the teacher can no longer see and no longer selected.
+    // Left alone, `onRecrop` would keep re-cutting against a stale
+    // `extractionId`, `cropSlots` would keep showing (and uploading) crops
+    // from it, and `sImage` — if it holds a crop, not a manual pick — would
+    // upload a figure the teacher never approved against the new photo. See
+    // Important Finding 3.
+    this.extractionId = null;
+    this.cropSlots.set([]);
+    this.extractedAlternatives = [];
+    if (this.sImageFromCrop) {
+      this.setStructuredImage(null);
+      this.sImageFromCrop = false;
+    }
   }
 
   protected onStructuredImageSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     this.setStructuredImage(input.files?.[0] ?? null);
+    // A manual pick from the structured tab's own file input always
+    // supersedes anything AI-derived.
+    this.sImageFromCrop = false;
   }
 
   private setStructuredImage(file: File | null): void {
@@ -389,11 +430,16 @@ export class BankNewComponent {
 
         this.extractionId = extracted.extractionId ?? null;
         this.cropSlots.set(buildCropSlots(extracted));
+        this.extractedAlternatives = extracted.alternatives;
         // The figure crop feeds the SAME signal the manual complement-image
-        // picker feeds, so the existing save chain uploads it with no change.
-        this.sImage.set(
+        // picker feeds, so the existing save chain uploads it with no
+        // change — routed through `setStructuredImage` (not a raw
+        // `sImage.set`) so the preview stays in sync and the previous object
+        // URL is revoked (Important Finding 2).
+        this.setStructuredImage(
           extracted.figureCrop ? dataUrlToFile(extracted.figureCrop.dataUrl, 'figura.png') : null,
         );
+        this.sImageFromCrop = !!extracted.figureCrop;
 
         this.resolveStructuredTaxonomy({
           gradeLevel,
@@ -460,7 +506,17 @@ export class BankNewComponent {
 
   protected onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void {
     const extractionId = this.extractionId;
-    if (!extractionId) return;
+    if (!extractionId) {
+      // `extractionId` is null whenever the extraction's cache write failed
+      // (the API still returns crops in that case) — the teacher would
+      // otherwise drag the rectangle and see nothing happen. Same message as
+      // the 410 branch below since both mean "there is no live session to
+      // re-cut against." See Minor Finding 7.
+      this.extractError.set(
+        'La sesión de recorte expiró. Vuelve a extraer la pregunta desde la foto.',
+      );
+      return;
+    }
 
     this.updateSlot(event.target, (slot) => ({ ...slot, busy: true }));
     this.aiService.recropExtraction(extractionId, event.box).subscribe({
@@ -472,7 +528,11 @@ export class BankNewComponent {
           busy: false,
         }));
         if (event.target.kind === 'figure') {
-          this.sImage.set(dataUrlToFile(crop.dataUrl, 'figura.png'));
+          // Routed through `setStructuredImage` (not a raw `sImage.set`) so
+          // the preview stays in sync and the previous object URL is
+          // revoked (Important Finding 2).
+          this.setStructuredImage(dataUrlToFile(crop.dataUrl, 'figura.png'));
+          this.sImageFromCrop = true;
         }
       },
       error: (error: HttpErrorResponse) => {
@@ -493,7 +553,10 @@ export class BankNewComponent {
   protected onDiscard(target: CropTarget): void {
     this.cropSlots.update((slots) => slots.filter((slot) => !sameTarget(slot.target, target)));
     if (target.kind === 'figure') {
-      this.sImage.set(null);
+      // Routed through `setStructuredImage` (not a raw `sImage.set`) so the
+      // preview clears in sync (Important Finding 2).
+      this.setStructuredImage(null);
+      this.sImageFromCrop = false;
     }
   }
 
@@ -577,17 +640,41 @@ export class BankNewComponent {
     });
   }
 
-  /** Second half of the save chain — uploads any alternative crops the teacher kept, sparse by design. */
+  /**
+   * Second half of the save chain — uploads any alternative crops the
+   * teacher kept, sparse by design.
+   *
+   * Each crop's `alternativeIndex` was frozen at extraction time
+   * (`buildCropSlots`), but `sAlternatives` is a free-text textarea the
+   * teacher can freely edit, reorder, or blank lines in before saving — and
+   * `alternativesList()` filters out blank lines, so any edit before a crop's
+   * frozen index can shift its true position. Re-deriving each crop's index
+   * against the CURRENT list (via `reresolveAlternativeIndex`) instead of
+   * trusting the frozen one is what closes Critical Finding 1.
+   */
   private attachAlternativeImagesAndFinish(id: string): void {
+    const currentAlternatives = this.alternativesList();
+    // Each entry can be claimed by at most one crop — tracks which positions
+    // are still available for matching so two crops whose ORIGINAL text
+    // happened to be identical don't both claim the same occurrence.
+    const available = currentAlternatives.map((text, index) => ({ text, index }));
+
     const crops = this.cropSlots()
       .filter(
         (slot): slot is CropSlot & { target: { kind: 'alternative'; alternativeIndex: number } } =>
           slot.target.kind === 'alternative',
       )
-      .map((slot) => ({
-        alternativeIndex: slot.target.alternativeIndex,
-        file: dataUrlToFile(slot.dataUrl, 'alternativa.png'),
-      }));
+      .map((slot) => {
+        const alternativeIndex = this.reresolveAlternativeIndex(
+          slot.target.alternativeIndex,
+          currentAlternatives,
+          available,
+        );
+        return alternativeIndex === null
+          ? null
+          : { alternativeIndex, file: dataUrlToFile(slot.dataUrl, 'alternativa.png') };
+      })
+      .filter((crop): crop is { alternativeIndex: number; file: File } => crop !== null);
 
     if (crops.length === 0) {
       this.saving.set(false);
@@ -602,6 +689,56 @@ export class BankNewComponent {
       },
       error: () => this.failAfterCreate(),
     });
+  }
+
+  /**
+   * Re-derives where the alternative that had `originalIndex` at extraction
+   * time now sits in the CURRENT `alternativesList()`, since the teacher may
+   * have edited/reordered/deleted lines in the free-text textarea since
+   * (Critical Finding 1). Returns `null` when the crop cannot be safely
+   * reattached — the caller drops it rather than guessing.
+   *
+   * Matching strategy: exact string match, after trim, against the ORIGINAL
+   * text captured at extraction (`extractedAlternatives[originalIndex]`).
+   * `available` tracks which current positions are still unclaimed so two
+   * crops whose original text happened to be identical don't both grab the
+   * same occurrence — matched entries are removed from it as they're used.
+   *
+   * The one case this is EXPECTED to miss: a drawing alternative whose text
+   * the teacher blanked, per the pdf-template convention ("an alternative
+   * with its own image carries no text"). `alternativesList()` filters blank
+   * lines out entirely, so the blanked line simply isn't in `available` to
+   * match against — the original (non-blank) text can never be found there
+   * again. That is the correct, SAFE outcome: rather than guess a new
+   * position for an alternative that no longer exists in the submitted
+   * array, the crop is dropped. Silently misattaching it to whatever now
+   * occupies its old index would be worse — that is exactly Critical
+   * Finding 1.
+   *
+   * The `originalText.length === 0` branch is a defensive fallback only, not
+   * a supported path: `validateStructuredContent` (server-side) rejects any
+   * extraction response with a blank alternative, so `extractedAlternatives`
+   * can never actually hold one. If it somehow did, positional fallback is
+   * the only signal left — it has NO way to detect an earlier
+   * deletion/reorder and can misattach in that case. It exists only so this
+   * method has a defined, non-throwing return, not because its result is
+   * trustworthy.
+   */
+  private reresolveAlternativeIndex(
+    originalIndex: number,
+    currentAlternatives: readonly string[],
+    available: { text: string; index: number }[],
+  ): number | null {
+    const originalText = (this.extractedAlternatives[originalIndex] ?? '').trim();
+    if (originalText.length === 0) {
+      return originalIndex < currentAlternatives.length ? originalIndex : null;
+    }
+    const matchAt = available.findIndex((entry) => entry.text === originalText);
+    if (matchAt === -1) {
+      return null;
+    }
+    const [match] = available.splice(matchAt, 1);
+    return match.index;
   }
 
   /**

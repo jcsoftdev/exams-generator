@@ -974,4 +974,303 @@ describe('BankNewComponent', () => {
       expect(setAlternativeImages).toHaveBeenLastCalledWith('str-q', expect.any(Array));
     });
   });
+
+  describe('Critical 1: crop re-attribution when alternatives are edited after extraction', () => {
+    const EXTRACTED_WITH_REAL_TEXT: AiExtractedQuestion = {
+      bodyTypst: '¿Qué figura se muestra?',
+      alternatives: ['Uno', 'Dos', 'Tres', 'Cuatro', 'Cinco'],
+      correctAnswer: '0',
+      extractionId: 'extraction-1',
+      figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 } },
+      alternativeCrops: [
+        { alternativeIndex: 0, dataUrl: 'data:image/png;base64,BBBB', box: { x: 0, y: 0.7, w: 0.1, h: 0.1 } },
+        { alternativeIndex: 2, dataUrl: 'data:image/png;base64,CCCC', box: { x: 0.3, y: 0.7, w: 0.1, h: 0.1 } },
+      ],
+    };
+
+    function extractInto(fixture: { componentInstance: unknown; detectChanges(): void }): void {
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+    }
+
+    it('re-derives crop indices by original text when the teacher deletes a line before the crop, so the crop follows its alternative instead of misattaching', () => {
+      const { fixture, compiled, setAlternativeImages } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_REAL_TEXT),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      extractInto(fixture);
+      set(fixture, 'sDifficulty', 'easy');
+
+      // Teacher deletes the "Dos" line (index 1). Alternatives collapse to
+      // ['Uno', 'Tres', 'Cuatro', 'Cinco'] — 'Tres' (originally index 2, one
+      // of the crop targets) now sits at index 1. Without re-derivation, the
+      // frozen index 2 would misattach this crop to 'Cuatro'.
+      set(fixture, 'sAlternatives', 'Uno\nTres\nCuatro\nCinco');
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+
+      expect(setAlternativeImages).toHaveBeenCalledWith('str-q', [
+        { alternativeIndex: 0, file: expect.any(File) }, // 'Uno' — unchanged position
+        { alternativeIndex: 1, file: expect.any(File) }, // 'Tres' — shifted from 2 to 1
+      ]);
+    });
+
+    it('drops a crop whose alternative was blanked (drawing-only convention) rather than misattaching it to whatever now occupies its old index', () => {
+      const { fixture, compiled, setAlternativeImages } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_REAL_TEXT),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      extractInto(fixture);
+      set(fixture, 'sDifficulty', 'easy');
+
+      // Teacher blanks the 'Tres' line (index 2) per the pdf-template
+      // convention ("an alternative with its own image carries no text").
+      // `alternativesList()` filters blank lines, so 'Tres' disappears
+      // entirely from the submitted array — its crop must be dropped, not
+      // reattached to 'Cuatro' (which slides into its old index).
+      set(fixture, 'sAlternatives', 'Uno\nDos\n\nCuatro\nCinco');
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+
+      expect(setAlternativeImages).toHaveBeenCalledWith('str-q', [
+        { alternativeIndex: 0, file: expect.any(File) }, // 'Uno' still matches
+      ]);
+    });
+
+    it('uploads both crops unchanged when the alternatives were never edited (no regression)', () => {
+      const { fixture, compiled, setAlternativeImages } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_REAL_TEXT),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      extractInto(fixture);
+      set(fixture, 'sDifficulty', 'easy');
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+
+      expect(setAlternativeImages).toHaveBeenCalledWith('str-q', [
+        { alternativeIndex: 0, file: expect.any(File) },
+        { alternativeIndex: 2, file: expect.any(File) },
+      ]);
+    });
+  });
+
+  describe('Important 2: the complement-image preview stays synced with what actually uploads', () => {
+    it('shows a preview for the AI figure crop right after extraction (not blank)', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({
+            bodyTypst: 'x',
+            alternatives: ['a', 'b'],
+            correctAnswer: '0',
+            extractionId: 'extraction-1',
+            figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0, y: 0, w: 0.2, h: 0.2 } },
+          } satisfies AiExtractedQuestion),
+      });
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      expect(
+        compiled.querySelector('[data-testid="structured-image-upload-preview"]'),
+      ).toBeTruthy();
+    });
+
+    it('updates the preview after a manual re-crop of the figure', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({
+            bodyTypst: 'x',
+            alternatives: ['a', 'b'],
+            correctAnswer: '0',
+            extractionId: 'extraction-1',
+            figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0, y: 0, w: 0.2, h: 0.2 } },
+          } satisfies AiExtractedQuestion),
+        recropExtractionImpl: () =>
+          of({ dataUrl: 'data:image/png;base64,ZZZZ', box: { x: 0, y: 0, w: 0.2, h: 0.2 } }),
+      });
+      let urlCount = 0;
+      vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:fake-url-${++urlCount}`);
+      const revokeSpy = vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+      const urlAfterExtract = compiled
+        .querySelector('[data-testid="structured-image-upload-preview"]')
+        ?.getAttribute('src');
+
+      (
+        fixture.componentInstance as unknown as {
+          onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        }
+      ).onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+      fixture.detectChanges();
+
+      const urlAfterRecrop = compiled
+        .querySelector('[data-testid="structured-image-upload-preview"]')
+        ?.getAttribute('src');
+      expect(urlAfterRecrop).toBeTruthy();
+      expect(urlAfterRecrop).not.toBe(urlAfterExtract);
+      // The stale object URL from extraction must be revoked, not leaked.
+      expect(revokeSpy).toHaveBeenCalledWith(urlAfterExtract);
+    });
+
+    it('clears the preview when the figure crop is discarded', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({
+            bodyTypst: 'x',
+            alternatives: ['a', 'b'],
+            correctAnswer: '0',
+            extractionId: 'extraction-1',
+            figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0, y: 0, w: 0.2, h: 0.2 } },
+          } satisfies AiExtractedQuestion),
+      });
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      (fixture.componentInstance as unknown as { onDiscard(target: CropTarget): void }).onDiscard({
+        kind: 'figure',
+      });
+      fixture.detectChanges();
+
+      expect(
+        compiled.querySelector('[data-testid="structured-image-upload-preview"]'),
+      ).toBeFalsy();
+    });
+  });
+
+  describe('Important 3: switching the photo clears stale crops and the AI-derived complement image', () => {
+    const EXTRACTED_WITH_CROPS_2: AiExtractedQuestion = {
+      bodyTypst: '¿Qué muestra la figura?',
+      alternatives: ['a', 'b', 'c', 'd', 'e'],
+      correctAnswer: '0',
+      extractionId: 'extraction-1',
+      figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 } },
+      alternativeCrops: [
+        { alternativeIndex: 0, dataUrl: 'data:image/png;base64,BBBB', box: { x: 0, y: 0.7, w: 0.1, h: 0.1 } },
+      ],
+    };
+
+    it('clears cropSlots, extractionId and the AI-derived sImage when a new photo is picked on the photo tab', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROPS_2),
+      });
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as {
+        cropSlots(): readonly unknown[];
+        sImage(): File | null;
+      };
+      expect(instance.cropSlots().length).toBeGreaterThan(0);
+      expect(instance.sImage()).not.toBeNull();
+
+      // Back on the photo tab, teacher picks a DIFFERENT photo.
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickImage(fixture, compiled);
+
+      expect(instance.cropSlots().length).toBe(0);
+      expect(instance.sImage()).toBeNull();
+    });
+
+    it('a manually picked complement image survives a photo change (never came from a crop)', () => {
+      const { fixture, compiled } = setup();
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const manualFile = pickStructuredImage(fixture, compiled);
+
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickImage(fixture, compiled);
+
+      const instance = fixture.componentInstance as unknown as { sImage(): File | null };
+      expect(instance.sImage()).toBe(manualFile);
+    });
+
+    it('a stale crop is never uploaded after the photo was swapped and no new extraction ran', () => {
+      const { fixture, compiled, replaceQuestionImage, setAlternativeImages } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROPS_2),
+      });
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickImage(fixture, compiled);
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sDifficulty', 'easy');
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+
+      expect(replaceQuestionImage).not.toHaveBeenCalled();
+      expect(setAlternativeImages).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('Minor 7: a re-crop attempted after a failed cache write shows feedback instead of doing nothing', () => {
+    it('shows the expired-session message and never calls the API when extractionId is null', () => {
+      const { fixture, compiled, recropExtraction } = setup({
+        // hasCrops but no extractionId — the cache.put-failure path, which by
+        // design still returns crops.
+        extractQuestionFromImageImpl: () =>
+          of({
+            bodyTypst: 'x',
+            alternatives: ['a', 'b'],
+            correctAnswer: '0',
+            figureCrop: { dataUrl: 'data:image/png;base64,AAAA', box: { x: 0, y: 0, w: 0.2, h: 0.2 } },
+          } satisfies AiExtractedQuestion),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as {
+        onRecrop(event: { target: CropTarget; box: NormalizedBoxDto }): void;
+        extractError(): string | null;
+      };
+      instance.onRecrop({ target: { kind: 'figure' }, box: { x: 0, y: 0, w: 0.2, h: 0.2 } });
+      fixture.detectChanges();
+
+      expect(recropExtraction).not.toHaveBeenCalled();
+      expect(instance.extractError()).toBe(
+        'La sesión de recorte expiró. Vuelve a extraer la pregunta desde la foto.',
+      );
+      expect(compiled.querySelector('[data-testid="extract-error"]')?.textContent).toContain(
+        'La sesión de recorte expiró',
+      );
+    });
+  });
 });
