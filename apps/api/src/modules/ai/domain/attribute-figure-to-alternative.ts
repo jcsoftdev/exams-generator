@@ -26,6 +26,12 @@ const ALTERNATIVE_MARKER = /^([a-e])\s*[).:]$/i;
  * This replaces the `alternativeIndex` the vision model used to report. The
  * model was guessing; the page's own layout is not.
  *
+ * At most ONE figure comes back per alternative, and at most one complement.
+ * Both rules are resolved by input order, which is why this DEPENDS on
+ * `figures` arriving top-to-bottom — the contract `findFigureRegions`
+ * documents and its row-major scan provides. Reordering the figures upstream
+ * would silently change which blob wins each band.
+ *
  * With no marker recognised — a crooked photo, an OCR that missed them — every
  * figure is treated as complement. That is the safe degradation: the
  * complement is the common case, and the teacher reviews the crop before it is
@@ -42,7 +48,9 @@ export function attributeFigureToAlternative(
   }
 
   const firstMarkerTop = markers[0]!.top;
-  const byAlternative: AttributedFigure[] = [];
+  // Keyed by alternative index so a band can never emit two entries. Insertion
+  // order is preserved, which keeps the result top-to-bottom.
+  const byAlternative = new Map<number, AttributedFigure>();
   let complement: NormalizedBox | undefined;
 
   for (const box of figures) {
@@ -56,12 +64,23 @@ export function attributeFigureToAlternative(
     }
 
     const owner = [...markers].reverse().find((marker) => centre >= marker.top);
-    if (owner) {
-      byAlternative.push({ alternativeIndex: owner.index, box });
+    if (owner && !byAlternative.has(owner.index)) {
+      // The same argument as the complement above, applied per band: an
+      // alternative has ONE drawing, and a second blob beside it is a detached
+      // label or a stray mark. Keeping both would emit two entries carrying
+      // the same `alternativeIndex`, which the contract downstream cannot
+      // express — `AiExtractedQuestion.alternativeCrops` is documented as one
+      // sparse slot per alternative, and the web bank editor renders one crop
+      // slot per entry, so the teacher would see two slots both labelled the
+      // same alternative and both pointing at the same index.
+      //
+      // First-wins is TOPMOST-wins because `findFigureRegions` returns its
+      // figures top-to-bottom (its own docstring pins that contract).
+      byAlternative.set(owner.index, { alternativeIndex: owner.index, box });
     }
   }
 
-  return { ...(complement ? { complement } : {}), byAlternative };
+  return { ...(complement ? { complement } : {}), byAlternative: [...byAlternative.values()] };
 }
 
 /**

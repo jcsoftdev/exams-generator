@@ -76,6 +76,44 @@ describe("attributeFigureToAlternative", () => {
     expect(result.byAlternative).toEqual([{ alternativeIndex: 4, box: figure(0.96) }]);
   });
 
+  it("MUST: takes at most one figure per alternative — a detached label is not a second drawing", () => {
+    // Two blobs inside C)'s band: the drawing and the loose label or arrow
+    // beside it that never touched it. The contract downstream is one crop
+    // slot per entry, so a duplicated index shows the teacher two slots both
+    // labelled C), both pointing at the same alternative.
+    const drawing = { x: 0.3, y: 0.71, w: 0.2, h: 0.04 };
+    const detachedLabel = { x: 0.6, y: 0.75, w: 0.05, h: 0.03 };
+
+    const result = attributeFigureToAlternative([drawing, detachedLabel], MARKERS);
+
+    expect(result.byAlternative).toEqual([{ alternativeIndex: 2, box: drawing }]);
+  });
+
+  it("MUST: keeps the TOPMOST figure of a band, mirroring the complement rule", () => {
+    // `findFigureRegions` returns figures top-to-bottom, so the first entry
+    // in a band is its topmost one — the drawing, with the stray ink below it.
+    const topmost = { x: 0.3, y: 0.71, w: 0.2, h: 0.04 };
+    const below = { x: 0.3, y: 0.76, w: 0.2, h: 0.03 };
+
+    const result = attributeFigureToAlternative([topmost, below], MARKERS);
+
+    expect(result.byAlternative).toHaveLength(1);
+    expect(result.byAlternative[0]!.box).toEqual(topmost);
+  });
+
+  it("still keeps one figure per DISTINCT alternative when several bands have one", () => {
+    const inA = { x: 0.3, y: 0.51, w: 0.2, h: 0.04 };
+    const alsoInA = { x: 0.6, y: 0.55, w: 0.05, h: 0.03 };
+    const inD = { x: 0.3, y: 0.81, w: 0.2, h: 0.04 };
+
+    const result = attributeFigureToAlternative([inA, alsoInA, inD], MARKERS);
+
+    expect(result.byAlternative).toEqual([
+      { alternativeIndex: 0, box: inA },
+      { alternativeIndex: 3, box: inD },
+    ]);
+  });
+
   it("takes at most one complement — a second figure above the markers is dropped, not stacked", () => {
     const result = attributeFigureToAlternative([figure(0.1), figure(0.2)], MARKERS);
 
