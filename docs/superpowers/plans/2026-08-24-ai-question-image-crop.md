@@ -1344,7 +1344,8 @@ describe("RecropQuestionService.recrop", () => {
   it("throws NotFound — not Forbidden — for another user's extraction", async () => {
     const { service } = buildDeps();
 
-    // 404 rather than 403: a 403 would confirm that this extractionId exists.
+    // Same 410 as an unknown/expired id: responding differently here would BE
+    // the existence confirmation that avoiding a 403 was meant to remove.
     await expect(service.recrop(OTHER_USER, "extraction-1", BOX)).rejects.toBeInstanceOf(
       NotFoundException,
     );
@@ -1508,7 +1509,10 @@ export class RecropQuestionService {
     if (!cached) {
       throw new GoneException("This crop session expired — extract the question again");
     }
-    // 404 rather than 403: a 403 would confirm the id exists to whoever guessed it.
+    // Same 410 as an unknown/expired id — see the spec: a distinct code for
+    // "exists but is not yours" is itself the existence oracle.
+    // The Spanish "expired" message is correct for the legitimate user and
+    // reveals nothing to whoever guessed someone else's id.
     if (cached.userId !== user.sub) {
       throw new NotFoundException(`Extraction not found: ${extractionId}`);
     }
@@ -1670,7 +1674,7 @@ export const AI_CROP_PER_ACCOUNT_THROTTLE = { default: { ttl: 60_000, limit: 240
       .expect(410);
   });
 
-  it("returns 404 for another account's extractionId", async () => {
+  it("returns 410 — not a distinguishable code — for another account's extractionId", async () => {
     const png = await realPng();
     const extracted = await request(app.getHttpServer())
       .post("/ai/questions/extract")
@@ -1682,7 +1686,7 @@ export const AI_CROP_PER_ACCOUNT_THROTTLE = { default: { ttl: 60_000, limit: 240
       .post(`/ai/questions/extract/${extracted.body.extractionId}/crop`)
       .set("Authorization", `Bearer ${otherUserToken}`)
       .send({ box: { x: 0, y: 0, w: 0.25, h: 0.25 } })
-      .expect(404);
+      .expect(410);
   });
 ```
 
