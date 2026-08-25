@@ -16,6 +16,7 @@ import {
 } from "./domain/ports/question-generator.port";
 import { ExtractQuestionService } from "./extract-question.service";
 import { GenerateQuestionsService } from "./generate-questions.service";
+import { RecropQuestionService } from "./recrop-question.service";
 import { ReviseQuestionService } from "./revise-question.service";
 
 const EXTRACTED_QUESTION: GeneratedQuestion = {
@@ -29,8 +30,14 @@ const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1",
 function buildController() {
   const extractService = { extract: jest.fn() } as unknown as jest.Mocked<ExtractQuestionService>;
   const reviseService = { revise: jest.fn() } as unknown as jest.Mocked<ReviseQuestionService>;
-  const controller = new AiController({} as GenerateQuestionsService, reviseService, extractService);
-  return { controller, extractService, reviseService };
+  const recropService = { recrop: jest.fn() } as unknown as jest.Mocked<RecropQuestionService>;
+  const controller = new AiController(
+    {} as GenerateQuestionsService,
+    reviseService,
+    extractService,
+    recropService,
+  );
+  return { controller, extractService, reviseService, recropService };
 }
 
 const FILE = { buffer: Buffer.from("fake-png-bytes"), mimetype: "image/png" } as Express.Multer.File;
@@ -39,24 +46,27 @@ describe("AiController.extract", () => {
   it("throws BadRequestException when no file is uploaded", async () => {
     const { controller } = buildController();
 
-    await expect(controller.extract(undefined as unknown as Express.Multer.File)).rejects.toBeInstanceOf(
-      BadRequestException,
-    );
+    await expect(
+      controller.extract(TEACHER_USER, undefined as unknown as Express.Multer.File),
+    ).rejects.toBeInstanceOf(BadRequestException);
   });
 
   it("returns the service's result when extraction succeeds", async () => {
     const { controller, extractService } = buildController();
     extractService.extract.mockResolvedValue(EXTRACTED_QUESTION);
 
-    await expect(controller.extract(FILE)).resolves.toEqual(EXTRACTED_QUESTION);
-    expect(extractService.extract).toHaveBeenCalledWith({ buffer: FILE.buffer, mimetype: FILE.mimetype });
+    await expect(controller.extract(TEACHER_USER, FILE)).resolves.toEqual(EXTRACTED_QUESTION);
+    expect(extractService.extract).toHaveBeenCalledWith(TEACHER_USER, {
+      buffer: FILE.buffer,
+      mimetype: FILE.mimetype,
+    });
   });
 
   it("maps AiRateLimitError to 429 instead of falling through to a generic 500", async () => {
     const { controller, extractService } = buildController();
     extractService.extract.mockRejectedValue(new AiRateLimitError());
 
-    const rejection = controller.extract(FILE);
+    const rejection = controller.extract(TEACHER_USER, FILE);
     await expect(rejection).rejects.toBeInstanceOf(HttpException);
     await expect(rejection).rejects.toMatchObject({ status: HttpStatus.TOO_MANY_REQUESTS });
   });
@@ -65,7 +75,7 @@ describe("AiController.extract", () => {
     const { controller, extractService } = buildController();
     extractService.extract.mockRejectedValue(new AiInvalidResponseError("bad json", "{}"));
 
-    await expect(controller.extract(FILE)).rejects.toBeInstanceOf(UnprocessableEntityException);
+    await expect(controller.extract(TEACHER_USER, FILE)).rejects.toBeInstanceOf(UnprocessableEntityException);
   });
 
   it("maps any other AiGenerationError to 502", async () => {
@@ -74,7 +84,7 @@ describe("AiController.extract", () => {
       new AiGenerationError("OpenRouter request failed with status 401"),
     );
 
-    const rejection = controller.extract(FILE);
+    const rejection = controller.extract(TEACHER_USER, FILE);
     await expect(rejection).rejects.toBeInstanceOf(HttpException);
     await expect(rejection).rejects.toMatchObject({ status: HttpStatus.BAD_GATEWAY });
   });
@@ -84,7 +94,7 @@ describe("AiController.extract", () => {
     const original = new Error("boom");
     extractService.extract.mockRejectedValue(original);
 
-    await expect(controller.extract(FILE)).rejects.toBe(original);
+    await expect(controller.extract(TEACHER_USER, FILE)).rejects.toBe(original);
   });
 });
 

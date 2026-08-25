@@ -235,6 +235,24 @@
         </label>
       </div>
 
+      @if (cropSlots().length > 0 && cropPhotoUrl(); as photoUrl) {
+        <app-crop-review
+          [photoUrl]="photoUrl"
+          [slots]="cropSlots()"
+          (recrop)="onRecrop($event)"
+          (discard)="onDiscard($event)"
+        />
+        @if (extractError()) {
+          <p
+            data-testid="extract-error"
+            class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text"
+            role="alert"
+          >
+            {{ extractError() }}
+          </p>
+        }
+      }
+
       @if (!structuredValid()) {
         <p data-testid="structured-validation" class="text-xs text-hard-text">
           Completa grado, curso, tema, nivel, enunciado, al menos 2 alternativas y la clave para

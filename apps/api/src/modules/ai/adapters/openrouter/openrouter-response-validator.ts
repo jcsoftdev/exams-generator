@@ -1,3 +1,4 @@
+import { NormalizedBox, isValidNormalizedBox } from "../../domain/normalized-box";
 import { GeneratedAlternatives, GeneratedQuestion } from "../../domain/ports/question-generator.port";
 
 const VALID_ANSWER_LETTERS = new Set(["a", "b", "c", "d", "e"]);
@@ -61,6 +62,37 @@ export interface QuestionSelfReport {
 export interface ValidatedGeneratedQuestion {
   readonly question: GeneratedQuestion;
   readonly selfReport: QuestionSelfReport;
+}
+
+/**
+ * Crop boxes are best-effort geometry, never a validation error: a model that
+ * reports a box spilling off the canvas hallucinated the geometry, not the
+ * question. Dropping the box costs the human one manual crop; failing the
+ * whole response would cost them the entire transcription.
+ */
+function readFigureBox(value: unknown): NormalizedBox | undefined {
+  return isValidNormalizedBox(value) ? value : undefined;
+}
+
+/**
+ * One slot per alternative, or nothing at all — a shape a length-mismatched
+ * or all-null array can never satisfy trustworthily:
+ * - A length mismatch means the model lost track of which box belongs to
+ *   which alternative, so no individual entry in it can be trusted either;
+ *   the whole array is dropped rather than padded/truncated into a guess.
+ * - An array where every entry is `null` means there is nothing to crop —
+ *   normalized to `undefined` so the UI can key off the field's absence to
+ *   render no crop controls at all, instead of five empty slots.
+ */
+function readAlternativeBoxes(
+  value: unknown,
+  alternativeCount: number,
+): readonly (NormalizedBox | null)[] | undefined {
+  if (!Array.isArray(value) || value.length !== alternativeCount) {
+    return undefined;
+  }
+  const boxes = value.map((entry) => (isValidNormalizedBox(entry) ? entry : null));
+  return boxes.some((box) => box !== null) ? boxes : undefined;
 }
 
 /**
@@ -151,6 +183,8 @@ export function validateGeneratedQuestionShape(value: unknown): ValidatedGenerat
         typeof rawSuggestedTopic === "string" && rawSuggestedTopic.trim().length > 0
           ? rawSuggestedTopic
           : undefined,
+      figureBox: readFigureBox(payload.figureBox),
+      alternativeBoxes: readAlternativeBoxes(payload.alternativeBoxes, (alternatives as string[]).length),
     },
     selfReport: {
       conceptsUsed: conceptsUsed as string[],

@@ -619,9 +619,14 @@ export class BankService {
   }
 
   /**
-   * Attaches one image per alternative slot of a structured question
-   * (index-aligned with `questions.alternatives`) — every alternative must
-   * get exactly one image, all-or-nothing (400 on a count mismatch). Reuses
+   * Attaches images to alternative slots of a structured question. Without
+   * `indexes` this keeps the original all-or-nothing contract — every
+   * alternative must get exactly one image, index-aligned with
+   * `questions.alternatives` (400 on a count mismatch) — so the seed
+   * scripts that were the only callers before keep working untouched. With
+   * `indexes` the caller names which slot each file belongs to, which is
+   * what a question whose drawings sit on only SOME alternatives needs
+   * (e.g. a) and c) are diagrams, b)/d)/e) are text). Reuses
    * `requireManageableQuestion` — the SAME 404/403/409 gate `replaceImage`
    * uses — then `assertStructuredQuestion` (the same structured-only gate
    * `previewQuestion` uses) since alternative images only make sense for
@@ -634,23 +639,20 @@ export class BankService {
     user: AuthTokenPayload,
     id: string,
     files: readonly Express.Multer.File[],
+    indexes?: readonly number[],
   ): Promise<{ id: string }> {
     const question = await this.requireManageableQuestion(user, id);
     assertStructuredQuestion(question, "Alternative images");
 
     const alternatives = (question.alternatives ?? []) as readonly string[];
-    if (files.length !== alternatives.length) {
-      throw new BadRequestException(
-        `Expected exactly ${alternatives.length} image(s) (one per alternative), got ${files.length}`,
-      );
-    }
+    const slots = this.resolveAlternativeSlots(files.length, alternatives.length, indexes);
 
-    const images: { storageKey: string; mime: string }[] = [];
-    for (const file of files) {
+    const images: { storageKey: string; mime: string; alternativeIndex: number }[] = [];
+    for (const [position, file] of files.entries()) {
       const mime = requireImageMime(file);
       const storageKey = `bank/questions/${randomUUID()}`;
       await this.storage.put(storageKey, file.buffer, mime);
-      images.push({ storageKey, mime });
+      images.push({ storageKey, mime, alternativeIndex: slots[position]! });
     }
 
     const updatedId = await this.repository.setAlternativeImages(id, user.tenantId, images);
@@ -659,6 +661,45 @@ export class BankService {
     }
 
     return { id: updatedId };
+  }
+
+  /**
+   * Resolves which alternative slot each uploaded file belongs to.
+   *
+   * Without `indexes` this keeps the original contract — one image per
+   * alternative, in order — so the seed scripts that were the only callers
+   * before keep working untouched. With `indexes` the caller names the slots,
+   * which is what a question whose drawings sit on only some alternatives
+   * needs.
+   */
+  private resolveAlternativeSlots(
+    fileCount: number,
+    alternativeCount: number,
+    indexes: readonly number[] | undefined,
+  ): readonly number[] {
+    if (!indexes) {
+      if (fileCount !== alternativeCount) {
+        throw new BadRequestException(
+          `Expected exactly ${alternativeCount} image(s) (one per alternative), got ${fileCount}`,
+        );
+      }
+      return Array.from({ length: fileCount }, (_unused, index) => index);
+    }
+
+    if (indexes.length !== fileCount) {
+      throw new BadRequestException(
+        `indexes must name one slot per image: got ${indexes.length} index(es) for ${fileCount} image(s)`,
+      );
+    }
+    if (indexes.some((index) => !Number.isInteger(index) || index < 0 || index >= alternativeCount)) {
+      throw new BadRequestException(
+        `Every index must be an integer between 0 and ${alternativeCount - 1}`,
+      );
+    }
+    if (new Set(indexes).size !== indexes.length) {
+      throw new BadRequestException("indexes must not repeat — one image per alternative slot");
+    }
+    return indexes;
   }
 
   /**

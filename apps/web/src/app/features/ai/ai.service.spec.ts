@@ -3,7 +3,7 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { HttpDownloadProgressEvent, HttpEventType, provideHttpClient } from '@angular/common/http';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { TimeoutError } from 'rxjs';
-import { Difficulty } from '@exams-generator/shared';
+import { AiQuestionCrop, Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
 import { AiService } from './ai.service';
 import { environment } from '../../../environments/environment';
 import {
@@ -358,6 +358,27 @@ describe('AiService', () => {
       req.flush(extracted);
 
       expect(result).toEqual(extracted);
+    });
+  });
+
+  describe('recropExtraction', () => {
+    it('POSTs /ai/questions/extract/:extractionId/crop with { box } and resolves with the re-cut crop', () => {
+      const box: NormalizedBoxDto = { x: 0.1, y: 0.2, w: 0.3, h: 0.4 };
+      const crop: AiQuestionCrop = { dataUrl: 'data:image/png;base64,AAA', box };
+      let result: AiQuestionCrop | undefined;
+
+      service
+        .recropExtraction('extraction-1', box)
+        .subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(
+        `${environment.apiBaseUrl}/ai/questions/extract/extraction-1/crop`,
+      );
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toEqual({ box });
+      req.flush(crop);
+
+      expect(result).toEqual(crop);
     });
   });
 

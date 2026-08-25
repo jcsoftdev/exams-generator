@@ -39,6 +39,29 @@ export function accountTrackerFor(request: { user?: AuthTokenPayload }): string 
  */
 export const AI_PER_ACCOUNT_THROTTLE = { default: { ttl: 60_000, limit: 30 } };
 
+/**
+ * Crop adjustment calls no model: they re-cut an image already in Redis.
+ * Inheriting `AI_PER_ACCOUNT_THROTTLE` (30/min, sized for paid model calls)
+ * would let three crop adjustments eat a teacher's whole generation quota.
+ *
+ * Capped at 100 — the global per-IP ceiling (`app.module.ts`'s
+ * `ThrottlerModule.forRoot`) — NOT the ~240 this route's cost alone would
+ * justify. `@Throttle` metadata is guard-agnostic: it is read by BOTH the
+ * global IP-based `ThrottlerGuard` (`APP_GUARD`) and this file's
+ * `AccountThrottlerGuard`, since both share the same unnamed "default"
+ * throttler config and the same reflected metadata key (Important
+ * Finding 6). A higher account-scoped number here would silently relax the
+ * IP-based ceiling too, on the branch's most CPU-expensive endpoint — it
+ * decodes up to 5 MB and PNG-encodes a 1200px image per call. The
+ * alternative fix (a separate NAMED throttler per guard, so the two stop
+ * sharing decorator metadata) was rejected as the larger change for the same
+ * outcome: it touches `ThrottlerModule.forRoot`'s config shape and every
+ * existing `@Throttle({ default: ... })` call site across the app
+ * (`AiController`, `AiJobsController`, `AuthController`), whereas capping
+ * this one constant is a single-line fix with no wiring risk.
+ */
+export const AI_CROP_PER_ACCOUNT_THROTTLE = { default: { ttl: 60_000, limit: 100 } };
+
 @Injectable()
 export class AccountThrottlerGuard extends ThrottlerGuard {
   protected override getTracker(req: Record<string, unknown>): Promise<string> {

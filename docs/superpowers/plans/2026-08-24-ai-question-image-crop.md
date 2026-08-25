@@ -13,7 +13,8 @@
 ## Global Constraints
 
 - El proyecto corre en **Strict TDD**: cada tarea escribe el test que falla ANTES de la implementación, y se verifica que falle por la razón correcta.
-- Comandos de test: API unitarios `pnpm --filter @exams-generator/api exec jest --selectProjects non-e2e <ruta>`; API e2e `pnpm --filter @exams-generator/api exec jest --selectProjects e2e <ruta>`; web `pnpm --filter @exams-generator/web test`.
+- Comandos de test: API unitarios `pnpm --filter @exams-generator/api exec jest --selectProjects non-e2e --testPathPattern '<patrón>'`; API e2e `pnpm --filter @exams-generator/api exec jest --selectProjects e2e --testPathPattern '<patrón>'`; web `pnpm --filter @exams-generator/web test`.
+  - **Ojo**: pasar la ruta como argumento posicional NO filtra nada — `jest --selectProjects non-e2e src/.../x.spec.ts` corre las 112 suites igual ("Ran all test suites"). Solo `--testPathPattern` acota de verdad. La evidencia de TDD tiene que salir de la corrida acotada; un agregado de suite completa no prueba que tus tests corrieron.
 - **Nunca correr build** (`pnpm build`) como parte de una tarea. Para verificar tipos: `pnpm --filter @exams-generator/api typecheck`.
 - Commits en Conventional Commits, en inglés, **sin** `Co-Authored-By` ni atribución a IA.
 - Comentarios y documentación de código en inglés; textos visibles al usuario en español peruano.
@@ -1295,7 +1296,7 @@ El re-recorte manual **no** pasa por `snapBoxToInk`: el snap arregla la punterí
 
 ```ts
 // apps/api/src/modules/ai/recrop-question.service.spec.ts
-import { BadRequestException, GoneException, NotFoundException } from "@nestjs/common";
+import { BadRequestException, GoneException } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
 import { ImageCropperPort } from "./domain/ports/image-cropper.port";
 import { ExtractionCachePort } from "./domain/ports/extraction-cache.port";
@@ -1343,9 +1344,10 @@ describe("RecropQuestionService.recrop", () => {
   it("throws NotFound — not Forbidden — for another user's extraction", async () => {
     const { service } = buildDeps();
 
-    // 404 rather than 403: a 403 would confirm that this extractionId exists.
+    // Same 410 as an unknown/expired id: responding differently here would BE
+    // the existence confirmation that avoiding a 403 was meant to remove.
     await expect(service.recrop(OTHER_USER, "extraction-1", BOX)).rejects.toBeInstanceOf(
-      NotFoundException,
+      GoneException,
     );
   });
 
@@ -1464,13 +1466,7 @@ Registrar `RedisModule` en `apps/api/src/app.module.ts`, junto a `QueueModule`.
 
 ```ts
 // apps/api/src/modules/ai/recrop-question.service.ts
-import {
-  BadRequestException,
-  GoneException,
-  Inject,
-  Injectable,
-  NotFoundException,
-} from "@nestjs/common";
+import { BadRequestException, GoneException, Inject, Injectable } from "@nestjs/common";
 import { AiQuestionCrop } from "@exams-generator/shared";
 import { AuthTokenPayload } from "../auth/token.service";
 import { NormalizedBox, isValidNormalizedBox } from "./domain/normalized-box";
@@ -1504,12 +1500,13 @@ export class RecropQuestionService {
     }
 
     const cached = await this.cache.get(extractionId);
-    if (!cached) {
+    // One branch, one response: an unknown id, an expired one and someone
+    // else's all answer identically. A distinct code for "exists but is not
+    // yours" is itself the existence oracle — see the spec. The Spanish
+    // "expired" message is correct for the legitimate user and reveals
+    // nothing to whoever guessed someone else's id.
+    if (!cached || cached.userId !== user.sub) {
       throw new GoneException("This crop session expired — extract the question again");
-    }
-    // 404 rather than 403: a 403 would confirm the id exists to whoever guessed it.
-    if (cached.userId !== user.sub) {
-      throw new NotFoundException(`Extraction not found: ${extractionId}`);
     }
 
     const bytes = await this.cropper.crop(cached.image, cached.mimeType, box, CROP_MAX_WIDTH_PX);
@@ -1669,7 +1666,7 @@ export const AI_CROP_PER_ACCOUNT_THROTTLE = { default: { ttl: 60_000, limit: 240
       .expect(410);
   });
 
-  it("returns 404 for another account's extractionId", async () => {
+  it("returns 410 — not a distinguishable code — for another account's extractionId", async () => {
     const png = await realPng();
     const extracted = await request(app.getHttpServer())
       .post("/ai/questions/extract")
@@ -1681,7 +1678,7 @@ export const AI_CROP_PER_ACCOUNT_THROTTLE = { default: { ttl: 60_000, limit: 240
       .post(`/ai/questions/extract/${extracted.body.extractionId}/crop`)
       .set("Authorization", `Bearer ${otherUserToken}`)
       .send({ box: { x: 0, y: 0, w: 0.25, h: 0.25 } })
-      .expect(404);
+      .expect(410);
   });
 ```
 
