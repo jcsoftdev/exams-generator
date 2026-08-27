@@ -92,6 +92,23 @@ export const questions = pgTable(
     // changes — the reason source_url is stored at all.
     sourceUrlIdx: index("questions_source_url_idx").on(table.sourceUrl),
     poolIdx: index("questions_pool_idx").on(table.gradeLevel, table.status),
+    /**
+     * The bank grid's index. `listQuestions` filters by `topic_id` (the tree
+     * lazy-loads one topic at a time) and orders by `created_at DESC, id DESC`;
+     * without this, Postgres sorted every row that passed the filter and threw
+     * all but a `pageSize` window away (docs/audit-2026-08-26-prod-latency.md
+     * §4.1). The asymmetry that made it easy to miss: `exams` got exactly this
+     * treatment in 0011 (`exams_tenant_created_idx`) and `questions` — the
+     * table with 64k rows rather than hundreds — did not.
+     *
+     * Declared ASCENDING on purpose, even though the query says DESC. A btree
+     * scans backwards just as cheaply, and the direction only has to be spelled
+     * out for MIXED orderings (`created_at DESC, id ASC`). Both keys here point
+     * the same way, so `(topic_id, created_at, id)` serves
+     * `ORDER BY created_at DESC, id DESC` exactly. Do not "fix" this by adding
+     * `.desc()`.
+     */
+    topicCreatedIdx: index("questions_topic_created_idx").on(table.topicId, table.createdAt, table.id),
     // Multiple NULL body_hash rows (all `type = 'image'` questions) never
     // collide under Postgres' NULL-distinct unique-index semantics.
     tenantIdBodyHashIdx: uniqueIndex("questions_tenant_id_body_hash_idx").on(table.tenantId, table.bodyHash),

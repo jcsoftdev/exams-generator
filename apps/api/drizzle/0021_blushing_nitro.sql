@@ -1,0 +1,15 @@
+-- The bank grid's ordering index (docs/audit-2026-08-26-prod-latency.md §4.1).
+-- Measured on a 67k-row local bank, one topic of 1388 questions, LIMIT 50:
+--   before  227 buffers, 1.178 ms  — Bitmap Heap Scan of all 1388 + top-N heapsort
+--   after    55 buffers, 0.247 ms  — Index Scan Backward, stops at row 50
+-- The old plan's cost grew with the size of the topic; this one does not.
+--
+-- Plain CREATE INDEX, NOT CONCURRENTLY, and deliberately so: drizzle's migrator
+-- wraps every migration file in a transaction, and `CREATE INDEX CONCURRENTLY`
+-- cannot run inside one. On `questions` that is the right trade anyway — 64k
+-- rows build in well under a second, and the brief write lock lands during a
+-- deploy while the API container has not started serving yet (compose runs
+-- `migrate` before `main.js`). CONCURRENTLY is for million-row tables under
+-- live write load; using it here would mean moving the statement out to
+-- `drizzle/manual/` for no gain.
+CREATE INDEX IF NOT EXISTS "questions_topic_created_idx" ON "questions" USING btree ("topic_id","created_at","id");
