@@ -1,11 +1,10 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
-import { resolveDatabaseUrl } from "./env";
+import { resolvePoolConfig } from "./env";
 import * as schema from "./schema";
 
-export const pool = new Pool({
-  connectionString: resolveDatabaseUrl(),
-});
+/** Settings and the reasoning behind each live in `resolvePoolConfig` (`./env`). */
+export const pool = new Pool(resolvePoolConfig());
 
 export const db = drizzle(pool, { schema });
 
