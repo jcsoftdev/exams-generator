@@ -20,12 +20,50 @@ import { isSafeImageMime } from "./image-mime";
 export class AssetsController {
   constructor(private readonly service: AssetsService) {}
 
+  /**
+   * The bank tree's 40px leaf row, one per question for a whole page of 50 —
+   * see `AssetsService.getThumbnailContent` for why only that row gets a
+   * shrunk image and the readable views keep the original.
+   *
+   * Declared BEFORE `@Get(":id")`: a static-looking segment must be registered
+   * ahead of the generic `:id` catch-all in the same file for Nest's route
+   * matching to prefer it (same reason `bank.controller.ts` orders `summary`
+   * and `:id/preview` the way it does).
+   *
+   * `immutable` applies here for the same reason it does to the original: the
+   * thumbnail's storage key is derived from an original whose bytes cannot
+   * change, so neither can the thumbnail's.
+   */
+  @Get(":id/thumb")
+  async getAssetThumbnail(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id", ParseUUIDPipe) id: string,
+    @Res() res: Response,
+  ): Promise<void> {
+    const thumbnail = await this.service.getThumbnailContent(user, id);
+
+    res.set("X-Content-Type-Options", "nosniff");
+    res.set("Cache-Control", assetCacheControl(thumbnail.mime));
+    res.set("ETag", assetETag(thumbnail.buffer));
+    // `getThumbnailContent` only ever resolves for an asset that already
+    // passed `isSafeImageMime`, and falls back to those same original bytes
+    // when the resize fails — so this is always an image mime. Kept explicit
+    // rather than assumed, matching the branch below.
+    res.set("Content-Type", isSafeImageMime(thumbnail.mime) ? thumbnail.mime : "application/octet-stream");
+    res.set("Content-Disposition", "inline");
+    res.send(thumbnail.buffer);
+  }
+
   @Get(":id")
   async getAsset(
     @CurrentUser() user: AuthTokenPayload,
     @Param("id", ParseUUIDPipe) id: string,
     @Res() res: Response,
   ): Promise<void> {
+    // Resolved BEFORE any validator comparison, and deliberately so: a 304 must
+    // never become a cheaper way to confirm that another tenant's asset id
+    // exists. A cross-tenant request is a 404 whether or not its `If-None-Match`
+    // happens to match.
     const asset = await this.service.getAssetContent(user, id);
     // Never echo an attacker-chosen Content-Type. `asset.mime` came from the
     // uploader's own header (multer copies it verbatim); an `image/svg+xml`

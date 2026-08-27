@@ -11,6 +11,7 @@ import { assets, tenants, users } from "../../db/schema";
 import { STORAGE_PORT } from "../bank/bank.constants";
 import { TokenService } from "../auth/token.service";
 import { StoragePort } from "../exams/domain/ports/storage.port";
+import { thumbnailStorageKey } from "./asset-thumbnail";
 
 /**
  * Full HTTP e2e — real Nest app, real Postgres, real MinIO (docker-compose
@@ -364,5 +365,117 @@ describe("Assets module (e2e)", () => {
       .set("Authorization", `Bearer ${tenantBToken}`)
       .set("If-None-Match", mine.headers["etag"] as string)
       .expect(404);
+  });
+  /**
+   * Real `sharp`, real MinIO — no mock. The whole value of the thumbnail path
+   * is that the bytes come out smaller and still decode, and only the actual
+   * encoder can say whether that happened.
+   */
+  describe("GET /assets/:id/thumb", () => {
+    /** A 900x900 PNG — comfortably above the 320px the thumbnail targets. */
+    async function wideImage(): Promise<Buffer> {
+      const sharp = (await import("sharp")).default;
+      return sharp({
+        create: { width: 900, height: 900, channels: 3, background: { r: 200, g: 30, b: 90 } },
+      })
+        .png()
+        .toBuffer();
+    }
+
+    it("returns a SMALLER webp than the original, at the target width", async () => {
+      const original = await wideImage();
+      const id = await createAsset(tenantAId, "image/png", original);
+
+      const response = await request(app.getHttpServer())
+        .get(`/assets/${id}/thumb`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+
+      expect(response.headers["content-type"]).toMatch(/^image\/webp/);
+      expect(response.body.length).toBeLessThan(original.length);
+
+      const sharp = (await import("sharp")).default;
+      const meta = await sharp(response.body as Buffer).metadata();
+      expect(meta.width).toBe(320);
+      expect(meta.format).toBe("webp");
+    });
+
+    it("PERSISTS the thumbnail, so the second request reads it instead of resizing again", async () => {
+      const id = await createAsset(tenantAId, "image/png", await wideImage());
+
+      const first = await request(app.getHttpServer())
+        .get(`/assets/${id}/thumb`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+
+      // Written to storage under the derived key — the mechanism that makes
+      // this need no migration and heal pre-existing assets.
+      const storageKey = createdKeys[createdKeys.length - 1]!;
+      const stored = await storage.get(thumbnailStorageKey(storageKey));
+      createdKeys.push(thumbnailStorageKey(storageKey));
+      expect(Buffer.compare(stored, first.body as Buffer)).toBe(0);
+
+      const second = await request(app.getHttpServer())
+        .get(`/assets/${id}/thumb`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+      expect(Buffer.compare(second.body as Buffer, first.body as Buffer)).toBe(0);
+    });
+
+    it("caches immutably with an ETag, and 304s on revalidation", async () => {
+      const id = await createAsset(tenantAId, "image/png", await wideImage());
+
+      const first = await request(app.getHttpServer())
+        .get(`/assets/${id}/thumb`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+      createdKeys.push(thumbnailStorageKey(createdKeys[createdKeys.length - 1]!));
+
+      expect(first.headers["cache-control"]).toBe("private, max-age=31536000, immutable");
+
+      await request(app.getHttpServer())
+        .get(`/assets/${id}/thumb`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .set("If-None-Match", first.headers["etag"] as string)
+        .expect(304);
+    });
+
+    it("falls back to the original bytes when the image cannot be decoded", async () => {
+      // The grid keeps working with a heavy tile rather than a broken one.
+      const notAnImage = Buffer.from("definitely-not-a-png");
+      const id = await createAsset(tenantAId, "image/png", notAnImage);
+
+      const response = await request(app.getHttpServer())
+        .get(`/assets/${id}/thumb`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+
+      expect(response.headers["content-type"]).toMatch(/^image\/png/);
+      expect(Buffer.compare(response.body as Buffer, notAnImage)).toBe(0);
+    });
+
+    it("404s for a PDF — exam versions share this table and have no thumbnail", async () => {
+      const id = await createAsset(tenantAId, "application/pdf", Buffer.from("%PDF-1.7"), "exam.pdf");
+
+      await request(app.getHttpServer())
+        .get(`/assets/${id}/thumb`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(404);
+    });
+
+    it("404s cross-tenant — the thumbnail route is not a way around the boundary", async () => {
+      const id = await createAsset(tenantAId, "image/png", await wideImage());
+
+      await request(app.getHttpServer())
+        .get(`/assets/${id}/thumb`)
+        .set("Authorization", `Bearer ${tenantBToken}`)
+        .expect(404);
+    });
+
+    it("401s without a token", async () => {
+      const id = await createAsset(tenantAId, "image/png", await wideImage());
+
+      await request(app.getHttpServer()).get(`/assets/${id}/thumb`).expect(401);
+    });
   });
 });
