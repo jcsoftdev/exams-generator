@@ -103,7 +103,7 @@ function setup(
     archiveImpl?: (id: string) => unknown;
     deleteImpl?: (id: string) => unknown;
     getCoursesImpl?: () => unknown;
-    getTopicsForCoursesImpl?: (courseIds: string[]) => unknown;
+    getAllTopicsImpl?: () => unknown;
     reviseQuestionImpl?: (id: string, instruction: string) => unknown;
     extractQuestionFromImageImpl?: (image: File) => unknown;
     updateQuestionImpl?: (id: string, patch: unknown) => unknown;
@@ -139,11 +139,7 @@ function setup(
     of(new Blob([`b-${id}`], { type: 'image/png' })),
   );
   const getCourses = vi.fn(over.getCoursesImpl ?? (() => of(COURSES)));
-  const getTopicsForCourses = vi.fn(
-    over.getTopicsForCoursesImpl ??
-      ((courseIds: string[]) =>
-        of([...TOPICS_C1, ...TOPICS_C2].filter((t) => courseIds.includes(t.courseId)))),
-  );
+  const getAllTopics = vi.fn(over.getAllTopicsImpl ?? (() => of([...TOPICS_C1, ...TOPICS_C2])));
   const reviseQuestion = vi.fn(
     over.reviseQuestionImpl ??
       ((_id: string, _instruction: string) =>
@@ -201,7 +197,7 @@ function setup(
           fetchQuestionImage,
         },
       },
-      { provide: TaxonomyService, useValue: { getCourses, getTopicsForCourses } },
+      { provide: TaxonomyService, useValue: { getCourses, getAllTopics } },
       { provide: AiService, useValue: { reviseQuestion, extractQuestionFromImage } },
       { provide: Router, useValue: { navigate } },
     ],
@@ -221,7 +217,7 @@ function setup(
     replaceQuestionImage,
     fetchQuestionImage,
     getCourses,
-    getTopicsForCourses,
+    getAllTopics,
     reviseQuestion,
     extractQuestionFromImage,
     navigate,
@@ -260,10 +256,27 @@ function expandTopic(
 
 describe('BankListComponent', () => {
   describe('tree structure', () => {
-    it("fetches every course's topics via a single batched getTopicsForCourses call, not one per course", () => {
-      const { getTopicsForCourses } = setup();
-      expect(getTopicsForCourses).toHaveBeenCalledTimes(1);
-      expect(getTopicsForCourses).toHaveBeenCalledWith(['c1', 'c2']);
+    it('fetches the whole topic catalog in ONE request, not one per course', () => {
+      const { getAllTopics } = setup();
+      expect(getAllTopics).toHaveBeenCalledTimes(1);
+    });
+
+    /**
+     * The ordering, not just the count. Topics used to be fetched by handing
+     * `getCourses()`'s ids back as a filter, which made the second request wait
+     * on the first for a result that excluded nothing — a wasted round-trip
+     * against an origin ~620ms away (docs/audit-2026-08-26-prod-latency.md §2).
+     * Counting calls alone would not have caught that; this asserts the topics
+     * request is already in flight while the courses one is still pending.
+     */
+    it('does not wait for the courses response before asking for topics', () => {
+      const courses = new Subject<Course[]>();
+      const { getAllTopics } = setup({ getCoursesImpl: () => courses.asObservable() });
+
+      expect(getAllTopics).toHaveBeenCalledTimes(1);
+
+      courses.next(COURSES);
+      courses.complete();
     });
 
     it('groups questions by course -> topic with resolved names and counts, never raw UUIDs', () => {

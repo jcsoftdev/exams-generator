@@ -121,4 +121,24 @@ describe('TaxonomyService', () => {
       expect(result).toEqual(topics);
     });
   });
+
+  describe('getAllTopics', () => {
+    it('GETs /topics with NO courseId param — the whole catalog, one request', () => {
+      service.getAllTopics().subscribe();
+
+      const req = httpMock.expectOne((request) => request.url === `${environment.apiBaseUrl}/topics`);
+      expect(req.request.params.has('courseId')).toBe(false);
+      expect(req.request.params.has('gradeLevel')).toBe(false);
+      req.flush([]);
+    });
+
+    it('passes gradeLevel through when given', () => {
+      service.getAllTopics('5S').subscribe();
+
+      const req = httpMock.expectOne((request) => request.url === `${environment.apiBaseUrl}/topics`);
+      expect(req.request.params.get('gradeLevel')).toBe('5S');
+      expect(req.request.params.has('courseId')).toBe(false);
+      req.flush([]);
+    });
+  });
 });

@@ -1,7 +1,7 @@
 import { Component, DestroyRef, computed, effect, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Observable, forkJoin, map, switchMap } from 'rxjs';
+import { Observable, forkJoin, map } from 'rxjs';
 import {
   LucideAngularModule,
   Search,
@@ -486,10 +486,19 @@ export class BankListComponent {
   }
 
   /**
-   * Resolves id->name maps for every course/topic via a single batched
-   * `getTopicsForCourses()` call (fixes the N+1 fan-out where this used to
-   * issue one `getTopics(courseId)` request per course via `forkJoin` — see
-   * class doc).
+   * Resolves id->name maps for every course/topic.
+   *
+   * The two requests run CONCURRENTLY. They used to be chained with
+   * `switchMap` — fetch the courses, then hand their ids straight back as a
+   * `getTopicsForCourses` filter. But the tree spans every course, so that
+   * filter excluded nothing: the second call was waiting on the first purely
+   * to reconstruct "all of them". Against an origin ~620ms away that ordering
+   * cost a full extra round-trip before the tree could paint, for an identical
+   * result (docs/audit-2026-08-26-prod-latency.md §2).
+   *
+   * (The earlier fix in this spot removed a different problem — one request
+   * PER COURSE. Batching them into one was right; leaving it chained behind
+   * `getCourses()` was the leftover.)
    */
   private fetchTaxonomy(): Observable<{
     courseNames: ReadonlyMap<string, string>;
@@ -497,19 +506,18 @@ export class BankListComponent {
     courses: readonly Course[];
     topics: readonly Topic[];
   }> {
-    return this.taxonomyService.getCourses().pipe(
-      switchMap((courses) =>
-        this.taxonomyService.getTopicsForCourses(courses.map((course) => course.id)).pipe(
-          map((topics) => ({
-            // Labels, not raw names: same-named courses from different stages
-            // are indistinguishable otherwise (audit 2026-08-20, M2).
-            courseNames: courseLabels(courses),
-            topicNames: new Map(topics.map((topic) => [topic.id, topic.name])),
-            courses,
-            topics,
-          })),
-        ),
-      ),
+    return forkJoin({
+      courses: this.taxonomyService.getCourses(),
+      topics: this.taxonomyService.getAllTopics(),
+    }).pipe(
+      map(({ courses, topics }) => ({
+        // Labels, not raw names: same-named courses from different stages
+        // are indistinguishable otherwise (audit 2026-08-20, M2).
+        courseNames: courseLabels(courses),
+        topicNames: new Map(topics.map((topic) => [topic.id, topic.name])),
+        courses,
+        topics,
+      })),
     );
   }
 
