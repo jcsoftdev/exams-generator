@@ -3,6 +3,7 @@ import { Response } from "express";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
+import { assetCacheControl, assetETag } from "./asset-cache";
 import { pdfDownloadFilename } from "./asset-filename";
 import { AssetsService } from "./assets.service";
 import { isSafeImageMime } from "./image-mime";
@@ -33,6 +34,20 @@ export class AssetsController {
     // below to octet-stream, and forbid MIME sniffing so the browser cannot
     // second-guess us back into rendering it.
     res.set("X-Content-Type-Options", "nosniff");
+
+    // Caching policy + validator (see `asset-cache.ts` for why images may be
+    // `immutable` and PDFs may not). Both are set before `res.send()`, which is
+    // what lets Express answer a matching `If-None-Match` with a bodiless 304
+    // on its own — the whole point, since the web fetches every bank thumbnail
+    // as a separate authenticated XHR against an origin ~620ms away
+    // (docs/audit-2026-08-26-prod-latency.md §3).
+    //
+    // The object is still read from storage to hash it, so a 304 saves the
+    // payload but not the MinIO round-trip. That is the half that costs, and
+    // skipping the read would mean persisting a content hash on `assets` —
+    // a schema change, and a separate decision.
+    res.set("Cache-Control", assetCacheControl(asset.mime));
+    res.set("ETag", assetETag(asset.buffer));
 
     // Exam version PDFs come through this same route
     // (`exam-generation.service.ts` links them as `/assets/:id`), and the

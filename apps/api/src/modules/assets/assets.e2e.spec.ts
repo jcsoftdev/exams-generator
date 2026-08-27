@@ -254,4 +254,115 @@ describe("Assets module (e2e)", () => {
     expect(response.headers["content-type"]).toMatch(/^image\/png/);
     expect(response.headers["x-content-type-options"]).toBe("nosniff");
   });
+  /**
+   * The prod-latency finding this closes (docs/audit-2026-08-26-prod-latency.md
+   * §3): the route emitted no `Cache-Control` and no `ETag` at all. The web
+   * fetches thumbnails as authenticated blob XHRs (bearer auth means a plain
+   * `<img src>` cannot work), so a topic of 50 questions re-downloaded ~3MB of
+   * images on EVERY visit — each request paying the ~620ms round-trip to an
+   * origin in France measured in that audit.
+   */
+  it("GET /assets/:id — an image is cacheable forever and PRIVATE, with a strong ETag", async () => {
+    const id = await createAsset(tenantAId, "image/png", Buffer.from("cacheable-png"));
+
+    const response = await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .expect(200);
+
+    expect(response.headers["cache-control"]).toBe("private, max-age=31536000, immutable");
+    // `private` is the security half, not a tuning detail: Cloudflare fronts
+    // this API in production and must never store one tenant's question image.
+    expect(response.headers["cache-control"]).not.toMatch(/public/);
+    expect(response.headers["etag"]).toMatch(/^"[0-9a-f]+"$/);
+  });
+
+  it("GET /assets/:id — a PDF revalidates instead of caching immutably", async () => {
+    // Exam-version PDFs reuse their storage key across regenerations, so an
+    // already-issued asset id can come to point at different bytes. It may be
+    // stored, but never reused without asking.
+    const id = await createAsset(tenantAId, "application/pdf", Buffer.from("%PDF-1.7"), "exam.pdf");
+
+    const response = await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .expect(200);
+
+    expect(response.headers["cache-control"]).toBe("private, no-cache");
+    expect(response.headers["cache-control"]).not.toMatch(/immutable/);
+    expect(response.headers["etag"]).toMatch(/^"[0-9a-f]+"$/);
+  });
+
+  it("GET /assets/:id — returns 304 with no body when If-None-Match matches", async () => {
+    const bytes = Buffer.from("bytes-worth-not-resending");
+    const id = await createAsset(tenantAId, "image/png", bytes);
+
+    const first = await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .expect(200);
+    const etag = first.headers["etag"] as string;
+
+    const second = await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .set("If-None-Match", etag)
+      .expect(304);
+
+    // This is the byte saving that makes the round-trip worth paying: the
+    // revalidation carries no payload at all.
+    expect(second.body).toEqual({});
+    expect(second.headers["content-length"]).toBeUndefined();
+  });
+
+  it("GET /assets/:id — a stale If-None-Match still gets the full bytes", async () => {
+    const bytes = Buffer.from("fresh-bytes");
+    const id = await createAsset(tenantAId, "image/png", bytes);
+
+    const response = await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .set("If-None-Match", '"0000000000000000000000000000dead"')
+      .expect(200);
+
+    expect(Buffer.compare(response.body as Buffer, bytes)).toBe(0);
+  });
+
+  it("GET /assets/:id — two assets holding the same bytes share an ETag, different bytes do not", async () => {
+    const same = Buffer.from("identical-content");
+    const a = await createAsset(tenantAId, "image/png", same);
+    const b = await createAsset(tenantAId, "image/png", same);
+    const c = await createAsset(tenantAId, "image/png", Buffer.from("other-content"));
+
+    const get = async (id: string): Promise<string> =>
+      (
+        await request(app.getHttpServer())
+          .get(`/assets/${id}`)
+          .set("Authorization", `Bearer ${tenantAToken}`)
+          .expect(200)
+      ).headers["etag"] as string;
+
+    expect(await get(a)).toBe(await get(b));
+    expect(await get(a)).not.toBe(await get(c));
+  });
+
+  /**
+   * A 304 must not become a way to confirm that another tenant's asset id
+   * exists. The visibility check runs before any validator comparison, so a
+   * cross-tenant request is a 404 whether or not the ETag matches.
+   */
+  it("GET /assets/:id — a cross-tenant request with a VALID ETag is still 404, never 304", async () => {
+    const id = await createAsset(tenantAId, "image/png", Buffer.from("tenant-a-only"));
+
+    const mine = await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .expect(200);
+
+    await request(app.getHttpServer())
+      .get(`/assets/${id}`)
+      .set("Authorization", `Bearer ${tenantBToken}`)
+      .set("If-None-Match", mine.headers["etag"] as string)
+      .expect(404);
+  });
 });
