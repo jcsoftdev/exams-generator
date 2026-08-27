@@ -560,6 +560,263 @@
       "correctAnswer": "2",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
       "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 50 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cómo se lee? $B supset A$\n\nI. A está incluido en B\n\nII. A es un subconjunto de B\n\nIII. A está contenido en B\n\nIV. A no está incluido en B\n\nV. B incluye a A",
+      "alternatives": [
+        "II",
+        "IV",
+        "V",
+        "I",
+        "III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 01 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $p -> q$ es falso, ¿cuál es el valor de verdad de $p Delta q$?",
+      "alternatives": [
+        "$<->$",
+        "F",
+        "$tilde V$",
+        "V",
+        "$Delta$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 02 (clave D)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "sI $12^(2n)$ tiene 63 divisores más que $12^n$, calcula $n$.",
+      "alternatives": [
+        "1",
+        "3",
+        "4",
+        "0",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 03 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la suma de los factores primos de:\n\n$P_((x\\, y)) = 6x^2 + 7x y + 2y^2 + 13x + 8y + 6$",
+      "alternatives": [
+        "$5x + 6y + 5$",
+        "$4x + 2y + 5$",
+        "$5x + 7y + 5$",
+        "$5x + 3y + 5$",
+        "$5x + 4y + 5$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 05 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Productos Notables",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que: $a = 1 + b$\n\nDetermina el valor de: $M = (a + b)(a^2 + b^2)(a^4 + b^4)$",
+      "alternatives": [
+        "$a^6 - b^6$",
+        "$a^8 + b^8$",
+        "$a^4 - b^4$",
+        "$a^6 + b^6$",
+        "$a^8 - b^8$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 06 (clave E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Posición",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A un grupo de padres de familia se les pregunta acerca del número de hijos que tienen. Los resultados se muestran en la siguiente tabla:\n\n#align(center, table(columns: 2, align: center + horizon, inset: 6pt, stroke: 0.6pt, [N° de hijos], [N° de padres], [1], [4], [2], [6], [3], [10], [4], [9], [5], [1]))\n\nHalla el mayor número de hijos que tienen el 50% de los que tienen menos hijos.",
+      "alternatives": [
+        "1",
+        "3",
+        "4",
+        "5",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 10 (clave B)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la lengua no originaria del Perú.",
+      "alternatives": [
+        "Aymara",
+        "Jíbaro",
+        "Kauki",
+        "Náhuati",
+        "Amuesha"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 12 (clave D)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Morfología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el morfema gramatical flexivo en el siguiente ejemplo.\n\nNiñas",
+      "alternatives": [
+        "--a--",
+        "Ni--",
+        "Niña--",
+        "--as",
+        "N iñ--"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 13 (clave A)"
+    },
+    {
+      "courseName": "Literatura",
+      "topicName": "Literatura española",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Completa el organizador",
+      "alternatives": [
+        "Estudiante de Salamanca",
+        "El Ingenioso Hidalgo Don Quijote de la Mancha",
+        "El poema del Mio Cid",
+        "El Lazarillo de Tormes",
+        "El Lazarillo de ciegos caminantes"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-17-uncp-2021-1-area3-figures/lit-lot-17-uncp-2021-1-area3-15.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 15 (clave D)"
+    },
+    {
+      "courseName": "Geografía",
+      "topicName": "Áreas naturales protegidas del Perú",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Relaciona los parques nacionales y su ubicación:\n\nI. Manu\n\nII. Huascarán\n\nIII. Cutervo\n\na. Áncash\n\nb. Cusco y Madre de Dios\n\nc. Cajamarca",
+      "alternatives": [
+        "Ib -- IIa -- IIIc",
+        "Ia -- IIc -- IIIb",
+        "Ic -- IIb -- IIIa",
+        "Ib -- IIc -- IIIa",
+        "Ia -- IIb -- IIIc"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 22 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Referencias textuales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica el (los) enunciado(s) que ejemplifica(n) el referente textual de la elipsis:\n\nI. Daniel analizó un poema de César Vallejo y Rocío, un cuento de Julio Ramón Ribeyro.\n\nII. Eduardo organizó una fiesta en plena pandemia, él es un irresponsable.\n\nIII. Ella es la máxima autoridad, la directora del proyecto tiene la última palabra.",
+      "alternatives": [
+        "II",
+        "I",
+        "I -- II -- III",
+        "III",
+        "II -- III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 32 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el número que falta:\n\n#align(center, table(columns: 3, align: center + horizon, inset: 5pt, stroke: none,\n  [3], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$9$], [3],\n  [2], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$4$], [2],\n  [5], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$7$], [2],\n  [3], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[#hide[$0$]], [4],\n))",
+      "alternatives": [
+        "7",
+        "12",
+        "11",
+        "13",
+        "9"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 44 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué figura(s) se puede(n) realizar con un solo trazo y sin levantar el lápiz del papel?",
+      "alternatives": [
+        "Solo I",
+        "II y III",
+        "Solo II",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-17-uncp-2021-1-area3-figures/rm-lot-17-uncp-2021-1-area3-45.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 45 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se muestra un cuadrado mágico de orden 4.\n\nDetermina: $(M^2 + N^2)/2$\n\n#align(center, table(columns: 4, align: center + horizon, inset: 7pt, stroke: 0.6pt,\n  [$M$], [], [7], [12],\n  [], [4], [9], [],\n  [], [5], [16], [3],\n  [8], [11], [], [$N$],\n))",
+      "alternatives": [
+        "100",
+        "85",
+        "40",
+        "52",
+        "63"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 46 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Operaciones y Operadores Matemáticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se define la operación matemática: $2$#box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$n$] $=$ #box(baseline: 0.25em, stroke: 0.5pt, inset: (x: 3pt, y: 2pt))[$n - 1$] $- 5$\n\nAdemás: #box(baseline: 0.25em, stroke: 0.5pt, inset: (x: 3pt, y: 2pt))[$n + 1$] $=$ #box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$n + 2$] $- 3$\n\nCalcula el valor de: #box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$4$]",
+      "alternatives": [
+        "$-11$",
+        "$11$",
+        "$8$",
+        "$-8$",
+        "$10$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=28",
+      "sourceName": "Academia Ingeniería — Examen de Admisión UNCP 2021-I (Área III), pregunta 49 (clave D)"
     }
   ]
 }

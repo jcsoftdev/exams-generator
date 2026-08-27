@@ -192,13 +192,13 @@
       "topicName": "Teoría de Ecuaciones",
       "gradeLevel": "pre",
       "difficulty": "hard",
-      "bodyTypst": "Dada la ecuación cuadrática x 2 − mx + m + 3 = 0 Determine m tal que tenga soluciones reales.",
+      "bodyTypst": "Dada la ecuación cuadrática $x^2 - m x + m + 3 = 0$\n\nDetermine $m$ tal que tenga soluciones reales.",
       "alternatives": [
-        "h−∞, 3] ∪ [7, +∞i",
-        "h−∞, −4] ∪ [8, +∞i",
-        "h−∞, −2] ∪ [6, +∞i",
-        "R",
-        "h−∞, −5]"
+        "$lr(⟨-oo, 3]) union lr([7, +oo⟩)$",
+        "$lr(⟨-oo, -4]) union lr([8, +oo⟩)$",
+        "$lr(⟨-oo, -2]) union lr([6, +oo⟩)$",
+        "$RR$",
+        "$lr(⟨-oo, -5])$"
       ],
       "correctAnswer": "2",
       "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
@@ -987,6 +987,299 @@
       "correctAnswer": "4",
       "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
       "sourceName": "UNI — Examen de Admisión 2020-1, Química, pregunta 40 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Interés y Descuento",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La relación entre el descuento racional y el descuento comercial es $9/10$.\n\nDetermine la relación entre el valor actual comercial y el valor nominal del mismo documento.",
+      "alternatives": [
+        "$6/9$",
+        "$7/9$",
+        "$8/9$",
+        "$9/9$",
+        "$10/9$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene 12 fichas numeradas del 1 al 12. Se extrae aleatoriamente una primera ficha, luego una segunda y una tercera ficha, sin reposición. Calcule la probabilidad de que estos tres números estén en progresión aritmética de razón 1 o de razón -1.",
+      "alternatives": [
+        "$1/66$",
+        "$5/66$",
+        "$7/66$",
+        "$11/66$",
+        "$35/66$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 5 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea la expresión matemática\n\n$f(x) = x/sqrt(1 - x^2) + sqrt(1 - x^2)/x$;  $x in.not {-1, 0, 1}$\n\nCalcule $m$ ($m in RR^+$), si se cumple que\n\n$f(triangle) = 2$, cuando:\n\n$triangle = sqrt(1/2 - sqrt(1/4 - 1/m^2))$",
+      "alternatives": [
+        "1",
+        "49",
+        "2",
+        "4",
+        "$sqrt(11)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 11 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Progresiones y Límites de Sucesiones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las siguientes proposiciones con respecto a la suma finita\n\n$sum_(k=0)^1720 (-1/x)^k$\n\nI. La suma es igual a cero para $x = 1$.\n\nII. La suma es igual a uno para $x = 1$.\n\nIII. La suma es 1721 para $x = -1$.\n\nSon correctas:",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "II y III"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 12 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se define la matriz $A = [a_(i j)]_(2 times 3)$ como\n\n$a_(i j) = cases(2i + j quad \"si\" i < j, i j quad \"si\" i >= j)$\n\nCalcule $|A A^T|$.",
+      "alternatives": [
+        "82",
+        "84",
+        "86",
+        "89",
+        "92"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 14 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La ecuación $(x^2 + 3x)/(5x + 12) = (m - 1)/(m + 1)$ en $x$, tiene raíces de signos opuestos y el mismo valor absoluto.\n\nDadas las siguientes proposiciones\n\nI. $m < 3$\n\nII. $m in [2, 6]$\n\nIII. $m in [5, 10]$\n\nIndique cuál (o cuáles) son las correctas:",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "II y III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 19 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el sistema:\n\n$cases(-x + y <= 2, -x + 7y >= 20, x >= 0, y >= 0)$\n\nIndique cuáles de las siguientes proposiciones son correctas:\n\nI. La solución es única.\n\nII. La solución es un conjunto no acotado.\n\nIII. La solución es un conjunto vacío.",
+      "alternatives": [
+        "I, II y III",
+        "I y II",
+        "Solo II",
+        "I y III",
+        "Solo III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 20 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Polígonos y Cuadriláteros",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la figura $A B C D E F$ es un hexágono regular, determine $R H$, sabiendo que $B M = a$ y $M R = b$, con $a > b$.",
+      "alternatives": [
+        "$(a(a + b))/(a - b)$",
+        "$(b(a + b))/(a - b)$",
+        "$(a + b)^2/(a - b)$",
+        "$(a b)/(a - b)$",
+        "$b^2/(a - b)$"
+      ],
+      "correctAnswer": "1",
+      "imagePath": "uni-2020-1-figures/geo-2020-mat-24.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 24 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Circunferencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se traza una circunferencia que tiene como diámetro uno de los lados de un triángulo equilátero de lado \"$a$\". La longitud de la parte de la circunferencia que queda dentro del triángulo es:",
+      "alternatives": [
+        "$(pi a)/6$",
+        "$(pi a)/3$",
+        "$(pi a)/(sqrt(3) + 1)$",
+        "$(pi a)/sqrt(2)$",
+        "$(pi a)/(sqrt(2) + 1)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 27 (clave A)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sean los segmentos $overline(A B)$ y $overline(C D)$ ubicados en planos diferentes, que forman un ángulo que mide $30 degree$. Si $overline(A C) perp overline(A B)$, $overline(A C) perp overline(C D)$, $A C = 2$ m, $A B = 4$ m y $C D = sqrt(3)$, m entonces la longitud (en m) de $overline(B D)$ es:",
+      "alternatives": [
+        "$sqrt(10)$",
+        "$sqrt(11)$",
+        "$sqrt(12)$",
+        "$sqrt(13)$",
+        "$sqrt(14)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 28 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la gráfica de $y = A arccos(B x + C) + D$ es:\n\nDetermine el valor de: $E = A + B + C$",
+      "alternatives": [
+        "3",
+        "$2/3$",
+        "$4/3$",
+        "4",
+        "$14/3$"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "uni-2020-1-figures/trig-2020-mat-33.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 33 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Identidades Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine el valor máximo de la siguiente función:\n\n$y(x) = sqrt((1 - cos x)(1 + 2 cos x))$,  $x in lr(⟨0, (2 pi)/3⟩)$",
+      "alternatives": [
+        "$3/4$",
+        "$(3 sqrt(2))/4$",
+        "$(3 sqrt(3))/4$",
+        "$6/4$",
+        "$(3 sqrt(5))/4$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 34 (clave B)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el cuadrado $A B C D$ de la figura mostrada, $M$ y $N$ son puntos medios de sus respectivos lados. Si $m angle N M D = theta$, entonces el valor de $cot(theta/2)$ es:",
+      "alternatives": [
+        "$sqrt(5) - 2$",
+        "$sqrt(10) - 3$",
+        "$sqrt(5) + 2$",
+        "$sqrt(10) + sqrt(5)$",
+        "$sqrt(10) + 3$"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "uni-2020-1-figures/trig-2020-mat-36.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 36 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se desea construir un túnel en una montaña entre dos pueblos en Huancayo, que tenga como sección transversal un arco semielíptico, con eje mayor de 15 metros y una altura en el centro de 3 metros. Encuentre la ecuación canónica de la elipse sobre la que descansa la sección transversal del túnel.",
+      "alternatives": [
+        "$x^2/225 + y^2/9 = 1$",
+        "$x^2/(56\",\"25) + y^2/(2\",\"25) = 1$",
+        "$x^2/(56\",\"25) + y^2/9 = 1$",
+        "$x^2/900 + y^2/36 = 1$",
+        "$x^2/30 + y^2/6 = 1$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Matemáticas, pregunta 37 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La siguiente fórmula es dimensionalmente correcta:\n\n$A = A_0 cos(alpha t^2 + beta x^(1\\/2))$\n\ndonde \"$t$\" es el tiempo y \"$x$\" el desplazamiento. Encuentre la dimensión de $alpha\\/beta$.",
+      "alternatives": [
+        "$T^(-3) L^(1\\/2)$",
+        "$T^(-2) L^(-1\\/2)$",
+        "$T^(-2) L^(1\\/2)$",
+        "$T^2 L^(-1\\/2)$",
+        "$T^3 L^(1\\/2)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Física, pregunta 1 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Dinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el sistema mostrado, los coeficientes de rozamiento entre la plataforma $A$ y el bloque $B$ son $mu_s = 0\",\"8$ y $mu_k = 0\",\"6$. La plataforma $A$ se mueve sobre la superficie horizontal sin fricción. Determine aproximadamente en N, la magnitud de la fuerza $F$ horizontal con la que se puede jalar la plataforma $A$, tal que el bloque $B$ no resbale. La masa de la plataforma $A$ es de 20 kg y la del bloque $B$ es de 5 kg.\n\n$g = 9\",\"81$ m/s$\"\"^2$",
+      "alternatives": [
+        "56",
+        "96",
+        "156",
+        "196",
+        "256"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "uni-2020-1-figures/fis-2020-fis-03.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Física, pregunta 3 (clave D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La función de onda mecánica formada en una cuerda es de la forma:\n\n$y(x, t) = 1/9 sin(5 pi x - 9 pi t)$ m\n\ndonde $t$ está en s y $x$ en m. Si la potencia media es de 18 mW, calcule aproximadamente en g/m, la densidad lineal de la cuerda.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+      "sourceName": "UNI — Examen de Admisión 2020-1, Física, pregunta 14 (clave B)"
     }
   ]
 }

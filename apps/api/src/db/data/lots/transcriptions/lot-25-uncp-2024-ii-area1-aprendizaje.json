@@ -1,0 +1,22 @@
+{
+  "lot": "lot-25-uncp-2024-ii-area1-aprendizaje",
+  "transcriptions": [
+    {
+      "imagePath": "lot-25-uncp-2024-ii-area1-aprendizaje-image/psi-lot-25-01.png",
+      "bodyTypst": "Correlacione los tipos de aprendizaje con la figura que lo caracteriza:\n\nI. Aprendizaje social\n\nII. Aprendizaje motor\n\nIII. Aprendizaje actitudinal",
+      "alternatives": [
+        "Ia -- IIc -- IIIb",
+        "Ic -- IIa -- IIIb",
+        "Ib -- IIc -- IIIa",
+        "Ic -- IIb -- IIIa",
+        "Ia -- IIb -- IIIc"
+      ],
+      "figureCrop": {
+        "left": 0.42,
+        "top": 0.11,
+        "right": 0.756,
+        "bottom": 0.815
+      }
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "lot": "uni-2021-1",
+  "transcriptions": [
+    {
+      "imagePath": "uni-2021-1-image/rm-11-07.png",
+      "bodyTypst": "Establecer la figura que reemplaza a \"?\":",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "figureCrop": {
+        "left": 0.557,
+        "top": 0.068,
+        "right": 0.985,
+        "bottom": 0.394
+      },
+      "alternativeCrops": [
+        {
+          "left": 0.157,
+          "top": 0.431,
+          "right": 0.296,
+          "bottom": 0.532
+        },
+        {
+          "left": 0.157,
+          "top": 0.55,
+          "right": 0.298,
+          "bottom": 0.651
+        },
+        {
+          "left": 0.155,
+          "top": 0.666,
+          "right": 0.296,
+          "bottom": 0.769
+        },
+        {
+          "left": 0.157,
+          "top": 0.779,
+          "right": 0.292,
+          "bottom": 0.876
+        },
+        {
+          "left": 0.155,
+          "top": 0.888,
+          "right": 0.292,
+          "bottom": 0.986
+        }
+      ]
+    },
+    {
+      "imagePath": "uni-2021-1-image/rm-11-08.png",
+      "bodyTypst": "Asuma que las pesas mostradas están balanceadas. De las siguientes opciones, establecer cuál tiene la misma masa que #box(baseline: 0.15em, circle(radius: 0.32em, fill: luma(70%), stroke: 0.6pt))#box(baseline: 0.15em, rotate(180deg, polygon.regular(size: 0.78em, vertices: 3, fill: luma(70%), stroke: 0.6pt)))#box(baseline: 0.15em, rotate(180deg, polygon.regular(size: 0.78em, vertices: 3, fill: luma(70%), stroke: 0.6pt)))#box(baseline: 0.15em, rotate(180deg, polygon.regular(size: 0.78em, vertices: 3, fill: luma(70%), stroke: 0.6pt)))",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "figureCrop": {
+        "left": 0.35,
+        "top": 0.196,
+        "right": 0.699,
+        "bottom": 0.569
+      },
+      "alternativeCrops": [
+        {
+          "left": 0.108,
+          "top": 0.607,
+          "right": 0.213,
+          "bottom": 0.67
+        },
+        {
+          "left": 0.102,
+          "top": 0.68,
+          "right": 0.247,
+          "bottom": 0.744
+        },
+        {
+          "left": 0.104,
+          "top": 0.756,
+          "right": 0.237,
+          "bottom": 0.823
+        },
+        {
+          "left": 0.106,
+          "top": 0.835,
+          "right": 0.236,
+          "bottom": 0.902
+        },
+        {
+          "left": 0.11,
+          "top": 0.915,
+          "right": 0.21,
+          "bottom": 0.982
+        }
+      ]
+    },
+    {
+      "imagePath": "uni-2021-1-image/rm-11-09.png",
+      "bodyTypst": "Establecer el número que reemplaza a \"?\":",
+      "alternatives": [
+        "29",
+        "38",
+        "64",
+        "76",
+        "85"
+      ],
+      "figureCrop": {
+        "left": 0.399,
+        "top": 0.154,
+        "right": 0.635,
+        "bottom": 0.844
+      }
+    },
+    {
+      "imagePath": "uni-2021-1-image/arit-21-02.png",
+      "bodyTypst": "De un lote de 12 panetones se observa que 8 tienen pasas y los restantes no. ¿Cuál es la probabilidad de obtener 3 panetones con pasas y 2 sin pasas al escoger 5 panetones?",
+      "alternatives": [
+        "$12/33$",
+        "$14/33$",
+        "$16/33$",
+        "$18/33$",
+        "$20/33$"
+      ]
+    },
+    {
+      "imagePath": "uni-2021-1-image/arit-21-03.png",
+      "bodyTypst": "Un número $N$ en base 27 se escribe: $N = 123123_(27)$\n\nExpresar $N$ en base 10 y dar como respuesta la suma de sus cifras.",
+      "alternatives": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32"
+      ]
+    },
+    {
+      "imagePath": "uni-2021-1-image/arit-21-04.png",
+      "bodyTypst": "¿Cuántas fracciones irreductibles de la forma $N / overline(a b)$ al ser representadas como expresión decimal tienen la forma: $0\",\" overline(x y z w t r)$ ?",
+      "alternatives": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "imagePath": "uni-2021-1-image/arit-21-05.png",
+      "bodyTypst": "Si la expresión $N = a^(3a) dot (a + 1)^(2a)$ es la descomposición canónica del número $N$, halle la suma de los divisores compuestos de $N$. Dé como respuesta la suma de las cifras del resultado.",
+      "alternatives": [
+        "10",
+        "12",
+        "14",
+        "16",
+        "18"
+      ]
+    },
+    {
+      "imagePath": "uni-2021-1-image/alg-22-07.png",
+      "bodyTypst": "Indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F)\n\nRespecto a la ecuación en la variable en $x$, $a(a^2 - 1)x = 0$\n\nI. Si $a = -1$, la ecuación tiene infinitas soluciones.\n\nII. Si $a = 0$, la ecuación tiene solución única.\n\nIII. Si $a in {-1, 0, 1}$, la ecuación tiene solución única e igual a cero.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VFF",
+        "FVF",
+        "FFF"
+      ]
+    },
+    {
+      "imagePath": "uni-2021-1-image/alg-22-08.png",
+      "bodyTypst": "Indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F)\n\nI. Para todo $x > 0$ se tiene $log_3 (x) = log_9 (x + 1)$\n\nII. La función logarítmica es una función decreciente\n\nIII. La función logaritmo es siempre positiva",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FVV",
+        "FFV",
+        "FFF"
+      ]
+    },
+    {
+      "imagePath": "uni-2021-1-image/geo-23-15.png",
+      "bodyTypst": "Un tronco de prisma recto tiene por base un triángulo equilátero cuyo lado mide $b$ unidades, las aristas miden $2b$, $3b$, y $4b$ unidades respectivamente.\n\nCalcule el volumen en unidades cúbicas del tronco del prisma.",
+      "alternatives": [
+        "$sqrt(3)/4 b^3$",
+        "$(3 sqrt(3))/2 b^3$",
+        "$(3 sqrt(3))/4 b^3$",
+        "$sqrt(3)/2 b^3$",
+        "$(8 sqrt(3))/2 b^3$"
+      ]
+    },
+    {
+      "imagePath": "uni-2021-1-image/trig-24-17.png",
+      "bodyTypst": "Si se cumplen las condiciones $|tan theta| = - tan theta$; $|cos theta| = cos theta$;\n\n$|sec theta + tan theta| = sqrt(11)/8$\n\nCalcule $E = sec theta cot theta$",
+      "alternatives": [
+        "$53/75$",
+        "$-53/75$",
+        "$1$",
+        "$-75/53$",
+        "$75/53$"
+      ]
+    },
+    {
+      "imagePath": "uni-2021-1-image/trig-24-18.png",
+      "bodyTypst": "En la siguiente estructura metálica, halle $tan alpha$",
+      "alternatives": [
+        "$-1$",
+        "$-2$",
+        "$-3$",
+        "$-4$",
+        "$-5$"
+      ],
+      "figureCrop": {
+        "left": 0.295,
+        "top": 0.22,
+        "right": 0.742,
+        "bottom": 0.778
+      }
+    },
+    {
+      "imagePath": "uni-2021-1-image/trig-24-20.png",
+      "bodyTypst": "La distancia más cercana del planeta mercurio al sol es de $28 times 10^6$ millas y la excentricidad de su órbita es $1/5$. Encuentre (en millas) la diferencia entre su máxima y su mínima distancia al sol.",
+      "alternatives": [
+        "$10 times 10^6$",
+        "$11 times 10^6$",
+        "$12 times 10^6$",
+        "$13 times 10^6$",
+        "$14 times 10^6$"
+      ]
+    }
+  ]
+}

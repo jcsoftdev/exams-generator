@@ -1,0 +1,257 @@
+{
+  "lot": "lot-15-uncp-2021-iv",
+  "transcriptions": [
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/alg-lot-15-uncp-2021-iv-alg-04.png",
+      "bodyTypst": "Si: $3 - 2 sqrt(2)$ es una raíz del polinomio\n\n$R(x) = m x^3 - 11 x^2 - n x + 1 = 0$\n\nDetemrina el valor de: $m + n$",
+      "alternatives": [
+        "2",
+        "8",
+        "4",
+        "10",
+        "6"
+      ]
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/alg-lot-15-uncp-2021-iv-alg-05.png",
+      "bodyTypst": "Sea: $f(x) = x + 1/x + 3$\n\nHalla la traza de $f(A)$\n\nSi: $A = |A| mat(delim: \"[\", 3, -2; 2, 2)$",
+      "alternatives": [
+        "$14\",\"5$",
+        "$13\",\"5$",
+        "$10\",\"5$",
+        "$12\",\"5$",
+        "$11\",\"5$"
+      ]
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/est-lot-15-uncp-2021-iv-est-06.png",
+      "bodyTypst": "Se tiene los siguientes datos clasificados, calcule la mediana.\n\n#align(center, table(columns: 3, align: center + horizon, inset: 6pt, stroke: 0.6pt,\n  [$I_i$], [$f_i$], [$F_i$],\n  [$lr([20 - 30⟩)$], [2], [2],\n  [$lr([30 - 40⟩)$], [4], [6],\n  [$lr([40 - 50⟩)$], [5], [11],\n  [$lr([50 - 60⟩)$], [6], [17],\n  [$lr([60 - 70⟩)$], [3], [20],\n))",
+      "alternatives": [
+        "54",
+        "46",
+        "48",
+        "50",
+        "52"
+      ]
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/est-lot-15-uncp-2021-iv-est-07.png",
+      "bodyTypst": "Dada la siguiente tabla de datos de un grupo de personas:\n\n#align(center, table(columns: 2, align: center + horizon, inset: 6pt, stroke: 0.6pt,\n  [Edades], [$h_i$],\n  [$[19 - 21]$], [$0\",\"15$],\n  [$[22 - 24]$], [$0\",\"25$],\n  [$[25 - 27]$], [$0\",\"40$],\n  [$[28 - 30]$], [$0\",\"10$],\n  [$[31 - 33]$], [$0\",\"10$],\n))\n\nSi $F_4 = 270$, ¿cuántas personas tienen edades entre 31 y 33 años?",
+      "alternatives": [
+        "34",
+        "32",
+        "30",
+        "26",
+        "28"
+      ]
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/fis-lot-15-uncp-2021-iv-fis-13.png",
+      "bodyTypst": "Si el bloque de masa $m = 5$ kg sube 4 metros con velocidad constante, calcula el trabajo realizado por la fuerza $F$ en Joule.\n\n($g = 10$ m/s$\"\"^2$)",
+      "alternatives": [
+        "200",
+        "-200",
+        "300",
+        "-400",
+        "400"
+      ],
+      "figureCrop": {
+        "left": 0.38,
+        "top": 0.321,
+        "right": 0.682,
+        "bottom": 0.946
+      }
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/fis-lot-15-uncp-2021-iv-fis-14.png",
+      "bodyTypst": "El resorte de la figura ($k = 10$ N / m) está ligado a un bloque de 50 g, el cual es impactado inelásticamente por un proyectil de igual masa. Si la máxima deformación que experimenta el resorte es $0\",\"1$ m, halla la rapidez horizontal (en m/s) del proyectil antes del impacto.",
+      "alternatives": [
+        "1 m/s",
+        "4 m/s",
+        "2 m/s",
+        "$0\",\"5$ m/s",
+        "$1\",\"5$ m/s"
+      ],
+      "figureCrop": {
+        "left": 0.349,
+        "top": 0.405,
+        "right": 0.718,
+        "bottom": 0.75
+      }
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/quim-lot-15-uncp-2021-iv-qui-15.png",
+      "bodyTypst": "Determina el estado de oxidación de P en el compuesto $\"Ca\"_3(\"PO\"_4)_2$.",
+      "alternatives": [
+        "3+",
+        "2+",
+        "1+",
+        "5+",
+        "4+"
+      ]
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/quim-lot-15-uncp-2021-iv-qui-16.png",
+      "bodyTypst": "La energía para el enlace C--H es $183 \"kJ\"/\"mol\"$ y para el de C--Cl es $279 \"kJ\"/\"mol\"$.\n\nCalcula la energía total de enlace para la molécula $\"CHCL\"_3$ (Cloroformo).",
+      "alternatives": [
+        "2010",
+        "1020",
+        "1393",
+        "1200",
+        "3193"
+      ]
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/quim-lot-15-uncp-2021-iv-qui-17.png",
+      "bodyTypst": "De la siguiente reacción química:\n\n$\"HNO\"_3 + \"I\"_2 --> \"HIO\"_3 + \"NO\" + \"H\"_2\"O\"$\n\nDetermina el coeficiente del agente oxidante.",
+      "alternatives": [
+        "2",
+        "10",
+        "13",
+        "3",
+        "6"
+      ]
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/bio-lot-15-uncp-2021-iv-bio-21.png",
+      "bodyTypst": "Nombra los componentes del cito esqueleto representados por X,Y,Z respectivamente",
+      "alternatives": [
+        "Microtúbulo, filamento intermedio, microfilamento de tubulina.",
+        "Microfilamento, microtúbulo, filamento delgado.",
+        "Filamento intemedio, microtúbulo, microfilamento de actina.",
+        "Microfilamento, filamento intermedio, microtúbulo.",
+        "Microtúbulo, filamento intermedio, microfilamento de actina."
+      ],
+      "figureCrop": {
+        "left": 0.291,
+        "top": 0.152,
+        "right": 0.665,
+        "bottom": 0.662
+      }
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/bio-lot-15-uncp-2021-iv-bio-22.png",
+      "bodyTypst": "Analiza la verdad (V) o falsedad (F) de las proposiciones respecto a las hormonas que intervienen en la función renal.\n\n#align(center, table(columns: 2, stroke: none, align: center, inset: 6pt, column-gutter: 2em,\n  [*P*], [*Q*],\n  box(stroke: 0.6pt, inset: 5pt)[ANTIDIURÉTICA], box(stroke: 0.6pt, inset: 5pt)[ALDOSTERONA],\n))\n\nI. P, aumenta la reabsorción de iones de Na +; Q, la secreción de los iones de K+.\n\nII. P, se produce en la corteza suprarrenal; Q, en el aparato yuxtaglomerular.\n\nIII. P, aumenta la permeabilidad de los tubos colectores; Q, reabsorción de K+.",
+      "alternatives": [
+        "FFV",
+        "VVF",
+        "FFF",
+        "FVF",
+        "FVV"
+      ]
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/bio-lot-15-uncp-2021-iv-bio-23.png",
+      "bodyTypst": "Seleccione las características que corresponde a la fase de la meiosis que muestra la figura.\n\n1. Los cromosomas se alinean en la placa de metafase.\n\n2. Los pares homólogos se alinean independientemente en la placa de metafase.\n\n3. Los cromosomas se aparean y presentan el entrecruzamiento\n\n4. La fase corresponde a metafase II.\n\n5. La fase corresponde a metafase.",
+      "alternatives": [
+        "3-5",
+        "2-4",
+        "1-4",
+        "2-5",
+        "1-5"
+      ],
+      "figureCrop": {
+        "left": 0.321,
+        "top": 0.156,
+        "right": 0.641,
+        "bottom": 0.55
+      }
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/ing-lot-15-uncp-2021-iv-ing-40.png",
+      "bodyTypst": "De acuerdo al texto e imagen selecciona la información correcta:\n\nDaniel took guitar clases last year, but he had bad ears for music, so he couldn't play his guitar well.\n\nWhen his friend listened to him, he put his hands over his ears because it was very noisy.",
+      "alternatives": [
+        "Daniel played his guitar at a lot of concerts.",
+        "Daniel was very good at music.",
+        "Daniel's friend couldn't stand Daniel's music.",
+        "Daniel's friend was very happy listening the music.",
+        "Daniel's friend danced listening the music."
+      ],
+      "figureCrop": {
+        "left": 0.263,
+        "top": 0.246,
+        "right": 0.809,
+        "bottom": 0.75
+      }
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/ing-lot-15-uncp-2021-iv-ing-41.png",
+      "bodyTypst": "Identifica la afirmación incorrecta de acuerdo a la imagen:",
+      "alternatives": [
+        "I'm blowing out the candles.",
+        "My friends are happy.",
+        "I'm eating delicious cake now.",
+        "There is a birthday cake.",
+        "We are celebrating my birthday."
+      ],
+      "figureCrop": {
+        "left": 0.306,
+        "top": 0.117,
+        "right": 0.7,
+        "bottom": 0.78
+      }
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/rm-lot-15-uncp-2021-iv-raz-44.png",
+      "bodyTypst": "Calcula el valor de \"X\"",
+      "alternatives": [
+        "9",
+        "7",
+        "3",
+        "5",
+        "6"
+      ],
+      "figureCrop": {
+        "left": 0.264,
+        "top": 0.252,
+        "right": 0.79,
+        "bottom": 0.873
+      }
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/rm-lot-15-uncp-2021-iv-raz-46.png",
+      "bodyTypst": "Calcula el valor de \"X\" en:\n\n#align(center, table(columns: 3, align: center + horizon, inset: 6pt, stroke: none,\n  [24], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$8$], [21],\n  [36], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$20$], [24],\n  [44], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$9$], [50],\n  [21], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$x$], [33],\n))",
+      "alternatives": [
+        "11",
+        "12",
+        "10",
+        "9",
+        "8"
+      ]
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/rm-lot-15-uncp-2021-iv-raz-48.png",
+      "bodyTypst": "Calcula el número total de triángulos en la figura:",
+      "alternatives": [
+        "26",
+        "27",
+        "32",
+        "28",
+        "25"
+      ],
+      "figureCrop": {
+        "left": 0.343,
+        "top": 0.212,
+        "right": 0.684,
+        "bottom": 0.946
+      }
+    },
+    {
+      "imagePath": "lot-15-uncp-2021-iv-image/rm-lot-15-uncp-2021-iv-raz-49.png",
+      "bodyTypst": "Eliana salió del trabajo a las 14 h 45 min y llego a su casa justo cuando el reloj marcaba la hora que se observa en la figura:\n\n¿Cuánto tiempo demoro Eliana en llegar a su casa?",
+      "alternatives": [
+        "$52 5/13$ min",
+        "$53 11/13$ min",
+        "52 min",
+        "51 min",
+        "$51 12/13$ min"
+      ],
+      "figureCrop": {
+        "left": 0.388,
+        "top": 0.326,
+        "right": 0.691,
+        "bottom": 0.856
+      }
+    }
+  ]
+}

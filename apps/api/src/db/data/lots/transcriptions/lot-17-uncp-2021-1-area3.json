@@ -1,0 +1,182 @@
+{
+  "lot": "lot-17-uncp-2021-1-area3",
+  "transcriptions": [
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/arit-lot-17-uncp-2021-1-area3-01.png",
+      "bodyTypst": "¿Cómo se lee? $B supset A$\n\nI. A está incluido en B\n\nII. A es un subconjunto de B\n\nIII. A está contenido en B\n\nIV. A no está incluido en B\n\nV. B incluye a A",
+      "alternatives": [
+        "II",
+        "IV",
+        "V",
+        "I",
+        "III"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/alg-lot-17-uncp-2021-1-area3-02.png",
+      "bodyTypst": "Si $p -> q$ es falso, ¿cuál es el valor de verdad de $p Delta q$?",
+      "alternatives": [
+        "$<->$",
+        "F",
+        "$tilde V$",
+        "V",
+        "$Delta$"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/arit-lot-17-uncp-2021-1-area3-03.png",
+      "bodyTypst": "sI $12^(2n)$ tiene 63 divisores más que $12^n$, calcula $n$.",
+      "alternatives": [
+        "1",
+        "3",
+        "4",
+        "0",
+        "2"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/alg-lot-17-uncp-2021-1-area3-05.png",
+      "bodyTypst": "Determina la suma de los factores primos de:\n\n$P_((x\\, y)) = 6x^2 + 7x y + 2y^2 + 13x + 8y + 6$",
+      "alternatives": [
+        "$5x + 6y + 5$",
+        "$4x + 2y + 5$",
+        "$5x + 7y + 5$",
+        "$5x + 3y + 5$",
+        "$5x + 4y + 5$"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/alg-lot-17-uncp-2021-1-area3-06.png",
+      "bodyTypst": "Sabiendo que: $a = 1 + b$\n\nDetermina el valor de: $M = (a + b)(a^2 + b^2)(a^4 + b^4)$",
+      "alternatives": [
+        "$a^6 - b^6$",
+        "$a^8 + b^8$",
+        "$a^4 - b^4$",
+        "$a^6 + b^6$",
+        "$a^8 - b^8$"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/estad-lot-17-uncp-2021-1-area3-10.png",
+      "bodyTypst": "A un grupo de padres de familia se les pregunta acerca del número de hijos que tienen. Los resultados se muestran en la siguiente tabla:\n\n#align(center, table(columns: 2, align: center + horizon, inset: 6pt, stroke: 0.6pt, [N° de hijos], [N° de padres], [1], [4], [2], [6], [3], [10], [4], [9], [5], [1]))\n\nHalla el mayor número de hijos que tienen el 50% de los que tienen menos hijos.",
+      "alternatives": [
+        "1",
+        "3",
+        "4",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/com-lot-17-uncp-2021-1-area3-12.png",
+      "bodyTypst": "Identifica la lengua no originaria del Perú.",
+      "alternatives": [
+        "Aymara",
+        "Jíbaro",
+        "Kauki",
+        "Náhuati",
+        "Amuesha"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/com-lot-17-uncp-2021-1-area3-13.png",
+      "bodyTypst": "Identifica el morfema gramatical flexivo en el siguiente ejemplo.\n\nNiñas",
+      "alternatives": [
+        "--a--",
+        "Ni--",
+        "Niña--",
+        "--as",
+        "N iñ--"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/lit-lot-17-uncp-2021-1-area3-15.png",
+      "bodyTypst": "Completa el organizador",
+      "alternatives": [
+        "Estudiante de Salamanca",
+        "El Ingenioso Hidalgo Don Quijote de la Mancha",
+        "El poema del Mio Cid",
+        "El Lazarillo de Tormes",
+        "El Lazarillo de ciegos caminantes"
+      ],
+      "figureCrop": {
+        "left": 0.205,
+        "top": 0.143,
+        "right": 0.843,
+        "bottom": 0.626
+      }
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/geog-lot-17-uncp-2021-1-area3-22.png",
+      "bodyTypst": "Relaciona los parques nacionales y su ubicación:\n\nI. Manu\n\nII. Huascarán\n\nIII. Cutervo\n\na. Áncash\n\nb. Cusco y Madre de Dios\n\nc. Cajamarca",
+      "alternatives": [
+        "Ib -- IIa -- IIIc",
+        "Ia -- IIc -- IIIb",
+        "Ic -- IIb -- IIIa",
+        "Ib -- IIc -- IIIa",
+        "Ia -- IIb -- IIIc"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/rv-lot-17-uncp-2021-1-area3-32.png",
+      "bodyTypst": "Identifica el (los) enunciado(s) que ejemplifica(n) el referente textual de la elipsis:\n\nI. Daniel analizó un poema de César Vallejo y Rocío, un cuento de Julio Ramón Ribeyro.\n\nII. Eduardo organizó una fiesta en plena pandemia, él es un irresponsable.\n\nIII. Ella es la máxima autoridad, la directora del proyecto tiene la última palabra.",
+      "alternatives": [
+        "II",
+        "I",
+        "I -- II -- III",
+        "III",
+        "II -- III"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/rm-lot-17-uncp-2021-1-area3-44.png",
+      "bodyTypst": "Determina el número que falta:\n\n#align(center, table(columns: 3, align: center + horizon, inset: 5pt, stroke: none,\n  [3], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$9$], [3],\n  [2], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$4$], [2],\n  [5], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$7$], [2],\n  [3], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[#hide[$0$]], [4],\n))",
+      "alternatives": [
+        "7",
+        "12",
+        "11",
+        "13",
+        "9"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/rm-lot-17-uncp-2021-1-area3-45.png",
+      "bodyTypst": "¿Qué figura(s) se puede(n) realizar con un solo trazo y sin levantar el lápiz del papel?",
+      "alternatives": [
+        "Solo I",
+        "II y III",
+        "Solo II",
+        "I y II",
+        "I y III"
+      ],
+      "figureCrop": {
+        "left": 0.35,
+        "top": 0.344,
+        "right": 0.7,
+        "bottom": 0.738
+      }
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/rm-lot-17-uncp-2021-1-area3-46.png",
+      "bodyTypst": "Se muestra un cuadrado mágico de orden 4.\n\nDetermina: $(M^2 + N^2)/2$\n\n#align(center, table(columns: 4, align: center + horizon, inset: 7pt, stroke: 0.6pt,\n  [$M$], [], [7], [12],\n  [], [4], [9], [],\n  [], [5], [16], [3],\n  [8], [11], [], [$N$],\n))",
+      "alternatives": [
+        "100",
+        "85",
+        "40",
+        "52",
+        "63"
+      ]
+    },
+    {
+      "imagePath": "lot-17-uncp-2021-1-area3-image/rm-lot-17-uncp-2021-1-area3-49.png",
+      "bodyTypst": "Se define la operación matemática: $2$#box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$n$] $=$ #box(baseline: 0.25em, stroke: 0.5pt, inset: (x: 3pt, y: 2pt))[$n - 1$] $- 5$\n\nAdemás: #box(baseline: 0.25em, stroke: 0.5pt, inset: (x: 3pt, y: 2pt))[$n + 1$] $=$ #box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$n + 2$] $- 3$\n\nCalcula el valor de: #box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$4$]",
+      "alternatives": [
+        "$-11$",
+        "$11$",
+        "$8$",
+        "$-8$",
+        "$10$"
+      ]
+    }
+  ]
+}

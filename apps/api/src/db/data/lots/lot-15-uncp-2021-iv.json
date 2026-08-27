@@ -526,6 +526,321 @@
       "correctAnswer": "2",
       "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
       "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Matemático, pregunta 47 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si: $3 - 2 sqrt(2)$ es una raíz del polinomio\n\n$R(x) = m x^3 - 11 x^2 - n x + 1 = 0$\n\nDetemrina el valor de: $m + n$",
+      "alternatives": [
+        "2",
+        "8",
+        "4",
+        "10",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Álgebra, pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea: $f(x) = x + 1/x + 3$\n\nHalla la traza de $f(A)$\n\nSi: $A = |A| mat(delim: \"[\", 3, -2; 2, 2)$",
+      "alternatives": [
+        "$14\",\"5$",
+        "$13\",\"5$",
+        "$10\",\"5$",
+        "$12\",\"5$",
+        "$11\",\"5$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Álgebra, pregunta 5 (clave E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene los siguientes datos clasificados, calcule la mediana.\n\n#align(center, table(columns: 3, align: center + horizon, inset: 6pt, stroke: 0.6pt,\n  [$I_i$], [$f_i$], [$F_i$],\n  [$lr([20 - 30⟩)$], [2], [2],\n  [$lr([30 - 40⟩)$], [4], [6],\n  [$lr([40 - 50⟩)$], [5], [11],\n  [$lr([50 - 60⟩)$], [6], [17],\n  [$lr([60 - 70⟩)$], [3], [20],\n))",
+      "alternatives": [
+        "54",
+        "46",
+        "48",
+        "50",
+        "52"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Estadística y Probabilidades, pregunta 6 (clave C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la siguiente tabla de datos de un grupo de personas:\n\n#align(center, table(columns: 2, align: center + horizon, inset: 6pt, stroke: 0.6pt,\n  [Edades], [$h_i$],\n  [$[19 - 21]$], [$0\",\"15$],\n  [$[22 - 24]$], [$0\",\"25$],\n  [$[25 - 27]$], [$0\",\"40$],\n  [$[28 - 30]$], [$0\",\"10$],\n  [$[31 - 33]$], [$0\",\"10$],\n))\n\nSi $F_4 = 270$, ¿cuántas personas tienen edades entre 31 y 33 años?",
+      "alternatives": [
+        "34",
+        "32",
+        "30",
+        "26",
+        "28"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Estadística y Probabilidades, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el bloque de masa $m = 5$ kg sube 4 metros con velocidad constante, calcula el trabajo realizado por la fuerza $F$ en Joule.\n\n($g = 10$ m/s$\"\"^2$)",
+      "alternatives": [
+        "200",
+        "-200",
+        "300",
+        "-400",
+        "400"
+      ],
+      "correctAnswer": "0",
+      "imagePath": "lot-15-uncp-2021-iv-figures/fis-lot-15-uncp-2021-iv-fis-13.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Física, pregunta 13 (clave A)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El resorte de la figura ($k = 10$ N / m) está ligado a un bloque de 50 g, el cual es impactado inelásticamente por un proyectil de igual masa. Si la máxima deformación que experimenta el resorte es $0\",\"1$ m, halla la rapidez horizontal (en m/s) del proyectil antes del impacto.",
+      "alternatives": [
+        "1 m/s",
+        "4 m/s",
+        "2 m/s",
+        "$0\",\"5$ m/s",
+        "$1\",\"5$ m/s"
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-15-uncp-2021-iv-figures/fis-lot-15-uncp-2021-iv-fis-14.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Física, pregunta 14 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el estado de oxidación de P en el compuesto $\"Ca\"_3(\"PO\"_4)_2$.",
+      "alternatives": [
+        "3+",
+        "2+",
+        "1+",
+        "5+",
+        "4+"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Química, pregunta 15 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La energía para el enlace C--H es $183 \"kJ\"/\"mol\"$ y para el de C--Cl es $279 \"kJ\"/\"mol\"$.\n\nCalcula la energía total de enlace para la molécula $\"CHCL\"_3$ (Cloroformo).",
+      "alternatives": [
+        "2010",
+        "1020",
+        "1393",
+        "1200",
+        "3193"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Química, pregunta 16 (clave B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De la siguiente reacción química:\n\n$\"HNO\"_3 + \"I\"_2 --> \"HIO\"_3 + \"NO\" + \"H\"_2\"O\"$\n\nDetermina el coeficiente del agente oxidante.",
+      "alternatives": [
+        "2",
+        "10",
+        "13",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Química, pregunta 17 (clave B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Citología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Nombra los componentes del cito esqueleto representados por X,Y,Z respectivamente",
+      "alternatives": [
+        "Microtúbulo, filamento intermedio, microfilamento de tubulina.",
+        "Microfilamento, microtúbulo, filamento delgado.",
+        "Filamento intemedio, microtúbulo, microfilamento de actina.",
+        "Microfilamento, filamento intermedio, microtúbulo.",
+        "Microtúbulo, filamento intermedio, microfilamento de actina."
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-15-uncp-2021-iv-figures/bio-lot-15-uncp-2021-iv-bio-21.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Biología, pregunta 21 (clave E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de respiración y excreción",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Analiza la verdad (V) o falsedad (F) de las proposiciones respecto a las hormonas que intervienen en la función renal.\n\n#align(center, table(columns: 2, stroke: none, align: center, inset: 6pt, column-gutter: 2em,\n  [*P*], [*Q*],\n  box(stroke: 0.6pt, inset: 5pt)[ANTIDIURÉTICA], box(stroke: 0.6pt, inset: 5pt)[ALDOSTERONA],\n))\n\nI. P, aumenta la reabsorción de iones de Na +; Q, la secreción de los iones de K+.\n\nII. P, se produce en la corteza suprarrenal; Q, en el aparato yuxtaglomerular.\n\nIII. P, aumenta la permeabilidad de los tubos colectores; Q, reabsorción de K+.",
+      "alternatives": [
+        "FFV",
+        "VVF",
+        "FFF",
+        "FVF",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Biología, pregunta 22 (clave A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Citología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Seleccione las características que corresponde a la fase de la meiosis que muestra la figura.\n\n1. Los cromosomas se alinean en la placa de metafase.\n\n2. Los pares homólogos se alinean independientemente en la placa de metafase.\n\n3. Los cromosomas se aparean y presentan el entrecruzamiento\n\n4. La fase corresponde a metafase II.\n\n5. La fase corresponde a metafase.",
+      "alternatives": [
+        "3-5",
+        "2-4",
+        "1-4",
+        "2-5",
+        "1-5"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-15-uncp-2021-iv-figures/bio-lot-15-uncp-2021-iv-bio-23.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Biología, pregunta 23 (clave D)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Aptitud comunicativa (inglés)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De acuerdo al texto e imagen selecciona la información correcta:\n\nDaniel took guitar clases last year, but he had bad ears for music, so he couldn't play his guitar well.\n\nWhen his friend listened to him, he put his hands over his ears because it was very noisy.",
+      "alternatives": [
+        "Daniel played his guitar at a lot of concerts.",
+        "Daniel was very good at music.",
+        "Daniel's friend couldn't stand Daniel's music.",
+        "Daniel's friend was very happy listening the music.",
+        "Daniel's friend danced listening the music."
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-15-uncp-2021-iv-figures/ing-lot-15-uncp-2021-iv-ing-40.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Inglés, pregunta 40 (clave C)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Present continuous",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifica la afirmación incorrecta de acuerdo a la imagen:",
+      "alternatives": [
+        "I'm blowing out the candles.",
+        "My friends are happy.",
+        "I'm eating delicious cake now.",
+        "There is a birthday cake.",
+        "We are celebrating my birthday."
+      ],
+      "correctAnswer": "2",
+      "imagePath": "lot-15-uncp-2021-iv-figures/ing-lot-15-uncp-2021-iv-ing-41.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Inglés, pregunta 41 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula el valor de \"X\"",
+      "alternatives": [
+        "9",
+        "7",
+        "3",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-15-uncp-2021-iv-figures/rm-lot-15-uncp-2021-iv-raz-44.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Matemático, pregunta 44 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula el valor de \"X\" en:\n\n#align(center, table(columns: 3, align: center + horizon, inset: 6pt, stroke: none,\n  [24], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$8$], [21],\n  [36], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$20$], [24],\n  [44], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$9$], [50],\n  [21], box(baseline: 0.25em, stroke: 0.5pt, radius: 100%, inset: (x: 4pt, y: 2pt))[$x$], [33],\n))",
+      "alternatives": [
+        "11",
+        "12",
+        "10",
+        "9",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Matemático, pregunta 46 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula el número total de triángulos en la figura:",
+      "alternatives": [
+        "26",
+        "27",
+        "32",
+        "28",
+        "25"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-15-uncp-2021-iv-figures/rm-lot-15-uncp-2021-iv-raz-48.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Matemático, pregunta 48 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Cronometría y Móviles",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Eliana salió del trabajo a las 14 h 45 min y llego a su casa justo cuando el reloj marcaba la hora que se observa en la figura:\n\n¿Cuánto tiempo demoro Eliana en llegar a su casa?",
+      "alternatives": [
+        "$52 5/13$ min",
+        "$53 11/13$ min",
+        "52 min",
+        "51 min",
+        "$51 12/13$ min"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "lot-15-uncp-2021-iv-figures/rm-lot-15-uncp-2021-iv-raz-49.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=26",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2021-I, Área I, Razonamiento Matemático, pregunta 49 (clave E)"
     }
   ]
 }

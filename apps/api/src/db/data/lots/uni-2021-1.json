@@ -298,7 +298,7 @@
       "topicName": "Interés y Descuento",
       "gradeLevel": "pre",
       "difficulty": "hard",
-      "bodyTypst": "Un capital de $ 2 000 000 se deposita a una tasa nominal anual del 18 %. Si el dinero se capitaliza bimestralmente, ¿al cabo de cuántos meses se obtiene un monto de $ 2 185 454?",
+      "bodyTypst": "Un capital de \\$ 2 000 000 se deposita a una tasa nominal anual del 18 %. Si el dinero se capitaliza bimestralmente, ¿al cabo de cuántos meses se obtiene un monto de \\$ 2 185 454?",
       "alternatives": [
         "4",
         "5",
@@ -740,6 +740,245 @@
       "correctAnswer": "2",
       "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
       "sourceName": "UNI — Examen de Admisión 2021-1, Química, pregunta 20 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Establecer la figura que reemplaza a \"?\":",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "1",
+      "alternativeImagePaths": [
+        "uni-2021-1-alternatives/rm-11-07-a.png",
+        "uni-2021-1-alternatives/rm-11-07-b.png",
+        "uni-2021-1-alternatives/rm-11-07-c.png",
+        "uni-2021-1-alternatives/rm-11-07-d.png",
+        "uni-2021-1-alternatives/rm-11-07-e.png"
+      ],
+      "imagePath": "uni-2021-1-figures/rm-11-07.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Razonamiento Matemático, pregunta 7 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Asuma que las pesas mostradas están balanceadas. De las siguientes opciones, establecer cuál tiene la misma masa que #box(baseline: 0.15em, circle(radius: 0.32em, fill: luma(70%), stroke: 0.6pt))#box(baseline: 0.15em, rotate(180deg, polygon.regular(size: 0.78em, vertices: 3, fill: luma(70%), stroke: 0.6pt)))#box(baseline: 0.15em, rotate(180deg, polygon.regular(size: 0.78em, vertices: 3, fill: luma(70%), stroke: 0.6pt)))#box(baseline: 0.15em, rotate(180deg, polygon.regular(size: 0.78em, vertices: 3, fill: luma(70%), stroke: 0.6pt)))",
+      "alternatives": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctAnswer": "2",
+      "alternativeImagePaths": [
+        "uni-2021-1-alternatives/rm-11-08-a.png",
+        "uni-2021-1-alternatives/rm-11-08-b.png",
+        "uni-2021-1-alternatives/rm-11-08-c.png",
+        "uni-2021-1-alternatives/rm-11-08-d.png",
+        "uni-2021-1-alternatives/rm-11-08-e.png"
+      ],
+      "imagePath": "uni-2021-1-figures/rm-11-08.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Razonamiento Matemático, pregunta 8 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Sucesiones, Series y Analogías Numéricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Establecer el número que reemplaza a \"?\":",
+      "alternatives": [
+        "29",
+        "38",
+        "64",
+        "76",
+        "85"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "uni-2021-1-figures/rm-11-09.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Razonamiento Matemático, pregunta 9 (clave E)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Combinatoria y Probabilidad",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De un lote de 12 panetones se observa que 8 tienen pasas y los restantes no. ¿Cuál es la probabilidad de obtener 3 panetones con pasas y 2 sin pasas al escoger 5 panetones?",
+      "alternatives": [
+        "$12/33$",
+        "$14/33$",
+        "$16/33$",
+        "$18/33$",
+        "$20/33$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Aritmética, pregunta 2 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Sistemas de Numeración",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un número $N$ en base 27 se escribe: $N = 123123_(27)$\n\nExpresar $N$ en base 10 y dar como respuesta la suma de sus cifras.",
+      "alternatives": [
+        "28",
+        "29",
+        "30",
+        "31",
+        "32"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Aritmética, pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Racionales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántas fracciones irreductibles de la forma $N / overline(a b)$ al ser representadas como expresión decimal tienen la forma: $0\",\" overline(x y z w t r)$ ?",
+      "alternatives": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Aritmética, pregunta 4 (clave B)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Números Primos, MCD y MCM",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la expresión $N = a^(3a) dot (a + 1)^(2a)$ es la descomposición canónica del número $N$, halle la suma de los divisores compuestos de $N$. Dé como respuesta la suma de las cifras del resultado.",
+      "alternatives": [
+        "10",
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Aritmética, pregunta 5 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F)\n\nRespecto a la ecuación en la variable en $x$, $a(a^2 - 1)x = 0$\n\nI. Si $a = -1$, la ecuación tiene infinitas soluciones.\n\nII. Si $a = 0$, la ecuación tiene solución única.\n\nIII. Si $a in {-1, 0, 1}$, la ecuación tiene solución única e igual a cero.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VFF",
+        "FVF",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Álgebra, pregunta 7 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F)\n\nI. Para todo $x > 0$ se tiene $log_3 (x) = log_9 (x + 1)$\n\nII. La función logarítmica es una función decreciente\n\nIII. La función logaritmo es siempre positiva",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FVV",
+        "FFV",
+        "FFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Álgebra, pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Geometría del Espacio (Poliedros)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un tronco de prisma recto tiene por base un triángulo equilátero cuyo lado mide $b$ unidades, las aristas miden $2b$, $3b$, y $4b$ unidades respectivamente.\n\nCalcule el volumen en unidades cúbicas del tronco del prisma.",
+      "alternatives": [
+        "$sqrt(3)/4 b^3$",
+        "$(3 sqrt(3))/2 b^3$",
+        "$(3 sqrt(3))/4 b^3$",
+        "$sqrt(3)/2 b^3$",
+        "$(8 sqrt(3))/2 b^3$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Geometría, pregunta 15 (clave C)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas de Cualquier Ángulo",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si se cumplen las condiciones $|tan theta| = - tan theta$; $|cos theta| = cos theta$;\n\n$|sec theta + tan theta| = sqrt(11)/8$\n\nCalcule $E = sec theta cot theta$",
+      "alternatives": [
+        "$53/75$",
+        "$-53/75$",
+        "$1$",
+        "$-75/53$",
+        "$75/53$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Trigonometría, pregunta 17 (clave D)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la siguiente estructura metálica, halle $tan alpha$",
+      "alternatives": [
+        "$-1$",
+        "$-2$",
+        "$-3$",
+        "$-4$",
+        "$-5$"
+      ],
+      "correctAnswer": "4",
+      "imagePath": "uni-2021-1-figures/trig-24-18.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Trigonometría, pregunta 18 (clave E)"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La distancia más cercana del planeta mercurio al sol es de $28 times 10^6$ millas y la excentricidad de su órbita es $1/5$. Encuentre (en millas) la diferencia entre su máxima y su mínima distancia al sol.",
+      "alternatives": [
+        "$10 times 10^6$",
+        "$11 times 10^6$",
+        "$12 times 10^6$",
+        "$13 times 10^6$",
+        "$14 times 10^6$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI — Examen de Admisión 2021-1, Trigonometría, pregunta 20 (clave E)"
     }
   ]
 }

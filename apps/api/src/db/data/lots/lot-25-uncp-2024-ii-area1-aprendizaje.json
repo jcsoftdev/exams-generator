@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "courseName": "Psicología",
+      "topicName": "Aprendizaje",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Correlacione los tipos de aprendizaje con la figura que lo caracteriza:\n\nI. Aprendizaje social\n\nII. Aprendizaje motor\n\nIII. Aprendizaje actitudinal",
+      "alternatives": [
+        "Ia -- IIc -- IIIb",
+        "Ic -- IIa -- IIIb",
+        "Ib -- IIc -- IIIa",
+        "Ic -- IIb -- IIIa",
+        "Ia -- IIb -- IIIc"
+      ],
+      "correctAnswer": "3",
+      "imagePath": "lot-25-uncp-2024-ii-area1-aprendizaje-figures/psi-lot-25-01.png",
+      "sourceUrl": "https://web.academiaingenieria.edu.pe/solucionarios?download=51",
+      "sourceName": "UNCP — Examen de Admisión UNCP 2024-II (Área I), Psicología, pregunta 30 (clave D)"
+    }
+  ]
+}

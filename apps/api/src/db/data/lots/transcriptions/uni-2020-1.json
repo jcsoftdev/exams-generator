@@ -1,0 +1,216 @@
+{
+  "lot": "uni-2020-1",
+  "transcriptions": [
+    {
+      "imagePath": "uni-2020-1-image/arit-2020-mat-03.png",
+      "bodyTypst": "La relación entre el descuento racional y el descuento comercial es $9/10$.\n\nDetermine la relación entre el valor actual comercial y el valor nominal del mismo documento.",
+      "alternatives": [
+        "$6/9$",
+        "$7/9$",
+        "$8/9$",
+        "$9/9$",
+        "$10/9$"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/arit-2020-mat-05.png",
+      "bodyTypst": "Se tiene 12 fichas numeradas del 1 al 12. Se extrae aleatoriamente una primera ficha, luego una segunda y una tercera ficha, sin reposición. Calcule la probabilidad de que estos tres números estén en progresión aritmética de razón 1 o de razón -1.",
+      "alternatives": [
+        "$1/66$",
+        "$5/66$",
+        "$7/66$",
+        "$11/66$",
+        "$35/66$"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/alg-2020-mat-11.png",
+      "bodyTypst": "Sea la expresión matemática\n\n$f(x) = x/sqrt(1 - x^2) + sqrt(1 - x^2)/x$;  $x in.not {-1, 0, 1}$\n\nCalcule $m$ ($m in RR^+$), si se cumple que\n\n$f(triangle) = 2$, cuando:\n\n$triangle = sqrt(1/2 - sqrt(1/4 - 1/m^2))$",
+      "alternatives": [
+        "1",
+        "49",
+        "2",
+        "4",
+        "$sqrt(11)$"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/alg-2020-mat-12.png",
+      "bodyTypst": "Dadas las siguientes proposiciones con respecto a la suma finita\n\n$sum_(k=0)^1720 (-1/x)^k$\n\nI. La suma es igual a cero para $x = 1$.\n\nII. La suma es igual a uno para $x = 1$.\n\nIII. La suma es 1721 para $x = -1$.\n\nSon correctas:",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "II y III"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/alg-2020-mat-14.png",
+      "bodyTypst": "Se define la matriz $A = [a_(i j)]_(2 times 3)$ como\n\n$a_(i j) = cases(2i + j quad \"si\" i < j, i j quad \"si\" i >= j)$\n\nCalcule $|A A^T|$.",
+      "alternatives": [
+        "82",
+        "84",
+        "86",
+        "89",
+        "92"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/alg-2020-mat-19.png",
+      "bodyTypst": "La ecuación $(x^2 + 3x)/(5x + 12) = (m - 1)/(m + 1)$ en $x$, tiene raíces de signos opuestos y el mismo valor absoluto.\n\nDadas las siguientes proposiciones\n\nI. $m < 3$\n\nII. $m in [2, 6]$\n\nIII. $m in [5, 10]$\n\nIndique cuál (o cuáles) son las correctas:",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "II y III"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/alg-2020-mat-20.png",
+      "bodyTypst": "Dado el sistema:\n\n$cases(-x + y <= 2, -x + 7y >= 20, x >= 0, y >= 0)$\n\nIndique cuáles de las siguientes proposiciones son correctas:\n\nI. La solución es única.\n\nII. La solución es un conjunto no acotado.\n\nIII. La solución es un conjunto vacío.",
+      "alternatives": [
+        "I, II y III",
+        "I y II",
+        "Solo II",
+        "I y III",
+        "Solo III"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/geo-2020-mat-24.png",
+      "bodyTypst": "En la figura $A B C D E F$ es un hexágono regular, determine $R H$, sabiendo que $B M = a$ y $M R = b$, con $a > b$.",
+      "alternatives": [
+        "$(a(a + b))/(a - b)$",
+        "$(b(a + b))/(a - b)$",
+        "$(a + b)^2/(a - b)$",
+        "$(a b)/(a - b)$",
+        "$b^2/(a - b)$"
+      ],
+      "figureCrop": {
+        "left": 0.124,
+        "top": 0.195,
+        "right": 0.706,
+        "bottom": 0.62
+      }
+    },
+    {
+      "imagePath": "uni-2020-1-image/geo-2020-mat-27.png",
+      "bodyTypst": "Se traza una circunferencia que tiene como diámetro uno de los lados de un triángulo equilátero de lado \"$a$\". La longitud de la parte de la circunferencia que queda dentro del triángulo es:",
+      "alternatives": [
+        "$(pi a)/6$",
+        "$(pi a)/3$",
+        "$(pi a)/(sqrt(3) + 1)$",
+        "$(pi a)/sqrt(2)$",
+        "$(pi a)/(sqrt(2) + 1)$"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/geo-2020-mat-28.png",
+      "bodyTypst": "Sean los segmentos $overline(A B)$ y $overline(C D)$ ubicados en planos diferentes, que forman un ángulo que mide $30 degree$. Si $overline(A C) perp overline(A B)$, $overline(A C) perp overline(C D)$, $A C = 2$ m, $A B = 4$ m y $C D = sqrt(3)$, m entonces la longitud (en m) de $overline(B D)$ es:",
+      "alternatives": [
+        "$sqrt(10)$",
+        "$sqrt(11)$",
+        "$sqrt(12)$",
+        "$sqrt(13)$",
+        "$sqrt(14)$"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/trig-2020-mat-33.png",
+      "bodyTypst": "Si la gráfica de $y = A arccos(B x + C) + D$ es:\n\nDetermine el valor de: $E = A + B + C$",
+      "alternatives": [
+        "3",
+        "$2/3$",
+        "$4/3$",
+        "4",
+        "$14/3$"
+      ],
+      "figureCrop": {
+        "left": 0.187,
+        "top": 0.154,
+        "right": 0.649,
+        "bottom": 0.758
+      }
+    },
+    {
+      "imagePath": "uni-2020-1-image/trig-2020-mat-34.png",
+      "bodyTypst": "Determine el valor máximo de la siguiente función:\n\n$y(x) = sqrt((1 - cos x)(1 + 2 cos x))$,  $x in lr(⟨0, (2 pi)/3⟩)$",
+      "alternatives": [
+        "$3/4$",
+        "$(3 sqrt(2))/4$",
+        "$(3 sqrt(3))/4$",
+        "$6/4$",
+        "$(3 sqrt(5))/4$"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/trig-2020-mat-36.png",
+      "bodyTypst": "En el cuadrado $A B C D$ de la figura mostrada, $M$ y $N$ son puntos medios de sus respectivos lados. Si $m angle N M D = theta$, entonces el valor de $cot(theta/2)$ es:",
+      "alternatives": [
+        "$sqrt(5) - 2$",
+        "$sqrt(10) - 3$",
+        "$sqrt(5) + 2$",
+        "$sqrt(10) + sqrt(5)$",
+        "$sqrt(10) + 3$"
+      ],
+      "figureCrop": {
+        "left": 0.253,
+        "top": 0.311,
+        "right": 1.0,
+        "bottom": 0.781
+      }
+    },
+    {
+      "imagePath": "uni-2020-1-image/trig-2020-mat-37.png",
+      "bodyTypst": "Se desea construir un túnel en una montaña entre dos pueblos en Huancayo, que tenga como sección transversal un arco semielíptico, con eje mayor de 15 metros y una altura en el centro de 3 metros. Encuentre la ecuación canónica de la elipse sobre la que descansa la sección transversal del túnel.",
+      "alternatives": [
+        "$x^2/225 + y^2/9 = 1$",
+        "$x^2/(56\",\"25) + y^2/(2\",\"25) = 1$",
+        "$x^2/(56\",\"25) + y^2/9 = 1$",
+        "$x^2/900 + y^2/36 = 1$",
+        "$x^2/30 + y^2/6 = 1$"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/fis-2020-fis-01.png",
+      "bodyTypst": "La siguiente fórmula es dimensionalmente correcta:\n\n$A = A_0 cos(alpha t^2 + beta x^(1\\/2))$\n\ndonde \"$t$\" es el tiempo y \"$x$\" el desplazamiento. Encuentre la dimensión de $alpha\\/beta$.",
+      "alternatives": [
+        "$T^(-3) L^(1\\/2)$",
+        "$T^(-2) L^(-1\\/2)$",
+        "$T^(-2) L^(1\\/2)$",
+        "$T^2 L^(-1\\/2)$",
+        "$T^3 L^(1\\/2)$"
+      ]
+    },
+    {
+      "imagePath": "uni-2020-1-image/fis-2020-fis-03.png",
+      "bodyTypst": "En el sistema mostrado, los coeficientes de rozamiento entre la plataforma $A$ y el bloque $B$ son $mu_s = 0\",\"8$ y $mu_k = 0\",\"6$. La plataforma $A$ se mueve sobre la superficie horizontal sin fricción. Determine aproximadamente en N, la magnitud de la fuerza $F$ horizontal con la que se puede jalar la plataforma $A$, tal que el bloque $B$ no resbale. La masa de la plataforma $A$ es de 20 kg y la del bloque $B$ es de 5 kg.\n\n$g = 9\",\"81$ m/s$\"\"^2$",
+      "alternatives": [
+        "56",
+        "96",
+        "156",
+        "196",
+        "256"
+      ],
+      "figureCrop": {
+        "left": 0.084,
+        "top": 0.646,
+        "right": 0.797,
+        "bottom": 0.813
+      }
+    },
+    {
+      "imagePath": "uni-2020-1-image/fis-2020-fis-14.png",
+      "bodyTypst": "La función de onda mecánica formada en una cuerda es de la forma:\n\n$y(x, t) = 1/9 sin(5 pi x - 9 pi t)$ m\n\ndonde $t$ está en s y $x$ en m. Si la potencia media es de 18 mW, calcule aproximadamente en g/m, la densidad lineal de la cuerda.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    }
+  ]
+}
