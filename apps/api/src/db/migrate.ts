@@ -32,6 +32,16 @@ const MIGRATION_LOCK_KEY = 913_042_026;
 export async function runMigrations(): Promise<void> {
   const client = await pool.connect();
   try {
+    // The pool sets a 30s `statement_timeout` (`resolvePoolConfig`), and
+    // `pg_advisory_lock` is a STATEMENT that blocks for as long as another
+    // session holds the lock. Leaving the timeout on would turn the wait below
+    // into a hard failure the moment migrating outlasts it — precisely the
+    // scenario the lock exists for, and precisely the environment it would
+    // bite in (a fresh CI database, where every jest worker races and the
+    // winner has all 21 migrations to apply). Cleared on THIS connection only,
+    // session-scoped; the pooled connections `migrate()` runs its DDL on keep
+    // the ceiling.
+    await client.query("set statement_timeout = 0");
     await client.query("select pg_advisory_lock($1)", [MIGRATION_LOCK_KEY]);
     await migrate(db, { migrationsFolder: MIGRATIONS_FOLDER });
   } finally {

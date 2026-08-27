@@ -60,4 +60,24 @@ export class TaxonomyService {
     }
     return this.http.get<Topic[]>(`${environment.apiBaseUrl}/topics`, { params });
   }
+
+  /**
+   * Every topic in the catalog, in ONE request that depends on nothing.
+   *
+   * `getTopicsForCourses` deliberately refuses to fall back to "no filter"
+   * when handed an empty id list — that would turn a bug into a silent
+   * full-catalog fetch. So wanting the whole catalog has to be said out loud,
+   * which is what this is.
+   *
+   * It exists because the bank tree spans every course anyway: it called
+   * `getCourses()` purely to collect ids it then passed straight back as a
+   * filter that excluded nothing. Chaining those two round-trips cost ~620ms
+   * of pure latency against a France origin for a result identical to asking
+   * once (docs/audit-2026-08-26-prod-latency.md §2). Every topic has a course
+   * (`topics.course_id` is NOT NULL), so the two sets are the same set.
+   */
+  getAllTopics(gradeLevel?: string): Observable<Topic[]> {
+    const params = gradeLevel ? new HttpParams().set('gradeLevel', gradeLevel) : undefined;
+    return this.http.get<Topic[]>(`${environment.apiBaseUrl}/topics`, params ? { params } : {});
+  }
 }

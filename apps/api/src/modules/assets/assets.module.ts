@@ -4,6 +4,8 @@ import { resolveStorageAdapter } from "../bank/storage-provider";
 import { AssetsController } from "./assets.controller";
 import { AssetsRepository } from "./assets.repository";
 import { AssetsService } from "./assets.service";
+import { SharpThumbnailerAdapter } from "./sharp-thumbnailer.adapter";
+import { THUMBNAILER_PORT } from "./thumbnailer.port";
 
 /**
  * Reuses `STORAGE_PORT`/`resolveStorageAdapter` straight from the `bank`
@@ -12,6 +14,11 @@ import { AssetsService } from "./assets.service";
  */
 @Module({
   controllers: [AssetsController],
-  providers: [AssetsRepository, AssetsService, { provide: STORAGE_PORT, useFactory: resolveStorageAdapter }],
+  providers: [
+    AssetsRepository,
+    AssetsService,
+    { provide: STORAGE_PORT, useFactory: resolveStorageAdapter },
+    { provide: THUMBNAILER_PORT, useClass: SharpThumbnailerAdapter },
+  ],
 })
 export class AssetsModule {}
