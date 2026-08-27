@@ -146,7 +146,7 @@ export function applyTranscriptionFile(
   }
 
   const imageLot = readLot(`${lot}-image`);
-  const structuredLot = readLot(lot);
+  const structuredLot = readStructuredLot(lot);
 
   const result = applyLotTranscriptions({
     imageEntries: imageLot.entries,
@@ -234,6 +234,18 @@ function lotPath(name: string): string {
 
 function readLot(name: string): LotFile {
   return JSON.parse(readFileSync(lotPath(name), "utf8")) as LotFile;
+}
+
+/**
+ * The text side of a lot, which does not exist yet when `build_lot.py` ran with
+ * `--all-images`: every question of that exam was baked, so it wrote only
+ * `<lot>-image.json`. Eight lots (`lot-25`, the seven `scan-*`) are in that
+ * state, and reading the missing file was refusing 460 crops the pass is
+ * supposed to promote. Starting from no entries is the same thing the file
+ * would have said.
+ */
+function readStructuredLot(name: string): LotFile {
+  return existsSync(lotPath(name)) ? readLot(name) : { entries: [] };
 }
 
 function writeJson(path: string, value: unknown): void {
