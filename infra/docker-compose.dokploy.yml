@@ -17,6 +17,39 @@ services:
     networks: [exams-internal]
     image: postgres:17.2-bookworm
     restart: unless-stopped
+    # Tuning (docs/audit-2026-08-26-prod-latency.md §5.1). Until this line the
+    # container ran factory defaults, which are calibrated for a machine no one
+    # has had in a decade: `shared_buffers = 128MB`, `work_mem = 4MB`,
+    # `random_page_cost = 4.0` (the cost model of a spinning disk).
+    #
+    # These numbers are sized against a MEASURED database, not a rule of thumb:
+    # the whole thing is 90MB, of which `questions` is 77MB. So 256MB of
+    # shared_buffers holds every page of it with room to roughly triple, and
+    # spending more would be buying cache for data that does not exist.
+    #
+    # `work_mem` is the one that was actually hurting: it is per sort/hash NODE,
+    # and 4MB made the bank tree's GROUP BY over 64k rows spill to disk. 16MB
+    # keeps it in memory. Worst case here is ~10 connections (the pool's `max`,
+    # see `resolvePoolConfig`) times a few nodes each — a few hundred MB, on a
+    # host with ~2.8GB free.
+    #
+    # `random_page_cost = 1.1` tells the planner it is on flash, not a platter,
+    # which is what makes it willing to choose an index scan over a seq scan.
+    #
+    # ROLLBACK: delete this `command:` line. Postgres returns to defaults on
+    # the next restart; nothing here changes on-disk format or data.
+    command:
+      - postgres
+      - -c
+      - shared_buffers=256MB
+      - -c
+      - effective_cache_size=768MB
+      - -c
+      - work_mem=16MB
+      - -c
+      - maintenance_work_mem=128MB
+      - -c
+      - random_page_cost=1.1
     environment:
       POSTGRES_USER: ${DB_USER:-exams}
       # No dev fallback in PRODUCTION (audit 2026-08-20 H4): the old
