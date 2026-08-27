@@ -42,9 +42,16 @@ export function previewLot(lot: string, filters: readonly string[]): { rendered:
   const directory = mkdtempSync(join(tmpdir(), "preview-lot-"));
   const source = join(directory, "preview.typ");
   const pdf = join(directory, "preview.pdf");
+  // One unlabelled section holding one unlabelled block: the official layout
+  // added sections and blocks around the question list, and a preview has no
+  // booklet structure to honour — it is a contact sheet of one lot.
   writeFileSync(
     source,
-    renderExamTypst({ title: `Vista previa — ${lot}`, versionLabel: "Forma A", questions } as never),
+    renderExamTypst({
+      title: `Vista previa — ${lot}`,
+      versionLabel: "Forma A",
+      sections: [{ blocks: [{ label: "", questions }] }],
+    }),
     "utf8",
   );
   execFileSync("typst", ["compile", "--root", "/", source, pdf], { stdio: "pipe" });
