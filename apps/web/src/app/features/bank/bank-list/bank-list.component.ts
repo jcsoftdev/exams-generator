@@ -1,7 +1,7 @@
 import { Component, DestroyRef, computed, effect, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Observable, forkJoin, map } from 'rxjs';
+import { EMPTY, Observable, catchError, forkJoin, from, map, mergeMap } from 'rxjs';
 import {
   LucideAngularModule,
   Search,
@@ -82,6 +82,16 @@ const TOPIC_ERROR_MESSAGE = 'No se pudieron cargar las preguntas de este tema.';
  * making a second page rare for tenant-sized topics.
  */
 const TOPIC_PAGE_SIZE = 50;
+
+/**
+ * How many thumbnail requests may be in flight at once.
+ *
+ * Six mirrors the classic per-origin connection limit, and stays a sane cap
+ * even over HTTP/2 where the browser would happily open all fifty: the ceiling
+ * that matters is the single API replica buffering each asset in memory, not
+ * the socket count.
+ */
+const IMAGE_FETCH_CONCURRENCY = 6;
 
 /**
  * Question-bank screen, tree redesign: a two-column split where the left
@@ -360,6 +370,15 @@ export class BankListComponent {
   protected readonly imageUrls = signal<Record<string, string>>({});
   /** Every object URL this component has ever created, revoked on destroy. */
   private readonly objectUrls: string[] = [];
+  /**
+   * Asset ids currently being fetched. `imageUrls` alone cannot stand in for
+   * this: it is only populated when a response ARRIVES, so a second
+   * `loadImages` for the same topic (re-expand, or the visibility effect
+   * firing again) would re-request everything still in flight.
+   */
+  private readonly imagesInFlight = new Set<string>();
+  /** Asset ids already upgraded from thumbnail to original — see `loadFullImage`. */
+  private readonly fullImagesLoaded = new Set<string>();
 
   private readonly expandedCourses = signal<ReadonlySet<string>>(new Set());
   private readonly expandedTopics = signal<ReadonlySet<string>>(new Set());
@@ -712,9 +731,50 @@ export class BankListComponent {
     this.actionError.set(null);
     this.cancelEdit();
     this.selected.set(question);
+    this.loadFullImage(question);
     this.bankService.getQuestion(question.id).subscribe({
       next: (full) => this.selected.set(full),
       error: () => {},
+    });
+  }
+
+  /**
+   * Replaces a question's thumbnail with the original once it is selected.
+   *
+   * The detail panel renders `max-h-64 w-full` and the edit preview `h-28
+   * w-28` — both read from the same `imageUrls` map the 40px leaf row does, and
+   * both are views where the statement has to be legible. So the map holds the
+   * thumbnail until a question is opened and the full image from then on: the
+   * panel paints instantly with the bytes already in hand and sharpens when
+   * the original lands, instead of showing nothing while it travels.
+   *
+   * Only ever ONE image at a time — this is the selected question — which is
+   * why it does not go through `IMAGE_FETCH_CONCURRENCY`.
+   */
+  private loadFullImage(question: BankQuestion): void {
+    const assetId = question.imageAssetId;
+    if (!assetId || this.fullImagesLoaded.has(assetId)) {
+      return;
+    }
+    this.fullImagesLoaded.add(assetId);
+
+    this.bankService.fetchQuestionImage(assetId).subscribe({
+      next: (blob) => {
+        const url = URL.createObjectURL(blob);
+        this.objectUrls.push(url);
+        const previous = this.imageUrls()[assetId];
+        this.imageUrls.update((current) => ({ ...current, [assetId]: url }));
+        // The thumbnail this replaces is dead the moment nothing renders it.
+        // `ngOnDestroy` would get to it eventually via `objectUrls`, but a long
+        // session opening question after question would hold every one of them
+        // until then.
+        if (previous) {
+          URL.revokeObjectURL(previous);
+        }
+      },
+      // A failed upgrade leaves the thumbnail in place — a soft image rather
+      // than an empty panel. Cleared from the guard so re-selecting retries.
+      error: () => this.fullImagesLoaded.delete(assetId),
     });
   }
 
@@ -1010,17 +1070,52 @@ export class BankListComponent {
    * a `blob:` object URL, which `<img>` CAN load without any header.
    */
   private loadImages(questions: readonly BankQuestion[]): void {
-    for (const question of questions) {
-      const assetId = question.imageAssetId;
-      if (!assetId || this.imageUrls()[assetId]) {
-        continue;
-      }
-      this.bankService.fetchQuestionImage(assetId).subscribe((blob) => {
-        const url = URL.createObjectURL(blob);
-        this.objectUrls.push(url);
-        this.imageUrls.update((current) => ({ ...current, [assetId]: url }));
-      });
+    const pending = questions
+      .map((question) => question.imageAssetId)
+      .filter((assetId): assetId is string => Boolean(assetId))
+      .filter((assetId) => !this.imageUrls()[assetId] && !this.imagesInFlight.has(assetId));
+
+    if (pending.length === 0) {
+      return;
     }
+
+    for (const assetId of pending) {
+      this.imagesInFlight.add(assetId);
+    }
+
+    // `IMAGE_FETCH_CONCURRENCY` at a time, not all of them. Expanding a topic
+    // used to fire one XHR per question — up to `TOPIC_PAGE_SIZE` (50) at once,
+    // each a full-size scan. Bounding it matters for two separate reasons:
+    // the browser's own per-origin limit made most of them queue anyway, and
+    // the API buffers every asset whole in memory on a single replica
+    // (`replicas: 1`), so fifty concurrent reads is fifty live buffers there.
+    from(pending)
+      .pipe(
+        mergeMap(
+          (assetId) =>
+            this.bankService.fetchQuestionThumbnail(assetId).pipe(
+              map((blob) => ({ assetId, blob })),
+              // One unreadable asset must not cancel the other forty-nine —
+              // `mergeMap` would propagate the error and tear down the whole
+              // stream. The tile simply stays imageless.
+              catchError(() => EMPTY),
+            ),
+          IMAGE_FETCH_CONCURRENCY,
+        ),
+      )
+      .subscribe({
+        next: ({ assetId, blob }) => {
+          const url = URL.createObjectURL(blob);
+          this.objectUrls.push(url);
+          this.imagesInFlight.delete(assetId);
+          this.imageUrls.update((current) => ({ ...current, [assetId]: url }));
+        },
+        complete: () => {
+          for (const assetId of pending) {
+            this.imagesInFlight.delete(assetId);
+          }
+        },
+      });
   }
 
   protected imageUrl(question: BankQuestion): string | null {

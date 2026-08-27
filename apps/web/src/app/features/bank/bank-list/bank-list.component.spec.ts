@@ -138,6 +138,9 @@ function setup(
   const fetchQuestionImage = vi.fn((id: string) =>
     of(new Blob([`b-${id}`], { type: 'image/png' })),
   );
+  const fetchQuestionThumbnail = vi.fn((id: string) =>
+    of(new Blob([`t-${id}`], { type: 'image/webp' })),
+  );
   const getCourses = vi.fn(over.getCoursesImpl ?? (() => of(COURSES)));
   const getAllTopics = vi.fn(over.getAllTopicsImpl ?? (() => of([...TOPICS_C1, ...TOPICS_C2])));
   const reviseQuestion = vi.fn(
@@ -195,6 +198,7 @@ function setup(
           replaceQuestionImage,
           buildImageAssetUrl,
           fetchQuestionImage,
+          fetchQuestionThumbnail,
         },
       },
       { provide: TaxonomyService, useValue: { getCourses, getAllTopics } },
@@ -216,6 +220,7 @@ function setup(
     updateQuestion,
     replaceQuestionImage,
     fetchQuestionImage,
+    fetchQuestionThumbnail,
     getCourses,
     getAllTopics,
     reviseQuestion,
@@ -368,17 +373,41 @@ describe('BankListComponent', () => {
       expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
     });
 
-    it('fetches thumbnails through an authenticated blob for a leaf question', () => {
-      const { compiled, fixture, fetchQuestionImage } = setup();
+    /**
+     * The leaf row asks for the THUMBNAIL, never the original. It renders one
+     * per question for a page of 50, and the originals are full-resolution
+     * scans — that row is where the ~3MB per expanded topic came from
+     * (docs/audit-2026-08-26-prod-latency.md §3.2).
+     */
+    it('fetches the thumbnail — not the original — through an authenticated blob for a leaf question', () => {
+      const { compiled, fixture, fetchQuestionThumbnail, fetchQuestionImage } = setup();
       expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
-      expect(fetchQuestionImage).toHaveBeenCalledWith('asset-1');
+      expect(fetchQuestionThumbnail).toHaveBeenCalledWith('asset-1');
+      expect(fetchQuestionImage).not.toHaveBeenCalled();
       expect(compiled.querySelector('img')?.getAttribute('src')).toMatch(/^blob:/);
     });
 
-    it('does NOT fetch thumbnails for a topic that has never been expanded (lazy-load)', () => {
-      const { fetchQuestionImage } = setup();
+    /**
+     * ...and selecting one upgrades it. The detail panel is a view a teacher
+     * READS — the statement is inside the image — so it must end up on the
+     * original, not the 320px stand-in it paints with first.
+     */
+    it('fetches the ORIGINAL once a question is selected', () => {
+      const { compiled, fixture, fetchQuestionImage } = setup();
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
       expect(fetchQuestionImage).not.toHaveBeenCalled();
+
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      expect(fetchQuestionImage).toHaveBeenCalledWith('asset-1');
+    });
+
+    it('does NOT fetch thumbnails for a topic that has never been expanded (lazy-load)', () => {
+      const { fetchQuestionThumbnail } = setup();
+      expect(fetchQuestionThumbnail).not.toHaveBeenCalled();
     });
 
     it('loads the tree from the per-topic summary alone — not a single question row is fetched on entry', () => {

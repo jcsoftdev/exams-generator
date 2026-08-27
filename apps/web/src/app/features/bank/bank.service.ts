@@ -163,6 +163,20 @@ export class BankService {
   }
 
   /**
+   * The 320px WebP form of the same asset, for the tree's 40px leaf row.
+   *
+   * Only that row uses it. These are IMAGE questions — the statement and the
+   * alternatives are inside the picture — so the views a teacher actually
+   * READS (the selected question's panel, the edit preview) keep asking
+   * `fetchQuestionImage` for the original. The leaf row is the one that
+   * renders 50 at a time, which is where the weight was
+   * (docs/audit-2026-08-26-prod-latency.md §3.2).
+   */
+  fetchQuestionThumbnail(imageAssetId: string): Observable<Blob> {
+    return this.http.get(`${this.buildImageAssetUrl(imageAssetId)}/thumb`, { responseType: 'blob' });
+  }
+
+  /**
    * Attaches images to the alternative slots that have one. `indexes` names
    * the slot for each image, so a question with drawings on only a) and c)
    * uploads exactly two files (see the API's `resolveAlternativeSlots`).
