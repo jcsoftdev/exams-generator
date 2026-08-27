@@ -2,9 +2,11 @@ import "reflect-metadata";
 import { ValidationPipe } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
 import { NestExpressApplication } from "@nestjs/platform-express";
+import compression from "compression";
 import helmet from "helmet";
 import { Logger } from "nestjs-pino";
 import { AppModule } from "./app.module";
+import { shouldCompress } from "./common/compression.filter";
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, { bufferLogs: true });
@@ -14,6 +16,15 @@ async function bootstrap() {
   // before this line until it's set, so nothing before this point is lost.
   app.useLogger(app.get(Logger));
   app.use(helmet());
+  // Compresses origin→edge, the hop that crosses an ocean; Cloudflare handles
+  // edge→browser on its own. `shouldCompress` (and its spec) exist because the
+  // default filter would happily buffer the SSE streams — see that file.
+  //
+  // `compression` is a DIRECT dependency of this package, not a transitive
+  // one, for the same reason the body-parser note below spells out: the
+  // `pnpm deploy --prod` isolated bundle only carries direct deps, and a
+  // transitive import crash-loops prod with `Cannot find module`.
+  app.use(compression({ filter: shouldCompress }));
   // The web app now lives on a tenant subdomain (`{slug}.creaexamen.com`)
   // while the API is centralized on `api.creaexamen.com` — no longer
   // same-origin, so cross-origin browser reads need explicit CORS. Auth is
