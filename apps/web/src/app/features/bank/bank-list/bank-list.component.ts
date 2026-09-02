@@ -94,6 +94,14 @@ const TOPIC_PAGE_SIZE = 50;
 const IMAGE_FETCH_CONCURRENCY = 6;
 
 /**
+ * D1 (audit M1): how long a just-created question's row stays flagged
+ * `data-highlight="true"` after the tree reveals it. Long enough to find on
+ * screen, short enough that it reads as "this one" rather than a permanent
+ * marker.
+ */
+const HIGHLIGHT_DURATION_MS = 4000;
+
+/**
  * Question-bank screen, tree redesign: a two-column split where the left
  * column is a collapsible Curso -> Tema -> preguntas tree (replacing the
  * flat paginated list + raw UUID subtitles) and the right column is the
@@ -391,6 +399,14 @@ export class BankListComponent {
   /** Every `topicId` an image fetch has already been requested for — guards the lazy-load effect against duplicate HTTP calls. */
   private readonly requestedImageTopics = new Set<string>();
 
+  // --- D1: highlight the question just created (bank-new -> here) --------------
+  /** `router.getCurrentNavigation()?.extras.state['createdQuestionId']`, falling back to `history.state` — captured once, in the constructor, before Angular clears the current navigation. */
+  private readonly pendingCreatedQuestionId: string | null;
+  /** Dismissible "Pregunta guardada." banner — shown once the created question has been located and revealed. */
+  protected readonly createdBanner = signal(false);
+  /** The just-created question's id while its row should render `data-highlight="true"`; cleared after `HIGHLIGHT_DURATION_MS`. */
+  protected readonly highlightedQuestionId = signal<string | null>(null);
+
   /** Curso -> Tema -> preguntas: skeleton + counts from the server summary, leaves filled in per expanded topic (QB tree redesign, lazy by branch). */
   protected readonly tree = computed<QuestionTreeCourseNode[]>(() =>
     buildQuestionTree(
@@ -428,6 +444,13 @@ export class BankListComponent {
   });
 
   constructor() {
+    // Read BEFORE `loadInitial()`: `getCurrentNavigation()` is only non-null
+    // while the navigation that landed on this component is still current —
+    // capturing it here (constructor, synchronous) is the one place that's
+    // guaranteed true. `history.state` is the fallback for whenever Angular's
+    // navigation object isn't available (e.g. a page reload that replays the
+    // same history entry).
+    this.pendingCreatedQuestionId = this.readCreatedQuestionId();
     this.loadInitial();
     this.destroyRef.onDestroy(() => {
       for (const url of this.objectUrls) {
@@ -460,12 +483,72 @@ export class BankListComponent {
         this.taxonomyLoaded.set(true);
         this.applyCounts(counts);
         this.loading.set(false);
+        // Called AFTER `applyCounts` (which resets expand state) — see its
+        // doc — so the reveal's own expand/select below is never clobbered by
+        // this same load collapsing everything back down.
+        if (this.pendingCreatedQuestionId) {
+          this.revealCreatedQuestion(this.pendingCreatedQuestionId);
+        }
       },
       error: () => {
         this.loading.set(false);
         this.errorMessage.set(ERROR_MESSAGE);
       },
     });
+  }
+
+  /** D1 helper — see `pendingCreatedQuestionId`'s doc for why this reads the navigation state in the constructor. */
+  private readCreatedQuestionId(): string | null {
+    const navigationState = this.router.getCurrentNavigation?.()?.extras?.state as
+      Record<string, unknown> | undefined;
+    const fromNavigation = navigationState?.['createdQuestionId'];
+    if (typeof fromNavigation === 'string' && fromNavigation) {
+      return fromNavigation;
+    }
+    const fromHistory = (history.state as Record<string, unknown> | undefined)?.[
+      'createdQuestionId'
+    ];
+    return typeof fromHistory === 'string' && fromHistory ? fromHistory : null;
+  }
+
+  /**
+   * D1 (audit M1): "Guardar no da ningún feedback de éxito" — the teacher
+   * saved a question in `bank-new` and landed back on a collapsed tree with
+   * nothing selected. Fetches the full question, expands its course AND
+   * topic (loading that topic's page — the same path `toggleTopic` uses),
+   * selects it so the detail panel shows it, and flags its row
+   * `data-highlight` for `HIGHLIGHT_DURATION_MS`. Also announces it through
+   * `LiveAnnouncerService` (D3) — the visible banner alone is silent to a
+   * screen reader. A failed lookup (question deleted/archived between save
+   * and this fetch) is a silent no-op: no banner, no crash.
+   */
+  private revealCreatedQuestion(id: string): void {
+    this.bankService.getQuestion(id).subscribe({
+      next: (question) => {
+        this.expandedCourses.update((current) => addToSet(current, question.courseId));
+        this.expandedTopics.update((current) => addToSet(current, question.topicId));
+        this.loadTopicQuestions(question.topicId);
+        this.select(question);
+        this.createdBanner.set(true);
+        this.liveAnnouncer.announce('Pregunta guardada.');
+        this.highlightedQuestionId.set(id);
+        setTimeout(() => this.highlightedQuestionId.set(null), HIGHLIGHT_DURATION_MS);
+        // Best-effort: scroll the row into view once the topic's page has
+        // rendered. `scrollIntoView` doesn't exist in every test environment
+        // (jsdom), hence the optional call — this is UX polish, not behavior
+        // a test should depend on.
+        setTimeout(() => {
+          document
+            .querySelector(`[data-testid="bank-question"][data-question-id="${id}"]`)
+            ?.scrollIntoView?.({ block: 'center' });
+        }, 0);
+      },
+      error: () => {},
+    });
+  }
+
+  protected dismissCreatedBanner(): void {
+    this.createdBanner.set(false);
   }
 
   protected search(): void {
