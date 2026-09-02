@@ -168,8 +168,13 @@ export type GenerateQuestionStreamEvent =
  * `string | undefined` here to match what actually crosses the wire.
  *
  * `alternatives` is left as a loose `readonly string[]`, not the port's
- * exactly-5 `GeneratedAlternatives` tuple, even though the API always sends
- * exactly 5 (`openrouter-response-validator.ts` rejects anything else) —
+ * exactly-5 `GeneratedAlternatives` tuple. For `revise`/`generate` the API
+ * DOES always send exactly 5 (`openrouter-response-validator.ts`'s
+ * `validateGeneratedQuestionShape` rejects anything else) — but this same
+ * field is inherited unchanged by `AiExtractedQuestion` below, whose
+ * `extract` response may legitimately carry FEWER than 5, even an empty
+ * array (`validateExtractedQuestionShape` — see `AiExtractedQuestion`'s own
+ * docstring), so a tuple type here would be wrong for that caller. Also:
  * the bank feature's own AI-revise/extract test fixtures
  * (`bank-list.component.spec.ts`, `bank-new.component.spec.ts`) construct
  * `AiRevisedQuestion` values with 2-element arrays via `satisfies
