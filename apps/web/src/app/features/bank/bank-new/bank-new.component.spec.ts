@@ -6,6 +6,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { NormalizedBoxDto, AiExtractedQuestion } from '@exams-generator/shared';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
+import { ButtonComponent } from '../../../ui/button/button.component';
 import { BankNewComponent } from './bank-new.component';
 import { BankService } from '../bank.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
@@ -1228,16 +1229,25 @@ describe('BankNewComponent', () => {
     });
 
     it('renders "Extraer con IA" as the primary action, and "Guardar foto tal cual" as the secondary/ghost action', () => {
-      const { compiled } = setup();
-      const extractButton = compiled.querySelector(
-        '[data-testid="extract-with-ai"] button',
-      ) as HTMLButtonElement;
+      const { fixture, compiled } = setup();
+      // Reads the `variant` INPUT bound to each `ui-button`, not a CSS class
+      // string — a class assertion breaks the moment `ui-button`'s own
+      // internal styling changes, even though the component's intent
+      // (primary vs. ghost) hasn't.
+      const extractButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="extract-with-ai"] ui-button'),
+      );
+      const submitButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="photo-submit"] ui-button'),
+      );
+      const extractButtonInstance = extractButtonDebug.componentInstance as ButtonComponent;
+      const submitButtonInstance = submitButtonDebug.componentInstance as ButtonComponent;
       const submitButton = compiled.querySelector(
         '[data-testid="photo-submit"] button',
       ) as HTMLButtonElement;
 
-      expect(extractButton.className).toContain('bg-primary-500');
-      expect(submitButton.className).not.toContain('bg-primary-500');
+      expect(extractButtonInstance.variant()).toBe('primary');
+      expect(submitButtonInstance.variant()).toBe('ghost');
       expect(submitButton.textContent).toContain('Guardar foto tal cual');
     });
 
