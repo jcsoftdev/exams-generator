@@ -361,6 +361,19 @@ export class BankNewComponent {
         error: () => this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.'),
       });
     });
+
+    // B8: a stale extraction/recrop error talks about a photo or a reading
+    // the teacher is actively correcting — once they touch enunciado,
+    // alternativas, or clave, that message no longer describes what's on
+    // screen. Tracks the signals directly (rather than wrapping each
+    // template `(input)` handler) so this fires the same way regardless of
+    // how the field changed.
+    effect(() => {
+      this.sBody();
+      this.sAlternatives();
+      this.sCorrectAnswer();
+      this.extractError.set(null);
+    });
   }
 
   protected setTab(t: Tab): void {
@@ -440,6 +453,9 @@ export class BankNewComponent {
     }
     this.pImage.set(file);
     this.pImagePreviewUrl.set(file ? URL.createObjectURL(file) : null);
+    // B8: a stale extraction/recrop error talks about the PREVIOUS photo —
+    // pointless (and confusing) to leave it up once that photo is gone.
+    this.extractError.set(null);
 
     // Crops (and any pending re-crop handle) are always cut FROM the photo
     // that was just replaced — the moment it changes (or is cleared), they
@@ -484,6 +500,18 @@ export class BankNewComponent {
       !!this.pCorrectAnswer() &&
       !!this.pImage()
     );
+  }
+
+  /** B8: names only the fields still missing, in the photo tab's visual order, instead of always listing all six. */
+  protected photoMissingFields(): string {
+    const missing: string[] = [];
+    if (!this.pImage()) missing.push('imagen');
+    if (!this.pGradeLevel()) missing.push('grado');
+    if (!this.pCourseId()) missing.push('curso');
+    if (!this.pTopicId()) missing.push('tema');
+    if (!this.pDifficulty()) missing.push('nivel');
+    if (!this.pCorrectAnswer()) missing.push('clave');
+    return missing.join(', ');
   }
 
   /**
@@ -756,6 +784,19 @@ export class BankNewComponent {
       this.alternativesList().length >= 2 &&
       !!this.sCorrectAnswer()
     );
+  }
+
+  /** B8: names only the fields still missing, in the structured tab's visual order, instead of always listing all six. */
+  protected structuredMissingFields(): string {
+    const missing: string[] = [];
+    if (!this.sGradeLevel()) missing.push('grado');
+    if (!this.sCourseId()) missing.push('curso');
+    if (!this.sTopicId()) missing.push('tema');
+    if (!this.sDifficulty()) missing.push('nivel');
+    if (!this.sBody().trim()) missing.push('enunciado');
+    if (this.alternativesList().length < 2) missing.push('al menos 2 alternativas');
+    if (!this.sCorrectAnswer()) missing.push('clave');
+    return missing.join(', ');
   }
 
   private alternativesList(): string[] {

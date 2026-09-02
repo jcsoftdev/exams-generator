@@ -127,7 +127,7 @@
 
       @if (!photoValid()) {
         <p data-testid="photo-validation" class="text-xs text-hard-text">
-          Completa grado, curso, tema, nivel, clave e imagen para poder guardar.
+          Falta: {{ photoMissingFields() }}
         </p>
       }
       <div class="flex flex-wrap gap-2">
@@ -227,7 +227,7 @@
         ></textarea>
       </label>
       <ui-input
-        label="Clave (a/b/c/d)"
+        label="Clave (a–e)"
         [value]="sCorrectAnswer()"
         (valueChange)="sCorrectAnswer.set($event)"
       ></ui-input>
@@ -292,8 +292,7 @@
 
       @if (!structuredValid()) {
         <p data-testid="structured-validation" class="text-xs text-hard-text">
-          Completa grado, curso, tema, nivel, enunciado, al menos 2 alternativas y la clave para
-          poder guardar.
+          Falta: {{ structuredMissingFields() }}
         </p>
       }
       <div data-testid="structured-submit">

@@ -911,6 +911,71 @@ describe('BankNewComponent', () => {
     });
   });
 
+  describe('B8: small copy/state fixes', () => {
+    it('clears extractError when a new photo is picked', () => {
+      const { fixture, compiled } = setup();
+      (
+        fixture.componentInstance as unknown as { extractError: { set(v: string | null): void } }
+      ).extractError.set('boom');
+      fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="extract-error"]')).toBeTruthy();
+
+      pickImage(fixture, compiled);
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as { extractError(): string | null };
+      expect(instance.extractError()).toBeNull();
+    });
+
+    it('clears extractError when the teacher edits the enunciado, alternativas, or clave on the structured tab', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      (
+        fixture.componentInstance as unknown as { extractError: { set(v: string | null): void } }
+      ).extractError.set('boom');
+      fixture.detectChanges();
+
+      set(fixture, 'sBody', 'un enunciado editado');
+
+      const instance = fixture.componentInstance as unknown as { extractError(): string | null };
+      expect(instance.extractError()).toBeNull();
+    });
+
+    it('labels the clave field "Clave (a–e)" on the structured tab', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(compiled.textContent).toContain('Clave (a–e)');
+      expect(compiled.textContent).not.toContain('Clave (a/b/c/d)');
+    });
+
+    it('lists only the missing fields in the photo-tab validation hint', () => {
+      const { fixture, compiled } = setup();
+      set(fixture, 'pCourseId', 'c1');
+      set(fixture, 'pTopicId', 't1');
+      set(fixture, 'pDifficulty', 'easy');
+      pickImage(fixture, compiled);
+
+      const hint = compiled.querySelector('[data-testid="photo-validation"]');
+      expect(hint?.textContent).toContain('Falta: grado, clave');
+    });
+
+    it('lists only the missing fields in the structured-tab validation hint', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', 'x');
+      set(fixture, 'sAlternatives', 'a\nb');
+
+      const hint = compiled.querySelector('[data-testid="structured-validation"]');
+      expect(hint?.textContent).toContain('Falta: grado, clave');
+    });
+  });
+
   describe('AI crops', () => {
     const EXTRACTED_WITH_CROPS: AiExtractedQuestion = {
       bodyTypst: '¿Qué muestra la figura?',
