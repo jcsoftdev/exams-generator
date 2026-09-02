@@ -27,6 +27,8 @@ import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { MathTextComponent } from '../../../ui/math-text/math-text.component';
+import { LiveRegionComponent } from '../../../ui/live-region/live-region.component';
+import { LiveAnnouncerService } from '../../../ui/live-region/live-announcer.service';
 import { truncateTypst, typstToPlainText } from '../../../shared/typst/typst-to-latex';
 import { TagVariant } from '../../../ui/ui.types';
 import { BankService } from '../bank.service';
@@ -92,6 +94,14 @@ const TOPIC_PAGE_SIZE = 50;
  * the socket count.
  */
 const IMAGE_FETCH_CONCURRENCY = 6;
+
+/**
+ * D1 (audit M1): how long a just-created question's row stays flagged
+ * `data-highlight="true"` after the tree reveals it. Long enough to find on
+ * screen, short enough that it reads as "this one" rather than a permanent
+ * marker.
+ */
+const HIGHLIGHT_DURATION_MS = 4000;
 
 /**
  * Question-bank screen, tree redesign: a two-column split where the left
@@ -215,6 +225,7 @@ const IMAGE_FETCH_CONCURRENCY = 6;
     QuestionContentFieldsComponent,
     AiReviseBoxComponent,
     LucideAngularModule,
+    LiveRegionComponent,
   ],
   // Local (component-scoped) icon pick — Angular's Lucide icon token is NOT a multi-provider, so a
   // local `pick()` SHADOWS (does not merge with) the app-level one in app.config.ts. This must list
@@ -247,6 +258,7 @@ export class BankListComponent {
   private readonly aiService = inject(AiService);
   private readonly destroyRef = inject(DestroyRef);
   private readonly router = inject(Router);
+  private readonly liveAnnouncer = inject(LiveAnnouncerService);
 
   protected readonly difficulties = Object.values(Difficulty);
   protected readonly difficultyLabels = DIFFICULTY_LABELS;
@@ -391,6 +403,14 @@ export class BankListComponent {
   /** Every `topicId` an image fetch has already been requested for — guards the lazy-load effect against duplicate HTTP calls. */
   private readonly requestedImageTopics = new Set<string>();
 
+  // --- D1: highlight the question just created (bank-new -> here) --------------
+  /** `router.getCurrentNavigation()?.extras.state['createdQuestionId']`, falling back to `history.state` — captured once, in the constructor, before Angular clears the current navigation. */
+  private readonly pendingCreatedQuestionId: string | null;
+  /** Dismissible "Pregunta guardada." banner — shown once the created question has been located and revealed. */
+  protected readonly createdBanner = signal(false);
+  /** The just-created question's id while its row should render `data-highlight="true"`; cleared after `HIGHLIGHT_DURATION_MS`. */
+  protected readonly highlightedQuestionId = signal<string | null>(null);
+
   /** Curso -> Tema -> preguntas: skeleton + counts from the server summary, leaves filled in per expanded topic (QB tree redesign, lazy by branch). */
   protected readonly tree = computed<QuestionTreeCourseNode[]>(() =>
     buildQuestionTree(
@@ -428,6 +448,13 @@ export class BankListComponent {
   });
 
   constructor() {
+    // Read BEFORE `loadInitial()`: `getCurrentNavigation()` is only non-null
+    // while the navigation that landed on this component is still current —
+    // capturing it here (constructor, synchronous) is the one place that's
+    // guaranteed true. `history.state` is the fallback for whenever Angular's
+    // navigation object isn't available (e.g. a page reload that replays the
+    // same history entry).
+    this.pendingCreatedQuestionId = this.readCreatedQuestionId();
     this.loadInitial();
     this.destroyRef.onDestroy(() => {
       for (const url of this.objectUrls) {
@@ -460,12 +487,72 @@ export class BankListComponent {
         this.taxonomyLoaded.set(true);
         this.applyCounts(counts);
         this.loading.set(false);
+        // Called AFTER `applyCounts` (which resets expand state) — see its
+        // doc — so the reveal's own expand/select below is never clobbered by
+        // this same load collapsing everything back down.
+        if (this.pendingCreatedQuestionId) {
+          this.revealCreatedQuestion(this.pendingCreatedQuestionId);
+        }
       },
       error: () => {
         this.loading.set(false);
         this.errorMessage.set(ERROR_MESSAGE);
       },
     });
+  }
+
+  /** D1 helper — see `pendingCreatedQuestionId`'s doc for why this reads the navigation state in the constructor. */
+  private readCreatedQuestionId(): string | null {
+    const navigationState = this.router.getCurrentNavigation?.()?.extras?.state as
+      Record<string, unknown> | undefined;
+    const fromNavigation = navigationState?.['createdQuestionId'];
+    if (typeof fromNavigation === 'string' && fromNavigation) {
+      return fromNavigation;
+    }
+    const fromHistory = (history.state as Record<string, unknown> | undefined)?.[
+      'createdQuestionId'
+    ];
+    return typeof fromHistory === 'string' && fromHistory ? fromHistory : null;
+  }
+
+  /**
+   * D1 (audit M1): "Guardar no da ningún feedback de éxito" — the teacher
+   * saved a question in `bank-new` and landed back on a collapsed tree with
+   * nothing selected. Fetches the full question, expands its course AND
+   * topic (loading that topic's page — the same path `toggleTopic` uses),
+   * selects it so the detail panel shows it, and flags its row
+   * `data-highlight` for `HIGHLIGHT_DURATION_MS`. Also announces it through
+   * `LiveAnnouncerService` (D3) — the visible banner alone is silent to a
+   * screen reader. A failed lookup (question deleted/archived between save
+   * and this fetch) is a silent no-op: no banner, no crash.
+   */
+  private revealCreatedQuestion(id: string): void {
+    this.bankService.getQuestion(id).subscribe({
+      next: (question) => {
+        this.expandedCourses.update((current) => addToSet(current, question.courseId));
+        this.expandedTopics.update((current) => addToSet(current, question.topicId));
+        this.loadTopicQuestions(question.topicId);
+        this.select(question);
+        this.createdBanner.set(true);
+        this.liveAnnouncer.announce('Pregunta guardada.');
+        this.highlightedQuestionId.set(id);
+        setTimeout(() => this.highlightedQuestionId.set(null), HIGHLIGHT_DURATION_MS);
+        // Best-effort: scroll the row into view once the topic's page has
+        // rendered. `scrollIntoView` doesn't exist in every test environment
+        // (jsdom), hence the optional call — this is UX polish, not behavior
+        // a test should depend on.
+        setTimeout(() => {
+          document
+            .querySelector(`[data-testid="bank-question"][data-question-id="${id}"]`)
+            ?.scrollIntoView?.({ block: 'center' });
+        }, 0);
+      },
+      error: () => {},
+    });
+  }
+
+  protected dismissCreatedBanner(): void {
+    this.createdBanner.set(false);
   }
 
   protected search(): void {
@@ -711,8 +798,39 @@ export class BankListComponent {
     // Its provenance names the exam and the question number, which is what
     // tells one of ~1500 harvested image questions from the next. The trailing
     // "(clave E)" the harvest writes is dropped: the row prints the key already.
-    const source = (question.sourceName ?? '').replace(/\s*\(clave\s+[a-eA-E]\)\s*$/, '').trim();
-    return source ? truncateTypst(source, 70) : null;
+    // The file extension a WEB UPLOAD writes into sourceName ("1d.PNG") is
+    // dropped too — it's not provenance, just noise (audit 2026-09-02, D2a).
+    const source = (question.sourceName ?? '')
+      .replace(/\s*\(clave\s+[a-eA-E]\)\s*$/, '')
+      .replace(/\.(png|jpe?g|gif|webp|bmp|heic|heif|tiff?)$/i, '')
+      .trim();
+    if (source) {
+      return truncateTypst(source, 70);
+    }
+    // No statement AND no source: a question created straight in the web UI
+    // from a bare image, with nothing else to identify it by. The row used to
+    // fall through to `null` here and render only "Clave: d" (audit 2026-09-02,
+    // L1) — this is the honest floor: it IS a question, it DOES have an image.
+    return 'Pregunta con imagen';
+  }
+
+  /**
+   * D2b (audit L4): "Genética y herencia · 5" and "· 4" side by side, with
+   * nothing telling the two topics apart — the trailing number there is
+   * `topic.questionCount`, easily mistaken for a grade. Only topics that
+   * ACTUALLY share a name within the same course get the grade suffix; a
+   * unique name stays bare, same as before. `topic.gradeLevel` is `null`
+   * until the topic's first page has loaded (see `QuestionTreeTopicNode`), so
+   * a same-named topic never expanded yet still renders bare rather than a
+   * dangling "· undefined".
+   */
+  protected topicDisplayName(course: QuestionTreeCourseNode, topic: QuestionTreeTopicNode): string {
+    const sharesNameWithSibling =
+      course.topics.filter((sibling) => sibling.name === topic.name).length > 1;
+    if (sharesNameWithSibling && topic.gradeLevel) {
+      return `${topic.name} · ${gradeLevelLabel(topic.gradeLevel)}`;
+    }
+    return topic.name;
   }
 
   /** Alternatives of a structured question, lettered a/b/c…, with the `correctAnswer` one flagged. Empty for image questions. */

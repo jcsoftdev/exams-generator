@@ -18,9 +18,18 @@ import { ButtonSize, ButtonVariant } from '../ui.types';
       [disabled]="disabled() || loading()"
       [attr.aria-label]="ariaLabel() || null"
       [attr.aria-disabled]="disabled() || loading() ? 'true' : null"
+      [attr.aria-busy]="loading() ? 'true' : null"
+      [attr.aria-describedby]="ariaDescribedBy() || null"
       (click)="onClick()"
     >
       <ng-content></ng-content>
+      @if (loading()) {
+        <!-- D3a (audit M12): loading toggled disabled but never told assistive
+             tech WHY the click did nothing and nothing else changed — no
+             aria-busy, no changed label. This is the sr-only equivalent of the
+             spinner every loading variant already shows sighted users. -->
+        <span class="sr-only">Cargando…</span>
+      }
     </button>
   `,
 })
@@ -37,6 +46,14 @@ export class ButtonComponent {
    * it belongs to (audit 2026-08-15).
    */
   readonly ariaLabel = input<string>();
+  /**
+   * D4 (audit M11): "Botón deshabilitado sin vínculo a la razón" — a disabled
+   * button with a helper text nearby ("Necesita grado e imagen") has no
+   * programmatic link between the two unless something passes that hint's id
+   * through as `aria-describedby`. Passthrough only — the id itself is the
+   * caller's to own (same pattern as `ui-input`'s `errorId`).
+   */
+  readonly ariaDescribedBy = input<string>();
 
   readonly clicked = output<void>();
 

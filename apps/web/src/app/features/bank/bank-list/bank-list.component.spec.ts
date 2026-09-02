@@ -107,6 +107,8 @@ function setup(
     reviseQuestionImpl?: (id: string, instruction: string) => unknown;
     extractQuestionFromImageImpl?: (image: File) => unknown;
     updateQuestionImpl?: (id: string, patch: unknown) => unknown;
+    /** D1: what `router.getCurrentNavigation()?.extras.state` looks like on entry. `undefined` -> no current navigation (falls back to `history.state`). */
+    getCurrentNavigationImpl?: () => unknown;
   } = {},
 ) {
   const questionSource = vi.fn(over.listImpl ?? (() => of(QUESTIONS)));
@@ -162,6 +164,7 @@ function setup(
         } satisfies AiRevisedQuestion)),
   );
   const navigate = vi.fn();
+  const getCurrentNavigation = vi.fn(over.getCurrentNavigationImpl ?? (() => null));
   let n = 0;
   vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:mock-${n++}`);
   vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
@@ -203,7 +206,7 @@ function setup(
       },
       { provide: TaxonomyService, useValue: { getCourses, getAllTopics } },
       { provide: AiService, useValue: { reviseQuestion, extractQuestionFromImage } },
-      { provide: Router, useValue: { navigate } },
+      { provide: Router, useValue: { navigate, getCurrentNavigation } },
     ],
   });
   const fixture = TestBed.createComponent(BankListComponent);
@@ -226,6 +229,7 @@ function setup(
     reviseQuestion,
     extractQuestionFromImage,
     navigate,
+    getCurrentNavigation,
   };
 }
 
@@ -551,6 +555,42 @@ describe('BankListComponent', () => {
       expect(snippet?.textContent).toContain('¿Cuál es el resultado de 2 + 3 × 4?');
     });
 
+    it('shows a neutral "Pregunta con imagen" fallback when a leaf has no statement AND no sourceName (D2a — a web-created image question)', () => {
+      const image = makeQuestion({
+        id: 'qi-blank',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'image',
+        bodyTypst: null,
+        alternatives: null,
+        sourceName: null,
+      });
+      const { compiled, fixture } = setup({ listImpl: () => of([image]) });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      const snippet = compiled.querySelector('[data-testid="question-snippet"]');
+      expect(snippet?.textContent).toContain('Pregunta con imagen');
+    });
+
+    it('strips the file extension off sourceName before showing it as the snippet (D2a)', () => {
+      const image = makeQuestion({
+        id: 'qi-ext',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'image',
+        bodyTypst: null,
+        alternatives: null,
+        sourceName: '1d.PNG',
+      });
+      const { compiled, fixture } = setup({ listImpl: () => of([image]) });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      const snippet = compiled.querySelector('[data-testid="question-snippet"]');
+      expect(snippet?.textContent?.trim()).toBe('1d');
+    });
+
     it('labels an image question with where it came from, since it has no statement', () => {
       // The bank now holds ~1500 whole-question images harvested from published
       // exams. Without their provenance every one of those rows reads "Clave: c"
@@ -619,6 +659,34 @@ describe('BankListComponent', () => {
 
       const snippet = compiled.querySelector('[data-testid="question-snippet"]');
       expect(snippet?.textContent).not.toContain('(clave C)');
+    });
+
+    it('shows the grade on each topic once two topics under the same course share a name (D2b)', () => {
+      const topics: Topic[] = [
+        { id: 't-bio-5', name: 'Genética y herencia', courseId: 'c1' },
+        { id: 't-bio-4', name: 'Genética y herencia', courseId: 'c1' },
+      ];
+      const questions: BankQuestion[] = [
+        makeQuestion({ id: 'gb5', courseId: 'c1', topicId: 't-bio-5', gradeLevel: 'secundaria_5' }),
+        makeQuestion({ id: 'gb4', courseId: 'c1', topicId: 't-bio-4', gradeLevel: 'secundaria_4' }),
+      ];
+      const { compiled, fixture } = setup({
+        getAllTopicsImpl: () => of(topics),
+        listImpl: () => of(questions),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't-bio-5');
+      expandTopic(compiled, fixture, 't-bio-4');
+
+      expect(topicHeader(compiled, 't-bio-5').textContent).toContain('5° secundaria');
+      expect(topicHeader(compiled, 't-bio-4').textContent).toContain('4° secundaria');
+    });
+
+    it('leaves a unique topic name bare — no grade suffix when nothing else under the course shares it', () => {
+      const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
+
+      expect(topicHeader(compiled, 't1').textContent).not.toMatch(/°/);
     });
   });
 
@@ -1356,6 +1424,92 @@ describe('BankListComponent', () => {
       fixture.detectChanges();
       expect(questionSource).toHaveBeenCalledTimes(1);
       expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
+    });
+  });
+
+  describe('created question banner (D1)', () => {
+    it('reveals the question just created: expands its course/topic, selects it, and shows a dismissible banner', () => {
+      const { compiled, getQuestion } = setup({
+        getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+      });
+
+      expect(getQuestion).toHaveBeenCalledWith('q1');
+      expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('true');
+      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
+      expect(compiled.querySelector('[data-testid="bank-panel"]')).toBeTruthy();
+
+      const banner = compiled.querySelector('[data-testid="created-banner"]');
+      expect(banner?.textContent).toContain('Pregunta guardada.');
+
+      const row = compiled.querySelector('[data-question-id="q1"]');
+      expect(row?.getAttribute('data-highlight')).toBe('true');
+    });
+
+    it('falls back to history.state when there is no current Angular navigation', () => {
+      history.replaceState({ createdQuestionId: 'q1' }, '');
+      try {
+        const { compiled } = setup({
+          getCurrentNavigationImpl: () => null,
+          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        });
+
+        expect(compiled.querySelector('[data-testid="created-banner"]')).toBeTruthy();
+        expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
+      } finally {
+        history.replaceState(null, '');
+      }
+    });
+
+    it('dismisses the banner on click, without touching the highlighted row', () => {
+      const { compiled, fixture } = setup({
+        getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+        getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+      });
+
+      (
+        compiled.querySelector('[data-testid="created-banner-dismiss"]') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="created-banner"]')).toBeFalsy();
+    });
+
+    it('clears the row highlight after 4s (fake timers)', () => {
+      vi.useFakeTimers();
+      try {
+        const { compiled, fixture } = setup({
+          getCurrentNavigationImpl: () => ({ extras: { state: { createdQuestionId: 'q1' } } }),
+          getQuestionImpl: (id) => of(makeQuestion({ id, courseId: 'c1', topicId: 't1' })),
+        });
+        fixture.detectChanges();
+
+        expect(
+          compiled.querySelector('[data-question-id="q1"]')?.getAttribute('data-highlight'),
+        ).toBe('true');
+
+        vi.advanceTimersByTime(4000);
+        fixture.detectChanges();
+
+        expect(
+          compiled.querySelector('[data-question-id="q1"]')?.getAttribute('data-highlight'),
+        ).toBeNull();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('shows neither the banner nor any highlight when there is no created-question state', () => {
+      const { compiled } = setup();
+      expect(compiled.querySelector('[data-testid="created-banner"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-highlight="true"]')).toBeFalsy();
+    });
+  });
+
+  describe('accessibility (D3)', () => {
+    it('mounts a single live-region for the LiveAnnouncerService, so it can be moved to the shell at merge', () => {
+      const { compiled } = setup();
+      expect(compiled.querySelector('[data-testid="live-region"]')).toBeTruthy();
     });
   });
 });

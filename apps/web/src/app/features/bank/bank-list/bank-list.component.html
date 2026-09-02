@@ -1,5 +1,32 @@
 <div class="flex flex-col gap-4 p-6" data-testid="bank-list">
+  <!--
+    D3 (audit M12): single aria-live sink for LiveAnnouncerService. Belongs in
+    the app shell (one instance app-wide) — mounted here only because the
+    shell is out of this line's ownership; see LiveRegionComponent's doc.
+  -->
+  <ui-live-region></ui-live-region>
+
   <h1 class="text-xl font-semibold text-n900">Banco de preguntas</h1>
+
+  @if (createdBanner()) {
+    <!-- D1 (audit M1): the only feedback "Guardar" used to give was a collapsed tree. -->
+    <div
+      data-testid="created-banner"
+      role="status"
+      class="flex items-center justify-between gap-3 rounded-card border border-easy-text/20 bg-easy-bg px-4 py-2 text-sm text-easy-text"
+    >
+      <span>Pregunta guardada.</span>
+      <button
+        type="button"
+        data-testid="created-banner-dismiss"
+        class="rounded-field px-2 py-0.5 text-sm font-medium underline focus:outline-none focus:ring-2 focus:ring-primary-300"
+        aria-label="Cerrar aviso"
+        (click)="dismissCreatedBanner()"
+      >
+        Cerrar
+      </button>
+    </div>
+  }
 
   <!-- Barra de filtros -->
   <div
@@ -164,7 +191,9 @@
                           [name]="chevronFor(isTopicExpanded(topic.topicId))"
                           class="h-3.5 w-3.5 shrink-0 text-n400"
                         ></lucide-angular>
-                        <span class="text-sm font-medium text-n700">{{ topic.name }}</span>
+                        <span class="text-sm font-medium text-n700">{{
+                          topicDisplayName(course, topic)
+                        }}</span>
                         <!-- Count comes from the server summary, NOT from the loaded leaves — it's the topic's real total even while collapsed. -->
                         <span class="text-xs text-n500">· {{ topic.questionCount }}</span>
                       </button>
@@ -176,10 +205,16 @@
                             <button
                               type="button"
                               data-testid="bank-question"
+                              [attr.data-question-id]="q.id"
+                              [attr.data-highlight]="
+                                highlightedQuestionId() === q.id ? 'true' : null
+                              "
                               class="flex items-center gap-3 rounded-field border bg-surface p-2 pl-14 text-left transition-colors hover:border-primary-300 hover:bg-primary-50/40 focus:outline-none focus:ring-2 focus:ring-primary-300"
                               [class.border-primary-500]="selected()?.id === q.id"
                               [class.bg-primary-50]="selected()?.id === q.id"
                               [class.border-n200]="selected()?.id !== q.id"
+                              [class.ring-2]="highlightedQuestionId() === q.id"
+                              [class.ring-easy-text]="highlightedQuestionId() === q.id"
                               (click)="select(q)"
                             >
                               @if (imageUrl(q); as url) {
