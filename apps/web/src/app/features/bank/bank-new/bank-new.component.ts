@@ -1,6 +1,18 @@
-import { Component, computed, effect, inject, signal } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Injector,
+  afterNextRender,
+  computed,
+  effect,
+  inject,
+  signal,
+  viewChild,
+} from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { TimeoutError } from 'rxjs';
 import { AiExtractedQuestion, Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
 import {
   LucideAngularModule,
@@ -43,8 +55,16 @@ const CORRECT_ANSWER_LETTERS = ['a', 'b', 'c', 'd', 'e'];
  * field is letter-labeled (a/b/c/d/e) and manual entry into it is also a
  * letter. Converting at this boundary keeps `sCorrectAnswer` ALWAYS a
  * letter, whether it got there by typing or by AI autofill.
+ *
+ * The extraction can also come back with `correctAnswer: null` when the
+ * model couldn't read a clave from the photo at all (B1) — the parameter is
+ * typed as the union so that shape is handled explicitly even against
+ * today's non-nullable `AiRevisedQuestion.correctAnswer`, which still
+ * assigns into it fine. `null` means "leave the field empty for the teacher
+ * to fill in", never a prefilled guess.
  */
-function indexToCorrectAnswerLetter(index: string): string {
+function indexToCorrectAnswerLetter(index: string | null): string {
+  if (index === null) return '';
   const letter = CORRECT_ANSWER_LETTERS[Number(index)];
   return letter ?? index;
 }
@@ -154,6 +174,18 @@ export class BankNewComponent {
   private readonly taxonomyService = inject(TaxonomyService);
   private readonly aiService = inject(AiService);
   private readonly router = inject(Router);
+  private readonly injector = inject(Injector);
+
+  /**
+   * Template refs on the structured tab's own textareas — used only to move
+   * focus there right after a successful extraction (B1/B7). `viewChild`
+   * (signal form) rather than `@ViewChild` since the structured panel is
+   * behind an `@if`, so the ref only resolves once that branch is rendered.
+   */
+  protected readonly structuredBodyTextarea =
+    viewChild<ElementRef<HTMLTextAreaElement>>('bodyTextarea');
+  protected readonly structuredAlternativesTextarea =
+    viewChild<ElementRef<HTMLTextAreaElement>>('alternativesTextarea');
 
   protected readonly gradeLevelOptions = GRADE_LEVELS.map((g) => ({
     value: g,
@@ -171,8 +203,31 @@ export class BankNewComponent {
   ];
   protected readonly saving = signal(false);
   protected readonly saveError = signal<string | null>(null);
+  /**
+   * B4/M7: flips true right before `navigateToBank` fires — the leave guard
+   * (`canDeactivate`) checks this FIRST so a successful save never prompts
+   * "¿Salir sin guardar?" for a page the teacher just finished with, even
+   * though `cropSlots`/`sBody` etc. may still hold values at that instant
+   * (the component doesn't get destroyed until the navigation completes).
+   */
+  private savedSuccessfully = false;
   protected readonly extracting = signal(false);
   protected readonly extractError = signal<string | null>(null);
+  /** True right after an extraction whose `alternatives` came back empty (B1). */
+  protected readonly extractNoAlternatives = signal(false);
+  /** True right after a successful extraction — B7's "revisa antes de guardar" notice at the top of the structured tab. */
+  protected readonly extractReviewNotice = signal(false);
+  /**
+   * B5: the AI's raw course/topic guess, set whenever at least one of them
+   * didn't match anything in the loaded taxonomy — `resolveStructuredTaxonomy`
+   * used to just drop a non-matching suggestion silently, leaving the
+   * teacher with two blank selects and no idea the AI even tried.
+   */
+  protected readonly aiTaxonomyHint = signal<string | null>(null);
+  /** Visibility is live, not frozen at extraction time — hides the instant BOTH selects end up with a value, whether that came from the suggestion, the photo tab, or the teacher picking manually. */
+  protected readonly showAiTaxonomyHint = computed(
+    () => !!this.aiTaxonomyHint() && (!this.sCourseId() || !this.sTopicId()),
+  );
 
   // Foto
   protected readonly pCourses = signal<Course[]>([]);
@@ -306,12 +361,84 @@ export class BankNewComponent {
         error: () => this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.'),
       });
     });
+
+    // B8: a stale extraction/recrop error talks about a photo or a reading
+    // the teacher is actively correcting — once they touch enunciado,
+    // alternativas, or clave, that message no longer describes what's on
+    // screen. Tracks the signals directly (rather than wrapping each
+    // template `(input)` handler) so this fires the same way regardless of
+    // how the field changed.
+    effect(() => {
+      this.sBody();
+      this.sAlternatives();
+      this.sCorrectAnswer();
+      this.extractError.set(null);
+    });
   }
 
   protected setTab(t: Tab): void {
     this.tab.set(t);
     this.saveError.set(null);
     this.extractError.set(null);
+  }
+
+  /**
+   * B4/M7: the router-facing leave guard (`bank-new-leave.guard.ts`) calls
+   * this — kept as a plain public method rather than logic inlined in the
+   * guard itself, since only the component knows its own dirty state.
+   */
+  canDeactivate(): boolean {
+    if (this.savedSuccessfully || !this.hasUnsavedWork()) {
+      return true;
+    }
+    return confirm('Tienes una pregunta a medio revisar. ¿Salir sin guardar?');
+  }
+
+  /**
+   * True while there is AI/crop work in flight or unreviewed, or a
+   * structured question the teacher started writing but hasn't saved yet.
+   * `sBody` alone (not `sAlternatives`/`sCorrectAnswer`) is enough of a
+   * signal — an enunciado with content is the first thing a teacher types,
+   * so its presence already means "there is something here to lose."
+   */
+  private hasUnsavedWork(): boolean {
+    return (
+      this.cropSlots().length > 0 ||
+      this.extracting() ||
+      this.saving() ||
+      this.sBody().trim().length > 0
+    );
+  }
+
+  /** Same condition as `canDeactivate`, for the browser-level (tab close/refresh) case Angular's router never sees. */
+  @HostListener('window:beforeunload', ['$event'])
+  protected onBeforeUnload(event: BeforeUnloadEvent): void {
+    if (this.savedSuccessfully || !this.hasUnsavedWork()) {
+      return;
+    }
+    event.preventDefault();
+  }
+
+  /**
+   * Moves focus to the structured tab's first field right after a
+   * successful extraction: the enunciado textarea normally (B7), but the
+   * alternatives textarea instead when the extraction came back with none
+   * (B1) — that is the field the teacher actually needs to act on first in
+   * that case. `afterNextRender` (not a plain focus call) because the
+   * structured panel is behind an `@if` — it may not exist in the DOM yet
+   * the instant this runs, mid-`subscribe` callback, outside of Angular's
+   * own change-detection/render cycle.
+   */
+  private focusStructuredFirstField(hasAlternatives: boolean): void {
+    afterNextRender(
+      () => {
+        const target = hasAlternatives
+          ? this.structuredBodyTextarea()?.nativeElement
+          : this.structuredAlternativesTextarea()?.nativeElement;
+        target?.focus();
+      },
+      { injector: this.injector },
+    );
   }
 
   protected onImageSelected(event: Event): void {
@@ -326,6 +453,9 @@ export class BankNewComponent {
     }
     this.pImage.set(file);
     this.pImagePreviewUrl.set(file ? URL.createObjectURL(file) : null);
+    // B8: a stale extraction/recrop error talks about the PREVIOUS photo —
+    // pointless (and confusing) to leave it up once that photo is gone.
+    this.extractError.set(null);
 
     // Crops (and any pending re-crop handle) are always cut FROM the photo
     // that was just replaced — the moment it changes (or is cleared), they
@@ -372,6 +502,18 @@ export class BankNewComponent {
     );
   }
 
+  /** B8: names only the fields still missing, in the photo tab's visual order, instead of always listing all six. */
+  protected photoMissingFields(): string {
+    const missing: string[] = [];
+    if (!this.pImage()) missing.push('imagen');
+    if (!this.pGradeLevel()) missing.push('grado');
+    if (!this.pCourseId()) missing.push('curso');
+    if (!this.pTopicId()) missing.push('tema');
+    if (!this.pDifficulty()) missing.push('nivel');
+    if (!this.pCorrectAnswer()) missing.push('clave');
+    return missing.join(', ');
+  }
+
   /**
    * Gate for "Extraer con IA" — deliberately just Grado + imagen. Curso/Tema
    * are best-effort SUGGESTED by the AI and matched client-side (see
@@ -397,9 +539,9 @@ export class BankNewComponent {
         image: this.pImage()!,
       })
       .subscribe({
-        next: () => {
+        next: ({ id }) => {
           this.saving.set(false);
-          this.router.navigate(['/app/bank']);
+          this.navigateToBank(id);
         },
         error: (_e: HttpErrorResponse) => {
           this.saving.set(false);
@@ -408,6 +550,20 @@ export class BankNewComponent {
           );
         },
       });
+  }
+
+  /**
+   * Navigates back to the bank list, passing the freshly created question's
+   * id through router state — Line D's `bank-list` reads
+   * `history.state.createdQuestionId` after this navigation to highlight the
+   * new row. Also flips `savedSuccessfully` so the leave guard (B4/M7)
+   * doesn't ask the teacher to confirm leaving a page they just finished
+   * saving — the dirty state has to be cleared BEFORE navigating, not after,
+   * since the guard runs synchronously as part of the navigation itself.
+   */
+  private navigateToBank(id: string): void {
+    this.savedSuccessfully = true;
+    this.router.navigate(['/app/bank'], { state: { createdQuestionId: id } });
   }
 
   protected extractWithAi(): void {
@@ -423,18 +579,20 @@ export class BankNewComponent {
 
     this.aiService.extractQuestionFromImage(image).subscribe({
       next: (extracted) => {
+        const hasAlternatives = extracted.alternatives.length > 0;
         this.sBody.set(extracted.bodyTypst);
-        this.sAlternatives.set(extracted.alternatives.join('\n'));
+        // Empty `alternatives` (B1) means the model couldn't read any off
+        // the photo — leave the textarea blank for the teacher to type them,
+        // rather than joining an empty array into an equally blank string
+        // that would look the same but hide WHY it's blank.
+        this.sAlternatives.set(hasAlternatives ? extracted.alternatives.join('\n') : '');
+        this.extractNoAlternatives.set(!hasAlternatives);
         // `extracted.correctAnswer` is `string | null` now — extraction
-        // never invents a key the photo didn't show. `null` clears the
-        // field (same as its initial `''`) so the "can save" gate at
-        // `!!this.sCorrectAnswer()` correctly requires the teacher to pick
-        // one by hand.
-        this.sCorrectAnswer.set(
-          extracted.correctAnswer !== null
-            ? indexToCorrectAnswerLetter(extracted.correctAnswer)
-            : '',
-        );
+        // never invents a key the photo didn't show.
+        // `indexToCorrectAnswerLetter` handles `null` itself (returns `''`),
+        // which matches the field's initial value and correctly requires
+        // the teacher to pick one by hand.
+        this.sCorrectAnswer.set(indexToCorrectAnswerLetter(extracted.correctAnswer));
         // sDifficulty is intentionally left untouched — Nivel is never
         // auto-filled from AI, the human always picks it.
 
@@ -460,10 +618,20 @@ export class BankNewComponent {
         });
 
         this.extracting.set(false);
+        this.extractReviewNotice.set(true);
         this.setTab('structured');
+        this.focusStructuredFirstField(hasAlternatives);
       },
-      error: (error: HttpErrorResponse) => {
+      error: (error: HttpErrorResponse | TimeoutError) => {
         this.extracting.set(false);
+        // B2: the client-side watchdog (ai.service.ts) fires a TimeoutError,
+        // not an HttpErrorResponse — it never reached the server at all, so
+        // there is no status/body to read a message from. Handled first,
+        // before anything below assumes an HttpErrorResponse shape.
+        if (error instanceof TimeoutError) {
+          this.extractError.set('La lectura de la foto tardó demasiado. Inténtalo de nuevo.');
+          return;
+        }
         // 429 gets its own wording because the server's body says nothing
         // actionable about a free-tier quota. Every other 4xx DOES explain
         // itself — a 422 carries the validation errors, a 400 says the file
@@ -488,7 +656,10 @@ export class BankNewComponent {
    * AI's suggested names against the taxonomy already loaded for this grade
    * (`pCourses`) and, once a course is known, that course's topics. No
    * match at any step just means both stay blank — the human picks them,
-   * same as before this feature existed.
+   * same as before this feature existed — but B5 additionally surfaces the
+   * AI's raw guess (`aiTaxonomyHint`) instead of dropping it silently, since
+   * "Biología" not matching a school's "Ciencia y Tecnología" is exactly the
+   * kind of near-miss a teacher can act on if they can see it.
    */
   private resolveStructuredTaxonomy(params: {
     gradeLevel: string;
@@ -506,6 +677,11 @@ export class BankNewComponent {
         this.pendingStructuredTopicId = topicId;
       }
       this.sGradeLevel.set(gradeLevel);
+      this.aiTaxonomyHint.set(
+        (!!suggestedCourseName && !courseId) || (!!suggestedTopicName && !topicId)
+          ? `La IA sugiere: ${suggestedCourseName ?? '—'} / ${suggestedTopicName ?? '—'}`
+          : null,
+      );
     };
 
     const courseId =
@@ -540,6 +716,18 @@ export class BankNewComponent {
     this.updateSlot(event.target, (slot) => ({ ...slot, busy: true }));
     this.aiService.recropExtraction(extractionId, event.box).subscribe({
       next: (crop) => {
+        // B3: a stale response — the teacher picked a new photo (or
+        // re-extracted) WHILE this recrop was in flight, which already reset
+        // `this.extractionId` and wiped `cropSlots`/`sImage` (Important
+        // Finding 3). Applying it anyway would silently resurrect a crop (and
+        // possibly `sImage`) from an extraction the teacher has moved past —
+        // `updateSlot` finding no matching slot wouldn't save `sImage`, which
+        // is set unconditionally below. Compare against the CAPTURED id, not
+        // a freshly-read `this.extractionId`, so this can only ever be "the
+        // extraction changed since this request was sent".
+        if (this.extractionId !== extractionId) {
+          return;
+        }
         this.updateSlot(event.target, (slot) => ({
           ...slot,
           dataUrl: crop.dataUrl,
@@ -555,6 +743,12 @@ export class BankNewComponent {
         }
       },
       error: (error: HttpErrorResponse) => {
+        // B3: same staleness guard as `next` above — a stale error must not
+        // overwrite `extractError` for an extraction the teacher already
+        // left behind.
+        if (this.extractionId !== extractionId) {
+          return;
+        }
         this.updateSlot(event.target, (slot) => ({ ...slot, busy: false }));
         // A 410 means the crop session expired, the id was never ours, or
         // it belongs to another account — the API deliberately returns the
@@ -595,6 +789,19 @@ export class BankNewComponent {
       this.alternativesList().length >= 2 &&
       !!this.sCorrectAnswer()
     );
+  }
+
+  /** B8: names only the fields still missing, in the structured tab's visual order, instead of always listing all six. */
+  protected structuredMissingFields(): string {
+    const missing: string[] = [];
+    if (!this.sGradeLevel()) missing.push('grado');
+    if (!this.sCourseId()) missing.push('curso');
+    if (!this.sTopicId()) missing.push('tema');
+    if (!this.sDifficulty()) missing.push('nivel');
+    if (!this.sBody().trim()) missing.push('enunciado');
+    if (this.alternativesList().length < 2) missing.push('al menos 2 alternativas');
+    if (!this.sCorrectAnswer()) missing.push('clave');
+    return missing.join(', ');
   }
 
   private alternativesList(): string[] {
@@ -696,14 +903,14 @@ export class BankNewComponent {
 
     if (crops.length === 0) {
       this.saving.set(false);
-      this.router.navigate(['/app/bank']);
+      this.navigateToBank(id);
       return;
     }
 
     this.bankService.setAlternativeImages(id, crops).subscribe({
       next: () => {
         this.saving.set(false);
-        this.router.navigate(['/app/bank']);
+        this.navigateToBank(id);
       },
       error: () => this.failAfterCreate(),
     });

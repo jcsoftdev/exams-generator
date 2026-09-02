@@ -359,6 +359,32 @@ describe('AiService', () => {
 
       expect(result).toEqual(extracted);
     });
+
+    /**
+     * B2 (client timeout audit): unlike the two streaming calls above, this
+     * was a bare `http.post` with nothing bounding how long it could hang —
+     * DeepSeek Vision extraction normally takes 25-50s, so 120s gives ample
+     * margin while still surfacing a TimeoutError instead of hanging forever
+     * on a silently dropped connection.
+     */
+    it('errors with a TimeoutError when no response arrives within 120s', () => {
+      vi.useFakeTimers();
+      try {
+        const image = new File(['fake-bytes'], 'question.png', { type: 'image/png' });
+        let capturedError: unknown;
+        service
+          .extractQuestionFromImage(image)
+          .subscribe({ error: (err) => (capturedError = err) });
+
+        httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/extract`);
+
+        vi.advanceTimersByTime(120_000);
+
+        expect(capturedError).toBeInstanceOf(TimeoutError);
+      } finally {
+        vi.useRealTimers();
+      }
+    });
   });
 
   describe('recropExtraction', () => {
@@ -377,6 +403,26 @@ describe('AiService', () => {
       req.flush(crop);
 
       expect(result).toEqual(crop);
+    });
+
+    /** B2: a hand-drawn re-crop is a much lighter/faster operation than a full extraction — 30s is generous. */
+    it('errors with a TimeoutError when no response arrives within 30s', () => {
+      vi.useFakeTimers();
+      try {
+        const box: NormalizedBoxDto = { x: 0.1, y: 0.2, w: 0.3, h: 0.4 };
+        let capturedError: unknown;
+        service
+          .recropExtraction('extraction-1', box)
+          .subscribe({ error: (err) => (capturedError = err) });
+
+        httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/extract/extraction-1/crop`);
+
+        vi.advanceTimersByTime(30_000);
+
+        expect(capturedError).toBeInstanceOf(TimeoutError);
+      } finally {
+        vi.useRealTimers();
+      }
     });
   });
 

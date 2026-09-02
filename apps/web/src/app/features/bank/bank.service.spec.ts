@@ -53,6 +53,32 @@ describe('BankService', () => {
       req.flush({ id: 'new-question-id' });
     });
 
+    /**
+     * B9 (audit L1): image-only questions had no title to show in the bank
+     * list — the API already accepts an optional `sourceName` on this
+     * endpoint, so send the picked file's own name for it.
+     */
+    it('sends the picked file name as sourceName, so image-only questions get a title in the bank list', () => {
+      const image = new File(['fake-bytes'], 'foto-pregunta-3.png', { type: 'image/png' });
+
+      service
+        .uploadImageQuestion({
+          courseId: 'course-1',
+          topicId: 'topic-1',
+          difficulty: Difficulty.Medium,
+          gradeLevel: 'secundaria_2',
+          correctAnswer: 'c',
+          image,
+        })
+        .subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/image`);
+      const body = req.request.body as FormData;
+      expect(body.get('sourceName')).toBe('foto-pregunta-3.png');
+
+      req.flush({ id: 'new-question-id' });
+    });
+
     it('resolves with the created question id', () => {
       const image = new File(['fake-bytes'], 'question.png', { type: 'image/png' });
       let result: { id: string } | undefined;
