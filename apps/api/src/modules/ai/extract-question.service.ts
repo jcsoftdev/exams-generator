@@ -17,7 +17,7 @@ import {
   QUESTION_GENERATOR_PORT,
   TEXT_REGION_DETECTOR_PORT,
 } from "./ai.constants";
-import { correctAnswerLetterToIndex } from "./domain/correct-answer-letter-to-index";
+import { correctAnswerLetterToIndexOrNull } from "./domain/correct-answer-letter-to-index";
 
 /** Raw multipart file shape this service needs — decoupled from Express/Multer types. */
 export interface ExtractQuestionFile {
@@ -36,9 +36,11 @@ export interface ExtractQuestionFile {
  * `correctAnswer` is a LETTER ("a".."e", or `null` when the photo doesn't show/imply
  * a key — see `ExtractedQuestion`) on the `QuestionGeneratorPort` contract but a
  * 0-based INDEX (or still `null`) in the response/PATCH edit contract — this service
- * converts the generator's LETTER output to an INDEX (`correctAnswerLetterToIndex`,
- * mirroring `ReviseQuestionService`/`GenerateQuestionsService`, with its null-safe
- * overload passing a `null` key straight through) BEFORE returning it.
+ * converts the generator's LETTER output to an INDEX
+ * (`correctAnswerLetterToIndexOrNull`, the null-safe wrapper around
+ * `ReviseQuestionService`/`GenerateQuestionsService`'s own
+ * `correctAnswerLetterToIndex`, passing a `null` key straight through) BEFORE
+ * returning it.
  *
  * Unlike `generate()`/`reviseQuestion()`, this endpoint does NOT run the bank's
  * `validateStructuredContent` (which requires >=2 alternatives and a non-null
@@ -91,10 +93,23 @@ export class ExtractQuestionService {
 
     // The generator returns a LETTER (or null); convert to the 0-based INDEX
     // response/PATCH convention expects BEFORE returning — the null-safe
-    // overload passes a `null` key straight through unconverted.
+    // wrapper passes a `null` key straight through unconverted.
+    const correctAnswerIndex = correctAnswerLetterToIndexOrNull(extracted.correctAnswer);
+
+    // Residual guard, mirroring `validateExtractedQuestionShape`'s own
+    // out-of-range rule (the adapter's validator is the primary gate — this
+    // is defense in depth, not a substitute for it): a key pointing past the
+    // alternatives actually transcribed must never reach the response, even
+    // from a `QuestionGeneratorPort` implementation that didn't enforce it
+    // itself.
+    const safeCorrectAnswerIndex =
+      correctAnswerIndex !== null && Number(correctAnswerIndex) >= extracted.alternatives.length
+        ? null
+        : correctAnswerIndex;
+
     const extractedWithIndex: ExtractedQuestion = {
       ...extracted,
-      correctAnswer: correctAnswerLetterToIndex(extracted.correctAnswer),
+      correctAnswer: safeCorrectAnswerIndex,
     };
 
     // Only bodyTypst is checked here — see this class's docstring for why
@@ -107,7 +122,7 @@ export class ExtractQuestionService {
       });
     }
 
-    const crops = await this.buildCrops(file.buffer, mimeType);
+    const crops = await this.buildCrops(file.buffer, mimeType, extractedWithIndex.alternatives.length);
 
     const hasCrops = !!crops.figureCrop || (crops.alternativeCrops?.length ?? 0) > 0;
     if (!hasCrops) {
@@ -157,10 +172,18 @@ export class ExtractQuestionService {
    * tesseract, an image sharp cannot decode, a downscale or a crop that
    * throws — is logged and swallowed, and the caller still gets the
    * transcription. The text is the valuable half of this endpoint.
+   *
+   * `alternativesLength` bounds `alternativeCrops`: the page's own OCR marks
+   * a figure band for any `A)`–`E)` marker it finds, regardless of how many
+   * alternatives the model actually transcribed — an out-of-range entry
+   * (`alternativeIndex >= alternativesLength`) is skipped BEFORE it is ever
+   * cropped, never surfaced for the teacher to match against an alternative
+   * that doesn't exist.
    */
   private async buildCrops(
     image: Buffer,
     mimeType: string,
+    alternativesLength: number,
   ): Promise<{ figureCrop?: AiQuestionCrop; alternativeCrops?: readonly AiAlternativeCrop[] }> {
     try {
       // Detection runs on a BOUNDED raster, never on the raw upload. See
@@ -193,6 +216,12 @@ export class ExtractQuestionService {
 
       const alternativeCrops: AiAlternativeCrop[] = [];
       for (const entry of attributed.byAlternative) {
+        // The photo may show a marker band for an alternative slot the
+        // transcription never confirmed — never crop (or return) a figure
+        // the teacher has no matching alternative text for.
+        if (entry.alternativeIndex >= alternativesLength) {
+          continue;
+        }
         alternativeCrops.push({ alternativeIndex: entry.alternativeIndex, ...(await cropAt(entry.box)) });
       }
 

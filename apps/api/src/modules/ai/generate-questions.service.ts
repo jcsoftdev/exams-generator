@@ -10,6 +10,7 @@ import { GradeLevel } from "../exams/domain/value-objects/grade-level";
 import { PdfCompilerPort, TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { correctAnswerLetterToIndex } from "./domain/correct-answer-letter-to-index";
 import {
+  AiNotConfiguredError,
   GeneratedQuestion,
   GenerateProgressEvent,
   QuestionGeneratorPort,
@@ -40,6 +41,16 @@ export interface GenerateQuestionsCreatedItem {
 export interface GenerateQuestionsFailedItem {
   readonly index: number;
   readonly error: string;
+  /**
+   * Stable machine-readable reason, set only for `AiNotConfiguredError` (a
+   * missing `AI_MODEL`/`AI_API_KEY`, or an invalid `AI_THINKING`/
+   * `AI_RESPONSE_FORMAT` — see `resolveAiProviderConfig`) — mirrors
+   * `AiController.mapAiProviderError`'s `code: "ai_not_configured"` on the
+   * synchronous `revise`/`extract` endpoints, extended here to the
+   * generate/stream and durable-job paths, which never throw an
+   * `HttpException` the client could read a `code` off of.
+   */
+  readonly code?: string;
 }
 
 export interface GenerateQuestionsResult {
@@ -117,7 +128,7 @@ export class GenerateQuestionsService {
       if (outcome.ok) {
         created.push({ id: outcome.id });
       } else {
-        failed.push({ index, error: outcome.error });
+        failed.push({ index, error: outcome.error, code: outcome.code });
       }
     }
 
@@ -194,7 +205,7 @@ export class GenerateQuestionsService {
             type: "done",
             result: outcome.ok
               ? { created: [{ id: outcome.id }], failed: [] }
-              : { created: [], failed: [{ index: 0, error: outcome.error }] },
+              : { created: [], failed: [{ index: 0, error: outcome.error, code: outcome.code }] },
           });
           subscriber.complete();
         } catch (error) {
@@ -236,7 +247,10 @@ export class GenerateQuestionsService {
       readonly withFigure: boolean;
     },
     onProgress?: (event: GenerateProgressEvent) => void,
-  ): Promise<{ readonly ok: true; readonly id: string } | { readonly ok: false; readonly error: string }> {
+  ): Promise<
+    | { readonly ok: true; readonly id: string }
+    | { readonly ok: false; readonly error: string; readonly code?: string }
+  > {
     try {
       let generated: GeneratedQuestion | undefined;
       let lastCompileError: TypstCompilationError | undefined;
@@ -324,7 +338,14 @@ export class GenerateQuestionsService {
       return { ok: true, id };
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
-      return { ok: false, error: message };
+      // A missing AI_MODEL/AI_API_KEY (or an invalid AI_THINKING/
+      // AI_RESPONSE_FORMAT — see `resolveAiProviderConfig`) is a deployment
+      // gap, not a transient generation failure — tag it so both the
+      // buffered batch and the stream/job paths above can tell it apart
+      // from a generic failure instead of the caller having to string-match
+      // `message`.
+      const code = error instanceof AiNotConfiguredError ? "ai_not_configured" : undefined;
+      return { ok: false, error: message, code };
     }
   }
 }

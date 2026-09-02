@@ -76,7 +76,11 @@ function readThinking(env: AiProviderEnv): OpenRouterThinkingMode | undefined {
   const raw = readNonBlank(env, "AI_THINKING");
   if (raw === undefined) return undefined;
   if ((THINKING_MODES as readonly string[]).includes(raw)) return raw as OpenRouterThinkingMode;
-  throw new Error(
+  // A config typo, not a transient provider failure — same reasoning as the
+  // missing AI_MODEL/AI_API_KEY checks above: an operator has to fix the
+  // env, a teacher retrying can never succeed. AiNotConfiguredError maps
+  // this to 503 `ai_not_configured` instead of a generic 500 at request time.
+  throw new AiNotConfiguredError(
     `AI_THINKING must be one of ${THINKING_MODES.join(", ")} (got "${raw}"); see infra/env.example.`,
   );
 }
@@ -95,7 +99,9 @@ function readResponseFormat(env: AiProviderEnv): OpenRouterResponseFormatMode {
   const raw = readNonBlank(env, "AI_RESPONSE_FORMAT");
   if (raw === undefined) return "json_schema";
   if ((RESPONSE_FORMAT_MODES as readonly string[]).includes(raw)) return raw as OpenRouterResponseFormatMode;
-  throw new Error(
+  // Same reasoning as `readThinking`'s AiNotConfiguredError above — a
+  // deployment misconfiguration, not something retrying the request fixes.
+  throw new AiNotConfiguredError(
     `AI_RESPONSE_FORMAT must be one of ${RESPONSE_FORMAT_MODES.join(", ")} (got "${raw}"). Use json_object for DeepSeek's own API (see infra/env.example).`,
   );
 }

@@ -4,7 +4,8 @@ import {
   GeneratedQuestion,
 } from "../../domain/ports/question-generator.port";
 
-const VALID_ANSWER_LETTERS = new Set(["a", "b", "c", "d", "e"]);
+const ANSWER_LETTERS = ["a", "b", "c", "d", "e"] as const;
+const VALID_ANSWER_LETTERS = new Set<string>(ANSWER_LETTERS);
 
 const MATH_SEGMENT = /\$([^$]*)\$/g;
 const LATEX_COMMAND = /\\[a-zA-Z]+/;
@@ -269,6 +270,17 @@ export function validateGeneratedQuestionShape(value: unknown): ValidatedGenerat
  * A `correctAnswer` letter that IS present must still be one of "a".."e" —
  * only `null` is accepted as "not visible"; anything else malformed still
  * fails validation the same way `validateGeneratedQuestionShape` does.
+ *
+ * A letter that IS one of "a".."e" is STILL rejected when its 0-based index
+ * has no matching entry in `alternatives` (e.g. `correctAnswer: "c"` with
+ * `alternatives: []`, or `"e"` with only 2 alternatives transcribed) — a key
+ * pointing at an option the photo never showed is exactly the kind of
+ * invented content this validator otherwise refuses to let through, and
+ * rejecting it (rather than silently coercing to `null`) is what feeds the
+ * error back into the adapter's retry loop instead of shipping a fabricated
+ * key. When `alternatives` is empty, this rule alone means every non-null
+ * `correctAnswer` is rejected — there is no index an empty array can
+ * satisfy.
  */
 export function validateExtractedQuestionShape(value: unknown): ValidatedExtractedQuestion {
   const errors: string[] = [];
@@ -301,6 +313,10 @@ export function validateExtractedQuestionShape(value: unknown): ValidatedExtract
     if (typeof normalized !== "string" || !VALID_ANSWER_LETTERS.has(normalized)) {
       errors.push(
         'correctAnswer must be one of "a", "b", "c", "d", "e", or null when not visible in the photo',
+      );
+    } else if (ANSWER_LETTERS.indexOf(normalized as (typeof ANSWER_LETTERS)[number]) >= alternatives.length) {
+      errors.push(
+        `correctAnswer "${normalized}" has no matching entry in alternatives (only ${alternatives.length} transcribed) — a key the photo can't show must be null, not a guess`,
       );
     } else {
       correctAnswer = normalized;

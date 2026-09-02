@@ -3,7 +3,6 @@ import { BullModule } from "@nestjs/bullmq";
 import { BankModule } from "../bank/bank.module";
 import { LazyQuestionGeneratorAdapter } from "./adapters/lazy-question-generator.adapter";
 import { resolveAiProviderConfig } from "./resolve-ai-provider-config";
-import { AiNotConfiguredError } from "./domain/ports/question-generator.port";
 import { SharpImageCropperAdapter } from "./adapters/image/sharp-image-cropper.adapter";
 import { RedisExtractionCacheAdapter } from "./adapters/cache/redis-extraction-cache.adapter";
 import { AiController } from "./ai.controller";
@@ -54,17 +53,22 @@ import { ReviseQuestionService } from "./revise-question.service";
       useFactory: () => {
         // Advisory only — never blocks boot. `LazyQuestionGeneratorAdapter`
         // below defers the SAME check to first use (that's what keeps a
-        // missing AI_MODEL/AI_API_KEY from crashing every app bootstrap,
-        // e2e included); this WARN just gives an operator a chance to notice
-        // the gap in the boot log before a teacher hits the 503 it produces.
+        // missing AI_MODEL/AI_API_KEY — or a bad AI_THINKING/AI_RESPONSE_FORMAT,
+        // both of which `resolveAiProviderConfig` now also raises as
+        // `AiNotConfiguredError` — from crashing every app bootstrap, e2e
+        // included); this WARN just gives an operator a chance to notice the
+        // gap in the boot log before a teacher hits the 503 it produces.
+        // Logs EVERY caught error, not just `AiNotConfiguredError` — an
+        // instanceof gate here would silently swallow anything
+        // `resolveAiProviderConfig` starts throwing that this code doesn't
+        // yet know about, leaving the exact same "silent at boot, 500 at
+        // request time" gap this check exists to close.
         try {
           resolveAiProviderConfig(process.env);
         } catch (error) {
-          if (error instanceof AiNotConfiguredError) {
-            new Logger("AiModule").warn(
-              `AI provider is not configured — every AI endpoint will return 503 until this is fixed: ${error.message}`,
-            );
-          }
+          new Logger("AiModule").warn(
+            `AI provider is not configured — every AI endpoint will return 503 until this is fixed: ${(error as Error).message}`,
+          );
         }
         return new LazyQuestionGeneratorAdapter(resolveQuestionGeneratorAdapter);
       },
