@@ -73,6 +73,7 @@ export class GenerationJobsProcessor extends WorkerHost {
         await this.repository.appendFailedItem(record.id, {
           index,
           error: result.failed[0]?.error ?? "Unknown generation failure",
+          code: result.failed[0]?.code,
         });
       }
       this.events.notify(record.id);

@@ -36,6 +36,15 @@ export type GenerationJobStatus = (typeof GENERATION_JOB_STATUSES)[number];
 export interface GenerationJobFailedItem {
   readonly index: number;
   readonly error: string;
+  /**
+   * A stable machine-readable reason, present only for failure causes a
+   * client needs to react to differently than "show the message" — today
+   * only `"ai_not_configured"` (the deployment is missing `AI_MODEL`/
+   * `AI_API_KEY`, or has an invalid `AI_THINKING`/`AI_RESPONSE_FORMAT`),
+   * absent for every other failure. Additive and backwards-compatible: an
+   * older client that doesn't read this field still gets `error` unchanged.
+   */
+  readonly code?: string;
 }
 
 /**
@@ -111,6 +120,8 @@ export interface GenerateQuestionsCreatedItem {
 export interface GenerateQuestionsFailedItem {
   readonly index: number;
   readonly error: string;
+  /** Same contract as `GenerationJobFailedItem.code` — see its docstring. */
+  readonly code?: string;
 }
 
 /**

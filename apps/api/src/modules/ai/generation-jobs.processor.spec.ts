@@ -119,6 +119,29 @@ describe("GenerationJobsProcessor", () => {
     expect(repository.appendCreatedQuestion).toHaveBeenCalledWith("job-1", "q5");
   });
 
+  it('forwards code: "ai_not_configured" onto the job\'s failed item, so the history UI can distinguish it from a transient failure', async () => {
+    const { processor, repository, generateQuestionsService } = buildDeps();
+    repository.getByIdUnscoped.mockResolvedValue({
+      ...BASE_RECORD,
+      count: 1,
+      createdCount: 0,
+      failedCount: 0,
+      status: "pending",
+    });
+    generateQuestionsService.generateQuestions.mockResolvedValueOnce({
+      created: [],
+      failed: [{ index: 0, error: "AI_MODEL env var is not set.", code: "ai_not_configured" }],
+    });
+
+    await processor.process(job("job-1"));
+
+    expect(repository.appendFailedItem).toHaveBeenCalledWith("job-1", {
+      index: 0,
+      error: "AI_MODEL env var is not set.",
+      code: "ai_not_configured",
+    });
+  });
+
   it("resumes from createdCount + failedCount instead of restarting at 0 (checkpoint-resume)", async () => {
     const { processor, repository, generateQuestionsService } = buildDeps();
     repository.getByIdUnscoped.mockResolvedValue({
