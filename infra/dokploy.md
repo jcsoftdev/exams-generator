@@ -62,8 +62,12 @@ only `api`/`web` swapped for Dokploy-managed application resources.
 | `MINIO_ROOT_USER` / `MINIO_ROOT_PASSWORD` | api, minio | Credentials pair; must match what the MinIO instance was provisioned with. |
 | `JWT_SECRET` | api | Required, no default — `docker-compose.dokploy.yml` fails fast (`${JWT_SECRET:?...}`) if unset. Generate a unique per-environment secret, never reuse the local dev value. |
 | `REDIS_HOST` / `REDIS_PORT` | api | Redis connection for the BullMQ `generation` queue. Set to `redis` / `6379` by the compose stack; only override when pointing at an external/managed Redis. |
-| `AI_MODEL` | api | OpenRouter model id for text AI ops (generate, revise). Required for AI endpoints — resolved lazily, so the app boots without it but the first generate/revise call fails with a clear error if unset. |
-| `AI_VISION_MODEL` | api | OpenRouter model id for image extraction (`POST /ai/questions/extract`). Optional — falls back to `AI_MODEL` when unset (only works if that model is vision-capable). |
+| `AI_BASE_URL` | api | Chat-completions url of the AI provider. Unset = OpenRouter. DeepSeek: `https://api.deepseek.com/chat/completions`. |
+| `AI_API_KEY` | api | Provider key (`OPENROUTER_API_KEY` still accepted as a fallback). Required for every AI endpoint; when missing the API answers `503 ai_not_configured` and logs a WARN at boot. |
+| `AI_MODEL` | api | Text model id for generate/revise. DeepSeek: `deepseek-v4-flash`. |
+| `AI_VISION_MODEL` | api | Vision model for `POST /ai/questions/extract`. DeepSeek: `deepseek-v4-flash-vision-exp` (the only DeepSeek model that accepts images). Falls back to `AI_MODEL`. |
+| `AI_RESPONSE_FORMAT` | api | `json_schema` (default, OpenRouter strict output) or `json_object` (DeepSeek's own API only supports this; the schema then travels in the prompt). |
+| `AI_THINKING` | api | `enabled` / `disabled`; unset = field not sent. DeepSeek V4 reasons by default and starves `max_tokens` on photo extraction — set `disabled`. |
 | `OPENROUTER_API_KEY` | api | OpenRouter API key. Required for all AI endpoints (lazy, same as `AI_MODEL`). Compose passes it through only if set — supply it per environment. |
 | `PORT` | api | Container-internal port, defaults to `3000`. Only change if the base image/CMD changes too. |
 | `API_PORT` | host mapping | Host-side port mapped to the api container's `3000`, default `3012` (compose only — not meaningful for Dokploy Application resources, which manage their own routing/domains). |
