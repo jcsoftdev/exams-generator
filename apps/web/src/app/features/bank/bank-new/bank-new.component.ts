@@ -715,13 +715,17 @@ export class BankNewComponent {
   }
 
   /**
-   * Sets `extractError` AND announces the same text through
-   * `LiveAnnouncerService` — the visible banner alone is silent to a screen
-   * reader, same rationale as bank-list's D3 announcements.
+   * Sets `extractError` — rendered with `role="alert"` in the template
+   * (both the photo-tab banner and the structured-tab crop-review one),
+   * which assistive tech announces on its own the moment it's inserted
+   * into the DOM. A SECOND announcement via `LiveAnnouncerService` used to
+   * fire here too — same text, same moment, through the OTHER live-region
+   * channel — so a screen reader user heard it twice. `role="alert"` alone
+   * is the single channel now; every call site (extract, timeout, 429,
+   * recrop) routes through this one method precisely so that stays true.
    */
   private setExtractError(message: string): void {
     this.extractError.set(message);
-    this.liveAnnouncer.announce(message);
   }
 
   /**

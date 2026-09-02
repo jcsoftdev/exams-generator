@@ -749,6 +749,22 @@ describe('BankNewComponent', () => {
       expect(instance.extracting()).toBe(false);
     });
 
+    it('does not announce the extract error through LiveAnnouncerService — the role="alert" banner already announces on insertion, one channel only', () => {
+      const { fixture, compiled, announce } = setup({
+        extractQuestionFromImageImpl: () =>
+          throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      expect(announce).not.toHaveBeenCalledWith(
+        'No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.',
+      );
+    });
+
     it('surfaces a 4xx body verbatim instead of the generic retry message', () => {
       const { fixture, compiled } = setup({
         extractQuestionFromImageImpl: () =>
