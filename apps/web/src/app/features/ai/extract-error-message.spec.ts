@@ -67,4 +67,32 @@ describe('extractErrorMessage', () => {
 
     expect(extractErrorMessage(error)).toBe('No se pudo guardar la pregunta. Inténtalo de nuevo.');
   });
+
+  /**
+   * B10 (audit A2, web half): a 503 with `{ code: "ai_not_configured" }`
+   * means the school's tenant has no AI provider set up at all — not a
+   * transient failure, so the message must not suggest retrying (unlike
+   * every other branch above, which does).
+   */
+  it('returns the ai-not-configured wording for a 503 carrying { code: "ai_not_configured" }, without suggesting a retry', () => {
+    const error = new HttpErrorResponse({
+      status: 503,
+      error: { code: 'ai_not_configured', message: 'AI is not configured for this tenant' },
+    });
+
+    const message = extractErrorMessage(error);
+    expect(message).toBe(
+      'La extracción con IA no está habilitada en este colegio. Escribe la pregunta o guarda la foto tal cual.',
+    );
+    expect(message.toLowerCase()).not.toContain('inténtalo de nuevo');
+  });
+
+  it('falls back to the generic 5xx wording for a 503 that does NOT carry the ai_not_configured code', () => {
+    const error = new HttpErrorResponse({
+      status: 503,
+      error: { message: 'Service Unavailable' },
+    });
+
+    expect(extractErrorMessage(error)).toBe('No se pudo guardar la pregunta. Inténtalo de nuevo.');
+  });
 });

@@ -1670,6 +1670,36 @@ describe('BankNewComponent', () => {
     });
   });
 
+  describe('B10: 503 ai_not_configured surfaces a specific, non-retry message', () => {
+    it('shows the ai-not-configured wording, without suggesting a retry, on a 503 { code: "ai_not_configured" }', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 503,
+                error: { code: 'ai_not_configured', message: 'AI is not configured' },
+              }),
+          ),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as { extractError(): string | null };
+      const message = instance.extractError();
+      expect(message).toBe(
+        'La extracción con IA no está habilitada en este colegio. Escribe la pregunta o guarda la foto tal cual.',
+      );
+      expect(message?.toLowerCase()).not.toContain('inténtalo de nuevo');
+      expect(compiled.querySelector('[data-testid="extract-error"]')?.textContent).toContain(
+        'no está habilitada en este colegio',
+      );
+    });
+  });
+
   describe('B2: client timeout on extract', () => {
     it('shows the progress status line while extracting, hidden the rest of the time', () => {
       const { fixture, compiled } = setup({

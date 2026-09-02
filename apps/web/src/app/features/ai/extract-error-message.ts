@@ -33,6 +33,19 @@ export function extractErrorMessage(
 ): string {
   const body = error.error as unknown;
 
+  // B10 (audit A2, web half): a 503 with `{ code: "ai_not_configured" }`
+  // means the school's tenant never set up an AI provider at all — not a
+  // transient failure, so this is checked FIRST and returns dedicated
+  // wording that does NOT invite a retry, unlike every other branch below.
+  if (
+    error.status === 503 &&
+    body &&
+    typeof body === 'object' &&
+    (body as { code?: unknown }).code === 'ai_not_configured'
+  ) {
+    return 'La extracción con IA no está habilitada en este colegio. Escribe la pregunta o guarda la foto tal cual.';
+  }
+
   if (Array.isArray(body)) {
     return body.join(', ');
   }
