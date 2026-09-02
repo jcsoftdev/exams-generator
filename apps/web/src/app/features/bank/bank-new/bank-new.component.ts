@@ -215,6 +215,8 @@ export class BankNewComponent {
   protected readonly extractError = signal<string | null>(null);
   /** True right after an extraction whose `alternatives` came back empty (B1). */
   protected readonly extractNoAlternatives = signal(false);
+  /** True right after a successful extraction — B7's "revisa antes de guardar" notice at the top of the structured tab. */
+  protected readonly extractReviewNotice = signal(false);
   /**
    * B5: the AI's raw course/topic guess, set whenever at least one of them
    * didn't match anything in the loaded taxonomy — `resolveStructuredTaxonomy`
@@ -583,6 +585,7 @@ export class BankNewComponent {
         });
 
         this.extracting.set(false);
+        this.extractReviewNotice.set(true);
         this.setTab('structured');
         this.focusStructuredFirstField(hasAlternatives);
       },

@@ -1555,6 +1555,56 @@ describe('BankNewComponent', () => {
     });
   });
 
+  describe('B7: announces the tab switch after a successful extraction', () => {
+    it('shows the review notice at the top of the structured tab and focuses the enunciado textarea', () => {
+      const { fixture, compiled } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const notice = compiled.querySelector('[data-testid="extract-review-notice"]');
+      expect(notice?.textContent).toContain(
+        'La IA leyó la foto. Revisa el enunciado, las alternativas y la clave antes de guardar.',
+      );
+      const gradeSelect = compiled.querySelector('[data-testid="structured-grade-select"]');
+      expect(
+        !!(notice!.compareDocumentPosition(gradeSelect!) & Node.DOCUMENT_POSITION_FOLLOWING),
+      ).toBe(true);
+
+      const bodyTextarea = compiled.querySelector(
+        '[data-testid="structured-body-textarea"]',
+      ) as HTMLTextAreaElement;
+      expect(document.activeElement).toBe(bodyTextarea);
+    });
+
+    it('focuses the alternatives textarea instead when the extraction came back with none (B1 takes priority)', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({ bodyTypst: 'x', alternatives: [], correctAnswer: '0' }),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const alternativesTextarea = compiled.querySelector(
+        '[data-testid="structured-alternatives-textarea"]',
+      ) as HTMLTextAreaElement;
+      expect(document.activeElement).toBe(alternativesTextarea);
+    });
+
+    it('does not show the review notice before any extraction has run', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="extract-review-notice"]')).toBeFalsy();
+    });
+  });
+
   describe('B2: client timeout on extract', () => {
     it('shows the progress status line while extracting, hidden the rest of the time', () => {
       const { fixture, compiled } = setup({

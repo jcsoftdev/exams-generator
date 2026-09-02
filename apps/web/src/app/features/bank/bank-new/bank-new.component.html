@@ -147,6 +147,14 @@
       data-testid="tab-structured-panel"
       class="flex flex-col gap-3 rounded-card border border-n200 bg-surface p-4"
     >
+      @if (extractReviewNotice()) {
+        <p
+          data-testid="extract-review-notice"
+          class="rounded-field bg-tint-bg px-3 py-2 text-sm text-tint-text"
+        >
+          La IA leyó la foto. Revisa el enunciado, las alternativas y la clave antes de guardar.
+        </p>
+      }
       <div data-testid="structured-grade-select">
         <ui-select
           label="Grado"
