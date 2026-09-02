@@ -834,13 +834,20 @@ export class BankListComponent {
    * not fix it — 70 characters of Typst still typeset wider than the row. The
    * rendered statement lives in the detail panel, which has room for it.
    *
-   * `null` for image questions (they have no statement text; the leaf falls
-   * back to the answer key), so text questions stop rendering as blank cards.
+   * `null` for a question with no statement text: a STRUCTURED question with
+   * a genuinely empty body (leaf falls back to the answer key), or an IMAGE
+   * question is never `null` — see the `'Pregunta con imagen'` floor below,
+   * gated on `type === 'image'` (audit bank-list #14) so a structured
+   * question with an empty body can never render that copy — it has no
+   * image at all, that string would be a lie.
    */
   protected questionSnippet(question: BankQuestion): string | null {
     const text = typstToPlainText(question.bodyTypst ?? '');
     if (text) {
       return truncateTypst(text, 70);
+    }
+    if (question.type !== 'image') {
+      return null;
     }
     // An image question has no statement, so the row would say only "Clave: c".
     // Its provenance names the exam and the question number, which is what

@@ -568,6 +568,31 @@ describe('BankListComponent', () => {
       expect(snippet?.textContent).toContain('¿Cuál es el resultado de 2 + 3 × 4?');
     });
 
+    // audit bank-list #14: the "Pregunta con imagen" fallback used to fire
+    // for ANY leaf with no statement/no source, image question or not — a
+    // structured question with a genuinely empty body would get the same
+    // "it has an image" copy despite never having one.
+    it('never shows "Pregunta con imagen" for a structured question with an empty body — falls back to the answer key instead (audit #14)', () => {
+      const structuredBlank = makeQuestion({
+        id: 'qs-blank',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'structured',
+        imageAssetId: null,
+        bodyTypst: null,
+        alternatives: null,
+        sourceName: null,
+      });
+      const { compiled, fixture } = setup({ listImpl: () => of([structuredBlank]) });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      expect(compiled.querySelector('[data-testid="question-snippet"]')).toBeFalsy();
+      const row = compiled.querySelector('[data-question-id="qs-blank"]');
+      expect(row?.textContent).not.toContain('Pregunta con imagen');
+      expect(row?.textContent).toContain('Clave:');
+    });
+
     it('shows a neutral "Pregunta con imagen" fallback when a leaf has no statement AND no sourceName (D2a — a web-created image question)', () => {
       const image = makeQuestion({
         id: 'qi-blank',
