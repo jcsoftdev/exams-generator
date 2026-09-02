@@ -1,4 +1,14 @@
-import { Component, computed, effect, inject, signal } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Injector,
+  afterNextRender,
+  computed,
+  effect,
+  inject,
+  signal,
+  viewChild,
+} from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AiExtractedQuestion, Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
@@ -43,8 +53,16 @@ const CORRECT_ANSWER_LETTERS = ['a', 'b', 'c', 'd', 'e'];
  * field is letter-labeled (a/b/c/d/e) and manual entry into it is also a
  * letter. Converting at this boundary keeps `sCorrectAnswer` ALWAYS a
  * letter, whether it got there by typing or by AI autofill.
+ *
+ * The extraction can also come back with `correctAnswer: null` when the
+ * model couldn't read a clave from the photo at all (B1) — the parameter is
+ * typed as the union so that shape is handled explicitly even against
+ * today's non-nullable `AiRevisedQuestion.correctAnswer`, which still
+ * assigns into it fine. `null` means "leave the field empty for the teacher
+ * to fill in", never a prefilled guess.
  */
-function indexToCorrectAnswerLetter(index: string): string {
+function indexToCorrectAnswerLetter(index: string | null): string {
+  if (index === null) return '';
   const letter = CORRECT_ANSWER_LETTERS[Number(index)];
   return letter ?? index;
 }
@@ -154,6 +172,18 @@ export class BankNewComponent {
   private readonly taxonomyService = inject(TaxonomyService);
   private readonly aiService = inject(AiService);
   private readonly router = inject(Router);
+  private readonly injector = inject(Injector);
+
+  /**
+   * Template refs on the structured tab's own textareas — used only to move
+   * focus there right after a successful extraction (B1/B7). `viewChild`
+   * (signal form) rather than `@ViewChild` since the structured panel is
+   * behind an `@if`, so the ref only resolves once that branch is rendered.
+   */
+  protected readonly structuredBodyTextarea =
+    viewChild<ElementRef<HTMLTextAreaElement>>('bodyTextarea');
+  protected readonly structuredAlternativesTextarea =
+    viewChild<ElementRef<HTMLTextAreaElement>>('alternativesTextarea');
 
   protected readonly gradeLevelOptions = GRADE_LEVELS.map((g) => ({
     value: g,
@@ -173,6 +203,8 @@ export class BankNewComponent {
   protected readonly saveError = signal<string | null>(null);
   protected readonly extracting = signal(false);
   protected readonly extractError = signal<string | null>(null);
+  /** True right after an extraction whose `alternatives` came back empty (B1). */
+  protected readonly extractNoAlternatives = signal(false);
 
   // Foto
   protected readonly pCourses = signal<Course[]>([]);
@@ -314,6 +346,28 @@ export class BankNewComponent {
     this.extractError.set(null);
   }
 
+  /**
+   * Moves focus to the structured tab's first field right after a
+   * successful extraction: the enunciado textarea normally (B7), but the
+   * alternatives textarea instead when the extraction came back with none
+   * (B1) — that is the field the teacher actually needs to act on first in
+   * that case. `afterNextRender` (not a plain focus call) because the
+   * structured panel is behind an `@if` — it may not exist in the DOM yet
+   * the instant this runs, mid-`subscribe` callback, outside of Angular's
+   * own change-detection/render cycle.
+   */
+  private focusStructuredFirstField(hasAlternatives: boolean): void {
+    afterNextRender(
+      () => {
+        const target = hasAlternatives
+          ? this.structuredBodyTextarea()?.nativeElement
+          : this.structuredAlternativesTextarea()?.nativeElement;
+        target?.focus();
+      },
+      { injector: this.injector },
+    );
+  }
+
   protected onImageSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     this.setImage(input.files?.[0] ?? null);
@@ -423,8 +477,14 @@ export class BankNewComponent {
 
     this.aiService.extractQuestionFromImage(image).subscribe({
       next: (extracted) => {
+        const hasAlternatives = extracted.alternatives.length > 0;
         this.sBody.set(extracted.bodyTypst);
-        this.sAlternatives.set(extracted.alternatives.join('\n'));
+        // Empty `alternatives` (B1) means the model couldn't read any off
+        // the photo — leave the textarea blank for the teacher to type them,
+        // rather than joining an empty array into an equally blank string
+        // that would look the same but hide WHY it's blank.
+        this.sAlternatives.set(hasAlternatives ? extracted.alternatives.join('\n') : '');
+        this.extractNoAlternatives.set(!hasAlternatives);
         this.sCorrectAnswer.set(indexToCorrectAnswerLetter(extracted.correctAnswer));
         // sDifficulty is intentionally left untouched — Nivel is never
         // auto-filled from AI, the human always picks it.
@@ -452,6 +512,7 @@ export class BankNewComponent {
 
         this.extracting.set(false);
         this.setTab('structured');
+        this.focusStructuredFirstField(hasAlternatives);
       },
       error: (error: HttpErrorResponse) => {
         this.extracting.set(false);

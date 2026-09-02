@@ -1361,6 +1361,65 @@ describe('BankNewComponent', () => {
     });
   });
 
+  describe('B1: empty alternatives / null correctAnswer from extraction', () => {
+    it('shows a non-error notice and leaves the alternatives textarea empty and focused when extraction returns no alternatives', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({
+            bodyTypst: 'Enunciado sin alternativas',
+            alternatives: [],
+            correctAnswer: '0',
+          }),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const notice = compiled.querySelector('[data-testid="extract-no-alternatives"]');
+      expect(notice?.textContent).toContain(
+        'La foto no trae alternativas. Escríbelas una por línea.',
+      );
+      const instance = fixture.componentInstance as unknown as { sAlternatives(): string };
+      expect(instance.sAlternatives()).toBe('');
+      const textarea = compiled.querySelector(
+        '[data-testid="structured-alternatives-textarea"]',
+      ) as HTMLTextAreaElement;
+      expect(document.activeElement).toBe(textarea);
+    });
+
+    it('hides the empty-alternatives notice when the extraction did return alternatives', () => {
+      const { fixture, compiled } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="extract-no-alternatives"]')).toBeFalsy();
+    });
+
+    it('leaves the clave input empty (never prefilled) when correctAnswer is null', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({
+            bodyTypst: 'x',
+            alternatives: ['a', 'b'],
+            correctAnswer: null,
+          }),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as { sCorrectAnswer(): string };
+      expect(instance.sCorrectAnswer()).toBe('');
+    });
+  });
+
   describe('Minor 7: a re-crop attempted after a failed cache write shows feedback instead of doing nothing', () => {
     it('shows the expired-session message and never calls the API when extractionId is null', () => {
       const { fixture, compiled, recropExtraction } = setup({

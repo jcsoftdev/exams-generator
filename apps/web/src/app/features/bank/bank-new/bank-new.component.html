@@ -174,15 +174,27 @@
       <label class="text-sm text-n700"
         >Enunciado
         <textarea
+          #bodyTextarea
+          data-testid="structured-body-textarea"
           class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
           rows="3"
           [value]="sBody()"
           (input)="sBody.set($any($event.target).value)"
         ></textarea>
       </label>
+      @if (extractNoAlternatives()) {
+        <p
+          data-testid="extract-no-alternatives"
+          class="rounded-field bg-tint-bg px-3 py-2 text-sm text-tint-text"
+        >
+          La foto no trae alternativas. Escríbelas una por línea.
+        </p>
+      }
       <label class="text-sm text-n700"
         >Alternativas (una por línea)
         <textarea
+          #alternativesTextarea
+          data-testid="structured-alternatives-textarea"
           class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
           rows="4"
           [value]="sAlternatives()"
