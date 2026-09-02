@@ -726,6 +726,21 @@ describe('BankListComponent', () => {
 
       expect(topicHeader(compiled, 't1').textContent).not.toMatch(/°/);
     });
+
+    // audit bank-list #15 — the test above never expands 't1', so its
+    // `gradeLevel` is null regardless of the uniqueness check, and would
+    // pass even if `sharesNameWithSibling` were broken. EXPANDING the unique
+    // topic gives it a real (non-null) `gradeLevel`, so this is the one that
+    // actually exercises "unique name -> bare" rather than "no grade loaded
+    // yet -> bare".
+    it('leaves a unique, EXPANDED topic bare too — the suffix is gated on sharing a name, not merely on having a loaded grade (audit #15)', () => {
+      const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
+      expect(topicHeader(compiled, 't1').textContent).not.toMatch(/°/);
+    });
   });
 
   describe('search filter', () => {
