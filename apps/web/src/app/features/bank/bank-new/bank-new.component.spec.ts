@@ -175,6 +175,21 @@ function pickStructuredImage(fixture: { detectChanges(): void }, compiled: HTMLE
 }
 
 describe('BankNewComponent', () => {
+  describe('L8: one h1 per page (the topbar owns it, this is a section heading)', () => {
+    it('does not render an h1 inside app-bank-new', () => {
+      const { compiled } = setup();
+
+      expect(compiled.querySelector('h1')).toBeFalsy();
+    });
+
+    it('still shows "Nueva pregunta" as a heading, demoted to h2', () => {
+      const { compiled } = setup();
+
+      const heading = compiled.querySelector('h2');
+      expect(heading?.textContent?.trim()).toBe('Nueva pregunta');
+    });
+  });
+
   it('shows the photo tab by default and switches to the structured tab', () => {
     const { fixture, compiled } = setup();
     expect(compiled.querySelector('[data-testid="tab-photo-panel"]')).toBeTruthy();

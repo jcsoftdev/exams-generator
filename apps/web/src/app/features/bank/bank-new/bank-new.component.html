@@ -1,5 +1,7 @@
 <div class="mx-auto max-w-2xl">
-  <h1 class="mb-4 text-xl font-bold text-n900">Nueva pregunta</h1>
+  <!-- L8: the topbar already renders the page's <h1> (its `title()`) — this
+       is a section heading within the page, not a second top-level one. -->
+  <h2 class="mb-4 text-xl font-bold text-n900">Nueva pregunta</h2>
 
   <ui-tabs [tabs]="tabItems" [value]="tab()" (valueChange)="setTab($event)"></ui-tabs>
 
