@@ -561,6 +561,79 @@ describe('BankNewComponent', () => {
     });
   });
 
+  describe('M9: taxonomy effects race — a stale response must not overwrite a newer selection', () => {
+    it("keeps the SECOND grade's courses even when the FIRST grade's getCourses resolves last (photo tab)", () => {
+      const firstGrade = new Subject<Course[]>();
+      const secondGrade = new Subject<Course[]>();
+      let call = 0;
+      const { fixture } = setup({
+        getCourses: () => {
+          call++;
+          return call === 1 ? firstGrade.asObservable() : secondGrade.asObservable();
+        },
+      });
+      const instance = fixture.componentInstance as unknown as {
+        pGradeLevel: { set(v: string): void };
+        pCourses: () => Course[];
+      };
+
+      instance.pGradeLevel.set('pre');
+      fixture.detectChanges();
+      instance.pGradeLevel.set('esc');
+      fixture.detectChanges();
+
+      const secondGradeCourses: Course[] = [{ id: 'c9', name: 'Curso de esc', stage: 'colegio' }];
+      const firstGradeCourses: Course[] = [
+        { id: 'c1', name: 'Curso de pre', stage: 'preuniversitario' },
+      ];
+      // The SECOND request resolves first, the FIRST (now stale) resolves LAST.
+      secondGrade.next(secondGradeCourses);
+      firstGrade.next(firstGradeCourses);
+      fixture.detectChanges();
+
+      expect(instance.pCourses()).toEqual(secondGradeCourses);
+    });
+
+    it("keeps the SECOND course's topics even when the FIRST course's getTopics resolves last (structured tab)", () => {
+      const firstCourse = new Subject<Topic[]>();
+      const secondCourse = new Subject<Topic[]>();
+      let call = 0;
+      const { fixture, compiled } = setup();
+      // Swapped in BEFORE either `sCourseId` is set below — the topics
+      // effect looks up `.getTopics` on the injected (singleton) service at
+      // call time, so this takes over before it's ever invoked.
+      (
+        TestBed.inject(TaxonomyService) as unknown as { getTopics: () => Observable<Topic[]> }
+      ).getTopics = vi.fn(() => {
+        call++;
+        return call === 1 ? firstCourse.asObservable() : secondCourse.asObservable();
+      });
+
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const instance = fixture.componentInstance as unknown as {
+        sGradeLevel: { set(v: string): void };
+        sCourseId: { set(v: string): void };
+        sTopics: () => Topic[];
+      };
+      instance.sGradeLevel.set('pre');
+      fixture.detectChanges();
+
+      instance.sCourseId.set('c1');
+      fixture.detectChanges();
+      instance.sCourseId.set('c2');
+      fixture.detectChanges();
+
+      const secondCourseTopics: Topic[] = [{ id: 't9', name: 'Tema de c2', courseId: 'c2' }];
+      const firstCourseTopics: Topic[] = [{ id: 't1', name: 'Tema de c1', courseId: 'c1' }];
+      secondCourse.next(secondCourseTopics);
+      firstCourse.next(firstCourseTopics);
+      fixture.detectChanges();
+
+      expect(instance.sTopics()).toEqual(secondCourseTopics);
+    });
+  });
+
   describe('styled file upload (photo tab)', () => {
     it('renders a styled upload control instead of the native file input', () => {
       const { compiled } = setup();

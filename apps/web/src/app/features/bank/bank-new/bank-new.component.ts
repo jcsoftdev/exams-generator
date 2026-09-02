@@ -320,8 +320,20 @@ export class BankNewComponent {
       this.pCourses.set([]);
       if (!gradeLevel) return;
       this.taxonomyService.getCourses(gradeLevel).subscribe({
-        next: (courses) => this.pCourses.set(courses),
-        error: () => this.saveError.set('No se pudieron cargar los cursos. Recarga la página.'),
+        // M9: a SLOWER response for a grade the teacher has already moved
+        // past (they picked a different grade before this one landed) must
+        // not clobber the courses list a NEWER request already populated —
+        // or is still about to. Comparing the captured `gradeLevel` against
+        // the CURRENT signal, read at response time, is what tells "my own
+        // request" apart from "a request some earlier effect run started".
+        next: (courses) => {
+          if (this.pGradeLevel() !== gradeLevel) return;
+          this.pCourses.set(courses);
+        },
+        error: () => {
+          if (this.pGradeLevel() !== gradeLevel) return;
+          this.saveError.set('No se pudieron cargar los cursos. Recarga la página.');
+        },
       });
     });
 
@@ -333,8 +345,15 @@ export class BankNewComponent {
       this.sCourses.set([]);
       if (!gradeLevel) return;
       this.taxonomyService.getCourses(gradeLevel).subscribe({
-        next: (courses) => this.sCourses.set(courses),
-        error: () => this.saveError.set('No se pudieron cargar los cursos. Recarga la página.'),
+        // M9: same staleness guard as the photo tab's effect above.
+        next: (courses) => {
+          if (this.sGradeLevel() !== gradeLevel) return;
+          this.sCourses.set(courses);
+        },
+        error: () => {
+          if (this.sGradeLevel() !== gradeLevel) return;
+          this.saveError.set('No se pudieron cargar los cursos. Recarga la página.');
+        },
       });
     });
 
@@ -347,8 +366,16 @@ export class BankNewComponent {
       this.pTopics.set([]);
       if (!courseId) return;
       this.taxonomyService.getTopics(courseId, this.pGradeLevel() ?? undefined).subscribe({
-        next: (topics) => this.pTopics.set(topics),
-        error: () => this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.'),
+        // M9: same staleness guard, keyed on the course this request was
+        // actually made for.
+        next: (topics) => {
+          if (this.pCourseId() !== courseId) return;
+          this.pTopics.set(topics);
+        },
+        error: () => {
+          if (this.pCourseId() !== courseId) return;
+          this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.');
+        },
       });
     });
 
@@ -361,8 +388,15 @@ export class BankNewComponent {
       this.sTopics.set([]);
       if (!courseId) return;
       this.taxonomyService.getTopics(courseId, this.sGradeLevel() ?? undefined).subscribe({
-        next: (topics) => this.sTopics.set(topics),
-        error: () => this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.'),
+        // M9: same staleness guard as the photo tab's effect above.
+        next: (topics) => {
+          if (this.sCourseId() !== courseId) return;
+          this.sTopics.set(topics);
+        },
+        error: () => {
+          if (this.sCourseId() !== courseId) return;
+          this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.');
+        },
       });
     });
 
