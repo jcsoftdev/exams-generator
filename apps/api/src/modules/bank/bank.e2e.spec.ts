@@ -24,6 +24,7 @@ describe("Bank module (e2e)", () => {
 
   let courseId: string;
   let topicId: string;
+  let gradedTopicId: string;
   let staffUserId: string;
   let tenantAId: string;
   let tenantATeacherId: string;
@@ -69,6 +70,13 @@ describe("Bank module (e2e)", () => {
       .values({ courseId, name: `E2E Topic ${suffix}` })
       .returning({ id: topics.id });
     topicId = topic!.id;
+
+    // Grade-scoped topic — taxonomy-level grade, independent of any question's own gradeLevel.
+    const [gradedTopic] = await db
+      .insert(topics)
+      .values({ courseId, name: `E2E Graded Topic ${suffix}`, gradeLevel: "secundaria_5" })
+      .returning({ id: topics.id });
+    gradedTopicId = gradedTopic!.id;
 
     const [staff] = await db
       .insert(users)
@@ -174,7 +182,7 @@ describe("Bank module (e2e)", () => {
             ),
       ],
       ["delete tenants", () => db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]))],
-      ["delete topics", () => db.delete(topics).where(inArray(topics.id, [topicId]))],
+      ["delete topics", () => db.delete(topics).where(inArray(topics.id, [topicId, gradedTopicId]))],
       ["delete courses", () => db.delete(courses).where(inArray(courses.id, [courseId]))],
       ["close app", () => app.close()],
     ];
@@ -830,10 +838,36 @@ describe("Bank module (e2e)", () => {
 
       expect(Array.isArray(res.body)).toBe(true);
       const bucket = res.body.find((row: { topicId: string }) => row.topicId === topicId);
-      expect(bucket).toEqual({ courseId, topicId, total: expect.any(Number) });
+      // topicId's fixture carries no taxonomy gradeLevel — null, not derived from the question above.
+      expect(bucket).toEqual({ courseId, topicId, total: expect.any(Number), gradeLevel: null });
       expect(bucket.total).toBeGreaterThanOrEqual(1);
       // The whole point: no `bodyTypst`/`alternatives`/`id` ever crosses the wire here.
       expect(JSON.stringify(res.body)).not.toContain("summary fixture question");
+    });
+
+    it("carries the TOPIC's own gradeLevel from the taxonomy, not derived from its questions' gradeLevel", async () => {
+      const created = await structuredRequest(tenantAToken)
+        .send({
+          courseId,
+          topicId: gradedTopicId,
+          difficulty: Difficulty.Medium,
+          // Deliberately a DIFFERENT grade than the topic's own — proves the
+          // response reads the topic's taxonomy grade, never the question's.
+          gradeLevel: "primaria_4",
+          bodyTypst: "graded topic fixture question",
+          alternatives: ["a", "b"],
+          correctAnswer: "0",
+        })
+        .expect(201);
+      await trackCreatedQuestion(created.body.id);
+
+      const res = await request(app.getHttpServer())
+        .get("/bank/questions/summary")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+
+      const bucket = res.body.find((row: { topicId: string }) => row.topicId === gradedTopicId);
+      expect(bucket.gradeLevel).toBe("secundaria_5");
     });
 
     it("applies the same filters as the list endpoint, so the tree counts match what expanding a topic returns", async () => {
