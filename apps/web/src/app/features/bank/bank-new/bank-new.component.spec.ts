@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { NormalizedBoxDto, AiExtractedQuestion } from '@exams-generator/shared';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { ButtonComponent } from '../../../ui/button/button.component';
+import { InputComponent } from '../../../ui/input/input.component';
 import { BankNewComponent } from './bank-new.component';
 import { BankService } from '../bank.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
@@ -1261,6 +1262,91 @@ describe('BankNewComponent', () => {
       pickImage(fixture, compiled);
 
       expect(compiled.querySelector('[data-testid="extract-helper"]')).toBeFalsy();
+    });
+  });
+
+  describe('D4: wiring the required/ariaDescribedBy primitives', () => {
+    function selectInstance(
+      fixture: { debugElement: { query(pred: unknown): { componentInstance: unknown } | null } },
+      testid: string,
+    ): SelectComponent<unknown> {
+      const debugEl = fixture.debugElement.query(By.css(`[data-testid="${testid}"] ui-select`));
+      return debugEl!.componentInstance as SelectComponent<unknown>;
+    }
+
+    function inputInstance(
+      fixture: { debugElement: { query(pred: unknown): { componentInstance: unknown } | null } },
+      testid: string,
+    ): InputComponent {
+      const debugEl = fixture.debugElement.query(By.css(`[data-testid="${testid}"] ui-input`));
+      return debugEl!.componentInstance as InputComponent;
+    }
+
+    it('marks every required select/input as required=true on the photo tab', () => {
+      const { fixture } = setup();
+      expect(selectInstance(fixture, 'photo-grade-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'photo-course-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'photo-topic-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'photo-difficulty-select').required()).toBe(true);
+      expect(inputInstance(fixture, 'photo-correct-answer-input').required()).toBe(true);
+    });
+
+    it('marks every required select/input as required=true on the structured tab', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(selectInstance(fixture, 'structured-grade-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'structured-course-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'structured-topic-select').required()).toBe(true);
+      expect(selectInstance(fixture, 'structured-difficulty-select').required()).toBe(true);
+      expect(inputInstance(fixture, 'structured-correct-answer-input').required()).toBe(true);
+    });
+
+    it('links the disabled "Extraer con IA" button to its helper text via ariaDescribedBy', () => {
+      const { fixture, compiled } = setup();
+      const helper = compiled.querySelector('[data-testid="extract-helper"]') as HTMLElement;
+      expect(helper.id).toBeTruthy();
+      const extractButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="extract-with-ai"] ui-button'),
+      );
+      const extractButtonInstance = extractButtonDebug!.componentInstance as ButtonComponent;
+      expect(extractButtonInstance.ariaDescribedBy()).toBe(helper.id);
+    });
+
+    it('clears ariaDescribedBy on "Extraer con IA" once photo taxonomy is complete (helper text is gone)', () => {
+      const { fixture, compiled } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      const extractButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="extract-with-ai"] ui-button'),
+      );
+      const extractButtonInstance = extractButtonDebug!.componentInstance as ButtonComponent;
+      expect(extractButtonInstance.ariaDescribedBy()).toBeFalsy();
+    });
+
+    it('links the photo-tab submit button to its missing-fields hint via ariaDescribedBy', () => {
+      const { fixture, compiled } = setup();
+      const hint = compiled.querySelector('[data-testid="photo-validation"]') as HTMLElement;
+      expect(hint.id).toBeTruthy();
+      const submitButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="photo-submit"] ui-button'),
+      );
+      const submitButtonInstance = submitButtonDebug!.componentInstance as ButtonComponent;
+      expect(submitButtonInstance.ariaDescribedBy()).toBe(hint.id);
+    });
+
+    it('links the structured-tab submit button to its missing-fields hint via ariaDescribedBy', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const hint = compiled.querySelector('[data-testid="structured-validation"]') as HTMLElement;
+      expect(hint.id).toBeTruthy();
+      const submitButtonDebug = fixture.debugElement.query(
+        By.css('[data-testid="structured-submit"] ui-button'),
+      );
+      const submitButtonInstance = submitButtonDebug!.componentInstance as ButtonComponent;
+      expect(submitButtonInstance.ariaDescribedBy()).toBe(hint.id);
     });
   });
 
