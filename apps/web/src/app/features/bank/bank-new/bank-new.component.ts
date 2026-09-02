@@ -1,5 +1,6 @@
 import {
   Component,
+  DestroyRef,
   ElementRef,
   HostListener,
   Injector,
@@ -12,20 +13,14 @@ import {
 } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { TimeoutError } from 'rxjs';
+import { TimeoutError, forkJoin, of } from 'rxjs';
 import { AiExtractedQuestion, Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
-import {
-  LucideAngularModule,
-  Upload,
-  Image as ImageIcon,
-  Check,
-  ChevronDown,
-  Sparkles,
-} from 'lucide-angular';
+import { LucideAngularModule, Check, ChevronDown, Sparkles } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TabsComponent, TabItem } from '../../../ui/tabs/tabs.component';
+import { FileUploadComponent } from '../../../ui/file-upload/file-upload.component';
 import { BankService } from '../bank.service';
 import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
@@ -160,14 +155,14 @@ function buildCropSlots(extracted: AiExtractedQuestion): readonly CropSlot[] {
     TabsComponent,
     LucideAngularModule,
     CropReviewComponent,
+    FileUploadComponent,
   ],
   // `ui-select` (Grado/Curso/Tema/Nivel, both tabs) needs Check + ChevronDown —
   // this component-level `.pick()` shadows the root `app.config.ts` registration
   // for its own subtree, so the nested `ui-select` instances can't fall back to it.
-  providers: [
-    LucideAngularModule.pick({ Upload, Image: ImageIcon, Check, ChevronDown, Sparkles })
-      .providers ?? [],
-  ],
+  // L5: Upload/Image moved out with the upload control itself — `ui-file-upload`
+  // now registers those two icons for its OWN subtree.
+  providers: [LucideAngularModule.pick({ Check, ChevronDown, Sparkles }).providers ?? []],
   templateUrl: './bank-new.component.html',
 })
 export class BankNewComponent {
@@ -177,6 +172,7 @@ export class BankNewComponent {
   private readonly router = inject(Router);
   private readonly injector = inject(Injector);
   private readonly liveAnnouncer = inject(LiveAnnouncerService);
+  private readonly destroyRef = inject(DestroyRef);
 
   /**
    * Template refs on the structured tab's own textareas — used only to move
@@ -318,8 +314,20 @@ export class BankNewComponent {
       this.pCourses.set([]);
       if (!gradeLevel) return;
       this.taxonomyService.getCourses(gradeLevel).subscribe({
-        next: (courses) => this.pCourses.set(courses),
-        error: () => this.saveError.set('No se pudieron cargar los cursos. Recarga la página.'),
+        // M9: a SLOWER response for a grade the teacher has already moved
+        // past (they picked a different grade before this one landed) must
+        // not clobber the courses list a NEWER request already populated —
+        // or is still about to. Comparing the captured `gradeLevel` against
+        // the CURRENT signal, read at response time, is what tells "my own
+        // request" apart from "a request some earlier effect run started".
+        next: (courses) => {
+          if (this.pGradeLevel() !== gradeLevel) return;
+          this.pCourses.set(courses);
+        },
+        error: () => {
+          if (this.pGradeLevel() !== gradeLevel) return;
+          this.saveError.set('No se pudieron cargar los cursos. Recarga la página.');
+        },
       });
     });
 
@@ -331,8 +339,15 @@ export class BankNewComponent {
       this.sCourses.set([]);
       if (!gradeLevel) return;
       this.taxonomyService.getCourses(gradeLevel).subscribe({
-        next: (courses) => this.sCourses.set(courses),
-        error: () => this.saveError.set('No se pudieron cargar los cursos. Recarga la página.'),
+        // M9: same staleness guard as the photo tab's effect above.
+        next: (courses) => {
+          if (this.sGradeLevel() !== gradeLevel) return;
+          this.sCourses.set(courses);
+        },
+        error: () => {
+          if (this.sGradeLevel() !== gradeLevel) return;
+          this.saveError.set('No se pudieron cargar los cursos. Recarga la página.');
+        },
       });
     });
 
@@ -345,8 +360,16 @@ export class BankNewComponent {
       this.pTopics.set([]);
       if (!courseId) return;
       this.taxonomyService.getTopics(courseId, this.pGradeLevel() ?? undefined).subscribe({
-        next: (topics) => this.pTopics.set(topics),
-        error: () => this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.'),
+        // M9: same staleness guard, keyed on the course this request was
+        // actually made for.
+        next: (topics) => {
+          if (this.pCourseId() !== courseId) return;
+          this.pTopics.set(topics);
+        },
+        error: () => {
+          if (this.pCourseId() !== courseId) return;
+          this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.');
+        },
       });
     });
 
@@ -359,8 +382,15 @@ export class BankNewComponent {
       this.sTopics.set([]);
       if (!courseId) return;
       this.taxonomyService.getTopics(courseId, this.sGradeLevel() ?? undefined).subscribe({
-        next: (topics) => this.sTopics.set(topics),
-        error: () => this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.'),
+        // M9: same staleness guard as the photo tab's effect above.
+        next: (topics) => {
+          if (this.sCourseId() !== courseId) return;
+          this.sTopics.set(topics);
+        },
+        error: () => {
+          if (this.sCourseId() !== courseId) return;
+          this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.');
+        },
       });
     });
 
@@ -385,6 +415,25 @@ export class BankNewComponent {
     effect(() => {
       if (this.sAlternatives().trim().length > 0) {
         this.extractNoAlternatives.set(false);
+      }
+    });
+
+    // M8: `setImage`/`setStructuredImage` only ever revoke the PREVIOUS
+    // object URL when a new one replaces it — whichever one is still live
+    // the moment this component is torn down (navigating away mid-review,
+    // route reuse) never gets revoked at all, leaking it for the lifetime
+    // of the tab. `cropPhotoUrl` is a `computed` of `pImagePreviewUrl` (no
+    // object URL of its own) and every `CropSlot.dataUrl` is a `data:` URI
+    // (AI extraction responses / `dataUrlToFile`, never
+    // `URL.createObjectURL`) — neither needs a revoke here.
+    this.destroyRef.onDestroy(() => {
+      const photoUrl = this.pImagePreviewUrl();
+      if (photoUrl) {
+        URL.revokeObjectURL(photoUrl);
+      }
+      const structuredUrl = this.sImagePreviewUrl();
+      if (structuredUrl) {
+        URL.revokeObjectURL(structuredUrl);
       }
     });
   }
@@ -479,9 +528,9 @@ export class BankNewComponent {
     );
   }
 
-  protected onImageSelected(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    this.setImage(input.files?.[0] ?? null);
+  /** L5: `ui-file-upload`'s `fileSelected` output already hands over the `File | null` directly. */
+  protected onImageSelected(file: File | null): void {
+    this.setImage(file);
   }
 
   private setImage(file: File | null): void {
@@ -518,9 +567,9 @@ export class BankNewComponent {
     }
   }
 
-  protected onStructuredImageSelected(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    this.setStructuredImage(input.files?.[0] ?? null);
+  /** L5: same as `onImageSelected` — `ui-file-upload` emits the `File | null` directly. */
+  protected onStructuredImageSelected(file: File | null): void {
+    this.setStructuredImage(file);
     // A manual pick from the structured tab's own file input always
     // supersedes anything AI-derived.
     this.sImageFromCrop = false;
@@ -1056,21 +1105,41 @@ export class BankNewComponent {
     );
   }
 
+  /**
+   * L7: uploads the complement image and the alternative crops IN PARALLEL
+   * via `forkJoin` — they only ever depend on the just-created `id`, never
+   * on each other, so the old chain (`attachStructuredImageAndFinish` ➜
+   * `attachAlternativeImagesAndFinish`) was paying for two sequential
+   * round trips where one concurrent pair would do. Whichever half has
+   * nothing to upload is represented by `of(null)` so `forkJoin` still
+   * completes without a real request for it. `forkJoin`'s own semantics —
+   * ANY source erroring fails the whole join immediately — are exactly the
+   * `failAfterCreate()` behavior this replaces: a failure in EITHER upload
+   * must leave `sCreatedQuestionId` set so a resubmit retries (both of)
+   * them, never re-running `createStructuredQuestion` and duplicating the
+   * question itself.
+   */
   private attachStructuredImageAndFinish(id: string): void {
     const image = this.sImage();
-    if (!image) {
-      this.attachAlternativeImagesAndFinish(id);
-      return;
-    }
-    this.bankService.replaceQuestionImage(id, image).subscribe({
-      next: () => this.attachAlternativeImagesAndFinish(id),
+    const imageUpload$ = image ? this.bankService.replaceQuestionImage(id, image) : of(null);
+
+    const crops = this.resolveAlternativeCropsToUpload();
+    const alternativesUpload$ =
+      crops.length > 0 ? this.bankService.setAlternativeImages(id, crops) : of(null);
+
+    forkJoin([imageUpload$, alternativesUpload$]).subscribe({
+      next: () => {
+        this.saving.set(false);
+        this.navigateToBank(id);
+      },
       error: () => this.failAfterCreate(),
     });
   }
 
   /**
-   * Second half of the save chain — uploads any alternative crops the
-   * teacher kept, sparse by design.
+   * The alternative crops to upload, each re-derived against the CURRENT
+   * alternatives list rather than trusting the index frozen at extraction
+   * time.
    *
    * Each crop's `alternativeIndex` was frozen at extraction time
    * (`buildCropSlots`), but `sAlternatives` is a free-text textarea the
@@ -1080,14 +1149,14 @@ export class BankNewComponent {
    * against the CURRENT list (via `reresolveAlternativeIndex`) instead of
    * trusting the frozen one is what closes Critical Finding 1.
    */
-  private attachAlternativeImagesAndFinish(id: string): void {
+  private resolveAlternativeCropsToUpload(): { alternativeIndex: number; file: File }[] {
     const currentAlternatives = this.alternativesList();
     // Each entry can be claimed by at most one crop — tracks which positions
     // are still available for matching so two crops whose ORIGINAL text
     // happened to be identical don't both claim the same occurrence.
     const available = currentAlternatives.map((text, index) => ({ text, index }));
 
-    const crops = this.cropSlots()
+    return this.cropSlots()
       .filter(
         (slot): slot is CropSlot & { target: { kind: 'alternative'; alternativeIndex: number } } =>
           slot.target.kind === 'alternative',
@@ -1102,20 +1171,6 @@ export class BankNewComponent {
           : { alternativeIndex, file: dataUrlToFile(slot.dataUrl, 'alternativa.png') };
       })
       .filter((crop): crop is { alternativeIndex: number; file: File } => crop !== null);
-
-    if (crops.length === 0) {
-      this.saving.set(false);
-      this.navigateToBank(id);
-      return;
-    }
-
-    this.bankService.setAlternativeImages(id, crops).subscribe({
-      next: () => {
-        this.saving.set(false);
-        this.navigateToBank(id);
-      },
-      error: () => this.failAfterCreate(),
-    });
   }
 
   /**

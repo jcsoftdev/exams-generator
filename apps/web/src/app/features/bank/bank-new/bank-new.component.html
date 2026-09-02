@@ -1,5 +1,7 @@
 <div class="mx-auto max-w-2xl">
-  <h1 class="mb-4 text-xl font-bold text-n900">Nueva pregunta</h1>
+  <!-- L8: the topbar already renders the page's <h1> (its `title()`) — this
+       is a section heading within the page, not a second top-level one. -->
+  <h2 class="mb-4 text-xl font-bold text-n900">Nueva pregunta</h2>
 
   <ui-tabs [tabs]="tabItems" [value]="tab()" (valueChange)="setTab($event)"></ui-tabs>
 
@@ -18,42 +20,16 @@
       data-testid="tab-photo-panel"
       class="flex flex-col gap-3 rounded-card border border-n200 bg-surface p-4"
     >
-      <div data-testid="image-upload" class="flex flex-col gap-2">
-        <span class="text-sm font-medium text-n700">Imagen del enunciado</span>
-        <label
-          class="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-card border-2 border-dashed border-n300 bg-n50 px-4 py-6 text-center transition-colors hover:border-primary-400 hover:bg-primary-50"
-        >
-          <input
-            type="file"
-            accept="image/*"
-            class="sr-only"
-            [disabled]="extracting()"
-            (change)="onImageSelected($event)"
-          />
-          @if (pImagePreviewUrl()) {
-            <img
-              data-testid="image-upload-preview"
-              [src]="pImagePreviewUrl()"
-              alt="Vista previa de la imagen del enunciado"
-              class="h-24 w-24 rounded-field object-cover"
-            />
-            <span
-              data-testid="image-upload-filename"
-              class="flex items-center gap-1.5 text-sm font-medium text-n900"
-            >
-              <lucide-angular name="image" class="h-4 w-4 text-primary-500"></lucide-angular>
-              {{ pImage()?.name }}
-            </span>
-            <span data-testid="image-upload-change" class="text-sm font-medium text-primary-500"
-              >Cambiar imagen</span
-            >
-          } @else {
-            <lucide-angular name="upload" class="h-6 w-6 text-n500"></lucide-angular>
-            <span class="text-sm text-n700">Arrastra una imagen o haz clic para elegirla</span>
-            <span class="text-xs text-n500">PNG o JPG</span>
-          }
-        </label>
-      </div>
+      <ui-file-upload
+        testIdPrefix="image-upload"
+        label="Imagen del enunciado"
+        hint="Arrastra una imagen o haz clic para elegirla"
+        previewAlt="Vista previa de la imagen del enunciado"
+        [previewUrl]="pImagePreviewUrl()"
+        [fileName]="pImage()?.name ?? null"
+        [disabled]="extracting()"
+        (fileSelected)="onImageSelected($event)"
+      ></ui-file-upload>
 
       <div data-testid="photo-grade-select">
         <ui-select
@@ -258,45 +234,15 @@
         ></ui-input>
       </div>
 
-      <div data-testid="structured-image-upload" class="flex flex-col gap-2">
-        <span class="text-sm font-medium text-n700">Imagen complementaria (opcional)</span>
-        <label
-          class="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-card border-2 border-dashed border-n300 bg-n50 px-4 py-6 text-center transition-colors hover:border-primary-400 hover:bg-primary-50"
-        >
-          <input
-            type="file"
-            accept="image/*"
-            class="sr-only"
-            (change)="onStructuredImageSelected($event)"
-          />
-          @if (sImagePreviewUrl()) {
-            <img
-              data-testid="structured-image-upload-preview"
-              [src]="sImagePreviewUrl()"
-              alt="Vista previa de la imagen complementaria"
-              class="h-24 w-24 rounded-field object-cover"
-            />
-            <span
-              data-testid="structured-image-upload-filename"
-              class="flex items-center gap-1.5 text-sm font-medium text-n900"
-            >
-              <lucide-angular name="image" class="h-4 w-4 text-primary-500"></lucide-angular>
-              {{ sImage()?.name }}
-            </span>
-            <span
-              data-testid="structured-image-upload-change"
-              class="text-sm font-medium text-primary-500"
-              >Cambiar imagen</span
-            >
-          } @else {
-            <lucide-angular name="upload" class="h-6 w-6 text-n500"></lucide-angular>
-            <span class="text-sm text-n700"
-              >Solo si hay un gráfico, diagrama o pasaje que no se pueda escribir en Typst</span
-            >
-            <span class="text-xs text-n500">PNG o JPG</span>
-          }
-        </label>
-      </div>
+      <ui-file-upload
+        testIdPrefix="structured-image-upload"
+        label="Imagen complementaria (opcional)"
+        hint="Solo si hay un gráfico, diagrama o pasaje que no se pueda escribir en Typst"
+        previewAlt="Vista previa de la imagen complementaria"
+        [previewUrl]="sImagePreviewUrl()"
+        [fileName]="sImage()?.name ?? null"
+        (fileSelected)="onStructuredImageSelected($event)"
+      ></ui-file-upload>
 
       @if (cropSlots().length > 0 && cropPhotoUrl(); as photoUrl) {
         <app-crop-review

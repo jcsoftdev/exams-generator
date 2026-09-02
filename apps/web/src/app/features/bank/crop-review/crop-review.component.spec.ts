@@ -27,6 +27,12 @@ function dispatchPointer(el: HTMLElement, type: string, clientX: number, clientY
   el.dispatchEvent(new MouseEvent(type, { clientX, clientY, bubbles: true }));
 }
 
+/** Parses a CSS `aspect-ratio` value in `<w> / <h>` slash form (L6) into a plain number. */
+function ratioToNumber(value: string): number {
+  const [w, h] = value.split('/').map((part) => parseFloat(part.trim()));
+  return w / h;
+}
+
 const SLOT: CropSlot = {
   target: { kind: 'figure' },
   label: 'Figura del enunciado',
@@ -49,6 +55,40 @@ describe('CropReviewComponent', () => {
     const fixture = await render([]);
 
     expect(fixture.nativeElement.querySelector('[data-testid="crop-slot"]')).toBeNull();
+  });
+
+  describe('L6: reserves space for the photo so the editor does not shift while it loads', () => {
+    it('gives the crop container a non-zero aspect-ratio/min-height BEFORE the photo has loaded', async () => {
+      const fixture = await render([SLOT]);
+
+      const container = (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>(
+        '[data-testid="crop-container"]',
+      )!;
+
+      const aspectRatio = container.style.getPropertyValue('aspect-ratio');
+      const minHeight = container.style.getPropertyValue('min-height');
+      // Either reservation strategy is acceptable — what matters is that
+      // SOME non-zero space is already claimed before the <img> has painted
+      // anything, so the layout never has to jump once it does.
+      const hasAspectRatio = !!aspectRatio && ratioToNumber(aspectRatio) > 0;
+      const hasMinHeight = !!minHeight && parseFloat(minHeight) > 0;
+      expect(hasAspectRatio || hasMinHeight).toBe(true);
+    });
+
+    it("narrows the reserved aspect-ratio to the photo's own once it reports its natural size", async () => {
+      const fixture = await render([SLOT]);
+      const container = (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>(
+        '[data-testid="crop-container"]',
+      )!;
+      const img = container.querySelector('img')!;
+
+      Object.defineProperty(img, 'naturalWidth', { value: 800, configurable: true });
+      Object.defineProperty(img, 'naturalHeight', { value: 400, configurable: true });
+      img.dispatchEvent(new Event('load'));
+      fixture.detectChanges();
+
+      expect(ratioToNumber(container.style.getPropertyValue('aspect-ratio'))).toBeCloseTo(2, 5);
+    });
   });
 
   it('renders one slot per crop, labelled', async () => {

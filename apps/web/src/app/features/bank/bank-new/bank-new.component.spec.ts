@@ -175,6 +175,21 @@ function pickStructuredImage(fixture: { detectChanges(): void }, compiled: HTMLE
 }
 
 describe('BankNewComponent', () => {
+  describe('L8: one h1 per page (the topbar owns it, this is a section heading)', () => {
+    it('does not render an h1 inside app-bank-new', () => {
+      const { compiled } = setup();
+
+      expect(compiled.querySelector('h1')).toBeFalsy();
+    });
+
+    it('still shows "Nueva pregunta" as a heading, demoted to h2', () => {
+      const { compiled } = setup();
+
+      const heading = compiled.querySelector('h2');
+      expect(heading?.textContent?.trim()).toBe('Nueva pregunta');
+    });
+  });
+
   it('shows the photo tab by default and switches to the structured tab', () => {
     const { fixture, compiled } = setup();
     expect(compiled.querySelector('[data-testid="tab-photo-panel"]')).toBeTruthy();
@@ -558,6 +573,79 @@ describe('BankNewComponent', () => {
       expect(createStructuredQuestion).toHaveBeenCalledWith(
         expect.objectContaining({ courseId: 'c1', topicId: 't1' }),
       );
+    });
+  });
+
+  describe('M9: taxonomy effects race — a stale response must not overwrite a newer selection', () => {
+    it("keeps the SECOND grade's courses even when the FIRST grade's getCourses resolves last (photo tab)", () => {
+      const firstGrade = new Subject<Course[]>();
+      const secondGrade = new Subject<Course[]>();
+      let call = 0;
+      const { fixture } = setup({
+        getCourses: () => {
+          call++;
+          return call === 1 ? firstGrade.asObservable() : secondGrade.asObservable();
+        },
+      });
+      const instance = fixture.componentInstance as unknown as {
+        pGradeLevel: { set(v: string): void };
+        pCourses: () => Course[];
+      };
+
+      instance.pGradeLevel.set('pre');
+      fixture.detectChanges();
+      instance.pGradeLevel.set('esc');
+      fixture.detectChanges();
+
+      const secondGradeCourses: Course[] = [{ id: 'c9', name: 'Curso de esc', stage: 'colegio' }];
+      const firstGradeCourses: Course[] = [
+        { id: 'c1', name: 'Curso de pre', stage: 'preuniversitario' },
+      ];
+      // The SECOND request resolves first, the FIRST (now stale) resolves LAST.
+      secondGrade.next(secondGradeCourses);
+      firstGrade.next(firstGradeCourses);
+      fixture.detectChanges();
+
+      expect(instance.pCourses()).toEqual(secondGradeCourses);
+    });
+
+    it("keeps the SECOND course's topics even when the FIRST course's getTopics resolves last (structured tab)", () => {
+      const firstCourse = new Subject<Topic[]>();
+      const secondCourse = new Subject<Topic[]>();
+      let call = 0;
+      const { fixture, compiled } = setup();
+      // Swapped in BEFORE either `sCourseId` is set below — the topics
+      // effect looks up `.getTopics` on the injected (singleton) service at
+      // call time, so this takes over before it's ever invoked.
+      (
+        TestBed.inject(TaxonomyService) as unknown as { getTopics: () => Observable<Topic[]> }
+      ).getTopics = vi.fn(() => {
+        call++;
+        return call === 1 ? firstCourse.asObservable() : secondCourse.asObservable();
+      });
+
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const instance = fixture.componentInstance as unknown as {
+        sGradeLevel: { set(v: string): void };
+        sCourseId: { set(v: string): void };
+        sTopics: () => Topic[];
+      };
+      instance.sGradeLevel.set('pre');
+      fixture.detectChanges();
+
+      instance.sCourseId.set('c1');
+      fixture.detectChanges();
+      instance.sCourseId.set('c2');
+      fixture.detectChanges();
+
+      const secondCourseTopics: Topic[] = [{ id: 't9', name: 'Tema de c2', courseId: 'c2' }];
+      const firstCourseTopics: Topic[] = [{ id: 't1', name: 'Tema de c1', courseId: 'c1' }];
+      secondCourse.next(secondCourseTopics);
+      firstCourse.next(firstCourseTopics);
+      fixture.detectChanges();
+
+      expect(instance.sTopics()).toEqual(secondCourseTopics);
     });
   });
 
@@ -1810,6 +1898,101 @@ describe('BankNewComponent', () => {
     });
   });
 
+  describe('L7: parallelises the image and alternative-crops uploads', () => {
+    const EXTRACTED_FOR_L7: AiExtractedQuestion = {
+      bodyTypst: '¿Qué figura se muestra?',
+      alternatives: ['Uno', 'Dos'],
+      correctAnswer: '0',
+      extractionId: 'extraction-l7',
+      figureCrop: {
+        dataUrl: 'data:image/png;base64,AAAA',
+        box: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 },
+      },
+      alternativeCrops: [
+        {
+          alternativeIndex: 0,
+          dataUrl: 'data:image/png;base64,BBBB',
+          box: { x: 0, y: 0.7, w: 0.1, h: 0.1 },
+        },
+      ],
+    };
+
+    it('issues replaceQuestionImage and setAlternativeImages before either resolves, and a failure in either surfaces a save error without discarding the created id', () => {
+      const imageSubject = new Subject<{ id: string }>();
+      const altSubject = new Subject<{ id: string }>();
+      const { fixture, compiled, replaceQuestionImage, setAlternativeImages, navigate } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_FOR_L7),
+        replaceImageImpl: () => imageSubject.asObservable(),
+        setAlternativeImagesImpl: () => altSubject.asObservable(),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+      set(fixture, 'sDifficulty', 'easy');
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+
+      // Both requests must already be in flight — proving they were fired
+      // in PARALLEL, not one waiting on the other's response.
+      expect(replaceQuestionImage).toHaveBeenCalledTimes(1);
+      expect(setAlternativeImages).toHaveBeenCalledTimes(1);
+      expect(navigate).not.toHaveBeenCalled();
+
+      // The image upload fails; the alternative-crops upload never resolves
+      // at all — a failure in EITHER must surface the same recoverable
+      // error, without ever navigating away.
+      imageSubject.error(new Error('upload failed'));
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
+        'La pregunta se guardó, pero no se pudieron adjuntar las imágenes',
+      );
+      expect(navigate).not.toHaveBeenCalled();
+    });
+
+    it('retries both uploads on a resubmit after a partial failure, without calling createStructuredQuestion again', () => {
+      let imageCalls = 0;
+      const {
+        fixture,
+        compiled,
+        replaceQuestionImage,
+        setAlternativeImages,
+        createStructuredQuestion,
+      } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_FOR_L7),
+        replaceImageImpl: () => {
+          imageCalls++;
+          return imageCalls === 1 ? throwError(() => new Error('boom')) : of({ id: 'str-q' });
+        },
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+      set(fixture, 'sDifficulty', 'easy');
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+      expect(createStructuredQuestion).toHaveBeenCalledTimes(1);
+      expect(compiled.querySelector('[data-testid="save-error"]')).toBeTruthy();
+
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+
+      // The question itself is never recreated — only the uploads retry.
+      expect(createStructuredQuestion).toHaveBeenCalledTimes(1);
+      expect(replaceQuestionImage).toHaveBeenCalledTimes(2);
+      expect(setAlternativeImages).toHaveBeenCalledTimes(2);
+    });
+  });
+
   describe('Important 2: the complement-image preview stays synced with what actually uploads', () => {
     it('shows a preview for the AI figure crop right after extraction (not blank)', () => {
       const { fixture, compiled } = setup({
@@ -2818,6 +3001,33 @@ describe('BankNewComponent', () => {
 
       expect(event.preventDefault).not.toHaveBeenCalled();
       expect(event.returnValue).toBe('untouched');
+    });
+  });
+
+  describe('M8: revokes preview object URLs on destroy', () => {
+    it('revokes both the photo and structured preview object URLs when the component is destroyed', () => {
+      const { fixture, compiled } = setup();
+      let counter = 0;
+      vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:preview-${counter++}`);
+      const revokeSpy = vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+
+      pickImage(fixture, compiled);
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      pickStructuredImage(fixture, compiled);
+      revokeSpy.mockClear();
+
+      fixture.destroy();
+
+      expect(revokeSpy).toHaveBeenCalledWith('blob:preview-0');
+      expect(revokeSpy).toHaveBeenCalledWith('blob:preview-1');
+      vi.restoreAllMocks();
+    });
+
+    it('does not throw when destroyed with no image ever picked', () => {
+      const { fixture } = setup();
+
+      expect(() => fixture.destroy()).not.toThrow();
     });
   });
 });
