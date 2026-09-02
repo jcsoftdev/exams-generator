@@ -140,7 +140,16 @@ describe('CropReviewComponent', () => {
     });
   });
 
-  it('starts a resize from a pointerdown 15 px outside the visible 8 px dot', async () => {
+  it('resizes via a pointerdown on the enlarged handle wrapper, not the 8px dot (jsdom cannot hit-test a 15px offset)', async () => {
+    // jsdom has no hit-testing — dispatching a pointerdown always fires on
+    // whichever element `dispatchEvent` is called on, never on "whatever a
+    // real browser would find under these coordinates". So this test cannot
+    // actually prove a pointerdown 15px outside the visible 8px dot still
+    // starts a resize the way a real browser would; the 44x44 inline-size
+    // assertion in the previous test IS that hit-area evidence. What this
+    // test DOES prove: a pointerdown on the handle WRAPPER (its real DOM hit
+    // target, sized well past the 8px dot) drives `startResize`'s coordinate
+    // math correctly end to end.
     const fixture = await render([SLOT]);
     const emitted: unknown[] = [];
     fixture.componentInstance.recrop.subscribe((event) => emitted.push(event));
@@ -152,10 +161,7 @@ describe('CropReviewComponent', () => {
 
     // The `se` handle sits at the box's bottom-right corner: box {x:.1,y:.1,
     // w:.5,h:.5} on a 200x100 container puts its corner at clientX 120,
-    // clientY 60. The visible dot there is only 8 px across, but a
-    // pointerdown 15 px outside it (135, 75) must still land inside the
-    // enlarged 44x44 hit area and start the resize rather than falling
-    // through to the container's own `startMove`.
+    // clientY 60.
     const handles = container.querySelectorAll<HTMLElement>('[data-testid="crop-resize-handle"]');
     const seHandle = handles[4]; // RESIZE_HANDLES = ['nw','n','ne','e','se','s','sw','w']
 
@@ -173,6 +179,67 @@ describe('CropReviewComponent', () => {
     expect(event.box.y).toBeCloseTo(0.1, 10);
     expect(event.box.w).toBeCloseTo(0.55, 10);
     expect(event.box.h).toBeCloseTo(0.6, 10);
+  });
+
+  it('keeps a real 24px move strip by shrinking the w/e handles when the box is narrower than two 44px wrappers (audit #1)', async () => {
+    const NARROW_SLOT: CropSlot = {
+      ...SLOT,
+      box: { x: 0.3, y: 0.1, w: 0.2, h: 0.5 },
+    };
+    // Stubbed on the PROTOTYPE, and set up before the container div even
+    // exists (`render()` does the first, real render below) — `handleSize`
+    // reads the rect from inside a template expression, which on an OnPush
+    // view is only re-evaluated on a render Angular actually runs. Stubbing
+    // an per-instance rect only AFTER that first render — the container
+    // element has to exist to spy on it — would need a SECOND render to
+    // pick it up, and nothing here (no input change, no template-bound
+    // event) gives Angular a reason to schedule one. Stubbing the prototype
+    // up front sidesteps that entirely: the very first render already
+    // measures 256x128.
+    const rectSpy = vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue({
+      left: 0,
+      top: 0,
+      right: 256,
+      bottom: 128,
+      width: 256,
+      height: 128,
+      x: 0,
+      y: 0,
+      toJSON: () => ({}),
+    } as DOMRect);
+    const fixture = await render([NARROW_SLOT]);
+    const emitted: unknown[] = [];
+    fixture.componentInstance.recrop.subscribe((event) => emitted.push(event));
+
+    const container = (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>(
+      '[data-testid="crop-container"]',
+    )!;
+
+    // Box width = 0.2 * 256 = 51.2px — narrower than two 44px handles placed
+    // side by side (88px). `w` and `e` must each shrink to 51.2 - 24 =
+    // 27.2px so a real 24px strip survives in the middle for MOVE.
+    const handles = container.querySelectorAll<HTMLElement>('[data-testid="crop-resize-handle"]');
+    const wHandle = handles[7]; // RESIZE_HANDLES = ['nw','n','ne','e','se','s','sw','w']
+    const eHandle = handles[3];
+    expect(parseFloat(wHandle.style.width)).toBeCloseTo(27.2, 5);
+    expect(parseFloat(eHandle.style.width)).toBeCloseTo(27.2, 5);
+
+    // A pointerdown reaching the CONTAINER (as it would in a real browser
+    // once the shrunk handles no longer cover the centre) at the box's own
+    // centre — x: 0.3 + 0.1 = 0.4 of 256 = 102.4 — still starts a MOVE, not a
+    // resize: the box shifts without changing size.
+    const centerX = 0.4 * 256;
+    const centerY = 0.35 * 128;
+    dispatchPointer(container, 'pointerdown', centerX, centerY);
+    dispatchPointer(container, 'pointermove', centerX + 10, centerY);
+    dispatchPointer(container, 'pointerup', centerX + 10, centerY);
+
+    expect(emitted.length).toBe(1);
+    const event = emitted[0] as { box: { x: number; y: number; w: number; h: number } };
+    expect(event.box.w).toBeCloseTo(0.2, 10);
+    expect(event.box.h).toBeCloseTo(0.5, 10);
+
+    rectSpy.mockRestore();
   });
 
   it('does not emit recrop for a plain click with no movement between pointerdown and pointerup', async () => {
@@ -194,7 +261,7 @@ describe('CropReviewComponent', () => {
     expect(emitted.length).toBe(0);
   });
 
-  it('makes the crop box focusable with a group role and an instructive aria-label', async () => {
+  it('makes the crop box focusable with a group role and an instructive aria-label built from the slot label', async () => {
     const fixture = await render([SLOT]);
 
     const box = (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>(
@@ -204,8 +271,28 @@ describe('CropReviewComponent', () => {
     expect(box.getAttribute('tabindex')).toBe('0');
     expect(box.getAttribute('role')).toBe('group');
     expect(box.getAttribute('aria-label')).toBe(
-      'Recorte de la figura, usa las flechas para mover y Shift+flechas para redimensionar',
+      'Figura del enunciado, usa las flechas para mover y Shift+flechas para redimensionar',
     );
+  });
+
+  it('gives each slot its OWN aria-label instead of a shared one — audit crop-review #4', async () => {
+    const fixture = await render([
+      SLOT,
+      { ...SLOT, target: { kind: 'alternative', alternativeIndex: 2 }, label: 'Alternativa c)' },
+    ]);
+
+    const labels = Array.from(
+      (fixture.nativeElement as HTMLElement).querySelectorAll<HTMLElement>(
+        '[data-testid="crop-box"]',
+      ),
+    ).map((box) => box.getAttribute('aria-label'));
+
+    expect(labels).toEqual([
+      'Figura del enunciado, usa las flechas para mover y Shift+flechas para redimensionar',
+      'Alternativa c), usa las flechas para mover y Shift+flechas para redimensionar',
+    ]);
+    // Different slots, so the two labels must not collide.
+    expect(labels[0]).not.toBe(labels[1]);
   });
 
   it('shows a visible keyboard instructions hint under the editor', async () => {
@@ -322,6 +409,111 @@ describe('CropReviewComponent', () => {
 
     box.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
     expect(emitted).toEqual([]);
+  });
+
+  it('does not emit recrop on Enter with no pending arrow-key edit — audit crop-review #2', async () => {
+    const fixture = await render([SLOT]);
+    const emitted: unknown[] = [];
+    fixture.componentInstance.recrop.subscribe((event) => emitted.push(event));
+
+    const box = (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>(
+      '[data-testid="crop-box"]',
+    )!;
+    box.focus();
+
+    // Enter pressed straight away, with no ArrowLeft/Right/Up/Down first —
+    // there is nothing to apply, so this must be a silent no-op rather than
+    // a wasted `recrop` for the slot's own unchanged box.
+    box.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+
+    expect(emitted).toEqual([]);
+  });
+
+  it('clears a pending arrow-key edit once a mouse drag starts on the same slot — audit crop-review #3', async () => {
+    const fixture = await render([SLOT]);
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    const box = compiled.querySelector<HTMLElement>('[data-testid="crop-box"]')!;
+    box.focus();
+    box.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+    fixture.detectChanges();
+    expect(parseFloat(box.style.left)).toBeCloseTo(11, 6);
+
+    const container = compiled.querySelector<HTMLElement>('[data-testid="crop-container"]')!;
+    stubRect(container, 200, 100);
+    // A drag that starts and releases with no movement in between never
+    // calls `applyBox`, so the slot's own box (from `slots()`) stays exactly
+    // what it was — x: 0.1 — which is what makes this a clean way to check
+    // whether the pending key edit survived the drag.
+    dispatchPointer(container, 'pointerdown', 20, 10);
+    dispatchPointer(container, 'pointerup', 20, 10);
+    fixture.detectChanges();
+
+    // Without the fix, `boxFor` would fall through to the stale key edit
+    // (11%) once drag state resets — the drag having started must have
+    // discarded it instead, so the box follows the slot's real (unmoved)
+    // box, not the key edit from before the drag.
+    expect(parseFloat(box.style.left)).toBeCloseTo(10, 6);
+  });
+
+  it('keeps each slot’s pending arrow-key edit independent — audit crop-review #5', async () => {
+    const SLOT_B: CropSlot = {
+      ...SLOT,
+      target: { kind: 'alternative', alternativeIndex: 0 },
+      label: 'Alternativa a)',
+      box: { x: 0.05, y: 0.05, w: 0.2, h: 0.2 },
+    };
+    const fixture = await render([SLOT, SLOT_B]);
+    const compiled = fixture.nativeElement as HTMLElement;
+    const boxes = compiled.querySelectorAll<HTMLElement>('[data-testid="crop-box"]');
+    const [firstBox, secondBox] = [boxes[0], boxes[1]];
+
+    // Arrow-edit the FIRST slot only, twice.
+    firstBox.focus();
+    firstBox.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+    firstBox.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+    fixture.detectChanges();
+    expect(parseFloat(firstBox.style.left)).toBeCloseTo(12, 6);
+    // The second slot was never touched — its own box is untouched too.
+    expect(parseFloat(secondBox.style.left)).toBeCloseTo(5, 6);
+
+    // Now arrow-edit the SECOND slot — this must not discard the first
+    // slot's still-pending edit.
+    secondBox.focus();
+    secondBox.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true }));
+    fixture.detectChanges();
+    expect(parseFloat(secondBox.style.top)).toBeCloseTo(6, 6);
+    expect(parseFloat(firstBox.style.left)).toBeCloseTo(12, 6);
+
+    // Applying the first slot's edit only resolves ITS pending edit.
+    const emitted: unknown[] = [];
+    fixture.componentInstance.recrop.subscribe((event) => emitted.push(event));
+    firstBox.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+
+    expect(emitted.length).toBe(1);
+    const event = emitted[0] as { target: unknown; box: { x: number } };
+    expect(event.target).toEqual({ kind: 'figure' });
+    expect(event.box.x).toBeCloseTo(0.12, 6);
+    // The second slot's pending edit is still there, unresolved.
+    expect(parseFloat(secondBox.style.top)).toBeCloseTo(6, 6);
+  });
+
+  it('clears every pending arrow-key edit once the slots input changes — audit crop-review #3', async () => {
+    const fixture = await render([SLOT]);
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    const box = compiled.querySelector<HTMLElement>('[data-testid="crop-box"]')!;
+    box.focus();
+    box.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+    fixture.detectChanges();
+    expect(parseFloat(box.style.left)).toBeCloseTo(11, 6);
+
+    // The caller pushes a fresh `slots` value (e.g. the server's response to
+    // an unrelated recrop) — any stale pending edit must not survive it.
+    fixture.componentRef.setInput('slots', [SLOT]);
+    fixture.detectChanges();
+
+    expect(parseFloat(box.style.left)).toBeCloseTo(10, 6);
   });
 });
 
