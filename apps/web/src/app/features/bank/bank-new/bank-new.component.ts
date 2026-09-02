@@ -1,6 +1,7 @@
 import {
   Component,
   ElementRef,
+  HostListener,
   Injector,
   afterNextRender,
   computed,
@@ -202,6 +203,14 @@ export class BankNewComponent {
   ];
   protected readonly saving = signal(false);
   protected readonly saveError = signal<string | null>(null);
+  /**
+   * B4/M7: flips true right before `navigateToBank` fires — the leave guard
+   * (`canDeactivate`) checks this FIRST so a successful save never prompts
+   * "¿Salir sin guardar?" for a page the teacher just finished with, even
+   * though `cropSlots`/`sBody` etc. may still hold values at that instant
+   * (the component doesn't get destroyed until the navigation completes).
+   */
+  private savedSuccessfully = false;
   protected readonly extracting = signal(false);
   protected readonly extractError = signal<string | null>(null);
   /** True right after an extraction whose `alternatives` came back empty (B1). */
@@ -348,6 +357,43 @@ export class BankNewComponent {
   }
 
   /**
+   * B4/M7: the router-facing leave guard (`bank-new-leave.guard.ts`) calls
+   * this — kept as a plain public method rather than logic inlined in the
+   * guard itself, since only the component knows its own dirty state.
+   */
+  canDeactivate(): boolean {
+    if (this.savedSuccessfully || !this.hasUnsavedWork()) {
+      return true;
+    }
+    return confirm('Tienes una pregunta a medio revisar. ¿Salir sin guardar?');
+  }
+
+  /**
+   * True while there is AI/crop work in flight or unreviewed, or a
+   * structured question the teacher started writing but hasn't saved yet.
+   * `sBody` alone (not `sAlternatives`/`sCorrectAnswer`) is enough of a
+   * signal — an enunciado with content is the first thing a teacher types,
+   * so its presence already means "there is something here to lose."
+   */
+  private hasUnsavedWork(): boolean {
+    return (
+      this.cropSlots().length > 0 ||
+      this.extracting() ||
+      this.saving() ||
+      this.sBody().trim().length > 0
+    );
+  }
+
+  /** Same condition as `canDeactivate`, for the browser-level (tab close/refresh) case Angular's router never sees. */
+  @HostListener('window:beforeunload', ['$event'])
+  protected onBeforeUnload(event: BeforeUnloadEvent): void {
+    if (this.savedSuccessfully || !this.hasUnsavedWork()) {
+      return;
+    }
+    event.preventDefault();
+  }
+
+  /**
    * Moves focus to the structured tab's first field right after a
    * successful extraction: the enunciado textarea normally (B7), but the
    * alternatives textarea instead when the extraction came back with none
@@ -452,9 +498,9 @@ export class BankNewComponent {
         image: this.pImage()!,
       })
       .subscribe({
-        next: () => {
+        next: ({ id }) => {
           this.saving.set(false);
-          this.router.navigate(['/app/bank']);
+          this.navigateToBank(id);
         },
         error: (_e: HttpErrorResponse) => {
           this.saving.set(false);
@@ -463,6 +509,20 @@ export class BankNewComponent {
           );
         },
       });
+  }
+
+  /**
+   * Navigates back to the bank list, passing the freshly created question's
+   * id through router state — Line D's `bank-list` reads
+   * `history.state.createdQuestionId` after this navigation to highlight the
+   * new row. Also flips `savedSuccessfully` so the leave guard (B4/M7)
+   * doesn't ask the teacher to confirm leaving a page they just finished
+   * saving — the dirty state has to be cleared BEFORE navigating, not after,
+   * since the guard runs synchronously as part of the navigation itself.
+   */
+  private navigateToBank(id: string): void {
+    this.savedSuccessfully = true;
+    this.router.navigate(['/app/bank'], { state: { createdQuestionId: id } });
   }
 
   protected extractWithAi(): void {
@@ -775,14 +835,14 @@ export class BankNewComponent {
 
     if (crops.length === 0) {
       this.saving.set(false);
-      this.router.navigate(['/app/bank']);
+      this.navigateToBank(id);
       return;
     }
 
     this.bankService.setAlternativeImages(id, crops).subscribe({
       next: () => {
         this.saving.set(false);
-        this.router.navigate(['/app/bank']);
+        this.navigateToBank(id);
       },
       error: () => this.failAfterCreate(),
     });

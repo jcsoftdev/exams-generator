@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { Observable, Subject, TimeoutError, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -203,7 +203,9 @@ describe('BankNewComponent', () => {
     });
     // No complement image was picked — the second-step call must not fire.
     expect(replaceQuestionImage).not.toHaveBeenCalled();
-    expect(navigate).toHaveBeenCalledWith(['/app/bank']);
+    // Line D reads history.state.createdQuestionId to highlight the new row
+    // in bank-list after this navigation.
+    expect(navigate).toHaveBeenCalledWith(['/app/bank'], { state: { createdQuestionId: 'str-q' } });
   });
 
   it('attaches a picked complement image after creating the structured question, then navigates back', () => {
@@ -223,7 +225,7 @@ describe('BankNewComponent', () => {
     ).click();
 
     expect(replaceQuestionImage).toHaveBeenCalledWith('str-q', file);
-    expect(navigate).toHaveBeenCalledWith(['/app/bank']);
+    expect(navigate).toHaveBeenCalledWith(['/app/bank'], { state: { createdQuestionId: 'str-q' } });
   });
 
   it('shows a partial-failure message when the question is created but the complement image fails to upload, and does not navigate', () => {
@@ -289,7 +291,19 @@ describe('BankNewComponent', () => {
     expect(createStructuredQuestion).toHaveBeenCalledTimes(1);
     expect(replaceQuestionImage).toHaveBeenCalledTimes(2);
     expect(replaceQuestionImage).toHaveBeenLastCalledWith('str-q', expect.any(File));
-    expect(navigate).toHaveBeenCalledWith(['/app/bank']);
+    expect(navigate).toHaveBeenCalledWith(['/app/bank'], { state: { createdQuestionId: 'str-q' } });
+  });
+
+  it('navigates back with the created id in history.state after saving a photo question as-is', () => {
+    const { fixture, compiled, navigate } = setup({
+      uploadImpl: () => of({ id: 'img-q' }),
+    });
+    fillPhotoTaxonomy(fixture);
+    pickImage(fixture, compiled);
+    set(fixture, 'pCorrectAnswer', 'a');
+    (compiled.querySelector('[data-testid="photo-submit"] button') as HTMLButtonElement).click();
+
+    expect(navigate).toHaveBeenCalledWith(['/app/bank'], { state: { createdQuestionId: 'img-q' } });
   });
 
   it('shows an inline error when structured save fails and does not navigate', () => {
@@ -1554,6 +1568,91 @@ describe('BankNewComponent', () => {
       expect(compiled.querySelector('[data-testid="extract-error"]')?.textContent).toContain(
         'La sesión de recorte expiró',
       );
+    });
+  });
+
+  describe('B4: leave guard (canDeactivate)', () => {
+    // `vi.spyOn` on an already-spied `window.confirm` returns the SAME spy
+    // instance (call history and all) rather than a fresh one — without
+    // this, each test's `confirmSpy.toHaveBeenCalled()` assertions would see
+    // calls left over from earlier tests in this block.
+    afterEach(() => {
+      vi.restoreAllMocks();
+    });
+
+    const EXTRACTED_WITH_CROP_FOR_GUARD: AiExtractedQuestion = {
+      bodyTypst: 'x',
+      alternatives: ['a', 'b'],
+      correctAnswer: '0',
+      extractionId: 'extraction-1',
+      figureCrop: {
+        dataUrl: 'data:image/png;base64,AAAA',
+        box: { x: 0, y: 0, w: 0.2, h: 0.2 },
+      },
+    };
+
+    it('confirms before leaving when there are pending crops, and returns false when declined', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => of(EXTRACTED_WITH_CROP_FOR_GUARD),
+      });
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(false);
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      const result = instance.canDeactivate();
+
+      expect(confirmSpy).toHaveBeenCalledWith(
+        'Tienes una pregunta a medio revisar. ¿Salir sin guardar?',
+      );
+      expect(result).toBe(false);
+    });
+
+    it('allows leaving without confirming when there is nothing unsaved', () => {
+      const { fixture } = setup();
+      const confirmSpy = vi.spyOn(window, 'confirm');
+
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).not.toHaveBeenCalled();
+    });
+
+    it('confirms before leaving when the structured enunciado has unsaved text', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sBody', 'Un enunciado a medio escribir');
+      const confirmSpy = vi.spyOn(window, 'confirm').mockReturnValue(true);
+
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).toHaveBeenCalled();
+    });
+
+    it('does not confirm again right after a successful save — the dirty state is reset before navigating', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', '¿Cuánto es 2+2?');
+      set(fixture, 'sAlternatives', '4\n3\n5\n6');
+      set(fixture, 'sCorrectAnswer', 'a');
+      (
+        compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement
+      ).click();
+      fixture.detectChanges();
+
+      const confirmSpy = vi.spyOn(window, 'confirm');
+      const instance = fixture.componentInstance as unknown as { canDeactivate(): boolean };
+      expect(instance.canDeactivate()).toBe(true);
+      expect(confirmSpy).not.toHaveBeenCalled();
     });
   });
 });
