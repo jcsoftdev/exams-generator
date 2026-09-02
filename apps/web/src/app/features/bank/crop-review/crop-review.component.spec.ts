@@ -126,6 +126,55 @@ describe('CropReviewComponent', () => {
     });
   });
 
+  it('renders each resize handle with an interactive hit area of at least 44x44 CSS px', async () => {
+    const fixture = await render([SLOT]);
+
+    const handles = (fixture.nativeElement as HTMLElement).querySelectorAll<HTMLElement>(
+      '[data-testid="crop-resize-handle"]',
+    );
+
+    expect(handles.length).toBe(8);
+    handles.forEach((handle) => {
+      expect(handle.style.width).toBe('44px');
+      expect(handle.style.height).toBe('44px');
+    });
+  });
+
+  it('starts a resize from a pointerdown 15 px outside the visible 8 px dot', async () => {
+    const fixture = await render([SLOT]);
+    const emitted: unknown[] = [];
+    fixture.componentInstance.recrop.subscribe((event) => emitted.push(event));
+
+    const container = (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>(
+      '[data-testid="crop-container"]',
+    )!;
+    stubRect(container, 200, 100);
+
+    // The `se` handle sits at the box's bottom-right corner: box {x:.1,y:.1,
+    // w:.5,h:.5} on a 200x100 container puts its corner at clientX 120,
+    // clientY 60. The visible dot there is only 8 px across, but a
+    // pointerdown 15 px outside it (135, 75) must still land inside the
+    // enlarged 44x44 hit area and start the resize rather than falling
+    // through to the container's own `startMove`.
+    const handles = container.querySelectorAll<HTMLElement>('[data-testid="crop-resize-handle"]');
+    const seHandle = handles[4]; // RESIZE_HANDLES = ['nw','n','ne','e','se','s','sw','w']
+
+    dispatchPointer(seHandle, 'pointerdown', 135, 75);
+    dispatchPointer(container, 'pointermove', 145, 85);
+    dispatchPointer(container, 'pointerup', 145, 85);
+
+    expect(emitted.length).toBe(1);
+    const event = emitted[0] as {
+      target: unknown;
+      box: { x: number; y: number; w: number; h: number };
+    };
+    expect(event.target).toEqual({ kind: 'figure' });
+    expect(event.box.x).toBeCloseTo(0.1, 10);
+    expect(event.box.y).toBeCloseTo(0.1, 10);
+    expect(event.box.w).toBeCloseTo(0.55, 10);
+    expect(event.box.h).toBeCloseTo(0.6, 10);
+  });
+
   it('does not emit recrop for a plain click with no movement between pointerdown and pointerup', async () => {
     const fixture = await render([SLOT]);
     const emitted: unknown[] = [];

@@ -24,11 +24,16 @@
         >
           @for (handle of resizeHandles; track handle) {
             <div
-              class="absolute h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white bg-primary-600"
+              data-testid="crop-resize-handle"
+              class="absolute flex -translate-x-1/2 -translate-y-1/2 items-center justify-center"
               [style.left]="handlePosition(handle).left"
               [style.top]="handlePosition(handle).top"
+              [style.width.px]="44"
+              [style.height.px]="44"
               (pointerdown)="startResize($event, container, slot, handle)"
-            ></div>
+            >
+              <div class="h-2 w-2 rounded-full border border-white bg-primary-600"></div>
+            </div>
           }
         </div>
       </div>
