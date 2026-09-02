@@ -133,16 +133,24 @@ export interface BankStatusDifficultyCount {
 }
 
 /**
- * One `{courseId, topicId, total}` bucket from `countByCourseAndTopic` —
- * feeds the web bank tree's lazy skeleton (`GET /bank/questions/summary`).
- * Deliberately carries NO question payload: the whole point is that the tree
- * can render Curso -> Tema with real counts while a topic's leaves are only
- * fetched when that topic is expanded.
+ * One `{courseId, topicId, total, gradeLevel}` bucket from
+ * `countByCourseAndTopic` — feeds the web bank tree's lazy skeleton (`GET
+ * /bank/questions/summary`). Deliberately carries NO question payload: the
+ * whole point is that the tree can render Curso -> Tema with real counts
+ * while a topic's leaves are only fetched when that topic is expanded.
+ *
+ * `gradeLevel` is the TOPIC's own grade from `topics.grade_level` (the
+ * taxonomy scoping — see `topics.schema.ts`), NEVER derived from the
+ * questions counted in `total`: a topic can hold questions tagged with any
+ * grade (or none), so the topic's own grade is the only value stable enough
+ * to label a collapsed tree branch with. `null` means the topic applies to
+ * the whole stage (unscoped), same as `topics.grade_level IS NULL`.
  */
 export interface BankTopicQuestionCount {
   readonly courseId: string;
   readonly topicId: string;
   readonly total: number;
+  readonly gradeLevel: string | null;
 }
 
 /** Persistence port for the bank module — implemented by `BankRepository`. */

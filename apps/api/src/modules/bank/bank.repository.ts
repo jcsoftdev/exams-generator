@@ -317,16 +317,25 @@ export class BankRepository implements BankRepositoryPort {
    */
   async countByCourseAndTopic(filter: QuestionListFilter): Promise<BankTopicQuestionCount[]> {
     const rows = await this.db
-      .select({ courseId: topics.courseId, topicId: questions.topicId, total: count() })
+      .select({
+        courseId: topics.courseId,
+        topicId: questions.topicId,
+        total: count(),
+        // The TOPIC's own grade (taxonomy), not any question's — grouped on
+        // so a topic never fans out into more than one bucket, see the port
+        // doc for why this must never read from `questions.grade_level`.
+        gradeLevel: topics.gradeLevel,
+      })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
       .where(and(...buildQuestionListConditions(filter)))
-      .groupBy(topics.courseId, questions.topicId);
+      .groupBy(topics.courseId, questions.topicId, topics.gradeLevel);
 
     return rows.map((row) => ({
       courseId: row.courseId,
       topicId: row.topicId,
       total: Number(row.total),
+      gradeLevel: row.gradeLevel,
     }));
   }
 

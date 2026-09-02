@@ -23,6 +23,18 @@ function openViaClick(compiled: HTMLElement, fixture: { detectChanges: () => voi
   fixture.detectChanges();
 }
 
+function labelledByIds(button: HTMLButtonElement): string[] {
+  return (button.getAttribute('aria-labelledby') ?? '').split(' ').filter(Boolean);
+}
+
+/** The concatenated text content of every element `aria-labelledby` references — what a screen reader would announce as the accessible name. */
+function referencedText(compiled: HTMLElement, ids: readonly string[]): string {
+  return ids
+    .map((id) => compiled.querySelector(`#${id}`)?.textContent?.trim())
+    .filter(Boolean)
+    .join(' ');
+}
+
 describe('SelectComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -37,10 +49,10 @@ describe('SelectComponent', () => {
     fixture.detectChanges();
 
     const button = trigger(compiled);
-    const labelledbyId = button.getAttribute('aria-labelledby');
-    expect(labelledbyId).toBeTruthy();
+    const labelledbyIds = labelledByIds(button);
+    expect(labelledbyIds.length).toBeGreaterThan(0);
 
-    const label = compiled.querySelector(`#${labelledbyId}`);
+    const label = compiled.querySelector(`#${labelledbyIds[0]}`);
     expect(label?.tagName).toBe('LABEL');
     expect(label?.textContent).toContain('Grado');
   });
@@ -50,6 +62,38 @@ describe('SelectComponent', () => {
     fixture.detectChanges();
 
     expect(trigger(compiled).hasAttribute('aria-labelledby')).toBe(false);
+  });
+
+  /**
+   * M14: `aria-labelledby` used to reference the external `label()` alone,
+   * so the trigger's accessible name never included the placeholder or the
+   * selected option — two selects sharing a label ("Curso") sounded
+   * identical to assistive tech regardless of what each one held.
+   */
+  it("references BOTH the label and the trigger's own value, so the accessible name includes what's selected (M14)", () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('label', 'Curso');
+    fixture.componentRef.setInput('options', [{ value: 'math', label: 'Matemática' }]);
+    fixture.componentRef.setInput('value', 'math');
+    fixture.detectChanges();
+
+    const button = trigger(compiled);
+    const ids = labelledByIds(button);
+    expect(ids).toHaveLength(2);
+
+    expect(referencedText(compiled, ids)).toBe('Curso Matemática');
+  });
+
+  it('references the placeholder (not a selected option) when nothing is selected yet', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('label', 'Curso');
+    fixture.componentRef.setInput('placeholder', 'Elige un curso');
+    fixture.detectChanges();
+
+    const button = trigger(compiled);
+    const ids = labelledByIds(button);
+
+    expect(referencedText(compiled, ids)).toBe('Curso Elige un curso');
   });
 
   it('renders a trigger button showing the placeholder (dimmed) when nothing is selected', () => {

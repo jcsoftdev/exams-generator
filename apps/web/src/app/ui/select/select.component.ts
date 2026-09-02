@@ -56,7 +56,7 @@ interface SelectListItem<T> {
         [attr.aria-expanded]="open()"
         [attr.aria-controls]="listboxId"
         [attr.aria-activedescendant]="open() ? optionId(highlightedIndex()) : null"
-        [attr.aria-labelledby]="label() ? labelId : null"
+        [attr.aria-labelledby]="ariaLabelledBy()"
         [attr.aria-required]="required() ? 'true' : null"
         [attr.aria-invalid]="error() ? 'true' : null"
         [attr.aria-describedby]="error() ? errorId : null"
@@ -65,7 +65,7 @@ interface SelectListItem<T> {
         (keydown)="onTriggerKeydown($event)"
         class="flex w-full items-center justify-between gap-2 rounded-field border border-n300 bg-surface px-3 py-2 text-left text-sm text-n900 disabled:cursor-not-allowed disabled:bg-n100"
       >
-        <span [class.text-n400]="!selectedOption()">{{ triggerLabel() }}</span>
+        <span [id]="valueId" [class.text-n400]="!selectedOption()">{{ triggerLabel() }}</span>
         <lucide-angular name="chevron-down" class="h-4 w-4 shrink-0 text-n500"></lucide-angular>
       </button>
 
@@ -130,6 +130,8 @@ export class SelectComponent<T = string> {
   protected readonly instanceId = `ui-select-${SelectComponent.instanceCounter++}`;
   protected readonly listboxId = `${this.instanceId}-listbox`;
   protected readonly labelId = `${this.instanceId}-label`;
+  /** M14: the trigger's own visible text (placeholder or selected option) — referenced by `ariaLabelledBy` so it joins the label in the trigger's accessible name. */
+  protected readonly valueId = `${this.instanceId}-value`;
   /** D4: mirrors `ui-input`'s `errorId` — links the trigger to the error text via `aria-describedby`. */
   protected readonly errorId = `${this.instanceId}-error`;
 
@@ -159,6 +161,19 @@ export class SelectComponent<T = string> {
 
   protected readonly triggerLabel = computed(
     () => this.selectedOption()?.label ?? this.placeholder() ?? '',
+  );
+
+  /**
+   * M14: the trigger's accessible name used to come from `label()` ALONE
+   * ("Curso"), never the placeholder/selected option ("Elige un curso" /
+   * "Matemática") — so two selects sharing a label sounded identical to
+   * assistive tech. Referencing BOTH ids makes the computed name concatenate
+   * to "Curso Elige un curso" / "Curso Matemática". `null` when there is no
+   * external `label()` — same as before, so a label-less select still falls
+   * back to the browser's default (the trigger's own text content).
+   */
+  protected readonly ariaLabelledBy = computed(() =>
+    this.label() ? `${this.labelId} ${this.valueId}` : null,
   );
 
   protected optionId(index: number): string {
