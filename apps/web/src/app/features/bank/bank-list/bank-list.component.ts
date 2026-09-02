@@ -1080,10 +1080,12 @@ export class BankListComponent {
    * `editCorrectAnswer`), the same way: it never calls `saveEdit` itself, so
    * the teacher still reviews the extracted text/alternatives/clave in the
    * form before clicking Guardar. `alternatives` is joined one-per-line to
-   * match `editAlternativesList`'s parsing, and `AiRevisedQuestion.correctAnswer`
+   * match `editAlternativesList`'s parsing, and `AiExtractedQuestion.correctAnswer`
    * is already a 0-based INDEX (same canonical format as `editCorrectAnswer`
-   * everywhere else) — populated DIRECTLY, no letter conversion. Failures
-   * reuse `aiError`/`ai-error` from Task 9.
+   * everywhere else) — populated DIRECTLY, no letter conversion. It is now
+   * `string | null` (extraction never invents a key the photo didn't show);
+   * `null` clears the field to `''`. Failures reuse `aiError`/`ai-error`
+   * from Task 9.
    */
   protected extractFromImage(): void {
     const file = this.ocrFile();
@@ -1097,7 +1099,11 @@ export class BankListComponent {
       next: (extracted) => {
         this.editBody.set(extracted.bodyTypst);
         this.editAlternatives.set(extracted.alternatives.join('\n'));
-        this.editCorrectAnswer.set(extracted.correctAnswer);
+        // `extracted.correctAnswer` is `string | null` now — extraction
+        // never invents a key the photo didn't show. `null` clears the
+        // field so the teacher has to pick one by hand instead of saving a
+        // fabricated key.
+        this.editCorrectAnswer.set(extracted.correctAnswer ?? '');
         this.extracting.set(false);
       },
       error: () => {

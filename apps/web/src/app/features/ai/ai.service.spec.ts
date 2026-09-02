@@ -3,7 +3,12 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { HttpDownloadProgressEvent, HttpEventType, provideHttpClient } from '@angular/common/http';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { TimeoutError } from 'rxjs';
-import { AiQuestionCrop, Difficulty, NormalizedBoxDto } from '@exams-generator/shared';
+import {
+  AiExtractedQuestion,
+  AiQuestionCrop,
+  Difficulty,
+  NormalizedBoxDto,
+} from '@exams-generator/shared';
 import { AiService } from './ai.service';
 import { environment } from '../../../environments/environment';
 import {
@@ -339,12 +344,12 @@ describe('AiService', () => {
   describe('extractQuestionFromImage', () => {
     it('POSTs a multipart FormData with the image under "file" and resolves with the extracted question', () => {
       const image = new File(['fake-bytes'], 'question.png', { type: 'image/png' });
-      const extracted: AiRevisedQuestion = {
+      const extracted: AiExtractedQuestion = {
         bodyTypst: 'extracted body',
         alternatives: ['a', 'b', 'c', 'd', 'e'],
         correctAnswer: '2',
       };
-      let result: AiRevisedQuestion | undefined;
+      let result: AiExtractedQuestion | undefined;
 
       service.extractQuestionFromImage(image).subscribe((response) => (result = response));
 
