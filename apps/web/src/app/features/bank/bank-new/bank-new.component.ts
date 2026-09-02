@@ -709,17 +709,45 @@ export class BankNewComponent {
     const { gradeLevel, photoCourseId, photoTopicId, suggestedCourseName, suggestedTopicName } =
       params;
 
+    /**
+     * Always applies THIS extraction's resolved `courseId`/`topicId` —
+     * never "stale", even on a second extraction at the same grade whose
+     * suggestion differs from (or contradicts) the first's. The pending
+     * mechanism is only a relay for the two chained effects
+     * (`sGradeLevel`→`sCourseId`, `sCourseId`→`sTopicId`) below, and a
+     * signal `.set()` to the SAME value it already holds never notifies —
+     * so a genuine grade OR course change is applied by that effect chain,
+     * but a same-grade (or same-course) extraction must be applied
+     * directly here instead, or it would silently vanish along with
+     * whatever the PREVIOUS extraction (or the teacher) had picked.
+     */
     const applyPreselect = (courseId: string, topicId: string): void => {
-      if (this.sGradeLevel() !== gradeLevel) {
-        this.pendingStructuredCourseId = courseId;
-        this.pendingStructuredTopicId = topicId;
-      }
-      this.sGradeLevel.set(gradeLevel);
       this.aiTaxonomyHint.set(
         (!!suggestedCourseName && !courseId) || (!!suggestedTopicName && !topicId)
           ? `La IA sugiere: ${suggestedCourseName ?? '—'} / ${suggestedTopicName ?? '—'}`
           : null,
       );
+
+      const gradeChanged = this.sGradeLevel() !== gradeLevel;
+      this.pendingStructuredCourseId = courseId;
+      this.pendingStructuredTopicId = topicId;
+      this.sGradeLevel.set(gradeLevel);
+      if (gradeChanged) {
+        return;
+      }
+
+      // Same grade as before — the grade→course effect above was a no-op,
+      // so `pendingStructuredCourseId` was never consumed. Apply the
+      // course ourselves.
+      this.pendingStructuredCourseId = null;
+      const courseChanged = this.sCourseId() !== courseId;
+      this.sCourseId.set(courseId);
+      if (!courseChanged) {
+        // Same course too — the course→topic effect is ALSO a no-op here,
+        // one level down from the guard above. Apply the topic directly.
+        this.pendingStructuredTopicId = null;
+        this.sTopicId.set(topicId);
+      }
     };
 
     const courseId =

@@ -794,7 +794,19 @@ describe('BankNewComponent', () => {
       expect(instance.extractError()).toContain('límite de uso gratuito');
     });
 
-    it('does not leak a stale pending course/topic when the structured grade already equals the photo grade (same-grade no-op)', () => {
+    /**
+     * Renamed/re-scoped from "does not leak a STALE pending course/topic
+     * ... (same-grade no-op)": the OLD assertion here was that a same-grade
+     * extraction applied NOTHING (Curso/Tema stayed blank) because the
+     * grade→course effect never fires when `sGradeLevel.set()` gets the
+     * value it already had. That was the bug, not the spec — a
+     * same-grade extraction's own resolved course/topic is NOT "stale",
+     * it's simply this extraction's own (correct) result, and it must be
+     * applied even though the grade→course effect chain never runs for it.
+     * See "second extraction at the same grade" below for the case this
+     * guards against directly.
+     */
+    it("applies THIS extraction's resolved course/topic even when the structured grade already equals the photo grade (same-grade case)", () => {
       const { fixture, compiled } = setup();
       fillPhotoTaxonomy(fixture);
       pickImage(fixture, compiled);
@@ -809,19 +821,111 @@ describe('BankNewComponent', () => {
       instance.extractWithAi();
       fixture.detectChanges();
 
-      // Same-grade no-op: sGradeLevel.set() never notifies, so the
-      // grade→course effect doesn't fire and Curso/Tema are NOT preselected.
       expect(instance.sGradeLevel()).toBe('pre');
-      expect(instance.sCourseId()).not.toBe('c1');
-      expect(instance.sTopicId()).not.toBe('t1');
+      expect(instance.sCourseId()).toBe('c1');
+      expect(instance.sTopicId()).toBe('t1');
 
       // Later manual course pick on the structured tab, unrelated to the
-      // photo tab's course — without Fix 1's guard, pendingStructuredTopicId
-      // would still hold the photo tab's stale 't1' and leak into c2.
+      // photo tab's course — must reset the topic, never leak the previous
+      // extraction's 't1' into c2.
       set(fixture, 'sCourseId', 'c2');
       fixture.detectChanges();
 
       expect(instance.sTopicId()).toBe('');
+    });
+
+    describe('second extraction at the same grade applies its OWN resolved course/topic, not the previous one', () => {
+      it("a second extraction (same grade) overwrites the first extraction's matched course/topic", () => {
+        let call = 0;
+        const { fixture, compiled } = setup({
+          extractQuestionFromImageImpl: () => {
+            call++;
+            return call === 1
+              ? of({
+                  bodyTypst: 'uno',
+                  alternatives: ['A', 'B'],
+                  correctAnswer: '0',
+                  suggestedCourseName: 'comunicación',
+                  suggestedTopicName: 'lectora',
+                } satisfies AiRevisedQuestion)
+              : of({
+                  bodyTypst: 'dos',
+                  alternatives: ['A', 'B'],
+                  correctAnswer: '0',
+                  suggestedCourseName: 'Matemática',
+                  suggestedTopicName: 'Álgebra',
+                } satisfies AiRevisedQuestion);
+          },
+        });
+        set(fixture, 'pGradeLevel', 'pre');
+        const instance = fixture.componentInstance as unknown as {
+          extractWithAi(): void;
+          sCourseId(): string;
+          sTopicId(): string;
+        };
+        pickImage(fixture, compiled);
+        instance.extractWithAi();
+        fixture.detectChanges();
+        expect(instance.sCourseId()).toBe('c2');
+        expect(instance.sTopicId()).toBe('t2');
+
+        // Second extraction — the structured grade is already 'pre' from
+        // the first extraction, so this is the same-grade path.
+        (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+        fixture.detectChanges();
+        pickImage(fixture, compiled);
+        instance.extractWithAi();
+        fixture.detectChanges();
+
+        expect(instance.sCourseId()).toBe('c1');
+        expect(instance.sTopicId()).toBe('t1');
+      });
+
+      it('clears the selects and shows the B5 hint when the second extraction (same grade) matches nothing in the taxonomy', () => {
+        let call = 0;
+        const { fixture, compiled } = setup({
+          extractQuestionFromImageImpl: () => {
+            call++;
+            return call === 1
+              ? of({
+                  bodyTypst: 'uno',
+                  alternatives: ['A', 'B'],
+                  correctAnswer: '0',
+                  suggestedCourseName: 'comunicación',
+                  suggestedTopicName: 'lectora',
+                } satisfies AiRevisedQuestion)
+              : of({
+                  bodyTypst: 'dos',
+                  alternatives: ['A', 'B'],
+                  correctAnswer: '0',
+                  suggestedCourseName: 'Biología',
+                  suggestedTopicName: 'Fotosíntesis',
+                } satisfies AiRevisedQuestion);
+          },
+        });
+        set(fixture, 'pGradeLevel', 'pre');
+        const instance = fixture.componentInstance as unknown as {
+          extractWithAi(): void;
+          sCourseId(): string;
+          sTopicId(): string;
+        };
+        pickImage(fixture, compiled);
+        instance.extractWithAi();
+        fixture.detectChanges();
+        expect(instance.sCourseId()).toBe('c2');
+
+        (compiled.querySelector('[data-testid="tab-photo"]') as HTMLButtonElement).click();
+        fixture.detectChanges();
+        pickImage(fixture, compiled);
+        instance.extractWithAi();
+        fixture.detectChanges();
+
+        expect(instance.sCourseId()).toBe('');
+        expect(instance.sTopicId()).toBe('');
+        expect(compiled.querySelector('[data-testid="ai-taxonomy-hint"]')?.textContent).toContain(
+          'Biología',
+        );
+      });
     });
   });
 
