@@ -38,9 +38,9 @@ const TOPIC_NAMES = new Map([
   ['t3', 'Ecuaciones'],
 ]);
 const COUNTS: BankTopicCount[] = [
-  { courseId: 'c1', topicId: 't1', total: 2 },
-  { courseId: 'c1', topicId: 't2', total: 1 },
-  { courseId: 'c2', topicId: 't3', total: 1 },
+  { courseId: 'c1', topicId: 't1', total: 2, gradeLevel: null },
+  { courseId: 'c1', topicId: 't2', total: 1, gradeLevel: null },
+  { courseId: 'c2', topicId: 't3', total: 1, gradeLevel: null },
 ];
 
 describe('buildQuestionTree', () => {
@@ -101,9 +101,9 @@ describe('buildQuestionTree', () => {
 
   it('sorts courses and topics alphabetically by resolved name (never by raw id)', () => {
     const counts: BankTopicCount[] = [
-      { courseId: 'c-zeta', topicId: 't-zulu', total: 1 },
-      { courseId: 'c-alpha', topicId: 't-yankee', total: 1 },
-      { courseId: 'c-alpha', topicId: 't-alpha', total: 1 },
+      { courseId: 'c-zeta', topicId: 't-zulu', total: 1, gradeLevel: null },
+      { courseId: 'c-alpha', topicId: 't-yankee', total: 1, gradeLevel: null },
+      { courseId: 'c-alpha', topicId: 't-alpha', total: 1, gradeLevel: null },
     ];
     const courseNames = new Map([
       ['c-zeta', 'Zoología'],
@@ -123,7 +123,7 @@ describe('buildQuestionTree', () => {
 
   it('falls back to a friendly label (never the raw UUID) when a name is unresolved', () => {
     const tree = buildQuestionTree(
-      [{ courseId: 'missing-course', topicId: 'missing-topic', total: 1 }],
+      [{ courseId: 'missing-course', topicId: 'missing-topic', total: 1, gradeLevel: null }],
       new Map(),
       new Map(),
       new Map(),
@@ -139,8 +139,8 @@ describe('buildQuestionTree', () => {
   it('drops zero-total buckets so an empty branch never renders', () => {
     const tree = buildQuestionTree(
       [
-        { courseId: 'c1', topicId: 't1', total: 2 },
-        { courseId: 'c1', topicId: 't2', total: 0 },
+        { courseId: 'c1', topicId: 't1', total: 2, gradeLevel: null },
+        { courseId: 'c1', topicId: 't2', total: 0, gradeLevel: null },
       ],
       new Map(),
       COURSE_NAMES,
@@ -154,7 +154,39 @@ describe('buildQuestionTree', () => {
     expect(buildQuestionTree([], new Map(), COURSE_NAMES, TOPIC_NAMES)).toEqual([]);
   });
 
-  it("exposes a topic's gradeLevel once its questions are loaded (D2b — needed to disambiguate same-named topics)", () => {
+  it("labels a topic from the SUMMARY's own gradeLevel — available immediately, no expansion needed (D2b)", () => {
+    const counts: BankTopicCount[] = [
+      { courseId: 'c1', topicId: 't1', total: 2, gradeLevel: 'secundaria_5' },
+      { courseId: 'c1', topicId: 't2', total: 1, gradeLevel: null },
+    ];
+
+    const tree = buildQuestionTree(counts, new Map(), COURSE_NAMES, TOPIC_NAMES);
+    const fracciones = tree
+      .find((c) => c.courseId === 'c1')
+      ?.topics.find((t) => t.topicId === 't1');
+
+    // Collapsed — `loaded` is false and no questions were ever fetched.
+    expect(fracciones?.loaded).toBe(false);
+    expect(fracciones?.gradeLevel).toBe('secundaria_5');
+  });
+
+  it("prefers the summary's gradeLevel over the loaded-page derivation when both are present", () => {
+    const counts: BankTopicCount[] = [
+      { courseId: 'c1', topicId: 't1', total: 1, gradeLevel: 'secundaria_5' },
+    ];
+    const loaded = new Map<string, readonly BankQuestion[]>([
+      ['t1', [q({ id: 'q1', courseId: 'c1', topicId: 't1', gradeLevel: 'primaria_4' })]],
+    ]);
+
+    const tree = buildQuestionTree(counts, loaded, COURSE_NAMES, TOPIC_NAMES);
+    const fracciones = tree
+      .find((c) => c.courseId === 'c1')
+      ?.topics.find((t) => t.topicId === 't1');
+
+    expect(fracciones?.gradeLevel).toBe('secundaria_5');
+  });
+
+  it("falls back to a topic's LOADED questions when the summary carries no gradeLevel (D2b fallback)", () => {
     const loaded = new Map<string, readonly BankQuestion[]>([
       ['t1', [q({ id: 'q1', courseId: 'c1', topicId: 't1', gradeLevel: 'secundaria_5' })]],
     ]);
@@ -167,7 +199,7 @@ describe('buildQuestionTree', () => {
     expect(fracciones?.gradeLevel).toBe('secundaria_5');
   });
 
-  it('leaves gradeLevel null for a topic never expanded — grade is unknown until the first page loads', () => {
+  it('leaves gradeLevel null when neither the summary nor a loaded page has one', () => {
     const tree = buildQuestionTree(COUNTS, new Map(), COURSE_NAMES, TOPIC_NAMES);
     const fracciones = tree
       .find((c) => c.courseId === 'c1')
@@ -176,7 +208,7 @@ describe('buildQuestionTree', () => {
     expect(fracciones?.gradeLevel).toBeNull();
   });
 
-  it('leaves gradeLevel null when the loaded page mixes grades — a wrong suffix is worse than none (audit #15)', () => {
+  it('leaves gradeLevel null when the summary has none and the loaded page mixes grades — a wrong suffix is worse than none (audit #15)', () => {
     const loaded = new Map<string, readonly BankQuestion[]>([
       [
         't1',

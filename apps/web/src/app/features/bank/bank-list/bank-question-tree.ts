@@ -16,21 +16,17 @@ export interface QuestionTreeTopicNode {
   /** `true` once this topic's first page came back — distinguishes "not fetched yet" from "fetched, genuinely empty". */
   readonly loaded: boolean;
   /**
-   * D2b (audit L4): the taxonomy API's `TopicListItem` does not return a
-   * topic's `gradeLevel` (it's DB-backed, but only used server-side to
-   * FILTER `findTopics`/`findTopicsByCourseIds` — see
-   * `apps/api/.../taxonomy.repository.ts`), so this is derived client-side
-   * from the loaded question(s) of the topic instead — every question in a
-   * topic normally shares the same grade by seeding convention. `null`
-   * until the topic's first page has loaded (mirrors `loaded`/`questions`),
-   * AND `null` if that loaded page turns out NOT grade-uniform (audit #15) —
-   * a wrong/misleading suffix is worse than none. Because it's derived from
-   * only the loaded page, the label can also only ever appear once a topic
-   * has been expanded — the summary the unexpanded tree renders from has no
-   * grade data to draw from at all.
+   * D2b: the TOPIC's own taxonomy grade, taken straight from the server
+   * summary's `BankTopicCount.gradeLevel` — available immediately, with NO
+   * dependency on the topic ever being expanded. `null` means the topic is
+   * unscoped in the taxonomy (applies to the whole stage).
    *
-   * TODO(api): expose gradeLevel on TopicListItem so this no longer depends
-   * on a topic having been expanded (and loaded) at least once.
+   * Falls back to deriving it from the loaded question(s) of the topic ONLY
+   * when the summary itself carries none: every question in a topic
+   * normally shares the same grade by seeding convention, so a topic whose
+   * taxonomy row has no grade can still get a label once expanded. `null`
+   * if that loaded page turns out NOT grade-uniform (audit #15) — a
+   * wrong/misleading suffix is worse than none.
    */
   readonly gradeLevel: string | null;
 }
@@ -86,7 +82,8 @@ export function buildQuestionTree(
       questionCount: bucket.total,
       questions: loaded ?? [],
       loaded: loaded !== undefined,
-      gradeLevel: uniformGradeLevel(loaded),
+      // Summary first (D2b), loaded-page derivation only as a fallback.
+      gradeLevel: bucket.gradeLevel ?? uniformGradeLevel(loaded),
     });
   }
 

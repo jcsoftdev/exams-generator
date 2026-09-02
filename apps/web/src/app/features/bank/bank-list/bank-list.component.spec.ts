@@ -82,8 +82,17 @@ const QUESTIONS: BankQuestion[] = [
  * the fake `listQuestionsPaged` pages through — mirroring the real backend,
  * where `GET /bank/questions/summary` and `GET /bank/questions` answer the
  * same filter set and therefore can never disagree.
+ *
+ * `topicGradeLevels` mirrors `topics.grade_level` on the real backend: the
+ * TOPIC's own taxonomy grade, independent of any question's `gradeLevel` —
+ * defaults to `null` (unscoped), same as a topic with no grade in the
+ * taxonomy. Kept separate from `questions` on purpose so a test can prove
+ * the summary's `gradeLevel` never gets confused with a question's.
  */
-function countsFrom(questions: readonly BankQuestion[]): BankTopicCount[] {
+function countsFrom(
+  questions: readonly BankQuestion[],
+  topicGradeLevels: ReadonlyMap<string, string | null> = new Map(),
+): BankTopicCount[] {
   const byTopic = new Map<string, BankTopicCount>();
   for (const question of questions) {
     const existing = byTopic.get(question.topicId);
@@ -91,6 +100,7 @@ function countsFrom(questions: readonly BankQuestion[]): BankTopicCount[] {
       courseId: question.courseId,
       topicId: question.topicId,
       total: (existing?.total ?? 0) + 1,
+      gradeLevel: topicGradeLevels.get(question.topicId) ?? null,
     });
   }
   return [...byTopic.values()];
@@ -121,11 +131,15 @@ function setup(
       page: number,
       pageSize: number,
     ) => unknown;
+    /** The TOPIC's own taxonomy grade the fake summary carries — see `countsFrom`. */
+    topicGradeLevels?: ReadonlyMap<string, string | null>;
   } = {},
 ) {
   const questionSource = vi.fn(over.listImpl ?? (() => of(QUESTIONS)));
   const getQuestionCounts = vi.fn((_filters?: unknown) =>
-    (questionSource() as Observable<BankQuestion[]>).pipe(map(countsFrom)),
+    (questionSource() as Observable<BankQuestion[]>).pipe(
+      map((questions) => countsFrom(questions, over.topicGradeLevels)),
+    ),
   );
   const listQuestionsPaged = vi.fn(
     over.listQuestionsPagedImpl ??
@@ -716,6 +730,32 @@ describe('BankListComponent', () => {
       expandTopic(compiled, fixture, 't-bio-5');
       expandTopic(compiled, fixture, 't-bio-4');
 
+      expect(topicHeader(compiled, 't-bio-5').textContent).toContain('5° secundaria');
+      expect(topicHeader(compiled, 't-bio-4').textContent).toContain('4° secundaria');
+    });
+
+    it('shows the grade on each same-named topic WITHOUT expanding either one — the summary carries it now (D2b, api gradeLevel)', () => {
+      const topics: Topic[] = [
+        { id: 't-bio-5', name: 'Genética y herencia', courseId: 'c1' },
+        { id: 't-bio-4', name: 'Genética y herencia', courseId: 'c1' },
+      ];
+      const questions: BankQuestion[] = [
+        makeQuestion({ id: 'gb5', courseId: 'c1', topicId: 't-bio-5' }),
+        makeQuestion({ id: 'gb4', courseId: 'c1', topicId: 't-bio-4' }),
+      ];
+      const { compiled, fixture } = setup({
+        getAllTopicsImpl: () => of(topics),
+        listImpl: () => of(questions),
+        topicGradeLevels: new Map([
+          ['t-bio-5', 'secundaria_5'],
+          ['t-bio-4', 'secundaria_4'],
+        ]),
+      });
+      expandCourse(compiled, fixture, 'c1');
+
+      // Collapsed — never expanded, so no question leaves were ever fetched.
+      expect(topicHeader(compiled, 't-bio-5').getAttribute('aria-expanded')).toBe('false');
+      expect(topicHeader(compiled, 't-bio-4').getAttribute('aria-expanded')).toBe('false');
       expect(topicHeader(compiled, 't-bio-5').textContent).toContain('5° secundaria');
       expect(topicHeader(compiled, 't-bio-4').textContent).toContain('4° secundaria');
     });

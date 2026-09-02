@@ -164,7 +164,9 @@ describe('BankService', () => {
 
     it('forwards the same filters the list endpoint takes, so counts match what expanding a topic returns', () => {
       let result: readonly BankTopicCount[] | undefined;
-      const counts: BankTopicCount[] = [{ courseId: 'c1', topicId: 't1', total: 42 }];
+      const counts: BankTopicCount[] = [
+        { courseId: 'c1', topicId: 't1', total: 42, gradeLevel: 'primaria_3' },
+      ];
 
       service
         .getQuestionCounts({ difficulty: Difficulty.Hard, gradeLevel: 'primaria_3' })
